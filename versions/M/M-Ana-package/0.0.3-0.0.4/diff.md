@@ -1,0 +1,209 @@
+# Comparing `tmp/M_Ana_package-0.0.3.tar.gz` & `tmp/M_Ana_package-0.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "M_Ana_package-0.0.3.tar", last modified: Thu Apr  6 15:59:11 2023, max compression
++gzip compressed data, was "M_Ana_package-0.0.4.tar", last modified: Thu Apr  6 16:01:23 2023, max compression
+```
+
+## Comparing `M_Ana_package-0.0.3.tar` & `M_Ana_package-0.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,33 +1,33 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.187351 M_Ana_package-0.0.3/
+--rw-rw-rw-   0        0        0       84 2023-03-17 22:06:37.000000 M_Ana_package-0.0.3/CHANGELOG.txt
+--rw-rw-rw-   0        0        0     1050 2023-03-17 22:11:59.000000 M_Ana_package-0.0.3/LICENCE.txt
+--rw-rw-rw-   0        0        0       25 2023-03-17 22:07:46.000000 M_Ana_package-0.0.3/MANIFEST.in
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.149570 M_Ana_package-0.0.3/MAna/
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.151873 M_Ana_package-0.0.3/MAna/Test/
+--rw-rw-rw-   0        0        0     1216 2023-03-19 22:11:08.000000 M_Ana_package-0.0.3/MAna/Test/analysisTest.py
+--rw-rw-rw-   0        0        0     4654 2023-03-19 22:14:02.000000 M_Ana_package-0.0.3/MAna/Test/dataTest.py
+--rw-rw-rw-   0        0        0     5373 2023-03-19 22:44:37.000000 M_Ana_package-0.0.3/MAna/Test/modelingTest.py
+--rw-rw-rw-   0        0        0       80 2023-04-06 14:16:46.000000 M_Ana_package-0.0.3/MAna/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.153196 M_Ana_package-0.0.3/MAna/analysis/
+--rw-rw-rw-   0        0        0       29 2023-04-06 14:17:22.000000 M_Ana_package-0.0.3/MAna/analysis/__init__.py
+--rw-rw-rw-   0        0        0    16242 2023-04-06 13:57:17.000000 M_Ana_package-0.0.3/MAna/analysis/visualizations.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.156683 M_Ana_package-0.0.3/MAna/data/
+--rw-rw-rw-   0        0        0       52 2023-04-06 14:18:08.000000 M_Ana_package-0.0.3/MAna/data/__init__.py
+--rw-rw-rw-   0        0        0     6411 2023-03-19 22:01:18.000000 M_Ana_package-0.0.3/MAna/data/data_cleaning.py
+--rw-rw-rw-   0        0        0     5073 2023-04-06 14:32:38.000000 M_Ana_package-0.0.3/MAna/data/data_io.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.162252 M_Ana_package-0.0.3/MAna/modeling/
+--rw-rw-rw-   0        0        0      124 2023-04-06 14:18:24.000000 M_Ana_package-0.0.3/MAna/modeling/__init__.py
+--rw-rw-rw-   0        0        0     7223 2023-04-06 14:06:12.000000 M_Ana_package-0.0.3/MAna/modeling/data_preprocessing.py
+--rw-rw-rw-   0        0        0     1261 2023-03-19 22:22:08.000000 M_Ana_package-0.0.3/MAna/modeling/model_evaluation.py
+--rw-rw-rw-   0        0        0     1061 2023-04-03 13:46:32.000000 M_Ana_package-0.0.3/MAna/modeling/modeling.py
+--rw-rw-rw-   0        0        0    12174 2023-04-06 14:28:56.000000 M_Ana_package-0.0.3/MAna/modeling/visualizations.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:59:11.185994 M_Ana_package-0.0.3/M_Ana_package.egg-info/
+--rw-rw-rw-   0        0        0      678 2023-04-06 15:59:10.000000 M_Ana_package-0.0.3/M_Ana_package.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      614 2023-04-06 15:59:11.000000 M_Ana_package-0.0.3/M_Ana_package.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 15:59:10.000000 M_Ana_package-0.0.3/M_Ana_package.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      140 2023-04-06 15:59:10.000000 M_Ana_package-0.0.3/M_Ana_package.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        5 2023-04-06 15:59:11.000000 M_Ana_package-0.0.3/M_Ana_package.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0      678 2023-04-06 15:59:11.187351 M_Ana_package-0.0.3/PKG-INFO
+--rw-rw-rw-   0        0        0        0 2023-03-26 21:45:45.000000 M_Ana_package-0.0.3/README.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 15:59:11.188733 M_Ana_package-0.0.3/setup.cfg
+--rw-rw-rw-   0        0        0     1277 2023-04-06 15:58:14.000000 M_Ana_package-0.0.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.272259 M_Ana_package-0.0.4/
++-rw-rw-rw-   0        0        0       84 2023-03-17 22:06:37.000000 M_Ana_package-0.0.4/CHANGELOG.txt
++-rw-rw-rw-   0        0        0     1050 2023-03-17 22:11:59.000000 M_Ana_package-0.0.4/LICENCE.txt
++-rw-rw-rw-   0        0        0       25 2023-03-17 22:07:46.000000 M_Ana_package-0.0.4/MANIFEST.in
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.239142 M_Ana_package-0.0.4/MAna/
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.242290 M_Ana_package-0.0.4/MAna/Test/
++-rw-rw-rw-   0        0        0     1216 2023-03-19 22:11:08.000000 M_Ana_package-0.0.4/MAna/Test/analysisTest.py
++-rw-rw-rw-   0        0        0     4654 2023-03-19 22:14:02.000000 M_Ana_package-0.0.4/MAna/Test/dataTest.py
++-rw-rw-rw-   0        0        0     5373 2023-03-19 22:44:37.000000 M_Ana_package-0.0.4/MAna/Test/modelingTest.py
++-rw-rw-rw-   0        0        0       80 2023-04-06 14:16:46.000000 M_Ana_package-0.0.4/MAna/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.244291 M_Ana_package-0.0.4/MAna/analysis/
++-rw-rw-rw-   0        0        0       29 2023-04-06 14:17:22.000000 M_Ana_package-0.0.4/MAna/analysis/__init__.py
++-rw-rw-rw-   0        0        0    16242 2023-04-06 13:57:17.000000 M_Ana_package-0.0.4/MAna/analysis/visualizations.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.246766 M_Ana_package-0.0.4/MAna/data/
++-rw-rw-rw-   0        0        0       52 2023-04-06 14:18:08.000000 M_Ana_package-0.0.4/MAna/data/__init__.py
++-rw-rw-rw-   0        0        0     6411 2023-03-19 22:01:18.000000 M_Ana_package-0.0.4/MAna/data/data_cleaning.py
++-rw-rw-rw-   0        0        0     5073 2023-04-06 14:32:38.000000 M_Ana_package-0.0.4/MAna/data/data_io.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.252365 M_Ana_package-0.0.4/MAna/modeling/
++-rw-rw-rw-   0        0        0      124 2023-04-06 14:18:24.000000 M_Ana_package-0.0.4/MAna/modeling/__init__.py
++-rw-rw-rw-   0        0        0     7223 2023-04-06 14:06:12.000000 M_Ana_package-0.0.4/MAna/modeling/data_preprocessing.py
++-rw-rw-rw-   0        0        0     1261 2023-03-19 22:22:08.000000 M_Ana_package-0.0.4/MAna/modeling/model_evaluation.py
++-rw-rw-rw-   0        0        0     1061 2023-04-03 13:46:32.000000 M_Ana_package-0.0.4/MAna/modeling/modeling.py
++-rw-rw-rw-   0        0        0    12174 2023-04-06 14:28:56.000000 M_Ana_package-0.0.4/MAna/modeling/visualizations.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:01:23.270140 M_Ana_package-0.0.4/M_Ana_package.egg-info/
++-rw-rw-rw-   0        0        0      678 2023-04-06 16:01:23.000000 M_Ana_package-0.0.4/M_Ana_package.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      614 2023-04-06 16:01:23.000000 M_Ana_package-0.0.4/M_Ana_package.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 16:01:23.000000 M_Ana_package-0.0.4/M_Ana_package.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0      131 2023-04-06 16:01:23.000000 M_Ana_package-0.0.4/M_Ana_package.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        5 2023-04-06 16:01:23.000000 M_Ana_package-0.0.4/M_Ana_package.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0      678 2023-04-06 16:01:23.271140 M_Ana_package-0.0.4/PKG-INFO
++-rw-rw-rw-   0        0        0        0 2023-03-26 21:45:45.000000 M_Ana_package-0.0.4/README.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 16:01:23.272259 M_Ana_package-0.0.4/setup.cfg
++-rw-rw-rw-   0        0        0     1245 2023-04-06 16:01:11.000000 M_Ana_package-0.0.4/setup.py
+```
+
+### Comparing `M_Ana_package-0.0.3/LICENCE.txt` & `M_Ana_package-0.0.4/LICENCE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/Test/analysisTest.py` & `M_Ana_package-0.0.4/MAna/Test/analysisTest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/Test/dataTest.py` & `M_Ana_package-0.0.4/MAna/Test/dataTest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/Test/modelingTest.py` & `M_Ana_package-0.0.4/MAna/Test/modelingTest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/analysis/visualizations.py` & `M_Ana_package-0.0.4/MAna/analysis/visualizations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/data/data_cleaning.py` & `M_Ana_package-0.0.4/MAna/data/data_cleaning.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/data/data_io.py` & `M_Ana_package-0.0.4/MAna/data/data_io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/modeling/data_preprocessing.py` & `M_Ana_package-0.0.4/MAna/modeling/data_preprocessing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/modeling/model_evaluation.py` & `M_Ana_package-0.0.4/MAna/modeling/model_evaluation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/modeling/modeling.py` & `M_Ana_package-0.0.4/MAna/modeling/modeling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/MAna/modeling/visualizations.py` & `M_Ana_package-0.0.4/MAna/modeling/visualizations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/M_Ana_package.egg-info/PKG-INFO` & `M_Ana_package-0.0.4/M_Ana_package.egg-info/PKG-INFO`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: M-Ana-package
+-Version: 0.0.3
++Version: 0.0.4
+ Summary: A Python Package for Data Manipulation and Analysis
+ Home-page: 
+ Author: M_A
+ Keywords: data
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `M_Ana_package-0.0.3/M_Ana_package.egg-info/SOURCES.txt` & `M_Ana_package-0.0.4/M_Ana_package.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `M_Ana_package-0.0.3/PKG-INFO` & `M_Ana_package-0.0.4/PKG-INFO`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: M_Ana_package
+-Version: 0.0.3
++Version: 0.0.4
+ Summary: A Python Package for Data Manipulation and Analysis
+ Home-page: 
+ Author: M_A
+ Keywords: data
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `M_Ana_package-0.0.3/setup.py` & `M_Ana_package-0.0.4/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+   name='M_Ana_package',
+-  version='0.0.3',
++  version='0.0.4',
+   description='A Python Package for Data Manipulation and Analysis',
+   long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+   url='',  
+   author='M_A', 
+   keywords='data', 
+   packages=find_packages(),
+   install_requires=['plotly',
+@@ -19,16 +19,15 @@
+                     'pyperclip',
+                     'pyarrow',
+                     'sas7bdat',
+                     'pyreadstat',
+                     'statsmodels',
+                     'pyod',
+                     'tensorflow',
+-                    'h5py',
+-                    'warnings'],
++                    'h5py',],
+    classifiers=[
+         'Development Status :: 3 - Alpha',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: MIT License',
+         'Programming Language :: Python :: 3',
+         'Programming Language :: Python :: 3.6',
+         'Programming Language :: Python :: 3.7',
+```
+

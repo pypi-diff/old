@@ -1,0 +1,843 @@
+# Comparing `tmp/crypt-dir-1.0.8.tar.gz` & `tmp/crypt-dir-1.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "crypt-dir-1.0.8.tar", last modified: Fri Mar 31 15:19:03 2023, max compression
++gzip compressed data, was "crypt-dir-1.1.0.tar", last modified: Thu Apr  6 16:08:17 2023, max compression
+```
+
+## Comparing `crypt-dir-1.0.8.tar` & `crypt-dir-1.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-03-31 15:19:03.977844 crypt-dir-1.0.8/
+--rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.0.8/LICENSE
+--rw-r--r--   0 khanh      (501) staff       (20)     3556 2023-03-31 15:19:03.977693 crypt-dir-1.0.8/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)     3311 2023-03-31 14:19:49.000000 crypt-dir-1.0.8/README.md
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-03-31 15:19:03.976663 crypt-dir-1.0.8/crypt_dir/
+--rw-r--r--   0 khanh      (501) staff       (20)       88 2023-03-31 12:34:48.000000 crypt-dir-1.0.8/crypt_dir/__init__.py
+--rw-r--r--   0 khanh      (501) staff       (20)     2579 2023-03-31 14:08:30.000000 crypt-dir-1.0.8/crypt_dir/crypt.py
+--rw-r--r--   0 khanh      (501) staff       (20)     6017 2023-03-31 14:08:30.000000 crypt-dir-1.0.8/crypt_dir/crypt_dir.py
+--rw-r--r--   0 khanh      (501) staff       (20)     3618 2023-03-31 14:38:51.000000 crypt-dir-1.0.8/crypt_dir/crypt_file.py
+--rw-r--r--   0 khanh      (501) staff       (20)      824 2023-03-31 14:44:06.000000 crypt-dir-1.0.8/crypt_dir/sig.py
+--rw-r--r--   0 khanh      (501) staff       (20)      467 2023-03-31 14:02:04.000000 crypt-dir-1.0.8/crypt_dir/util.py
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-03-31 15:19:03.977522 crypt-dir-1.0.8/crypt_dir.egg-info/
+--rw-r--r--   0 khanh      (501) staff       (20)     3556 2023-03-31 15:19:03.000000 crypt-dir-1.0.8/crypt_dir.egg-info/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)      313 2023-03-31 15:19:03.000000 crypt-dir-1.0.8/crypt_dir.egg-info/SOURCES.txt
+--rw-r--r--   0 khanh      (501) staff       (20)        1 2023-03-31 15:19:03.000000 crypt-dir-1.0.8/crypt_dir.egg-info/dependency_links.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       20 2023-03-31 15:19:03.000000 crypt-dir-1.0.8/crypt_dir.egg-info/requires.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       10 2023-03-31 15:19:03.000000 crypt-dir-1.0.8/crypt_dir.egg-info/top_level.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       38 2023-03-31 15:19:03.977891 crypt-dir-1.0.8/setup.cfg
+--rw-r--r--   0 khanh      (501) staff       (20)      563 2023-03-31 15:18:33.000000 crypt-dir-1.0.8/setup.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.395269 crypt-dir-1.1.0/
++-rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.1.0/LICENSE
++-rw-r--r--   0 khanh      (501) staff       (20)     3784 2023-04-06 16:08:17.395135 crypt-dir-1.1.0/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)     3526 2023-04-06 16:01:38.000000 crypt-dir-1.1.0/README.md
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.393926 crypt-dir-1.1.0/crypt_dir/
++-rw-r--r--   0 khanh      (501) staff       (20)      126 2023-04-06 16:01:38.000000 crypt-dir-1.1.0/crypt_dir/__init__.py
++-rw-r--r--   0 khanh      (501) staff       (20)     2318 2023-04-06 16:02:52.000000 crypt-dir-1.1.0/crypt_dir/crypt.py
++-rw-r--r--   0 khanh      (501) staff       (20)     6083 2023-04-06 15:55:36.000000 crypt-dir-1.1.0/crypt_dir/crypt_dir.py
++-rw-r--r--   0 khanh      (501) staff       (20)     3744 2023-04-06 16:03:15.000000 crypt-dir-1.1.0/crypt_dir/crypt_file.py
++-rw-r--r--   0 khanh      (501) staff       (20)      257 2023-04-06 15:59:40.000000 crypt-dir-1.1.0/crypt_dir/serialize.py
++-rw-r--r--   0 khanh      (501) staff       (20)      805 2023-04-06 16:03:15.000000 crypt-dir-1.1.0/crypt_dir/signature.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.394948 crypt-dir-1.1.0/crypt_dir.egg-info/
++-rw-r--r--   0 khanh      (501) staff       (20)     3784 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)      324 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/SOURCES.txt
++-rw-r--r--   0 khanh      (501) staff       (20)        1 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/dependency_links.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       20 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/requires.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       10 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/top_level.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       38 2023-04-06 16:08:17.395317 crypt-dir-1.1.0/setup.cfg
++-rw-r--r--   0 khanh      (501) staff       (20)      586 2023-04-06 16:07:55.000000 crypt-dir-1.1.0/setup.py
+```
+
+### Comparing `crypt-dir-1.0.8/LICENSE` & `crypt-dir-1.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.0.8/PKG-INFO` & `crypt-dir-1.1.0/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ Metadata-Version: 2.1
+ Name: crypt-dir
+-Version: 1.0.8
++Version: 1.1.0
+ Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+ Author: Nguyen Ngoc Khanh
+ Author-email: khanh.nguyen.contact@gmail.com
++License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # CRYPT_DIR
+ 
+ - Encrypt all your files and write into another directory if there is update
+ - Clean the encrypted directory if files or directories have been deleted
+@@ -23,85 +24,93 @@
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
+ )
+ 
+ # read files in plain_dir, encrypt and write files into encrypted_dir if needed using 12 workers
+ crypt_dir.update_encrypted_dir(
+-  key_file=key_file,
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
+-  max_workers=12,
++    key=key,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
++    max_workers=12,
+ )
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+-    key_file=key_file,
++    key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+ )
+ ```
+ 
+ # INSTALLATION
+ 
+ ```shell
+ pip install --upgrade crypt-dir
+ ```
+ 
+-
+ # DECRYPT IT YOURSELF
+ 
+ ## SPECIFICATION 1.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file is modified (mtime changes)
+ 
+ - file is decrypt-able if `signature` matches `key`
+ 
+ - `.enc1` file
+ 
+-  - `file_signature`: little-endian encoded mtime of file in uint64
+-  - `key_signature`: `SHA1` bytes of key
+-  - `file_size`: little-endian encoded file size in uint64
+-  - `iv`: `AES256` initialization vector
+-  - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
++    - `header`:
++        - `file_sig`: little-endian encoded mtime of file in uint64
++        - `key_sig`: `SHA1` bytes of key
++        - `file_size`: little-endian encoded file size in uint64
++        - `init_vec`: `AES256` initialization vector
++
++    - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
+ 
+ ```
+-|   file_signature   |   key_signature   |   file_size   |   iv          |   encrypted_data  |
++|                                      header                            |   encrypted_data  |
++|   file_sig         |   key_sig         |   file_size   |   init_vec    |   encrypted_data  |
+ |   8 bytes          |   20 bytes        |   8 bytes     |   16 bytes    |   n bytes         |
+ ```
+ 
+ ## SPECIFICATION 0.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file_hash changes
+```
+
+### Comparing `crypt-dir-1.0.8/README.md` & `crypt-dir-1.1.0/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -14,85 +14,93 @@
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
+ )
+ 
+ # read files in plain_dir, encrypt and write files into encrypted_dir if needed using 12 workers
+ crypt_dir.update_encrypted_dir(
+-  key_file=key_file,
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
+-  max_workers=12,
++    key=key,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
++    max_workers=12,
+ )
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+-    key_file=key_file,
++    key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+ )
+ ```
+ 
+ # INSTALLATION
+ 
+ ```shell
+ pip install --upgrade crypt-dir
+ ```
+ 
+-
+ # DECRYPT IT YOURSELF
+ 
+ ## SPECIFICATION 1.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file is modified (mtime changes)
+ 
+ - file is decrypt-able if `signature` matches `key`
+ 
+ - `.enc1` file
+ 
+-  - `file_signature`: little-endian encoded mtime of file in uint64
+-  - `key_signature`: `SHA1` bytes of key
+-  - `file_size`: little-endian encoded file size in uint64
+-  - `iv`: `AES256` initialization vector
+-  - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
++    - `header`:
++        - `file_sig`: little-endian encoded mtime of file in uint64
++        - `key_sig`: `SHA1` bytes of key
++        - `file_size`: little-endian encoded file size in uint64
++        - `init_vec`: `AES256` initialization vector
++
++    - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
+ 
+ ```
+-|   file_signature   |   key_signature   |   file_size   |   iv          |   encrypted_data  |
++|                                      header                            |   encrypted_data  |
++|   file_sig         |   key_sig         |   file_size   |   init_vec    |   encrypted_data  |
+ |   8 bytes          |   20 bytes        |   8 bytes     |   16 bytes    |   n bytes         |
+ ```
+ 
+ ## SPECIFICATION 0.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file_hash changes
+```
+
+### Comparing `crypt-dir-1.0.8/crypt_dir/crypt.py` & `crypt-dir-1.1.0/crypt_dir/crypt.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,84 +1,78 @@
+-import io
+ import os
+ from typing import BinaryIO
+ 
+ from Cryptodome.Cipher import AES
+ from Cryptodome.Hash import SHA1
+ 
+ HASH_SIZE = 20  # size of hash value in bytes
+ BLOCK_SIZE = AES.block_size  # size of AES block in bytes
+ KEY_SIZE = 32  # size of AES key in bytes
+ AES_MODE = AES.MODE_CBC  # cipher block chaining
+ CHUNK_SIZE = 2 ** 30  # 1 GB # chunk size to read from io in bytes
+-IV_SIZE = 16  # size of iv in bytes
+-
+-
+-def random_bytes(count: int = 1) -> bytes:
+-    return os.urandom(count)
+ 
+ 
+ def sha1_hash(f_in: BinaryIO) -> bytes:
+     h = SHA1.new()
+     while True:
+         chunk = f_in.read(CHUNK_SIZE)
+         if len(chunk) == 0:
+             b = h.digest()
+             assert len(b) == HASH_SIZE
+             return b
+         h.update(chunk)
+ 
+ 
+-def aes256_encrypt(key: bytes, iv: bytes, plain_read_io: BinaryIO, encrypted_write_io: BinaryIO):
++def aes256_encrypt(
++        key: bytes, init_vec: bytes,
++        plain_read_io: BinaryIO, encrypted_write_io: BinaryIO,
++):
+     assert BLOCK_SIZE == 16
+     assert CHUNK_SIZE % BLOCK_SIZE == 0
+-    assert len(iv) == BLOCK_SIZE
++    assert len(init_vec) == BLOCK_SIZE
+     assert len(key) == KEY_SIZE
+-    aes = AES.new(key, AES_MODE, iv)
++    aes = AES.new(key, AES_MODE, init_vec)
+     while True:
+         chunk = plain_read_io.read(CHUNK_SIZE)
+         if len(chunk) == 0:
+             return
+         if len(chunk) % BLOCK_SIZE != 0:
+             chunk += b"\0" * (BLOCK_SIZE - len(chunk) % BLOCK_SIZE)  # padded with 0s until BLOCK_SIZE
+         b = aes.encrypt(chunk)
+         encrypted_write_io.write(b)
+ 
+ 
+-def aes256_decrypt(key: bytes, iv: bytes, size: int, encrypted_read_io: BinaryIO, decrypted_write_io: BinaryIO):
++def aes256_decrypt(
++        key: bytes, init_vec: bytes, file_size: int,
++        encrypted_read_io: BinaryIO, decrypted_write_io: BinaryIO,
++):
+     assert BLOCK_SIZE == 16
+     assert CHUNK_SIZE % BLOCK_SIZE == 0
+-    assert len(iv) == BLOCK_SIZE
++    assert len(init_vec) == BLOCK_SIZE
+     assert len(key) == KEY_SIZE
+-    aes = AES.new(key, AES_MODE, iv)
+-    remaining_size = size
++    aes = AES.new(key, AES_MODE, init_vec)
++    remaining_size = file_size
+     while True:
+         chunk = encrypted_read_io.read(CHUNK_SIZE)
+         if len(chunk) == 0:
+             return
+         b = aes.decrypt(chunk)
+         if remaining_size < len(b):
+             b = b[:remaining_size]
+         decrypted_write_io.write(b)
+         remaining_size -= len(b)
+ 
+ 
+-if __name__ == "__main__":
+-    key = random_bytes(KEY_SIZE)
+-    sig = sha1_hash(io.BytesIO(key))
+-    iv = random_bytes(IV_SIZE)
+-    plain = b"hello world, this is an example message"
+-    print("plain", plain)
+-
+-    encrypted_io = io.BytesIO()
+-    aes256_encrypt(key, iv, io.BytesIO(plain), encrypted_io)
+-    encrypted_io.seek(0)
+-    encrypted = encrypted_io.read()
+-    print("encrypted", encrypted)
+-
+-    encrypted_io.seek(0)
+-    decrypted_io = io.BytesIO()
+-    aes256_decrypt(key, iv, len(plain), encrypted_io, decrypted_io)
+-    decrypted_io.seek(0)
+-    decrypted = decrypted_io.read()
+-    print("decrypt", decrypted)
+-    assert plain == decrypted
++def read_or_create_key(key_path: str) -> bytes:
++    def read_hex_file(path: str) -> bytes:
++        with open(path, "r") as f:
++            return bytes.fromhex(f.read())
++
++    def write_hex_file(path: str, b: bytes):
++        with open(path, "w") as f:
++            f.write(b.hex())
++
++    if not os.path.exists(key_path):
++        write_hex_file(key_path, os.urandom(KEY_SIZE))
++
++    key = read_hex_file(key_path)
++    return key
+```
+
+### Comparing `crypt-dir-1.0.8/crypt_dir/crypt_dir.py` & `crypt-dir-1.1.0/crypt_dir/crypt_dir.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ 
+ import concurrent.futures
+ import os
+ import shutil
+ import sys
+ from typing import *
+ 
++from .crypt import KEY_SIZE
+ from .crypt_file import Codec
+ 
+ ENCRYPTED_EXT = "enc1"
+ 
+ 
+ def delete_if_ok(encrypted_path: str):
+     if os.path.exists(encrypted_path):
+@@ -90,26 +91,27 @@
+     dir_out = os.path.abspath(dir_out)
+     for path_in in walk_dir(dir_in):
+         path_out = path_in.replace(dir_in, dir_out)
+         if not os.path.exists(path_out):
+             os.makedirs(path_out)
+ 
+ 
+-def update_encrypted_dir(key_file: str, plain_dir: str, encrypted_dir: str, max_workers: int | None = None):
++def update_encrypted_dir(key: bytes, plain_dir: str, encrypted_dir: str, max_workers: int | None = None):
+     """
+     read files in plain_dir, encrypt and write files into encrypted_dir if needed
+     :param plain_dir:
+     :param encrypted_dir:
+-    :param key_file:
++    :param key:
+     :param max_workers:
+     :return:
+     """
++    assert len(key) == KEY_SIZE
+     plain_dir = os.path.abspath(plain_dir)
+     encrypted_dir = os.path.abspath(encrypted_dir)
+-    codec = Codec(key_file)
++    codec = Codec(key)
+     copy_dir_structure(plain_dir, encrypted_dir)
+ 
+     def make_dir_and_encrypt_file_if_needed(plain_path: str):
+         encrypted_path = plain_path_to_encrypted_path(plain_dir, encrypted_dir, plain_path)
+         try:
+             os.makedirs(os.path.dirname(encrypted_path))
+         except FileExistsError:
+@@ -126,26 +128,27 @@
+                 sys.stdout.write(f"encrypted: {encrypted_path}\n")
+ 
+ 
+ def is_encrypted_file(path: str) -> bool:
+     return path.endswith(f".{ENCRYPTED_EXT}")
+ 
+ 
+-def restore_encrypted_dir(key_file: str, encrypted_dir: str, restored_dir: str, max_workers: int | None = None):
++def restore_encrypted_dir(key: bytes, encrypted_dir: str, restored_dir: str, max_workers: int | None = None):
+     """
+     decrypt all files in encrypted_dir
+     :param restored_dir:
+     :param encrypted_dir:
+-    :param key_file:
++    :param key:
+     :param max_workers:
+     :return:
+     """
++    assert len(key) == KEY_SIZE
+     encrypted_dir = os.path.abspath(encrypted_dir)
+     restored_dir = os.path.abspath(restored_dir)
+-    codec = Codec(key_file)
++    codec = Codec(key)
+     copy_dir_structure(encrypted_dir, restored_dir)
+ 
+     def decrypt_file(encrypted_path: str):
+         decrypted_path = encrypted_path_to_plain_path(restored_dir, encrypted_dir, encrypted_path)
+         try:
+             os.makedirs(os.path.dirname(decrypted_path))
+         except FileExistsError:
+```
+
+### Comparing `crypt-dir-1.0.8/crypt_dir/crypt_file.py` & `crypt-dir-1.1.0/crypt_dir/crypt_file.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,75 +1,100 @@
+ #!/usr/bin/env python
+ from __future__ import annotations
+ 
+ import io
+ import os
++from dataclasses import dataclass
++from typing import BinaryIO
+ 
+-from .crypt import aes256_encrypt, aes256_decrypt, sha1_hash, random_bytes, IV_SIZE, BLOCK_SIZE, KEY_SIZE
+-from .sig import get_file_signature, FILE_SIGNATURE_SIZE, get_key_signature, KEY_SIGNATURE_SIZE, set_file_signature
+-from .util import uint64_to_bytes, bytes_to_uint64, write_hex_file, read_hex_file, UINT64_SIZE
++from .crypt import aes256_encrypt, aes256_decrypt, sha1_hash, BLOCK_SIZE, KEY_SIZE
++from .serialize import uint64_to_bytes, bytes_to_uint64, UINT64_SIZE
++from .signature import get_file_sig, FILE_SIG_SIZE, get_key_sig, KEY_SIG_SIZE, set_file_signature
++
++
++@dataclass
++class Header:
++    file_sig: bytes
++    key_sig: bytes
++    file_size: int
++    init_vec: bytes
++
++
++def read_header(read_io: BinaryIO) -> Header:
++    file_sig = read_io.read(FILE_SIG_SIZE)
++    key_sig = read_io.read(KEY_SIG_SIZE)
++    file_size = bytes_to_uint64(read_io.read(UINT64_SIZE))
++    init_vec = read_io.read(BLOCK_SIZE)
++    return Header(file_sig=file_sig, key_sig=key_sig, file_size=file_size, init_vec=init_vec)
++
++
++def write_header(write_io: BinaryIO, header: Header):
++    write_io.write(header.file_sig)
++    write_io.write(header.key_sig)
++    write_io.write(uint64_to_bytes(header.file_size))
++    write_io.write(header.init_vec)
+ 
+ 
+ def aes256_encrypt_file_if_needed(
+         key: bytes, plain_path: str, encrypted_path: str,
+         key_sig: bytes | None = None,
+ ) -> bool:
+     if key_sig is None:
+-        key_sig = get_key_signature(key)
+-    plain_file_sig = get_file_signature(plain_path)
++        key_sig = get_key_sig(key)
++    file_sig = get_file_sig(plain_path)
+     # check file updated
+     if os.path.exists(encrypted_path):
+         with open(encrypted_path, "rb") as f:
+-            encrypted_file_sig = f.read(FILE_SIGNATURE_SIZE)
+-        if plain_file_sig == encrypted_file_sig:
++            header = read_header(f)
++        if key_sig == header.key_sig and file_sig == header.file_sig:
++            # only skip if both key_sig and file_sig are the same
+             return False
+ 
+     # encrypted file will be updated regardless its mtime is sooner or later
+     # encrypt
+-    iv = random_bytes(IV_SIZE)
+-    size = os.path.getsize(plain_path)
++    init_vec = os.urandom(BLOCK_SIZE)
++    file_size = os.path.getsize(plain_path)
+     with open(plain_path, "rb") as plain_f, open(encrypted_path, "wb") as encrypted_f:
+-        encrypted_f.write(plain_file_sig)  # 8 bytes - file signature - little endian of mtime in uint64
+-        encrypted_f.write(key_sig)  # 20 bytes - key signature
+-        encrypted_f.write(uint64_to_bytes(size))  # 8 bytes - little endian of file size in uint64
+-        encrypted_f.write(iv)  # 16 bytes - initialization vector
+-        aes256_encrypt(key=key, iv=iv, plain_read_io=plain_f, encrypted_write_io=encrypted_f)
++        write_header(write_io=encrypted_f, header=Header(
++            file_sig=file_sig,
++            key_sig=key_sig,
++            file_size=file_size,
++            init_vec=init_vec,
++        ))
++        aes256_encrypt(key=key, init_vec=init_vec, plain_read_io=plain_f, encrypted_write_io=encrypted_f)
+     return True
+ 
+ 
+ def aes256_decrypt_file(
+         key: bytes, encrypted_path: str, decrypted_path: str,
+         key_sig: bytes | None = None,
+ ):
+     if key_sig is None:
+-        key_sig = get_key_signature(key)
++        key_sig = get_key_sig(key)
+     with open(encrypted_path, "rb") as encrypted_f, open(decrypted_path, "wb") as decrypted_f:
+-        encrypted_file_sig = encrypted_f.read(FILE_SIGNATURE_SIZE)  # 8 bytes - file signature - little endian of mtime in uint64
+-        encrypted_key_sig = encrypted_f.read(KEY_SIGNATURE_SIZE)  # 20 bytes - key signature
+-        if encrypted_key_sig != key_sig:
++        header = read_header(encrypted_f)
++        if header.key_sig != key_sig:
+             raise RuntimeError(f"signature does not match for {encrypted_path}")
+-        size = bytes_to_uint64(encrypted_f.read(UINT64_SIZE))  # 8 bytes - little endian of file size in uint64
+-        iv = encrypted_f.read(BLOCK_SIZE)  # 16 bytes - initialization vector
+-        aes256_decrypt(key=key, iv=iv, size=size, encrypted_read_io=encrypted_f, decrypted_write_io=decrypted_f)
++        aes256_decrypt(key=key, init_vec=header.init_vec, file_size=header.file_size, encrypted_read_io=encrypted_f,
++                       decrypted_write_io=decrypted_f)
+     # set file signature
+-    set_file_signature(path=decrypted_path, sig=encrypted_file_sig)
++    set_file_signature(path=decrypted_path, sig=header.file_sig)
+ 
+ 
+ class Codec:
+-    def __init__(self, key_path: str):
++    def __init__(self, key: bytes):
+         """
+         Codec: encrypt and decrypt a file
+         encrypted file structure
+-        |file_signature|key_signature|file_size|iv|encrypted_data|
++        |file_sig|key_sig|file_size|init_vec|encrypted_data|
+ 
+-        :param key_path: path to key file in hex
++        :param key: key
+         """
+-        if not os.path.exists(key_path):
+-            write_hex_file(key_path, random_bytes(KEY_SIZE))
+-        self.key = read_hex_file(key_path)
++        assert len(key) == KEY_SIZE
++        self.key = key
+         self.sig = sha1_hash(io.BytesIO(self.key))
+ 
+     def encrypt_file_if_needed(self, plain_path: str, encrypted_path: str) -> bool:
+         return aes256_encrypt_file_if_needed(
+             key=self.key,
+             plain_path=plain_path,
+             encrypted_path=encrypted_path,
+```
+
+### Comparing `crypt-dir-1.0.8/crypt_dir/sig.py` & `crypt-dir-1.1.0/crypt_dir/signature.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ import io
+ import os
+ 
+ from .crypt import sha1_hash, HASH_SIZE
+-from .util import uint64_to_bytes, UINT64_SIZE, bytes_to_uint64
++from .serialize import uint64_to_bytes, UINT64_SIZE, bytes_to_uint64
+ 
+-KEY_SIGNATURE_SIZE = HASH_SIZE
+-FILE_SIGNATURE_SIZE = UINT64_SIZE
++KEY_SIG_SIZE = HASH_SIZE
++FILE_SIG_SIZE = UINT64_SIZE
+ 
+ 
+-def get_key_signature(key: bytes) -> bytes:
++def get_key_sig(key: bytes) -> bytes:
+     return sha1_hash(io.BytesIO(key))
+ 
+ 
+-def get_file_signature(path: str) -> bytes:
++def get_file_sig(path: str) -> bytes:
+     stat = os.stat(path)
+     mtime = stat.st_mtime_ns
+     return uint64_to_bytes(mtime)
+ 
+ 
+ def set_file_signature(path: str, sig: bytes):
+     mtime = bytes_to_uint64(sig)
+```
+
+### Comparing `crypt-dir-1.0.8/crypt_dir.egg-info/PKG-INFO` & `crypt-dir-1.1.0/crypt_dir.egg-info/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ Metadata-Version: 2.1
+ Name: crypt-dir
+-Version: 1.0.8
++Version: 1.1.0
+ Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+ Author: Nguyen Ngoc Khanh
+ Author-email: khanh.nguyen.contact@gmail.com
++License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # CRYPT_DIR
+ 
+ - Encrypt all your files and write into another directory if there is update
+ - Clean the encrypted directory if files or directories have been deleted
+@@ -23,85 +24,93 @@
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
+ )
+ 
+ # read files in plain_dir, encrypt and write files into encrypted_dir if needed using 12 workers
+ crypt_dir.update_encrypted_dir(
+-  key_file=key_file,
+-  plain_dir=plain_dir,
+-  encrypted_dir=encrypted_dir,
+-  max_workers=12,
++    key=key,
++    plain_dir=plain_dir,
++    encrypted_dir=encrypted_dir,
++    max_workers=12,
+ )
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+ key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
++key = crypt_dir.read_or_create_key(key_file)
++
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+-    key_file=key_file,
++    key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+ )
+ ```
+ 
+ # INSTALLATION
+ 
+ ```shell
+ pip install --upgrade crypt-dir
+ ```
+ 
+-
+ # DECRYPT IT YOURSELF
+ 
+ ## SPECIFICATION 1.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file is modified (mtime changes)
+ 
+ - file is decrypt-able if `signature` matches `key`
+ 
+ - `.enc1` file
+ 
+-  - `file_signature`: little-endian encoded mtime of file in uint64
+-  - `key_signature`: `SHA1` bytes of key
+-  - `file_size`: little-endian encoded file size in uint64
+-  - `iv`: `AES256` initialization vector
+-  - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
++    - `header`:
++        - `file_sig`: little-endian encoded mtime of file in uint64
++        - `key_sig`: `SHA1` bytes of key
++        - `file_size`: little-endian encoded file size in uint64
++        - `init_vec`: `AES256` initialization vector
++
++    - `file encrypted`: `AES256` file encrypted bytes with chunk size of `2^30`
+ 
+ ```
+-|   file_signature   |   key_signature   |   file_size   |   iv          |   encrypted_data  |
++|                                      header                            |   encrypted_data  |
++|   file_sig         |   key_sig         |   file_size   |   init_vec    |   encrypted_data  |
+ |   8 bytes          |   20 bytes        |   8 bytes     |   16 bytes    |   n bytes         |
+ ```
+ 
+ ## SPECIFICATION 0.*
+ 
+-You don't need to know the specification. For some folks who want to know exactly what happened with their files, here is the specification for `key_file` and `.enc` files:
++You don't need to know the specification. For some folks who want to know exactly what happened with their files, here
++is the specification for `key_file` and `.enc` files:
+ 
+ - if `key_file` does not exist, `crypt_dir` will create a random key of 32 bytes using `os.urandom` encoded into `hex`
+ 
+ - two algorithms are used in `crypt_dir`: `SHA1` and `AES-256` in `CBC` mode
+ 
+ - encrypted files are updated only if file_hash changes
+```
+
+### Comparing `crypt-dir-1.0.8/setup.py` & `crypt-dir-1.1.0/setup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,18 +1,19 @@
+ import setuptools
+ 
+ if __name__ == "__main__":
+     with open("README.md") as f:
+         long_description = f.read()
+     setuptools.setup(
+         name="crypt-dir",
+-        version="1.0.8",
++        version="1.1.0",
+         author="Nguyen Ngoc Khanh",
+         author_email="khanh.nguyen.contact@gmail.com",
+         long_description=long_description,
+         long_description_content_type="text/markdown",
+         url="https://github.com/khanh-nguyen-code/crypt-dir",
+         packages=setuptools.find_packages(),
++        license="MIT",
+         install_requires=[
+             "pycryptodomex==3.17",
+         ],
+     )
+```
+

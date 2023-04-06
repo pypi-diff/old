@@ -1,0 +1,132 @@
+--- tmp/chatdbt-0.0.3.tar.gz
++++ tmp/chatdbt-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "chatdbt-0.0.3.tar", max compression
+│ +gzip compressed data, was "chatdbt-0.0.4.tar", max compression
+│   --- chatdbt-0.0.3.tar
+├── +++ chatdbt-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ --rw-r--r--   0        0        0     4293 2023-04-04 11:26:15.209241 chatdbt-0.0.3/README.md
+│ │ --rw-r--r--   0        0        0      222 2023-04-06 15:53:29.281110 chatdbt-0.0.3/chatdbt/__init__.py
+│ │ --rw-r--r--   0        0        0    12939 2023-04-06 14:59:42.982624 chatdbt-0.0.3/chatdbt/chat.py
+│ │ --rw-r--r--   0        0        0      413 2023-03-30 09:50:02.949353 chatdbt-0.0.3/chatdbt/dbt_doc_resolver/__init__.py
+│ │ --rw-r--r--   0        0        0     1024 2023-04-04 10:53:56.113000 chatdbt-0.0.3/chatdbt/dbt_doc_resolver/localfs.py
+│ │ --rw-r--r--   0        0        0     2607 2023-04-06 15:53:09.650620 chatdbt-0.0.3/chatdbt/i18n.py
+│ │ --rw-r--r--   0        0        0     5387 2023-04-06 15:19:40.954618 chatdbt-0.0.3/chatdbt/model.py
+│ │ --rw-r--r--   0        0        0     1627 2023-04-06 15:12:59.226924 chatdbt-0.0.3/chatdbt/openai.py
+│ │ --rw-r--r--   0        0        0     4471 2023-04-06 15:10:00.859901 chatdbt-0.0.3/chatdbt/shortcut.py
+│ │ --rw-r--r--   0        0        0      386 2023-04-04 15:55:49.091076 chatdbt-0.0.3/chatdbt/tiktoken_provider/__init__.py
+│ │ --rw-r--r--   0        0        0      868 2023-04-04 15:55:44.322642 chatdbt-0.0.3/chatdbt/tiktoken_provider/tiktoken_http_server.py
+│ │ --rw-r--r--   0        0        0      625 2023-04-04 14:37:03.059444 chatdbt-0.0.3/chatdbt/vector_storage/__init__.py
+│ │ --rw-r--r--   0        0        0     1670 2023-03-30 11:35:03.665857 chatdbt-0.0.3/chatdbt/vector_storage/atlas.py
+│ │ --rw-r--r--   0        0        0     2670 2023-04-04 14:42:21.851573 chatdbt-0.0.3/chatdbt/vector_storage/pgvector.py
+│ │ --rw-r--r--   0        0        0     2219 2023-04-06 15:56:04.867521 chatdbt-0.0.3/pyproject.toml
+│ │ --rw-r--r--   0        0        0     5385 1970-01-01 00:00:00.000000 chatdbt-0.0.3/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     4293 2023-04-04 11:26:15.209241 chatdbt-0.0.4/README.md
+│ │ +-rw-r--r--   0        0        0      222 2023-04-06 16:00:42.469668 chatdbt-0.0.4/chatdbt/__init__.py
+│ │ +-rw-r--r--   0        0        0    12939 2023-04-06 14:59:42.982624 chatdbt-0.0.4/chatdbt/chat.py
+│ │ +-rw-r--r--   0        0        0      413 2023-03-30 09:50:02.949353 chatdbt-0.0.4/chatdbt/dbt_doc_resolver/__init__.py
+│ │ +-rw-r--r--   0        0        0     1024 2023-04-04 10:53:56.113000 chatdbt-0.0.4/chatdbt/dbt_doc_resolver/localfs.py
+│ │ +-rw-r--r--   0        0        0     2758 2023-04-06 16:00:46.107825 chatdbt-0.0.4/chatdbt/i18n.py
+│ │ +-rw-r--r--   0        0        0     5387 2023-04-06 15:19:40.954618 chatdbt-0.0.4/chatdbt/model.py
+│ │ +-rw-r--r--   0        0        0     1627 2023-04-06 15:12:59.226924 chatdbt-0.0.4/chatdbt/openai.py
+│ │ +-rw-r--r--   0        0        0     4471 2023-04-06 15:10:00.859901 chatdbt-0.0.4/chatdbt/shortcut.py
+│ │ +-rw-r--r--   0        0        0      386 2023-04-04 15:55:49.091076 chatdbt-0.0.4/chatdbt/tiktoken_provider/__init__.py
+│ │ +-rw-r--r--   0        0        0      868 2023-04-04 15:55:44.322642 chatdbt-0.0.4/chatdbt/tiktoken_provider/tiktoken_http_server.py
+│ │ +-rw-r--r--   0        0        0      625 2023-04-04 14:37:03.059444 chatdbt-0.0.4/chatdbt/vector_storage/__init__.py
+│ │ +-rw-r--r--   0        0        0     1670 2023-03-30 11:35:03.665857 chatdbt-0.0.4/chatdbt/vector_storage/atlas.py
+│ │ +-rw-r--r--   0        0        0     2670 2023-04-04 14:42:21.851573 chatdbt-0.0.4/chatdbt/vector_storage/pgvector.py
+│ │ +-rw-r--r--   0        0        0     2219 2023-04-06 16:01:49.751832 chatdbt-0.0.4/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     5385 1970-01-01 00:00:00.000000 chatdbt-0.0.4/PKG-INFO
+│ │   --- chatdbt-0.0.3/README.md
+│ ├── +++ chatdbt-0.0.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/chat.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/chat.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/dbt_doc_resolver/localfs.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/dbt_doc_resolver/localfs.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/i18n.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/i18n.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -16,26 +16,26 @@
+│ │  
+│ │  
+│ │  _i18n = {
+│ │      "en-us": {
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_CONTENT: "You are a sql master",
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_RELATED_TABLES: "Here are some tables with description: {}",
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_RELATED_MESSAGES: "Here are some related chat messages: {}",
+│ │ -        I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_TABLES: "My question is '{}'. Can you tell me which table in ({}) I should use? why?",
+│ │ +        I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_TABLES: "My question is '{}'. Can you tell me which table in ({}) I should use(Please select from the table provided above or from the table listed in depends_on)? why?",
+│ │          I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_SQL: "My question is '{}'. Can you tell me which table in ({}) I should use(Please select from the table provided above or from the table listed in depends_on)? why? Can you write a sql to complete my question based on this table?",
+│ │          I18nKey.KEY_NO_RESPONSE: "Sorry, I can't find any tables",
+│ │          I18nKey.KEY_MESSAGE_related_tables: "Related tables",
+│ │          I18nKey.KEY_MESSAGE_related_messages: "Related messages",
+│ │      },
+│ │      "zh-cn": {
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_CONTENT: "你是一位 SQL 专家",
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_RELATED_TABLES: "这里有一些 table 的描述: {}",
+│ │          I18nKey.KEY_PROMPT_SYSTEM_ROLE_RELATED_MESSAGES: "这里有一些相关的聊天记录: {}",
+│ │          I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_TABLES: "我的问题是 '{}'. 你能告诉我我应该使用哪个 table 吗(请从上面提供的 table 或 depends_on 中的 table 中选取)? 为什么?",
+│ │ -        I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_SQL: "我的问题是 '{}'. 你能告诉我我应该使用哪个 table 吗? 为什么? 你能基于这个 table ，写一段 sql 来完成我的问题吗？",
+│ │ +        I18nKey.KEY_PROMPT_USER_ROLE_SUGGEST_SQL: "我的问题是 '{}'. 你能告诉我我应该使用哪个 table 吗(请从上面提供的 table 或 depends_on 中的 table 中选取)? 为什么? 你能基于这个 table ，写一段 sql 来完成我的问题吗？",
+│ │          I18nKey.KEY_NO_RESPONSE: "抱歉，我检索不到任何 table",
+│ │          I18nKey.KEY_MESSAGE_related_tables: "相关的 table",
+│ │          I18nKey.KEY_MESSAGE_related_messages: "相关的聊天记录",
+│ │      },
+│ │  }
+│ │   --- chatdbt-0.0.3/chatdbt/model.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/model.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/openai.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/openai.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/shortcut.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/shortcut.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/tiktoken_provider/tiktoken_http_server.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/tiktoken_provider/tiktoken_http_server.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/vector_storage/__init__.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/vector_storage/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/vector_storage/atlas.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/vector_storage/atlas.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/chatdbt/vector_storage/pgvector.py
+│ ├── +++ chatdbt-0.0.4/chatdbt/vector_storage/pgvector.py
+│ │┄ Files identical despite different names
+│ │   --- chatdbt-0.0.3/pyproject.toml
+│ ├── +++ chatdbt-0.0.4/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "chatdbt"
+│ │ -version = "0.0.3"
+│ │ +version = "0.0.4"
+│ │  description = "chatdbt is an openai-based dbt documentation robot. You can use natural language to describe your data query requirements to the robot, and chatdbt will help you select the dbt model you need, or generate sql responses based on these dbt models to meet your need"
+│ │  authors = ["cadl <ctrlaltdeleteliu@gmail.com>"]
+│ │  readme = "README.md"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.7.1,<3.11"
+│ │  pydantic = "^1.9"
+│ │   --- chatdbt-0.0.3/PKG-INFO
+│ ├── +++ chatdbt-0.0.4/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: chatdbt
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: chatdbt is an openai-based dbt documentation robot. You can use natural language to describe your data query requirements to the robot, and chatdbt will help you select the dbt model you need, or generate sql responses based on these dbt models to meet your need
+│ │  Author: cadl
+│ │  Author-email: ctrlaltdeleteliu@gmail.com
+│ │  Requires-Python: >=3.7.1,<3.11
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9

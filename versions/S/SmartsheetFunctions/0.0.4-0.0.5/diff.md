@@ -1,0 +1,173 @@
+# Comparing `tmp/SmartsheetFunctions-0.0.4.tar.gz` & `tmp/SmartsheetFunctions-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "SmartsheetFunctions-0.0.4.tar", last modified: Thu Apr  6 16:01:44 2023, max compression
++gzip compressed data, was "SmartsheetFunctions-0.0.5.tar", last modified: Thu Apr  6 16:03:31 2023, max compression
+```
+
+## Comparing `SmartsheetFunctions-0.0.4.tar` & `SmartsheetFunctions-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:01:44.420756 SmartsheetFunctions-0.0.4/
+--rw-rw-rw-   0        0        0     1092 2023-04-06 14:51:56.000000 SmartsheetFunctions-0.0.4/LICENSE
+--rw-rw-rw-   0        0        0     4993 2023-04-06 16:01:44.419759 SmartsheetFunctions-0.0.4/PKG-INFO
+--rw-rw-rw-   0        0        0     4590 2023-04-06 16:01:18.000000 SmartsheetFunctions-0.0.4/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:01:44.399268 SmartsheetFunctions-0.0.4/SmartsheetFunctions/
+--rw-rw-rw-   0        0        0        0 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions/__init__.py
+--rw-rw-rw-   0        0        0     8945 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions/smartsheet.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:01:44.415763 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/
+--rw-rw-rw-   0        0        0     4993 2023-04-06 16:01:44.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      306 2023-04-06 16:01:44.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 16:01:44.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        9 2023-04-06 16:01:44.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       20 2023-04-06 16:01:44.000000 SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 16:01:44.420756 SmartsheetFunctions-0.0.4/setup.cfg
+--rw-rw-rw-   0        0        0      761 2023-04-06 16:01:27.000000 SmartsheetFunctions-0.0.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:03:31.458838 SmartsheetFunctions-0.0.5/
++-rw-rw-rw-   0        0        0     1092 2023-04-06 14:51:56.000000 SmartsheetFunctions-0.0.5/LICENSE
++-rw-rw-rw-   0        0        0     4992 2023-04-06 16:03:31.455841 SmartsheetFunctions-0.0.5/PKG-INFO
++-rw-rw-rw-   0        0        0     4589 2023-04-06 16:03:02.000000 SmartsheetFunctions-0.0.5/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 16:03:31.442852 SmartsheetFunctions-0.0.5/SmartsheetFunctions/
++-rw-rw-rw-   0        0        0        0 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions/__init__.py
++-rw-rw-rw-   0        0        0     8945 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions/smartsheet.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:03:31.453838 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/
++-rw-rw-rw-   0        0        0     4992 2023-04-06 16:03:31.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      306 2023-04-06 16:03:31.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 16:03:31.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 16:03:31.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       20 2023-04-06 16:03:31.000000 SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 16:03:31.459838 SmartsheetFunctions-0.0.5/setup.cfg
++-rw-rw-rw-   0        0        0      761 2023-04-06 16:03:15.000000 SmartsheetFunctions-0.0.5/setup.py
+```
+
+### Comparing `SmartsheetFunctions-0.0.4/LICENSE` & `SmartsheetFunctions-0.0.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `SmartsheetFunctions-0.0.4/PKG-INFO` & `SmartsheetFunctions-0.0.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SmartsheetFunctions
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: SmartSheet Functions for development
+ Author: Derek Bantel
+ Author-email: derekbantel@outlook.com
+ License: MIT
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -16,15 +16,15 @@
+ This Python library provides several easy-to-use methods for interacting with the SmartSheet API. The SmartSheet class is used to interact with sheets in a SmartSheet account, while the SmartFolder class is used to interact with folders.
+ 
+ ## Usage
+ 
+ 1. Import the library:
+ 
+    ```python
+-   from SmarthSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
++   from SmartSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
+ 
+ 2. Create a SmartSheet object by providing a sheet ID and an API token:
+     ```python
+     sheet_id = "your-sheet-id"
+     api_token = "your-api-token"
+     ss = SmartSheet(sheet_id, api_token)
+```
+
+### Comparing `SmartsheetFunctions-0.0.4/README.md` & `SmartsheetFunctions-0.0.5/README.md`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ This Python library provides several easy-to-use methods for interacting with the SmartSheet API. The SmartSheet class is used to interact with sheets in a SmartSheet account, while the SmartFolder class is used to interact with folders.
+ 
+ ## Usage
+ 
+ 1. Import the library:
+ 
+    ```python
+-   from SmarthSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
++   from SmartSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
+ 
+ 2. Create a SmartSheet object by providing a sheet ID and an API token:
+     ```python
+     sheet_id = "your-sheet-id"
+     api_token = "your-api-token"
+     ss = SmartSheet(sheet_id, api_token)
+```
+
+### Comparing `SmartsheetFunctions-0.0.4/SmartsheetFunctions/smartsheet.py` & `SmartsheetFunctions-0.0.5/SmartsheetFunctions/smartsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SmartsheetFunctions-0.0.4/SmartsheetFunctions.egg-info/PKG-INFO` & `SmartsheetFunctions-0.0.5/SmartsheetFunctions.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SmartsheetFunctions
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: SmartSheet Functions for development
+ Author: Derek Bantel
+ Author-email: derekbantel@outlook.com
+ License: MIT
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -16,15 +16,15 @@
+ This Python library provides several easy-to-use methods for interacting with the SmartSheet API. The SmartSheet class is used to interact with sheets in a SmartSheet account, while the SmartFolder class is used to interact with folders.
+ 
+ ## Usage
+ 
+ 1. Import the library:
+ 
+    ```python
+-   from SmarthSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
++   from SmartSheetFunctions import SmartSheet, SmartFolder, create_smartsheet
+ 
+ 2. Create a SmartSheet object by providing a sheet ID and an API token:
+     ```python
+     sheet_id = "your-sheet-id"
+     api_token = "your-api-token"
+     ss = SmartSheet(sheet_id, api_token)
+```
+
+### Comparing `SmartsheetFunctions-0.0.4/setup.py` & `SmartsheetFunctions-0.0.5/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ # read the contents of your README file
+ from pathlib import Path
+ this_directory = Path(__file__).parent
+ long_description = (this_directory / "README.md").read_text()
+ 
+ setuptools.setup(
+     name="SmartsheetFunctions",
+-    version="0.0.4",
++    version="0.0.5",
+     author="Derek Bantel",
+     author_email="derekbantel@outlook.com",
+     description="SmartSheet Functions for development",
+     long_description=long_description,
+     long_description_content_type='text/markdown',
+     license="MIT",
+     packages=["SmartsheetFunctions"],
+```
+

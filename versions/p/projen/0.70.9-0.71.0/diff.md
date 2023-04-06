@@ -1,0 +1,2579 @@
+# Comparing `tmp/projen-0.70.9.tar.gz` & `tmp/projen-0.71.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "projen-0.70.9.tar", last modified: Mon Apr  3 10:27:53 2023, max compression
++gzip compressed data, was "projen-0.71.0.tar", last modified: Thu Apr  6 16:10:07 2023, max compression
+```
+
+## Comparing `projen-0.70.9.tar` & `projen-0.71.0.tar`
+
+### file list
+
+```diff
+@@ -1,55 +1,55 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.093658 projen-0.70.9/
+--rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-03 10:27:39.000000 projen-0.70.9/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-03 10:27:39.000000 projen-0.70.9/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    55403 2023-04-03 10:27:53.093658 projen-0.70.9/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    54524 2023-04-03 10:27:39.000000 projen-0.70.9/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-03 10:27:39.000000 projen-0.70.9/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-03 10:27:53.093658 projen-0.70.9/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2058 2023-04-03 10:27:39.000000 projen-0.70.9/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.073658 projen-0.70.9/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.077658 projen-0.70.9/src/projen/
+--rw-r--r--   0 runner    (1001) docker     (123)   565517 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.077658 projen-0.70.9/src/projen/_jsii/
+--rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/_jsii/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.081658 projen-0.70.9/src/projen/_jsii/bin/
+--rw-r--r--   0 runner    (1001) docker     (123)      249 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/_jsii/bin/projen
+--rw-r--r--   0 runner    (1001) docker     (123)  3339414 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/_jsii/projen@0.70.9.jsii.tgz
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.081658 projen-0.70.9/src/projen/awscdk/
+--rw-r--r--   0 runner    (1001) docker     (123)  1031705 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/awscdk/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/build/
+--rw-r--r--   0 runner    (1001) docker     (123)    39873 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/build/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/cdk/
+--rw-r--r--   0 runner    (1001) docker     (123)   475192 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/cdk/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/cdk8s/
+--rw-r--r--   0 runner    (1001) docker     (123)   568763 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/cdk8s/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/cdktf/
+--rw-r--r--   0 runner    (1001) docker     (123)   210426 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/cdktf/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/circleci/
+--rw-r--r--   0 runner    (1001) docker     (123)    75837 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/circleci/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/github/
+--rw-r--r--   0 runner    (1001) docker     (123)   220633 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/github/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)   235582 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/github/workflows/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.085658 projen-0.70.9/src/projen/gitlab/
+--rw-r--r--   0 runner    (1001) docker     (123)   192753 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/gitlab/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/java/
+--rw-r--r--   0 runner    (1001) docker     (123)   174928 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/java/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/javascript/
+--rw-r--r--   0 runner    (1001) docker     (123)   585936 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/javascript/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/python/
+--rw-r--r--   0 runner    (1001) docker     (123)   187110 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/python/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/release/
+--rw-r--r--   0 runner    (1001) docker     (123)   246151 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/release/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/typescript/
+--rw-r--r--   0 runner    (1001) docker     (123)   423064 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/typescript/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/vscode/
+--rw-r--r--   0 runner    (1001) docker     (123)    54316 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/vscode/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.089658 projen-0.70.9/src/projen/web/
+--rw-r--r--   0 runner    (1001) docker     (123)   745214 2023-04-03 10:27:39.000000 projen-0.70.9/src/projen/web/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 10:27:53.077658 projen-0.70.9/src/projen.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    55403 2023-04-03 10:27:53.000000 projen-0.70.9/src/projen.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      852 2023-04-03 10:27:53.000000 projen-0.70.9/src/projen.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 10:27:53.000000 projen-0.70.9/src/projen.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-03 10:27:53.000000 projen-0.70.9/src/projen.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-03 10:27:53.000000 projen-0.70.9/src/projen.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.451689 projen-0.71.0/
++-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-06 16:09:55.000000 projen-0.71.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 16:09:55.000000 projen-0.71.0/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    55403 2023-04-06 16:10:07.451689 projen-0.71.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    54524 2023-04-06 16:09:55.000000 projen-0.71.0/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-06 16:09:55.000000 projen-0.71.0/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 16:10:07.451689 projen-0.71.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2058 2023-04-06 16:09:55.000000 projen-0.71.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.435689 projen-0.71.0/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.439689 projen-0.71.0/src/projen/
++-rw-r--r--   0 runner    (1001) docker     (123)   579961 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.439689 projen-0.71.0/src/projen/_jsii/
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/_jsii/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.443689 projen-0.71.0/src/projen/_jsii/bin/
++-rw-r--r--   0 runner    (1001) docker     (123)      249 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/_jsii/bin/projen
++-rw-r--r--   0 runner    (1001) docker     (123)  3348765 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/_jsii/projen@0.71.0.jsii.tgz
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.443689 projen-0.71.0/src/projen/awscdk/
++-rw-r--r--   0 runner    (1001) docker     (123)  1031705 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/awscdk/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.443689 projen-0.71.0/src/projen/build/
++-rw-r--r--   0 runner    (1001) docker     (123)    39873 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/build/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.443689 projen-0.71.0/src/projen/cdk/
++-rw-r--r--   0 runner    (1001) docker     (123)   475192 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/cdk/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/cdk8s/
++-rw-r--r--   0 runner    (1001) docker     (123)   568763 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/cdk8s/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/cdktf/
++-rw-r--r--   0 runner    (1001) docker     (123)   210426 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/cdktf/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/circleci/
++-rw-r--r--   0 runner    (1001) docker     (123)    75837 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/circleci/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/github/
++-rw-r--r--   0 runner    (1001) docker     (123)   275214 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/github/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)   235582 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/github/workflows/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/gitlab/
++-rw-r--r--   0 runner    (1001) docker     (123)   192753 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/gitlab/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/java/
++-rw-r--r--   0 runner    (1001) docker     (123)   174928 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/java/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/javascript/
++-rw-r--r--   0 runner    (1001) docker     (123)   585936 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/javascript/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/python/
++-rw-r--r--   0 runner    (1001) docker     (123)   187110 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/python/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/release/
++-rw-r--r--   0 runner    (1001) docker     (123)   246151 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/release/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.447689 projen-0.71.0/src/projen/typescript/
++-rw-r--r--   0 runner    (1001) docker     (123)   423064 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/typescript/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.451689 projen-0.71.0/src/projen/vscode/
++-rw-r--r--   0 runner    (1001) docker     (123)    54316 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/vscode/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.451689 projen-0.71.0/src/projen/web/
++-rw-r--r--   0 runner    (1001) docker     (123)   745214 2023-04-06 16:09:55.000000 projen-0.71.0/src/projen/web/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:10:07.439689 projen-0.71.0/src/projen.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    55403 2023-04-06 16:10:07.000000 projen-0.71.0/src/projen.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      852 2023-04-06 16:10:07.000000 projen-0.71.0/src/projen.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:10:07.000000 projen-0.71.0/src/projen.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 16:10:07.000000 projen-0.71.0/src/projen.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-06 16:10:07.000000 projen-0.71.0/src/projen.egg-info/top_level.txt
+```
+
+### Comparing `projen-0.70.9/LICENSE` & `projen-0.71.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/PKG-INFO` & `projen-0.71.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: projen
+-Version: 0.70.9
++Version: 0.71.0
+ Summary: CDK for software projects
+ Home-page: https://github.com/projen/projen.git
+ Author: Amazon Web Services
+ License: Apache-2.0
+ Project-URL: Source, https://github.com/projen/projen.git
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `projen-0.70.9/README.md` & `projen-0.71.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/setup.py` & `projen-0.71.0/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import json
+ import setuptools
+ 
+ kwargs = json.loads(
+     """
+ {
+     "name": "projen",
+-    "version": "0.70.9",
++    "version": "0.71.0",
+     "description": "CDK for software projects",
+     "license": "Apache-2.0",
+     "url": "https://github.com/projen/projen.git",
+     "long_description_content_type": "text/markdown",
+     "author": "Amazon Web Services",
+     "bdist_wheel": {
+         "universal": true
+@@ -38,23 +38,23 @@
+         "projen.release",
+         "projen.typescript",
+         "projen.vscode",
+         "projen.web"
+     ],
+     "package_data": {
+         "projen._jsii": [
+-            "projen@0.70.9.jsii.tgz"
++            "projen@0.71.0.jsii.tgz"
+         ],
+         "projen": [
+             "py.typed"
+         ]
+     },
+     "python_requires": "~=3.7",
+     "install_requires": [
+-        "jsii>=1.79.0, <2.0.0",
++        "jsii>=1.80.0, <2.0.0",
+         "publication>=0.0.3",
+         "typeguard~=2.13.3"
+     ],
+     "classifiers": [
+         "Intended Audience :: Developers",
+         "Operating System :: OS Independent",
+         "Programming Language :: JavaScript",
+```
+
+### Comparing `projen-0.70.9/src/projen/__init__.py` & `projen-0.71.0/src/projen/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -5573,14 +5573,15 @@
+         return typing.cast(None, jsii.invoke(self, "addPackageIgnore", [_pattern]))
+ 
+     @jsii.member(jsii_name="addTask")
+     def add_task(
+         self,
+         name: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         exec: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+         steps: typing.Optional[typing.Sequence[typing.Union["TaskStep", typing.Dict[builtins.str, typing.Any]]]] = None,
+         condition: typing.Optional[builtins.str] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         description: typing.Optional[builtins.str] = None,
+         env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+@@ -5588,14 +5589,15 @@
+     ) -> "Task":
+         '''(experimental) Adds a new task to this project.
+ 
+         This will fail if the project already has
+         a task with this name.
+ 
+         :param name: The task name to add.
++        :param args: (experimental) Should the provided ``exec`` shell command receive fixed args. Default: - no arguments are passed to the step
+         :param exec: (experimental) Shell command to execute as the first command of the task. Default: - add steps using ``task.exec(command)`` or ``task.spawn(subtask)``
+         :param receive_args: (experimental) Should the provided ``exec`` shell command receive args passed to the task. Default: false
+         :param steps: (experimental) List of task steps to run.
+         :param condition: (experimental) A shell command which determines if the this task should be executed. If the program exits with a zero exit code, steps will be executed. A non-zero code means that task will be skipped.
+         :param cwd: (experimental) The working directory for all steps in this task (unless overridden by the step). Default: - process.cwd()
+         :param description: (experimental) The description of this build command. Default: - the task name
+         :param env: (experimental) Defines environment variables for the execution of this task. Values in this map will be evaluated in a shell, so you can do stuff like ``$(echo "foo")``. Default: {}
+@@ -5603,14 +5605,15 @@
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__deb7240461e3476c5778bf65eccdf771a733a6c994c9ab1093bf5302284f6e8d)
+             check_type(argname="argument name", value=name, expected_type=type_hints["name"])
+         props = TaskOptions(
++            args=args,
+             exec=exec,
+             receive_args=receive_args,
+             steps=steps,
+             condition=condition,
+             cwd=cwd,
+             description=description,
+             env=env,
+@@ -7635,25 +7638,27 @@
+     :stability: experimental
+     '''
+ 
+     def __init__(
+         self,
+         name: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         exec: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+         steps: typing.Optional[typing.Sequence[typing.Union["TaskStep", typing.Dict[builtins.str, typing.Any]]]] = None,
+         condition: typing.Optional[builtins.str] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         description: typing.Optional[builtins.str] = None,
+         env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+         required_env: typing.Optional[typing.Sequence[builtins.str]] = None,
+     ) -> None:
+         '''
+         :param name: -
++        :param args: (experimental) Should the provided ``exec`` shell command receive fixed args. Default: - no arguments are passed to the step
+         :param exec: (experimental) Shell command to execute as the first command of the task. Default: - add steps using ``task.exec(command)`` or ``task.spawn(subtask)``
+         :param receive_args: (experimental) Should the provided ``exec`` shell command receive args passed to the task. Default: false
+         :param steps: (experimental) List of task steps to run.
+         :param condition: (experimental) A shell command which determines if the this task should be executed. If the program exits with a zero exit code, steps will be executed. A non-zero code means that task will be skipped.
+         :param cwd: (experimental) The working directory for all steps in this task (unless overridden by the step). Default: - process.cwd()
+         :param description: (experimental) The description of this build command. Default: - the task name
+         :param env: (experimental) Defines environment variables for the execution of this task. Values in this map will be evaluated in a shell, so you can do stuff like ``$(echo "foo")``. Default: {}
+@@ -7661,14 +7666,15 @@
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__679ed15034b92ce65671fe4889a8e0476b00d6023000c4f1035f69d18ac8760c)
+             check_type(argname="argument name", value=name, expected_type=type_hints["name"])
+         props = TaskOptions(
++            args=args,
+             exec=exec,
+             receive_args=receive_args,
+             steps=steps,
+             condition=condition,
+             cwd=cwd,
+             description=description,
+             env=env,
+@@ -7711,31 +7717,35 @@
+         return typing.cast(None, jsii.invoke(self, "env", [name, value]))
+ 
+     @jsii.member(jsii_name="exec")
+     def exec(
+         self,
+         command: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Executes a shell command.
+ 
+         :param command: Shell command.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__866645d9e72b430281a892f9aec648a8a4d11dfd83393ea8d1cf161c619f40ce)
+             check_type(argname="argument command", value=command, expected_type=type_hints["command"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "exec", [command, options]))
+ 
+     @jsii.member(jsii_name="lock")
+     def lock(self) -> None:
+         '''(experimental) Forbid additional changes to this task.
+ 
+@@ -7744,183 +7754,211 @@
+         return typing.cast(None, jsii.invoke(self, "lock", []))
+ 
+     @jsii.member(jsii_name="prepend")
+     def prepend(
+         self,
+         shell: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(deprecated) Adds a command at the beginning of the task.
+ 
+         :param shell: The command to add.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :deprecated: use ``prependExec()``
+ 
+         :stability: deprecated
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__72dcbc585fdab7a308274ba33cb7b5bcf9e106aaf01bef404fbb15b6c60db4c4)
+             check_type(argname="argument shell", value=shell, expected_type=type_hints["shell"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "prepend", [shell, options]))
+ 
+     @jsii.member(jsii_name="prependExec")
+     def prepend_exec(
+         self,
+         shell: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Adds a command at the beginning of the task.
+ 
+         :param shell: The command to add.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__6303cc71c3e6fb4aba7cadb07d20f36a327564e7e91f7baf72d0bb511b02f9d8)
+             check_type(argname="argument shell", value=shell, expected_type=type_hints["shell"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "prependExec", [shell, options]))
+ 
+     @jsii.member(jsii_name="prependSay")
+     def prepend_say(
+         self,
+         message: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Says something at the beginning of the task.
+ 
+         :param message: Your message.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__83e687ef928f97e72aa2e81b8d6d9eb6d68cfdfb3063bfbd3f8c9e4ea8177cf5)
+             check_type(argname="argument message", value=message, expected_type=type_hints["message"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "prependSay", [message, options]))
+ 
+     @jsii.member(jsii_name="prependSpawn")
+     def prepend_spawn(
+         self,
+         subtask: "Task",
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Adds a spawn instruction at the beginning of the task.
+ 
+         :param subtask: The subtask to execute.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__80be0ec2af5c5b034b9ad26a372663b2dede8547b402f7501bd174f174db2d3a)
+             check_type(argname="argument subtask", value=subtask, expected_type=type_hints["subtask"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "prependSpawn", [subtask, options]))
+ 
+     @jsii.member(jsii_name="reset")
+     def reset(
+         self,
+         command: typing.Optional[builtins.str] = None,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Reset the task so it no longer has any commands.
+ 
+         :param command: the first command to add to the task after it was cleared.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__bec2ab04da022f328e54a5747cb659465473a80e61ea4b23af06f41a51eaf8a8)
+             check_type(argname="argument command", value=command, expected_type=type_hints["command"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "reset", [command, options]))
+ 
+     @jsii.member(jsii_name="say")
+     def say(
+         self,
+         message: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Say something.
+ 
+         :param message: Your message.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__7da16e7abde21673795e791b1dc02e7b9c04503d828a84a24ad2e0950514f3d1)
+             check_type(argname="argument message", value=message, expected_type=type_hints["message"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "say", [message, options]))
+ 
+     @jsii.member(jsii_name="spawn")
+     def spawn(
+         self,
+         subtask: "Task",
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Spawns a sub-task.
+ 
+         :param subtask: The subtask to execute.
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__30afd72afdc7d9e0229d01ea2f502a330dca643bfa30b79876a78ec24110ee41)
+             check_type(argname="argument subtask", value=subtask, expected_type=type_hints["subtask"])
+-        options = TaskStepOptions(cwd=cwd, name=name, receive_args=receive_args)
++        options = TaskStepOptions(
++            args=args, cwd=cwd, name=name, receive_args=receive_args
++        )
+ 
+         return typing.cast(None, jsii.invoke(self, "spawn", [subtask, options]))
+ 
+     @builtins.property
+     @jsii.member(jsii_name="name")
+     def name(self) -> builtins.str:
+         '''(experimental) Task name.
+@@ -8094,65 +8132,71 @@
+     jsii_struct_bases=[TaskCommonOptions],
+     name_mapping={
+         "condition": "condition",
+         "cwd": "cwd",
+         "description": "description",
+         "env": "env",
+         "required_env": "requiredEnv",
++        "args": "args",
+         "exec": "exec",
+         "receive_args": "receiveArgs",
+         "steps": "steps",
+     },
+ )
+ class TaskOptions(TaskCommonOptions):
+     def __init__(
+         self,
+         *,
+         condition: typing.Optional[builtins.str] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         description: typing.Optional[builtins.str] = None,
+         env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+         required_env: typing.Optional[typing.Sequence[builtins.str]] = None,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         exec: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+         steps: typing.Optional[typing.Sequence[typing.Union["TaskStep", typing.Dict[builtins.str, typing.Any]]]] = None,
+     ) -> None:
+         '''
+         :param condition: (experimental) A shell command which determines if the this task should be executed. If the program exits with a zero exit code, steps will be executed. A non-zero code means that task will be skipped.
+         :param cwd: (experimental) The working directory for all steps in this task (unless overridden by the step). Default: - process.cwd()
+         :param description: (experimental) The description of this build command. Default: - the task name
+         :param env: (experimental) Defines environment variables for the execution of this task. Values in this map will be evaluated in a shell, so you can do stuff like ``$(echo "foo")``. Default: {}
+         :param required_env: (experimental) A set of environment variables that must be defined in order to execute this task. Task execution will fail if one of these is not defined.
++        :param args: (experimental) Should the provided ``exec`` shell command receive fixed args. Default: - no arguments are passed to the step
+         :param exec: (experimental) Shell command to execute as the first command of the task. Default: - add steps using ``task.exec(command)`` or ``task.spawn(subtask)``
+         :param receive_args: (experimental) Should the provided ``exec`` shell command receive args passed to the task. Default: false
+         :param steps: (experimental) List of task steps to run.
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__4b67d140d8d3bc0d4265c1dc732e2e99b3a05600097a65f0baa8803715ced0be)
+             check_type(argname="argument condition", value=condition, expected_type=type_hints["condition"])
+             check_type(argname="argument cwd", value=cwd, expected_type=type_hints["cwd"])
+             check_type(argname="argument description", value=description, expected_type=type_hints["description"])
+             check_type(argname="argument env", value=env, expected_type=type_hints["env"])
+             check_type(argname="argument required_env", value=required_env, expected_type=type_hints["required_env"])
++            check_type(argname="argument args", value=args, expected_type=type_hints["args"])
+             check_type(argname="argument exec", value=exec, expected_type=type_hints["exec"])
+             check_type(argname="argument receive_args", value=receive_args, expected_type=type_hints["receive_args"])
+             check_type(argname="argument steps", value=steps, expected_type=type_hints["steps"])
+         self._values: typing.Dict[builtins.str, typing.Any] = {}
+         if condition is not None:
+             self._values["condition"] = condition
+         if cwd is not None:
+             self._values["cwd"] = cwd
+         if description is not None:
+             self._values["description"] = description
+         if env is not None:
+             self._values["env"] = env
+         if required_env is not None:
+             self._values["required_env"] = required_env
++        if args is not None:
++            self._values["args"] = args
+         if exec is not None:
+             self._values["exec"] = exec
+         if receive_args is not None:
+             self._values["receive_args"] = receive_args
+         if steps is not None:
+             self._values["steps"] = steps
+ 
+@@ -8212,14 +8256,26 @@
+ 
+         :stability: experimental
+         '''
+         result = self._values.get("required_env")
+         return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+ 
+     @builtins.property
++    def args(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Should the provided ``exec`` shell command receive fixed args.
++
++        :default: - no arguments are passed to the step
++
++        :see: {@link TaskStepOptions.args }
++        :stability: experimental
++        '''
++        result = self._values.get("args")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
+     def exec(self) -> typing.Optional[builtins.str]:
+         '''(experimental) Shell command to execute as the first command of the task.
+ 
+         :default: - add steps using ``task.exec(command)`` or ``task.spawn(subtask)``
+ 
+         :stability: experimental
+         '''
+@@ -8499,46 +8555,84 @@
+             k + "=" + repr(v) for k, v in self._values.items()
+         )
+ 
+ 
+ @jsii.data_type(
+     jsii_type="projen.TaskStepOptions",
+     jsii_struct_bases=[],
+-    name_mapping={"cwd": "cwd", "name": "name", "receive_args": "receiveArgs"},
++    name_mapping={
++        "args": "args",
++        "cwd": "cwd",
++        "name": "name",
++        "receive_args": "receiveArgs",
++    },
+ )
+ class TaskStepOptions:
+     def __init__(
+         self,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+     ) -> None:
+         '''(experimental) Options for task steps.
+ 
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__2eac93e499bd717527ab62b174c5bd1e157bf4043f5d771b6a289f39177d124a)
++            check_type(argname="argument args", value=args, expected_type=type_hints["args"])
+             check_type(argname="argument cwd", value=cwd, expected_type=type_hints["cwd"])
+             check_type(argname="argument name", value=name, expected_type=type_hints["name"])
+             check_type(argname="argument receive_args", value=receive_args, expected_type=type_hints["receive_args"])
+         self._values: typing.Dict[builtins.str, typing.Any] = {}
++        if args is not None:
++            self._values["args"] = args
+         if cwd is not None:
+             self._values["cwd"] = cwd
+         if name is not None:
+             self._values["name"] = name
+         if receive_args is not None:
+             self._values["receive_args"] = receive_args
+ 
+     @builtins.property
++    def args(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) A list of fixed arguments always passed to the step.
++
++        Useful to re-use existing tasks without having to re-define the whole task.
++        Fixed args are always passed to the step, even if ``receiveArgs`` is ``false``
++        and are always passed before any args the task is called with.
++
++        If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command.
++        The position of the args can be changed by including the marker ``$@`` inside the command string.
++
++        If the step spawns a subtask, args are passed to the subtask.
++        The subtask must define steps receiving args for this to have any effect.
++
++        If the step calls a builtin script, args are passed to the script.
++        It is up to the script to use or discard the arguments.
++
++        :default: - no arguments are passed to the step
++
++        :stability: experimental
++
++        Example::
++
++            task.spawn("deploy", { args: ["--force"] });
++        '''
++        result = self._values.get("args")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
+     def cwd(self) -> typing.Optional[builtins.str]:
+         '''(experimental) The working directory for this step.
+ 
+         :default: - determined by the task
+ 
+         :stability: experimental
+         '''
+@@ -8625,26 +8719,28 @@
+         return typing.cast(None, jsii.invoke(self, "addEnvironment", [name, value]))
+ 
+     @jsii.member(jsii_name="addTask")
+     def add_task(
+         self,
+         name: builtins.str,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         exec: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+         steps: typing.Optional[typing.Sequence[typing.Union["TaskStep", typing.Dict[builtins.str, typing.Any]]]] = None,
+         condition: typing.Optional[builtins.str] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         description: typing.Optional[builtins.str] = None,
+         env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+         required_env: typing.Optional[typing.Sequence[builtins.str]] = None,
+     ) -> Task:
+         '''(experimental) Adds a task to a project.
+ 
+         :param name: The name of the task.
++        :param args: (experimental) Should the provided ``exec`` shell command receive fixed args. Default: - no arguments are passed to the step
+         :param exec: (experimental) Shell command to execute as the first command of the task. Default: - add steps using ``task.exec(command)`` or ``task.spawn(subtask)``
+         :param receive_args: (experimental) Should the provided ``exec`` shell command receive args passed to the task. Default: false
+         :param steps: (experimental) List of task steps to run.
+         :param condition: (experimental) A shell command which determines if the this task should be executed. If the program exits with a zero exit code, steps will be executed. A non-zero code means that task will be skipped.
+         :param cwd: (experimental) The working directory for all steps in this task (unless overridden by the step). Default: - process.cwd()
+         :param description: (experimental) The description of this build command. Default: - the task name
+         :param env: (experimental) Defines environment variables for the execution of this task. Values in this map will be evaluated in a shell, so you can do stuff like ``$(echo "foo")``. Default: {}
+@@ -8652,14 +8748,15 @@
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__836b8399b5241179b18880b35ae533996a76c85a9b01d5c5c846aaef0e3a8d88)
+             check_type(argname="argument name", value=name, expected_type=type_hints["name"])
+         options = TaskOptions(
++            args=args,
+             exec=exec,
+             receive_args=receive_args,
+             steps=steps,
+             condition=condition,
+             cwd=cwd,
+             description=description,
+             env=env,
+@@ -10973,60 +11070,66 @@
+         jsii.create(self.__class__, self, [project, options])
+ 
+ 
+ @jsii.data_type(
+     jsii_type="projen.TaskStep",
+     jsii_struct_bases=[TaskStepOptions],
+     name_mapping={
++        "args": "args",
+         "cwd": "cwd",
+         "name": "name",
+         "receive_args": "receiveArgs",
+         "builtin": "builtin",
+         "exec": "exec",
+         "say": "say",
+         "spawn": "spawn",
+     },
+ )
+ class TaskStep(TaskStepOptions):
+     def __init__(
+         self,
+         *,
++        args: typing.Optional[typing.Sequence[builtins.str]] = None,
+         cwd: typing.Optional[builtins.str] = None,
+         name: typing.Optional[builtins.str] = None,
+         receive_args: typing.Optional[builtins.bool] = None,
+         builtin: typing.Optional[builtins.str] = None,
+         exec: typing.Optional[builtins.str] = None,
+         say: typing.Optional[builtins.str] = None,
+         spawn: typing.Optional[builtins.str] = None,
+     ) -> None:
+         '''(experimental) A single step within a task.
+ 
+         The step could either be  the execution of a
+         shell command or execution of a sub-task, by name.
+ 
++        :param args: (experimental) A list of fixed arguments always passed to the step. Useful to re-use existing tasks without having to re-define the whole task. Fixed args are always passed to the step, even if ``receiveArgs`` is ``false`` and are always passed before any args the task is called with. If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. If the step calls a builtin script, args are passed to the script. It is up to the script to use or discard the arguments. Default: - no arguments are passed to the step
+         :param cwd: (experimental) The working directory for this step. Default: - determined by the task
+         :param name: (experimental) Step name. Default: - no name
+         :param receive_args: (experimental) Should this step receive args passed to the task. If ``true``, args are passed through at the end of the ``exec`` shell command. The position of the args can be changed by including the marker ``$@`` inside the command string. If the step spawns a subtask, args are passed to the subtask. The subtask must define steps receiving args for this to have any effect. Default: false
+         :param builtin: (experimental) The name of a built-in task to execute. Built-in tasks are node.js programs baked into the projen module and as component runtime helpers. The name is a path relative to the projen lib/ directory (without the .task.js extension). For example, if your built in builtin task is under ``src/release/resolve-version.task.ts``, then this would be ``release/resolve-version``. Default: - do not execute a builtin task
+         :param exec: (experimental) Shell command to execute. Default: - don't execute a shell command
+         :param say: (experimental) Print a message. Default: - don't say anything
+         :param spawn: (experimental) Subtask to execute. Default: - don't spawn a subtask
+ 
+         :stability: experimental
+         '''
+         if __debug__:
+             type_hints = typing.get_type_hints(_typecheckingstub__6e32d65dbc737f8fd131c5593ecf206bcf2a76757ddb7c5f42945d73058aaae1)
++            check_type(argname="argument args", value=args, expected_type=type_hints["args"])
+             check_type(argname="argument cwd", value=cwd, expected_type=type_hints["cwd"])
+             check_type(argname="argument name", value=name, expected_type=type_hints["name"])
+             check_type(argname="argument receive_args", value=receive_args, expected_type=type_hints["receive_args"])
+             check_type(argname="argument builtin", value=builtin, expected_type=type_hints["builtin"])
+             check_type(argname="argument exec", value=exec, expected_type=type_hints["exec"])
+             check_type(argname="argument say", value=say, expected_type=type_hints["say"])
+             check_type(argname="argument spawn", value=spawn, expected_type=type_hints["spawn"])
+         self._values: typing.Dict[builtins.str, typing.Any] = {}
++        if args is not None:
++            self._values["args"] = args
+         if cwd is not None:
+             self._values["cwd"] = cwd
+         if name is not None:
+             self._values["name"] = name
+         if receive_args is not None:
+             self._values["receive_args"] = receive_args
+         if builtin is not None:
+@@ -11035,14 +11138,42 @@
+             self._values["exec"] = exec
+         if say is not None:
+             self._values["say"] = say
+         if spawn is not None:
+             self._values["spawn"] = spawn
+ 
+     @builtins.property
++    def args(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) A list of fixed arguments always passed to the step.
++
++        Useful to re-use existing tasks without having to re-define the whole task.
++        Fixed args are always passed to the step, even if ``receiveArgs`` is ``false``
++        and are always passed before any args the task is called with.
++
++        If the step executes a shell commands, args are passed through at the end of the ``exec`` shell command.
++        The position of the args can be changed by including the marker ``$@`` inside the command string.
++
++        If the step spawns a subtask, args are passed to the subtask.
++        The subtask must define steps receiving args for this to have any effect.
++
++        If the step calls a builtin script, args are passed to the script.
++        It is up to the script to use or discard the arguments.
++
++        :default: - no arguments are passed to the step
++
++        :stability: experimental
++
++        Example::
++
++            task.spawn("deploy", { args: ["--force"] });
++        '''
++        result = self._values.get("args")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
+     def cwd(self) -> typing.Optional[builtins.str]:
+         '''(experimental) The working directory for this step.
+ 
+         :default: - determined by the task
+ 
+         :stability: experimental
+         '''
+@@ -12070,14 +12201,15 @@
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__deb7240461e3476c5778bf65eccdf771a733a6c994c9ab1093bf5302284f6e8d(
+     name: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     exec: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+     steps: typing.Optional[typing.Sequence[typing.Union[TaskStep, typing.Dict[builtins.str, typing.Any]]]] = None,
+     condition: typing.Optional[builtins.str] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     description: typing.Optional[builtins.str] = None,
+     env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+@@ -12354,14 +12486,15 @@
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__679ed15034b92ce65671fe4889a8e0476b00d6023000c4f1035f69d18ac8760c(
+     name: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     exec: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+     steps: typing.Optional[typing.Sequence[typing.Union[TaskStep, typing.Dict[builtins.str, typing.Any]]]] = None,
+     condition: typing.Optional[builtins.str] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     description: typing.Optional[builtins.str] = None,
+     env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+@@ -12382,84 +12515,92 @@
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__866645d9e72b430281a892f9aec648a8a4d11dfd83393ea8d1cf161c619f40ce(
+     command: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__72dcbc585fdab7a308274ba33cb7b5bcf9e106aaf01bef404fbb15b6c60db4c4(
+     shell: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__6303cc71c3e6fb4aba7cadb07d20f36a327564e7e91f7baf72d0bb511b02f9d8(
+     shell: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__83e687ef928f97e72aa2e81b8d6d9eb6d68cfdfb3063bfbd3f8c9e4ea8177cf5(
+     message: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__80be0ec2af5c5b034b9ad26a372663b2dede8547b402f7501bd174f174db2d3a(
+     subtask: Task,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__bec2ab04da022f328e54a5747cb659465473a80e61ea4b23af06f41a51eaf8a8(
+     command: typing.Optional[builtins.str] = None,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__7da16e7abde21673795e791b1dc02e7b9c04503d828a84a24ad2e0950514f3d1(
+     message: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__30afd72afdc7d9e0229d01ea2f502a330dca643bfa30b79876a78ec24110ee41(
+     subtask: Task,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+@@ -12483,14 +12624,15 @@
+ def _typecheckingstub__4b67d140d8d3bc0d4265c1dc732e2e99b3a05600097a65f0baa8803715ced0be(
+     *,
+     condition: typing.Optional[builtins.str] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     description: typing.Optional[builtins.str] = None,
+     env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+     required_env: typing.Optional[typing.Sequence[builtins.str]] = None,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     exec: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+     steps: typing.Optional[typing.Sequence[typing.Union[TaskStep, typing.Dict[builtins.str, typing.Any]]]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+@@ -12525,14 +12667,15 @@
+     steps: typing.Optional[typing.Sequence[typing.Union[TaskStep, typing.Dict[builtins.str, typing.Any]]]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__2eac93e499bd717527ab62b174c5bd1e157bf4043f5d771b6a289f39177d124a(
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+@@ -12548,14 +12691,15 @@
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__836b8399b5241179b18880b35ae533996a76c85a9b01d5c5c846aaef0e3a8d88(
+     name: builtins.str,
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     exec: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+     steps: typing.Optional[typing.Sequence[typing.Union[TaskStep, typing.Dict[builtins.str, typing.Any]]]] = None,
+     condition: typing.Optional[builtins.str] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     description: typing.Optional[builtins.str] = None,
+     env: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+@@ -12943,14 +13087,15 @@
+     filename: typing.Optional[builtins.str] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
+ def _typecheckingstub__6e32d65dbc737f8fd131c5593ecf206bcf2a76757ddb7c5f42945d73058aaae1(
+     *,
++    args: typing.Optional[typing.Sequence[builtins.str]] = None,
+     cwd: typing.Optional[builtins.str] = None,
+     name: typing.Optional[builtins.str] = None,
+     receive_args: typing.Optional[builtins.bool] = None,
+     builtin: typing.Optional[builtins.str] = None,
+     exec: typing.Optional[builtins.str] = None,
+     say: typing.Optional[builtins.str] = None,
+     spawn: typing.Optional[builtins.str] = None,
+```
+
+### Comparing `projen-0.70.9/src/projen/awscdk/__init__.py` & `projen-0.71.0/src/projen/awscdk/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/build/__init__.py` & `projen-0.71.0/src/projen/build/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/cdk/__init__.py` & `projen-0.71.0/src/projen/cdk/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/cdk8s/__init__.py` & `projen-0.71.0/src/projen/cdk8s/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/cdktf/__init__.py` & `projen-0.71.0/src/projen/cdktf/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/circleci/__init__.py` & `projen-0.71.0/src/projen/circleci/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/github/__init__.py` & `projen-0.71.0/src/projen/github/__init__.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -361,14 +361,370 @@
+ 
+     def __repr__(self) -> str:
+         return "AutoMergeOptions(%s)" % ", ".join(
+             k + "=" + repr(v) for k, v in self._values.items()
+         )
+ 
+ 
++@jsii.data_type(
++    jsii_type="projen.github.CheckoutWithPatchOptions",
++    jsii_struct_bases=[],
++    name_mapping={
++        "lfs": "lfs",
++        "patch_file": "patchFile",
++        "ref": "ref",
++        "repository": "repository",
++        "token": "token",
++    },
++)
++class CheckoutWithPatchOptions:
++    def __init__(
++        self,
++        *,
++        lfs: typing.Optional[builtins.bool] = None,
++        patch_file: typing.Optional[builtins.str] = None,
++        ref: typing.Optional[builtins.str] = None,
++        repository: typing.Optional[builtins.str] = None,
++        token: typing.Optional[builtins.str] = None,
++    ) -> None:
++        '''(experimental) Options for ``checkoutWithPatch``.
++
++        :param lfs: (experimental) Whether LFS is enabled for the GitHub repository. Default: false
++        :param patch_file: (experimental) The name of the artifact the patch is stored as. Default: ".repo.patch"
++        :param ref: (experimental) Branch or tag name. Default: - the default branch is implicitly used
++        :param repository: (experimental) The repository (owner/repo) to use. Default: - the default repository is implicitly used
++        :param token: (experimental) A GitHub token to use when checking out the repository. If the intent is to push changes back to the branch, then you must use a PAT with ``repo`` (and possibly ``workflows``) permissions. Default: - the default GITHUB_TOKEN is implicitly used
++
++        :stability: experimental
++        '''
++        if __debug__:
++            type_hints = typing.get_type_hints(_typecheckingstub__c7405ea05e49b1f743e00dc103618fbd659c979bbec234492b8928ed6cf37e9b)
++            check_type(argname="argument lfs", value=lfs, expected_type=type_hints["lfs"])
++            check_type(argname="argument patch_file", value=patch_file, expected_type=type_hints["patch_file"])
++            check_type(argname="argument ref", value=ref, expected_type=type_hints["ref"])
++            check_type(argname="argument repository", value=repository, expected_type=type_hints["repository"])
++            check_type(argname="argument token", value=token, expected_type=type_hints["token"])
++        self._values: typing.Dict[builtins.str, typing.Any] = {}
++        if lfs is not None:
++            self._values["lfs"] = lfs
++        if patch_file is not None:
++            self._values["patch_file"] = patch_file
++        if ref is not None:
++            self._values["ref"] = ref
++        if repository is not None:
++            self._values["repository"] = repository
++        if token is not None:
++            self._values["token"] = token
++
++    @builtins.property
++    def lfs(self) -> typing.Optional[builtins.bool]:
++        '''(experimental) Whether LFS is enabled for the GitHub repository.
++
++        :default: false
++
++        :stability: experimental
++        '''
++        result = self._values.get("lfs")
++        return typing.cast(typing.Optional[builtins.bool], result)
++
++    @builtins.property
++    def patch_file(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the artifact the patch is stored as.
++
++        :default: ".repo.patch"
++
++        :stability: experimental
++        '''
++        result = self._values.get("patch_file")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def ref(self) -> typing.Optional[builtins.str]:
++        '''(experimental) Branch or tag name.
++
++        :default: - the default branch is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("ref")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def repository(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The repository (owner/repo) to use.
++
++        :default: - the default repository is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("repository")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def token(self) -> typing.Optional[builtins.str]:
++        '''(experimental) A GitHub token to use when checking out the repository.
++
++        If the intent is to push changes back to the branch, then you must use a
++        PAT with ``repo`` (and possibly ``workflows``) permissions.
++
++        :default: - the default GITHUB_TOKEN is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("token")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    def __eq__(self, rhs: typing.Any) -> builtins.bool:
++        return isinstance(rhs, self.__class__) and rhs._values == self._values
++
++    def __ne__(self, rhs: typing.Any) -> builtins.bool:
++        return not (rhs == self)
++
++    def __repr__(self) -> str:
++        return "CheckoutWithPatchOptions(%s)" % ", ".join(
++            k + "=" + repr(v) for k, v in self._values.items()
++        )
++
++
++@jsii.data_type(
++    jsii_type="projen.github.CreatePullRequestOptions",
++    jsii_struct_bases=[],
++    name_mapping={
++        "pull_request_description": "pullRequestDescription",
++        "pull_request_title": "pullRequestTitle",
++        "workflow_name": "workflowName",
++        "assignees": "assignees",
++        "base_branch": "baseBranch",
++        "branch_name": "branchName",
++        "credentials": "credentials",
++        "git_identity": "gitIdentity",
++        "labels": "labels",
++        "signoff": "signoff",
++        "step_id": "stepId",
++        "step_name": "stepName",
++    },
++)
++class CreatePullRequestOptions:
++    def __init__(
++        self,
++        *,
++        pull_request_description: builtins.str,
++        pull_request_title: builtins.str,
++        workflow_name: builtins.str,
++        assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++        base_branch: typing.Optional[builtins.str] = None,
++        branch_name: typing.Optional[builtins.str] = None,
++        credentials: typing.Optional["GithubCredentials"] = None,
++        git_identity: typing.Optional[typing.Union["GitIdentity", typing.Dict[builtins.str, typing.Any]]] = None,
++        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++        signoff: typing.Optional[builtins.bool] = None,
++        step_id: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++    ) -> None:
++        '''
++        :param pull_request_description: (experimental) Description added to the pull request. Providence information are automatically added.
++        :param pull_request_title: (experimental) The full title used to create the pull request. If PR titles are validated in this repo, the title should comply with the respective rules.
++        :param workflow_name: (experimental) The name of the workflow that will create the PR.
++        :param assignees: (experimental) Assignees to add on the PR. Default: - no assignees
++        :param base_branch: (experimental) Sets the pull request base branch. Default: - The branch checked out in the workflow.
++        :param branch_name: (experimental) The pull request branch name. Default: ``github-actions/${options.workflowName}``
++        :param credentials: (experimental) The job credentials used to create the pull request. Provided credentials must have permissions to create a pull request on the repository.
++        :param git_identity: (experimental) The git identity used to create the commit. Default: - the default github-actions user
++        :param labels: (experimental) Labels to apply on the PR. Default: - no labels.
++        :param signoff: (experimental) Add Signed-off-by line by the committer at the end of the commit log message. Default: true
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created. Default: "create_pr"
++        :param step_name: (experimental) The name of the step displayed on GitHub. Default: "Create Pull Request"
++
++        :stability: experimental
++        '''
++        if isinstance(git_identity, dict):
++            git_identity = GitIdentity(**git_identity)
++        if __debug__:
++            type_hints = typing.get_type_hints(_typecheckingstub__42dbc4c6e52abbc74605066eb4f3323d0948617836847a6b99285ed9034e48d7)
++            check_type(argname="argument pull_request_description", value=pull_request_description, expected_type=type_hints["pull_request_description"])
++            check_type(argname="argument pull_request_title", value=pull_request_title, expected_type=type_hints["pull_request_title"])
++            check_type(argname="argument workflow_name", value=workflow_name, expected_type=type_hints["workflow_name"])
++            check_type(argname="argument assignees", value=assignees, expected_type=type_hints["assignees"])
++            check_type(argname="argument base_branch", value=base_branch, expected_type=type_hints["base_branch"])
++            check_type(argname="argument branch_name", value=branch_name, expected_type=type_hints["branch_name"])
++            check_type(argname="argument credentials", value=credentials, expected_type=type_hints["credentials"])
++            check_type(argname="argument git_identity", value=git_identity, expected_type=type_hints["git_identity"])
++            check_type(argname="argument labels", value=labels, expected_type=type_hints["labels"])
++            check_type(argname="argument signoff", value=signoff, expected_type=type_hints["signoff"])
++            check_type(argname="argument step_id", value=step_id, expected_type=type_hints["step_id"])
++            check_type(argname="argument step_name", value=step_name, expected_type=type_hints["step_name"])
++        self._values: typing.Dict[builtins.str, typing.Any] = {
++            "pull_request_description": pull_request_description,
++            "pull_request_title": pull_request_title,
++            "workflow_name": workflow_name,
++        }
++        if assignees is not None:
++            self._values["assignees"] = assignees
++        if base_branch is not None:
++            self._values["base_branch"] = base_branch
++        if branch_name is not None:
++            self._values["branch_name"] = branch_name
++        if credentials is not None:
++            self._values["credentials"] = credentials
++        if git_identity is not None:
++            self._values["git_identity"] = git_identity
++        if labels is not None:
++            self._values["labels"] = labels
++        if signoff is not None:
++            self._values["signoff"] = signoff
++        if step_id is not None:
++            self._values["step_id"] = step_id
++        if step_name is not None:
++            self._values["step_name"] = step_name
++
++    @builtins.property
++    def pull_request_description(self) -> builtins.str:
++        '''(experimental) Description added to the pull request.
++
++        Providence information are automatically added.
++
++        :stability: experimental
++        '''
++        result = self._values.get("pull_request_description")
++        assert result is not None, "Required property 'pull_request_description' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def pull_request_title(self) -> builtins.str:
++        '''(experimental) The full title used to create the pull request.
++
++        If PR titles are validated in this repo, the title should comply with the respective rules.
++
++        :stability: experimental
++        '''
++        result = self._values.get("pull_request_title")
++        assert result is not None, "Required property 'pull_request_title' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def workflow_name(self) -> builtins.str:
++        '''(experimental) The name of the workflow that will create the PR.
++
++        :stability: experimental
++        '''
++        result = self._values.get("workflow_name")
++        assert result is not None, "Required property 'workflow_name' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def assignees(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Assignees to add on the PR.
++
++        :default: - no assignees
++
++        :stability: experimental
++        '''
++        result = self._values.get("assignees")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
++    def base_branch(self) -> typing.Optional[builtins.str]:
++        '''(experimental) Sets the pull request base branch.
++
++        :default: - The branch checked out in the workflow.
++
++        :stability: experimental
++        '''
++        result = self._values.get("base_branch")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def branch_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The pull request branch name.
++
++        :default: ``github-actions/${options.workflowName}``
++
++        :stability: experimental
++        '''
++        result = self._values.get("branch_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def credentials(self) -> typing.Optional["GithubCredentials"]:
++        '''(experimental) The job credentials used to create the pull request.
++
++        Provided credentials must have permissions to create a pull request on the repository.
++
++        :stability: experimental
++        '''
++        result = self._values.get("credentials")
++        return typing.cast(typing.Optional["GithubCredentials"], result)
++
++    @builtins.property
++    def git_identity(self) -> typing.Optional["GitIdentity"]:
++        '''(experimental) The git identity used to create the commit.
++
++        :default: - the default github-actions user
++
++        :stability: experimental
++        '''
++        result = self._values.get("git_identity")
++        return typing.cast(typing.Optional["GitIdentity"], result)
++
++    @builtins.property
++    def labels(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Labels to apply on the PR.
++
++        :default: - no labels.
++
++        :stability: experimental
++        '''
++        result = self._values.get("labels")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
++    def signoff(self) -> typing.Optional[builtins.bool]:
++        '''(experimental) Add Signed-off-by line by the committer at the end of the commit log message.
++
++        :default: true
++
++        :stability: experimental
++        '''
++        result = self._values.get("signoff")
++        return typing.cast(typing.Optional[builtins.bool], result)
++
++    @builtins.property
++    def step_id(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The step ID which produces the output which indicates if a patch was created.
++
++        :default: "create_pr"
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_id")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def step_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the step displayed on GitHub.
++
++        :default: "Create Pull Request"
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    def __eq__(self, rhs: typing.Any) -> builtins.bool:
++        return isinstance(rhs, self.__class__) and rhs._values == self._values
++
++    def __ne__(self, rhs: typing.Any) -> builtins.bool:
++        return not (rhs == self)
++
++    def __repr__(self) -> str:
++        return "CreatePullRequestOptions(%s)" % ", ".join(
++            k + "=" + repr(v) for k, v in self._values.items()
++        )
++
++
+ class Dependabot(
+     _Component_2b0ad27f,
+     metaclass=jsii.JSIIMeta,
+     jsii_type="projen.github.Dependabot",
+ ):
+     '''(experimental) Defines dependabot configuration for node projects.
+ 
+@@ -3215,14 +3571,301 @@
+ 
+     def __repr__(self) -> str:
+         return "MergifyRule(%s)" % ", ".join(
+             k + "=" + repr(v) for k, v in self._values.items()
+         )
+ 
+ 
++@jsii.data_type(
++    jsii_type="projen.github.PullRequestFromPatchOptions",
++    jsii_struct_bases=[CreatePullRequestOptions],
++    name_mapping={
++        "pull_request_description": "pullRequestDescription",
++        "pull_request_title": "pullRequestTitle",
++        "workflow_name": "workflowName",
++        "assignees": "assignees",
++        "base_branch": "baseBranch",
++        "branch_name": "branchName",
++        "credentials": "credentials",
++        "git_identity": "gitIdentity",
++        "labels": "labels",
++        "signoff": "signoff",
++        "step_id": "stepId",
++        "step_name": "stepName",
++        "patch": "patch",
++        "job_name": "jobName",
++        "runs_on": "runsOn",
++    },
++)
++class PullRequestFromPatchOptions(CreatePullRequestOptions):
++    def __init__(
++        self,
++        *,
++        pull_request_description: builtins.str,
++        pull_request_title: builtins.str,
++        workflow_name: builtins.str,
++        assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++        base_branch: typing.Optional[builtins.str] = None,
++        branch_name: typing.Optional[builtins.str] = None,
++        credentials: typing.Optional[GithubCredentials] = None,
++        git_identity: typing.Optional[typing.Union[GitIdentity, typing.Dict[builtins.str, typing.Any]]] = None,
++        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++        signoff: typing.Optional[builtins.bool] = None,
++        step_id: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++        patch: typing.Union["PullRequestPatchSource", typing.Dict[builtins.str, typing.Any]],
++        job_name: typing.Optional[builtins.str] = None,
++        runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
++    ) -> None:
++        '''
++        :param pull_request_description: (experimental) Description added to the pull request. Providence information are automatically added.
++        :param pull_request_title: (experimental) The full title used to create the pull request. If PR titles are validated in this repo, the title should comply with the respective rules.
++        :param workflow_name: (experimental) The name of the workflow that will create the PR.
++        :param assignees: (experimental) Assignees to add on the PR. Default: - no assignees
++        :param base_branch: (experimental) Sets the pull request base branch. Default: - The branch checked out in the workflow.
++        :param branch_name: (experimental) The pull request branch name. Default: ``github-actions/${options.workflowName}``
++        :param credentials: (experimental) The job credentials used to create the pull request. Provided credentials must have permissions to create a pull request on the repository.
++        :param git_identity: (experimental) The git identity used to create the commit. Default: - the default github-actions user
++        :param labels: (experimental) Labels to apply on the PR. Default: - no labels.
++        :param signoff: (experimental) Add Signed-off-by line by the committer at the end of the commit log message. Default: true
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created. Default: "create_pr"
++        :param step_name: (experimental) The name of the step displayed on GitHub. Default: "Create Pull Request"
++        :param patch: (experimental) Information about the patch that is used to create the pull request.
++        :param job_name: (experimental) The name of the job displayed on GitHub. Default: "Create Pull Request"
++        :param runs_on: (experimental) Github Runner selection labels. Default: ["ubuntu-latest"]
++
++        :stability: experimental
++        '''
++        if isinstance(git_identity, dict):
++            git_identity = GitIdentity(**git_identity)
++        if isinstance(patch, dict):
++            patch = PullRequestPatchSource(**patch)
++        if __debug__:
++            type_hints = typing.get_type_hints(_typecheckingstub__0c1e5279fc8c18480c3113cc60b389aa13938b2052436bbdcb3069cfe669fa47)
++            check_type(argname="argument pull_request_description", value=pull_request_description, expected_type=type_hints["pull_request_description"])
++            check_type(argname="argument pull_request_title", value=pull_request_title, expected_type=type_hints["pull_request_title"])
++            check_type(argname="argument workflow_name", value=workflow_name, expected_type=type_hints["workflow_name"])
++            check_type(argname="argument assignees", value=assignees, expected_type=type_hints["assignees"])
++            check_type(argname="argument base_branch", value=base_branch, expected_type=type_hints["base_branch"])
++            check_type(argname="argument branch_name", value=branch_name, expected_type=type_hints["branch_name"])
++            check_type(argname="argument credentials", value=credentials, expected_type=type_hints["credentials"])
++            check_type(argname="argument git_identity", value=git_identity, expected_type=type_hints["git_identity"])
++            check_type(argname="argument labels", value=labels, expected_type=type_hints["labels"])
++            check_type(argname="argument signoff", value=signoff, expected_type=type_hints["signoff"])
++            check_type(argname="argument step_id", value=step_id, expected_type=type_hints["step_id"])
++            check_type(argname="argument step_name", value=step_name, expected_type=type_hints["step_name"])
++            check_type(argname="argument patch", value=patch, expected_type=type_hints["patch"])
++            check_type(argname="argument job_name", value=job_name, expected_type=type_hints["job_name"])
++            check_type(argname="argument runs_on", value=runs_on, expected_type=type_hints["runs_on"])
++        self._values: typing.Dict[builtins.str, typing.Any] = {
++            "pull_request_description": pull_request_description,
++            "pull_request_title": pull_request_title,
++            "workflow_name": workflow_name,
++            "patch": patch,
++        }
++        if assignees is not None:
++            self._values["assignees"] = assignees
++        if base_branch is not None:
++            self._values["base_branch"] = base_branch
++        if branch_name is not None:
++            self._values["branch_name"] = branch_name
++        if credentials is not None:
++            self._values["credentials"] = credentials
++        if git_identity is not None:
++            self._values["git_identity"] = git_identity
++        if labels is not None:
++            self._values["labels"] = labels
++        if signoff is not None:
++            self._values["signoff"] = signoff
++        if step_id is not None:
++            self._values["step_id"] = step_id
++        if step_name is not None:
++            self._values["step_name"] = step_name
++        if job_name is not None:
++            self._values["job_name"] = job_name
++        if runs_on is not None:
++            self._values["runs_on"] = runs_on
++
++    @builtins.property
++    def pull_request_description(self) -> builtins.str:
++        '''(experimental) Description added to the pull request.
++
++        Providence information are automatically added.
++
++        :stability: experimental
++        '''
++        result = self._values.get("pull_request_description")
++        assert result is not None, "Required property 'pull_request_description' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def pull_request_title(self) -> builtins.str:
++        '''(experimental) The full title used to create the pull request.
++
++        If PR titles are validated in this repo, the title should comply with the respective rules.
++
++        :stability: experimental
++        '''
++        result = self._values.get("pull_request_title")
++        assert result is not None, "Required property 'pull_request_title' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def workflow_name(self) -> builtins.str:
++        '''(experimental) The name of the workflow that will create the PR.
++
++        :stability: experimental
++        '''
++        result = self._values.get("workflow_name")
++        assert result is not None, "Required property 'workflow_name' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def assignees(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Assignees to add on the PR.
++
++        :default: - no assignees
++
++        :stability: experimental
++        '''
++        result = self._values.get("assignees")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
++    def base_branch(self) -> typing.Optional[builtins.str]:
++        '''(experimental) Sets the pull request base branch.
++
++        :default: - The branch checked out in the workflow.
++
++        :stability: experimental
++        '''
++        result = self._values.get("base_branch")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def branch_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The pull request branch name.
++
++        :default: ``github-actions/${options.workflowName}``
++
++        :stability: experimental
++        '''
++        result = self._values.get("branch_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def credentials(self) -> typing.Optional[GithubCredentials]:
++        '''(experimental) The job credentials used to create the pull request.
++
++        Provided credentials must have permissions to create a pull request on the repository.
++
++        :stability: experimental
++        '''
++        result = self._values.get("credentials")
++        return typing.cast(typing.Optional[GithubCredentials], result)
++
++    @builtins.property
++    def git_identity(self) -> typing.Optional[GitIdentity]:
++        '''(experimental) The git identity used to create the commit.
++
++        :default: - the default github-actions user
++
++        :stability: experimental
++        '''
++        result = self._values.get("git_identity")
++        return typing.cast(typing.Optional[GitIdentity], result)
++
++    @builtins.property
++    def labels(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Labels to apply on the PR.
++
++        :default: - no labels.
++
++        :stability: experimental
++        '''
++        result = self._values.get("labels")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    @builtins.property
++    def signoff(self) -> typing.Optional[builtins.bool]:
++        '''(experimental) Add Signed-off-by line by the committer at the end of the commit log message.
++
++        :default: true
++
++        :stability: experimental
++        '''
++        result = self._values.get("signoff")
++        return typing.cast(typing.Optional[builtins.bool], result)
++
++    @builtins.property
++    def step_id(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The step ID which produces the output which indicates if a patch was created.
++
++        :default: "create_pr"
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_id")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def step_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the step displayed on GitHub.
++
++        :default: "Create Pull Request"
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def patch(self) -> "PullRequestPatchSource":
++        '''(experimental) Information about the patch that is used to create the pull request.
++
++        :stability: experimental
++        '''
++        result = self._values.get("patch")
++        assert result is not None, "Required property 'patch' is missing"
++        return typing.cast("PullRequestPatchSource", result)
++
++    @builtins.property
++    def job_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the job displayed on GitHub.
++
++        :default: "Create Pull Request"
++
++        :stability: experimental
++        '''
++        result = self._values.get("job_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def runs_on(self) -> typing.Optional[typing.List[builtins.str]]:
++        '''(experimental) Github Runner selection labels.
++
++        :default: ["ubuntu-latest"]
++
++        :stability: experimental
++        '''
++        result = self._values.get("runs_on")
++        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
++
++    def __eq__(self, rhs: typing.Any) -> builtins.bool:
++        return isinstance(rhs, self.__class__) and rhs._values == self._values
++
++    def __ne__(self, rhs: typing.Any) -> builtins.bool:
++        return not (rhs == self)
++
++    def __repr__(self) -> str:
++        return "PullRequestFromPatchOptions(%s)" % ", ".join(
++            k + "=" + repr(v) for k, v in self._values.items()
++        )
++
++
+ class PullRequestLint(
+     _Component_2b0ad27f,
+     metaclass=jsii.JSIIMeta,
+     jsii_type="projen.github.PullRequestLint",
+ ):
+     '''(experimental) Configure validations to run on GitHub pull requests.
+ 
+@@ -3341,14 +3984,164 @@
+ 
+     def __repr__(self) -> str:
+         return "PullRequestLintOptions(%s)" % ", ".join(
+             k + "=" + repr(v) for k, v in self._values.items()
+         )
+ 
+ 
++@jsii.data_type(
++    jsii_type="projen.github.PullRequestPatchSource",
++    jsii_struct_bases=[CheckoutWithPatchOptions],
++    name_mapping={
++        "lfs": "lfs",
++        "patch_file": "patchFile",
++        "ref": "ref",
++        "repository": "repository",
++        "token": "token",
++        "job_id": "jobId",
++        "output_name": "outputName",
++    },
++)
++class PullRequestPatchSource(CheckoutWithPatchOptions):
++    def __init__(
++        self,
++        *,
++        lfs: typing.Optional[builtins.bool] = None,
++        patch_file: typing.Optional[builtins.str] = None,
++        ref: typing.Optional[builtins.str] = None,
++        repository: typing.Optional[builtins.str] = None,
++        token: typing.Optional[builtins.str] = None,
++        job_id: builtins.str,
++        output_name: builtins.str,
++    ) -> None:
++        '''
++        :param lfs: (experimental) Whether LFS is enabled for the GitHub repository. Default: false
++        :param patch_file: (experimental) The name of the artifact the patch is stored as. Default: ".repo.patch"
++        :param ref: (experimental) Branch or tag name. Default: - the default branch is implicitly used
++        :param repository: (experimental) The repository (owner/repo) to use. Default: - the default repository is implicitly used
++        :param token: (experimental) A GitHub token to use when checking out the repository. If the intent is to push changes back to the branch, then you must use a PAT with ``repo`` (and possibly ``workflows``) permissions. Default: - the default GITHUB_TOKEN is implicitly used
++        :param job_id: (experimental) The id of the job that created the patch file.
++        :param output_name: (experimental) The name of the output that indicates if a patch has been created.
++
++        :stability: experimental
++        '''
++        if __debug__:
++            type_hints = typing.get_type_hints(_typecheckingstub__c3c9a28aa8266154d9a36adad571b3695e958b931e79b9eaff4a7dc55e95dec8)
++            check_type(argname="argument lfs", value=lfs, expected_type=type_hints["lfs"])
++            check_type(argname="argument patch_file", value=patch_file, expected_type=type_hints["patch_file"])
++            check_type(argname="argument ref", value=ref, expected_type=type_hints["ref"])
++            check_type(argname="argument repository", value=repository, expected_type=type_hints["repository"])
++            check_type(argname="argument token", value=token, expected_type=type_hints["token"])
++            check_type(argname="argument job_id", value=job_id, expected_type=type_hints["job_id"])
++            check_type(argname="argument output_name", value=output_name, expected_type=type_hints["output_name"])
++        self._values: typing.Dict[builtins.str, typing.Any] = {
++            "job_id": job_id,
++            "output_name": output_name,
++        }
++        if lfs is not None:
++            self._values["lfs"] = lfs
++        if patch_file is not None:
++            self._values["patch_file"] = patch_file
++        if ref is not None:
++            self._values["ref"] = ref
++        if repository is not None:
++            self._values["repository"] = repository
++        if token is not None:
++            self._values["token"] = token
++
++    @builtins.property
++    def lfs(self) -> typing.Optional[builtins.bool]:
++        '''(experimental) Whether LFS is enabled for the GitHub repository.
++
++        :default: false
++
++        :stability: experimental
++        '''
++        result = self._values.get("lfs")
++        return typing.cast(typing.Optional[builtins.bool], result)
++
++    @builtins.property
++    def patch_file(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the artifact the patch is stored as.
++
++        :default: ".repo.patch"
++
++        :stability: experimental
++        '''
++        result = self._values.get("patch_file")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def ref(self) -> typing.Optional[builtins.str]:
++        '''(experimental) Branch or tag name.
++
++        :default: - the default branch is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("ref")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def repository(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The repository (owner/repo) to use.
++
++        :default: - the default repository is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("repository")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def token(self) -> typing.Optional[builtins.str]:
++        '''(experimental) A GitHub token to use when checking out the repository.
++
++        If the intent is to push changes back to the branch, then you must use a
++        PAT with ``repo`` (and possibly ``workflows``) permissions.
++
++        :default: - the default GITHUB_TOKEN is implicitly used
++
++        :stability: experimental
++        '''
++        result = self._values.get("token")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def job_id(self) -> builtins.str:
++        '''(experimental) The id of the job that created the patch file.
++
++        :stability: experimental
++        '''
++        result = self._values.get("job_id")
++        assert result is not None, "Required property 'job_id' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def output_name(self) -> builtins.str:
++        '''(experimental) The name of the output that indicates if a patch has been created.
++
++        :stability: experimental
++        '''
++        result = self._values.get("output_name")
++        assert result is not None, "Required property 'output_name' is missing"
++        return typing.cast(builtins.str, result)
++
++    def __eq__(self, rhs: typing.Any) -> builtins.bool:
++        return isinstance(rhs, self.__class__) and rhs._values == self._values
++
++    def __ne__(self, rhs: typing.Any) -> builtins.bool:
++        return not (rhs == self)
++
++    def __repr__(self) -> str:
++        return "PullRequestPatchSource(%s)" % ", ".join(
++            k + "=" + repr(v) for k, v in self._values.items()
++        )
++
++
+ class PullRequestTemplate(
+     _TextFile_4a74808c,
+     metaclass=jsii.JSIIMeta,
+     jsii_type="projen.github.PullRequestTemplate",
+ ):
+     '''(experimental) Template for GitHub pull requests.
+ 
+@@ -4200,14 +4993,130 @@
+ 
+     def __repr__(self) -> str:
+         return "TaskWorkflowOptions(%s)" % ", ".join(
+             k + "=" + repr(v) for k, v in self._values.items()
+         )
+ 
+ 
++@jsii.data_type(
++    jsii_type="projen.github.UploadGitPatchOptions",
++    jsii_struct_bases=[],
++    name_mapping={
++        "output_name": "outputName",
++        "step_id": "stepId",
++        "mutation_error": "mutationError",
++        "patch_file": "patchFile",
++        "step_name": "stepName",
++    },
++)
++class UploadGitPatchOptions:
++    def __init__(
++        self,
++        *,
++        output_name: builtins.str,
++        step_id: builtins.str,
++        mutation_error: typing.Optional[builtins.str] = None,
++        patch_file: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++    ) -> None:
++        '''(experimental) Options for ``uploadGitPatch``.
++
++        :param output_name: (experimental) The name of the output to emit. It will be set to ``true`` if there was a diff.
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created.
++        :param mutation_error: (experimental) Fail if a mutation was found and print this error message. Default: - do not fail upon mutation
++        :param patch_file: (experimental) The name of the artifact the patch is stored as. Default: ".repo.patch"
++        :param step_name: (experimental) The name of the step. Default: "Find mutations"
++
++        :stability: experimental
++        '''
++        if __debug__:
++            type_hints = typing.get_type_hints(_typecheckingstub__44834a10372a9e24aeb2cd31c9103944ca6f9b5f985d1986a7fcf267c04e9498)
++            check_type(argname="argument output_name", value=output_name, expected_type=type_hints["output_name"])
++            check_type(argname="argument step_id", value=step_id, expected_type=type_hints["step_id"])
++            check_type(argname="argument mutation_error", value=mutation_error, expected_type=type_hints["mutation_error"])
++            check_type(argname="argument patch_file", value=patch_file, expected_type=type_hints["patch_file"])
++            check_type(argname="argument step_name", value=step_name, expected_type=type_hints["step_name"])
++        self._values: typing.Dict[builtins.str, typing.Any] = {
++            "output_name": output_name,
++            "step_id": step_id,
++        }
++        if mutation_error is not None:
++            self._values["mutation_error"] = mutation_error
++        if patch_file is not None:
++            self._values["patch_file"] = patch_file
++        if step_name is not None:
++            self._values["step_name"] = step_name
++
++    @builtins.property
++    def output_name(self) -> builtins.str:
++        '''(experimental) The name of the output to emit.
++
++        It will be set to ``true`` if there was a diff.
++
++        :stability: experimental
++        '''
++        result = self._values.get("output_name")
++        assert result is not None, "Required property 'output_name' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def step_id(self) -> builtins.str:
++        '''(experimental) The step ID which produces the output which indicates if a patch was created.
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_id")
++        assert result is not None, "Required property 'step_id' is missing"
++        return typing.cast(builtins.str, result)
++
++    @builtins.property
++    def mutation_error(self) -> typing.Optional[builtins.str]:
++        '''(experimental) Fail if a mutation was found and print this error message.
++
++        :default: - do not fail upon mutation
++
++        :stability: experimental
++        '''
++        result = self._values.get("mutation_error")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def patch_file(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the artifact the patch is stored as.
++
++        :default: ".repo.patch"
++
++        :stability: experimental
++        '''
++        result = self._values.get("patch_file")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    @builtins.property
++    def step_name(self) -> typing.Optional[builtins.str]:
++        '''(experimental) The name of the step.
++
++        :default: "Find mutations"
++
++        :stability: experimental
++        '''
++        result = self._values.get("step_name")
++        return typing.cast(typing.Optional[builtins.str], result)
++
++    def __eq__(self, rhs: typing.Any) -> builtins.bool:
++        return isinstance(rhs, self.__class__) and rhs._values == self._values
++
++    def __ne__(self, rhs: typing.Any) -> builtins.bool:
++        return not (rhs == self)
++
++    def __repr__(self) -> str:
++        return "UploadGitPatchOptions(%s)" % ", ".join(
++            k + "=" + repr(v) for k, v in self._values.items()
++        )
++
++
+ @jsii.enum(jsii_type="projen.github.VersioningStrategy")
+ class VersioningStrategy(enum.Enum):
+     '''(experimental) The strategy to use when edits manifest and lock files.
+ 
+     :stability: experimental
+     '''
+ 
+@@ -4239,19 +5148,252 @@
+     INCREASE_IF_NECESSARY = "INCREASE_IF_NECESSARY"
+     '''(experimental) Increase the version requirement only when required by the new version.
+ 
+     :stability: experimental
+     '''
+ 
+ 
++class WorkflowActions(
++    metaclass=jsii.JSIIMeta,
++    jsii_type="projen.github.WorkflowActions",
++):
++    '''(experimental) A set of utility functions for creating GitHub actions in workflows.
++
++    :stability: experimental
++    '''
++
++    def __init__(self) -> None:
++        '''
++        :stability: experimental
++        '''
++        jsii.create(self.__class__, self, [])
++
++    @jsii.member(jsii_name="checkoutWithPatch")
++    @builtins.classmethod
++    def checkout_with_patch(
++        cls,
++        *,
++        lfs: typing.Optional[builtins.bool] = None,
++        patch_file: typing.Optional[builtins.str] = None,
++        ref: typing.Optional[builtins.str] = None,
++        repository: typing.Optional[builtins.str] = None,
++        token: typing.Optional[builtins.str] = None,
++    ) -> typing.List[_JobStep_c3287c05]:
++        '''(experimental) Checks out a repository and applies a git patch that was created using ``uploadGitPatch``.
++
++        :param lfs: (experimental) Whether LFS is enabled for the GitHub repository. Default: false
++        :param patch_file: (experimental) The name of the artifact the patch is stored as. Default: ".repo.patch"
++        :param ref: (experimental) Branch or tag name. Default: - the default branch is implicitly used
++        :param repository: (experimental) The repository (owner/repo) to use. Default: - the default repository is implicitly used
++        :param token: (experimental) A GitHub token to use when checking out the repository. If the intent is to push changes back to the branch, then you must use a PAT with ``repo`` (and possibly ``workflows``) permissions. Default: - the default GITHUB_TOKEN is implicitly used
++
++        :return: Job steps
++
++        :stability: experimental
++        '''
++        options = CheckoutWithPatchOptions(
++            lfs=lfs, patch_file=patch_file, ref=ref, repository=repository, token=token
++        )
++
++        return typing.cast(typing.List[_JobStep_c3287c05], jsii.sinvoke(cls, "checkoutWithPatch", [options]))
++
++    @jsii.member(jsii_name="createPullRequest")
++    @builtins.classmethod
++    def create_pull_request(
++        cls,
++        *,
++        pull_request_description: builtins.str,
++        pull_request_title: builtins.str,
++        workflow_name: builtins.str,
++        assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++        base_branch: typing.Optional[builtins.str] = None,
++        branch_name: typing.Optional[builtins.str] = None,
++        credentials: typing.Optional[GithubCredentials] = None,
++        git_identity: typing.Optional[typing.Union[GitIdentity, typing.Dict[builtins.str, typing.Any]]] = None,
++        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++        signoff: typing.Optional[builtins.bool] = None,
++        step_id: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++    ) -> typing.List[_JobStep_c3287c05]:
++        '''(experimental) A step that creates a pull request based on the current repo state.
++
++        :param pull_request_description: (experimental) Description added to the pull request. Providence information are automatically added.
++        :param pull_request_title: (experimental) The full title used to create the pull request. If PR titles are validated in this repo, the title should comply with the respective rules.
++        :param workflow_name: (experimental) The name of the workflow that will create the PR.
++        :param assignees: (experimental) Assignees to add on the PR. Default: - no assignees
++        :param base_branch: (experimental) Sets the pull request base branch. Default: - The branch checked out in the workflow.
++        :param branch_name: (experimental) The pull request branch name. Default: ``github-actions/${options.workflowName}``
++        :param credentials: (experimental) The job credentials used to create the pull request. Provided credentials must have permissions to create a pull request on the repository.
++        :param git_identity: (experimental) The git identity used to create the commit. Default: - the default github-actions user
++        :param labels: (experimental) Labels to apply on the PR. Default: - no labels.
++        :param signoff: (experimental) Add Signed-off-by line by the committer at the end of the commit log message. Default: true
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created. Default: "create_pr"
++        :param step_name: (experimental) The name of the step displayed on GitHub. Default: "Create Pull Request"
++
++        :return: Job steps
++
++        :stability: experimental
++        '''
++        options = CreatePullRequestOptions(
++            pull_request_description=pull_request_description,
++            pull_request_title=pull_request_title,
++            workflow_name=workflow_name,
++            assignees=assignees,
++            base_branch=base_branch,
++            branch_name=branch_name,
++            credentials=credentials,
++            git_identity=git_identity,
++            labels=labels,
++            signoff=signoff,
++            step_id=step_id,
++            step_name=step_name,
++        )
++
++        return typing.cast(typing.List[_JobStep_c3287c05], jsii.sinvoke(cls, "createPullRequest", [options]))
++
++    @jsii.member(jsii_name="setupGitIdentity")
++    @builtins.classmethod
++    def setup_git_identity(
++        cls,
++        *,
++        email: builtins.str,
++        name: builtins.str,
++    ) -> typing.List[_JobStep_c3287c05]:
++        '''(experimental) Configures the git identity (user name and email).
++
++        :param email: (experimental) The email address of the git user.
++        :param name: (experimental) The name of the user.
++
++        :return: Job steps
++
++        :stability: experimental
++        '''
++        id = GitIdentity(email=email, name=name)
++
++        return typing.cast(typing.List[_JobStep_c3287c05], jsii.sinvoke(cls, "setupGitIdentity", [id]))
++
++    @jsii.member(jsii_name="uploadGitPatch")
++    @builtins.classmethod
++    def upload_git_patch(
++        cls,
++        *,
++        output_name: builtins.str,
++        step_id: builtins.str,
++        mutation_error: typing.Optional[builtins.str] = None,
++        patch_file: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++    ) -> typing.List[_JobStep_c3287c05]:
++        '''(experimental) Creates a .patch file from the current git diff and uploads it as an artifact. Use ``checkoutWithPatch`` to download and apply in another job.
++
++        If a patch was uploaded, the action can optionally fail the job.
++
++        :param output_name: (experimental) The name of the output to emit. It will be set to ``true`` if there was a diff.
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created.
++        :param mutation_error: (experimental) Fail if a mutation was found and print this error message. Default: - do not fail upon mutation
++        :param patch_file: (experimental) The name of the artifact the patch is stored as. Default: ".repo.patch"
++        :param step_name: (experimental) The name of the step. Default: "Find mutations"
++
++        :return: Job steps
++
++        :stability: experimental
++        '''
++        options = UploadGitPatchOptions(
++            output_name=output_name,
++            step_id=step_id,
++            mutation_error=mutation_error,
++            patch_file=patch_file,
++            step_name=step_name,
++        )
++
++        return typing.cast(typing.List[_JobStep_c3287c05], jsii.sinvoke(cls, "uploadGitPatch", [options]))
++
++
++class WorkflowJobs(metaclass=jsii.JSIIMeta, jsii_type="projen.github.WorkflowJobs"):
++    '''(experimental) A set of utility functions for creating jobs in GitHub Workflows.
++
++    :stability: experimental
++    '''
++
++    def __init__(self) -> None:
++        '''
++        :stability: experimental
++        '''
++        jsii.create(self.__class__, self, [])
++
++    @jsii.member(jsii_name="pullRequestFromPatch")
++    @builtins.classmethod
++    def pull_request_from_patch(
++        cls,
++        *,
++        patch: typing.Union[PullRequestPatchSource, typing.Dict[builtins.str, typing.Any]],
++        job_name: typing.Optional[builtins.str] = None,
++        runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
++        pull_request_description: builtins.str,
++        pull_request_title: builtins.str,
++        workflow_name: builtins.str,
++        assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++        base_branch: typing.Optional[builtins.str] = None,
++        branch_name: typing.Optional[builtins.str] = None,
++        credentials: typing.Optional[GithubCredentials] = None,
++        git_identity: typing.Optional[typing.Union[GitIdentity, typing.Dict[builtins.str, typing.Any]]] = None,
++        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++        signoff: typing.Optional[builtins.bool] = None,
++        step_id: typing.Optional[builtins.str] = None,
++        step_name: typing.Optional[builtins.str] = None,
++    ) -> _Job_20ffcf45:
++        '''(experimental) Creates a pull request with the changes of a patch file.
++
++        :param patch: (experimental) Information about the patch that is used to create the pull request.
++        :param job_name: (experimental) The name of the job displayed on GitHub. Default: "Create Pull Request"
++        :param runs_on: (experimental) Github Runner selection labels. Default: ["ubuntu-latest"]
++        :param pull_request_description: (experimental) Description added to the pull request. Providence information are automatically added.
++        :param pull_request_title: (experimental) The full title used to create the pull request. If PR titles are validated in this repo, the title should comply with the respective rules.
++        :param workflow_name: (experimental) The name of the workflow that will create the PR.
++        :param assignees: (experimental) Assignees to add on the PR. Default: - no assignees
++        :param base_branch: (experimental) Sets the pull request base branch. Default: - The branch checked out in the workflow.
++        :param branch_name: (experimental) The pull request branch name. Default: ``github-actions/${options.workflowName}``
++        :param credentials: (experimental) The job credentials used to create the pull request. Provided credentials must have permissions to create a pull request on the repository.
++        :param git_identity: (experimental) The git identity used to create the commit. Default: - the default github-actions user
++        :param labels: (experimental) Labels to apply on the PR. Default: - no labels.
++        :param signoff: (experimental) Add Signed-off-by line by the committer at the end of the commit log message. Default: true
++        :param step_id: (experimental) The step ID which produces the output which indicates if a patch was created. Default: "create_pr"
++        :param step_name: (experimental) The name of the step displayed on GitHub. Default: "Create Pull Request"
++
++        :return: Job
++
++        :stability: experimental
++        '''
++        options = PullRequestFromPatchOptions(
++            patch=patch,
++            job_name=job_name,
++            runs_on=runs_on,
++            pull_request_description=pull_request_description,
++            pull_request_title=pull_request_title,
++            workflow_name=workflow_name,
++            assignees=assignees,
++            base_branch=base_branch,
++            branch_name=branch_name,
++            credentials=credentials,
++            git_identity=git_identity,
++            labels=labels,
++            signoff=signoff,
++            step_id=step_id,
++            step_name=step_name,
++        )
++
++        return typing.cast(_Job_20ffcf45, jsii.sinvoke(cls, "pullRequestFromPatch", [options]))
++
++
+ __all__ = [
+     "AutoApprove",
+     "AutoApproveOptions",
+     "AutoMerge",
+     "AutoMergeOptions",
++    "CheckoutWithPatchOptions",
++    "CreatePullRequestOptions",
+     "Dependabot",
+     "DependabotIgnore",
+     "DependabotOptions",
+     "DependabotRegistry",
+     "DependabotRegistryType",
+     "DependabotScheduleInterval",
+     "GitHub",
+@@ -4267,25 +5409,30 @@
+     "GithubWorkflowOptions",
+     "IAddConditionsLater",
+     "Mergify",
+     "MergifyConditionalOperator",
+     "MergifyOptions",
+     "MergifyQueue",
+     "MergifyRule",
++    "PullRequestFromPatchOptions",
+     "PullRequestLint",
+     "PullRequestLintOptions",
++    "PullRequestPatchSource",
+     "PullRequestTemplate",
+     "PullRequestTemplateOptions",
+     "SemanticTitleOptions",
+     "Stale",
+     "StaleBehavior",
+     "StaleOptions",
+     "TaskWorkflow",
+     "TaskWorkflowOptions",
++    "UploadGitPatchOptions",
+     "VersioningStrategy",
++    "WorkflowActions",
++    "WorkflowJobs",
+     "workflows",
+ ]
+ 
+ publication.publish()
+ 
+ # Loading modules to ensure their types are registered with the jsii runtime library
+ from . import workflows
+@@ -4336,14 +5483,43 @@
+     *,
+     approved_reviews: typing.Optional[jsii.Number] = None,
+     blocking_labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
++def _typecheckingstub__c7405ea05e49b1f743e00dc103618fbd659c979bbec234492b8928ed6cf37e9b(
++    *,
++    lfs: typing.Optional[builtins.bool] = None,
++    patch_file: typing.Optional[builtins.str] = None,
++    ref: typing.Optional[builtins.str] = None,
++    repository: typing.Optional[builtins.str] = None,
++    token: typing.Optional[builtins.str] = None,
++) -> None:
++    """Type checking stubs"""
++    pass
++
++def _typecheckingstub__42dbc4c6e52abbc74605066eb4f3323d0948617836847a6b99285ed9034e48d7(
++    *,
++    pull_request_description: builtins.str,
++    pull_request_title: builtins.str,
++    workflow_name: builtins.str,
++    assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++    base_branch: typing.Optional[builtins.str] = None,
++    branch_name: typing.Optional[builtins.str] = None,
++    credentials: typing.Optional[GithubCredentials] = None,
++    git_identity: typing.Optional[typing.Union[GitIdentity, typing.Dict[builtins.str, typing.Any]]] = None,
++    labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++    signoff: typing.Optional[builtins.bool] = None,
++    step_id: typing.Optional[builtins.str] = None,
++    step_name: typing.Optional[builtins.str] = None,
++) -> None:
++    """Type checking stubs"""
++    pass
++
+ def _typecheckingstub__2caae883697ce14c090e89c8fd0dbbab7e7c0f31d6d4d66311f05a6793bd9e92(
+     github: GitHub,
+     *,
+     ignore: typing.Optional[typing.Sequence[typing.Union[DependabotIgnore, typing.Dict[builtins.str, typing.Any]]]] = None,
+     ignore_projen: typing.Optional[builtins.bool] = None,
+     labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+     registries: typing.Optional[typing.Mapping[builtins.str, typing.Union[DependabotRegistry, typing.Dict[builtins.str, typing.Any]]]] = None,
+@@ -4627,14 +5803,35 @@
+     actions: typing.Mapping[builtins.str, typing.Any],
+     conditions: typing.Sequence[typing.Union[builtins.str, typing.Union[MergifyConditionalOperator, typing.Dict[builtins.str, typing.Any]]]],
+     name: builtins.str,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
++def _typecheckingstub__0c1e5279fc8c18480c3113cc60b389aa13938b2052436bbdcb3069cfe669fa47(
++    *,
++    pull_request_description: builtins.str,
++    pull_request_title: builtins.str,
++    workflow_name: builtins.str,
++    assignees: typing.Optional[typing.Sequence[builtins.str]] = None,
++    base_branch: typing.Optional[builtins.str] = None,
++    branch_name: typing.Optional[builtins.str] = None,
++    credentials: typing.Optional[GithubCredentials] = None,
++    git_identity: typing.Optional[typing.Union[GitIdentity, typing.Dict[builtins.str, typing.Any]]] = None,
++    labels: typing.Optional[typing.Sequence[builtins.str]] = None,
++    signoff: typing.Optional[builtins.bool] = None,
++    step_id: typing.Optional[builtins.str] = None,
++    step_name: typing.Optional[builtins.str] = None,
++    patch: typing.Union[PullRequestPatchSource, typing.Dict[builtins.str, typing.Any]],
++    job_name: typing.Optional[builtins.str] = None,
++    runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
++) -> None:
++    """Type checking stubs"""
++    pass
++
+ def _typecheckingstub__2e947e718bf3d7bd85f25ecd7154aeef36d789ef76012c5d50b8c1a265be7750(
+     github: GitHub,
+     *,
+     runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
+     semantic_title: typing.Optional[builtins.bool] = None,
+     semantic_title_options: typing.Optional[typing.Union[SemanticTitleOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+ ) -> None:
+@@ -4646,14 +5843,27 @@
+     runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
+     semantic_title: typing.Optional[builtins.bool] = None,
+     semantic_title_options: typing.Optional[typing.Union[SemanticTitleOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+ 
++def _typecheckingstub__c3c9a28aa8266154d9a36adad571b3695e958b931e79b9eaff4a7dc55e95dec8(
++    *,
++    lfs: typing.Optional[builtins.bool] = None,
++    patch_file: typing.Optional[builtins.str] = None,
++    ref: typing.Optional[builtins.str] = None,
++    repository: typing.Optional[builtins.str] = None,
++    token: typing.Optional[builtins.str] = None,
++    job_id: builtins.str,
++    output_name: builtins.str,
++) -> None:
++    """Type checking stubs"""
++    pass
++
+ def _typecheckingstub__609f06a532384d8ff817f7118dd1e021a8ee15a4aeb1b785b674a5c885fabc7b(
+     github: GitHub,
+     *,
+     lines: typing.Optional[typing.Sequence[builtins.str]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
+@@ -4747,7 +5957,18 @@
+     pre_build_steps: typing.Optional[typing.Sequence[typing.Union[_JobStep_c3287c05, typing.Dict[builtins.str, typing.Any]]]] = None,
+     pre_checkout_steps: typing.Optional[typing.Sequence[typing.Union[_JobStep_c3287c05, typing.Dict[builtins.str, typing.Any]]]] = None,
+     runs_on: typing.Optional[typing.Sequence[builtins.str]] = None,
+     triggers: typing.Optional[typing.Union[_Triggers_e9ae7617, typing.Dict[builtins.str, typing.Any]]] = None,
+ ) -> None:
+     """Type checking stubs"""
+     pass
++
++def _typecheckingstub__44834a10372a9e24aeb2cd31c9103944ca6f9b5f985d1986a7fcf267c04e9498(
++    *,
++    output_name: builtins.str,
++    step_id: builtins.str,
++    mutation_error: typing.Optional[builtins.str] = None,
++    patch_file: typing.Optional[builtins.str] = None,
++    step_name: typing.Optional[builtins.str] = None,
++) -> None:
++    """Type checking stubs"""
++    pass
+```
+
+### Comparing `projen-0.70.9/src/projen/github/workflows/__init__.py` & `projen-0.71.0/src/projen/github/workflows/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/gitlab/__init__.py` & `projen-0.71.0/src/projen/gitlab/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/java/__init__.py` & `projen-0.71.0/src/projen/java/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/javascript/__init__.py` & `projen-0.71.0/src/projen/javascript/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/python/__init__.py` & `projen-0.71.0/src/projen/python/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/release/__init__.py` & `projen-0.71.0/src/projen/release/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/typescript/__init__.py` & `projen-0.71.0/src/projen/typescript/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/vscode/__init__.py` & `projen-0.71.0/src/projen/vscode/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen/web/__init__.py` & `projen-0.71.0/src/projen/web/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `projen-0.70.9/src/projen.egg-info/PKG-INFO` & `projen-0.71.0/src/projen.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: projen
+-Version: 0.70.9
++Version: 0.71.0
+ Summary: CDK for software projects
+ Home-page: https://github.com/projen/projen.git
+ Author: Amazon Web Services
+ License: Apache-2.0
+ Project-URL: Source, https://github.com/projen/projen.git
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `projen-0.70.9/src/projen.egg-info/SOURCES.txt` & `projen-0.71.0/src/projen.egg-info/SOURCES.txt`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ src/projen/py.typed
+ src/projen.egg-info/PKG-INFO
+ src/projen.egg-info/SOURCES.txt
+ src/projen.egg-info/dependency_links.txt
+ src/projen.egg-info/requires.txt
+ src/projen.egg-info/top_level.txt
+ src/projen/_jsii/__init__.py
+-src/projen/_jsii/projen@0.70.9.jsii.tgz
++src/projen/_jsii/projen@0.71.0.jsii.tgz
+ src/projen/_jsii/bin/projen
+ src/projen/awscdk/__init__.py
+ src/projen/build/__init__.py
+ src/projen/cdk/__init__.py
+ src/projen/cdk8s/__init__.py
+ src/projen/cdktf/__init__.py
+ src/projen/circleci/__init__.py
+```
+

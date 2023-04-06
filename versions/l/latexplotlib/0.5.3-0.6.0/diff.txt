@@ -1,0 +1,196 @@
+--- tmp/latexplotlib-0.5.3.tar.gz
++++ tmp/latexplotlib-0.6.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "latexplotlib-0.5.3.tar", last modified: Wed Apr  5 12:37:07 2023, max compression
+│ +gzip compressed data, was "latexplotlib-0.6.0.tar", last modified: Thu Apr  6 16:00:05 2023, max compression
+│   --- latexplotlib-0.5.3.tar
+├── +++ latexplotlib-0.6.0.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7146 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6274 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2928 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1138 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/src/latexplotlib/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       63 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/src/latexplotlib/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8855 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/src/latexplotlib/_latexplotlib.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/src/latexplotlib/_version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/src/latexplotlib.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7146 2023-04-05 12:37:07.000000 latexplotlib-0.5.3/src/latexplotlib.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      630 2023-04-05 12:37:07.000000 latexplotlib-0.5.3/src/latexplotlib.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 12:37:07.000000 latexplotlib-0.5.3/src/latexplotlib.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      148 2023-04-05 12:37:07.000000 latexplotlib-0.5.3/src/latexplotlib.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-05 12:37:07.000000 latexplotlib-0.5.3/src/latexplotlib.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/styles/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex10pt-minimal.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1324 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex10pt.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex11pt-minimal.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1326 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex11pt.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex12pt-minimal.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1326 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex12pt.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      482 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex9pt-minimal.mplstyle
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1322 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/styles/latex9pt.mplstyle
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:37:07.225139 latexplotlib-0.5.3/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8834 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/tests/test_latexplotlib.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      502 2023-04-05 12:36:44.000000 latexplotlib-0.5.3/tests/test_styles.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.524983 latexplotlib-0.6.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7146 2023-04-06 16:00:05.520983 latexplotlib-0.6.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6274 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2928 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 16:00:05.524983 latexplotlib-0.6.0/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.516982 latexplotlib-0.6.0/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.520983 latexplotlib-0.6.0/src/latexplotlib/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      445 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9488 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/_latexplotlib.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/_version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.520983 latexplotlib-0.6.0/src/latexplotlib/styles/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex10pt-minimal.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1324 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex10pt.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex11pt-minimal.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1326 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex11pt.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex12pt-minimal.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1326 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex12pt.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      482 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex9pt-minimal.mplstyle
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1322 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/src/latexplotlib/styles/latex9pt.mplstyle
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.520983 latexplotlib-0.6.0/src/latexplotlib.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7146 2023-04-06 16:00:05.000000 latexplotlib-0.6.0/src/latexplotlib.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      788 2023-04-06 16:00:05.000000 latexplotlib-0.6.0/src/latexplotlib.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:00:05.000000 latexplotlib-0.6.0/src/latexplotlib.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      148 2023-04-06 16:00:05.000000 latexplotlib-0.6.0/src/latexplotlib.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-06 16:00:05.000000 latexplotlib-0.6.0/src/latexplotlib.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:00:05.520983 latexplotlib-0.6.0/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8834 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/tests/test_latexplotlib.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      519 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/tests/test_styles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-06 15:59:48.000000 latexplotlib-0.6.0/tests/test_styles_available.py
+│ │   --- latexplotlib-0.5.3/LICENSE
+│ ├── +++ latexplotlib-0.6.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/PKG-INFO
+│ ├── +++ latexplotlib-0.6.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: latexplotlib
+│ │ -Version: 0.5.3
+│ │ +Version: 0.6.0
+│ │  Summary: Perfect matplotlib figures for latex
+│ │  Author-email: Constantin Gahr <latexplotlib.gvxel@aleeas.com>
+│ │  License: MIT
+│ │  Project-URL: Homepage, https://github.com/cgahr/latexplotlib
+│ │  Project-URL: Issues, https://github.com/cgahr/latexplotlib/issues
+│ │  Keywords: latex,matplotlib-figures,matplotlib-style-sheets,matplotlib-styles,python
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: latexplotlib Version: 0.5.3 Summary: Perfect
+│ │ │ +Metadata-Version: 2.1 Name: latexplotlib Version: 0.6.0 Summary: Perfect
+│ │ │  matplotlib figures for latex Author-email: Constantin Gahr
+│ │ │  gvxel@aleeas.com> License: MIT Project-URL: Homepage, https://github.com/cgahr/
+│ │ │  latexplotlib Project-URL: Issues, https://github.com/cgahr/latexplotlib/issues
+│ │ │  Keywords: latex,matplotlib-figures,matplotlib-style-sheets,matplotlib-
+│ │ │  styles,python Classifier: Programming Language :: Python :: 3.7 Classifier:
+│ │ │  Programming Language :: Python :: 3.8 Classifier: Programming Language ::
+│ │ │  Python :: 3.9 Classifier: Programming Language :: Python :: 3.10 Classifier:
+│ │   --- latexplotlib-0.5.3/README.md
+│ ├── +++ latexplotlib-0.6.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/pyproject.toml
+│ ├── +++ latexplotlib-0.6.0/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/src/latexplotlib/_latexplotlib.py
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib/_latexplotlib.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,13 +1,14 @@
+│ │  import json
+│ │  import warnings
+│ │  from contextlib import contextmanager
+│ │  from pathlib import Path
+│ │  from typing import TYPE_CHECKING, Any, Dict, Iterator, Optional, Sequence, Tuple, Union
+│ │  
+│ │ +import matplotlib as mpl
+│ │  import matplotlib.pyplot as plt
+│ │  from appdirs import user_config_dir
+│ │  
+│ │  if TYPE_CHECKING:
+│ │      from typing import Literal
+│ │  
+│ │      Aspect = Union[float, Literal["auto", "equal"]]
+│ │ @@ -323,7 +324,29 @@
+│ │          scale=scale,
+│ │          aspect=aspect,
+│ │          width_ratios=width_ratios,
+│ │          height_ratios=height_ratios,
+│ │      )
+│ │  
+│ │      return plt.subplots(nrows, ncols, figsize=_figsize, **kwargs)
+│ │ +
+│ │ +
+│ │ +def delete_styles_from_previous_installation() -> None:
+│ │ +    """A helper function to remove old style files."""
+│ │ +    old = [
+│ │ +        "latex10pt-minimal.mplstyle",
+│ │ +        "latex10pt.mplstyle",
+│ │ +        "latex11pt-minimal.mplstyle",
+│ │ +        "latex11pt.mplstyle",
+│ │ +        "latex12pt-minimal.mplstyle",
+│ │ +        "latex12pt.mplstyle",
+│ │ +        "latex9pt-minimal.mplstyle",
+│ │ +        "latex9pt.mplstyle",
+│ │ +    ]
+│ │ +
+│ │ +    styledir = Path(mpl.get_configdir()) / "stylelib"
+│ │ +
+│ │ +    for name in old:
+│ │ +        style = styledir / name
+│ │ +
+│ │ +        if style.exists() and input(f"delete {style}? [y/N]") == "y":
+│ │ +            style.unlink()
+│ │   --- latexplotlib-0.5.3/src/latexplotlib.egg-info/PKG-INFO
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: latexplotlib
+│ │ -Version: 0.5.3
+│ │ +Version: 0.6.0
+│ │  Summary: Perfect matplotlib figures for latex
+│ │  Author-email: Constantin Gahr <latexplotlib.gvxel@aleeas.com>
+│ │  License: MIT
+│ │  Project-URL: Homepage, https://github.com/cgahr/latexplotlib
+│ │  Project-URL: Issues, https://github.com/cgahr/latexplotlib/issues
+│ │  Keywords: latex,matplotlib-figures,matplotlib-style-sheets,matplotlib-styles,python
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: latexplotlib Version: 0.5.3 Summary: Perfect
+│ │ │ +Metadata-Version: 2.1 Name: latexplotlib Version: 0.6.0 Summary: Perfect
+│ │ │  matplotlib figures for latex Author-email: Constantin Gahr
+│ │ │  gvxel@aleeas.com> License: MIT Project-URL: Homepage, https://github.com/cgahr/
+│ │ │  latexplotlib Project-URL: Issues, https://github.com/cgahr/latexplotlib/issues
+│ │ │  Keywords: latex,matplotlib-figures,matplotlib-style-sheets,matplotlib-
+│ │ │  styles,python Classifier: Programming Language :: Python :: 3.7 Classifier:
+│ │ │  Programming Language :: Python :: 3.8 Classifier: Programming Language ::
+│ │ │  Python :: 3.9 Classifier: Programming Language :: Python :: 3.10 Classifier:
+│ │   --- latexplotlib-0.5.3/styles/latex10pt.mplstyle
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib/styles/latex10pt.mplstyle
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/styles/latex11pt.mplstyle
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib/styles/latex11pt.mplstyle
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/styles/latex12pt.mplstyle
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib/styles/latex12pt.mplstyle
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/styles/latex9pt.mplstyle
+│ ├── +++ latexplotlib-0.6.0/src/latexplotlib/styles/latex9pt.mplstyle
+│ │┄ Files identical despite different names
+│ │   --- latexplotlib-0.5.3/tests/test_latexplotlib.py
+│ ├── +++ latexplotlib-0.6.0/tests/test_latexplotlib.py
+│ │┄ Files identical despite different names
