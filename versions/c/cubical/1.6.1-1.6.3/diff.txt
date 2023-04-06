@@ -1,0 +1,618 @@
+--- tmp/cubical-1.6.1.tar.gz
++++ tmp/cubical-1.6.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/cubical-1.6.1.tar", last modified: Fri Jul 15 13:47:25 2022, max compression
+│ +gzip compressed data, was "cubical-1.6.3.tar", last modified: Thu Apr  6 14:55:09 2023, max compression
+│   --- cubical-1.6.1.tar
+├── +++ cubical-1.6.3.tar
+│ ├── file list
+│ │ @@ -1,102 +1,104 @@
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     3474 2022-07-15 13:42:30.000000 cubical-1.6.1/setup.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      112 2022-07-15 12:55:04.000000 cubical-1.6.1/MANIFEST.in
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)       38 2022-07-15 13:47:25.000000 cubical-1.6.1/setup.cfg
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        1 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)       49 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        8 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1137 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        1 2022-07-15 13:43:27.000000 cubical-1.6.1/cubical.egg-info/not-zip-safe
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      216 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/requires.txt
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     2606 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical.egg-info/SOURCES.txt
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/test/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     9741 2022-07-15 12:55:04.000000 cubical-1.6.1/test/test_geometry.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      282 2022-07-15 12:55:04.000000 cubical-1.6.1/README.md
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1137 2022-07-15 13:47:25.000000 cubical-1.6.1/PKG-INFO
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    13070 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/flagging.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/data_handler/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     9797 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/TiggerSourceProvider.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     9846 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/MBTiggerSim.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     2455 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    76631 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/ms_data_handler.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    75530 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/ms_tile.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     3589 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/data_handler/wisdom.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    40352 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/solver.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/bin/
+│ │ --rwxrwxr-x   0 bhugo     (1000) bhugo     (1000)     5716 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/bin/plot-leakage-solutions
+│ │ --rwxrwxr-x   0 bhugo     (1000) bhugo     (1000)     4064 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/bin/plot-gain-solutions
+│ │ --rwxrwxr-x   0 bhugo     (1000) bhugo     (1000)     3779 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/bin/print-cubical-stats
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)       60 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/bin/gocubical
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    20905 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/workers.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/database/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     3979 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/iface_database.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    11263 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/pickled_db.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    38870 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/parameter.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     4247 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/blankcaltable.CASA.tgz
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    29467 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/database/casa_db_adaptor.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      269 2022-07-15 13:46:40.000000 cubical-1.6.1/cubical/__init__.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/madmax/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12807 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/madmax/plots.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    17934 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/madmax/flagger.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/madmax/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    31903 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/main.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    14929 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/statistics.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/plots/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    25670 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/plots/gainsols.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     3593 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/plots/stats.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     5509 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/plots/leakages.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1242 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/plots/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12136 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/plots/ifrgains.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/degridder/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    35574 2022-07-15 13:41:59.000000 cubical-1.6.1/cubical/degridder/DDFacetSim.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/degridder/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     4182 2022-07-15 13:41:59.000000 cubical-1.6.1/cubical/degridder/FITSBeamInterpolator.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12181 2022-07-15 13:00:27.000000 cubical-1.6.1/cubical/degridder/DicoSourceProvider.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    26466 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/degridder/geometry.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/tools/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     3381 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/shm_utils.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1432 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/ModColor.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12132 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/parsets.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    11415 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/shared_dict.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    16746 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/logger.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      780 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/dtype_checks.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      304 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    11736 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/dynoptparse.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     7400 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/NpShared.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     2140 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/tools/ClassPrint.py
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/kernels/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    10428 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/t_slope.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     7574 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/phase_only.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    11477 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/madmax.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    15580 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/diag_complex.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     5447 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/rebinning.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12394 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/tf_plane.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     9412 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/chain.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1882 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    10337 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/f_slope.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     6220 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/diag_phase_only.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    12468 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/full_W_complex.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    18713 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/diag_robust.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    22224 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/full_complex.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     7212 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/generics.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    17742 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/kernels/diagdiag_complex.py
+│ │ --rwxrwxr-x   0 bhugo     (1000) bhugo     (1000)    45501 2022-07-15 13:41:59.000000 cubical-1.6.1/cubical/DefaultParset.cfg
+│ │ -drwxrwxr-x   0 bhugo     (1000) bhugo     (1000)        0 2022-07-15 13:47:25.000000 cubical-1.6.1/cubical/machines/
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    49503 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/interval_gain_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     8532 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/ifr_gain_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    30403 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/jones_chain_robust_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    27087 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/jones_chain_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     6561 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/pol_gain_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    18389 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/slope_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)      219 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/__init__.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     8231 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/phase_diag_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    14852 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/parallactic_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    10908 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/complex_2x2_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1364 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/parameterised_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    42154 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/abstract_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)    25505 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/complex_W_2x2_machine.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     1055 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/machines/machine_types.py
+│ │ --rw-rw-r--   0 bhugo     (1000) bhugo     (1000)     2427 2022-07-15 12:55:04.000000 cubical-1.6.1/cubical/param_db.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.254843 cubical-1.6.3/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    18092 2022-03-24 13:06:05.000000 cubical-1.6.3/LICENSE.md
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      112 2022-03-24 13:06:05.000000 cubical-1.6.3/MANIFEST.in
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1031 2023-04-06 14:55:09.254843 cubical-1.6.3/PKG-INFO
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      282 2022-03-24 13:06:05.000000 cubical-1.6.3/README.md
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.242843 cubical-1.6.3/cubical/
+│ │ +-rwxrwxr-x   0 jonathan  (1000) jonathan  (1000)    45501 2023-04-06 14:53:17.000000 cubical-1.6.3/cubical/DefaultParset.cfg
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      269 2023-04-06 14:54:17.000000 cubical-1.6.3/cubical/__init__.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.242843 cubical-1.6.3/cubical/bin/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)       60 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/bin/gocubical
+│ │ +-rwxrwxr-x   0 jonathan  (1000) jonathan  (1000)     4064 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/bin/plot-gain-solutions
+│ │ +-rwxrwxr-x   0 jonathan  (1000) jonathan  (1000)     5716 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/bin/plot-leakage-solutions
+│ │ +-rwxrwxr-x   0 jonathan  (1000) jonathan  (1000)     3779 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/bin/print-cubical-stats
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.242843 cubical-1.6.3/cubical/data_handler/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     9846 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/data_handler/MBTiggerSim.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     9797 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/data_handler/TiggerSourceProvider.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     2455 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/data_handler/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    76631 2022-06-15 07:47:56.000000 cubical-1.6.3/cubical/data_handler/ms_data_handler.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    75530 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/data_handler/ms_tile.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     3589 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/data_handler/wisdom.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.246843 cubical-1.6.3/cubical/database/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        0 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     4247 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/blankcaltable.CASA.tgz
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    29467 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/casa_db_adaptor.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     3979 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/iface_database.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    38870 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/parameter.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    11263 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/database/pickled_db.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.246843 cubical-1.6.3/cubical/degridder/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    35574 2023-04-06 14:53:17.000000 cubical-1.6.3/cubical/degridder/DDFacetSim.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12181 2023-04-06 14:53:17.000000 cubical-1.6.3/cubical/degridder/DicoSourceProvider.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     4182 2023-04-06 14:53:17.000000 cubical-1.6.3/cubical/degridder/FITSBeamInterpolator.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        0 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/degridder/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    26466 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/degridder/geometry.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    13070 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/flagging.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.246843 cubical-1.6.3/cubical/kernels/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1882 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     9412 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/chain.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    15580 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/diag_complex.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     6220 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/diag_phase_only.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    18713 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/diag_robust.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    17742 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/diagdiag_complex.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    10337 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/f_slope.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12468 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/full_W_complex.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    22224 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/full_complex.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     7212 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/generics.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    11477 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/madmax.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     7574 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/phase_only.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     5447 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/rebinning.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    10428 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/t_slope.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12394 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/kernels/tf_plane.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.250843 cubical-1.6.3/cubical/machines/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      219 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    42154 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/abstract_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    10908 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/complex_2x2_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    25505 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/complex_W_2x2_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     8532 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/ifr_gain_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    49503 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/interval_gain_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    27087 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/jones_chain_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    30403 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/jones_chain_robust_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1055 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/machine_types.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    14852 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/parallactic_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1364 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/parameterised_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     8231 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/phase_diag_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     6561 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/pol_gain_machine.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    18389 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/machines/slope_machine.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.250843 cubical-1.6.3/cubical/madmax/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        0 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/madmax/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    17934 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/madmax/flagger.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12807 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/madmax/plots.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    32044 2023-04-06 14:53:17.000000 cubical-1.6.3/cubical/main.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     2427 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/param_db.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.250843 cubical-1.6.3/cubical/plots/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1242 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/plots/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    25670 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/plots/gainsols.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12136 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/plots/ifrgains.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     5509 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/plots/leakages.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     3593 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/plots/stats.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    40352 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/solver.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    14929 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/statistics.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.254843 cubical-1.6.3/cubical/tools/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     2140 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/ClassPrint.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1432 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/ModColor.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     7400 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/NpShared.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      304 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/__init__.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      780 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/dtype_checks.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    11736 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/dynoptparse.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    16746 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/logger.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    12132 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/parsets.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    11415 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/shared_dict.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     3381 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/tools/shm_utils.py
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)    20905 2022-03-24 13:06:05.000000 cubical-1.6.3/cubical/workers.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.242843 cubical-1.6.3/cubical.egg-info/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     1031 2023-04-06 14:55:08.000000 cubical-1.6.3/cubical.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     2632 2023-04-06 14:55:09.000000 cubical-1.6.3/cubical.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        1 2023-04-06 14:55:08.000000 cubical-1.6.3/cubical.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)       48 2023-04-06 14:55:09.000000 cubical-1.6.3/cubical.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        1 2022-03-24 13:07:15.000000 cubical-1.6.3/cubical.egg-info/not-zip-safe
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)      216 2023-04-06 14:55:09.000000 cubical-1.6.3/cubical.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)        8 2023-04-06 14:55:09.000000 cubical-1.6.3/cubical.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)       66 2022-03-24 13:06:05.000000 cubical-1.6.3/pyproject.toml
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)       38 2023-04-06 14:55:09.254843 cubical-1.6.3/setup.cfg
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     3474 2023-04-06 14:53:17.000000 cubical-1.6.3/setup.py
+│ │ +drwxrwxr-x   0 jonathan  (1000) jonathan  (1000)        0 2023-04-06 14:55:09.254843 cubical-1.6.3/test/
+│ │ +-rw-rw-r--   0 jonathan  (1000) jonathan  (1000)     9741 2022-03-24 13:06:05.000000 cubical-1.6.3/test/test_geometry.py
+│ ├── filetype from file(1)
+│ │ @@ -1 +1 @@
+│ │ -POSIX tar archive (GNU)
+│ │ +POSIX tar archive
+│ │   --- cubical-1.6.1/setup.py
+│ ├── +++ cubical-1.6.3/setup.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical.egg-info/PKG-INFO
+│ ├── +++ cubical-1.6.3/PKG-INFO
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,35 +1,38 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cubical
+│ │ -Version: 1.6.1
+│ │ +Version: 1.6.3
+│ │  Summary: Fast calibration implementation exploiting complex optimisation.
+│ │  Home-page: https://github.com/ratt-ru/CubiCal
+│ │  Author: Jonathan Kenyon
+│ │  Author-email: jonosken@gmail.com
+│ │  License: GNU GPL v3
+│ │ -Description: # CubiCal
+│ │ -        
+│ │ -        CubiCal is a suite of fast radio interferometric calibration routines exploiting complex optimisation.
+│ │ -        
+│ │ -        ## Documentation
+│ │ -        
+│ │ -        Documentation can now be found on [readthedocs](http://cubical.readthedocs.io).
+│ │ -        
+│ │ -        
+│ │ -        ## Licence
+│ │ -        
+│ │ -        CubiCal is licensed under the GNU GPL v2.0 Licence.
+│ │ -        
+│ │ -        
+│ │ -        
+│ │ -        
+│ │  Platform: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Classifier: Operating System :: POSIX :: Linux
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Topic :: Scientific/Engineering :: Astronomy
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │ -Provides-Extra: degridder-support
+│ │  Provides-Extra: lsm-support
+│ │ +Provides-Extra: degridder-support
+│ │ +License-File: LICENSE.md
+│ │ +
+│ │ +# CubiCal
+│ │ +
+│ │ +CubiCal is a suite of fast radio interferometric calibration routines exploiting complex optimisation.
+│ │ +
+│ │ +## Documentation
+│ │ +
+│ │ +Documentation can now be found on [readthedocs](http://cubical.readthedocs.io).
+│ │ +
+│ │ +
+│ │ +## Licence
+│ │ +
+│ │ +CubiCal is licensed under the GNU GPL v2.0 Licence.
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │   --- cubical-1.6.1/cubical.egg-info/SOURCES.txt
+│ ├── +++ cubical-1.6.3/cubical.egg-info/SOURCES.txt
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,11 @@
+│ │ +LICENSE.md
+│ │  MANIFEST.in
+│ │  README.md
+│ │ +pyproject.toml
+│ │  setup.py
+│ │  cubical/DefaultParset.cfg
+│ │  cubical/__init__.py
+│ │  cubical/flagging.py
+│ │  cubical/main.py
+│ │  cubical/param_db.py
+│ │  cubical/solver.py
+│ │   --- cubical-1.6.1/test/test_geometry.py
+│ ├── +++ cubical-1.6.3/test/test_geometry.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/PKG-INFO
+│ ├── +++ cubical-1.6.3/cubical.egg-info/PKG-INFO
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,35 +1,38 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cubical
+│ │ -Version: 1.6.1
+│ │ +Version: 1.6.3
+│ │  Summary: Fast calibration implementation exploiting complex optimisation.
+│ │  Home-page: https://github.com/ratt-ru/CubiCal
+│ │  Author: Jonathan Kenyon
+│ │  Author-email: jonosken@gmail.com
+│ │  License: GNU GPL v3
+│ │ -Description: # CubiCal
+│ │ -        
+│ │ -        CubiCal is a suite of fast radio interferometric calibration routines exploiting complex optimisation.
+│ │ -        
+│ │ -        ## Documentation
+│ │ -        
+│ │ -        Documentation can now be found on [readthedocs](http://cubical.readthedocs.io).
+│ │ -        
+│ │ -        
+│ │ -        ## Licence
+│ │ -        
+│ │ -        CubiCal is licensed under the GNU GPL v2.0 Licence.
+│ │ -        
+│ │ -        
+│ │ -        
+│ │ -        
+│ │  Platform: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Classifier: Operating System :: POSIX :: Linux
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Topic :: Scientific/Engineering :: Astronomy
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │ -Provides-Extra: degridder-support
+│ │  Provides-Extra: lsm-support
+│ │ +Provides-Extra: degridder-support
+│ │ +License-File: LICENSE.md
+│ │ +
+│ │ +# CubiCal
+│ │ +
+│ │ +CubiCal is a suite of fast radio interferometric calibration routines exploiting complex optimisation.
+│ │ +
+│ │ +## Documentation
+│ │ +
+│ │ +Documentation can now be found on [readthedocs](http://cubical.readthedocs.io).
+│ │ +
+│ │ +
+│ │ +## Licence
+│ │ +
+│ │ +CubiCal is licensed under the GNU GPL v2.0 Licence.
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │   --- cubical-1.6.1/cubical/flagging.py
+│ ├── +++ cubical-1.6.3/cubical/flagging.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/TiggerSourceProvider.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/TiggerSourceProvider.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/MBTiggerSim.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/MBTiggerSim.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/__init__.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/ms_data_handler.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/ms_data_handler.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/ms_tile.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/ms_tile.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/data_handler/wisdom.py
+│ ├── +++ cubical-1.6.3/cubical/data_handler/wisdom.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/solver.py
+│ ├── +++ cubical-1.6.3/cubical/solver.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/bin/plot-leakage-solutions
+│ ├── +++ cubical-1.6.3/cubical/bin/plot-leakage-solutions
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/bin/plot-gain-solutions
+│ ├── +++ cubical-1.6.3/cubical/bin/plot-gain-solutions
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/bin/print-cubical-stats
+│ ├── +++ cubical-1.6.3/cubical/bin/print-cubical-stats
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/workers.py
+│ ├── +++ cubical-1.6.3/cubical/workers.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/database/iface_database.py
+│ ├── +++ cubical-1.6.3/cubical/database/iface_database.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/database/pickled_db.py
+│ ├── +++ cubical-1.6.3/cubical/database/pickled_db.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/database/parameter.py
+│ ├── +++ cubical-1.6.3/cubical/database/parameter.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/database/blankcaltable.CASA.tgz
+│ ├── +++ cubical-1.6.3/cubical/database/blankcaltable.CASA.tgz
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/database/casa_db_adaptor.py
+│ ├── +++ cubical-1.6.3/cubical/database/casa_db_adaptor.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/madmax/plots.py
+│ ├── +++ cubical-1.6.3/cubical/madmax/plots.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/madmax/flagger.py
+│ ├── +++ cubical-1.6.3/cubical/madmax/flagger.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/main.py
+│ ├── +++ cubical-1.6.3/cubical/main.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -440,21 +440,25 @@
+│ │  
+│ │          if dde_mode == 'always' and not have_dd_jones:
+│ │              raise UserInputError("we have '--model-ddes always', but no direction dependent Jones terms enabled")
+│ │  
+│ │          # force floats in Montblanc calculations
+│ │          mb_opts = GD["montblanc"]
+│ │          # mb`_opts['dtype'] = 'float'
+│ │ +        if load_model:
+│ │ +            models = str(GD["model"]["list"]).split(",")
+│ │ +            weights = GD["weight"]["column"].split(",") if GD["weight"]["column"] else None
+│ │ +        else:
+│ │ +            models = weights = []
+│ │  
+│ │ -        ms.init_models(str(GD["model"]["list"]).split(","),
+│ │ -                       GD["weight"]["column"].split(",") if GD["weight"]["column"] else None,
+│ │ -                       fill_offdiag_weights=GD["weight"]["fill-offdiag"],
+│ │ +        ms.init_models(models, weights, fill_offdiag_weights=GD["weight"]["fill-offdiag"],
+│ │                         mb_opts=GD["montblanc"],
+│ │                         use_ddes=have_dd_jones and dde_mode != 'never',
+│ │ -                       degrid_opts=GD["degridding"])
+│ │ +                       degrid_opts=GD["degridding"],
+│ │ +                       null_v=GD["model"]["null-v"])
+│ │  
+│ │          if len(ms.model_directions) < 2 and have_dd_jones and dde_mode == 'auto':
+│ │              raise UserInputError("--model-list does not specify directions. "
+│ │                      "Have you forgotten a @dE tag perhaps? Rerun with '--model-ddes never' to proceed anyway.")
+│ │  
+│ │          if load_model:
+│ │              # set up subtraction options
+│ │ @@ -641,17 +645,17 @@
+│ │                      warnings.simplefilter("error", np.ComplexWarning)
+│ │                      cubical.plots.ifrgains.make_ifrgain_plots(solver.ifrgain_machine.reload(), ms, GD, basename)
+│ │              else:
+│ │                  try:
+│ │                      cubical.plots.ifrgains.make_ifrgain_plots(solver.ifrgain_machine.reload(), ms, GD, basename)
+│ │                  except Exception as exc:
+│ │                      import traceback
+│ │ -                    print(file=ModColor.Str("An error has occurred while making BBC plots: {}({})\n {}".format(type(exc).__name__,
+│ │ +                    print(ModColor.Str("An error has occurred while making BBC plots: {}({})\n {}".format(type(exc).__name__,
+│ │                                                                                             exc,
+│ │ -                                                                                           traceback.format_exc())))
+│ │ +                                                                                           traceback.format_exc())), file=log)
+│ │                      print(ModColor.Str("This is not fatal, but should be reported (and your plots have gone missing!)"), file=log)
+│ │  
+│ │          ms.close()
+│ │  
+│ │          print(ModColor.Str("completed successfully", col="green"), file=log)
+│ │  
+│ │      except RuntimeWarning:
+│ │   --- cubical-1.6.1/cubical/statistics.py
+│ ├── +++ cubical-1.6.3/cubical/statistics.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/plots/gainsols.py
+│ ├── +++ cubical-1.6.3/cubical/plots/gainsols.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/plots/stats.py
+│ ├── +++ cubical-1.6.3/cubical/plots/stats.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/plots/leakages.py
+│ ├── +++ cubical-1.6.3/cubical/plots/leakages.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/plots/__init__.py
+│ ├── +++ cubical-1.6.3/cubical/plots/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/plots/ifrgains.py
+│ ├── +++ cubical-1.6.3/cubical/plots/ifrgains.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/degridder/DDFacetSim.py
+│ ├── +++ cubical-1.6.3/cubical/degridder/DDFacetSim.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/degridder/FITSBeamInterpolator.py
+│ ├── +++ cubical-1.6.3/cubical/degridder/FITSBeamInterpolator.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/degridder/DicoSourceProvider.py
+│ ├── +++ cubical-1.6.3/cubical/degridder/DicoSourceProvider.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/degridder/geometry.py
+│ ├── +++ cubical-1.6.3/cubical/degridder/geometry.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/shm_utils.py
+│ ├── +++ cubical-1.6.3/cubical/tools/shm_utils.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/ModColor.py
+│ ├── +++ cubical-1.6.3/cubical/tools/ModColor.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/parsets.py
+│ ├── +++ cubical-1.6.3/cubical/tools/parsets.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/shared_dict.py
+│ ├── +++ cubical-1.6.3/cubical/tools/shared_dict.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/logger.py
+│ ├── +++ cubical-1.6.3/cubical/tools/logger.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/dtype_checks.py
+│ ├── +++ cubical-1.6.3/cubical/tools/dtype_checks.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/dynoptparse.py
+│ ├── +++ cubical-1.6.3/cubical/tools/dynoptparse.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/NpShared.py
+│ ├── +++ cubical-1.6.3/cubical/tools/NpShared.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/tools/ClassPrint.py
+│ ├── +++ cubical-1.6.3/cubical/tools/ClassPrint.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/t_slope.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/t_slope.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/phase_only.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/phase_only.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/madmax.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/madmax.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/diag_complex.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/diag_complex.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/rebinning.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/rebinning.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/tf_plane.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/tf_plane.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/chain.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/chain.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/__init__.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/f_slope.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/f_slope.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/diag_phase_only.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/diag_phase_only.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/full_W_complex.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/full_W_complex.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/diag_robust.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/diag_robust.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/full_complex.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/full_complex.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/generics.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/generics.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/kernels/diagdiag_complex.py
+│ ├── +++ cubical-1.6.3/cubical/kernels/diagdiag_complex.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/DefaultParset.cfg
+│ ├── +++ cubical-1.6.3/cubical/DefaultParset.cfg
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/interval_gain_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/interval_gain_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/ifr_gain_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/ifr_gain_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/jones_chain_robust_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/jones_chain_robust_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/jones_chain_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/jones_chain_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/pol_gain_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/pol_gain_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/slope_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/slope_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/phase_diag_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/phase_diag_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/parallactic_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/parallactic_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/complex_2x2_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/complex_2x2_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/parameterised_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/parameterised_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/abstract_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/abstract_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/complex_W_2x2_machine.py
+│ ├── +++ cubical-1.6.3/cubical/machines/complex_W_2x2_machine.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/machines/machine_types.py
+│ ├── +++ cubical-1.6.3/cubical/machines/machine_types.py
+│ │┄ Files identical despite different names
+│ │   --- cubical-1.6.1/cubical/param_db.py
+│ ├── +++ cubical-1.6.3/cubical/param_db.py
+│ │┄ Files identical despite different names

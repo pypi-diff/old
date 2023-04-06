@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pg_docker-0.7.0.tar.gz tmp/pg_docker-0.8.0.tar.gz --html versions/p/pg-docker/0.7.0-0.8.0/index.html --text versions/p/pg-docker/0.7.0-0.8.0/diff.txt --markdown versions/p/pg-docker/0.7.0-0.8.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.38 KB</span></div>
+  <div><span class="source">tmp/pg_docker-0.7.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pg_docker-0.8.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">186 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pg_docker-0.<del>7</del>.0.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pg_docker-0.<ins>8</ins>.0.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.14 KB</span></div>
+    <div><span class="source">pg_docker-0.7.0.tar</span> vs.</div>
+    <div id="pg_docker--.-.-.tar"><span class="source">pg_docker-0.8.0.tar</span>
+      <a class="anchor" href="#pg_docker--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.62 KB</span></div>
+      <div id="pg_docker--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2286<span class="dp">·</span>2022-12-19<span class="dp">·</span>20:16:34.229525<span class="dp">·</span>pg_docker-0.<del>7</del>.0/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2286<span class="dp">·</span>2022-12-19<span class="dp">·</span>20:16:34.229525<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<span class="dp">·</span>2022-12-15<span class="dp">·</span>21:23:14.996919<span class="dp">·</span>pg_docker-0.<del>7</del>.0/pg_docker/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<span class="dp">·</span>2022-12-15<span class="dp">·</span>21:23:14.996919<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/pg_docker/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8213<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:56:37.634490<span class="dp">·</span>pg_docker-0.<del>7</del>.0/pg_docker/_core.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8213<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:56:37.634490<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/pg_docker/_core.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2022-12-15<span class="dp">·</span>22:40:13.976549<span class="dp">·</span>pg_docker-0.<del>7</del>.0/pg_docker/_plugin.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2022-12-15<span class="dp">·</span>22:40:13.976549<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/pg_docker/_plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-19<span class="dp">·</span>18:30:52.443272<span class="dp">·</span>pg_docker-0.<del>7</del>.0/pg_docker/py.typed</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-19<span class="dp">·</span>18:30:52.443272<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/pg_docker/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>71</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>58</del>:<del>26</del>.<del>0</del>63<del>253</del><span class="dp">·</span>pg_docker-0.<del>7</del>.0/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>69</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>01</ins>:<ins>40</ins>.63<ins>1</ins><ins>392</ins><span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30<del>50</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pg_docker-0.<del>7</del>.0/setup.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30<ins>46</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<del>40</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pg_docker-0.<del>7</del>.0/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<ins>36</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pg_docker-0.<ins>8</ins>.0/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">pg_docker-0.7.0/README.md</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--README.md"><span class="source">pg_docker-0.8.0/README.md</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">pg_docker-0.7.0/pg_docker/_core.py</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--pg_docker-_core.py"><span class="source">pg_docker-0.8.0/pg_docker/_core.py</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--pg_docker-_core.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">pg_docker-0.7.0/pg_docker/_plugin.py</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--pg_docker-_plugin.py"><span class="source">pg_docker-0.8.0/pg_docker/_plugin.py</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--pg_docker-_plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">566 B</span></div>
+      <div><span class="source">pg_docker-0.7.0/pyproject.toml</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--pyproject.toml"><span class="source">pg_docker-0.8.0/pyproject.toml</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 20% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pg-docker&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pg-docker&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<del>7</del>.0&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<ins>8</ins>.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Your<span class="dp">·</span>Name<span class="dp">·</span>&lt;you@example.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Your<span class="dp">·</span>Name<span class="dp">·</span>&lt;you@example.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;pg_docker&quot;}]</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;pg_docker&quot;}]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">8 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>Pytest&quot;</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>Pytest&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">]</td><td class="diffline">10 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">11 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td><td class="diffline">12 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">psycopg2<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.9<del>.5</del>&quot;</td><td class="diffline">13 </td><td class="diffpresent">psycopg2<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.9&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td><td class="diffline">14 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td><td class="diffline">15 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^22.10.0&quot;</td><td class="diffline">16 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^22.10.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">isort<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.10.1&quot;</td><td class="diffline">17 </td><td class="diffpresent">isort<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.10.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">mypy<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.991&quot;</td><td class="diffline">18 </td><td class="diffpresent">mypy<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.991&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.9 KB</span></div>
+      <div><span class="source">pg_docker-0.7.0/setup.py</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--setup.py"><span class="source">pg_docker-0.8.0/setup.py</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 22 lines modified</td><td colspan="2">Offset 4, 22 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">4 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">[&#x27;pg_docker&#x27;]</td><td class="diffline">5 </td><td class="diffpresent">[&#x27;pg_docker&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">package_data<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">6 </td><td class="diffpresent">package_data<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}</td><td class="diffline">7 </td><td class="diffpresent">{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">8 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">[&#x27;psycopg2&gt;=2.9<del>.5</del>,&lt;3<del>.0</del>.0&#x27;]</td><td class="diffline">9 </td><td class="diffpresent">[&#x27;psycopg2&gt;=2.9,&lt;3.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">10 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">{&#x27;pytest11&#x27;:<span class="dp">·</span>[&#x27;pg_docker<span class="dp">·</span>=<span class="dp">·</span>pg_docker._plugin&#x27;]}</td><td class="diffline">11 </td><td class="diffpresent">{&#x27;pytest11&#x27;:<span class="dp">·</span>[&#x27;pg_docker<span class="dp">·</span>=<span class="dp">·</span>pg_docker._plugin&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">12 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;pg-docker&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;pg-docker&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.<del>7</del>.0&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.<ins>8</ins>.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>PG<span class="dp">·</span>Docker\n\nA<span class="dp">·</span>python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>containerized<span class="dp">·</span>postgres<span class="dp">·</span>databases<span class="dp">·</span>in<span class="dp">·</span>python\n\n**Why<span class="dp">·</span>would<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>this?**\n\nIf<span class="dp">·</span>you<span class="dp">·</span>are<span class="dp">·</span>using<span class="dp">·</span>postgres<span class="dp">·</span>and<span class="dp">·</span>want<span class="dp">·</span>to<span class="dp">·</span>write<span class="dp">·</span>tests<span class="dp">·</span>that<span class="dp">·</span>run<span class="dp">·</span>against<span class="dp">·</span>a<span class="dp">·</span>real<span class="dp">·</span>database,<span class="dp">·</span>then<span class="dp">·</span>this<span class="dp">·</span>will<span class="dp">·</span>make<span class="dp">·</span>your<span class="dp">·</span>life<span class="dp">·</span>easier.\n\n##<span class="dp">·</span>Installation\n\nInstall<span class="dp">·</span>via<span class="dp">·</span>pip:\n```\npip<span class="dp">·</span>install<span class="dp">·</span>pg-docker\n```\n\nYou<span class="dp">·</span>will<span class="dp">·</span>also<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>have<span class="dp">·</span>[docker](https://www.docker.com/).\n\n##<span class="dp">·</span>Usage\n\nNote:<span class="dp">·</span>*This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>mainly<span class="dp">·</span>built<span class="dp">·</span>with<span class="dp">·</span>pytest<span class="dp">·</span>in<span class="dp">·</span>mind,<span class="dp">·</span>but<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>context<span class="dp">·</span>managers<span class="dp">·</span>documented<span class="dp">·</span>below<span class="dp">·</span>with<span class="dp">·</span>other<span class="dp">·</span>testing<span class="dp">·</span>frameworks<span class="dp">·</span>as<span class="dp">·</span>well.*\n\n###<span class="dp">·</span>Example\n\nWith<span class="dp">·</span>pytest:\n```py\nimport<span class="dp">·</span>psycopg2\n\n\npytest_plugins<span class="dp">·</span>=<span class="dp">·</span>[&quot;pg_docker&quot;]\n\n\ndef<span class="dp">·</span>test_using_a_database(pg_database):\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>db_connection<span class="dp">·</span>=<span class="dp">·</span>psycopg2.connect(**pg_database.connection_kwargs())\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cursor<span class="dp">·</span>=<span class="dp">·</span>db_connection.cursor()\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cursor.execute(&quot;SELECT<span class="dp">·</span>\&#x27;hello<span class="dp">·</span>world!\&#x27;&quot;)\n\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>cursor.fetchone()<span class="dp">·</span>==<span class="dp">·</span>(&quot;hello<span class="dp">·</span>world!&quot;,)\n```\n\n###<span class="dp">·</span>Usage<span class="dp">·</span>with<span class="dp">·</span>pytest\n\nYou<span class="dp">·</span>first<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>plugin.<span class="dp">·</span>To<span class="dp">·</span>do<span class="dp">·</span>this<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>`conftest.py`<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>root<span class="dp">·</span>directory<span class="dp">·</span>of<span class="dp">·</span>your<span class="dp">·</span>tests<span class="dp">·</span>and<span class="dp">·</span>add:\n```py\npytest_plugins<span class="dp">·</span>=<span class="dp">·</span>[&quot;pg_docker&quot;]\n```\nYou<span class="dp">·</span>can<span class="dp">·</span>find<span class="dp">·</span>more<span class="dp">·</span>details<span class="dp">·</span>on<span class="dp">·</span>how<span class="dp">·</span>to<span class="dp">·</span>activate<span class="dp">·</span>plugins<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[pytest<span class="dp">·</span>docs](https://docs.pytest.org/en/latest/how-to/plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file)\n\nThe<span class="dp">·</span>plugin<span class="dp">·</span>The<span class="dp">·</span>following<span class="dp">·</span>fixtures:\n\n<span class="dp">·</span>-<span class="dp">·</span>`pg_database`:<span class="dp">·</span>`DatabaseParams`<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>clean<span class="dp">·</span>database.\n<span class="dp">·</span>-<span class="dp">·</span>`pg_database_pool`:<span class="dp">·</span>A<span class="dp">·</span>`DatabasePool`<span class="dp">·</span>instance.<span class="dp">·</span>Use<span class="dp">·</span>this<span class="dp">·</span>if<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>more<span class="dp">·</span>than<span class="dp">·</span>one<span class="dp">·</span>database<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>tests<span class="dp">·</span>at<span class="dp">·</span>a<span class="dp">·</span>time.\n\n\n###<span class="dp">·</span>Configuring<span class="dp">·</span>Database<span class="dp">·</span>Migrations\n\nUse<span class="dp">·</span>the<span class="dp">·</span>below<span class="dp">·</span>template<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`conftest.py`<span class="dp">·</span>to<span class="dp">·</span>configure<span class="dp">·</span>how<span class="dp">·</span>your<span class="dp">·</span>databases<span class="dp">·</span>are<span class="dp">·</span>set<span class="dp">·</span>up.<span class="dp">·</span>\n```py\ndef<span class="dp">·</span>setup_db(pg_params):\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Add<span class="dp">·</span>any<span class="dp">·</span>setup<span class="dp">·</span>logic<span class="dp">·</span>for<span class="dp">·</span>your<span class="dp">·</span>database<span class="dp">·</span>in<span class="dp">·</span>here.&quot;&quot;&quot;\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass\n\n@pytest.fixture(scope=&quot;session&quot;)\ndef<span class="dp">·</span>pg_setup_db():\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>setup_db\n```\nNote:<span class="dp">·</span>*You<span class="dp">·</span>might<span class="dp">·</span>be<span class="dp">·</span>inclined<span class="dp">·</span>to<span class="dp">·</span>edit<span class="dp">·</span>the<span class="dp">·</span>above<span class="dp">·</span>code<span class="dp">·</span>to<span class="dp">·</span>nest<span class="dp">·</span>the<span class="dp">·</span>setup_db<span class="dp">·</span>function<span class="dp">·</span>inside<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>fixture<span class="dp">·</span>function.<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>not<span class="dp">·</span>work,<span class="dp">·</span>because<span class="dp">·</span>the<span class="dp">·</span>fixture<span class="dp">·</span>result<span class="dp">·</span>needs<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>[pickleable](https://docs.python.org/3/library/pickle.html#what-can-be-pickled-and-unpickled)!*\n\n\n###<span class="dp">·</span>Advanced<span class="dp">·</span>Usage<span class="dp">·</span>(and<span class="dp">·</span>other<span class="dp">·</span>testing<span class="dp">·</span>frameworks)\n\nFor<span class="dp">·</span>other<span class="dp">·</span>use<span class="dp">·</span>cases<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>`database_pool`<span class="dp">·</span>context<span class="dp">·</span>manager:\n```py\nwith<span class="dp">·</span>database_pool()<span class="dp">·</span>as<span class="dp">·</span>db_pool:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>db_pool.database<span class="dp">·</span>as<span class="dp">·</span>db_params:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>connection<span class="dp">·</span>=<span class="dp">·</span>psycopg2.connect(**db_params.connection_kwargs())\n```\n&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>PG<span class="dp">·</span>Docker\n\nA<span class="dp">·</span>python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>containerized<span class="dp">·</span>postgres<span class="dp">·</span>databases<span class="dp">·</span>in<span class="dp">·</span>python\n\n**Why<span class="dp">·</span>would<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>this?**\n\nIf<span class="dp">·</span>you<span class="dp">·</span>are<span class="dp">·</span>using<span class="dp">·</span>postgres<span class="dp">·</span>and<span class="dp">·</span>want<span class="dp">·</span>to<span class="dp">·</span>write<span class="dp">·</span>tests<span class="dp">·</span>that<span class="dp">·</span>run<span class="dp">·</span>against<span class="dp">·</span>a<span class="dp">·</span>real<span class="dp">·</span>database,<span class="dp">·</span>then<span class="dp">·</span>this<span class="dp">·</span>will<span class="dp">·</span>make<span class="dp">·</span>your<span class="dp">·</span>life<span class="dp">·</span>easier.\n\n##<span class="dp">·</span>Installation\n\nInstall<span class="dp">·</span>via<span class="dp">·</span>pip:\n```\npip<span class="dp">·</span>install<span class="dp">·</span>pg-docker\n```\n\nYou<span class="dp">·</span>will<span class="dp">·</span>also<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>have<span class="dp">·</span>[docker](https://www.docker.com/).\n\n##<span class="dp">·</span>Usage\n\nNote:<span class="dp">·</span>*This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>mainly<span class="dp">·</span>built<span class="dp">·</span>with<span class="dp">·</span>pytest<span class="dp">·</span>in<span class="dp">·</span>mind,<span class="dp">·</span>but<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>context<span class="dp">·</span>managers<span class="dp">·</span>documented<span class="dp">·</span>below<span class="dp">·</span>with<span class="dp">·</span>other<span class="dp">·</span>testing<span class="dp">·</span>frameworks<span class="dp">·</span>as<span class="dp">·</span>well.*\n\n###<span class="dp">·</span>Example\n\nWith<span class="dp">·</span>pytest:\n```py\nimport<span class="dp">·</span>psycopg2\n\n\npytest_plugins<span class="dp">·</span>=<span class="dp">·</span>[&quot;pg_docker&quot;]\n\n\ndef<span class="dp">·</span>test_using_a_database(pg_database):\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>db_connection<span class="dp">·</span>=<span class="dp">·</span>psycopg2.connect(**pg_database.connection_kwargs())\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cursor<span class="dp">·</span>=<span class="dp">·</span>db_connection.cursor()\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cursor.execute(&quot;SELECT<span class="dp">·</span>\&#x27;hello<span class="dp">·</span>world!\&#x27;&quot;)\n\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>cursor.fetchone()<span class="dp">·</span>==<span class="dp">·</span>(&quot;hello<span class="dp">·</span>world!&quot;,)\n```\n\n###<span class="dp">·</span>Usage<span class="dp">·</span>with<span class="dp">·</span>pytest\n\nYou<span class="dp">·</span>first<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>plugin.<span class="dp">·</span>To<span class="dp">·</span>do<span class="dp">·</span>this<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>`conftest.py`<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>root<span class="dp">·</span>directory<span class="dp">·</span>of<span class="dp">·</span>your<span class="dp">·</span>tests<span class="dp">·</span>and<span class="dp">·</span>add:\n```py\npytest_plugins<span class="dp">·</span>=<span class="dp">·</span>[&quot;pg_docker&quot;]\n```\nYou<span class="dp">·</span>can<span class="dp">·</span>find<span class="dp">·</span>more<span class="dp">·</span>details<span class="dp">·</span>on<span class="dp">·</span>how<span class="dp">·</span>to<span class="dp">·</span>activate<span class="dp">·</span>plugins<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[pytest<span class="dp">·</span>docs](https://docs.pytest.org/en/latest/how-to/plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file)\n\nThe<span class="dp">·</span>plugin<span class="dp">·</span>The<span class="dp">·</span>following<span class="dp">·</span>fixtures:\n\n<span class="dp">·</span>-<span class="dp">·</span>`pg_database`:<span class="dp">·</span>`DatabaseParams`<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>clean<span class="dp">·</span>database.\n<span class="dp">·</span>-<span class="dp">·</span>`pg_database_pool`:<span class="dp">·</span>A<span class="dp">·</span>`DatabasePool`<span class="dp">·</span>instance.<span class="dp">·</span>Use<span class="dp">·</span>this<span class="dp">·</span>if<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>more<span class="dp">·</span>than<span class="dp">·</span>one<span class="dp">·</span>database<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>tests<span class="dp">·</span>at<span class="dp">·</span>a<span class="dp">·</span>time.\n\n\n###<span class="dp">·</span>Configuring<span class="dp">·</span>Database<span class="dp">·</span>Migrations\n\nUse<span class="dp">·</span>the<span class="dp">·</span>below<span class="dp">·</span>template<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`conftest.py`<span class="dp">·</span>to<span class="dp">·</span>configure<span class="dp">·</span>how<span class="dp">·</span>your<span class="dp">·</span>databases<span class="dp">·</span>are<span class="dp">·</span>set<span class="dp">·</span>up.<span class="dp">·</span>\n```py\ndef<span class="dp">·</span>setup_db(pg_params):\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Add<span class="dp">·</span>any<span class="dp">·</span>setup<span class="dp">·</span>logic<span class="dp">·</span>for<span class="dp">·</span>your<span class="dp">·</span>database<span class="dp">·</span>in<span class="dp">·</span>here.&quot;&quot;&quot;\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass\n\n@pytest.fixture(scope=&quot;session&quot;)\ndef<span class="dp">·</span>pg_setup_db():\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>setup_db\n```\nNote:<span class="dp">·</span>*You<span class="dp">·</span>might<span class="dp">·</span>be<span class="dp">·</span>inclined<span class="dp">·</span>to<span class="dp">·</span>edit<span class="dp">·</span>the<span class="dp">·</span>above<span class="dp">·</span>code<span class="dp">·</span>to<span class="dp">·</span>nest<span class="dp">·</span>the<span class="dp">·</span>setup_db<span class="dp">·</span>function<span class="dp">·</span>inside<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>fixture<span class="dp">·</span>function.<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>not<span class="dp">·</span>work,<span class="dp">·</span>because<span class="dp">·</span>the<span class="dp">·</span>fixture<span class="dp">·</span>result<span class="dp">·</span>needs<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>[pickleable](https://docs.python.org/3/library/pickle.html#what-can-be-pickled-and-unpickled)!*\n\n\n###<span class="dp">·</span>Advanced<span class="dp">·</span>Usage<span class="dp">·</span>(and<span class="dp">·</span>other<span class="dp">·</span>testing<span class="dp">·</span>frameworks)\n\nFor<span class="dp">·</span>other<span class="dp">·</span>use<span class="dp">·</span>cases<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>`database_pool`<span class="dp">·</span>context<span class="dp">·</span>manager:\n```py\nwith<span class="dp">·</span>database_pool()<span class="dp">·</span>as<span class="dp">·</span>db_pool:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>db_pool.database<span class="dp">·</span>as<span class="dp">·</span>db_params:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>connection<span class="dp">·</span>=<span class="dp">·</span>psycopg2.connect(**db_params.connection_kwargs())\n```\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Your<span class="dp">·</span>Name&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Your<span class="dp">·</span>Name&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;you@example.com&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;you@example.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">747 B</span></div>
+      <div><span class="source">pg_docker-0.7.0/PKG-INFO</span> vs.</div>
+      <div id="pg_docker--.-.-.tar---pg_docker--.-.--PKG-INFO"><span class="source">pg_docker-0.8.0/PKG-INFO</span>
+        <a class="anchor" href="#pg_docker--.-.-.tar---pg_docker--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pg-docker</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pg-docker</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>7</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>8</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Your<span class="dp">·</span>Name</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Your<span class="dp">·</span>Name</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>you@example.com</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>you@example.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>Pytest</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>Pytest</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>psycopg2<span class="dp">·</span>(&gt;=2.9<del>.5</del>,&lt;3<del>.0</del>.0)</td><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>psycopg2<span class="dp">·</span>(&gt;=2.9,&lt;3.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">14 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>PG<span class="dp">·</span>Docker</td><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>PG<span class="dp">·</span>Docker</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">A<span class="dp">·</span>python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>containerized<span class="dp">·</span>postgres<span class="dp">·</span>databases<span class="dp">·</span>in<span class="dp">·</span>python</td><td class="diffline">16 </td><td class="diffpresent">A<span class="dp">·</span>python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>containerized<span class="dp">·</span>postgres<span class="dp">·</span>databases<span class="dp">·</span>in<span class="dp">·</span>python</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">**Why<span class="dp">·</span>would<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>this?**</td><td class="diffline">17 </td><td class="diffpresent">**Why<span class="dp">·</span>would<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>this?**</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
