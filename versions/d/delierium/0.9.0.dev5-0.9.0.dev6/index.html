@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/delierium-0.9.0.dev5-py3-none-any.whl.zip tmp/delierium-0.9.0.dev6-py3-none-any.whl.zip --html versions/d/delierium/0.9.0.dev5-0.9.0.dev6/index.html --text versions/d/delierium/0.9.0.dev5-0.9.0.dev6/diff.txt --markdown versions/d/delierium/0.9.0.dev5-0.9.0.dev6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">4.14 KB</span></div>
+  <div><span class="source">tmp/delierium-0.9.0.dev5-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/delierium-0.9.0.dev6-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.49 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1545<del>5</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>9</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1545<ins>6</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>9</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6136<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>11:00<span class="dp">·</span>delierium/DerivativeOperators.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6136<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>11:00<span class="dp">·</span>delierium/DerivativeOperators.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13186<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:30<span class="dp">·</span>delierium/Infinitesimals.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13186<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:30<span class="dp">·</span>delierium/Infinitesimals.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>538<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>13:25<span class="dp">·</span>delierium/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>538<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>13:25<span class="dp">·</span>delierium/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15332<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>11:00<span class="dp">·</span>delierium/helpers.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15332<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-05<span class="dp">·</span>11:00<span class="dp">·</span>delierium/helpers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1065<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<del>1</del><span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/LICENSE</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1065<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<ins>5</ins><span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4504<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<del>1</del><span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/METADATA</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4504<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<ins>5</ins><span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<del>1</del><span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/WHEEL</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<ins>5</ins><span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<del>1</del><span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/top_level.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<ins>5</ins><span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>750<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<del>1</del><span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/RECORD</td><td class="diffline">10 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>750<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span>17:3<ins>5</ins><span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">9<span class="dp">·</span>files,<span class="dp">·</span>41619<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1416<del>1</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>66.0%</td><td class="diffline">11 </td><td class="diffpresent">9<span class="dp">·</span>files,<span class="dp">·</span>41619<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1416<ins>2</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>66.0%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">724 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 23 lines modified</td><td colspan="2">Offset 6, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">7 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium/helpers.py</td><td class="diffline">8 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium/helpers.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/LICENSE</td><td class="diffline">10 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">11 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/METADATA</td><td class="diffline">12 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">13 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/WHEEL</td><td class="diffline">14 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">15 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/top_level.txt</td><td class="diffline">16 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">17 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<del>5</del>.dist-info/RECORD</td><td class="diffline">18 </td><td class="diffpresent">Filename:<span class="dp">·</span>delierium-0.9.0.dev<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">19 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">20 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">115 B</span></div>
+    <div><span class="source">delierium-0.9.0.dev5.dist-info/LICENSE</span> vs.</div>
+    <div id="delierium--.-.-.dev-.dist-info-LICENSE"><span class="source">delierium-0.9.0.dev6.dist-info/LICENSE</span>
+      <a class="anchor" href="#delierium--.-.-.dev-.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">463 B</span></div>
+    <div><span class="source">delierium-0.9.0.dev5.dist-info/METADATA</span> vs.</div>
+    <div id="delierium--.-.-.dev-.dist-info-METADATA"><span class="source">delierium-0.9.0.dev6.dist-info/METADATA</span>
+      <a class="anchor" href="#delierium--.-.-.dev-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>delierium</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>delierium</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.0.dev<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.0.dev<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Symmetry<span class="dp">·</span>Analysis<span class="dp">·</span>for<span class="dp">·</span>ODEs/PDEs<span class="dp">·</span>using<span class="dp">·</span>SageMath</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Symmetry<span class="dp">·</span>Analysis<span class="dp">·</span>for<span class="dp">·</span>ODEs/PDEs<span class="dp">·</span>using<span class="dp">·</span>SageMath</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Mayerhofer-Schöpf</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Mayerhofer-Schöpf</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tapir@aon.at</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tapir@aon.at</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/tapir442/delierium</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/tapir442/delierium</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>ODE<span class="dp">·</span>PDE<span class="dp">·</span>Lie<span class="dp">·</span>Symmetry</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>ODE<span class="dp">·</span>PDE<span class="dp">·</span>Lie<span class="dp">·</span>Symmetry</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.29 KB</span></div>
+    <div><span class="source">delierium-0.9.0.dev5.dist-info/RECORD</span> vs.</div>
+    <div id="delierium--.-.-.dev-.dist-info-RECORD"><span class="source">delierium-0.9.0.dev6.dist-info/RECORD</span>
+      <a class="anchor" href="#delierium--.-.-.dev-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 18% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">delierium/DerivativeOperators.py,sha256=XxKIkum-7bXdlMTqnhDeysjaKKeV_7OR-DDqEdo4NnQ,6136</td><td class="diffline">1 </td><td class="diffpresent">delierium/DerivativeOperators.py,sha256=XxKIkum-7bXdlMTqnhDeysjaKKeV_7OR-DDqEdo4NnQ,6136</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">delierium/Infinitesimals.py,sha256=eevvunPuVF5OMN-HnTOmMwd_OPq2DFraleqZvWMslQQ,13186</td><td class="diffline">2 </td><td class="diffpresent">delierium/Infinitesimals.py,sha256=eevvunPuVF5OMN-HnTOmMwd_OPq2DFraleqZvWMslQQ,13186</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">delierium/__init__.py,sha256=L3MQwe09Vc6HW5X5NINVtM2MUqS2bAO84Y5Vse0bCdo,538</td><td class="diffline">3 </td><td class="diffpresent">delierium/__init__.py,sha256=L3MQwe09Vc6HW5X5NINVtM2MUqS2bAO84Y5Vse0bCdo,538</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">delierium/helpers.py,sha256=zRTx7S-s50gBLmYqmNEGPtihRSkOd0IPqk61DVIUWXo,15332</td><td class="diffline">4 </td><td class="diffpresent">delierium/helpers.py,sha256=zRTx7S-s50gBLmYqmNEGPtihRSkOd0IPqk61DVIUWXo,15332</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">delierium-0.9.0.dev<del>5</del>.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065</td><td class="diffline">5 </td><td class="diffpresent">delierium-0.9.0.dev<ins>6</ins>.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">delierium-0.9.0.dev<del>5</del>.dist-info/METADATA,sha256=<del>NlZosBLtUkY5uXct3q7dUGN4pulqLgklFNk4</del>B<del>aLf0wY</del>,4504</td><td class="diffline">6 </td><td class="diffpresent">delierium-0.9.0.dev<ins>6</ins>.dist-info/METADATA,sha256=<ins>dyndW_9QH-2n_apolrLw4HYrcmGjWPhZ8Cqa</ins>B<ins>LzG9Zs</ins>,4504</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">delierium-0.9.0.dev<del>5</del>.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92</td><td class="diffline">7 </td><td class="diffpresent">delierium-0.9.0.dev<ins>6</ins>.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">delierium-0.9.0.dev<del>5</del>.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16</td><td class="diffline">8 </td><td class="diffpresent">delierium-0.9.0.dev<ins>6</ins>.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">delierium-0.9.0.dev<del>5</del>.dist-info/RECORD,,</td><td class="diffline">9 </td><td class="diffpresent">delierium-0.9.0.dev<ins>6</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

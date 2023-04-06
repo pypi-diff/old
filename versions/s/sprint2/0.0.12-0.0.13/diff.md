@@ -1,0 +1,375 @@
+# Comparing `tmp/sprint2-0.0.12.tar.gz` & `tmp/sprint2-0.0.13.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "sprint2-0.0.12.tar", last modified: Thu Apr  6 16:02:18 2023, max compression
++gzip compressed data, was "sprint2-0.0.13.tar", last modified: Thu Apr  6 17:28:50 2023, max compression
+```
+
+## Comparing `sprint2-0.0.12.tar` & `sprint2-0.0.13.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+-drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 16:02:23.568759 sprint2-0.0.12/
+-drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 16:02:23.433771 sprint2-0.0.12/MaskAGref/
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     6686 2023-04-06 15:59:14.000000 sprint2-0.0.12/MaskAGref/MaskAGref.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)       24 2023-04-06 15:59:14.000000 sprint2-0.0.12/MaskAGref/__init__.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)      655 2023-04-06 16:02:23.566759 sprint2-0.0.12/PKG-INFO
+-drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 16:02:23.479767 sprint2-0.0.12/getDsRNA/
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     1919 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/__init__.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     8966 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step1_transcript_blat.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     9760 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step2_transcript_dspair.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     3162 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step3_bedtools_sorted_rmLC.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     6742 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step4_combine_by_chr.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     5750 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step5_merge_dsRNA.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     2408 2023-04-06 15:59:10.000000 sprint2-0.0.12/getDsRNA/step6_dsRNA.py
+-drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 16:02:23.522763 sprint2-0.0.12/getRES/
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     2034 2023-04-06 15:59:12.000000 sprint2-0.0.12/getRES/__init__.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)    44833 2023-04-06 15:59:12.000000 sprint2-0.0.12/getRES/step1_SNVcalling.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)    20239 2023-04-06 15:59:12.000000 sprint2-0.0.12/getRES/step2_annotation_based.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)    19408 2023-04-06 15:59:12.000000 sprint2-0.0.12/getRES/step3_dsRNA_based.py
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)       38 2023-04-06 16:02:23.569759 sprint2-0.0.12/setup.cfg
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)     1130 2023-04-06 16:02:06.000000 sprint2-0.0.12/setup.py
+-drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 16:02:23.559760 sprint2-0.0.12/sprint2.egg-info/
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)      655 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/PKG-INFO
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)      565 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/SOURCES.txt
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)        1 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/dependency_links.txt
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)       90 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/entry_points.txt
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)        9 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/requires.txt
+--rw-rw-r--   0 xyx       (1003) xyx       (1003)       26 2023-04-06 16:02:23.000000 sprint2-0.0.12/sprint2.egg-info/top_level.txt
++drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 17:28:54.998792 sprint2-0.0.13/
++drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 17:28:54.842805 sprint2-0.0.13/MaskAGref/
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     6735 2023-04-06 17:28:33.000000 sprint2-0.0.13/MaskAGref/MaskAGref.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)       24 2023-04-06 17:28:33.000000 sprint2-0.0.13/MaskAGref/__init__.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)      621 2023-04-06 17:28:54.996792 sprint2-0.0.13/PKG-INFO
++drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 17:28:54.892801 sprint2-0.0.13/getDsRNA/
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     1919 2023-04-06 17:28:29.000000 sprint2-0.0.13/getDsRNA/__init__.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     9507 2023-04-06 17:28:28.000000 sprint2-0.0.13/getDsRNA/step1_transcript_blat.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     9760 2023-04-06 17:28:28.000000 sprint2-0.0.13/getDsRNA/step2_transcript_dspair.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     3162 2023-04-06 17:28:28.000000 sprint2-0.0.13/getDsRNA/step3_bedtools_sorted_rmLC.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     6742 2023-04-06 17:28:28.000000 sprint2-0.0.13/getDsRNA/step4_combine_by_chr.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     5750 2023-04-06 17:28:28.000000 sprint2-0.0.13/getDsRNA/step5_merge_dsRNA.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     2408 2023-04-06 17:28:29.000000 sprint2-0.0.13/getDsRNA/step6_dsRNA.py
++drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 17:28:54.938797 sprint2-0.0.13/getRES/
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     2034 2023-04-06 17:28:31.000000 sprint2-0.0.13/getRES/__init__.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)    45388 2023-04-06 17:28:31.000000 sprint2-0.0.13/getRES/step1_SNVcalling.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)    20531 2023-04-06 17:28:31.000000 sprint2-0.0.13/getRES/step2_annotation_based.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)    19408 2023-04-06 17:28:31.000000 sprint2-0.0.13/getRES/step3_dsRNA_based.py
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)       38 2023-04-06 17:28:55.000792 sprint2-0.0.13/setup.cfg
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)     1096 2023-04-06 17:28:36.000000 sprint2-0.0.13/setup.py
++drwxrwxr-x   0 xyx       (1003) xyx       (1003)        0 2023-04-06 17:28:54.988793 sprint2-0.0.13/sprint2.egg-info/
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)      621 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/PKG-INFO
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)      565 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/SOURCES.txt
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)        1 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/dependency_links.txt
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)       90 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/entry_points.txt
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)        9 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/requires.txt
++-rw-rw-r--   0 xyx       (1003) xyx       (1003)       26 2023-04-06 17:28:54.000000 sprint2-0.0.13/sprint2.egg-info/top_level.txt
+```
+
+### Comparing `sprint2-0.0.12/MaskAGref/MaskAGref.py` & `sprint2-0.0.13/MaskAGref/MaskAGref.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -6,17 +6,17 @@
+ 
+ ##----------------------------------------------------------------------------------------------------------
+ 
+ def description():
+     print('')
+     print("##############################################################################################")
+     print('')
+-    print("   SPRINT-2.0: SNP-free RNA editing Identification Toolkit")
++    print("   SPRINT-2.0: An enhanced tool to identify RNA editing sites")
+     print('')
+-    print("   http://tianlab.cn/SPRINT/")
++    print("   https://github.com/xieyunxiao/SPRINT2/")
+     print('')
+     print("   Please contact 20210700107@fudan.edu.cn when questions arise.")
+     print('')
+     print("##############################################################################################")
+     
+ ##----------------------------------------------------------------------------------------------------------
+ 
+@@ -138,24 +138,26 @@
+ 
+     try:
+         args = parser.parse_args()
+     except argparse.ArgumentError as e:
+         print(e)
+         exit(1)
+ 
++    global bwa
+     refgenome=str(args.reference)
+     base_path=str(args.output)
+     bwa=str(args.bwa)
+     CPU=int(args.cpu)
+ 
+     if args.gtf:
+         gtf_file=str(args.gtf)
+     else:
+         gtf_file=False
+ 
++    global read2,
+     read2=''
+     paired_end=True
+     description()
+     pool_size = CPU
+     pool1 = Pool(pool_size)
+ 
+     print('Masking A with G in reference genome...')
+```
+
+### Comparing `sprint2-0.0.12/PKG-INFO` & `sprint2-0.0.13/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ Metadata-Version: 2.1
+ Name: sprint2
+-Version: 0.0.12
++Version: 0.0.13
+ Summary: SPRINT-2.0: An enhanced tool to identify RNA editing sites
+-Home-page: https://github.com/xieyunxiao/RNA_editing-and-dsRNA/tree/main/SPRINT2.0
++Home-page: https://github.com/xieyunxiao/SPRINT2
+ Author: Feng Zhang, Yunxiao Xie
+ Author-email: 20210700107@fudan.edu.cn
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `sprint2-0.0.12/getDsRNA/__init__.py` & `sprint2-0.0.13/getDsRNA/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getDsRNA/step1_transcript_blat.py` & `sprint2-0.0.13/getDsRNA/step1_transcript_blat.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -10,15 +10,26 @@
+ import subprocess 
+ import os,time
+ import shutil
+ import re
+ import argparse
+ 
+ ##----------------------------------------------------------------------------------------------------------
+-
++def description():
++    print('')
++    print("##############################################################################################")
++    print('')
++    print("   SPRINT-2.0: An enhanced tool to identify RNA editing sites")
++    print('')
++    print("   https://github.com/xieyunxiao/SPRINT2/")
++    print('')
++    print("   Please contact 20210700107@fudan.edu.cn when questions arise.")
++    print('')
++    print("##############################################################################################")
++    
+ def oneChrRef(CHR="chr1"):
+     this_chr=str(CHR)
+     this_ref_path=ref_out_dir+"/"+this_chr+".fa"
+     this_seq=">"+this_chr+"\n"+str(chrom[this_chr].upper())+"\n"
+     fo=open(this_ref_path,'w')
+     fo.write(this_seq)
+     fo.close()
+@@ -117,15 +128,16 @@
+     trans_add=2
+     ##trans_add:...kb
+     SITE_ADD_AROUND=int(SITE_ADD_AROUND)
+     trans_add=int(trans_add)*1000
+     add2=2*SITE_ADD_AROUND
+ 
+     ##----------------------------------------------------------------------------------------------------------
+-    print("Start step1 BLAT...")
++    description()
++    print("\n\n\nStart step1 BLAT...")
+ 
+     OUT_DIR = OUT_DIR_BASE+"/"
+     if not os.path.isdir(OUT_DIR):
+         os.mkdir(OUT_DIR)
+     ##----------------------------------------------------------------------------------------------------------
+     ##load reference genome fasta file and compute time
+     ##running time is:40 seconds
+```
+
+### Comparing `sprint2-0.0.12/getDsRNA/step2_transcript_dspair.py` & `sprint2-0.0.13/getDsRNA/step2_transcript_dspair.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getDsRNA/step3_bedtools_sorted_rmLC.py` & `sprint2-0.0.13/getDsRNA/step3_bedtools_sorted_rmLC.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getDsRNA/step4_combine_by_chr.py` & `sprint2-0.0.13/getDsRNA/step4_combine_by_chr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getDsRNA/step5_merge_dsRNA.py` & `sprint2-0.0.13/getDsRNA/step5_merge_dsRNA.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getDsRNA/step6_dsRNA.py` & `sprint2-0.0.13/getDsRNA/step6_dsRNA.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getRES/__init__.py` & `sprint2-0.0.13/getRES/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/getRES/step1_SNVcalling.py` & `sprint2-0.0.13/getRES/step1_SNVcalling.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,24 @@
+ ##SNV calling
+ import subprocess,os,sys,pysam
+ import time, pysam,re
+ from Bio import SeqIO 
+ import argparse
+ 
++def description():
++    print('')
++    print("##############################################################################################")
++    print('')
++    print("   SPRINT-2.0: An enhanced tool to identify RNA editing sites")
++    print('')
++    print("   https://github.com/xieyunxiao/SPRINT2/")
++    print('')
++    print("   Please contact 20210700107@fudan.edu.cn when questions arise.")
++    print('')
++    print("##############################################################################################")
+ 
+ def get_baseq_cutoff(fq_in_dir=0,cutoff_out_dir=0):
+     fi=open(fq_in_dir)
+     fo=open(cutoff_out_dir,"w")
+     line1=fi.readline()
+     line2=fi.readline()
+     line3=fi.readline()
+@@ -733,14 +744,15 @@
+         fo.write("\t".join(seq[0:4])+"\t"+this_ad+"\n")
+     fo.close()
+ ##----------------------------------------------------------------------------------------------------------
+ 
+ 
+ ##----------------------------------------------------------------------------------------------------------
+ def main(args):
++
+     parser = argparse.ArgumentParser(description="python3 step1_SNVcalling.py")
+     parser.add_argument("-o", "--output",default = str(os.getcwd()),  help="path to Output Directory (defalt:Working Directory)")
+     parser.add_argument("-r1", "--read1",default = str(os.getcwd())+"test_1.fastq",  help="path to read1.fastq (defalt:~/test_1.fastq)")
+     parser.add_argument("-r2", "--read2",  help="path to read2.fastq ##optional")
+     parser.add_argument("-R", "--reference",default = str(os.getcwd())+"reference.fa",  help="path to reference FASTA file (defalt:~/reference.fa)")
+     parser.add_argument("-b", "--bwa",default = str(os.getcwd())+"bwa",  help="path to BWA (defalt:~/bwa)")
+     parser.add_argument("-B", "--bedtools",default = str(os.getcwd())+"bedtools",  help="path to BEDTOOLS ((defalt:~/bedtools)")
+@@ -752,15 +764,15 @@
+ 
+     except argparse.ArgumentError as e:
+         print(e)
+         exit(1)
+ 
+     ##----------------------------------------------------------------------------------------------------------
+ 
+-    global cutbp,paired_end,read0,tmp
++    global cutbp,paired_end,read0,tmp,chrom
+     cutbp=6
+     paired_end=True
+     read0=""
+     tmp=str(args.output)+"/"
+     read1=str(args.read1)
+ 
+     refgenome=str(args.reference)
+@@ -774,16 +786,16 @@
+         paired_end=True
+     else:
+         read2=read0
+         paired_end=False
+ 
+ 
+     ##----------------------------------------------------------------------------------------------------------
+-
+-    print("Step1:SNV calling...")
++    description()
++    print("\n\n\nStep1:SNV calling...")
+ 
+     time_start = int(time.perf_counter())
+ 
+     if not os.path.isdir(tmp):
+         os.mkdir(tmp)
+     ##read_cut
+     cut(read1,tmp+"cut_read1.fastq",cutbp,"read1")
+```
+
+### Comparing `sprint2-0.0.12/getRES/step2_annotation_based.py` & `sprint2-0.0.13/getRES/step2_annotation_based.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -442,20 +442,22 @@
+     try:
+         args = parser.parse_args(args.split())
+ 
+     except argparse.ArgumentError as e:
+         print(e)
+         exit(1)
+ 
+-
++    global ori_tmp,tmp
+     ori_tmp=str(args.snv)+"/"
+     tmp=str(args.output)+"/"
+     repeat=str(args.repeat)
+ 
+-
++    global cluster_distance,cluster_size_alu_ad1,cluster_size_alu_ad2,cluster_size_nalurp,cluster_size_nrp
++    global cluster_size_rg,cluster_size_hp,cluster_size_alu_hp,cluster_size_nalurp_hp,cluster_size_nrp_hp
++    global strand_specify,var_limit,poly_limit,rm_multi
+     cluster_distance=200
+     cluster_size_alu_ad1 = 3
+     cluster_size_alu_ad2 = 2
+     cluster_size_nalurp = 5
+     cluster_size_nrp = 7
+     cluster_size_rg = 5
+     cluster_size_hp = 5
+```
+
+### Comparing `sprint2-0.0.12/getRES/step3_dsRNA_based.py` & `sprint2-0.0.13/getRES/step3_dsRNA_based.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sprint2-0.0.12/sprint2.egg-info/PKG-INFO` & `sprint2-0.0.13/sprint2.egg-info/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ Metadata-Version: 2.1
+ Name: sprint2
+-Version: 0.0.12
++Version: 0.0.13
+ Summary: SPRINT-2.0: An enhanced tool to identify RNA editing sites
+-Home-page: https://github.com/xieyunxiao/RNA_editing-and-dsRNA/tree/main/SPRINT2.0
++Home-page: https://github.com/xieyunxiao/SPRINT2
+ Author: Feng Zhang, Yunxiao Xie
+ Author-email: 20210700107@fudan.edu.cn
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `sprint2-0.0.12/sprint2.egg-info/SOURCES.txt` & `sprint2-0.0.13/sprint2.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

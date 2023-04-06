@@ -1,0 +1,341 @@
+# Comparing `tmp/serverless-sdk-0.3.8.tar.gz` & `tmp/serverless-sdk-0.3.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/home/runner/work/console/console/python/packages/sdk/dist/.tmp-it7c1jn0/serverless-sdk-0.3.8.tar", last modified: Thu Mar 30 20:26:17 2023, max compression
++gzip compressed data, was "/home/runner/work/console/console/python/packages/sdk/dist/.tmp-etz6ci7s/serverless-sdk-0.3.9.tar", last modified: Tue Apr  4 07:17:33 2023, max compression
+```
+
+## Comparing `serverless-sdk-0.3.8.tar` & `serverless-sdk-0.3.9.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/
+--rw-r--r--   0 runner    (1001) docker     (123)     2434 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1911 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)     1055 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/pyproject.toml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2434 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      699 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      157 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/serverless_sdk.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      106 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/sls_sdk/
+--rw-r--r--   0 runner    (1001) docker     (123)     4317 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      482 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)      770 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/exceptions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/sls_sdk/lib/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/captured_event.py
+--rw-r--r--   0 runner    (1001) docker     (123)      596 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/emitter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1430 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/error.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1919 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/error_captured_event.py
+--rw-r--r--   0 runner    (1001) docker     (123)      326 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/id.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/
+--rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/logging.py
+--rw-r--r--   0 runner    (1001) docker     (123)      986 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/name.py
+--rw-r--r--   0 runner    (1001) docker     (123)      459 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/notice.py
+--rw-r--r--   0 runner    (1001) docker     (123)      810 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/stack_trace_string.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4982 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/tags.py
+--rw-r--r--   0 runner    (1001) docker     (123)      273 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/timing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7475 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/trace.py
+--rw-r--r--   0 runner    (1001) docker     (123)      559 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/warning.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1485 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/sls_sdk/lib/warning_captured_event.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 20:26:17.000000 serverless-sdk-0.3.8/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     5805 2023-03-30 20:25:54.000000 serverless-sdk-0.3.8/tests/test_sdk.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/
++-rw-r--r--   0 runner    (1001) docker     (123)     2427 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1904 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1055 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk/
++-rw-r--r--   0 runner    (1001) docker     (123)     4317 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      482 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      770 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/exceptions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk/lib/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/captured_event.py
++-rw-r--r--   0 runner    (1001) docker     (123)      596 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/emitter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1430 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/error.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1919 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/error_captured_event.py
++-rw-r--r--   0 runner    (1001) docker     (123)      326 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/id.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/
++-rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/logging.py
++-rw-r--r--   0 runner    (1001) docker     (123)      986 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/name.py
++-rw-r--r--   0 runner    (1001) docker     (123)      459 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/notice.py
++-rw-r--r--   0 runner    (1001) docker     (123)      810 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/stack_trace_string.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4982 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/tags.py
++-rw-r--r--   0 runner    (1001) docker     (123)      273 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/timing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7475 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/trace.py
++-rw-r--r--   0 runner    (1001) docker     (123)      559 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/warning.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1485 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/serverless_sdk/lib/warning_captured_event.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2427 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      825 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      157 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/serverless_sdk.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 07:17:33.000000 serverless-sdk-0.3.9/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     5875 2023-04-04 07:17:04.000000 serverless-sdk-0.3.9/tests/test_sdk.py
+```
+
+### Comparing `serverless-sdk-0.3.8/PKG-INFO` & `serverless-sdk-0.3.9/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: serverless-sdk
+-Version: 0.3.8
++Version: 0.3.9
+ Summary: Serverless SDK for Python
+ Author: serverlessinc
+ Project-URL: changelog, https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md
+ Project-URL: documentation, https://github.com/serverless/console/tree/main/python/packages/sdk
+ Project-URL: homepage, https://www.serverless.com/console
+ Project-URL: repository, https://github.com/serverless/console
+ Requires-Python: >=3.7
+@@ -30,15 +30,15 @@
+ ```shell
+ pip install serverless-sdk
+ ```
+ 
+ ### Usage
+ 
+ ```python
+-from serverless_sdk import serverlessSdk
++from sls_sdk import serverlessSdk
+ print(serverlessSdk.name)
+ print(serverlessSdk.version)
+ 
+ serverlessSdk.capture_error(Exception("Unexpected"))
+ ```
+ 
+ ### Setup
+```
+
+### Comparing `serverless-sdk-0.3.8/README.md` & `serverless-sdk-0.3.9/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -17,15 +17,15 @@
+ ```shell
+ pip install serverless-sdk
+ ```
+ 
+ ### Usage
+ 
+ ```python
+-from serverless_sdk import serverlessSdk
++from sls_sdk import serverlessSdk
+ print(serverlessSdk.name)
+ print(serverlessSdk.version)
+ 
+ serverlessSdk.capture_error(Exception("Unexpected"))
+ ```
+ 
+ ### Setup
+```
+
+### Comparing `serverless-sdk-0.3.8/pyproject.toml` & `serverless-sdk-0.3.9/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ requires = [
+     "setuptools>=65.6.3",
+     "wheel>=0.38.4",
+ ]
+ 
+ [project]
+ name = "serverless-sdk"
+-version = "0.3.8"
++version = "0.3.9"
+ description = "Serverless SDK for Python"
+ readme = "README.md"
+ authors = [{ name = "serverlessinc" }]
+ requires-python = ">=3.7"
+ dependencies = [
+     "backports.cached-property", # included in Python >=3.8
+     "blinker>=1.5",
+```
+
+### Comparing `serverless-sdk-0.3.8/serverless_sdk.egg-info/PKG-INFO` & `serverless-sdk-0.3.9/serverless_sdk.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: serverless-sdk
+-Version: 0.3.8
++Version: 0.3.9
+ Summary: Serverless SDK for Python
+ Author: serverlessinc
+ Project-URL: changelog, https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md
+ Project-URL: documentation, https://github.com/serverless/console/tree/main/python/packages/sdk
+ Project-URL: homepage, https://www.serverless.com/console
+ Project-URL: repository, https://github.com/serverless/console
+ Requires-Python: >=3.7
+@@ -30,15 +30,15 @@
+ ```shell
+ pip install serverless-sdk
+ ```
+ 
+ ### Usage
+ 
+ ```python
+-from serverless_sdk import serverlessSdk
++from sls_sdk import serverlessSdk
+ print(serverlessSdk.name)
+ print(serverlessSdk.version)
+ 
+ serverlessSdk.capture_error(Exception("Unexpected"))
+ ```
+ 
+ ### Setup
+```
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/__init__.py` & `serverless-sdk-0.3.9/serverless_sdk/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/exceptions.py` & `serverless-sdk-0.3.9/serverless_sdk/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/captured_event.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/captured_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/emitter.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/emitter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/error.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/error.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/error_captured_event.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/error_captured_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/logging.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/logging.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/name.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/name.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/stack_trace_string.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/stack_trace_string.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/tags.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/tags.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/trace.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/trace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/warning.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/warning.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/sls_sdk/lib/warning_captured_event.py` & `serverless-sdk-0.3.9/serverless_sdk/lib/warning_captured_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `serverless-sdk-0.3.8/tests/test_sdk.py` & `serverless-sdk-0.3.9/tests/test_sdk.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,31 +1,31 @@
+ from __future__ import annotations
+ from types import MethodType
+ from unittest.mock import MagicMock
+ import pytest
+ 
+ from . import get_params
+-import sls_sdk
+-from sls_sdk import ServerlessSdk
+-from sls_sdk.base import SLS_ORG_ID
+-from sls_sdk.lib.error_captured_event import TYPE_MAP as ERROR_TYPE_MAP
+-from sls_sdk.lib.warning_captured_event import TYPE_MAP as WARNING_TYPE_MAP
+-from sls_sdk.lib.emitter import event_emitter
++import serverless_sdk
++from serverless_sdk import ServerlessSdk
++from serverless_sdk.base import SLS_ORG_ID
++from serverless_sdk.lib.error_captured_event import TYPE_MAP as ERROR_TYPE_MAP
++from serverless_sdk.lib.warning_captured_event import TYPE_MAP as WARNING_TYPE_MAP
++from serverless_sdk.lib.emitter import event_emitter
+ 
+ 
+ @pytest.fixture
+ def sdk() -> ServerlessSdk:
+-    from sls_sdk import serverlessSdk
++    from serverless_sdk import serverlessSdk
+ 
+     return serverlessSdk
+ 
+ 
+ def test_can_import_serverless_sdk():
+     try:
+-        from sls_sdk import serverlessSdk
++        from serverless_sdk import serverlessSdk
+ 
+     except ImportError as e:
+         raise AssertionError("Cannot import `serverlessSdk`") from e
+ 
+ 
+ def test_has_name(sdk: ServerlessSdk):
+     assert hasattr(sdk, "name")
+@@ -91,15 +91,15 @@
+     params = get_params(sdk._create_trace_span)
+ 
+     assert len(params) >= len(args)
+     assert all(arg in params for arg in args)
+ 
+ 
+ def test_create_trace_span_returns_trace_span(sdk: ServerlessSdk):
+-    from sls_sdk.lib.trace import TraceSpan
++    from serverless_sdk.lib.trace import TraceSpan
+ 
+     span = sdk._create_trace_span("name", "input", "output")
+ 
+     assert isinstance(span, TraceSpan)
+ 
+ 
+ def test_sdk_exposes_capture_error(sdk: ServerlessSdk):
+@@ -170,15 +170,15 @@
+     # then
+     assert sdk._custom_tags[tag_name] == tag_value
+ 
+ 
+ def test_sdk_set_tag_does_not_crash_on_invalid_input(sdk: ServerlessSdk, monkeypatch):
+     # given
+     mock = MagicMock()
+-    monkeypatch.setattr(sls_sdk, "report_error", mock)
++    monkeypatch.setattr(serverless_sdk, "report_error", mock)
+     tag_name = ""
+     tag_value = "value"
+ 
+     # when
+     failed = False
+     try:
+         sdk.set_tag(tag_name, tag_value)
+```
+

@@ -1,0 +1,331 @@
+--- tmp/security_scan_invoker-1.0.5-py3-none-any.whl.zip
++++ tmp/security_scan_invoker-1.1.0-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,32 +1,32 @@
+│ -Zip file size: 36535 bytes, number of entries: 30
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:55 security_scan_invoker/__init__.py
+│ --rw-r--r--  2.0 unx      956 b- defN 23-Apr-05 19:55 security_scan_invoker/arg_parser_wrapper.py
+│ --rw-r--r--  2.0 unx     2337 b- defN 23-Apr-05 19:55 security_scan_invoker/build_details.py
+│ --rw-r--r--  2.0 unx     3063 b- defN 23-Apr-05 19:55 security_scan_invoker/build_details_fetcher.py
+│ --rw-r--r--  2.0 unx      803 b- defN 23-Apr-05 19:55 security_scan_invoker/iface_arg_parser.py
+│ --rw-r--r--  2.0 unx     1074 b- defN 23-Apr-05 19:55 security_scan_invoker/iface_build_details_fetcher.py
+│ --rw-r--r--  2.0 unx     1331 b- defN 23-Apr-05 19:55 security_scan_invoker/iface_veracode_api.py
+│ --rw-r--r--  2.0 unx      354 b- defN 23-Apr-05 19:55 security_scan_invoker/logging.conf
+│ --rw-r--r--  2.0 unx     2014 b- defN 23-Apr-05 19:55 security_scan_invoker/main.py
+│ --rw-r--r--  2.0 unx     3700 b- defN 23-Apr-05 19:55 security_scan_invoker/parser.py
+│ --rw-r--r--  2.0 unx     1946 b- defN 23-Apr-05 19:55 security_scan_invoker/scanner_args.py
+│ --rw-r--r--  2.0 unx     8556 b- defN 23-Apr-05 19:55 security_scan_invoker/veracode_api_wrapper.py
+│ --rw-r--r--  2.0 unx    11226 b- defN 23-Apr-05 19:55 security_scan_invoker/veracode_scanner_app.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:55 tests/__init__.py
+│ --rw-r--r--  2.0 unx      972 b- defN 23-Apr-05 19:55 tests/fake_arg_parser.py
+│ --rw-r--r--  2.0 unx     1157 b- defN 23-Apr-05 19:55 tests/fake_build_details_fetcher.py
+│ --rw-r--r--  2.0 unx     3835 b- defN 23-Apr-05 19:55 tests/fake_veracode_api.py
+│ --rw-r--r--  2.0 unx     8257 b- defN 23-Apr-05 19:55 tests/fakes.py
+│ --rw-r--r--  2.0 unx     1720 b- defN 23-Apr-05 19:55 tests/test_build_details.py
+│ --rw-r--r--  2.0 unx     6156 b- defN 23-Apr-05 19:55 tests/test_build_details_fetcher.py
+│ --rw-r--r--  2.0 unx     4814 b- defN 23-Apr-05 19:55 tests/test_parser.py
+│ --rw-r--r--  2.0 unx     1396 b- defN 23-Apr-05 19:55 tests/test_scanner_args.py
+│ --rw-r--r--  2.0 unx     7293 b- defN 23-Apr-05 19:55 tests/test_veracode_api.py
+│ --rw-r--r--  2.0 unx    21665 b- defN 23-Apr-05 19:55 tests/test_veracode_scanner_app.py
+│ --rw-r--r--  2.0 unx    11357 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx     8466 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       74 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     2727 b- defN 23-Apr-05 19:56 security_scan_invoker-1.0.5.dist-info/RECORD
+│ -30 files, 117369 bytes uncompressed, 32065 bytes compressed:  72.7%
+│ +Zip file size: 36652 bytes, number of entries: 30
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 17:34 security_scan_invoker/__init__.py
+│ +-rw-r--r--  2.0 unx      956 b- defN 23-Apr-06 17:34 security_scan_invoker/arg_parser_wrapper.py
+│ +-rw-r--r--  2.0 unx     2511 b- defN 23-Apr-06 17:34 security_scan_invoker/build_details.py
+│ +-rw-r--r--  2.0 unx     3071 b- defN 23-Apr-06 17:34 security_scan_invoker/build_details_fetcher.py
+│ +-rw-r--r--  2.0 unx      803 b- defN 23-Apr-06 17:34 security_scan_invoker/iface_arg_parser.py
+│ +-rw-r--r--  2.0 unx     1074 b- defN 23-Apr-06 17:34 security_scan_invoker/iface_build_details_fetcher.py
+│ +-rw-r--r--  2.0 unx     1331 b- defN 23-Apr-06 17:34 security_scan_invoker/iface_veracode_api.py
+│ +-rw-r--r--  2.0 unx      354 b- defN 23-Apr-06 17:34 security_scan_invoker/logging.conf
+│ +-rw-r--r--  2.0 unx     2014 b- defN 23-Apr-06 17:34 security_scan_invoker/main.py
+│ +-rw-r--r--  2.0 unx     3700 b- defN 23-Apr-06 17:34 security_scan_invoker/parser.py
+│ +-rw-r--r--  2.0 unx     1946 b- defN 23-Apr-06 17:34 security_scan_invoker/scanner_args.py
+│ +-rw-r--r--  2.0 unx     8698 b- defN 23-Apr-06 17:34 security_scan_invoker/veracode_api_wrapper.py
+│ +-rw-r--r--  2.0 unx    11224 b- defN 23-Apr-06 17:34 security_scan_invoker/veracode_scanner_app.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 17:34 tests/__init__.py
+│ +-rw-r--r--  2.0 unx      972 b- defN 23-Apr-06 17:34 tests/fake_arg_parser.py
+│ +-rw-r--r--  2.0 unx     1157 b- defN 23-Apr-06 17:34 tests/fake_build_details_fetcher.py
+│ +-rw-r--r--  2.0 unx     3835 b- defN 23-Apr-06 17:34 tests/fake_veracode_api.py
+│ +-rw-r--r--  2.0 unx     8257 b- defN 23-Apr-06 17:34 tests/fakes.py
+│ +-rw-r--r--  2.0 unx     1982 b- defN 23-Apr-06 17:34 tests/test_build_details.py
+│ +-rw-r--r--  2.0 unx     6156 b- defN 23-Apr-06 17:34 tests/test_build_details_fetcher.py
+│ +-rw-r--r--  2.0 unx     4814 b- defN 23-Apr-06 17:34 tests/test_parser.py
+│ +-rw-r--r--  2.0 unx     1396 b- defN 23-Apr-06 17:34 tests/test_scanner_args.py
+│ +-rw-r--r--  2.0 unx     7293 b- defN 23-Apr-06 17:34 tests/test_veracode_api.py
+│ +-rw-r--r--  2.0 unx    21665 b- defN 23-Apr-06 17:34 tests/test_veracode_scanner_app.py
+│ +-rw-r--r--  2.0 unx    11357 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     8466 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       74 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     2727 b- defN 23-Apr-06 17:35 security_scan_invoker-1.1.0.dist-info/RECORD
+│ +30 files, 117953 bytes uncompressed, 32182 bytes compressed:  72.7%
+├── zipnote {}
+│ @@ -66,26 +66,26 @@
+│  
+│  Filename: tests/test_veracode_api.py
+│  Comment: 
+│  
+│  Filename: tests/test_veracode_scanner_app.py
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/LICENSE
+│ +Filename: security_scan_invoker-1.1.0.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/METADATA
+│ +Filename: security_scan_invoker-1.1.0.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/WHEEL
+│ +Filename: security_scan_invoker-1.1.0.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/entry_points.txt
+│ +Filename: security_scan_invoker-1.1.0.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/top_level.txt
+│ +Filename: security_scan_invoker-1.1.0.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: security_scan_invoker-1.0.5.dist-info/RECORD
+│ +Filename: security_scan_invoker-1.1.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── security_scan_invoker/build_details.py
+│ @@ -37,16 +37,21 @@
+│  
+│      def __init__(self, status: str, version: str, app_id: str):
+│          self.status: str = status
+│          self.version: str = version
+│          self.app_id: str = app_id
+│  
+│      @staticmethod
+│ -    def parse_build_details(build_info_response: dict) -> "BuildDetails":
+│ -        app_id = build_info_response["buildinfo"]["@app_id"]
+│ +    def parse_build_details(build_info_response: dict, app_id: str = None) -> "BuildDetails":
+│ +        if "buildinfo" not in build_info_response:
+│ +            return BuildDetails(status=None, version=None, app_id=app_id)
+│ +
+│ +        if not app_id:
+│ +            app_id = build_info_response["buildinfo"]["@app_id"]
+│ +
+│          status = ""
+│          version = ""
+│  
+│          try:
+│              status = build_info_response["buildinfo"]["build"]["analysis_unit"]["@status"]
+│              version = build_info_response["buildinfo"]["build"]["@version"]
+│          except KeyError as err_key:
+├── security_scan_invoker/build_details_fetcher.py
+│ @@ -20,15 +20,15 @@
+│  
+│  
+│  class BuildDetailsFetcher(IBuildDetailsFetcher):
+│      def get_build_details(self, app_name) -> BuildDetails:
+│          apps = self.veracode_api.get_app_list()
+│          app_id = self.find_app_id(apps, app_name)
+│          response = self.veracode_api.get_build_info(app_id)
+│ -        return BuildDetails.parse_build_details(response)
+│ +        return BuildDetails.parse_build_details(response, app_id)
+│  
+│      @staticmethod
+│      def find_app_id(apps, app_name):
+│          for app in apps:
+│              if app["@app_name"] == app_name:
+│                  return app["@app_id"]
+│          raise SystemExit(
+├── security_scan_invoker/veracode_api_wrapper.py
+│ @@ -134,15 +134,15 @@
+│          :type autoscan: bool, optional
+│          :raises err: HTTPError if there was an error in the request.
+│          :return: True if the scan started successfully, False otherwise
+│          :rtype: bool
+│          """
+│          logger = logging.getLogger(__name__)
+│          url = self.base_v5 + "beginprescan.do"
+│ -        params = {"app_id": app_id, "autoscan": autoscan}
+│ +        params = {"app_id": app_id, "auto_scan": autoscan}
+│          try:
+│              res = requests.get(
+│                  url,
+│                  params=params,
+│                  auth=RequestsAuthPluginVeracodeHMAC(
+│                      api_key_id=self.api_key_id, api_key_secret=self.api_key_secret
+│                  ),
+│ @@ -167,15 +167,15 @@
+│          :rtype: bool
+│          """
+│  
+│          logger = logging.getLogger(__name__)
+│          url = self.base_v5 + "getprescanresults.do"
+│          params = {"app_id": app_id}
+│          attempt: int = 0
+│ -        while attempt < 5:
+│ +        while attempt < 10:
+│              attempt += 1
+│              try:
+│                  res = requests.get(
+│                      url,
+│                      params=params,
+│                      auth=RequestsAuthPluginVeracodeHMAC(
+│                          api_key_id=self.api_key_id, api_key_secret=self.api_key_secret
+│ @@ -185,29 +185,31 @@
+│                  res.raise_for_status()
+│              except HTTPError as err:
+│                  logger.error(f'HTTP Error occurred: {err}')
+│                  raise err
+│  
+│              parsed = xmltodict.parse(res.text)
+│              if "error" in parsed:
+│ -                if attempt >= 5:
+│ +                if attempt >= 10:
+│                      logger.error(f"Unable to complete pre-scan. Error {parsed}")
+│                  else:
+│ -                    time.sleep(10)
+│ +                    time.sleep(30)
+│              else:
+│                  if "prescanresults" in parsed:
+│                      return parsed["prescanresults"]["module"]["@status"].lower() == "ok"
+│  
+│          return False
+│  
+│      def begin_scan(self, app_id: str, select_previous_modules: bool) -> bool:
+│          """Begins the scan for the given app_id.
+│  
+│          :param app_id: The app id to start the prescan on
+│          :type app_id: str
+│ +        :param select_previous_modules: Whether to use the previous modules selection for scan
+│ +        :type select_previous_modules: bool
+│          :raises err: HTTPError if there was an error in the request.
+│          :return: True if the scan was started, False otherwise
+│          :rtype: bool
+│          """
+│          logger = logging.getLogger(__name__)
+│          url = self.base_v5 + "beginscan.do"
+│          modules_to_scan: str = "select_previous_modules" if select_previous_modules \
+├── security_scan_invoker/veracode_scanner_app.py
+│ @@ -68,15 +68,15 @@
+│          if exit_code > 0:
+│              if exit_code == 101:
+│                  logger.info("A new scan is not needed. "
+│                              "Marking the current build successful.")
+│              else:
+│                  logger.error("Scan failed to upload. Marking build step failed."
+│                               "See stack trace for ERROR and then visit: "
+│ -                             "https://github.com/JohnDeere/veracode-scanner-tester#"
+│ +                             "https://github.com/JohnDeere/security-scan-invoker#"
+│                               "faq-and-common-errors")
+│          else:
+│              self._run_veracode_scan()
+│  
+│          return exit_code
+│  
+│      def _run_veracode_scan(self):
+├── tests/test_build_details.py
+│ @@ -41,7 +41,15 @@
+│              }
+│          }}
+│          result = BuildDetails.parse_build_details(test_data)
+│          assert result.app_id == "test_app_id"
+│          assert result.status == "test_status"
+│          assert not result.version
+│          assert "KeyError parsing build status" in caplog.text
+│ +
+│ +    @staticmethod
+│ +    def test_build_details_no_previous_build():
+│ +        test_data = {}
+│ +        app_id = "1234"
+│ +        result = BuildDetails.parse_build_details(test_data, app_id=app_id)
+│ +        assert result.app_id == "1234"
+│ +        assert not result.status
+├── tests/test_veracode_api.py
+│ @@ -118,15 +118,15 @@
+│      @mock.patch.object(requests, "get")
+│      def test_get_prescan_results_not_available(
+│              patched_get, fake_api_wrapper, patched_sleep, caplog):
+│          fake_resp = FakeResponse(200, FAKE_GET_PRESCAN_NOT_AVAIL)
+│          patched_get.return_value = fake_resp
+│          assert not fake_api_wrapper.get_prescan_results("test_app_id")
+│          assert "Unable to complete pre-scan." in caplog.text
+│ -        assert patched_sleep.call_count == 4
+│ +        assert patched_sleep.call_count == 9
+│  
+│      @staticmethod
+│      @mock.patch.object(requests, "get")
+│      def test_get_prescan_results_raises_httperror(patched_get, fake_api_wrapper, patched_sleep):
+│          fake_resp = FakeResponse(500, FAKE_BEGIN_PRESCAN_SUCCESS)
+│          patched_get.return_value = fake_resp
+│          with pytest.raises(requests.HTTPError) as _error_http:
+│   --- security_scan_invoker-1.0.5.dist-info/LICENSE
+├── +++ security_scan_invoker-1.1.0.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- security_scan_invoker-1.0.5.dist-info/METADATA
+├── +++ security_scan_invoker-1.1.0.dist-info/METADATA
+│┄ Files 1% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: security-scan-invoker
+│ -Version: 1.0.5
+│ +Version: 1.1.0
+│  Summary: Submits a Veracode scan if able. Will perform pre-scan checks to determine the
+│  Project-URL: Source Code, https://github.com/JohnDeere/security-scan-invoker
+│  Description-Content-Type: text/markdown
+│  License-File: LICENSE
+│  Requires-Dist: requests
+│  Requires-Dist: veracode-api-signing
+│  Requires-Dist: xmltodict
+│   --- security_scan_invoker-1.0.5.dist-info/RECORD
+├── +++ security_scan_invoker-1.1.0.dist-info/RECORD
+│┄ Files 14% similar despite different names
+│ @@ -1,30 +1,30 @@
+│  security_scan_invoker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  security_scan_invoker/arg_parser_wrapper.py,sha256=nGWDiiV34czZF19TmDQ3kn_c_qHeo30lt7u5Gi6Oq2M,956
+│ -security_scan_invoker/build_details.py,sha256=LSl4jPgRJUHSpMdS1CtU6afN0Voca7WfR8iK5IdclP4,2337
+│ -security_scan_invoker/build_details_fetcher.py,sha256=vs-DjL0og7HWfkVXIAwvusLrdNRJMYg2rNTUsEKv5dg,3063
+│ +security_scan_invoker/build_details.py,sha256=ZqcEpfqE4LbnHBpN5WWB8Aqrc1xTn8JstCwKWNO7Gk4,2511
+│ +security_scan_invoker/build_details_fetcher.py,sha256=APZ2U2Ca7iXQZG7bVDT35dTBPTA3PDj161DccidDrkA,3071
+│  security_scan_invoker/iface_arg_parser.py,sha256=OaymsKe_9yvvXoW9em9eJPqiF__qTTSlIiGvWFNJmk4,803
+│  security_scan_invoker/iface_build_details_fetcher.py,sha256=Z_Oo8gfaD6HnZJaerONRhYZHO-bZcEIWtBoODoBTuIA,1074
+│  security_scan_invoker/iface_veracode_api.py,sha256=9E8bUpGjUJz_NnCCglRObWuJDGWPThVGSR7Xmp6hUE4,1331
+│  security_scan_invoker/logging.conf,sha256=GM4n19-VWqMUh_iVdKX86mB3kY5UxRXy28XcJDd9K6Y,354
+│  security_scan_invoker/main.py,sha256=5ESUGcvMFyEpdQmqjrk1ZbqnmLDMqthi1qnapcPkDgs,2014
+│  security_scan_invoker/parser.py,sha256=i_iKiYiGTH6xb2Xj4TbWJtiYwy2Ill8_B5ktwh0vhxk,3700
+│  security_scan_invoker/scanner_args.py,sha256=vixaV480Mo2F6Ruf8-okqxVAZclyMHzIv5e5nHBIAHo,1946
+│ -security_scan_invoker/veracode_api_wrapper.py,sha256=o_zY6CkccPLIGD2tTpgmLxb7l-RsV9PK8ZU70Rn0IY8,8556
+│ -security_scan_invoker/veracode_scanner_app.py,sha256=ScuZSwaG1g9D-qLkEy3CTTrjuMb6wj-bfxPpF50qjmE,11226
+│ +security_scan_invoker/veracode_api_wrapper.py,sha256=YqN4VHot2h1WFhDDwngZr7HAG4meRxtK7ZaoCgZDEdE,8698
+│ +security_scan_invoker/veracode_scanner_app.py,sha256=LhPoSlJg11Amz9Mn9F6JSbxj91EDtnzTorO4hpdRvsA,11224
+│  tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  tests/fake_arg_parser.py,sha256=871SHFaFaOJxZwcGWIuOppKofOHDHjZyd7168tzg9DM,972
+│  tests/fake_build_details_fetcher.py,sha256=uRiW5cibG0MMyd9inubxUmv8yTuHUfEs-7D1ihU9HFY,1157
+│  tests/fake_veracode_api.py,sha256=YvIG1jK3jWvq-JULyKOUZhYSWGWtZj5nLwwDFP-QwHw,3835
+│  tests/fakes.py,sha256=TLetLqraJqxpW_In0yLziZZheUXUiWTu21A59Fwmzf4,8257
+│ -tests/test_build_details.py,sha256=oQs7phizblLI7Ss0q8yklslTmfvHPBq_6xlJnbcm9tk,1720
+│ +tests/test_build_details.py,sha256=VDNCQw8Iew079h0mEkwuqk6BPZTB89aaFZdzupWu0yI,1982
+│  tests/test_build_details_fetcher.py,sha256=LfvBNixve_Ty4f3BphRkY2JDoO08FxIVbIkH3Vxvadc,6156
+│  tests/test_parser.py,sha256=ygGIr9XGJuDfgSTqPEM7C8TtFCi2eFGjigWVjr3PveA,4814
+│  tests/test_scanner_args.py,sha256=aMY1arfU35FQ-RY7-Hc8fgqH06MwNpESFncrKAs9o0Q,1396
+│ -tests/test_veracode_api.py,sha256=-XVVfuUrBEYHBMxd_OTrtpaSiA6ORRK0azIUqp1wU_0,7293
+│ +tests/test_veracode_api.py,sha256=dXpyjvjnROopv58BdmGntL-ny7QuzvlEbyCy5Kh-6Ho,7293
+│  tests/test_veracode_scanner_app.py,sha256=-_grlSHW6Yz6fqGEvZf69y9lAcDlcYZtkAEFFUAVznM,21665
+│ -security_scan_invoker-1.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+│ -security_scan_invoker-1.0.5.dist-info/METADATA,sha256=5CIblvpd_rUmYxhqGw_lBzTRAtVOEJFWbFNPGZrVtIk,8466
+│ -security_scan_invoker-1.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ -security_scan_invoker-1.0.5.dist-info/entry_points.txt,sha256=qPw5lHeRe8RK56259bD02c6V4R3HULqEh-eUb_wDOOc,74
+│ -security_scan_invoker-1.0.5.dist-info/top_level.txt,sha256=_E7PFbLtRd-AnRsCmImRCkXLwMuy2FAD5jRrufREQ6o,28
+│ -security_scan_invoker-1.0.5.dist-info/RECORD,,
+│ +security_scan_invoker-1.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+│ +security_scan_invoker-1.1.0.dist-info/METADATA,sha256=l58UR0AbI-jUNUA0Za9kcC54EncZ1abSVTY5XaIRGQo,8466
+│ +security_scan_invoker-1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +security_scan_invoker-1.1.0.dist-info/entry_points.txt,sha256=qPw5lHeRe8RK56259bD02c6V4R3HULqEh-eUb_wDOOc,74
+│ +security_scan_invoker-1.1.0.dist-info/top_level.txt,sha256=_E7PFbLtRd-AnRsCmImRCkXLwMuy2FAD5jRrufREQ6o,28
+│ +security_scan_invoker-1.1.0.dist-info/RECORD,,

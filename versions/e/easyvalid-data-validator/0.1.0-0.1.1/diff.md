@@ -1,0 +1,223 @@
+# Comparing `tmp/easyvalid_data_validator-0.1.0.tar.gz` & `tmp/easyvalid_data_validator-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "easyvalid_data_validator-0.1.0.tar", max compression
++gzip compressed data, was "easyvalid_data_validator-0.1.1.tar", max compression
+```
+
+## Comparing `easyvalid_data_validator-0.1.0.tar` & `easyvalid_data_validator-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,20 +1,20 @@
+--rw-r--r--   0        0        0        0 2023-03-09 22:18:32.634299 easyvalid_data_validator-0.1.0/easyvalid_data_validator/__init__.py
+--rw-r--r--   0        0        0     2297 2023-03-09 22:40:13.595480 easyvalid_data_validator-0.1.0/easyvalid_data_validator/common.py
+--rw-r--r--   0        0        0      781 2023-03-09 22:26:59.056769 easyvalid_data_validator-0.1.0/easyvalid_data_validator/constraints.py
+--rw-r--r--   0        0        0        0 2023-03-09 22:35:17.446982 easyvalid_data_validator-0.1.0/easyvalid_data_validator/customexceptions/__init__.py
+--rw-r--r--   0        0        0       49 2023-03-09 22:26:59.056769 easyvalid_data_validator-0.1.0/easyvalid_data_validator/customexceptions/array.py
+--rw-r--r--   0        0        0      158 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.0/easyvalid_data_validator/customexceptions/common.py
+--rw-r--r--   0        0        0       41 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.0/easyvalid_data_validator/customexceptions/integer.py
+--rw-r--r--   0        0        0       95 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.0/easyvalid_data_validator/customexceptions/string.py
+--rw-r--r--   0        0        0        0 2023-03-09 22:36:30.704664 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/__init__.py
+--rw-r--r--   0        0        0     1253 2023-03-09 22:43:26.031175 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/array.py
+--rw-r--r--   0        0        0      328 2023-03-09 22:49:10.070446 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/boolean.py
+--rw-r--r--   0        0        0      445 2023-03-09 22:49:10.086069 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/dictionary.py
+--rw-r--r--   0        0        0     1566 2023-03-09 22:49:10.086069 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/float.py
+--rw-r--r--   0        0        0     1466 2023-03-09 22:49:10.039301 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/integer.py
+--rw-r--r--   0        0        0     1178 2023-03-09 22:49:10.039301 easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/string.py
+--rw-r--r--   0        0        0     6762 2023-03-09 22:51:24.210560 easyvalid_data_validator-0.1.0/easyvalid_data_validator/validator.py
+--rw-r--r--   0        0        0      410 2023-03-09 23:05:59.570412 easyvalid_data_validator-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0     2322 2023-03-09 23:15:48.802207 easyvalid_data_validator-0.1.0/README.md
+--rw-r--r--   0        0        0     2947 1970-01-01 00:00:00.000000 easyvalid_data_validator-0.1.0/setup.py
+--rw-r--r--   0        0        0     2542 1970-01-01 00:00:00.000000 easyvalid_data_validator-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0        0 2023-03-09 22:18:32.634299 easyvalid_data_validator-0.1.1/easyvalid_data_validator/__init__.py
++-rw-r--r--   0        0        0     2297 2023-03-09 22:40:13.595480 easyvalid_data_validator-0.1.1/easyvalid_data_validator/common.py
++-rw-r--r--   0        0        0      781 2023-03-09 22:26:59.056769 easyvalid_data_validator-0.1.1/easyvalid_data_validator/constraints.py
++-rw-r--r--   0        0        0        0 2023-03-09 22:35:17.446982 easyvalid_data_validator-0.1.1/easyvalid_data_validator/customexceptions/__init__.py
++-rw-r--r--   0        0        0       49 2023-03-09 22:26:59.056769 easyvalid_data_validator-0.1.1/easyvalid_data_validator/customexceptions/array.py
++-rw-r--r--   0        0        0      158 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.1/easyvalid_data_validator/customexceptions/common.py
++-rw-r--r--   0        0        0       41 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.1/easyvalid_data_validator/customexceptions/integer.py
++-rw-r--r--   0        0        0       95 2023-03-09 22:26:59.072392 easyvalid_data_validator-0.1.1/easyvalid_data_validator/customexceptions/string.py
++-rw-r--r--   0        0        0        0 2023-03-09 22:36:30.704664 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/__init__.py
++-rw-r--r--   0        0        0     1253 2023-03-09 22:43:26.031175 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/array.py
++-rw-r--r--   0        0        0      328 2023-03-09 22:49:10.070446 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/boolean.py
++-rw-r--r--   0        0        0      445 2023-03-09 22:49:10.086069 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/dictionary.py
++-rw-r--r--   0        0        0     1566 2023-03-09 22:49:10.086069 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/float.py
++-rw-r--r--   0        0        0     1466 2023-03-09 22:49:10.039301 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/integer.py
++-rw-r--r--   0        0        0     1178 2023-03-09 22:49:10.039301 easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/string.py
++-rw-r--r--   0        0        0     6775 2023-04-06 17:19:24.062391 easyvalid_data_validator-0.1.1/easyvalid_data_validator/validator.py
++-rw-r--r--   0        0        0      410 2023-04-06 17:27:23.523656 easyvalid_data_validator-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0     2390 2023-03-09 23:36:23.123574 easyvalid_data_validator-0.1.1/README.md
++-rw-r--r--   0        0        0     3016 1970-01-01 00:00:00.000000 easyvalid_data_validator-0.1.1/setup.py
++-rw-r--r--   0        0        0     2610 1970-01-01 00:00:00.000000 easyvalid_data_validator-0.1.1/PKG-INFO
+```
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/common.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/constraints.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/constraints.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/array.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/array.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/float.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/float.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/integer.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/integer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/datacheckers/string.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/datacheckers/string.py`
+
+ * *Files identical despite different names*
+
+### Comparing `easyvalid_data_validator-0.1.0/easyvalid_data_validator/validator.py` & `easyvalid_data_validator-0.1.1/easyvalid_data_validator/validator.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -21,15 +21,15 @@
+     :param key: validated item key
+     :param constraint: rules that value has to match
+     :param validated_data: validated json dict
+     :return: empty list or list of tuples containing key and error message
+     """
+     errors = []
+     validated_value = validated_data.get(key, False)
+-    if not validated_value:
++    if key not in validated_data.keys():
+         raise KeyError('Invalid key')
+ 
+     for constraint_name, constraint_value in constraint.items():
+ 
+         match constraint_name:
+             case Constraint.STRING_REGEX:
+                 if not matches_regex(validated_value, constraint_value):
+```
+
+### Comparing `easyvalid_data_validator-0.1.0/README.md` & `easyvalid_data_validator-0.1.1/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -48,27 +48,27 @@
+ 
+ So we create dict that stores dicts containing Constraint Objects as key that are indicators for validator of which case it's currently working on, and what datachecker it should use.
+ Value should be arguments that datachecker need:
+ - Constraint Object - Enum object
+ - datachecker - function that takes needed arguments and returns True or False if condition is mached
+ - validator - validator function that raises error when any of value is not valid, or returns data when it's valid
+ ```
+-form ... import Constraint
++from easyvalid_data_validator.constraints import Constraint
+ 
+ constraints = {
+-    "name": {Constraint.STRING_REGEX: r'^[A-Z]+$},
++    "name": {Constraint.STRING_REGEX: r'^[A-Z]+$'},
+     "age": {Constraint.INT_GE: 18},
+-    "balance": {Constraint.STRING_DECIMAL: None}
++    "balance": {Constraint.STRING_IS_DECIMAL: None}
+ }
+ ```
+ 
+ Validation is very easy now, we just need to provide validate_json_data() with json_data, and constraints:
+ 
+ ```
+-form ... import validate_json_data
++from easyvalid_data_validator.validator import validate_json_data
+ 
+ result = validate_json_data(user, constraints)
+ 
+ # result --> {"name": "ADAM", "age": 18, "balance": "2000.00"}
+ ```
+ 
+ If we would change age of user to 17, validator would throw an error:
+```
+
+### Comparing `easyvalid_data_validator-0.1.0/setup.py` & `easyvalid_data_validator-0.1.1/setup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -7,17 +7,17 @@
+  'easyvalid_data_validator.datacheckers']
+ 
+ package_data = \
+ {'': ['*']}
+ 
+ setup_kwargs = {
+     'name': 'easyvalid-data-validator',
+-    'version': '0.1.0',
++    'version': '0.1.1',
+     'description': '',
+-    'long_description': '## Installation\n\nYou can install it directly from PyPi\n```bash\n  pip install easyvalid-data-validator\n```\n    \n## Tests\n\nAll functions are fully tested\n\nYou are able to run tests on your own by using this command being in package directory\n\n```bash\n  poetry run python -m unittest discover -v\n```\nor\n```bash\n  poetry run pytest\n```\n# easyvalid-data-validator\n\nIt\'s a package developed mainly for validation of json dict that is created by using json.load().\n\nHere is an example of json dict, that has name, age, and balance.\n```\nuser = {\n    "name": "ADAM",\n    "age": 18,\n    "balance": "2000.00"\n}\n```\nWe want to validate if:\n- name contain only uppercase letters,\n- age is greater or equal to 18,\n- balance is valid for Decimal conversion\n\n\nWe need to prepare constraint dict which describes this rules as explained:\n\n```\nconstraints = {\n    "key_name1": {<ConstraintEnumObject>: *args},\n    "key_name2": {<ConstraintEnumObject>: *args},\n    "key_name3": {<ConstraintEnumObject>: *args}\n}\n```\n\nSo we create dict that stores dicts containing Constraint Objects as key that are indicators for validator of which case it\'s currently working on, and what datachecker it should use.\nValue should be arguments that datachecker need:\n- Constraint Object - Enum object\n- datachecker - function that takes needed arguments and returns True or False if condition is mached\n- validator - validator function that raises error when any of value is not valid, or returns data when it\'s valid\n```\nform ... import Constraint\n\nconstraints = {\n    "name": {Constraint.STRING_REGEX: r\'^[A-Z]+$},\n    "age": {Constraint.INT_GE: 18},\n    "balance": {Constraint.STRING_DECIMAL: None}\n}\n```\n\nValidation is very easy now, we just need to provide validate_json_data() with json_data, and constraints:\n\n```\nform ... import validate_json_data\n\nresult = validate_json_data(user, constraints)\n\n# result --> {"name": "ADAM", "age": 18, "balance": "2000.00"}\n```\n\nIf we would change age of user to 17, validator would throw an error:\n\n```\nValidationError("age": ["Invalid integer expression - isn\'t grater or equal to compare value"])\n```\n\n## Documentation link\n\n[Click to read documentation](https://github.com/DSmolke/EASYVALID_DATA_VALIDATOR/edit/master/README.md)\n',
++    'long_description': '## Installation\n\nYou can install it directly from PyPi\n```bash\n  pip install easyvalid-data-validator\n```\n    \n## Tests\n\nAll functions are fully tested\n\nYou are able to run tests on your own by using this command being in package directory\n\n```bash\n  poetry run python -m unittest discover -v\n```\nor\n```bash\n  poetry run pytest\n```\n# easyvalid-data-validator\n\nIt\'s a package developed mainly for validation of json dict that is created by using json.load().\n\nHere is an example of json dict, that has name, age, and balance.\n```\nuser = {\n    "name": "ADAM",\n    "age": 18,\n    "balance": "2000.00"\n}\n```\nWe want to validate if:\n- name contain only uppercase letters,\n- age is greater or equal to 18,\n- balance is valid for Decimal conversion\n\n\nWe need to prepare constraint dict which describes this rules as explained:\n\n```\nconstraints = {\n    "key_name1": {<ConstraintEnumObject>: *args},\n    "key_name2": {<ConstraintEnumObject>: *args},\n    "key_name3": {<ConstraintEnumObject>: *args}\n}\n```\n\nSo we create dict that stores dicts containing Constraint Objects as key that are indicators for validator of which case it\'s currently working on, and what datachecker it should use.\nValue should be arguments that datachecker need:\n- Constraint Object - Enum object\n- datachecker - function that takes needed arguments and returns True or False if condition is mached\n- validator - validator function that raises error when any of value is not valid, or returns data when it\'s valid\n```\nfrom easyvalid_data_validator.constraints import Constraint\n\nconstraints = {\n    "name": {Constraint.STRING_REGEX: r\'^[A-Z]+$\'},\n    "age": {Constraint.INT_GE: 18},\n    "balance": {Constraint.STRING_IS_DECIMAL: None}\n}\n```\n\nValidation is very easy now, we just need to provide validate_json_data() with json_data, and constraints:\n\n```\nfrom easyvalid_data_validator.validator import validate_json_data\n\nresult = validate_json_data(user, constraints)\n\n# result --> {"name": "ADAM", "age": 18, "balance": "2000.00"}\n```\n\nIf we would change age of user to 17, validator would throw an error:\n\n```\nValidationError("age": ["Invalid integer expression - isn\'t grater or equal to compare value"])\n```\n\n## Documentation link\n\n[Click to read documentation](https://github.com/DSmolke/EASYVALID_DATA_VALIDATOR/edit/master/README.md)\n',
+     'author': 'Smolke',
+     'author_email': 'd.smolczynski1@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+     'packages': packages,
+     'package_data': package_data,
+```
+
+### Comparing `easyvalid_data_validator-0.1.0/PKG-INFO` & `easyvalid_data_validator-0.1.1/PKG-INFO`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: easyvalid-data-validator
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: 
+ Author: Smolke
+ Author-email: d.smolczynski1@gmail.com
+ Requires-Python: >=3.11,<4.0
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.11
+ Description-Content-Type: text/markdown
+@@ -59,27 +59,27 @@
+ 
+ So we create dict that stores dicts containing Constraint Objects as key that are indicators for validator of which case it's currently working on, and what datachecker it should use.
+ Value should be arguments that datachecker need:
+ - Constraint Object - Enum object
+ - datachecker - function that takes needed arguments and returns True or False if condition is mached
+ - validator - validator function that raises error when any of value is not valid, or returns data when it's valid
+ ```
+-form ... import Constraint
++from easyvalid_data_validator.constraints import Constraint
+ 
+ constraints = {
+-    "name": {Constraint.STRING_REGEX: r'^[A-Z]+$},
++    "name": {Constraint.STRING_REGEX: r'^[A-Z]+$'},
+     "age": {Constraint.INT_GE: 18},
+-    "balance": {Constraint.STRING_DECIMAL: None}
++    "balance": {Constraint.STRING_IS_DECIMAL: None}
+ }
+ ```
+ 
+ Validation is very easy now, we just need to provide validate_json_data() with json_data, and constraints:
+ 
+ ```
+-form ... import validate_json_data
++from easyvalid_data_validator.validator import validate_json_data
+ 
+ result = validate_json_data(user, constraints)
+ 
+ # result --> {"name": "ADAM", "age": 18, "balance": "2000.00"}
+ ```
+ 
+ If we would change age of user to 17, validator would throw an error:
+```
+

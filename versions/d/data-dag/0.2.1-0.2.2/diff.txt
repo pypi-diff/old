@@ -1,0 +1,902 @@
+--- tmp/data_dag-0.2.1.tar.gz
++++ tmp/data-dag-0.2.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "data_dag-0.2.1.tar", last modified: Wed Sep 21 21:22:40 2022, max compression
+│ +gzip compressed data, was "data-dag-0.2.2.tar", last modified: Thu Apr  6 17:32:45 2023, max compression
+│   --- data_dag-0.2.1.tar
+├── +++ data-dag-0.2.2.tar
+│ ├── file list
+│ │ @@ -1,19 +1,38 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-09-21 21:22:40.141804 data_dag-0.2.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4220 2022-09-21 21:22:40.141804 data_dag-0.2.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3741 2022-09-21 21:22:24.000000 data_dag-0.2.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-09-21 21:22:40.137804 data_dag-0.2.1/data_dag/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       22 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4044 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/dag_factory.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-09-21 21:22:40.141804 data_dag-0.2.1/data_dag/operator_factory/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      199 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/operator_factory/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2414 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/operator_factory/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5962 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/operator_factory/dynamic.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3660 2022-09-21 21:22:24.000000 data_dag-0.2.1/data_dag/operator_factory/simple.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-09-21 21:22:40.137804 data_dag-0.2.1/data_dag.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4220 2022-09-21 21:22:40.000000 data_dag-0.2.1/data_dag.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      383 2022-09-21 21:22:40.000000 data_dag-0.2.1/data_dag.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-09-21 21:22:40.000000 data_dag-0.2.1/data_dag.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       48 2022-09-21 21:22:40.000000 data_dag-0.2.1/data_dag.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        9 2022-09-21 21:22:40.000000 data_dag-0.2.1/data_dag.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      117 2022-09-21 21:22:24.000000 data_dag-0.2.1/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      757 2022-09-21 21:22:40.141804 data_dag-0.2.1/setup.cfg
+│ │ +-rw-r--r--   0        0        0      177 2023-04-06 17:31:12.370152 data-dag-0.2.2/.bumpversion.cfg
+│ │ +-rw-r--r--   0        0        0     1351 2022-07-12 18:41:30.346472 data-dag-0.2.2/.github/workflows/docs.yml
+│ │ +-rw-r--r--   0        0        0      359 2022-07-12 16:43:24.229520 data-dag-0.2.2/.github/workflows/pre-commit.yml
+│ │ +-rw-r--r--   0        0        0      702 2022-07-12 16:43:24.229520 data-dag-0.2.2/.github/workflows/pypi.yml
+│ │ +-rw-r--r--   0        0        0     1008 2022-07-12 16:43:24.229520 data-dag-0.2.2/.github/workflows/pytest.yml
+│ │ +-rw-r--r--   0        0        0     2162 2022-07-05 17:25:03.902436 data-dag-0.2.2/.gitignore
+│ │ +-rw-r--r--   0        0        0      720 2023-04-06 17:29:46.795060 data-dag-0.2.2/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0        0        0     1015 2023-04-06 17:29:46.795584 data-dag-0.2.2/.ruff.toml
+│ │ +-rw-r--r--   0        0        0     4012 2023-04-06 17:32:20.400308 data-dag-0.2.2/README.md
+│ │ +-rw-r--r--   0        0        0       71 2023-04-06 17:31:12.369113 data-dag-0.2.2/data_dag/__init__.py
+│ │ +-rw-r--r--   0        0        0     4140 2023-04-06 17:29:46.796641 data-dag-0.2.2/data_dag/dag_factory.py
+│ │ +-rw-r--r--   0        0        0      371 2023-04-06 17:29:46.797160 data-dag-0.2.2/data_dag/operator_factory/__init__.py
+│ │ +-rw-r--r--   0        0        0     2482 2023-04-06 17:29:46.798193 data-dag-0.2.2/data_dag/operator_factory/base.py
+│ │ +-rw-r--r--   0        0        0     6060 2023-04-06 17:29:46.798708 data-dag-0.2.2/data_dag/operator_factory/dynamic.py
+│ │ +-rw-r--r--   0        0        0     3760 2023-04-06 17:29:46.799230 data-dag-0.2.2/data_dag/operator_factory/simple.py
+│ │ +-rw-r--r--   0        0        0      654 2022-07-12 16:43:24.230519 data-dag-0.2.2/docs/Makefile
+│ │ +-rw-r--r--   0        0        0    35824 2022-07-12 16:43:24.231196 data-dag-0.2.2/docs/_images/img.png
+│ │ +-rw-r--r--   0        0        0      517 2023-04-06 17:29:41.241718 data-dag-0.2.2/docs/changelog.md
+│ │ +-rw-r--r--   0        0        0     2345 2023-04-06 17:31:12.369625 data-dag-0.2.2/docs/conf.py
+│ │ +-rw-r--r--   0        0        0    15045 2023-04-06 17:29:41.243816 data-dag-0.2.2/docs/getting_started.md
+│ │ +-rw-r--r--   0        0        0      503 2022-07-13 17:23:05.120784 data-dag-0.2.2/docs/index.md
+│ │ +-rw-r--r--   0        0        0       71 2022-07-12 16:43:24.233210 data-dag-0.2.2/docs/installation.md
+│ │ +-rwxr-xr-x   0        0        0      800 2022-07-12 16:43:24.234202 data-dag-0.2.2/docs/make.bat
+│ │ +-rw-r--r--   0        0        0     9157 2023-04-06 17:29:41.244380 data-dag-0.2.2/docs/overview.md
+│ │ +-rw-r--r--   0        0        0      189 2022-09-21 18:57:00.581648 data-dag-0.2.2/docs/reference/dag_factory.rst
+│ │ +-rw-r--r--   0        0        0      102 2022-07-13 17:25:22.892593 data-dag-0.2.2/docs/reference/modules.rst
+│ │ +-rw-r--r--   0        0        0      374 2023-04-06 17:29:41.245435 data-dag-0.2.2/docs/reference/operator_factory.rst
+│ │ +-rw-r--r--   0        0        0       72 2023-04-06 17:29:41.245962 data-dag-0.2.2/docs/requirements.txt
+│ │ +-rw-r--r--   0        0        0      187 2023-04-06 17:29:41.246483 data-dag-0.2.2/docs/usage/dag_factory.md
+│ │ +-rw-r--r--   0        0        0      127 2022-07-13 19:27:31.672485 data-dag-0.2.2/docs/usage/index.md
+│ │ +-rw-r--r--   0        0        0     2850 2023-04-06 17:29:41.247535 data-dag-0.2.2/docs/usage/operator_factory.md
+│ │ +-rw-r--r--   0        0        0      308 2023-04-06 17:29:46.800790 data-dag-0.2.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      204 2022-07-12 16:43:24.236204 data-dag-0.2.2/requirements.txt
+│ │ +-rw-r--r--   0        0        0      769 2023-04-06 17:31:12.368072 data-dag-0.2.2/setup.cfg
+│ │ +-rw-r--r--   0        0        0     1384 2022-07-06 20:04:36.688948 data-dag-0.2.2/tests/test_dag_factory.py
+│ │ +-rw-r--r--   0        0        0     4509 2022-07-13 19:52:45.671498 data-dag-0.2.2/tests/test_dynamic_operator_factory.py
+│ │ +-rw-r--r--   0        0        0     3811 2023-04-06 17:29:46.801830 data-dag-0.2.2/tests/test_operator_factory.py
+│ │ +-rw-r--r--   0        0        0     4121 1970-01-01 00:00:00.000000 data-dag-0.2.2/PKG-INFO
+│ │   --- data_dag-0.2.1/PKG-INFO
+│ ├── +++ data-dag-0.2.2/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,20 +1,14 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: data_dag
+│ │ -Version: 0.2.1
+│ │ +Name: data-dag
+│ │ +Version: 0.2.2
+│ │  Summary: Tooling to help build data-driven DAGs
+│ │ -Home-page: https://github.com/rearc-data/data_dag
+│ │ -Author: Rearc Data
+│ │ -Author-email: data@rearc.io
+│ │ -Project-URL: Bug Tracker, https://github.com/rearc-data/data_dag/issues
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Operating System :: OS Independent
+│ │ -Requires-Python: >=3.7
+│ │ +Author-email: Rearc Data <data@rearc.io>
+│ │  Description-Content-Type: text/markdown
+│ │ +Project-URL: Home, https://github.com/rearc-data/data-dag
+│ │  
+│ │  [![Documentation Status](https://readthedocs.org/projects/data-dag/badge/?version=latest)](https://data-dag.readthedocs.io/en/latest/?badge=latest) ![PyPI](https://img.shields.io/pypi/v/data-dag)
+│ │  
+│ │  # Overview
+│ │  
+│ │  `data-dag` is a library for writing data-defined Airflow DAGs and operators.
+│ │  
+│ │ @@ -136,7 +130,12 @@
+│ │      dag_name = yaml_file_path.with_suffix('').name
+│ │      globals()[dag_name] = dag
+│ │  ```
+│ │  
+│ │  # Documentation
+│ │  
+│ │  [Complete docs can be found here](https://data-dag.rtfd.org/)
+│ │ +
+│ │ +[//]: # (TODO)
+│ │ +[//]: # (- Add DAG loader factory to enable a 2-liner DAG python file
+│ │ +[//]: # (- Add dependency group mixin or something )
+│ │ +
+│ │   --- data_dag-0.2.1/data_dag/dag_factory.py
+│ ├── +++ data-dag-0.2.2/data_dag/dag_factory.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,96 +1,96 @@
+│ │ -import abc
+│ │ -from datetime import timedelta, datetime
+│ │ -from typing import Optional, Dict, List, Iterable, Union
+│ │ -
+│ │ -from airflow.models.dag import DAG
+│ │ -from pydantic import BaseModel
+│ │ -
+│ │ -
+│ │ -class DagFactory(BaseModel, abc.ABC):
+│ │ -    """
+│ │ -    Base factory class for generating DAGs.
+│ │ -
+│ │ -    This class serves as a metadata wrapper around :py:class:`airflow.models.dag.DAG`.
+│ │ -
+│ │ -    The simplest way to create a DAG factory is to inherit from :py:class:`DagFactory` and implement :py:meth:`_make_dag`, like::
+│ │ -
+│ │ -        class MyKindOfDag(DagFactory):
+│ │ -            def _make_dag(self):
+│ │ -                start = DummyOperator(...)
+│ │ -                do_something = PythonOperator(...)
+│ │ -                end = DummyOperator(...)
+│ │ -
+│ │ -                start >> do_something >> end
+│ │ -
+│ │ -    The :py:class:`~airflow.models.dag.DAG` object itself will be automatically created and opened prior to :py:meth:`_make_dag` being called.
+│ │ -    The final DAG can be obtained by calling :py:meth:`make_dag` on an instance of your factory::
+│ │ -
+│ │ -        my_particular_dag_metadata = MyKindOfDag()
+│ │ -        dag = my_particular_dag_metadata.make_dag()
+│ │ -
+│ │ -    For documentation on the attributes of :py:class:`DagFactory`, see the `DAG type docs <https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/models/dag/index.html#airflow.models.dag.DAG>`_.
+│ │ -
+│ │ -    DAG keyword arguments can be passed in any of three ways (in ascending priority):
+│ │ -    1. Overriding :py:meth:`default_dag_kwargs` to return a dictionary of default keyword arguments
+│ │ -    2. Passing in data during construction (either directly or in an overridden constructor)
+│ │ -    3. As a ``dag_overrides`` dictionary when calling :py:meth:`make_dag`
+│ │ -    """
+│ │ -
+│ │ -    dag_id: str
+│ │ -    description: Optional[str] = None
+│ │ -    schedule_interval: Union[timedelta, str, None] = None
+│ │ -    start_date: Optional[datetime] = None
+│ │ -    end_date: Optional[datetime] = None
+│ │ -    full_filepath: Optional[str] = None
+│ │ -    template_searchpath: Optional[Union[str, Iterable[str]]] = None
+│ │ -    user_defined_macros: Optional[Dict] = None
+│ │ -    user_defined_filters: Optional[Dict] = None
+│ │ -    default_args: Optional[Dict] = None
+│ │ -    concurrency: Optional[int] = None
+│ │ -    max_active_tasks: Optional[int] = None
+│ │ -    max_active_runs: Optional[int] = None
+│ │ -    dagrun_timeout: Optional[timedelta] = None
+│ │ -    default_view: Optional[str] = None
+│ │ -    orientation: Optional[str] = None
+│ │ -    catchup: Optional[bool] = None
+│ │ -    doc_md: Optional[str] = None
+│ │ -    params: Optional[Dict] = None
+│ │ -    access_control: Optional[Dict] = None
+│ │ -    is_paused_upon_creation: Optional[bool] = None
+│ │ -    jinja_environment_kwargs: Optional[Dict] = None
+│ │ -    render_template_as_native_obj: bool = False
+│ │ -    tags: Optional[List[str]] = None
+│ │ -
+│ │ -    @property
+│ │ -    def default_dag_kwargs(self) -> Dict:
+│ │ -        """Override this property in a subclass to provide default arguments to the
+│ │ -        :py:class:`airflow.models.dag.DAG` constructor."""
+│ │ -        return {}
+│ │ -
+│ │ -    def make_dag_object(self, **overrides) -> DAG:
+│ │ -        """Creates the basic :py:class:`airflow.models.dag.DAG` object represented by this metadata.
+│ │ -
+│ │ -        This doesn't populate the DAG with nodes, it is only responsible for creating the initial DAG object.
+│ │ -        """
+│ │ -        kwargs = self.default_dag_kwargs.copy()
+│ │ -        kwargs.update(
+│ │ -            {
+│ │ -                field: getattr(self, field, None)
+│ │ -                for field in DagFactory.__fields__
+│ │ -                if getattr(self, field, None) is not None
+│ │ -            }
+│ │ -        )
+│ │ -        kwargs.update(overrides)
+│ │ -        return DAG(**kwargs)
+│ │ -
+│ │ -    def make_dag(self, *args, dag_overrides: Optional[Dict] = None, **kwargs) -> DAG:
+│ │ -        """Creates and populates a :py:class:`airflow.models.dag.DAG` represented by this metadata"""
+│ │ -        dag = self.make_dag_object(**(dag_overrides or {}))
+│ │ -        with dag:
+│ │ -            self._make_dag(*args, **kwargs)
+│ │ -
+│ │ -        return dag
+│ │ -
+│ │ -    def _make_dag(self, *args, **kwargs) -> None:
+│ │ -        """Override this method in a subclass to populate the :py:class:`airflow.models.dag.DAG` object with nodes and edges"""
+│ │ -        raise NotImplementedError()
+│ │ +import abc
+│ │ +from datetime import datetime, timedelta
+│ │ +from typing import Dict, Iterable, List, Optional, Union
+│ │ +
+│ │ +from airflow.models.dag import DAG
+│ │ +from pydantic import BaseModel
+│ │ +
+│ │ +
+│ │ +class DagFactory(BaseModel, abc.ABC):
+│ │ +    """
+│ │ +    Base factory class for generating DAGs.
+│ │ +
+│ │ +    This class serves as a metadata wrapper around :py:class:`airflow.models.dag.DAG`.
+│ │ +
+│ │ +    The simplest way to create a DAG factory is to inherit from :py:class:`DagFactory` and implement :py:meth:`_make_dag`, like::
+│ │ +
+│ │ +        class MyKindOfDag(DagFactory):
+│ │ +            def _make_dag(self):
+│ │ +                start = DummyOperator(...)
+│ │ +                do_something = PythonOperator(...)
+│ │ +                end = DummyOperator(...)
+│ │ +
+│ │ +                start >> do_something >> end
+│ │ +
+│ │ +    The :py:class:`~airflow.models.dag.DAG` object itself will be automatically created and opened prior to :py:meth:`_make_dag` being called.
+│ │ +    The final DAG can be obtained by calling :py:meth:`make_dag` on an instance of your factory::
+│ │ +
+│ │ +        my_particular_dag_metadata = MyKindOfDag()
+│ │ +        dag = my_particular_dag_metadata.make_dag()
+│ │ +
+│ │ +    For documentation on the attributes of :py:class:`DagFactory`, see the `DAG type docs <https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/models/dag/index.html#airflow.models.dag.DAG>`_.
+│ │ +
+│ │ +    DAG keyword arguments can be passed in any of three ways (in ascending priority):
+│ │ +    1. Overriding :py:meth:`default_dag_kwargs` to return a dictionary of default keyword arguments
+│ │ +    2. Passing in data during construction (either directly or in an overridden constructor)
+│ │ +    3. As a ``dag_overrides`` dictionary when calling :py:meth:`make_dag`
+│ │ +    """
+│ │ +
+│ │ +    dag_id: str
+│ │ +    description: Optional[str] = None
+│ │ +    schedule_interval: Union[timedelta, str, None] = None
+│ │ +    start_date: Optional[datetime] = None
+│ │ +    end_date: Optional[datetime] = None
+│ │ +    full_filepath: Optional[str] = None
+│ │ +    template_searchpath: Optional[Union[str, Iterable[str]]] = None
+│ │ +    user_defined_macros: Optional[Dict] = None
+│ │ +    user_defined_filters: Optional[Dict] = None
+│ │ +    default_args: Optional[Dict] = None
+│ │ +    concurrency: Optional[int] = None
+│ │ +    max_active_tasks: Optional[int] = None
+│ │ +    max_active_runs: Optional[int] = None
+│ │ +    dagrun_timeout: Optional[timedelta] = None
+│ │ +    default_view: Optional[str] = None
+│ │ +    orientation: Optional[str] = None
+│ │ +    catchup: Optional[bool] = None
+│ │ +    doc_md: Optional[str] = None
+│ │ +    params: Optional[Dict] = None
+│ │ +    access_control: Optional[Dict] = None
+│ │ +    is_paused_upon_creation: Optional[bool] = None
+│ │ +    jinja_environment_kwargs: Optional[Dict] = None
+│ │ +    render_template_as_native_obj: bool = False
+│ │ +    tags: Optional[List[str]] = None
+│ │ +
+│ │ +    @property
+│ │ +    def default_dag_kwargs(self) -> Dict:
+│ │ +        """Override this property in a subclass to provide default arguments to the
+│ │ +        :py:class:`airflow.models.dag.DAG` constructor."""
+│ │ +        return {}
+│ │ +
+│ │ +    def make_dag_object(self, **overrides) -> DAG:
+│ │ +        """Creates the basic :py:class:`airflow.models.dag.DAG` object represented by this metadata.
+│ │ +
+│ │ +        This doesn't populate the DAG with nodes, it is only responsible for creating the initial DAG object.
+│ │ +        """
+│ │ +        kwargs = self.default_dag_kwargs.copy()
+│ │ +        kwargs.update(
+│ │ +            {
+│ │ +                field: getattr(self, field, None)
+│ │ +                for field in DagFactory.__fields__
+│ │ +                if getattr(self, field, None) is not None
+│ │ +            }
+│ │ +        )
+│ │ +        kwargs.update(overrides)
+│ │ +        return DAG(**kwargs)
+│ │ +
+│ │ +    def make_dag(self, *args, dag_overrides: Optional[Dict] = None, **kwargs) -> DAG:
+│ │ +        """Creates and populates a :py:class:`airflow.models.dag.DAG` represented by this metadata"""
+│ │ +        dag = self.make_dag_object(**(dag_overrides or {}))
+│ │ +        with dag:
+│ │ +            self._make_dag(*args, **kwargs)
+│ │ +
+│ │ +        return dag
+│ │ +
+│ │ +    def _make_dag(self, *args, **kwargs) -> None:
+│ │ +        """Override this method in a subclass to populate the :py:class:`airflow.models.dag.DAG` object with nodes and edges"""
+│ │ +        raise NotImplementedError()
+│ │   --- data_dag-0.2.1/data_dag/operator_factory/base.py
+│ ├── +++ data-dag-0.2.2/data_dag/operator_factory/base.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,68 +1,68 @@
+│ │ -import abc
+│ │ -import contextlib
+│ │ -from typing import Union, Sequence, Optional
+│ │ -
+│ │ -from airflow.models.taskmixin import TaskMixin
+│ │ -from airflow.utils.task_group import TaskGroup
+│ │ -from pydantic import BaseModel
+│ │ -
+│ │ -
+│ │ -class BaseOperatorFactory(BaseModel, abc.ABC):
+│ │ -    def make_operator(
+│ │ -        self, *args, **kwargs
+│ │ -    ) -> Union[TaskMixin, Sequence[TaskMixin], None]:
+│ │ -        """Converts this factory metadata into an operator.
+│ │ -
+│ │ -        Returns:
+│ │ -            Zero or more operator-like things. The code that calls this should know how to handle the possible return types for this particular factory.
+│ │ -        """
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │ -
+│ │ -class OperatorFactory(BaseOperatorFactory, abc.ABC):
+│ │ -    """An interface for writing operator factories."""
+│ │ -
+│ │ -    task_id: Optional[str]
+│ │ -
+│ │ -    @property
+│ │ -    def default_task_id(self) -> str:
+│ │ -        """If overridden, defines a default task ID when none is manually specified"""
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │ -    def get_task_id(self):
+│ │ -        """Provides the custom task ID if provided, else this factory's default task ID"""
+│ │ -        return self.task_id or self.default_task_id
+│ │ -
+│ │ -    @contextlib.contextmanager
+│ │ -    def _task_group(self):
+│ │ -        with TaskGroup(group_id=self.get_task_id()) as group:
+│ │ -            yield
+│ │ -
+│ │ -        return group
+│ │ -
+│ │ -    def make_operator(
+│ │ -        self, *args, **kwargs
+│ │ -    ) -> Union[TaskMixin, Sequence[TaskMixin], None]:
+│ │ -        """Converts this factory metadata into an operator.
+│ │ -
+│ │ -        If you need to create multiple operators, whether connected or not, implement :py:meth:`_make_operators`
+│ │ -        instead, and they will be automatically wrapped in a :py:class:`airflow.utils.task_group.TaskGroup`.
+│ │ -
+│ │ -        Returns:
+│ │ -            Zero or more operator-like things. The code that calls this should know how to handle the possible return types for this particular factory.
+│ │ -        """
+│ │ -        with self._task_group() as group:
+│ │ -            self._make_operators(*args, **kwargs)
+│ │ -
+│ │ -        return group
+│ │ -
+│ │ -    def _make_operators(self, *args, **kwargs) -> None:
+│ │ -        """Can be implemented instead of :py:meth:`make_operator` to define an operator collection inside a
+│ │ -        default :py:class:`airflow.utils.task_group.TaskGroup`"""
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │ -
+│ │ -class OperatorComponent(BaseModel, abc.ABC):
+│ │ -    """A non-operator component for use in other operator factories. Just a proxy for :py:class:`pydantic.BaseModel`."""
+│ │ -
+│ │ -    pass
+│ │ +import abc
+│ │ +import contextlib
+│ │ +from typing import Optional, Sequence, Union
+│ │ +
+│ │ +from airflow.models.taskmixin import TaskMixin
+│ │ +from airflow.utils.task_group import TaskGroup
+│ │ +from pydantic import BaseModel
+│ │ +
+│ │ +
+│ │ +class BaseOperatorFactory(BaseModel, abc.ABC):
+│ │ +    def make_operator(
+│ │ +        self, *args, **kwargs
+│ │ +    ) -> Union[TaskMixin, Sequence[TaskMixin], None]:
+│ │ +        """Converts this factory metadata into an operator.
+│ │ +
+│ │ +        Returns:
+│ │ +            Zero or more operator-like things. The code that calls this should know how to handle the possible return types for this particular factory.
+│ │ +        """
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +
+│ │ +class OperatorFactory(BaseOperatorFactory, abc.ABC):
+│ │ +    """An interface for writing operator factories."""
+│ │ +
+│ │ +    task_id: Optional[str]
+│ │ +
+│ │ +    @property
+│ │ +    def default_task_id(self) -> str:
+│ │ +        """If overridden, defines a default task ID when none is manually specified"""
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +    def get_task_id(self):
+│ │ +        """Provides the custom task ID if provided, else this factory's default task ID"""
+│ │ +        return self.task_id or self.default_task_id
+│ │ +
+│ │ +    @contextlib.contextmanager
+│ │ +    def _task_group(self):
+│ │ +        with TaskGroup(group_id=self.get_task_id()) as group:
+│ │ +            yield
+│ │ +
+│ │ +        return group
+│ │ +
+│ │ +    def make_operator(
+│ │ +        self, *args, **kwargs
+│ │ +    ) -> Union[TaskMixin, Sequence[TaskMixin], None]:
+│ │ +        """Converts this factory metadata into an operator.
+│ │ +
+│ │ +        If you need to create multiple operators, whether connected or not, implement :py:meth:`_make_operators`
+│ │ +        instead, and they will be automatically wrapped in a :py:class:`airflow.utils.task_group.TaskGroup`.
+│ │ +
+│ │ +        Returns:
+│ │ +            Zero or more operator-like things. The code that calls this should know how to handle the possible return types for this particular factory.
+│ │ +        """
+│ │ +        with self._task_group() as group:
+│ │ +            self._make_operators(*args, **kwargs)
+│ │ +
+│ │ +        return group
+│ │ +
+│ │ +    def _make_operators(self, *args, **kwargs) -> None:
+│ │ +        """Can be implemented instead of :py:meth:`make_operator` to define an operator collection inside a
+│ │ +        default :py:class:`airflow.utils.task_group.TaskGroup`"""
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +
+│ │ +class OperatorComponent(BaseModel, abc.ABC):
+│ │ +    """A non-operator component for use in other operator factories. Just a proxy for :py:class:`pydantic.BaseModel`."""
+│ │ +
+│ │ +    pass
+│ │   --- data_dag-0.2.1/data_dag/operator_factory/dynamic.py
+│ ├── +++ data-dag-0.2.2/data_dag/operator_factory/dynamic.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,125 +1,125 @@
+│ │ -import abc
+│ │ -import inspect
+│ │ -import warnings
+│ │ -
+│ │ -from pydantic.main import ModelMetaclass
+│ │ -
+│ │ -from .base import OperatorFactory, OperatorComponent
+│ │ -
+│ │ -
+│ │ -class _DynamicModelMetaclass(ModelMetaclass):
+│ │ -    def __new__(mcs, *args, **kwargs):
+│ │ -        cls = super(_DynamicModelMetaclass, mcs).__new__(mcs, *args, **kwargs)
+│ │ -        cls.__known_subclasses__ = dict()
+│ │ -        return cls
+│ │ -
+│ │ -    def __call__(cls, *args, **kwargs):
+│ │ -        known_subtype = cls.__type_name__
+│ │ -        specified_subtype = kwargs.pop(
+│ │ -            cls.__type_kwarg_name__, cls.__default_type_name__
+│ │ -        )
+│ │ -
+│ │ -        if known_subtype is None and specified_subtype is None:
+│ │ -            raise TypeError(
+│ │ -                f"Failed to find type kwarg `{cls.__type_kwarg_name__}` while instantiating {cls}"
+│ │ -            )
+│ │ -        elif known_subtype is not None and specified_subtype is not None:
+│ │ -            raise TypeError(
+│ │ -                f"Cannot specify explicit `{cls.__type_kwarg_name__}` to specific type {cls}"
+│ │ -            )
+│ │ -
+│ │ -        # At this point, we know that exactly one of known_subtype and specified_subtype is given
+│ │ -        assert bool(known_subtype) ^ bool(specified_subtype), (
+│ │ -            known_subtype,
+│ │ -            specified_subtype,
+│ │ -        )
+│ │ -
+│ │ -        if known_subtype:
+│ │ -            specified_cls = cls
+│ │ -        elif specified_subtype:
+│ │ -            try:
+│ │ -                specified_cls = cls.__known_subclasses__[specified_subtype]
+│ │ -            except KeyError as ex:
+│ │ -                raise TypeError(
+│ │ -                    f"Subtype `{specified_subtype}` not found for {cls}. Options are {list(cls.__known_subclasses__)}"
+│ │ -                ) from ex
+│ │ -        else:  # pragma: no cover
+│ │ -            assert False, ("How did we get here?", known_subtype, specified_subtype)
+│ │ -
+│ │ -        return super(_DynamicModelMetaclass, specified_cls).__call__(*args, **kwargs)
+│ │ -
+│ │ -
+│ │ -# With much help from
+│ │ -# https://stackoverflow.com/questions/23374715/changing-the-bases-of-an-object-based-on-arguments-to-init
+│ │ -class _DynamicOperatorBase:
+│ │ -    __type_name__ = None
+│ │ -    __default_type_name__ = None
+│ │ -    __type_kwarg_name__ = "type"
+│ │ -
+│ │ -    def __init_subclass__(cls, **kwargs):
+│ │ -        if not inspect.isabstract(cls) and abc.ABC not in cls.__bases__:
+│ │ -            subtype_name = cls.__type_name__
+│ │ -
+│ │ -            if not subtype_name:
+│ │ -                warnings.warn(
+│ │ -                    f"Type {cls} does not specify a subtype name (as __type_name__) and cannot be dynamically instantiated; if this is intentional, make the clas abstract, like `class {cls.__name__}(..., abc.ABC):`"
+│ │ -                )
+│ │ -
+│ │ -            cls.__known_subclasses__[subtype_name] = cls
+│ │ -
+│ │ -
+│ │ -class DynamicOperatorFactory(
+│ │ -    OperatorFactory, _DynamicOperatorBase, abc.ABC, metaclass=_DynamicModelMetaclass
+│ │ -):
+│ │ -    """An OperatorFactory that can automatically instantiate sub-classes based on the input data.
+│ │ -
+│ │ -    Consider the following example::
+│ │ -
+│ │ -        class InputFile(DynamicOperatorFactory, abc.ABC):
+│ │ -            pass
+│ │ -
+│ │ -        class LocalFile(InputFile):
+│ │ -            __type_name__ = 'local'
+│ │ -
+│ │ -            path: str
+│ │ -
+│ │ -        class S3File(InputFile):
+│ │ -            __type_name__ = 's3'
+│ │ -
+│ │ -            bucket: str
+│ │ -            key: str
+│ │ -
+│ │ -        InputFile.parse_obj({'type': 's3', 'bucket': 'my-bucket', 'key': 'my-key'})
+│ │ -        # S3File(bucket='my-bucket', key='my-key')
+│ │ -
+│ │ -    Note how the type of object that gets instantiated is dynamically chosen from the data, rather than specified by the code. This allows a supertype to be used in code, and for the subtype to be chosen at runtime based on data.
+│ │ -
+│ │ -    To use a dynamic factory, define your base supertype to inherit directly from :py:class:`DynamicOperatorFactory` and :py:class:`abc.ABC`. The class can be totally empty, as in the example above. This top-level class will be populated with a dictionary that will automatically track subclasses as they get define.
+│ │ -
+│ │ -    .. warning::
+│ │ -
+│ │ -        It's important to remember that, while subtypes are automatically tracked upon definition, they must still be imported somewhere. Make sure that when the supertype is imported, the subtypes also eventually get imported, or else they will be unavailable at DAG resolution time.
+│ │ -
+│ │ -    Subclasses must either define ``__type_name__ = "some_name"`` or else inherit from :py:class:`abc.ABC` to indicate that they are abstract. Classes that are not abstract and not named will generate a warning.
+│ │ -
+│ │ -    A default subtype can be specified using ``__default_type_name__`` in the top-level type. Note that this is the ``__type_name__`` of the default subclass, not the class name itself.
+│ │ -
+│ │ -    By default, the subclass is chosen by the ``"type"`` key in the input data. This can be changed by setting ``__type_kwarg_name__`` in the top-level type to some other string. This key will be stripped from the input data and all other keys will be passed along to the subtype's constructor without further modification.
+│ │ -
+│ │ -    Attempting to construct a top-level object, either directly (with its constructor) or using ``parse_obj``, without specifying a "type" (or whatever you renamed the key to be) will result in a :py:exc:`TypeError`.
+│ │ -
+│ │ -    .. note::
+│ │ -
+│ │ -        Pydantic already supports Union types, so why would we use a custom DynamicOperatorFactory instead?
+│ │ -
+│ │ -        Dynamic factories provide two key advantages:
+│ │ -
+│ │ -        - The subtype selected is explicit rather than implicit. The subtypes don't need to be distinguishable in any other way besides their ``__type_name__``, nor is there any kind of ordering of the subtypes.
+│ │ -        - The list of options is automatically maintained, as long as the modules containing the subtypes are sure to be imported. That is, another component or factory can use the top-level type to annotate one of its fields, and the subtypes will automatically be implied.
+│ │ -    """
+│ │ -
+│ │ -
+│ │ -class DynamicOperatorComponent(
+│ │ -    OperatorComponent, _DynamicOperatorBase, abc.ABC, metaclass=_DynamicModelMetaclass
+│ │ -):
+│ │ -    """Identical to :py:class:`DynamicOperatorFactory` but based on :py:class:`OperatorComponent` instead."""
+│ │ +import abc
+│ │ +import inspect
+│ │ +import warnings
+│ │ +
+│ │ +from pydantic.main import ModelMetaclass
+│ │ +
+│ │ +from .base import OperatorComponent, OperatorFactory
+│ │ +
+│ │ +
+│ │ +class _DynamicModelMetaclass(ModelMetaclass):
+│ │ +    def __new__(mcs, *args, **kwargs):
+│ │ +        cls = super().__new__(mcs, *args, **kwargs)
+│ │ +        cls.__known_subclasses__ = dict()
+│ │ +        return cls
+│ │ +
+│ │ +    def __call__(cls, *args, **kwargs):
+│ │ +        known_subtype = cls.__type_name__
+│ │ +        specified_subtype = kwargs.pop(
+│ │ +            cls.__type_kwarg_name__, cls.__default_type_name__
+│ │ +        )
+│ │ +
+│ │ +        if known_subtype is None and specified_subtype is None:
+│ │ +            raise TypeError(
+│ │ +                f"Failed to find type kwarg `{cls.__type_kwarg_name__}` while instantiating {cls}"
+│ │ +            )
+│ │ +        elif known_subtype is not None and specified_subtype is not None:
+│ │ +            raise TypeError(
+│ │ +                f"Cannot specify explicit `{cls.__type_kwarg_name__}` to specific type {cls}"
+│ │ +            )
+│ │ +
+│ │ +        # At this point, we know that exactly one of known_subtype and specified_subtype is given
+│ │ +        assert bool(known_subtype) ^ bool(specified_subtype), (
+│ │ +            known_subtype,
+│ │ +            specified_subtype,
+│ │ +        )
+│ │ +
+│ │ +        if known_subtype:
+│ │ +            specified_cls = cls
+│ │ +        elif specified_subtype:
+│ │ +            try:
+│ │ +                specified_cls = cls.__known_subclasses__[specified_subtype]
+│ │ +            except KeyError as ex:
+│ │ +                raise TypeError(
+│ │ +                    f"Subtype `{specified_subtype}` not found for {cls}. Options are {list(cls.__known_subclasses__)}"
+│ │ +                ) from ex
+│ │ +        else:  # pragma: no cover
+│ │ +            assert False, ("How did we get here?", known_subtype, specified_subtype)
+│ │ +
+│ │ +        return super(_DynamicModelMetaclass, specified_cls).__call__(*args, **kwargs)
+│ │ +
+│ │ +
+│ │ +# With much help from
+│ │ +# https://stackoverflow.com/questions/23374715/changing-the-bases-of-an-object-based-on-arguments-to-init
+│ │ +class _DynamicOperatorBase:
+│ │ +    __type_name__ = None
+│ │ +    __default_type_name__ = None
+│ │ +    __type_kwarg_name__ = "type"
+│ │ +
+│ │ +    def __init_subclass__(cls, **kwargs):
+│ │ +        if not inspect.isabstract(cls) and abc.ABC not in cls.__bases__:
+│ │ +            subtype_name = cls.__type_name__
+│ │ +
+│ │ +            if not subtype_name:
+│ │ +                warnings.warn(
+│ │ +                    f"Type {cls} does not specify a subtype name (as __type_name__) and cannot be dynamically instantiated; if this is intentional, make the clas abstract, like `class {cls.__name__}(..., abc.ABC):`"
+│ │ +                )
+│ │ +
+│ │ +            cls.__known_subclasses__[subtype_name] = cls
+│ │ +
+│ │ +
+│ │ +class DynamicOperatorFactory(
+│ │ +    OperatorFactory, _DynamicOperatorBase, abc.ABC, metaclass=_DynamicModelMetaclass
+│ │ +):
+│ │ +    """An OperatorFactory that can automatically instantiate sub-classes based on the input data.
+│ │ +
+│ │ +    Consider the following example::
+│ │ +
+│ │ +        class InputFile(DynamicOperatorFactory, abc.ABC):
+│ │ +            pass
+│ │ +
+│ │ +        class LocalFile(InputFile):
+│ │ +            __type_name__ = 'local'
+│ │ +
+│ │ +            path: str
+│ │ +
+│ │ +        class S3File(InputFile):
+│ │ +            __type_name__ = 's3'
+│ │ +
+│ │ +            bucket: str
+│ │ +            key: str
+│ │ +
+│ │ +        InputFile.parse_obj({'type': 's3', 'bucket': 'my-bucket', 'key': 'my-key'})
+│ │ +        # S3File(bucket='my-bucket', key='my-key')
+│ │ +
+│ │ +    Note how the type of object that gets instantiated is dynamically chosen from the data, rather than specified by the code. This allows a supertype to be used in code, and for the subtype to be chosen at runtime based on data.
+│ │ +
+│ │ +    To use a dynamic factory, define your base supertype to inherit directly from :py:class:`DynamicOperatorFactory` and :py:class:`abc.ABC`. The class can be totally empty, as in the example above. This top-level class will be populated with a dictionary that will automatically track subclasses as they get define.
+│ │ +
+│ │ +    .. warning::
+│ │ +
+│ │ +        It's important to remember that, while subtypes are automatically tracked upon definition, they must still be imported somewhere. Make sure that when the supertype is imported, the subtypes also eventually get imported, or else they will be unavailable at DAG resolution time.
+│ │ +
+│ │ +    Subclasses must either define ``__type_name__ = "some_name"`` or else inherit from :py:class:`abc.ABC` to indicate that they are abstract. Classes that are not abstract and not named will generate a warning.
+│ │ +
+│ │ +    A default subtype can be specified using ``__default_type_name__`` in the top-level type. Note that this is the ``__type_name__`` of the default subclass, not the class name itself.
+│ │ +
+│ │ +    By default, the subclass is chosen by the ``"type"`` key in the input data. This can be changed by setting ``__type_kwarg_name__`` in the top-level type to some other string. This key will be stripped from the input data and all other keys will be passed along to the subtype's constructor without further modification.
+│ │ +
+│ │ +    Attempting to construct a top-level object, either directly (with its constructor) or using ``parse_obj``, without specifying a "type" (or whatever you renamed the key to be) will result in a :py:exc:`TypeError`.
+│ │ +
+│ │ +    .. note::
+│ │ +
+│ │ +        Pydantic already supports Union types, so why would we use a custom DynamicOperatorFactory instead?
+│ │ +
+│ │ +        Dynamic factories provide two key advantages:
+│ │ +
+│ │ +        - The subtype selected is explicit rather than implicit. The subtypes don't need to be distinguishable in any other way besides their ``__type_name__``, nor is there any kind of ordering of the subtypes.
+│ │ +        - The list of options is automatically maintained, as long as the modules containing the subtypes are sure to be imported. That is, another component or factory can use the top-level type to annotate one of its fields, and the subtypes will automatically be implied.
+│ │ +    """
+│ │ +
+│ │ +
+│ │ +class DynamicOperatorComponent(
+│ │ +    OperatorComponent, _DynamicOperatorBase, abc.ABC, metaclass=_DynamicModelMetaclass
+│ │ +):
+│ │ +    """Identical to :py:class:`DynamicOperatorFactory` but based on :py:class:`OperatorComponent` instead."""
+│ │   --- data_dag-0.2.1/data_dag/operator_factory/simple.py
+│ ├── +++ data-dag-0.2.2/data_dag/operator_factory/simple.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,100 +1,100 @@
+│ │ -import abc
+│ │ -import inspect
+│ │ -from typing import Type, Any
+│ │ -
+│ │ -from pydantic import BaseModel
+│ │ -from typing_extensions import get_origin
+│ │ -
+│ │ -from .base import OperatorFactory, OperatorComponent
+│ │ -
+│ │ -
+│ │ -def _dict_from_primitive(cls: "Type[_SimpleModelMixin]", obj):
+│ │ -    assert cls.__simple_field__ is not None
+│ │ -    if not isinstance(obj, dict):
+│ │ -        return {cls.__simple_field__.name: obj}
+│ │ -    else:
+│ │ -        # Check if we're expecting a dictionary...
+│ │ -        tp = cls.__simple_field__.outer_type_
+│ │ -        tp = get_origin(tp) or tp
+│ │ -        if isinstance(tp, type) and issubclass(tp, dict):
+│ │ -            raise NotImplementedError(
+│ │ -                "Not yet sure how to handle sanitizing a dictionary when the class is just a proxy for a dictionary field"
+│ │ -            )
+│ │ -        ###
+│ │ -        return obj
+│ │ -
+│ │ -
+│ │ -class _SimpleModelMixin:
+│ │ -    """A mixin to support single-field pydantic models being parsed directly from primitives rather than requiring dictionaries"""
+│ │ -
+│ │ -    def __init_subclass__(cls, **kwargs):
+│ │ -        assert issubclass(cls, BaseModel)
+│ │ -
+│ │ -        if not inspect.isabstract(cls) and abc.ABC not in cls.__bases__:
+│ │ -            required_fields = [
+│ │ -                field for field in cls.__fields__.values() if field.required
+│ │ -            ]
+│ │ -            if len(required_fields) != 1:
+│ │ -                raise TypeError(
+│ │ -                    f"A non-abstract inheritor of {cls} must have exactly one non-default field (Found {[f.name for f in required_fields]})"
+│ │ -                )
+│ │ -
+│ │ -            field = required_fields[0]
+│ │ -            cls.__simple_field__ = field
+│ │ -            cls.__pre_root_validators__ = [_dict_from_primitive]
+│ │ -
+│ │ -    @classmethod
+│ │ -    def _enforce_dict_if_root(cls, obj: Any) -> Any:
+│ │ -        obj = super()._enforce_dict_if_root(obj)
+│ │ -        obj = _dict_from_primitive(cls, obj)
+│ │ -        return obj
+│ │ -
+│ │ -
+│ │ -class SimpleOperatorFactory(_SimpleModelMixin, OperatorFactory, abc.ABC):
+│ │ -    """Identical to :py:class:`OperatorFactory` except that this represents predominantly a single field of metadata.
+│ │ -
+│ │ -    The model that inherits from :py:class:`SimpleOperatorFactory` can only have a single non-required field
+│ │ -    (meaning no default value and not :py:class:`~typing.Optional`). In return the constructor for this object,
+│ │ -    in addition to being callable with a dictionary of field values, can also be called with a simple literal to fill
+│ │ -    in the single required field.
+│ │ -
+│ │ -    Consider the following example::
+│ │ -
+│ │ -        class FilePath(SimpleOperatorFactory):
+│ │ -            path: str  # <-- single required field
+│ │ -            is_file: bool = True  # <-- optional field (because of default)
+│ │ -            mime_type: Optional[str]  # <-- optional field (because of Optional type)
+│ │ -
+│ │ -            def make_operator(self):
+│ │ -                ...
+│ │ -
+│ │ -    Normally, this object could only be instantiated using a dictionary::
+│ │ -
+│ │ -        FilePath.parse_obj({'path': 'path/to/file.txt'})
+│ │ -
+│ │ -        # Or, in YAML:
+│ │ -        # outer_object:
+│ │ -        #   my_file:
+│ │ -        #     path: 'path/to/file.txt'
+│ │ -        # Or, in JSON:
+│ │ -        # {"outer_object": {"my_file": {"path": "path/to/file.txt"}}}
+│ │ -
+│ │ -    However, because we inherit from :py:class:`SimpleOperatorFactory`, we can instantiate a ``FilePath`` by specifying just the ``path`` literal::
+│ │ -
+│ │ -        FilePath.parse_obj('path/to/file.txt')
+│ │ -
+│ │ -        # Or, in YAML:
+│ │ -        # outer_object:
+│ │ -        #   my_file: 'path/to/file.txt'
+│ │ -        # Or, in JSON:
+│ │ -        # {"outer_object": {"my_file": "path/to/file.txt"}}
+│ │ -    """
+│ │ -
+│ │ -    pass
+│ │ -
+│ │ -
+│ │ -class SimpleOperatorComponent(_SimpleModelMixin, OperatorComponent, abc.ABC):
+│ │ -    """An extension of :py:class:`OperatorComponent` to have the same single-field functionality as
+│ │ -    :py:class:`SimpleOperatorFactory`."""
+│ │ -
+│ │ -    pass
+│ │ +import abc
+│ │ +import inspect
+│ │ +from typing import Any, Type
+│ │ +
+│ │ +from pydantic import BaseModel
+│ │ +from typing_extensions import get_origin
+│ │ +
+│ │ +from .base import OperatorComponent, OperatorFactory
+│ │ +
+│ │ +
+│ │ +def _dict_from_primitive(cls: "Type[_SimpleModelMixin]", obj):
+│ │ +    assert cls.__simple_field__ is not None
+│ │ +    if not isinstance(obj, dict):
+│ │ +        return {cls.__simple_field__.name: obj}
+│ │ +    else:
+│ │ +        # Check if we're expecting a dictionary...
+│ │ +        tp = cls.__simple_field__.outer_type_
+│ │ +        tp = get_origin(tp) or tp
+│ │ +        if isinstance(tp, type) and issubclass(tp, dict):
+│ │ +            raise NotImplementedError(
+│ │ +                "Not yet sure how to handle sanitizing a dictionary when the class is just a proxy for a dictionary field"
+│ │ +            )
+│ │ +        ###
+│ │ +        return obj
+│ │ +
+│ │ +
+│ │ +class _SimpleModelMixin:
+│ │ +    """A mixin to support single-field pydantic models being parsed directly from primitives rather than requiring dictionaries"""
+│ │ +
+│ │ +    def __init_subclass__(cls, **kwargs):
+│ │ +        assert issubclass(cls, BaseModel)
+│ │ +
+│ │ +        if not inspect.isabstract(cls) and abc.ABC not in cls.__bases__:
+│ │ +            required_fields = [
+│ │ +                field for field in cls.__fields__.values() if field.required
+│ │ +            ]
+│ │ +            if len(required_fields) != 1:
+│ │ +                raise TypeError(
+│ │ +                    f"A non-abstract inheritor of {cls} must have exactly one non-default field (Found {[f.name for f in required_fields]})"
+│ │ +                )
+│ │ +
+│ │ +            field = required_fields[0]
+│ │ +            cls.__simple_field__ = field
+│ │ +            cls.__pre_root_validators__ = [_dict_from_primitive]
+│ │ +
+│ │ +    @classmethod
+│ │ +    def _enforce_dict_if_root(cls, obj: Any) -> Any:
+│ │ +        obj = super()._enforce_dict_if_root(obj)
+│ │ +        obj = _dict_from_primitive(cls, obj)
+│ │ +        return obj
+│ │ +
+│ │ +
+│ │ +class SimpleOperatorFactory(_SimpleModelMixin, OperatorFactory, abc.ABC):
+│ │ +    """Identical to :py:class:`OperatorFactory` except that this represents predominantly a single field of metadata.
+│ │ +
+│ │ +    The model that inherits from :py:class:`SimpleOperatorFactory` can only have a single non-required field
+│ │ +    (meaning no default value and not :py:class:`~typing.Optional`). In return the constructor for this object,
+│ │ +    in addition to being callable with a dictionary of field values, can also be called with a simple literal to fill
+│ │ +    in the single required field.
+│ │ +
+│ │ +    Consider the following example::
+│ │ +
+│ │ +        class FilePath(SimpleOperatorFactory):
+│ │ +            path: str  # <-- single required field
+│ │ +            is_file: bool = True  # <-- optional field (because of default)
+│ │ +            mime_type: Optional[str]  # <-- optional field (because of Optional type)
+│ │ +
+│ │ +            def make_operator(self):
+│ │ +                ...
+│ │ +
+│ │ +    Normally, this object could only be instantiated using a dictionary::
+│ │ +
+│ │ +        FilePath.parse_obj({'path': 'path/to/file.txt'})
+│ │ +
+│ │ +        # Or, in YAML:
+│ │ +        # outer_object:
+│ │ +        #   my_file:
+│ │ +        #     path: 'path/to/file.txt'
+│ │ +        # Or, in JSON:
+│ │ +        # {"outer_object": {"my_file": {"path": "path/to/file.txt"}}}
+│ │ +
+│ │ +    However, because we inherit from :py:class:`SimpleOperatorFactory`, we can instantiate a ``FilePath`` by specifying just the ``path`` literal::
+│ │ +
+│ │ +        FilePath.parse_obj('path/to/file.txt')
+│ │ +
+│ │ +        # Or, in YAML:
+│ │ +        # outer_object:
+│ │ +        #   my_file: 'path/to/file.txt'
+│ │ +        # Or, in JSON:
+│ │ +        # {"outer_object": {"my_file": "path/to/file.txt"}}
+│ │ +    """
+│ │ +
+│ │ +    pass
+│ │ +
+│ │ +
+│ │ +class SimpleOperatorComponent(_SimpleModelMixin, OperatorComponent, abc.ABC):
+│ │ +    """An extension of :py:class:`OperatorComponent` to have the same single-field functionality as
+│ │ +    :py:class:`SimpleOperatorFactory`."""
+│ │ +
+│ │ +    pass

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/serverless-sdk-0.3.8.tar.gz tmp/serverless-sdk-0.3.9.tar.gz --html versions/s/serverless-sdk/0.3.8-0.3.9/index.html --text versions/s/serverless-sdk/0.3.8-0.3.9/diff.txt --markdown versions/s/serverless-sdk/0.3.8-0.3.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">16.3 KB</span></div>
+  <div><span class="source">tmp/serverless-sdk-0.3.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/serverless-sdk-0.3.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">424 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/console/console/python/packages/sdk/dist/.tmp-<del>i</del>t<del>7c1jn0</del>/serverless-sdk-0.3.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>hu</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/console/console/python/packages/sdk/dist/.tmp-<ins>e</ins>t<ins>z6ci7s</ins>/serverless-sdk-0.3.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>ue</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><ins><span class="dp">·</span>4</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">15.8 KB</span></div>
+    <div><span class="source">serverless-sdk-0.3.8.tar</span> vs.</div>
+    <div id="serverless-sdk--.-.-.tar"><span class="source">serverless-sdk-0.3.9.tar</span>
+      <a class="anchor" href="#serverless-sdk--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">9.04 KB</span></div>
+      <div id="serverless-sdk--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 35 lines modified</td><td colspan="2">Offset 1, 35 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<del>34</del><span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<ins>27</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<del>11</del><span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>5</del>4.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<ins>04</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>0</ins>4.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1055<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>5</del>4.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/pyproject.toml</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1055<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>0</ins>4.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:33.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4317<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>482<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/base.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>770<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/exceptions.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:33.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2583<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/captured_event.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>596<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/emitter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1430<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/error.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1919<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/error_captured_event.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>326<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/id.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:33.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2130<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/logging.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>986<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/name.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>459<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/notice.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>810<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/stack_trace_string.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4982<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/tags.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>273<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/timing.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7475<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/trace.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>559<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/warning.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1485<span class="dp">·</span>2023-04-04<span class="dp">·</span>07:17:04.000000<span class="dp">·</span>serverless-sdk-0.3.9/serverless_sdk/lib/warning_captured_event.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/</td><td class="diffline">26 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<del>34</del><span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/PKG-INFO</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<ins>27</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>699</del><span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/SOURCES.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>825</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/dependency_links.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>157<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/requires.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>157<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>8</del><span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/serverless_sdk.egg-info/top_level.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>15</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/serverless_sdk.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/setup.cfg</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>5</del>4.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/setup.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>0</ins>4.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/setup.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:26:17.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4317<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/__init__.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>482<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/base.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>770<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/exceptions.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:26:17.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/__init__.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2583<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/captured_event.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>596<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/emitter.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1430<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/error.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1919<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/error_captured_event.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>326<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/id.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:26:17.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2130<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/logging.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>986<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/name.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>459<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/notice.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>810<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/stack_trace_string.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4982<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/tags.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>273<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/timing.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7475<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/trace.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>559<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/warning.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1485<span class="dp">·</span>2023-03-30<span class="dp">·</span>20:25:54.000000<span class="dp">·</span>serverless-sdk-0.3.8/sls_sdk/lib/warning_captured_event.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>26</del>:<del>17</del>.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/tests/</td><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>33</ins>.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<del>0</del>5<span class="dp">·</span>2023-0<del>3</del>-<del>30</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>5</del>4.000000<span class="dp">·</span>serverless-sdk-0.3.<del>8</del>/tests/test_sdk.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<ins>7</ins>5<span class="dp">·</span>2023-0<ins>4</ins>-<ins>04</ins><span class="dp">·</span><ins>07</ins>:<ins>17</ins>:<ins>0</ins>4.000000<span class="dp">·</span>serverless-sdk-0.3.<ins>9</ins>/tests/test_sdk.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">899 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/PKG-INFO</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--PKG-INFO"><span class="source">serverless-sdk-0.3.9/PKG-INFO</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>serverless-sdk</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>serverless-sdk</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>serverlessinc</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>serverlessinc</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://github.com/serverless/console/tree/main/python/packages/sdk</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://github.com/serverless/console/tree/main/python/packages/sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://www.serverless.com/console</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://www.serverless.com/console</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://github.com/serverless/console</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://github.com/serverless/console</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 15 lines modified</td><td colspan="2">Offset 30, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">```shell</td><td class="diffline">30 </td><td class="diffpresent">```shell</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td><td class="diffline">31 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">```</td><td class="diffline">32 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td><td class="diffline">33 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">```python</td><td class="diffline">34 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">from<span class="dp">·</span>s<del>erver</del>l<del>es</del>s_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td><td class="diffline">35 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">print(serverlessSdk.name)</td><td class="diffline">36 </td><td class="diffpresent">print(serverlessSdk.name)</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">print(serverlessSdk.version)</td><td class="diffline">37 </td><td class="diffpresent">print(serverlessSdk.version)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td><td class="diffline">38 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">```</td><td class="diffline">39 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">397 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/README.md</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--README.md"><span class="source">serverless-sdk-0.3.9/README.md</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 17, 15 lines modified</td><td colspan="2">Offset 17, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">```shell</td><td class="diffline">17 </td><td class="diffpresent">```shell</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">```</td><td class="diffline">19 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td><td class="diffline">20 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">```python</td><td class="diffline">21 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>s<del>erver</del>l<del>es</del>s_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">print(serverlessSdk.name)</td><td class="diffline">23 </td><td class="diffpresent">print(serverlessSdk.name)</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">print(serverlessSdk.version)</td><td class="diffline">24 </td><td class="diffpresent">print(serverlessSdk.version)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td><td class="diffline">25 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">```</td><td class="diffline">26 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td><td class="diffline">27 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">502 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/pyproject.toml</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--pyproject.toml"><span class="source">serverless-sdk-0.3.9/pyproject.toml</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 15 lines modified</td><td colspan="2">Offset 3, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">3 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;setuptools&gt;=65.6.3&quot;,</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;setuptools&gt;=65.6.3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;wheel&gt;=0.38.4&quot;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;wheel&gt;=0.38.4&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">]</td><td class="diffline">6 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">[project]</td><td class="diffline">7 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;serverless-sdk&quot;</td><td class="diffline">8 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;serverless-sdk&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>8</del>&quot;</td><td class="diffline">9 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python&quot;</td><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[{<span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&quot;serverlessinc&quot;<span class="dp">·</span>}]</td><td class="diffline">12 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[{<span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&quot;serverlessinc&quot;<span class="dp">·</span>}]</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">14 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;backports.cached-property&quot;,<span class="dp">·</span>#<span class="dp">·</span>included<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>&gt;=3.8</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;backports.cached-property&quot;,<span class="dp">·</span>#<span class="dp">·</span>included<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;blinker&gt;=1.5&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;blinker&gt;=1.5&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">947 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/serverless_sdk.egg-info/PKG-INFO</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--serverless_sdk.egg-info-PKG-INFO"><span class="source">serverless-sdk-0.3.9/serverless_sdk.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--serverless_sdk.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>serverless-sdk</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>serverless-sdk</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Serverless<span class="dp">·</span>SDK<span class="dp">·</span>for<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>serverlessinc</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>serverlessinc</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://github.com/serverless/console/blob/main/python/packages/sdk/CHANGELOG.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://github.com/serverless/console/tree/main/python/packages/sdk</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://github.com/serverless/console/tree/main/python/packages/sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://www.serverless.com/console</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://www.serverless.com/console</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://github.com/serverless/console</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://github.com/serverless/console</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 15 lines modified</td><td colspan="2">Offset 30, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">```shell</td><td class="diffline">30 </td><td class="diffpresent">```shell</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td><td class="diffline">31 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>serverless-sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">```</td><td class="diffline">32 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td><td class="diffline">33 </td><td class="diffpresent">###<span class="dp">·</span>Usage</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">```python</td><td class="diffline">34 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">from<span class="dp">·</span>s<del>erver</del>l<del>es</del>s_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td><td class="diffline">35 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">print(serverlessSdk.name)</td><td class="diffline">36 </td><td class="diffpresent">print(serverlessSdk.name)</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">print(serverlessSdk.version)</td><td class="diffline">37 </td><td class="diffpresent">print(serverlessSdk.version)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td><td class="diffline">38 </td><td class="diffpresent">serverlessSdk.capture_error(Exception(&quot;Unexpected&quot;))</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">```</td><td class="diffline">39 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">126 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/__init__.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-__init__.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/__init__.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">130 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/exceptions.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-exceptions.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/exceptions.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-exceptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">146 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/captured_event.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-captured_event.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/captured_event.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-captured_event.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">132 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/emitter.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-emitter.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/emitter.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-emitter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">128 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/error.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-error.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/error.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-error.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">158 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/error_captured_event.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-error_captured_event.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/error_captured_event.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-error_captured_event.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">164 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/instrumentation/logging.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-instrumentation-logging.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/instrumentation/logging.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-instrumentation-logging.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">126 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/name.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-name.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/name.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-name.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">154 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/stack_trace_string.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-stack_trace_string.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/stack_trace_string.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-stack_trace_string.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">126 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/tags.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-tags.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/tags.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-tags.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">128 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/trace.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-trace.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/trace.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-trace.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">132 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/warning.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-warning.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/warning.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-warning.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/sls_sdk/lib/warning_captured_event.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-warning_captured_event.py"><span class="source">serverless-sdk-0.3.9/serverless_sdk/lib/warning_captured_event.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--sls_sdk-lib-warning_captured_event.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.28 KB</span></div>
+      <div><span class="source">serverless-sdk-0.3.8/tests/test_sdk.py</span> vs.</div>
+      <div id="serverless-sdk--.-.-.tar---serverless-sdk--.-.--tests-test_sdk.py"><span class="source">serverless-sdk-0.3.9/tests/test_sdk.py</span>
+        <a class="anchor" href="#serverless-sdk--.-.-.tar---serverless-sdk--.-.--tests-test_sdk.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 31 lines modified</td><td colspan="2">Offset 1, 31 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>annotations</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>annotations</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>types<span class="dp">·</span>import<span class="dp">·</span>MethodType</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>types<span class="dp">·</span>import<span class="dp">·</span>MethodType</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>unittest.mock<span class="dp">·</span>import<span class="dp">·</span>MagicMock</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>unittest.mock<span class="dp">·</span>import<span class="dp">·</span>MagicMock</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>.<span class="dp">·</span>import<span class="dp">·</span>get_params</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>.<span class="dp">·</span>import<span class="dp">·</span>get_params</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>sls_sdk</td><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>ServerlessSdk</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk<span class="dp">·</span>import<span class="dp">·</span>ServerlessSdk</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk.base<span class="dp">·</span>import<span class="dp">·</span>SLS_ORG_ID</td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk.base<span class="dp">·</span>import<span class="dp">·</span>SLS_ORG_ID</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk.lib.error_captured_event<span class="dp">·</span>import<span class="dp">·</span>TYPE_MAP<span class="dp">·</span>as<span class="dp">·</span>ERROR_TYPE_MAP</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk.lib.error_captured_event<span class="dp">·</span>import<span class="dp">·</span>TYPE_MAP<span class="dp">·</span>as<span class="dp">·</span>ERROR_TYPE_MAP</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk.lib.warning_captured_event<span class="dp">·</span>import<span class="dp">·</span>TYPE_MAP<span class="dp">·</span>as<span class="dp">·</span>WARNING_TYPE_MAP</td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk.lib.warning_captured_event<span class="dp">·</span>import<span class="dp">·</span>TYPE_MAP<span class="dp">·</span>as<span class="dp">·</span>WARNING_TYPE_MAP</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>sls_sdk.lib.emitter<span class="dp">·</span>import<span class="dp">·</span>event_emitter</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk.lib.emitter<span class="dp">·</span>import<span class="dp">·</span>event_emitter</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">@pytest.fixture</td><td class="diffline">12 </td><td class="diffpresent">@pytest.fixture</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>sdk()<span class="dp">·</span>-&gt;<span class="dp">·</span>ServerlessSdk:</td><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>sdk()<span class="dp">·</span>-&gt;<span class="dp">·</span>ServerlessSdk:</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>serverlessSdk</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">def<span class="dp">·</span>test_can_import_serverless_sdk():</td><td class="diffline">16 </td><td class="diffpresent">def<span class="dp">·</span>test_can_import_serverless_sdk():</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>sls_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk<span class="dp">·</span>import<span class="dp">·</span>serverlessSdk</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>ImportError<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>ImportError<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>AssertionError(&quot;Cannot<span class="dp">·</span>import<span class="dp">·</span>`serverlessSdk`&quot;)<span class="dp">·</span>from<span class="dp">·</span>e</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>AssertionError(&quot;Cannot<span class="dp">·</span>import<span class="dp">·</span>`serverlessSdk`&quot;)<span class="dp">·</span>from<span class="dp">·</span>e</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">def<span class="dp">·</span>test_has_name(sdk:<span class="dp">·</span>ServerlessSdk):</td><td class="diffline">21 </td><td class="diffpresent">def<span class="dp">·</span>test_has_name(sdk:<span class="dp">·</span>ServerlessSdk):</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>hasattr(sdk,<span class="dp">·</span>&quot;name&quot;)</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>hasattr(sdk,<span class="dp">·</span>&quot;name&quot;)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 91, 15 lines modified</td><td colspan="2">Offset 91, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params<span class="dp">·</span>=<span class="dp">·</span>get_params(sdk._create_trace_span)</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params<span class="dp">·</span>=<span class="dp">·</span>get_params(sdk._create_trace_span)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>len(params)<span class="dp">·</span>&gt;=<span class="dp">·</span>len(args)</td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>len(params)<span class="dp">·</span>&gt;=<span class="dp">·</span>len(args)</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>all(arg<span class="dp">·</span>in<span class="dp">·</span>params<span class="dp">·</span>for<span class="dp">·</span>arg<span class="dp">·</span>in<span class="dp">·</span>args)</td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>all(arg<span class="dp">·</span>in<span class="dp">·</span>params<span class="dp">·</span>for<span class="dp">·</span>arg<span class="dp">·</span>in<span class="dp">·</span>args)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">def<span class="dp">·</span>test_create_trace_span_returns_trace_span(sdk:<span class="dp">·</span>ServerlessSdk):</td><td class="diffline">94 </td><td class="diffpresent">def<span class="dp">·</span>test_create_trace_span_returns_trace_span(sdk:<span class="dp">·</span>ServerlessSdk):</td></tr>
+<tr class="diffchanged"><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>sls_sdk.lib.trace<span class="dp">·</span>import<span class="dp">·</span>TraceSpan</td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>s<ins>erver</ins>l<ins>es</ins>s_sdk.lib.trace<span class="dp">·</span>import<span class="dp">·</span>TraceSpan</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>span<span class="dp">·</span>=<span class="dp">·</span>sdk._create_trace_span(&quot;name&quot;,<span class="dp">·</span>&quot;input&quot;,<span class="dp">·</span>&quot;output&quot;)</td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>span<span class="dp">·</span>=<span class="dp">·</span>sdk._create_trace_span(&quot;name&quot;,<span class="dp">·</span>&quot;input&quot;,<span class="dp">·</span>&quot;output&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(span,<span class="dp">·</span>TraceSpan)</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(span,<span class="dp">·</span>TraceSpan)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent">def<span class="dp">·</span>test_sdk_exposes_capture_error(sdk:<span class="dp">·</span>ServerlessSdk):</td><td class="diffline">98 </td><td class="diffpresent">def<span class="dp">·</span>test_sdk_exposes_capture_error(sdk:<span class="dp">·</span>ServerlessSdk):</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 170, 15 lines modified</td><td colspan="2">Offset 170, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">170 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>then</td><td class="diffline">170 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>then</td></tr>
+<tr class="diffunmodified"><td class="diffline">171 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>sdk._custom_tags[tag_name]<span class="dp">·</span>==<span class="dp">·</span>tag_value</td><td class="diffline">171 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>sdk._custom_tags[tag_name]<span class="dp">·</span>==<span class="dp">·</span>tag_value</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">172 </td><td class="diffpresent">def<span class="dp">·</span>test_sdk_set_tag_does_not_crash_on_invalid_input(sdk:<span class="dp">·</span>ServerlessSdk,<span class="dp">·</span>monkeypatch):</td><td class="diffline">172 </td><td class="diffpresent">def<span class="dp">·</span>test_sdk_set_tag_does_not_crash_on_invalid_input(sdk:<span class="dp">·</span>ServerlessSdk,<span class="dp">·</span>monkeypatch):</td></tr>
+<tr class="diffunmodified"><td class="diffline">173 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>given</td><td class="diffline">173 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>given</td></tr>
+<tr class="diffunmodified"><td class="diffline">174 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mock<span class="dp">·</span>=<span class="dp">·</span>MagicMock()</td><td class="diffline">174 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mock<span class="dp">·</span>=<span class="dp">·</span>MagicMock()</td></tr>
+<tr class="diffchanged"><td class="diffline">175 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>monkeypatch.setattr(sls_sdk,<span class="dp">·</span>&quot;report_error&quot;,<span class="dp">·</span>mock)</td><td class="diffline">175 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>monkeypatch.setattr(s<ins>erver</ins>l<ins>es</ins>s_sdk,<span class="dp">·</span>&quot;report_error&quot;,<span class="dp">·</span>mock)</td></tr>
+<tr class="diffunmodified"><td class="diffline">176 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_name<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">176 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_name<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">177 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_value<span class="dp">·</span>=<span class="dp">·</span>&quot;value&quot;</td><td class="diffline">177 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_value<span class="dp">·</span>=<span class="dp">·</span>&quot;value&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">178 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>when</td><td class="diffline">178 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>when</td></tr>
+<tr class="diffunmodified"><td class="diffline">179 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>failed<span class="dp">·</span>=<span class="dp">·</span>False</td><td class="diffline">179 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>failed<span class="dp">·</span>=<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td class="diffline">180 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">180 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">181 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sdk.set_tag(tag_name,<span class="dp">·</span>tag_value)</td><td class="diffline">181 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sdk.set_tag(tag_name,<span class="dp">·</span>tag_value)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
