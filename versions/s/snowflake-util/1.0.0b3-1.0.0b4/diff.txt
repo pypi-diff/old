@@ -1,0 +1,166 @@
+--- tmp/snowflake-util-1.0.0b3.tar.gz
++++ tmp/snowflake-util-1.0.0b4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "snowflake-util-1.0.0b3.tar", last modified: Sat Jul 30 14:59:06 2022, max compression
+│ +gzip compressed data, was "snowflake-util-1.0.0b4.tar", last modified: Sat Jul 30 15:07:10 2022, max compression
+│   --- snowflake-util-1.0.0b3.tar
+├── +++ snowflake-util-1.0.0b4.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxrwxrwx   0        0        0        0 2022-07-30 14:59:06.099667 snowflake-util-1.0.0b3/
+│ │ --rw-rw-rw-   0        0        0     1087 2022-07-30 14:25:09.000000 snowflake-util-1.0.0b3/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3889 2022-07-30 14:59:06.098700 snowflake-util-1.0.0b3/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3177 2022-07-30 14:55:51.000000 snowflake-util-1.0.0b3/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2022-07-30 14:59:06.100667 snowflake-util-1.0.0b3/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1198 2022-07-30 14:58:50.000000 snowflake-util-1.0.0b3/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-07-30 14:59:06.068536 snowflake-util-1.0.0b3/snowflake/
+│ │ --rw-rw-rw-   0        0        0     1212 2022-07-30 13:09:18.000000 snowflake-util-1.0.0b3/snowflake/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4398 2022-07-30 12:53:42.000000 snowflake-util-1.0.0b3/snowflake/config.py
+│ │ --rw-rw-rw-   0        0        0     1367 2022-07-30 11:31:57.000000 snowflake-util-1.0.0b3/snowflake/enums.py
+│ │ --rw-rw-rw-   0        0        0    18945 2022-07-30 14:59:01.000000 snowflake-util-1.0.0b3/snowflake/snowflake.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-07-30 14:59:06.094520 snowflake-util-1.0.0b3/snowflake_util.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3889 2022-07-30 14:59:05.000000 snowflake-util-1.0.0b3/snowflake_util.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      262 2022-07-30 14:59:05.000000 snowflake-util-1.0.0b3/snowflake_util.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2022-07-30 14:59:05.000000 snowflake-util-1.0.0b3/snowflake_util.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       10 2022-07-30 14:59:05.000000 snowflake-util-1.0.0b3/snowflake_util.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2022-07-30 15:07:10.942867 snowflake-util-1.0.0b4/
+│ │ +-rw-rw-rw-   0        0        0     1087 2022-07-30 14:25:09.000000 snowflake-util-1.0.0b4/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3890 2022-07-30 15:07:10.941865 snowflake-util-1.0.0b4/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3178 2022-07-30 15:04:37.000000 snowflake-util-1.0.0b4/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2022-07-30 15:07:10.942867 snowflake-util-1.0.0b4/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1198 2022-07-30 15:06:42.000000 snowflake-util-1.0.0b4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2022-07-30 15:07:10.913042 snowflake-util-1.0.0b4/snowflake/
+│ │ +-rw-rw-rw-   0        0        0     1212 2022-07-30 13:09:18.000000 snowflake-util-1.0.0b4/snowflake/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4398 2022-07-30 12:53:42.000000 snowflake-util-1.0.0b4/snowflake/config.py
+│ │ +-rw-rw-rw-   0        0        0     1367 2022-07-30 11:31:57.000000 snowflake-util-1.0.0b4/snowflake/enums.py
+│ │ +-rw-rw-rw-   0        0        0    18945 2022-07-30 15:06:57.000000 snowflake-util-1.0.0b4/snowflake/snowflake.py
+│ │ +drwxrwxrwx   0        0        0        0 2022-07-30 15:07:10.938852 snowflake-util-1.0.0b4/snowflake_util.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3890 2022-07-30 15:07:10.000000 snowflake-util-1.0.0b4/snowflake_util.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      262 2022-07-30 15:07:10.000000 snowflake-util-1.0.0b4/snowflake_util.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2022-07-30 15:07:10.000000 snowflake-util-1.0.0b4/snowflake_util.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       10 2022-07-30 15:07:10.000000 snowflake-util-1.0.0b4/snowflake_util.egg-info/top_level.txt
+│ │   --- snowflake-util-1.0.0b3/LICENSE
+│ ├── +++ snowflake-util-1.0.0b4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- snowflake-util-1.0.0b3/PKG-INFO
+│ ├── +++ snowflake-util-1.0.0b4/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,25 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: snowflake-util
+│ │ -Version: 1.0.0b3
+│ │ +Version: 1.0.0b4
+│ │  Summary: A Python library for generating snowflakes.
+│ │  Author: TheMultii
+│ │  Project-URL: Repository, https://github.com/TheMultii/snowflake-util
+│ │  Keywords: python,snowflake,generator,custom,library,id generator,uid
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: Unix
+│ │  Classifier: Operating System :: MacOS :: MacOS X
+│ │  Classifier: Operating System :: Microsoft :: Windows
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  
+│ │ -# snowlake-util
+│ │ +# snowflake-util
+│ │  
+│ │  A Python library for generating Discord, Twitter, Instagram and custom snowflakes.
+│ │  
+│ │  A snowflake is a unique identifier for a resource that includes, among other things, a timestamp of when such a snowflake was created. Snowflakes are used by Twitter, Discord or Instagram. They were created by Twitter in 2010.
+│ │  
+│ │  Developed by TheMultii (c) 2022-present
+│ │   --- snowflake-util-1.0.0b3/README.md
+│ ├── +++ snowflake-util-1.0.0b4/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# snowlake-util
+│ │ +# snowflake-util
+│ │  
+│ │  A Python library for generating Discord, Twitter, Instagram and custom snowflakes.
+│ │  
+│ │  A snowflake is a unique identifier for a resource that includes, among other things, a timestamp of when such a snowflake was created. Snowflakes are used by Twitter, Discord or Instagram. They were created by Twitter in 2010.
+│ │  
+│ │  Developed by TheMultii (c) 2022-present
+│ │   --- snowflake-util-1.0.0b3/setup.py
+│ ├── +++ snowflake-util-1.0.0b4/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  import os
+│ │  
+│ │  here = os.path.abspath(os.path.dirname(__file__))
+│ │  
+│ │  with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+│ │      long_description = f"\n{f.read()}"
+│ │  
+│ │ -VERSION = '1.0.0b3'
+│ │ +VERSION = '1.0.0b4'
+│ │  DESCRIPTION = 'A Python library for generating snowflakes.'
+│ │  LONG_DESCRIPTION = 'A Python library for generating Discord, Twitter, Instagram and custom snowflakes.'
+│ │  
+│ │  # Setup
+│ │  setup(
+│ │      name='snowflake-util',
+│ │      version=VERSION,
+│ │   --- snowflake-util-1.0.0b3/snowflake/__init__.py
+│ ├── +++ snowflake-util-1.0.0b4/snowflake/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- snowflake-util-1.0.0b3/snowflake/config.py
+│ ├── +++ snowflake-util-1.0.0b4/snowflake/config.py
+│ │┄ Files identical despite different names
+│ │   --- snowflake-util-1.0.0b3/snowflake/enums.py
+│ ├── +++ snowflake-util-1.0.0b4/snowflake/enums.py
+│ │┄ Files identical despite different names
+│ │   --- snowflake-util-1.0.0b3/snowflake/snowflake.py
+│ ├── +++ snowflake-util-1.0.0b4/snowflake/snowflake.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -73,15 +73,15 @@
+│ │          epoch=Epoch.discord,
+│ │          leading_bit=False,
+│ │          timestamp_length=42,
+│ │          param1_length=5,
+│ │          param2_length=5,
+│ │          sequence_length=12
+│ │      )
+│ │ -    __version = "1.0.0b3"
+│ │ +    __version = "1.0.0b4"
+│ │  
+│ │      def __init__(self, config: Optional[SnowflakeConfig] = __default_config) -> None:
+│ │          """
+│ │          Creates a new instance of Snowflake
+│ │  
+│ │          Parameters:
+│ │          -----------
+│ │   --- snowflake-util-1.0.0b3/snowflake_util.egg-info/PKG-INFO
+│ ├── +++ snowflake-util-1.0.0b4/snowflake_util.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,25 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: snowflake-util
+│ │ -Version: 1.0.0b3
+│ │ +Version: 1.0.0b4
+│ │  Summary: A Python library for generating snowflakes.
+│ │  Author: TheMultii
+│ │  Project-URL: Repository, https://github.com/TheMultii/snowflake-util
+│ │  Keywords: python,snowflake,generator,custom,library,id generator,uid
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: Unix
+│ │  Classifier: Operating System :: MacOS :: MacOS X
+│ │  Classifier: Operating System :: Microsoft :: Windows
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  
+│ │ -# snowlake-util
+│ │ +# snowflake-util
+│ │  
+│ │  A Python library for generating Discord, Twitter, Instagram and custom snowflakes.
+│ │  
+│ │  A snowflake is a unique identifier for a resource that includes, among other things, a timestamp of when such a snowflake was created. Snowflakes are used by Twitter, Discord or Instagram. They were created by Twitter in 2010.
+│ │  
+│ │  Developed by TheMultii (c) 2022-present

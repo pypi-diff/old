@@ -1,0 +1,126 @@
+--- tmp/uscit-23.4.6.20.20.tar.gz
++++ tmp/uscit-23.4.6.20.46.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "uscit-23.4.6.20.20.tar", last modified: Thu Apr  6 18:35:23 2023, max compression
+│ +gzip compressed data, was "uscit-23.4.6.20.46.tar", last modified: Thu Apr  6 18:47:16 2023, max compression
+│   --- uscit-23.4.6.20.20.tar
+├── +++ uscit-23.4.6.20.46.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:35:23.283760 uscit-23.4.6.20.20/
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     1073 2023-04-05 22:12:06.000000 uscit-23.4.6.20.20/LICENSE
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      667 2023-04-06 18:35:23.283600 uscit-23.4.6.20.20/PKG-INFO
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      145 2023-04-06 14:28:41.000000 uscit-23.4.6.20.20/README.md
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      586 2023-04-06 18:20:08.000000 uscit-23.4.6.20.20/pyproject.toml
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)       38 2023-04-06 18:35:23.283807 uscit-23.4.6.20.20/setup.cfg
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:35:23.282117 uscit-23.4.6.20.20/src/
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:35:23.283355 uscit-23.4.6.20.20/src/uscit.egg-info/
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      667 2023-04-06 18:35:23.000000 uscit-23.4.6.20.20/src/uscit.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      177 2023-04-06 18:35:23.000000 uscit-23.4.6.20.20/src/uscit.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        1 2023-04-06 18:35:23.000000 uscit-23.4.6.20.20/src/uscit.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        6 2023-04-06 18:35:23.000000 uscit-23.4.6.20.20/src/uscit.egg-info/top_level.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     5700 2023-04-06 15:13:26.000000 uscit-23.4.6.20.20/src/uscit.py
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:47:16.792075 uscit-23.4.6.20.46/
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     1073 2023-04-05 22:12:06.000000 uscit-23.4.6.20.46/LICENSE
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      784 2023-04-06 18:47:16.791927 uscit-23.4.6.20.46/PKG-INFO
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      198 2023-04-06 18:46:52.000000 uscit-23.4.6.20.46/README.md
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      640 2023-04-06 18:46:52.000000 uscit-23.4.6.20.46/pyproject.toml
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)       38 2023-04-06 18:47:16.792119 uscit-23.4.6.20.46/setup.cfg
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:47:16.790711 uscit-23.4.6.20.46/src/
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 18:47:16.791720 uscit-23.4.6.20.46/src/uscit.egg-info/
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      784 2023-04-06 18:47:16.000000 uscit-23.4.6.20.46/src/uscit.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      177 2023-04-06 18:47:16.000000 uscit-23.4.6.20.46/src/uscit.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        1 2023-04-06 18:47:16.000000 uscit-23.4.6.20.46/src/uscit.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        6 2023-04-06 18:47:16.000000 uscit-23.4.6.20.46/src/uscit.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     5700 2023-04-06 15:13:26.000000 uscit-23.4.6.20.46/src/uscit.py
+│ │   --- uscit-23.4.6.20.20/LICENSE
+│ ├── +++ uscit-23.4.6.20.46/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- uscit-23.4.6.20.20/PKG-INFO
+│ ├── +++ uscit-23.4.6.20.46/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uscit
+│ │ -Version: 23.4.6.20.20
+│ │ +Version: 23.4.6.20.46
+│ │  Summary: simple package for very common functions
+│ │  Author-email: diego aliaga <daliaga@chacaltaya.edu.bo>
+│ │  Project-URL: Homepage, https://github.com/daliagachc/uscit
+│ │  Project-URL: Bug Tracker, https://github.com/daliagachc/uscit/issues
+│ │ +Project-URL: Documentation, https://daliagachc.github.io/uscit/
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # uscit
+│ │  
+│ │  This is a very simple package
+│ │  - everyday functions 
+│ │  - there is no organization 
+│ │  - random collection of functions
+│ │  - only one module us_it
+│ │ +
+│ │ +# Documentation
+│ │ +https://daliagachc.github.io/uscit/
+│ │   --- uscit-23.4.6.20.20/pyproject.toml
+│ ├── +++ uscit-23.4.6.20.46/pyproject.toml
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,18 +1,19 @@
+│ │  [build-system]
+│ │  requires = [ "setuptools>=61.0",]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "uscit"
+│ │ -version = "23.04.06.20.20"
+│ │ +version = "23.04.06.20.46"
+│ │  description = "simple package for very common functions"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+│ │  [[project.authors]]
+│ │  name = "diego aliaga"
+│ │  email = "daliaga@chacaltaya.edu.bo"
+│ │  
+│ │  [project.urls]
+│ │  Homepage = "https://github.com/daliagachc/uscit"
+│ │  "Bug Tracker" = "https://github.com/daliagachc/uscit/issues"
+│ │ +Documentation = "https://daliagachc.github.io/uscit/"
+│ │   --- uscit-23.4.6.20.20/src/uscit.egg-info/PKG-INFO
+│ ├── +++ uscit-23.4.6.20.46/src/uscit.egg-info/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uscit
+│ │ -Version: 23.4.6.20.20
+│ │ +Version: 23.4.6.20.46
+│ │  Summary: simple package for very common functions
+│ │  Author-email: diego aliaga <daliaga@chacaltaya.edu.bo>
+│ │  Project-URL: Homepage, https://github.com/daliagachc/uscit
+│ │  Project-URL: Bug Tracker, https://github.com/daliagachc/uscit/issues
+│ │ +Project-URL: Documentation, https://daliagachc.github.io/uscit/
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # uscit
+│ │  
+│ │  This is a very simple package
+│ │  - everyday functions 
+│ │  - there is no organization 
+│ │  - random collection of functions
+│ │  - only one module us_it
+│ │ +
+│ │ +# Documentation
+│ │ +https://daliagachc.github.io/uscit/
+│ │   --- uscit-23.4.6.20.20/src/uscit.py
+│ ├── +++ uscit-23.4.6.20.46/src/uscit.py
+│ │┄ Files identical despite different names

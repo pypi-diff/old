@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/chatgdb-1.0.1.tar.gz tmp/chatgdb-1.0.2.tar.gz --html versions/c/chatgdb/1.0.1-1.0.2/index.html --text versions/c/chatgdb/1.0.1-1.0.2/diff.txt --markdown versions/c/chatgdb/1.0.1-1.0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.69 KB</span></div>
+  <div><span class="source">tmp/chatgdb-1.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/chatgdb-1.0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">182 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;chatgdb-1.0.<del>1</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;chatgdb-1.0.<ins>2</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.47 KB</span></div>
+    <div><span class="source">chatgdb-1.0.1.tar</span> vs.</div>
+    <div id="chatgdb--.-.-.tar"><span class="source">chatgdb-1.0.2.tar</span>
+      <a class="anchor" href="#chatgdb--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.36 KB</span></div>
+      <div id="chatgdb--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2023-03-31<span class="dp">·</span>21:54:58.877640<span class="dp">·</span>chatgdb-1.0.<del>1</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2023-03-31<span class="dp">·</span>21:54:58.877640<span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>47</del>9<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>04</del>:<del>54</del>:<del>04</del>.<del>75</del>6<del>944</del><span class="dp">·</span>chatgdb-1.0.<del>1</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>98</ins>9<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>18</ins>:<ins>48</ins>:<ins>13</ins>.<ins>91</ins>6<ins>239</ins><span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-01<span class="dp">·</span>22:30:13.298149<span class="dp">·</span>chatgdb-1.0.<del>1</del>/chatgdb/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-01<span class="dp">·</span>22:30:13.298149<span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/chatgdb/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>748<span class="dp">·</span>2023-04-05<span class="dp">·</span>01:57:44.066776<span class="dp">·</span>chatgdb-1.0.<del>1</del>/chatgdb/cli.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>748<span class="dp">·</span>2023-04-05<span class="dp">·</span>01:57:44.066776<span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/chatgdb/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5325<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>01</del>:<del>57</del>:<del>48</del>.<del>120098</del><span class="dp">·</span>chatgdb-1.0.<del>1</del>/chatgdb/core.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5325<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>18</ins>:<ins>48</ins>:<ins>11</ins>.<ins>972972</ins><span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/chatgdb/core.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>567<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>04</del>:<del>54</del>:<del>12</del>.<del>540256</del><span class="dp">·</span>chatgdb-1.0.<del>1</del>/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>567<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>18</ins>:<ins>48</ins>:<ins>51</ins>.<ins>188387</ins><span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>44</del>5<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>chatgdb-1.0.<del>1</del>/PKG-INFO</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>95</ins>5<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>chatgdb-1.0.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">chatgdb-1.0.1/LICENSE</span> vs.</div>
+      <div id="chatgdb--.-.-.tar---chatgdb--.-.--LICENSE"><span class="source">chatgdb-1.0.2/LICENSE</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---chatgdb--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">chatgdb-1.0.1/chatgdb/cli.py</span> vs.</div>
+      <div id="chatgdb--.-.-.tar---chatgdb--.-.--chatgdb-cli.py"><span class="source">chatgdb-1.0.2/chatgdb/cli.py</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---chatgdb--.-.--chatgdb-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">chatgdb-1.0.1/chatgdb/core.py</span> vs.</div>
+      <div id="chatgdb--.-.-.tar---chatgdb--.-.--chatgdb-core.py"><span class="source">chatgdb-1.0.2/chatgdb/core.py</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---chatgdb--.-.--chatgdb-core.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">452 B</span></div>
+      <div><span class="source">chatgdb-1.0.1/pyproject.toml</span> vs.</div>
+      <div id="chatgdb--.-.-.tar---chatgdb--.-.--pyproject.toml"><span class="source">chatgdb-1.0.2/pyproject.toml</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---chatgdb--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ChatGDB&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ChatGDB&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<del>1</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Pranay<span class="dp">·</span>Gosar<span class="dp">·</span>&lt;gosarpranay@gmail.com&gt;&quot;]</td><td class="diffline">4 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Pranay<span class="dp">·</span>Gosar<span class="dp">·</span>&lt;gosarpranay@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>directly<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>directly<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/pgosar/chatgdb&quot;</td><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/pgosar/chatgdb&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;gdb&quot;,<span class="dp">·</span>&quot;debugger&quot;,<span class="dp">·</span>&quot;chatgpt&quot;]</td><td class="diffline">9 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;gdb&quot;,<span class="dp">·</span>&quot;debugger&quot;,<span class="dp">·</span>&quot;chatgpt&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.37 KB</span></div>
+      <div><span class="source">chatgdb-1.0.1/PKG-INFO</span> vs.</div>
+      <div id="chatgdb--.-.-.tar---chatgdb--.-.--PKG-INFO"><span class="source">chatgdb-1.0.2/PKG-INFO</span>
+        <a class="anchor" href="#chatgdb--.-.-.tar---chatgdb--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 23% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>chatgdb</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>chatgdb</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>directly<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>directly<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/pgosar/chatgdb</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/pgosar/chatgdb</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>gdb,debugger,chatgpt</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>gdb,debugger,chatgpt</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Pranay<span class="dp">·</span>Gosar</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Pranay<span class="dp">·</span>Gosar</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gosarpranay@gmail.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gosarpranay@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.3,&lt;4.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.3,&lt;4.0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 20, 32 lines modified</td><td colspan="2">Offset 20, 39 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/pgosar/chatgdb/issues</td><td class="diffline">21 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/pgosar/chatgdb/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/pgosar/chatgdb</td><td class="diffline">22 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/pgosar/chatgdb</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">23 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">#<span class="dp">·</span>ChatGDB</td><td class="diffline">24 </td><td class="diffpresent">#<span class="dp">·</span>ChatGDB</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!</td><td class="diffline">25 </td><td class="diffpresent">Harness<span class="dp">·</span>the<span class="dp">·</span>power<span class="dp">·</span>of<span class="dp">·</span>ChatGPT<span class="dp">·</span>inside<span class="dp">·</span>the<span class="dp">·</span>GDB<span class="dp">·</span>debugger!</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">![Image](https://lh5.googleusercontent.com/xZMLwWWxavqYjC3fyCIZJ0m-s-f-XEoiOeWGbxRrw3dWoukUoWzJJ4iiBkVO2Vtiyr4K6o0WkTs7B40TapeBPIYwgVRVhDXGVjB4tFYoKH3_nK847nYXl3pISB6dEP6Wp_o0uPlfJOjCrLspm0_VNw)</td></tr>
+<tr class="diffdeleted"><td class="diffline">26 </td><td class="diffpresent">![image](https://user-images.githubusercontent.com/55164602/229982475-9a9724fe-91d0-48a4-aa3b-85bfc38edafa.png)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">###<span class="dp">·</span>Installation<span class="dp">·</span>instructions</td><td class="diffline">27 </td><td class="diffpresent">###<span class="dp">·</span>Installation<span class="dp">·</span>instructions</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">First,<span class="dp">·</span>make<span class="dp">·</span>sure<span class="dp">·</span>you<span class="dp">·</span>install<span class="dp">·</span>[pip](https://pip.pypa.io/en/stable/installation/)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">To<span class="dp">·</span>install,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>```pip3<span class="dp">·</span>install<span class="dp">·</span>chatgdb```.<span class="dp">·</span>It<span class="dp">·</span>will<span class="dp">·</span>create<span class="dp">·</span>an<span class="dp">·</span>executable<span class="dp">·</span>called</td><td class="diffline">29 </td><td class="diffpresent">To<span class="dp">·</span>install,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>```pip3<span class="dp">·</span>install<span class="dp">·</span>chatgdb```.<span class="dp">·</span>It<span class="dp">·</span>will<span class="dp">·</span>create<span class="dp">·</span>an<span class="dp">·</span>executable<span class="dp">·</span>called</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">```chatgdb```<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>will<span class="dp">·</span>have<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>your<span class="dp">·</span>api<span class="dp">·</span>key.<span class="dp">·</span>To<span class="dp">·</span>do<span class="dp">·</span>that,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>command</td><td class="diffline">30 </td><td class="diffpresent">```chatgdb```<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>will<span class="dp">·</span>have<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>your<span class="dp">·</span>api<span class="dp">·</span>key.<span class="dp">·</span>To<span class="dp">·</span>do<span class="dp">·</span>that,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>command</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">```chatgdb<span class="dp">·</span>-k<span class="dp">·</span>&lt;API<span class="dp">·</span>KEY&gt;<span class="dp">·</span>```</td><td class="diffline">31 </td><td class="diffpresent">```chatgdb<span class="dp">·</span>-k<span class="dp">·</span>&lt;API<span class="dp">·</span>KEY&gt;<span class="dp">·</span>```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Without<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>key,<span class="dp">·</span>you<span class="dp">·</span>won&#x27;t<span class="dp">·</span>be<span class="dp">·</span>able<span class="dp">·</span>to<span class="dp">·</span>make<span class="dp">·</span>requests<span class="dp">·</span>to<span class="dp">·</span>OpenAI.<span class="dp">·</span>The<span class="dp">·</span>API<span class="dp">·</span>key<span class="dp">·</span>is<span class="dp">·</span>stored<span class="dp">·</span>in</td><td class="diffline">32 </td><td class="diffpresent">Without<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>key,<span class="dp">·</span>you<span class="dp">·</span>won&#x27;t<span class="dp">·</span>be<span class="dp">·</span>able<span class="dp">·</span>to<span class="dp">·</span>make<span class="dp">·</span>requests<span class="dp">·</span>to<span class="dp">·</span>OpenAI.<span class="dp">·</span>The<span class="dp">·</span>API<span class="dp">·</span>key<span class="dp">·</span>is<span class="dp">·</span>stored<span class="dp">·</span>in</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">text<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>directory<span class="dp">·</span>as<span class="dp">·</span>the<span class="dp">·</span>installed<span class="dp">·</span>script,<span class="dp">·</span>which<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>python<span class="dp">·</span>site<span class="dp">·</span>packages</td><td class="diffline">33 </td><td class="diffpresent">text<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>directory<span class="dp">·</span>as<span class="dp">·</span>the<span class="dp">·</span>installed<span class="dp">·</span>script,<span class="dp">·</span>which<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>python<span class="dp">·</span>site<span class="dp">·</span>packages</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">folder</td><td class="diffline">34 </td><td class="diffpresent">folder<ins><span class="dp">·</span>along<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>main<span class="dp">·</span>script.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>easily<span class="dp">·</span>find<span class="dp">·</span>this<span class="dp">·</span>location<span class="dp">·</span>by<span class="dp">·</span>running<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>terminal:</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">```<span class="dp">·</span>python<span class="dp">·</span>-m<span class="dp">·</span>site<span class="dp">·</span>--user-site```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Optionally,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>download<span class="dp">·</span>the<span class="dp">·</span>compressed<span class="dp">·</span>files<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>releases<span class="dp">·</span>page<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>the<span class="dp">·</span>scripts<span class="dp">·</span>directly.</td><td class="diffline">36 </td><td class="diffpresent">Optionally,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>download<span class="dp">·</span>the<span class="dp">·</span>compressed<span class="dp">·</span>files<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>releases<span class="dp">·</span>page<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>the<span class="dp">·</span>scripts<span class="dp">·</span>directly.</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">If<span class="dp">·</span>you<span class="dp">·</span>do<span class="dp">·</span>this,<span class="dp">·</span>you<span class="dp">·</span>will<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>instead<span class="dp">·</span>invoke<span class="dp">·</span>the<span class="dp">·</span>cli<span class="dp">·</span>tool<span class="dp">·</span>with<span class="dp">·</span></td><td class="diffline">37 </td><td class="diffpresent">If<span class="dp">·</span>you<span class="dp">·</span>do<span class="dp">·</span>this,<span class="dp">·</span>you<span class="dp">·</span>will<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>instead<span class="dp">·</span>invoke<span class="dp">·</span>the<span class="dp">·</span>cli<span class="dp">·</span>tool<span class="dp">·</span>with<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">```python<span class="dp">·</span>path/to/cli.py<span class="dp">·</span>-k<span class="dp">·</span>&lt;API<span class="dp">·</span>KEY&gt;```.</td><td class="diffline">38 </td><td class="diffpresent">```python<span class="dp">·</span>path/to/cli.py<span class="dp">·</span>-k<span class="dp">·</span>&lt;API<span class="dp">·</span>KEY&gt;```.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">###<span class="dp">·</span>How<span class="dp">·</span>to<span class="dp">·</span>use</td><td class="diffline">39 </td><td class="diffpresent">###<span class="dp">·</span>How<span class="dp">·</span>to<span class="dp">·</span>use</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent"><del>Whil</del><del>e</del><span class="dp">·</span><del>in</del><del>s</del>i<del>de<span class="dp">·</span>gdb,<span class="dp">·</span>sou</del>r<del>ce</del><span class="dp">·</span><del>t</del><del>h</del>e<del><span class="dp">·</span></del>co<del>re.py</del><span class="dp">·</span><del>fil</del>e<del><span class="dp">·</span></del><del>w</del>it<del>h</del><del><span class="dp">·</span>```s</del>our<del>ce</del><span class="dp">·</span><del>/path/to/core.py</del>```<del>.<span class="dp">·</span>By<span class="dp">·</span>defa</del><del>ult,<span class="dp">·</span>this<span class="dp">·</span></del>i<del>s<span class="dp">·</span>pytho</del>n<del>XXX/s</del>it<del>e-packages</del><del>/cha</del>t<del>gdb/c</del>o<del>re.py.<span class="dp">·</span><span class="dp">·</span>Then</del><span class="dp">·</span><del>y</del>ou<del><span class="dp">·</span></del>c<del>an<span class="dp">·</span>us</del>e<span class="dp">·</span>the<span class="dp">·</span><del>com</del>m<del>and<span class="dp">·</span>chat<span class="dp">·</span></del>a<del>pp</del><del>e</del>n<del>ded</del><span class="dp">·</span><del>b</del><del>y<span class="dp">·</span>your</del><span class="dp">·</span><del>q</del>u<del>ery,<span class="dp">·</span></del><del>f</del>o<del>r<span class="dp">·</span>exa</del>m<del>ple<span class="dp">·</span>```ch</del>at<del><span class="dp">·</span>l</del>i<del>st</del><del><span class="dp">·</span></del>all<del><span class="dp">·</span>brea</del><del>kp</del>o<del>i</del>n<del>t</del>s<del><span class="dp">·</span></del>t<del>h</del>a<del>t<span class="dp">·</span>I<span class="dp">·</span>c</del>r<del>ea</del>t<del>ed```[<span class="dp">·</span></del><del>..</del>.<span class="dp">·</span><del>t</del><del>r</del>un<del>c</del><del>a</del>t<del>ed<span class="dp">·</span></del><del>by</del><span class="dp">·</span><del>dif</del>fo<del>sc</del>o<del>pe;<span class="dp">·</span></del><del>le</del>n<del>:<span class="dp">·</span>245,<span class="dp">·</span>SHA</del><del>:</del><span class="dp">·</span><del>16576981dfe8623f55c613a389d4</del>c<del>032147f8bf432</del><del>1fe</del>a<del>41dc8991161b9</del><del>1</del>d<del>6cf<span class="dp">·</span>...<span class="dp">·</span></del><del>]</del></td><td class="diffline">40 </td><td class="diffpresent"><ins>I</ins><span class="dp">·</span><ins>f</ins>ir<ins>st</ins><span class="dp">·</span><ins>r</ins>eco<ins>mmend</ins><span class="dp">·</span>e<ins>d</ins>it<ins>ing<span class="dp">·</span>y</ins>our<span class="dp">·</span>```<ins>$HOME/.gdb</ins>init<ins>```<span class="dp">·</span></ins>to<span class="dp">·</span><ins>s</ins>ou<ins>r</ins>ce<span class="dp">·</span>the<span class="dp">·</span>ma<ins>i</ins>n<span class="dp">·</span><ins>script</ins><span class="dp">·</span><ins>a</ins>u<ins>t</ins>omati<ins>c</ins>all<ins>y<span class="dp">·</span></ins>on<ins><span class="dp">·</span></ins>start<ins>up</ins>.<span class="dp">·</span><ins>R</ins>un<ins><span class="dp">·</span></ins>t<ins>he</ins><span class="dp">·</span>fo<ins>ll</ins>o<ins>wi</ins>n<ins>g</ins><span class="dp">·</span>c<ins>omm</ins>a<ins>n</ins>d<ins>:</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">41 </td><td class="diffpresent">```echo<span class="dp">·</span>&quot;source<span class="dp">·</span>$(python<span class="dp">·</span>-m<span class="dp">·</span>site<span class="dp">·</span>--user-site)/chatgdb/core.py&quot;<span class="dp">·</span>&gt;<span class="dp">·</span>$HOME/.gdbinit```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">42 </td><td class="diffpresent">While<span class="dp">·</span>inside<span class="dp">·</span>GDB<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>chat<span class="dp">·</span>appended<span class="dp">·</span>by<span class="dp">·</span>your<span class="dp">·</span>query,<span class="dp">·</span>for<span class="dp">·</span>example<span class="dp">·</span>```chat<span class="dp">·</span>list<span class="dp">·</span>all<span class="dp">·</span>breakpoints<span class="dp">·</span>that<span class="dp">·</span>I<span class="dp">·</span>created```.<span class="dp">·</span>There<span class="dp">·</span>is<span class="dp">·</span>also<span class="dp">·</span>a<span class="dp">·</span>command<span class="dp">·</span>called<span class="dp">·</span>```explain```<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>with<span class="dp">·</span>no<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>explain<span class="dp">·</span>the<span class="dp">·</span>previously<span class="dp">·</span>run<span class="dp">·</span>command,<span class="dp">·</span>and<span class="dp">·</span>optionally,<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>query<span class="dp">·</span>to<span class="dp">·</span>just<span class="dp">·</span>ask<span class="dp">·</span>GPT<span class="dp">·</span>a<span class="dp">·</span>question.<span class="dp">·</span>For<span class="dp">·</span>example,<span class="dp">·</span>running<span class="dp">·</span>```explain```<span class="dp">·</span>directly<span class="dp">·</span>after<span class="dp">·</span>running<span class="dp">·</span>```break<span class="dp">·</span>7```<span class="dp">·</span>would<span class="dp">·</span>prompt<span class="dp">·</span>the<span class="dp">·</span>tool<span class="dp">·</span>to<span class="dp">·</span>explain<span class="dp">·</span>how<span class="dp">·</span>breakpoints<span class="dp">·</span>work.<span class="dp">·</span>Running<span class="dp">·</span>```explain<span class="dp">·</span>how<span class="dp">·</span>input<span class="dp">·</span>formatting<span class="dp">·</span>works<span class="dp">·</span>in<span class="dp">·</span>gdb```<span class="dp">·</span>would<span class="dp">·</span>prompt<span class="dp">·</span>it<span class="dp">·</span>to<span class="dp">·</span>explain<span class="dp">·</span>input<span class="dp">·</span>formatting<span class="dp">·</span>(see<span class="dp">·</span>the<span class="dp">·</span>image<span class="dp">·</span>at<span class="dp">·</span>the<span class="dp">·</span>top).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent">Run<span class="dp">·</span>chat<span class="dp">·</span>help<span class="dp">·</span>to<span class="dp">·</span>print<span class="dp">·</span>out<span class="dp">·</span>a<span class="dp">·</span>short<span class="dp">·</span>tutorial<span class="dp">·</span>on<span class="dp">·</span>how<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>tool.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">39 </td><td class="diffpresent">You<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>edit<span class="dp">·</span>your<span class="dp">·</span>```$HOME/.gdbinit```<span class="dp">·</span>and<span class="dp">·</span>source<span class="dp">·</span>the<span class="dp">·</span>file<span class="dp">·</span>automatically<span class="dp">·</span>on<span class="dp">·</span>startup<span class="dp">·</span>with</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">40 </td><td class="diffpresent">```source<span class="dp">·</span>/path/to/core.py```.</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

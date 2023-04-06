@@ -1,0 +1,1730 @@
+--- tmp/quantrocket-moonchart-2.8.0.0.tar.gz
++++ tmp/quantrocket-moonchart-2.9.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "quantrocket-moonchart-2.8.0.0.tar", last modified: Tue Sep 13 14:51:16 2022, max compression
+│ +gzip compressed data, was "quantrocket-moonchart-2.9.0.2.tar", last modified: Thu Apr  6 18:47:01 2023, max compression
+│   --- quantrocket-moonchart-2.8.0.0.tar
+├── +++ quantrocket-moonchart-2.9.0.2.tar
+│ ├── file list
+│ │ @@ -1,28 +1,29 @@
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     9144 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/LICENSE.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       52 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/MANIFEST.in
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      299 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1383 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/README.md
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/moonchart/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      334 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      499 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/moonchart/_version.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    13287 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/base.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      699 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/exceptions.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    13153 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/paramscan.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    18243 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/perf.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    22275 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/shortfall.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    32660 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/tearsheet.py
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/moonchart/tests/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/tests/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    31526 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/tests/test_perf.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    53960 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/tests/test_utils.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    12222 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/moonchart/utils.py
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      299 2022-09-13 14:51:16.000000 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      569 2022-09-13 14:51:16.000000 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        1 2022-09-13 14:51:16.000000 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       67 2022-09-13 14:51:16.000000 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/requires.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       10 2022-09-13 14:51:16.000000 quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      196 2022-09-13 14:51:16.415120 quantrocket-moonchart-2.8.0.0/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1212 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/setup.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    68611 2022-09-13 14:50:32.000000 quantrocket-moonchart-2.8.0.0/versioneer.py
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     9144 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/LICENSE.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       52 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/MANIFEST.in
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      280 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1383 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/README.md
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/moonchart/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1183 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/__init__.py
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/moonchart/_tests/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/_tests/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    31527 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/_tests/test_perf.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    53961 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/_tests/test_utils.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      499 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/moonchart/_version.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    13362 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/base.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      699 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/exceptions.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    14270 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/paramscan.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    20860 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/perf.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/py.typed
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    24596 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/shortfall.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    34025 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/tearsheet.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    15298 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/moonchart/utils.py
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      280 2023-04-06 18:47:01.000000 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      591 2023-04-06 18:47:01.000000 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        1 2023-04-06 18:47:01.000000 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       67 2023-04-06 18:47:01.000000 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       10 2023-04-06 18:47:01.000000 quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      196 2023-04-06 18:47:01.625451 quantrocket-moonchart-2.9.0.2/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1258 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/setup.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    68611 2023-04-06 18:46:20.000000 quantrocket-moonchart-2.9.0.2/versioneer.py
+│ │   --- quantrocket-moonchart-2.8.0.0/LICENSE.txt
+│ ├── +++ quantrocket-moonchart-2.9.0.2/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- quantrocket-moonchart-2.8.0.0/README.md
+│ ├── +++ quantrocket-moonchart-2.9.0.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/base.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/base.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -36,15 +36,20 @@
+│ │          save tear sheet to this filepath as a PDF instead of displaying
+│ │  
+│ │      max_cols_for_details : int, optional
+│ │          suppress detailed plots if there are more than this many columns
+│ │          (i.e. strategies or securities). Too many plots may cause slow
+│ │          rendering. Default 25.
+│ │      """
+│ │ -    def __init__(self, pdf_filename=None, figsize=None, max_cols_for_details=25):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        pdf_filename: str = None,
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        max_cols_for_details: int = 25
+│ │ +        ):
+│ │          self.figsize = figsize or (16.0, 12.0) # width, height in inches
+│ │          plt.rc("axes", axisbelow=True)
+│ │          if pdf_filename:
+│ │              self._pdf = PdfPages(pdf_filename, keep_empty=True)
+│ │          else:
+│ │              self._pdf = None
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/exceptions.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/exceptions.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/paramscan.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/paramscan.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -10,23 +10,40 @@
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │  import pandas as pd
+│ │  import seaborn as sns
+│ │ +from typing import Union, TextIO
+│ │  from collections import OrderedDict
+│ │  import matplotlib
+│ │  import matplotlib.pyplot as plt
+│ │  from matplotlib.font_manager import FontProperties
+│ │  from .perf import DailyPerformance
+│ │  from .base import BaseTearsheet
+│ │  from .exceptions import MoonchartError
+│ │  
+│ │  class ParamscanTearsheet(BaseTearsheet):
+│ │ +    """
+│ │ +    Create a tear sheet from a parameter scan results CSV from Moonshot or
+│ │ +    Zipline.
+│ │ +
+│ │ +    See Also
+│ │ +    --------
+│ │ +    ParamscanTearsheet.from_csv : Create a tear sheet from a parameter scan
+│ │ +        results CSV from Moonshot or Zipline.
+│ │ +
+│ │ +    Notes
+│ │ +    -----
+│ │ +    Usage Guide:
+│ │ +
+│ │ +    * Moonshot parameter scans: https://qrok.it/dl/mc/moonshot-paramscan
+│ │ +    * Zipline parameter scans: https://qrok.it/dl/mc/zipline-paramscan
+│ │ +    """
+│ │  
+│ │      def _from_df(self, results):
+│ │          """
+│ │          Creates a param scan tear sheet from a param scan results
+│ │          DataFrame.
+│ │          """
+│ │          if "StrategyOrDate" not in results.columns:
+│ │ @@ -48,15 +65,20 @@
+│ │  
+│ │          results = results.unstack(level=params)
+│ │          results =results.reindex(columns=desired_cols)
+│ │  
+│ │          return self.create_full_tearsheet(results)
+│ │  
+│ │      @classmethod
+│ │ -    def from_csv(cls, filepath_or_buffer, figsize=None, pdf_filename=None):
+│ │ +    def from_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        pdf_filename: str = None
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a tear sheet from a parameter scan results CSV from Moonshot or
+│ │          Zipline.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          filepath_or_buffer : str or file-like object
+│ │ @@ -68,35 +90,54 @@
+│ │          pdf_filename : string, optional
+│ │              save tear sheet to this filepath as a PDF instead of displaying
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │  
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Moonshot parameter scans: https://qrok.it/dl/mc/moonshot-paramscan
+│ │ +        * Zipline parameter scans: https://qrok.it/dl/mc/zipline-paramscan
+│ │ +
+│ │          Examples
+│ │          --------
+│ │          >>> from moonchart import ParamscanTearsheet
+│ │          >>> ParamscanTearsheet.from_csv("paramscan_results.csv")
+│ │          """
+│ │          results = pd.read_csv(filepath_or_buffer)
+│ │          t = cls(figsize=figsize, pdf_filename=pdf_filename)
+│ │          return t._from_df(results)
+│ │  
+│ │      @classmethod
+│ │ -    def from_moonshot_csv(cls, *args, **kwargs):
+│ │ -        import warnings
+│ │ -        with warnings.catch_warnings():
+│ │ -            warnings.simplefilter("always", DeprecationWarning)
+│ │ -            warnings.warn(
+│ │ -                "ParamscanTearsheet.from_moonshot_csv is deprecated and will be "
+│ │ -                "removed in a future release, please use ParamscanTearsheet.from_csv "
+│ │ -                "instead", DeprecationWarning)
+│ │ -            return cls.from_csv(*args, **kwargs)
+│ │ +    def from_moonshot_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        pdf_filename: str = None
+│ │ +        ) -> None:
+│ │ +        """
+│ │ +        Create a tear sheet from a parameter scan results CSV from Moonshot or
+│ │ +        Zipline.
+│ │  
+│ │ -    def create_full_tearsheet(self, results, heatmap_2d=True):
+│ │ +        This method is an alias for ParamscanTearsheet.from_csv. Please see its
+│ │ +        docstring for more information.
+│ │ +        """
+│ │ +        return cls.from_csv(
+│ │ +            filepath_or_buffer,
+│ │ +            figsize=figsize,
+│ │ +            pdf_filename=pdf_filename)
+│ │ +
+│ │ +    def create_full_tearsheet(
+│ │ +        self,
+│ │ +        results: pd.DataFrame,
+│ │ +        heatmap_2d: bool = True
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a full tear sheet of param scan results.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          results : DataFrame
+│ │              multi-index (Field, StrategyOrDate) DataFrame of param scan results,
+│ │ @@ -104,14 +145,21 @@
+│ │  
+│ │          heatmap_2d : bool
+│ │              use heat maps for 2-d paramscans; if False, use bar charts
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │ +
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Moonshot parameter scans: https://qrok.it/dl/mc/moonshot-paramscan
+│ │ +        * Zipline parameter scans: https://qrok.it/dl/mc/zipline-paramscan
+│ │          """
+│ │          returns = results.loc["AggReturn"]
+│ │          returns.index = pd.to_datetime(returns.index)
+│ │          returns.index.name = "Date"
+│ │  
+│ │          summary = OrderedDict()
+│ │          if results.columns.nlevels == 2:
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/perf.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/perf.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ +from typing import Union, TextIO
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  from .exceptions import InsufficientData, MoonchartError
+│ │  from .utils import (
+│ │      get_zscores,
+│ │      trim_outliers as trim_outliers_func,
+│ │      get_sharpe,
+│ │ @@ -77,31 +78,32 @@
+│ │  
+│ │      trim_outliers: int or float, optional
+│ │          discard returns that are more than this many standard deviations from the mean
+│ │      """
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ -        returns,
+│ │ -        pnl=None,
+│ │ -        net_exposures=None,
+│ │ -        abs_exposures=None,
+│ │ -        total_holdings=None,
+│ │ -        turnover=None,
+│ │ -        commission_amounts=None,
+│ │ -        commissions=None,
+│ │ -        slippages=None,
+│ │ -        benchmark=None,
+│ │ -        riskfree=0,
+│ │ -        compound=True,
+│ │ -        rolling_sharpe_window=200,
+│ │ -        trim_outliers=None
+│ │ +        returns: pd.DataFrame,
+│ │ +        pnl: pd.DataFrame = None,
+│ │ +        net_exposures: pd.DataFrame = None,
+│ │ +        abs_exposures: pd.DataFrame = None,
+│ │ +        total_holdings: pd.DataFrame = None,
+│ │ +        turnover: pd.DataFrame = None,
+│ │ +        commission_amounts: pd.DataFrame = None,
+│ │ +        commissions: pd.DataFrame = None,
+│ │ +        slippages: pd.DataFrame = None,
+│ │ +        benchmark: 'pd.Series[float]' = None,
+│ │ +        riskfree: float = 0,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200,
+│ │ +        trim_outliers: float = None
+│ │          ):
+│ │  
+│ │ -        self.returns = returns
+│ │ +        self.returns: pd.DataFrame = returns
+│ │ +        """a DataFrame of pct returns"""
+│ │          if len(self.returns.index) < 2:
+│ │              raise InsufficientData(
+│ │                  "Moonchart needs at least 2 dates to analyze performance, "
+│ │                  "but returns DataFrame has length {0}".format(len(self.returns.index)))
+│ │          self._trim_outliers = trim_outliers
+│ │          if trim_outliers:
+│ │              self.returns = trim_outliers_func(returns, z_score=trim_outliers)
+│ │ @@ -112,25 +114,36 @@
+│ │              if isinstance(returns, pd.DataFrame):
+│ │                  max_zscore = max_zscore.max()
+│ │              if max_zscore > 20:
+│ │                  import warnings
+│ │                  warnings.warn("Found returns which are {0} standard deviations from the "
+│ │                                "mean, consider removing them with the `trim_outliers` parameter".format(
+│ │                                    round(max_zscore)))
+│ │ -        self.pnl = pnl
+│ │ -        self.net_exposures = net_exposures
+│ │ -        self.abs_exposures = abs_exposures
+│ │ -        self.total_holdings = total_holdings
+│ │ -        self.turnover = turnover
+│ │ -        self.commission_amounts = commission_amounts
+│ │ -        self.commissions = commissions
+│ │ -        self.slippages = slippages
+│ │ -        self.riskfree = riskfree
+│ │ -        self.compound = compound
+│ │ -        self.rolling_sharpe_window = rolling_sharpe_window
+│ │ +        self.pnl: pd.DataFrame = pnl
+│ │ +        """a DataFrame of pnl"""
+│ │ +        self.net_exposures: pd.DataFrame = net_exposures
+│ │ +        """a DataFrame of net (hedged) exposure"""
+│ │ +        self.abs_exposures: pd.DataFrame = abs_exposures
+│ │ +        """a DataFrame of absolute exposure (ignoring hedging)"""
+│ │ +        self.total_holdings: pd.DataFrame = total_holdings
+│ │ +        """a DataFrame of the number of holdings"""
+│ │ +        self.turnover: pd.DataFrame = turnover
+│ │ +        """a DataFrame of turnover, that is, changes to positions"""
+│ │ +        self.commission_amounts: pd.DataFrame = commission_amounts
+│ │ +        """a DataFrame of commission amounts, in the base currency"""
+│ │ +        self.commissions: pd.DataFrame = commissions
+│ │ +        """a DataFrame of commissions, as a proportion of capital"""
+│ │ +        self.slippages: pd.DataFrame = slippages
+│ │ +        """a DataFrame of slippages, as a proportion of capital"""
+│ │ +        self.riskfree: float = riskfree
+│ │ +        """the riskfree rate"""
+│ │ +        self.compound: bool = compound
+│ │ +        """True for compound/geometric returns, False for arithmetic returns"""
+│ │ +        self.rolling_sharpe_window: int = rolling_sharpe_window
+│ │ +        """compute rolling Sharpe over this many periods"""
+│ │          self._benchmark_prices = benchmark
+│ │          self._benchmark_returns = None
+│ │          self._benchmark_cum_returns = None
+│ │          self._cum_returns = None
+│ │          self._cum_commissions = None
+│ │          self._cum_slippages = None
+│ │          self._cum_commission_amounts = None
+│ │ @@ -190,22 +203,25 @@
+│ │              kwargs["slippages"] = results.loc["Slippage"]
+│ │          if "Benchmark" in fields:
+│ │              kwargs["benchmark"] = results.loc["Benchmark"]
+│ │  
+│ │          return cls(**kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def from_moonshot_csv(cls, filepath_or_buffer,
+│ │ -                          start_date=None,
+│ │ -                          end_date=None,
+│ │ -                          trim_outliers=None,
+│ │ -                          how_to_aggregate=None,
+│ │ -                          riskfree=0,
+│ │ -                          compound=True,
+│ │ -                          rolling_sharpe_window=200):
+│ │ +    def from_moonshot_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        riskfree: float = 0,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> 'DailyPerformance':
+│ │          """
+│ │          Creates a DailyPerformance instance from a Moonshot backtest results CSV.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          filepath_or_buffer : str or file-like object
+│ │              filepath or file-like object of the CSV
+│ │ @@ -266,22 +282,25 @@
+│ │              trim_outliers=trim_outliers,
+│ │              how_to_aggregate=how_to_aggregate,
+│ │              riskfree=riskfree,
+│ │              compound=compound,
+│ │              rolling_sharpe_window=rolling_sharpe_window)
+│ │  
+│ │      @classmethod
+│ │ -    def from_pnl_csv(cls, filepath_or_buffer,
+│ │ -                     start_date=None,
+│ │ -                     end_date=None,
+│ │ -                     trim_outliers=None,
+│ │ -                     how_to_aggregate=None,
+│ │ -                     riskfree=0,
+│ │ -                     compound=True,
+│ │ -                     rolling_sharpe_window=200):
+│ │ +    def from_pnl_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        riskfree: float = 0,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> 'DailyPerformance':
+│ │          """
+│ │          Creates a DailyPerformance instance from a PNL CSV.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          filepath_or_buffer : str or file-like object
+│ │              filepath or file-like object of the CSV
+│ │ @@ -329,89 +348,99 @@
+│ │              trim_outliers=trim_outliers,
+│ │              how_to_aggregate=how_to_aggregate,
+│ │              riskfree=riskfree,
+│ │              compound=compound,
+│ │              rolling_sharpe_window=rolling_sharpe_window)
+│ │  
+│ │      @property
+│ │ -    def cum_returns(self):
+│ │ +    def cum_returns(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of cumulative returns"""
+│ │  
+│ │          if self._cum_returns is None:
+│ │              self._cum_returns = get_cum_returns(self.returns, compound=self.compound)
+│ │  
+│ │          return self._cum_returns
+│ │  
+│ │      @property
+│ │ -    def cum_commissions(self):
+│ │ +    def cum_commissions(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of cumulative commissions, as a proportion of capital"""
+│ │  
+│ │          if self._cum_commissions is None and self.commissions is not None:
+│ │              self._cum_commissions = get_cum_returns(self.commissions, compound=False)
+│ │  
+│ │          return self._cum_commissions
+│ │  
+│ │      @property
+│ │ -    def cum_commission_amounts(self):
+│ │ +    def cum_commission_amounts(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of cumulative commission amounts, in the base currency"""
+│ │  
+│ │          if self._cum_commission_amounts is None and self.commission_amounts is not None:
+│ │              self._cum_commission_amounts = self.commission_amounts.cumsum()
+│ │  
+│ │          return self._cum_commission_amounts
+│ │  
+│ │      @property
+│ │ -    def cum_slippages(self):
+│ │ +    def cum_slippages(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of cumulative slippages, as a proportion of capital"""
+│ │  
+│ │          if self._cum_slippages is None and self.slippages is not None:
+│ │              self._cum_slippages = get_cum_returns(self.slippages, compound=False)
+│ │  
+│ │          return self._cum_slippages
+│ │  
+│ │      @property
+│ │ -    def cagr(self):
+│ │ +    def cagr(self) -> 'pd.Series[float]':
+│ │ +        """a Series of CAGR values"""
+│ │          if self._cagr is None:
+│ │              self._cagr = get_cagr(self.cum_returns, compound=self.compound)
+│ │  
+│ │          return self._cagr
+│ │  
+│ │      @property
+│ │ -    def sharpe(self):
+│ │ +    def sharpe(self) -> 'pd.Series[float]':
+│ │ +        """a Series of Sharpe ratios"""
+│ │          if self._sharpe is None:
+│ │              self._sharpe = get_sharpe(self.returns, riskfree=self.riskfree)
+│ │  
+│ │          return self._sharpe
+│ │  
+│ │      @property
+│ │ -    def rolling_sharpe(self):
+│ │ +    def rolling_sharpe(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of rolling Sharpe ratios"""
+│ │          if self._rolling_sharpe is None:
+│ │              self._rolling_sharpe = get_rolling_sharpe(
+│ │                  self.returns,
+│ │                  window=self.rolling_sharpe_window,
+│ │                  riskfree=self.riskfree)
+│ │  
+│ │          return self._rolling_sharpe
+│ │  
+│ │      @property
+│ │ -    def drawdowns(self):
+│ │ +    def drawdowns(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of drawdowns"""
+│ │          if self._drawdowns is None:
+│ │              self._drawdowns = get_drawdowns(self.cum_returns)
+│ │  
+│ │          return self._drawdowns
+│ │  
+│ │      @property
+│ │ -    def max_drawdown(self):
+│ │ +    def max_drawdown(self) -> float:
+│ │ +        """the maximum drawdown"""
+│ │          return self.drawdowns.min()
+│ │  
+│ │      @property
+│ │ -    def cum_pnl(self):
+│ │ +    def cum_pnl(self) -> pd.DataFrame:
+│ │ +        """a DataFrame of cumulative PNL"""
+│ │          if self._cum_pnl is None and self.pnl is not None:
+│ │              self._cum_pnl = self.pnl.cumsum()
+│ │  
+│ │          return self._cum_pnl
+│ │  
+│ │      @property
+│ │ -    def benchmark_returns(self):
+│ │ +    def benchmark_returns(self) -> 'pd.Series[float]':
+│ │          """
+│ │          Returns a Series of benchmark returns from the DataFrame of benchmark
+│ │          prices, if any. If more than one strategy/column has benchmark
+│ │          prices, uses the first to compute returns.
+│ │          """
+│ │          if self._benchmark_returns is not None:
+│ │              return self._benchmark_returns
+│ │ @@ -433,15 +462,16 @@
+│ │  
+│ │          self._benchmark_returns = benchmark_prices.pct_change().fillna(0)
+│ │          self._benchmark_returns.name = "benchmark"
+│ │  
+│ │          return self._benchmark_returns
+│ │  
+│ │      @property
+│ │ -    def benchmark_cum_returns(self):
+│ │ +    def benchmark_cum_returns(self) -> 'pd.Series[float]':
+│ │ +        """Cumulative benchmark returns"""
+│ │  
+│ │          if self._benchmark_cum_returns is None and self._benchmark_returns is not None:
+│ │              self._benchmark_cum_returns = get_cum_returns(self._benchmark_returns, compound=True)
+│ │  
+│ │          return self._benchmark_cum_returns
+│ │  
+│ │  class AggregateDailyPerformance(DailyPerformance):
+│ │ @@ -481,18 +511,22 @@
+│ │      Plot aggregate cumulative returns:
+│ │  
+│ │      >>> perf = DailyPerformance.from_moonshot_csv("backtest_results.csv")
+│ │      >>> agg_perf = AggregateDailyPerformance(perf)
+│ │      >>> agg_perf.cum_returns.plot()
+│ │      """
+│ │  
+│ │ -    def __init__(self, performance, riskfree=None,
+│ │ -                 compound=None,
+│ │ -                 rolling_sharpe_window=None,
+│ │ -                 trim_outliers=None):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        riskfree: float = None,
+│ │ +        compound: bool = None,
+│ │ +        rolling_sharpe_window: int = None,
+│ │ +        trim_outliers: float = None
+│ │ +        ):
+│ │  
+│ │          if riskfree is None:
+│ │              riskfree = performance.riskfree
+│ │          if compound is None:
+│ │              compound = performance.compound
+│ │          if rolling_sharpe_window is None:
+│ │              rolling_sharpe_window = performance.rolling_sharpe_window
+│ │ @@ -504,29 +538,37 @@
+│ │              riskfree=riskfree,
+│ │              compound=compound,
+│ │              rolling_sharpe_window=rolling_sharpe_window,
+│ │              benchmark=performance._benchmark_prices,
+│ │              trim_outliers=trim_outliers
+│ │          )
+│ │          if performance.pnl is not None:
+│ │ -            self.pnl = performance.pnl.sum(axis=1)
+│ │ +            self.pnl: 'pd.Series[float]' = performance.pnl.sum(axis=1)
+│ │ +            """a Series of aggregate PNL"""
+│ │  
+│ │          if performance.commission_amounts is not None:
+│ │ -            self.commission_amounts = performance.commission_amounts.sum(axis=1)
+│ │ +            self.commission_amounts: 'pd.Series[float]' = performance.commission_amounts.sum(axis=1)
+│ │ +            """a Series of aggregate commission amounts, in the base currency"""
+│ │  
+│ │          if performance.commissions is not None:
+│ │ -            self.commissions = performance.commissions.sum(axis=1)
+│ │ +            self.commissions: 'pd.Series[float]' = performance.commissions.sum(axis=1)
+│ │ +            """a Series of aggregate commissions, as a proportion of capital"""
+│ │  
+│ │          if performance.slippages is not None:
+│ │ -            self.slippages = performance.slippages.sum(axis=1)
+│ │ +            self.slippages: 'pd.Series[float]' = performance.slippages.sum(axis=1)
+│ │ +            """a Series of aggregate slippages, as a proportion of capital"""
+│ │  
+│ │          if performance.net_exposures is not None:
+│ │ -            self.net_exposures = performance.net_exposures.sum(axis=1)
+│ │ +            self.net_exposures: 'pd.Series[float]' = performance.net_exposures.sum(axis=1)
+│ │ +            """a Series of aggregate net exposures"""
+│ │  
+│ │          if performance.abs_exposures is not None:
+│ │ -            self.abs_exposures = performance.abs_exposures.sum(axis=1)
+│ │ +            self.abs_exposures: 'pd.Series[float]' = performance.abs_exposures.sum(axis=1)
+│ │ +            """a Series of aggregate absolute exposures"""
+│ │  
+│ │          if performance.total_holdings is not None:
+│ │ -            self.total_holdings = performance.total_holdings.sum(axis=1)
+│ │ +            self.total_holdings: 'pd.Series[float]' = performance.total_holdings.sum(axis=1)
+│ │ +            """a Series of aggregate total holdings"""
+│ │  
+│ │          if performance.turnover is not None:
+│ │ -            self.turnover = performance.turnover.sum(axis=1)
+│ │ +            self.turnover: 'pd.Series[float]' = performance.turnover.sum(axis=1)
+│ │ +            """a Series of aggregate turnover"""
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/shortfall.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/shortfall.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,61 +1,116 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ +from typing import Union, TextIO, overload
+│ │  import pandas as pd
+│ │  import matplotlib.pyplot as plt
+│ │  from matplotlib.font_manager import FontProperties
+│ │  import seaborn as sns
+│ │  import empyrical as ep
+│ │  import scipy.stats
+│ │  import warnings
+│ │  from .base import BaseTearsheet
+│ │  from .perf import DailyPerformance, AggregateDailyPerformance
+│ │  from .exceptions import MoonchartError
+│ │  from .utils import with_baseline, get_cum_returns, get_drawdowns
+│ │  
+│ │  class ShortfallTearsheet(BaseTearsheet):
+│ │      """
+│ │ -    Generate a tear sheet of performance stats and plots highlighting the
+│ │ +    Create a tear sheet of performance stats and plots highlighting the
+│ │      shortfall between simulated or benchmark results and actual results.
+│ │  
+│ │      See Also
+│ │      --------
+│ │      ShortfallTearsheet.from_csvs : Create a shortfall tear sheet from CSVs.
+│ │ +
+│ │ +    Notes
+│ │ +    -----
+│ │ +    Usage Guide:
+│ │ +
+│ │ +    * Implementation Shortfall: https://qrok.it/dl/mc/shortfall
+│ │      """
+│ │  
+│ │      def __init__(self,
+│ │                   *args,
+│ │                   labels=("simulated", "actual"),
+│ │                   **kwargs):
+│ │          super().__init__(*args, **kwargs)
+│ │          self.x_label, self.y_label = labels
+│ │  
+│ │ +    @overload
+│ │ +    @classmethod
+│ │ +    def from_csvs(
+│ │ +        cls,
+│ │ +        x_filepath_or_buffer: Union[str, TextIO],
+│ │ +        y_filepath_or_buffer: Union[str, TextIO],
+│ │ +        labels: tuple[str, str] = ("simulated", "actual"),
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        largest_n: None = None,
+│ │ +        shift_x_positions: int = 0,
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        pdf_filename: str = None,
+│ │ +        riskfree: float = 0,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> None:
+│ │ +        pass
+│ │ +
+│ │ +    @overload
+│ │ +    @classmethod
+│ │ +    def from_csvs(
+│ │ +        cls,
+│ │ +        x_filepath_or_buffer: Union[str, TextIO],
+│ │ +        y_filepath_or_buffer: Union[str, TextIO],
+│ │ +        labels: tuple[str, str] = ("simulated", "actual"),
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        largest_n: int = None,
+│ │ +        shift_x_positions: int = 0,
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        pdf_filename: str = None,
+│ │ +        riskfree: float = 0,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> pd.DataFrame:
+│ │ +        pass
+│ │ +
+│ │      @classmethod
+│ │ -    def from_csvs(cls, x_filepath_or_buffer, y_filepath_or_buffer,
+│ │ -                  labels=("simulated", "actual"),
+│ │ -                  start_date=None,
+│ │ -                  end_date=None,
+│ │ -                  largest_n=None,
+│ │ -                  shift_x_positions=0,
+│ │ -                  figsize=None, trim_outliers=None,
+│ │ -                  how_to_aggregate=None,
+│ │ -                  pdf_filename=None, riskfree=0,
+│ │ -                  compound=True, rolling_sharpe_window=200):
+│ │ +    def from_csvs(
+│ │ +        cls,
+│ │ +        x_filepath_or_buffer,
+│ │ +        y_filepath_or_buffer,
+│ │ +        labels=("simulated", "actual"),
+│ │ +        start_date=None,
+│ │ +        end_date=None,
+│ │ +        largest_n=None,
+│ │ +        shift_x_positions=0,
+│ │ +        figsize=None,
+│ │ +        trim_outliers=None,
+│ │ +        how_to_aggregate=None,
+│ │ +        pdf_filename=None,
+│ │ +        riskfree=0,
+│ │ +        compound=True,
+│ │ +        rolling_sharpe_window=200):
+│ │          """
+│ │          Create a shortfall tear sheet comparing simulated results (or other benchmark results)
+│ │          with actual results.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          x_filepath_or_buffer : str or file-like object
+│ │ @@ -115,14 +170,20 @@
+│ │              compute rolling Sharpe over this many periods (default 200)
+│ │  
+│ │          Returns
+│ │          -------
+│ │          DataFrame or None
+│ │              DataFrame of largest shortfalls if largest_n is not None, otherwise None
+│ │  
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Implementation Shortfall: https://qrok.it/dl/mc/shortfall
+│ │ +
+│ │          Examples
+│ │          --------
+│ │          >>> from moonchart import ShortfallTearsheet
+│ │          >>> ShortfallTearsheet.from_csvs("backtest.csv", "pnl.csv")
+│ │          """
+│ │  
+│ │          x_perf = DailyPerformance.from_moonshot_csv(
+│ │ @@ -145,16 +206,40 @@
+│ │              compound=compound,
+│ │              rolling_sharpe_window=rolling_sharpe_window)
+│ │  
+│ │          t = cls(labels=labels, figsize=figsize, pdf_filename=pdf_filename)
+│ │          return t.create_full_tearsheet(x_perf, y_perf, largest_n=largest_n,
+│ │                                         shift_x_positions=shift_x_positions)
+│ │  
+│ │ -    def create_full_tearsheet(self, x_performance, y_performance, largest_n=None,
+│ │ -                              shift_x_positions=0):
+│ │ +    @overload
+│ │ +    def create_full_tearsheet(
+│ │ +        self,
+│ │ +        x_performance: DailyPerformance,
+│ │ +        y_performance: DailyPerformance,
+│ │ +        largest_n: None = None,
+│ │ +        shift_x_positions: int = 0
+│ │ +        ) -> None:
+│ │ +        pass
+│ │ +
+│ │ +    @overload
+│ │ +    def create_full_tearsheet(
+│ │ +        self,
+│ │ +        x_performance: DailyPerformance,
+│ │ +        y_performance: DailyPerformance,
+│ │ +        largest_n: int = None,
+│ │ +        shift_x_positions: int = 0
+│ │ +        ) -> pd.DataFrame:
+│ │ +        pass
+│ │ +
+│ │ +    def create_full_tearsheet(
+│ │ +        self,
+│ │ +        x_performance,
+│ │ +        y_performance,
+│ │ +        largest_n=None,
+│ │ +        shift_x_positions=0):
+│ │          """
+│ │          Create a shortfall tear sheet comparing simulated results (or other
+│ │          benchmark results) with actual results.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          x_performance : DailyPerformance, required
+│ │ @@ -181,14 +266,20 @@
+│ │          -------
+│ │          DataFrame or None
+│ │              DataFrame of largest shortfalls if largest_n is not None, otherwise None
+│ │  
+│ │          See Also
+│ │          --------
+│ │          ShortfallTearsheet.from_csvs : Create a shortfall tear sheet from CSVs.
+│ │ +
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Implementation Shortfall: https://qrok.it/dl/mc/shortfall
+│ │          """
+│ │  
+│ │          y_agg_performance = AggregateDailyPerformance(y_performance)
+│ │          x_agg_performance = AggregateDailyPerformance(x_performance)
+│ │  
+│ │          self.create_summary_tearsheet(x_agg_performance, y_agg_performance)
+│ │  
+│ │ @@ -258,15 +349,20 @@
+│ │                  y_agg_performance.turnover,
+│ │                  fig_title="Turnover")
+│ │  
+│ │          self._save_or_show()
+│ │  
+│ │          return largest_shortfalls
+│ │  
+│ │ -    def create_largest_shortfalls_tearsheet(self, x_performance, y_performance, largest_n=5):
+│ │ +    def create_largest_shortfalls_tearsheet(
+│ │ +        self,
+│ │ +        x_performance: DailyPerformance,
+│ │ +        y_performance: DailyPerformance,
+│ │ +        largest_n: int = 5
+│ │ +        ) -> pd.DataFrame:
+│ │          """
+│ │          Create a "largest shortfalls" table highligting the dates and
+│ │          specific instruments or strategies (depending on whether the columns
+│ │          of the input returns are instruments or strategies) with the largest
+│ │          magnitude shortfall (positive or negative).
+│ │  
+│ │          Parameters
+│ │ @@ -408,15 +504,19 @@
+│ │  
+│ │          shortfall = results[self.y_label] - results[self.x_label]
+│ │          results["shortfall"] = shortfall
+│ │          results = with_baseline(results, value=0)
+│ │          results.plot(ax=axis, title="Daily " + fig_title)
+│ │          axis.set_xlabel("")
+│ │  
+│ │ -    def create_summary_tearsheet(self, x_performance, y_performance):
+│ │ +    def create_summary_tearsheet(
+│ │ +        self,
+│ │ +        x_performance: DailyPerformance,
+│ │ +        y_performance: DailyPerformance
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a tear sheet of summary shortfall stats in a table.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          x_performance : AggregateDailyPerformance, required
+│ │              simulated or benchmark aggregate performance results
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/tearsheet.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/tearsheet.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ +from typing import Union, TextIO
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  import seaborn as sns
+│ │  import matplotlib.pyplot as plt
+│ │  from matplotlib.font_manager import FontProperties
+│ │  import math
+│ │  import warnings
+│ │ @@ -30,23 +31,45 @@
+│ │      get_cagr,
+│ │      get_cum_returns,
+│ │      get_drawdowns
+│ │  )
+│ │  
+│ │  class Tearsheet(BaseTearsheet):
+│ │      """
+│ │ -    Generates a tear sheet of performance stats and graphs.
+│ │ +    Create a tear sheet of performance stats and graphs for backtest
+│ │ +    results or live PNL.
+│ │ +
+│ │ +    See Also
+│ │ +    --------
+│ │ +    Tearsheet.from_moonshot_csv : Create a full tear sheet from a moonshot backtest results CSV.
+│ │ +
+│ │ +    Tearsheet.from_pnl_csv : Create a full tear sheet from a PNL CSV.
+│ │ +
+│ │ +    Notes
+│ │ +    -----
+│ │ +    Usage Guide:
+│ │ +
+│ │ +    * Moonshot backtesting: https://qrok.it/dl/mc/moonshot-backtest
+│ │ +    * Performance tracking: https://qrok.it/dl/mc/performance
+│ │      """
+│ │      @classmethod
+│ │ -    def from_moonshot_csv(cls, filepath_or_buffer, figsize=None,
+│ │ -                          max_cols_for_details=25, trim_outliers=None,
+│ │ -                          how_to_aggregate=None,
+│ │ -                          pdf_filename=None, riskfree=0,
+│ │ -                          start_date=None, end_date=None,
+│ │ -                          compound=True, rolling_sharpe_window=200):
+│ │ +    def from_moonshot_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        max_cols_for_details: int = 25,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        pdf_filename: str = None,
+│ │ +        riskfree: float = 0,
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a full tear sheet from a moonshot backtest results CSV.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          filepath_or_buffer : str or file-like object
+│ │              filepath of CSV or file-like object
+│ │ @@ -88,14 +111,20 @@
+│ │          rolling_sharpe_window : int, optional
+│ │              compute rolling Sharpe over this many periods (default 200)
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │  
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Moonshot backtesting: https://qrok.it/dl/mc/moonshot-backtest
+│ │ +
+│ │          Examples
+│ │          --------
+│ │          >>> from moonchart import Tearsheet
+│ │          >>> Tearsheet.from_moonshot_csv("backtest_results.csv")
+│ │          """
+│ │          perf = DailyPerformance.from_moonshot_csv(
+│ │              filepath_or_buffer,
+│ │ @@ -110,20 +139,28 @@
+│ │          t = cls(figsize=figsize,
+│ │                  max_cols_for_details=max_cols_for_details,
+│ │                  pdf_filename=pdf_filename)
+│ │  
+│ │          return t.create_full_tearsheet(perf)
+│ │  
+│ │      @classmethod
+│ │ -    def from_pnl_csv(cls, filepath_or_buffer, figsize=None,
+│ │ -                     max_cols_for_details=25, trim_outliers=None,
+│ │ -                     how_to_aggregate=None,
+│ │ -                     pdf_filename=None, riskfree=0,
+│ │ -                     start_date=None, end_date=None,
+│ │ -                     compound=True, rolling_sharpe_window=200):
+│ │ +    def from_pnl_csv(
+│ │ +        cls,
+│ │ +        filepath_or_buffer: Union[str, TextIO],
+│ │ +        figsize: tuple[int, int] = None,
+│ │ +        max_cols_for_details: int = 25,
+│ │ +        trim_outliers: float = None,
+│ │ +        how_to_aggregate: dict[str, str] = None,
+│ │ +        pdf_filename: str = None,
+│ │ +        riskfree: float = 0,
+│ │ +        start_date: str = None,
+│ │ +        end_date: str = None,
+│ │ +        compound: bool = True,
+│ │ +        rolling_sharpe_window: int = 200
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a full tear sheet from a pnl CSV.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          filepath_or_buffer : str or file-like object
+│ │              filepath or file-like object of the CSV
+│ │ @@ -163,14 +200,20 @@
+│ │  
+│ │          rolling_sharpe_window : int, optional
+│ │              compute rolling Sharpe over this many periods (default 200)
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │ +
+│ │ +        Notes
+│ │ +        -----
+│ │ +        Usage Guide:
+│ │ +
+│ │ +        * Performance tracking: https://qrok.it/dl/mc/performance
+│ │          """
+│ │          perf = DailyPerformance.from_pnl_csv(
+│ │              filepath_or_buffer,
+│ │              start_date=start_date,
+│ │              end_date=end_date,
+│ │              trim_outliers=trim_outliers,
+│ │              how_to_aggregate=how_to_aggregate,
+│ │ @@ -180,15 +223,15 @@
+│ │  
+│ │          t = cls(figsize=figsize,
+│ │                  max_cols_for_details=max_cols_for_details,
+│ │                  pdf_filename=pdf_filename)
+│ │  
+│ │          return t.create_full_tearsheet(perf)
+│ │  
+│ │ -    def create_full_tearsheet(self, performance):
+│ │ +    def create_full_tearsheet(self, performance: DailyPerformance) -> None:
+│ │          """
+│ │          Create a full tear sheet of performance results including returns
+│ │          plots, returns by year plots, and position-related plots.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          performance : instance
+│ │ @@ -226,15 +269,19 @@
+│ │              performance.net_exposures, performance.abs_exposures)]):
+│ │              self.create_positions_tearsheet(performance, agg_performance)
+│ │  
+│ │          self._create_constituents_tearsheet(performance)
+│ │  
+│ │          self._save_or_show()
+│ │  
+│ │ -    def create_summary_tearsheet(self, performance, agg_performance=None):
+│ │ +    def create_summary_tearsheet(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        agg_performance: AggregateDailyPerformance = None
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a tear sheet of summary performance stats in a table.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          performance : DailyPerformance, required
+│ │              a DailyPerformance instance
+│ │ @@ -391,15 +438,19 @@
+│ │              for (row, col), cell in table.get_celld().items():
+│ │                  if (row == 0) and (col == 0):
+│ │                      cell.set_text_props(fontproperties=FontProperties(weight='bold'))
+│ │  
+│ │              table.scale(2, 2)
+│ │              table.set_fontsize("large")
+│ │  
+│ │ -    def create_returns_tearsheet(self, performance, agg_performance=None):
+│ │ +    def create_returns_tearsheet(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        agg_performance: AggregateDailyPerformance = None
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a tear sheet of returns-related plots.
+│ │  
+│ │          The included plots depend on what is present in the performance data.
+│ │          Always plots cumulative returns, drawdowns, and rolling Sharpe. Plots
+│ │          cumulative returns vs benchmark if benchmark is present. Plots
+│ │          cumulative PNL if PNL is present. For multi-column performance
+│ │ @@ -496,15 +547,19 @@
+│ │                      pnl = pd.concat((pnl, gross_pnl, commission_amounts), axis=1, sort=True)
+│ │                  except TypeError:
+│ │                      # sort was introduced in pandas 0.23
+│ │                      pnl = pd.concat((pnl, gross_pnl, commission_amounts), axis=1)
+│ │              pnl.plot(
+│ │                  ax=axis, kind="bar", title="PNL (Details)")
+│ │  
+│ │ -    def create_positions_tearsheet(self, performance, agg_performance=None):
+│ │ +    def create_positions_tearsheet(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        agg_performance: AggregateDailyPerformance = None
+│ │ +        ) -> None:
+│ │          """
+│ │          Create a tear sheet of position-related plots.
+│ │  
+│ │          Includes plots of net and absolute daily exposure, number of daily
+│ │          holdings, and daily turnover.
+│ │  
+│ │          Parameters
+│ │ @@ -664,15 +719,19 @@
+│ │                  next_pos += 1
+│ │                  self._y_format_as_percentage(axis)
+│ │                  norm_cagrs.plot(ax=axis, kind="bar", title="Normalized CAGR (CAGR/Absolute Exposure) (Details)")
+│ │                  axis.set_ylabel("Normalized CAGR")
+│ │  
+│ │          fig.tight_layout()
+│ │  
+│ │ -    def create_returns_by_year_tearsheet(self, performance, agg_performance=None):
+│ │ +    def create_returns_by_year_tearsheet(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        agg_performance: AggregateDailyPerformance = None
+│ │ +        ) -> None:
+│ │          """
+│ │          Plots bar charts showing CAGR and Sharpe by year.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          performance : DailyPerformance, required
+│ │              a DailyPerformance instance
+│ │ @@ -751,15 +810,20 @@
+│ │              plot = sharpes_by_year.plot(ax=axis, kind="bar", title="Sharpe by Year {0}".format(extra_label))
+│ │              axis.set_xlabel("")
+│ │              if isinstance(sharpes_by_year, pd.DataFrame):
+│ │                  self._clear_legend(plot)
+│ │  
+│ │          fig.tight_layout()
+│ │  
+│ │ -    def create_montecarlo_tearsheet(self, performance, cycles=5, aggregate_before_shuffle=True):
+│ │ +    def create_montecarlo_tearsheet(
+│ │ +        self,
+│ │ +        performance: DailyPerformance,
+│ │ +        cycles: int = 5,
+│ │ +        aggregate_before_shuffle: bool = True
+│ │ +        ) -> None:
+│ │          """
+│ │          Run a Montecarlo simulation by shuffling the DataFrame of returns a specified
+│ │          number of times and plotting the shuffled returns against the original returns.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          performance : DailyPerformance, required
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/tests/test_perf.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/_tests/test_perf.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ -# To run: pytest path/to/moonchart/tests -v
+│ │ +# To run: pytest path/to/moonchart/_tests -v
+│ │  
+│ │  import os
+│ │  import unittest
+│ │  import pandas as pd
+│ │  # Specify non-interactive matplotlib backend before anything else imports
+│ │  # matplotlib
+│ │  import matplotlib as mpl
+│ │ @@ -696,15 +696,15 @@
+│ │              round_results(perf.sharpe.to_dict()),
+│ │              {'strategy-a': 13.43909, 'strategy-b': 10.255814}
+│ │          )
+│ │  
+│ │          perf = DailyPerformance.from_pnl_csv("pnl.csv", riskfree=0.02/252)
+│ │          self.assertDictEqual(
+│ │              round_results(perf.sharpe.to_dict()),
+│ │ -            {'strategy-a': 13.43909, 'strategy-b': 10.255814}
+│ │ +            {'strategy-a': 12.826098, 'strategy-b': 10.04274}
+│ │          )
+│ │  
+│ │      def test_compound(self):
+│ │  
+│ │          perf = DailyPerformance.from_moonshot_csv("backtest.csv")
+│ │          self.assertDictEqual(
+│ │              round_results(perf.cum_returns.to_dict(orient="list")),
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/tests/test_utils.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/_tests/test_utils.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ -# To run: pytest path/to/moonchart/tests -v
+│ │ +# To run: pytest path/to/moonchart/_tests -v
+│ │  
+│ │  import unittest
+│ │  import os
+│ │  import pandas as pd
+│ │  import numpy as np
+│ │  from quantrocket.moonshot import read_moonshot_csv
+│ │  from quantrocket.blotter import read_pnl_csv
+│ │   --- quantrocket-moonchart-2.8.0.0/moonchart/utils.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/moonchart/utils.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,26 +1,77 @@
+│ │ -# Copyright 2017-2022 QuantRocket LLC - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket LLC - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │ +"""
+│ │ +Utility functions for performance analysis.
+│ │  
+│ │ +Functions
+│ │ +---------
+│ │ +get_sharpe
+│ │ +    Return the Sharpe ratio of the returns.
+│ │ +
+│ │ +get_rolling_sharpe
+│ │ +    Compute rolling Sharpe ratios for the returns.
+│ │ +
+│ │ +get_cum_returns
+│ │ +    Compute the cumulative returns of the provided returns.
+│ │ +
+│ │ +get_zscores
+│ │ +    Return the Z-scores of the input returns.
+│ │ +
+│ │ +get_cagr
+│ │ +    Compute the CAGR from the cumulative returns.
+│ │ +
+│ │ +get_drawdowns
+│ │ +    Compute the drawdowns of the cumulative returns.
+│ │ +
+│ │ +get_top_movers
+│ │ +    Return the biggest gainers and losers in the returns.
+│ │ +
+│ │ +intraday_to_daily
+│ │ +    Roll up a DataFrame of intraday performance results to daily, dropping
+│ │ +    the "Time" level from the multi-index.
+│ │ +
+│ │ +trim_outliers
+│ │ +    Zero out observations that are too many standard deviations from the
+│ │ +    mean.
+│ │ +
+│ │ +with_baseline
+│ │ +    Prepend a date-indexed Series or DataFrame with an initial row that is
+│ │ +    one period earlier than the first row and has the specified value.
+│ │ +"""
+│ │ +from typing import overload
+│ │  import seaborn as sns
+│ │  import pandas as pd
+│ │  import numpy as np
+│ │  from .exceptions import MoonchartError
+│ │  
+│ │ +__all__ = [
+│ │ +    "get_sharpe",
+│ │ +    "get_rolling_sharpe",
+│ │ +    "get_cum_returns",
+│ │ +    "get_zscores",
+│ │ +    "get_cagr",
+│ │ +    "get_drawdowns",
+│ │ +    "get_top_movers",
+│ │ +    "intraday_to_daily",
+│ │ +    "trim_outliers",
+│ │ +    "with_baseline",
+│ │ +]
+│ │ +
+│ │  def set_default_palette():
+│ │      """
+│ │      Sets the default palette so that the first 3 colors are
+│ │      blue, green, red. This was the case in Matplotlib 2 but in
+│ │      Matplotlib the default sequence is blue, orange, green, red,
+│ │      which is not as good for Moonchart plots. This function
+│ │      will remove orange from position 2 and put it at the end.
+│ │ @@ -30,17 +81,29 @@
+│ │  
+│ │      current_palette = sns.color_palette()
+│ │      orange = (0.8666666666666667, 0.5176470588235295, 0.3215686274509804)
+│ │      if current_palette[1] == orange:
+│ │          current_palette.append(current_palette.pop(1))
+│ │          sns.set_palette(current_palette)
+│ │  
+│ │ +@overload
+│ │ +def get_zscores(
+│ │ +    returns: 'pd.Series[float]'
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_zscores(
+│ │ +    returns: pd.DataFrame
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │ +
+│ │  def get_zscores(returns):
+│ │      """
+│ │ -    Returns the Z-scores of the input returns.
+│ │ +    Return the Z-scores of the input returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          Series or DataFrame of returns
+│ │  
+│ │      Returns
+│ │ @@ -48,17 +111,31 @@
+│ │      Series or DataFrame
+│ │      """
+│ │      # Ignore 0 returns in calculating z score
+│ │      nonzero_returns = returns.where(returns != 0)
+│ │      z_scores = (nonzero_returns - nonzero_returns.mean())/nonzero_returns.std()
+│ │      return z_scores
+│ │  
+│ │ +@overload
+│ │ +def trim_outliers(
+│ │ +    returns: 'pd.Series[float]',
+│ │ +    z_score: float
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def trim_outliers(
+│ │ +    returns: pd.DataFrame,
+│ │ +    z_score: float
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │ +
+│ │  def trim_outliers(returns, z_score):
+│ │      """
+│ │ -    Zeroes out observations that are too many standard deviations from the
+│ │ +    Zero out observations that are too many standard deviations from the
+│ │      mean.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          Series or DataFrame of returns
+│ │  
+│ │ @@ -70,15 +147,15 @@
+│ │      Series or DataFrame
+│ │      """
+│ │      z_scores = get_zscores(returns)
+│ │      return returns.where(z_scores.abs() <= z_score, 0)
+│ │  
+│ │  def with_baseline(data, value=1):
+│ │      """
+│ │ -    Prepends a date-indexed Series or DataFrame with an initial row that is
+│ │ +    Prepend a date-indexed Series or DataFrame with an initial row that is
+│ │      one period earlier than the first row and has the specified value.
+│ │  
+│ │      The typical use case is for generating plots: without a baseline row, a cumulative
+│ │      returns plot won't start from 1 if the first day's return is nonzero.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │ @@ -140,36 +217,66 @@
+│ │      mean = (returns - riskfree).mean()
+│ │      if isinstance(mean, float) and mean == 0:
+│ │          return 0
+│ │      std = (returns - riskfree).std()
+│ │      # Returns are assumed to represent daily returns, so annualize the Sharpe ratio
+│ │      return mean/std * np.sqrt(252)
+│ │  
+│ │ +@overload
+│ │ +def get_sharpe(
+│ │ +    returns: 'pd.Series[float]',
+│ │ +    riskfree: float = 0
+│ │ +    ) -> float:
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_sharpe(
+│ │ +    returns: pd.DataFrame,
+│ │ +    riskfree: float = 0
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │  def get_sharpe(returns, riskfree=0):
+│ │      """
+│ │ -    Returns the Sharpe ratio of the returns.
+│ │ +    Return the Sharpe ratio of the returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          a Series or DataFrame of returns
+│ │  
+│ │      riskfree : float, optional
+│ │          the risk-free rate (default 0)
+│ │  
+│ │      Returns
+│ │      -------
+│ │      float or Series of floats
+│ │      """
+│ │      returns = _pad_returns(returns)
+│ │ -    return _get_sharpe(returns)
+│ │ +    return _get_sharpe(returns, riskfree=riskfree)
+│ │ +
+│ │ +@overload
+│ │ +def get_rolling_sharpe(
+│ │ +    returns: 'pd.Series[float]',
+│ │ +    window: int,
+│ │ +    riskfree: float = 0
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_rolling_sharpe(
+│ │ +    returns: pd.DataFrame,
+│ │ +    window: int,
+│ │ +    riskfree: float = 0
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │  
+│ │  def get_rolling_sharpe(returns, window, riskfree=0):
+│ │      """
+│ │ -    Computes rolling Sharpe ratios for the returns.
+│ │ +    Compute rolling Sharpe ratios for the returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          a Series or DataFrame of returns
+│ │  
+│ │      window : int, required
+│ │ @@ -189,17 +296,31 @@
+│ │      except TypeError as e:
+│ │          # handle pandas<0.23
+│ │          if "apply() got an unexpected keyword argument 'raw'" in repr(e):
+│ │              return rolling_returns.apply(_get_sharpe, kwargs=dict(riskfree=riskfree))
+│ │          else:
+│ │              raise
+│ │  
+│ │ +@overload
+│ │ +def get_cum_returns(
+│ │ +    returns: 'pd.Series[float]',
+│ │ +    compound: bool = True
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_cum_returns(
+│ │ +    returns: pd.DataFrame,
+│ │ +    compound: bool = True
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │ +
+│ │  def get_cum_returns(returns, compound=True):
+│ │      """
+│ │ -    Computes the cumulative returns of the provided returns.
+│ │ +    Compute the cumulative returns of the provided returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          a Series or DataFrame of returns
+│ │  
+│ │      compound : bool
+│ │ @@ -214,17 +335,31 @@
+│ │          cum_returns = (1 + returns).cumprod()
+│ │      else:
+│ │          cum_returns = returns.cumsum() + 1
+│ │  
+│ │      cum_returns.index.name = "Date"
+│ │      return cum_returns
+│ │  
+│ │ +@overload
+│ │ +def get_cagr(
+│ │ +    cum_returns: 'pd.Series[float]',
+│ │ +    compound: bool = True
+│ │ +    ) -> float:
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_cagr(
+│ │ +    cum_returns: pd.DataFrame,
+│ │ +    compound: bool = True
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │  def get_cagr(cum_returns, compound=True):
+│ │      """
+│ │ -    Computes the CAGR from the cumulative returns.
+│ │ +    Compute the CAGR from the cumulative returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      cum_returns : Series or DataFrame, required
+│ │          a Series or DataFrame of cumulative returns
+│ │  
+│ │      compound : bool
+│ │ @@ -259,17 +394,29 @@
+│ │          # Compound annual growth rate doesn't apply to arithmetic
+│ │          # returns, so just divide the cum_returns by the number of years
+│ │          # to get the annual return
+│ │          cagr = (ending_value/beginning_value - 1)/years
+│ │  
+│ │      return cagr
+│ │  
+│ │ +@overload
+│ │ +def get_drawdowns(
+│ │ +    cum_returns: 'pd.Series[float]'
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_drawdowns(
+│ │ +    cum_returns: pd.DataFrame
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │ +
+│ │  def get_drawdowns(cum_returns):
+│ │      """
+│ │ -    Computes the drawdowns of the cumulative returns.
+│ │ +    Compute the drawdowns of the cumulative returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      cum_returns : Series or DataFrame, required
+│ │          a Series or DataFrame of cumulative returns
+│ │  
+│ │      Returns
+│ │ @@ -277,17 +424,31 @@
+│ │      Series or DataFrame
+│ │      """
+│ │      cum_returns = cum_returns[cum_returns.notnull()]
+│ │      highwater_marks = cum_returns.expanding().max()
+│ │      drawdowns = cum_returns/highwater_marks - 1
+│ │      return drawdowns
+│ │  
+│ │ +@overload
+│ │ +def get_top_movers(
+│ │ +    returns: 'pd.Series[float]',
+│ │ +    n: int = 10
+│ │ +    ) -> 'pd.Series[float]':
+│ │ +    pass
+│ │ +
+│ │ +@overload
+│ │ +def get_top_movers(
+│ │ +    returns: pd.DataFrame,
+│ │ +    n: int = 10
+│ │ +    ) -> pd.DataFrame:
+│ │ +    pass
+│ │ +
+│ │  def get_top_movers(returns, n=10):
+│ │      """
+│ │ -    Returns the biggest gainers and losers in the returns.
+│ │ +    Return the biggest gainers and losers in the returns.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      returns : Series or DataFrame, required
+│ │          a Series or DataFrame of returns
+│ │  
+│ │      n : int, optional
+│ │ @@ -307,15 +468,18 @@
+│ │          top_movers = pd.concat((returns.head(n), returns.tail(n)), sort=True)
+│ │      except TypeError:
+│ │          # sort was introduced in pandas 0.23
+│ │          top_movers = pd.concat((returns.head(n), returns.tail(n)))
+│ │  
+│ │      return top_movers
+│ │  
+│ │ -def intraday_to_daily(results, how=None):
+│ │ +def intraday_to_daily(
+│ │ +    results: pd.DataFrame,
+│ │ +    how: dict[str, str] = None
+│ │ +    ) -> pd.DataFrame:
+│ │      """
+│ │      Roll up a DataFrame of intraday performance results to daily, dropping
+│ │      the "Time" level from the multi-index.
+│ │  
+│ │      The following aggregation methods are supported:
+│ │  
+│ │      extreme: min or max of day, whichever is of greater absolute magnitude
+│ │   --- quantrocket-moonchart-2.8.0.0/quantrocket_moonchart.egg-info/SOURCES.txt
+│ ├── +++ quantrocket-moonchart-2.9.0.2/quantrocket_moonchart.egg-info/SOURCES.txt
+│ │┄ Files 17% similar despite different names
+│ │ @@ -6,18 +6,19 @@
+│ │  versioneer.py
+│ │  moonchart/__init__.py
+│ │  moonchart/_version.py
+│ │  moonchart/base.py
+│ │  moonchart/exceptions.py
+│ │  moonchart/paramscan.py
+│ │  moonchart/perf.py
+│ │ +moonchart/py.typed
+│ │  moonchart/shortfall.py
+│ │  moonchart/tearsheet.py
+│ │  moonchart/utils.py
+│ │ -moonchart/tests/__init__.py
+│ │ -moonchart/tests/test_perf.py
+│ │ -moonchart/tests/test_utils.py
+│ │ +moonchart/_tests/__init__.py
+│ │ +moonchart/_tests/test_perf.py
+│ │ +moonchart/_tests/test_utils.py
+│ │  quantrocket_moonchart.egg-info/PKG-INFO
+│ │  quantrocket_moonchart.egg-info/SOURCES.txt
+│ │  quantrocket_moonchart.egg-info/dependency_links.txt
+│ │  quantrocket_moonchart.egg-info/requires.txt
+│ │  quantrocket_moonchart.egg-info/top_level.txt
+│ │   --- quantrocket-moonchart-2.8.0.0/setup.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/setup.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# Copyright 2017-2022 QuantRocket - All Rights Reserved
+│ │ +# Copyright 2017-2023 QuantRocket - All Rights Reserved
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -21,14 +21,15 @@
+│ │      description='Moonchart',
+│ │      long_description='Performance tear sheets for backtest analysis',
+│ │      url='https://www.quantrocket.com',
+│ │      author='QuantRocket LLC',
+│ │      author_email='support@quantrocket.com',
+│ │      license='Apache-2.0',
+│ │      packages=find_packages(),
+│ │ +    package_data={"moonchart": ["py.typed"]},
+│ │      install_requires=[
+│ │          "matplotlib",
+│ │          "pandas>=0.20",
+│ │          "seaborn",
+│ │          "quantrocket-client",
+│ │          "empyrical",
+│ │          "scipy",
+│ │   --- quantrocket-moonchart-2.8.0.0/versioneer.py
+│ ├── +++ quantrocket-moonchart-2.9.0.2/versioneer.py
+│ │┄ Files identical despite different names

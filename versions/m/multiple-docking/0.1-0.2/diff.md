@@ -1,0 +1,47 @@
+# Comparing `tmp/multiple_docking-0.1.tar.gz` & `tmp/multiple_docking-0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "multiple_docking-0.1.tar", last modified: Thu Apr  6 18:30:42 2023, max compression
++gzip compressed data, was "multiple_docking-0.2.tar", last modified: Thu Apr  6 18:49:55 2023, max compression
+```
+
+## Comparing `multiple_docking-0.1.tar` & `multiple_docking-0.2.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,12 @@
+-drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:30:42.772216 multiple_docking-0.1/
+--rw-rw-r--   0 supun     (1000) supun     (1000)      238 2023-04-06 18:30:42.772216 multiple_docking-0.1/PKG-INFO
+-drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:30:42.772216 multiple_docking-0.1/multiple_docking/
+--rw-rw-r--   0 supun     (1000) supun     (1000)        0 2023-04-06 18:13:08.000000 multiple_docking-0.1/multiple_docking/__init__.py
+--rw-rw-r--   0 supun     (1000) supun     (1000)     4956 2023-01-30 05:55:24.000000 multiple_docking-0.1/multiple_docking/docking.py
+-drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:30:42.772216 multiple_docking-0.1/multiple_docking.egg-info/
+--rw-rw-r--   0 supun     (1000) supun     (1000)      238 2023-04-06 18:30:42.000000 multiple_docking-0.1/multiple_docking.egg-info/PKG-INFO
+--rw-rw-r--   0 supun     (1000) supun     (1000)      264 2023-04-06 18:30:42.000000 multiple_docking-0.1/multiple_docking.egg-info/SOURCES.txt
+--rw-rw-r--   0 supun     (1000) supun     (1000)        1 2023-04-06 18:30:42.000000 multiple_docking-0.1/multiple_docking.egg-info/dependency_links.txt
+--rw-rw-r--   0 supun     (1000) supun     (1000)       27 2023-04-06 18:30:42.000000 multiple_docking-0.1/multiple_docking.egg-info/requires.txt
+--rw-rw-r--   0 supun     (1000) supun     (1000)       17 2023-04-06 18:30:42.000000 multiple_docking-0.1/multiple_docking.egg-info/top_level.txt
+--rw-rw-r--   0 supun     (1000) supun     (1000)       38 2023-04-06 18:30:42.772216 multiple_docking-0.1/setup.cfg
+--rw-rw-r--   0 supun     (1000) supun     (1000)      440 2023-04-06 18:11:38.000000 multiple_docking-0.1/setup.py
++drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:49:55.835017 multiple_docking-0.2/
++-rw-rw-r--   0 supun     (1000) supun     (1000)      238 2023-04-06 18:49:55.835017 multiple_docking-0.2/PKG-INFO
++drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:49:55.835017 multiple_docking-0.2/multiple_docking/
++-rw-rw-r--   0 supun     (1000) supun     (1000)        0 2023-04-06 18:13:08.000000 multiple_docking-0.2/multiple_docking/__init__.py
++-rw-rw-r--   0 supun     (1000) supun     (1000)     4956 2023-01-30 05:55:24.000000 multiple_docking-0.2/multiple_docking/docking.py
++drwxrwxr-x   0 supun     (1000) supun     (1000)        0 2023-04-06 18:49:55.835017 multiple_docking-0.2/multiple_docking.egg-info/
++-rw-rw-r--   0 supun     (1000) supun     (1000)      238 2023-04-06 18:49:55.000000 multiple_docking-0.2/multiple_docking.egg-info/PKG-INFO
++-rw-rw-r--   0 supun     (1000) supun     (1000)      225 2023-04-06 18:49:55.000000 multiple_docking-0.2/multiple_docking.egg-info/SOURCES.txt
++-rw-rw-r--   0 supun     (1000) supun     (1000)        1 2023-04-06 18:49:55.000000 multiple_docking-0.2/multiple_docking.egg-info/dependency_links.txt
++-rw-rw-r--   0 supun     (1000) supun     (1000)       17 2023-04-06 18:49:55.000000 multiple_docking-0.2/multiple_docking.egg-info/top_level.txt
++-rw-rw-r--   0 supun     (1000) supun     (1000)       38 2023-04-06 18:49:55.835017 multiple_docking-0.2/setup.cfg
++-rw-rw-r--   0 supun     (1000) supun     (1000)      361 2023-04-06 18:47:56.000000 multiple_docking-0.2/setup.py
+```
+
+### Comparing `multiple_docking-0.1/multiple_docking/docking.py` & `multiple_docking-0.2/multiple_docking/docking.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/metaseg-0.1.0.tar.gz tmp/metaseg-0.1.1.tar.gz --html versions/m/metaseg/0.1.0-0.1.1/index.html --text versions/m/metaseg/0.1.0-0.1.1/diff.txt --markdown versions/m/metaseg/0.1.0-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.4 KB</span></div>
+  <div><span class="source">tmp/metaseg-0.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/metaseg-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;metaseg-0.1.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;metaseg-0.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.1 KB</span></div>
+    <div><span class="source">metaseg-0.1.0.tar</span> vs.</div>
+    <div id="metaseg--.-.-.tar"><span class="source">metaseg-0.1.1.tar</span>
+      <a class="anchor" href="#metaseg--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">7.99 KB</span></div>
+      <div id="metaseg--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 33 lines modified</td><td colspan="2">Offset 1, 34 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>349809</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>702773</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:30:40.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:30:40.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>700</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>349809</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>955</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>702773</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>426</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>36</del>:<del>09</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>681</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>22</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>346</del>4<del>75</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>699</ins>4<ins>40</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>46</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>36</del>:<del>47</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>92</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>33</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15117<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/automatic_mask_generator.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15117<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/automatic_mask_generator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2936<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/build_sam.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2936<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/build_sam.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2001<span class="dp">·</span>2023-04-06<span class="dp">·</span>18:50:33.000000<span class="dp">·</span>metaseg-0.1.1/metaseg/demo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>3464</del>7<del>5</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>7027</ins>7<ins>3</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>465<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>465<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1479<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/common.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1479<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/common.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14341<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/image_encoder.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14341<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/image_encoder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6540<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/mask_decoder.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6540<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/mask_decoder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8596<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/prompt_encoder.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8596<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/prompt_encoder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7273<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/sam.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7273<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/sam.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8332<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/modeling/transformer.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8332<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/modeling/transformer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11570<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/predictor.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11570<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/predictor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>349809</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/utils/</td><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>702773</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/utils/</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>197<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/utils/__init__.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>197<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12621<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/utils/amg.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12621<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/utils/amg.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5743<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/utils/onnx.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5743<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:47.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/utils/onnx.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3874<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg/utils/transforms.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3874<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg/utils/transforms.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>346</del>4<del>75</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/</td><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>699</ins>4<ins>40</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>700</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/PKG-INFO</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>955</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>43</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/SOURCES.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>59</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/dependency_links.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>212<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/requires.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>212<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/metaseg.egg-info/top_level.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/metaseg.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/pyproject.toml</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>125<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/requirements.txt</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>125<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:34:00.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>430<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>37</del>:<del>54</del>.<del>349809</del><span class="dp">·</span>metaseg-0.1.<del>0</del>/setup.cfg</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>430<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>8</ins>:<ins>50</ins>:<ins>38</ins>.<ins>702773</ins><span class="dp">·</span>metaseg-0.1.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1529<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:43.000000<span class="dp">·</span>metaseg-0.1.<del>0</del>/setup.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kadir<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1529<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:43.000000<span class="dp">·</span>metaseg-0.1.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">metaseg-0.1.0/LICENSE</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--LICENSE"><span class="source">metaseg-0.1.1/LICENSE</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/automatic_mask_generator.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-automatic_mask_generator.py"><span class="source">metaseg-0.1.1/metaseg/automatic_mask_generator.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-automatic_mask_generator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/build_sam.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-build_sam.py"><span class="source">metaseg-0.1.1/metaseg/build_sam.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-build_sam.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/common.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-common.py"><span class="source">metaseg-0.1.1/metaseg/modeling/common.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-common.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/image_encoder.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-image_encoder.py"><span class="source">metaseg-0.1.1/metaseg/modeling/image_encoder.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-image_encoder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/mask_decoder.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-mask_decoder.py"><span class="source">metaseg-0.1.1/metaseg/modeling/mask_decoder.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-mask_decoder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/prompt_encoder.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-prompt_encoder.py"><span class="source">metaseg-0.1.1/metaseg/modeling/prompt_encoder.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-prompt_encoder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/sam.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-sam.py"><span class="source">metaseg-0.1.1/metaseg/modeling/sam.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-sam.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/modeling/transformer.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-transformer.py"><span class="source">metaseg-0.1.1/metaseg/modeling/transformer.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-modeling-transformer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/predictor.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-predictor.py"><span class="source">metaseg-0.1.1/metaseg/predictor.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-predictor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/utils/amg.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-amg.py"><span class="source">metaseg-0.1.1/metaseg/utils/amg.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-amg.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/utils/onnx.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-onnx.py"><span class="source">metaseg-0.1.1/metaseg/utils/onnx.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-onnx.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg/utils/transforms.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-transforms.py"><span class="source">metaseg-0.1.1/metaseg/utils/transforms.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg-utils-transforms.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">506 B</span></div>
+      <div><span class="source">metaseg-0.1.0/metaseg.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--metaseg.egg-info-SOURCES.txt"><span class="source">metaseg-0.1.1/metaseg.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--metaseg.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 14% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 14 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">pyproject.toml</td><td class="diffline">4 </td><td class="diffpresent">pyproject.toml</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">requirements.txt</td><td class="diffline">5 </td><td class="diffpresent">requirements.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">setup.cfg</td><td class="diffline">6 </td><td class="diffpresent">setup.cfg</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">setup.py</td><td class="diffline">7 </td><td class="diffpresent">setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">metaseg/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">metaseg/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">metaseg/automatic_mask_generator.py</td><td class="diffline">9 </td><td class="diffpresent">metaseg/automatic_mask_generator.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">metaseg/build_sam.py</td><td class="diffline">10 </td><td class="diffpresent">metaseg/build_sam.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">metaseg/demo.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">metaseg/predictor.py</td><td class="diffline">12 </td><td class="diffpresent">metaseg/predictor.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">metaseg.egg-info/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">metaseg.egg-info/PKG-INFO</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">metaseg.egg-info/SOURCES.txt</td><td class="diffline">14 </td><td class="diffpresent">metaseg.egg-info/SOURCES.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">metaseg.egg-info/dependency_links.txt</td><td class="diffline">15 </td><td class="diffpresent">metaseg.egg-info/dependency_links.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">metaseg.egg-info/requires.txt</td><td class="diffline">16 </td><td class="diffpresent">metaseg.egg-info/requires.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">metaseg.egg-info/top_level.txt</td><td class="diffline">17 </td><td class="diffpresent">metaseg.egg-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">metaseg/modeling/__init__.py</td><td class="diffline">18 </td><td class="diffpresent">metaseg/modeling/__init__.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">metaseg-0.1.0/setup.py</span> vs.</div>
+      <div id="metaseg--.-.-.tar---metaseg--.-.--setup.py"><span class="source">metaseg-0.1.1/setup.py</span>
+        <a class="anchor" href="#metaseg--.-.-.tar---metaseg--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

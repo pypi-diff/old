@@ -1,0 +1,220 @@
+# Comparing `tmp/gpterminator-0.1.8.tar.gz` & `tmp/gpterminator-0.1.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gpterminator-0.1.8.tar", last modified: Sat Mar 25 18:41:11 2023, max compression
++gzip compressed data, was "gpterminator-0.1.9.tar", last modified: Sun Mar 26 05:16:21 2023, max compression
+```
+
+## Comparing `gpterminator-0.1.8.tar` & `gpterminator-0.1.9.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 18:41:11.025954 gpterminator-0.1.8/
+--rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-03-25 18:40:58.000000 gpterminator-0.1.8/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     4448 2023-03-25 18:41:11.025954 gpterminator-0.1.8/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4052 2023-03-25 18:40:58.000000 gpterminator-0.1.8/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 18:41:11.025954 gpterminator-0.1.8/gpterminator/
+--rw-r--r--   0 runner    (1001) docker     (123)    20279 2023-03-25 18:40:58.000000 gpterminator-0.1.8/gpterminator/GPTerminator.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 18:40:58.000000 gpterminator-0.1.8/gpterminator/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      133 2023-03-25 18:40:58.000000 gpterminator-0.1.8/gpterminator/__main__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 18:41:11.025954 gpterminator-0.1.8/gpterminator.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4448 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      348 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       54 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      115 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       13 2023-03-25 18:41:11.000000 gpterminator-0.1.8/gpterminator.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       90 2023-03-25 18:40:58.000000 gpterminator-0.1.8/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      709 2023-03-25 18:41:11.025954 gpterminator-0.1.8/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-25 18:40:58.000000 gpterminator-0.1.8/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-26 05:16:21.385294 gpterminator-0.1.9/
++-rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-03-26 05:16:08.000000 gpterminator-0.1.9/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     4448 2023-03-26 05:16:21.385294 gpterminator-0.1.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4052 2023-03-26 05:16:08.000000 gpterminator-0.1.9/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-26 05:16:21.385294 gpterminator-0.1.9/gpterminator/
++-rw-r--r--   0 runner    (1001) docker     (123)    20780 2023-03-26 05:16:08.000000 gpterminator-0.1.9/gpterminator/GPTerminator.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-26 05:16:08.000000 gpterminator-0.1.9/gpterminator/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      133 2023-03-26 05:16:08.000000 gpterminator-0.1.9/gpterminator/__main__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-26 05:16:21.385294 gpterminator-0.1.9/gpterminator.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4448 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      348 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       54 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      115 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-03-26 05:16:21.000000 gpterminator-0.1.9/gpterminator.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       90 2023-03-26 05:16:08.000000 gpterminator-0.1.9/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      709 2023-03-26 05:16:21.385294 gpterminator-0.1.9/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-26 05:16:08.000000 gpterminator-0.1.9/setup.py
+```
+
+### Comparing `gpterminator-0.1.8/LICENSE` & `gpterminator-0.1.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `gpterminator-0.1.8/PKG-INFO` & `gpterminator-0.1.9/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gpterminator
+-Version: 0.1.8
++Version: 0.1.9
+ Summary: See https://github.com/AineeJames/ChatGPTerminator for more details!
+ Home-page: https://github.com/AineeJames/ChatGPTerminator
+ Author: Aiden Olsen
+ License: LICENSE
+ Project-URL: Documentation, https://github.com/AineeJames/ChatGPTerminator
+ Keywords: chatgpt cli python
+ Description-Content-Type: text/markdown
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: gpterminator Version: 0.1.8 Summary: See https://
++Metadata-Version: 2.1 Name: gpterminator Version: 0.1.9 Summary: See https://
+ github.com/AineeJames/ChatGPTerminator for more details! Home-page: https://
+ github.com/AineeJames/ChatGPTerminator Author: Aiden Olsen License: LICENSE
+ Project-URL: Documentation, https://github.com/AineeJames/ChatGPTerminator
+ Keywords: chatgpt cli python Description-Content-Type: text/markdown License-
+ File: LICENSE
+          ****** GPTerminator :robot: - ChatGPT in the Terminal! ******
+                            [./imgs/panel_output.png]
+```
+
+### Comparing `gpterminator-0.1.8/README.md` & `gpterminator-0.1.9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `gpterminator-0.1.8/gpterminator/GPTerminator.py` & `gpterminator-0.1.9/gpterminator/GPTerminator.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,16 @@
+ import openai
+ from openai import error
+ import tiktoken
+ from rich.console import Console
+ from rich.markdown import Markdown
+ from rich.panel import Panel
+ from rich.live import Live
++from rich.syntax import Syntax
++from rich.columns import Columns
+ import os
+ import json
+ import sys
+ import configparser
+ from prompt_toolkit import prompt
+ from pathlib import Path
+ import pyperclip
+@@ -93,38 +95,43 @@
+     def copyCode(self):
+         last_resp = self.msg_hist[-1]["content"]
+         code_block_list = []
+         index = 1
+         while True:
+             try:
+                 code_block = last_resp.split("```")[index]
++                lexer = code_block.split("\n")[0]
+                 code_block = "\n".join(code_block.split("\n")[1:])
+                 code_block_list.append(code_block)
+             except:
+                 lst_len = len(code_block_list)
+                 if lst_len == 1:
+                     pyperclip.copy(code_block_list[0])
++                    self.console.print(f"[bright_black]Copied text to keyboard...[/]")
+                 elif lst_len > 1:
++                    choice_list = []
+                     for num, code_block in enumerate(code_block_list):
+-                        self.console.log(
+-                            Panel.fit(code_block, title=f"Option {num + 1}")
+-                        )
++                        code_block = Syntax(code_block, lexer)
++                        choice = Panel(code_block, title=f"[bright_black]Option[/] [red]{num + 1}[/]", border_style="bright_black", style="bold")
++                        choice_list.append(choice)
++                    self.console.print(Columns(choice_list))
+                     while True:
+                         self.console.print(
+                             f"[yellow]|{self.cmd_init}|[/][bold green] Which code block do you want [/bold green][bold gray]> [/bold gray]",
+                             end="",
+                         )
+                         try:
+                             idx = int(input())
+                             if idx >= 1 and idx <= len(code_block_list):
+                                 break
+                         except:
+                             pass
+                         self.printError("incorrect input, try again")
+                     pyperclip.copy(code_block_list[idx - 1])
++                    self.console.print(f"[bright_black]Copied text to keyboard...[/]")
+                 else:
+                     self.printError("could not find code in previous response")
+                 return
+             index += 2
+ 
+     def printConfig(self):
+         config = configparser.ConfigParser()
+```
+
+### Comparing `gpterminator-0.1.8/gpterminator.egg-info/PKG-INFO` & `gpterminator-0.1.9/gpterminator.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gpterminator
+-Version: 0.1.8
++Version: 0.1.9
+ Summary: See https://github.com/AineeJames/ChatGPTerminator for more details!
+ Home-page: https://github.com/AineeJames/ChatGPTerminator
+ Author: Aiden Olsen
+ License: LICENSE
+ Project-URL: Documentation, https://github.com/AineeJames/ChatGPTerminator
+ Keywords: chatgpt cli python
+ Description-Content-Type: text/markdown
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: gpterminator Version: 0.1.8 Summary: See https://
++Metadata-Version: 2.1 Name: gpterminator Version: 0.1.9 Summary: See https://
+ github.com/AineeJames/ChatGPTerminator for more details! Home-page: https://
+ github.com/AineeJames/ChatGPTerminator Author: Aiden Olsen License: LICENSE
+ Project-URL: Documentation, https://github.com/AineeJames/ChatGPTerminator
+ Keywords: chatgpt cli python Description-Content-Type: text/markdown License-
+ File: LICENSE
+          ****** GPTerminator :robot: - ChatGPT in the Terminal! ******
+                            [./imgs/panel_output.png]
+```
+
+### Comparing `gpterminator-0.1.8/setup.cfg` & `gpterminator-0.1.9/setup.cfg`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = gpterminator
+-version = 0.1.8
++version = 0.1.9
+ author = Aiden Olsen
+ description = See https://github.com/AineeJames/ChatGPTerminator for more details!
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+ license = LICENSE
+ url = https://github.com/AineeJames/ChatGPTerminator
+ keywords = chatgpt cli python
+```
+
