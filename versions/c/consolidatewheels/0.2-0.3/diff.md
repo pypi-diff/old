@@ -1,0 +1,361 @@
+# Comparing `tmp/consolidatewheels-0.2.tar.gz` & `tmp/consolidatewheels-0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "consolidatewheels-0.2.tar", last modified: Thu Feb  2 11:13:12 2023, max compression
++gzip compressed data, was "consolidatewheels-0.3.tar", last modified: Thu Apr  6 16:31:18 2023, max compression
+```
+
+## Comparing `consolidatewheels-0.2.tar` & `consolidatewheels-0.3.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,27 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-02 11:13:12.244551 consolidatewheels-0.2/
+--rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-02-02 11:12:56.000000 consolidatewheels-0.2/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     4615 2023-02-02 11:13:12.244551 consolidatewheels-0.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4258 2023-02-02 11:12:56.000000 consolidatewheels-0.2/README.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-02 11:13:12.240551 consolidatewheels-0.2/consolidatewheels/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-02 11:12:56.000000 consolidatewheels-0.2/consolidatewheels/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      140 2023-02-02 11:12:56.000000 consolidatewheels-0.2/consolidatewheels/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4818 2023-02-02 11:12:56.000000 consolidatewheels-0.2/consolidatewheels/consolidate.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2227 2023-02-02 11:12:56.000000 consolidatewheels-0.2/consolidatewheels/main.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-02 11:13:12.244551 consolidatewheels-0.2/consolidatewheels.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4615 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      400 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       66 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       40 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       18 2023-02-02 11:13:12.000000 consolidatewheels-0.2/consolidatewheels.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      945 2023-02-02 11:12:56.000000 consolidatewheels-0.2/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-02 11:13:12.244551 consolidatewheels-0.2/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:31:18.551715 consolidatewheels-0.3/
++-rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-04-06 16:31:11.000000 consolidatewheels-0.3/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     4866 2023-04-06 16:31:18.551715 consolidatewheels-0.3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4509 2023-04-06 16:31:11.000000 consolidatewheels-0.3/README.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:31:18.547715 consolidatewheels-0.3/consolidatewheels/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      140 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4090 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/consolidate_linux.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4470 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/consolidate_osx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4538 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/dedupe.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3059 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/main.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1698 2023-04-06 16:31:11.000000 consolidatewheels-0.3/consolidatewheels/wheelsfunc.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:31:18.547715 consolidatewheels-0.3/consolidatewheels.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4866 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      626 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       66 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-06 16:31:18.000000 consolidatewheels-0.3/consolidatewheels.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      960 2023-04-06 16:31:11.000000 consolidatewheels-0.3/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 16:31:18.551715 consolidatewheels-0.3/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:31:18.547715 consolidatewheels-0.3/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     4611 2023-04-06 16:31:11.000000 consolidatewheels-0.3/tests/test_consolidate_linux.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4940 2023-04-06 16:31:11.000000 consolidatewheels-0.3/tests/test_consolidate_osx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2075 2023-04-06 16:31:11.000000 consolidatewheels-0.3/tests/test_dedupe.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4775 2023-04-06 16:31:11.000000 consolidatewheels-0.3/tests/test_main.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1636 2023-04-06 16:31:11.000000 consolidatewheels-0.3/tests/test_wheels.py
+```
+
+### Comparing `consolidatewheels-0.2/LICENSE` & `consolidatewheels-0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `consolidatewheels-0.2/PKG-INFO` & `consolidatewheels-0.3/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: consolidatewheels
+-Version: 0.2
++Version: 0.3
+ Summary: Consolidates the shared object dependencies across multiple wheels
+ Author-email: Alessandro Molina <amol@turbogears.org>
+ License: MIT
+ Classifier: Programming Language :: Python :: 3
+ Requires-Python: >=3.7
+ Description-Content-Type: text/x-rst
+ Provides-Extra: testing
+@@ -88,14 +88,21 @@
+ 
+     $ ldd venv/lib/python3.10/site-packages/libtwo/_libtwo.cpython-310-aarch64-linux-gnu.so
+ 	libfoo-ef63151d.so => not found
+ 
+ which would work correctly as far as ``libone`` is imported _before_ ``libtwo`` as they will
+ both look for ``libfoo-ef63151d.so`` which was loaded already by ``libone``.
+ 
++OSX Support
++~~~~~~~~~~~
++
++``consolidatewheels`` works also in conjunction with ``delocate``, consolidating all libraries
++embedded by ``delocate`` and removing duplicates of the embedded libraries when they are provided
++in multiple wheels.
++
+ Install
+ -------
+ 
+ Install with::
+ 
+     $ pip install consolidatewheels
+ 
+@@ -104,15 +111,15 @@
+ ``auditwheel`` has, so you are probably already satisfying them if you use ``auditwheel``.
+ 
+ Usage
+ -----
+ 
+ Usage instructions::
+ 
+-    consolidate --help
++    consolidatewheels --help
+ 
+ Example::
+ 
+-    consolidate libone.whl libtwo.whl --dest=./consolidated_wheels
++    consolidatewheels libone.whl libtwo.whl --dest=./consolidated_wheels
+ 
+ For a more complex example and a testing environment, you can take
+ a look at https://github.com/amol-/wheeldeps which uses ``consolidatewheels``
+```
+
+### Comparing `consolidatewheels-0.2/README.rst` & `consolidatewheels-0.3/README.rst`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -76,14 +76,21 @@
+ 
+     $ ldd venv/lib/python3.10/site-packages/libtwo/_libtwo.cpython-310-aarch64-linux-gnu.so
+ 	libfoo-ef63151d.so => not found
+ 
+ which would work correctly as far as ``libone`` is imported _before_ ``libtwo`` as they will
+ both look for ``libfoo-ef63151d.so`` which was loaded already by ``libone``.
+ 
++OSX Support
++~~~~~~~~~~~
++
++``consolidatewheels`` works also in conjunction with ``delocate``, consolidating all libraries
++embedded by ``delocate`` and removing duplicates of the embedded libraries when they are provided
++in multiple wheels.
++
+ Install
+ -------
+ 
+ Install with::
+ 
+     $ pip install consolidatewheels
+ 
+@@ -92,15 +99,15 @@
+ ``auditwheel`` has, so you are probably already satisfying them if you use ``auditwheel``.
+ 
+ Usage
+ -----
+ 
+ Usage instructions::
+ 
+-    consolidate --help
++    consolidatewheels --help
+ 
+ Example::
+ 
+-    consolidate libone.whl libtwo.whl --dest=./consolidated_wheels
++    consolidatewheels libone.whl libtwo.whl --dest=./consolidated_wheels
+ 
+ For a more complex example and a testing environment, you can take
+ a look at https://github.com/amol-/wheeldeps which uses ``consolidatewheels``
+```
+
+### Comparing `consolidatewheels-0.2/consolidatewheels/main.py` & `consolidatewheels-0.3/consolidatewheels/main.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,28 +1,37 @@
+ from __future__ import annotations
+ 
+ import argparse
+ import os
+ import shutil
+ import subprocess
+ import sys
++import tempfile
+ 
+-from . import consolidate
++from . import consolidate_linux, consolidate_osx, dedupe
+ 
+ 
+ def main() -> int:
+     """Main entry point of the command line tool.
+ 
+     Executes consolidatewheels and returns the exit code.
+     """
+     if not requirements_satisfied():
+         return 1
+ 
+     opts = parse_options()
+-    consolidate.consolidate(opts.wheels, opts.dest)
++    if sys.platform == "linux":
++        consolidate_linux.consolidate(opts.wheels, opts.dest)
++    elif sys.platform == "darwin":
++        # On Mac, delocate does not mangle library names,
++        # but there is no --exclude option,
++        # so we just have to remove the extra lib.
++        with tempfile.TemporaryDirectory() as dedupedir:
++            wheels = dedupe.dedupe(opts.wheels, dedupedir)
++            consolidate_osx.consolidate(wheels, opts.dest)
+     return 0
+ 
+ 
+ def parse_options() -> argparse.Namespace:
+     """Parse the options supported by the tool
+ 
+     Returns an object with options as attributes.
+@@ -57,24 +66,32 @@
+     """Verifies that all system requirements are satisfied.
+ 
+     Those can't be esily verified during install process,
+     so it's easier to just check them when the tool starts.
+ 
+     Returns ``False`` is the requirements are not satisfied.
+     """
+-    if sys.platform != "linux":
+-        print("Error: This tool only supports Linux")
+-        return False
+-
+-    # Ensure that patchelf exists and we can use it.
+-    if not shutil.which("patchelf"):
+-        print("Cannot find required utility `patchelf` in PATH")
+-        return False
+-
+-    try:
+-        subprocess.check_output(["patchelf", "--version"]).decode("utf-8")
+-    except subprocess.CalledProcessError:
+-        print("Could not call `patchelf` binary")
++    if sys.platform == "darwin":
++        if not shutil.which("install_name_tool"):
++            print("Cannot find required utility `install_name_tool` in PATH")
++            return False
++
++        if not shutil.which("codesign"):
++            print("Cannot find required utility `codesign` in PATH")
++            return False
++    elif sys.platform == "linux":
++        # Ensure that patchelf exists and we can use it.
++        if not shutil.which("patchelf"):
++            print("Cannot find required utility `patchelf` in PATH")
++            return False
++
++        try:
++            subprocess.check_output(["patchelf", "--version"]).decode("utf-8")
++        except subprocess.CalledProcessError:
++            print("Could not call `patchelf` binary")
++            return False
++    else:
++        print("Error: This tool only supports Linux and MacOSX")
+         return False
+ 
+     # All requirements are in place, that's good!
+     return True
+```
+
+### Comparing `consolidatewheels-0.2/consolidatewheels.egg-info/PKG-INFO` & `consolidatewheels-0.3/consolidatewheels.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: consolidatewheels
+-Version: 0.2
++Version: 0.3
+ Summary: Consolidates the shared object dependencies across multiple wheels
+ Author-email: Alessandro Molina <amol@turbogears.org>
+ License: MIT
+ Classifier: Programming Language :: Python :: 3
+ Requires-Python: >=3.7
+ Description-Content-Type: text/x-rst
+ Provides-Extra: testing
+@@ -88,14 +88,21 @@
+ 
+     $ ldd venv/lib/python3.10/site-packages/libtwo/_libtwo.cpython-310-aarch64-linux-gnu.so
+ 	libfoo-ef63151d.so => not found
+ 
+ which would work correctly as far as ``libone`` is imported _before_ ``libtwo`` as they will
+ both look for ``libfoo-ef63151d.so`` which was loaded already by ``libone``.
+ 
++OSX Support
++~~~~~~~~~~~
++
++``consolidatewheels`` works also in conjunction with ``delocate``, consolidating all libraries
++embedded by ``delocate`` and removing duplicates of the embedded libraries when they are provided
++in multiple wheels.
++
+ Install
+ -------
+ 
+ Install with::
+ 
+     $ pip install consolidatewheels
+ 
+@@ -104,15 +111,15 @@
+ ``auditwheel`` has, so you are probably already satisfying them if you use ``auditwheel``.
+ 
+ Usage
+ -----
+ 
+ Usage instructions::
+ 
+-    consolidate --help
++    consolidatewheels --help
+ 
+ Example::
+ 
+-    consolidate libone.whl libtwo.whl --dest=./consolidated_wheels
++    consolidatewheels libone.whl libtwo.whl --dest=./consolidated_wheels
+ 
+ For a more complex example and a testing environment, you can take
+ a look at https://github.com/amol-/wheeldeps which uses ``consolidatewheels``
+```
+
+### Comparing `consolidatewheels-0.2/pyproject.toml` & `consolidatewheels-0.3/pyproject.toml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,25 +1,26 @@
+ [build-system]
+ requires = ["setuptools>=45"]
+ 
+ [project]
+ name = "consolidatewheels"
+-version = "0.2"
++version = "0.3"
+ authors = [
+     {name = "Alessandro Molina", email = "amol@turbogears.org"},
+ ]
+ license = {text = "MIT"}
+ description = "Consolidates the shared object dependencies across multiple wheels"
+ readme = "README.rst"
+ requires-python = ">=3.7"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+ ]
+ dependencies = [
+-    "wheel"
++    "wheel",
++    "pkginfo"
+ ]
+ 
+ [project.optional-dependencies]
+ testing = [
+     "pytest >= 3.4",
+     "pytest-cov"
+ ]
+```
+

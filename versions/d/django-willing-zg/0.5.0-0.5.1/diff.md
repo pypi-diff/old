@@ -1,0 +1,168 @@
+# Comparing `tmp/django-willing-zg-0.5.0.tar.gz` & `tmp/django_willing_zg-0.5.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "django-willing-zg-0.5.0.tar", max compression
++gzip compressed data, was "django_willing_zg-0.5.1.tar", max compression
+```
+
+## Comparing `django-willing-zg-0.5.0.tar` & `django_willing_zg-0.5.1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,15 @@
+--rw-r--r--   0        0        0      689 2022-06-08 22:41:27.725933 django-willing-zg-0.5.0/README.md
+--rw-r--r--   0        0        0      642 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/pyproject.toml
+--rw-r--r--   0        0        0       22 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/__init__.py
+--rw-r--r--   0        0        0       91 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/apps.py
+--rw-r--r--   0        0        0     2138 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/mailer.py
+--rw-r--r--   0        0        0      118 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/settings/__init__.py
+--rw-r--r--   0        0        0      541 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/settings/cookies.py
+--rw-r--r--   0        0        0      541 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/settings/email.py
+--rw-r--r--   0        0        0      723 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/settings/jwt.py
+--rw-r--r--   0        0        0     1147 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/settings/secrets.py
+--rw-r--r--   0        0        0      446 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/templates/email/mlp_transactional_email.html
+--rw-r--r--   0        0        0      356 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/templates/email/mlp_transactional_email.txt
+--rw-r--r--   0        0        0      208 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/urls.py
+--rw-r--r--   0        0        0      318 2022-06-08 22:41:27.729933 django-willing-zg-0.5.0/willing_zg/views.py
+--rw-r--r--   0        0        0     1540 2022-06-08 22:42:15.742931 django-willing-zg-0.5.0/setup.py
+--rw-r--r--   0        0        0     1414 2022-06-08 22:42:15.743254 django-willing-zg-0.5.0/PKG-INFO
++-rw-r--r--   0        0        0      689 2023-04-06 16:35:36.667354 django_willing_zg-0.5.1/README.md
++-rw-r--r--   0        0        0      657 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/pyproject.toml
++-rw-r--r--   0        0        0       22 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/__init__.py
++-rw-r--r--   0        0        0       91 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/apps.py
++-rw-r--r--   0        0        0     2136 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/mailer.py
++-rw-r--r--   0        0        0      118 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/settings/__init__.py
++-rw-r--r--   0        0        0      541 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/settings/cookies.py
++-rw-r--r--   0        0        0      541 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/settings/email.py
++-rw-r--r--   0        0        0      723 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/settings/jwt.py
++-rw-r--r--   0        0        0     1147 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/settings/secrets.py
++-rw-r--r--   0        0        0      446 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/templates/email/mlp_transactional_email.html
++-rw-r--r--   0        0        0      356 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/templates/email/mlp_transactional_email.txt
++-rw-r--r--   0        0        0      208 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/urls.py
++-rw-r--r--   0        0        0      318 2023-04-06 16:35:36.671354 django_willing_zg-0.5.1/willing_zg/views.py
++-rw-r--r--   0        0        0     1466 1970-01-01 00:00:00.000000 django_willing_zg-0.5.1/PKG-INFO
+```
+
+### Comparing `django-willing-zg-0.5.0/README.md` & `django_willing_zg-0.5.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `django-willing-zg-0.5.0/pyproject.toml` & `django_willing_zg-0.5.1/pyproject.toml`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,30 +1,30 @@
+ [tool.poetry]
+ name = "django-willing-zg"
+-version = "0.5.0"
++version = "0.5.1"
+ description = ""
+ readme = "README.md"
+ authors = ["Bequest, Inc. <oss@willing.com>"]
+ packages = [
+     { include = "willing_zg" },
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = ">=3.7,<4.0"
+ django = ">=3.0.8,<5.0"
+ djangorestframework = "^3.11.0"
+ zygoat-django = ">=0.3"
+-cryptography = "^3.1"
++cryptography = ">=3.1,<40.0"
+ djangorestframework-simplejwt = "^4.4.0"
+ simplejwt-extensions = "^0.2.1"
+ 
+-[tool.poetry.dev-dependencies]
+-pytest = "^5.2"
+-flake8-black = "^0.2.1"
+-black = "^20.8b1"
++[tool.poetry.group.dev.dependencies]
++flake8-black = "^0.3.6"
++black = "^23.3.0"
++pytest = "^7.2.2"
+ 
+ [tool.black]
+ line-length = 95
+ target-version = ['py37']
+ [build-system]
+ requires = ["poetry>=0.12"]
+ build-backend = "poetry.masonry.api"
+```
+
+### Comparing `django-willing-zg-0.5.0/willing_zg/mailer.py` & `django_willing_zg-0.5.1/willing_zg/mailer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ 
+ 
+ class MailerError(Exception):
+     pass
+ 
+ 
+ class Mailer:
+-    """ The Mailer class holds helper functions for sending template emails """
++    """The Mailer class holds helper functions for sending template emails"""
+ 
+     @classmethod
+     def send_email(
+         cls,
+         to_emails,
+         subject,
+         template,
+```
+
+### Comparing `django-willing-zg-0.5.0/willing_zg/settings/cookies.py` & `django_willing_zg-0.5.1/willing_zg/settings/cookies.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-willing-zg-0.5.0/willing_zg/settings/email.py` & `django_willing_zg-0.5.1/willing_zg/settings/email.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-willing-zg-0.5.0/willing_zg/settings/jwt.py` & `django_willing_zg-0.5.1/willing_zg/settings/jwt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-willing-zg-0.5.0/willing_zg/settings/secrets.py` & `django_willing_zg-0.5.1/willing_zg/settings/secrets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-willing-zg-0.5.0/PKG-INFO` & `django_willing_zg-0.5.1/PKG-INFO`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,20 +1,21 @@
+ Metadata-Version: 2.1
+ Name: django-willing-zg
+-Version: 0.5.0
++Version: 0.5.1
+ Summary: 
+ Author: Bequest, Inc.
+ Author-email: oss@willing.com
+ Requires-Python: >=3.7,<4.0
+ Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+-Requires-Dist: cryptography (>=3.1,<4.0)
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Requires-Dist: cryptography (>=3.1,<40.0)
+ Requires-Dist: django (>=3.0.8,<5.0)
+ Requires-Dist: djangorestframework (>=3.11.0,<4.0.0)
+ Requires-Dist: djangorestframework-simplejwt (>=4.4.0,<5.0.0)
+ Requires-Dist: simplejwt-extensions (>=0.2.1,<0.3.0)
+ Requires-Dist: zygoat-django (>=0.3)
+ Description-Content-Type: text/markdown
+```
+

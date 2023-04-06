@@ -1,0 +1,280 @@
+# Comparing `tmp/com.castsoftware.uc.oneclick-0.2.1.tar.gz` & `tmp/com.castsoftware.uc.oneclick-0.2.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "com.castsoftware.uc.oneclick-0.2.1.tar", last modified: Fri Mar 31 19:52:49 2023, max compression
++gzip compressed data, was "com.castsoftware.uc.oneclick-0.2.2.tar", last modified: Thu Apr  6 16:41:00 2023, max compression
+```
+
+## Comparing `com.castsoftware.uc.oneclick-0.2.1.tar` & `com.castsoftware.uc.oneclick-0.2.2.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxrwxrwx   0        0        0        0 2023-03-31 19:52:49.383243 com.castsoftware.uc.oneclick-0.2.1/
+--rw-rw-rw-   0        0        0      515 2023-03-31 19:52:49.376217 com.castsoftware.uc.oneclick-0.2.1/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-03-31 19:52:49.129801 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/
+--rw-rw-rw-   0        0        0      515 2023-03-31 19:52:49.000000 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      818 2023-03-31 19:52:49.000000 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-31 19:52:49.000000 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      136 2023-03-31 19:52:49.000000 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-03-31 19:52:49.000000 com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/top_level.txt
+-drwxrwxrwx   0        0        0        0 2023-03-31 19:52:49.224657 com.castsoftware.uc.oneclick-0.2.1/oneclick/
+--rw-rw-rw-   0        0        0        2 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 19:52:49.267548 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/
+--rw-rw-rw-   0        0        0        0 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/__init__.py
+--rw-rw-rw-   0        0        0     2465 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/aip_analysis.py
+--rw-rw-rw-   0        0        0     1231 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/analysis.py
+--rw-rw-rw-   0        0        0     3444 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/highlight_analysis.py
+--rw-rw-rw-   0        0        0     4706 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/trackAnalysis.py
+--rw-rw-rw-   0        0        0    19538 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/config.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 19:52:49.337033 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/
+--rw-rw-rw-   0        0        0        0 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/__init__.py
+--rw-rw-rw-   0        0        0     4429 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/cleanup.py
+--rw-rw-rw-   0        0        0     6391 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/cloc.py
+--rw-rw-rw-   0        0        0     8416 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/discoveryReport.py
+--rw-rw-rw-   0        0        0     3436 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/prep.py
+--rw-rw-rw-   0        0        0      491 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/sourceValidation.py
+--rw-rw-rw-   0        0        0     6023 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/sqlDiscovery.py
+--rw-rw-rw-   0        0        0     2251 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/unzip.py
+--rw-rw-rw-   0        0        0      305 2023-03-27 13:12:48.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/exceptions.py
+--rw-rw-rw-   0        0        0    11263 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/main.py
+--rw-rw-rw-   0        0        0     1977 2023-03-28 19:09:20.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/runArg.py
+--rw-rw-rw-   0        0        0     2098 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.1/oneclick/sendEmail.py
+--rw-rw-rw-   0        0        0      705 2023-03-31 19:51:39.000000 com.castsoftware.uc.oneclick-0.2.1/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-03-31 19:52:49.383243 com.castsoftware.uc.oneclick-0.2.1/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 16:41:00.293872 com.castsoftware.uc.oneclick-0.2.2/
++-rw-rw-rw-   0        0        0      515 2023-04-06 16:41:00.284065 com.castsoftware.uc.oneclick-0.2.2/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-06 16:40:59.992482 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/
++-rw-rw-rw-   0        0        0      515 2023-04-06 16:40:59.000000 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      818 2023-04-06 16:40:59.000000 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 16:40:59.000000 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0      136 2023-04-06 16:40:59.000000 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 16:40:59.000000 com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 16:41:00.120456 com.castsoftware.uc.oneclick-0.2.2/oneclick/
++-rw-rw-rw-   0        0        0        2 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:41:00.175931 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/
++-rw-rw-rw-   0        0        0        0 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/__init__.py
++-rw-rw-rw-   0        0        0     2649 2023-04-06 16:17:36.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/aip_analysis.py
++-rw-rw-rw-   0        0        0     1231 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/analysis.py
++-rw-rw-rw-   0        0        0     3446 2023-04-06 16:21:03.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/highlight_analysis.py
++-rw-rw-rw-   0        0        0     4706 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/trackAnalysis.py
++-rw-rw-rw-   0        0        0    19538 2023-04-06 16:10:49.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/config.py
++drwxrwxrwx   0        0        0        0 2023-04-06 16:41:00.269643 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/
++-rw-rw-rw-   0        0        0        0 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/__init__.py
++-rw-rw-rw-   0        0        0     4429 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/cleanup.py
++-rw-rw-rw-   0        0        0     6391 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/cloc.py
++-rw-rw-rw-   0        0        0     8416 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/discoveryReport.py
++-rw-rw-rw-   0        0        0     3436 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/prep.py
++-rw-rw-rw-   0        0        0      491 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/sourceValidation.py
++-rw-rw-rw-   0        0        0     6023 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/sqlDiscovery.py
++-rw-rw-rw-   0        0        0     2251 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/unzip.py
++-rw-rw-rw-   0        0        0      305 2023-03-27 13:12:48.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/exceptions.py
++-rw-rw-rw-   0        0        0    11263 2023-03-29 16:14:00.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/main.py
++-rw-rw-rw-   0        0        0     1977 2023-03-28 19:09:20.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/runArg.py
++-rw-rw-rw-   0        0        0     2098 2023-03-27 13:09:22.000000 com.castsoftware.uc.oneclick-0.2.2/oneclick/sendEmail.py
++-rw-rw-rw-   0        0        0      705 2023-04-06 16:32:44.000000 com.castsoftware.uc.oneclick-0.2.2/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 16:41:00.294876 com.castsoftware.uc.oneclick-0.2.2/setup.cfg
+```
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/PKG-INFO` & `com.castsoftware.uc.oneclick-0.2.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: com.castsoftware.uc.oneclick
+-Version: 0.2.1
++Version: 0.2.2
+ Summary: Assessment Generator
+ Project-URL: Homepage, https://github.com/CAST-Extend/com.castsoftware.uc.arg
+ Project-URL: Bug Tracker, https://github.com/CAST-Extend/com.castsoftware.uc.arg/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+```
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/PKG-INFO` & `com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: com.castsoftware.uc.oneclick
+-Version: 0.2.1
++Version: 0.2.2
+ Summary: Assessment Generator
+ Project-URL: Homepage, https://github.com/CAST-Extend/com.castsoftware.uc.arg
+ Project-URL: Bug Tracker, https://github.com/CAST-Extend/com.castsoftware.uc.arg/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+```
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/com.castsoftware.uc.oneclick.egg-info/SOURCES.txt` & `com.castsoftware.uc.oneclick-0.2.2/com.castsoftware.uc.oneclick.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/aip_analysis.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/aip_analysis.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -10,42 +10,50 @@
+ class AIPAnalysis(Analysis):
+ 
+     def __init__(cls, log_level:int):
+         super().__init__(cls.__class__.__name__,log_level)
+         pass
+     
+     def run(cls, config:Config):
+-        if not config.is_aip_active:
+-            cls._log.warning('AIP active flag is set to false, skipping analysis')
+-            return 
++        if not config.is_console_active:
++            cls._log.warning('Console active flag is set to false, skipping analysis')
++            return -1
+ 
+         for appl in config.application:
+ 
+             #has thi spplication already been run?
+             aip_status = config.application[appl]['aip']
+             if aip_status == '' or aip_status.startswith('Error'):
+                 #add a new appication in AIP Console
+                 cls._log.info(f'Running analysis for {config.project_name}\{appl}')
+ 
+                 java_home = config.java_home
+                 if len(java_home) > 0:
+                     java_home = f'{java_home}/bin/'
+                 
++                enable_security=''
++                if config.enable_security_assessment:
++                    enable_security='--enable-security-assessment'
++
++                blueprint=''
++                if config.blueprint:
++                    blueprint='--blueprint'
++
+                 args = [f'{java_home}java.exe',
+                         '-jar',config.console_cli,
+                         'add',
+                         '-n',appl,
+                         '-f', f'AIP/{config.project_name}/{appl}',
+                         '-s',config.console_url,
+                         '--apikey',config.console_key,
+                         '--verbose' , 'false',
+-                        '--auto-create','--blueprint'
++                        '--auto-create',
+                         '--node-name',config.console_node,
+-                        '--enable-security-assessment', config.enable_security_assessment,
+-                        '--blueprint', config.enable_security_assessment
++                        enable_security,
++                        blueprint
+                         ]
+                 cls._log.debug(dumps(args, indent=2))
+ 
+                 try:
+                     process = run_process(args,wait=False)
+                 except FileNotFoundError as e:
+                     cls._log.error(f'Unable to launch analysis process {e}')
+```
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/analysis.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/analysis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/highlight_analysis.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/highlight_analysis.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+     def __init__(cls, log_level:int):
+         super().__init__(cls.__class__.__name__,log_level)
+         pass
+ 
+     def run(cls, config:Config):
+         if not config.is_hl_active:
+             cls._log.warning(f'Highlight is not configured, analysis will not run')
+-            return 
++            return -1
+         
+         rest = HLRestCall(config.hl_url,config.hl_user,config.hl_password,config.hl_instance)
+ 
+         try:
+             process = {}
+             for appl in config.application:
+                 hl_status = config.application[appl]['hl']
+```
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/analysis/trackAnalysis.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/analysis/trackAnalysis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/config.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/cleanup.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/cleanup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/cloc.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/cloc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/discoveryReport.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/discoveryReport.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/prep.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/prep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/sqlDiscovery.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/sqlDiscovery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/discovery/unzip.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/discovery/unzip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/main.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/runArg.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/runArg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/oneclick/sendEmail.py` & `com.castsoftware.uc.oneclick-0.2.2/oneclick/sendEmail.py`
+
+ * *Files identical despite different names*
+
+### Comparing `com.castsoftware.uc.oneclick-0.2.1/pyproject.toml` & `com.castsoftware.uc.oneclick-0.2.2/pyproject.toml`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ [project]
+ name='com.castsoftware.uc.oneclick'
+ description="Assessment Generator"
+-version='0.2.1' #prod version
++version='0.2.2' #prod version
+ dependencies = [
+     'pandas','python-pptx==0.6.18','python-docx',
+     'com.castsoftware.uc.python.common>=0.1.6',
+     'com.castsoftware.uc.action-plan',
+     'com.castsoftware.uc.arg'
+ ]
+ classifiers = [
+```
+

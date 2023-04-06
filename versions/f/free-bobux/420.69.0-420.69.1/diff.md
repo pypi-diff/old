@@ -1,0 +1,52 @@
+# Comparing `tmp/free-bobux-420.69.0.tar.gz` & `tmp/free-bobux-420.69.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "free-bobux-420.69.0.tar", last modified: Thu Apr  6 16:31:35 2023, max compression
++gzip compressed data, was "free-bobux-420.69.1.tar", last modified: Thu Apr  6 16:33:47 2023, max compression
+```
+
+## Comparing `free-bobux-420.69.0.tar` & `free-bobux-420.69.1.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:31:35.008157 free-bobux-420.69.0/
+--rw-r--r--   0 adam      (1003) adam      (1003)      248 2023-04-06 16:31:35.008157 free-bobux-420.69.0/PKG-INFO
+--rw-r--r--   0 adam      (1003) adam      (1003)     1908 2023-04-06 16:18:02.000000 free-bobux-420.69.0/README.md
+-drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:31:35.008157 free-bobux-420.69.0/free_bobux.egg-info/
+--rw-r--r--   0 adam      (1003) adam      (1003)      248 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/PKG-INFO
+--rw-r--r--   0 adam      (1003) adam      (1003)      262 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/SOURCES.txt
+--rw-r--r--   0 adam      (1003) adam      (1003)        1 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/dependency_links.txt
+--rw-r--r--   0 adam      (1003) adam      (1003)       48 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/entry_points.txt
+--rw-r--r--   0 adam      (1003) adam      (1003)        7 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/requires.txt
+--rw-r--r--   0 adam      (1003) adam      (1003)        9 2023-04-06 16:31:34.000000 free-bobux-420.69.0/free_bobux.egg-info/top_level.txt
+-drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:31:35.008157 free-bobux-420.69.0/rickroll/
+--rw-r--r--   0 adam      (1003) adam      (1003)       33 2023-04-06 16:25:00.000000 free-bobux-420.69.0/rickroll/__init__.py
+--rw-r--r--   0 adam      (1003) adam      (1003)      268 2023-04-06 16:28:01.000000 free-bobux-420.69.0/rickroll/rick.py
+--rw-r--r--   0 adam      (1003) adam      (1003)       38 2023-04-06 16:31:35.008157 free-bobux-420.69.0/setup.cfg
+--rw-r--r--   0 adam      (1003) adam      (1003)     1109 2023-04-06 16:31:11.000000 free-bobux-420.69.0/setup.py
++drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:33:47.390003 free-bobux-420.69.1/
++-rw-r--r--   0 adam      (1003) adam      (1003)      248 2023-04-06 16:33:47.390003 free-bobux-420.69.1/PKG-INFO
++-rw-r--r--   0 adam      (1003) adam      (1003)     1908 2023-04-06 16:18:02.000000 free-bobux-420.69.1/README.md
++drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:33:47.390003 free-bobux-420.69.1/free_bobux.egg-info/
++-rw-r--r--   0 adam      (1003) adam      (1003)      248 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/PKG-INFO
++-rw-r--r--   0 adam      (1003) adam      (1003)      262 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/SOURCES.txt
++-rw-r--r--   0 adam      (1003) adam      (1003)        1 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/dependency_links.txt
++-rw-r--r--   0 adam      (1003) adam      (1003)       48 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/entry_points.txt
++-rw-r--r--   0 adam      (1003) adam      (1003)        7 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/requires.txt
++-rw-r--r--   0 adam      (1003) adam      (1003)        9 2023-04-06 16:33:47.000000 free-bobux-420.69.1/free_bobux.egg-info/top_level.txt
++drwxr-xr-x   0 adam      (1003) adam      (1003)        0 2023-04-06 16:33:47.390003 free-bobux-420.69.1/rickroll/
++-rw-r--r--   0 adam      (1003) adam      (1003)       33 2023-04-06 16:25:00.000000 free-bobux-420.69.1/rickroll/__init__.py
++-rw-r--r--   0 adam      (1003) adam      (1003)      268 2023-04-06 16:28:01.000000 free-bobux-420.69.1/rickroll/rick.py
++-rw-r--r--   0 adam      (1003) adam      (1003)       38 2023-04-06 16:33:47.390003 free-bobux-420.69.1/setup.cfg
++-rw-r--r--   0 adam      (1003) adam      (1003)      951 2023-04-06 16:33:39.000000 free-bobux-420.69.1/setup.py
+```
+
+### Comparing `free-bobux-420.69.0/README.md` & `free-bobux-420.69.1/README.md`
+
+ * *Files identical despite different names*
+

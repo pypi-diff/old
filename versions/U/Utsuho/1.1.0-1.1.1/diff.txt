@@ -1,0 +1,158 @@
+--- tmp/Utsuho-1.1.0.tar.gz
++++ tmp/Utsuho-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "/Users/juno/Projects/utsuho/dist/.tmp-9bgpi2k0/Utsuho-1.1.0.tar", last modified: Wed Apr  5 13:09:40 2023, max compression
+│ +gzip compressed data, was "/Users/juno/Projects/utsuho/dist/.tmp-bukvldrb/Utsuho-1.1.1.tar", last modified: Thu Apr  6 16:32:26 2023, max compression
+│   --- Utsuho-1.1.0.tar
+├── +++ Utsuho-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-05 13:09:40.000000 Utsuho-1.1.0/
+│ │ --rw-r--r--   0 juno       (501) staff       (20)      558 2023-04-05 13:04:55.000000 Utsuho-1.1.0/LICENSE
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     2103 2023-04-05 13:09:40.000000 Utsuho-1.1.0/PKG-INFO
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     1446 2023-04-05 13:04:55.000000 Utsuho-1.1.0/README.md
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     1464 2023-04-05 13:04:55.000000 Utsuho-1.1.0/pyproject.toml
+│ │ --rw-r--r--   0 juno       (501) staff       (20)       38 2023-04-05 13:09:40.000000 Utsuho-1.1.0/setup.cfg
+│ │ -drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/
+│ │ -drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     2103 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 juno       (501) staff       (20)      243 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 juno       (501) staff       (20)        1 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 juno       (501) staff       (20)      202 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/requires.txt
+│ │ --rw-r--r--   0 juno       (501) staff       (20)        7 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/Utsuho.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-05 13:09:40.000000 Utsuho-1.1.0/src/utsuho/
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     8193 2023-04-05 13:04:55.000000 Utsuho-1.1.0/src/utsuho/__init__.py
+│ │ --rw-r--r--   0 juno       (501) staff       (20)     7423 2023-04-05 13:04:55.000000 Utsuho-1.1.0/src/utsuho/maps.py
+│ │ +drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-06 16:32:26.000000 Utsuho-1.1.1/
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)      558 2023-04-05 13:04:55.000000 Utsuho-1.1.1/LICENSE
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     2124 2023-04-06 16:32:26.000000 Utsuho-1.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     1446 2023-04-05 13:04:55.000000 Utsuho-1.1.1/README.md
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     1456 2023-04-06 16:23:35.000000 Utsuho-1.1.1/pyproject.toml
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)       38 2023-04-06 16:32:26.000000 Utsuho-1.1.1/setup.cfg
+│ │ +drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/
+│ │ +drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     2124 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)      243 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)        1 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)      210 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/requires.txt
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)        7 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/Utsuho.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 juno       (501) staff       (20)        0 2023-04-06 16:32:26.000000 Utsuho-1.1.1/src/utsuho/
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     8193 2023-04-06 16:23:35.000000 Utsuho-1.1.1/src/utsuho/__init__.py
+│ │ +-rw-r--r--   0 juno       (501) staff       (20)     7423 2023-04-05 13:04:55.000000 Utsuho-1.1.1/src/utsuho/maps.py
+│ │   --- Utsuho-1.1.0/LICENSE
+│ ├── +++ Utsuho-1.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- Utsuho-1.1.0/PKG-INFO
+│ ├── +++ Utsuho-1.1.1/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: Utsuho
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: Utsuho is a Python module that provides interconversion between Japanese half-width katakana and full-width katakana.
+│ │  Author-email: Nobuyuki Sekimori <43375309+juno-rmks@users.noreply.github.com>
+│ │  Project-URL: Source Code, https://github.com/juno-rmks/utsuho/
+│ │  Project-URL: Documentation, https://utsuho.readthedocs.io/
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: test
+│ │  Provides-Extra: dev
+│ │ +Provides-Extra: docs
+│ │  License-File: LICENSE
+│ │  
+│ │  # Utsuho
+│ │  
+│ │  Utsuho is a Python module that provides interconversion between Japanese half-width katakana and full-width katakana.
+│ │  
+│ │  The name Utsuho comes from the long story "Utsuho Monogatari," which is said to have been written in the middle of the Heian period, and contains descriptions of katakana.
+│ │   --- Utsuho-1.1.0/README.md
+│ ├── +++ Utsuho-1.1.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- Utsuho-1.1.0/pyproject.toml
+│ ├── +++ Utsuho-1.1.1/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -20,23 +20,20 @@
+│ │  
+│ │  [project.urls]
+│ │  "Source Code" = "https://github.com/juno-rmks/utsuho/"
+│ │  "Documentation" = "https://utsuho.readthedocs.io/"
+│ │  
+│ │  [project.optional-dependencies]
+│ │  test = ["pytest>=7.0.0", "coverage>=7.2.2", "pytest-benchmark>=4.0.0"]
+│ │ -dev = [
+│ │ -    "build>=0.10.0",
+│ │ -    "twine>=4.0.2",
+│ │ -    "autopep8>=2.0.2",
+│ │ -    "isort>=5.11.5",
+│ │ -    "Sphinx>=5.3.0",
+│ │ -    "sphinx-intl>=2.1.0",
+│ │ -    "sphinx-rtd-theme>=1.2.0",
+│ │ -    "myst-parser>=1.0.0",
+│ │ +dev = ["build>=0.10.0", "twine>=4.0.2", "autopep8>=2.0.2", "isort>=5.11.5"]
+│ │ +docs = [
+│ │ +    "Sphinx==5.3.0",
+│ │ +    "sphinx-intl==2.1.0",
+│ │ +    "sphinx-rtd-theme==1.2.0",
+│ │ +    "myst-parser==1.0.0",
+│ │  ]
+│ │  
+│ │  [tool.setuptools.dynamic]
+│ │  version = { attr = "utsuho.__version__" }
+│ │  
+│ │  [tool.autopep8]
+│ │  max_line_length = 159
+│ │   --- Utsuho-1.1.0/src/Utsuho.egg-info/PKG-INFO
+│ ├── +++ Utsuho-1.1.1/src/Utsuho.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: Utsuho
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: Utsuho is a Python module that provides interconversion between Japanese half-width katakana and full-width katakana.
+│ │  Author-email: Nobuyuki Sekimori <43375309+juno-rmks@users.noreply.github.com>
+│ │  Project-URL: Source Code, https://github.com/juno-rmks/utsuho/
+│ │  Project-URL: Documentation, https://utsuho.readthedocs.io/
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: test
+│ │  Provides-Extra: dev
+│ │ +Provides-Extra: docs
+│ │  License-File: LICENSE
+│ │  
+│ │  # Utsuho
+│ │  
+│ │  Utsuho is a Python module that provides interconversion between Japanese half-width katakana and full-width katakana.
+│ │  
+│ │  The name Utsuho comes from the long story "Utsuho Monogatari," which is said to have been written in the middle of the Heian period, and contains descriptions of katakana.
+│ │   --- Utsuho-1.1.0/src/utsuho/__init__.py
+│ ├── +++ Utsuho-1.1.1/src/utsuho/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -22,15 +22,15 @@
+│ │      half_to_full_length_mark_map,
+│ │      half_to_full_letter_map,
+│ │      half_to_full_punctuation_map,
+│ │      half_to_full_space_map,
+│ │      half_to_full_voicing_mark_map
+│ │  )
+│ │  
+│ │ -__version__ = '1.1.0'
+│ │ +__version__ = '1.1.1'
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class ConverterConfig():
+│ │      """ Configuration of whether to convert non-katakana characters.
+│ │  
+│ │      Parameters
+│ │   --- Utsuho-1.1.0/src/utsuho/maps.py
+│ ├── +++ Utsuho-1.1.1/src/utsuho/maps.py
+│ │┄ Files identical despite different names

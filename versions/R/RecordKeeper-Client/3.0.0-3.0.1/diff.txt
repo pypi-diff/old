@@ -1,0 +1,945 @@
+--- tmp/RecordKeeper_Client-3.0.0.tar.gz
++++ tmp/RecordKeeper_Client-3.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "RecordKeeper_Client-3.0.0.tar", last modified: Mon Feb  6 18:09:17 2023, max compression
+│ +gzip compressed data, was "RecordKeeper_Client-3.0.1.tar", last modified: Thu Apr  6 16:40:08 2023, max compression
+│   --- RecordKeeper_Client-3.0.0.tar
+├── +++ RecordKeeper_Client-3.0.1.tar
+│ ├── file list
+│ │ @@ -1,23 +1,24 @@
+│ │ -drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-02-06 18:09:17.048557 RecordKeeper_Client-3.0.0/
+│ │ --rw-r--r--   0 hubert    (1001) hubert    (1001)    35149 2021-09-21 18:37:33.000000 RecordKeeper_Client-3.0.0/LICENSE
+│ │ --rw-r--r--   0 hubert    (1001) hubert    (1001)       16 2021-09-21 18:37:33.000000 RecordKeeper_Client-3.0.0/MANIFEST.in
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     5832 2023-02-06 18:09:17.048557 RecordKeeper_Client-3.0.0/PKG-INFO
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     4011 2023-02-06 17:51:31.000000 RecordKeeper_Client-3.0.0/README.md
+│ │ -drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-02-06 18:09:17.044557 RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     5832 2023-02-06 18:09:16.000000 RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)      424 2023-02-06 18:09:17.000000 RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)        1 2023-02-06 18:09:16.000000 RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)        9 2023-02-06 18:09:16.000000 RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/top_level.txt
+│ │ -drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-02-06 18:09:17.048557 RecordKeeper_Client-3.0.0/rkclient/
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)      809 2022-12-20 15:37:03.000000 RecordKeeper_Client-3.0.0/rkclient/__init__.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)    12359 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/admin.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)       97 2022-09-05 15:01:23.000000 RecordKeeper_Client-3.0.0/rkclient/auth.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     6116 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/client.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     3264 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/entities.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     2294 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/factory.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     3548 2023-02-02 20:09:10.000000 RecordKeeper_Client-3.0.0/rkclient/request.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     3885 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/serialization.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     2819 2023-01-10 16:49:07.000000 RecordKeeper_Client-3.0.0/rkclient/test_api.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)     6615 2023-02-06 17:41:30.000000 RecordKeeper_Client-3.0.0/rkclient/test_serialization.py
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)       38 2023-02-06 18:09:17.048557 RecordKeeper_Client-3.0.0/setup.cfg
+│ │ --rw-rw-r--   0 hubert    (1001) hubert    (1001)      888 2022-08-11 20:23:13.000000 RecordKeeper_Client-3.0.0/setup.py
+│ │ +drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/
+│ │ +-rw-r--r--   0 hubert    (1001) hubert    (1001)    35149 2021-09-21 18:37:33.000000 RecordKeeper_Client-3.0.1/LICENSE
+│ │ +-rw-r--r--   0 hubert    (1001) hubert    (1001)       16 2021-09-21 18:37:33.000000 RecordKeeper_Client-3.0.1/MANIFEST.in
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     6127 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/PKG-INFO
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     4260 2023-04-06 16:39:47.000000 RecordKeeper_Client-3.0.1/README.md
+│ │ +drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     6127 2023-04-06 16:40:08.000000 RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)      416 2023-04-06 16:40:08.000000 RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)        1 2023-04-06 16:40:08.000000 RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)        9 2023-04-06 16:40:08.000000 RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/rkclient/
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)      820 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/rkclient/__init__.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)    14001 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/rkclient/admin.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)       97 2023-02-13 20:07:56.000000 RecordKeeper_Client-3.0.1/rkclient/auth.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     5540 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/rkclient/client.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     3264 2023-03-29 19:51:20.000000 RecordKeeper_Client-3.0.1/rkclient/entities.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     2294 2023-02-13 20:07:56.000000 RecordKeeper_Client-3.0.1/rkclient/factory.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     3456 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/rkclient/request.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     4486 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/rkclient/serialization.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)       38 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/setup.cfg
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)      894 2023-03-15 09:31:37.000000 RecordKeeper_Client-3.0.1/setup.py
+│ │ +drwxrwxr-x   0 hubert    (1001) hubert    (1001)        0 2023-04-06 16:40:08.772000 RecordKeeper_Client-3.0.1/test/
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     2880 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/test/test_api.py
+│ │ +-rw-rw-r--   0 hubert    (1001) hubert    (1001)     6627 2023-04-06 16:26:10.000000 RecordKeeper_Client-3.0.1/test/test_serialization.py
+│ │   --- RecordKeeper_Client-3.0.0/LICENSE
+│ ├── +++ RecordKeeper_Client-3.0.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- RecordKeeper_Client-3.0.0/PKG-INFO
+│ ├── +++ RecordKeeper_Client-3.0.1/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,32 +1,32 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: RecordKeeper_Client
+│ │ -Version: 3.0.0
+│ │ -Summary: Client library for accessing RecordKeepers Receiver
+│ │ +Version: 3.0.1
+│ │ +Summary: Client library for accessing Record Keepers Receiver
+│ │  Home-page: UNKNOWN
+│ │  Author: ERST
+│ │ -Author-email: noreply@erst.dk
+│ │ +Author-email: noreply@example.ecom
+│ │  License: GPLv3+
+│ │  Description: 
+│ │          # Context
+│ │          
+│ │ -        RecordKeeper (abbreviated to RK) is aimed at two broad goals:
+│ │ +        Record Keeper (abbreviated to RK) is aimed at two broad goals:
+│ │          
+│ │          1. Explaining why something happened in your platform.
+│ │             Common example that we want to support is: why event X happened at time T?
+│ │             What Models were used? Who trained them, using training data ingested from which
+│ │             datasources? It achieves it by creating graph of events.
+│ │          
+│ │          2. Recreating platform state at that time.
+│ │          
+│ │          # Basics
+│ │          
+│ │          RKClient library is used to create events (PEMS) and inform RK about them.
+│ │          
+│ │ -        You will need a running RecordKeeper Event Receiver to be able to work with it.
+│ │ +        You will need a running Record Keeper Event Receiver to be able to work with it.
+│ │          
+│ │          Recommended usage:
+│ │          
+│ │          ```
+│ │          emitter_id = uuid.UUID('..some static uuid..')
+│ │          rk_host = os.environ.get('RK_HOST')
+│ │          
+│ │ @@ -71,15 +71,15 @@
+│ │          If you want to do anything more than sending a PEM, you will need to pass a
+│ │          RK authentication credential when creating RKClient or RKAdmin.
+│ │          
+│ │          There are two types:
+│ │          1. User auth
+│ │          2. PUC auth
+│ │          
+│ │ -        First is available in RecordKeeper Dashboard, in your user profile. It's intended 
+│ │ +        First is available in Record Keeper Dashboard, in your user profile. It's intended 
+│ │          to be used in tests.
+│ │          
+│ │          Machine code on production should rather use PUC-auth, since it's user agnostic. 
+│ │          However, you will need to ask RK admin to create the PUC and send you its auth code.
+│ │          
+│ │          ## RKClient from Python console
+│ │          
+│ │ @@ -93,77 +93,82 @@
+│ │          >>> for pem in pems:
+│ │          >>>   print(pem)
+│ │          ```
+│ │          ## Changelog
+│ │          
+│ │          ### Unreleased
+│ │          
+│ │ +        ## [3.0.1] - 2023-04-06
+│ │ +        - Improved error logging, by creating less irrelevant logs. 
+│ │ +        - Add default User-Agent to requests to be equal to `recordkeeper-client-{version}`.
+│ │ +        - RKAdmin supports /info and /verify endpoints of GraphBuilder.
+│ │ +        
+│ │          ## [3.0.0] - 2023-02-06
+│ │          - Changed Artifact id field from uuid to string. This forces changes in many functions API.
+│ │          - Changed Emitter field from uuid to string.
+│ │          - RKClient get_artifacts() supports returning artifacts with properties, from graph.
+│ │          
+│ │ -        ### [2.1.0] - 20.12.2022
+│ │ +        ### [2.1.0] - 2022-12-20
+│ │          - Adjust default RK_HOST URLs to use shallower path: `<ip>:<port>/receiver/`, instead of `<ip>:<port>/recordkeeper/receiver/`
+│ │          - Removed ping() function.
+│ │          - Added deserialize_info() function for converting result of get_info() to Info class.
+│ │          - Removed postgres_enabled and neo4j_enabled flags from Info.
+│ │          
+│ │ -        ### [2.0.0] - 18.11.2022
+│ │ +        ### [2.0.0] - 2022-11-18
+│ │          - Make it possible to control GraphBuilder through RKAdmin. 
+│ │          - Refactor requests code.
+│ │          - RKAdmin new check_connections method.
+│ │          
+│ │ -        ### [1.9.1] - 20.9.2022
+│ │ +        ### [1.9.1] - 2022-09-20
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.9.0] - 13.9.2022
+│ │ +        ### [1.9.0] - 2022-09-13
+│ │          - Added async test.
+│ │          
+│ │ -        ### [1.8.0] - 23.2.2022
+│ │ +        ### [1.8.0] - 2022-02-23
+│ │          - Support for PUC auth type. 
+│ │          - New function get_tags_count.
+│ │          
+│ │ -        ### [1.7.0] - 23.2.2022
+│ │ +        ### [1.7.0] - 2022-02-23
+│ │          - RKClient catches timeout exception. 
+│ │          - Artifact instances in python can be compared using equal operator.
+│ │          
+│ │ -        ### [1.6.1] - 26.01.2022
+│ │ +        ### [1.6.1] - 2022-01-26
+│ │          - PEM deduplicates uses artifacts. 
+│ │          - Fix for function behaviour in mocked RKClient.
+│ │          
+│ │ -        ### [1.6.0] - 17.01.2022
+│ │ +        ### [1.6.0] - 2022-01-17
+│ │          - Removed PEM User field, bumped PEM version to 1.0.1
+│ │          
+│ │ -        ### [1.5.0] - 21.12.2021
+│ │ +        ### [1.5.0] - 2021-12-21
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.4.0] - 16.11.2021
+│ │ +        ### [1.4.0] - 2021-11-16
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.3.0] - 6.9.2021
+│ │ +        ### [1.3.0] - 2021-09-06
+│ │          - Remove the requests dependency
+│ │          
+│ │ -        ### [1.2.3] - 26.8.2021
+│ │ +        ### [1.2.3] - 2021-08-26
+│ │          - Bump the requests version to 2.26.*
+│ │          
+│ │ -        ### [1.2.2] - 17.6.2021
+│ │ +        ### [1.2.2] - 2021-06-17
+│ │          - Option to disable SSL cert verification
+│ │          
+│ │ -        ### [1.2.1] - 8.6.2021
+│ │ +        ### [1.2.1] - 2021-06-8
+│ │          - Official release on Pypi, added license
+│ │          
+│ │          
+│ │          ---
+│ │ -        RKClient is part of ERST Recordkeeper repository.
+│ │ +        RKClient is part of ERST Record Keeper repository.
+│ │          
+│ │          RKClient is licensed with GNU General Public License version 3 or later,
+│ │          see LICENSE file for details.
+│ │          
+│ │ -        Recordkeeper is ERST's implementation of the Context Cartographer specification.
+│ │ +        Record Keeper is ERST's implementation of the Context Cartographer specification.
+│ │          
+│ │          
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- RecordKeeper_Client-3.0.0/README.md
+│ ├── +++ RecordKeeper_Client-3.0.1/README.md
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,24 +1,24 @@
+│ │  
+│ │  # Context
+│ │  
+│ │ -RecordKeeper (abbreviated to RK) is aimed at two broad goals:
+│ │ +Record Keeper (abbreviated to RK) is aimed at two broad goals:
+│ │  
+│ │  1. Explaining why something happened in your platform.
+│ │     Common example that we want to support is: why event X happened at time T?
+│ │     What Models were used? Who trained them, using training data ingested from which
+│ │     datasources? It achieves it by creating graph of events.
+│ │  
+│ │  2. Recreating platform state at that time.
+│ │  
+│ │  # Basics
+│ │  
+│ │  RKClient library is used to create events (PEMS) and inform RK about them.
+│ │  
+│ │ -You will need a running RecordKeeper Event Receiver to be able to work with it.
+│ │ +You will need a running Record Keeper Event Receiver to be able to work with it.
+│ │  
+│ │  Recommended usage:
+│ │  
+│ │  ```
+│ │  emitter_id = uuid.UUID('..some static uuid..')
+│ │  rk_host = os.environ.get('RK_HOST')
+│ │  
+│ │ @@ -63,15 +63,15 @@
+│ │  If you want to do anything more than sending a PEM, you will need to pass a
+│ │  RK authentication credential when creating RKClient or RKAdmin.
+│ │  
+│ │  There are two types:
+│ │  1. User auth
+│ │  2. PUC auth
+│ │  
+│ │ -First is available in RecordKeeper Dashboard, in your user profile. It's intended 
+│ │ +First is available in Record Keeper Dashboard, in your user profile. It's intended 
+│ │  to be used in tests.
+│ │  
+│ │  Machine code on production should rather use PUC-auth, since it's user agnostic. 
+│ │  However, you will need to ask RK admin to create the PUC and send you its auth code.
+│ │  
+│ │  ## RKClient from Python console
+│ │  
+│ │ @@ -85,71 +85,76 @@
+│ │  >>> for pem in pems:
+│ │  >>>   print(pem)
+│ │  ```
+│ │  ## Changelog
+│ │  
+│ │  ### Unreleased
+│ │  
+│ │ +## [3.0.1] - 2023-04-06
+│ │ +- Improved error logging, by creating less irrelevant logs. 
+│ │ +- Add default User-Agent to requests to be equal to `recordkeeper-client-{version}`.
+│ │ +- RKAdmin supports /info and /verify endpoints of GraphBuilder.
+│ │ +
+│ │  ## [3.0.0] - 2023-02-06
+│ │  - Changed Artifact id field from uuid to string. This forces changes in many functions API.
+│ │  - Changed Emitter field from uuid to string.
+│ │  - RKClient get_artifacts() supports returning artifacts with properties, from graph.
+│ │  
+│ │ -### [2.1.0] - 20.12.2022
+│ │ +### [2.1.0] - 2022-12-20
+│ │  - Adjust default RK_HOST URLs to use shallower path: `<ip>:<port>/receiver/`, instead of `<ip>:<port>/recordkeeper/receiver/`
+│ │  - Removed ping() function.
+│ │  - Added deserialize_info() function for converting result of get_info() to Info class.
+│ │  - Removed postgres_enabled and neo4j_enabled flags from Info.
+│ │  
+│ │ -### [2.0.0] - 18.11.2022
+│ │ +### [2.0.0] - 2022-11-18
+│ │  - Make it possible to control GraphBuilder through RKAdmin. 
+│ │  - Refactor requests code.
+│ │  - RKAdmin new check_connections method.
+│ │  
+│ │ -### [1.9.1] - 20.9.2022
+│ │ +### [1.9.1] - 2022-09-20
+│ │  - Version updated to match other components
+│ │  
+│ │ -### [1.9.0] - 13.9.2022
+│ │ +### [1.9.0] - 2022-09-13
+│ │  - Added async test.
+│ │  
+│ │ -### [1.8.0] - 23.2.2022
+│ │ +### [1.8.0] - 2022-02-23
+│ │  - Support for PUC auth type. 
+│ │  - New function get_tags_count.
+│ │  
+│ │ -### [1.7.0] - 23.2.2022
+│ │ +### [1.7.0] - 2022-02-23
+│ │  - RKClient catches timeout exception. 
+│ │  - Artifact instances in python can be compared using equal operator.
+│ │  
+│ │ -### [1.6.1] - 26.01.2022
+│ │ +### [1.6.1] - 2022-01-26
+│ │  - PEM deduplicates uses artifacts. 
+│ │  - Fix for function behaviour in mocked RKClient.
+│ │  
+│ │ -### [1.6.0] - 17.01.2022
+│ │ +### [1.6.0] - 2022-01-17
+│ │  - Removed PEM User field, bumped PEM version to 1.0.1
+│ │  
+│ │ -### [1.5.0] - 21.12.2021
+│ │ +### [1.5.0] - 2021-12-21
+│ │  - Version updated to match other components
+│ │  
+│ │ -### [1.4.0] - 16.11.2021
+│ │ +### [1.4.0] - 2021-11-16
+│ │  - Version updated to match other components
+│ │  
+│ │ -### [1.3.0] - 6.9.2021
+│ │ +### [1.3.0] - 2021-09-06
+│ │  - Remove the requests dependency
+│ │  
+│ │ -### [1.2.3] - 26.8.2021
+│ │ +### [1.2.3] - 2021-08-26
+│ │  - Bump the requests version to 2.26.*
+│ │  
+│ │ -### [1.2.2] - 17.6.2021
+│ │ +### [1.2.2] - 2021-06-17
+│ │  - Option to disable SSL cert verification
+│ │  
+│ │ -### [1.2.1] - 8.6.2021
+│ │ +### [1.2.1] - 2021-06-8
+│ │  - Official release on Pypi, added license
+│ │  
+│ │  
+│ │  ---
+│ │ -RKClient is part of ERST Recordkeeper repository.
+│ │ +RKClient is part of ERST Record Keeper repository.
+│ │  
+│ │  RKClient is licensed with GNU General Public License version 3 or later,
+│ │  see LICENSE file for details.
+│ │  
+│ │ -Recordkeeper is ERST's implementation of the Context Cartographer specification.
+│ │ +Record Keeper is ERST's implementation of the Context Cartographer specification.
+│ │   --- RecordKeeper_Client-3.0.0/RecordKeeper_Client.egg-info/PKG-INFO
+│ ├── +++ RecordKeeper_Client-3.0.1/RecordKeeper_Client.egg-info/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,32 +1,32 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: RecordKeeper-Client
+│ │ -Version: 3.0.0
+│ │ -Summary: Client library for accessing RecordKeepers Receiver
+│ │ +Version: 3.0.1
+│ │ +Summary: Client library for accessing Record Keepers Receiver
+│ │  Home-page: UNKNOWN
+│ │  Author: ERST
+│ │ -Author-email: noreply@erst.dk
+│ │ +Author-email: noreply@example.ecom
+│ │  License: GPLv3+
+│ │  Description: 
+│ │          # Context
+│ │          
+│ │ -        RecordKeeper (abbreviated to RK) is aimed at two broad goals:
+│ │ +        Record Keeper (abbreviated to RK) is aimed at two broad goals:
+│ │          
+│ │          1. Explaining why something happened in your platform.
+│ │             Common example that we want to support is: why event X happened at time T?
+│ │             What Models were used? Who trained them, using training data ingested from which
+│ │             datasources? It achieves it by creating graph of events.
+│ │          
+│ │          2. Recreating platform state at that time.
+│ │          
+│ │          # Basics
+│ │          
+│ │          RKClient library is used to create events (PEMS) and inform RK about them.
+│ │          
+│ │ -        You will need a running RecordKeeper Event Receiver to be able to work with it.
+│ │ +        You will need a running Record Keeper Event Receiver to be able to work with it.
+│ │          
+│ │          Recommended usage:
+│ │          
+│ │          ```
+│ │          emitter_id = uuid.UUID('..some static uuid..')
+│ │          rk_host = os.environ.get('RK_HOST')
+│ │          
+│ │ @@ -71,15 +71,15 @@
+│ │          If you want to do anything more than sending a PEM, you will need to pass a
+│ │          RK authentication credential when creating RKClient or RKAdmin.
+│ │          
+│ │          There are two types:
+│ │          1. User auth
+│ │          2. PUC auth
+│ │          
+│ │ -        First is available in RecordKeeper Dashboard, in your user profile. It's intended 
+│ │ +        First is available in Record Keeper Dashboard, in your user profile. It's intended 
+│ │          to be used in tests.
+│ │          
+│ │          Machine code on production should rather use PUC-auth, since it's user agnostic. 
+│ │          However, you will need to ask RK admin to create the PUC and send you its auth code.
+│ │          
+│ │          ## RKClient from Python console
+│ │          
+│ │ @@ -93,77 +93,82 @@
+│ │          >>> for pem in pems:
+│ │          >>>   print(pem)
+│ │          ```
+│ │          ## Changelog
+│ │          
+│ │          ### Unreleased
+│ │          
+│ │ +        ## [3.0.1] - 2023-04-06
+│ │ +        - Improved error logging, by creating less irrelevant logs. 
+│ │ +        - Add default User-Agent to requests to be equal to `recordkeeper-client-{version}`.
+│ │ +        - RKAdmin supports /info and /verify endpoints of GraphBuilder.
+│ │ +        
+│ │          ## [3.0.0] - 2023-02-06
+│ │          - Changed Artifact id field from uuid to string. This forces changes in many functions API.
+│ │          - Changed Emitter field from uuid to string.
+│ │          - RKClient get_artifacts() supports returning artifacts with properties, from graph.
+│ │          
+│ │ -        ### [2.1.0] - 20.12.2022
+│ │ +        ### [2.1.0] - 2022-12-20
+│ │          - Adjust default RK_HOST URLs to use shallower path: `<ip>:<port>/receiver/`, instead of `<ip>:<port>/recordkeeper/receiver/`
+│ │          - Removed ping() function.
+│ │          - Added deserialize_info() function for converting result of get_info() to Info class.
+│ │          - Removed postgres_enabled and neo4j_enabled flags from Info.
+│ │          
+│ │ -        ### [2.0.0] - 18.11.2022
+│ │ +        ### [2.0.0] - 2022-11-18
+│ │          - Make it possible to control GraphBuilder through RKAdmin. 
+│ │          - Refactor requests code.
+│ │          - RKAdmin new check_connections method.
+│ │          
+│ │ -        ### [1.9.1] - 20.9.2022
+│ │ +        ### [1.9.1] - 2022-09-20
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.9.0] - 13.9.2022
+│ │ +        ### [1.9.0] - 2022-09-13
+│ │          - Added async test.
+│ │          
+│ │ -        ### [1.8.0] - 23.2.2022
+│ │ +        ### [1.8.0] - 2022-02-23
+│ │          - Support for PUC auth type. 
+│ │          - New function get_tags_count.
+│ │          
+│ │ -        ### [1.7.0] - 23.2.2022
+│ │ +        ### [1.7.0] - 2022-02-23
+│ │          - RKClient catches timeout exception. 
+│ │          - Artifact instances in python can be compared using equal operator.
+│ │          
+│ │ -        ### [1.6.1] - 26.01.2022
+│ │ +        ### [1.6.1] - 2022-01-26
+│ │          - PEM deduplicates uses artifacts. 
+│ │          - Fix for function behaviour in mocked RKClient.
+│ │          
+│ │ -        ### [1.6.0] - 17.01.2022
+│ │ +        ### [1.6.0] - 2022-01-17
+│ │          - Removed PEM User field, bumped PEM version to 1.0.1
+│ │          
+│ │ -        ### [1.5.0] - 21.12.2021
+│ │ +        ### [1.5.0] - 2021-12-21
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.4.0] - 16.11.2021
+│ │ +        ### [1.4.0] - 2021-11-16
+│ │          - Version updated to match other components
+│ │          
+│ │ -        ### [1.3.0] - 6.9.2021
+│ │ +        ### [1.3.0] - 2021-09-06
+│ │          - Remove the requests dependency
+│ │          
+│ │ -        ### [1.2.3] - 26.8.2021
+│ │ +        ### [1.2.3] - 2021-08-26
+│ │          - Bump the requests version to 2.26.*
+│ │          
+│ │ -        ### [1.2.2] - 17.6.2021
+│ │ +        ### [1.2.2] - 2021-06-17
+│ │          - Option to disable SSL cert verification
+│ │          
+│ │ -        ### [1.2.1] - 8.6.2021
+│ │ +        ### [1.2.1] - 2021-06-8
+│ │          - Official release on Pypi, added license
+│ │          
+│ │          
+│ │          ---
+│ │ -        RKClient is part of ERST Recordkeeper repository.
+│ │ +        RKClient is part of ERST Record Keeper repository.
+│ │          
+│ │          RKClient is licensed with GNU General Public License version 3 or later,
+│ │          see LICENSE file for details.
+│ │          
+│ │ -        Recordkeeper is ERST's implementation of the Context Cartographer specification.
+│ │ +        Record Keeper is ERST's implementation of the Context Cartographer specification.
+│ │          
+│ │          
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/admin.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/admin.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -26,15 +26,16 @@
+│ │                   user_auth: str = '',
+│ │                   puc_auth: str = ''):
+│ │          self.receiver_client = RKClient(receiver_url, emitter_id='admin', timeout_sec=timeout_sec, insecure=insecure,
+│ │                                          user_auth=user_auth, puc_auth=puc_auth)
+│ │          graph_builder_url = graph_builder_url.rstrip('/')
+│ │          log.info(f"Connecting to Graph Builder: {graph_builder_url}")
+│ │          self.graph_builder_client = RequestHelper(graph_builder_url, timeout_sec=timeout_sec, insecure=insecure,
+│ │ -                                                  user_auth=user_auth, puc_auth=puc_auth)
+│ │ +                                                  user_auth=user_auth, puc_auth=puc_auth,
+│ │ +                                                  user_agent=f'recordkeeper-client-{self.receiver_client.get_version()}')
+│ │  
+│ │      def check_connections(self) -> Tuple[str, bool]:
+│ │          msg, ok = self.graph_builder_client.get("/info")
+│ │          if not ok:
+│ │              return f"Graph Builder connection error: {msg}", False
+│ │          msg, ok = self.receiver_client.get_info()
+│ │          if not ok:
+│ │ @@ -60,24 +61,59 @@
+│ │          start_time = time.time()
+│ │          text, ok = self.graph_builder_client.post("/flush", "{}")
+│ │          total_flush_time = time.time() - start_time
+│ │          if not ok:
+│ │              return f"flushing queue failed: {text}", False
+│ │          return f"flushing queue finished, in {total_flush_time:.2f}s", True
+│ │  
+│ │ +    def graph_verify(self) -> Tuple[str, bool]:
+│ │ +        """
+│ │ +        Starts sql vs graph comparison, and returns result as string with newlines.
+│ │ +        :return: first element: error message or 'OK'
+│ │ +                 second element: True for success, False for error
+│ │ +        """
+│ │ +        text, ok = self.graph_builder_client.post("/verify", "{}")
+│ │ +        if not ok:
+│ │ +            return f"Verifying integrity failed: {text}", False
+│ │ +        return text, True
+│ │ +
+│ │ +    def get_graph_info(self) -> Tuple[str, bool]:
+│ │ +        """
+│ │ +        Returns json with fields as in GraphBuilderInfo class - the GB state. Use `deserialize_graph_builder_info` for easy parsing.
+│ │ +        :return: check class description
+│ │ +        """
+│ │ +        text, ok = self.graph_builder_client.get("/info")
+│ │ +        return text, ok
+│ │ +
+│ │      def clean_dbs(self) -> Tuple[str, bool]:
+│ │          """
+│ │          :return: first element: error message or 'OK'
+│ │                   second element: True for success, False for error
+│ │          """
+│ │          text, ok = self.receiver_client.receiver_request.post("/clean", "{}")
+│ │          if not ok:
+│ │              return f"Cleaning db failed: {text}", False
+│ │          return 'OK', True
+│ │  
+│ │ +    def get_pem(self, pem_id: str) -> Tuple[Optional[PEM], str, bool]:
+│ │ +        """
+│ │ +        Returns pem from sql db.
+│ │ +        :param pem_id: UUID, should be in hex format.
+│ │ +        :return: PEM or None
+│ │ +        """
+│ │ +        def _get_pem() -> Tuple[Optional[PEM], str, bool]:
+│ │ +            text, ok = self.receiver_client.receiver_request.get(f"/pem/{pem_id}")
+│ │ +            if not ok:
+│ │ +                return None, text, False
+│ │ +            pem_json = json.loads(text)
+│ │ +            pem = PEMSerialization.from_dict(pem_json, True)
+│ │ +            return pem, 'OK', True
+│ │ +
+│ │ +        return _handle_request(_get_pem, "Getting pem")
+│ │ +
+│ │      def get_pems(self,
+│ │                   page_index: int = -1,
+│ │                   page_size: int = -1,
+│ │                   sort_field: str = '',
+│ │                   sort_order: str = '',
+│ │                   filters: Optional[Dict] = None) -> Tuple[List[PEM], str, bool]:
+│ │          """
+│ │ @@ -253,32 +289,37 @@
+│ │              return [], f"Querying SQL failed: {text}", False
+│ │  
+│ │          objs = json.loads(text)
+│ │          artifacts: List[Artifact] = [ArtifactSerialization.from_dict(o) for o in objs]
+│ │          return artifacts, "", True
+│ │  
+│ │      def _get_artifacts_from_graph(self) -> Tuple[List[Artifact], str, bool]:
+│ │ -        text, ok = self.query_graph('MATCH (a:Artifact) RETURN a.rk_id AS rk_id, a.properties as properties')
+│ │ +        text, ok = self.query_graph('MATCH (a:Artifact) RETURN a.rk_id AS rk_id, a.properties as properties, a.created_at as created_at')
+│ │          if not ok:
+│ │              return [], text, False
+│ │  
+│ │          # the text contains python like list [['<name>','<properties-as-json>'], ['<name>', ... ] ]
+│ │          objs = ast.literal_eval(text)
+│ │          artifacts: List[Artifact] = [
+│ │ -            ArtifactSerialization.from_dict(
+│ │ -                {'Name': o[0],
+│ │ -                 'Properties': json.loads(o[1]) if o[1] else {},
+│ │ -                 'CreatedAt': None,
+│ │ -                 'TaxonomyFiles': None}
+│ │ -            )
+│ │ +            create_artifact_from_neo4j(o)
+│ │              for o in objs
+│ │          ]
+│ │          return artifacts, "", True
+│ │  
+│ │  
+│ │ +def create_artifact_from_neo4j(result: tuple) -> Artifact:
+│ │ +    art = ArtifactSerialization.from_dict(
+│ │ +        {'Name': result[0],
+│ │ +         'Properties': json.loads(result[1]) if result[1] else {},
+│ │ +         'CreatedAt': result[2],
+│ │ +         'TaxonomyFiles': None}
+│ │ +    )
+│ │ +    return art
+│ │ +
+│ │ +
+│ │  def _handle_request(func: Callable, name: str) -> Tuple[Any, str, bool]:
+│ │      """
+│ │      Wraps the error, logging and exception handling.
+│ │      """
+│ │      obj, text, ok = func()
+│ │      if not ok:
+│ │          text = f"{name} failed: {text}"
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/client.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/client.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,45 +1,23 @@
+│ │  import time
+│ │  import logging
+│ │  import datetime
+│ │  from uuid import UUID, uuid1
+│ │ -from typing import Dict, Any, Optional, Tuple, Callable
+│ │ +from typing import Dict, Optional, Tuple, Callable
+│ │  from importlib.metadata import version
+│ │  
+│ │  from rkclient.auth import RK_USER_AUTH_HEADER, RK_PUC_AUTH_HEADER
+│ │  from rkclient.entities import PEM, Artifact
+│ │  from rkclient.request import RequestHelper
+│ │  from rkclient.serialization import PEMSerialization, _encode_as_base64
+│ │  
+│ │  log = logging.getLogger("rkclient")
+│ │  RK_VERSION = version('RecordKeeper_Client')
+│ │  
+│ │  
+│ │ -def add_pem_context(files: Dict[str, Any], pem: PEM):
+│ │ -    """
+│ │ -    Helper function to be used when adding RK context to request
+│ │ -    :param files: a dictionary which belongs to Python Requests object
+│ │ -    :return:
+│ │ -    """
+│ │ -    files['rk_context'] = pem.ID.hex
+│ │ -
+│ │ -
+│ │ -def get_pem_from_request(request) -> Optional[UUID]:
+│ │ -    """
+│ │ -    Helper function to be used when retrieving RK context
+│ │ -    :param request: Flask-request object
+│ │ -    :return:
+│ │ -    """
+│ │ -    rk_context = request.files.get('rk_context', None)
+│ │ -    if rk_context is None:
+│ │ -        return None
+│ │ -    pem_id: str = rk_context.stream.read().decode("UTF8")
+│ │ -    return UUID(hex=pem_id)
+│ │ -
+│ │ -
+│ │  class RKClient:
+│ │      """
+│ │          All network functions return tuple [str, bool]
+│ │          If bool is False, str contains error description
+│ │  
+│ │          Errors are also logged to rkclient logger
+│ │      """
+│ │ @@ -55,15 +33,15 @@
+│ │          :param receiver_url:
+│ │          :param emitter_id:
+│ │          :param timeout_sec:
+│ │          :param insecure: set it to True when operating with server that has test SSL certificates
+│ │          """
+│ │  
+│ │          receiver_url = receiver_url.rstrip('/')
+│ │ -        self.receiver_request = RequestHelper(receiver_url, timeout_sec, insecure, user_auth, puc_auth)
+│ │ +        self.receiver_request = RequestHelper(receiver_url, timeout_sec, insecure, user_auth, puc_auth, f'recordkeeper-client-{RK_VERSION}')
+│ │          log.info(f"ver {RK_VERSION}, connecting to: {receiver_url}")
+│ │  
+│ │          self.emitter_id = emitter_id
+│ │  
+│ │          if user_auth:
+│ │              log.info(f"Authorizing with {RK_USER_AUTH_HEADER} header")
+│ │          elif puc_auth:
+│ │ @@ -130,15 +108,15 @@
+│ │              log.debug(f"sending PEM: {payload}")
+│ │              return self.receiver_request.post("/pem", payload)
+│ │  
+│ │          return _handle_request(_send_pem, "Sending PEM")
+│ │  
+│ │      def get_info(self) -> Tuple[str, bool]:
+│ │          """
+│ │ -        Returns json with fields as in Info class. Use `deserialize_info` for easy parsing.
+│ │ +        Returns json with fields as in Info class - the Receiver state. Use `deserialize_info` for easy parsing.
+│ │          :return: check class description
+│ │          """
+│ │          def _get_info():
+│ │              return self.receiver_request.get("/info")
+│ │  
+│ │          return _handle_request(_get_info, "Getting info", True)
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/entities.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/entities.py
+│ │┄ Files identical despite different names
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/factory.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/factory.py
+│ │┄ Files identical despite different names
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/request.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/request.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -9,25 +9,21 @@
+│ │  from rkclient.auth import RK_USER_AUTH_HEADER, RK_PUC_AUTH_HEADER
+│ │  
+│ │  log = logging.getLogger("rkclient")
+│ │  
+│ │  
+│ │  class RequestHelper:
+│ │  
+│ │ -    def __init__(self, url: str, timeout_sec: int = 5, insecure: bool = True, user_auth: str = '', puc_auth: str = ''):
+│ │ +    def __init__(self, url: str, timeout_sec: int = 5, insecure: bool = True, user_auth: str = '', puc_auth: str = '', user_agent: str = ''):
+│ │          self.url = url
+│ │          self.timeout_sec = timeout_sec
+│ │          self.user_auth = user_auth
+│ │          self.puc_auth = puc_auth
+│ │          self.insecure = insecure
+│ │ -        if self.insecure:
+│ │ -            log.warning("Disabled SSL certificate check")
+│ │ -        if "https://" not in self.url and "http://receiver:8083" not in self.url and \
+│ │ -                "localhost" not in self.url and "127.0.0.1" not in self.url:
+│ │ -            log.warning("If you're connecting to https server without specifying https in url, expect 405 errors")
+│ │ +        self.user_agent = user_agent
+│ │  
+│ │      def get(self, url_postfix: str, query_params: Optional[Dict[str, Any]] = None) -> Tuple[str, bool]:
+│ │          url = self.url + url_postfix + _encode_query_params(query_params)
+│ │          req = urllib.request.Request(url=url)
+│ │          if self.user_auth:
+│ │              req.add_header(RK_USER_AUTH_HEADER, self.user_auth)
+│ │          elif self.puc_auth:
+│ │ @@ -40,23 +36,25 @@
+│ │          req.add_header('Content-Type', 'application/json')
+│ │          if self.user_auth:
+│ │              req.add_header(RK_USER_AUTH_HEADER, self.user_auth)
+│ │          elif self.puc_auth:
+│ │              req.add_header(RK_PUC_AUTH_HEADER, self.puc_auth)
+│ │          return self._make_request(req)
+│ │  
+│ │ -    def _make_request(self, request):
+│ │ +    def _make_request(self, request: urllib.request.Request):
+│ │          try:
+│ │ +            if not request.has_header('User-Agent'):
+│ │ +                request.add_header('User-Agent', self.user_agent)
+│ │              resp = urllib.request.urlopen(request, timeout=self.timeout_sec, context=self._get_ssl_context())
+│ │          except HTTPError as e:
+│ │ -            return f"error: {e} {e.read().decode()}", False
+│ │ +            return f"error for {request.full_url}: {e} {e.read().decode()}", False
+│ │          except URLError as e:
+│ │ -            return f"connection error: {e}", False
+│ │ +            return f"connection error for {request.full_url}: {e}", False
+│ │          except timeout as e:
+│ │ -            return f"socket timed out in {self.timeout_sec}s: {e}", False
+│ │ +            return f"socket timed out in {self.timeout_sec}s for {request.full_url}: {e}", False
+│ │          else:
+│ │              return resp.read().decode(), True
+│ │  
+│ │      def _get_ssl_context(self) -> ssl.SSLContext:
+│ │          ctx = ssl.create_default_context()
+│ │          if self.insecure:
+│ │              ctx.check_hostname = False
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/serialization.py
+│ ├── +++ RecordKeeper_Client-3.0.1/rkclient/serialization.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -118,7 +118,30 @@
+│ │  
+│ │  def deserialize_info(s: str) -> Optional[Info]:
+│ │      try:
+│ │          json_obj = json.loads(s)
+│ │          return Info(**json_obj)
+│ │      except JSONDecodeError:
+│ │          return None
+│ │ +
+│ │ +
+│ │ +@dataclass
+│ │ +class GraphBuilderInfo:
+│ │ +    version: str
+│ │ +    pg_pems_count: int
+│ │ +    pg_artifacts_count: int
+│ │ +    neo4j_pems_count: int
+│ │ +    neo4j_artifacts_count: int
+│ │ +    pems_sync_pct: str
+│ │ +    artifacts_sync_pct: str
+│ │ +    loop_iteration_interval: int
+│ │ +    loop_state_should_rebuild: str  # 'False', 'True', or error message
+│ │ +    loop_state_should_flush: str    # 'False', 'True', or error message
+│ │ +
+│ │ +
+│ │ +def deserialize_graph_builder_info(s: str) -> Optional[GraphBuilderInfo]:
+│ │ +    try:
+│ │ +        json_obj = json.loads(s)
+│ │ +        return GraphBuilderInfo(**json_obj)
+│ │ +    except JSONDecodeError:
+│ │ +        return None
+│ │ +
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/test_api.py
+│ ├── +++ RecordKeeper_Client-3.0.1/test/test_api.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  import unittest
+│ │  from uuid import UUID
+│ │  from mock import patch
+│ │  
+│ │  from rkclient import RKClient, RKClientFactory
+│ │  
+│ │  
+│ │ -class TestAPI(unittest.TestCase):
+│ │ +class TestAPIUnit(unittest.TestCase):
+│ │  
+│ │      def test_rk_factory(self):
+│ │          os.environ['RK_MOCK'] = 'true'
+│ │          rk = RKClientFactory.get('', 'emitter-name')
+│ │          del os.environ['RK_MOCK']
+│ │  
+│ │          pred = rk.prepare_pem('', None)
+│ │ @@ -45,19 +45,20 @@
+│ │      def test_prepare_pem(self):
+│ │          rk = RKClient('', 'emitter-name')
+│ │          pred = rk.prepare_pem('', None)
+│ │          pem = rk.prepare_pem('some_type_name', pred.ID, { "value_int": -123 })
+│ │  
+│ │          self.assertIs(type(pem.ID), UUID)
+│ │          self.assertEqual(pem.Predecessor, pred.ID)
+│ │ +        self.assertEqual(pem.Type, 'some_type_name')
+│ │          self.assertEqual(pem.Emitter, 'emitter-name')
+│ │          self.assertEqual(pem.Properties["value_int"], -123)
+│ │  
+│ │  
+│ │ -class TestAPIWithMocking(unittest.TestCase):
+│ │ +class TestAPIWithMockingUnit(unittest.TestCase):
+│ │  
+│ │      def setUp(self):
+│ │          self.patcher = patch('urllib.request.urlopen')
+│ │          self.urlopen_mock = self.patcher.start()
+│ │  
+│ │      def tearDown(self):
+│ │          self.patcher.stop()
+│ │   --- RecordKeeper_Client-3.0.0/rkclient/test_serialization.py
+│ ├── +++ RecordKeeper_Client-3.0.1/test/test_serialization.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -32,15 +32,15 @@
+│ │      return '{"ID": "a606c8ea39a111eb8ad60a9a235141b0", "Type": "ingest", "Predecessor": null,' \
+│ │             ' "Emitter": "serialization_test_2", "TimestampClient": "2020-12-08 22:06:40",' \
+│ │             ' "TimestampReceived": "", "Properties": {"filename": "data.csv"},' \
+│ │             ' "Version": "2.0.0", "Tag": "", "TagNamespace": "", "UsesArtifacts": [' + uses_artifact + '],' \
+│ │             ' "ProducesArtifacts": [' + produces_artifact + ']}'
+│ │  
+│ │  
+│ │ -class TestPEMSerialization(unittest.TestCase):
+│ │ +class TestPEMSerializationUnit(unittest.TestCase):
+│ │  
+│ │      def test_serialize(self):
+│ │          self.maxDiff = None
+│ │          pem = PEM(UUID("a606c8ea-39a1-11eb-8ad6-0a9a235141b0"), "ingest", None,
+│ │                    "serialization_test_1", "2020-12-08 22:06:40")
+│ │          pem.Properties = {'filename': 'data.csv'}
+│ │          pem_json = PEMSerialization.to_json(pem)
+│ │ @@ -59,15 +59,15 @@
+│ │          self.assertEqual(pem.Properties, {'filename': 'data.csv'})
+│ │          self.assertEqual(pem.Version, '2.0.0')
+│ │          self.assertEqual(pem.Tag, '')
+│ │          self.assertEqual(pem.TagNamespace, '')
+│ │  
+│ │  
+│ │  # todo test serialize/deserialize PEM in format returned from Postgres, which contains only Artifact ID
+│ │ -class TestPEMArtifactSerialization(unittest.TestCase):
+│ │ +class TestPEMArtifactSerializationUnit(unittest.TestCase):
+│ │  
+│ │      def setUp(self):
+│ │          self.maxDiff = None
+│ │          self.pem = PEM(UUID("a606c8ea-39a1-11eb-8ad6-0a9a235141b0"), "ingest", None,
+│ │                         "serialization_test_2", "2020-12-08 22:06:40")
+│ │  
+│ │          self.art1 = Artifact('Foobar', {'foo': 'baz'})
+│ │ @@ -121,15 +121,15 @@
+│ │          self.assertEqual(pem.Properties['filename'], 'data.csv')
+│ │          self.assertEqual(len(pem.UsesArtifacts), 1)
+│ │          self.assertEqual(pem.UsesArtifacts[0].Name, 'Foobar')
+│ │          self.assertEqual(pem.UsesArtifacts[0].Properties, {'foo': 'baz'})
+│ │          self.assertEqual(pem.UsesArtifacts[0].TaxonomyFiles, {tax_id.hex: tax_content})
+│ │  
+│ │  
+│ │ -class TestArtifactSerialization(unittest.TestCase):
+│ │ +class TestArtifactSerializationUnit(unittest.TestCase):
+│ │  
+│ │      def test_serialize(self):
+│ │          art1 = Artifact('Foobar', {'foo': 'baz'})
+│ │          art1.CreatedAt = "2020-12-08 22:06:40"
+│ │          art_json = json.dumps(ArtifactSerialization.to_dict(art1))
+│ │          self.assertEqual(sample_art, art_json)
+│ │          self.assertEqual("Artifact(Foobar, {'foo': 'baz'}, 2020-12-08 22:06:40)", str(art1))
+│ │   --- RecordKeeper_Client-3.0.0/setup.py
+│ ├── +++ RecordKeeper_Client-3.0.1/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -4,20 +4,20 @@
+│ │      long_description = readme_file.read()
+│ │  
+│ │  with open('VERSION.txt') as version_file:
+│ │      rk_version = version_file.read().strip()
+│ │  
+│ │  setuptools.setup(
+│ │      name='RecordKeeper_Client',
+│ │ -    description='Client library for accessing RecordKeeper''s Receiver',
+│ │ +    description='Client library for accessing Record Keeper''s Receiver',
+│ │      long_description=long_description,
+│ │      long_description_content_type='text/markdown',
+│ │      version=rk_version,
+│ │      author='ERST',
+│ │ -    author_email='noreply@erst.dk',
+│ │ +    author_email='noreply@example.ecom',
+│ │      license='GPLv3+',
+│ │      packages=['rkclient'],
+│ │      python_requires='>=3.8.0',
+│ │      classifiers=[
+│ │          'Programming Language :: Python :: 3',
+│ │          'Operating System :: OS Independent',
+│ │          'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',

@@ -1,0 +1,580 @@
+--- tmp/cyxmltv-0.3.tar.gz
++++ tmp/cyxmltv-0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist\cyxmltv-0.3.tar", last modified: Tue Jun  2 07:42:48 2020, max compression
+│ +gzip compressed data, was "cyxmltv-0.4.tar", last modified: Thu Apr  6 16:31:59 2023, max compression
+│   --- cyxmltv-0.3.tar
+├── +++ cyxmltv-0.4.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ -drwxrwxrwx   0        0        0        0 2020-06-02 07:42:48.832368 cyxmltv-0.3/
+│ │ --rw-rw-rw-   0        0        0     1191 2020-06-02 07:42:48.832368 cyxmltv-0.3/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      554 2020-06-02 07:01:15.000000 cyxmltv-0.3/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2020-06-02 07:42:48.820368 cyxmltv-0.3/cyxmltv/
+│ │ --rw-rw-rw-   0        0        0        0 2020-06-02 07:40:20.000000 cyxmltv-0.3/cyxmltv/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1130 2020-06-02 07:41:55.000000 cyxmltv-0.3/cyxmltv/__main__.py
+│ │ --rw-rw-rw-   0        0        0      774 2020-06-01 14:58:01.000000 cyxmltv-0.3/cyxmltv/common.py
+│ │ --rw-rw-rw-   0        0        0     3366 2020-06-02 06:29:40.000000 cyxmltv-0.3/cyxmltv/parser.py
+│ │ --rw-rw-rw-   0        0        0       17 2020-06-02 07:17:00.000000 cyxmltv-0.3/cyxmltv/version.py
+│ │ --rw-rw-rw-   0        0        0     2096 2020-06-02 06:22:59.000000 cyxmltv-0.3/cyxmltv/xmltv.py
+│ │ -drwxrwxrwx   0        0        0        0 2020-06-02 07:42:48.830369 cyxmltv-0.3/cyxmltv.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1191 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      318 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       50 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       34 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2020-06-02 07:42:48.000000 cyxmltv-0.3/cyxmltv.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2020-06-02 07:42:48.833370 cyxmltv-0.3/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      993 2020-06-02 07:42:38.000000 cyxmltv-0.3/setup.py
+│ │ +drwxr-xr-x   0 harry     (1000) harry     (1000)        0 2023-04-06 16:31:59.642322 cyxmltv-0.4/
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)     1298 2023-04-06 16:31:59.642322 cyxmltv-0.4/PKG-INFO
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)      660 2023-04-06 16:14:19.000000 cyxmltv-0.4/README.md
+│ │ +drwxr-xr-x   0 harry     (1000) harry     (1000)        0 2023-04-06 16:31:59.642322 cyxmltv-0.4/cyxmltv/
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)        0 2023-04-06 16:14:19.000000 cyxmltv-0.4/cyxmltv/__init__.py
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)     1091 2023-04-06 16:14:19.000000 cyxmltv-0.4/cyxmltv/__main__.py
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)      745 2023-04-06 16:14:19.000000 cyxmltv-0.4/cyxmltv/common.py
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)     3269 2023-04-06 16:18:39.000000 cyxmltv-0.4/cyxmltv/parser.py
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)       16 2023-04-06 16:19:03.000000 cyxmltv-0.4/cyxmltv/version.py
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)     2031 2023-04-06 16:14:19.000000 cyxmltv-0.4/cyxmltv/xmltv.py
+│ │ +drwxr-xr-x   0 harry     (1000) harry     (1000)        0 2023-04-06 16:31:59.642322 cyxmltv-0.4/cyxmltv.egg-info/
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)     1298 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)      318 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)        1 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)       50 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)       34 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/requires.txt
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)        8 2023-04-06 16:31:59.000000 cyxmltv-0.4/cyxmltv.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)       38 2023-04-06 16:31:59.642322 cyxmltv-0.4/setup.cfg
+│ │ +-rw-r--r--   0 harry     (1000) harry     (1000)      960 2023-04-06 16:14:19.000000 cyxmltv-0.4/setup.py
+│ │   --- cyxmltv-0.3/PKG-INFO
+│ ├── +++ cyxmltv-0.4/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,31 +1,33 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: cyxmltv
+│ │ -Version: 0.3
+│ │ -Summary: Command line utility to create an XmlTv formatted EPG for cypriot channels
+│ │ -Home-page: UNKNOWN
+│ │ -Author: Harry Papaxenopoulos
+│ │ -Author-email: hpapaxen@gmail.com
+│ │ -License: MIT
+│ │ -Description: # Project CyXmlTv
+│ │ -        
+│ │ -        This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ -        electronic programming guide for cypriot channels. It's primarily used for
+│ │ -        operating the Plex DVR.
+│ │ -        
+│ │ -        ## How to install
+│ │ -        
+│ │ -        * Option 1: Install through pip with `pip install cyxmltv`
+│ │ -        * Option 2: Download the source code and create a distribution via 
+│ │ -        `python setup.py sdist`. Then install via 
+│ │ -        `pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ -        
+│ │ -        ## How to run
+│ │ -        
+│ │ -        Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ -        you want to use.
+│ │ -Keywords: cyprus xmltv plex cypriot epg rik1 rik
+│ │ -Platform: UNKNOWN
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Operating System :: OS Independent
+│ │ -Description-Content-Type: text/markdown
+│ │ +Metadata-Version: 2.1
+│ │ +Name: cyxmltv
+│ │ +Version: 0.4
+│ │ +Summary: Command line utility to create an XmlTv formatted EPG for cypriot channels
+│ │ +Home-page: UNKNOWN
+│ │ +Author: Harry Papaxenopoulos
+│ │ +Author-email: hpapaxen@gmail.com
+│ │ +License: MIT
+│ │ +Description: # Project CyXmlTv
+│ │ +        
+│ │ +        This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ +        electronic programming guide for cypriot channels. It's primarily used for
+│ │ +        operating the Plex DVR.
+│ │ +        
+│ │ +        ## How to install
+│ │ +        
+│ │ +        * Option 1: Install through pip with `pip install cyxmltv`
+│ │ +        * Option 2: Download the source code and create a distribution via 
+│ │ +        `python setup.py sdist`. Then install via 
+│ │ +        `pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ +        
+│ │ +        ## How to run
+│ │ +        
+│ │ +        Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ +        you want to use. Then, you can use the aforementioned file in Plex's
+│ │ +        [DVR setup](https://support.plex.tv/articles/225877347-live-tv-dvr/)
+│ │ +        
+│ │ +Keywords: cyprus xmltv plex cypriot epg rik1 rik
+│ │ +Platform: UNKNOWN
+│ │ +Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Operating System :: OS Independent
+│ │ +Description-Content-Type: text/markdown
+│ │   --- cyxmltv-0.3/README.md
+│ ├── +++ cyxmltv-0.4/README.md
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,17 +1,18 @@
+│ │ -# Project CyXmlTv
+│ │ -
+│ │ -This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ -electronic programming guide for cypriot channels. It's primarily used for
+│ │ -operating the Plex DVR.
+│ │ -
+│ │ -## How to install
+│ │ -
+│ │ -* Option 1: Install through pip with `pip install cyxmltv`
+│ │ -* Option 2: Download the source code and create a distribution via 
+│ │ -`python setup.py sdist`. Then install via 
+│ │ -`pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ -
+│ │ -## How to run
+│ │ -
+│ │ -Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ -you want to use.
+│ │ +# Project CyXmlTv
+│ │ +
+│ │ +This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ +electronic programming guide for cypriot channels. It's primarily used for
+│ │ +operating the Plex DVR.
+│ │ +
+│ │ +## How to install
+│ │ +
+│ │ +* Option 1: Install through pip with `pip install cyxmltv`
+│ │ +* Option 2: Download the source code and create a distribution via 
+│ │ +`python setup.py sdist`. Then install via 
+│ │ +`pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ +
+│ │ +## How to run
+│ │ +
+│ │ +Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ +you want to use. Then, you can use the aforementioned file in Plex's
+│ │ +[DVR setup](https://support.plex.tv/articles/225877347-live-tv-dvr/)
+│ │   --- cyxmltv-0.3/cyxmltv/parser.py
+│ ├── +++ cyxmltv-0.4/cyxmltv/parser.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,109 +1,109 @@
+│ │ -from datetime import date, datetime, timedelta
+│ │ -from typing import List
+│ │ -
+│ │ -import logging
+│ │ -import requests
+│ │ -from bs4 import BeautifulSoup, Tag
+│ │ -
+│ │ -from .common import Channel, TVShow, ChannelMappings
+│ │ -
+│ │ -
+│ │ -def to_date_time(base_date: date, minutes: str) -> datetime:
+│ │ -    today = datetime.combine(base_date, datetime.min.time())
+│ │ -    return today + timedelta(minutes=int(minutes))
+│ │ -
+│ │ -
+│ │ -def populate_shows(channel: Channel, tag: Tag, base_date: date):
+│ │ -    for program_tag in tag.find_all('div', attrs={'class': 'program'}):
+│ │ -        title_tag = program_tag.find('span', attrs={'class': 'program_title'})
+│ │ -        if not title_tag:
+│ │ -            continue
+│ │ -
+│ │ -        title = title_tag.getText()
+│ │ -        start_time = to_date_time(base_date, program_tag.attrs['data-start'])
+│ │ -        minutes = int(program_tag.attrs['data-dur'])
+│ │ -        end_time = timedelta(minutes=minutes) + start_time
+│ │ -        content = program_tag.find('div', attrs={'class': 'data'}).getText()
+│ │ -        channel.shows.append(TVShow(start_time, end_time, title, content))
+│ │ -
+│ │ -
+│ │ -def parse_shows(tag: Tag, channels: List[Channel], base_date: date):
+│ │ -    ch_program_tags = tag.find_all('div', attrs={'class': 'epgrow'})
+│ │ -
+│ │ -    filtered = [f for f in ch_program_tags if 'fakeepgrow' not in f['class']]
+│ │ -
+│ │ -    for i in range(0, len(channels)):
+│ │ -        populate_shows(channels[i], filtered[i], base_date)
+│ │ -
+│ │ -
+│ │ -def find_channel(channels: List[Channel], ch_id: str):
+│ │ -    return next((c for c in channels if c.id == ch_id), None)
+│ │ -
+│ │ -
+│ │ -def merge(base_list: List[Channel], new_list: List[Channel]):
+│ │ -    for new_channel in new_list:
+│ │ -        old_channel = find_channel(base_list, new_channel.id)
+│ │ -        if old_channel:
+│ │ -            old_channel.shows.extend(new_channel.shows)
+│ │ -        else:
+│ │ -            base_list.append(new_channel)
+│ │ -
+│ │ -
+│ │ -def parse_week() -> List[Channel]:
+│ │ -
+│ │ -    logging.info('Downloading epg information...')
+│ │ -
+│ │ -    channels = []
+│ │ -    for i in range(0, 6):
+│ │ -        merge(channels, parse_tv(i))
+│ │ -
+│ │ -    return channels
+│ │ -
+│ │ -
+│ │ -def parse_tv(day: int) -> List:
+│ │ -    content = download(day)
+│ │ -    soup = BeautifulSoup(content, 'html.parser')
+│ │ -
+│ │ -    logging.debug("Parsing channels for day %d", day)
+│ │ -
+│ │ -    left_tag = soup.find('div', attrs={'id':'left'})
+│ │ -    channels = parse_channels(left_tag)
+│ │ -
+│ │ -    right_tag = soup.find('div', attrs={'id': 'right'})
+│ │ -    base_date = date.today() + timedelta(days=day)
+│ │ -
+│ │ -    logging.debug("Parsing shows for day %d", day)
+│ │ -    parse_shows(right_tag, channels, base_date)
+│ │ -
+│ │ -    return channels
+│ │ -
+│ │ -
+│ │ -def parse_channels(tag: Tag) -> List[Channel]:
+│ │ -
+│ │ -    channels = []
+│ │ -
+│ │ -    ch_tags = tag.find_all('a', attrs={'class': 'channel_link'})
+│ │ -    for ch_tag in ch_tags:
+│ │ -        ch_id = ch_tag.attrs['data-reveal-id']
+│ │ -        img = ch_tag.find('div', attrs={'class': 'channel'}).attrs['style']
+│ │ -        img = img.replace('background-image: url(', '')
+│ │ -        img = img.replace(');', '')
+│ │ -        img = img.replace('\'', '')
+│ │ -
+│ │ -        name = ChannelMappings.get(ch_id)
+│ │ -
+│ │ -        channels.append(Channel(name, ch_id, img, []))
+│ │ -
+│ │ -    return channels
+│ │ -
+│ │ -
+│ │ -def download(day: int) -> str:
+│ │ -
+│ │ -    logging.debug("Downloading schedule for day %d", day)
+│ │ -
+│ │ -    base_url = "https://data.cytavision.com.cy/epg/index.php"
+│ │ -    url = "{}?site=cyprus&category=1&lang=en&day={}".format(base_url, day)
+│ │ -    r = requests.get(url, )
+│ │ -    r.encoding = 'UTF8'
+│ │ -
+│ │ -    return r.text
+│ │ +from datetime import date, datetime, timedelta
+│ │ +from typing import List
+│ │ +
+│ │ +import logging
+│ │ +import requests
+│ │ +from bs4 import BeautifulSoup, Tag
+│ │ +
+│ │ +from .common import Channel, TVShow, ChannelMappings
+│ │ +
+│ │ +
+│ │ +def to_date_time(base_date: date, minutes: str) -> datetime:
+│ │ +    today = datetime.combine(base_date, datetime.min.time())
+│ │ +    return today + timedelta(minutes=int(minutes))
+│ │ +
+│ │ +
+│ │ +def populate_shows(channel: Channel, tag: Tag, base_date: date):
+│ │ +    for program_tag in tag.find_all('div', attrs={'class': 'program'}):
+│ │ +        title_tag = program_tag.find('span', attrs={'class': 'program_title'})
+│ │ +        if not title_tag:
+│ │ +            continue
+│ │ +
+│ │ +        title = title_tag.getText()
+│ │ +        start_time = to_date_time(base_date, program_tag.attrs['data-start'])
+│ │ +        minutes = int(program_tag.attrs['data-dur'])
+│ │ +        end_time = timedelta(minutes=minutes) + start_time
+│ │ +        content = program_tag.find('div', attrs={'class': 'data'}).getText()
+│ │ +        channel.shows.append(TVShow(start_time, end_time, title, content))
+│ │ +
+│ │ +
+│ │ +def parse_shows(tag: Tag, channels: List[Channel], base_date: date):
+│ │ +    ch_program_tags = tag.find_all('div', attrs={'class': 'epgrow'})
+│ │ +
+│ │ +    filtered = [f for f in ch_program_tags if 'fakeepgrow' not in f['class']]
+│ │ +
+│ │ +    for i in range(0, len(channels)):
+│ │ +        populate_shows(channels[i], filtered[i], base_date)
+│ │ +
+│ │ +
+│ │ +def find_channel(channels: List[Channel], ch_id: str):
+│ │ +    return next((c for c in channels if c.id == ch_id), None)
+│ │ +
+│ │ +
+│ │ +def merge(base_list: List[Channel], new_list: List[Channel]):
+│ │ +    for new_channel in new_list:
+│ │ +        old_channel = find_channel(base_list, new_channel.id)
+│ │ +        if old_channel:
+│ │ +            old_channel.shows.extend(new_channel.shows)
+│ │ +        else:
+│ │ +            base_list.append(new_channel)
+│ │ +
+│ │ +
+│ │ +def parse_week() -> List[Channel]:
+│ │ +
+│ │ +    logging.info('Downloading epg information...')
+│ │ +
+│ │ +    channels = []
+│ │ +    for i in range(0, 6):
+│ │ +        merge(channels, parse_tv(i))
+│ │ +
+│ │ +    return channels
+│ │ +
+│ │ +
+│ │ +def parse_tv(day: int) -> List:
+│ │ +    content = download(day)
+│ │ +    soup = BeautifulSoup(content, 'html.parser')
+│ │ +
+│ │ +    logging.debug("Parsing channels for day %d", day)
+│ │ +
+│ │ +    left_tag = soup.find('div', attrs={'id':'left'})
+│ │ +    channels = parse_channels(left_tag)
+│ │ +
+│ │ +    right_tag = soup.find('div', attrs={'id': 'right'})
+│ │ +    base_date = date.today() + timedelta(days=day)
+│ │ +
+│ │ +    logging.debug("Parsing shows for day %d", day)
+│ │ +    parse_shows(right_tag, channels, base_date)
+│ │ +
+│ │ +    return channels
+│ │ +
+│ │ +
+│ │ +def parse_channels(tag: Tag) -> List[Channel]:
+│ │ +
+│ │ +    channels = []
+│ │ +
+│ │ +    ch_tags = tag.find_all('a', attrs={'class': 'channel_link'})
+│ │ +    for ch_tag in ch_tags:
+│ │ +        ch_id = ch_tag.attrs['data-reveal-id']
+│ │ +        img = ch_tag.find('div', attrs={'class': 'channel'}).attrs['style']
+│ │ +        img = img.replace('background-image: url(', '')
+│ │ +        img = img.replace(');', '')
+│ │ +        img = img.replace('\'', '')
+│ │ +
+│ │ +        name = ChannelMappings.get(ch_id)
+│ │ +
+│ │ +        channels.append(Channel(name, ch_id, img, []))
+│ │ +
+│ │ +    return channels
+│ │ +
+│ │ +
+│ │ +def download(day: int) -> str:
+│ │ +
+│ │ +    logging.debug("Downloading schedule for day %d", day)
+│ │ +
+│ │ +    base_url = "https://data.cytavision.com.cy/epg/index.php"
+│ │ +    url = "{}?site=cyprus&category=1&lang=en&day={}".format(base_url, day)
+│ │ +    r = requests.get(url, verify=false)
+│ │ +    r.encoding = 'UTF8'
+│ │ +
+│ │ +    return r.text
+│ │   --- cyxmltv-0.3/cyxmltv/xmltv.py
+│ ├── +++ cyxmltv-0.4/cyxmltv/xmltv.py
+│ │┄ Ordering differences only
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,65 +1,65 @@
+│ │ -import logging
+│ │ -from typing import List
+│ │ -
+│ │ -import pytz
+│ │ -from lxml import etree
+│ │ -from lxml.etree import Element
+│ │ -
+│ │ -from .common import Channel
+│ │ -from datetime import datetime
+│ │ -
+│ │ -ET = pytz.timezone('Europe/Athens')
+│ │ -
+│ │ -
+│ │ -def to_programme_date(program_time: datetime) -> str:
+│ │ -    return ET.localize(program_time).strftime('%Y%m%d%H%M%S %z')
+│ │ -
+│ │ -
+│ │ -def create_programme_tags(channel: Channel, tv: Element):
+│ │ -
+│ │ -    for show in channel.shows:
+│ │ -        pr_tag = etree.SubElement(tv, 'programme')
+│ │ -        pr_tag.attrib['start'] = to_programme_date(show.start_time)
+│ │ -        pr_tag.attrib['stop'] = to_programme_date(show.end_time)
+│ │ -        pr_tag.attrib['channel'] = channel.id
+│ │ -        title = etree.SubElement(pr_tag, 'title')
+│ │ -        title.attrib['lang'] = "el"
+│ │ -        title.text = show.name
+│ │ -
+│ │ -        desc = etree.SubElement(pr_tag, 'desc')
+│ │ -        desc.attrib['lang'] = 'el'
+│ │ -        desc.text = show.description.replace('\n', '').replace('\t', '')
+│ │ -
+│ │ -
+│ │ -def create_channel_tags(channel: Channel, tv: Element):
+│ │ -    ch_tag = etree.SubElement(tv, "channel")
+│ │ -    ch_tag.attrib['id'] = channel.id
+│ │ -    name_tag = etree.SubElement(ch_tag, 'display-name')
+│ │ -    name_tag.text = channel.name
+│ │ -    icon_tag = etree.SubElement(ch_tag, 'icon')
+│ │ -    icon_tag.attrib['src'] = channel.icon
+│ │ -
+│ │ -
+│ │ -def to_xml(channels: List[Channel], tgt_file:str) -> Element:
+│ │ -    tv = etree.Element('tv')
+│ │ -    tv.attrib['source-info-url'] = 'https://www.github.com/hpapaxen/cyxmltv'
+│ │ -    tv.attrib['source-info-name'] = 'Cyprus XMLTV'
+│ │ -
+│ │ -    logging.info('Creating xml tags for channels')
+│ │ -
+│ │ -    for channel in channels:
+│ │ -        create_channel_tags(channel, tv)
+│ │ -
+│ │ -    logging.info('Creating xml tags for shows')
+│ │ -
+│ │ -    for channel in channels:
+│ │ -        create_programme_tags(channel, tv)
+│ │ -
+│ │ -    tree = etree.ElementTree(tv)
+│ │ -
+│ │ -    logging.info("Writing result to %s", tgt_file)
+│ │ -    tree.write(tgt_file,
+│ │ -               pretty_print=True,
+│ │ -               xml_declaration=True,
+│ │ -               encoding='UTF-8',
+│ │ -               doctype='<!DOCTYPE tv SYSTEM "https://raw.githubusercontent.com/XMLTV/xmltv/master/xmltv.dtd">')
+│ │ +import logging
+│ │ +from typing import List
+│ │ +
+│ │ +import pytz
+│ │ +from lxml import etree
+│ │ +from lxml.etree import Element
+│ │ +
+│ │ +from .common import Channel
+│ │ +from datetime import datetime
+│ │ +
+│ │ +ET = pytz.timezone('Europe/Athens')
+│ │ +
+│ │ +
+│ │ +def to_programme_date(program_time: datetime) -> str:
+│ │ +    return ET.localize(program_time).strftime('%Y%m%d%H%M%S %z')
+│ │ +
+│ │ +
+│ │ +def create_programme_tags(channel: Channel, tv: Element):
+│ │ +
+│ │ +    for show in channel.shows:
+│ │ +        pr_tag = etree.SubElement(tv, 'programme')
+│ │ +        pr_tag.attrib['start'] = to_programme_date(show.start_time)
+│ │ +        pr_tag.attrib['stop'] = to_programme_date(show.end_time)
+│ │ +        pr_tag.attrib['channel'] = channel.id
+│ │ +        title = etree.SubElement(pr_tag, 'title')
+│ │ +        title.attrib['lang'] = "el"
+│ │ +        title.text = show.name
+│ │ +
+│ │ +        desc = etree.SubElement(pr_tag, 'desc')
+│ │ +        desc.attrib['lang'] = 'el'
+│ │ +        desc.text = show.description.replace('\n', '').replace('\t', '')
+│ │ +
+│ │ +
+│ │ +def create_channel_tags(channel: Channel, tv: Element):
+│ │ +    ch_tag = etree.SubElement(tv, "channel")
+│ │ +    ch_tag.attrib['id'] = channel.id
+│ │ +    name_tag = etree.SubElement(ch_tag, 'display-name')
+│ │ +    name_tag.text = channel.name
+│ │ +    icon_tag = etree.SubElement(ch_tag, 'icon')
+│ │ +    icon_tag.attrib['src'] = channel.icon
+│ │ +
+│ │ +
+│ │ +def to_xml(channels: List[Channel], tgt_file:str) -> Element:
+│ │ +    tv = etree.Element('tv')
+│ │ +    tv.attrib['source-info-url'] = 'https://www.github.com/hpapaxen/cyxmltv'
+│ │ +    tv.attrib['source-info-name'] = 'Cyprus XMLTV'
+│ │ +
+│ │ +    logging.info('Creating xml tags for channels')
+│ │ +
+│ │ +    for channel in channels:
+│ │ +        create_channel_tags(channel, tv)
+│ │ +
+│ │ +    logging.info('Creating xml tags for shows')
+│ │ +
+│ │ +    for channel in channels:
+│ │ +        create_programme_tags(channel, tv)
+│ │ +
+│ │ +    tree = etree.ElementTree(tv)
+│ │ +
+│ │ +    logging.info("Writing result to %s", tgt_file)
+│ │ +    tree.write(tgt_file,
+│ │ +               pretty_print=True,
+│ │ +               xml_declaration=True,
+│ │ +               encoding='UTF-8',
+│ │ +               doctype='<!DOCTYPE tv SYSTEM "https://raw.githubusercontent.com/XMLTV/xmltv/master/xmltv.dtd">')
+│ │   --- cyxmltv-0.3/cyxmltv.egg-info/PKG-INFO
+│ ├── +++ cyxmltv-0.4/cyxmltv.egg-info/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,31 +1,33 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: cyxmltv
+│ │ -Version: 0.3
+│ │ -Summary: Command line utility to create an XmlTv formatted EPG for cypriot channels
+│ │ -Home-page: UNKNOWN
+│ │ -Author: Harry Papaxenopoulos
+│ │ -Author-email: hpapaxen@gmail.com
+│ │ -License: MIT
+│ │ -Description: # Project CyXmlTv
+│ │ -        
+│ │ -        This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ -        electronic programming guide for cypriot channels. It's primarily used for
+│ │ -        operating the Plex DVR.
+│ │ -        
+│ │ -        ## How to install
+│ │ -        
+│ │ -        * Option 1: Install through pip with `pip install cyxmltv`
+│ │ -        * Option 2: Download the source code and create a distribution via 
+│ │ -        `python setup.py sdist`. Then install via 
+│ │ -        `pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ -        
+│ │ -        ## How to run
+│ │ -        
+│ │ -        Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ -        you want to use.
+│ │ -Keywords: cyprus xmltv plex cypriot epg rik1 rik
+│ │ -Platform: UNKNOWN
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Operating System :: OS Independent
+│ │ -Description-Content-Type: text/markdown
+│ │ +Metadata-Version: 2.1
+│ │ +Name: cyxmltv
+│ │ +Version: 0.4
+│ │ +Summary: Command line utility to create an XmlTv formatted EPG for cypriot channels
+│ │ +Home-page: UNKNOWN
+│ │ +Author: Harry Papaxenopoulos
+│ │ +Author-email: hpapaxen@gmail.com
+│ │ +License: MIT
+│ │ +Description: # Project CyXmlTv
+│ │ +        
+│ │ +        This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+│ │ +        electronic programming guide for cypriot channels. It's primarily used for
+│ │ +        operating the Plex DVR.
+│ │ +        
+│ │ +        ## How to install
+│ │ +        
+│ │ +        * Option 1: Install through pip with `pip install cyxmltv`
+│ │ +        * Option 2: Download the source code and create a distribution via 
+│ │ +        `python setup.py sdist`. Then install via 
+│ │ +        `pip install dist/cyxmltv-<version>.tar.gz`.
+│ │ +        
+│ │ +        ## How to run
+│ │ +        
+│ │ +        Simply run `cyxmltv <filename>`, where `<filename>` is the target file name 
+│ │ +        you want to use. Then, you can use the aforementioned file in Plex's
+│ │ +        [DVR setup](https://support.plex.tv/articles/225877347-live-tv-dvr/)
+│ │ +        
+│ │ +Keywords: cyprus xmltv plex cypriot epg rik1 rik
+│ │ +Platform: UNKNOWN
+│ │ +Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Operating System :: OS Independent
+│ │ +Description-Content-Type: text/markdown

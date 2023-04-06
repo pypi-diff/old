@@ -1,0 +1,1494 @@
+--- tmp/kb_controller-0.9.9.tar.gz
++++ tmp/kb_controller-1.0.0.tar.gz
+│   --- kb_controller-0.9.9.tar
+├── +++ kb_controller-1.0.0.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ --rw-r--r--   0        0        0       53 2020-02-02 00:00:00.000000 kb_controller-0.9.9/setup.py
+│ │ --rwxr-xr-x   0        0        0       33 2020-02-02 00:00:00.000000 kb_controller-0.9.9/start.sh
+│ │ --rw-r--r--   0        0        0      496 2020-02-02 00:00:00.000000 kb_controller-0.9.9/.vscode/launch.json
+│ │ --rw-r--r--   0        0        0  1518604 2020-02-02 00:00:00.000000 kb_controller-0.9.9/microbit-kode/microbit-kbMicroServer.hex
+│ │ --rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/.DS_Store
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/__init__.py
+│ │ --rw-r--r--   0        0        0     8391 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/controller.py
+│ │ --rw-r--r--   0        0        0     3970 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/ubitemulator.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/__init__.py
+│ │ --rw-r--r--   0        0        0     1330 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/event_poller.py
+│ │ --rw-r--r--   0        0        0     3906 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/kb_central.py
+│ │ --rw-r--r--   0        0        0     2294 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/kb_config.py
+│ │ --rw-r--r--   0        0        0      447 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/kbc-default-config.ini
+│ │ --rw-r--r--   0        0        0     1225 2020-02-02 00:00:00.000000 kb_controller-0.9.9/src/kb_controller/helpers/microbit.py
+│ │ --rw-r--r--   0        0        0       50 2020-02-02 00:00:00.000000 kb_controller-0.9.9/.gitignore
+│ │ --rw-r--r--   0        0        0     1074 2020-02-02 00:00:00.000000 kb_controller-0.9.9/LICENSE
+│ │ --rw-r--r--   0        0        0     9418 2020-02-02 00:00:00.000000 kb_controller-0.9.9/README.md
+│ │ --rw-r--r--   0        0        0      670 2020-02-02 00:00:00.000000 kb_controller-0.9.9/pyproject.toml
+│ │ --rw-r--r--   0        0        0    10045 2020-02-02 00:00:00.000000 kb_controller-0.9.9/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       53 2020-02-02 00:00:00.000000 kb_controller-1.0.0/setup.py
+│ │ +-rwxr-xr-x   0        0        0       33 2020-02-02 00:00:00.000000 kb_controller-1.0.0/start.sh
+│ │ +-rw-r--r--   0        0        0      496 2020-02-02 00:00:00.000000 kb_controller-1.0.0/.vscode/launch.json
+│ │ +-rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/.DS_Store
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/__init__.py
+│ │ +-rw-r--r--   0        0        0     8823 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/controller.py
+│ │ +-rw-r--r--   0        0        0     4072 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/ubitemulator.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/__init__.py
+│ │ +-rw-r--r--   0        0        0     1453 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/event_poller.py
+│ │ +-rw-r--r--   0        0        0      167 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/helper.py
+│ │ +-rw-r--r--   0        0        0     4697 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/kb_central.py
+│ │ +-rw-r--r--   0        0        0     2341 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/kb_config.py
+│ │ +-rw-r--r--   0        0        0      396 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/kbc-default-config.ini
+│ │ +-rw-r--r--   0        0        0     1532 2020-02-02 00:00:00.000000 kb_controller-1.0.0/src/kb_controller/helpers/microbit.py
+│ │ +-rw-r--r--   0        0        0       58 2020-02-02 00:00:00.000000 kb_controller-1.0.0/.gitignore
+│ │ +-rw-r--r--   0        0        0     1074 2020-02-02 00:00:00.000000 kb_controller-1.0.0/LICENSE
+│ │ +-rw-r--r--   0        0        0    15035 2020-02-02 00:00:00.000000 kb_controller-1.0.0/README.md
+│ │ +-rw-r--r--   0        0        0      670 2020-02-02 00:00:00.000000 kb_controller-1.0.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0    15662 2020-02-02 00:00:00.000000 kb_controller-1.0.0/PKG-INFO
+│ │   --- kb_controller-0.9.9/src/kb_controller/.DS_Store
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- kb_controller-0.9.9/src/kb_controller/controller.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/controller.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,27 +1,28 @@
+│ │  import serial
+│ │  import os
+│ │ -from datetime import datetime
+│ │ -from kb_controller.helpers import kb_config, kb_central, microbit, event_poller
+│ │ +import getpass
+│ │ +from kb_controller.helpers import kb_config, kb_central, microbit, event_poller, helper
+│ │  
+│ │  current_track_id = 0
+│ │  department_id = 0
+│ │  tracks_per_department = {}
+│ │  
+│ │  def start():
+│ │      clear_console()
+│ │      print()
+│ │ -    print(f'  CONTROLLER STARTER OP {datetime.now()}')
+│ │ -    print('===================================================')
+│ │ -    print()
+│ │ -
+│ │ -    # TODO: prompt for api_user/password on startup, and set this in kb_config
+│ │ -    # (and remove from the .ini file!!)
+│ │ -
+│ │ +    print(f'  CONTROLLER STARTER OP {helper.getDateString()}')
+│ │ +    print('================================================')
+│ │      microbit.initialize_connection()
+│ │ +    print()
+│ │ +    print('Tjek evt. https://kuglebane.pythonanywhere.com/users/')
+│ │ +    print()
+│ │ +    u = input('Api bruger: ')
+│ │ +    p = getpass.getpass(prompt='Kodeord:')
+│ │ +    kb_config.set_api_user(u,p)
+│ │  
+│ │      global current_track_id
+│ │      global department_id
+│ │      global tracks_per_department
+│ │  
+│ │      department_id = kb_central.get_department_id_from_token()
+│ │      tracks_per_department = kb_central.get_tracks()
+│ │ @@ -30,50 +31,59 @@
+│ │  
+│ │      while True:
+│ │  
+│ │          if current_track_id > 0 and event_poller.thread is None:
+│ │              event_poller.start_thread(current_track_id)
+│ │  
+│ │          try:
+│ │ -            byteText = microbit.read_line()
+│ │ +            byte_text = microbit.read_line()
+│ │              response = ''
+│ │ -            text = str(byteText, 'utf-8').strip()
+│ │ +            text = str(byte_text, 'utf-8').strip()
+│ │  
+│ │ -            if not text == '':
+│ │ -                print('m:b <<< ' + text)
+│ │ +            if text != '':
+│ │ +                helper.printLog('m:b <<< ' + text)
+│ │  
+│ │ -                if (text == 'quit'):
+│ │ +                if text == 'quit':
+│ │                      microbit.send_message('OK:QUIT')
+│ │                      break
+│ │  
+│ │ -                if (text.startswith('init:')):
+│ │ +                if text.startswith('init:'):
+│ │                      track = text[5:]
+│ │ -                    if not track in tracks_per_department[department_id]['tracks']:
+│ │ -                        print(f'ERROR! Bane ID {track} findes ikke for afdeling {department_id}')
+│ │ +                    if track == '0':
+│ │ +                        print()
+│ │ +                        print("FEJL! Micro:bit'en er sat rigtig op - den står til bane ID = 0")
+│ │ +                        print()
+│ │ +                        response = 'ERROR:INIT:INVALID-TRACK:' + track
+│ │ +                    elif not track in tracks_per_department[department_id]['tracks']:
+│ │ +                        print()
+│ │ +                        print(f'FEJL! Bane ID {track} findes ikke for afdeling {department_id}')
+│ │ +                        print()
+│ │                          response = 'ERROR:INIT:INVALID-TRACK:' + track
+│ │ +                        
+│ │                      else:
+│ │                          current_track_id = int(track)
+│ │                          response = 'OK:INIT:' + track
+│ │                          print_tracks()
+│ │  
+│ │ -                elif (current_track_id == 0):
+│ │ +                elif current_track_id == 0:
+│ │ +                    print()
+│ │                      print('Der er ikke tilknyttet en kuglebane til controlleren')
+│ │                      print('Brug kommandoen: "init:<<kuglebane-ID>>" for at tilknytte kuglebanen')
+│ │                      print("Dette kan du f.eks. programmere micro:bit'en til at gøre :-)")
+│ │                      print()
+│ │                      response = 'ERROR:NOT-INITIALIZED'
+│ │  
+│ │                  elif (text == 'events'):
+│ │                      print()
+│ │ -                    print(f'Henter events for kuglebanen')
+│ │ +                    print('Henter events for kuglebanen')
+│ │                      print('-----------------------------')
+│ │                      count = kb_central.get_number_of_events_for_track(current_track_id)
+│ │                      response = f'OK:EVENTS-TRACK:{current_track_id}:{count}'
+│ │  
+│ │ -                elif (text.startswith('send:')):
+│ │ +                elif text.startswith('send:'):
+│ │                      to_track = text[5:]
+│ │                      to_track_exists = False
+│ │                      for dep_id in tracks_per_department:
+│ │                          to_track_exists = to_track in tracks_per_department[dep_id]['tracks']
+│ │                          if to_track_exists:
+│ │                              break
+│ │  
+│ │ @@ -84,73 +94,70 @@
+│ │                          print()
+│ │                          print(
+│ │                              f'Sender START besked til "bane {to_track}"')
+│ │                          print('-------------------------------------')
+│ │                          kb_central.send_start_event(current_track_id, to_track)
+│ │                          response = 'OK:SEND:' + to_track
+│ │  
+│ │ -                elif (text.startswith('pop')):
+│ │ +                elif text.startswith('pop'):
+│ │                          print()
+│ │                          print(
+│ │ -                            f'"Popper" den ældste vent fra event-køen')
+│ │ +                            '"Popper" den ældste vent fra event-køen')
+│ │                          print('-------------------------------------')
+│ │                          events = kb_central.get_events_for_track(current_track_id)
+│ │                          if events is None or not 'events' in events:
+│ │                              response = 'ERROR:POP:INGEN-EVENTS'
+│ │                          else:
+│ │                              response = pop_event(events)
+│ │  
+│ │ +                elif text.startswith('FEJL!'):
+│ │ +                    print()
+│ │ +                    print("Microbit'en har opgivet dét den var igang med.")
+│ │ +                    print('Prøv igen (eller undersøg hvilke fejl der er skrevt i konsollen herover)')
+│ │ +
+│ │                  else:
+│ │                      print('Ukendt kommando modtaget: ' + text)
+│ │                      response = 'ERROR:unknown-command'
+│ │  
+│ │              if not response=='':
+│ │                  microbit.send_message(response)
+│ │  
+│ │ -        except serial.serialutil.SerialException as e:
+│ │ +        except serial.serialutil.SerialException as err:
+│ │              print()
+│ │              print("Der skete en fejl med den serielle forbindelse!")
+│ │ -            print(type(e))
+│ │ -            print(e)
+│ │ -            print(e.args)
+│ │ +            print(type(err))
+│ │ +            print(err)
+│ │ +            print(err.args)
+│ │              break
+│ │  
+│ │ -        except Exception as e:
+│ │ +        except Exception as err:
+│ │              print()
+│ │              print("Der skete en fejl!")
+│ │ -            print(type(e))
+│ │ -            print(e)
+│ │ -            print(e.args)
+│ │ +            print(type(err))
+│ │ +            print(err)
+│ │ +            print(err.args)
+│ │              microbit.send_message('ERROR:Exception')
+│ │  
+│ │      microbit.close_connection()
+│ │  
+│ │      print()
+│ │ -    print(f'FARVEL! Controlleren lukker ned nu! {datetime.now()}')
+│ │ +    print(f'FARVEL! Controlleren lukker ned nu! {helper.getDateString()}')
+│ │      print()
+│ │ -    print('Venter på at tråden der poller kuglebane-centralen afslutter.')
+│ │ -    print(f'Der kan gå op til {kb_config.poll_interval_in_seconds} sekunder...')
+│ │ -    event_poller.signal_stop_thread()
+│ │ -    
+│ │ +
+│ │ +
+│ │  def pop_event(events):
+│ │      # first event is always the oldest
+│ │      event_id_to_pop = list(events['events'])[0]
+│ │      event = events['events'][event_id_to_pop]
+│ │  
+│ │ +    kb_central.print_kb_event(event_id_to_pop, event)
+│ │ +
+│ │      command_id = event['command_id']
+│ │      from_department_id = event['from_department_id']
+│ │      from_track_id = event['from_track_id']
+│ │ -    from_track_name = event['from_track_name']
+│ │ -
+│ │ -    print()
+│ │ -    print(f'Event ID: {event_id_to_pop}')
+│ │ -    print(f'  - kommando: {command_id}')
+│ │ -    print(f'  - modtaget fra afdeling: {from_department_id}')
+│ │ -    print(f'                kuglebane: {from_track_id} ("{from_track_name}")')
+│ │ -    print()
+│ │  
+│ │      kb_central.delete_event(event_id_to_pop)
+│ │      return f'OK:POP:{from_department_id}:{from_track_id}:{command_id}'
+│ │  
+│ │  def clear_console():
+│ │      global department_id
+│ │      global tracks_per_department
+│ │ @@ -158,14 +165,15 @@
+│ │  
+│ │  def show_console_info():
+│ │      print()
+│ │      print('============================================================')
+│ │      print('   M I C R O : B I T   S E R I A L   C O N T R O L L E R')
+│ │      print('============================================================')
+│ │      print(f'Kuglebane central........: {kb_config.kbc_host}')
+│ │ +    print(f'API bruger...............: {kb_config.api_user}')
+│ │      print(f'Controller for afdeling..: {department_id}')
+│ │      print('-----------------------------------------------------------')
+│ │      print()
+│ │      print('Kommandoer:')
+│ │      print()
+│ │      print('  init:<<kuglebane_id>>')
+│ │      print('     - fortæller hvilken kuglebane controlleren håndterer')
+│ │ @@ -185,14 +193,16 @@
+│ │      print('     - sender en besked til en anden kuglebane om at starte kuglen')
+│ │      print()
+│ │      print('  quit')
+│ │      print('     - Afbryder controlleren')
+│ │      print()
+│ │      print('-----------------------------------------------------------')
+│ │      print()
+│ │ +    print("Venter på at modtage en 'init' kommando fra micro:bit'en...")
+│ │ +    print()
+│ │  
+│ │  def print_tracks():
+│ │      global current_track_id
+│ │      global department_id
+│ │      global tracks_per_department
+│ │  
+│ │      print()
+│ │   --- kb_controller-0.9.9/src/kb_controller/ubitemulator.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/ubitemulator.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,9 +1,15 @@
+│ │ -import sys
+│ │  import os
+│ │ +if os.name == 'nt':
+│ │ +    print()
+│ │ +    print('Windows understøttes ikke p.t.!')
+│ │ +    print()
+│ │ +    quit()
+│ │ +
+│ │ +import sys
+│ │  import pty
+│ │  from time import sleep
+│ │  from threading import Thread
+│ │  
+│ │  EMULATOR_PROMPT = 'Skriv kommando der skal sendes til controlleren og tryk <Enter>: '
+│ │  
+│ │  is_ctrl_initialized = False
+│ │   --- kb_controller-0.9.9/src/kb_controller/helpers/event_poller.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/helpers/event_poller.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,40 +1,43 @@
+│ │  from threading import Thread
+│ │  from time import sleep
+│ │  from datetime import datetime
+│ │  from . import microbit
+│ │  from . import kb_config
+│ │  from . import kb_central
+│ │ +from . import helper
+│ │  
+│ │ -stop_thread = False
+│ │  thread = None
+│ │  
+│ │  def kb_central_poller(current_track_id):
+│ │      sleep(1) # Give controller time to initialize
+│ │ -    global stop_thread
+│ │      while True:
+│ │          print()
+│ │          print('- - - - - - - - - - - - - - - - - - - - -')
+│ │ -        print(f"{datetime.now()} POLLER CENTRAL...")
+│ │ +        print('Henter events fra kukglebane centralen...')
+│ │ +        print()
+│ │  
+│ │          count = kb_central.get_number_of_events_for_track(current_track_id)
+│ │ -        microbit.send_message(f'EVENT-TRACKS:{current_track_id}:{count}')
+│ │ +        print()
+│ │ +        print(f'Antal events modtaget i alt: {count}')
+│ │ +        print()
+│ │ +
+│ │ +        # Do not send events automatically for now
+│ │ +        # We go for a "pure" polling solution
+│ │  
+│ │ -        print(f'Kontakter kuglebane-centralen igen om {kb_config.poll_interval_in_seconds} sekunder...')
+│ │ +        # microbit.send_message(f'EVENT-TRACKS:{current_track_id}:{count}')
+│ │ +
+│ │ +        interval = kb_config.poll_interval_in_seconds
+│ │ +        text_interval = f'{interval} sekunder' if interval <=60 else f'ca. {"%.0f" % (interval / 60)} minutter'
+│ │ +
+│ │ +        print(f'Kontakter kuglebane-centralen igen om {text_interval}...')
+│ │          print('- - - - - - - - - - - - - - - - - - - - -')
+│ │          print()
+│ │          sleep(kb_config.poll_interval_in_seconds)
+│ │ -        if (stop_thread):
+│ │ -            print('QUIT signal modtaget - stopper med at polle kuglebane controlleren!')
+│ │ -            break
+│ │  
+│ │  def start_thread(current_track_id):
+│ │      print()
+│ │ -    print(f'Starter tråd der poller kb-centralen: {kb_config.kbc_host}')
+│ │ +    print(f'Starter baggrunds-tråd der poller kb-centralen: {kb_config.kbc_host}')
+│ │      global thread
+│ │ -    if thread is None and not stop_thread:
+│ │ -        thread = Thread(group=None, target=kb_central_poller, args=(current_track_id,))
+│ │ +    if thread is None:
+│ │ +        thread = Thread(group=None, daemon=True, target=kb_central_poller, args=(current_track_id,))
+│ │          thread.start()
+│ │ -
+│ │ -def signal_stop_thread():
+│ │ -    global stop_thread
+│ │ -    stop_thread = True
+│ │   --- kb_controller-0.9.9/src/kb_controller/helpers/kb_central.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/helpers/kb_central.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,12 +1,14 @@
+│ │ +# Håndterer alle requests og forespørgsler til kuglebane centralen
+│ │ +
+│ │  import jwt
+│ │  from requests.auth import HTTPBasicAuth
+│ │  import requests
+│ │  from datetime import datetime
+│ │ -from . import kb_config
+│ │ +from . import kb_config, helper
+│ │  
+│ │  jwt_token = None
+│ │  
+│ │  def get_tracks():
+│ │      response = get_request_to_host('api/tracks/all')
+│ │      return response.json()['departments']
+│ │  
+│ │ @@ -29,18 +31,33 @@
+│ │      response = get_events_for_track(track_id)
+│ │      count = 0 if len(response)==0 else len(response["events"])
+│ │      return count
+│ │  
+│ │  def get_events_for_track(track_id):
+│ │      response = get_request_to_host(f'api/events/{track_id}')
+│ │      events = response.json()
+│ │ -    print('Response:')
+│ │ -    print(events)
+│ │ +    print()
+│ │ +    if len(events) > 0:
+│ │ +        for event_id in events["events"]:
+│ │ +            print_kb_event(event_id, events["events"][event_id])
+│ │ +            print()
+│ │      return events
+│ │  
+│ │ +def print_kb_event(event_id, event):
+│ │ +    command_id = event['command_id']
+│ │ +    created = event['created']
+│ │ +    from_department_id = event['from_department_id']
+│ │ +    from_track_id = event['from_track_id']
+│ │ +    from_track_name = event['from_track_name']
+│ │ +
+│ │ +    print(f' Event id: {event_id} - kommando: {command_id}')
+│ │ +    print(f'   - afsendt: {created}')
+│ │ +    print(f'   - fra {from_department_id}, bane {from_track_id} ({from_track_name})')
+│ │ +
+│ │ +
+│ │  def delete_event(event_id):
+│ │      response = delete_request_to_host(f'api/event/{event_id}')
+│ │      print(response.text)
+│ │  
+│ │  
+│ │  def get_jwt_bearer_auth_header():
+│ │      headers = {"Authorization": f"Bearer {get_auth_jwt_token()}"}
+│ │ @@ -68,57 +85,64 @@
+│ │          jwt_token = request_token_from_kb_cetral()
+│ │  
+│ │      return jwt_token
+│ │  
+│ │  def request_token_from_kb_cetral():
+│ │      basic = HTTPBasicAuth(kb_config.api_user, kb_config.pwd)
+│ │      url = f'{kb_config.kbc_host}auth/token'
+│ │ -    print(f'KB-CENTRAL >>> {url}')
+│ │ +    helper.printLog(f'KB-CENTRAL >>> {url}')
+│ │      try:
+│ │          response = requests.get(url, auth=basic)
+│ │      except requests.exceptions.ConnectionError as e:
+│ │          print_http_connection_error(e)
+│ │          exit()
+│ │ -    validate_response(response)
+│ │ +    try:
+│ │ +        validate_response(response)
+│ │ +    except Exception as e:
+│ │ +        print()
+│ │ +        print(e)
+│ │ +        print()
+│ │ +        exit()
+│ │ +
+│ │      return response.json()['token']
+│ │  
+│ │  
+│ │  def validate_response(response):
+│ │      if not response.status_code == 200:
+│ │          raise Exception(f'Response not OK! URL: {response.url} (status = {response.status_code})')
+│ │      
+│ │ -    print(f'KB-CENTRAL <<< Response status OK!')
+│ │ +    helper.printLog(f'KB-CENTRAL <<< Response status OK!')
+│ │      print()
+│ │  
+│ │      
+│ │  def get_request_to_host(endpoint):
+│ │      url = f'{kb_config.kbc_host}{endpoint}'
+│ │ -    print(f'KB-CENTRAL >>> {url}  [GET]')
+│ │ +    helper.printLog(f'KB-CENTRAL >>> {url}  [GET]')
+│ │      try:
+│ │          response = requests.get(url, headers=get_jwt_bearer_auth_header())
+│ │      except requests.exceptions.ConnectionError as e:
+│ │          print_http_connection_error(e)
+│ │          exit()
+│ │      validate_response(response)
+│ │      return response
+│ │      
+│ │  def post_request_to_host(endpoint):
+│ │      url = f'{kb_config.kbc_host}{endpoint}'
+│ │ -    print(f'KB-CENTRAL >>> {url}  [POST]')
+│ │ +    helper.printLog(f'KB-CENTRAL >>> {url}  [POST]')
+│ │      try:
+│ │          response = requests.post(url, headers=get_jwt_bearer_auth_header())
+│ │      except requests.exceptions.ConnectionError as e:
+│ │          print_http_connection_error(e)
+│ │          exit()
+│ │      validate_response(response)
+│ │      return response
+│ │  
+│ │  def delete_request_to_host(endpoint):
+│ │      url = f'{kb_config.kbc_host}{endpoint}'
+│ │ -    print(f'KB-CENTRAL >>> {url}  [DELETE]')
+│ │ +    helper.printLog(f'KB-CENTRAL >>> {url}  [DELETE]')
+│ │      try:
+│ │          response = requests.delete(url, headers=get_jwt_bearer_auth_header())
+│ │      except requests.exceptions.ConnectionError as e:
+│ │          print_http_connection_error(e)
+│ │          exit()
+│ │      validate_response(response)
+│ │      return response
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- kb_controller-0.9.9/src/kb_controller/helpers/kb_config.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/helpers/kb_config.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -30,20 +30,25 @@
+│ │          config['PRODUCTION'] = defaultConfig['PRODUCTION']
+│ │  
+│ │      save()
+│ │      print("Afslutter programmet - tjek kbc-config.ini filen og start igen !")
+│ │      print('----------------------------------------------------------------')
+│ │      exit()
+│ │  
+│ │ +api_user='API_User'
+│ │ +pwd='Password'
+│ │ +
+│ │ +def set_api_user(user, p):
+│ │ +    global api_user, pwd
+│ │ +    api_user = user
+│ │ +    pwd = p
+│ │  
+│ │  is_production = config['GENERAL'].getboolean('is_production')
+│ │  is_emulator = config['GENERAL'].getboolean('is_emulator')
+│ │  poll_interval_in_seconds = config['GENERAL'].getint('polling_interval')
+│ │ -api_user=config['GENERAL']['api_user']
+│ │ -pwd=config['GENERAL']['password']
+│ │  EMULATOR = config['EMULATOR']
+│ │  MICROBIT = config['MICROBIT']
+│ │  LOCALHOST = config['LOCALHOST']
+│ │  PRODUCTION = config['PRODUCTION']
+│ │  
+│ │  def get_tty_value(key):
+│ │      return EMULATOR[key] if is_emulator else MICROBIT[key]
+│ │   --- kb_controller-0.9.9/src/kb_controller/helpers/microbit.py
+│ ├── +++ kb_controller-1.0.0/src/kb_controller/helpers/microbit.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,49 +1,57 @@
+│ │ +# Håndterer al seriel kommunikation med micro:bit'en
+│ │ +
+│ │  from time import sleep
+│ │  import serial
+│ │ -from . import kb_config
+│ │ +from serial.tools.list_ports import comports
+│ │ +from . import kb_config, helper
+│ │  
+│ │  ser = None
+│ │  
+│ │  def send_message(msg):
+│ │      global ser
+│ │      if ser is None:
+│ │          initialize_connection()
+│ │  
+│ │ -    print('m:b >>> ' + msg)
+│ │ -    ser.write(bytes(msg, 'utf-8'))
+│ │ +    msg_nl = msg + '\n'
+│ │ +    helper.printLog('m:b >>> ' + msg_nl)
+│ │ +    ser.write(bytes(msg_nl, 'utf-8'))
+│ │      # ensure that the controller do not pick up the message itself 
+│ │      sleep(0.2)
+│ │  
+│ │  def read_line():
+│ │      if ser is None:
+│ │          initialize_connection()
+│ │  
+│ │      text = ser.readline() 
+│ │      ser.reset_input_buffer()
+│ │      return text
+│ │  
+│ │  def initialize_connection():
+│ │      global ser
+│ │      try:
+│ │ +        print(f'Forbinder til micro:bit på: {kb_config.tty_name}')
+│ │          ser = serial.Serial(kb_config.tty_name, kb_config.tty_rate, timeout=kb_config.tty_timeout)
+│ │          ser.reset_input_buffer()
+│ │          ser.reset_output_buffer()
+│ │ -        print()
+│ │ -        print(f'Forbinder til micro:bit på: {kb_config.tty_name}')
+│ │          sleep(0.2)
+│ │ -        send_message('init')
+│ │          return ser
+│ │      except Exception as e:
+│ │          print()
+│ │ -        print(
+│ │ -            f"Der skete en fejl under forbindelse til seriel porten: {kb_config.tty_name}")
+│ │ +        print('-------------------------------------')
+│ │ +        print("FEJL under etablering af forbindelse!")
+│ │ +        print(e.args)
+│ │ +        print()
+│ │          print("Tjek om microbit'en er forbundet, eller om portnavnet er korrekt.")
+│ │ +        ports = comports()
+│ │ +        if len(ports) > 0:
+│ │ +            print()
+│ │ +            print('Tilgængelige porte:')
+│ │ +            for port in ports:
+│ │ +                print(port)
+│ │ +        print('-------------------------------------')
+│ │          print()
+│ │ -        print(type(e))
+│ │ -        print('----')
+│ │ -        print(e.args)
+│ │          exit()
+│ │  
+│ │  def close_connection():
+│ │      if not ser is None:
+│ │          ser.close()
+│ │   --- kb_controller-0.9.9/LICENSE
+│ ├── +++ kb_controller-1.0.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kb_controller-0.9.9/README.md
+│ ├── +++ kb_controller-1.0.0/README.md
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,33 +1,239 @@
+│ │  # Coding Pirates Kuglebane controller
+│ │  
+│ │ -Controlleren kan modtage et (simpelt) serielt signal med en kommando - f.eks. fra en fra micro:bit.
+│ │ +Controlleres er lavet til [Coding Pirates Viborg/Bjerringbro](http:kodepirat.dk)s kuglebane-projekt i forårssæsonen 2023.
+│ │  
+│ │ -Ud fra den modtagne kommando sender controlleren et request til [_kuglebane centralen_](https://github.com/Coding-Pirates-Viborg/kuglebane-central) og sender efterfølgnede et svar tilbage til micro:bit'en.
+│ │ +Controlleren kan modtage et (simpelt) serielt signal med en kommando - f.eks. fra en fra micro:bit.
+│ │  
+│ │ -Når controlleren starter op (se afsnit herunder) startes en tråd der poller _kuglebane centralen_ for at høre om der er kommet events til den kuglebane controlleren er tilknyttet. 
+│ │ +Ud fra den modtagne kommando sender controlleren et request til [_kuglebane centralen_](https://github.com/Coding-Pirates-Viborg/kuglebane-central) og sender efterfølgende et svar tilbage til micro:bit'en.
+│ │  
+│ │ +Når controlleren starter op (se afsnit herunder) startes en tråd der poller _kuglebane centralen_ for at høre om der er kommet events til den kuglebane controlleren er tilknyttet.
+│ │  
+│ │  - [Coding Pirates Kuglebane controller](#coding-pirates-kuglebane-controller)
+│ │ +  - [Installation af kuglebane-controlleren](#installation-af-kuglebane-controlleren)
+│ │ +  - [Start kuglebane controlleren](#start-kuglebane-controlleren)
+│ │ +    - [Konfiguration af micro:bit og kuglebane-central](#konfiguration-af-microbit-og-kuglebane-central)
+│ │ +    - [Forbinde micro:bit til controlleren](#forbinde-microbit-til-controlleren)
+│ │ +    - [Login med API bruger ved opstart](#login-med-api-bruger-ved-opstart)
+│ │ +    - [Controller initialiseres ved opstart](#controller-initialiseres-ved-opstart)
+│ │ +    - [Hentning af beskeder til kuglebanen i baggrunden](#hentning-af-beskeder-til-kuglebanen-i-baggrunden)
+│ │ +    - [Logning af kommunikation i konsollen](#logning-af-kommunikation-i-konsollen)
+│ │    - [Kommandoer der kan sendes til controlleren](#kommandoer-der-kan-sendes-til-controlleren)
+│ │      - [Kommando: `init:<<bane_id>>`](#kommando-initbane_id)
+│ │ -    - [Kommando: `send:<<bane_id>>`](#kommando-sendbane_id)
+│ │ +    - [Kommando: `send:<<til_bane_id>>`](#kommando-sendtil_bane_id)
+│ │      - [Kommando: `events`](#kommando-events)
+│ │      - [Kommando: `pop`](#kommando-pop)
+│ │      - [Kommando: `pop:<<event_id>>`](#kommando-popevent_id)
+│ │ -  - [Start kuglebane controlleren](#start-kuglebane-controlleren)
+│ │ -    - [Konfiguration af micro:bit og kuglebane-central](#konfiguration-af-microbit-og-kuglebane-central)
+│ │ -    - [Controller initialiseres ved opstart](#controller-initialiseres-ved-opstart)
+│ │ +    - [ERROR: ukent kommando](#error-ukent-kommando)
+│ │    - [Micro:bit emulator](#microbit-emulator)
+│ │    - [Eksempelkode til micro:bit'en](#eksempelkode-til-microbiten)
+│ │    - [Finde den port micro:bit'en kommunikerer på](#finde-den-port-microbiten-kommunikerer-på)
+│ │      - [Linux (Pi)](#linux-pi)
+│ │        - [Installere screen på Ubuntu](#installere-screen-på-ubuntu)
+│ │      - [Mac](#mac)
+│ │  
+│ │ +## Installation af kuglebane-controlleren
+│ │ +
+│ │ +Det anbefales at installere controlleren i et virtuelt miljø.
+│ │ +
+│ │ +1. Lav en mappe, hvor du vil have controlleren installeret
+│ │ +1. Start en kommandoprompt/Terminal og gå ind mappen 
+│ │ +1. Lav et virtuelt environment inde i mappen ved at skrive: \
+│ │ +    ```text
+│ │ +    python -m venv venv
+│ │ +    ```
+│ │ +   - _der kan godt gå lidt tid, før det er oprettet_
+│ │ +1. Aktiver “venv” med: 
+│ │ +   ```
+│ │ +   activate
+│ │ +   ```
+│ │ +   \
+│ │ +  eller (Windows): \
+│ │ +    ```
+│ │ +    venv\Scripts\activate
+│ │ +    ```
+│ │ +1. Du kan se at det virtuelle miljø er aktiveret, når det står (venv) forrest i kammondo-prompten - f.eks.:\
+│ │ +    ```
+│ │ +    (venv) kuglebane-controller $
+│ │ +    ```
+│ │ +1. Installer kuglebane controlleren med pip
+│ │ +
+│ │ +      ```text
+│ │ +      pip intall kb-controller
+│ │ +      ```
+│ │ +
+│ │ +Husk at installere Python først :-)
+│ │ +
+│ │ +## Start kuglebane controlleren
+│ │ +
+│ │ +Denne kan startes fra et aktiveret `venv`:
+│ │ +
+│ │ +```
+│ │ +  python venv/lib/python3.7/site-packages/kb_controller/controller.py
+│ │ +```
+│ │ + 
+│ │ +- **Bemærk**: _i Windows, ser det typisk sådan ud:_
+│ │ +
+│ │ +```
+│ │ +  python venv\Lib\site-packages\kb_controller\controller.py
+│ │ +```
+│ │ +
+│ │ +
+│ │ +eller via Python med `kb_controller.controller.start()` 
+│ │ +
+│ │ +F.eks.:
+│ │ +
+│ │ +```python
+│ │ +>>> from kb_controller import controller
+│ │ +>>> controller.start()
+│ │ +```
+│ │ +
+│ │ +
+│ │ +eller fra source filen (hvis koden er klonet fra Github):
+│ │ +
+│ │ +```text
+│ │ +  python src/kb_controller/controller.py
+│ │ +```
+│ │ +
+│ │ +
+│ │ +### Konfiguration af micro:bit og kuglebane-central
+│ │ +Første gang controlleren startes oprettes en `kbc-config.ini` konfigurationsfil, hvor port-angivelse til micro:bit'en, url'en til kuglebanecentralen og polling-intervallet til kuglebanecentralen angives. 
+│ │ +
+│ │ +Der kan være forskllige konfigurationer, afhængigt af om micro:bit'en emuleres og om man bruger en lokal version af kuglebane-centralen eller ej. Dette styres med disse to flag i konfig-filen:
+│ │ +
+│ │ +```
+│ │ +is_production = True eller False
+│ │ +is_emulator = True eller False
+│ │ +```
+│ │ +
+│ │ +Som standard er controlleren sat op til at bruge _kuglebane centralen_ der ligger "i skyen" (på  https://kuglebane.pythonanywhere.com) og er sat til at spørge hvert minut (`polling_interval=60`) om der er beskeder til den kuglebane, controlleren hører til.
+│ │ +
+│ │ +Tilret konfigurationsfilen, så den passer med hvilken seriel port micro:bit'en er forbundet til (se næste afnsit).
+│ │ +
+│ │ +### Forbinde micro:bit til controlleren
+│ │ +Controlleren forventer at der sidder en enhed på den serielle port - f.eks. en micro:bit (_eller emulatoren - se herunder_).
+│ │ +
+│ │ +Hvis der ikke kan skabes forbindelse på angivne serielle port stopper controlleren med en fejl og lister de porte der lige nu er tilgængelige. 
+│ │ +
+│ │ +Hvis du tilslutter micro:bit'en (via USB kablet), så hold øje med den port der hedder noget med "USB" og/eller "microbit", f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  -------------------------------------
+│ │ +  FEJL under etablering af forbindelse!
+│ │ +  (2, "could not open port /dev/cu.usbmodem1410: [Errno 2] No such file or directory:")
+│ │ +
+│ │ +  Tjek om microbit'en er forbundet, eller om portnavnet er korrekt.
+│ │ +
+│ │ +  Tilgængelige porte:
+│ │ +  /dev/cu.BLTH - n/a
+│ │ +  /dev/cu.Bluetooth-Incoming-Port - n/a
+│ │ +  /dev/cu.usbmodem14102 - BBC micro:bit CMSIS-DAP - mbed Serial Port      <--
+│ │ +  -------------------------------------
+│ │ +```
+│ │ +for Windows, vil det være en af `COM` portene (f.eks. `COM4`)
+│ │ +
+│ │ +Åbn filen _kbc-config.ini_ og ret værdien for porten i `[MICROBIT]` afsnittet, f.eks:
+│ │ +
+│ │ +```text
+│ │ +  [MICROBIT]
+│ │ +  tty_name = COM4
+│ │ +```
+│ │ +
+│ │ +
+│ │ +### Login med API bruger ved opstart
+│ │ +Når den serielle port er forbundet, skal api-bruger og adgangskode angives. API brugeren, er den bruger der har adgang til at lave forespørgsler til _kuglebane centralen_ (se evt. også https://kuglebane.pythonanywhere.com)
+│ │ +
+│ │ +
+│ │ +### Controller initialiseres ved opstart
+│ │ +
+│ │ +Når controlleren er startet op skriver den ud i konsollen hvilken afdeling den hører til og hvilke kommandoer man kan sende til den.
+│ │ +
+│ │ +Herefter venter den på at der sende en `init` kommando fra microbit'en, der fortæller hvilken kuglebane den tilhører. Dette gøres ved at få micro:bit'en til at sende en `init:<<ID>>` kommando, hvor `ID` er kuglebanens ID (en oversigt over kuglebane-ID'er kan ses på _kuglebane centralen_ - https://kuglebane.pythonanywhere.com/tracks/)
+│ │ +
+│ │ +Se desuden afsnittet _Kommandoer der kan sendes til controlleren_ herunder.
+│ │ +
+│ │ +Når controlleren har fået at vide hilken kuglebane den tilhører skrives listen af kuglebaner per afdeling ud i konsollen, f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  ============================================================
+│ │ +    M I C R O : B I T   S E R I A L   C O N T R O L L E R
+│ │ +  ============================================================
+│ │ +  Kuglebane central........: https://kuglebane.pythonanywhere.com/
+│ │ +  API bruger...............: CpvApi
+│ │ +  Controller for afdeling..: CPV
+│ │ +  -----------------------------------------------------------
+│ │ +
+│ │ +  [2023-03-19 22:56:16] m:b <<< init:1
+│ │ +
+│ │ +  -----------------------------------------------------------
+│ │ +  Tilgængelige kuglebaner:
+│ │ +
+│ │ +    CPV (egen afdeling):
+│ │ +    -------------------------------------
+│ │ +      1 - Gargamel
+│ │ +      2 - Smølfine    [CONTROLLER]
+│ │ +    -------------------------------------
+│ │ +
+│ │ +    CPB:
+│ │ +      3 - Gammelsmølf
+│ │ +      4 - Stærkesmølf
+│ │ +
+│ │ +    CPS:
+│ │ +      5 - Astrosmølf
+│ │ +  -----------------------------------------------------------
+│ │ +
+│ │ +  [2023-03-19 22:56:16] m:b >>> OK:INIT:1
+│ │ +```
+│ │ +
+│ │ +Controlleren herover er placeret i afdeling _CPV_ og tilsluttet kuglebane _Smølfine_ med ID = 2.
+│ │ +
+│ │ +### Hentning af beskeder til kuglebanen i baggrunden
+│ │ +
+│ │ +Når controlleren er startet op og initialiseret, startes en tråd, der står og poller _kuglebane centralen_ om der er kommet events til den kuglebane, controllere er tilsluttet. 
+│ │ +
+│ │ +Dette gøres i det interval (i sekunder) der er sat i `polling_interval` i _kbc-config.ini_ filen (se tidligere afsnit).
+│ │ +
+│ │ +Hvis der er en eller flere events, skrives dette ud i konsollen, f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  - - - - - - - - - - - - - - - - - - - - -
+│ │ +  Henter events fra kukglebane centralen...
+│ │ +
+│ │ +  [2023-03-19 23:09:18] KB-CENTRAL >>> https://kuglebane.pythonanywhere.com/api/events/1  [GET]
+│ │ +  [2023-03-19 23:09:18] KB-CENTRAL <<< Response status OK!
+│ │ +
+│ │ +
+│ │ +  Event id: 1 - kommando: START
+│ │ +    - afsendt: 19-03-2023 23:08:41.787930
+│ │ +    - fra CPB, bane 3 (Gammelsmølf)
+│ │ +
+│ │ +
+│ │ +  Antal events modtaget i alt: 1
+│ │ +
+│ │ +  Kontakter kuglebane-centralen igen om 60 sekunder...
+│ │ +  - - - - - - - - - - - - - - - - - - - - -
+│ │ +```
+│ │ +
+│ │ +
+│ │ +Det er så op til micro:bit'en at hente en event.
+│ │ +
+│ │ +Nu og her, gøres dette ved at bruge `pop` kommandoen - så man henter den ælste event, der er sendt, hvorefter denne slettes fra _kuglebane centralen_.
+│ │ +
+│ │ +### Logning af kommunikation i konsollen
+│ │ +
+│ │ +Generelt skrives al kommunikation ud i konsollen. Ud over tidsstemplet, benyttes der disse præfiks:
+│ │ +
+│ │ +- `m:b >>>` besked sendt TIL micro:bit
+│ │ +- `m:b <<<` besked modtaget FRA micro:bit
+│ │ +- `KB-CENTRAL >>>` request send TIL _kuglebane centralen_
+│ │ +- `KB-CENTRAL <<<` response modtaget FRA _kuglebane centralen_
+│ │ +
+│ │ +Så hvis der opstår kommunikationsfejl et eller andetr sted, kan man forsøge at spore det ved at kigge i konsollen.
+│ │ +
+│ │ +---
+│ │  
+│ │  ## Kommandoer der kan sendes til controlleren
+│ │  
+│ │  Hver gang en kommando modtages vil controlleren svare på formen:  `STATUS:KOMMANDO:SVAR`
+│ │  
+│ │  Hvor: 
+│ │  
+│ │ @@ -42,38 +248,44 @@
+│ │  ---
+│ │  ### Kommando: `init:<<bane_id>>`
+│ │  
+│ │  Initialisere controlleren til den kuglebane (med id=`bane_id`), som controlleren er tilknyttet.
+│ │  
+│ │  * **Svar fra controller**: `OK:INIT:<<bane_id>>`
+│ │  
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:INIT:<<bane_id>>:<<eventuel fejlbesked>>`
+│ │  
+│ │  ---
+│ │ -### Kommando: `send:<<bane_id>>`
+│ │ +### Kommando: `send:<<til_bane_id>>`
+│ │  
+│ │ -Sender en `START` event til bane `<<bane_id>>`
+│ │ +Sender en `START` event til bane `<<til_bane_id>>`
+│ │  
+│ │  * **Svar fra controller**: `OK:SEND:<<fra-bane_id>>:<<til-bane_id>>`
+│ │  
+│ │ +Hvor `fra-bane_id` er ID på den kuglebane, som controllren selv er tilsluttet.
+│ │ +
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:SEND:<<til_bane_id>>:<<eventuel fejlbesked>>`
+│ │  
+│ │  ---
+│ │  ### Kommando: `events`
+│ │  
+│ │ -Henter alle events der er sendt til den kuglebane controlleren er tilnkyttet (dvs. kuglebanen man har angivet med `init` kommandoen)
+│ │ +Henter alle events der er sendt til den kuglebane controlleren er tilsluttet (dvs. kuglebanen man har angivet fra micro:bit'en med `init` kommandoen)
+│ │  
+│ │  * **Svar fra controller**: `OK:EVENTS-TRACK:<<bane_id>>:<<antal-events>>`
+│ │    * `bane_id` = den kuglebane controlleren er tilnkyttet (_dvs. det ID der er modtaget fra micro:bit'en med_ `init` _kommandoen_)
+│ │    * `antal_events` = antallet af beskeder der er modtaget til denne kuglebane
+│ │  
+│ │  Beærk: i svaret ses bare antallet af events. Kig på konsollen for controlleren for at se hvilke events der er modtaget. 
+│ │  
+│ │  For at afvikle den første (ældste) event sendes `pop` kommandoen.
+│ │  
+│ │  For at afvikle en bestemt event sendes `pop:<<event_id>>` kommandoen
+│ │  
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:EVENTS:<<eventuel fejlbesked>>`
+│ │ +
+│ │  
+│ │  ---
+│ │  ### Kommando: `pop`
+│ │  
+│ │  Fjerner den ældste event fra _kuglebane centralen_ og sender kommando-id fra eventen til enheden (f.eks. en micro:bit) på den serielle port, så denne kan udføre kommandoen (f.eks. `START` for at starte en kugle) på kuglebanen den er tilnkyttet.
+│ │  
+│ │  Desuden medsendes hvilken afdeling og kuglebane eventen blev afsendt fra.
+│ │ @@ -92,100 +304,30 @@
+│ │  
+│ │  Samme som `pop` men med et specifikt `<<event_id>>` i stedet for den ældste event. 
+│ │  
+│ │  * **Svar fra controller**: `OK:POP:event_id:kommando_id` - f.eks. `OK:POP:6:START`
+│ │  
+│ │  ---
+│ │  
+│ │ -## Start kuglebane controlleren
+│ │ -
+│ │ -Denne kan startes med `kb_controller.server.start()` 
+│ │ -
+│ │ -F.eks.:
+│ │ -
+│ │ -```python
+│ │ ->>> from kb_controller import controller
+│ │ ->>> controller.start()
+│ │ -```
+│ │ -
+│ │ -eller fra et aktiveret `venv`:
+│ │ -
+│ │ -```
+│ │ -  python venv/lib/python3.7/site-packages/kb_controller/controller.py
+│ │ -```
+│ │ -
+│ │ -eller (hvis koden er klonet fra Github):
+│ │ -
+│ │ -```text
+│ │ -  python src/kb_controller/controller.py
+│ │ -```
+│ │ -
+│ │ -Controlleren forventer at der sidder en enhed på den serielle port - f.eks. en micro:bit (eller emulatoren - se herunder).
+│ │ -
+│ │ -Hvis den angivne serielle port ikke er tilgængelig stopper controlleren med en fejl.
+│ │ +### ERROR: ukent kommando
+│ │ +Hvis der modtages ne kommando, der ikke er en af ovenstående, sendes denne fejl:
+│ │  
+│ │ +* `ERROR:unknown-command`
+│ │  
+│ │ -### Konfiguration af micro:bit og kuglebane-central
+│ │ -Første gang controlleren startes oprettes en `kbc-config.ini` konfigurationsfil, hvor port-angivelse til micro:bit'en, url'en til kuglebanecentralen og polling-intervallet til kuglebanecentralen angives. 
+│ │ -
+│ │ -Der kan være forskllige konfigurationer, afhængigt af om micro:bit'en emuleres og om man bruger en lokal version af kuglebane-centralen eller ej. Dette styres med disse to flag i konfig-filen:
+│ │ -
+│ │ -```
+│ │ -is_production = True eller False
+│ │ -is_emulator = True eller False
+│ │ -```
+│ │ -
+│ │ -Tilret konfigurationsfilen, så den passer med hvilken seriel port micro:bit'en er forbundet til.
+│ │ +Hvilket også vil være tilfældet, hvis den kommando der sendes fra micro:bit'en af en eller anden årsag bliver korrupt (f.eks. pga. støj på kablet el.l.).
+│ │  
+│ │ -Se afsnittet længere ned [om at finde den port micro:bit'en sidder på](#finde-den-port-microbiten-kommunikerer-på)
+│ │ +Man kan derfor overveje at lade micro:bit'en forsøge igen et par gange, hvis den modtager et fejlsvar.
+│ │  
+│ │ -Desuden kan man angive hvilket interval controlleren skal polle kuglebanecentralen med (dvs. hvor tit skal controlleren spørge centralen om der er kommen nye events). Intervallet angives i sekunder.
+│ │ -
+│ │ -```
+│ │ -polling_interval=300
+│ │ -```
+│ │ -
+│ │ -
+│ │ -### Controller initialiseres ved opstart
+│ │ -
+│ │ -Når controlleren starter sender den en "init" forespørgsel ud på det serielle interface og forventer et svar med `init:<<bane_id>>` (dette skal programmeres på den micro:bit, der er tilsluttet)
+│ │ -
+│ │ -Herefter spyttes der en del info ud i konsollen, hvor man bla. kan se hvilken forening og kuglebane controlleren er konfigureret til og hvilke kuglebaner der er tilgængelige i kugelbane-caentralen, f.eks.:
+│ │ -
+│ │ -```text
+│ │ -============================================================
+│ │ -Seriel forbindelse:
+│ │ -/dev/ttys006
+│ │ -
+│ │ -============================================================
+│ │ -   M I C R O : B I T   S E R I A L   C O N T R O L L E R
+│ │ -============================================================
+│ │ -Kuglebane central: http://kuglebane.pythonanywhere.com/
+│ │ -Afdeling.........: CPV
+│ │ -Kuglebane........: 1
+│ │ ------------------------------------------------------------
+│ │ -
+│ │ -Tilgængelige kuglebaner:
+│ │ -
+│ │ -  ---------------------------------
+│ │ -  CPV (EGEN AFDELING):
+│ │ -    1 - TEST Bane cpv
+│ │ -  ---------------------------------
+│ │ -
+│ │ -  CPB:
+│ │ -    2 - TEST Bane cpb
+│ │ +---
+│ │  
+│ │ -  CPS:
+│ │ -    4 - TEST bane cps
+│ │ -
+│ │ ------------------------------------------------------------
+│ │ -```
+│ │  
+│ │  ## Micro:bit emulator
+│ │  
+│ │ +P.T. IKKE UNDERSTØTTET I WINDOWS!
+│ │ +
+│ │  Med `ubit_emulator.start(<<track_id>>)` startes en simpel emulator, hvor man kan emulere de tekst kommandoer der sendes fra f.eks. en micro:bit der er forbundet serielt til controlleren.
+│ │  
+│ │  Emulatoren defaulter til track-id=1. Dette skal sættes til det ID der passer med en kuglebane i den forening, controlleren er konfigureret til.
+│ │  
+│ │  For at sætte emulatoren til at "lege" kugelbane 3, sættes `track_id=3` i start parameteren, f.eks:
+│ │  
+│ │  ```python
+│ │ @@ -242,15 +384,18 @@
+│ │  
+│ │  Skriv kommando: 
+│ │  ```
+│ │  
+│ │  
+│ │  ## Eksempelkode til micro:bit'en
+│ │  
+│ │ -Et eksempel, hvor knap-A sender et start signal og knap-B beder om at få alle events for team'et findes i mappen [microbit-kode](microbit-kode/)
+│ │ +Et eksempel, hvor micro:bit'en kan modtage og sende kan ses i 
+│ │ +
+│ │ +https://github.com/Coding-Pirates-Viborg/microbit-controller
+│ │ +
+│ │  
+│ │  ## Finde den port micro:bit'en kommunikerer på
+│ │  
+│ │  ### Linux (Pi)
+│ │  
+│ │  1. Plug in the micro:bit and open a new terminal window.
+│ │  2. Typing dmesg | tail will shows you which /dev/ node the micro:bit was assigned (e.g. /dev/ttyACM0).
+│ │   --- kb_controller-0.9.9/pyproject.toml
+│ ├── +++ kb_controller-1.0.0/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["hatchling"]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "kb_controller"
+│ │ -version = "0.9.9"
+│ │ +version = "1.0.0"
+│ │  authors = [
+│ │    { name="esgem", email="esge@kodepirat.dk" },
+│ │  ]
+│ │  description = "CPVB Kuglebane Controller - forår 2023"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- kb_controller-0.9.9/PKG-INFO
+│ ├── +++ kb_controller-1.0.0/PKG-INFO
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kb_controller
+│ │ -Version: 0.9.9
+│ │ +Version: 1.0.0
+│ │  Summary: CPVB Kuglebane Controller - forår 2023
+│ │  Project-URL: Homepage, https://github.com/Coding-Pirates-Viborg/kuglebane-controller
+│ │  Project-URL: Bug Tracker, https://github.com/Coding-Pirates-Viborg/kuglebane-controller/issues
+│ │  Author-email: esgem <esge@kodepirat.dk>
+│ │  License-File: LICENSE
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -13,38 +13,244 @@
+│ │  Requires-Dist: pyjwt
+│ │  Requires-Dist: pyserial
+│ │  Requires-Dist: requests
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Coding Pirates Kuglebane controller
+│ │  
+│ │ -Controlleren kan modtage et (simpelt) serielt signal med en kommando - f.eks. fra en fra micro:bit.
+│ │ +Controlleres er lavet til [Coding Pirates Viborg/Bjerringbro](http:kodepirat.dk)s kuglebane-projekt i forårssæsonen 2023.
+│ │  
+│ │ -Ud fra den modtagne kommando sender controlleren et request til [_kuglebane centralen_](https://github.com/Coding-Pirates-Viborg/kuglebane-central) og sender efterfølgnede et svar tilbage til micro:bit'en.
+│ │ +Controlleren kan modtage et (simpelt) serielt signal med en kommando - f.eks. fra en fra micro:bit.
+│ │  
+│ │ -Når controlleren starter op (se afsnit herunder) startes en tråd der poller _kuglebane centralen_ for at høre om der er kommet events til den kuglebane controlleren er tilknyttet. 
+│ │ +Ud fra den modtagne kommando sender controlleren et request til [_kuglebane centralen_](https://github.com/Coding-Pirates-Viborg/kuglebane-central) og sender efterfølgende et svar tilbage til micro:bit'en.
+│ │  
+│ │ +Når controlleren starter op (se afsnit herunder) startes en tråd der poller _kuglebane centralen_ for at høre om der er kommet events til den kuglebane controlleren er tilknyttet.
+│ │  
+│ │  - [Coding Pirates Kuglebane controller](#coding-pirates-kuglebane-controller)
+│ │ +  - [Installation af kuglebane-controlleren](#installation-af-kuglebane-controlleren)
+│ │ +  - [Start kuglebane controlleren](#start-kuglebane-controlleren)
+│ │ +    - [Konfiguration af micro:bit og kuglebane-central](#konfiguration-af-microbit-og-kuglebane-central)
+│ │ +    - [Forbinde micro:bit til controlleren](#forbinde-microbit-til-controlleren)
+│ │ +    - [Login med API bruger ved opstart](#login-med-api-bruger-ved-opstart)
+│ │ +    - [Controller initialiseres ved opstart](#controller-initialiseres-ved-opstart)
+│ │ +    - [Hentning af beskeder til kuglebanen i baggrunden](#hentning-af-beskeder-til-kuglebanen-i-baggrunden)
+│ │ +    - [Logning af kommunikation i konsollen](#logning-af-kommunikation-i-konsollen)
+│ │    - [Kommandoer der kan sendes til controlleren](#kommandoer-der-kan-sendes-til-controlleren)
+│ │      - [Kommando: `init:<<bane_id>>`](#kommando-initbane_id)
+│ │ -    - [Kommando: `send:<<bane_id>>`](#kommando-sendbane_id)
+│ │ +    - [Kommando: `send:<<til_bane_id>>`](#kommando-sendtil_bane_id)
+│ │      - [Kommando: `events`](#kommando-events)
+│ │      - [Kommando: `pop`](#kommando-pop)
+│ │      - [Kommando: `pop:<<event_id>>`](#kommando-popevent_id)
+│ │ -  - [Start kuglebane controlleren](#start-kuglebane-controlleren)
+│ │ -    - [Konfiguration af micro:bit og kuglebane-central](#konfiguration-af-microbit-og-kuglebane-central)
+│ │ -    - [Controller initialiseres ved opstart](#controller-initialiseres-ved-opstart)
+│ │ +    - [ERROR: ukent kommando](#error-ukent-kommando)
+│ │    - [Micro:bit emulator](#microbit-emulator)
+│ │    - [Eksempelkode til micro:bit'en](#eksempelkode-til-microbiten)
+│ │    - [Finde den port micro:bit'en kommunikerer på](#finde-den-port-microbiten-kommunikerer-på)
+│ │      - [Linux (Pi)](#linux-pi)
+│ │        - [Installere screen på Ubuntu](#installere-screen-på-ubuntu)
+│ │      - [Mac](#mac)
+│ │  
+│ │ +## Installation af kuglebane-controlleren
+│ │ +
+│ │ +Det anbefales at installere controlleren i et virtuelt miljø.
+│ │ +
+│ │ +1. Lav en mappe, hvor du vil have controlleren installeret
+│ │ +1. Start en kommandoprompt/Terminal og gå ind mappen 
+│ │ +1. Lav et virtuelt environment inde i mappen ved at skrive: \
+│ │ +    ```text
+│ │ +    python -m venv venv
+│ │ +    ```
+│ │ +   - _der kan godt gå lidt tid, før det er oprettet_
+│ │ +1. Aktiver “venv” med: 
+│ │ +   ```
+│ │ +   activate
+│ │ +   ```
+│ │ +   \
+│ │ +  eller (Windows): \
+│ │ +    ```
+│ │ +    venv\Scripts\activate
+│ │ +    ```
+│ │ +1. Du kan se at det virtuelle miljø er aktiveret, når det står (venv) forrest i kammondo-prompten - f.eks.:\
+│ │ +    ```
+│ │ +    (venv) kuglebane-controller $
+│ │ +    ```
+│ │ +1. Installer kuglebane controlleren med pip
+│ │ +
+│ │ +      ```text
+│ │ +      pip intall kb-controller
+│ │ +      ```
+│ │ +
+│ │ +Husk at installere Python først :-)
+│ │ +
+│ │ +## Start kuglebane controlleren
+│ │ +
+│ │ +Denne kan startes fra et aktiveret `venv`:
+│ │ +
+│ │ +```
+│ │ +  python venv/lib/python3.7/site-packages/kb_controller/controller.py
+│ │ +```
+│ │ + 
+│ │ +- **Bemærk**: _i Windows, ser det typisk sådan ud:_
+│ │ +
+│ │ +```
+│ │ +  python venv\Lib\site-packages\kb_controller\controller.py
+│ │ +```
+│ │ +
+│ │ +
+│ │ +eller via Python med `kb_controller.controller.start()` 
+│ │ +
+│ │ +F.eks.:
+│ │ +
+│ │ +```python
+│ │ +>>> from kb_controller import controller
+│ │ +>>> controller.start()
+│ │ +```
+│ │ +
+│ │ +
+│ │ +eller fra source filen (hvis koden er klonet fra Github):
+│ │ +
+│ │ +```text
+│ │ +  python src/kb_controller/controller.py
+│ │ +```
+│ │ +
+│ │ +
+│ │ +### Konfiguration af micro:bit og kuglebane-central
+│ │ +Første gang controlleren startes oprettes en `kbc-config.ini` konfigurationsfil, hvor port-angivelse til micro:bit'en, url'en til kuglebanecentralen og polling-intervallet til kuglebanecentralen angives. 
+│ │ +
+│ │ +Der kan være forskllige konfigurationer, afhængigt af om micro:bit'en emuleres og om man bruger en lokal version af kuglebane-centralen eller ej. Dette styres med disse to flag i konfig-filen:
+│ │ +
+│ │ +```
+│ │ +is_production = True eller False
+│ │ +is_emulator = True eller False
+│ │ +```
+│ │ +
+│ │ +Som standard er controlleren sat op til at bruge _kuglebane centralen_ der ligger "i skyen" (på  https://kuglebane.pythonanywhere.com) og er sat til at spørge hvert minut (`polling_interval=60`) om der er beskeder til den kuglebane, controlleren hører til.
+│ │ +
+│ │ +Tilret konfigurationsfilen, så den passer med hvilken seriel port micro:bit'en er forbundet til (se næste afnsit).
+│ │ +
+│ │ +### Forbinde micro:bit til controlleren
+│ │ +Controlleren forventer at der sidder en enhed på den serielle port - f.eks. en micro:bit (_eller emulatoren - se herunder_).
+│ │ +
+│ │ +Hvis der ikke kan skabes forbindelse på angivne serielle port stopper controlleren med en fejl og lister de porte der lige nu er tilgængelige. 
+│ │ +
+│ │ +Hvis du tilslutter micro:bit'en (via USB kablet), så hold øje med den port der hedder noget med "USB" og/eller "microbit", f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  -------------------------------------
+│ │ +  FEJL under etablering af forbindelse!
+│ │ +  (2, "could not open port /dev/cu.usbmodem1410: [Errno 2] No such file or directory:")
+│ │ +
+│ │ +  Tjek om microbit'en er forbundet, eller om portnavnet er korrekt.
+│ │ +
+│ │ +  Tilgængelige porte:
+│ │ +  /dev/cu.BLTH - n/a
+│ │ +  /dev/cu.Bluetooth-Incoming-Port - n/a
+│ │ +  /dev/cu.usbmodem14102 - BBC micro:bit CMSIS-DAP - mbed Serial Port      <--
+│ │ +  -------------------------------------
+│ │ +```
+│ │ +for Windows, vil det være en af `COM` portene (f.eks. `COM4`)
+│ │ +
+│ │ +Åbn filen _kbc-config.ini_ og ret værdien for porten i `[MICROBIT]` afsnittet, f.eks:
+│ │ +
+│ │ +```text
+│ │ +  [MICROBIT]
+│ │ +  tty_name = COM4
+│ │ +```
+│ │ +
+│ │ +
+│ │ +### Login med API bruger ved opstart
+│ │ +Når den serielle port er forbundet, skal api-bruger og adgangskode angives. API brugeren, er den bruger der har adgang til at lave forespørgsler til _kuglebane centralen_ (se evt. også https://kuglebane.pythonanywhere.com)
+│ │ +
+│ │ +
+│ │ +### Controller initialiseres ved opstart
+│ │ +
+│ │ +Når controlleren er startet op skriver den ud i konsollen hvilken afdeling den hører til og hvilke kommandoer man kan sende til den.
+│ │ +
+│ │ +Herefter venter den på at der sende en `init` kommando fra microbit'en, der fortæller hvilken kuglebane den tilhører. Dette gøres ved at få micro:bit'en til at sende en `init:<<ID>>` kommando, hvor `ID` er kuglebanens ID (en oversigt over kuglebane-ID'er kan ses på _kuglebane centralen_ - https://kuglebane.pythonanywhere.com/tracks/)
+│ │ +
+│ │ +Se desuden afsnittet _Kommandoer der kan sendes til controlleren_ herunder.
+│ │ +
+│ │ +Når controlleren har fået at vide hilken kuglebane den tilhører skrives listen af kuglebaner per afdeling ud i konsollen, f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  ============================================================
+│ │ +    M I C R O : B I T   S E R I A L   C O N T R O L L E R
+│ │ +  ============================================================
+│ │ +  Kuglebane central........: https://kuglebane.pythonanywhere.com/
+│ │ +  API bruger...............: CpvApi
+│ │ +  Controller for afdeling..: CPV
+│ │ +  -----------------------------------------------------------
+│ │ +
+│ │ +  [2023-03-19 22:56:16] m:b <<< init:1
+│ │ +
+│ │ +  -----------------------------------------------------------
+│ │ +  Tilgængelige kuglebaner:
+│ │ +
+│ │ +    CPV (egen afdeling):
+│ │ +    -------------------------------------
+│ │ +      1 - Gargamel
+│ │ +      2 - Smølfine    [CONTROLLER]
+│ │ +    -------------------------------------
+│ │ +
+│ │ +    CPB:
+│ │ +      3 - Gammelsmølf
+│ │ +      4 - Stærkesmølf
+│ │ +
+│ │ +    CPS:
+│ │ +      5 - Astrosmølf
+│ │ +  -----------------------------------------------------------
+│ │ +
+│ │ +  [2023-03-19 22:56:16] m:b >>> OK:INIT:1
+│ │ +```
+│ │ +
+│ │ +Controlleren herover er placeret i afdeling _CPV_ og tilsluttet kuglebane _Smølfine_ med ID = 2.
+│ │ +
+│ │ +### Hentning af beskeder til kuglebanen i baggrunden
+│ │ +
+│ │ +Når controlleren er startet op og initialiseret, startes en tråd, der står og poller _kuglebane centralen_ om der er kommet events til den kuglebane, controllere er tilsluttet. 
+│ │ +
+│ │ +Dette gøres i det interval (i sekunder) der er sat i `polling_interval` i _kbc-config.ini_ filen (se tidligere afsnit).
+│ │ +
+│ │ +Hvis der er en eller flere events, skrives dette ud i konsollen, f.eks.:
+│ │ +
+│ │ +```text
+│ │ +  - - - - - - - - - - - - - - - - - - - - -
+│ │ +  Henter events fra kukglebane centralen...
+│ │ +
+│ │ +  [2023-03-19 23:09:18] KB-CENTRAL >>> https://kuglebane.pythonanywhere.com/api/events/1  [GET]
+│ │ +  [2023-03-19 23:09:18] KB-CENTRAL <<< Response status OK!
+│ │ +
+│ │ +
+│ │ +  Event id: 1 - kommando: START
+│ │ +    - afsendt: 19-03-2023 23:08:41.787930
+│ │ +    - fra CPB, bane 3 (Gammelsmølf)
+│ │ +
+│ │ +
+│ │ +  Antal events modtaget i alt: 1
+│ │ +
+│ │ +  Kontakter kuglebane-centralen igen om 60 sekunder...
+│ │ +  - - - - - - - - - - - - - - - - - - - - -
+│ │ +```
+│ │ +
+│ │ +
+│ │ +Det er så op til micro:bit'en at hente en event.
+│ │ +
+│ │ +Nu og her, gøres dette ved at bruge `pop` kommandoen - så man henter den ælste event, der er sendt, hvorefter denne slettes fra _kuglebane centralen_.
+│ │ +
+│ │ +### Logning af kommunikation i konsollen
+│ │ +
+│ │ +Generelt skrives al kommunikation ud i konsollen. Ud over tidsstemplet, benyttes der disse præfiks:
+│ │ +
+│ │ +- `m:b >>>` besked sendt TIL micro:bit
+│ │ +- `m:b <<<` besked modtaget FRA micro:bit
+│ │ +- `KB-CENTRAL >>>` request send TIL _kuglebane centralen_
+│ │ +- `KB-CENTRAL <<<` response modtaget FRA _kuglebane centralen_
+│ │ +
+│ │ +Så hvis der opstår kommunikationsfejl et eller andetr sted, kan man forsøge at spore det ved at kigge i konsollen.
+│ │ +
+│ │ +---
+│ │  
+│ │  ## Kommandoer der kan sendes til controlleren
+│ │  
+│ │  Hver gang en kommando modtages vil controlleren svare på formen:  `STATUS:KOMMANDO:SVAR`
+│ │  
+│ │  Hvor: 
+│ │  
+│ │ @@ -59,38 +265,44 @@
+│ │  ---
+│ │  ### Kommando: `init:<<bane_id>>`
+│ │  
+│ │  Initialisere controlleren til den kuglebane (med id=`bane_id`), som controlleren er tilknyttet.
+│ │  
+│ │  * **Svar fra controller**: `OK:INIT:<<bane_id>>`
+│ │  
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:INIT:<<bane_id>>:<<eventuel fejlbesked>>`
+│ │  
+│ │  ---
+│ │ -### Kommando: `send:<<bane_id>>`
+│ │ +### Kommando: `send:<<til_bane_id>>`
+│ │  
+│ │ -Sender en `START` event til bane `<<bane_id>>`
+│ │ +Sender en `START` event til bane `<<til_bane_id>>`
+│ │  
+│ │  * **Svar fra controller**: `OK:SEND:<<fra-bane_id>>:<<til-bane_id>>`
+│ │  
+│ │ +Hvor `fra-bane_id` er ID på den kuglebane, som controllren selv er tilsluttet.
+│ │ +
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:SEND:<<til_bane_id>>:<<eventuel fejlbesked>>`
+│ │  
+│ │  ---
+│ │  ### Kommando: `events`
+│ │  
+│ │ -Henter alle events der er sendt til den kuglebane controlleren er tilnkyttet (dvs. kuglebanen man har angivet med `init` kommandoen)
+│ │ +Henter alle events der er sendt til den kuglebane controlleren er tilsluttet (dvs. kuglebanen man har angivet fra micro:bit'en med `init` kommandoen)
+│ │  
+│ │  * **Svar fra controller**: `OK:EVENTS-TRACK:<<bane_id>>:<<antal-events>>`
+│ │    * `bane_id` = den kuglebane controlleren er tilnkyttet (_dvs. det ID der er modtaget fra micro:bit'en med_ `init` _kommandoen_)
+│ │    * `antal_events` = antallet af beskeder der er modtaget til denne kuglebane
+│ │  
+│ │  Beærk: i svaret ses bare antallet af events. Kig på konsollen for controlleren for at se hvilke events der er modtaget. 
+│ │  
+│ │  For at afvikle den første (ældste) event sendes `pop` kommandoen.
+│ │  
+│ │  For at afvikle en bestemt event sendes `pop:<<event_id>>` kommandoen
+│ │  
+│ │ +* **Svar hvis der opstår en fejl:**: `ERROR:EVENTS:<<eventuel fejlbesked>>`
+│ │ +
+│ │  
+│ │  ---
+│ │  ### Kommando: `pop`
+│ │  
+│ │  Fjerner den ældste event fra _kuglebane centralen_ og sender kommando-id fra eventen til enheden (f.eks. en micro:bit) på den serielle port, så denne kan udføre kommandoen (f.eks. `START` for at starte en kugle) på kuglebanen den er tilnkyttet.
+│ │  
+│ │  Desuden medsendes hvilken afdeling og kuglebane eventen blev afsendt fra.
+│ │ @@ -109,100 +321,30 @@
+│ │  
+│ │  Samme som `pop` men med et specifikt `<<event_id>>` i stedet for den ældste event. 
+│ │  
+│ │  * **Svar fra controller**: `OK:POP:event_id:kommando_id` - f.eks. `OK:POP:6:START`
+│ │  
+│ │  ---
+│ │  
+│ │ -## Start kuglebane controlleren
+│ │ -
+│ │ -Denne kan startes med `kb_controller.server.start()` 
+│ │ -
+│ │ -F.eks.:
+│ │ -
+│ │ -```python
+│ │ ->>> from kb_controller import controller
+│ │ ->>> controller.start()
+│ │ -```
+│ │ -
+│ │ -eller fra et aktiveret `venv`:
+│ │ -
+│ │ -```
+│ │ -  python venv/lib/python3.7/site-packages/kb_controller/controller.py
+│ │ -```
+│ │ -
+│ │ -eller (hvis koden er klonet fra Github):
+│ │ -
+│ │ -```text
+│ │ -  python src/kb_controller/controller.py
+│ │ -```
+│ │ -
+│ │ -Controlleren forventer at der sidder en enhed på den serielle port - f.eks. en micro:bit (eller emulatoren - se herunder).
+│ │ -
+│ │ -Hvis den angivne serielle port ikke er tilgængelig stopper controlleren med en fejl.
+│ │ +### ERROR: ukent kommando
+│ │ +Hvis der modtages ne kommando, der ikke er en af ovenstående, sendes denne fejl:
+│ │  
+│ │ +* `ERROR:unknown-command`
+│ │  
+│ │ -### Konfiguration af micro:bit og kuglebane-central
+│ │ -Første gang controlleren startes oprettes en `kbc-config.ini` konfigurationsfil, hvor port-angivelse til micro:bit'en, url'en til kuglebanecentralen og polling-intervallet til kuglebanecentralen angives. 
+│ │ -
+│ │ -Der kan være forskllige konfigurationer, afhængigt af om micro:bit'en emuleres og om man bruger en lokal version af kuglebane-centralen eller ej. Dette styres med disse to flag i konfig-filen:
+│ │ -
+│ │ -```
+│ │ -is_production = True eller False
+│ │ -is_emulator = True eller False
+│ │ -```
+│ │ -
+│ │ -Tilret konfigurationsfilen, så den passer med hvilken seriel port micro:bit'en er forbundet til.
+│ │ +Hvilket også vil være tilfældet, hvis den kommando der sendes fra micro:bit'en af en eller anden årsag bliver korrupt (f.eks. pga. støj på kablet el.l.).
+│ │  
+│ │ -Se afsnittet længere ned [om at finde den port micro:bit'en sidder på](#finde-den-port-microbiten-kommunikerer-på)
+│ │ +Man kan derfor overveje at lade micro:bit'en forsøge igen et par gange, hvis den modtager et fejlsvar.
+│ │  
+│ │ -Desuden kan man angive hvilket interval controlleren skal polle kuglebanecentralen med (dvs. hvor tit skal controlleren spørge centralen om der er kommen nye events). Intervallet angives i sekunder.
+│ │ -
+│ │ -```
+│ │ -polling_interval=300
+│ │ -```
+│ │ -
+│ │ -
+│ │ -### Controller initialiseres ved opstart
+│ │ -
+│ │ -Når controlleren starter sender den en "init" forespørgsel ud på det serielle interface og forventer et svar med `init:<<bane_id>>` (dette skal programmeres på den micro:bit, der er tilsluttet)
+│ │ -
+│ │ -Herefter spyttes der en del info ud i konsollen, hvor man bla. kan se hvilken forening og kuglebane controlleren er konfigureret til og hvilke kuglebaner der er tilgængelige i kugelbane-caentralen, f.eks.:
+│ │ -
+│ │ -```text
+│ │ -============================================================
+│ │ -Seriel forbindelse:
+│ │ -/dev/ttys006
+│ │ -
+│ │ -============================================================
+│ │ -   M I C R O : B I T   S E R I A L   C O N T R O L L E R
+│ │ -============================================================
+│ │ -Kuglebane central: http://kuglebane.pythonanywhere.com/
+│ │ -Afdeling.........: CPV
+│ │ -Kuglebane........: 1
+│ │ ------------------------------------------------------------
+│ │ -
+│ │ -Tilgængelige kuglebaner:
+│ │ -
+│ │ -  ---------------------------------
+│ │ -  CPV (EGEN AFDELING):
+│ │ -    1 - TEST Bane cpv
+│ │ -  ---------------------------------
+│ │ -
+│ │ -  CPB:
+│ │ -    2 - TEST Bane cpb
+│ │ +---
+│ │  
+│ │ -  CPS:
+│ │ -    4 - TEST bane cps
+│ │ -
+│ │ ------------------------------------------------------------
+│ │ -```
+│ │  
+│ │  ## Micro:bit emulator
+│ │  
+│ │ +P.T. IKKE UNDERSTØTTET I WINDOWS!
+│ │ +
+│ │  Med `ubit_emulator.start(<<track_id>>)` startes en simpel emulator, hvor man kan emulere de tekst kommandoer der sendes fra f.eks. en micro:bit der er forbundet serielt til controlleren.
+│ │  
+│ │  Emulatoren defaulter til track-id=1. Dette skal sættes til det ID der passer med en kuglebane i den forening, controlleren er konfigureret til.
+│ │  
+│ │  For at sætte emulatoren til at "lege" kugelbane 3, sættes `track_id=3` i start parameteren, f.eks:
+│ │  
+│ │  ```python
+│ │ @@ -259,15 +401,18 @@
+│ │  
+│ │  Skriv kommando: 
+│ │  ```
+│ │  
+│ │  
+│ │  ## Eksempelkode til micro:bit'en
+│ │  
+│ │ -Et eksempel, hvor knap-A sender et start signal og knap-B beder om at få alle events for team'et findes i mappen [microbit-kode](microbit-kode/)
+│ │ +Et eksempel, hvor micro:bit'en kan modtage og sende kan ses i 
+│ │ +
+│ │ +https://github.com/Coding-Pirates-Viborg/microbit-controller
+│ │ +
+│ │  
+│ │  ## Finde den port micro:bit'en kommunikerer på
+│ │  
+│ │  ### Linux (Pi)
+│ │  
+│ │  1. Plug in the micro:bit and open a new terminal window.
+│ │  2. Typing dmesg | tail will shows you which /dev/ node the micro:bit was assigned (e.g. /dev/ttyACM0).

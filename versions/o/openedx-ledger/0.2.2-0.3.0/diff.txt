@@ -1,0 +1,678 @@
+--- tmp/openedx-ledger-0.2.2.tar.gz
++++ tmp/openedx-ledger-0.3.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "openedx-ledger-0.2.2.tar", last modified: Thu Mar 23 13:08:04 2023, max compression
+│ +gzip compressed data, was "openedx-ledger-0.3.0.tar", last modified: Thu Apr  6 16:37:09 2023, max compression
+│   --- openedx-ledger-0.2.2.tar
+├── +++ openedx-ledger-0.3.0.tar
+│ ├── file list
+│ │ @@ -1,44 +1,45 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.555255 openedx-ledger-0.2.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1572 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/CHANGELOG.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    35139 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/LICENSE.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      209 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8246 2023-03-23 13:08:04.555255 openedx-ledger-0.2.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5962 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/README.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.547254 openedx-ledger-0.2.2/openedx_ledger/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      175 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1840 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/admin.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3619 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      156 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/apps.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      220 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/constants.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.551254 openedx-ledger-0.2.2/openedx_ledger/migrations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3768 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/0001_initial.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6005 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/0002_historicalledger_historicalreversal_historicaltransaction.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4294 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/0003_field_updates_20230216_1605.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      638 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/0004_ledger_idpkey_blankable.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    12708 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/0005_help_text_and_more_indices.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/migrations/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    11591 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/models.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.543254 openedx-ledger-0.2.2/openedx_ledger/templates/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.551254 openedx-ledger-0.2.2/openedx_ledger/templates/edx_ledger/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      662 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/templates/edx_ledger/base.html
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.551254 openedx-ledger-0.2.2/openedx_ledger/test_utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      341 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/test_utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1456 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/test_utils/factories.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      329 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/urls.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1462 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      107 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/openedx_ledger/views.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.551254 openedx-ledger-0.2.2/openedx_ledger.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8246 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1078 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      175 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       15 2023-03-23 13:08:04.000000 openedx-ledger-0.2.2/openedx_ledger.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.551254 openedx-ledger-0.2.2/requirements/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      282 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/requirements/base.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      561 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/requirements/constraints.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      176 2023-03-23 13:08:04.555255 openedx-ledger-0.2.2/setup.cfg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (122)     5100 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-23 13:08:04.555255 openedx-ledger-0.2.2/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1997 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/tests/test_api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2819 2023-03-23 13:07:58.000000 openedx-ledger-0.2.2/tests/test_models.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1572 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/CHANGELOG.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    35139 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/LICENSE.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      209 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8246 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5962 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/README.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.568405 openedx-ledger-0.3.0/openedx_ledger/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      175 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1945 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/admin.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5185 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      156 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/apps.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      220 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/constants.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/openedx_ledger/migrations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3768 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0001_initial.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6005 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0002_historicalledger_historicalreversal_historicaltransaction.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4294 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0003_field_updates_20230216_1605.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      638 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0004_ledger_idpkey_blankable.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    12708 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0005_help_text_and_more_indices.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4291 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/0006_auto_20230404_1744.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/migrations/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    15474 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/models.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.564405 openedx-ledger-0.3.0/openedx_ledger/templates/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/openedx_ledger/templates/edx_ledger/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      662 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/templates/edx_ledger/base.html
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/openedx_ledger/test_utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      341 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/test_utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2301 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/test_utils/factories.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      329 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/urls.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1462 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      107 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/openedx_ledger/views.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/openedx_ledger.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8246 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1131 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      175 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       15 2023-04-06 16:37:09.000000 openedx-ledger-0.3.0/openedx_ledger.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/requirements/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      282 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/requirements/base.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      561 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/requirements/constraints.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      176 2023-04-06 16:37:09.580406 openedx-ledger-0.3.0/setup.cfg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (122)     5100 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 16:37:09.576406 openedx-ledger-0.3.0/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2209 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/tests/test_api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4515 2023-04-06 16:37:06.000000 openedx-ledger-0.3.0/tests/test_models.py
+│ │   --- openedx-ledger-0.2.2/CHANGELOG.rst
+│ ├── +++ openedx-ledger-0.3.0/CHANGELOG.rst
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/LICENSE.txt
+│ ├── +++ openedx-ledger-0.3.0/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/PKG-INFO
+│ ├── +++ openedx-ledger-0.3.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: openedx-ledger
+│ │ -Version: 0.2.2
+│ │ +Version: 0.3.0
+│ │  Summary: Records transactions against a ledger, denominated in units of value.
+│ │  Home-page: https://github.com/openedx/openedx-ledger
+│ │  Author: edX
+│ │  Author-email: oscm@edx.org
+│ │  License: AGPL 3.0
+│ │  Keywords: Python edx
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- openedx-ledger-0.2.2/README.rst
+│ ├── +++ openedx-ledger-0.3.0/README.rst
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/admin.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/admin.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -50,14 +50,15 @@
+│ │          """
+│ │          Metaclass for TransactionAdmin.
+│ │          """
+│ │  
+│ │          model = models.Transaction
+│ │          fields = '__all__'
+│ │  
+│ │ +    search_fields = ('content_key', 'lms_user_id', 'uuid', 'external_reference__external_reference_id',)
+│ │      _all_fields = [field.name for field in models.Transaction._meta.get_fields()]
+│ │      list_display = ('uuid', 'idempotency_key', 'quantity', 'state',)
+│ │      if can_modify():
+│ │          readonly_fields = (
+│ │              'created',
+│ │              'modified',
+│ │          )
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/api.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/api.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -2,48 +2,78 @@
+│ │  The openedx_ledger python API.
+│ │  """
+│ │  from django.db.transaction import atomic, get_connection
+│ │  
+│ │  from openedx_ledger import models, utils
+│ │  
+│ │  
+│ │ +class LedgerBalanceExceeded(Exception):
+│ │ +    """
+│ │ +    Exception for when a transaction could not be created because it would exceed the ledger balance.
+│ │ +    """
+│ │ +
+│ │ +
+│ │  def create_transaction(
+│ │ -    ledger, quantity, idempotency_key,
+│ │ -    lms_user_id=None, content_key=None,
+│ │ -    subsidy_access_policy_uuid=None, state=models.TransactionStateChoices.CREATED,
+│ │ +    ledger,
+│ │ +    quantity,
+│ │ +    idempotency_key,
+│ │ +    lms_user_id=None,
+│ │ +    content_key=None,
+│ │ +    subsidy_access_policy_uuid=None,
+│ │ +    state=models.TransactionStateChoices.CREATED,
+│ │      **metadata
+│ │  ):
+│ │      """
+│ │      Create a transaction.
+│ │  
+│ │ -    Should throw an exception when transaction would exceed balance of the ledger.
+│ │ -    Locking and DB transactions?
+│ │ -    (course id, ledger, user) are unique.
+│ │ -    Or support an idempotency key.
+│ │ +    Args:
+│ │ +        ledger (openedx_ledger.models.Ledger): The ledger to which the transaction should be added.
+│ │ +        quantity (int): Negative value representing the desired quantity of the new Transaction.
+│ │ +        idempotency_key (str): The idempotency_key of the new Transaction.
+│ │ +        lms_user_id (int, Optional):
+│ │ +            The lms_user_id representing the learner who is enrolling. Skip if this does not represent a policy
+│ │ +            enrolling a learner into content.
+│ │ +        content_key (str, Optional):
+│ │ +            The identifier of the content into which the learner is enrolling. Skip if this does not represent a policy
+│ │ +            enrolling a learner into content.
+│ │ +        subsidy_access_policy_uuid (str, Optional):
+│ │ +            The policy which permitted the creation of the new Transaction. Skip if this does not represent a policy
+│ │ +            enrolling a learner into content.
+│ │ +        state (str, Optional):
+│ │ +            The initial state of the new transaction. Choice of openedx_ledger.models.TransactionStateChoices.
+│ │ +        **metadata (dict, Optional):
+│ │ +            Optional metadata to add to the transaction, potentially useful for debugging, analytics, or other purposes
+│ │ +            defined by the caller.
+│ │ +
+│ │ +    Raises:
+│ │ +        openedx_ledger.models.LedgerLockAttemptFailed:
+│ │ +            Raises this if there's another attempt in process to add a transaction to this Ledger.
+│ │ +        openedx_ledger.api.LedgerBalanceExceeded:
+│ │ +            Raises this if the transaction would cause the balance of the ledger to become negative.
+│ │      """
+│ │ -    durable = not get_connection().in_atomic_block
+│ │ -    with atomic(durable=durable):
+│ │ -        balance = ledger.balance()
+│ │ -        if (quantity < 0) and ((balance + quantity) < 0):
+│ │ -            # TODO: we definitely have to revisit this logic later to implement ADR 0002.
+│ │ -            raise Exception("d'oh!")  # pylint: disable=broad-exception-raised
+│ │ -
+│ │ -        transaction, _ = models.Transaction.objects.get_or_create(
+│ │ -            ledger=ledger,
+│ │ -            idempotency_key=idempotency_key,
+│ │ -            defaults={
+│ │ -                "quantity": quantity,
+│ │ -                "content_key": content_key,
+│ │ -                "lms_user_id": lms_user_id,
+│ │ -                "subsidy_access_policy_uuid": subsidy_access_policy_uuid,
+│ │ -                "state": state,
+│ │ -                "metadata": metadata,
+│ │ -            },
+│ │ -        )
+│ │ -        return transaction
+│ │ +    with ledger.lock():
+│ │ +        durable = not get_connection().in_atomic_block
+│ │ +        with atomic(durable=durable):
+│ │ +            balance = ledger.balance()
+│ │ +            if (quantity < 0) and ((balance + quantity) < 0):
+│ │ +                raise LedgerBalanceExceeded("A Transaction was not created because it would exceed the ledger balance.")
+│ │ +
+│ │ +            transaction, _ = models.Transaction.objects.get_or_create(
+│ │ +                ledger=ledger,
+│ │ +                idempotency_key=idempotency_key,
+│ │ +                defaults={
+│ │ +                    "quantity": quantity,
+│ │ +                    "content_key": content_key,
+│ │ +                    "lms_user_id": lms_user_id,
+│ │ +                    "subsidy_access_policy_uuid": subsidy_access_policy_uuid,
+│ │ +                    "state": state,
+│ │ +                    "metadata": metadata,
+│ │ +                },
+│ │ +            )
+│ │ +    return transaction
+│ │  
+│ │  
+│ │  def reverse_full_transaction(transaction, idempotency_key, **metadata):
+│ │      """
+│ │      Reverse a transaction, in full.
+│ │  
+│ │      Idempotency of reversals - reversing the same transaction twice
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/migrations/0001_initial.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/migrations/0002_historicalledger_historicalreversal_historicaltransaction.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/migrations/0002_historicalledger_historicalreversal_historicaltransaction.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/migrations/0003_field_updates_20230216_1605.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/migrations/0003_field_updates_20230216_1605.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/migrations/0004_ledger_idpkey_blankable.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/migrations/0004_ledger_idpkey_blankable.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/migrations/0005_help_text_and_more_indices.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/migrations/0005_help_text_and_more_indices.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/models.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/models.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,21 +1,26 @@
+│ │  """
+│ │  edx_ledger models.
+│ │  """
+│ │ +from contextlib import contextmanager
+│ │  from uuid import uuid4
+│ │  
+│ │ +from django.core.cache import cache as django_cache
+│ │  from django.db import models
+│ │  from django.db.models.functions import Coalesce
+│ │  from django.db.transaction import atomic
+│ │ +from edx_django_utils.cache.utils import get_cache_key
+│ │  from jsonfield.fields import JSONField
+│ │  from model_utils.models import TimeStampedModel
+│ │  from simple_history.models import HistoricalRecords
+│ │  
+│ │  from openedx_ledger.utils import create_idempotency_key_for_ledger
+│ │  
+│ │ +LEDGER_LOCK_RESOURCE_NAME = 'ledger'
+│ │ +
+│ │  
+│ │  class UnitChoices:
+│ │      USD_CENTS = 'usd_cents'
+│ │      SEATS = 'seats'
+│ │      CHOICES = (
+│ │          (USD_CENTS, 'U.S. Dollar (Cents)'),
+│ │          (SEATS, 'Seats in a course'),
+│ │ @@ -45,28 +50,19 @@
+│ │          (CREATED, 'Created'),
+│ │          (PENDING, 'Pending'),
+│ │          (COMMITTED, 'Committed'),
+│ │          (FAILED, 'Failed'),
+│ │      )
+│ │  
+│ │  
+│ │ -class TransactionReferenceTypeChoices:
+│ │ +class LedgerLockAttemptFailed(Exception):
+│ │      """
+│ │ -    Enumerate different choices for the type of Transaction reference_id.
+│ │ -
+│ │ -    The reference_id of a Transaction may refer to different things depending on the type of content being enrolled and
+│ │ -    the time of enrollment.  These options allow us to be explicit about the type of identifier used for that redeption
+│ │ -    result.
+│ │ +    Raise when attempt to lock Ledger failed due to an already existing lock.
+│ │      """
+│ │  
+│ │ -    LEARNER_CREDIT_ENTERPRISE_COURSE_ENROLLMENT_ID = 'learner_credit_enterprise_course_enrollment_id'
+│ │ -    CHOICES = (
+│ │ -        (LEARNER_CREDIT_ENTERPRISE_COURSE_ENROLLMENT_ID, 'LearnerCreditEnterpriseCourseEnrollment ID'),
+│ │ -    )
+│ │ -
+│ │  
+│ │  class TimeStampedModelWithUuid(TimeStampedModel):
+│ │      """
+│ │      Base timestamped model adding a UUID field.
+│ │      """
+│ │  
+│ │      class Meta:
+│ │ @@ -158,14 +154,57 @@
+│ │          Calculate the current balance of the ledger.
+│ │  
+│ │          Returns:
+│ │              int: The total balance of all transactions in this ledger.  Always positive.
+│ │          """
+│ │          return self.subset_balance(Transaction.objects.filter(ledger=self))
+│ │  
+│ │ +    @property
+│ │ +    def lock_resource_key(self) -> str:
+│ │ +        return get_cache_key(resource=LEDGER_LOCK_RESOURCE_NAME, uuid=self.uuid)
+│ │ +
+│ │ +    def acquire_lock(self) -> str:
+│ │ +        """
+│ │ +        Acquire an exclusive lock on this Ledger instance.
+│ │ +
+│ │ +        Memcached devs recommend using add() for locking instead of get()+set(), which rules out TieredCache which only
+│ │ +        exposes get()+set() from django cache.  See: https://github.com/memcached/memcached/issues/163
+│ │ +
+│ │ +        Returns:
+│ │ +            str: lock ID if a Ledger lock was successfully acquired, None otherwise.
+│ │ +        """
+│ │ +        lock_id = uuid4()
+│ │ +        if django_cache.add(self.lock_resource_key, lock_id):
+│ │ +            return lock_id
+│ │ +        else:
+│ │ +            return None
+│ │ +
+│ │ +    def release_lock(self) -> None:
+│ │ +        """
+│ │ +        Release an exclusive lock on this Ledger instance.
+│ │ +        """
+│ │ +        django_cache.delete(self.lock_resource_key)
+│ │ +
+│ │ +    @contextmanager
+│ │ +    def lock(self):
+│ │ +        """
+│ │ +        Context manager for locking this Ledger instance.
+│ │ +
+│ │ +        Raises:
+│ │ +            openedx_ledger.models.LedgerLockAttemptFailed:
+│ │ +                Raises this if there's another distributed process locking this Ledger.
+│ │ +        """
+│ │ +        lock_id = self.acquire_lock()
+│ │ +        if not lock_id:
+│ │ +            raise LedgerLockAttemptFailed(f"Failed to acquire lock <{lock_id}> on Ledger {str(self)}.")
+│ │ +        try:
+│ │ +            yield lock_id
+│ │ +        finally:
+│ │ +            self.release_lock()
+│ │ +
+│ │      def save(self, *args, **kwags):
+│ │          """
+│ │          Sets the idempotency_key for the ledger if it is currently null.
+│ │          """
+│ │          if not self.idempotency_key:
+│ │              self.idempotency_key = create_idempotency_key_for_ledger()
+│ │          super().save(*args, **kwags)
+│ │ @@ -283,42 +322,138 @@
+│ │          blank=True,
+│ │          null=True,
+│ │          db_index=True,
+│ │          help_text=(
+│ │              "The globally unique content identifier.  Joinable with ContentMetadata.content_key in enterprise-catalog."
+│ │          )
+│ │      )
+│ │ -    reference_id = models.CharField(
+│ │ +    fulfillment_identifier = models.CharField(
+│ │          max_length=255,
+│ │          blank=True,
+│ │          null=True,
+│ │          db_index=True,
+│ │          help_text=(
+│ │ -            "The identifier of the item acquired via the transaction. "
+│ │ -            "e.g. a LearnerCreditEnterpriseCourseEnrollment ID."
+│ │ +            "The UUID identifier of the subsidized enrollment record for a learner generated durning the enrollment"
+│ │ +            "call made to enterprise/edx platform e.g. a LearnerCreditEnterpriseCourseEnrollment UUID."
+│ │          ),
+│ │      )
+│ │ -    reference_type = models.CharField(
+│ │ -        max_length=255,
+│ │ -        blank=True,
+│ │ -        null=True,
+│ │ -        # Since null=True we do not need a default choice.  Furthermore, a default doesn't make sense anyway because
+│ │ -        # there's no reasonable heuristic to guess the type before runtime.
+│ │ -        choices=TransactionReferenceTypeChoices.CHOICES,
+│ │ -        db_index=True,
+│ │ -        help_text="The type of identifier used for `reference_id`.",
+│ │ -    )
+│ │      subsidy_access_policy_uuid = models.UUIDField(
+│ │          blank=True,
+│ │          null=True,
+│ │          help_text="A reference to the subsidy access policy which was used to create a transaction for the content."
+│ │      )
+│ │      history = HistoricalRecords()
+│ │  
+│ │  
+│ │ +class ExternalFulfillmentProvider(TimeStampedModel):
+│ │ +    """
+│ │ +    Model of external fulfillment providers. This is used to track the external systems that are used to fulfill
+│ │ +    transactions.
+│ │ +
+│ │ +    .. no_pii:
+│ │ +    """
+│ │ +
+│ │ +    class Meta:
+│ │ +        """
+│ │ +        Metaclass for ExternalFulfillmentProvider.
+│ │ +        """
+│ │ +
+│ │ +        verbose_name = 'External Fulfillment provider'
+│ │ +        verbose_name_plural = 'External fulfillment providers'
+│ │ +
+│ │ +    name = models.CharField(
+│ │ +        max_length=255,
+│ │ +        blank=False,
+│ │ +        null=False,
+│ │ +        unique=True,
+│ │ +        db_index=True,
+│ │ +        help_text="The name of the external reference type.",
+│ │ +    )
+│ │ +    slug = models.SlugField(
+│ │ +        max_length=32,
+│ │ +        unique=True,
+│ │ +        help_text=(
+│ │ +            "The slug of the external reference type. This is typically the slugified name of the system that the "
+│ │ +            "reference is associated with."
+│ │ +        )
+│ │ +    )
+│ │ +
+│ │ +    def __str__(self):
+│ │ +        """
+│ │ +        Return string representation of this external fulfillment provider, visible in logs, django admin, etc.
+│ │ +        """
+│ │ +        msg = (
+│ │ +            f'<ExternalFulfillmentProvider\n'
+│ │ +            f'name={self.name}\n'
+│ │ +            f'slug={self.slug}>'
+│ │ +        )
+│ │ +        return msg
+│ │ +
+│ │ +
+│ │ +class ExternalTransactionReference(TimeStampedModel):
+│ │ +    """
+│ │ +    Model of references to transactions from an external system and their associated Transaction objects.
+│ │ +
+│ │ +    .. no_pii:
+│ │ +    """
+│ │ +
+│ │ +    class Meta:
+│ │ +        """
+│ │ +        Metaclass for ExternalTransactionReference.
+│ │ +        """
+│ │ +
+│ │ +        unique_together = [('external_reference_id', 'external_fulfillment_provider')]
+│ │ +        verbose_name = 'External Transaction Reference'
+│ │ +
+│ │ +    transaction = models.ForeignKey(
+│ │ +        Transaction,
+│ │ +        related_name='external_reference',
+│ │ +        null=True,
+│ │ +        on_delete=models.CASCADE,
+│ │ +        help_text=(
+│ │ +            "The Transaction to which this external reference is associated."
+│ │ +        ),
+│ │ +    )
+│ │ +    external_reference_id = models.CharField(
+│ │ +        max_length=255,
+│ │ +        blank=False,
+│ │ +        null=False,
+│ │ +        primary_key=True,
+│ │ +        db_index=True,
+│ │ +        help_text=(
+│ │ +            "The identifier for the external reference operation. This is typically the name of the system that the "
+│ │ +            "reference is associated with."
+│ │ +        ),
+│ │ +    )
+│ │ +    external_fulfillment_provider = models.ForeignKey(
+│ │ +        ExternalFulfillmentProvider,
+│ │ +        related_name='reference',
+│ │ +        null=False,
+│ │ +        blank=False,
+│ │ +        on_delete=models.CASCADE,
+│ │ +        help_text=(
+│ │ +            "The provider (source) of the external reference."
+│ │ +        )
+│ │ +    )
+│ │ +
+│ │ +    def __str__(self):
+│ │ +        """
+│ │ +        Return string representation of this external reference, visible in logs, django admin, etc.
+│ │ +        """
+│ │ +        msg = (
+│ │ +            f'<ExternalTransactionReference\n'
+│ │ +            f'external_reference_id={self.external_reference_id}\n'
+│ │ +            f'external_fulfillment_provider={self.external_fulfillment_provider}\n'
+│ │ +        )
+│ │ +        if self.transaction:
+│ │ +            msg += f'associated with {self.transaction}\n'
+│ │ +        msg += '>'
+│ │ +        return msg
+│ │ +
+│ │ +
+│ │  class Reversal(BaseTransaction):
+│ │      """
+│ │      Represents a reversal of some or all of a transaction, but no more.
+│ │  
+│ │      .. no_pii:
+│ │      """
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/templates/edx_ledger/base.html
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/templates/edx_ledger/base.html
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/test_utils/factories.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/test_utils/factories.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,15 +1,23 @@
+│ │  """
+│ │  Test factories for openedx-ledger models.
+│ │  """
+│ │  from uuid import uuid4
+│ │  
+│ │  import factory
+│ │  
+│ │ -from openedx_ledger.models import Ledger, Reversal, Transaction, TransactionStateChoices, UnitChoices
+│ │ +from openedx_ledger.models import (
+│ │ +    ExternalFulfillmentProvider,
+│ │ +    ExternalTransactionReference,
+│ │ +    Ledger,
+│ │ +    Reversal,
+│ │ +    Transaction,
+│ │ +    TransactionStateChoices,
+│ │ +    UnitChoices,
+│ │ +)
+│ │  
+│ │  
+│ │  class LedgerFactory(factory.django.DjangoModelFactory):
+│ │      """
+│ │      Test factory for the `Ledger` model.
+│ │  
+│ │      By default, no transactions are created for this test Ledger.
+│ │ @@ -33,14 +41,37 @@
+│ │      idempotency_key = factory.LazyFunction(uuid4)
+│ │      state = TransactionStateChoices.CREATED
+│ │      quantity = factory.Faker("random_int", min=-100000, max=-100)
+│ │      ledger = factory.Iterator(Ledger.objects.all())
+│ │      lms_user_id = factory.Faker("random_int", min=1, max=1000)
+│ │  
+│ │  
+│ │ +class ExternalFulfillmentProviderFactory(factory.django.DjangoModelFactory):
+│ │ +    """
+│ │ +    Test factory for the `ExternalFulfillmentProvider` model.
+│ │ +    """
+│ │ +    class Meta:
+│ │ +        model = ExternalFulfillmentProvider
+│ │ +
+│ │ +    name = factory.Faker("company")
+│ │ +    slug = factory.Faker("slug")
+│ │ +
+│ │ +
+│ │ +class ExternalTransactionReferenceFactory(factory.django.DjangoModelFactory):
+│ │ +    """
+│ │ +    Test factory for the `ExternalTransactionReferenceFactory` model.
+│ │ +    """
+│ │ +    class Meta:
+│ │ +        model = ExternalTransactionReference
+│ │ +
+│ │ +    external_reference_id = factory.Faker("lexify", text="????-????-????-????")
+│ │ +    transaction = factory.Iterator(Transaction.objects.all())
+│ │ +    external_fulfillment_provider = factory.Iterator(ExternalFulfillmentProvider.objects.all())
+│ │ +
+│ │ +
+│ │  class ReversalFactory(factory.django.DjangoModelFactory):
+│ │      """
+│ │      Test factory for the `Reversal` model.
+│ │      """
+│ │      class Meta:
+│ │          model = Reversal
+│ │   --- openedx-ledger-0.2.2/openedx_ledger/utils.py
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger/utils.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/openedx_ledger.egg-info/PKG-INFO
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: openedx-ledger
+│ │ -Version: 0.2.2
+│ │ +Version: 0.3.0
+│ │  Summary: Records transactions against a ledger, denominated in units of value.
+│ │  Home-page: https://github.com/openedx/openedx-ledger
+│ │  Author: edX
+│ │  Author-email: oscm@edx.org
+│ │  License: AGPL 3.0
+│ │  Keywords: Python edx
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- openedx-ledger-0.2.2/openedx_ledger.egg-info/SOURCES.txt
+│ ├── +++ openedx-ledger-0.3.0/openedx_ledger.egg-info/SOURCES.txt
+│ │┄ Files 8% similar despite different names
+│ │ @@ -20,14 +20,15 @@
+│ │  openedx_ledger.egg-info/requires.txt
+│ │  openedx_ledger.egg-info/top_level.txt
+│ │  openedx_ledger/migrations/0001_initial.py
+│ │  openedx_ledger/migrations/0002_historicalledger_historicalreversal_historicaltransaction.py
+│ │  openedx_ledger/migrations/0003_field_updates_20230216_1605.py
+│ │  openedx_ledger/migrations/0004_ledger_idpkey_blankable.py
+│ │  openedx_ledger/migrations/0005_help_text_and_more_indices.py
+│ │ +openedx_ledger/migrations/0006_auto_20230404_1744.py
+│ │  openedx_ledger/migrations/__init__.py
+│ │  openedx_ledger/templates/edx_ledger/base.html
+│ │  openedx_ledger/test_utils/__init__.py
+│ │  openedx_ledger/test_utils/factories.py
+│ │  requirements/base.in
+│ │  requirements/constraints.txt
+│ │  tests/test_api.py
+│ │   --- openedx-ledger-0.2.2/requirements/constraints.txt
+│ ├── +++ openedx-ledger-0.3.0/requirements/constraints.txt
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/setup.py
+│ ├── +++ openedx-ledger-0.3.0/setup.py
+│ │┄ Files identical despite different names
+│ │   --- openedx-ledger-0.2.2/tests/test_api.py
+│ ├── +++ openedx-ledger-0.3.0/tests/test_api.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -26,19 +26,25 @@
+│ │  
+│ │  
+│ │  @pytest.mark.django_db
+│ │  def test_no_negative_balance():
+│ │      ledger = api.create_ledger(unit=UnitChoices.USD_CENTS, idempotency_key='my-other-ledger')
+│ │      assert ledger.balance() == 0
+│ │  
+│ │ -    with pytest.raises(Exception, match="d'oh!"):
+│ │ +    with pytest.raises(
+│ │ +        api.LedgerBalanceExceeded,
+│ │ +        match="A Transaction was not created because it would exceed the ledger balance."
+│ │ +    ):
+│ │          api.create_transaction(ledger, quantity=-1, idempotency_key='tx-1')
+│ │  
+│ │      api.create_transaction(ledger, quantity=999, idempotency_key='tx-2')
+│ │ -    with pytest.raises(Exception, match="d'oh!"):
+│ │ +    with pytest.raises(
+│ │ +        api.LedgerBalanceExceeded,
+│ │ +        match="A Transaction was not created because it would exceed the ledger balance."
+│ │ +    ):
+│ │          api.create_transaction(ledger, quantity=-1000, idempotency_key='tx-3')
+│ │  
+│ │  
+│ │  @pytest.mark.django_db
+│ │  def test_multiple_reversals():
+│ │      ledger = api.create_ledger(unit=UnitChoices.USD_CENTS, idempotency_key='my-other-ledger')
+│ │      assert ledger.balance() == 0

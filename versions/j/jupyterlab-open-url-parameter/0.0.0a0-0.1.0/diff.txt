@@ -1,0 +1,52 @@
+--- tmp/jupyterlab-open-url-parameter-0.0.0a0.tar.gz
++++ tmp/jupyterlab_open_url_parameter-0.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "jupyterlab-open-url-parameter-0.0.0a0.tar", last modified: Thu Apr  6 15:40:38 2023, max compression
+│ +gzip compressed data, last modified: Sun Feb  2 00:00:00 2020, max compression
+│   --- jupyterlab-open-url-parameter-0.0.0a0.tar
+├── +++ jupyterlab_open_url_parameter-0.1.0.tar
+│ ├── file list
+│ │ @@ -1,9 +1,33 @@
+│ │ -drwxr-xr-x   0 jtp       (1000) jtp       (1000)        0 2023-04-06 15:40:38.712596 jupyterlab-open-url-parameter-0.0.0a0/
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)       75 2023-04-06 15:40:38.712596 jupyterlab-open-url-parameter-0.0.0a0/PKG-INFO
+│ │ -drwxr-xr-x   0 jtp       (1000) jtp       (1000)        0 2023-04-06 15:40:38.711596 jupyterlab-open-url-parameter-0.0.0a0/jupyterlab_open_url_parameter.egg-info/
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)       75 2023-04-06 15:40:38.000000 jupyterlab-open-url-parameter-0.0.0a0/jupyterlab_open_url_parameter.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)      220 2023-04-06 15:40:38.000000 jupyterlab-open-url-parameter-0.0.0a0/jupyterlab_open_url_parameter.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)        1 2023-04-06 15:40:38.000000 jupyterlab-open-url-parameter-0.0.0a0/jupyterlab_open_url_parameter.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)        1 2023-04-06 15:40:38.000000 jupyterlab-open-url-parameter-0.0.0a0/jupyterlab_open_url_parameter.egg-info/top_level.txt
+│ │ --rw-r--r--   0 jtp       (1000) jtp       (1000)       38 2023-04-06 15:40:38.712596 jupyterlab-open-url-parameter-0.0.0a0/setup.cfg
+│ │ --rw-rw-r--   0 jtp       (1000) jtp       (1000)      103 2023-04-06 15:40:23.000000 jupyterlab-open-url-parameter-0.0.0a0/setup.py
+│ │ +-rw-r--r--   0        0        0       71 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.eslintignore
+│ │ +-rw-r--r--   0        0        0     1026 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.eslintrc.js
+│ │ +-rw-r--r--   0        0        0      102 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.prettierignore
+│ │ +-rw-r--r--   0        0        0      102 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.prettierrc
+│ │ +-rw-r--r--   0        0        0      163 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.readthedocs.yml
+│ │ +-rw-r--r--   0        0        0      260 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.stylelintrc
+│ │ +-rw-r--r--   0        0        0     1339 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/CHANGELOG.md
+│ │ +-rw-r--r--   0        0        0     2135 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/RELEASE.md
+│ │ +-rw-r--r--   0        0        0      219 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/install.json
+│ │ +-rw-r--r--   0        0        0     3502 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/package.json
+│ │ +-rw-r--r--   0        0        0       33 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/setup.py
+│ │ +-rw-r--r--   0        0        0      554 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/tsconfig.json
+│ │ +-rw-r--r--   0        0        0   210379 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/yarn.lock
+│ │ +-rw-r--r--   0        0        0      501 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/docs/conf.py
+│ │ +-rw-r--r--   0        0        0      240 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/docs/environment.yml
+│ │ +-rw-r--r--   0        0        0       30 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/docs/index.md
+│ │ +-rw-r--r--   0        0        0      172 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/__init__.py
+│ │ +-rw-r--r--   0        0        0      171 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/_version.py
+│ │ +-rw-r--r--   0        0        0     3362 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/package.json
+│ │ +-rw-r--r--   0        0        0      865 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/static/568.11e2a1073dedb0d7c64b.js
+│ │ +-rw-r--r--   0        0        0     3534 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/static/747.9a8b7abcd88da875bb07.js
+│ │ +-rw-r--r--   0        0        0     6487 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/static/remoteEntry.74a375733b4162d461a9.js
+│ │ +-rw-r--r--   0        0        0      172 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/static/style.js
+│ │ +-rw-r--r--   0        0        0     2452 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/jupyterlab_open_url_parameter/labextension/static/third-party-licenses.json
+│ │ +-rw-r--r--   0        0        0     1794 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/src/index.ts
+│ │ +-rw-r--r--   0        0        0      138 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/style/base.css
+│ │ +-rw-r--r--   0        0        0       25 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/style/index.css
+│ │ +-rw-r--r--   0        0        0       21 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/style/index.js
+│ │ +-rw-r--r--   0        0        0     1654 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/.gitignore
+│ │ +-rw-r--r--   0        0        0     1531 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     4398 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/README.md
+│ │ +-rw-r--r--   0        0        0     2439 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     7373 2020-02-02 00:00:00.000000 jupyterlab_open_url_parameter-0.1.0/PKG-INFO

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/gto-0.3.0rc1.tar.gz tmp/gto-0.3.0rc2.tar.gz --html versions/g/gto/0.3.0rc1-0.3.0rc2/index.html --text versions/g/gto/0.3.0rc1-0.3.0rc2/diff.txt --markdown versions/g/gto/0.3.0rc1-0.3.0rc2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">22.2 KB</span></div>
+  <div><span class="source">tmp/gto-0.3.0rc1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/gto-0.3.0rc2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">262 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gto-0.3.0rc<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gto-0.3.0rc<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">21.9 KB</span></div>
+    <div><span class="source">gto-0.3.0rc1.tar</span> vs.</div>
+    <div id="gto--.-.-rc-.tar"><span class="source">gto-0.3.0rc2.tar</span>
+      <a class="anchor" href="#gto--.-.-rc-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">15.2 KB</span></div>
+      <div id="gto--.-.-rc-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 66 lines modified</td><td colspan="2">Offset 1, 66 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>6<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>6<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>164<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.coveragerc</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>164<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.coveragerc</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>87</del>4<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/.github/</td><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>18</ins>4<ins>150</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.github/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>87</del>8<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/.github/ISSUE_TEMPLATE/</td><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>18</ins>8<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.github/ISSUE_TEMPLATE/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1358<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.github/ISSUE_TEMPLATE/epic-or-story.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1358<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.github/ISSUE_TEMPLATE/epic-or-story.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>87</del>8<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/.github/workflows/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>18</ins>8<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.github/workflows/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3442<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.github/workflows/check-test-release.yml</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3442<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.github/workflows/check-test-release.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2071<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.gitignore</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2071<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1457<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.pre-commit-config.yaml</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1457<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.pre-commit-config.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20057<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/.pylintrc</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20057<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/.pylintrc</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11345<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/LICENSE</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11345<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3502<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>6<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/PKG-INFO</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3502<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>6<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2765<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/README.md</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2765<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>2<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>2<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>265<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>265<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>163<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/_gto_version.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>163<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>44</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/_gto_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>404<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/_version.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>404<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17289<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/api.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17289<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19695<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/base.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19695<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29313<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/cli.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29313<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>501<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/commit_message_generator.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>501<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/commit_message_generator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4102<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/config.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4102<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3724<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/constants.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3724<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5762<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/exceptions.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5762<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3266<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/ext.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3266<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/ext.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>833<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/ext_dvc.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>833<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/ext_dvc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1368<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/ext_mlem.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1368<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/ext_mlem.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7367<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/git_utils.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7367<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/git_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18038<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/index.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18038<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/index.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>763<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/log.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>763<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/log.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20840<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/registry.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20840<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/registry.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<del>166</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/tag.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<ins>221</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/tag.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1720<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/ui.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1720<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/ui.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2990<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/utils.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2990<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3123<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto/versions.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3123<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto/versions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>2<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/</td><td class="diffline">36 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>2<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3502<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/PKG-INFO</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3502<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1143<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/SOURCES.txt</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1143<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/dependency_links.txt</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>84<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/entry_points.txt</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>84<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/not-zip-safe</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>236<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/requires.txt</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>236<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/gto.egg-info/top_level.txt</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/gto.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>207<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/pyproject.toml</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>207<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/renovate.json</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/renovate.json</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1152<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>6<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/setup.cfg</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1152<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>6<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2137<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/setup.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2137<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>882763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/</td><td class="diffline">48 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>196151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/__init__.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3220<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/conftest.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3220<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/conftest.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>22</del>.<del>88</del>6<del>763</del><span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/resources/</td><td class="diffline">51 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>45</ins>.<ins>19</ins>6<ins>151</ins><span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/resources/</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/resources/__init__.py</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/resources/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2782<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/resources/sample_remote_repo_expected_history_churn.json</td><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2782<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/resources/sample_remote_repo_expected_history_churn.json</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/resources/sample_remote_repo_expected_registry.json</td><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/resources/sample_remote_repo_expected_registry.json</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>563<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/skip_presets.py</td><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>563<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/skip_presets.py</td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28593<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_api.py</td><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28593<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<del>554</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_cli.py</td><td class="diffline">57 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<ins>773</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3874<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_config.py</td><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3874<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1202<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_constants.py</td><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1202<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13338<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_git_utils.py</td><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13338<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_git_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3241<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_index.py</td><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3241<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_index.py</td></tr>
+<tr class="diffchanged"><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19732<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_registry.py</td><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19732<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_registry.py</td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5427<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_showcase.py</td><td class="diffline">63 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5427<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_showcase.py</td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3965<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_tag.py</td><td class="diffline">64 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3965<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_tag.py</td></tr>
+<tr class="diffchanged"><td class="diffline">65 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>816<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/test_versions.py</td><td class="diffline">65 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>816<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/test_versions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">66 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1605<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>11</del>.000000<span class="dp">·</span>gto-0.3.0rc<del>1</del>/tests/utils.py</td><td class="diffline">66 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1605<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>35</ins>:<ins>27</ins>.000000<span class="dp">·</span>gto-0.3.0rc<ins>2</ins>/tests/utils.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/.github/ISSUE_TEMPLATE/epic-or-story.md</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--.github-ISSUE_TEMPLATE-epic-or-story.md"><span class="source">gto-0.3.0rc2/.github/ISSUE_TEMPLATE/epic-or-story.md</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--.github-ISSUE_TEMPLATE-epic-or-story.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/.github/workflows/check-test-release.yml</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--.github-workflows-check-test-release.yml"><span class="source">gto-0.3.0rc2/.github/workflows/check-test-release.yml</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--.github-workflows-check-test-release.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/.gitignore</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--.gitignore"><span class="source">gto-0.3.0rc2/.gitignore</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/.pre-commit-config.yaml</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--.pre-commit-config.yaml"><span class="source">gto-0.3.0rc2/.pre-commit-config.yaml</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--.pre-commit-config.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/.pylintrc</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--.pylintrc"><span class="source">gto-0.3.0rc2/.pylintrc</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--.pylintrc">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/LICENSE</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--LICENSE"><span class="source">gto-0.3.0rc2/LICENSE</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">510 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/PKG-INFO</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--PKG-INFO"><span class="source">gto-0.3.0rc2/PKG-INFO</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gto</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gto</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.0rc<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.0rc<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Version<span class="dp">·</span>and<span class="dp">·</span>deploy<span class="dp">·</span>your<span class="dp">·</span>models<span class="dp">·</span>following<span class="dp">·</span>GitOps<span class="dp">·</span>principles</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Version<span class="dp">·</span>and<span class="dp">·</span>deploy<span class="dp">·</span>your<span class="dp">·</span>models<span class="dp">·</span>following<span class="dp">·</span>GitOps<span class="dp">·</span>principles</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/iterative/gto</td><td class="diffline">5 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/iterative/gto</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexander<span class="dp">·</span>Guschin</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexander<span class="dp">·</span>Guschin</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>aguschin@iterative.ai</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>aguschin@iterative.ai</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>git<span class="dp">·</span>repo<span class="dp">·</span>repository<span class="dp">·</span>artifact<span class="dp">·</span>registry<span class="dp">·</span>developer-tools<span class="dp">·</span>collaboration</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>git<span class="dp">·</span>repo<span class="dp">·</span>repository<span class="dp">·</span>artifact<span class="dp">·</span>registry<span class="dp">·</span>developer-tools<span class="dp">·</span>collaboration</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/README.md</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--README.md"><span class="source">gto-0.3.0rc2/README.md</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/api.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-api.py"><span class="source">gto-0.3.0rc2/gto/api.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/base.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-base.py"><span class="source">gto-0.3.0rc2/gto/base.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/cli.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-cli.py"><span class="source">gto-0.3.0rc2/gto/cli.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/config.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-config.py"><span class="source">gto-0.3.0rc2/gto/config.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/constants.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-constants.py"><span class="source">gto-0.3.0rc2/gto/constants.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/exceptions.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-exceptions.py"><span class="source">gto-0.3.0rc2/gto/exceptions.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-exceptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/ext.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-ext.py"><span class="source">gto-0.3.0rc2/gto/ext.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-ext.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/ext_dvc.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-ext_dvc.py"><span class="source">gto-0.3.0rc2/gto/ext_dvc.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-ext_dvc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/ext_mlem.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-ext_mlem.py"><span class="source">gto-0.3.0rc2/gto/ext_mlem.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-ext_mlem.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/git_utils.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-git_utils.py"><span class="source">gto-0.3.0rc2/gto/git_utils.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-git_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/index.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-index.py"><span class="source">gto-0.3.0rc2/gto/index.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-index.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/log.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-log.py"><span class="source">gto-0.3.0rc2/gto/log.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-log.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/registry.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-registry.py"><span class="source">gto-0.3.0rc2/gto/registry.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-registry.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">807 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/tag.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-tag.py"><span class="source">gto-0.3.0rc2/gto/tag.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-tag.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 20, 14 lines modified</td><td colspan="2">Offset 20, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ACTION,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ACTION,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>COUNTER,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>COUNTER,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NAME,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NAME,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>STAGE,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>STAGE,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TAG,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TAG,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>VERSION,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>VERSION,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Action,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Action,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name_to_tag,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_re,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_re,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_to_name,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag_to_name,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">)</td><td class="diffline">30 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">from<span class="dp">·</span>.exceptions<span class="dp">·</span>import<span class="dp">·</span>(</td><td class="diffline">31 </td><td class="diffpresent">from<span class="dp">·</span>.exceptions<span class="dp">·</span>import<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>InvalidTagName,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>InvalidTagName,</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>MissingArg,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>MissingArg,</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NotImplementedInGTO,</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NotImplementedInGTO,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 56, 14 lines modified</td><td colspan="2">Offset 57, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>stage:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None,</td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>stage:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo:<span class="dp">·</span>Optional[git.Repo]<span class="dp">·</span>=<span class="dp">·</span>None,</td><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo:<span class="dp">·</span>Optional[git.Repo]<span class="dp">·</span>=<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>simple:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>False,</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>simple:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>False,</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">):</td><td class="diffline">60 </td><td class="diffpresent">):</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>action<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>TagTemplates:</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>action<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>TagTemplates:</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>UnknownAction(action=action)</td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>UnknownAction(action=action)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>artifact<span class="dp">·</span>=<span class="dp">·</span>name_to_tag(artifact)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>TagTemplates[action].format(artifact=artifact,<span class="dp">·</span>version=version,<span class="dp">·</span>stage=stage)</td><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>TagTemplates[action].format(artifact=artifact,<span class="dp">·</span>version=version,<span class="dp">·</span>stage=stage)</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>simple:</td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>simple:</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>tag</td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>tag</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>repo<span class="dp">·</span>is<span class="dp">·</span>None:</td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>repo<span class="dp">·</span>is<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>MissingArg(arg=&quot;repo&quot;)</td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>MissingArg(arg=&quot;repo&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>counter<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>counter<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>t<span class="dp">·</span>in<span class="dp">·</span>repo.tags:</td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>t<span class="dp">·</span>in<span class="dp">·</span>repo.tags:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/ui.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-ui.py"><span class="source">gto-0.3.0rc2/gto/ui.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-ui.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/utils.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-utils.py"><span class="source">gto-0.3.0rc2/gto/utils.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto/versions.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto-versions.py"><span class="source">gto-0.3.0rc2/gto/versions.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto-versions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">536 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto.egg-info/PKG-INFO</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto.egg-info-PKG-INFO"><span class="source">gto-0.3.0rc2/gto.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gto</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gto</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.0rc<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.0rc<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Version<span class="dp">·</span>and<span class="dp">·</span>deploy<span class="dp">·</span>your<span class="dp">·</span>models<span class="dp">·</span>following<span class="dp">·</span>GitOps<span class="dp">·</span>principles</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Version<span class="dp">·</span>and<span class="dp">·</span>deploy<span class="dp">·</span>your<span class="dp">·</span>models<span class="dp">·</span>following<span class="dp">·</span>GitOps<span class="dp">·</span>principles</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/iterative/gto</td><td class="diffline">5 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/iterative/gto</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexander<span class="dp">·</span>Guschin</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexander<span class="dp">·</span>Guschin</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>aguschin@iterative.ai</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>aguschin@iterative.ai</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>git<span class="dp">·</span>repo<span class="dp">·</span>repository<span class="dp">·</span>artifact<span class="dp">·</span>registry<span class="dp">·</span>developer-tools<span class="dp">·</span>collaboration</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>git<span class="dp">·</span>repo<span class="dp">·</span>repository<span class="dp">·</span>artifact<span class="dp">·</span>registry<span class="dp">·</span>developer-tools<span class="dp">·</span>collaboration</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/gto.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--gto.egg-info-SOURCES.txt"><span class="source">gto-0.3.0rc2/gto.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--gto.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/setup.cfg</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--setup.cfg"><span class="source">gto-0.3.0rc2/setup.cfg</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/setup.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--setup.py"><span class="source">gto-0.3.0rc2/setup.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/conftest.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-conftest.py"><span class="source">gto-0.3.0rc2/tests/conftest.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-conftest.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/resources/__init__.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-__init__.py"><span class="source">gto-0.3.0rc2/tests/resources/__init__.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_history_churn.json</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-sample_remote_repo_expected_history_churn.json"><span class="source">gto-0.3.0rc2/tests/resources/sample_remote_repo_expected_history_churn.json</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-sample_remote_repo_expected_history_churn.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_registry.json</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-sample_remote_repo_expected_registry.json"><span class="source">gto-0.3.0rc2/tests/resources/sample_remote_repo_expected_registry.json</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-resources-sample_remote_repo_expected_registry.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/skip_presets.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-skip_presets.py"><span class="source">gto-0.3.0rc2/tests/skip_presets.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-skip_presets.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_api.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_api.py"><span class="source">gto-0.3.0rc2/tests/test_api.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">725 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_cli.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_cli.py"><span class="source">gto-0.3.0rc2/tests/test_cli.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 351, 14 lines modified</td><td colspan="2">Offset 351, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">351 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_check_failing_cmd(</td><td class="diffline">351 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_check_failing_cmd(</td></tr>
+<tr class="diffunmodified"><td class="diffline">352 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;register&quot;,</td><td class="diffline">352 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;register&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">353 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[&quot;-r&quot;,<span class="dp">·</span>repo.working_dir,<span class="dp">·</span>&quot;a3&quot;,<span class="dp">·</span>&quot;--version&quot;,<span class="dp">·</span>&quot;1.2.3&quot;],</td><td class="diffline">353 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[&quot;-r&quot;,<span class="dp">·</span>repo.working_dir,<span class="dp">·</span>&quot;a3&quot;,<span class="dp">·</span>&quot;--version&quot;,<span class="dp">·</span>&quot;1.2.3&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">354 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;❌<span class="dp">·</span>Supplied<span class="dp">·</span>version<span class="dp">·</span>&#x27;1.2.3&#x27;<span class="dp">·</span>cannot<span class="dp">·</span>be<span class="dp">·</span>parsed\n&quot;,</td><td class="diffline">354 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;❌<span class="dp">·</span>Supplied<span class="dp">·</span>version<span class="dp">·</span>&#x27;1.2.3&#x27;<span class="dp">·</span>cannot<span class="dp">·</span>be<span class="dp">·</span>parsed\n&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">355 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">355 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">356 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_check_successful_cmd(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">357 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;register&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">358 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[&quot;-r&quot;,<span class="dp">·</span>repo.working_dir,<span class="dp">·</span>&quot;classification/dvclive:models/nn&quot;],</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">359 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;classification/dvclive=models/nn@v0.0.1&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">360 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>search_func=_check_output_contains,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">361 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">356 </td><td class="diffpresent">def<span class="dp">·</span>test_assign(repo_with_commit:<span class="dp">·</span>Tuple[git.Repo,<span class="dp">·</span>Callable]):</td><td class="diffline">362 </td><td class="diffpresent">def<span class="dp">·</span>test_assign(repo_with_commit:<span class="dp">·</span>Tuple[git.Repo,<span class="dp">·</span>Callable]):</td></tr>
+<tr class="diffunmodified"><td class="diffline">357 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo,<span class="dp">·</span>write_file<span class="dp">·</span>=<span class="dp">·</span>repo_with_commit</td><td class="diffline">363 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo,<span class="dp">·</span>write_file<span class="dp">·</span>=<span class="dp">·</span>repo_with_commit</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">358 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_check_successful_cmd(</td><td class="diffline">364 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_check_successful_cmd(</td></tr>
+<tr class="diffunmodified"><td class="diffline">359 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;register&quot;,</td><td class="diffline">365 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;register&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">360 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[&quot;-r&quot;,<span class="dp">·</span>repo.working_dir,<span class="dp">·</span>&quot;nn1&quot;],</td><td class="diffline">366 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[&quot;-r&quot;,<span class="dp">·</span>repo.working_dir,<span class="dp">·</span>&quot;nn1&quot;],</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_config.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_config.py"><span class="source">gto-0.3.0rc2/tests/test_config.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_constants.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_constants.py"><span class="source">gto-0.3.0rc2/tests/test_constants.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_git_utils.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_git_utils.py"><span class="source">gto-0.3.0rc2/tests/test_git_utils.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_git_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_index.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_index.py"><span class="source">gto-0.3.0rc2/tests/test_index.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_index.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_registry.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_registry.py"><span class="source">gto-0.3.0rc2/tests/test_registry.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_registry.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_showcase.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_showcase.py"><span class="source">gto-0.3.0rc2/tests/test_showcase.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_showcase.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_tag.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_tag.py"><span class="source">gto-0.3.0rc2/tests/test_tag.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_tag.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/test_versions.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-test_versions.py"><span class="source">gto-0.3.0rc2/tests/test_versions.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-test_versions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">gto-0.3.0rc1/tests/utils.py</span> vs.</div>
+      <div id="gto--.-.-rc-.tar---gto--.-.-rc--tests-utils.py"><span class="source">gto-0.3.0rc2/tests/utils.py</span>
+        <a class="anchor" href="#gto--.-.-rc-.tar---gto--.-.-rc--tests-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

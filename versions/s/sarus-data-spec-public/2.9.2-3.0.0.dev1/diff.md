@@ -1,0 +1,5845 @@
+# Comparing `tmp/sarus_data_spec_public-2.9.2.tar.gz` & `tmp/sarus_data_spec_public-3.0.0.dev1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "sarus_data_spec_public-2.9.2.tar", last modified: Wed Mar 29 13:37:39 2023, max compression
++gzip compressed data, was "sarus_data_spec_public-3.0.0.dev1.tar", last modified: Thu Apr  6 16:40:58 2023, max compression
+```
+
+## Comparing `sarus_data_spec_public-2.9.2.tar` & `sarus_data_spec_public-3.0.0.dev1.tar`
+
+### file list
+
+```diff
+@@ -1,186 +1,178 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/
+--rw-rw-rw-   0 root         (0) root         (0)      211 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)      431 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)      133 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/pyproject.toml
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.060454 sarus_data_spec_public-2.9.2/sarus_data_spec/
+--rwxrwxrwx   0 root         (0) root         (0)      825 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.061454 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      562 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/array.py
+--rw-rw-rw-   0 root         (0) root         (0)     7511 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/schema.py
+--rw-rw-rw-   0 root         (0) root         (0)     9355 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/type.py
+--rw-rw-rw-   0 root         (0) root         (0)      932 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/attribute.py
+--rw-rw-rw-   0 root         (0) root         (0)     4618 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/base.py
+--rw-rw-rw-   0 root         (0) root         (0)     1488 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/bounds.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.062454 sarus_data_spec_public-2.9.2/sarus_data_spec/config/
+--rw-rw-rw-   0 root         (0) root         (0)      649 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2744 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/privacy_properties.yaml
+--rw-rw-rw-   0 root         (0) root         (0)     6116 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/routing.yaml
+--rw-rw-rw-   0 root         (0) root         (0)     3315 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/constants.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.063454 sarus_data_spec_public-2.9.2/sarus_data_spec/context/
+--rw-rw-rw-   0 root         (0) root         (0)      265 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     1331 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/public.py
+--rw-rw-rw-   0 root         (0) root         (0)      361 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/state.py
+--rw-rw-rw-   0 root         (0) root         (0)      985 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)    18362 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataset.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.065454 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2286 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/base.py
+--rw-rw-rw-   0 root         (0) root         (0)     9972 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/simple_rules.py
+--rw-rw-rw-   0 root         (0) root         (0)      825 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/typing.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.066454 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    10924 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/base.py
+--rw-rw-rw-   0 root         (0) root         (0)      815 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/privacy_limit.py
+--rw-rw-rw-   0 root         (0) root         (0)     2404 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/simple_rules.py
+--rw-rw-rw-   0 root         (0) root         (0)     4469 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     8849 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/deprecation.py
+--rw-rw-rw-   0 root         (0) root         (0)     1584 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/factory.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.067454 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.068454 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/
+--rw-rw-rw-   0 root         (0) root         (0)       98 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.069455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     3904 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/api_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)    19022 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.069455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/
+--rw-rw-rw-   0 root         (0) root         (0)       83 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     9139 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py
+--rw-rw-rw-   0 root         (0) root         (0)     6898 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/utils.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.072455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     4562 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/arrow_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3314 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     5252 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/caching_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     2238 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/schema_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3970 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/value_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3628 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/worker_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)    17187 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.049453 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.073455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/
+--rw-rw-rw-   0 root         (0) root         (0)      173 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     3554 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.073455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.077455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    14604 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py
+--rw-rw-rw-   0 root         (0) root         (0)      579 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py
+--rw-rw-rw-   0 root         (0) root         (0)      679 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.078455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/
+--rw-rw-rw-   0 root         (0) root         (0)      430 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    28993 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py
+--rw-rw-rw-   0 root         (0) root         (0)    27016 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py
+--rw-rw-rw-   0 root         (0) root         (0)      263 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas_profiling.py
+--rw-rw-rw-   0 root         (0) root         (0)     5336 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py
+--rw-rw-rw-   0 root         (0) root         (0)     4765 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py
+--rw-rw-rw-   0 root         (0) root         (0)      266 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/skopt.py
+--rw-rw-rw-   0 root         (0) root         (0)     3093 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/std.py
+--rw-rw-rw-   0 root         (0) root         (0)      698 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py
+--rw-rw-rw-   0 root         (0) root         (0)    10164 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/routing.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.082455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    13787 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py
+--rw-rw-rw-   0 root         (0) root         (0)     1469 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py
+--rw-rw-rw-   0 root         (0) root         (0)    11545 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py
+--rw-rw-rw-   0 root         (0) root         (0)    10719 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py
+--rw-rw-rw-   0 root         (0) root         (0)    10763 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py
+--rw-rw-rw-   0 root         (0) root         (0)     6545 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py
+--rw-rw-rw-   0 root         (0) root         (0)     4198 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py
+--rw-rw-rw-   0 root         (0) root         (0)     2180 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py
+--rw-rw-rw-   0 root         (0) root         (0)    10114 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py
+--rw-rw-rw-   0 root         (0) root         (0)     9336 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py
+--rw-rw-rw-   0 root         (0) root         (0)    27155 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.084456 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     4023 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/model.py
+--rw-rw-rw-   0 root         (0) root         (0)      505 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/privacy_params.py
+--rw-rw-rw-   0 root         (0) root         (0)      277 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/random_seed.py
+--rw-rw-rw-   0 root         (0) root         (0)     2462 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/routing.py
+--rw-rw-rw-   0 root         (0) root         (0)    12377 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     1521 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/marginals.py
+--rw-rw-rw-   0 root         (0) root         (0)     3028 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/path.py
+--rw-rw-rw-   0 root         (0) root         (0)     3004 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/predicate.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.103457 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/
+--rw-rw-rw-   0 root         (0) root         (0)     1978 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute.proto
+--rw-r--r--   0 root         (0) root         (0)     5552 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1846 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      251 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds.proto
+--rw-r--r--   0 root         (0) root         (0)     6306 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2168 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      310 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint.proto
+--rw-r--r--   0 root         (0) root         (0)     7860 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2834 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     1233 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset.proto
+--rw-r--r--   0 root         (0) root         (0)    24833 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     8880 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      470 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links.proto
+--rw-r--r--   0 root         (0) root         (0)    11282 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4193 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager.proto
+--rw-r--r--   0 root         (0) root         (0)     4572 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1642 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      254 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals.proto
+--rw-r--r--   0 root         (0) root         (0)     6408 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2177 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      153 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path.proto
+--rw-r--r--   0 root         (0) root         (0)     4998 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1735 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      550 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate.proto
+--rw-r--r--   0 root         (0) root         (0)    13369 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4859 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      259 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container.proto
+--rw-r--r--   0 root         (0) root         (0)     5086 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1825 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      629 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation.proto
+--rw-r--r--   0 root         (0) root         (0)     5982 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2613 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     2977 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar.proto
+--rw-r--r--   0 root         (0) root         (0)    31156 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    13960 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      695 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema.proto
+--rw-r--r--   0 root         (0) root         (0)    12546 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4579 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      249 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size.proto
+--rw-r--r--   0 root         (0) root         (0)     6233 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2162 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     3909 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics.proto
+--rw-r--r--   0 root         (0) root         (0)    91981 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    32903 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      646 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status.proto
+--rw-r--r--   0 root         (0) root         (0)    18816 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     6206 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     5557 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform.proto
+--rw-r--r--   0 root         (0) root         (0)   105993 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    37589 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     4496 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type.proto
+--rw-r--r--   0 root         (0) root         (0)    73431 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    28800 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      949 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3914 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/utilities.py
+--rwxrwxrwx   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)    11159 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/scalar.py
+--rw-rw-rw-   0 root         (0) root         (0)     4084 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/schema.py
+--rw-rw-rw-   0 root         (0) root         (0)     1467 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/size.py
+--rw-rw-rw-   0 root         (0) root         (0)    43542 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/statistics.py
+--rw-rw-rw-   0 root         (0) root         (0)    16983 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/status.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.104457 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    11812 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/local.py
+--rw-rw-rw-   0 root         (0) root         (0)     5153 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3078 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/utils.py
+--rw-rw-rw-   0 root         (0) root         (0)    30172 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/transform.py
+--rw-rw-rw-   0 root         (0) root         (0)   127509 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/type.py
+--rw-rw-rw-   0 root         (0) root         (0)    34097 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3437 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/variant_constraint.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/
+--rw-r--r--   0 root         (0) root         (0)      431 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     7208 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) root         (0)      113 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       16 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)     5141 2023-03-29 13:37:39.108457 sarus_data_spec_public-2.9.2/setup.cfg
+--rwxrwxrwx   0 root         (0) root         (0)     1186 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.223547 sarus_data_spec_public-3.0.0.dev1/
++-rw-rw-rw-   0 root         (0) root         (0)      211 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)      436 2023-04-06 16:40:58.223547 sarus_data_spec_public-3.0.0.dev1/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)      133 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/pyproject.toml
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.175542 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/
++-rwxrwxrwx   0 root         (0) root         (0)      830 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.177542 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      562 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/array.py
++-rw-rw-rw-   0 root         (0) root         (0)     7487 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/schema.py
++-rw-rw-rw-   0 root         (0) root         (0)     9355 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/type.py
++-rw-rw-rw-   0 root         (0) root         (0)      932 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/attribute.py
++-rw-rw-rw-   0 root         (0) root         (0)     4618 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/base.py
++-rw-rw-rw-   0 root         (0) root         (0)     1488 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/bounds.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.178542 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/
++-rw-rw-rw-   0 root         (0) root         (0)      649 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2744 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/privacy_properties.yaml
++-rw-rw-rw-   0 root         (0) root         (0)     6116 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/routing.yaml
++-rw-rw-rw-   0 root         (0) root         (0)     3500 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/constants.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.179542 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/
++-rw-rw-rw-   0 root         (0) root         (0)      265 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     1331 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/public.py
++-rw-rw-rw-   0 root         (0) root         (0)      361 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/state.py
++-rw-rw-rw-   0 root         (0) root         (0)      985 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)    18070 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataset.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.181542 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2286 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/base.py
++-rw-rw-rw-   0 root         (0) root         (0)    12251 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/simple_rules.py
++-rw-rw-rw-   0 root         (0) root         (0)      825 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/typing.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.183543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    11034 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/base.py
++-rw-rw-rw-   0 root         (0) root         (0)      815 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/privacy_limit.py
++-rw-rw-rw-   0 root         (0) root         (0)     2710 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/simple_rules.py
++-rw-rw-rw-   0 root         (0) root         (0)     4469 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     8849 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/deprecation.py
++-rw-rw-rw-   0 root         (0) root         (0)     1584 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/factory.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.184543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     6890 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/async_utils.py
++-rw-rw-rw-   0 root         (0) root         (0)    27491 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.185543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     8338 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.186543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3763 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/base.py
++-rw-rw-rw-   0 root         (0) root         (0)     2268 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/schema.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.187543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/remote/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/remote/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3206 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/remote/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.187543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/
++-rw-rw-rw-   0 root         (0) root         (0)      173 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3552 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.188543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.191543 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    13974 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/external_op.py
++-rw-rw-rw-   0 root         (0) root         (0)      579 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/imblearn.py
++-rw-rw-rw-   0 root         (0) root         (0)      679 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/numpy.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.193544 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/
++-rw-rw-rw-   0 root         (0) root         (0)      430 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    28993 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/pandas.py
++-rw-rw-rw-   0 root         (0) root         (0)    27823 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/pandas_dp.py
++-rw-rw-rw-   0 root         (0) root         (0)      263 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas_profiling.py
++-rw-rw-rw-   0 root         (0) root         (0)     7976 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/protection_utils.py
++-rw-rw-rw-   0 root         (0) root         (0)     4765 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/sklearn.py
++-rw-rw-rw-   0 root         (0) root         (0)      266 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/skopt.py
++-rw-rw-rw-   0 root         (0) root         (0)     3093 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/std.py
++-rw-rw-rw-   0 root         (0) root         (0)      698 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/xgboost.py
++-rw-rw-rw-   0 root         (0) root         (0)     9996 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/routing.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.197544 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    13739 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/differentiated_sample.py
++-rw-rw-rw-   0 root         (0) root         (0)     1461 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/extract.py
++-rw-rw-rw-   0 root         (0) root         (0)    11529 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/filter.py
++-rw-rw-rw-   0 root         (0) root         (0)    10703 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/get_item.py
++-rw-rw-rw-   0 root         (0) root         (0)    10747 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/project.py
++-rw-rw-rw-   0 root         (0) root         (0)     6519 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/sample.py
++-rw-rw-rw-   0 root         (0) root         (0)     4190 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/select_sql.py
++-rw-rw-rw-   0 root         (0) root         (0)     2170 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/shuffle.py
++-rw-rw-rw-   0 root         (0) root         (0)    10106 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/standard_op.py
++-rw-rw-rw-   0 root         (0) root         (0)    10991 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/synthetic.py
++-rw-rw-rw-   0 root         (0) root         (0)    27153 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/visitor_selector.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.199545 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     4015 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/model.py
++-rw-rw-rw-   0 root         (0) root         (0)      497 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/privacy_params.py
++-rw-rw-rw-   0 root         (0) root         (0)      269 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/random_seed.py
++-rw-rw-rw-   0 root         (0) root         (0)     2670 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/routing.py
++-rw-rw-rw-   0 root         (0) root         (0)    12255 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     1521 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/marginals.py
++-rw-rw-rw-   0 root         (0) root         (0)     3127 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/path.py
++-rw-rw-rw-   0 root         (0) root         (0)     3004 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/predicate.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.220547 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/
++-rw-rw-rw-   0 root         (0) root         (0)     1978 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      244 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/attribute.proto
++-rw-r--r--   0 root         (0) root         (0)     5552 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/attribute_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1846 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/attribute_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      251 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/bounds.proto
++-rw-r--r--   0 root         (0) root         (0)     6306 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/bounds_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2168 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/bounds_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      322 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/constraint.proto
++-rw-r--r--   0 root         (0) root         (0)     8070 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/constraint_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2892 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/constraint_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     1233 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset.proto
++-rw-r--r--   0 root         (0) root         (0)    24833 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     8880 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      470 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/links.proto
++-rw-r--r--   0 root         (0) root         (0)    11282 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/links_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4193 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/links_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      244 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/manager.proto
++-rw-r--r--   0 root         (0) root         (0)     4572 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/manager_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1642 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/manager_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      254 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/marginals.proto
++-rw-r--r--   0 root         (0) root         (0)     6408 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/marginals_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2177 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/marginals_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      153 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/path.proto
++-rw-r--r--   0 root         (0) root         (0)     4998 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/path_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1735 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/path_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      550 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate.proto
++-rw-r--r--   0 root         (0) root         (0)    13369 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4859 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      259 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/proto_container.proto
++-rw-r--r--   0 root         (0) root         (0)     5086 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/proto_container_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1825 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/proto_container_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      629 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation.proto
++-rw-r--r--   0 root         (0) root         (0)     5982 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2613 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     3044 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar.proto
++-rw-r--r--   0 root         (0) root         (0)    32882 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    14459 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      695 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema.proto
++-rw-r--r--   0 root         (0) root         (0)    12546 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4579 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      249 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/size.proto
++-rw-r--r--   0 root         (0) root         (0)     6233 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/size_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2162 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/size_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     3909 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics.proto
++-rw-r--r--   0 root         (0) root         (0)    91981 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    32903 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      646 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status.proto
++-rw-r--r--   0 root         (0) root         (0)    18816 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     6206 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     5557 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform.proto
++-rw-r--r--   0 root         (0) root         (0)   105993 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    37589 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     4496 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type.proto
++-rw-r--r--   0 root         (0) root         (0)    73431 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    28800 2023-04-06 16:40:47.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      949 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3914 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/utilities.py
++-rwxrwxrwx   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)    11280 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/scalar.py
++-rw-rw-rw-   0 root         (0) root         (0)     4555 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/schema.py
++-rw-rw-rw-   0 root         (0) root         (0)     1467 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/size.py
++-rw-rw-rw-   0 root         (0) root         (0)    43542 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/statistics.py
++-rw-rw-rw-   0 root         (0) root         (0)    17816 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/status.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.221547 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    11812 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/local.py
++-rw-rw-rw-   0 root         (0) root         (0)     5153 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3078 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/utils.py
++-rw-rw-rw-   0 root         (0) root         (0)    30392 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/transform.py
++-rw-rw-rw-   0 root         (0) root         (0)   127509 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/type.py
++-rw-rw-rw-   0 root         (0) root         (0)    34363 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3983 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/variant_constraint.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 16:40:58.223547 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      436 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     6566 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0) root         (0)      113 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       16 2023-04-06 16:40:58.000000 sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/top_level.txt
++-rw-rw-rw-   0 root         (0) root         (0)     4625 2023-04-06 16:40:58.224547 sarus_data_spec_public-3.0.0.dev1/setup.cfg
++-rwxrwxrwx   0 root         (0) root         (0)     1191 2023-04-06 16:40:35.000000 sarus_data_spec_public-3.0.0.dev1/setup.py
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/__init__.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/__init__.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ from sarus_data_spec.transform import Transform
+ from sarus_data_spec.variant_constraint import VariantConstraint
+ 
+ """A library to manage Sarus datasets"""
+ # pylint: disable=unused-variable
+ 
+ PACKAGE_NAME: Final[str] = 'sarus_data_spec'
+-VERSION: Final[str] = '2.9.2'
++VERSION: Final[str] = '3.0.0.dev1'
+ 
+ try:
+     import sarus_data_spec.context.worker as sw
+ 
+     push_global_context(sw.WorkerContext())
+ except ModuleNotFoundError as exception:
+     if exception.name == 'sarus_data_spec.context.worker':
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/array.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/array.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/schema.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/schema.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -227,22 +227,22 @@
+     NB:
+       - This does not handle the multitable case.
+       - We need to handle differently the protected schema case because we
+         cannot easily explore the StructType with Pyarrow < 10
+     """
+     if has_protected_format(schema):
+         # TODO Remove this case when we have Pyarrow >= 10.0
+-        def reformat_field_name(field_name: str) -> str:
+-            """When doing struct.flatten Pyarrow prepends the parent
+-            struct name. We remove it here.
+-            """
+-            return field_name[len(DATA) + 1 :]
++
++        def normalize_field_name(field_name: str) -> str:
++            """When flattening the fields, the field name becomes
++            `data.field_name`."""
++            return field_name[(len(DATA) + 1) :]
+ 
+         data_fields = {
+-            reformat_field_name(field.name): arrow_type.type_from_arrow(
++            normalize_field_name(field.name): arrow_type.type_from_arrow(
+                 field.type, nullable=False
+             )
+             for field in schema.field(DATA).flatten()
+         }
+         fields = {
+             name: arrow_type.type_from_arrow(data_type, nullable=False)
+             for name, data_type in zip(schema.names, schema.types)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/type.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/arrow/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/attribute.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/attribute.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/base.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/bounds.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/bounds.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/config/__init__.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/config/privacy_properties.yaml` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/privacy_properties.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/config/routing.yaml` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/config/routing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/constants.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/constants.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,9 +1,11 @@
+ from enum import Enum
+ 
++import pandas as pd
++
+ from sarus_data_spec import typing as st
+ 
+ DATA = 'data'
+ USER_COLUMN = 'sarus_protected_entity'
+ WEIGHTS = 'sarus_weights'
+ PUBLIC = 'sarus_is_public'
+ 
+@@ -113,14 +115,18 @@
+ PRIVATE_QUERY = "private_query"
+ IS_REMOTE = "is_remote"
+ VARIANT_UUID = "variant_uuid"
+ RELATIONSHIP_SPEC = "relationship_spec"
+ 
+ 
+ # SYNTHETIC DATA
++SYNTHETIC_MODEL = 'sarus_synthetic_model'
++TRAIN_CORRELATIONS = 'train_correlations'
++
++
+ class SyntheticDataSettings:
+     """Namespace for SD generation settings"""
+ 
+     BATCH_SIZE = 64
+     EPOCHS = 10
+ 
+ 
+@@ -131,7 +137,10 @@
+     "mysql": st.SQLDialect.MY_SQL,
+     "sqlite": st.SQLDialect.SQLLITE,
+     "oracle": st.SQLDialect.ORACLE,
+     "bigquery": st.SQLDialect.BIG_QUERY,
+     "redshift": st.SQLDialect.REDSHIFT,
+     "hive": st.SQLDialect.HIVE,
+ }
++
++# List of types a Dataset can be converted to
++DATASET_TYPES = [pd.DataFrame]
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/context/public.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/public.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/context/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/context/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataset.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataset.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -127,36 +127,34 @@
+         self, type_name: t.Optional[str] = sp.type_name(sp.Dataset)
+     ) -> Set[st.DataSpec]:
+         """Returns the set of non-transformed datasets that are parents
+         of the current dataset"""
+         sources = self.storage().sources(self, type_name=type_name)
+         return sources
+ 
+-    def status(self, task_names: t.List[str]) -> t.Optional[st.Status]:
++    def status(
++        self, task_names: t.Optional[t.List[str]] = None
++    ) -> t.Optional[st.Status]:
+         """This method return a status that contains all the
+         last updates for the task_names required. It returns None if
+-        all the tasks are missing. Synchronization is performed under the
+-        hood, so statuses with the task_names are copied in the storage if
+-        the current manager has a delegated."""
++        any of the tasks is missing."""
+ 
+-        # collects last status for each task. This if needed will also update
+-        # them if any synchronization is needed.
++        if task_names is None:
++            task_names = []
+         if type(task_names) not in [list, set, tuple]:
+             raise TypeError(
+                 f"Invalid task_names passed to dataset.status {task_names}"
+             )
+-        statuses = [
+-            self.manager().status(self, task_name) for task_name in task_names
+-        ]
+-        # go from last to first so to be sure that tasks have been updated
+-        # for all others if needed
+-        for status in reversed(statuses):
+-            if status is not None:
+-                return status
+-        return None
++        last_status = self.manager().status(self)
++        if last_status is None:
++            return last_status
++        for task in task_names:
++            if last_status.task(task) is None:
++                return None
++        return last_status
+ 
+     def schema(self) -> st.Schema:
+         return self.manager().schema(self)
+ 
+     def size(self) -> t.Optional[Size]:
+         return cast('Size', self.manager().size(self))
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/base.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/simple_rules.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/simple_rules.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -3,19 +3,19 @@
+ import logging
+ 
+ from sarus_data_spec.attribute import attach_properties
+ from sarus_data_spec.constants import VARIANT_UUID
+ from sarus_data_spec.context import global_context
+ from sarus_data_spec.dataset import transformed
+ from sarus_data_spec.dataspec_validator.typing import DataspecValidator
+-from sarus_data_spec.manager.ops.asyncio.processor import routing
++from sarus_data_spec.manager.ops.processor import routing
+ from sarus_data_spec.scalar import privacy_budget
+ from sarus_data_spec.variant_constraint import (
+     dp_constraint,
+-    public_constraint,
++    mock_constraint,
+     syn_constraint,
+ )
+ import sarus_data_spec.protobuf as sp
+ import sarus_data_spec.typing as st
+ 
+ ArgStruct = Tuple[List[int], List[str]]
+ logger = logging.getLogger(__name__)
+@@ -93,14 +93,22 @@
+         variant, _ = compile_synthetic(
+             dataspec_validator,
+             dataspec,
+             public_context,
+         )
+         return variant
+ 
++    elif kind == st.ConstraintKind.MOCK:
++        mock_variant, _ = compile_mock(
++            dataspec_validator,
++            dataspec,
++            public_context,
++        )
++        return mock_variant
++
+     if privacy_limit is None:
+         raise ValueError(
+             "Privacy limit must be defined for PEP or DP compilation"
+         )
+ 
+     if kind == st.ConstraintKind.DP:
+         variant, _ = compile_dp(
+@@ -145,26 +153,16 @@
+                 constraint,
+                 st.ConstraintKind.SYNTHETIC,
+                 public_context,
+                 privacy_limit=None,
+             ):
+                 return variant, public_context
+ 
+-    if dataspec.prototype() == sp.Dataset:
+-        dataset = cast(st.Dataset, dataspec)
+-        # TODO remove this constraint once we have the whole
+-        # graph for a remote DataSpec
+-        if not dataspec.is_remote() and dataset.is_synthetic():
+-            syn_constraint(
+-                dataspec=dataspec,
+-                required_context=list(public_context),
+-            )
+-            return dataset, list(public_context)
+-
+-    if not dataspec.is_remote() and dataspec.is_transformed():
++    # Derive the SD from the parents SD
++    if dataspec.is_transformed():
+         transform = dataspec.transform()
+         args, kwargs = dataspec.parents()
+         ds_args, sc_args, struct = flatten_args(args, kwargs)
+         ds_syn_args_context = [
+             compile_synthetic(dataspec_validator, parent, public_context)
+             for parent in ds_args
+         ]
+@@ -202,32 +200,100 @@
+         )
+         syn_constraint(
+             dataspec=syn_variant, required_context=list(public_context)
+         )
+         attach_variant(dataspec, syn_variant, kind=st.ConstraintKind.SYNTHETIC)
+         return syn_variant, new_context
+ 
+-    # Source (non transformed) dataset, we always
+-    # raise an error, the synthetic dataset is created
+-    # separately
+-    if dataspec.prototype() == sp.Dataset:
++    elif dataspec.is_public():
++        return dataspec, public_context
++    else:
+         raise TypeError(
+-            'Source Dataset cannot'
+-            'be compiled to Synthetic, a variant'
+-            'should have been created earlier'
++            'Non public source Datasets cannot'
++            'be compiled to Synthetic, a synthetic variant'
++            'should have been created downstream in the graph.'
+         )
+ 
+-    elif dataspec.prototype() == sp.Scalar:
+-        scalar = cast(st.Scalar, dataspec)
+-        assert scalar.is_model()
+-        new_context = list(public_context) + [scalar.uuid()]
+-        public_constraint(dataspec=scalar)
+-        return scalar, new_context
+ 
+-    raise ValueError("Uncaught compilation case.")
++def compile_mock(
++    dataspec_validator: DataspecValidator,
++    dataspec: st.DataSpec,
++    public_context: Collection[str],
++) -> Tuple[Optional[st.DataSpec], Collection[str]]:
++    """Compile the MOCK variant of a DataSpec.
++
++    Note that the MOCK compilation only makes sense for internally transformed
++    dataspecs. For externally transformed dataspecs, the MOCK is computed
++    before the dataspec, so we can only fetch it.
++    """
++    for constraint in dataspec_validator.verified_constraints(dataspec):
++        if dataspec_validator.verifies(
++            constraint,
++            st.ConstraintKind.MOCK,
++            public_context,
++            privacy_limit=None,
++        ):
++            return dataspec, public_context
++
++    # Current dataspec has a variant that verifies the constraint?
++    for variant in dataspec.variants():
++        if variant is None:
++            logger.info(f"Found a None variant for dataspec {dataspec.uuid()}")
++            continue
++        for constraint in dataspec_validator.verified_constraints(variant):
++            if dataspec_validator.verifies(
++                constraint,
++                st.ConstraintKind.MOCK,
++                public_context,
++                privacy_limit=None,
++            ):
++                return variant, public_context
++
++    if dataspec.is_public():
++        return dataspec, public_context
++
++    if not dataspec.is_transformed():
++        raise ValueError(
++            'Cannot compile the MOCK of a non public source DataSpec. '
++            'A MOCK should be set manually downstream in the '
++            'computation graph.'
++        )
++
++    # The DataSpec is the result of an internal transform
++    transform = dataspec.transform()
++    args, kwargs = dataspec.parents()
++    mock_args = [arg.variant(st.ConstraintKind.MOCK) for arg in args]
++    named_mock_args = {
++        name: arg.variant(st.ConstraintKind.MOCK)
++        for name, arg in kwargs.items()
++    }
++    if any([m is None for m in mock_args]) or any(
++        [m is None for m in named_mock_args.values()]
++    ):
++        raise ValueError(
++            f"Cannot derive a mock for {dataspec} "
++            "because of of the parent has a None MOCK."
++        )
++
++    typed_mock_args = [cast(st.DataSpec, ds) for ds in mock_args]
++    typed_named_mock_args = {
++        name: cast(st.DataSpec, ds) for name, ds in named_mock_args.items()
++    }
++
++    mock: st.DataSpec = transformed(
++        transform,
++        *typed_mock_args,
++        dataspec_type=sp.type_name(dataspec.prototype()),
++        dataspec_name=None,
++        **typed_named_mock_args,
++    )
++    mock_constraint(mock)
++    attach_variant(dataspec, mock, st.ConstraintKind.MOCK)
++
++    return mock, public_context
+ 
+ 
+ def compile_dp(
+     dataspec_validator: DataspecValidator,
+     dataspec: st.DataSpec,
+     public_context: Collection[str],
+     privacy_limit: st.PrivacyLimit,
+@@ -281,15 +347,24 @@
+ 
+     # Create the DP variant
+     assert dp_transform is not None
+     budget = privacy_budget(privacy_limit)
+     seed = global_context().generate_seed(salt=time_ns())
+     args, kwargs = dataspec.parents()
+     dp_variant = cast(
+-        st.DataSpec, dp_transform(*args, **kwargs, budget=budget, seed=seed)
++        st.DataSpec,
++        transformed(
++            dp_transform,
++            *args,
++            dataspec_type=sp.type_name(dataspec.prototype()),
++            dataspec_name=None,
++            budget=budget,
++            seed=seed,
++            **kwargs,
++        ),
+     )
+     dp_constraint(
+         dataspec=dp_variant,
+         required_context=list(public_context),
+         privacy_limit=privacy_limit,
+     )
+     attach_variant(
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_rewriter/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/base.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/base.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -3,16 +3,16 @@
+ from typing import Collection, List, Optional, cast
+ import json
+ import logging
+ 
+ from sarus_data_spec.attribute import attach_properties
+ from sarus_data_spec.constants import PEP_TOKEN, PRIVATE_QUERY
+ from sarus_data_spec.dataspec_validator.privacy_limit import DeltaEpsilonLimit
+-from sarus_data_spec.manager.asyncio.utils import sync
+-from sarus_data_spec.manager.ops.asyncio.processor import routing
++from sarus_data_spec.manager.async_utils import sync
++from sarus_data_spec.manager.ops.processor import routing
+ from sarus_data_spec.protobuf.utilities import dejson
+ from sarus_data_spec.protobuf.utilities import json as proto_to_json
+ from sarus_data_spec.storage.typing import Storage
+ from sarus_data_spec.variant_constraint import (
+     pep_constraint,
+     public_constraint,
+     syn_constraint,
+@@ -174,16 +174,20 @@
+             args_parents, kwargs_parents = dataspec.parents()
+             is_public = all(
+                 [self.is_public(ds) for ds in args_parents]
+                 + [self.is_public(ds) for ds in kwargs_parents.values()]
+             )
+         elif dataspec.prototype() == sp.Scalar:
+             scalar = cast(st.Scalar, dataspec)
+-            if scalar.is_model():
+-                is_public = True
++            assert (
++                scalar.is_model()
++                or scalar.is_random_seed()
++                or scalar.is_privacy_params()
++            )
++            is_public = True
+         else:
+             is_public = False
+ 
+         # save variant constraint
+         if is_public:
+             public_constraint(dataspec)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/privacy_limit.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/privacy_limit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/simple_rules.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/simple_rules.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -15,14 +15,17 @@
+ ) -> bool:
+     if kind == st.ConstraintKind.PUBLIC:
+         return verifies_public(variant_constraint=variant_constraint)
+ 
+     elif kind == st.ConstraintKind.SYNTHETIC:
+         return verifies_synthetic(variant_constraint=variant_constraint)
+ 
++    elif kind == st.ConstraintKind.MOCK:
++        return verifies_mock(variant_constraint=variant_constraint)
++
+     elif kind == st.ConstraintKind.DP:
+         return verifies_dp(
+             variant_constraint=variant_constraint,
+             privacy_limit=privacy_limit,
+         )
+ 
+     else:  # kind == st.ConstraintKind.PEP:
+@@ -36,14 +39,21 @@
+ def verifies_synthetic(variant_constraint: st.VariantConstraint) -> bool:
+     return variant_constraint.constraint_kind() in [
+         st.ConstraintKind.PUBLIC,
+         st.ConstraintKind.SYNTHETIC,
+     ]
+ 
+ 
++def verifies_mock(variant_constraint: st.VariantConstraint) -> bool:
++    return variant_constraint.constraint_kind() in [
++        st.ConstraintKind.PUBLIC,
++        st.ConstraintKind.MOCK,
++    ]
++
++
+ def verifies_pep(
+     variant_constraint: st.VariantConstraint,
+ ) -> bool:
+     """If we attached a PEP constraint to a dataspec then it is PEP.
+ 
+     NB: for now we don't check the context nor the privacy limit
+     """
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/dataspec_validator/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/deprecation.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/deprecation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/factory.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/api_computation.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/remote/base.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,68 +1,42 @@
+ import logging
+ import typing as t
+ 
+-import pyarrow as pa
+-
+-from sarus_data_spec.manager.asyncio.base import BaseComputation, T
+-from sarus_data_spec.manager.typing import DelegatedComputation, Manager
++from sarus_data_spec.manager.computations.base import BaseComputation, T
+ import sarus_data_spec.status as stt
+ import sarus_data_spec.typing as st
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+-class TypedApiManager(Manager, t.Protocol):
+-    async def async_to_arrow_op(
+-        self, dataset: st.Dataset, batch_size: int
+-    ) -> t.AsyncIterator[pa.RecordBatch]:
+-        ...
+-
+-    async def async_value_op(self, scalar: st.Scalar) -> st.DataSpecValue:
+-        ...
+-
+-    def computation_timeout(self, dataspec: st.DataSpec) -> int:
+-        ...
+-
+-    def computation_max_delay(self, dataspec: st.DataSpec) -> int:
+-        ...
+-
+-
+-class ApiComputation(BaseComputation[T], DelegatedComputation):
+-    def __init__(self, manager: TypedApiManager):
+-        self._manager: TypedApiManager = manager
+-
+-    def manager(self) -> TypedApiManager:
+-        return self._manager
+-
+-    async def read_ready_result(
++class RemoteComputation(BaseComputation[T]):
++    async def result_from_stage_properties(
+         self,
+         dataspec: st.DataSpec,
+         properties: t.Mapping[str, str],
+         **kwargs: t.Any,
+     ) -> T:
+         raise NotImplementedError
+ 
+     async def pending(self, dataspec: st.DataSpec) -> st.Status:
+-        """if the status of a task is pending, delegation has been
++        """If the status of a task is pending, delegation has been
+         already done, so the manager just waits for the task to
+         be completed"""
+ 
+         stage = await self.wait_for_computation(
+             dataspec=dataspec,
+             current_stage='pending',
+-            timeout=self.manager().computation_timeout(dataspec),
+-            max_delay=self.manager().computation_max_delay(dataspec),
++            timeout=self.computing_manager().computation_timeout(dataspec),
++            max_delay=self.computing_manager().computation_max_delay(dataspec),
+         )
+ 
+         if stage.pending():
+-            # TODO push error status to worker ?
+             stt.error(
+                 dataspec=dataspec,
+-                manager=dataspec.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+                 properties={
+                     "message": (
+                         "TimeOutError: Pending time out for task"
+                         f" {self.task_name} on dataspec {dataspec}"
+                     ),
+                     'relaunch': str(True),
+@@ -83,22 +57,22 @@
+         Such a case can happen if another manager has taken the computation
+         of the task. After a given timeout, an error is raised.
+         """
+ 
+         stage = await self.wait_for_computation(
+             dataspec=dataspec,
+             current_stage='processing',
+-            timeout=self.manager().computation_timeout(dataspec),
+-            max_delay=self.manager().computation_max_delay(dataspec),
++            timeout=self.computing_manager().computation_timeout(dataspec),
++            max_delay=self.computing_manager().computation_max_delay(dataspec),
+         )
+         if stage.processing() or stage.pending():
+             # TODO push error status to worker ?
+             stt.error(
+                 dataspec=dataspec,
+-                manager=dataspec.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+                 properties={
+                     "message": (
+                         "TimeOutError: Processing time out for task"
+                         f" {self.task_name} on dataspec {dataspec}"
+                     ),
+                     'relaunch': str(True),
+@@ -107,11 +81,10 @@
+             raise stt.DataSpecErrorStatus(
+                 (
+                     True,
+                     "Processing time out for task"
+                     f" {self.task_name} on dataspec {dataspec}",
+                 )
+             )
+-
+         # if the stage is an error, it is complete_task
+         # that decides what to do
+         return await self.complete_task(dataspec)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/base.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/status.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,517 +1,520 @@
+ from __future__ import annotations
+ 
+-import asyncio
++from datetime import datetime
++from functools import partial
++from typing import Callable, List, Mapping, Optional, Type, cast
+ import logging
+-import os
+-import traceback
+ import typing as t
+ 
+-import pandas as pd
+-import pyarrow as pa
+-
+-from sarus_data_spec.arrow.array import convert_record_batch
+-from sarus_data_spec.manager.asyncio.utils import sync, sync_iterator
+-from sarus_data_spec.manager.base import Base
+-from sarus_data_spec.manager.typing import Computation, Manager
+-from sarus_data_spec.schema import Schema
++from sarus_data_spec import typing as st
++from sarus_data_spec.base import Base, Referring
++from sarus_data_spec.dataset import Dataset
++from sarus_data_spec.manager.typing import Manager
++from sarus_data_spec.protobuf.typing import ProtobufWithUUIDAndDatetime
+ import sarus_data_spec.protobuf as sp
+-import sarus_data_spec.status as stt
+-import sarus_data_spec.typing as st
+-
+-try:
+-    from sarus_data_spec.bounds import Bounds
+-    from sarus_data_spec.links import Links
+-    from sarus_data_spec.marginals import Marginals
+-    from sarus_data_spec.size import Size
+-
+-except ModuleNotFoundError:
+-    pass
+-try:
+-    import tensorflow as tf
+-
+-    from sarus_data_spec.manager.ops.asyncio.tensorflow.features import (
+-        deserialize,
+-        flatten,
+-        nest,
+-        serialize,
+-        to_internal_signature,
+-    )
+-    from sarus_data_spec.manager.ops.asyncio.tensorflow.tensorflow_visitor import (  # noqa: E501
+-        convert_tensorflow,
+-    )
+-except ModuleNotFoundError:
+-    pass  # error message printed from typing.py
+-
+ 
+ logger = logging.getLogger(__name__)
+ 
+-BATCH_SIZE = 10000
+ 
++class DataSpecErrorStatus(Exception):
++    def __init__(self, relaunch_error_msg: t.Tuple[bool, str]) -> None:
++        relaunch, error_msg = relaunch_error_msg
++        self.relaunch = relaunch
++        self.error_msg = error_msg
++
++    def __str__(self) -> str:
++        return self.error_msg
++
++
++class Status(Referring[sp.Status]):
++    """A python class to describe status"""
++
++    def __init__(self, protobuf: sp.Status, store: bool = True) -> None:
++        self._referred = {
++            protobuf.dataspec,
++            protobuf.manager,
++        }  # This has to be defined before it is initialized
++        super().__init__(protobuf, store=store)
++
++    def prototype(self) -> Type[sp.Status]:
++        """Return the type of the underlying protobuf."""
++        return sp.Status
+ 
+-class BaseAsyncManager(Base):
+-    """Asynchronous Manager Base implementation
+-    Make synchronous methods rely on asynchronous ones for consistency.
+-    """
++    def datetime(self) -> datetime:
++        return datetime.fromisoformat(self.protobuf().datetime)
+ 
+-    def dataspec_computation(self, dataspec: st.DataSpec) -> Computation:
+-        """Return the Computation for getting the dataspec's value. If sql is
+-        is true, the sqlcomputation will be returned.
++    def update(
++        self,
++        task_stages: Optional[Mapping[str, st.Stage]] = None,
++        properties: Optional[Mapping[str, str]] = None,
++    ) -> t.Tuple[Status, bool]:
+         """
+-        raise NotImplementedError
+-
+-    def sql_computation(self) -> Computation:
+-        """Returns the SQL Computation of the manager. The aim of the method is
+-        is to reduce code duplication between API and Worker manager
++        This method apply an atomic update
++        to the last version of the status. The update
++        is not performed if the transition from the old
++        to the new stage is a regression (see method
++        transitions_allowed)
+         """
+-        raise NotImplementedError
++        # Now update the last version of this status
++        new_status, is_updated = self.storage().update_referring_with_datetime(
++            self.referred(),
++            self.type_name(),
++            partial(
++                update_last, task_stages=task_stages, properties=properties
++            ),
++        )
++        return t.cast(Status, new_status), is_updated
++
++    def clear_task(self, task: str) -> t.Tuple[Status, bool]:
++        """Creates a new status removing the task specified.
++        To remove the task specified, the stage must be either
++        ready or error (a static situation in which no one
++        is processing the task).
++        If the task does not exist, nothing is created"""
++        # We copy the content of the current status
++
++        def clear_update(
++            status: st.Referring[ProtobufWithUUIDAndDatetime],
++        ) -> t.Tuple[st.Referring[ProtobufWithUUIDAndDatetime], bool]:
++
++            status = t.cast(Status, status)
++            proto = status.protobuf()
++            # We update its timestamp and properties
++            proto.datetime = datetime.now().isoformat()
++            stage = proto.task_stages.pop(task)
++            if stage.WhichOneof('stage') is None:
++                return status, False
++
++            # we can create a new empty status only
++            # if the current stage is static ie ready
++            # (for example when removing cache) or
++            # error (relaunch after timeout)
++            else:
++                can_be_cleared = transition_allowed(
++                    existing_stage=stage, new_stage=None, task_name=task
++                )
++                if can_be_cleared:
++                    # create a new data spec object
++                    return Status(proto, store=False), True
++                return status, False
++
++        new_status, is_updated = self.storage().update_referring_with_datetime(
++            self.referred(), self.type_name(), clear_update
++        )
++        return cast(Status, new_status), is_updated
++
++    def task(self, task: str) -> t.Optional[Stage]:
++        stage = self.protobuf().task_stages.get(task, None)
++        return Stage(stage) if stage is not None else stage
++
++    def task_stages(self) -> t.Mapping[str, Stage]:
++        return {
++            stage_name: Stage(stage_proto)
++            for stage_name, stage_proto in self.protobuf().task_stages.items()
++        }
+ 
+-    def prepare(self, dataspec: st.DataSpec) -> None:
+-        """Make sure a Dataspec is ready."""
+-        sync(self.async_prepare(dataspec))
+-
+-    async def async_prepare(self, dataspec: st.DataSpec) -> None:
+-        """Make sure a Dataspec is ready asynchronously."""
+-        computation = self.dataspec_computation(dataspec)
+-        await computation.complete_task(dataspec)
+-
+-    async def async_prepare_parents(self, dataspec: st.DataSpec) -> None:
+-        """Prepare all the parents of a Dataspec."""
+-        args, kwargs = dataspec.parents()
+-        parents = list(args) + list(kwargs.values())
+-        coros = [self.async_prepare(parent) for parent in parents]
+-        # here, if many parents potentially fail, we want to be sure
+-        # that all of them do it, and not only the first one (to
+-        # modify all statuses accordingly).
+-        # After, we only raise the first exception for the child.
+-
+-        results = await asyncio.gather(*coros, return_exceptions=True)
+-        exceptions = [
+-            element for element in results if isinstance(element, Exception)
+-        ]
+-        if len(exceptions) == 0:
+-            return
+-        raise error_aggregation(exceptions)
+-
+-    async def async_value(self, scalar: st.Scalar) -> t.Any:
+-        """Reads asynchronously value of a scalar."""
+-        computation = self.dataspec_computation(scalar)
+-        return await computation.task_result(dataspec=scalar)
+-
+-    def value(self, scalar: st.Scalar) -> st.DataSpecValue:
+-        return sync(self.async_value(scalar=scalar))
+-
+-    async def async_to_arrow(
+-        self, dataset: st.Dataset, batch_size: int
+-    ) -> t.AsyncIterator[pa.RecordBatch]:
+-        """Reads asynchronous iterator of datast batches"""
+-        computation = t.cast(
+-            BaseComputation[t.AsyncIterator[pa.RecordBatch]],
+-            self.dataspec_computation(dataset),
+-        )
+-        return await computation.task_result(
+-            dataspec=dataset, batch_size=batch_size
+-        )
++    def pending(
++        self,
++    ) -> bool:
++        """this is true if all tasks have status at least pending
++        (i.e. pending, processing or ready) and at least one is pending"""
++        has_one = False
++        all_better = True
++        task_stages = self.protobuf().task_stages
++        if task_stages is not None:
++            for task in task_stages:
++                has_one = has_one or task_stages[task].HasField('pending')
++                all_better = all_better and not (
++                    task_stages[task].HasField('error')
++                )
++        return has_one and all_better
+ 
+-    def to_arrow(
+-        self, dataset: st.Dataset, batch_size: int
+-    ) -> t.Iterator[pa.RecordBatch]:
+-        return sync_iterator(
+-            self.async_to_arrow(dataset=dataset, batch_size=batch_size)
+-        )
++    def processing(
++        self,
++    ) -> bool:
++        """this is true if all tasks have status at least processing
++        (i.e. processing or ready) and at least one is processing"""
++        has_one = False
++        all_better = True
++        task_stages = self.protobuf().task_stages
++        if task_stages is not None:
++            for task in task_stages:
++                has_one = has_one or task_stages[task].HasField('processing')
++                all_better = all_better and not (
++                    task_stages[task].HasField('error')
++                    or task_stages[task].HasField('pending')
++                )
++        return has_one and all_better
++
++    def ready(
++        self,
++    ) -> bool:  # TODO this should be true if all tasks have status ready
++        """this is true if all tasks have status ready"""
++        all_ready = True
++        task_stages = self.protobuf().task_stages
++        if task_stages is not None:
++            for task in task_stages:
++                all_ready = all_ready and task_stages[task].HasField('ready')
++        return all_ready
+ 
+-    async def async_to_pandas(self, dataset: st.Dataset) -> pd.DataFrame:
+-        batches_async_it = await self.async_to_arrow(
+-            dataset=dataset, batch_size=BATCH_SIZE
++    def error(
++        self,
++    ) -> bool:  # TODO this should be true if any task have status error
++        """this is true if any tasks have status error"""
++        has_error = False
++        task_stages = self.protobuf().task_stages
++        if task_stages is not None:
++            for task in task_stages:
++                has_error = has_error or task_stages[task].HasField('error')
++        return has_error
++
++    def dataset(self) -> Dataset:
++        dataspec = self.dataspec()
++        assert isinstance(dataspec, Dataset)
++        return dataspec
++
++    def dataspec(self) -> st.DataSpec:
++        return cast(
++            st.DataSpec, self.storage().referrable(self._protobuf.dataspec)
+         )
+-        arrow_batches = [batch async for batch in batches_async_it]
+-        return pa.Table.from_batches(arrow_batches).to_pandas()
+ 
+-    def to_pandas(self, dataset: st.Dataset) -> pd.DataFrame:
+-        return sync(self.async_to_pandas(dataset=dataset))
++    def owner(
++        self,
++    ) -> Manager:
++        # TODO: Maybe find a better name, but this was shadowing
++        # the actual manager of this object.  # noqa: E501
++        return cast(Manager, self.storage().referrable(self._protobuf.manager))
++
++
++def transition_allowed(
++    existing_stage: t.Optional[sp.Status.Stage],
++    new_stage: t.Optional[sp.Status.Stage],
++    task_name: str,
++) -> bool:
++    """Method that verifies that the new stage for a given task
++    can be set to the existing. The rule is that stages can only
++    go towards a more advanced stage and never backwards, except
++    for error and ready that can be reset to None.
++    When the stage is None, it means that the task is not present"""
++
++    if existing_stage is None:
++        return True  # all transitions allowed if no task exists
++
++    allowed_transitions = {
++        'pending': ['processing', 'ready', 'error'],
++        'processing': ['ready', 'error'],
++        'ready': ['error', None],
++        'error': [None, 'ready'],
++        None: ['pending', 'processing', 'ready', 'error']
++        # the transition error to ready can occur
++        # if a long task is processed, meanwhile another worker sets an error
++        # because it timeouts after waiting, then the first worker finishes
++    }
++    if new_stage is not None:
++        if (
++            new_stage.WhichOneof('stage')  # type:ignore
++            in allowed_transitions[existing_stage.WhichOneof('stage')]
++        ):
++            return True
++        else:
++            logger.warning(
++                f"Trying to update a status with stage "
++                f"{new_stage.WhichOneof('stage')} for the task {task_name} "
++                f"while the existing stage "
++                f"is {existing_stage.WhichOneof('stage')}, "
++                f"therefore the update will be ignored"
++            )
++        return False
+ 
+-    def to_tensorflow(self, dataset: st.Dataset) -> tf.data.Dataset:
+-        return sync(self.async_to_tensorflow(dataset=dataset))
++    else:
++        if (
++            new_stage  # type: ignore
++            in allowed_transitions[existing_stage.WhichOneof('stage')]
++        ):
++            return True
+ 
+-    def schema(self, dataset: st.Dataset) -> Schema:
+-        return t.cast(Schema, sync(self.async_schema(dataset=dataset)))
++        else:
++            logger.warning(
++                f"Trying to update a status with stage "
++                f"{new_stage} for the task {task_name} "
++                f"while the existing stage "
++                f"is {existing_stage.WhichOneof('stage')}, "
++                f"therefore the update will be ignored"
++            )
++            return False
+ 
+-    def to_parquet(self, dataset: st.Dataset) -> None:
+-        sync(self.async_to_parquet(dataset=dataset))
+ 
+-    def to_sql(self, dataset: st.Dataset) -> None:
+-        sync(self.async_to_sql(dataset=dataset))
++# Builders
++def status(
++    dataspec: st.DataSpec,
++    task_stages: Optional[Mapping[str, st.Stage]] = None,
++    properties: Optional[Mapping[str, str]] = None,
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    """A builder to ease the construction of a status
++    - dataspec: is the dataspec, the status is added to
++    - manager: is which manager, if None,
++        the default manager of the dataspec is used
++    """
++    # Use the right manager
++    manager = dataspec.manager() if manager is None else manager
++    # If a status already exists for the dataspec
++    # and manager simply create an updated version of it
++    last = last_status(dataspec=dataspec, manager=manager)
++    if last is None:
++        status = Status(
++            sp.Status(
++                dataspec=dataspec.uuid(),
++                manager=manager.uuid(),
++                datetime=datetime.now().isoformat(),
++                task_stages=None
++                if task_stages is None
++                else {
++                    task: task_stages[task].protobuf() for task in task_stages
++                },
++                properties=properties,
++            ),
++            store=False,
++        )
++        (
++            new_status,
++            is_updated,
++        ) = status.storage().create_referring_with_datetime(
++            status,
++            partial(
++                update_last, task_stages=task_stages, properties=properties
++            ),
++        )
++        return t.cast(st.Status, new_status), is_updated
++    else:
++        return last.update(task_stages=task_stages, properties=properties)
++
++
++def last_status(
++    dataspec: st.DataSpec,
++    manager: Optional[Manager] = None,
++    task: t.Optional[str] = None,
++) -> Optional[st.Status]:
++    """Return a DataSpec's last status by sorted datetime."""
++    manager = dataspec.manager() if manager is None else manager
++    status = cast(
++        Optional[st.Status],
++        manager.storage().last_referring(
++            (dataspec, manager), sp.type_name(sp.Status)
++        ),
++    )
+ 
+-    def sql_prepare(self, dataset: st.Dataset) -> None:
+-        """SQL prepare dataset."""
+-        sync(self.async_sql_prepare(dataset))
++    if status is None or task is None:
++        return status
+ 
+-    async def async_sql_prepare(self, dataset: st.Dataset) -> None:
+-        """SQL prepare the dataset synchronously"""
+-        computation = t.cast(
+-            BaseComputation[t.AsyncIterator[pa.RecordBatch]],
+-            self.sql_computation(),
+-        )
+-        await computation.complete_task(dataset)
++    if status.task(task=task) is None:
++        return None
+ 
+-    async def async_sql_prepare_parents(self, dataset: st.Dataset) -> None:
+-        """SQL prepare all the parents of a dataset: calling async_sql_prepare
+-        for dataset parents and async_prepare for scalar parents.
+-        """
+-        args, kwargs = dataset.parents()
+-        parents = list(args) + list(kwargs.values())
+-        coros = [
+-            self.async_sql_prepare(t.cast(st.Dataset, parent))
+-            if dataset.prototype() == sp.Dataset
+-            else self.async_prepare(parent)
+-            for parent in parents
+-        ]
+-        # here, if many parents potentially fail, we want to be sure
+-        # that all of them do it, and not only the first one (to
+-        # modify all statuses accordingly).
+-        # After, we only raise the first exception for the child.
+-
+-        results = await asyncio.gather(*coros, return_exceptions=True)
+-        exceptions = [
+-            element for element in results if isinstance(element, Exception)
+-        ]
+-        if len(exceptions) == 0:
+-            return
+-        raise error_aggregation(exceptions)
++    return status
+ 
+-    def sql(
+-        self,
+-        dataset: st.Dataset,
+-        query: t.Union[str, t.Mapping[t.Union[str, t.Tuple[str, ...]], str]],
+-        dialect: t.Optional[st.SQLDialect] = None,
+-        batch_size: int = 10000,
+-    ) -> t.Iterator[pa.RecordBatch]:
+-        return sync_iterator(
+-            self.async_sql(dataset, query, dialect, batch_size)
+-        )
+ 
+-    async def async_sql(
+-        self,
+-        dataset: st.Dataset,
+-        query: t.Union[str, t.Mapping[t.Union[str, t.Tuple[str, ...]], str]],
+-        dialect: t.Optional[st.SQLDialect] = None,
+-        batch_size: int = 10000,
+-    ) -> t.AsyncIterator[pa.RecordBatch]:
+-        computation = t.cast(
+-            BaseComputation[t.AsyncIterator[pa.RecordBatch]],
+-            self.sql_computation(),
+-        )
+-        return await computation.task_result(
+-            dataset, query=query, dialect=dialect, batch_size=batch_size
++def last_statuses(
++    dataspec: st.DataSpec, task: t.Optional[str] = None
++) -> List[st.Status]:
++    """Return a list composed by the last status of every
++    DataSpec's manager."""
++    managers = dataspec.storage().type_name(sp.type_name(sp.Manager))
++    statuses = []
++    for manager in managers:
++        stt = last_status(
++            dataspec,
++            cast(
++                Optional[Manager],
++                manager,
++            ),
+         )
++        if stt is not None:
++            if task is not None:
++                if stt.task(task) is not None:
++                    statuses.append(stt)
++            else:
++                statuses.append(stt)
++    return statuses
+ 
+-    def cache_scalar(self, scalar: st.Scalar) -> None:
+-        sync(self.async_cache_scalar(scalar=scalar))
+-
+-    def size(self, dataset: st.Dataset) -> st.Size:
+-        return t.cast(Size, sync(self.async_size(dataset)))
+ 
+-    def bounds(self, dataset: st.Dataset) -> st.Bounds:
+-        return t.cast(Bounds, sync(self.async_bounds(dataset)))
++class Stage(Base[sp.Status.Stage]):
++    """A simple wrapper type to simplify protobuf usage"""
+ 
+-    def marginals(self, dataset: st.Dataset) -> st.Marginals:
+-        return t.cast(Marginals, sync(self.async_marginals(dataset)))
++    def accept(self, visitor: st.StageVisitor) -> None:
++        dispatch: Callable[[], None] = {
++            'pending': visitor.pending,
++            'processing': visitor.processing,
++            'ready': visitor.ready,
++            'error': visitor.error,
++        }[cast(str, self.protobuf().WhichOneof('stage'))]
++        dispatch()
+ 
+-    def links(self, dataset: st.Dataset) -> st.Links:
+-        return t.cast(Links, sync(self.async_links(dataset)))
++    def stage(self) -> str:
++        return cast(str, self.protobuf().WhichOneof('stage'))
+ 
+-    def foreign_keys(self, dataset: st.Dataset) -> t.Dict[st.Path, st.Path]:
+-        return t.cast(
+-            t.Dict[st.Path, st.Path], sync(self.async_foreign_keys(dataset))
+-        )
++    def ready(self) -> bool:
++        return self.stage() == 'ready'
+ 
+-    def primary_keys(self, dataset: st.Dataset) -> t.List[st.Path]:
+-        return t.cast(t.List[st.Path], sync(self.async_primary_keys(dataset)))
++    def pending(self) -> bool:
++        return self.stage() == 'pending'
+ 
+-    async def async_links(self, dataset: st.Dataset) -> t.Any:
+-        raise NotImplementedError
++    def processing(self) -> bool:
++        return self.stage() == 'processing'
+ 
+-    async def async_to_tensorflow(
+-        self, dataset: st.Dataset
+-    ) -> tf.data.Dataset:
+-        root_dir = os.path.join(
+-            self.parquet_dir(), "tfrecords", dataset.uuid()
+-        )
+-        schema_type = (await self.async_schema(dataset)).type()
+-        signature = to_internal_signature(schema_type)
++    def error(self) -> bool:
++        return self.stage() == 'error'
+ 
+-        if not os.path.exists(root_dir):
+-            # the dataset is cached first
+-            os.makedirs(root_dir)
+-
+-            flattener = flatten(signature)
+-            serializer = serialize(signature)
+-            i = 0
+-            batches_async_it = await self.async_to_arrow(
+-                dataset=dataset, batch_size=BATCH_SIZE
+-            )
+-            async for batch in batches_async_it:
+-                filename = os.path.join(root_dir, f"batch_{i}.tfrecord")
+-                i += 1
+-                await write_tf_batch(
+-                    filename, batch, schema_type, flattener, serializer
+-                )
+ 
+-        # reading from cache
+-        glob = os.path.join(root_dir, "*.tfrecord")
+-        filenames = tf.data.Dataset.list_files(glob, shuffle=False)
+-        deserializer = deserialize(signature)
+-        nester = nest(signature)
+-        return tf.data.TFRecordDataset(filenames).map(deserializer).map(nester)
+-
+-
+-async def write_tf_batch(
+-    filename: str,
+-    batch: pa.RecordBatch,
+-    schema_type: st.Type,
+-    flattener: t.Callable,
+-    serializer: t.Callable,
+-) -> None:
+-    with tf.io.TFRecordWriter(filename) as writer:
+-        batch = convert_tensorflow(
+-            convert_record_batch(record_batch=batch, _type=schema_type),
+-            schema_type,
++# Builders for stages
++def pending_stage(properties: Optional[Mapping[str, str]] = None) -> Stage:
++    return Stage(
++        sp.Status.Stage(
++            pending=sp.Status.Stage.Pending(), properties=properties
+         )
+-        batch = tf.data.Dataset.from_tensor_slices(batch).map(flattener)
+-        for row in batch:
+-            as_bytes = serializer(row)
+-            writer.write(as_bytes)
+-
++    )
+ 
+-T = t.TypeVar("T")
+ 
++def processing_stage(properties: Optional[Mapping[str, str]] = None) -> Stage:
++    return Stage(
++        sp.Status.Stage(
++            processing=sp.Status.Stage.Processing(), properties=properties
++        )
++    )
+ 
+-class BaseComputation(Computation[T]):
+-    """General class that implements some
+-    methods of the protocol shared by all task
+-    computations"""
+ 
+-    task_name = ''
++def ready_stage(properties: Optional[Mapping[str, str]] = None) -> Stage:
++    return Stage(
++        sp.Status.Stage(ready=sp.Status.Stage.Ready(), properties=properties)
++    )
+ 
+-    def __init__(self, manager: Manager):
+-        self._manager = manager
+ 
+-    def manager(self) -> Manager:
+-        return self._manager
++def error_stage(properties: Optional[Mapping[str, str]] = None) -> Stage:
++    return Stage(
++        sp.Status.Stage(error=sp.Status.Stage.Error(), properties=properties)
++    )
+ 
+-    def status(self, dataspec: st.DataSpec) -> t.Optional[st.Status]:
+-        return self.manager().status(dataspec, self.task_name)
+ 
+-    def launch_task(self, dataspec: st.DataSpec) -> t.Optional[t.Awaitable]:
+-        """Launch the task computation.
++# Builders for statuses
+ 
+-        Returns an optional awaitable that can be used in async functions to
+-        wait for the task to complete. This can be useful if some managers have
+-        a more efficient way than statuses to await for the result.
+-        """
+-        raise NotImplementedError
+ 
+-    async def task_result(self, dataspec: st.DataSpec, **kwargs: t.Any) -> T:
+-        """Return the task result.
++def properties(
++    dataspec: st.DataSpec,
++    properties: Optional[Mapping[str, str]],
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    return status(
++        dataspec,
++        task_stages=None,
++        properties=properties,
++        manager=manager,
++    )
+ 
+-        This is the main entry point from outide the computation. The call to
+-        `complete_task` will launch the task if it does not exist and wait for
+-        it to be ready.
+ 
+-        Here, we assert that the task is ready and then get the result in a
+-        try/catch block.
+-        """
+-        status = await self.complete_task(dataspec=dataspec)
+-        stage = status.task(self.task_name)
+-        assert stage
+-        assert stage.ready()
+-        try:
+-            return await self.read_ready_result(
+-                dataspec, stage.properties(), **kwargs
+-            )
+-        except stt.DataSpecErrorStatus as exception:
+-            stt.error(
+-                dataspec=dataspec,
+-                manager=self.manager(),
+-                task=self.task_name,
+-                properties={
+-                    "message": traceback.format_exc(),
+-                    'relaunch': str(exception.relaunch),
+-                },
+-            )
+-            raise stt.DataSpecErrorStatus(
+-                (exception.relaunch, traceback.format_exc())
+-            )
+-        except Exception:
+-            stt.error(
+-                dataspec=dataspec,
+-                manager=self.manager(),
+-                task=self.task_name,
+-                properties={
+-                    "message": traceback.format_exc(),
+-                    'relaunch': str(False),
+-                },
+-            )
+-            raise stt.DataSpecErrorStatus((False, traceback.format_exc()))
++def pending(
++    dataspec: st.DataSpec,
++    task: str,
++    properties: Optional[Mapping[str, str]] = None,
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    return status(
++        dataspec,
++        task_stages={task: pending_stage(properties=properties)},
++        properties=None,
++        manager=manager,
++    )
+ 
+-    async def read_ready_result(
+-        self,
+-        dataspec: st.DataSpec,
+-        properties: t.Mapping[str, str],
+-        **kwargs: t.Any,
+-    ) -> T:
+-        """Return the task result by reading cache or computing the value."""
+-        raise NotImplementedError
+-
+-    async def complete_task(self, dataspec: st.DataSpec) -> st.Status:
+-        """Poll the last status for the given task and if no status
+-        is available either performs the computation or delegates it
+-        to another manager. Then keeps polling until either the task
+-        is completed or an error occurs."""
+ 
+-        manager_status = stt.last_status(
+-            dataspec=dataspec, manager=self.manager(), task=self.task_name
+-        )
++def processing(
++    dataspec: st.DataSpec,
++    task: str,
++    properties: Optional[Mapping[str, str]] = None,
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    return status(
++        dataspec,
++        task_stages={task: processing_stage(properties=properties)},
++        properties=None,
++        manager=manager,
++    )
+ 
+-        if manager_status is None:
+-            task = self.launch_task(dataspec=dataspec)
+-            if task is not None:
+-                # NB: an exception raised in an asyncio task will be reraised
+-                # in the awaiting code
+-                await task
+-            # In the other cases, the complete_task will be reentered with
+-            # the pending status, resulting in a polling process
+-            return await self.complete_task(dataspec)
+ 
+-        else:
+-            last_task = t.cast(st.Stage, manager_status.task(self.task_name))
+-            if last_task.ready():
+-                return manager_status
+-            elif last_task.pending():
+-                return await self.pending(dataspec)
+-            elif last_task.processing():
+-                return await self.processing(dataspec)
+-            elif last_task.error():
+-                return await self.error(dataspec)
+-            else:
+-                raise ValueError(f"Inconsistent status {manager_status}")
++def ready(
++    dataspec: st.DataSpec,
++    task: str,
++    properties: Optional[Mapping[str, str]] = None,
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    return status(
++        dataspec,
++        task_stages={task: ready_stage(properties=properties)},
++        properties=None,
++        manager=manager,
++    )
+ 
+-    async def pending(self, dataspec: st.DataSpec) -> st.Status:
+-        """The behaviour depends on the manager"""
+-        raise NotImplementedError
+ 
+-    async def processing(self, dataspec: st.DataSpec) -> st.Status:
+-        """The behaviour depends on the manager"""
+-        raise NotImplementedError
++def error(
++    dataspec: st.DataSpec,
++    task: str,
++    properties: Optional[Mapping[str, str]] = None,
++    manager: Optional[Manager] = None,
++) -> t.Tuple[st.Status, bool]:
++    return status(
++        dataspec,
++        task_stages={task: error_stage(properties=properties)},
++        properties=None,
++        manager=manager,
++    )
+ 
+-    async def error(
+-        self,
+-        dataspec: st.DataSpec,
+-    ) -> st.Status:
+-        """The DataSpec already has an Error status.
+-        In this case, we clear the statuses so that the
+-        task can be relaunched in the future.
+-        """
+-        status = self.status(dataspec)
+-        assert status
+-        stage = status.task(self.task_name)
+-        assert stage
+-        should_clear = status_error_policy(stage=stage)
+-        if should_clear:
+-            stt.clear_task(dataspec=dataspec, task=self.task_name)
+-            return await self.complete_task(dataspec=dataspec)
+-        raise stt.DataSpecErrorStatus(
+-            (
+-                stage.properties()["relaunch"] == str(True),
+-                stage.properties()["message"],
+-            )
+-        )
+ 
+-    async def wait_for_computation(
+-        self,
+-        dataspec: st.DataSpec,
+-        current_stage: str,
+-        timeout: int = 300,
+-        max_delay: int = 10,
+-    ) -> st.Stage:
+-        """Utility to wait for the availability of a computation, by polling
+-        its status for at most `timeout` seconds, with a period of at most
+-        `max_delay` seconds between each attempt. Delay grows exponentially
+-        at first."""
+-        delay = min(1, timeout, max_delay)
+-        total_wait = 0
+-        while total_wait < timeout:
+-            status = self.status(dataspec=dataspec)
+-            assert status
+-            stage = status.task(self.task_name)
+-            assert stage
+-            if stage.stage() == current_stage:
+-                logger.debug(f'POLLING {self.task_name} {dataspec.uuid()}')
+-                await asyncio.sleep(delay)
+-                total_wait += delay
+-                delay = min(2 * delay, max_delay, timeout - total_wait)
++def clear_task(dataspec: st.DataSpec, task: str) -> None:
++    """This methods creates a new status for each manager
++    where the specified task has been cleared"""
++
++    statuses = last_statuses(dataspec)
++    for manager_status in statuses:
++        manager_status.clear_task(task)
++
++
++def update_last(
++    status: st.Referring[ProtobufWithUUIDAndDatetime],
++    task_stages: Optional[Mapping[str, st.Stage]],
++    properties: Optional[Mapping[str, str]],
++) -> t.Tuple[st.Referring[ProtobufWithUUIDAndDatetime], bool]:
++    """Returns whether the update should be done, ie transitions
++    are respected and the status that can be updated in case"""
++    # We copy the content of the current status
++    proto = cast(Status, status).protobuf()
++    # We update its timestamp and properties
++    proto.datetime = datetime.now().isoformat()
++    if properties is not None:
++        proto.properties.update(properties)
++        # Protobuf implementation of the merge
++        # does not work as expected on maps...
++    if task_stages is not None:
++        for task in task_stages:
++            stage = task_stages[task].protobuf()
++            if (
++                task in proto.task_stages
++                and proto.task_stages[task].WhichOneof('stage')
++                == task_stages[task].protobuf().WhichOneof('stage')
++                and not stage.properties == proto.task_stages[task].properties
++            ):
++                proto.task_stages[task].properties.update(stage.properties)
+             else:
+-                break
+-        assert stage
+-        return stage
+-
+-
+-class ErrorCatchingAsyncIterator:
+-    """Wrap an AsyncIterator and catches potential errors.
+-
+-    When an error occurs, this sets the Dataspec status to error
+-    accordingly.
+-    """
+-
+-    def __init__(
+-        self,
+-        ait: t.AsyncIterator,
+-        dataspec: st.DataSpec,
+-        computation: BaseComputation,
+-    ):
+-        self.ait = ait
+-        self.computation = computation
+-        self.dataspec = dataspec
+-        self.agen: t.Optional[t.AsyncIterator] = None
+-
+-    def __aiter__(self) -> t.AsyncIterator:
+-        return self.ait
+-
+-    async def __anext__(self) -> t.Any:
+-        try:
+-            batch = await self.ait.__anext__()
+-        except StopAsyncIteration:
+-            raise
+-        except stt.DataSpecErrorStatus as exception:
+-            stt.error(
+-                dataspec=self.dataspec,
+-                manager=self.computation.manager(),
+-                task=self.computation.task_name,
+-                properties={
+-                    "message": traceback.format_exc(),
+-                    'relaunch': str(exception.relaunch),
+-                },
+-            )
+-            raise stt.DataSpecErrorStatus(
+-                (exception.relaunch, traceback.format_exc())
+-            )
+-        except Exception:
+-            stt.error(
+-                dataspec=self.dataspec,
+-                manager=self.computation.manager(),
+-                task=self.computation.task_name,
+-                properties={
+-                    "message": traceback.format_exc(),
+-                    'relaunch': str(False),
+-                },
+-            )
+-            raise stt.DataSpecErrorStatus((False, traceback.format_exc()))
+-
+-        else:
+-            return batch
++                if transition_allowed(
++                    existing_stage=proto.task_stages.get(task, None),
++                    new_stage=stage,
++                    task_name=task,
++                ):
++                    proto.task_stages[task].CopyFrom(stage)
++                else:
++                    return status, False
++    # And return a new UNSTORED data spec object
++    return Status(proto, store=False), True
+ 
+ 
+ def status_error_policy(stage: st.Stage) -> bool:
+     """This methods returns whether a given error message
+     should be reset to None or not. Currently, the quick
+     shortcut is to check whether the error message starts
+     with a TimeoutError, in this case, we want to retry"""
+@@ -522,13 +525,13 @@
+ def error_aggregation(errors: t.List[Exception]) -> Exception:
+     """Takes as input a list of exceptions, the first error
+     that is not a DataSpecErrorStatus or that has not a relaunch.
+     If they are all DataSpecErrorStatuses with relaunch, returns
+     the first"""
+ 
+     for error in errors:
+-        if isinstance(error, stt.DataSpecErrorStatus) and error.relaunch:
++        if isinstance(error, DataSpecErrorStatus) and error.relaunch:
+             continue
+         else:
+             return error
+ 
+     return errors[0]
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/base.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,254 +1,238 @@
+-import os
+-import typing as t
++from __future__ import annotations
+ 
+-import pyarrow as pa
++import asyncio
++import logging
++import traceback
++import typing as t
+ 
+-from sarus_data_spec import typing as st
+-from sarus_data_spec.constants import CACHE_SCALAR_TASK, TO_PARQUET_TASK
+-from sarus_data_spec.manager.asyncio.api.api_computation import ApiComputation
+-from sarus_data_spec.manager.asyncio.base import BaseAsyncManager
+-from sarus_data_spec.manager.asyncio.worker.arrow_computation import (
+-    ToArrowComputation,
+-)
+-from sarus_data_spec.manager.asyncio.worker.cache_scalar_computation import (
+-    CacheScalarComputation,
+-)
+-from sarus_data_spec.manager.asyncio.worker.caching_computation import (
+-    ToParquetComputation,
+-)
+-from sarus_data_spec.manager.asyncio.worker.schema_computation import (
+-    SchemaComputation,
+-)
+-from sarus_data_spec.manager.asyncio.worker.value_computation import (
+-    ValueComputation,
+-)
+-from sarus_data_spec.manager.ops.asyncio.processor.routing import (
+-    TransformedDataset,
+-    TransformedScalar,
+-)
+-from sarus_data_spec.manager.ops.asyncio.source.routing import SourceScalar
+-import sarus_data_spec.manager.typing as smt
+-import sarus_data_spec.protobuf as sp
++from sarus_data_spec.manager.base import Base
++from sarus_data_spec.manager.typing import Computation
++from sarus_data_spec.status import status_error_policy
+ import sarus_data_spec.status as stt
+-import sarus_data_spec.storage.typing as storage_typing
+-
+-computation_timeout = os.environ.get(
+-    'DELEGATING_COMPUTATION_TIMEOUT', default=600
+-)
+-computation_max_delay = os.environ.get(
+-    'DELEGATING_COMPUTATION_MAX_DELAY', default=10
+-)
+-
+-
+-class DelegatingManager(BaseAsyncManager):
+-    """Manager that can compute a result locally or delegate a computation.
+-
+-    This manager is initialized with a reference to the remote Manager so that
+-    we can register its statuses in the local storage.
++import sarus_data_spec.typing as st
+ 
+-    The local computations implementations are taken from the WorkerManager.
++logger = logging.getLogger(__name__)
++T = t.TypeVar("T")
+ 
+-    Subclasses should implement the following three computations to compute
+-    values remotely:
+-        - self.remote_to_parquet_computation
+-        - self.remote_to_arrow_computation
+-        - self.remote_value_computation
+ 
+-    Subclasses also have to implement the `is_remotely_computed` method to
+-    decide if a computation should be performed locally or remotely.
++class BaseComputation(Computation[T]):
++    """General class that implements some
++    methods of the protocol shared by all task
++    computations"""
+ 
+-    Finally, subclasses should implement the `delegate_manager_statuses` method
+-    to fetch statuses from the remote Manager.
+-    """
++    task_name = ''
+ 
+-    def __init__(
+-        self,
+-        storage: storage_typing.Storage,
+-        protobuf: sp.Manager,
+-        remote_manager: smt.Manager,
+-    ) -> None:
+-        super().__init__(storage, protobuf)
+-        self.remote_manager = remote_manager
+-        self.local_schema_computation = SchemaComputation(self)
+-        self.local_to_arrow_computation = ToArrowComputation(
+-            self, ToParquetComputation(self)
+-        )
+-        self.local_value_computation = ValueComputation(
+-            self, CacheScalarComputation(self)
+-        )
+-        self.local_to_parquet_computation = ToParquetComputation(self)
+-        self.local_cache_scalar_computation = CacheScalarComputation(self)
++    def __init__(self, computing_manager: Base):
++        self._computing_manager = computing_manager
+ 
+-        # To define in subclasses
+-        self.remote_to_parquet_computation: ApiComputation[None]
+-        self.remote_to_arrow_computation: ApiComputation[
+-            t.AsyncIterator[pa.RecordBatch]
+-        ]
+-        self.remote_cache_scalar_computation: ApiComputation[t.Any]
+-        self.remote_value_computation: ApiComputation[t.Any]
+-
+-    def dataspec_computation(self, dataspec: st.DataSpec) -> smt.Computation:
+-        """Return the computation for a Dataspec."""
+-        is_delegated = self.is_delegated(dataspec)
+-        proto = dataspec.prototype()
+-        if proto == sp.Dataset:
+-            if is_delegated:
+-                return self.remote_to_arrow_computation
+-            else:
+-                return self.local_to_arrow_computation
+-        else:
+-            if is_delegated:
+-                return self.remote_value_computation
+-            else:
+-                return self.local_value_computation
++    def computing_manager(self) -> Base:
++        return self._computing_manager
+ 
+-    def _delegate_manager_status(
+-        self, dataspec: st.DataSpec, task_name: str
+-    ) -> t.Optional[st.Status]:
+-        """Fetch the remote status a single Dataspec."""
+-        statuses = self._delegate_manager_statuses(
+-            [dataspec], task_name=task_name
+-        )
+-        (status,) = statuses
+-        return status
++    def status(self, dataspec: st.DataSpec) -> t.Optional[st.Status]:
++        return self.computing_manager().status(dataspec, self.task_name)
+ 
+-    def _delegate_manager_statuses(
+-        self, dataspecs: t.List[st.DataSpec], task_name: str
+-    ) -> t.List[t.Optional[st.Status]]:
+-        """Fetch the remote statuses for a list of Dataspecs."""
+-        raise NotImplementedError
++    def launch_task(self, dataspec: st.DataSpec) -> t.Optional[t.Awaitable]:
++        """Launch the task computation.
+ 
+-    def is_delegated(self, dataspec: st.DataSpec) -> bool:
+-        """Return True is the dataspec's computation is delegated."""
++        Returns an optional awaitable that can be used in async functions to
++        wait for the task to complete. This can be useful if some managers have
++        a more efficient way than statuses to await for the result.
++        """
+         raise NotImplementedError
+ 
+-    def is_cached(self, dataspec: st.DataSpec) -> bool:
+-        """Sets whether a dataset should be cached or not"""
+-        raise NotImplementedError
++    async def task_result(self, dataspec: st.DataSpec, **kwargs: t.Any) -> T:
++        """Return the task result.
+ 
+-    def status(
+-        self, dataspec: st.DataSpec, task_name: str
+-    ) -> t.Optional[st.Status]:
+-        """Reads the delegate manager's status and update the API status if
+-        needed.
++        This is the main entry point from outide the computation. The call to
++        `complete_task` will launch the task if it does not exist and wait for
++        it to be ready.
+ 
+-        Returns the API manager's status.
++        Here, we assert that the task is ready and then get the result in a
++        try/catch block.
+         """
+-        local_status = stt.last_status(
+-            dataspec=dataspec,
+-            task=task_name,
+-            manager=self,
+-        )
+-
+-        # TODO think of a finer way to distinguish delegated tasks
+-        if task_name in [CACHE_SCALAR_TASK, TO_PARQUET_TASK]:
+-            # cannot delegate the caching
+-            return local_status
+-
+-        if not self.is_delegated(dataspec):
+-            # computation not delegated, return local status
+-            return local_status
+-
+-        delegate_status = self._delegate_manager_status(dataspec, task_name)
+-        if delegate_status is None:
+-            # return local status which may be pending
+-            return local_status
+-
+-        local_stage = local_status.task(task_name) if local_status else None
+-        delegate_stage = delegate_status.task(task_name)
+-        assert delegate_stage
+-
+-        if delegate_stage == local_stage:
+-            # no progress: update not needed
+-            return local_status
+-
+-        # copy delegate manager status as API status
+-        if delegate_stage.ready():
+-            status, _ = stt.ready(
+-                dataspec=dataspec,
+-                task=task_name,
+-                manager=self,
+-                properties=delegate_stage.properties(),
++        status = await self.complete_task(dataspec=dataspec)
++        stage = status.task(self.task_name)
++        assert stage
++        assert stage.ready()
++        try:
++            return await self.result_from_stage_properties(
++                dataspec, stage.properties(), **kwargs
+             )
+-        elif delegate_stage.error():
+-            status, _ = stt.error(
++        except stt.DataSpecErrorStatus as exception:
++            stt.error(
+                 dataspec=dataspec,
+-                task=task_name,
+-                manager=self,
+-                properties=delegate_stage.properties(),
++                manager=self.computing_manager(),
++                task=self.task_name,
++                properties={
++                    "message": traceback.format_exc(),
++                    'relaunch': str(exception.relaunch),
++                },
+             )
+-        elif delegate_stage.processing():
+-            status, _ = stt.processing(
+-                dataspec=dataspec,
+-                task=task_name,
+-                manager=self,
+-                properties=delegate_stage.properties(),
++            raise stt.DataSpecErrorStatus(
++                (exception.relaunch, traceback.format_exc())
+             )
+-        elif delegate_stage.pending():
+-            status, _ = stt.pending(
++        except Exception:
++            stt.error(
+                 dataspec=dataspec,
+-                task=task_name,
+-                manager=self,
+-                properties=delegate_stage.properties(),
++                manager=self.computing_manager(),
++                task=self.task_name,
++                properties={
++                    "message": traceback.format_exc(),
++                    'relaunch': str(False),
++                },
+             )
+-        else:
+-            raise ValueError('Delegate manager status not properly managed')
++            raise stt.DataSpecErrorStatus((False, traceback.format_exc()))
+ 
+-        return status
++    async def result_from_stage_properties(
++        self,
++        dataspec: st.DataSpec,
++        properties: t.Mapping[str, str],
++        **kwargs: t.Any,
++    ) -> T:
++        """Return the task result by reading cache or computing the value."""
++        raise NotImplementedError
+ 
+-    async def async_schema(self, dataset: st.Dataset) -> st.Schema:
+-        """Schema computation is done locally."""
+-        return await self.local_schema_computation.task_result(
+-            dataspec=dataset
+-        )
++    async def complete_task(self, dataspec: st.DataSpec) -> st.Status:
++        """Poll the last status for the given task and if no status
++        is available either performs the computation or delegates it
++        to another manager. Then keeps polling until either the task
++        is completed or an error occurs."""
++
++        manager_status = self.status(dataspec)
++
++        if manager_status is None:
++            task = self.launch_task(dataspec=dataspec)
++            if task is not None:
++                # NB: an exception raised in an asyncio task will be reraised
++                # in the awaiting code
++                await task
++            # In the other cases, the complete_task will be reentered with
++            # the pending status, resulting in a polling process
++            return await self.complete_task(dataspec)
+ 
+-    async def async_to_parquet(self, dataset: st.Dataset) -> None:
+-        await self.local_to_parquet_computation.complete_task(dataspec=dataset)
++        else:
++            last_task = t.cast(st.Stage, manager_status.task(self.task_name))
++            if last_task.ready():
++                return manager_status
++            elif last_task.pending():
++                return await self.pending(dataspec)
++            elif last_task.processing():
++                return await self.processing(dataspec)
++            elif last_task.error():
++                return await self.error(dataspec)
++            else:
++                raise ValueError(f"Inconsistent status {manager_status}")
+ 
+-    async def async_cache_scalar(self, scalar: st.Scalar) -> None:
+-        await self.local_cache_scalar_computation.complete_task(
+-            dataspec=scalar
+-        )
++    async def pending(self, dataspec: st.DataSpec) -> st.Status:
++        """The behaviour depends on the manager"""
++        raise NotImplementedError
+ 
+-    async def async_to_arrow_op(
+-        self, dataset: st.Dataset, batch_size: int
+-    ) -> t.AsyncIterator[pa.RecordBatch]:
+-        """Route a Dataset to its Op implementation.
++    async def processing(self, dataspec: st.DataSpec) -> st.Status:
++        """The behaviour depends on the manager"""
++        raise NotImplementedError
+ 
+-        When the computation is not delegated the manager should also be
+-        able to compute the value.
++    async def error(
++        self,
++        dataspec: st.DataSpec,
++    ) -> st.Status:
++        """The DataSpec already has an Error status.
++        In this case, we clear the statuses so that the
++        task can be relaunched in the future.
+         """
+-        if dataset.is_transformed():
+-            iterator = await TransformedDataset(dataset).to_arrow(
+-                batch_size=batch_size
++        status = self.status(dataspec)
++        assert status
++        stage = status.task(self.task_name)
++        assert stage
++        should_clear = status_error_policy(stage=stage)
++        if should_clear:
++            stt.clear_task(dataspec=dataspec, task=self.task_name)
++            return await self.complete_task(dataspec=dataspec)
++        raise stt.DataSpecErrorStatus(
++            (
++                stage.properties()["relaunch"] == str(True),
++                stage.properties()["message"],
+             )
+-            return iterator
+-
+-        else:
+-            raise ValueError('Dataset should be transformed.')
++        )
+ 
+-    async def async_value_op(self, scalar: st.Scalar) -> t.Any:
+-        """Route a Scalar to its Op implementation.
++    async def wait_for_computation(
++        self,
++        dataspec: st.DataSpec,
++        current_stage: str,
++        timeout: int = 300,
++        max_delay: int = 10,
++    ) -> st.Stage:
++        """Utility to wait for the availability of a computation, by polling
++        its status for at most `timeout` seconds, with a period of at most
++        `max_delay` seconds between each attempt. Delay grows exponentially
++        at first."""
++        delay = min(1, timeout, max_delay)
++        total_wait = 0
++        while total_wait < timeout:
++            status = self.status(dataspec=dataspec)
++            assert status
++            stage = status.task(self.task_name)
++            assert stage
++            if stage.stage() == current_stage:
++                logger.debug(f'POLLING {self.task_name} {dataspec.uuid()}')
++                await asyncio.sleep(delay)
++                total_wait += delay
++                delay = min(2 * delay, max_delay, timeout - total_wait)
++            else:
++                break
++        assert stage
++        return stage
+ 
+-        This method is shared between API and Worker because when the data is
+-        not cached the API manager should also be able to compute the value.
+-        """
+-        if scalar.is_transformed():
+-            return await TransformedScalar(scalar).value()
+-        else:
+-            return await SourceScalar(scalar).value()
+ 
+-    async def async_schema_op(self, dataset: st.Dataset) -> st.Schema:
+-        if dataset.is_transformed():
+-            return await TransformedDataset(dataset).schema()
+-        else:
+-            raise ValueError('Dataset should be transformed.')
++class ErrorCatchingAsyncIterator:
++    """Wrap an AsyncIterator and catches potential errors.
+ 
+-    def engine(self, uri: str) -> smt.sa_engine:
+-        raise NotImplementedError
++    When an error occurs, this sets the Dataspec status to error
++    accordingly.
++    """
+ 
+-    def computation_timeout(self, dataspec: st.DataSpec) -> int:
+-        return int(computation_timeout)
++    def __init__(
++        self,
++        ait: t.AsyncIterator,
++        dataspec: st.DataSpec,
++        computation: BaseComputation,
++    ):
++        self.ait = ait
++        self.computation = computation
++        self.dataspec = dataspec
++        self.agen: t.Optional[t.AsyncIterator] = None
++
++    def __aiter__(self) -> t.AsyncIterator:
++        return self.ait
++
++    async def __anext__(self) -> t.Any:
++        try:
++            batch = await self.ait.__anext__()
++        except StopAsyncIteration:
++            raise
++        except stt.DataSpecErrorStatus as exception:
++            stt.error(
++                dataspec=self.dataspec,
++                manager=self.computation.computing_manager(),
++                task=self.computation.task_name,
++                properties={
++                    "message": traceback.format_exc(),
++                    'relaunch': str(exception.relaunch),
++                },
++            )
++            raise stt.DataSpecErrorStatus(
++                (exception.relaunch, traceback.format_exc())
++            )
++        except Exception:
++            stt.error(
++                dataspec=self.dataspec,
++                manager=self.computation.computing_manager(),
++                task=self.computation.task_name,
++                properties={
++                    "message": traceback.format_exc(),
++                    'relaunch': str(False),
++                },
++            )
++            raise stt.DataSpecErrorStatus((False, traceback.format_exc()))
+ 
+-    def computation_max_delay(self, dataspec: st.DataSpec) -> int:
+-        return int(computation_max_delay)
++        else:
++            return batch
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/utils.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/async_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -109,15 +109,15 @@
+         yield x
+ 
+ 
+ def to_recordbatch(
+     output: t.Mapping[str, pa.Table]
+ ) -> t.AsyncIterator[pa.RecordBatch]:
+     """This function is inspired from arrow_recordbatch in
+-    sarus_data_spec/manager/ops/asyncio/source/sql/arrow.py
++    sarus_data_spec/manager/ops/source/sql/arrow.py
+     In order to create a recordbatch from different pyarrow tables, a struct is
+     created where the corresponding other missing tables
+     have been added as None"""
+     struct_arrays = {
+         table_path: pa.StructArray.from_arrays(
+             arrays=[el.combine_chunks() for el in table.flatten()],
+             names=table.column_names,
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/schema.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,100 +1,69 @@
+ import logging
+-import os
+-import pickle as pkl
+ import traceback
+ import typing as t
+ 
+ from sarus_data_spec import typing as st
+-from sarus_data_spec.constants import (
+-    CACHE_PATH,
+-    CACHE_PROTO,
+-    CACHE_SCALAR_TASK,
+-    CACHE_TYPE,
+-    ScalarCaching,
+-)
+-from sarus_data_spec.manager.asyncio.worker.worker_computation import (
+-    WorkerComputation,
+-)
+-from sarus_data_spec.scalar import Scalar
++from sarus_data_spec.constants import SCHEMA_TASK
++from sarus_data_spec.dataset import Dataset
++from sarus_data_spec.manager.computations.local.base import LocalComputation
++from sarus_data_spec.schema import Schema
+ from sarus_data_spec.status import DataSpecErrorStatus, error, ready
+-import sarus_data_spec.protobuf as sp
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+-class CacheScalarComputation(WorkerComputation[t.Tuple[str, str]]):
+-    """Class responsible for handling the caching
+-    in of a scalar. It wraps a ValueComputation to get the value."""
++class SchemaComputation(LocalComputation[st.Schema]):
++    """Class responsible to compute schemas"""
+ 
+-    task_name = CACHE_SCALAR_TASK
++    task_name = SCHEMA_TASK
+ 
+     async def prepare(self, dataspec: st.DataSpec) -> None:
+-        logger.debug(f'STARTING CACHE_SCALAR {dataspec.uuid()}')
+         try:
+-            value = await self.manager().async_value_op(
+-                scalar=t.cast(Scalar, dataspec)
++            logger.debug(f'STARTED SCHEMA {dataspec.uuid()}')
++            schema = await self.computing_manager().async_schema_op(
++                dataset=t.cast(Dataset, dataspec)
+             )
+-            if isinstance(value, st.HasProtobuf):
+-                properties = {
+-                    CACHE_PROTO: sp.to_base64(value.protobuf()),
+-                    CACHE_TYPE: sp.type_name(value.prototype()),
+-                }
+-            else:
+-                properties = {
+-                    CACHE_TYPE: ScalarCaching.PICKLE.value,
+-                    CACHE_PATH: self.cache_path(dataspec),
+-                }
+-                with open(self.cache_path(dataspec), "wb") as f:
+-                    pkl.dump(value, f)
+ 
+         except DataSpecErrorStatus as exception:
+             error(
+                 dataspec=dataspec,
+-                manager=self.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+                 properties={
+                     "message": traceback.format_exc(),
+                     'relaunch': str(exception.relaunch),
+                 },
+             )
+             raise DataSpecErrorStatus(
+                 (exception.relaunch, traceback.format_exc())
+             )
+-
+         except Exception:
+             error(
+                 dataspec=dataspec,
+-                manager=self.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+                 properties={
+                     "message": traceback.format_exc(),
+                     'relaunch': str(False),
+                 },
+             )
+-
+             raise DataSpecErrorStatus((False, traceback.format_exc()))
+         else:
+-            logger.debug(f'FINISHED CACHE_SCALAR {dataspec.uuid()}')
++            logger.debug(f'FINISHED SCHEMA {dataspec.uuid()}')
+             ready(
+                 dataspec=dataspec,
+-                manager=self.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+-                properties=properties,
++                properties={'uuid': schema.uuid()},
+             )
+ 
+-    async def read_ready_result(
++    async def result_from_stage_properties(
+         self,
+         dataspec: st.DataSpec,
+         properties: t.Mapping[str, str],
+         **kwargs: t.Any,
+-    ) -> t.Tuple[str, str]:
+-        """Reads the cache and returns the value."""
+-        if properties[CACHE_TYPE] == ScalarCaching.PICKLE.value:
+-            return properties[CACHE_TYPE], properties[CACHE_PATH]
+-        return properties[CACHE_TYPE], properties[CACHE_PROTO]
+-
+-    def cache_path(self, dataspec: st.DataSpec) -> str:
+-        """Returns the path where to cache the scalar."""
+-        return os.path.join(
+-            dataspec.manager().parquet_dir(), f"{dataspec.uuid()}.pkl"
++    ) -> st.Schema:
++        return t.cast(
++            Schema,
++            dataspec.storage().referrable(properties['uuid']),
+         )
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/worker_computation.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/computations/local/base.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,68 +1,48 @@
+ import asyncio
+ import logging
+ import typing as t
+ 
+-import pyarrow as pa
+-
+-from sarus_data_spec.manager.asyncio.base import BaseComputation, T
+-from sarus_data_spec.manager.typing import Manager
++from sarus_data_spec.manager.computations.base import BaseComputation, T
+ import sarus_data_spec.status as stt
+ import sarus_data_spec.typing as st
+ 
+ logger = logging.getLogger(__name__)
+ 
+-# This is done to avoid circular dependencies..
+-
+-
+-class TypedWorkerManager(Manager, t.Protocol):
+-    async def async_value_op(self, scalar: st.Scalar) -> st.DataSpecValue:
+-        ...
+-
+-    async def async_schema_op(self, dataset: st.Dataset) -> st.Schema:
+-        ...
+-
+-    async def async_to_arrow_op(
+-        self, dataset: st.Dataset, batch_size: int
+-    ) -> t.AsyncIterator[pa.RecordBatch]:
+-        ...
+-
+-    def computation_timeout(self, dataspec: st.DataSpec) -> int:
+-        ...
+-
+-    def computation_max_delay(self, dataspec: st.DataSpec) -> int:
+-        ...
+-
+ 
+-class WorkerComputation(BaseComputation[T]):
+-    def __init__(self, manager: TypedWorkerManager):
+-        self._manager: TypedWorkerManager = manager
+-
+-    def manager(self) -> TypedWorkerManager:
+-        return self._manager
+-
+-    async def read_ready_result(
++class LocalComputation(BaseComputation[T]):
++    async def result_from_stage_properties(
+         self,
+         dataspec: st.DataSpec,
+         properties: t.Mapping[str, str],
+         **kwargs: t.Any,
+     ) -> T:
+         raise NotImplementedError
+ 
++    async def pending(self, dataspec: st.DataSpec) -> st.Status:
++        task = self.launch_task(dataspec=dataspec)
++        if task is not None:
++            # NB: an exception raised in an asyncio task will be reraised
++            # in the awaiting code
++            await task
++        # In the other cases, the complete_task will be reentered with
++        # the pending status, resulting in a polling process
++        return await self.complete_task(dataspec)
++
+     async def processing(self, dataspec: st.DataSpec) -> st.Status:
+         """If processing, wait for the task to be ready.
+         Such a case can happen if another manager has taken the computation
+         of the task. After a given timeout, an error is raised.
+         """
+ 
+         stage = await self.wait_for_computation(
+             dataspec=dataspec,
+             current_stage='processing',
+-            timeout=self.manager().computation_timeout(dataspec),
+-            max_delay=self.manager().computation_max_delay(dataspec),
++            timeout=self.computing_manager().computation_timeout(dataspec),
++            max_delay=self.computing_manager().computation_max_delay(dataspec),
+         )
+         if stage.processing():
+             stt.error(
+                 dataspec=dataspec,
+                 manager=dataspec.manager(),
+                 task=self.task_name,
+                 properties={
+@@ -79,29 +59,40 @@
+                 )
+             )
+         # if the stage is an error, it is complete_task
+         # that decides what to do via the error_policy
+         return await self.complete_task(dataspec)
+ 
+     def launch_task(self, dataspec: st.DataSpec) -> t.Optional[t.Awaitable]:
+-        status = stt.last_status(
+-            dataspec=dataspec, manager=self.manager(), task=self.task_name
+-        )
++        status = self.status(dataspec)
+         if status is None:
+             _, is_updated = stt.processing(
+                 dataspec=dataspec,
+-                manager=self.manager(),
++                manager=self.computing_manager(),
+                 task=self.task_name,
+             )
+             if is_updated:
+                 return asyncio.create_task(
+                     self.prepare(dataspec),
+                     name=self.task_name + dataspec.uuid(),
+                 )
+-
++        else:
++            stage = status.task(self.task_name)
++            assert stage
++            if stage.pending():
++                _, is_updated = stt.processing(
++                    dataspec=dataspec,
++                    manager=self.computing_manager(),
++                    task=self.task_name,
++                )
++                if is_updated:
++                    return asyncio.create_task(
++                        self.prepare(dataspec),
++                        name=self.task_name + dataspec.uuid(),
++                    )
+         return None
+ 
+     async def prepare(self, dataspec: st.DataSpec) -> None:
+         """Prepare the computation and set the status accordingly.
+ 
+         It is up to the computation to define what preparing means. It can be
+         computing and caching the data as well as simply checking that the
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/base.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/base.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from __future__ import annotations
+ 
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+-from sarus_data_spec.manager.asyncio.utils import decoupled_async_iter
++from sarus_data_spec.manager.async_utils import decoupled_async_iter
+ import sarus_data_spec.dataspec_validator.typing as sdvt
+ import sarus_data_spec.typing as st
+ 
+ 
+ class DataspecStaticChecker:
+     def __init__(self, dataspec: st.DataSpec):
+         self.dataspec = dataspec
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/external_op.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -6,62 +6,79 @@
+ 
+ import pandas as pd
+ import pyarrow as pa
+ 
+ from sarus_data_spec.arrow.schema import type_from_arrow_schema
+ from sarus_data_spec.config import ROUTING
+ from sarus_data_spec.dataspec_validator.typing import PEPKind
+-from sarus_data_spec.manager.asyncio.utils import async_iter
+-from sarus_data_spec.manager.ops.asyncio.base import (
++from sarus_data_spec.manager.async_utils import async_iter
++from sarus_data_spec.manager.ops.base import (
+     DatasetImplementation,
+     DatasetStaticChecker,
+     DataspecStaticChecker,
+     ScalarImplementation,
+ )
+ from sarus_data_spec.schema import schema as schema_builder
+ from sarus_data_spec.transform import external, transform_id
+ import sarus_data_spec.manager.typing as smt
+ import sarus_data_spec.protobuf as sp
+ import sarus_data_spec.type as sdt
+ import sarus_data_spec.typing as st
+ 
+ from .protection_utils import (
+     ExternalOpImplementation,
+-    extract_data_from_pe,
+-    pandas_merge_pe,
++    arguments_values,
++    arguments_values_and_protected_entity,
++    output_protected_entity,
++    to_pyarrow_table_with_protected_entity,
+ )
+ 
+ 
+ class ExternalScalarStaticChecker(DataspecStaticChecker):
+     async def private_queries(self) -> t.List[st.PrivateQuery]:
+         """Return the PrivateQueries summarizing DP characteristics."""
+-        implementation = external_implementation(self.dataspec)
+-        args, kwargs = external_arguments(self.dataspec)
++        transform = self.dataspec.transform()
++        ds_args, ds_kwargs = self.dataspec.parents()
++
++        implementation = external_implementation(transform)
++        args, kwargs = static_and_dynamic_arguments(
++            transform, *ds_args, **ds_kwargs
++        )
+         return await implementation.private_queries(*args, **kwargs)
+ 
+     def is_dp(self) -> bool:
+         """Checks if the transform is DP and compatible with the arguments."""
+-        op_implementation = external_implementation(self.dataspec)
+-        args, kwargs = external_arguments(self.dataspec)
+-        return op_implementation.is_dp(*args, **kwargs)
++        transform = self.dataspec.transform()
++        ds_args, ds_kwargs = self.dataspec.parents()
++
++        implementation = external_implementation(transform)
++        args, kwargs = static_and_dynamic_arguments(
++            transform, *ds_args, **ds_kwargs
++        )
++        return implementation.is_dp(*args, **kwargs)
+ 
+     def is_dp_applicable(self, public_context: t.Collection[str]) -> bool:
+         """Statically check if a DP transform is applicable in this position.
+ 
+         This verification is common to all dataspecs and is true if:
+             - the dataspec is transformed and its transform has an equivalent
+             DP transform
+             - the DP transform's required PEP arguments are PEP and aligned
+             (i.e. same PEP token)
+             - other dataspecs arguments are public
+         """
+-        op_implementation = external_implementation(self.dataspec)
+-        args, kwargs = external_arguments(self.dataspec)
++        transform = self.dataspec.transform()
++        ds_args, ds_kwargs = self.dataspec.parents()
+ 
+-        dp_implementation = op_implementation.dp_equivalent()
++        implementation = external_implementation(transform)
++        args, kwargs = static_and_dynamic_arguments(
++            transform, *ds_args, **ds_kwargs
++        )
++
++        dp_implementation = implementation.dp_equivalent()
+         if dp_implementation is None or not dp_implementation.is_dp(
+             *args, **kwargs
+         ):
+             return False
+ 
+         pep_args, non_pep_args = group_by_pep(
+             dp_implementation, *args, **kwargs
+@@ -85,18 +102,17 @@
+         if not all([token == pep_tokens[0] for token in pep_tokens]):
+             return False
+ 
+         return True
+ 
+     def dp_transform(self) -> t.Optional[st.Transform]:
+         """Return the dataspec's DP equivalent transform if existing."""
+-        op_implementation = external_implementation(self.dataspec)
+-        py_args, py_kwargs, ds_args_pos = serialized_external_arguments(
+-            self.dataspec
+-        )
++        transform = self.dataspec.transform()
++        op_implementation = external_implementation(transform)
++        py_args, py_kwargs, ds_args_pos = static_arguments(transform)
+ 
+         dp_implementation = op_implementation.dp_equivalent()
+         if dp_implementation is None:
+             return None
+ 
+         dp_transform_id = dp_implementation.transform_id
+         assert dp_transform_id is not None
+@@ -114,41 +130,42 @@
+ ):
+     def __init__(self, dataset: st.Dataset):
+         super().__init__(dataset)
+         self.dataset = dataset
+ 
+     def pep_token(self, public_context: t.Collection[str]) -> t.Optional[str]:
+         """Return the current dataspec's PEP token."""
+-        op_implementation = external_implementation(self.dataspec)
+-        transform_args, transform_kwargs = external_arguments(self.dataspec)
++        transform = self.dataspec.transform()
++        ds_args, ds_kwargs = self.dataspec.parents()
++
++        implementation = external_implementation(transform)
++        args, kwargs = static_and_dynamic_arguments(
++            transform, *ds_args, **ds_kwargs
++        )
+ 
+-        if len(op_implementation.allowed_pep_args) == 0:
++        if len(implementation.allowed_pep_args) == 0:
+             return None
+ 
+-        pep_args, non_pep_args = group_by_pep(
+-            op_implementation, *transform_args, **transform_kwargs
+-        )
++        pep_args, non_pep_args = group_by_pep(implementation, *args, **kwargs)
+ 
+-        pep_kind = op_implementation.pep_kind(
+-            *transform_args, **transform_kwargs
+-        )
++        pep_kind = implementation.pep_kind(*args, **kwargs)
+         if pep_kind == PEPKind.NOT_PEP:
+             return None
+ 
+         # All non PEP args should be public of published
+         if not all(
+             [
+                 arg.uuid() in public_context or arg.is_public()
+                 for arg in non_pep_args.values()
+             ]
+         ):
+             return None
+ 
+         # The PEP arg combination should be allowed
+-        if set(pep_args.keys()) not in op_implementation.allowed_pep_args:
++        if set(pep_args.keys()) not in implementation.allowed_pep_args:
+             return None
+ 
+         # All PEP tokens should be equal
+         pep_tokens = [arg.pep_token() for arg in pep_args.values()]
+         if not all([token == pep_tokens[0] for token in pep_tokens]):
+             return None
+ 
+@@ -189,90 +206,96 @@
+         return schema_builder(self.dataset, schema_type=schema_type)
+ 
+ 
+ class ExternalDatasetOp(DatasetImplementation):
+     async def to_arrow(
+         self, batch_size: int
+     ) -> t.AsyncIterator[pa.RecordBatch]:
+-        op_implementation = external_implementation(self.dataset)
+-        transform_args, transform_kwargs = external_arguments(self.dataset)
++        transform = self.dataset.transform()
++        ds_args, ds_kwargs = self.dataset.parents()
+ 
+-        data_args, data_kwargs, pe_candidates = await evaluate_arguments(
+-            *transform_args, **transform_kwargs
++        implementation = external_implementation(transform)
++        args, kwargs = static_and_dynamic_arguments(
++            transform, *ds_args, **ds_kwargs
+         )
+-        static_checker = ExternalScalarStaticChecker(self.dataset)
+-        if self.dataset.is_pep() or static_checker.is_dp():
+-            # If we reach this part then there should be only one input PE
+-            pe = next(iter(pe_candidates), None)
+-            if pe is None:
+-                raise ValueError(
+-                    "The dataset was infered PEP but has no input PE"
+-                )
+-            # For now, PE in external ops are only viewed as pd.DataFrames
+-            if not all([candidate.equals(pe) for candidate in pe_candidates]):
+-                raise ValueError(
+-                    "The dataset is PEP but has several differing"
+-                    " input PE values"
+-                )
+ 
++        static_checker = ExternalDatasetStaticChecker(self.dataset)
+         if static_checker.is_dp():
+-            # We also pass the PE for DP implementations
+-            data = await op_implementation.call(
++            (
++                data_args,
++                data_kwargs,
++                pe,
++            ) = await arguments_values_and_protected_entity(*args, **kwargs)
++            result = await implementation.call(
+                 *data_args, **data_kwargs, pe=pe, dataspec=self.dataset
+             )
+-        else:
+-            data = await op_implementation.call(*data_args, **data_kwargs)
++            table = to_pyarrow_table(result)
+ 
+-        if self.dataset.is_pep():
+-            # We guarantee that the data.index is a reliable way to trace how
+-            # the rows were rearranged
+-            assert pe is not None
+-            pe = pe.loc[data.index]
+-        else:
+-            pe = None
+-
+-        if isinstance(data, pd.DataFrame):
+-            table = pandas_merge_pe(data, pe)
+-            return async_iter(table.to_batches(max_chunksize=batch_size))
++        elif self.dataset.is_pep():
++            (
++                data_args,
++                data_kwargs,
++                pe,
++            ) = await arguments_values_and_protected_entity(*args, **kwargs)
++            result = await implementation.call(*data_args, **data_kwargs)
++            output_pe = output_protected_entity(pe, result)
++            table = to_pyarrow_table_with_protected_entity(result, output_pe)
+ 
+         else:
+-            raise TypeError(f"Cannot convert {type(data)} to Arrow batches.")
++            data_args, data_kwargs = await arguments_values(*args, **kwargs)
++            result = await implementation.call(*data_args, **data_kwargs)
++            table = to_pyarrow_table(result)
++
++        return async_iter(table.to_batches(max_chunksize=batch_size))
+ 
+ 
+ class ExternalScalarOp(ScalarImplementation):
+     async def value(self) -> t.Any:
+-        op_implementation = external_implementation(self.scalar)
+-        transform_args, transform_kwargs = external_arguments(self.scalar)
+-
+-        data_args, data_kwargs, pe_candidates = await evaluate_arguments(
+-            *transform_args, **transform_kwargs
++        transform = self.scalar.transform()
++        ds_args, ds_kwargs = self.scalar.parents()
++        return await async_compute_external_value(
++            transform, *ds_args, **ds_kwargs
+         )
+ 
+-        static_checker = ExternalScalarStaticChecker(self.scalar)
+-        if static_checker.is_dp():
+-            # If we reach this part then there should be only one input PE
+-            pe = next(iter(pe_candidates), None)
+-            if pe is None:
+-                raise ValueError(
+-                    "The dataset was infered PEP but has no input PE"
+-                )
+-            # For now, PE in external ops are only viewed as pd.DataFrames
+-            if not all([candidate.equals(pe) for candidate in pe_candidates]):
+-                raise ValueError(
+-                    "The dataset is PEP but has several differing"
+-                    " input PE values"
+-                )
+-            # We also pass the PE for DP implementations
+-            data = await op_implementation.call(
+-                *data_args, **data_kwargs, pe=pe, dataspec=self.scalar
+-            )
+-        else:
+-            data = await op_implementation.call(*data_args, **data_kwargs)
+ 
+-        return data
++async def async_compute_external_value(
++    transform: st.Transform,
++    *ds_args: st.DataSpec,
++    **ds_kwargs: st.DataSpec,
++) -> t.Any:
++    """Compute the value of an external transform applied on Dataspecs.
++
++    This function computes the output value without manipulating the
++    corresponding Dataspec. This is useful when we need to have access
++    to the value of a Dataspec before its creation:
++      - for computing a Mock value and inferring if the result is
++        a Scalar or a Dataset.
++    """
++    implementation = external_implementation(transform)
++    args, kwargs = static_and_dynamic_arguments(
++        transform, *ds_args, **ds_kwargs
++    )
++
++    if implementation.is_dp(*args, **kwargs):
++        data = await implementation.call(*args, **kwargs)
++
++    else:
++        data_args, data_kwargs = await arguments_values(*args, **kwargs)
++        data = await implementation.call(*data_args, **data_kwargs)
++
++    return data
++
++
++def to_pyarrow_table(data: t.Any) -> pa.Table:
++    """Convert the result of an external transform to a Pyarrow Table."""
++    if not isinstance(data, pd.DataFrame):
++        raise TypeError(f"Cannot convert {type(data)} to Arrow batches.")
++
++    df = t.cast(pd.DataFrame, data)
++    return pa.Table.from_pandas(df)
+ 
+ 
+ def group_by_pep(
+     op_implementation: smt.ExternalOpImplementation,
+     *args: t.Any,
+     **kwargs: t.Any,
+ ) -> t.Tuple[t.Dict[str, st.DataSpec], t.Dict[str, st.DataSpec]]:
+@@ -314,94 +337,67 @@
+         arg_name: arg
+         for arg_name, arg in dataspec_args.items()
+         if arg_name not in pep_args
+     }
+     return pep_args, non_pep_args
+ 
+ 
+-def serialized_external_arguments(
+-    dataspec: st.DataSpec,
++def static_arguments(
++    transform: st.Transform,
+ ) -> t.Tuple[t.Dict[int, t.Any], t.Dict[str, t.Any], t.List[int]]:
+     """Return the external arguments serialized in the protobuf."""
+-    transform = dataspec.transform()
+     assert transform and transform.is_external()
+ 
+-    transform_spec = dataspec.transform().protobuf().spec
++    transform_spec = transform.protobuf().spec
+     external_args = pkl.loads(transform_spec.external.named_arguments)
+     py_args = external_args["py_args"]
+     py_kwargs = external_args["py_kwargs"]
+     ds_args_pos = external_args["ds_args_pos"]
+     return py_args, py_kwargs, ds_args_pos
+ 
+ 
+-def external_arguments(
+-    dataspec: st.DataSpec,
++def static_and_dynamic_arguments(
++    transform: st.Transform, *ds_args: st.DataSpec, **ds_kwargs: st.DataSpec
+ ) -> t.Tuple[t.List[t.Any], t.Dict[str, t.Any]]:
+     """Return all the external arguments.
+ 
+-    This returns arguments serialized in the protobufs as well as Dataspecs.
++    This returns static arguments interleaved with Dataspecs.
+     """
+-    py_args, py_kwargs, ds_args_pos = serialized_external_arguments(dataspec)
+-
+-    ds_args, ds_kwargs = dataspec.parents()
++    py_args, py_kwargs, ds_args_pos = static_arguments(transform)
+     pos_values = {pos: val for pos, val in zip(ds_args_pos, ds_args)}
+     kwargs = {**py_kwargs, **ds_kwargs}
+     pos_args = {**pos_values, **py_args}
+     args = [pos_args[i] for i in range(len(pos_args))]
+     return args, kwargs
+ 
+ 
+ def external_implementation(
+-    dataspec: st.DataSpec,
++    transform: st.Transform,
+ ) -> smt.ExternalOpImplementation:
+     """Return the implementation of an external op from a DataSpec.
+ 
+     The mapping is done by the config file.
+     """
+-    transform = dataspec.transform()
+     assert transform and transform.is_external()
+     library, op_name = transform_id(transform).split(".")
+     if op_name not in ROUTING["external"][library]:
+         raise NotImplementedError(
+             f"Routing: {op_name} not in {list(ROUTING['external'][library].keys())}"  # noqa: E501
+         )
+ 
+     implementation_name = ROUTING["external"][library][op_name]
+     module = importlib.import_module(
+-        f"sarus_data_spec.manager.ops.asyncio.processor.external.{library}"
++        f"sarus_data_spec.manager.ops.processor.external.{library}"
+     )
+     op_implementation = getattr(module, implementation_name)
+ 
+     if not isinstance(op_implementation, type):
+         op_implementation = type(
+             implementation_name,
+             (ExternalOpImplementation,),
+             {
+                 "call": staticmethod(op_implementation),
+                 "transform_id": transform_id,
+             },
+         )
+ 
+-    return t.cast(smt.ExternalOpImplementation, op_implementation(dataspec))
+-
+-
+-async def evaluate_arguments(
+-    *args: t.Any, **kwargs: t.Any
+-) -> t.Tuple[t.List[t.Any], t.Dict[str, t.Any], t.List[t.Any]]:
+-    """Evaluate sarus dataspecs and extract the PE.
+-
+-    Compute the value of Dataspec arguments. Extract all the protections and
+-    return them in a list.
+-    """
+-    data_pe_args = [await extract_data_from_pe(arg) for arg in args]
+-    data_args = [data for data, _ in data_pe_args]
+-    pe_args = [pe for _, pe in data_pe_args]
+-
+-    data_pe_kwargs = {
+-        name: await extract_data_from_pe(arg) for name, arg in kwargs.items()
+-    }
+-    data_kwargs = {name: data for name, (data, _) in data_pe_kwargs.items()}
+-    pe_kwargs = [pe for _, pe in data_pe_kwargs.values()]
+-
+-    pe_candidates = list(filter(lambda x: x is not None, pe_args + pe_kwargs))
+-
+-    return data_args, data_kwargs, pe_candidates
++    return t.cast(smt.ExternalOpImplementation, op_implementation())
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/imblearn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/numpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/pandas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/pandas/pandas_dp.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -5,15 +5,19 @@
+ import pandas as pd
+ import pandas._typing as pdt
+ 
+ from sarus_data_spec.constants import MAX_MAX_MULT
+ from sarus_data_spec.protobuf.utilities import unwrap
+ import sarus_data_spec.typing as st
+ 
+-from ..protection_utils import ExternalOpImplementation
++from ..protection_utils import (
++    ExternalOpImplementation,
++    arguments_values,
++    arguments_values_and_protected_entity,
++)
+ 
+ logger = logging.getLogger(__name__)
+ 
+ try:
+     from sarus_statistics.ops.bounds.op import BoundOp
+     from sarus_statistics.ops.histograms.op import CountOp
+     from sarus_statistics.ops.max_multiplicity.op import MaxMultiplicityOp
+@@ -54,22 +58,22 @@
+ 
+ 
+ DEFAULT_MAX_MAX_MULT = 1
+ NUMERIC_TYPES = ('integer', 'float', 'boolean')
+ 
+ 
+ class pd_shape_dp(ExternalOpImplementation):
+-    allowed_pep_args: t.List[t.Set[str]] = [{"dataframe"}]
++    allowed_pep_args: t.List[t.Set[str]] = [{"parent_ds"}]
+     transform_id: str = "pandas.PD_SHAPE_DP"
+ 
+     def is_dp(self, *args: t.Any, **kwargs: t.Any) -> bool:
+         return True
+ 
+     @staticmethod
+-    async def static_privacy(  # type: ignore[override]
++    async def private_queries_and_task(  # type: ignore[override]
+         parent_ds: st.Dataset, budget: t.Any, **kwargs: t.Any
+     ) -> t.Tuple[t.List[st.PrivateQuery], st.Task]:
+         """Return the PrivateQueries summarizing DP characteristics."""
+         if len(budget) != 1:
+             raise NotImplementedError(
+                 "The PrivacyParams contains more than 1 point in the privacy "
+                 "profile."
+@@ -107,41 +111,46 @@
+         )
+         query = builder.private_query(tasks)
+         composed_query = t.cast(ComposedPrivateQuery, query)
+         return list(composed_query.all_subqueries()), tasks
+ 
+     @staticmethod
+     async def call(  # type: ignore[override]
+-        dataframe: t.Any,
+-        dataspec: st.DataSpec,
+-        budget: t.Any,
+-        seed: int,
+-        pe: t.Any,
++        parent_ds: st.Dataset,
++        budget: st.Scalar,
++        seed: st.Scalar,
+     ) -> t.Any:
+         """Implementation of DP shape.
+ 
+         A DP implementation receives additional arguments compared to a
+         standard external implementation:
+             - `budget`: a list of sp.Scalar.PrivacyParams.Point
+                 object containing each an epsilon and a delta values
+             - `seed`: an integer used to parametrize random number generators
+             - `pe`: theprotected entity used by `sarus_statistics` primitives
+         """
+-        parent_ds = t.cast(st.Dataset, dataspec.parents()[0][0])
+-        _, tasks = await pd_shape_dp.static_privacy(parent_ds, budget)
++        # Evaluate arguments
++        (dataframe, budget_value, seed_value), _ = await arguments_values(
++            parent_ds, budget, seed
++        )
+ 
+-        epsilon = budget[0].epsilon
++        # Get QB task parametrization
++        _, tasks = await pd_shape_dp.private_queries_and_task(
++            parent_ds, budget_value
++        )
++
++        epsilon = budget_value[0].epsilon
+         n_rows, n_cols = dataframe.shape
+ 
+         # Compute DP value
+         tasks = [unwrap(subtask) for subtask in tasks.subtasks]
+         max_mult_task, shape_task = t.cast(MaxMultiplicity, tasks[0]), t.cast(
+             GenericTask, tasks[1]
+         )
+-        random_generator = np.random.default_rng(abs(seed))
++        random_generator = np.random.default_rng(abs(seed_value))
+         max_mul = MaxMultiplicityOp(
+             parent_ds,
+             epsilon,  # parameter for quantiles
+             max_mult_task.noise_user_count,
+             max_mult_task.noise_multiplicity,
+             max_mult_task.max_max_multiplicity,
+         ).value(random_generator)
+@@ -154,33 +163,33 @@
+         dp_shape = (n_rows, n_cols)
+ 
+         # Compute private query
+         return dp_shape
+ 
+ 
+ class pd_sum_dp(ExternalOpImplementation):
+-    allowed_pep_args: t.List[t.Set[str]] = [{"dataframe"}]
++    allowed_pep_args: t.List[t.Set[str]] = [{"parent_ds"}]
+     transform_id: str = "pandas.PD_SUM_DP"
+ 
+     def is_dp(  # type: ignore[override]
+         self,
+-        dataframe: t.Any,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = None,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         min_count: int = 0,
+         budget: t.Any = None,
+         seed: t.Optional[int] = None,
+         **kwargs: t.Any,
+     ) -> bool:
+         return (axis == 0) and (numeric_only is True)
+ 
+     @staticmethod
+-    async def static_privacy(  # type: ignore[override]
++    async def private_queries_and_task(  # type: ignore[override]
+         parent_ds: st.Dataset,
+         budget: t.Any,
+         **kwargs: t.Any,
+     ) -> t.Tuple[t.List[st.PrivateQuery], st.Task]:
+         if len(budget) != 1:
+             raise NotImplementedError(
+                 "The PrivacyParams contains more than 1 point in the privacy "
+@@ -230,46 +239,47 @@
+         )
+         query = builder.private_query(tasks)
+         composed_query = t.cast(ComposedPrivateQuery, query)
+         return list(composed_query.all_subqueries()), tasks
+ 
+     @staticmethod
+     async def call(  # type: ignore[override]
+-        dataframe: t.Any,
+-        dataspec: st.DataSpec,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = None,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         min_count: int = 0,
+-        budget: t.Any = None,
+-        seed: t.Optional[int] = None,
+-        pe: pd.DataFrame = None,
++        budget: t.Optional[st.Scalar] = None,
++        seed: t.Optional[st.Scalar] = None,
+         **kwargs: t.Any,
+     ) -> t.Any:
++        # Evaluate arguments
++        (dataframe, budget_value, seed_value), _ = await arguments_values(
++            parent_ds, budget, seed
++        )
++
+         assert type(dataframe) in [pd.DataFrame, pd.Series]
+-        assert pe.shape[0] == dataframe.shape[0]
+         assert numeric_only
+         assert axis == 0
+         assert level is None
+         assert min_count == 0
+-        assert seed
+-        assert budget
++        assert seed_value
++        assert budget_value
+ 
+-        parent_ds = t.cast(st.Dataset, dataspec.parents()[0][0])
+-        _, tasks = await pd_sum_dp.static_privacy(
++        _, tasks = await pd_sum_dp.private_queries_and_task(
+             parent_ds=parent_ds,
+-            budget=budget,
++            budget=budget_value,
+         )
+ 
+-        epsilon = budget[0].epsilon
++        epsilon = budget_value[0].epsilon
+         # Compute DP value
+         tasks = [unwrap(subtask) for subtask in tasks.subtasks]
+         max_mult_task, sum_tasks = tasks[0], tasks[1:]
+-        random_generator = np.random.default_rng(abs(seed))
++        random_generator = np.random.default_rng(abs(seed_value))
+         max_mul = MaxMultiplicityOp(
+             parent_ds,
+             epsilon,  # parameter for quantiles
+             max_mult_task.noise_user_count,
+             max_mult_task.noise_multiplicity,
+             max_mult_task.max_max_multiplicity,
+         ).value(random_generator)
+@@ -312,32 +322,32 @@
+             )
+ 
+         sum_dp = pd.Series(sum_dp_dict)
+         return sum_dp
+ 
+ 
+ class pd_mean_dp(ExternalOpImplementation):
+-    allowed_pep_args: t.List[t.Set[str]] = [{"dataframe"}]
++    allowed_pep_args: t.List[t.Set[str]] = [{"parent_ds"}]
+     transform_id: str = "pandas.PD_MEAN_DP"
+ 
+     def is_dp(  # type: ignore[override]
+         self,
+-        dataframe: t.Any,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         budget: t.Any = None,
+         seed: t.Optional[int] = None,
+         **kwargs: t.Any,
+     ) -> bool:
+         return axis == 0 and numeric_only is True
+ 
+     @staticmethod
+-    async def static_privacy(  # type: ignore[override]
++    async def private_queries_and_task(  # type: ignore[override]
+         parent_ds: st.Dataset,
+         budget: t.Any,
+         **kwargs: t.Any,
+     ) -> t.Tuple[t.List[st.PrivateQuery], st.Task]:
+         if len(budget) != 1:
+             raise NotImplementedError(
+                 "The PrivacyParams contains more than 1 point in the privacy "
+@@ -385,44 +395,50 @@
+         )
+         query = builder.private_query(tasks)
+         composed_query = t.cast(ComposedPrivateQuery, query)
+         return list(composed_query.all_subqueries()), tasks
+ 
+     @staticmethod
+     async def call(  # type: ignore[override]
+-        dataframe: t.Any,
+-        dataspec: st.DataSpec,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+-        budget: t.Any = None,
+-        seed: t.Optional[int] = None,
+-        pe: pd.DataFrame = None,
++        budget: t.Optional[st.Scalar] = None,
++        seed: t.Optional[st.Scalar] = None,
+         **kwargs: t.Any,
+     ) -> t.Any:
++        # Evaluate arguments
++        (
++            (dataframe, budget_value, seed_value),
++            _,
++            pe,
++        ) = await arguments_values_and_protected_entity(
++            parent_ds, budget, seed
++        )
++
+         assert type(dataframe) in [pd.DataFrame, pd.Series]
+         assert pe.shape[0] == dataframe.shape[0]
+         assert numeric_only
+         assert axis == 0
+         assert level is None
+-        assert seed
+-        assert budget
++        assert seed_value
++        assert budget_value
+ 
+-        parent_ds = t.cast(st.Dataset, dataspec.parents()[0][0])
+-        _, tasks = await pd_mean_dp.static_privacy(
++        _, tasks = await pd_mean_dp.private_queries_and_task(
+             parent_ds=parent_ds,
+-            budget=budget,
++            budget=budget_value,
+         )
+         tasks = [unwrap(subtask) for subtask in tasks.subtasks]
+         max_mult_task, mean_tasks = tasks[0], tasks[1:]
+ 
+         # Compute DP value
+-        random_generator = np.random.default_rng(abs(seed))
+-        epsilon = budget[0].epsilon
++        random_generator = np.random.default_rng(abs(seed_value))
++        epsilon = budget_value[0].epsilon
+         max_mul = MaxMultiplicityOp(
+             parent_ds,
+             epsilon,  # parameter for quantiles
+             max_mult_task.noise_user_count,
+             max_mult_task.noise_multiplicity,
+             max_mult_task.max_max_multiplicity,
+         ).value(random_generator)
+@@ -462,32 +478,32 @@
+             )
+ 
+         mean_dp = pd.Series(mean_dp_dict)
+         return mean_dp
+ 
+ 
+ class pd_median_dp(ExternalOpImplementation):
+-    allowed_pep_args: t.List[t.Set[str]] = [{"dataframe"}]
++    allowed_pep_args: t.List[t.Set[str]] = [{"parent_ds"}]
+     transform_id: str = "pandas.PD_MEDIAN_DP"
+ 
+     def is_dp(  # type: ignore[override]
+         self,
+-        dataframe: t.Any,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         budget: t.Any = None,
+         seed: t.Optional[int] = None,
+         **kwargs: t.Any,
+     ) -> bool:
+         return axis == 0 and numeric_only is True
+ 
+     @staticmethod
+-    async def static_privacy(  # type: ignore[override]
++    async def private_queries_and_task(  # type: ignore[override]
+         parent_ds: st.Dataset,
+         budget: t.Any,
+         **kwargs: t.Any,
+     ) -> t.Tuple[t.List[st.PrivateQuery], st.Task]:
+         if len(budget) != 1:
+             raise NotImplementedError(
+                 "The PrivacyParams contains more than 1 point in the privacy "
+@@ -536,43 +552,49 @@
+         )
+         query = builder.private_query(tasks)
+         composed_query = t.cast(ComposedPrivateQuery, query)
+         return list(composed_query.all_subqueries()), tasks
+ 
+     @staticmethod
+     async def call(  # type: ignore[override]
+-        dataframe: t.Any,
+-        dataspec: st.DataSpec,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+-        budget: t.Any = None,
+-        seed: t.Optional[int] = None,
+-        pe: pd.DataFrame = None,
++        budget: t.Optional[st.Scalar] = None,
++        seed: t.Optional[st.Scalar] = None,
+         **kwargs: t.Any,
+     ) -> t.Any:
++        # Evaluate arguments
++        (
++            (dataframe, budget_value, seed_value),
++            _,
++            pe,
++        ) = await arguments_values_and_protected_entity(
++            parent_ds, budget, seed
++        )
++
+         assert type(dataframe) in [pd.DataFrame, pd.Series]
+         assert pe.shape[0] == dataframe.shape[0]
+         assert numeric_only
+         assert axis == 0
+         assert level is None
+-        assert seed
+-        assert budget
++        assert seed_value
++        assert budget_value
+ 
+-        parent_ds = t.cast(st.Dataset, dataspec.parents()[0][0])
+-        _, tasks = await pd_median_dp.static_privacy(
++        _, tasks = await pd_median_dp.private_queries_and_task(
+             parent_ds=parent_ds,
+-            budget=budget,
++            budget=budget_value,
+         )
+         tasks = [unwrap(subtask) for subtask in tasks.subtasks]
+         max_mult_task, median_tasks = tasks[0], tasks[1:]
+ 
+-        random_generator = np.random.default_rng(abs(seed))
+-        epsilon = budget[0].epsilon
++        random_generator = np.random.default_rng(abs(seed_value))
++        epsilon = budget_value[0].epsilon
+ 
+         # Compute DP value
+         max_mul = MaxMultiplicityOp(
+             parent_ds,
+             epsilon,  # parameter for quantiles
+             max_mult_task.noise_user_count,
+             max_mult_task.noise_multiplicity,
+@@ -614,33 +636,33 @@
+             )
+ 
+         median_dp = pd.Series(median_dp_dict)
+         return median_dp
+ 
+ 
+ class pd_std_dp(ExternalOpImplementation):
+-    allowed_pep_args: t.List[t.Set[str]] = [{"dataframe"}]
++    allowed_pep_args: t.List[t.Set[str]] = [{"parent_ds"}]
+     transform_id: str = "pandas.PD_STD_DP"
+ 
+     def is_dp(  # type: ignore[override]
+         self,
+-        dataframe: t.Any,
++        parent_ds: t.Any,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         ddof: int = 1,
+         budget: t.Any = None,
+         seed: t.Optional[int] = None,
+         **kwargs: t.Any,
+     ) -> bool:
+         return axis == 0 and numeric_only is True
+ 
+     @staticmethod
+-    async def static_privacy(  # type: ignore[override]
++    async def private_queries_and_task(  # type: ignore[override]
+         parent_ds: st.Dataset,
+         budget: t.Any,
+         **kwargs: t.Any,
+     ) -> t.Tuple[t.List[st.PrivateQuery], st.Task]:
+         if len(budget) != 1:
+             raise NotImplementedError(
+                 "The PrivacyParams contains more than 1 point in the privacy "
+@@ -689,44 +711,50 @@
+         )
+         query = builder.private_query(tasks)
+         composed_query = t.cast(ComposedPrivateQuery, query)
+         return list(composed_query.all_subqueries()), tasks
+ 
+     @staticmethod
+     async def call(  # type: ignore[override]
+-        dataframe: t.Any,
+-        dataspec: st.DataSpec,
++        parent_ds: st.Dataset,
+         axis: t.Optional[pdt.Axis] = 0,
+         skipna: bool = True,
+         level: t.Optional[pdt.Level] = None,
+         numeric_only: t.Optional[bool] = None,
+         ddof: int = 1,
+-        budget: t.Any = None,
+-        seed: t.Optional[int] = None,
+-        pe: pd.DataFrame = None,
++        budget: t.Optional[st.Scalar] = None,
++        seed: t.Optional[st.Scalar] = None,
+         **kwargs: t.Any,
+     ) -> t.Any:
++        # Evaluate arguments
++        (
++            (dataframe, budget_value, seed_value),
++            _,
++            pe,
++        ) = await arguments_values_and_protected_entity(
++            parent_ds, budget, seed
++        )
++
+         assert type(dataframe) in [pd.DataFrame, pd.Series]
+         assert pe.shape[0] == dataframe.shape[0]
+         assert numeric_only
+         assert axis == 0
+         assert level is None
+-        assert seed
+-        assert budget
++        assert seed_value
++        assert budget_value
+ 
+-        parent_ds = t.cast(st.Dataset, dataspec.parents()[0][0])
+-        _, tasks = await pd_std_dp.static_privacy(
++        _, tasks = await pd_std_dp.private_queries_and_task(
+             parent_ds=parent_ds,
+-            budget=budget,
++            budget=budget_value,
+         )
+         tasks = [unwrap(subtask) for subtask in tasks.subtasks]
+         max_mult_task, std_tasks = tasks[0], tasks[1:]
+ 
+-        epsilon = budget[0].epsilon
+-        random_generator = np.random.default_rng(abs(seed))
++        epsilon = budget_value[0].epsilon
++        random_generator = np.random.default_rng(abs(seed_value))
+ 
+         # Compute DP value
+         max_mul = MaxMultiplicityOp(
+             parent_ds,
+             epsilon,  # parameter for quantiles
+             max_mult_task.noise_user_count,
+             max_mult_task.noise_multiplicity,
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/sklearn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/std.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/std.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/external/xgboost.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/routing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/routing.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,149 +1,149 @@
+ import logging
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+-from sarus_data_spec.manager.ops.asyncio.base import (
++from sarus_data_spec.manager.ops.base import (
+     DatasetImplementation,
+     DatasetStaticChecker,
+     DataspecStaticChecker,
+     ScalarImplementation,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.external.external_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.external.external_op import (  # noqa: E501
+     ExternalDatasetOp,
+     ExternalDatasetStaticChecker,
+     ExternalScalarOp,
+     ExternalScalarStaticChecker,
+ )
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.differentiated_sample import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.differentiated_sample import (  # noqa: E501
+         DifferentiatedSample,
+         DifferentiatedSampleStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: DifferentiatedSampling not available.")
+ 
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.extract import (
++from sarus_data_spec.manager.ops.processor.standard.extract import (
+     Extract,
+     ExtractStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.filter import (
++from sarus_data_spec.manager.ops.processor.standard.filter import (
+     Filter,
+     FilterStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.get_item import (
++from sarus_data_spec.manager.ops.processor.standard.get_item import (
+     GetItem,
+     GetItemStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.project import (
++from sarus_data_spec.manager.ops.processor.standard.project import (
+     Project,
+     ProjectStaticChecker,
+ )
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.sample import (
++    from sarus_data_spec.manager.ops.processor.standard.sample import (
+         Sample,
+         SampleStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: Sample not available.")
+ 
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.select_sql import (
++from sarus_data_spec.manager.ops.processor.standard.select_sql import (
+     SelectSQL,
+     SelectSQLStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.shuffle import (
++from sarus_data_spec.manager.ops.processor.standard.shuffle import (
+     Shuffle,
+     ShuffleStaticChecker,
+ )
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.protection_utils.protected_paths import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.protection_utils.protected_paths import (  # noqa: E501
+         ProtectedPaths,
+         ProtectedPathsStaticChecker,
+         PublicPaths,
+         PublicPathStaticChecker,
+     )
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.protection_utils.protection import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.protection_utils.protection import (  # noqa: E501
+         ProtectedDataset,
+         ProtectedDatasetStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: Protection not available.")
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.user_settings.automatic import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.user_settings.automatic import (  # noqa: E501
+         AutomaticUserSettings,
+         AutomaticUserSettingsStaticChecker,
+     )
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.user_settings.user_settings import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.user_settings.user_settings import (  # noqa: E501
+         UserSettingsDataset,
+         UserSettingsStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: UserSettings not available.")
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.assign_budget import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.assign_budget import (  # noqa: E501
+         AssignBudget,
+         AssignBudgetStaticChecker,
+     )
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.budgets_ops import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.budgets_ops import (  # noqa: E501
+         AttributesBudget,
+         AttributesBudgetStaticChecker,
+         AutomaticBudget,
+         AutomaticBudgetStaticChecker,
+         SDBudget,
+         SDBudgetStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: Transforms with budgets not available.")
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.synthetic import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.synthetic import (  # noqa: E501
+         SamplingRatios,
+         SamplingRatiosStaticChecker,
+         Synthetic,
+         SyntheticStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: Synthetic not available.")
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.derive_seed import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.derive_seed import (  # noqa: E501
+         DeriveSeed,
+         DeriveSeedStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: Seed transforms not available.")
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.group_by_pe import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.group_by_pe import (  # noqa: E501
+         GroupByPE,
+         GroupByPEStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: GroupPE not available.")
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.transcode import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.transcode import (  # noqa: E501
+         Transcode,
+         TranscodeStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: GroupPE not available.")
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.relationship_spec import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.relationship_spec import (  # noqa: E501
+         RelationshipSpecOp,
+         RelationshipSpecOpStaticChecker,
+     )
+ except ModuleNotFoundError:
+     logger = logging.getLogger(__name__)
+     logger.info("Transforms: RelationshipSpec not available.")
+ import sarus_data_spec.typing as st
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/differentiated_sample.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,46 +3,46 @@
+ import numpy as np
+ import pyarrow as pa
+ 
+ from sarus_data_spec.arrow.array import convert_record_batch
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import DATA, DATASET_SLUGNAME
+ from sarus_data_spec.dataset import Dataset
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.sample import (
++from sarus_data_spec.manager.ops.processor.standard.sample import (
+     fast_gather,
+     new_sampling_ratio,
+     sample_arrow_to_arrow,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.sampling.size_utils import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.sampling.size_utils import (  # noqa: E501
+     differentiated_sampled_size,
+     sampled_size,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+ from sarus_data_spec.marginals import marginals as marginals_builder
+ from sarus_data_spec.path import straight_path
+ from sarus_data_spec.scalar import Scalar
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+ import sarus_data_spec.typing as st
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.sampling.differentiated_sampling_sizes import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.sampling.differentiated_sampling_sizes import (  # noqa: E501
+         differentiated_sampling_sizes,
+     )
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.sampling.sql import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.sampling.sql import (  # noqa: E501
+         sql_differentiated_sample_to_arrow,
+     )
+ except ModuleNotFoundError as exception:
+     # for the public repo
+     if (
+         exception.name
+-        == 'sarus_data_spec.manager.ops.asyncio.processor.standard.sampling'  # noqa: E501
++        == 'sarus_data_spec.manager.ops.processor.standard.sampling'  # noqa: E501
+     ):
+         pass
+     else:
+         raise exception
+ 
+ 
+ class DifferentiatedSampleStaticChecker(StandardDatasetStaticChecker):
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/extract.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+ from sarus_data_spec.constants import DATASET_SLUGNAME
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+ from sarus_data_spec.schema import schema
+ import sarus_data_spec.typing as st
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/filter.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -6,19 +6,19 @@
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import (
+     DATA,
+     DATASET_SLUGNAME,
+     OPTIONAL_VALUE,
+     PRIMARY_KEYS,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.visitor_selector import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.visitor_selector import (  # noqa: E501
+     filter_primary_keys,
+     select_rows,
+     update_fks,
+ )
+ from sarus_data_spec.marginals import marginals as marg_builder
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/get_item.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -2,19 +2,19 @@
+ 
+ import pyarrow as pa
+ 
+ from sarus_data_spec.arrow.array import convert_record_batch
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import DATA, DATASET_SLUGNAME
+ from sarus_data_spec.dataset import Dataset
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.visitor_selector import (  # noqa : E501
++from sarus_data_spec.manager.ops.processor.standard.visitor_selector import (  # noqa : E501
+     select_rows,
+ )
+ from sarus_data_spec.marginals import marginals as marg_builder
+ from sarus_data_spec.path import Path
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+ import sarus_data_spec.type as sdt
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/project.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -5,19 +5,19 @@
+ from sarus_data_spec.arrow.array import convert_record_batch
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import (
+     DATASET_SLUGNAME,
+     OPTIONAL_VALUE,
+     PRIMARY_KEYS,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.visitor_selector import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.visitor_selector import (  # noqa: E501
+     filter_primary_keys,
+     select_columns,
+     update_fks,
+ )
+ from sarus_data_spec.marginals import marginals as marg_builder
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/sample.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,34 +3,34 @@
+ 
+ import numpy as np
+ import pyarrow as pa
+ 
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import DATASET_SLUGNAME
+ from sarus_data_spec.dataset import Dataset
+-from sarus_data_spec.manager.asyncio.utils import async_iter
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.async_utils import async_iter
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+ from sarus_data_spec.marginals import marginals as marginals_builder
+ from sarus_data_spec.scalar import Scalar
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+ import sarus_data_spec.typing as st
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.processor.standard.sampling.sql import (  # noqa: E501
++    from sarus_data_spec.manager.ops.processor.standard.sampling.sql import (  # noqa: E501
+         sql_sample_to_arrow,
+     )
+ except ModuleNotFoundError as exception:
+     # for the public repo
+     if (
+         exception.name
+-        == 'sarus_data_spec.manager.ops.asyncio.processor.standard.sampling'  # noqa: E501
++        == 'sarus_data_spec.manager.ops.processor.standard.sampling'  # noqa: E501
+     ):
+         pass
+     else:
+         raise exception
+ 
+ 
+ try:
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/select_sql.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ import logging
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+ from sarus_data_spec.arrow.type import type_from_arrow
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+ from sarus_data_spec.schema import schema
+ import sarus_data_spec.type as sdt
+ import sarus_data_spec.typing as st
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/shuffle.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ import random
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+ from sarus_data_spec.bounds import bounds as bounds_builder
+ from sarus_data_spec.constants import DATASET_SLUGNAME
+-from sarus_data_spec.manager.asyncio.utils import async_iter
+-from sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op import (  # noqa: E501
++from sarus_data_spec.manager.async_utils import async_iter
++from sarus_data_spec.manager.ops.processor.standard.standard_op import (  # noqa: E501
+     StandardDatasetImplementation,
+     StandardDatasetStaticChecker,
+ )
+ from sarus_data_spec.marginals import marginals as marg_builder
+ from sarus_data_spec.schema import schema
+ from sarus_data_spec.size import size as size_builder
+ import sarus_data_spec.typing as st
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/standard_op.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ import typing as t
+ import warnings
+ 
+ import numpy as np
+ import pyarrow as pa
+ 
+ from sarus_data_spec.dataset import Dataset
+-from sarus_data_spec.manager.ops.asyncio.base import (
++from sarus_data_spec.manager.ops.base import (
+     DatasetImplementation,
+     DatasetStaticChecker,
+     DataspecStaticChecker,
+     ScalarImplementation,
+ )
+ 
+ try:
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/synthetic.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,30 +1,39 @@
+ import typing as t
+ import warnings
+ 
+ import pyarrow as pa
+ 
++from sarus_data_spec.attribute import attach_properties
++from sarus_data_spec.bounds import bounds as bounds_builder
++from sarus_data_spec.marginals import marginals as marginals_builder
++from sarus_data_spec.size import size as size_builder
+ import sarus_data_spec.typing as st
+ 
+ try:
+     from sarus_synthetic_data.synthetic_generator.generator import (
+         SyntheticGenerator,
+     )
+ 
+ except ModuleNotFoundError:
+     warnings.warn(
+         'sarus-synthetic-data Module not found, synthetic data operations not '
+         'available '
+     )
+ 
+-from sarus_data_spec.constants import DATASET_SLUGNAME, SYNTHETIC_TASK
++from sarus_data_spec.constants import (
++    DATASET_SLUGNAME,
++    SYNTHETIC_MODEL,
++    SYNTHETIC_TASK,
++    TRAIN_CORRELATIONS,
++)
+ from sarus_data_spec.dataset import Dataset
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.source.query_builder import (
++    from sarus_data_spec.manager.ops.source.query_builder import (
+         synthetic_parameters,
+     )
+ except ModuleNotFoundError:
+     warnings.warn(
+         "synthetic_parameters not found, "
+         "synthetic data operations not available "
+     )
+@@ -271,29 +280,50 @@
+         # Budget
+         budget_param = parents_dict['sd_budget']
+         budget = t.cast(
+             t.Tuple[float, float],
+             await dataset.manager().async_value(t.cast(Scalar, budget_param)),
+         )
+ 
++        # Model
++        correlations_scalar = t.cast(Scalar, parents_dict['synthetic_model'])
++        train_correlations = t.cast(
++            bool, await dataset.manager().async_value(correlations_scalar)
++        )
++
+         # Generator params
+         generator_params = await synthetic_parameters(
+-            dataset, sd_budget=budget, task=SYNTHETIC_TASK
++            dataset,
++            sd_budget=budget,
++            task=SYNTHETIC_TASK,
++            train_correlations=train_correlations,
+         )
+         # Links computation
+         _ = await self.dataset.manager().async_links(self.dataset)
+         # compute
+         generator = SyntheticGenerator(dataset, generator_params.generator)
+         dataset_schema = await dataset.manager().async_schema(dataset)
+         datatype = dataset_schema.type()
+         generator.train()
+         sample = generator.sample()
+         table = convert_array_to_table(datatype, sample)
+         return async_iter_arrow(table.to_batches(max_chunksize=batch_size))
+ 
++    async def size(self) -> st.Size:
++        parent_size = await self.parent_size()
++        return size_builder(self.dataset, parent_size.statistics())
++
++    async def bounds(self) -> st.Bounds:
++        parent_bounds = await self.parent_bounds()
++        return bounds_builder(self.dataset, parent_bounds.statistics())
++
++    async def marginals(self) -> st.Marginals:
++        parent_marginals = await self.parent_marginals()
++        return marginals_builder(self.dataset, parent_marginals.statistics())
++
+ 
+ class SamplingRatiosStaticChecker(StandardScalarStaticChecker):
+     ...
+ 
+ 
+ class SamplingRatios(StandardScalarImplementation):
+     """Computes the sampling ratios for the SD
+@@ -304,7 +334,26 @@
+         out = {}
+         for table_path in (await self.parent_schema()).tables():
+             sizes = await dataset.manager().async_size(dataset)
+             assert sizes
+             stat = sizes.statistics().nodes_statistics(table_path)[0]
+             out[table_path] = min(1, MAX_SIZE / stat.size())
+         return out
++
++
++class SyntheticModelStaticChecker(StandardScalarStaticChecker):
++    ...
++
++
++class SyntheticModel(StandardScalarImplementation):
++    """Computes the synthetic model to use"""
++
++    async def value(self) -> t.Any:
++        attribute = self.scalar.attribute(name=SYNTHETIC_MODEL)
++        if attribute is None:
++            attach_properties(
++                self.scalar,
++                name=SYNTHETIC_MODEL,
++                properties={TRAIN_CORRELATIONS: str(True)},
++            )
++            return True
++        return attribute.properties()[TRAIN_CORRELATIONS] == str(True)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/processor/standard/visitor_selector.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -418,15 +418,15 @@
+ 
+         def Union(
+             self,
+             fields: t.Mapping[str, st.Type],
+             name: t.Optional[str] = None,
+             properties: t.Optional[t.Mapping[str, str]] = None,
+         ) -> None:
+-            assert len(fields) == self.batch_array.type.num_children - 1
++            assert len(fields) == self.batch_array.type.num_fields - 1
+             # -1 because field_selected is not in the fields
+             arrays = [
+                 select_columns(
+                     field_type,
+                     self.batch_array.flatten()[
+                         self.batch_array.type.get_field_index(field_name)
+                     ].filter(
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/model.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/model.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from __future__ import annotations
+ 
+ from typing import Any, Dict
+ import logging
+ import pickle as pkl
+ import typing as t
+ 
+-from sarus_data_spec.manager.ops.asyncio.base import ScalarImplementation
++from sarus_data_spec.manager.ops.base import ScalarImplementation
+ import sarus_data_spec.protobuf as sp
+ 
+ logger = logging.getLogger(__name__)
+ 
+ try:
+     import xgboost  # type: ignore[import]
+ except ModuleNotFoundError:
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/routing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/ops/source/routing.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,46 +1,50 @@
+ from typing import AsyncIterator
+ import logging
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+-from sarus_data_spec.manager.ops.asyncio.base import ScalarImplementation
++from sarus_data_spec.manager.ops.base import ScalarImplementation
+ import sarus_data_spec.typing as st
+ 
+ from .model import Model
+ from .privacy_params import PrivacyParams
+ from .random_seed import RandomSeed
+ 
+ logger = logging.getLogger(__name__)
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.source.sql_source import SourceSQL
++    from sarus_data_spec.manager.ops.source.sql_source import SourceSQL
+ except ModuleNotFoundError:
+     logger.info(
+         "sqlalquemy not installed, source SQL operations not available."
+     )
+ 
+ try:
+-    from sarus_data_spec.manager.ops.asyncio.source.csv.arrow import (
+-        csv_to_arrow,
+-    )
+-    from sarus_data_spec.manager.ops.asyncio.source.csv.schema import (
+-        csv_schema,
+-    )
++    from sarus_data_spec.manager.ops.source.csv.arrow import csv_to_arrow
++    from sarus_data_spec.manager.ops.source.csv.schema import csv_schema
+ except ModuleNotFoundError:
+     logger.info("CSV package not found, source CSV operations not available.")
++try:
++    from sarus_data_spec.manager.ops.processor.standard.synthetic import (  # noqa: E501
++        SyntheticModel,
++    )
++except ModuleNotFoundError:
++    logger.info("Synthetic generation not available")
+ 
+ 
+ def get_scalar_op(scalar: st.Scalar) -> t.Type[ScalarImplementation]:
+     if scalar.is_model():
+         return Model
+     elif scalar.is_random_seed():
+         return RandomSeed
+     elif scalar.is_privacy_params():
+         return PrivacyParams
++    elif scalar.is_synthetic_model():
++        return SyntheticModel
+     else:
+         raise NotImplementedError(f"Source scalar for {scalar}")
+ 
+ 
+ class SourceScalar(ScalarImplementation):
+     async def value(self) -> t.Any:
+         OpClass = get_scalar_op(self.scalar)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/manager/typing.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -163,15 +163,15 @@
+     def to_sql(self, dataset: st.Dataset) -> None:
+         ...
+ 
+     async def async_to_sql(self, dataset: st.Dataset) -> None:
+         ...
+ 
+     def status(
+-        self, dataspec: st.DataSpec, task_name: str
++        self, dataspec: st.DataSpec, task_name: t.Optional[str] = None
+     ) -> t.Optional[st.Status]:
+         ...
+ 
+     def dataspec_rewriter(self) -> sdrt.DataspecRewriter:
+         ...
+ 
+     def dataspec_validator(self) -> sdvt.DataspecValidator:
+@@ -271,14 +271,24 @@
+ 
+     def sql_pushing_schema_prefix(self, dataset: st.Dataset) -> str:
+         ...
+ 
+     def engine(self, uri: str) -> sa_engine:
+         ...
+ 
++    def mock_value(
++        self,
++        transform: st.Transform,
++        *arguments: st.DataSpec,
++        **named_arguments: st.DataSpec,
++    ) -> t.Any:
++        """Compute the mock value of an external transform applied on
++        Dataspecs.
++        """
++
+ 
+ @runtime_checkable
+ class HasManager(Protocol):
+     """Has a manager."""
+ 
+     def manager(self) -> Manager:
+         """Return a manager (usually a singleton)."""
+@@ -316,25 +326,14 @@
+ 
+     async def complete_task(self, dataspec: st.DataSpec) -> st.Status:
+         """Monitors a task: it launches it if there is no status
+         and then polls until it is ready/error"""
+         ...
+ 
+ 
+-class DelegatedComputation(Computation, t.Protocol[T]):
+-    def delegate_manager_status(
+-        self, dataspec: st.DataSpec
+-    ) -> Optional[st.Status]:
+-        """While some managers are eager and always execute tasks,
+-        others are lazy and delegate them. This is an interface
+-        for a manager to get the status of the eager manager
+-        that is executing the task"""
+-        ...
+-
+-
+ @t.runtime_checkable
+ class ExternalOpImplementation(t.Protocol):
+     """External Op implementation class.
+ 
+     The `allowed_pep_args` is a list of combinations of arguments' names which
+     are managed by the Op. The result of the Op will be PEP only if the set of
+     PEP arguments passed to the Op are in this list.
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/marginals.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/marginals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/path.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/path.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -50,19 +50,21 @@
+         assert select_path.label() == self.label()
+ 
+         if len(select_path.sub_paths()) == 0:
+             return self.sub_paths()
+ 
+         final_sub_paths = []
+         for sub_path in select_path.sub_paths():
++            should_add = False
+             for available_sub_path in self.sub_paths():
+                 if available_sub_path.label() == sub_path.label():
++                    should_add = True
+                     break
+-
+-            final_sub_paths.extend(available_sub_path.select(sub_path))
++            if should_add:
++                final_sub_paths.extend(available_sub_path.select(sub_path))
+ 
+         return final_sub_paths
+ 
+ 
+ def paths(path_list: t.List[t.List[str]]) -> t.List[Path]:
+     out = defaultdict(list)
+     for path in path_list:
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/predicate.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/predicate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/__init__.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/attribute_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/attribute_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/bounds_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/bounds_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/constraint_pb2.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -16,15 +16,15 @@
+ 
+ DESCRIPTOR = _descriptor.FileDescriptor(
+   name='sarus_data_spec/protobuf/constraint.proto',
+   package='sarus_data_spec',
+   syntax='proto3',
+   serialized_options=None,
+   create_key=_descriptor._internal_create_key,
+-  serialized_pb=b'\n)sarus_data_spec/protobuf/constraint.proto\x12\x0fsarus_data_spec\"\x82\x02\n\x11VariantConstraint\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64\x61taspec\x18\x02 \x01(\t\x12\x38\n\x0f\x63onstraint_kind\x18\x03 \x01(\x0e\x32\x1f.sarus_data_spec.ConstraintKind\x12\x18\n\x10required_context\x18\x04 \x03(\t\x12\x46\n\nproperties\x18\x05 \x03(\x0b\x32\x32.sarus_data_spec.VariantConstraint.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*<\n\x0e\x43onstraintKind\x12\r\n\tSYNTHETIC\x10\x00\x12\x06\n\x02\x44P\x10\x01\x12\n\n\x06PUBLIC\x10\x02\x12\x07\n\x03PEP\x10\x03\x62\x06proto3'
++  serialized_pb=b'\n)sarus_data_spec/protobuf/constraint.proto\x12\x0fsarus_data_spec\"\x82\x02\n\x11VariantConstraint\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64\x61taspec\x18\x02 \x01(\t\x12\x38\n\x0f\x63onstraint_kind\x18\x03 \x01(\x0e\x32\x1f.sarus_data_spec.ConstraintKind\x12\x18\n\x10required_context\x18\x04 \x03(\t\x12\x46\n\nproperties\x18\x05 \x03(\x0b\x32\x32.sarus_data_spec.VariantConstraint.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*F\n\x0e\x43onstraintKind\x12\r\n\tSYNTHETIC\x10\x00\x12\x06\n\x02\x44P\x10\x01\x12\n\n\x06PUBLIC\x10\x02\x12\x07\n\x03PEP\x10\x03\x12\x08\n\x04MOCK\x10\x04\x62\x06proto3'
+ )
+ 
+ _CONSTRAINTKIND = _descriptor.EnumDescriptor(
+   name='ConstraintKind',
+   full_name='sarus_data_spec.ConstraintKind',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -46,27 +46,33 @@
+       type=None,
+       create_key=_descriptor._internal_create_key),
+     _descriptor.EnumValueDescriptor(
+       name='PEP', index=3, number=3,
+       serialized_options=None,
+       type=None,
+       create_key=_descriptor._internal_create_key),
++    _descriptor.EnumValueDescriptor(
++      name='MOCK', index=4, number=4,
++      serialized_options=None,
++      type=None,
++      create_key=_descriptor._internal_create_key),
+   ],
+   containing_type=None,
+   serialized_options=None,
+   serialized_start=323,
+-  serialized_end=383,
++  serialized_end=393,
+ )
+ _sym_db.RegisterEnumDescriptor(_CONSTRAINTKIND)
+ 
+ ConstraintKind = enum_type_wrapper.EnumTypeWrapper(_CONSTRAINTKIND)
+ SYNTHETIC = 0
+ DP = 1
+ PUBLIC = 2
+ PEP = 3
++MOCK = 4
+ 
+ 
+ 
+ _VARIANTCONSTRAINT_PROPERTIESENTRY = _descriptor.Descriptor(
+   name='PropertiesEntry',
+   full_name='sarus_data_spec.VariantConstraint.PropertiesEntry',
+   filename=None,
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/constraint_pb2.pyi`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,19 +18,21 @@
+     V = typing.NewType('V', builtins.int)
+ class _ConstraintKindEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[_ConstraintKind.V], builtins.type):
+     DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor = ...
+     SYNTHETIC = ConstraintKind.V(0)
+     DP = ConstraintKind.V(1)
+     PUBLIC = ConstraintKind.V(2)
+     PEP = ConstraintKind.V(3)
++    MOCK = ConstraintKind.V(4)
+ 
+ SYNTHETIC = ConstraintKind.V(0)
+ DP = ConstraintKind.V(1)
+ PUBLIC = ConstraintKind.V(2)
+ PEP = ConstraintKind.V(3)
++MOCK = ConstraintKind.V(4)
+ global___ConstraintKind = ConstraintKind
+ 
+ 
+ class VariantConstraint(google.protobuf.message.Message):
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
+     class PropertiesEntry(google.protobuf.message.Message):
+         DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/dataset_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/links_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/links_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/manager_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/manager_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/marginals_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/marginals_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/path_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/path_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/predicate_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/proto_container_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/proto_container_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/relation_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar.proto`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -25,14 +25,15 @@
+   // Definitions
+   message Spec { // How to obtain the dataset
+     oneof spec {
+       Transformed transformed = 1;
+       Model model = 2;
+       PrivacyParameters privacy_params=3;
+       RandomSeed random_seed = 4;
++      SyntheticModel synthetic_model=5;
+     }
+   }
+ 
+   message Transformed {
+     string transform = 1; // Transform id
+     repeated string arguments = 2; // Dataset or other object ids
+     map<string,string> named_arguments = 3;
+@@ -102,8 +103,9 @@
+       double delta = 2;
+     }
+   }
+ 
+   message RandomSeed {
+     int32 value=1;
+   }
++  message SyntheticModel{}
+ }
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar_pb2.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+ 
+ DESCRIPTOR = _descriptor.FileDescriptor(
+   name='sarus_data_spec/protobuf/scalar.proto',
+   package='sarus_data_spec',
+   syntax='proto3',
+   serialized_options=None,
+   create_key=_descriptor._internal_create_key,
+-  serialized_pb=b'\n%sarus_data_spec/protobuf/scalar.proto\x12\x0fsarus_data_spec\"\xfb\x0e\n\x06Scalar\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x64oc\x18\x03 \x01(\t\x12*\n\x04spec\x18\x04 \x01(\x0b\x32\x1c.sarus_data_spec.Scalar.Spec\x12;\n\nproperties\x18\x05 \x03(\x0b\x32\'.sarus_data_spec.Scalar.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xfa\x01\n\x04Spec\x12:\n\x0btransformed\x18\x01 \x01(\x0b\x32#.sarus_data_spec.Scalar.TransformedH\x00\x12.\n\x05model\x18\x02 \x01(\x0b\x32\x1d.sarus_data_spec.Scalar.ModelH\x00\x12\x43\n\x0eprivacy_params\x18\x03 \x01(\x0b\x32).sarus_data_spec.Scalar.PrivacyParametersH\x00\x12\x39\n\x0brandom_seed\x18\x04 \x01(\x0b\x32\".sarus_data_spec.Scalar.RandomSeedH\x00\x42\x06\n\x04spec\x1a\xbc\x01\n\x0bTransformed\x12\x11\n\ttransform\x18\x01 \x01(\t\x12\x11\n\targuments\x18\x02 \x03(\t\x12P\n\x0fnamed_arguments\x18\x03 \x03(\x0b\x32\x37.sarus_data_spec.Scalar.Transformed.NamedArgumentsEntry\x1a\x35\n\x13NamedArgumentsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xd3\x08\n\x05Model\x12\x11\n\targuments\x18\x01 \x01(\x0c\x12\x17\n\x0fnamed_arguments\x18\x02 \x01(\x0c\x12=\n\x0bmodel_class\x18\x03 \x01(\x0e\x32(.sarus_data_spec.Scalar.Model.ModelClass\"\xde\x07\n\nModelClass\x12\x0c\n\x08TF_KERAS\x10\x00\x12\n\n\x06SK_SVC\x10\x01\x12\r\n\tSK_ONEHOT\x10\x02\x12\n\n\x06SK_PCA\x10\x03\x12\x1b\n\x17SK_AFFINITY_PROPAGATION\x10\x04\x12\x1f\n\x1bSK_AGGLOMERATIVE_CLUSTERING\x10\x05\x12\x0c\n\x08SK_BIRCH\x10\x06\x12\r\n\tSK_DBSCAN\x10\x07\x12\x1c\n\x18SK_FEATURE_AGGLOMERATION\x10\x08\x12\r\n\tSK_KMEANS\x10\t\x12\x17\n\x13SK_MINIBATCH_KMEANS\x10\n\x12\x11\n\rSK_MEAN_SHIFT\x10\x0b\x12\r\n\tSK_OPTICS\x10\x0c\x12\x1a\n\x16SK_SPECTRAL_CLUSTERING\x10\r\x12\x1c\n\x18SK_SPECTRAL_BICLUSTERING\x10\x0e\x12\x1c\n\x18SK_SPECTRAL_COCLUSTERING\x10\x0f\x12\x1a\n\x16SK_ADABOOST_CLASSIFIER\x10<\x12\x19\n\x15SK_ADABOOST_REGRESSOR\x10=\x12\x19\n\x15SK_BAGGING_CLASSIFIER\x10>\x12\x18\n\x14SK_BAGGING_REGRESSOR\x10?\x12\x1c\n\x18SK_EXTRA_TREES_REGRESSOR\x10@\x12\x1d\n\x19SK_EXTRA_TREES_CLASSIFIER\x10\x41\x12#\n\x1fSK_GRADIENT_BOOSTING_CLASSIFIER\x10\x42\x12\"\n\x1eSK_GRADIENT_BOOSTING_REGRESSOR\x10\x43\x12\x17\n\x13SK_ISOLATION_FOREST\x10\x44\x12\x1f\n\x1bSK_RANDOM_FOREST_CLASSIFIER\x10\x45\x12\x1e\n\x1aSK_RANDOM_FOREST_REGRESSOR\x10\x46\x12\x1d\n\x19SK_RANDOM_TREES_EMBEDDING\x10G\x12\x1a\n\x16SK_STACKING_CLASSIFIER\x10H\x12\x19\n\x15SK_STACKING_REGRESSOR\x10I\x12\x18\n\x14SK_VOTING_CLASSIFIER\x10J\x12\x17\n\x13SK_VOTING_REGRESSOR\x10K\x12\'\n#SK_HIST_GRADIENT_BOOSTING_REGRESSOR\x10L\x12(\n$SK_HIST_GRADIENT_BOOSTING_CLASSIFIER\x10M\x12 \n\x1cSK_REPEATED_STRATIFIED_KFOLD\x10P\x12\x12\n\x0eXGB_CLASSIFIER\x10\\\x12\x14\n\x10SK_LABEL_ENCODER\x10\x62\x12\x0c\n\x08SK_KFOLD\x10\x63\x1a}\n\x11PrivacyParameters\x12?\n\x06points\x18\x01 \x03(\x0b\x32/.sarus_data_spec.Scalar.PrivacyParameters.Point\x1a\'\n\x05Point\x12\x0f\n\x07\x65psilon\x18\x01 \x01(\x01\x12\r\n\x05\x64\x65lta\x18\x02 \x01(\x01\x1a\x1b\n\nRandomSeed\x12\r\n\x05value\x18\x01 \x01(\x05\x62\x06proto3'
++  serialized_pb=b'\n%sarus_data_spec/protobuf/scalar.proto\x12\x0fsarus_data_spec\"\xd0\x0f\n\x06Scalar\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x64oc\x18\x03 \x01(\t\x12*\n\x04spec\x18\x04 \x01(\x0b\x32\x1c.sarus_data_spec.Scalar.Spec\x12;\n\nproperties\x18\x05 \x03(\x0b\x32\'.sarus_data_spec.Scalar.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xbd\x02\n\x04Spec\x12:\n\x0btransformed\x18\x01 \x01(\x0b\x32#.sarus_data_spec.Scalar.TransformedH\x00\x12.\n\x05model\x18\x02 \x01(\x0b\x32\x1d.sarus_data_spec.Scalar.ModelH\x00\x12\x43\n\x0eprivacy_params\x18\x03 \x01(\x0b\x32).sarus_data_spec.Scalar.PrivacyParametersH\x00\x12\x39\n\x0brandom_seed\x18\x04 \x01(\x0b\x32\".sarus_data_spec.Scalar.RandomSeedH\x00\x12\x41\n\x0fsynthetic_model\x18\x05 \x01(\x0b\x32&.sarus_data_spec.Scalar.SyntheticModelH\x00\x42\x06\n\x04spec\x1a\xbc\x01\n\x0bTransformed\x12\x11\n\ttransform\x18\x01 \x01(\t\x12\x11\n\targuments\x18\x02 \x03(\t\x12P\n\x0fnamed_arguments\x18\x03 \x03(\x0b\x32\x37.sarus_data_spec.Scalar.Transformed.NamedArgumentsEntry\x1a\x35\n\x13NamedArgumentsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xd3\x08\n\x05Model\x12\x11\n\targuments\x18\x01 \x01(\x0c\x12\x17\n\x0fnamed_arguments\x18\x02 \x01(\x0c\x12=\n\x0bmodel_class\x18\x03 \x01(\x0e\x32(.sarus_data_spec.Scalar.Model.ModelClass\"\xde\x07\n\nModelClass\x12\x0c\n\x08TF_KERAS\x10\x00\x12\n\n\x06SK_SVC\x10\x01\x12\r\n\tSK_ONEHOT\x10\x02\x12\n\n\x06SK_PCA\x10\x03\x12\x1b\n\x17SK_AFFINITY_PROPAGATION\x10\x04\x12\x1f\n\x1bSK_AGGLOMERATIVE_CLUSTERING\x10\x05\x12\x0c\n\x08SK_BIRCH\x10\x06\x12\r\n\tSK_DBSCAN\x10\x07\x12\x1c\n\x18SK_FEATURE_AGGLOMERATION\x10\x08\x12\r\n\tSK_KMEANS\x10\t\x12\x17\n\x13SK_MINIBATCH_KMEANS\x10\n\x12\x11\n\rSK_MEAN_SHIFT\x10\x0b\x12\r\n\tSK_OPTICS\x10\x0c\x12\x1a\n\x16SK_SPECTRAL_CLUSTERING\x10\r\x12\x1c\n\x18SK_SPECTRAL_BICLUSTERING\x10\x0e\x12\x1c\n\x18SK_SPECTRAL_COCLUSTERING\x10\x0f\x12\x1a\n\x16SK_ADABOOST_CLASSIFIER\x10<\x12\x19\n\x15SK_ADABOOST_REGRESSOR\x10=\x12\x19\n\x15SK_BAGGING_CLASSIFIER\x10>\x12\x18\n\x14SK_BAGGING_REGRESSOR\x10?\x12\x1c\n\x18SK_EXTRA_TREES_REGRESSOR\x10@\x12\x1d\n\x19SK_EXTRA_TREES_CLASSIFIER\x10\x41\x12#\n\x1fSK_GRADIENT_BOOSTING_CLASSIFIER\x10\x42\x12\"\n\x1eSK_GRADIENT_BOOSTING_REGRESSOR\x10\x43\x12\x17\n\x13SK_ISOLATION_FOREST\x10\x44\x12\x1f\n\x1bSK_RANDOM_FOREST_CLASSIFIER\x10\x45\x12\x1e\n\x1aSK_RANDOM_FOREST_REGRESSOR\x10\x46\x12\x1d\n\x19SK_RANDOM_TREES_EMBEDDING\x10G\x12\x1a\n\x16SK_STACKING_CLASSIFIER\x10H\x12\x19\n\x15SK_STACKING_REGRESSOR\x10I\x12\x18\n\x14SK_VOTING_CLASSIFIER\x10J\x12\x17\n\x13SK_VOTING_REGRESSOR\x10K\x12\'\n#SK_HIST_GRADIENT_BOOSTING_REGRESSOR\x10L\x12(\n$SK_HIST_GRADIENT_BOOSTING_CLASSIFIER\x10M\x12 \n\x1cSK_REPEATED_STRATIFIED_KFOLD\x10P\x12\x12\n\x0eXGB_CLASSIFIER\x10\\\x12\x14\n\x10SK_LABEL_ENCODER\x10\x62\x12\x0c\n\x08SK_KFOLD\x10\x63\x1a}\n\x11PrivacyParameters\x12?\n\x06points\x18\x01 \x03(\x0b\x32/.sarus_data_spec.Scalar.PrivacyParameters.Point\x1a\'\n\x05Point\x12\x0f\n\x07\x65psilon\x18\x01 \x01(\x01\x12\r\n\x05\x64\x65lta\x18\x02 \x01(\x01\x1a\x1b\n\nRandomSeed\x12\r\n\x05value\x18\x01 \x01(\x05\x1a\x10\n\x0eSyntheticModelb\x06proto3'
+ )
+ 
+ 
+ 
+ _SCALAR_MODEL_MODELCLASS = _descriptor.EnumDescriptor(
+   name='ModelClass',
+   full_name='sarus_data_spec.Scalar.Model.ModelClass',
+@@ -220,16 +220,16 @@
+       name='SK_KFOLD', index=37, number=99,
+       serialized_options=None,
+       type=None,
+       create_key=_descriptor._internal_create_key),
+   ],
+   containing_type=None,
+   serialized_options=None,
+-  serialized_start=828,
+-  serialized_end=1818,
++  serialized_start=895,
++  serialized_end=1885,
+ )
+ _sym_db.RegisterEnumDescriptor(_SCALAR_MODEL_MODELCLASS)
+ 
+ 
+ _SCALAR_PROPERTIESENTRY = _descriptor.Descriptor(
+   name='PropertiesEntry',
+   full_name='sarus_data_spec.Scalar.PropertiesEntry',
+@@ -300,14 +300,21 @@
+     _descriptor.FieldDescriptor(
+       name='random_seed', full_name='sarus_data_spec.Scalar.Spec.random_seed', index=3,
+       number=4, type=11, cpp_type=10, label=1,
+       has_default_value=False, default_value=None,
+       message_type=None, enum_type=None, containing_type=None,
+       is_extension=False, extension_scope=None,
+       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
++    _descriptor.FieldDescriptor(
++      name='synthetic_model', full_name='sarus_data_spec.Scalar.Spec.synthetic_model', index=4,
++      number=5, type=11, cpp_type=10, label=1,
++      has_default_value=False, default_value=None,
++      message_type=None, enum_type=None, containing_type=None,
++      is_extension=False, extension_scope=None,
++      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+   ],
+   extensions=[
+   ],
+   nested_types=[],
+   enum_types=[
+   ],
+   serialized_options=None,
+@@ -318,15 +325,15 @@
+     _descriptor.OneofDescriptor(
+       name='spec', full_name='sarus_data_spec.Scalar.Spec.spec',
+       index=0, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+   serialized_start=267,
+-  serialized_end=517,
++  serialized_end=584,
+ )
+ 
+ _SCALAR_TRANSFORMED_NAMEDARGUMENTSENTRY = _descriptor.Descriptor(
+   name='NamedArgumentsEntry',
+   full_name='sarus_data_spec.Scalar.Transformed.NamedArgumentsEntry',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -355,16 +362,16 @@
+   ],
+   serialized_options=b'8\001',
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=655,
+-  serialized_end=708,
++  serialized_start=722,
++  serialized_end=775,
+ )
+ 
+ _SCALAR_TRANSFORMED = _descriptor.Descriptor(
+   name='Transformed',
+   full_name='sarus_data_spec.Scalar.Transformed',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -400,16 +407,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=520,
+-  serialized_end=708,
++  serialized_start=587,
++  serialized_end=775,
+ )
+ 
+ _SCALAR_MODEL = _descriptor.Descriptor(
+   name='Model',
+   full_name='sarus_data_spec.Scalar.Model',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -446,16 +453,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=711,
+-  serialized_end=1818,
++  serialized_start=778,
++  serialized_end=1885,
+ )
+ 
+ _SCALAR_PRIVACYPARAMETERS_POINT = _descriptor.Descriptor(
+   name='Point',
+   full_name='sarus_data_spec.Scalar.PrivacyParameters.Point',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -484,16 +491,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1906,
+-  serialized_end=1945,
++  serialized_start=1973,
++  serialized_end=2012,
+ )
+ 
+ _SCALAR_PRIVACYPARAMETERS = _descriptor.Descriptor(
+   name='PrivacyParameters',
+   full_name='sarus_data_spec.Scalar.PrivacyParameters',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -515,16 +522,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1820,
+-  serialized_end=1945,
++  serialized_start=1887,
++  serialized_end=2012,
+ )
+ 
+ _SCALAR_RANDOMSEED = _descriptor.Descriptor(
+   name='RandomSeed',
+   full_name='sarus_data_spec.Scalar.RandomSeed',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -546,16 +553,40 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1947,
+-  serialized_end=1974,
++  serialized_start=2014,
++  serialized_end=2041,
++)
++
++_SCALAR_SYNTHETICMODEL = _descriptor.Descriptor(
++  name='SyntheticModel',
++  full_name='sarus_data_spec.Scalar.SyntheticModel',
++  filename=None,
++  file=DESCRIPTOR,
++  containing_type=None,
++  create_key=_descriptor._internal_create_key,
++  fields=[
++  ],
++  extensions=[
++  ],
++  nested_types=[],
++  enum_types=[
++  ],
++  serialized_options=None,
++  is_extendable=False,
++  syntax='proto3',
++  extension_ranges=[],
++  oneofs=[
++  ],
++  serialized_start=2043,
++  serialized_end=2059,
+ )
+ 
+ _SCALAR = _descriptor.Descriptor(
+   name='Scalar',
+   full_name='sarus_data_spec.Scalar',
+   filename=None,
+   file=DESCRIPTOR,
+@@ -596,55 +627,60 @@
+       has_default_value=False, default_value=[],
+       message_type=None, enum_type=None, containing_type=None,
+       is_extension=False, extension_scope=None,
+       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+   ],
+   extensions=[
+   ],
+-  nested_types=[_SCALAR_PROPERTIESENTRY, _SCALAR_SPEC, _SCALAR_TRANSFORMED, _SCALAR_MODEL, _SCALAR_PRIVACYPARAMETERS, _SCALAR_RANDOMSEED, ],
++  nested_types=[_SCALAR_PROPERTIESENTRY, _SCALAR_SPEC, _SCALAR_TRANSFORMED, _SCALAR_MODEL, _SCALAR_PRIVACYPARAMETERS, _SCALAR_RANDOMSEED, _SCALAR_SYNTHETICMODEL, ],
+   enum_types=[
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto3',
+   extension_ranges=[],
+   oneofs=[
+   ],
+   serialized_start=59,
+-  serialized_end=1974,
++  serialized_end=2059,
+ )
+ 
+ _SCALAR_PROPERTIESENTRY.containing_type = _SCALAR
+ _SCALAR_SPEC.fields_by_name['transformed'].message_type = _SCALAR_TRANSFORMED
+ _SCALAR_SPEC.fields_by_name['model'].message_type = _SCALAR_MODEL
+ _SCALAR_SPEC.fields_by_name['privacy_params'].message_type = _SCALAR_PRIVACYPARAMETERS
+ _SCALAR_SPEC.fields_by_name['random_seed'].message_type = _SCALAR_RANDOMSEED
++_SCALAR_SPEC.fields_by_name['synthetic_model'].message_type = _SCALAR_SYNTHETICMODEL
+ _SCALAR_SPEC.containing_type = _SCALAR
+ _SCALAR_SPEC.oneofs_by_name['spec'].fields.append(
+   _SCALAR_SPEC.fields_by_name['transformed'])
+ _SCALAR_SPEC.fields_by_name['transformed'].containing_oneof = _SCALAR_SPEC.oneofs_by_name['spec']
+ _SCALAR_SPEC.oneofs_by_name['spec'].fields.append(
+   _SCALAR_SPEC.fields_by_name['model'])
+ _SCALAR_SPEC.fields_by_name['model'].containing_oneof = _SCALAR_SPEC.oneofs_by_name['spec']
+ _SCALAR_SPEC.oneofs_by_name['spec'].fields.append(
+   _SCALAR_SPEC.fields_by_name['privacy_params'])
+ _SCALAR_SPEC.fields_by_name['privacy_params'].containing_oneof = _SCALAR_SPEC.oneofs_by_name['spec']
+ _SCALAR_SPEC.oneofs_by_name['spec'].fields.append(
+   _SCALAR_SPEC.fields_by_name['random_seed'])
+ _SCALAR_SPEC.fields_by_name['random_seed'].containing_oneof = _SCALAR_SPEC.oneofs_by_name['spec']
++_SCALAR_SPEC.oneofs_by_name['spec'].fields.append(
++  _SCALAR_SPEC.fields_by_name['synthetic_model'])
++_SCALAR_SPEC.fields_by_name['synthetic_model'].containing_oneof = _SCALAR_SPEC.oneofs_by_name['spec']
+ _SCALAR_TRANSFORMED_NAMEDARGUMENTSENTRY.containing_type = _SCALAR_TRANSFORMED
+ _SCALAR_TRANSFORMED.fields_by_name['named_arguments'].message_type = _SCALAR_TRANSFORMED_NAMEDARGUMENTSENTRY
+ _SCALAR_TRANSFORMED.containing_type = _SCALAR
+ _SCALAR_MODEL.fields_by_name['model_class'].enum_type = _SCALAR_MODEL_MODELCLASS
+ _SCALAR_MODEL.containing_type = _SCALAR
+ _SCALAR_MODEL_MODELCLASS.containing_type = _SCALAR_MODEL
+ _SCALAR_PRIVACYPARAMETERS_POINT.containing_type = _SCALAR_PRIVACYPARAMETERS
+ _SCALAR_PRIVACYPARAMETERS.fields_by_name['points'].message_type = _SCALAR_PRIVACYPARAMETERS_POINT
+ _SCALAR_PRIVACYPARAMETERS.containing_type = _SCALAR
+ _SCALAR_RANDOMSEED.containing_type = _SCALAR
++_SCALAR_SYNTHETICMODEL.containing_type = _SCALAR
+ _SCALAR.fields_by_name['spec'].message_type = _SCALAR_SPEC
+ _SCALAR.fields_by_name['properties'].message_type = _SCALAR_PROPERTIESENTRY
+ DESCRIPTOR.message_types_by_name['Scalar'] = _SCALAR
+ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+ 
+ Scalar = _reflection.GeneratedProtocolMessageType('Scalar', (_message.Message,), {
+ 
+@@ -699,25 +735,33 @@
+ 
+   'RandomSeed' : _reflection.GeneratedProtocolMessageType('RandomSeed', (_message.Message,), {
+     'DESCRIPTOR' : _SCALAR_RANDOMSEED,
+     '__module__' : 'sarus_data_spec.protobuf.scalar_pb2'
+     # @@protoc_insertion_point(class_scope:sarus_data_spec.Scalar.RandomSeed)
+     })
+   ,
++
++  'SyntheticModel' : _reflection.GeneratedProtocolMessageType('SyntheticModel', (_message.Message,), {
++    'DESCRIPTOR' : _SCALAR_SYNTHETICMODEL,
++    '__module__' : 'sarus_data_spec.protobuf.scalar_pb2'
++    # @@protoc_insertion_point(class_scope:sarus_data_spec.Scalar.SyntheticModel)
++    })
++  ,
+   'DESCRIPTOR' : _SCALAR,
+   '__module__' : 'sarus_data_spec.protobuf.scalar_pb2'
+   # @@protoc_insertion_point(class_scope:sarus_data_spec.Scalar)
+   })
+ _sym_db.RegisterMessage(Scalar)
+ _sym_db.RegisterMessage(Scalar.PropertiesEntry)
+ _sym_db.RegisterMessage(Scalar.Spec)
+ _sym_db.RegisterMessage(Scalar.Transformed)
+ _sym_db.RegisterMessage(Scalar.Transformed.NamedArgumentsEntry)
+ _sym_db.RegisterMessage(Scalar.Model)
+ _sym_db.RegisterMessage(Scalar.PrivacyParameters)
+ _sym_db.RegisterMessage(Scalar.PrivacyParameters.Point)
+ _sym_db.RegisterMessage(Scalar.RandomSeed)
++_sym_db.RegisterMessage(Scalar.SyntheticModel)
+ 
+ 
+ _SCALAR_PROPERTIESENTRY._options = None
+ _SCALAR_TRANSFORMED_NAMEDARGUMENTSENTRY._options = None
+ # @@protoc_insertion_point(module_scope)
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/scalar_pb2.pyi`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -36,32 +36,36 @@
+         How to obtain the dataset
+         """
+         DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
+         TRANSFORMED_FIELD_NUMBER: builtins.int
+         MODEL_FIELD_NUMBER: builtins.int
+         PRIVACY_PARAMS_FIELD_NUMBER: builtins.int
+         RANDOM_SEED_FIELD_NUMBER: builtins.int
++        SYNTHETIC_MODEL_FIELD_NUMBER: builtins.int
+         @property
+         def transformed(self) -> global___Scalar.Transformed: ...
+         @property
+         def model(self) -> global___Scalar.Model: ...
+         @property
+         def privacy_params(self) -> global___Scalar.PrivacyParameters: ...
+         @property
+         def random_seed(self) -> global___Scalar.RandomSeed: ...
++        @property
++        def synthetic_model(self) -> global___Scalar.SyntheticModel: ...
+         def __init__(self,
+             *,
+             transformed : typing.Optional[global___Scalar.Transformed] = ...,
+             model : typing.Optional[global___Scalar.Model] = ...,
+             privacy_params : typing.Optional[global___Scalar.PrivacyParameters] = ...,
+             random_seed : typing.Optional[global___Scalar.RandomSeed] = ...,
++            synthetic_model : typing.Optional[global___Scalar.SyntheticModel] = ...,
+             ) -> None: ...
+-        def HasField(self, field_name: typing_extensions.Literal[u"model",b"model",u"privacy_params",b"privacy_params",u"random_seed",b"random_seed",u"spec",b"spec",u"transformed",b"transformed"]) -> builtins.bool: ...
+-        def ClearField(self, field_name: typing_extensions.Literal[u"model",b"model",u"privacy_params",b"privacy_params",u"random_seed",b"random_seed",u"spec",b"spec",u"transformed",b"transformed"]) -> None: ...
+-        def WhichOneof(self, oneof_group: typing_extensions.Literal[u"spec",b"spec"]) -> typing.Optional[typing_extensions.Literal["transformed","model","privacy_params","random_seed"]]: ...
++        def HasField(self, field_name: typing_extensions.Literal[u"model",b"model",u"privacy_params",b"privacy_params",u"random_seed",b"random_seed",u"spec",b"spec",u"synthetic_model",b"synthetic_model",u"transformed",b"transformed"]) -> builtins.bool: ...
++        def ClearField(self, field_name: typing_extensions.Literal[u"model",b"model",u"privacy_params",b"privacy_params",u"random_seed",b"random_seed",u"spec",b"spec",u"synthetic_model",b"synthetic_model",u"transformed",b"transformed"]) -> None: ...
++        def WhichOneof(self, oneof_group: typing_extensions.Literal[u"spec",b"spec"]) -> typing.Optional[typing_extensions.Literal["transformed","model","privacy_params","random_seed","synthetic_model"]]: ...
+ 
+     class Transformed(google.protobuf.message.Message):
+         DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
+         class NamedArgumentsEntry(google.protobuf.message.Message):
+             DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
+             KEY_FIELD_NUMBER: builtins.int
+             VALUE_FIELD_NUMBER: builtins.int
+@@ -240,14 +244,19 @@
+         value: builtins.int = ...
+         def __init__(self,
+             *,
+             value : builtins.int = ...,
+             ) -> None: ...
+         def ClearField(self, field_name: typing_extensions.Literal[u"value",b"value"]) -> None: ...
+ 
++    class SyntheticModel(google.protobuf.message.Message):
++        DESCRIPTOR: google.protobuf.descriptor.Descriptor = ...
++        def __init__(self,
++            ) -> None: ...
++
+     UUID_FIELD_NUMBER: builtins.int
+     NAME_FIELD_NUMBER: builtins.int
+     DOC_FIELD_NUMBER: builtins.int
+     SPEC_FIELD_NUMBER: builtins.int
+     PROPERTIES_FIELD_NUMBER: builtins.int
+     uuid: typing.Text = ...
+     """A Scalar does not ensure this possibility. As a consequence, oprations
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/schema_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/size_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/size_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/statistics_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/status_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/transform_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type.proto` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.pyi` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/type_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/utilities.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/protobuf/utilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/scalar.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/scalar.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -7,14 +7,15 @@
+     List,
+     Optional,
+     Set,
+     Tuple,
+     Type,
+     cast,
+ )
++import datetime
+ import pickle as pkl
+ import typing as t
+ 
+ from sarus_data_spec.base import Referring
+ from sarus_data_spec.transform import Transform
+ import sarus_data_spec.protobuf as sp
+ import sarus_data_spec.typing as st
+@@ -73,48 +74,48 @@
+             return True
+         if self.is_transformed():
+             transform = self.transform()
+             if transform.protobuf().spec.HasField("derive_seed"):
+                 return True
+         return False
+ 
++    def is_synthetic_model(self) -> bool:
++        """Is the scalar composed."""
++        return self._protobuf.spec.HasField("synthetic_model")
++
+     def is_pep(self) -> bool:
+         """Is the scalar PEP."""
+         return False
+ 
+     def pep_token(self) -> Optional[str]:
+         """Returns the scalar PEP token."""
+         return None
+ 
+     def is_public(self) -> bool:
+         """Is the scalar public."""
+         return self.manager().dataspec_validator().is_public(self)
+ 
+-    def status(self, task_names: List[str]) -> Optional[st.Status]:
++    def status(self, task_names: t.Optional[List[str]]) -> Optional[st.Status]:
+         """This method return a status that contains all the
+         last updates for the task_names required. It returns None if
+-        all the tasks are missing. Synchronization is performed under the
+-        hood, so statuses with the task_names are copied in the storage if
+-        the current manager has a delegated."""
++        any of the tasks is missing."""
+ 
+-        # collects last status for each task. This if needed will also update
+-        # them if any synchronization is needed.
++        if task_names is None:
++            task_names = []
+         if type(task_names) not in [list, set, tuple]:
+             raise TypeError(
+                 f"Invalid task_names passed to dataset.status {task_names}"
+             )
+-        statuses = [
+-            self.manager().status(self, task_name) for task_name in task_names
+-        ]
+-        # go from last to first so to be sure that tasks have been updated
+-        # for all others if needed
+-        for status in reversed(statuses):
+-            if status is not None:
+-                return status
+-        return None
++        last_status = self.manager().status(self)
++        if last_status is None:
++            return last_status
++        for task in task_names:
++            if last_status.task(task) is None:
++                return None
++        return last_status
+ 
+     def transform(self) -> st.Transform:
+         return cast(
+             st.Transform,
+             self.storage().referrable(
+                 self.protobuf().spec.transformed.transform
+             ),
+@@ -313,14 +314,24 @@
+         sp.Scalar(
+             name='seed',
+             spec=sp.Scalar.Spec(random_seed=sp.Scalar.RandomSeed(value=value)),
+         )
+     )
+ 
+ 
++def synthetic_model() -> Scalar:
++    return Scalar(
++        sp.Scalar(
++            name='synthetic_model',
++            spec=sp.Scalar.Spec(synthetic_model=sp.Scalar.SyntheticModel()),
++            properties={'creation_time': str(datetime.datetime.now())},
++        )
++    )
++
++
+ class Visitor:
+     """A visitor class for Scalar"""
+ 
+     def all(self, visited: Scalar) -> None:
+         return
+ 
+     def transformed(
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/schema.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/schema.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ 
+ import typing as t
+ 
+ import pyarrow as pa
+ 
+ from sarus_data_spec.arrow.schema import to_arrow
+ from sarus_data_spec.base import Referring
+-from sarus_data_spec.constants import DATASET_SLUGNAME
++from sarus_data_spec.constants import DATASET_SLUGNAME, PUBLIC
+ from sarus_data_spec.path import Path, path
+ from sarus_data_spec.type import Type
+ import sarus_data_spec.dataset as sd
+ import sarus_data_spec.protobuf as sp
+ import sarus_data_spec.typing as st
+ 
+ 
+@@ -64,14 +64,30 @@
+         if len(struct_paths) == 0:  # struct is the first level
+             return [path(label='data')]
+         return [
+             path(label='data', paths=[t.cast(Path, element)])
+             for element in struct_paths
+         ]
+ 
++    def private_tables(self) -> t.List[st.Path]:
++        return [
++            table
++            for table in self.tables()
++            if self.data_type().sub_types(table)[0].properties()[PUBLIC]
++            != str(True)
++        ]
++
++    def public_tables(self) -> t.List[st.Path]:
++        return [
++            table
++            for table in self.tables()
++            if self.data_type().sub_types(table)[0].properties()[PUBLIC]
++            == str(True)
++        ]
++
+ 
+ # Builder
+ def schema(
+     dataset: st.Dataset,
+     fields: t.Optional[t.Mapping[str, st.Type]] = None,
+     schema_type: t.Optional[st.Type] = None,
+     protected_paths: t.Optional[sp.Path] = None,
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/size.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/size.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/statistics.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/local.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/local.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/utils.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/storage/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/transform.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/transform.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -627,15 +627,19 @@
+             schema_preserving=False,
+             properties={'creation_time': str(datetime.datetime.now())},
+         )
+     )
+ 
+ 
+ def synthetic() -> Transform:
+-    """Synthetic transform"""
++    """Synthetic transform. This transform should be
++    called on a dataset with the additional following kwargs:
++    -sampling_ratios: a scalar created by the transform sampling ratios
++    -synthetic_model: a scalar of type synthetic_model
++    """
+     return Transform(
+         sp.Transform(
+             name="Synthetic data",
+             spec=sp.Transform.Spec(
+                 synthetic=sp.Transform.Synthetic(),
+             ),
+             inversible=False,
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/type.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/typing.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/typing.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -271,15 +271,17 @@
+ 
+     def sources(self, type_name: t.Optional[str]) -> t.Set[DataSpec]:
+         ...
+ 
+     def transform(self) -> Transform:
+         ...
+ 
+-    def status(self, task_names: t.List[str]) -> t.Optional[Status]:
++    def status(
++        self, task_names: t.Optional[t.List[str]]
++    ) -> t.Optional[Status]:
+         ...
+ 
+     def accept(self, visitor: Visitor) -> None:
+         ...
+ 
+     def attribute(self, name: str) -> t.Optional[Attribute]:
+         """Return the attribute with the given name or None if not found."""
+@@ -385,14 +387,17 @@
+ 
+     def is_privacy_params(self) -> bool:
+         """Is the scalar privacy parameters."""
+ 
+     def is_random_seed(self) -> bool:
+         """Is the scalar a random seed."""
+ 
++    def is_synthetic_model(self) -> bool:
++        """is the scalar a synthetic model"""
++
+     def value(self) -> DataSpecValue:
+         ...
+ 
+     async def async_value(self) -> DataSpecValue:
+         ...
+ 
+     def spec(self) -> str:
+@@ -487,14 +492,20 @@
+ 
+     def protected_path(self) -> Path:
+         ...
+ 
+     def data_type(self) -> Type:
+         ...
+ 
++    def private_tables(self) -> t.List[Path]:
++        ...
++
++    def public_tables(self) -> t.List[Path]:
++        ...
++
+ 
+ class Status(Referring[sp.Status], t.Protocol):
+     """A python abstract class to describe status"""
+ 
+     def prototype(self) -> t.Type[sp.Status]:
+         """Return the type of the underlying protobuf."""
+         ...
+@@ -831,14 +842,15 @@
+ 
+ 
+ class ConstraintKind(Enum):
+     SYNTHETIC = sp.ConstraintKind.SYNTHETIC
+     PEP = sp.ConstraintKind.PEP
+     DP = sp.ConstraintKind.DP
+     PUBLIC = sp.ConstraintKind.PUBLIC
++    MOCK = sp.ConstraintKind.MOCK
+ 
+ 
+ class SQLDialect(Enum):
+     """SQL Dialects"""
+ 
+     POSTGRES = 1
+     SQL_SERVER = 2
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec/variant_constraint.py` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec/variant_constraint.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -92,17 +92,35 @@
+             },
+         )
+     )
+ 
+ 
+ def syn_constraint(
+     dataspec: st.DataSpec,
+-    required_context: List[str] = [],
++    required_context: Optional[List[str]] = None,
+ ) -> VariantConstraint:
+     """Create a variant constraint specifying a dataspec is synthetic."""
++    if required_context is None:
++        required_context = []
+     return VariantConstraint(
+         sp.VariantConstraint(
+             dataspec=dataspec.uuid(),
+             constraint_kind=sp.ConstraintKind.SYNTHETIC,
+             required_context=required_context,
+         )
+     )
++
++
++def mock_constraint(
++    dataspec: st.DataSpec,
++    required_context: Optional[List[str]] = None,
++) -> VariantConstraint:
++    """Create a variant constraint specifying a dataspec is a mock."""
++    if required_context is None:
++        required_context = []
++    return VariantConstraint(
++        sp.VariantConstraint(
++            dataspec=dataspec.uuid(),
++            constraint_kind=sp.ConstraintKind.MOCK,
++            required_context=required_context,
++        )
++    )
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/SOURCES.txt` & `sarus_data_spec_public-3.0.0.dev1/sarus_data_spec_public.egg-info/SOURCES.txt`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -40,64 +40,58 @@
+ sarus_data_spec/dataspec_rewriter/typing.py
+ sarus_data_spec/dataspec_validator/__init__.py
+ sarus_data_spec/dataspec_validator/base.py
+ sarus_data_spec/dataspec_validator/privacy_limit.py
+ sarus_data_spec/dataspec_validator/simple_rules.py
+ sarus_data_spec/dataspec_validator/typing.py
+ sarus_data_spec/manager/__init__.py
++sarus_data_spec/manager/async_utils.py
+ sarus_data_spec/manager/base.py
+ sarus_data_spec/manager/typing.py
+-sarus_data_spec/manager/asyncio/__init__.py
+-sarus_data_spec/manager/asyncio/base.py
+-sarus_data_spec/manager/asyncio/utils.py
+-sarus_data_spec/manager/asyncio/api/__init__.py
+-sarus_data_spec/manager/asyncio/api/api_computation.py
+-sarus_data_spec/manager/asyncio/delegating/__init__.py
+-sarus_data_spec/manager/asyncio/delegating/delegating_manager.py
+-sarus_data_spec/manager/asyncio/worker/__init__.py
+-sarus_data_spec/manager/asyncio/worker/arrow_computation.py
+-sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py
+-sarus_data_spec/manager/asyncio/worker/caching_computation.py
+-sarus_data_spec/manager/asyncio/worker/schema_computation.py
+-sarus_data_spec/manager/asyncio/worker/value_computation.py
+-sarus_data_spec/manager/asyncio/worker/worker_computation.py
+-sarus_data_spec/manager/ops/asyncio/__init__.py
+-sarus_data_spec/manager/ops/asyncio/base.py
+-sarus_data_spec/manager/ops/asyncio/processor/__init__.py
+-sarus_data_spec/manager/ops/asyncio/processor/routing.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/__init__.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/pandas_profiling.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/skopt.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/std.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/pandas/__init__.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py
+-sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/__init__.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/project.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py
+-sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py
+-sarus_data_spec/manager/ops/asyncio/source/__init__.py
+-sarus_data_spec/manager/ops/asyncio/source/model.py
+-sarus_data_spec/manager/ops/asyncio/source/privacy_params.py
+-sarus_data_spec/manager/ops/asyncio/source/random_seed.py
+-sarus_data_spec/manager/ops/asyncio/source/routing.py
++sarus_data_spec/manager/computations/__init__.py
++sarus_data_spec/manager/computations/base.py
++sarus_data_spec/manager/computations/local/__init__.py
++sarus_data_spec/manager/computations/local/base.py
++sarus_data_spec/manager/computations/local/schema.py
++sarus_data_spec/manager/computations/remote/__init__.py
++sarus_data_spec/manager/computations/remote/base.py
++sarus_data_spec/manager/ops/__init__.py
++sarus_data_spec/manager/ops/base.py
++sarus_data_spec/manager/ops/processor/__init__.py
++sarus_data_spec/manager/ops/processor/routing.py
++sarus_data_spec/manager/ops/processor/external/__init__.py
++sarus_data_spec/manager/ops/processor/external/external_op.py
++sarus_data_spec/manager/ops/processor/external/imblearn.py
++sarus_data_spec/manager/ops/processor/external/numpy.py
++sarus_data_spec/manager/ops/processor/external/pandas_profiling.py
++sarus_data_spec/manager/ops/processor/external/protection_utils.py
++sarus_data_spec/manager/ops/processor/external/sklearn.py
++sarus_data_spec/manager/ops/processor/external/skopt.py
++sarus_data_spec/manager/ops/processor/external/std.py
++sarus_data_spec/manager/ops/processor/external/xgboost.py
++sarus_data_spec/manager/ops/processor/external/pandas/__init__.py
++sarus_data_spec/manager/ops/processor/external/pandas/pandas.py
++sarus_data_spec/manager/ops/processor/external/pandas/pandas_dp.py
++sarus_data_spec/manager/ops/processor/standard/__init__.py
++sarus_data_spec/manager/ops/processor/standard/differentiated_sample.py
++sarus_data_spec/manager/ops/processor/standard/extract.py
++sarus_data_spec/manager/ops/processor/standard/filter.py
++sarus_data_spec/manager/ops/processor/standard/get_item.py
++sarus_data_spec/manager/ops/processor/standard/project.py
++sarus_data_spec/manager/ops/processor/standard/sample.py
++sarus_data_spec/manager/ops/processor/standard/select_sql.py
++sarus_data_spec/manager/ops/processor/standard/shuffle.py
++sarus_data_spec/manager/ops/processor/standard/standard_op.py
++sarus_data_spec/manager/ops/processor/standard/synthetic.py
++sarus_data_spec/manager/ops/processor/standard/visitor_selector.py
++sarus_data_spec/manager/ops/source/__init__.py
++sarus_data_spec/manager/ops/source/model.py
++sarus_data_spec/manager/ops/source/privacy_params.py
++sarus_data_spec/manager/ops/source/random_seed.py
++sarus_data_spec/manager/ops/source/routing.py
+ sarus_data_spec/protobuf/__init__.py
+ sarus_data_spec/protobuf/attribute.proto
+ sarus_data_spec/protobuf/attribute_pb2.py
+ sarus_data_spec/protobuf/attribute_pb2.pyi
+ sarus_data_spec/protobuf/bounds.proto
+ sarus_data_spec/protobuf/bounds_pb2.py
+ sarus_data_spec/protobuf/bounds_pb2.pyi
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/setup.cfg` & `sarus_data_spec_public-3.0.0.dev1/setup.cfg`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -42,52 +42,48 @@
+ 	sarus_data_spec.typing
+ 	sarus_data_spec.variant_constraint
+ 	sarus_data_spec.storage.typing
+ 	sarus_data_spec.storage.utils
+ 	sarus_data_spec.storage.local
+ 	sarus_data_spec.manager.typing
+ 	sarus_data_spec.manager.base
+-	sarus_data_spec.manager.asyncio.base
+-	sarus_data_spec.manager.asyncio.utils
+-	sarus_data_spec.manager.asyncio.api.api_computation
+-	sarus_data_spec.manager.asyncio.worker.arrow_computation
+-	sarus_data_spec.manager.asyncio.worker.cache_scalar_computation
+-	sarus_data_spec.manager.asyncio.worker.caching_computation
+-	sarus_data_spec.manager.asyncio.worker.schema_computation
+-	sarus_data_spec.manager.asyncio.worker.value_computation
+-	sarus_data_spec.manager.asyncio.worker.worker_computation
+-	sarus_data_spec.manager.asyncio.delegating.delegating_manager
+-	sarus_data_spec.manager.ops.asyncio.base
+-	sarus_data_spec.manager.ops.asyncio.source.model
+-	sarus_data_spec.manager.ops.asyncio.source.privacy_params
+-	sarus_data_spec.manager.ops.asyncio.source.random_seed
+-	sarus_data_spec.manager.ops.asyncio.source.routing
+-	sarus_data_spec.manager.ops.asyncio.processor.routing
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.standard_op
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.visitor_selector
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.filter
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.get_item
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.project
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.sample
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.differentiated_sample
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.select_sql
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.extract
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.shuffle
+-	sarus_data_spec.manager.ops.asyncio.processor.standard.synthetic
+-	sarus_data_spec.manager.ops.asyncio.processor.external.external_op
+-	sarus_data_spec.manager.ops.asyncio.processor.external.imblearn
+-	sarus_data_spec.manager.ops.asyncio.processor.external.numpy
+-	sarus_data_spec.manager.ops.asyncio.processor.external.pandas.pandas
+-	sarus_data_spec.manager.ops.asyncio.processor.external.pandas.pandas_dp
+-	sarus_data_spec.manager.ops.asyncio.processor.external.pandas_profiling
+-	sarus_data_spec.manager.ops.asyncio.processor.external.protection_utils
+-	sarus_data_spec.manager.ops.asyncio.processor.external.sklearn
+-	sarus_data_spec.manager.ops.asyncio.processor.external.skopt
+-	sarus_data_spec.manager.ops.asyncio.processor.external.std
+-	sarus_data_spec.manager.ops.asyncio.processor.external.xgboost
++	sarus_data_spec.manager.base
++	sarus_data_spec.manager.async_utils
++	sarus_data_spec.manager.computations.base
++	sarus_data_spec.manager.computations.local.base
++	sarus_data_spec.manager.computations.local.schema
++	sarus_data_spec.manager.computations.remote.base
++	sarus_data_spec.manager.ops.base
++	sarus_data_spec.manager.ops.source.model
++	sarus_data_spec.manager.ops.source.privacy_params
++	sarus_data_spec.manager.ops.source.random_seed
++	sarus_data_spec.manager.ops.source.routing
++	sarus_data_spec.manager.ops.processor.routing
++	sarus_data_spec.manager.ops.processor.standard.standard_op
++	sarus_data_spec.manager.ops.processor.standard.visitor_selector
++	sarus_data_spec.manager.ops.processor.standard.filter
++	sarus_data_spec.manager.ops.processor.standard.get_item
++	sarus_data_spec.manager.ops.processor.standard.project
++	sarus_data_spec.manager.ops.processor.standard.sample
++	sarus_data_spec.manager.ops.processor.standard.differentiated_sample
++	sarus_data_spec.manager.ops.processor.standard.select_sql
++	sarus_data_spec.manager.ops.processor.standard.extract
++	sarus_data_spec.manager.ops.processor.standard.shuffle
++	sarus_data_spec.manager.ops.processor.standard.synthetic
++	sarus_data_spec.manager.ops.processor.external.external_op
++	sarus_data_spec.manager.ops.processor.external.imblearn
++	sarus_data_spec.manager.ops.processor.external.numpy
++	sarus_data_spec.manager.ops.processor.external.pandas.pandas
++	sarus_data_spec.manager.ops.processor.external.pandas.pandas_dp
++	sarus_data_spec.manager.ops.processor.external.pandas_profiling
++	sarus_data_spec.manager.ops.processor.external.protection_utils
++	sarus_data_spec.manager.ops.processor.external.sklearn
++	sarus_data_spec.manager.ops.processor.external.skopt
++	sarus_data_spec.manager.ops.processor.external.std
++	sarus_data_spec.manager.ops.processor.external.xgboost
+ 	sarus_data_spec.dataspec_rewriter.typing
+ 	sarus_data_spec.dataspec_rewriter.base
+ 	sarus_data_spec.dataspec_rewriter.simple_rules
+ 	sarus_data_spec.dataspec_validator.typing
+ 	sarus_data_spec.dataspec_validator.base
+ 	sarus_data_spec.dataspec_validator.simple_rules
+ 	sarus_data_spec.dataspec_validator.privacy_limit
+```
+
+### Comparing `sarus_data_spec_public-2.9.2/setup.py` & `sarus_data_spec_public-3.0.0.dev1/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -43,8 +43,8 @@
+ 
+     def run(self):
+         generate_proto_code()
+         build_py.run(self)
+ 
+ 
+ if __name__ == '__main__':
+-    setup(version='2.9.2')
++    setup(version='3.0.0.dev1')
+```
+

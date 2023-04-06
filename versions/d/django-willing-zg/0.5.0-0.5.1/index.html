@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/django-willing-zg-0.5.0.tar.gz tmp/django_willing_zg-0.5.1.tar.gz --html versions/d/django-willing-zg/0.5.0-0.5.1/index.html --text versions/d/django-willing-zg/0.5.0-0.5.1/diff.txt --markdown versions/d/django-willing-zg/0.5.0-0.5.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.06 KB</span></div>
+  <div><span class="source">tmp/django-willing-zg-0.5.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/django_willing_zg-0.5.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">202 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.79 KB</span></div>
+    <div><span class="source">django-willing-zg-0.5.0.tar</span> vs.</div>
+    <div id="django-willing-zg--.-.-.tar"><span class="source">django_willing_zg-0.5.1.tar</span>
+      <a class="anchor" href="#django-willing-zg--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.67 KB</span></div>
+      <div id="django-willing-zg--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>689<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>725933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>689<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>667354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>42</del><span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/pyproject.toml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>57</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>91<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/apps.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>91<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/apps.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>213<del>8</del><span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/mailer.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>213<ins>6</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/mailer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/settings/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/settings/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/settings/cookies.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/settings/cookies.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/settings/email.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/settings/email.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>723<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/settings/jwt.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>723<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/settings/jwt.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1147<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/settings/secrets.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1147<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/settings/secrets.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>446<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/templates/email/mlp_transactional_email.html</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>446<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/templates/email/mlp_transactional_email.html</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>356<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/templates/email/mlp_transactional_email.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>356<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/templates/email/mlp_transactional_email.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>208<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/urls.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>208<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/urls.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>318<span class="dp">·</span>202<del>2</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>41</del>:<del>27</del>.<del>729933</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/willing_zg/views.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>318<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>35</ins>:<ins>36</ins>.<ins>671354</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/willing_zg/views.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1540<span class="dp">·</span>2022-06-08<span class="dp">·</span>22:42:15.742931<span class="dp">·</span>django-willing-zg-0.5.0/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<del>14</del><span class="dp">·</span><del>2022</del>-0<del>6</del>-0<del>8</del><span class="dp">·</span><del>22</del>:<del>42</del>:<del>15</del>.<del>743254</del><span class="dp">·</span>django<del>-</del>willing<del>-</del>zg-0.5.<del>0</del>/PKG-INFO</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<ins>66</ins><span class="dp">·</span><ins>1970</ins>-0<ins>1</ins>-0<ins>1</ins><span class="dp">·</span><ins>00</ins>:<ins>00</ins>:<ins>00</ins>.<ins>000000</ins><span class="dp">·</span>django<ins>_</ins>willing<ins>_</ins>zg-0.5.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/README.md</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--README.md"><span class="source">django_willing_zg-0.5.1/README.md</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">956 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/pyproject.toml</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--pyproject.toml"><span class="source">django_willing_zg-0.5.1/pyproject.toml</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 30 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;django-willing-zg&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;django-willing-zg&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5.<del>0</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">5 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Bequest,<span class="dp">·</span>Inc.<span class="dp">·</span>&lt;oss@willing.com&gt;&quot;]</td><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Bequest,<span class="dp">·</span>Inc.<span class="dp">·</span>&lt;oss@willing.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;willing_zg&quot;<span class="dp">·</span>},</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;willing_zg&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">10 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7,&lt;4.0&quot;</td><td class="diffline">11 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7,&lt;4.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">django<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.0.8,&lt;5.0&quot;</td><td class="diffline">12 </td><td class="diffpresent">django<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.0.8,&lt;5.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">djangorestframework<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.11.0&quot;</td><td class="diffline">13 </td><td class="diffpresent">djangorestframework<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.11.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">zygoat-django<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=0.3&quot;</td><td class="diffline">14 </td><td class="diffpresent">zygoat-django<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=0.3&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">cryptography<span class="dp">·</span>=<span class="dp">·</span>&quot;<del>^</del>3.1&quot;</td><td class="diffline">15 </td><td class="diffpresent">cryptography<span class="dp">·</span>=<span class="dp">·</span>&quot;<ins>&gt;</ins><ins>=</ins>3.1<ins>,&lt;40.0</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">djangorestframework-simplejwt<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.4.0&quot;</td><td class="diffline">16 </td><td class="diffpresent">djangorestframework-simplejwt<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.4.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">simplejwt-extensions<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.2.1&quot;</td><td class="diffline">17 </td><td class="diffpresent">simplejwt-extensions<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.2.1&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">[tool.poetry.dev<del>-</del>dependencies]</td><td class="diffline">18 </td><td class="diffpresent">[tool.poetry.<ins>group.</ins>dev<ins>.</ins>dependencies]</td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.2&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">flake8-black<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<del>2</del>.<del>1</del>&quot;</td><td class="diffline">19 </td><td class="diffpresent">flake8-black<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<ins>3</ins>.<ins>6</ins>&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^2<del>0</del>.<del>8b1</del>&quot;</td><td class="diffline">20 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^2<ins>3</ins>.<ins>3.0</ins>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.2&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">[tool.black]</td><td class="diffline">22 </td><td class="diffpresent">[tool.black]</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">line-length<span class="dp">·</span>=<span class="dp">·</span>95</td><td class="diffline">23 </td><td class="diffpresent">line-length<span class="dp">·</span>=<span class="dp">·</span>95</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">target-version<span class="dp">·</span>=<span class="dp">·</span>[&#x27;py37&#x27;]</td><td class="diffline">24 </td><td class="diffpresent">target-version<span class="dp">·</span>=<span class="dp">·</span>[&#x27;py37&#x27;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">[build-system]</td><td class="diffline">25 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry&gt;=0.12&quot;]</td><td class="diffline">26 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry&gt;=0.12&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;poetry.masonry.api&quot;</td><td class="diffline">27 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;poetry.masonry.api&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">482 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/willing_zg/mailer.py</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-mailer.py"><span class="source">django_willing_zg-0.5.1/willing_zg/mailer.py</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-mailer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 15 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">class<span class="dp">·</span>MailerError(Exception):</td><td class="diffline">4 </td><td class="diffpresent">class<span class="dp">·</span>MailerError(Exception):</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">class<span class="dp">·</span>Mailer:</td><td class="diffline">6 </td><td class="diffpresent">class<span class="dp">·</span>Mailer:</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<del><span class="dp">·</span></del>The<span class="dp">·</span>Mailer<span class="dp">·</span>class<span class="dp">·</span>holds<span class="dp">·</span>helper<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>sending<span class="dp">·</span>template<span class="dp">·</span>emails<del><span class="dp">·</span></del>&quot;&quot;&quot;</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;The<span class="dp">·</span>Mailer<span class="dp">·</span>class<span class="dp">·</span>holds<span class="dp">·</span>helper<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>sending<span class="dp">·</span>template<span class="dp">·</span>emails&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@classmethod</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@classmethod</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>send_email(</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>send_email(</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cls,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cls,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to_emails,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to_emails,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>subject,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>subject,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>template,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>template,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/willing_zg/settings/cookies.py</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-cookies.py"><span class="source">django_willing_zg-0.5.1/willing_zg/settings/cookies.py</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-cookies.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/willing_zg/settings/email.py</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-email.py"><span class="source">django_willing_zg-0.5.1/willing_zg/settings/email.py</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-email.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/willing_zg/settings/jwt.py</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-jwt.py"><span class="source">django_willing_zg-0.5.1/willing_zg/settings/jwt.py</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-jwt.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/willing_zg/settings/secrets.py</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-secrets.py"><span class="source">django_willing_zg-0.5.1/willing_zg/settings/secrets.py</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--willing_zg-settings-secrets.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.0 KB</span></div>
+      <div><span class="source">django-willing-zg-0.5.0/PKG-INFO</span> vs.</div>
+      <div id="django-willing-zg--.-.-.tar---django-willing-zg--.-.--PKG-INFO"><span class="source">django_willing_zg-0.5.1/PKG-INFO</span>
+        <a class="anchor" href="#django-willing-zg--.-.-.tar---django-willing-zg--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-willing-zg</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-willing-zg</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Bequest,<span class="dp">·</span>Inc.</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Bequest,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>oss@willing.com</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>oss@willing.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>cryptography<span class="dp">·</span>(&gt;=3.1,&lt;4.0)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>cryptography<span class="dp">·</span>(&gt;=3.1,&lt;4<ins>0</ins>.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>django<span class="dp">·</span>(&gt;=3.0.8,&lt;5.0)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>django<span class="dp">·</span>(&gt;=3.0.8,&lt;5.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>djangorestframework<span class="dp">·</span>(&gt;=3.11.0,&lt;4.0.0)</td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>djangorestframework<span class="dp">·</span>(&gt;=3.11.0,&lt;4.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>djangorestframework-simplejwt<span class="dp">·</span>(&gt;=4.4.0,&lt;5.0.0)</td><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>djangorestframework-simplejwt<span class="dp">·</span>(&gt;=4.4.0,&lt;5.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>simplejwt-extensions<span class="dp">·</span>(&gt;=0.2.1,&lt;0.3.0)</td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>simplejwt-extensions<span class="dp">·</span>(&gt;=0.2.1,&lt;0.3.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>zygoat-django<span class="dp">·</span>(&gt;=0.3)</td><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>zygoat-django<span class="dp">·</span>(&gt;=0.3)</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">20 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
