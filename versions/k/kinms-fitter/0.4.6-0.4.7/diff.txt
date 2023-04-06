@@ -1,0 +1,152 @@
+--- tmp/kinms_fitter-0.4.6.tar.gz
++++ tmp/kinms_fitter-0.4.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kinms_fitter-0.4.6.tar", last modified: Tue Mar 14 17:45:40 2023, max compression
+│ +gzip compressed data, was "kinms_fitter-0.4.7.tar", last modified: Thu Apr  6 16:14:57 2023, max compression
+│   --- kinms_fitter-0.4.6.tar
+├── +++ kinms_fitter-0.4.7.tar
+│ ├── file list
+│ │ @@ -1,22 +1,23 @@
+│ │ -drwxr-xr-x   0 tdavis     (501) staff       (20)        0 2023-03-14 17:45:40.510824 kinms_fitter-0.4.6/
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)    35149 2021-01-07 12:48:31.000000 kinms_fitter-0.4.6/LICENSE
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)     2098 2023-03-14 17:45:40.510674 kinms_fitter-0.4.6/PKG-INFO
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)     1530 2022-08-24 14:57:04.000000 kinms_fitter-0.4.6/README.md
+│ │ -drwxr-xr-x   0 tdavis     (501) staff       (20)        0 2023-03-14 17:45:40.509458 kinms_fitter-0.4.6/kinms_fitter/
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)      291 2022-08-24 14:32:42.000000 kinms_fitter-0.4.6/kinms_fitter/__init__.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)    40943 2023-03-10 15:45:52.000000 kinms_fitter-0.4.6/kinms_fitter/kinms_fitter.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)    40353 2023-03-08 15:55:21.000000 kinms_fitter-0.4.6/kinms_fitter/kinms_fitter_old.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)     1680 2023-02-15 10:57:33.000000 kinms_fitter-0.4.6/kinms_fitter/prior_funcs.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)    13192 2022-10-19 21:40:58.000000 kinms_fitter-0.4.6/kinms_fitter/sb_profs.py
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)     2342 2023-02-21 14:38:07.000000 kinms_fitter-0.4.6/kinms_fitter/transformClouds.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)    37007 2023-02-21 14:38:15.000000 kinms_fitter-0.4.6/kinms_fitter/velocity_profs.py
+│ │ --rwxr--r--   0 tdavis     (501) staff       (20)     9608 2023-02-21 14:38:22.000000 kinms_fitter-0.4.6/kinms_fitter/warp_funcs.py
+│ │ -drwxr-xr-x   0 tdavis     (501) staff       (20)        0 2023-03-14 17:45:40.510200 kinms_fitter-0.4.6/kinms_fitter.egg-info/
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)     2098 2023-03-14 17:45:40.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)      466 2023-03-14 17:45:40.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)        1 2023-03-14 17:45:40.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)       82 2023-03-14 17:45:40.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/requires.txt
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)       13 2023-03-14 17:45:40.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/top_level.txt
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)        1 2021-01-07 12:53:57.000000 kinms_fitter-0.4.6/kinms_fitter.egg-info/zip-safe
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)       38 2023-03-14 17:45:40.510885 kinms_fitter-0.4.6/setup.cfg
+│ │ --rw-r--r--   0 tdavis     (501) staff       (20)     1056 2023-03-14 17:45:36.000000 kinms_fitter-0.4.6/setup.py
+│ │ +drwxr-xr-x   0 tdavis     (503) staff       (20)        0 2023-04-06 16:14:57.554111 kinms_fitter-0.4.7/
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)        0 2021-01-07 12:48:31.000000 kinms_fitter-0.4.7/LICENSE
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)      575 2023-04-06 16:14:57.553958 kinms_fitter-0.4.7/PKG-INFO
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)        0 2022-08-24 14:57:04.000000 kinms_fitter-0.4.7/README.md
+│ │ +drwxr-xr-x   0 tdavis     (503) staff       (20)        0 2023-04-06 16:14:57.552929 kinms_fitter-0.4.7/kinms_fitter/
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)      291 2022-08-24 14:32:42.000000 kinms_fitter-0.4.7/kinms_fitter/__init__.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)     9679 2023-04-06 14:09:43.000000 kinms_fitter-0.4.7/kinms_fitter/diskThick_funcs.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)    41289 2023-04-05 16:30:58.000000 kinms_fitter-0.4.7/kinms_fitter/kinms_fitter.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)    40353 2023-03-08 15:55:21.000000 kinms_fitter-0.4.7/kinms_fitter/kinms_fitter_old.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)     1680 2023-02-15 10:57:33.000000 kinms_fitter-0.4.7/kinms_fitter/prior_funcs.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)    17929 2023-04-06 16:00:06.000000 kinms_fitter-0.4.7/kinms_fitter/sb_profs.py
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)     2342 2023-02-21 14:38:07.000000 kinms_fitter-0.4.7/kinms_fitter/transformClouds.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)    37043 2023-03-31 08:43:11.000000 kinms_fitter-0.4.7/kinms_fitter/velocity_profs.py
+│ │ +-rwxr--r--   0 tdavis     (503) staff       (20)     9608 2023-02-21 14:38:22.000000 kinms_fitter-0.4.7/kinms_fitter/warp_funcs.py
+│ │ +drwxr-xr-x   0 tdavis     (503) staff       (20)        0 2023-04-06 16:14:57.553806 kinms_fitter-0.4.7/kinms_fitter.egg-info/
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)      575 2023-04-06 16:14:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)      498 2023-04-06 16:14:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)        1 2023-04-06 16:14:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)       82 2023-04-06 16:14:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/requires.txt
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)       13 2023-04-06 16:14:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)        0 2021-01-07 12:53:57.000000 kinms_fitter-0.4.7/kinms_fitter.egg-info/zip-safe
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)       38 2023-04-06 16:14:57.554167 kinms_fitter-0.4.7/setup.cfg
+│ │ +-rw-r--r--   0 tdavis     (503) staff       (20)     1056 2023-04-06 16:14:51.000000 kinms_fitter-0.4.7/setup.py
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/kinms_fitter.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/kinms_fitter.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -532,16 +532,23 @@
+│ │          inc=warp_funcs.eval(self.inc_profile,self.sbRad,param[5+self.n_pavars:5+self.n_pavars+self.n_incvars])
+│ │  
+│ │          if len(self.skySampClouds) >0:
+│ │              inClouds=transformClouds(self.skySampClouds[:,0:3],posAng = pa,inc = inc,cent = phasecen,sbRad=self.sbRad)
+│ │              sbprof=None
+│ │              myargs={'vPhaseCent': phasecen,'inClouds': inClouds, 'flux_clouds': self.skySampClouds[:,3]}
+│ │          else:
+│ │ -            sbprof=sb_profs.eval(self.sb_profile,self.sbRad,param[5+self.n_pavars+self.n_incvars:5+self.n_pavars+self.n_incvars+self.n_sbvars])
+│ │ -            myargs={'phaseCent': phasecen}
+│ │ +            if np.any([callable(i.thicknessfunc) for i in self.sb_profile]):
+│ │ +                inClouds=sb_profs.model(self.sb_profile,self.sbRad,param[5+self.n_pavars+self.n_incvars:5+self.n_pavars+self.n_incvars+self.n_sbvars],self.nSamps)
+│ │ +                myargs={'vPhaseCent': phasecen,'inClouds': inClouds}
+│ │ +                sbprof=None
+│ │ +            else:
+│ │ +                sbprof=sb_profs.eval(self.sb_profile,self.sbRad,param[5+self.n_pavars+self.n_incvars:5+self.n_pavars+self.n_incvars+self.n_sbvars])
+│ │ +                myargs={'phaseCent': phasecen}
+│ │ +            
+│ │ +            
+│ │          vrad=velocity_profs.eval(self.vel_profile,self.sbRad,param[5+self.n_pavars+self.n_incvars+self.n_sbvars:],inc=inc[0])
+│ │          
+│ │          if self.n_radmotionvars >0:
+│ │              radmotion=self.radial_motion[0](self.sbRad,param[5+self.n_pavars+self.n_incvars+self.n_velvars+self.n_sbvars:])
+│ │          else:
+│ │              radmotion=None
+│ │              
+│ │ @@ -725,15 +732,14 @@
+│ │              self.yc_guess=self.initial_guesses[1]
+│ │              
+│ │          newcoord = SkyCoord(self.xc_guess,self.yc_guess, unit="deg")
+│ │          centcoord = SkyCoord(self._xc_img,self._yc_img, unit="deg")
+│ │          dra, ddec = centcoord.spherical_offsets_to(newcoord)
+│ │          self.xc_guess=-dra.to(u.arcsec).value
+│ │          self.yc_guess=ddec.to(u.arcsec).value
+│ │ -        print(self.xc_guess,self.yc_guess)
+│ │          if np.any(self.initial_guesses != None):
+│ │              self.initial_guesses[0]=self.xc_guess
+│ │              self.initial_guesses[1]=self.yc_guess
+│ │          #breakpoint()   
+│ │           
+│ │          if np.any(self.inc_profile) == None:
+│ │              self.inc_profile=[warp_funcs.flat(self.inc_guess,self.inc_range[0],self.inc_range[1],priors=self.inc_prior,fixed=[self.inc_range[1]==self.inc_range[0]],labels='inc',units='deg')]
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/kinms_fitter_old.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/kinms_fitter_old.py
+│ │┄ Files identical despite different names
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/prior_funcs.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/prior_funcs.py
+│ │┄ Files identical despite different names
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/transformClouds.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/transformClouds.py
+│ │┄ Files identical despite different names
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/velocity_profs.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/velocity_profs.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -259,15 +259,15 @@
+│ │              if self.freeparams==1:
+│ │                  bhmass=0
+│ │              else:
+│ │                  bhmass=args[1]    
+│ │              return mge_vcirc(self.surf*args[0], self.sigma, self.qobs, np.clip(kwargs['inc'],self.mininc,90), 10**bhmass, self.distance, x)               
+│ │      class mge_vcirc_mlvar:  
+│ │          """
+│ │ -        Evaulate an MGE model of the potential, with or without a central point mass.  
+│ │ +        Evaulate an MGE model of the potential with variable M/L for each gaussian, with or without a central point mass.  
+│ │          
+│ │          Inputs
+│ │          ------
+│ │          surf : ndarray of float
+│ │              Luminosity of each gaussian component, units of Lsun.
+│ │          sigma : ndarray of float
+│ │              Width of each gaussian, units of arcsec.
+│ │   --- kinms_fitter-0.4.6/kinms_fitter/warp_funcs.py
+│ ├── +++ kinms_fitter-0.4.7/kinms_fitter/warp_funcs.py
+│ │┄ Files identical despite different names
+│ │   --- kinms_fitter-0.4.6/setup.py
+│ ├── +++ kinms_fitter-0.4.7/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  from setuptools import setup
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │   
+│ │  setup(name='kinms_fitter',
+│ │ -       version='0.4.6',
+│ │ +       version='0.4.7',
+│ │         description='Wrapper for KinMSpy that automates most common galaxy fitting tasks',
+│ │         url='https://github.com/TimothyADavis/KinMS_fitter',
+│ │         author='Timothy A. Davis',
+│ │         author_email='DavisT@cardiff.ac.uk',
+│ │         long_description=long_description,
+│ │         long_description_content_type="text/markdown",
+│ │         license='GNU GPLv3',

@@ -1,0 +1,172 @@
+# Comparing `tmp/catii-1.0.0a8.tar.gz` & `tmp/catii-1.0.0a9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/catii-1.0.0a8.tar", last modified: Mon Mar 20 14:07:49 2023, max compression
++gzip compressed data, was "dist/catii-1.0.0a9.tar", last modified: Mon Mar 20 14:54:27 2023, max compression
+```
+
+## Comparing `catii-1.0.0a8.tar` & `catii-1.0.0a9.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,21 @@
+-drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:07:49.000000 catii-1.0.0a8/
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    13145 2023-03-09 18:08:51.000000 catii-1.0.0a8/README.md
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    15884 2023-03-20 14:07:49.000000 catii-1.0.0a8/PKG-INFO
+-drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:07:49.000000 catii-1.0.0a8/src/
+-drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:07:49.000000 catii-1.0.0a8/src/catii.egg-info/
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)        1 2023-03-20 14:07:48.000000 catii-1.0.0a8/src/catii.egg-info/dependency_links.txt
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)        6 2023-03-20 14:07:48.000000 catii-1.0.0a8/src/catii.egg-info/top_level.txt
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)       27 2023-03-20 14:07:48.000000 catii-1.0.0a8/src/catii.egg-info/requires.txt
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    15884 2023-03-20 14:07:48.000000 catii-1.0.0a8/src/catii.egg-info/PKG-INFO
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)      355 2023-03-20 14:07:48.000000 catii-1.0.0a8/src/catii.egg-info/SOURCES.txt
+-drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:07:49.000000 catii-1.0.0a8/src/catii/
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    41005 2023-03-19 22:30:31.000000 catii-1.0.0a8/src/catii/iindexes.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    12969 2023-03-03 17:20:44.000000 catii-1.0.0a8/src/catii/set_operations.pyx
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    26360 2023-03-11 18:44:41.000000 catii-1.0.0a8/src/catii/xcubes.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    28827 2023-03-09 21:58:54.000000 catii-1.0.0a8/src/catii/ffuncs.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    22366 2023-03-11 20:25:57.000000 catii-1.0.0a8/src/catii/ccubes.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)     8029 2023-02-28 18:22:00.000000 catii-1.0.0a8/src/catii/indxio.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)      121 2023-02-28 18:22:00.000000 catii-1.0.0a8/src/catii/__init__.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    61087 2023-03-20 14:02:25.000000 catii-1.0.0a8/src/catii/xfuncs.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)     1175 2023-03-20 14:06:41.000000 catii-1.0.0a8/setup.py
+--rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)       38 2023-03-20 14:07:49.000000 catii-1.0.0a8/setup.cfg
++drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:54:27.000000 catii-1.0.0a9/
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    13145 2023-03-09 18:08:51.000000 catii-1.0.0a9/README.md
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    15884 2023-03-20 14:54:27.000000 catii-1.0.0a9/PKG-INFO
++drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/
++drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)        1 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/dependency_links.txt
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)        6 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/top_level.txt
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)       27 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/requires.txt
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    15884 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/PKG-INFO
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)      355 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii.egg-info/SOURCES.txt
++drwxrwxr-x   0 fumanchu  (1001) fumanchu  (1001)        0 2023-03-20 14:54:27.000000 catii-1.0.0a9/src/catii/
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    41005 2023-03-19 22:30:31.000000 catii-1.0.0a9/src/catii/iindexes.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    12969 2023-03-03 17:20:44.000000 catii-1.0.0a9/src/catii/set_operations.pyx
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    26360 2023-03-11 18:44:41.000000 catii-1.0.0a9/src/catii/xcubes.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    28827 2023-03-09 21:58:54.000000 catii-1.0.0a9/src/catii/ffuncs.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    22366 2023-03-11 20:25:57.000000 catii-1.0.0a9/src/catii/ccubes.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)     8029 2023-02-28 18:22:00.000000 catii-1.0.0a9/src/catii/indxio.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)      121 2023-02-28 18:22:00.000000 catii-1.0.0a9/src/catii/__init__.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)    61156 2023-03-20 14:48:46.000000 catii-1.0.0a9/src/catii/xfuncs.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)     1175 2023-03-20 14:53:27.000000 catii-1.0.0a9/setup.py
++-rw-rw-r--   0 fumanchu  (1001) fumanchu  (1001)       38 2023-03-20 14:54:27.000000 catii-1.0.0a9/setup.cfg
+```
+
+### Comparing `catii-1.0.0a8/README.md` & `catii-1.0.0a9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/PKG-INFO` & `catii-1.0.0a9/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: catii
+-Version: 1.0.0a8
++Version: 1.0.0a9
+ Summary: A library for N-dimensional categorical data.
+ Home-page: https://github.com/Crunch-io/catii
+ Author: Robert Brewer, Slobodan Ilić
+ Author-email: dev@crunch.io
+ License: UNKNOWN
+ Description: # catii :cat::eyes:
+```
+
+### Comparing `catii-1.0.0a8/src/catii.egg-info/PKG-INFO` & `catii-1.0.0a9/src/catii.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: catii
+-Version: 1.0.0a8
++Version: 1.0.0a9
+ Summary: A library for N-dimensional categorical data.
+ Home-page: https://github.com/Crunch-io/catii
+ Author: Robert Brewer, Slobodan Ilić
+ Author-email: dev@crunch.io
+ License: UNKNOWN
+ Description: # catii :cat::eyes:
+```
+
+### Comparing `catii-1.0.0a8/src/catii/iindexes.py` & `catii-1.0.0a9/src/catii/iindexes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/set_operations.pyx` & `catii-1.0.0a9/src/catii/set_operations.pyx`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/xcubes.py` & `catii-1.0.0a9/src/catii/xcubes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/ffuncs.py` & `catii-1.0.0a9/src/catii/ffuncs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/ccubes.py` & `catii-1.0.0a9/src/catii/ccubes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/indxio.py` & `catii-1.0.0a9/src/catii/indxio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `catii-1.0.0a8/src/catii/xfuncs.py` & `catii-1.0.0a9/src/catii/xfuncs.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1460,14 +1460,16 @@
+                 coordinates = coordinates[self.validity]
+             size = covs.shape[0]
+             for i, rowmask in self.bins(coordinates, size):
+                 if aweights is None:
+                     w = None
+                 else:
+                     w = aweights[rowmask]
++                    if len(w) == 0:
++                        continue
+                 covs[i] = numpy.cov(arr[rowmask].T, aweights=w)
+ 
+     def reduce(self, cube, regions):
+         """Return `regions` reduced to proper output."""
+         (covs,) = regions
+         if isinstance(self.return_missing_as, tuple):
+             missings = numpy.isnan(covs)
+```
+
+### Comparing `catii-1.0.0a8/setup.py` & `catii-1.0.0a9/setup.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+     ext_modules = cythonize(ext_modules)
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setup(
+     name="catii",
+-    version="1.0.0a8",
++    version="1.0.0a9",
+     author="Robert Brewer, Slobodan Ilić",
+     author_email="dev@crunch.io",
+     description="A library for N-dimensional categorical data.",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/Crunch-io/catii",
+     packages=find_packages(where="src"),
+```
+

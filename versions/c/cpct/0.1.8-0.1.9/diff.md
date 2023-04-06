@@ -1,0 +1,130 @@
+# Comparing `tmp/cpct-0.1.8.tar.gz` & `tmp/cpct-0.1.9.tar.gz`
+
+## Comparing `cpct-0.1.8.tar` & `cpct-0.1.9.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,24 @@
+--rwxr-xr-x   0        0        0      111 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/_START_HERE.cmd
+--rw-r--r--   0        0        0      169 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/__about__.py
+--rw-r--r--   0        0        0      102 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/__init__.py
+--rw-r--r--   0        0        0     2152 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/_install_requirements.py
+--rw-r--r--   0        0        0     1225 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/base_types.py
+--rw-r--r--   0        0        0    21073 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/cpct.py
+--rw-r--r--   0        0        0      182 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/discord.py
+--rw-r--r--   0        0        0    20925 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/poepy.py
+--rw-r--r--   0        0        0     2053 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/user_info.py
+--rw-r--r--   0        0        0    25296 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/img/ChipyLogo.png
+--rw-r--r--   0        0        0    31307 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/img/ctcp_gui.png
+--rw-r--r--   0        0        0     4116 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/img/dropper.png
+--rw-r--r--   0        0        0   678371 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/img/poe.png
+--rwxr-xr-x   0        0        0       38 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/qt/build_gui.bat
+--rw-r--r--   0        0        0    33527 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/qt/main_gui.py
+--rw-r--r--   0        0        0    34751 2020-02-02 00:00:00.000000 cpct-0.1.8/cpct/qt/main_gui.ui
+--rw-r--r--   0        0        0     1975 2020-02-02 00:00:00.000000 cpct-0.1.8/.gitignore
+--rw-r--r--   0        0        0     1100 2020-02-02 00:00:00.000000 cpct-0.1.8/LICENSE.txt
+--rw-r--r--   0        0        0     4707 2020-02-02 00:00:00.000000 cpct-0.1.8/README.md
+--rw-r--r--   0        0        0     1801 2020-02-02 00:00:00.000000 cpct-0.1.8/pyproject.toml
+--rw-r--r--   0        0        0     5628 2020-02-02 00:00:00.000000 cpct-0.1.8/PKG-INFO
++-rw-r--r--   0        0        0      169 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/__about__.py
++-rw-r--r--   0        0        0      102 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/__init__.py
++-rw-r--r--   0        0        0     1225 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/base_types.py
++-rw-r--r--   0        0        0    21073 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/cpct.py
++-rwxr-xr-x   0        0        0      111 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/cpct_START_HERE.cmd
++-rwxr-xr-x   0        0        0       92 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/cpct_download.bat
++-rw-r--r--   0        0        0     2152 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/cpct_install_requirements.py
++-rw-r--r--   0        0        0      182 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/discord.py
++-rw-r--r--   0        0        0    20925 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/poepy.py
++-rw-r--r--   0        0        0     2053 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/user_info.py
++-rw-r--r--   0        0        0   329881 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/ChipyLogo.png
++-rw-r--r--   0        0        0  1621531 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/ChipyLogo.psd
++-rw-r--r--   0        0        0   329881 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/cpct_logo.png
++-rw-r--r--   0        0        0    31307 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/ctcp_gui.png
++-rw-r--r--   0        0        0     4116 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/dropper.png
++-rw-r--r--   0        0        0   678371 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/img/poe.png
++-rwxr-xr-x   0        0        0       38 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/qt/build_gui.bat
++-rw-r--r--   0        0        0    33527 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/qt/main_gui.py
++-rw-r--r--   0        0        0    34751 2020-02-02 00:00:00.000000 cpct-0.1.9/cpct/qt/main_gui.ui
++-rw-r--r--   0        0        0     1975 2020-02-02 00:00:00.000000 cpct-0.1.9/.gitignore
++-rw-r--r--   0        0        0     1100 2020-02-02 00:00:00.000000 cpct-0.1.9/LICENSE.txt
++-rw-r--r--   0        0        0     4707 2020-02-02 00:00:00.000000 cpct-0.1.9/README.md
++-rw-r--r--   0        0        0     1801 2020-02-02 00:00:00.000000 cpct-0.1.9/pyproject.toml
++-rw-r--r--   0        0        0     5628 2020-02-02 00:00:00.000000 cpct-0.1.9/PKG-INFO
+```
+
+### Comparing `cpct-0.1.8/cpct/_install_requirements.py` & `cpct-0.1.9/cpct/cpct_install_requirements.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/base_types.py` & `cpct-0.1.9/cpct/base_types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/cpct.py` & `cpct-0.1.9/cpct/cpct.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/poepy.py` & `cpct-0.1.9/cpct/poepy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/user_info.py` & `cpct-0.1.9/cpct/user_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/img/ctcp_gui.png` & `cpct-0.1.9/cpct/img/ctcp_gui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/img/dropper.png` & `cpct-0.1.9/cpct/img/dropper.png`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/img/poe.png` & `cpct-0.1.9/cpct/img/poe.png`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/qt/main_gui.py` & `cpct-0.1.9/cpct/qt/main_gui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/cpct/qt/main_gui.ui` & `cpct-0.1.9/cpct/qt/main_gui.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/.gitignore` & `cpct-0.1.9/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/LICENSE.txt` & `cpct-0.1.9/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/README.md` & `cpct-0.1.9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/pyproject.toml` & `cpct-0.1.9/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `cpct-0.1.8/PKG-INFO` & `cpct-0.1.9/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cpct
+-Version: 0.1.8
++Version: 0.1.9
+ Summary: Chipys PathOfExile Chaos Tool
+ Project-URL: Documentation, https://github.com/unknown/cpct#readme
+ Project-URL: Issues, https://github.com/unknown/cpct/issues
+ Project-URL: Source, https://github.com/unknown/cpct
+ Author-email: Chipy <iamchipy@gmail.com>
+ License-Expression: MIT
+ License-File: LICENSE.txt
+```
+

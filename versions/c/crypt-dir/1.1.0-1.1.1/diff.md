@@ -1,0 +1,328 @@
+# Comparing `tmp/crypt-dir-1.1.0.tar.gz` & `tmp/crypt-dir-1.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "crypt-dir-1.1.0.tar", last modified: Thu Apr  6 16:08:17 2023, max compression
++gzip compressed data, was "crypt-dir-1.1.1.tar", last modified: Thu Apr  6 16:20:36 2023, max compression
+```
+
+## Comparing `crypt-dir-1.1.0.tar` & `crypt-dir-1.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.395269 crypt-dir-1.1.0/
+--rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.1.0/LICENSE
+--rw-r--r--   0 khanh      (501) staff       (20)     3784 2023-04-06 16:08:17.395135 crypt-dir-1.1.0/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)     3526 2023-04-06 16:01:38.000000 crypt-dir-1.1.0/README.md
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.393926 crypt-dir-1.1.0/crypt_dir/
+--rw-r--r--   0 khanh      (501) staff       (20)      126 2023-04-06 16:01:38.000000 crypt-dir-1.1.0/crypt_dir/__init__.py
+--rw-r--r--   0 khanh      (501) staff       (20)     2318 2023-04-06 16:02:52.000000 crypt-dir-1.1.0/crypt_dir/crypt.py
+--rw-r--r--   0 khanh      (501) staff       (20)     6083 2023-04-06 15:55:36.000000 crypt-dir-1.1.0/crypt_dir/crypt_dir.py
+--rw-r--r--   0 khanh      (501) staff       (20)     3744 2023-04-06 16:03:15.000000 crypt-dir-1.1.0/crypt_dir/crypt_file.py
+--rw-r--r--   0 khanh      (501) staff       (20)      257 2023-04-06 15:59:40.000000 crypt-dir-1.1.0/crypt_dir/serialize.py
+--rw-r--r--   0 khanh      (501) staff       (20)      805 2023-04-06 16:03:15.000000 crypt-dir-1.1.0/crypt_dir/signature.py
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:08:17.394948 crypt-dir-1.1.0/crypt_dir.egg-info/
+--rw-r--r--   0 khanh      (501) staff       (20)     3784 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)      324 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/SOURCES.txt
+--rw-r--r--   0 khanh      (501) staff       (20)        1 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/dependency_links.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       20 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/requires.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       10 2023-04-06 16:08:17.000000 crypt-dir-1.1.0/crypt_dir.egg-info/top_level.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       38 2023-04-06 16:08:17.395317 crypt-dir-1.1.0/setup.cfg
+--rw-r--r--   0 khanh      (501) staff       (20)      586 2023-04-06 16:07:55.000000 crypt-dir-1.1.0/setup.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:20:36.405959 crypt-dir-1.1.1/
++-rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.1.1/LICENSE
++-rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:20:36.405832 crypt-dir-1.1.1/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)     3506 2023-04-06 16:16:43.000000 crypt-dir-1.1.1/README.md
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:20:36.404849 crypt-dir-1.1.1/crypt_dir/
++-rw-r--r--   0 khanh      (501) staff       (20)      150 2023-04-06 16:16:18.000000 crypt-dir-1.1.1/crypt_dir/__init__.py
++-rw-r--r--   0 khanh      (501) staff       (20)     2511 2023-04-06 16:19:50.000000 crypt-dir-1.1.1/crypt_dir/crypt.py
++-rw-r--r--   0 khanh      (501) staff       (20)     6083 2023-04-06 15:55:36.000000 crypt-dir-1.1.1/crypt_dir/crypt_dir.py
++-rw-r--r--   0 khanh      (501) staff       (20)     3744 2023-04-06 16:03:15.000000 crypt-dir-1.1.1/crypt_dir/crypt_file.py
++-rw-r--r--   0 khanh      (501) staff       (20)      257 2023-04-06 15:59:40.000000 crypt-dir-1.1.1/crypt_dir/serialize.py
++-rw-r--r--   0 khanh      (501) staff       (20)      805 2023-04-06 16:03:15.000000 crypt-dir-1.1.1/crypt_dir/signature.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:20:36.405637 crypt-dir-1.1.1/crypt_dir.egg-info/
++-rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:20:36.000000 crypt-dir-1.1.1/crypt_dir.egg-info/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)      324 2023-04-06 16:20:36.000000 crypt-dir-1.1.1/crypt_dir.egg-info/SOURCES.txt
++-rw-r--r--   0 khanh      (501) staff       (20)        1 2023-04-06 16:20:36.000000 crypt-dir-1.1.1/crypt_dir.egg-info/dependency_links.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       20 2023-04-06 16:20:36.000000 crypt-dir-1.1.1/crypt_dir.egg-info/requires.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       10 2023-04-06 16:20:36.000000 crypt-dir-1.1.1/crypt_dir.egg-info/top_level.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       38 2023-04-06 16:20:36.406005 crypt-dir-1.1.1/setup.cfg
++-rw-r--r--   0 khanh      (501) staff       (20)      586 2023-04-06 16:20:08.000000 crypt-dir-1.1.1/setup.py
+```
+
+### Comparing `crypt-dir-1.1.0/LICENSE` & `crypt-dir-1.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.0/PKG-INFO` & `crypt-dir-1.1.1/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: crypt-dir
+-Version: 1.1.0
++Version: 1.1.1
+ Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+ Author: Nguyen Ngoc Khanh
+ Author-email: khanh.nguyen.contact@gmail.com
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+@@ -19,20 +19,19 @@
+ 
+ - encrypt
+ 
+ ```python
+ # User maintains two directories plain_dir and encrypted_dir
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+     plain_dir=plain_dir,
+     encrypted_dir=encrypted_dir,
+ )
+ 
+@@ -46,20 +45,19 @@
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+     key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+```
+
+### Comparing `crypt-dir-1.1.0/README.md` & `crypt-dir-1.1.1/crypt_dir.egg-info/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,7 +1,17 @@
++Metadata-Version: 2.1
++Name: crypt-dir
++Version: 1.1.1
++Home-page: https://github.com/khanh-nguyen-code/crypt-dir
++Author: Nguyen Ngoc Khanh
++Author-email: khanh.nguyen.contact@gmail.com
++License: MIT
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ # CRYPT_DIR
+ 
+ - Encrypt all your files and write into another directory if there is update
+ - Clean the encrypted directory if files or directories have been deleted
+ - Restore
+ - Minimize writing to SSDs
+ 
+@@ -9,20 +19,19 @@
+ 
+ - encrypt
+ 
+ ```python
+ # User maintains two directories plain_dir and encrypted_dir
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+     plain_dir=plain_dir,
+     encrypted_dir=encrypted_dir,
+ )
+ 
+@@ -36,20 +45,19 @@
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+     key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+```
+
+### Comparing `crypt-dir-1.1.0/crypt_dir/crypt.py` & `crypt-dir-1.1.1/crypt_dir/crypt.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,7 +1,8 @@
++import io
+ import os
+ from typing import BinaryIO
+ 
+ from Cryptodome.Cipher import AES
+ from Cryptodome.Hash import SHA1
+ 
+ HASH_SIZE = 20  # size of hash value in bytes
+@@ -72,7 +73,14 @@
+             f.write(b.hex())
+ 
+     if not os.path.exists(key_path):
+         write_hex_file(key_path, os.urandom(KEY_SIZE))
+ 
+     key = read_hex_file(key_path)
+     return key
++
++
++def make_key_from_password(password: bytes) -> bytes:
++    hash = sha1_hash(io.BytesIO(password))
++    hash += hash * (KEY_SIZE // HASH_SIZE)
++    key = hash[:KEY_SIZE]
++    return key
+```
+
+### Comparing `crypt-dir-1.1.0/crypt_dir/crypt_dir.py` & `crypt-dir-1.1.1/crypt_dir/crypt_dir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.0/crypt_dir/crypt_file.py` & `crypt-dir-1.1.1/crypt_dir/crypt_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.0/crypt_dir/signature.py` & `crypt-dir-1.1.1/crypt_dir/signature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.0/crypt_dir.egg-info/PKG-INFO` & `crypt-dir-1.1.1/README.md`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,17 +1,7 @@
+-Metadata-Version: 2.1
+-Name: crypt-dir
+-Version: 1.1.0
+-Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+-Author: Nguyen Ngoc Khanh
+-Author-email: khanh.nguyen.contact@gmail.com
+-License: MIT
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ # CRYPT_DIR
+ 
+ - Encrypt all your files and write into another directory if there is update
+ - Clean the encrypted directory if files or directories have been deleted
+ - Restore
+ - Minimize writing to SSDs
+ 
+@@ -19,20 +9,19 @@
+ 
+ - encrypt
+ 
+ ```python
+ # User maintains two directories plain_dir and encrypted_dir
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # Delete all files, directories in encrypted_dir that don't exist in the plain_dir
+ crypt_dir.clean_encrypted_dir(
+     plain_dir=plain_dir,
+     encrypted_dir=encrypted_dir,
+ )
+ 
+@@ -46,20 +35,19 @@
+ ```
+ 
+ - restore
+ 
+ ```python
+ import crypt_dir
+ 
+-key_file = "key.txt"
+ plain_dir = "plain"
+ encrypted_dir = "encrypted"
+ restored_dir = "restored"
+ 
+-key = crypt_dir.read_or_create_key(key_file)
++key = crypt_dir.make_key_from_password(b"password1234")
+ 
+ # restore all files in encrypted_dir using 12 workers
+ crypt_dir.restore_encrypted_dir(
+     key=key,
+     encrypted_dir=encrypted_dir,
+     restored_dir=restored_dir,
+     max_workers=12,
+```
+
+### Comparing `crypt-dir-1.1.0/setup.py` & `crypt-dir-1.1.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ if __name__ == "__main__":
+     with open("README.md") as f:
+         long_description = f.read()
+     setuptools.setup(
+         name="crypt-dir",
+-        version="1.1.0",
++        version="1.1.1",
+         author="Nguyen Ngoc Khanh",
+         author_email="khanh.nguyen.contact@gmail.com",
+         long_description=long_description,
+         long_description_content_type="text/markdown",
+         url="https://github.com/khanh-nguyen-code/crypt-dir",
+         packages=setuptools.find_packages(),
+         license="MIT",
+```
+

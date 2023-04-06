@@ -1,0 +1,1032 @@
+--- tmp/solvation-analysis-0.3.1.tar.gz
++++ tmp/solvation-analysis-0.3.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "solvation-analysis-0.3.1.tar", last modified: Sun Apr  2 16:22:47 2023, max compression
+│ +gzip compressed data, was "solvation-analysis-0.3.2.tar", last modified: Thu Apr  6 16:21:02 2023, max compression
+│   --- solvation-analysis-0.3.1.tar
+├── +++ solvation-analysis-0.3.2.tar
+│ ├── file list
+│ │ @@ -1,142 +1,142 @@
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.511940 solvation-analysis-0.3.1/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     8081 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/CODE_OF_CONDUCT.md
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    34684 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/LICENSE
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      234 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/MANIFEST.in
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    44782 2023-04-02 16:22:47.355272 solvation-analysis-0.3.1/PKG-INFO
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     3879 2023-04-02 16:17:13.000000 solvation-analysis-0.3.1/README.md
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     1940 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/pyproject.toml
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      106 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/requirements.txt
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      381 2023-04-02 16:22:47.355703 solvation-analysis-0.3.1/setup.cfg
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     2400 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/setup.py
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:47.355916 solvation-analysis-0.3.1/solvation_analysis/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      335 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/__init__.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      728 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/_column_names.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     8016 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/_utils.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      498 2023-04-02 16:22:47.355976 solvation-analysis-0.3.1/solvation_analysis/_version.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     4984 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/coordination.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    10777 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/networking.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     5709 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/pairing.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    10881 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/plotting.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    11231 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/rdf_parser.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    10944 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/residence.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    38245 2023-02-14 18:50:22.000000 solvation-analysis-0.3.1/solvation_analysis/solute.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    10663 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/speciation.py
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.465657 solvation-analysis-0.3.1/solvation_analysis/tests/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      112 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/__init__.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     9536 2023-02-14 18:28:50.000000 solvation-analysis-0.3.1/solvation_analysis/tests/conftest.py
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.466184 solvation-analysis-0.3.1/solvation_analysis/tests/data/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     8196 2022-10-02 21:12:27.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/.DS_Store
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     2848 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/README.md
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.471091 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  1418421 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec.data
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    14285 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec_elements.csv
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   855316 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_unwrap.dcd
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   855316 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_wrap.dcd
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  5563748 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_solv_df_large.csv
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.477975 solvation-analysis-0.3.1/solvation_analysis/tests/data/ea_fec_data/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   892516 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/ea_fec_data/ea_fec.dcd
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   761309 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/ea_fec_data/ea_fec.pdb
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.455187 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.480265 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/ea/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   871090 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/ea/topology.pdb
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  1023556 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/ea/trajectory_equil.dcd
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.483688 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/eaf/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   874261 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/eaf/topology.pdb
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  1027396 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/eaf/trajectory_equil.dcd
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.487981 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/fea/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   875050 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/fea/topology.pdb
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  1028356 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/fea/trajectory_equil.dcd
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.490327 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/feaf/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   876623 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/feaf/topology.pdb
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)  1030276 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/feaf/trajectory_equil.dcd
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.492743 solvation-analysis-0.3.1/solvation_analysis/tests/data/iba_data/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   721156 2022-09-27 18:34:04.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/iba_data/isobutyric_acid.dcd
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)   610100 2022-09-27 18:34:04.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/iba_data/isobutyric_acid.pdb
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.502773 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_data.npz
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.506794 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_data.npz
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:33.511750 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_bins.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_data.npz
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     2601 2022-09-27 18:34:04.000000 solvation-analysis-0.3.1/solvation_analysis/tests/datafiles.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     1196 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_coordination.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      867 2023-02-14 18:28:50.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_networking.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     1516 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_pairing.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     9786 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_plotting.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     6317 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_rdf_parser.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)      961 2023-02-14 18:28:50.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_residence.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     4012 2022-10-28 18:42:42.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_selection.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    12563 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_solute.py
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     1732 2023-04-02 16:08:07.000000 solvation-analysis-0.3.1/solvation_analysis/tests/test_speciation.py
+│ │ -drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-02 16:22:47.351863 solvation-analysis-0.3.1/solvation_analysis.egg-info/
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    44782 2023-04-02 16:22:47.000000 solvation-analysis-0.3.1/solvation_analysis.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)     7068 2023-04-02 16:22:47.000000 solvation-analysis-0.3.1/solvation_analysis.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)        1 2023-04-02 16:22:47.000000 solvation-analysis-0.3.1/solvation_analysis.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)       96 2023-04-02 16:22:47.000000 solvation-analysis-0.3.1/solvation_analysis.egg-info/requires.txt
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)       19 2023-04-02 16:22:47.000000 solvation-analysis-0.3.1/solvation_analysis.egg-info/top_level.txt
+│ │ --rw-r--r--   0 orioncohen   (505) staff       (20)    78254 2022-08-17 22:41:48.000000 solvation-analysis-0.3.1/versioneer.py
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.812451 solvation-analysis-0.3.2/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     8081 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/CODE_OF_CONDUCT.md
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    34684 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/LICENSE
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      234 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/MANIFEST.in
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    44782 2023-04-06 16:21:02.399305 solvation-analysis-0.3.2/PKG-INFO
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     3879 2023-04-02 16:17:13.000000 solvation-analysis-0.3.2/README.md
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     1940 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/pyproject.toml
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      106 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/requirements.txt
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      381 2023-04-06 16:21:02.399748 solvation-analysis-0.3.2/setup.cfg
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     2400 2023-04-05 15:18:21.000000 solvation-analysis-0.3.2/setup.py
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:21:02.400015 solvation-analysis-0.3.2/solvation_analysis/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      335 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/__init__.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      728 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/_column_names.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     8016 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/_utils.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      498 2023-04-06 16:21:02.400143 solvation-analysis-0.3.2/solvation_analysis/_version.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     6593 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/coordination.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    10777 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/solvation_analysis/networking.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     5709 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/solvation_analysis/pairing.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    13759 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/plotting.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    11231 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/rdf_parser.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    10944 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/solvation_analysis/residence.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    38245 2023-02-14 18:50:22.000000 solvation-analysis-0.3.2/solvation_analysis/solute.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     8970 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/speciation.py
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.732936 solvation-analysis-0.3.2/solvation_analysis/tests/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      112 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/__init__.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     9536 2023-02-14 18:28:50.000000 solvation-analysis-0.3.2/solvation_analysis/tests/conftest.py
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.734030 solvation-analysis-0.3.2/solvation_analysis/tests/data/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     8196 2022-10-02 21:12:27.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/.DS_Store
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     2848 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/README.md
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.743302 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  1418421 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec.data
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    14285 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec_elements.csv
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   855316 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_unwrap.dcd
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   855316 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_wrap.dcd
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  5563748 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_solv_df_large.csv
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.761334 solvation-analysis-0.3.2/solvation_analysis/tests/data/ea_fec_data/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   892516 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/ea_fec_data/ea_fec.dcd
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   761309 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/ea_fec_data/ea_fec.pdb
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.709316 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.766206 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/ea/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   871090 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/ea/topology.pdb
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  1023556 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/ea/trajectory_equil.dcd
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.769158 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/eaf/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   874261 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/eaf/topology.pdb
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  1027396 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/eaf/trajectory_equil.dcd
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.772043 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/fea/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   875050 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/fea/topology.pdb
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  1028356 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/fea/trajectory_equil.dcd
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.774787 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/feaf/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   876623 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/feaf/topology.pdb
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)  1030276 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/feaf/trajectory_equil.dcd
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.779974 solvation-analysis-0.3.2/solvation_analysis/tests/data/iba_data/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   721156 2022-09-27 18:34:04.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/iba_data/isobutyric_acid.dcd
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)   610100 2022-09-27 18:34:04.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/iba_data/isobutyric_acid.pdb
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.798669 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_data.npz
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.805336 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_data.npz
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:20:23.811963 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_bins.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      864 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_data.npz
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     2601 2022-09-27 18:34:04.000000 solvation-analysis-0.3.2/solvation_analysis/tests/datafiles.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     1672 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_coordination.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      867 2023-02-14 18:28:50.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_networking.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     1516 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_pairing.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    10037 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_plotting.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     6317 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_rdf_parser.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)      961 2023-02-14 18:28:50.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_residence.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     4012 2022-10-28 18:42:42.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_selection.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    12563 2023-04-02 16:08:07.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_solute.py
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     1572 2023-04-06 16:18:52.000000 solvation-analysis-0.3.2/solvation_analysis/tests/test_speciation.py
+│ │ +drwxr-xr-x   0 orioncohen   (505) staff       (20)        0 2023-04-06 16:21:02.396207 solvation-analysis-0.3.2/solvation_analysis.egg-info/
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    44782 2023-04-06 16:21:02.000000 solvation-analysis-0.3.2/solvation_analysis.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)     7068 2023-04-06 16:21:02.000000 solvation-analysis-0.3.2/solvation_analysis.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)        1 2023-04-06 16:21:02.000000 solvation-analysis-0.3.2/solvation_analysis.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)       96 2023-04-06 16:21:02.000000 solvation-analysis-0.3.2/solvation_analysis.egg-info/requires.txt
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)       19 2023-04-06 16:21:02.000000 solvation-analysis-0.3.2/solvation_analysis.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 orioncohen   (505) staff       (20)    78254 2022-08-17 22:41:48.000000 solvation-analysis-0.3.2/versioneer.py
+│ │   --- solvation-analysis-0.3.1/CODE_OF_CONDUCT.md
+│ ├── +++ solvation-analysis-0.3.2/CODE_OF_CONDUCT.md
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/LICENSE
+│ ├── +++ solvation-analysis-0.3.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/PKG-INFO
+│ ├── +++ solvation-analysis-0.3.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: solvation-analysis
+│ │ -Version: 0.3.1
+│ │ +Version: 0.3.2
+│ │  Summary: A toolkit to analyze solvation structure in molecular dynamics trajectories.
+│ │  Author: Orion Cohen
+│ │  Author-email: Orion Cohen <orioncohen@berkeley.edu>
+│ │  Maintainer-email: Orion Cohen <orioncohen@berkeley.edu>, Hugo MacDermott-Opeskin <hugomacdermott@gmail.com>
+│ │  License:                         GNU GENERAL PUBLIC LICENSE 
+│ │                                    Version 3, 29 June 2007
+│ │   --- solvation-analysis-0.3.1/README.md
+│ ├── +++ solvation-analysis-0.3.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/pyproject.toml
+│ ├── +++ solvation-analysis-0.3.2/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/setup.py
+│ ├── +++ solvation-analysis-0.3.2/setup.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/_column_names.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/_column_names.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/_utils.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/_utils.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/coordination.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/coordination.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -40,35 +40,41 @@
+│ │      ----------
+│ │      solvation_data : pandas.DataFrame
+│ │          The solvation data frame output by Solute.
+│ │      n_frames : int
+│ │          The number of frames in solvation_data.
+│ │      n_solutes : int
+│ │          The number of solutes in solvation_data.
+│ │ +    solvent_counts: Dict[str, int]
+│ │ +        A dictionary of the number of residues for each solvent.
+│ │ +    atom_group : MDAnalysis.core.groups.AtomGroup
+│ │ +        The atom group of all atoms in the universe.
+│ │  
+│ │      Examples
+│ │      --------
+│ │  
+│ │       .. code-block:: python
+│ │  
+│ │          # first define Li, BN, and FEC AtomGroups
+│ │          >>> solute = Solute(Li, {'BN': BN, 'FEC': FEC, 'PF6': PF6})
+│ │          >>> solute.run()
+│ │          >>> solute.coordination.coordination_numbers
+│ │          {'BN': 4.328, 'FEC': 0.253, 'PF6': 0.128}
+│ │  
+│ │      """
+│ │  
+│ │ -    def __init__(self, solvation_data, n_frames, n_solutes, atom_group):
+│ │ +    def __init__(self, solvation_data, n_frames, n_solutes, solvent_counts, atom_group):
+│ │          self.solvation_data = solvation_data
+│ │          self.n_frames = n_frames
+│ │          self.n_solutes = n_solutes
+│ │          self._cn_dict, self._cn_dict_by_frame = self._mean_cn()
+│ │          self.atom_group = atom_group
+│ │          self._coordinating_atoms = self._calculate_coordinating_atoms()
+│ │ +        self.solvent_counts = solvent_counts
+│ │ +        self._coordination_vs_random = self._calculate_coordination_vs_random()
+│ │  
+│ │      @staticmethod
+│ │      def from_solute(solute):
+│ │          """
+│ │          Generate a Coordination object from a solute.
+│ │  
+│ │          Parameters
+│ │ @@ -80,14 +86,15 @@
+│ │          Pairing
+│ │          """
+│ │          assert solute.has_run, "The solute must be run before calling from_solute"
+│ │          return Coordination(
+│ │              solute.solvation_data,
+│ │              solute.n_frames,
+│ │              solute.n_solutes,
+│ │ +            solute.solvent_counts,
+│ │              solute.u.atoms,
+│ │          )
+│ │  
+│ │      def _mean_cn(self):
+│ │          counts = self.solvation_data.groupby([FRAME, SOLUTE_IX, SOLVENT]).count()[SOLVENT_IX]
+│ │          cn_series = counts.groupby([SOLVENT, FRAME]).sum() / (
+│ │                  self.n_solutes * self.n_frames
+│ │ @@ -119,14 +126,31 @@
+│ │          type_fractions = (type_fractions
+│ │                           .reset_index(ATOM_TYPE)
+│ │                           .astype({ATOM_TYPE: str})
+│ │                           .set_index(ATOM_TYPE, append=True)
+│ │                           )
+│ │          return type_fractions[type_fractions[FRACTION] > tol]
+│ │  
+│ │ +    def _calculate_coordination_vs_random(self):
+│ │ +        """
+│ │ +        Calculate the coordination number relative to random coordination.
+│ │ +
+│ │ +        Values higher than 1 imply a higher coordination than expected from
+│ │ +        random distribution of solvents. Values lower than 1 imply a lower
+│ │ +        coordination than expected from random distribution of solvents.
+│ │ +        """
+│ │ +        average_shell_size = sum(self.coordination_numbers.values())
+│ │ +        total_solvents = sum(self.solvent_counts.values())
+│ │ +        coordination_vs_random = {}
+│ │ +        for solvent, count in self.solvent_counts.items():
+│ │ +            random = count * average_shell_size / total_solvents
+│ │ +            vs_random = self.coordination_numbers[solvent] / random
+│ │ +            coordination_vs_random[solvent] = vs_random
+│ │ +        return coordination_vs_random
+│ │ +
+│ │      @property
+│ │      def coordination_numbers(self):
+│ │          """
+│ │          A dictionary where keys are residue names (str) and values are the
+│ │          mean coordination number of that residue (float).
+│ │          """
+│ │          return self._cn_dict
+│ │ @@ -141,7 +165,17 @@
+│ │      @property
+│ │      def coordinating_atoms(self):
+│ │          """
+│ │          Fraction of each atom_type participating in solvation, calculated for each solvent.
+│ │          """
+│ │          return self._coordinating_atoms
+│ │  
+│ │ +    @property
+│ │ +    def coordination_vs_random(self):
+│ │ +        """
+│ │ +        Coordination number relative to random coordination.
+│ │ +
+│ │ +        Values higher than 1 imply a higher coordination than expected from
+│ │ +        random distribution of solvents. Values lower than 1 imply a lower
+│ │ +        coordination than expected from random distribution of solvents.
+│ │ +        """
+│ │ +        return self._coordination_vs_random
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/networking.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/networking.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/pairing.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/pairing.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/plotting.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/plotting.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -86,14 +86,99 @@
+│ │          title="Fraction of Solvents in Shells of Different Sizes",
+│ │          template="plotly_white",
+│ │      )
+│ │      fig.update_xaxes(type="category")
+│ │      return fig
+│ │  
+│ │  
+│ │ +def plot_co_occurrence(speciation, colorscale=None):
+│ │ +    """
+│ │ +    Plot the co-occurrence matrix of the solute using Plotly.
+│ │ +
+│ │ +    Co-occurrence represents the extent to which solvents occur with eachother
+│ │ +    relative to random. Values higher than 1 mean that solvents occur together
+│ │ +    more often than random and values lower than 1 mean solvents occur together
+│ │ +    less often than random. "Random" is calculated based on the total number of
+│ │ +    solvents participating in solvation, it ignores solvents in the diluent.
+│ │ +
+│ │ +    Args
+│ │ +    ----
+│ │ +    speciation: Speciation | Solution
+│ │ +    colorscale : any valid argument to Plotly colorscale.
+│ │ +
+│ │ +    Returns
+│ │ +    -------
+│ │ +    fig : plotly.graph_objs.Figure
+│ │ +    """
+│ │ +    if isinstance(speciation, Solute):
+│ │ +        if not hasattr(speciation, "speciation"):
+│ │ +            raise ValueError(f"Solute speciation analysis class must be instantiated.")
+│ │ +        speciation = speciation.speciation
+│ │ +
+│ │ +    solvent_names = speciation.speciation_data.columns.values
+│ │ +
+│ │ +    if colorscale:
+│ │ +        colorscale = colorscale
+│ │ +    else:
+│ │ +        min_val = speciation.solvent_co_occurrence.min().min()
+│ │ +        max_val = speciation.solvent_co_occurrence.max().max()
+│ │ +        range_val = max_val - min_val
+│ │ +
+│ │ +        colorscale = [
+│ │ +            [0, 'rgb(67,147,195)'],
+│ │ +            [(1 - min_val) / range_val, "white"],
+│ │ +            [1, 'rgb(214,96,77)']
+│ │ +        ]
+│ │ +
+│ │ +    # Create a heatmap trace with text annotations
+│ │ +    trace = go.Heatmap(
+│ │ +        x=solvent_names,
+│ │ +        y=solvent_names[::-1],  # Reverse the order of the y-axis labels
+│ │ +        z=speciation.solvent_co_occurrence.values,  # Keep the data in the original order
+│ │ +        text=speciation.solvent_co_occurrence.round(2).to_numpy(dtype=str),
+│ │ +        # Keep the text annotations in the original order
+│ │ +        hoverinfo="none",
+│ │ +        colorscale=colorscale
+│ │ +    )
+│ │ +
+│ │ +    # Update layout to display tick labels and text annotations
+│ │ +    layout = go.Layout(
+│ │ +        title="Solvent Co-Occurrence Matrix",
+│ │ +        xaxis=dict(
+│ │ +            tickmode='array',
+│ │ +            tickvals=list(range(len(solvent_names))),
+│ │ +            ticktext=solvent_names,
+│ │ +            tickangle=-30,
+│ │ +            side='top'
+│ │ +        ),
+│ │ +        yaxis=dict(
+│ │ +            tickmode='array',
+│ │ +            tickvals=list(range(len(solvent_names))),
+│ │ +            ticktext=solvent_names,
+│ │ +            autorange='reversed'
+│ │ +        ),
+│ │ +        margin=dict(l=60, r=60, b=60, t=100, pad=4),
+│ │ +        annotations=[
+│ │ +            dict(
+│ │ +                x=i,
+│ │ +                y=j,
+│ │ +                text=str(round(speciation.solvent_co_occurrence.iloc[j, i], 2)),
+│ │ +                font=dict(size=14, color="black"),
+│ │ +                showarrow=False
+│ │ +            )
+│ │ +            for i in range(len(solvent_names))
+│ │ +            for j in range(len(solvent_names))
+│ │ +        ],
+│ │ +    )
+│ │ +
+│ │ +    # Create and return the Figure object
+│ │ +    fig = go.Figure(data=[trace], layout=layout)
+│ │ +    return fig
+│ │ +
+│ │ +
+│ │  def compare_solvent_dicts(
+│ │      property_dict,
+│ │      rename_solvent_dict,
+│ │      solvents_to_plot,
+│ │      legend_label,
+│ │      x_axis="solvent",
+│ │      series=False,
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/rdf_parser.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/rdf_parser.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/residence.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/residence.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/solute.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/solute.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/speciation.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/speciation.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -16,16 +16,14 @@
+│ │  
+│ │  While ``speciation`` can be used in isolation, it is meant to be used
+│ │  as an attribute of the Solute class. This makes instantiating it and calculating the
+│ │  solvation data a non-issue.
+│ │  """
+│ │  
+│ │  import pandas as pd
+│ │ -import numpy as np
+│ │ -import matplotlib.pyplot as plt
+│ │  
+│ │  from solvation_analysis._column_names import *
+│ │  
+│ │  
+│ │  class Speciation:
+│ │      """
+│ │      Calculate the solvation shells of every solute.
+│ │ @@ -189,54 +187,14 @@
+│ │          # make DataFrames
+│ │          actual_df = pd.concat(actual_solvents_list, axis=1)
+│ │          expected_df = pd.concat(expected_solvents_list, axis=1)
+│ │          # calculate correlation matrix
+│ │          correlation = actual_df / expected_df
+│ │          return correlation
+│ │  
+│ │ -    def plot_co_occurrence(self):
+│ │ -        """
+│ │ -        Plot the co-occurrence matrix of the solute.
+│ │ -
+│ │ -        Co-occurrence as a heatmap with numerical values in addition to colors.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        fig : matplotlib.Figure
+│ │ -        ax : matplotlib.Axes
+│ │ -
+│ │ -        """
+│ │ -        # TODO: rewrite in plotly and move this to the plotting module
+│ │ -        solvent_names = self.speciation_data.columns.values
+│ │ -        fig, ax = plt.subplots()
+│ │ -        im = ax.imshow(self.solvent_co_occurrence)
+│ │ -        # We want to show all ticks...
+│ │ -        ax.set_xticks(np.arange(len(solvent_names)))
+│ │ -        ax.set_yticks(np.arange(len(solvent_names)))
+│ │ -        # ... and label them with the respective list entries
+│ │ -        ax.set_xticklabels(solvent_names, fontsize=14)
+│ │ -        ax.set_yticklabels(solvent_names, fontsize=14)
+│ │ -        # Let the horizontal axes labeling appear on top.
+│ │ -        ax.tick_params(top=True, bottom=False,
+│ │ -                       labeltop=True, labelbottom=False, )
+│ │ -        # Rotate the tick labels and set their alignment.
+│ │ -        plt.setp(ax.get_xticklabels(), rotation=-30, ha="right",
+│ │ -                 rotation_mode="anchor")
+│ │ -        # Loop over data dimensions and create text annotations.
+│ │ -        for i in range(len(solvent_names)):
+│ │ -            for j in range(len(solvent_names)):
+│ │ -                ax.text(j, i, round(self.solvent_co_occurrence.iloc[i, j], 2),
+│ │ -                        horizontalalignment="center",
+│ │ -                        verticalalignment="center",
+│ │ -                        color="black",
+│ │ -                        fontsize=14,
+│ │ -                        )
+│ │ -        fig.tight_layout()
+│ │ -        return fig, ax
+│ │ -
+│ │      @property
+│ │      def speciation_data(self):
+│ │          """
+│ │          A dataframe containing the speciation of every solute at
+│ │          every trajectory frame. Indexed by frame and solute numbers.
+│ │          Columns are the solvent molecules and values are the number
+│ │          of solvent in the shell.
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/conftest.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/.DS_Store
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/README.md
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/README.md
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec.data
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec.data
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_unwrap.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_unwrap.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_wrap.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_fec_short_wrap.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/bn_fec_data/bn_solv_df_large.csv
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/bn_fec_data/bn_solv_df_large.csv
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/ea_fec_data/ea_fec.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/ea_fec_data/ea_fec.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/ea_fec_data/ea_fec.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/ea_fec_data/ea_fec.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/ea/topology.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/ea/topology.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/ea/trajectory_equil.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/ea/trajectory_equil.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/eaf/topology.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/eaf/topology.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/eaf/trajectory_equil.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/eaf/trajectory_equil.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/fea/topology.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/fea/topology.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/fea/trajectory_equil.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/fea/trajectory_equil.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/feaf/topology.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/feaf/topology.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/eax_data/feaf/trajectory_equil.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/eax_data/feaf/trajectory_equil.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/iba_data/isobutyric_acid.dcd
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/iba_data/isobutyric_acid.dcd
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/iba_data/isobutyric_acid.pdb
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/iba_data/isobutyric_acid.pdb
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_O_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_fec_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_bn_N_vs_pf6_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_N_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_bn_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_F_vs_pf6_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_N_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_bn_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_fec_O_vs_pf6_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_N_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_bn_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_O_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_non_solvated/rdf_pf6_F_vs_fec_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_N_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_bn_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_O_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_fec_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_pf6_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_easy/rdf_universe_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_N_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_bn_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_O_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_fec_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_F_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_pf6_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_bins.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_bins.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_data.npz
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/data/rdf_vs_li_hard/rdf_universe_all_data.npz
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/datafiles.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/datafiles.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_coordination.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_coordination.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -35,19 +35,20 @@
+│ │  def test_coordinating_atoms(name, atom_type, fraction, solvation_data, run_solute):
+│ │      atoms = run_solute.u.atoms
+│ │      coordination = Coordination(solvation_data, 10, 49, atoms)
+│ │      calculated_fraction = coordination._coordinating_atoms.loc[(name, atom_type)]
+│ │      np.testing.assert_allclose(fraction, calculated_fraction, atol=0.05)
+│ │  
+│ │  
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ +@pytest.mark.parametrize(
+│ │ +    "name, coord",
+│ │ +    [
+│ │ +        ("fec", 0.15),
+│ │ +        ("bn", 1.64),
+│ │ +        ("pf6", 0.38),
+│ │ +    ],
+│ │ +)
+│ │ +def test_coordination_relative_to_random(name, coord, solvation_data, run_solute):
+│ │ +    atoms = run_solute.u.atoms
+│ │ +    coordination = Coordination(solvation_data, 10, 49, run_solute.solvent_counts, atoms)
+│ │ +    np.testing.assert_allclose(coord, coordination.coordination_vs_random[name], atol=0.05)
+│ │ +    assert len(coordination.coordination_numbers_by_frame) == 3
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_networking.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_networking.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_pairing.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_pairing.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_plotting.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_plotting.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,22 +1,24 @@
+│ │  import pytest
+│ │  from solvation_analysis.plotting import (
+│ │      plot_network_size_histogram,
+│ │      plot_shell_composition_by_size,
+│ │ +    plot_co_occurrence,
+│ │      _compare_function_generator,
+│ │      compare_free_solvents,
+│ │      compare_pairing,
+│ │      compare_coordination_numbers,
+│ │      compare_residence_times_cutoff,
+│ │      compare_residence_times_fit,
+│ │      compare_diluent,
+│ │  )
+│ │  
+│ │  from solvation_analysis.networking import Networking
+│ │  from solvation_analysis.residence import Residence
+│ │ +from solvation_analysis.speciation import Speciation
+│ │  
+│ │  
+│ │  def test_plot_network_size_histogram(run_solute):
+│ │      run_solute.networking = Networking.from_solute(run_solute, 'pf6')
+│ │      plot_network_size_histogram(run_solute)
+│ │      plot_network_size_histogram(run_solute.networking)
+│ │      assert True
+│ │ @@ -307,7 +309,14 @@
+│ │          x_label="Species",
+│ │          y_label="Pairing",
+│ │          title="Bar Graph of Solvent Pairing",
+│ │      )
+│ │      assert len(fig.data) == 4
+│ │      for bar in fig.data:
+│ │          assert set(bar.x) == {"pf6", "fec", "EAx"}
+│ │ +    # fig.show()
+│ │ +
+│ │ +
+│ │ +def test_plot_co_occurrence(solvation_data):
+│ │ +    speciation = Speciation(solvation_data, 10, 49)
+│ │ +    fig = plot_co_occurrence(speciation)
+│ │ +    # fig.show()
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_rdf_parser.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_rdf_parser.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_residence.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_residence.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_selection.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_selection.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_solute.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_solute.py
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/solvation_analysis/tests/test_speciation.py
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis/tests/test_speciation.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -48,13 +48,7 @@
+│ │      ],
+│ │  )
+│ │  def test_speciation_correlation(solvent_one, solvent_two, correlation, solvation_data):
+│ │      speciation = Speciation(solvation_data, 10, 49)
+│ │      df = speciation.solvent_co_occurrence
+│ │      np.testing.assert_allclose(df[solvent_one][solvent_two], correlation, atol=0.05)
+│ │  
+│ │ -
+│ │ -def test_plot_correlation(solvation_data):
+│ │ -    speciation = Speciation(solvation_data, 10, 49)
+│ │ -    fig, ax = speciation.plot_co_occurrence()
+│ │ -    # fig.show()
+│ │ -
+│ │   --- solvation-analysis-0.3.1/solvation_analysis.egg-info/PKG-INFO
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: solvation-analysis
+│ │ -Version: 0.3.1
+│ │ +Version: 0.3.2
+│ │  Summary: A toolkit to analyze solvation structure in molecular dynamics trajectories.
+│ │  Author: Orion Cohen
+│ │  Author-email: Orion Cohen <orioncohen@berkeley.edu>
+│ │  Maintainer-email: Orion Cohen <orioncohen@berkeley.edu>, Hugo MacDermott-Opeskin <hugomacdermott@gmail.com>
+│ │  License:                         GNU GENERAL PUBLIC LICENSE 
+│ │                                    Version 3, 29 June 2007
+│ │   --- solvation-analysis-0.3.1/solvation_analysis.egg-info/SOURCES.txt
+│ ├── +++ solvation-analysis-0.3.2/solvation_analysis.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- solvation-analysis-0.3.1/versioneer.py
+│ ├── +++ solvation-analysis-0.3.2/versioneer.py
+│ │┄ Files identical despite different names

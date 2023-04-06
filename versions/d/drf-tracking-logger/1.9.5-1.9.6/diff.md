@@ -1,0 +1,154 @@
+# Comparing `tmp/drf_tracking_logger-1.9.5-py3-none-any.whl.zip` & `tmp/drf_tracking_logger-1.9.6-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 6657 bytes, number of entries: 8
++Zip file size: 6612 bytes, number of entries: 8
+ -rw-rw-r--  2.0 unx        0 b- defN 19-Nov-11 13:15 drf_tracking_logger/__init__.py
+--rw-r--r--  2.0 unx     8700 b- defN 20-Jun-13 06:58 drf_tracking_logger/base_mixins.py
+--rw-rw-r--  2.0 unx      606 b- defN 19-Nov-11 13:29 drf_tracking_logger/mixins.py
+--rw-rw-r--  2.0 unx     1067 b- defN 23-Jan-23 16:37 drf_tracking_logger-1.9.5.dist-info/LICENSE
+--rw-rw-r--  2.0 unx     3027 b- defN 23-Jan-23 16:37 drf_tracking_logger-1.9.5.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Jan-23 16:37 drf_tracking_logger-1.9.5.dist-info/WHEEL
+--rw-rw-r--  2.0 unx       20 b- defN 23-Jan-23 16:37 drf_tracking_logger-1.9.5.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      707 b- defN 23-Jan-23 16:37 drf_tracking_logger-1.9.5.dist-info/RECORD
+-8 files, 14219 bytes uncompressed, 5401 bytes compressed:  62.0%
++-rw-r--r--  2.0 unx     8652 b- defN 23-Apr-06 16:09 drf_tracking_logger/base_mixins.py
++-rw-r--r--  2.0 unx      557 b- defN 23-Apr-06 16:14 drf_tracking_logger/mixins.py
++-rw-r--r--  2.0 unx     1067 b- defN 23-Apr-06 16:15 drf_tracking_logger-1.9.6.dist-info/LICENSE
++-rw-r--r--  2.0 unx     3027 b- defN 23-Apr-06 16:15 drf_tracking_logger-1.9.6.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 16:15 drf_tracking_logger-1.9.6.dist-info/WHEEL
++-rw-rw-r--  2.0 unx       20 b- defN 23-Apr-06 16:15 drf_tracking_logger-1.9.6.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      707 b- defN 23-Apr-06 16:15 drf_tracking_logger-1.9.6.dist-info/RECORD
++8 files, 14122 bytes uncompressed, 5356 bytes compressed:  62.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -3,23 +3,23 @@
+ 
+ Filename: drf_tracking_logger/base_mixins.py
+ Comment: 
+ 
+ Filename: drf_tracking_logger/mixins.py
+ Comment: 
+ 
+-Filename: drf_tracking_logger-1.9.5.dist-info/LICENSE
++Filename: drf_tracking_logger-1.9.6.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: drf_tracking_logger-1.9.5.dist-info/METADATA
++Filename: drf_tracking_logger-1.9.6.dist-info/METADATA
+ Comment: 
+ 
+-Filename: drf_tracking_logger-1.9.5.dist-info/WHEEL
++Filename: drf_tracking_logger-1.9.6.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: drf_tracking_logger-1.9.5.dist-info/top_level.txt
++Filename: drf_tracking_logger-1.9.6.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: drf_tracking_logger-1.9.5.dist-info/RECORD
++Filename: drf_tracking_logger-1.9.6.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## drf_tracking_logger/base_mixins.py
+
+```diff
+@@ -112,16 +112,14 @@
+                 logger.exception('Logging API call raise exception!')
+ 
+         return response
+ 
+     def handle_log(self):
+         """
+         Hook to define what happens with the log.
+-
+-        Defaults on saving the data on the db.
+         """
+         raise NotImplementedError
+ 
+     def _get_ip_address(self, request):
+         """Get the remote ip address the request was generated from. """
+         ipaddr = request.META.get("HTTP_X_FORWARDED_FOR", None)
+         if ipaddr:
+```
+
+## drf_tracking_logger/mixins.py
+
+```diff
+@@ -5,18 +5,16 @@
+ logger = logging.getLogger(os.getenv('TRACKING_LOGGER'))
+ 
+ 
+ class LoggingMixin(BaseLoggingMixin):
+     def handle_log(self):
+         """
+         Hook to define what happens with the log.
+-
+-        Defaults on saving the data on the db.
+         """
+-        if self.log['status_code'] == 200:
++        if self.log['status_code'] < 400:
+             logger.info(self.log)
+         else:
+             logger.error(self.log)
+ 
+ 
+ class LoggingErrorsMixin(LoggingMixin):
+     """
+```
+
+## Comparing `drf_tracking_logger-1.9.5.dist-info/LICENSE` & `drf_tracking_logger-1.9.6.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `drf_tracking_logger-1.9.5.dist-info/METADATA` & `drf_tracking_logger-1.9.6.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: drf-tracking-logger
+-Version: 1.9.5
++Version: 1.9.6
+ Summary: Log DRF requests on specified logger
+ Home-page: https://github.com/singhravi1/drf-tracking-logger
+ Author: Ravi Singh
+ Author-email: ravi.singh@startxlabs.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Operating System :: OS Independent
+ Description-Content-Type: text/markdown
+```
+
+## Comparing `drf_tracking_logger-1.9.5.dist-info/RECORD` & `drf_tracking_logger-1.9.6.dist-info/RECORD`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+ drf_tracking_logger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-drf_tracking_logger/base_mixins.py,sha256=p_4-LzMidcKZJ4w9Xqinn6QT7fB5mv2Yd4wJ_GJUtP8,8700
+-drf_tracking_logger/mixins.py,sha256=lW5y1b0GaUatkWPyVWyCV5NtqVpWI-BOOV20ThTRZF8,606
+-drf_tracking_logger-1.9.5.dist-info/LICENSE,sha256=f7TdHJyKdzpdfR5ysJ70nJQRIPHxMl7jHOFT753KQ7M,1067
+-drf_tracking_logger-1.9.5.dist-info/METADATA,sha256=sP5rAu9aT0V44TLPemAmzDVVN0FDZNP_Idwo4BEw7pY,3027
+-drf_tracking_logger-1.9.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-drf_tracking_logger-1.9.5.dist-info/top_level.txt,sha256=OVWTnx9lMCbvqTqjxSTwcVowwlBkyGuedYfnhHbr3fU,20
+-drf_tracking_logger-1.9.5.dist-info/RECORD,,
++drf_tracking_logger/base_mixins.py,sha256=TBlxfDl5C8_VkESu4xhoMhX4SMDphcObewnoS64989w,8652
++drf_tracking_logger/mixins.py,sha256=t3MH9LaI_NyQC4zlgpZZIsasEIvqASxCYrWzOzuABII,557
++drf_tracking_logger-1.9.6.dist-info/LICENSE,sha256=f7TdHJyKdzpdfR5ysJ70nJQRIPHxMl7jHOFT753KQ7M,1067
++drf_tracking_logger-1.9.6.dist-info/METADATA,sha256=HK4cH0S1KKMaxXP7Ohf16vqGF_IUMl2Z3KDKJoKarX4,3027
++drf_tracking_logger-1.9.6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++drf_tracking_logger-1.9.6.dist-info/top_level.txt,sha256=OVWTnx9lMCbvqTqjxSTwcVowwlBkyGuedYfnhHbr3fU,20
++drf_tracking_logger-1.9.6.dist-info/RECORD,,
+```
+
