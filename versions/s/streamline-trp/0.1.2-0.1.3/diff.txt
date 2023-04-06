@@ -1,0 +1,906 @@
+--- tmp/streamline_trp-0.1.2.tar.gz
++++ tmp/streamline_trp-0.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "streamline_trp-0.1.2.tar", max compression
+│ +gzip compressed data, was "streamline_trp-0.1.3.tar", max compression
+│   --- streamline_trp-0.1.2.tar
+├── +++ streamline_trp-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,68 +1,75 @@
+│ │ --rw-r--r--   0        0        0    10142 2023-03-17 18:20:00.409140 streamline_trp-0.1.2/LICENSE
+│ │ --rw-r--r--   0        0        0     2384 2023-03-17 18:20:00.409292 streamline_trp-0.1.2/README.md
+│ │ --rw-r--r--   0        0        0      352 2023-04-06 21:20:34.836696 streamline_trp-0.1.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0      111 2023-03-17 18:20:00.432328 streamline_trp-0.1.2/src-python/.style.yapf
+│ │ --rw-r--r--   0        0        0        0 2023-03-17 18:20:00.432439 streamline_trp-0.1.2/src-python/.yapfignore
+│ │ --rw-r--r--   0        0        0    10299 2023-03-17 18:20:00.432705 streamline_trp-0.1.2/src-python/README.md
+│ │ --rw-r--r--   0        0        0     3320 2023-03-17 18:20:00.432973 streamline_trp-0.1.2/src-python/a2i/README.md
+│ │ --rw-r--r--   0        0        0      109 2023-03-17 18:20:00.433116 streamline_trp-0.1.2/src-python/a2i/__init__.py
+│ │ --rw-r--r--   0        0        0   136560 2023-03-17 18:20:00.433874 streamline_trp-0.1.2/src-python/a2i/a2i-response.json
+│ │ --rw-r--r--   0        0        0     7188 2023-03-17 18:20:00.434100 streamline_trp-0.1.2/src-python/a2i/a2irp.py
+│ │ --rw-r--r--   0        0        0     1355 2023-03-17 18:20:00.434257 streamline_trp-0.1.2/src-python/a2i/a2irptest.py
+│ │ --rwxr-xr-x   0        0        0     1696 2023-03-17 18:20:00.434451 streamline_trp-0.1.2/src-python/bin/amazon-textract-pipeline
+│ │ --rw-r--r--   0        0        0        7 2023-03-17 18:20:00.434627 streamline_trp-0.1.2/src-python/extras/dev.txt
+│ │ --rw-r--r--   0        0        0      467 2023-03-17 18:20:00.434789 streamline_trp-0.1.2/src-python/setup.cfg
+│ │ --rw-r--r--   0        0        0     1950 2023-03-17 18:20:00.434905 streamline_trp-0.1.2/src-python/setup.py
+│ │ --rw-r--r--   0        0        0   487699 2023-03-17 18:20:00.436858 streamline_trp-0.1.2/src-python/tests/data/180-degree-roation.json
+│ │ --rw-r--r--   0        0        0   997174 2023-03-17 18:20:00.446648 streamline_trp-0.1.2/src-python/tests/data/all_features_with_floating_title_header.json
+│ │ --rw-r--r--   0        0        0   158398 2023-03-17 18:20:00.447057 streamline_trp-0.1.2/src-python/tests/data/employment-application.json
+│ │ --rw-r--r--   0        0        0   359047 2023-03-17 18:20:00.448928 streamline_trp-0.1.2/src-python/tests/data/gib.json
+│ │ --rw-r--r--   0        0        0   263699 2023-03-17 18:20:00.450496 streamline_trp-0.1.2/src-python/tests/data/gib1.json
+│ │ --rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.451354 streamline_trp-0.1.2/src-python/tests/data/gib_10_degrees.json
+│ │ --rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.452342 streamline_trp-0.1.2/src-python/tests/data/gib__10_degrees.json
+│ │ --rw-r--r--   0        0        0   155889 2023-03-17 18:20:00.453178 streamline_trp-0.1.2/src-python/tests/data/gib__15_degrees.json
+│ │ --rw-r--r--   0        0        0   165128 2023-03-17 18:20:00.453954 streamline_trp-0.1.2/src-python/tests/data/gib__180_degrees.json
+│ │ --rw-r--r--   0        0        0   144206 2023-03-17 18:20:00.454733 streamline_trp-0.1.2/src-python/tests/data/gib__25_degrees.json
+│ │ --rw-r--r--   0        0        0   162677 2023-03-17 18:20:00.455545 streamline_trp-0.1.2/src-python/tests/data/gib__270_degrees.json
+│ │ --rw-r--r--   0        0        0   157929 2023-03-17 18:20:00.456286 streamline_trp-0.1.2/src-python/tests/data/gib__90_degrees.json
+│ │ --rw-r--r--   0        0        0   164235 2023-03-17 18:20:00.457149 streamline_trp-0.1.2/src-python/tests/data/gib__minus_10_degrees.json
+│ │ --rw-r--r--   0        0        0   602412 2023-03-17 18:20:00.459657 streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_table_merge.json
+│ │ --rw-r--r--   0        0        0   257271 2023-03-17 18:20:00.460834 streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_tables.json
+│ │ --rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.461305 streamline_trp-0.1.2/src-python/tests/data/gib_multi_tables_multi_page_sample.json
+│ │ --rw-r--r--   0        0        0   805976 2023-03-17 18:20:00.462288 streamline_trp-0.1.2/src-python/tests/data/in-table-footer.json
+│ │ --rw-r--r--   0        0        0   244517 2023-03-17 18:20:00.463197 streamline_trp-0.1.2/src-python/tests/data/in-table-title.json
+│ │ --rw-r--r--   0        0        0  1653784 2023-03-17 18:20:00.465824 streamline_trp-0.1.2/src-python/tests/data/lending-doc-output.json
+│ │ --rw-r--r--   0        0        0    45693 2023-03-17 18:20:00.466215 streamline_trp-0.1.2/src-python/tests/data/lending-package-no-signature.json
+│ │ --rw-r--r--   0        0        0   256534 2023-03-17 18:20:00.467446 streamline_trp-0.1.2/src-python/tests/data/multi-page-forms-samples-2-page.json
+│ │ --rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.467958 streamline_trp-0.1.2/src-python/tests/data/multi-tables-multi-page-sample.json
+│ │ --rw-r--r--   0        0        0   336672 2023-03-17 18:20:00.468664 streamline_trp-0.1.2/src-python/tests/data/patient_intake_form_sample.json
+│ │ --rw-r--r--   0        0        0   631429 2023-03-17 18:20:00.472547 streamline_trp-0.1.2/src-python/tests/data/paystub_with_signature.json
+│ │ --rw-r--r--   0        0        0   411216 2023-03-17 18:20:00.474475 streamline_trp-0.1.2/src-python/tests/data/queries_sample.json
+│ │ --rw-r--r--   0        0        0   186485 2023-03-17 18:20:00.475154 streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_and_merged_cells.json
+│ │ --rw-r--r--   0        0        0   471384 2023-03-17 18:20:00.477328 streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_out_of_order_cells.json
+│ │ --rw-r--r--   0        0        0   276147 2023-03-17 18:20:00.478786 streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample1.json
+│ │ --rw-r--r--   0        0        0   287678 2023-03-17 18:20:00.479298 streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample2.json
+│ │ --rw-r--r--   0        0        0     5022 2023-03-17 18:20:00.479473 streamline_trp-0.1.2/src-python/tests/data/test-trp2-analyzeid_sample_multi_page.json
+│ │ --rw-r--r--   0        0        0     6523 2023-03-17 18:20:00.479637 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1.json
+│ │ --rw-r--r--   0        0        0   138932 2023-03-17 18:20:00.481085 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1_with_OCR.json
+│ │ --rw-r--r--   0        0        0       90 2023-03-17 18:20:00.481230 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample2.json
+│ │ --rw-r--r--   0        0        0   160326 2023-03-17 18:20:00.482007 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample1.json
+│ │ --rw-r--r--   0        0        0    57770 2023-03-17 18:20:00.482330 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample2.json
+│ │ --rw-r--r--   0        0        0    95331 2023-03-17 18:20:00.482686 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample3.json
+│ │ --rw-r--r--   0        0        0   137121 2023-03-17 18:20:00.482986 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample4.json
+│ │ --rw-r--r--   0        0        0   186483 2023-03-17 18:20:00.483584 streamline_trp-0.1.2/src-python/tests/data/textract-new-tables-api.json
+│ │ --rw-r--r--   0        0        0   142156 2023-03-17 18:20:00.483950 streamline_trp-0.1.2/src-python/tests/test-response.json
+│ │ --rw-r--r--   0        0        0     1970 2023-03-17 18:20:00.484208 streamline_trp-0.1.2/src-python/tests/test_base_trp2.py
+│ │ --rw-r--r--   0        0        0     5466 2023-03-17 18:20:00.484359 streamline_trp-0.1.2/src-python/tests/test_trp.py
+│ │ --rw-r--r--   0        0        0    37316 2023-03-17 18:20:00.484530 streamline_trp-0.1.2/src-python/tests/test_trp2.py
+│ │ --rw-r--r--   0        0        0     2668 2023-03-17 18:20:00.484674 streamline_trp-0.1.2/src-python/tests/test_trp2_analyzeid.py
+│ │ --rw-r--r--   0        0        0     1041 2023-03-17 18:20:00.484808 streamline_trp-0.1.2/src-python/tests/test_trp2_expense.py
+│ │ --rw-r--r--   0        0        0      786 2023-03-17 18:20:00.484928 streamline_trp-0.1.2/src-python/tests/test_trp2_lending.py
+│ │ --rw-r--r--   0        0        0    20527 2023-03-17 18:20:00.485275 streamline_trp-0.1.2/src-python/trp/__init__.py
+│ │ --rw-r--r--   0        0        0     6239 2023-03-17 18:20:00.485515 streamline_trp-0.1.2/src-python/trp/t_pipeline.py
+│ │ --rw-r--r--   0        0        0     5162 2023-03-17 18:20:00.485679 streamline_trp-0.1.2/src-python/trp/t_tables.py
+│ │ --rw-r--r--   0        0        0    38970 2023-04-06 21:01:51.032924 streamline_trp-0.1.2/src-python/trp/trp2.py
+│ │ --rw-r--r--   0        0        0     7760 2023-04-06 20:57:51.510628 streamline_trp-0.1.2/src-python/trp/trp2_analyzeid.py
+│ │ --rw-r--r--   0        0        0    14321 2023-04-06 20:57:51.511146 streamline_trp-0.1.2/src-python/trp/trp2_expense.py
+│ │ --rw-r--r--   0        0        0     8225 2023-04-06 20:57:51.511745 streamline_trp-0.1.2/src-python/trp/trp2_lending.py
+│ │ --rw-r--r--   0        0        0     2912 1970-01-01 00:00:00.000000 streamline_trp-0.1.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    10142 2023-03-17 18:20:00.409140 streamline_trp-0.1.3/LICENSE
+│ │ +-rw-r--r--   0        0        0     2384 2023-03-17 18:20:00.409292 streamline_trp-0.1.3/README.md
+│ │ +-rw-r--r--   0        0        0      352 2023-04-06 21:32:41.439484 streamline_trp-0.1.3/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      111 2023-03-17 18:20:00.432328 streamline_trp-0.1.3/src-python/.style.yapf
+│ │ +-rw-r--r--   0        0        0        0 2023-03-17 18:20:00.432439 streamline_trp-0.1.3/src-python/.yapfignore
+│ │ +-rw-r--r--   0        0        0    10299 2023-03-17 18:20:00.432705 streamline_trp-0.1.3/src-python/README.md
+│ │ +-rw-r--r--   0        0        0     3320 2023-03-17 18:20:00.432973 streamline_trp-0.1.3/src-python/a2i/README.md
+│ │ +-rw-r--r--   0        0        0      109 2023-04-06 21:22:22.239450 streamline_trp-0.1.3/src-python/a2i/__init__.py
+│ │ +-rw-r--r--   0        0        0   136560 2023-03-17 18:20:00.433874 streamline_trp-0.1.3/src-python/a2i/a2i-response.json
+│ │ +-rw-r--r--   0        0        0     7188 2023-03-17 18:20:00.434100 streamline_trp-0.1.3/src-python/a2i/a2irp.py
+│ │ +-rw-r--r--   0        0        0     1355 2023-03-17 18:20:00.434257 streamline_trp-0.1.3/src-python/a2i/a2irptest.py
+│ │ +-rwxr-xr-x   0        0        0     1696 2023-03-17 18:20:00.434451 streamline_trp-0.1.3/src-python/bin/amazon-textract-pipeline
+│ │ +-rw-r--r--   0        0        0    25767 2023-03-18 21:18:38.031244 streamline_trp-0.1.3/src-python/dist/streamline_trp-0.1.0-py3-none-any.whl
+│ │ +-rw-r--r--   0        0        0    25597 2023-03-18 21:18:37.987679 streamline_trp-0.1.3/src-python/dist/streamline_trp-0.1.0.tar.gz
+│ │ +-rw-r--r--   0        0        0    25766 2023-03-18 21:19:23.543250 streamline_trp-0.1.3/src-python/dist/streamline_trp-0.1.1-py3-none-any.whl
+│ │ +-rw-r--r--   0        0        0    25602 2023-03-18 21:19:23.499935 streamline_trp-0.1.3/src-python/dist/streamline_trp-0.1.1.tar.gz
+│ │ +-rw-r--r--   0        0        0        7 2023-03-17 18:20:00.434627 streamline_trp-0.1.3/src-python/extras/dev.txt
+│ │ +-rw-r--r--   0        0        0      467 2023-04-06 21:22:22.239907 streamline_trp-0.1.3/src-python/setup.cfg
+│ │ +-rw-r--r--   0        0        0     1950 2023-04-06 21:22:22.240255 streamline_trp-0.1.3/src-python/setup.py
+│ │ +-rw-r--r--   0        0        0   487699 2023-03-17 18:20:00.436858 streamline_trp-0.1.3/src-python/tests/data/180-degree-roation.json
+│ │ +-rw-r--r--   0        0        0   274499 2023-04-06 21:22:22.241560 streamline_trp-0.1.3/src-python/tests/data/2023-Q2-table-model-sample.json
+│ │ +-rw-r--r--   0        0        0   997174 2023-03-17 18:20:00.446648 streamline_trp-0.1.3/src-python/tests/data/all_features_with_floating_title_header.json
+│ │ +-rw-r--r--   0        0        0   158398 2023-03-17 18:20:00.447057 streamline_trp-0.1.3/src-python/tests/data/employment-application.json
+│ │ +-rw-r--r--   0        0        0   359047 2023-03-17 18:20:00.448928 streamline_trp-0.1.3/src-python/tests/data/gib.json
+│ │ +-rw-r--r--   0        0        0   263699 2023-03-17 18:20:00.450496 streamline_trp-0.1.3/src-python/tests/data/gib1.json
+│ │ +-rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.451354 streamline_trp-0.1.3/src-python/tests/data/gib_10_degrees.json
+│ │ +-rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.452342 streamline_trp-0.1.3/src-python/tests/data/gib__10_degrees.json
+│ │ +-rw-r--r--   0        0        0   155889 2023-03-17 18:20:00.453178 streamline_trp-0.1.3/src-python/tests/data/gib__15_degrees.json
+│ │ +-rw-r--r--   0        0        0   165128 2023-03-17 18:20:00.453954 streamline_trp-0.1.3/src-python/tests/data/gib__180_degrees.json
+│ │ +-rw-r--r--   0        0        0   144206 2023-03-17 18:20:00.454733 streamline_trp-0.1.3/src-python/tests/data/gib__25_degrees.json
+│ │ +-rw-r--r--   0        0        0   162677 2023-03-17 18:20:00.455545 streamline_trp-0.1.3/src-python/tests/data/gib__270_degrees.json
+│ │ +-rw-r--r--   0        0        0   157929 2023-03-17 18:20:00.456286 streamline_trp-0.1.3/src-python/tests/data/gib__90_degrees.json
+│ │ +-rw-r--r--   0        0        0   164235 2023-03-17 18:20:00.457149 streamline_trp-0.1.3/src-python/tests/data/gib__minus_10_degrees.json
+│ │ +-rw-r--r--   0        0        0   602412 2023-03-17 18:20:00.459657 streamline_trp-0.1.3/src-python/tests/data/gib_multi_page_table_merge.json
+│ │ +-rw-r--r--   0        0        0   257271 2023-03-17 18:20:00.460834 streamline_trp-0.1.3/src-python/tests/data/gib_multi_page_tables.json
+│ │ +-rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.461305 streamline_trp-0.1.3/src-python/tests/data/gib_multi_tables_multi_page_sample.json
+│ │ +-rw-r--r--   0        0        0   805976 2023-03-17 18:20:00.462288 streamline_trp-0.1.3/src-python/tests/data/in-table-footer.json
+│ │ +-rw-r--r--   0        0        0   244517 2023-03-17 18:20:00.463197 streamline_trp-0.1.3/src-python/tests/data/in-table-title.json
+│ │ +-rw-r--r--   0        0        0  1653784 2023-03-17 18:20:00.465824 streamline_trp-0.1.3/src-python/tests/data/lending-doc-output.json
+│ │ +-rw-r--r--   0        0        0    45693 2023-03-17 18:20:00.466215 streamline_trp-0.1.3/src-python/tests/data/lending-package-no-signature.json
+│ │ +-rw-r--r--   0        0        0   256534 2023-03-17 18:20:00.467446 streamline_trp-0.1.3/src-python/tests/data/multi-page-forms-samples-2-page.json
+│ │ +-rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.467958 streamline_trp-0.1.3/src-python/tests/data/multi-tables-multi-page-sample.json
+│ │ +-rw-r--r--   0        0        0   336672 2023-03-17 18:20:00.468664 streamline_trp-0.1.3/src-python/tests/data/patient_intake_form_sample.json
+│ │ +-rw-r--r--   0        0        0   631429 2023-03-17 18:20:00.472547 streamline_trp-0.1.3/src-python/tests/data/paystub_with_signature.json
+│ │ +-rw-r--r--   0        0        0   411216 2023-03-17 18:20:00.474475 streamline_trp-0.1.3/src-python/tests/data/queries_sample.json
+│ │ +-rw-r--r--   0        0        0   902193 2023-04-06 21:22:22.247282 streamline_trp-0.1.3/src-python/tests/data/request_for_verification_of_employment.json
+│ │ +-rw-r--r--   0        0        0 36350978 2023-04-06 21:22:22.421604 streamline_trp-0.1.3/src-python/tests/data/table-performance-pretty.json
+│ │ +-rw-r--r--   0        0        0   186485 2023-03-17 18:20:00.475154 streamline_trp-0.1.3/src-python/tests/data/tables_with_headers_and_merged_cells.json
+│ │ +-rw-r--r--   0        0        0   471384 2023-03-17 18:20:00.477328 streamline_trp-0.1.3/src-python/tests/data/tables_with_headers_out_of_order_cells.json
+│ │ +-rw-r--r--   0        0        0   276147 2023-03-17 18:20:00.478786 streamline_trp-0.1.3/src-python/tests/data/tables_with_merged_cells_sample1.json
+│ │ +-rw-r--r--   0        0        0   287678 2023-03-17 18:20:00.479298 streamline_trp-0.1.3/src-python/tests/data/tables_with_merged_cells_sample2.json
+│ │ +-rw-r--r--   0        0        0     5022 2023-03-17 18:20:00.479473 streamline_trp-0.1.3/src-python/tests/data/test-trp2-analyzeid_sample_multi_page.json
+│ │ +-rw-r--r--   0        0        0     6523 2023-03-17 18:20:00.479637 streamline_trp-0.1.3/src-python/tests/data/test-trp2_analyzeid_sample1.json
+│ │ +-rw-r--r--   0        0        0   138932 2023-03-17 18:20:00.481085 streamline_trp-0.1.3/src-python/tests/data/test-trp2_analyzeid_sample1_with_OCR.json
+│ │ +-rw-r--r--   0        0        0       90 2023-03-17 18:20:00.481230 streamline_trp-0.1.3/src-python/tests/data/test-trp2_analyzeid_sample2.json
+│ │ +-rw-r--r--   0        0        0   160326 2023-03-17 18:20:00.482007 streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample1.json
+│ │ +-rw-r--r--   0        0        0    57770 2023-03-17 18:20:00.482330 streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample2.json
+│ │ +-rw-r--r--   0        0        0    95331 2023-03-17 18:20:00.482686 streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample3.json
+│ │ +-rw-r--r--   0        0        0   137121 2023-03-17 18:20:00.482986 streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample4.json
+│ │ +-rw-r--r--   0        0        0   186483 2023-03-17 18:20:00.483584 streamline_trp-0.1.3/src-python/tests/data/textract-new-tables-api.json
+│ │ +-rw-r--r--   0        0        0   142156 2023-03-17 18:20:00.483950 streamline_trp-0.1.3/src-python/tests/test-response.json
+│ │ +-rw-r--r--   0        0        0     1970 2023-03-17 18:20:00.484208 streamline_trp-0.1.3/src-python/tests/test_base_trp2.py
+│ │ +-rw-r--r--   0        0        0     6108 2023-04-06 21:22:22.422351 streamline_trp-0.1.3/src-python/tests/test_trp.py
+│ │ +-rw-r--r--   0        0        0    42476 2023-04-06 21:22:22.422795 streamline_trp-0.1.3/src-python/tests/test_trp2.py
+│ │ +-rw-r--r--   0        0        0     2668 2023-03-17 18:20:00.484674 streamline_trp-0.1.3/src-python/tests/test_trp2_analyzeid.py
+│ │ +-rw-r--r--   0        0        0     1041 2023-03-17 18:20:00.484808 streamline_trp-0.1.3/src-python/tests/test_trp2_expense.py
+│ │ +-rw-r--r--   0        0        0      786 2023-03-17 18:20:00.484928 streamline_trp-0.1.3/src-python/tests/test_trp2_lending.py
+│ │ +-rw-r--r--   0        0        0    20527 2023-04-06 21:22:22.423277 streamline_trp-0.1.3/src-python/trp/__init__.py
+│ │ +-rw-r--r--   0        0        0     9009 2023-04-06 21:22:22.423616 streamline_trp-0.1.3/src-python/trp/t_pipeline.py
+│ │ +-rw-r--r--   0        0        0     4899 2023-04-06 21:22:22.423974 streamline_trp-0.1.3/src-python/trp/t_tables.py
+│ │ +-rw-r--r--   0        0        0    39145 2023-04-06 21:22:50.162433 streamline_trp-0.1.3/src-python/trp/trp2.py
+│ │ +-rw-r--r--   0        0        0     7760 2023-04-06 20:57:51.510628 streamline_trp-0.1.3/src-python/trp/trp2_analyzeid.py
+│ │ +-rw-r--r--   0        0        0    14321 2023-04-06 20:57:51.511146 streamline_trp-0.1.3/src-python/trp/trp2_expense.py
+│ │ +-rw-r--r--   0        0        0     8225 2023-04-06 20:57:51.511745 streamline_trp-0.1.3/src-python/trp/trp2_lending.py
+│ │ +-rw-r--r--   0        0        0     2912 1970-01-01 00:00:00.000000 streamline_trp-0.1.3/PKG-INFO
+│ │   --- streamline_trp-0.1.2/LICENSE
+│ ├── +++ streamline_trp-0.1.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/README.md
+│ ├── +++ streamline_trp-0.1.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/README.md
+│ ├── +++ streamline_trp-0.1.3/src-python/README.md
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/a2i/README.md
+│ ├── +++ streamline_trp-0.1.3/src-python/a2i/README.md
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/a2i/a2i-response.json
+│ ├── +++ streamline_trp-0.1.3/src-python/a2i/a2i-response.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/a2i/a2irp.py
+│ ├── +++ streamline_trp-0.1.3/src-python/a2i/a2irp.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/a2i/a2irptest.py
+│ ├── +++ streamline_trp-0.1.3/src-python/a2i/a2irptest.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/bin/amazon-textract-pipeline
+│ ├── +++ streamline_trp-0.1.3/src-python/bin/amazon-textract-pipeline
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/setup.py
+│ ├── +++ streamline_trp-0.1.3/src-python/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -24,15 +24,15 @@
+│ │      os.system('python3 setup.py sdist bdist_wheel')
+│ │      os.system('twine check dist/*')
+│ │      os.system('twine upload --repository pypi dist/*')
+│ │      sys.exit()
+│ │  
+│ │  setup(name='amazon-textract-response-parser',
+│ │        packages=['trp', 'a2i'],
+│ │ -      version='0.1.42',
+│ │ +      version='0.1.44',
+│ │        description='Easily parse JSON returned by Amazon Textract.',
+│ │        install_requires=requirements,
+│ │        scripts=['bin/amazon-textract-pipeline'],
+│ │        long_description_content_type='text/markdown',
+│ │        long_description=read('README.md'),
+│ │        author='Amazon Rekognition Textract Demoes',
+│ │        author_email='rekognition-textract-demos@amazon.com',
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/180-degree-roation.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/180-degree-roation.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/all_features_with_floating_title_header.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/all_features_with_floating_title_header.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/employment-application.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/employment-application.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib1.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib1.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib_10_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib_10_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__10_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__10_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__15_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__15_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__180_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__180_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__25_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__25_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__270_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__270_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__90_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__90_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib__minus_10_degrees.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib__minus_10_degrees.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_table_merge.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib_multi_page_table_merge.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_tables.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib_multi_page_tables.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/gib_multi_tables_multi_page_sample.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/gib_multi_tables_multi_page_sample.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/in-table-footer.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/in-table-footer.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/in-table-title.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/in-table-title.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/lending-doc-output.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/lending-doc-output.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/lending-package-no-signature.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/lending-package-no-signature.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/multi-page-forms-samples-2-page.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/multi-page-forms-samples-2-page.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/multi-tables-multi-page-sample.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/multi-tables-multi-page-sample.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/patient_intake_form_sample.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/patient_intake_form_sample.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/paystub_with_signature.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/paystub_with_signature.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/queries_sample.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/queries_sample.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_and_merged_cells.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/tables_with_headers_and_merged_cells.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_out_of_order_cells.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/tables_with_headers_out_of_order_cells.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample1.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/tables_with_merged_cells_sample1.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample2.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/tables_with_merged_cells_sample2.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test-trp2-analyzeid_sample_multi_page.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test-trp2-analyzeid_sample_multi_page.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test-trp2_analyzeid_sample1.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1_with_OCR.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test-trp2_analyzeid_sample1_with_OCR.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample1.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample1.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample2.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample2.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample3.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample3.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample4.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/test_trp2_expense_sample4.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/data/textract-new-tables-api.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/data/textract-new-tables-api.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/test-response.json
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test-response.json
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_base_trp2.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_base_trp2.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_trp.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_trp.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -163,7 +163,28 @@
+│ │      j = json.load(f)
+│ │      doc = Document(j)
+│ │      assert doc
+│ │      f = open(os.path.join(p, "data", "all_features_with_floating_title_header.json"))
+│ │      j = json.load(f)
+│ │      doc = Document(j)
+│ │      assert doc
+│ │ +
+│ │ +
+│ │ +def test_2023_q2_table_model(caplog):
+│ │ +    caplog.set_level(logging.DEBUG)
+│ │ +    p = os.path.dirname(os.path.realpath(__file__))
+│ │ +    f = open(os.path.join(p, "data", "in-table-title.json"))
+│ │ +    j = json.load(f)
+│ │ +    doc = Document(j)
+│ │ +    assert doc
+│ │ +    f = open(os.path.join(p, "data", "in-table-footer.json"))
+│ │ +    j = json.load(f)
+│ │ +    doc = Document(j)
+│ │ +    assert doc
+│ │ +    f = open(os.path.join(p, "data", "all_features_with_floating_title_header.json"))
+│ │ +    j = json.load(f)
+│ │ +    doc = Document(j)
+│ │ +    assert doc
+│ │ +    f = open(os.path.join(p, "data", "2023-Q2-table-model-sample.json"))
+│ │ +    j = json.load(f)
+│ │ +    doc = Document(j)
+│ │ +    assert doc
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_trp2.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_trp2.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,18 +1,20 @@
+│ │  from typing import List
+│ │ -from trp.t_pipeline import add_page_orientation, order_blocks_by_geo, pipeline_merge_tables, add_kv_ocr_confidence, add_orientation_to_blocks
+│ │ +from trp.t_pipeline import add_page_orientation, order_blocks_by_geo, order_blocks_by_geo_x_y, pipeline_merge_tables, add_kv_ocr_confidence, add_orientation_to_blocks
+│ │  from trp.t_tables import MergeOptions, HeaderFooterType
+│ │  import trp.trp2 as t2
+│ │ +import time
+│ │  import trp as t1
+│ │  import json
+│ │  import os
+│ │  import pytest
+│ │  from trp import Document
+│ │  from uuid import uuid4
+│ │  import logging
+│ │ +import re
+│ │  
+│ │  current_folder = os.path.dirname(os.path.realpath(__file__))
+│ │  
+│ │  
+│ │  def return_json_for_file(filename):
+│ │      with open(os.path.join(current_folder, filename)) as test_json:
+│ │          return json.load(test_json)
+│ │ @@ -59,14 +61,26 @@
+│ │      t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │      t_document = order_blocks_by_geo(t_document)
+│ │      doc = t1.Document(t2.TDocumentSchema().dump(t_document))
+│ │      assert "Page 1 - Value 1.1.1" == doc.pages[0].tables[0].rows[0].cells[0].text.strip()
+│ │      assert "Page 1 - Value 2.1.1" == doc.pages[0].tables[1].rows[0].cells[0].text.strip()
+│ │  
+│ │  
+│ │ +def test_tblock_order_blocks_by_geo_x_y():
+│ │ +    p = os.path.dirname(os.path.realpath(__file__))
+│ │ +    f = open(os.path.join(p, "data/gib.json"))
+│ │ +    j = json.load(f)
+│ │ +    t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │ +    new_order = order_blocks_by_geo_x_y(t_document)
+│ │ +    doc = t1.Document(t2.TDocumentSchema().dump(new_order))
+│ │ +    assert "Value 1.1.1" == doc.pages[0].tables[0].rows[0].cells[0].text.strip()
+│ │ +    assert "Value 2.1.1" == doc.pages[0].tables[1].rows[0].cells[0].text.strip()
+│ │ +    assert "Value 3.1.1" == doc.pages[0].tables[2].rows[0].cells[0].text.strip()
+│ │ +
+│ │ +
+│ │  def test_tblock():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      f = open(os.path.join(p, "data/gib.json"))
+│ │      j = json.load(f)
+│ │      t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │      new_order = order_blocks_by_geo(t_document)
+│ │      doc = t1.Document(t2.TDocumentSchema().dump(new_order))
+│ │ @@ -371,15 +385,15 @@
+│ │              assert False
+│ │  
+│ │  
+│ │  def test_block_id_map():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/employment-application.json")) as f:
+│ │          j = json.load(f)
+│ │ -        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ +        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.PAGE)) == 1
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.TABLE)) == 1
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.CELL)) == 20
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.LINE)) == 28
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.WORD)) == 63
+│ │          assert len(tdoc.block_id_map(t2.TextractBlockTypes.KEY_VALUE_SET)) == 8
+│ │          # test some random blocks in the main hashmap (all blocks included)
+│ │ @@ -392,15 +406,15 @@
+│ │          assert tdoc.block_id_map(t2.TextractBlockTypes.LINE)['5ff46696-e06e-4577-ac3f-32a1ffde3290'] == 21    #a line
+│ │  
+│ │  
+│ │  def test_block_map():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/employment-application.json")) as f:
+│ │          j = json.load(f)
+│ │ -        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ +        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.PAGE)) == 1
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.TABLE)) == 1
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.CELL)) == 20
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.LINE)) == 28
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.WORD)) == 63
+│ │          assert len(tdoc.block_map(t2.TextractBlockTypes.KEY_VALUE_SET)) == 8
+│ │          # test some random blocks in the main hashmap (all blocks included)
+│ │ @@ -416,36 +430,36 @@
+│ │              t2.TextractBlockTypes.LINE)['5ff46696-e06e-4577-ac3f-32a1ffde3290'] == tdoc.blocks[21]    #a line
+│ │  
+│ │  
+│ │  def test_find_block_by_id():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/employment-application.json")) as f:
+│ │          j = json.load(f)
+│ │ -        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ +        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          assert tdoc.find_block_by_id('7a2a9b0e-582b-4852-98bb-8e067e0b4703') == tdoc.blocks[103]
+│ │          assert tdoc.find_block_by_id('caa21fc2-834c-463e-a668-bb94722f3fe3') == tdoc.blocks[41]
+│ │          assert tdoc.find_block_by_id('foo-bar-baz') == None
+│ │  
+│ │  
+│ │  def test_get_block_by_id():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/employment-application.json")) as f:
+│ │          j = json.load(f)
+│ │ -        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ +        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          assert tdoc.get_block_by_id('7a2a9b0e-582b-4852-98bb-8e067e0b4703') == tdoc.blocks[103]
+│ │          assert tdoc.get_block_by_id('caa21fc2-834c-463e-a668-bb94722f3fe3') == tdoc.blocks[41]
+│ │          with pytest.raises(ValueError):
+│ │              tdoc.get_block_by_id('foo-bar-baz')
+│ │  
+│ │  
+│ │  def test_pages():
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/gib_multi_page_tables.json")) as f:
+│ │          j = json.load(f)
+│ │ -        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ +        tdoc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          pages_ids = [p.id for p in tdoc.pages]
+│ │          assert pages_ids == ["e8610e55-7a61-4bd0-a9ff-583a4dc69459", "5f146db3-4d4a-4add-8da1-e6828f1ce877"]
+│ │  
+│ │  
+│ │  def test_add_ids_to_relationships(caplog):
+│ │      tdocument = t2.TDocument()
+│ │      page_block = t2.TBlock(
+│ │ @@ -534,16 +548,15 @@
+│ │  
+│ │  
+│ │  def test_add_block():
+│ │      # add a block WITHOUT type
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      with open(os.path.join(p, "data/gib.json")) as f:
+│ │          j = json.load(f)
+│ │ -        t_document: t2.TDocument = t2.TDocumentSchema().load(j)
+│ │ -        page = t_document.pages[0]
+│ │ +        t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │          new_block_id = str(uuid4())
+│ │          new_block = t2.TBlock(id=new_block_id)
+│ │          t_document.add_block(new_block)
+│ │          assert t_document.block_id_map()[new_block_id] == len(t_document.blocks) - 1
+│ │          # add a block WITH type
+│ │          new_block_id = str(uuid4())
+│ │          new_block = t2.TBlock(id=new_block_id, block_type="WORD")
+│ │ @@ -761,21 +774,112 @@
+│ │      assert t_document
+│ │  
+│ │      f = open(os.path.join(p, "data", "all_features_with_floating_title_header.json"))
+│ │      j = json.load(f)
+│ │      t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │      assert t_document
+│ │  
+│ │ +    f = open(os.path.join(p, "data", "2023-Q2-table-model-sample.json"))
+│ │ +    j = json.load(f)
+│ │ +    t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │ +    assert t_document
+│ │ +
+│ │  
+│ │  def test_180_degree_orientation_page_and_based_on_words(caplog):
+│ │      caplog.set_level(logging.DEBUG)
+│ │      p = os.path.dirname(os.path.realpath(__file__))
+│ │      f = open(os.path.join(p, "data", "180-degree-roation.json"))
+│ │      j = json.load(f)
+│ │      t_document: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │      assert t_document
+│ │      t_document = add_page_orientation(t_document)
+│ │      # Check orientation based on words
+│ │      assert 180 == t_document.pages[0].custom['PageOrientationBasedOnWords']
+│ │      t_document = add_orientation_to_blocks(t_document)
+│ │      # Check PAGE rotation
+│ │      assert 179.94186486482977 == t_document.pages[0].custom['Orientation']
+│ │ +
+│ │ +
+│ │ +def test_large_json(caplog):
+│ │ +    caplog.set_level(logging.DEBUG)
+│ │ +    p = os.path.dirname(os.path.realpath(__file__))
+│ │ +    f = open(os.path.join(p, "data", "table-performance-pretty.json"))
+│ │ +    j = json.load(f)
+│ │ +    t_doc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │ +    assert t_doc
+│ │ +
+│ │ +
+│ │ +def test_process_tables_timing(caplog):
+│ │ +    fields = list()
+│ │ +    caplog.set_level(logging.DEBUG)
+│ │ +    p = os.path.dirname(os.path.realpath(__file__))
+│ │ +    f = open(os.path.join(p, "data", "table-performance-pretty.json"))
+│ │ +    j = json.load(f)
+│ │ +    t_doc: t2.TDocument = t2.TDocumentSchema().load(j)    #type: ignore
+│ │ +    assert t_doc
+│ │ +    ordered_doc = order_blocks_by_geo(t_doc)
+│ │ +    trp_doc = Document(t2.TDocumentSchema().dump(ordered_doc))
+│ │ +    page_num = 0
+│ │ +    table_index = 0
+│ │ +    for page in trp_doc.pages:
+│ │ +        page_num += 1
+│ │ +        for table in page.tables:
+│ │ +            try:
+│ │ +                table_data = []
+│ │ +                headers = table.get_header_field_names()    # New Table method to retrieve header column names
+│ │ +                if len(headers) > 0:    # Let's retain the only table with headers
+│ │ +                    merged_header = headers[0]
+│ │ +                    if len(headers) > 1:
+│ │ +                        for header in headers:
+│ │ +                            merged_header = [x if x == y else x + " " + y for x, y in zip(merged_header, header)]
+│ │ +                    merged_header = [re.sub(r'[^\w]+', '', x) for x in merged_header]
+│ │ +                    final_header = [[{
+│ │ +                        "displayName": " " if not x else x,
+│ │ +                        "key": " " if not ("".join(x.title().split())) else "".join(x.title().split())
+│ │ +                    } for x in merged_header]]
+│ │ +                    for _, row in enumerate(
+│ │ +                            table.rows_without_header):    # New Table attribute returning rows without headers
+│ │ +                        table_row = {}
+│ │ +                        for c, cell in enumerate(row.cells):
+│ │ +                            table_row[final_header[0][c].get("key")] = {
+│ │ +                                "name": final_header[0][c].get("key"),
+│ │ +                            # normal buter fieldformat
+│ │ +                                "value": [cell.mergedText],
+│ │ +                                "confidence": cell.confidence,
+│ │ +                                "page": page_num,
+│ │ +                                "coordinates": {
+│ │ +                                    "height": cell.geometry.boundingBox.height,
+│ │ +                                    "left": cell.geometry.boundingBox.left,
+│ │ +                                    "top": cell.geometry.boundingBox.top,
+│ │ +                                    "width": cell.geometry.boundingBox.width
+│ │ +                                } if cell.geometry else None
+│ │ +                            }    # New Cell attribute returning merged cells common va
+│ │ +                        table_data.append(table_row)
+│ │ +                    if len(table_data) > 0:
+│ │ +                        table_index += 1
+│ │ +                        fields.append({
+│ │ +                            "key": "table_" + str(table_index),
+│ │ +                            "value": json.dumps({
+│ │ +                                "headers": final_header,
+│ │ +                                "rows": table_data
+│ │ +                            }),
+│ │ +                            "confidence": table.confidence,
+│ │ +                            "page": page_num,
+│ │ +                            "coordinates": {
+│ │ +                                "height": table.geometry.boundingBox.height,
+│ │ +                                "left": table.geometry.boundingBox.left,
+│ │ +                                "top": table.geometry.boundingBox.top,
+│ │ +                                "width": table.geometry.boundingBox.width
+│ │ +                            } if table.geometry else None
+│ │ +                        })
+│ │ +            except:
+│ │ +                logging.error("Error parsing tabular data")
+│ │ +
+│ │ +
+│ │ +def test_tdoc_signature(caplog):
+│ │ +    caplog.set_level(logging.DEBUG)
+│ │ +    p = os.path.dirname(os.path.realpath(__file__))
+│ │ +    f = open(os.path.join(p, "data/request_for_verification_of_employment.json"))
+│ │ +    j = json.load(f)
+│ │ +    t_document: t2.TDocument = t2.TDocumentSchema().load(j)    # type: ignore
+│ │ +    page = t_document.pages[0]
+│ │ +    assert len(t_document.signatures(page=page)) == 3
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_trp2_analyzeid.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_trp2_analyzeid.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_trp2_expense.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_trp2_expense.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/tests/test_trp2_lending.py
+│ ├── +++ streamline_trp-0.1.3/src-python/tests/test_trp2_lending.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/trp/__init__.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  from typing import List
+│ │  from logging import NullHandler
+│ │  
+│ │  logging.getLogger(__name__).addHandler(NullHandler())
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │ -__version__ = '0.1.42'
+│ │ +__version__ = '0.1.44'
+│ │  
+│ │  ENTITY_TYPE_COLUMN_HEADER = "COLUMN_HEADER"
+│ │  ENTITY_TYPE_MERGED_CELL = "MERGED_CELL"
+│ │  
+│ │  
+│ │  class BaseBlock():
+│ │      def __init__(self, block, blockMap):
+│ │   --- streamline_trp-0.1.2/src-python/trp/t_pipeline.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/t_pipeline.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -18,16 +18,68 @@
+│ │          r = t_document.relationships_recursive(page)
+│ │          page_relationships = list(r) if r else list()
+│ │          page_blocks = sorted(page_relationships,
+│ │                               key=lambda b: b.geometry.bounding_box.top
+│ │                               if not b.text_type == "PAGE" and b.geometry and b.geometry.bounding_box else 1)
+│ │          new_order.extend(page_blocks)
+│ │      t_document.blocks = new_order
+│ │ +    t_document.__post_init__()
+│ │      return t_document
+│ │  
+│ │ +def order_blocks_by_geo_x_y(t_document: t2.TDocument) -> t2.TDocument:
+│ │ +    """
+│ │ +    Takes in a Textract JSON response and outputs a Textract JSON response schema which has the elements sorted by geometry x (left coordinate) and y-axis (top coordinate)
+│ │ +    """
+│ │ +    new_order: List[t2.TBlock] = list()
+│ │ +    for page in t_document.pages:
+│ │ +        new_order.append(page)
+│ │ +        r = t_document.relationships_recursive(page)
+│ │ +        rows = list()
+│ │ +        page_relationships = list(r) if r else list()
+│ │ +        # Sort all blocks by y-axis
+│ │ +        page_blocks_top = sorted(page_relationships,
+│ │ +                             key=lambda b: round(b.geometry.bounding_box.top, 3)
+│ │ +                             if not b.block_type == "PAGE" and b.geometry and b.geometry.bounding_box else 1)
+│ │ +        for b in page_blocks_top:
+│ │ +            # Check to see if current block is in existing virtual row
+│ │ +            row_found = False
+│ │ +            bbox_top = b.geometry.bounding_box.top
+│ │ +            bbox_bottom = b.geometry.bounding_box.top + b.geometry.bounding_box.height
+│ │ +            bbox_centre = b.geometry.bounding_box.top + b.geometry.bounding_box.height/2
+│ │ +            for row_list in rows:
+│ │ +                row = row_list[1]
+│ │ +                if row.block_type != b.block_type:
+│ │ +                    continue
+│ │ +                if row.entity_types is not None and row.entity_types != b.entity_types:
+│ │ +                    continue
+│ │ +                row_top = row.geometry.bounding_box.top
+│ │ +                row_bottom = row.geometry.bounding_box.top + row.geometry.bounding_box.height
+│ │ +                row_centre = row.geometry.bounding_box.top + row.geometry.bounding_box.height/2
+│ │ +                if((bbox_centre > row_top and bbox_centre < row_bottom) or (row_centre > bbox_top and row_centre < bbox_bottom)):
+│ │ +                    row_list.append(b)
+│ │ +                    row_found = True
+│ │ +                    break
+│ │ +            # Create a new virtual row if block was not placed in existing virtual rows
+│ │ +            if(row_found is False):
+│ │ +                rows.append([bbox_top, b])
+│ │ +        # sort rows by y-axis
+│ │ +        rows_ordered_top = sorted(rows,
+│ │ +                     key=lambda b: float(b[0]))
+│ │ +        # Order each row by x-axis and flatten
+│ │ +        page_blocks_ordered = list()
+│ │ +        for row_list in rows_ordered_top:
+│ │ +            row_list.pop(0)
+│ │ +            row_list_left = sorted(row_list,
+│ │ +                                 key=lambda b: b.geometry.bounding_box.left
+│ │ +                                 if not b.block_type == "PAGE" and b.geometry and b.geometry.bounding_box else 1)
+│ │ +            page_blocks_ordered.extend(row_list_left)
+│ │ +        new_order.extend(page_blocks_ordered)
+│ │ +    t_document.blocks = new_order
+│ │ +    t_document.__post_init__()
+│ │ +    return t_document
+│ │  
+│ │  def add_kv_ocr_confidence(t_document: t2.TDocument) -> t2.TDocument:
+│ │      """
+│ │      adds custom attribute to each KEY_VALUE_SET in the form of "Custom":{"OCRConfidence": {'mean': 98.2, 'min': 95.1}}
+│ │      If no CHILD relationships exist for a KEY or VALUE, no confidence score will be added.
+│ │      """
+│ │      for idx, page_block in enumerate(t_document.pages):
+│ │   --- streamline_trp-0.1.2/src-python/trp/t_tables.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/t_tables.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -93,44 +93,35 @@
+│ │      from trp.t_pipeline import order_blocks_by_geo
+│ │      ordered_doc = order_blocks_by_geo(t_doc)
+│ │      trp_doc = trp.Document(TDocumentSchema().dump(ordered_doc))
+│ │  
+│ │      for current_page in trp_doc.pages:
+│ │  
+│ │          if (page_compare_proc >= len(trp_doc.pages) - 1):
+│ │ -            # Reach last page
+│ │              break
+│ │          if len(current_page.tables) == 0:
+│ │ -            # No tables in current page
+│ │              page_compare_proc += 1
+│ │ -            continue
+│ │ +            break
+│ │          current_page_table = current_page.tables[len(current_page.tables) - 1]
+│ │          next_page = trp_doc.pages[page_compare_proc + 1]
+│ │          if len(next_page.tables) == 0:
+│ │ -            # No tables in next page
+│ │              page_compare_proc += 1
+│ │ -            continue
+│ │ +            break
+│ │          next_page_table = next_page.tables[0]
+│ │          result_1 = __validate_objects_between_tables(current_page, current_page_table, next_page, next_page_table,
+│ │                                                       header_footer_type)
+│ │          if (result_1):
+│ │ -            result_2_1 = __compare_table_column_numbers(
+│ │ -                current_page_table, next_page_table)
+│ │ -            result_2_2 = __compare_table_headers(
+│ │ -                current_page_table, next_page_table)
+│ │ +            result_2_1 = __compare_table_column_numbers(current_page_table, next_page_table)
+│ │ +            result_2_2 = __compare_table_headers(current_page_table, next_page_table)
+│ │              if (result_2_1 or result_2_2):
+│ │ -                result3 = __compare_table_dimensions(
+│ │ -                    current_page_table, next_page_table, accuracy_percentage)
+│ │ +                result3 = __compare_table_dimensions(current_page_table, next_page_table, accuracy_percentage)
+│ │                  if (result3):
+│ │                      table_ids_to_merge[next_page_table.id] = current_page_table.id
+│ │                      if (table_ids_merge_list):
+│ │                          if (any(merge_pairs[1] == current_page_table.id for merge_pairs in table_ids_merge_list)):
+│ │ -                            table_ids_merge_list[len(
+│ │ -                                table_ids_merge_list) - 1].append(next_page_table.id)
+│ │ +                            table_ids_merge_list[len(table_ids_merge_list) - 1].append(next_page_table.id)
+│ │                          else:
+│ │ -                            table_ids_merge_list.append(
+│ │ -                                [current_page_table.id, next_page_table.id])
+│ │ +                            table_ids_merge_list.append([current_page_table.id, next_page_table.id])
+│ │                      else:
+│ │ -                        table_ids_merge_list.append(
+│ │ -                            [current_page_table.id, next_page_table.id])
+│ │ +                        table_ids_merge_list.append([current_page_table.id, next_page_table.id])
+│ │          page_compare_proc += 1
+│ │      return table_ids_merge_list
+│ │   --- streamline_trp-0.1.2/src-python/trp/trp2.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/trp2.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -42,14 +42,15 @@
+│ │      CELL = auto()
+│ │      KEY_VALUE_SET = auto()
+│ │      PAGE = auto()
+│ │      SELECTION_ELEMENT = auto()
+│ │      QUERY = auto()
+│ │      QUERY_RESULT = auto()
+│ │      MERGED_CELL = auto()
+│ │ +    SIGNATURE = auto()
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class TextractEntityTypes(Enum):
+│ │      KEY = auto()
+│ │      VALUE = auto()
+│ │      COLUMN_HEADER = auto()
+│ │ @@ -452,14 +453,15 @@
+│ │      retry_attempts: int = field(default=None)  # type: ignore
+│ │      http_headers: THttpHeaders = field(default=None)  # type: ignore
+│ │  
+│ │  
+│ │  @dataclass(eq=True, init=True, repr=True)
+│ │  class TDocument():
+│ │      document_metadata: TDocumentMetadata = field(default=None)  # type: ignore
+│ │ +    # if blocks are changed, call __post_init__() to update the index
+│ │      blocks: List[TBlock] = field(default=None)  # type: ignore
+│ │      analyze_document_model_version: str = field(default=None)  # type: ignore
+│ │      detect_document_text_model_version: str = field(
+│ │          default=None)  # type: ignore
+│ │      status_message: str = field(default=None)  # type: ignore
+│ │      warnings: TWarnings = field(default=None)  # type: ignore
+│ │      job_status: str = field(default=None)  # type: ignore
+│ │ @@ -536,14 +538,15 @@
+│ │                  except KeyError:
+│ │                      self._block_id_maps[block.block_type] = dict()
+│ │                      self._block_id_maps[block.block_type][block.id] = len(
+│ │                          self.blocks) - 1
+│ │          if not page:
+│ │              page = self.pages[0]
+│ │          page.add_ids_to_relationships(ids=[block.id])
+│ │ +        self.__post_init__()
+│ │          self.relationships_recursive.cache_clear()
+│ │  
+│ │      @staticmethod
+│ │      def create_geometry_from_blocks(values: List[TBlock]) -> TGeometry:
+│ │          all_points = [p.geometry.bounding_box.points for p in values]
+│ │          all_points = [i for sublist in all_points for i in sublist]
+│ │          ymin = min([p.y for p in all_points])
+│ │ @@ -640,18 +643,19 @@
+│ │          '''Find a block by its ID. Returns None if not found'''
+│ │          idx = self.block_id_map().get(id, None)
+│ │          if idx:
+│ │              return self.blocks[idx]
+│ │          return None
+│ │  
+│ │      def get_block_by_id(self, id: str) -> TBlock:
+│ │ -        for b in self.blocks:
+│ │ -            if b.id == id:
+│ │ -                return b
+│ │ -        raise ValueError(f"no block for id: {id}")
+│ │ +        block = self.find_block_by_id(id=id)
+│ │ +        if block:
+│ │ +            return block
+│ │ +        else:
+│ │ +            raise ValueError(f"no block for id: {id}")
+│ │  
+│ │      # Sometimes Textract returns a block with an id in "Relationships" that is not present in the flattened list of blocks.
+│ │      # This is a Textract bug upstream of TRP workaround for that.
+│ │      # See "dd615b1f-dad5-487d-8702-8db7c16e8a9a" in "test-jamie-python.pdf" for org "spirals"
+│ │      def try_get_block_by_id(self, id: str) -> TBlock:
+│ │          try:
+│ │              return self.get_block_by_id(id)
+│ │ @@ -721,17 +725,17 @@
+│ │                  return list()
+│ │  
+│ │      def forms(self, page: TBlock = None) -> List[TBlock]:  # type: ignore
+│ │          return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.KEY_VALUE_SET)
+│ │  
+│ │      def keys(self, page: TBlock = None) -> List[TBlock]:  # type: ignore
+│ │          return [x for x in self.forms(page=page) if TextractEntityTypes.KEY.name in x.entity_types]
+│ │ -        # for key_entities in self.forms(page=page):
+│ │ -        #     if TextractEntityTypes.KEY.name in key_entities.entity_types:
+│ │ -        #         yield key_entities
+│ │ +
+│ │ +    def signatures(self, page: TBlock) -> List[TBlock]:
+│ │ +        return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.SIGNATURE)
+│ │  
+│ │      def queries(self, page: TBlock) -> List[TBlock]:
+│ │          return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.QUERY)
+│ │  
+│ │      def get_answers_for_query(self, block: TBlock) -> List[TBlock]:
+│ │          result_list: List[TBlock] = list()
+│ │          rels = block.get_relationships_for_type(relationship_type="ANSWER")
+│ │ @@ -790,20 +794,19 @@
+│ │              [x.selection_status for x in tblocks if x and x.selection_status])
+│ │          return return_value
+│ │  
+│ │      def lines(self, page: TBlock) -> List[TBlock]:
+│ │          return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.LINE)
+│ │  
+│ │      def delete_blocks(self, block_id: List[str]):
+│ │ -        for b in block_id:
+│ │ -            block = self.get_block_by_id(b)
+│ │ -            if block and self.blocks:
+│ │ -                self.blocks.remove(block)
+│ │ -            else:
+│ │ -                logger.warning(f"delete_blocks: did not get block for id: {b}")
+│ │ +        # delete from high index number to low index number to avoid deleting the wrong index after removing a lower valued one
+│ │ +        indexes = [self.block_id_map()[id] for id in block_id]
+│ │ +        indexes.sort(reverse=True)
+│ │ +        for index in indexes:
+│ │ +            del self.blocks[index]
+│ │          self.__post_init__()
+│ │          self.relationships_recursive.cache_clear()
+│ │  
+│ │      # combine any tables with overlapping ids
+│ │      def combine_tables(self, table_array_ids: List[List[str]]):
+│ │          head, *tail = table_array_ids
+│ │          if (len(tail) == 0):
+│ │   --- streamline_trp-0.1.2/src-python/trp/trp2_analyzeid.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/trp2_analyzeid.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/trp/trp2_expense.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/trp2_expense.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/src-python/trp/trp2_lending.py
+│ ├── +++ streamline_trp-0.1.3/src-python/trp/trp2_lending.py
+│ │┄ Files identical despite different names
+│ │   --- streamline_trp-0.1.2/PKG-INFO
+│ ├── +++ streamline_trp-0.1.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: streamline-trp
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: 
+│ │  Author: Doug Qian
+│ │  Author-email: douglas@spirals.so
+│ │  Requires-Python: >=3.8,<4.0
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
