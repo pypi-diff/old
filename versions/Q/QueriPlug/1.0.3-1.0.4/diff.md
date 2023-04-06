@@ -1,0 +1,98 @@
+# Comparing `tmp/QueriPlug-1.0.3.tar.gz` & `tmp/QueriPlug-1.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "QueriPlug-1.0.3.tar", last modified: Thu Apr  6 10:25:01 2023, max compression
++gzip compressed data, was "QueriPlug-1.0.4.tar", last modified: Thu Apr  6 11:27:22 2023, max compression
+```
+
+## Comparing `QueriPlug-1.0.3.tar` & `QueriPlug-1.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.343367 QueriPlug-1.0.3/
+--rw-rw-rw-   0        0        0    18429 2023-04-05 13:16:29.000000 QueriPlug-1.0.3/LICENSE
+--rw-rw-rw-   0        0        0      491 2023-04-06 10:25:01.342365 QueriPlug-1.0.3/PKG-INFO
+--rw-rw-rw-   0        0        0       39 2023-04-06 10:18:45.000000 QueriPlug-1.0.3/README.md
+--rw-rw-rw-   0        0        0      539 2023-04-06 10:20:22.000000 QueriPlug-1.0.3/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-06 10:25:01.344365 QueriPlug-1.0.3/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.312357 QueriPlug-1.0.3/src/
+-drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.321361 QueriPlug-1.0.3/src/QueriPlug/
+--rw-rw-rw-   0        0        0        0 2023-04-06 10:21:11.000000 QueriPlug-1.0.3/src/QueriPlug/__init__.py
+--rw-rw-rw-   0        0        0     2731 2023-04-06 10:20:01.000000 QueriPlug-1.0.3/src/QueriPlug/connections.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.340374 QueriPlug-1.0.3/src/QueriPlug.egg-info/
+--rw-rw-rw-   0        0        0      491 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      235 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       10 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 11:27:22.614517 QueriPlug-1.0.4/
++-rw-rw-rw-   0        0        0    18429 2023-04-05 13:16:29.000000 QueriPlug-1.0.4/LICENSE
++-rw-rw-rw-   0        0        0      491 2023-04-06 11:27:22.613528 QueriPlug-1.0.4/PKG-INFO
++-rw-rw-rw-   0        0        0       39 2023-04-06 10:18:45.000000 QueriPlug-1.0.4/README.md
++-rw-rw-rw-   0        0        0      539 2023-04-06 11:27:00.000000 QueriPlug-1.0.4/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 11:27:22.614517 QueriPlug-1.0.4/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 11:27:22.573811 QueriPlug-1.0.4/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 11:27:22.591513 QueriPlug-1.0.4/src/QueriPlug/
++-rw-rw-rw-   0        0        0        0 2023-04-06 10:21:11.000000 QueriPlug-1.0.4/src/QueriPlug/__init__.py
++-rw-rw-rw-   0        0        0     2834 2023-04-06 11:08:48.000000 QueriPlug-1.0.4/src/QueriPlug/connections.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:27:22.611527 QueriPlug-1.0.4/src/QueriPlug.egg-info/
++-rw-rw-rw-   0        0        0      491 2023-04-06 11:27:22.000000 QueriPlug-1.0.4/src/QueriPlug.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      235 2023-04-06 11:27:22.000000 QueriPlug-1.0.4/src/QueriPlug.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 11:27:22.000000 QueriPlug-1.0.4/src/QueriPlug.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       10 2023-04-06 11:27:22.000000 QueriPlug-1.0.4/src/QueriPlug.egg-info/top_level.txt
+```
+
+### Comparing `QueriPlug-1.0.3/LICENSE` & `QueriPlug-1.0.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `QueriPlug-1.0.3/pyproject.toml` & `QueriPlug-1.0.4/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "QueriPlug"
+-version = "1.0.3"
++version = "1.0.4"
+ authors = [
+   { name="Ivan Zabrodin" },
+ ]
+ description = "A SQLite3 wrapper for python"
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+```
+
+### Comparing `QueriPlug-1.0.3/src/QueriPlug/connections.py` & `QueriPlug-1.0.4/src/QueriPlug/connections.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -71,11 +71,14 @@
+         Deletes the entries with the specified IDs.
+         :param elements: The ID values to be deleted.
+         :return:
+         """
+         query = """DELETE FROM %s WHERE (ID) IN (%s);""" % (self.tablename, ','.join(str(elements)))
+         self._query(query)
+ 
+-    def addElement(self, *values) -> None:
++    def addElement(self, *values) -> bool:
++        if values in [i[1:] for i in self.getTable()]:
++            return False
+         query = """INSERT INTO %s (%s) VALUES %s""" % (
+             self.tablename, ','.join([col[0] for col in self.struct]), ''.join(str(values)))
+         self._query(query)
++        return True
+```
+

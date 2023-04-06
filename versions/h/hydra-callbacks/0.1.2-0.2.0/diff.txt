@@ -1,0 +1,809 @@
+--- tmp/hydra-callbacks-0.1.2.tar.gz
++++ tmp/hydra-callbacks-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "hydra-callbacks-0.1.2.tar", last modified: Thu Mar 23 20:22:11 2023, max compression
+│ +gzip compressed data, was "hydra-callbacks-0.2.0.tar", last modified: Thu Apr  6 11:22:50 2023, max compression
+│   --- hydra-callbacks-0.1.2.tar
+├── +++ hydra-callbacks-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,36 +1,39 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.861979 hydra-callbacks-0.1.2/.github/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.861979 hydra-callbacks-0.1.2/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3130 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/.github/workflows/master-cd.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1264 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/.github/workflows/tags-release.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1270 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/.github/workflows/test-ci.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       53 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/.gitignore
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1077 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2642 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1775 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2810 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.861979 hydra-callbacks-0.1.2/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/src/hydra_callbacks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      825 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/src/hydra_callbacks/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      160 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5795 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/src/hydra_callbacks/callbacks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1921 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/src/hydra_callbacks/logger.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2642 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      777 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      104 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       16 2023-03-23 20:22:11.000000 hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/tests/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 20:22:11.865980 hydra-callbacks-0.1.2/tests/test_app/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       97 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/config.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/dummy.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      295 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/dummy_app.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      581 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/gather_app.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      134 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/gather_app_conf.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      103 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/git_callback.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      164 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/latest_callback.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      119 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_app/runtime_perf.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7977 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_callbacks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      617 2023-03-23 20:21:38.000000 hydra-callbacks-0.1.2/tests/test_perflogger.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.666799 hydra-callbacks-0.2.0/.github/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.666799 hydra-callbacks-0.2.0/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3130 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/.github/workflows/master-cd.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1221 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/.github/workflows/tags-release.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1270 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/.github/workflows/test-ci.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/.gitignore
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1077 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3203 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2336 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2833 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.666799 hydra-callbacks-0.2.0/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.666799 hydra-callbacks-0.2.0/src/hydra_callbacks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      871 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/src/hydra_callbacks/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9206 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/src/hydra_callbacks/callbacks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1921 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/src/hydra_callbacks/logger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4715 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/src/hydra_callbacks/monitor.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3203 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      873 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      117 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       16 2023-04-06 11:22:50.000000 hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/tests/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:22:50.670799 hydra-callbacks-0.2.0/tests/test_app/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       97 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/config.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/dummy.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      295 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/dummy_app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      581 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/gather_app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      134 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/gather_app_conf.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      103 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/git_callback.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      164 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/latest_callback.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      514 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/perf_app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/ressource_monitor.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      119 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_app/runtime_perf.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11621 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_callbacks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      617 2023-04-06 11:21:46.000000 hydra-callbacks-0.2.0/tests/test_perflogger.py
+│ │   --- hydra-callbacks-0.1.2/.github/workflows/master-cd.yml
+│ ├── +++ hydra-callbacks-0.2.0/.github/workflows/master-cd.yml
+│ │┄ Files identical despite different names
+│ │   --- hydra-callbacks-0.1.2/.github/workflows/test-ci.yml
+│ ├── +++ hydra-callbacks-0.2.0/.github/workflows/test-ci.yml
+│ │┄ Files identical despite different names
+│ │   --- hydra-callbacks-0.1.2/LICENSE
+│ ├── +++ hydra-callbacks-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- hydra-callbacks-0.1.2/PKG-INFO
+│ ├── +++ hydra-callbacks-0.2.0/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hydra-callbacks
+│ │ -Version: 0.1.2
+│ │ +Version: 0.2.0
+│ │  Summary: A collection of usefull hydra callbacks for hydra configuration
+│ │  Author-email: Pierre-Antoine Comby <pierre-antoine.comby@cea.fr>
+│ │  Project-URL: Homepage, https://github.com/paquiteau/hydra-callbacks
+│ │  Project-URL: Bug Reports, https://github.com/paquiteau/hydra-callbacks/issues
+│ │  Project-URL: Sources, https://github.com/paquiteau/hydra-callbacks
+│ │  Keywords: hydra,configuration,callback
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │ @@ -20,22 +20,28 @@
+│ │  License-File: LICENSE
+│ │  
+│ │  # Hydra Callbacks 
+│ │  
+│ │  
+│ │  [![style](https://img.shields.io/badge/style-black-black)](https://github.com/psf/black)
+│ │  [![framework](https://img.shields.io/badge/framework-hydra-blue)](https://hydra.cc)
+│ │ -
+│ │ +[![codecov](https://codecov.io/gh/paquiteau/hydra-callbacks/branch/master/graph/badge.svg?token=NEV7SY24YB)](https://codecov.io/gh/paquiteau/hydra-callbacks)
+│ │ +[![CD](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml)
+│ │ +[![CI](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml)
+│ │ +[![Release](https://github.com/paquiteau/hydra-callbacks/releases/latest)](https://img.shields.io/github/v/release/paquiteau/hydra-callbacks)
+│ │  
+│ │  A collection of usefulls callbacks for the [https://hydra.cc/](hydra) configuration framework.
+│ │  
+│ │  
+│ │  ## Installation 
+│ │ +``` shell 
+│ │ +pip install hydra-callbacks
+│ │ +```
+│ │  
+│ │ -
+│ │ +Development version 
+│ │  ``` shell
+│ │  pip install git+https://github.com/paquiteau/hydra-callbacks
+│ │  ```
+│ │  
+│ │  ## Usage 
+│ │  
+│ │  In your hydra root config file add the following: 
+│ │ @@ -50,20 +56,20 @@
+│ │      latest_link:
+│ │        _target_: hydra_callbacks.LatestRunLink
+│ │  ```
+│ │  
+│ │  
+│ │  ## Available Callbacks 
+│ │  
+│ │ -| Name               | Action                                     | Author                                    |
+│ │ -|:-------------------|:-------------------------------------------|-------------------------------------------|
+│ │ -| GitInfo            | Check status of Repository                 | [paquiteau](https://github.com/paquiteau) |
+│ │ -| LatestRunLink      | Get a link to the latest run               | [paquiteau](https://github.com/paquiteau) |
+│ │ -| MultiRunGatherer   | Gather results json file in a single table | [paquiteau](https://github.com/paquiteau) |
+│ │ -| RuntimePerformance | Get Execution time for each run            | [paquiteau](https://github.com/paquiteau) |
+│ │ +| Name               | Action                                     |
+│ │ +|:-------------------|:-------------------------------------------|
+│ │ +| GitInfo            | Check status of Repository                 |
+│ │ +| LatestRunLink      | Get a link to the latest run               |
+│ │ +| MultiRunGatherer   | Gather results json file in a single table |
+│ │ +| RuntimePerformance | Get Execution time for each run            |
+│ │  
+│ │  And more to come ! 
+│ │  
+│ │  ## Also Available 
+│ │    
+│ │    - `PerfLogger` : A simple to use performance logger
+│ │    
+│ │ @@ -83,7 +89,10 @@
+│ │  
+│ │  ```
+│ │  
+│ │  ## You too, have cool Callbacks, or idea for one ? 
+│ │  
+│ │  Open a PR or an issue !
+│ │  
+│ │ +### Possible Ideas
+│ │ +- [In progress] A Ressource Monitoring Callback 
+│ │ +- A callback that summarize log from multiple runs
+│ │   --- hydra-callbacks-0.1.2/README.md
+│ ├── +++ hydra-callbacks-0.2.0/README.md
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,20 +1,26 @@
+│ │  # Hydra Callbacks 
+│ │  
+│ │  
+│ │  [![style](https://img.shields.io/badge/style-black-black)](https://github.com/psf/black)
+│ │  [![framework](https://img.shields.io/badge/framework-hydra-blue)](https://hydra.cc)
+│ │ -
+│ │ +[![codecov](https://codecov.io/gh/paquiteau/hydra-callbacks/branch/master/graph/badge.svg?token=NEV7SY24YB)](https://codecov.io/gh/paquiteau/hydra-callbacks)
+│ │ +[![CD](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml)
+│ │ +[![CI](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml)
+│ │ +[![Release](https://github.com/paquiteau/hydra-callbacks/releases/latest)](https://img.shields.io/github/v/release/paquiteau/hydra-callbacks)
+│ │  
+│ │  A collection of usefulls callbacks for the [https://hydra.cc/](hydra) configuration framework.
+│ │  
+│ │  
+│ │  ## Installation 
+│ │ +``` shell 
+│ │ +pip install hydra-callbacks
+│ │ +```
+│ │  
+│ │ -
+│ │ +Development version 
+│ │  ``` shell
+│ │  pip install git+https://github.com/paquiteau/hydra-callbacks
+│ │  ```
+│ │  
+│ │  ## Usage 
+│ │  
+│ │  In your hydra root config file add the following: 
+│ │ @@ -29,20 +35,20 @@
+│ │      latest_link:
+│ │        _target_: hydra_callbacks.LatestRunLink
+│ │  ```
+│ │  
+│ │  
+│ │  ## Available Callbacks 
+│ │  
+│ │ -| Name               | Action                                     | Author                                    |
+│ │ -|:-------------------|:-------------------------------------------|-------------------------------------------|
+│ │ -| GitInfo            | Check status of Repository                 | [paquiteau](https://github.com/paquiteau) |
+│ │ -| LatestRunLink      | Get a link to the latest run               | [paquiteau](https://github.com/paquiteau) |
+│ │ -| MultiRunGatherer   | Gather results json file in a single table | [paquiteau](https://github.com/paquiteau) |
+│ │ -| RuntimePerformance | Get Execution time for each run            | [paquiteau](https://github.com/paquiteau) |
+│ │ +| Name               | Action                                     |
+│ │ +|:-------------------|:-------------------------------------------|
+│ │ +| GitInfo            | Check status of Repository                 |
+│ │ +| LatestRunLink      | Get a link to the latest run               |
+│ │ +| MultiRunGatherer   | Gather results json file in a single table |
+│ │ +| RuntimePerformance | Get Execution time for each run            |
+│ │  
+│ │  And more to come ! 
+│ │  
+│ │  ## Also Available 
+│ │    
+│ │    - `PerfLogger` : A simple to use performance logger
+│ │    
+│ │ @@ -62,7 +68,10 @@
+│ │  
+│ │  ```
+│ │  
+│ │  ## You too, have cool Callbacks, or idea for one ? 
+│ │  
+│ │  Open a PR or an issue !
+│ │  
+│ │ +### Possible Ideas
+│ │ +- [In progress] A Ressource Monitoring Callback 
+│ │ +- A callback that summarize log from multiple runs
+│ │   --- hydra-callbacks-0.1.2/pyproject.toml
+│ ├── +++ hydra-callbacks-0.2.0/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -37,14 +37,16 @@
+│ │  ]
+│ │  
+│ │  
+│ │  dependencies = [
+│ │    "hydra-core",
+│ │    "GitPython",
+│ │    "pandas",
+│ │ +  "numpy",
+│ │ +  "psutil",
+│ │  ]
+│ │  
+│ │  [project.optional-dependencies]
+│ │  dev = ["black", "isort", "ruff"]
+│ │  test = ["pytest", "pytest-cov", "pytest-xdist", "pytest-sugar"]
+│ │  
+│ │  [project.urls]
+│ │   --- hydra-callbacks-0.1.2/src/hydra_callbacks/__init__.py
+│ ├── +++ hydra-callbacks-0.2.0/src/hydra_callbacks/__init__.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,32 +1,34 @@
+│ │  """A collection of Hydra callbacks for logging and performance analysis."""
+│ │  from .callbacks import (
+│ │      AnyRunCallback,
+│ │ -    RuntimePerformance,
+│ │      GitInfo,
+│ │ -    MultiRunGatherer,
+│ │      LatestRunLink,
+│ │ +    MultiRunGatherer,
+│ │ +    RessourceMonitor,
+│ │ +    RuntimePerformance,
+│ │  )
+│ │  from .logger import PerfLogger
+│ │  
+│ │ -
+│ │  __all__ = [
+│ │      "AnyRunCallback",
+│ │      "RuntimePerformance",
+│ │      "GitInfo",
+│ │      "MultiRunGatherer",
+│ │ +    "RessourceMonitor",
+│ │      "LatestRunLink",
+│ │      "PerfLogger",
+│ │  ]
+│ │  
+│ │  
+│ │  try:
+│ │      # -- Distribution mode --
+│ │      # import from _version.py generated by setuptools_scm during release
+│ │      from ._version import version as __version__
+│ │  except ImportError:  # pragma: no cover
+│ │      # -- Source mode --
+│ │      # use setuptools_scm to get the current version from src using git
+│ │ -    from setuptools_scm import get_version as _gv
+│ │      from os import path as _path
+│ │  
+│ │ +    from setuptools_scm import get_version as _gv
+│ │ +
+│ │      __version__ = _gv(_path.join(_path.dirname(__file__), _path.pardir))
+│ │   --- hydra-callbacks-0.1.2/src/hydra_callbacks/callbacks.py
+│ ├── +++ hydra-callbacks-0.2.0/src/hydra_callbacks/callbacks.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,20 +1,24 @@
+│ │  """Callback mechanism for hydra  jobs."""
+│ │ -import os
+│ │  import errno
+│ │ -import json
+│ │  import glob
+│ │ -
+│ │ +import json
+│ │  import logging
+│ │ +import os
+│ │ +import time
+│ │ +
+│ │ +import pandas as pd
+│ │ +from hydra.core.hydra_config import HydraConfig
+│ │ +from hydra.core.utils import JobReturn
+│ │  from hydra.experimental.callback import Callback
+│ │ +from hydra.types import TaskFunction
+│ │  from hydra.utils import to_absolute_path
+│ │  from omegaconf import DictConfig, open_dict
+│ │  
+│ │ -import pandas as pd
+│ │ -import time
+│ │ +from .monitor import ResourceMonitorService
+│ │  
+│ │  
+│ │  class AnyRunCallback(Callback):
+│ │      """Abstract Callback that execute on any run."""
+│ │  
+│ │      def on_run_start(self, config: DictConfig, **kwargs: None) -> None:
+│ │          """Execute before a single run."""
+│ │ @@ -172,7 +176,104 @@
+│ │              os.symlink(src, dest)
+│ │          except OSError as e:
+│ │              if e.errno == errno.EEXIST:
+│ │                  os.remove(dest)
+│ │                  os.symlink(src, dest)
+│ │              else:
+│ │                  raise e  # pragma: no cover
+│ │ +
+│ │ +
+│ │ +class RessourceMonitor(AnyRunCallback):
+│ │ +    """Callback that samples the cpu and memory usage during job execution.
+│ │ +
+│ │ +    The collected  data (cpu percent, memory usage) is written to a csv file.
+│ │ +
+│ │ +    TODO: Add GPU support.
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    enabled : bool
+│ │ +        if True, will log the total runtime.
+│ │ +    sample_interval : float or int
+│ │ +        The time interval at wat which to sample the process, in seconds.
+│ │ +    monitoring_file : str
+│ │ +        The file to write the monitoring data to.
+│ │ +    """
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        enabled: bool = True,
+│ │ +        sample_interval: float = 1,
+│ │ +        monitoring_file: str = "resource_monitoring.csv",
+│ │ +    ):
+│ │ +        self.enabled = enabled
+│ │ +        if not self.enabled:
+│ │ +            # don't do anything if not enabled
+│ │ +            self.on_job_start = lambda *args, **kwargs: None
+│ │ +            self.on_job_end = lambda *args, **kwargs: None
+│ │ +            self._on_anyrun_start = lambda *args, **kwargs: None
+│ │ +            self._on_anyrun_end = lambda *args, **kwargs: None
+│ │ +            return
+│ │ +
+│ │ +        self.sample_interval = sample_interval
+│ │ +        self.monitoring_file = monitoring_file
+│ │ +
+│ │ +    def on_run_start(self, config: DictConfig, **kwargs: None) -> None:
+│ │ +        """Execute after a single run."""
+│ │ +        self._on_anyrun_start(config.hydra.run.dir)
+│ │ +
+│ │ +    def on_multirun_start(self, config: DictConfig, **kwargs: None) -> None:
+│ │ +        """Execute after a multi run."""
+│ │ +        self._on_anyrun_start(config.hydra.sweep.dir)
+│ │ +
+│ │ +    def _on_anyrun_start(self, run_dir: str) -> None:
+│ │ +        """Configure the path for the monitoring file."""
+│ │ +        self.monitoring_file = os.path.join(
+│ │ +            to_absolute_path(run_dir), self.monitoring_file
+│ │ +        )
+│ │ +        self._monitor = {}
+│ │ +
+│ │ +    def _on_anyrun_end(self, config: DictConfig, **kwargs: None) -> None:
+│ │ +        """Run on any run end."""
+│ │ +        logging.getLogger("hydra").info(
+│ │ +            f"Writing monitoring data to {self.monitoring_file}"
+│ │ +        )
+│ │ +
+│ │ +    def on_job_start(
+│ │ +        self, config: DictConfig, *, task_function: TaskFunction, **kwargs: None
+│ │ +    ) -> None:
+│ │ +        """Execute before a single job."""
+│ │ +        job_full_id = self._get_job_info()
+│ │ +        self._monitor[job_full_id] = ResourceMonitorService(
+│ │ +            os.getpid(),
+│ │ +            interval=self.sample_interval,
+│ │ +            base_name=f"{job_full_id[0]},{job_full_id[1]}",
+│ │ +        )
+│ │ +        self._monitor[job_full_id].start()
+│ │ +
+│ │ +    def on_job_end(
+│ │ +        self,
+│ │ +        config: DictConfig,
+│ │ +        job_return: JobReturn,
+│ │ +        **kwargs: None,
+│ │ +    ) -> None:
+│ │ +        """Execute after a single job."""
+│ │ +        job_full_id = self._get_job_info()
+│ │ +        sampled_data = self._monitor[job_full_id].stop()
+│ │ +
+│ │ +        del self._monitor[job_full_id]
+│ │ +        sampled_data["prof_dict"]["job_name"] = job_full_id[0]
+│ │ +        sampled_data["prof_dict"]["job_id"] = job_full_id[1]
+│ │ +
+│ │ +        df = pd.DataFrame(sampled_data["prof_dict"])
+│ │ +        df.to_csv(
+│ │ +            self.monitoring_file,
+│ │ +            mode="a",
+│ │ +            header=not os.path.exists(self.monitoring_file),
+│ │ +        )
+│ │ +
+│ │ +    def _get_job_info(self) -> str:
+│ │ +        """Get the job id."""
+│ │ +        hconf = HydraConfig.get()
+│ │ +        name = hconf.job.name
+│ │ +        id = hconf.job.get("id", 0)
+│ │ +        return name, id
+│ │   --- hydra-callbacks-0.1.2/src/hydra_callbacks/logger.py
+│ ├── +++ hydra-callbacks-0.2.0/src/hydra_callbacks/logger.py
+│ │┄ Files identical despite different names
+│ │   --- hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/PKG-INFO
+│ ├── +++ hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hydra-callbacks
+│ │ -Version: 0.1.2
+│ │ +Version: 0.2.0
+│ │  Summary: A collection of usefull hydra callbacks for hydra configuration
+│ │  Author-email: Pierre-Antoine Comby <pierre-antoine.comby@cea.fr>
+│ │  Project-URL: Homepage, https://github.com/paquiteau/hydra-callbacks
+│ │  Project-URL: Bug Reports, https://github.com/paquiteau/hydra-callbacks/issues
+│ │  Project-URL: Sources, https://github.com/paquiteau/hydra-callbacks
+│ │  Keywords: hydra,configuration,callback
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │ @@ -20,22 +20,28 @@
+│ │  License-File: LICENSE
+│ │  
+│ │  # Hydra Callbacks 
+│ │  
+│ │  
+│ │  [![style](https://img.shields.io/badge/style-black-black)](https://github.com/psf/black)
+│ │  [![framework](https://img.shields.io/badge/framework-hydra-blue)](https://hydra.cc)
+│ │ -
+│ │ +[![codecov](https://codecov.io/gh/paquiteau/hydra-callbacks/branch/master/graph/badge.svg?token=NEV7SY24YB)](https://codecov.io/gh/paquiteau/hydra-callbacks)
+│ │ +[![CD](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/master-cd.yml)
+│ │ +[![CI](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml/badge.svg)](https://github.com/paquiteau/hydra-callbacks/actions/workflows/test-ci.yml)
+│ │ +[![Release](https://github.com/paquiteau/hydra-callbacks/releases/latest)](https://img.shields.io/github/v/release/paquiteau/hydra-callbacks)
+│ │  
+│ │  A collection of usefulls callbacks for the [https://hydra.cc/](hydra) configuration framework.
+│ │  
+│ │  
+│ │  ## Installation 
+│ │ +``` shell 
+│ │ +pip install hydra-callbacks
+│ │ +```
+│ │  
+│ │ -
+│ │ +Development version 
+│ │  ``` shell
+│ │  pip install git+https://github.com/paquiteau/hydra-callbacks
+│ │  ```
+│ │  
+│ │  ## Usage 
+│ │  
+│ │  In your hydra root config file add the following: 
+│ │ @@ -50,20 +56,20 @@
+│ │      latest_link:
+│ │        _target_: hydra_callbacks.LatestRunLink
+│ │  ```
+│ │  
+│ │  
+│ │  ## Available Callbacks 
+│ │  
+│ │ -| Name               | Action                                     | Author                                    |
+│ │ -|:-------------------|:-------------------------------------------|-------------------------------------------|
+│ │ -| GitInfo            | Check status of Repository                 | [paquiteau](https://github.com/paquiteau) |
+│ │ -| LatestRunLink      | Get a link to the latest run               | [paquiteau](https://github.com/paquiteau) |
+│ │ -| MultiRunGatherer   | Gather results json file in a single table | [paquiteau](https://github.com/paquiteau) |
+│ │ -| RuntimePerformance | Get Execution time for each run            | [paquiteau](https://github.com/paquiteau) |
+│ │ +| Name               | Action                                     |
+│ │ +|:-------------------|:-------------------------------------------|
+│ │ +| GitInfo            | Check status of Repository                 |
+│ │ +| LatestRunLink      | Get a link to the latest run               |
+│ │ +| MultiRunGatherer   | Gather results json file in a single table |
+│ │ +| RuntimePerformance | Get Execution time for each run            |
+│ │  
+│ │  And more to come ! 
+│ │  
+│ │  ## Also Available 
+│ │    
+│ │    - `PerfLogger` : A simple to use performance logger
+│ │    
+│ │ @@ -83,7 +89,10 @@
+│ │  
+│ │  ```
+│ │  
+│ │  ## You too, have cool Callbacks, or idea for one ? 
+│ │  
+│ │  Open a PR or an issue !
+│ │  
+│ │ +### Possible Ideas
+│ │ +- [In progress] A Ressource Monitoring Callback 
+│ │ +- A callback that summarize log from multiple runs
+│ │   --- hydra-callbacks-0.1.2/src/hydra_callbacks.egg-info/SOURCES.txt
+│ ├── +++ hydra-callbacks-0.2.0/src/hydra_callbacks.egg-info/SOURCES.txt
+│ │┄ Files 9% similar despite different names
+│ │ @@ -5,22 +5,25 @@
+│ │  .github/workflows/master-cd.yml
+│ │  .github/workflows/tags-release.yml
+│ │  .github/workflows/test-ci.yml
+│ │  src/hydra_callbacks/__init__.py
+│ │  src/hydra_callbacks/_version.py
+│ │  src/hydra_callbacks/callbacks.py
+│ │  src/hydra_callbacks/logger.py
+│ │ +src/hydra_callbacks/monitor.py
+│ │  src/hydra_callbacks.egg-info/PKG-INFO
+│ │  src/hydra_callbacks.egg-info/SOURCES.txt
+│ │  src/hydra_callbacks.egg-info/dependency_links.txt
+│ │  src/hydra_callbacks.egg-info/requires.txt
+│ │  src/hydra_callbacks.egg-info/top_level.txt
+│ │  tests/test_callbacks.py
+│ │  tests/test_perflogger.py
+│ │  tests/test_app/config.yaml
+│ │  tests/test_app/dummy.txt
+│ │  tests/test_app/dummy_app.py
+│ │  tests/test_app/gather_app.py
+│ │  tests/test_app/gather_app_conf.yaml
+│ │  tests/test_app/git_callback.yaml
+│ │  tests/test_app/latest_callback.yaml
+│ │ +tests/test_app/perf_app.py
+│ │ +tests/test_app/ressource_monitor.yaml
+│ │  tests/test_app/runtime_perf.yaml
+│ │   --- hydra-callbacks-0.1.2/tests/test_app/gather_app.py
+│ ├── +++ hydra-callbacks-0.2.0/tests/test_app/gather_app.py
+│ │┄ Files identical despite different names
+│ │   --- hydra-callbacks-0.1.2/tests/test_callbacks.py
+│ ├── +++ hydra-callbacks-0.2.0/tests/test_callbacks.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,24 +1,41 @@
+│ │  """Test for callbacks.py module."""
+│ │  import os
+│ │  import shutil
+│ │  from pathlib import Path
+│ │  from textwrap import dedent
+│ │ -
+│ │ +import contextlib
+│ │  import pytest
+│ │  import git
+│ │  from hydra.test_utils.test_utils import (
+│ │      assert_regex_match,
+│ │      _chdir_to_dir_containing,
+│ │      run_python_script,
+│ │  )
+│ │  
+│ │ +import pandas as pd
+│ │ +import numpy as np
+│ │ +
+│ │  _chdir_to_dir_containing("pyproject.toml")
+│ │  
+│ │  
+│ │ +@contextlib.contextmanager
+│ │ +def chdirto(new_dir) -> None:
+│ │ +    """Very simple context manager to change directory temporarly.
+│ │ +
+│ │ +    https://stackoverflow.com/a/75049063
+│ │ +    """
+│ │ +    d = os.getcwd()
+│ │ +    os.chdir(new_dir)
+│ │ +    try:
+│ │ +        yield
+│ │ +    finally:
+│ │ +        os.chdir(d)
+│ │ +
+│ │ +
+│ │  HYDRA_LAUNCH_LOG = "[HYDRA] Launching 1 jobs locally\n[HYDRA] 	#0 : \n"
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "config,args,expected",
+│ │      [
+│ │          pytest.param("config.yaml", [], "[JOB] foo: bar", id="no_callback"),
+│ │ @@ -78,14 +95,15 @@
+│ │          "hydra.run.dir=" + str(tmpdir),
+│ │          "hydra.job.chdir=True",
+│ │          "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │          "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │      ]
+│ │      cmd.extend(args)
+│ │      result, _err = run_python_script(cmd)
+│ │ +    assert _err == ""
+│ │      assert_regex_match(expected, result)
+│ │  
+│ │  
+│ │  # same test as above but with multirun enabled.
+│ │  @pytest.mark.parametrize(
+│ │      "config,args,expected",
+│ │      [
+│ │ @@ -176,14 +194,15 @@
+│ │          "hydra.callbacks.latest_callback.multirun_base_dir=" + str(tmpdir),
+│ │          "hydra.job.chdir=False",
+│ │          "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │          "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │      ]
+│ │      cmd.insert(2, "--multirun") if multirun else None
+│ │      result, _err = run_python_script(cmd)
+│ │ +    assert _err == ""
+│ │      assert_regex_match(
+│ │          (HYDRA_LAUNCH_LOG if multirun else "")
+│ │          + dedent(
+│ │              """\
+│ │              [JOB] foo: bar
+│ │  
+│ │              [{logger}] Latest run is at: {tmpdir}/latest
+│ │ @@ -210,15 +229,15 @@
+│ │          "+a=1,2,3",
+│ │          "hydra.sweep.dir=" + str(tmpdir),
+│ │          "hydra.job.chdir=True",
+│ │          "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │          "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │      ]
+│ │      result, _err = run_python_script(cmd)
+│ │ -
+│ │ +    assert _err == ""
+│ │      assert_regex_match(
+│ │          result,
+│ │          dedent(
+│ │              """
+│ │              [HYDRA] Launching 3 jobs locally
+│ │              [HYDRA] 	#0 : +a=1
+│ │              [JOB] foo: bar
+│ │ @@ -237,38 +256,131 @@
+│ │      with open(tmpdir / "agg_results.csv") as f:
+│ │          assert len(f.readlines()) == 4
+│ │  
+│ │  
+│ │  def test_dirty_git_repo_error(tmpdir: Path) -> None:
+│ │      """Test for dirty git repo error."""
+│ │  
+│ │ -    shutil.copytree("tests/test_app/", tmpdir / "test_app")
+│ │ -    os.chdir(tmpdir / "test_app")
+│ │ -    # create a fake temporary repo.
+│ │ -    testapp = git.Repo.init()
+│ │ -    testapp.git.add(".")
+│ │ -    testapp.index.commit("Initial commit")
+│ │ -
+│ │      cmd = [
+│ │          "dummy_app.py",
+│ │          "--config-name=git_callback.yaml",
+│ │          "hydra.callbacks.git_infos.clean=true",
+│ │          "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │          "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │      ]
+│ │  
+│ │ -    with open(tmpdir / "test_app/dummy.txt", "w") as f:
+│ │ -        f.write("Dummy has changed.")
+│ │ -
+│ │ -    result, _err = run_python_script(cmd, raise_exception=False)
+│ │ +    app_dir = tmpdir / "test_app"
+│ │ +    shutil.copytree("tests/test_app/", app_dir)
+│ │ +    # work in fake temporary repo.
+│ │ +    with chdirto(app_dir):
+│ │ +        testapp = git.Repo.init()
+│ │ +        testapp.git.add(".")
+│ │ +        testapp.index.commit("Initial commit")
+│ │ +        sha = testapp.head.object.hexsha
+│ │ +        # make the repo dirty
+│ │ +        with open("dummy.txt", "w") as f:
+│ │ +            f.write("Dummy has changed.")
+│ │ +        # run the test app.
+│ │ +        result, _err = run_python_script(cmd, raise_exception=False)
+│ │      assert _err == ""
+│ │      assert_regex_match(
+│ │          result,
+│ │          dedent(
+│ │              """\
+│ │                  [HYDRA] Git sha: {sha}, dirty: True
+│ │                  [HYDRA] Repo is dirty, aborting
+│ │                  """.format(
+│ │ -                sha=git.Repo().head.object.hexsha,
+│ │ +                sha=sha,
+│ │              )
+│ │          ),
+│ │      )
+│ │ +
+│ │ +
+│ │ +@pytest.mark.parametrize("multirun", [True, False])
+│ │ +def test_ressource_monitor(tmpdir: Path, multirun) -> None:
+│ │ +    """Test for resource monitor callback."""
+│ │ +
+│ │ +    cmd = [
+│ │ +        "tests/test_app/dummy_app.py",
+│ │ +        "--config-name=ressource_monitor.yaml",
+│ │ +        "hydra.sweep.dir=" + str(tmpdir),
+│ │ +        "hydra.run.dir=" + str(tmpdir),
+│ │ +        "hydra.job.chdir=True",
+│ │ +        "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │ +        "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │ +    ]
+│ │ +    if multirun:
+│ │ +        cmd.insert(2, "--multirun")
+│ │ +    result, _err = run_python_script(cmd)
+│ │ +    assert_regex_match(
+│ │ +        result,
+│ │ +        (HYDRA_LAUNCH_LOG if multirun else "")
+│ │ +        + dedent(
+│ │ +            """\
+│ │ +        [JOB] foo: bar
+│ │ +
+│ │ +        [{logger}] Writing monitoring data to {tmpdir}/resource_monitoring.csv
+│ │ +        """.format(
+│ │ +                tmpdir=tmpdir, logger="HYDRA" if multirun else "JOB"
+│ │ +            )
+│ │ +        ),
+│ │ +    )
+│ │ +
+│ │ +
+│ │ +def test_ressource_monitor_disabled(tmpdir):
+│ │ +
+│ │ +    cmd = [
+│ │ +        "tests/test_app/dummy_app.py",
+│ │ +        "--config-name=ressource_monitor.yaml",
+│ │ +        "hydra.callbacks.ressource_monitor.enabled=False",
+│ │ +        "hydra.sweep.dir=" + str(tmpdir),
+│ │ +        "hydra.run.dir=" + str(tmpdir),
+│ │ +        "hydra.job.chdir=True",
+│ │ +        "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │ +        "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │ +    ]
+│ │ +
+│ │ +    result, _err = run_python_script(cmd)
+│ │ +
+│ │ +    assert_regex_match(result, "[JOB] foo: bar")
+│ │ +
+│ │ +
+│ │ +def test_ressource_monitor_raises(tmpdir):
+│ │ +
+│ │ +    cmd = [
+│ │ +        "tests/test_app/dummy_app.py",
+│ │ +        "--config-name=ressource_monitor.yaml",
+│ │ +        "hydra.callbacks.ressource_monitor.sample_interval=0.1",
+│ │ +        "hydra.sweep.dir=" + str(tmpdir),
+│ │ +        "hydra.run.dir=" + str(tmpdir),
+│ │ +        "hydra.job.chdir=True",
+│ │ +        "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │ +        "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │ +    ]
+│ │ +
+│ │ +    result, _err = run_python_script(cmd, raise_exception=False)
+│ │ +
+│ │ +    assert "RuntimeError: Sampling interval (0.10s) cannot be lower than 0.2s" in _err
+│ │ +
+│ │ +
+│ │ +def test_ressource_monitor_results(tmpdir: Path) -> None:
+│ │ +    """Test for resource monitor callback."""
+│ │ +    sampling_time = 0.3  # seconds
+│ │ +    cmd = [
+│ │ +        "tests/test_app/perf_app.py",
+│ │ +        "--config-name=ressource_monitor.yaml",
+│ │ +        "hydra.callbacks.ressource_monitor.sample_interval=" + str(sampling_time),
+│ │ +        "hydra.sweep.dir=" + str(tmpdir),
+│ │ +        "hydra.run.dir=" + str(tmpdir),
+│ │ +        "hydra.job.chdir=True",
+│ │ +        "hydra.hydra_logging.formatters.simple.format='[HYDRA] %(message)s'",
+│ │ +        "hydra.job_logging.formatters.simple.format='[JOB] %(message)s'",
+│ │ +    ]
+│ │ +
+│ │ +    result, _err = run_python_script(cmd, raise_exception=False)
+│ │ +
+│ │ +    df = pd.read_csv(tmpdir / "resource_monitoring.csv", index_col=0)
+│ │ +    # check that the sampling interval is respected
+│ │ +    assert len(df) > 3 / 0.3
+│ │ +    np.testing.assert_allclose(df["time"].diff().mean(), sampling_time, rtol=0.05)
+│ │ +    # check that we got some activity on the cpu.
+│ │ +    assert df["cpus"].mean() > 0
+│ │   --- hydra-callbacks-0.1.2/tests/test_perflogger.py
+│ ├── +++ hydra-callbacks-0.2.0/tests/test_perflogger.py
+│ │┄ Files identical despite different names

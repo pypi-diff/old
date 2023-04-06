@@ -1,0 +1,278 @@
+--- tmp/vlutils-0.1.8.tar.gz
++++ tmp/vlutils-0.1.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/vlutils-0.1.8.tar", last modified: Wed Jan  5 11:39:37 2022, max compression
+│ +gzip compressed data, was "dist/vlutils-0.1.9.tar", last modified: Sun Jan  9 06:20:19 2022, max compression
+│   --- vlutils-0.1.8.tar
+├── +++ vlutils-0.1.9.tar
+│ ├── file list
+│ │ @@ -1,43 +1,43 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      612 2022-01-05 11:39:37.000000 vlutils-0.1.8/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1975 2022-01-05 11:39:34.000000 vlutils-0.1.8/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      784 2022-01-05 11:39:37.000000 vlutils-0.1.8/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       39 2022-01-05 11:39:34.000000 vlutils-0.1.8/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/test/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4444 2022-01-05 11:39:34.000000 vlutils-0.1.8/test/test_base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1174 2022-01-05 11:39:34.000000 vlutils-0.1.8/test/test_dataset.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      757 2022-01-05 11:39:34.000000 vlutils-0.1.8/test/test_vision.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils/base/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1016 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     6462 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/dataParallel.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1777 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/decoratorContextManager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2002 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/freqHook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2407 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/module.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1872 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/registry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2206 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/base/restorable.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     6299 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/config.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils/datasets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      248 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/datasets/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1661 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/datasets/wrappers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1802 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     6167 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/logger.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils/metrics/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      110 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/metrics/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      818 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/metrics/helpers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1430 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/metrics/meter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      355 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/metrics/pairwise.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5276 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/runtime.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     9236 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/saver.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1152 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils/vision/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/vision/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2714 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/vision/colorSpace.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      346 2022-01-05 11:39:34.000000 vlutils-0.1.8/vlutils/vision/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      612 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      804 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       30 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        8 2022-01-05 11:39:37.000000 vlutils-0.1.8/vlutils.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      612 2022-01-09 06:20:19.000000 vlutils-0.1.9/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1975 2022-01-09 06:20:16.000000 vlutils-0.1.9/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      784 2022-01-09 06:20:19.000000 vlutils-0.1.9/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       39 2022-01-09 06:20:16.000000 vlutils-0.1.9/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/test/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     4444 2022-01-09 06:20:16.000000 vlutils-0.1.9/test/test_base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1174 2022-01-09 06:20:16.000000 vlutils-0.1.9/test/test_dataset.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      757 2022-01-09 06:20:16.000000 vlutils-0.1.9/test/test_vision.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils/base/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1016 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     6462 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/dataParallel.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1777 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/decoratorContextManager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2002 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/freqHook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2407 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/module.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1877 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/registry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2206 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/base/restorable.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     6299 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/config.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils/datasets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      248 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/datasets/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1661 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/datasets/wrappers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1802 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     7033 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/logger.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils/metrics/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      110 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/metrics/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      818 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/metrics/helpers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1455 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/metrics/meter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      355 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/metrics/pairwise.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     5276 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/runtime.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     9236 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/saver.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1152 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils/vision/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/vision/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2714 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/vision/colorSpace.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      346 2022-01-09 06:20:16.000000 vlutils-0.1.9/vlutils/vision/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      612 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      804 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       30 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        8 2022-01-09 06:20:19.000000 vlutils-0.1.9/vlutils.egg-info/top_level.txt
+│ │   --- vlutils-0.1.8/PKG-INFO
+│ ├── +++ vlutils-0.1.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: vlutils
+│ │ -Version: 0.1.8
+│ │ +Version: 0.1.9
+│ │  Summary: My package description
+│ │  Home-page: https://github.com/cfm-uestc/vlutils
+│ │  Author: Xiaosu Zhu
+│ │  Author-email: aurora.studio@outlook.com
+│ │  License: Apache-2.0 License
+│ │  Description: UNKNOWN
+│ │  Keywords: Utilities,Utils
+│ │   --- vlutils-0.1.8/README.md
+│ ├── +++ vlutils-0.1.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/setup.cfg
+│ ├── +++ vlutils-0.1.9/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/test/test_base.py
+│ ├── +++ vlutils-0.1.9/test/test_base.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/test/test_dataset.py
+│ ├── +++ vlutils-0.1.9/test/test_dataset.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/test/test_vision.py
+│ ├── +++ vlutils-0.1.9/test/test_vision.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/__init__.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/dataParallel.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/dataParallel.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/decoratorContextManager.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/decoratorContextManager.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/freqHook.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/freqHook.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/module.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/module.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/base/registry.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/registry.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -17,15 +17,15 @@
+│ │  
+│ │  class _registry(metaclass=_registryMeta):
+│ │      def __init_subclass__(cls, **kwargs):
+│ │          super().__init_subclass__(**kwargs)
+│ │          cls._map: Dict[str, T] = dict()
+│ │  
+│ │      @classmethod
+│ │ -    def register(cls, key: Union[str, T]):
+│ │ +    def register(cls, key: Union[str, T]) -> T:
+│ │          """Decorator for register anything into registry.
+│ │  
+│ │          Args:
+│ │              key (str): The key for registering an object.
+│ │          """
+│ │          if isinstance(key, str):
+│ │              def insert(value: T):
+│ │   --- vlutils-0.1.8/vlutils/base/restorable.py
+│ ├── +++ vlutils-0.1.9/vlutils/base/restorable.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/config.py
+│ ├── +++ vlutils-0.1.9/vlutils/config.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/datasets/wrappers.py
+│ ├── +++ vlutils-0.1.9/vlutils/datasets/wrappers.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/io.py
+│ ├── +++ vlutils-0.1.9/vlutils/io.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/logger.py
+│ ├── +++ vlutils-0.1.9/vlutils/logger.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -12,18 +12,45 @@
+│ │  from vlutils.base.decoratorContextManager import DecoratorContextManager
+│ │  from .io import rotateItems
+│ │  
+│ │  
+│ │  __all__ = [
+│ │      "WaitingBar",
+│ │      "LoggingDisabler",
+│ │ -    "configLogging"
+│ │ +    "configLogging",
+│ │ +    "readableSize"
+│ │  ]
+│ │  
+│ │  
+│ │ +def readableSize(byteSize: int, floating: int = 2, binary: bool = True) -> str:
+│ │ +    """Convert bytes to human-readable string (like `-h` option in POSIX).
+│ │ +
+│ │ +    Args:
+│ │ +        size (int): Total bytes.
+│ │ +        floating (int, optional): Floating point length. Defaults to 2.
+│ │ +        binary (bool, optional): Format as XB or XiB. Defaults to True.
+│ │ +
+│ │ +    Returns:
+│ │ +        str: Human-readable string of size.
+│ │ +    """
+│ │ +    size = float(byteSize)
+│ │ +    unit = "B"
+│ │ +    if binary:
+│ │ +        for unit in ["B", "kiB", "MiB", "GiB", "TiB", "PiB"]:
+│ │ +            if size < 1024.0 or unit == "PiB":
+│ │ +                break
+│ │ +            size /= 1024.0
+│ │ +        return f"{size:.{floating}f}{unit}"
+│ │ +    for unit in ["B", "kB", "MB", "GB", "TB", "PB"]:
+│ │ +        if size < 1000.0 or unit == "PB":
+│ │ +            break
+│ │ +        size /= 1000.0
+│ │ +    return f"{size:.{floating}f}{unit}"
+│ │ +
+│ │ +
+│ │  class WaitingBar(DecoratorContextManager):
+│ │      """A CLI tool for printing waiting bar.
+│ │  
+│ │      Example:
+│ │      ```python
+│ │          @WaitingBar("msg")
+│ │          def longTime():
+│ │   --- vlutils-0.1.8/vlutils/metrics/helpers.py
+│ ├── +++ vlutils-0.1.9/vlutils/metrics/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/metrics/meter.py
+│ ├── +++ vlutils-0.1.9/vlutils/metrics/meter.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -6,16 +6,16 @@
+│ │      accumulated: float = 0.0
+│ │      length: int = 0
+│ │  
+│ │      def __init__(self, format: str = r"%.2f"):
+│ │          super().__init__()
+│ │          self._format = format
+│ │  
+│ │ -    def to(self, device):
+│ │ -        pass
+│ │ +    def to(self, device: Any) -> "Handler":
+│ │ +        return self
+│ │  
+│ │      @property
+│ │      def Length(self) -> int:
+│ │          return self.length
+│ │  
+│ │      @property
+│ │      def Accumulated(self) -> float:
+│ │   --- vlutils-0.1.8/vlutils/runtime.py
+│ ├── +++ vlutils-0.1.9/vlutils/runtime.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/saver.py
+│ ├── +++ vlutils-0.1.9/vlutils/saver.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/utils.py
+│ ├── +++ vlutils-0.1.9/vlutils/utils.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils/vision/colorSpace.py
+│ ├── +++ vlutils-0.1.9/vlutils/vision/colorSpace.py
+│ │┄ Files identical despite different names
+│ │   --- vlutils-0.1.8/vlutils.egg-info/PKG-INFO
+│ ├── +++ vlutils-0.1.9/vlutils.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: vlutils
+│ │ -Version: 0.1.8
+│ │ +Version: 0.1.9
+│ │  Summary: My package description
+│ │  Home-page: https://github.com/cfm-uestc/vlutils
+│ │  Author: Xiaosu Zhu
+│ │  Author-email: aurora.studio@outlook.com
+│ │  License: Apache-2.0 License
+│ │  Description: UNKNOWN
+│ │  Keywords: Utilities,Utils
+│ │   --- vlutils-0.1.8/vlutils.egg-info/SOURCES.txt
+│ ├── +++ vlutils-0.1.9/vlutils.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

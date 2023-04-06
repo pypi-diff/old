@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/tb_nightly-2.9.0a20220501-py3-none-any.whl.zip tmp/tb_nightly-2.9.0a20220502-py3-none-any.whl.zip --html versions/t/tb-nightly/2.9.0a20220501-2.9.0a20220502/index.html --text versions/t/tb-nightly/2.9.0a20220501-2.9.0a20220502/diff.txt --markdown versions/t/tb-nightly/2.9.0a20220501-2.9.0a20220502/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.85 KB</span></div>
+  <div><span class="source">tmp/tb_nightly-2.9.0a20220501-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/tb_nightly-2.9.0a20220502-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">2.61 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>579780<del>6</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>296</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>579780<ins>5</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>296</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4125<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4125<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1360<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/assets.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1360<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/assets.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3776<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/auth.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3776<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/auth.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3849<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/context.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3849<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/context.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6456<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/data_compat.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6456<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/data_compat.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8610<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/dataclass_compat.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8610<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/dataclass_compat.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4891<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/default.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4891<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/default.py</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 285, 14 lines modified</td><td colspan="2">Offset 285, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">285 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>792<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/io_util.py</td><td class="diffline">285 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>792<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/io_util.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">286 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4492<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/lazy_tensor_creator.py</td><td class="diffline">286 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4492<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/lazy_tensor_creator.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">287 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3827<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/op_evaluator.py</td><td class="diffline">287 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3827<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/op_evaluator.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">288 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>798<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/platform_util.py</td><td class="diffline">288 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>798<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/platform_util.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">289 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/tb_logging.py</td><td class="diffline">289 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/tb_logging.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">290 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21802<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/tensor_util.py</td><td class="diffline">290 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21802<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/tensor_util.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">291 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3734<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/timing.py</td><td class="diffline">291 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3734<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tensorboard/util/timing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">292 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29236<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/LICENSE</td><td class="diffline">292 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29236<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">293 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1873<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/METADATA</td><td class="diffline">293 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1873<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">294 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/WHEEL</td><td class="diffline">294 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">295 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>156<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/entry_points.txt</td><td class="diffline">295 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>156<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">296 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/top_level.txt</td><td class="diffline">296 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">297 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29076<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/RECORD</td><td class="diffline">297 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29076<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>20-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">298 </td><td class="diffpresent">296<span class="dp">·</span>files,<span class="dp">·</span>10017296<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>575074<del>6</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>42.6%</td><td class="diffline">298 </td><td class="diffpresent">296<span class="dp">·</span>files,<span class="dp">·</span>10017296<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>575074<ins>5</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>42.6%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">935 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 864, 26 lines modified</td><td colspan="2">Offset 864, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">864 </td><td class="diffpresent">Filename:<span class="dp">·</span>tensorboard/util/tensor_util.py</td><td class="diffline">864 </td><td class="diffpresent">Filename:<span class="dp">·</span>tensorboard/util/tensor_util.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">865 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">865 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">866 </td><td class="diffpresent">Filename:<span class="dp">·</span>tensorboard/util/timing.py</td><td class="diffline">866 </td><td class="diffpresent">Filename:<span class="dp">·</span>tensorboard/util/timing.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">867 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">867 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">868 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/LICENSE</td><td class="diffline">868 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">869 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">869 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">870 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/METADATA</td><td class="diffline">870 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">871 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">871 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">872 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/WHEEL</td><td class="diffline">872 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">873 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">873 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">874 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/entry_points.txt</td><td class="diffline">874 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">875 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">875 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">876 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/top_level.txt</td><td class="diffline">876 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">877 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">877 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">878 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<del>1</del>.dist-info/RECORD</td><td class="diffline">878 </td><td class="diffpresent">Filename:<span class="dp">·</span>tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">879 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">879 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">880 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">880 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">421 B</span></div>
+    <div id="tensorboard-version.py"><span class="source">tensorboard/version.py</span>
+      <a class="anchor" href="#tensorboard-version.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 8 lines modified</td><td colspan="2">Offset 11, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>WITHOUT<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OR<span class="dp">·</span>CONDITIONS<span class="dp">·</span>OF<span class="dp">·</span>ANY<span class="dp">·</span>KIND,<span class="dp">·</span>either<span class="dp">·</span>express<span class="dp">·</span>or<span class="dp">·</span>implied.</td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>WITHOUT<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OR<span class="dp">·</span>CONDITIONS<span class="dp">·</span>OF<span class="dp">·</span>ANY<span class="dp">·</span>KIND,<span class="dp">·</span>either<span class="dp">·</span>express<span class="dp">·</span>or<span class="dp">·</span>implied.</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>the<span class="dp">·</span>License<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>specific<span class="dp">·</span>language<span class="dp">·</span>governing<span class="dp">·</span>permissions<span class="dp">·</span>and</td><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>the<span class="dp">·</span>License<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>specific<span class="dp">·</span>language<span class="dp">·</span>governing<span class="dp">·</span>permissions<span class="dp">·</span>and</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>limitations<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>License.</td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>limitations<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>License.</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>==============================================================================</td><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>==============================================================================</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;&quot;&quot;Contains<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>string.&quot;&quot;&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;&quot;&quot;Contains<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>string.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&quot;2.9.0a2022050<del>1</del>&quot;</td><td class="diffline">16 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&quot;2.9.0a2022050<ins>2</ins>&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">125 B</span></div>
+    <div><span class="source">tb_nightly-2.9.0a20220501.dist-info/LICENSE</span> vs.</div>
+    <div id="tb_nightly--.-.-a--------.dist-info-LICENSE"><span class="source">tb_nightly-2.9.0a20220502.dist-info/LICENSE</span>
+      <a class="anchor" href="#tb_nightly--.-.-a--------.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">510 B</span></div>
+    <div><span class="source">tb_nightly-2.9.0a20220501.dist-info/METADATA</span> vs.</div>
+    <div id="tb_nightly--.-.-a--------.dist-info-METADATA"><span class="source">tb_nightly-2.9.0a20220502.dist-info/METADATA</span>
+      <a class="anchor" href="#tb_nightly--.-.-a--------.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tb-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tb-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a2022050<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a2022050<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>TensorBoard<span class="dp">·</span>lets<span class="dp">·</span>you<span class="dp">·</span>watch<span class="dp">·</span>Tensors<span class="dp">·</span>Flow</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>TensorBoard<span class="dp">·</span>lets<span class="dp">·</span>you<span class="dp">·</span>watch<span class="dp">·</span>Tensors<span class="dp">·</span>Flow</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/tensorboard</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/tensorboard</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>tensor<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>visualizer</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>tensor<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>visualizer</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">3.21 KB</span></div>
+    <div><span class="source">tb_nightly-2.9.0a20220501.dist-info/RECORD</span> vs.</div>
+    <div id="tb_nightly--.-.-a--------.dist-info-RECORD"><span class="source">tb_nightly-2.9.0a20220502.dist-info/RECORD</span>
+      <a class="anchor" href="#tb_nightly--.-.-a--------.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 1% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 9, 15 lines modified</td><td colspan="2">Offset 9, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">tensorboard/lazy.py,sha256=jQ6nB0St3fO7tXnP6TThJtsuVeyaEfGip0Beh-J23-8,3555</td><td class="diffline">9 </td><td class="diffpresent">tensorboard/lazy.py,sha256=jQ6nB0St3fO7tXnP6TThJtsuVeyaEfGip0Beh-J23-8,3555</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">tensorboard/main.py,sha256=BEWBybgD-1TGNvAFJ_Tbd0WiAPg6jjymIsncVHFOGqw,1800</td><td class="diffline">10 </td><td class="diffpresent">tensorboard/main.py,sha256=BEWBybgD-1TGNvAFJ_Tbd0WiAPg6jjymIsncVHFOGqw,1800</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">tensorboard/main_lib.py,sha256=-et8A-G-l-sm6tR4-XjHyqrPZfrJ0s3sk8GA20LI2Ac,1959</td><td class="diffline">11 </td><td class="diffpresent">tensorboard/main_lib.py,sha256=-et8A-G-l-sm6tR4-XjHyqrPZfrJ0s3sk8GA20LI2Ac,1959</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">tensorboard/manager.py,sha256=nwYd3niVzGt4KGNejx6zqfwnPu6EPtLoQGk0UGRSDIc,16381</td><td class="diffline">12 </td><td class="diffpresent">tensorboard/manager.py,sha256=nwYd3niVzGt4KGNejx6zqfwnPu6EPtLoQGk0UGRSDIc,16381</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">tensorboard/notebook.py,sha256=16nYDCRmO1r5RXntieo0lkyEFxWXh5_Cbgl7F-l8R1o,14704</td><td class="diffline">13 </td><td class="diffpresent">tensorboard/notebook.py,sha256=16nYDCRmO1r5RXntieo0lkyEFxWXh5_Cbgl7F-l8R1o,14704</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">tensorboard/plugin_util.py,sha256=WC-DJTflixyrrpZN7p882R2msprV-FLzA0FKZQUBfHM,7491</td><td class="diffline">14 </td><td class="diffpresent">tensorboard/plugin_util.py,sha256=WC-DJTflixyrrpZN7p882R2msprV-FLzA0FKZQUBfHM,7491</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">tensorboard/program.py,sha256=-Ltbhm0O8ZH3CXp8yBn52SrBAufs-6iV8Swn6gGASqc,34802</td><td class="diffline">15 </td><td class="diffpresent">tensorboard/program.py,sha256=-Ltbhm0O8ZH3CXp8yBn52SrBAufs-6iV8Swn6gGASqc,34802</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">tensorboard/version.py,sha256=<del>H47FPvcr1KTJ-ip3eUg7xywdmDeNcRLWuGcfF9bqBQM</del>,753</td><td class="diffline">16 </td><td class="diffpresent">tensorboard/version.py,sha256=<ins>8QrN4C7Ltj2dc0UZ7OcnQkT3Tv3wl_J9W71iAlcTYI8</ins>,753</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">tensorboard/webfiles.zip,sha256=Olxb3AKZ2jPm4-yDn632VPkFvNZJsSWGI_vwaHyznU0,4621116</td><td class="diffline">17 </td><td class="diffpresent">tensorboard/webfiles.zip,sha256=Olxb3AKZ2jPm4-yDn632VPkFvNZJsSWGI_vwaHyznU0,4621116</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">tensorboard/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0</td><td class="diffline">18 </td><td class="diffpresent">tensorboard/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">tensorboard/_vendor/bleach/__init__.py,sha256=CtmircSWFH5tn9GO4Ofi0CAB0yUQdU1TkU08GJ98ETk,3769</td><td class="diffline">19 </td><td class="diffpresent">tensorboard/_vendor/bleach/__init__.py,sha256=CtmircSWFH5tn9GO4Ofi0CAB0yUQdU1TkU08GJ98ETk,3769</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">tensorboard/_vendor/bleach/callbacks.py,sha256=Lvexc_oncFbfTtsEgItsGzt-rbs5goqQIr-8WtOAKFs,723</td><td class="diffline">20 </td><td class="diffpresent">tensorboard/_vendor/bleach/callbacks.py,sha256=Lvexc_oncFbfTtsEgItsGzt-rbs5goqQIr-8WtOAKFs,723</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">tensorboard/_vendor/bleach/encoding.py,sha256=aq062I1yXRPPjZjYzY4FoMYkCjBA-0QCU-xBhgq4JMQ,2277</td><td class="diffline">21 </td><td class="diffpresent">tensorboard/_vendor/bleach/encoding.py,sha256=aq062I1yXRPPjZjYzY4FoMYkCjBA-0QCU-xBhgq4JMQ,2277</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">tensorboard/_vendor/bleach/linkifier.py,sha256=djCbTk9lY4MHgGT7LKv7qc2TQiLE4S8B899Af2ZaVhQ,18879</td><td class="diffline">22 </td><td class="diffpresent">tensorboard/_vendor/bleach/linkifier.py,sha256=djCbTk9lY4MHgGT7LKv7qc2TQiLE4S8B899Af2ZaVhQ,18879</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">tensorboard/_vendor/bleach/sanitizer.py,sha256=1JJnx3L56dRX2oAVRv_fU_J0beQh95FdnyX-BlDDpNA,12233</td><td class="diffline">23 </td><td class="diffpresent">tensorboard/_vendor/bleach/sanitizer.py,sha256=1JJnx3L56dRX2oAVRv_fU_J0beQh95FdnyX-BlDDpNA,12233</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 284, 13 lines modified</td><td colspan="2">Offset 284, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">284 </td><td class="diffpresent">tensorboard/util/io_util.py,sha256=pIc9fc5BkMJZIQziZvMx9JKTZh5thk7Ny8_RQmjNxgk,792</td><td class="diffline">284 </td><td class="diffpresent">tensorboard/util/io_util.py,sha256=pIc9fc5BkMJZIQziZvMx9JKTZh5thk7Ny8_RQmjNxgk,792</td></tr>
+<tr class="diffunmodified"><td class="diffline">285 </td><td class="diffpresent">tensorboard/util/lazy_tensor_creator.py,sha256=Nv_tKVqo9dkvuG049mTjby1kjtm1-1RniSOSjEl1hso,4492</td><td class="diffline">285 </td><td class="diffpresent">tensorboard/util/lazy_tensor_creator.py,sha256=Nv_tKVqo9dkvuG049mTjby1kjtm1-1RniSOSjEl1hso,4492</td></tr>
+<tr class="diffunmodified"><td class="diffline">286 </td><td class="diffpresent">tensorboard/util/op_evaluator.py,sha256=PLrjGRR4MfnGIZcKm0YSYxp__YJgSG0jKuHmTeb5rVw,3827</td><td class="diffline">286 </td><td class="diffpresent">tensorboard/util/op_evaluator.py,sha256=PLrjGRR4MfnGIZcKm0YSYxp__YJgSG0jKuHmTeb5rVw,3827</td></tr>
+<tr class="diffunmodified"><td class="diffline">287 </td><td class="diffpresent">tensorboard/util/platform_util.py,sha256=5jr42kvi6GqRzFx6YponSDOFYg7_RL-DTlk6dDefNYM,798</td><td class="diffline">287 </td><td class="diffpresent">tensorboard/util/platform_util.py,sha256=5jr42kvi6GqRzFx6YponSDOFYg7_RL-DTlk6dDefNYM,798</td></tr>
+<tr class="diffunmodified"><td class="diffline">288 </td><td class="diffpresent">tensorboard/util/tb_logging.py,sha256=KRWgZ29e_fpK03bCRFP0nFoqN_KkI0RhaeGUVYqNg8M,781</td><td class="diffline">288 </td><td class="diffpresent">tensorboard/util/tb_logging.py,sha256=KRWgZ29e_fpK03bCRFP0nFoqN_KkI0RhaeGUVYqNg8M,781</td></tr>
+<tr class="diffunmodified"><td class="diffline">289 </td><td class="diffpresent">tensorboard/util/tensor_util.py,sha256=yJvEYRlQ6i-epazSrIzAVr9GTfgY4ACc7pBp2sMIq5U,21802</td><td class="diffline">289 </td><td class="diffpresent">tensorboard/util/tensor_util.py,sha256=yJvEYRlQ6i-epazSrIzAVr9GTfgY4ACc7pBp2sMIq5U,21802</td></tr>
+<tr class="diffunmodified"><td class="diffline">290 </td><td class="diffpresent">tensorboard/util/timing.py,sha256=f2_w98VpKR0TZdA-88kFxeIWdl5y6EHA_Dn6BOispFU,3734</td><td class="diffline">290 </td><td class="diffpresent">tensorboard/util/timing.py,sha256=f2_w98VpKR0TZdA-88kFxeIWdl5y6EHA_Dn6BOispFU,3734</td></tr>
+<tr class="diffchanged"><td class="diffline">291 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/LICENSE,sha256=muIndEPx_RqUi7xWKy0zMZVuUyChzEOhHN0z4T0sknk,29236</td><td class="diffline">291 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/LICENSE,sha256=muIndEPx_RqUi7xWKy0zMZVuUyChzEOhHN0z4T0sknk,29236</td></tr>
+<tr class="diffchanged"><td class="diffline">292 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/METADATA,sha256=<del>5WQVT05nFB-ObRjpfoV3LAH0</del>S<del>w19jcnrQfVWv-P2WaA</del>,1873</td><td class="diffline">292 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/METADATA,sha256=<ins>ps4WMN7pPCbZkhQysFpy_kvY</ins>S<ins>3kdaE0K9QOKxoYWe3o</ins>,1873</td></tr>
+<tr class="diffchanged"><td class="diffline">293 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92</td><td class="diffline">293 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92</td></tr>
+<tr class="diffchanged"><td class="diffline">294 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/entry_points.txt,sha256=FV17CwG_RTgFJOgP8RqFKOtLdrm-iCm4EzINTxbyMs8,156</td><td class="diffline">294 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/entry_points.txt,sha256=FV17CwG_RTgFJOgP8RqFKOtLdrm-iCm4EzINTxbyMs8,156</td></tr>
+<tr class="diffchanged"><td class="diffline">295 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/top_level.txt,sha256=40P4chmItVOwo2Fz7dRARFaQvcp6ZKme9JhcNbG8d8o,12</td><td class="diffline">295 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/top_level.txt,sha256=40P4chmItVOwo2Fz7dRARFaQvcp6ZKme9JhcNbG8d8o,12</td></tr>
+<tr class="diffchanged"><td class="diffline">296 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<del>1</del>.dist-info/RECORD,,</td><td class="diffline">296 </td><td class="diffpresent">tb_nightly-2.9.0a2022050<ins>2</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

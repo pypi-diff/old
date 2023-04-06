@@ -1,0 +1,760 @@
+--- tmp/iqrfpy-0.1.3.tar.gz
++++ tmp/iqrfpy-0.1.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "iqrfpy-0.1.3.tar", last modified: Sun Apr  2 10:51:35 2023, max compression
+│ +gzip compressed data, was "iqrfpy-0.1.4.tar", last modified: Thu Apr  6 11:30:07 2023, max compression
+│   --- iqrfpy-0.1.3.tar
+├── +++ iqrfpy-0.1.4.tar
+│ ├── file list
+│ │ @@ -1,193 +1,193 @@
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      309 2023-03-12 10:44:36.000000 iqrfpy-0.1.3/.editorconfig
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      113 2023-03-27 06:23:13.000000 iqrfpy-0.1.3/.gitignore
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      937 2023-03-22 19:16:00.000000 iqrfpy-0.1.3/.gitlab-ci.yml
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      203 2023-03-22 19:16:00.000000 iqrfpy-0.1.3/.pylintrc
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)    11346 2023-03-24 07:47:59.000000 iqrfpy-0.1.3/LICENSE
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      663 2023-03-25 07:04:37.000000 iqrfpy-0.1.3/Makefile
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      859 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/PKG-INFO
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        9 2023-03-07 12:47:49.000000 iqrfpy-0.1.3/README.md
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      632 2023-04-02 10:28:55.000000 iqrfpy-0.1.3/example.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/examples/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2081 2023-03-25 07:08:59.000000 iqrfpy-0.1.3/examples/response_factories.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       44 2023-04-02 10:49:39.000000 iqrfpy-0.1.3/iqrfpy/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/enums/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     5379 2023-03-24 10:38:31.000000 iqrfpy-0.1.3/iqrfpy/enums/Commands.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4646 2023-03-24 10:31:05.000000 iqrfpy-0.1.3/iqrfpy/enums/MessageTypes.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       90 2023-03-24 10:27:58.000000 iqrfpy-0.1.3/iqrfpy/enums/__init__.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      708 2023-03-24 10:49:19.000000 iqrfpy-0.1.3/iqrfpy/enums/peripherals.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/messages/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       61 2023-03-24 07:14:54.000000 iqrfpy-0.1.3/iqrfpy/messages/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/messages/requests/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2263 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/IRequest.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-08 11:54:48.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/messages/requests/binaryoutput/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:27.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/binaryoutput/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      988 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/AddrInfo.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2461 2023-04-02 10:26:37.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/AuthorizeBond.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1434 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Backup.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2161 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/BondNode.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1008 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/BondedDevices.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1010 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/ClearAllBonds.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1024 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/DiscoveredDevices.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1812 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Discovery.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1506 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/RemoveBond.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1668 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Restore.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1429 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetDpaParams.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2006 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetHops.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1912 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetMID.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4590 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SmartConnect.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      955 2023-03-16 15:28:35.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy/messages/requests/dali/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:18.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/dali/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/eeeprom/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:26.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/eeeprom/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/eeprom/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:21.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/eeprom/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/exploration/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/exploration/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/frc/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:40.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/frc/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/generic/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/generic/Raw.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/generic/RawHdp.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/generic/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/io/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:21.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/io/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/ledg/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:15.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/ledg/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/ledr/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:11.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/ledr/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/light/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:37.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/light/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/node/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      949 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/node/Read.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:41:43.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/node/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/os/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:14.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/os/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/ram/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:31.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/ram/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/sensor/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:31.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/sensor/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/thermometer/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:27.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/thermometer/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/requests/uart/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:32.000000 iqrfpy-0.1.3/iqrfpy/messages/requests/uart/__init__.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     8146 2023-04-02 10:45:04.000000 iqrfpy-0.1.3/iqrfpy/messages/response_factory.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2202 2023-03-24 12:37:34.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/AsyncResponse.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1932 2023-03-24 12:38:06.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/Confirmation.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     6896 2023-03-24 12:50:58.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/IResponse.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-17 10:12:06.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/binaryoutput/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:04.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/binaryoutput/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2144 2023-03-24 12:33:06.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/AddrInfo.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2229 2023-03-24 12:31:46.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/AuthorizeBond.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2075 2023-03-24 12:36:12.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Backup.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2189 2023-03-24 12:33:30.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/BondNode.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2145 2023-03-24 12:33:06.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/BondedDevices.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1808 2023-03-24 12:33:46.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/ClearAllBonds.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2201 2023-03-24 12:35:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/DiscoveredDevices.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2049 2023-03-24 12:35:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Discovery.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2053 2023-03-24 12:35:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/RemoveBond.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1683 2023-03-24 12:35:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Restore.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2193 2023-03-24 12:35:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetDpaParams.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2241 2023-03-24 12:35:21.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetHops.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1677 2023-03-24 12:35:48.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetMID.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2221 2023-03-24 12:35:48.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SmartConnect.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      983 2023-03-24 07:27:46.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/dali/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:58.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/dali/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/eeeprom/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:01.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/eeeprom/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/eeprom/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:56.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/eeprom/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/frc/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:43.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/frc/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/io/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:27.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/io/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/ledg/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:23.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/ledg/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/ledr/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:19.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/ledr/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/light/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:14.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/light/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/node/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2492 2023-03-24 12:33:06.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/node/Read.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:49.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/node/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/os/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:52.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/os/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/ram/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:05.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/ram/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/sensor/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:09.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/sensor/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/thermometer/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:32.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/thermometer/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/messages/responses/uart/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:37.000000 iqrfpy-0.1.3/iqrfpy/messages/responses/uart/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/transports/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      300 2023-03-22 19:16:00.000000 iqrfpy-0.1.3/iqrfpy/transports/__init__.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2308 2023-03-24 09:57:48.000000 iqrfpy-0.1.3/iqrfpy/transports/itransport.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2076 2023-03-24 09:57:48.000000 iqrfpy-0.1.3/iqrfpy/transports/mqtt_transport.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3788 2023-03-24 09:57:48.000000 iqrfpy-0.1.3/iqrfpy/transports/udp_transport.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/iqrfpy/utils/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       50 2023-03-24 11:33:36.000000 iqrfpy-0.1.3/iqrfpy/utils/__init__.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)    19524 2023-03-25 06:51:06.000000 iqrfpy-0.1.3/iqrfpy/utils/common.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      343 2023-03-24 11:01:36.000000 iqrfpy-0.1.3/iqrfpy/utils/enums.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.435319 iqrfpy-0.1.3/iqrfpy.egg-info/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      859 2023-04-02 10:51:35.000000 iqrfpy-0.1.3/iqrfpy.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     6091 2023-04-02 10:51:35.000000 iqrfpy-0.1.3/iqrfpy.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        1 2023-04-02 10:51:35.000000 iqrfpy-0.1.3/iqrfpy.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      159 2023-04-02 10:51:35.000000 iqrfpy-0.1.3/iqrfpy.egg-info/requires.txt
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        7 2023-04-02 10:51:35.000000 iqrfpy-0.1.3/iqrfpy.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      138 2023-03-24 09:25:00.000000 iqrfpy-0.1.3/pyproject.toml
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       85 2023-03-24 07:40:43.000000 iqrfpy-0.1.3/requirements.txt
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1162 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/setup.cfg
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      102 2023-03-22 19:16:00.000000 iqrfpy-0.1.3/test_requirements.txt
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/tests/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-07 12:49:34.000000 iqrfpy-0.1.3/tests/__init__.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/tests/enums/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1241 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/enums/Peripherals_test.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/tests/messages/
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.439319 iqrfpy-0.1.3/tests/messages/requests/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1292 2023-03-18 09:19:32.000000 iqrfpy-0.1.3/tests/messages/requests/IRequest_test.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/tests/messages/requests/coordinator/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      869 2023-03-18 09:24:49.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/AddrInfoRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4015 2023-04-02 10:26:13.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/AuthorizeBondRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2194 2023-03-18 09:44:00.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/BackupRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3758 2023-03-18 09:50:37.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/BondNodeRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      903 2023-03-18 09:24:46.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/BondedDevicesRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      904 2023-03-18 09:57:38.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/ClearAllBondsRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)      925 2023-03-18 09:59:43.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/DiscoveredDevicesRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3445 2023-03-18 10:11:35.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/DiscoveryRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2322 2023-03-18 10:17:19.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/RemoveBondRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4241 2023-03-18 10:45:18.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/RestoreRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2257 2023-03-18 10:55:51.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/SetDpaParamsRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3672 2023-03-18 11:08:56.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/SetHopsRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3511 2023-03-18 11:37:09.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/SetMIDRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)    11030 2023-03-19 07:20:25.000000 iqrfpy-0.1.3/tests/messages/requests/coordinator/SmartConnectRequest_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4549 2023-03-25 07:00:13.000000 iqrfpy-0.1.3/tests/messages/response_factory_test.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/tests/messages/responses/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     2161 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/AsyncResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     1280 2023-03-24 12:50:58.000000 iqrfpy-0.1.3/tests/messages/responses/Confirmation_test.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/tests/messages/responses/coordinator/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4324 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/AddrInfoResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4513 2023-04-02 10:41:56.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/AuthorizeBondResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4764 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/BackupResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4390 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/BondNodeResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4211 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/BondedDevicesResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3154 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/ClearAllBondsResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4343 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/DiscoveredDevicesResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3784 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/DiscoveryResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3794 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/RemoveNodeResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3054 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/RestoreResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3930 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/SetDpaParamsResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4490 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/SetHopsResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     3052 2023-03-24 10:31:41.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/SetMIDResponse_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)     4486 2023-03-24 10:47:04.000000 iqrfpy-0.1.3/tests/messages/responses/coordinator/SmartConnectResponse_test.py
+│ │ -drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-02 10:51:35.443319 iqrfpy-0.1.3/tests/utils/
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)    15855 2023-03-25 06:53:49.000000 iqrfpy-0.1.3/tests/utils/Common_test.py
+│ │ --rw-rw-r--   0 khanak    (1000) khanak    (1000)       78 2023-03-22 19:16:00.000000 iqrfpy-0.1.3/tox.ini
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      309 2023-03-12 10:44:36.000000 iqrfpy-0.1.4/.editorconfig
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      113 2023-03-27 06:23:13.000000 iqrfpy-0.1.4/.gitignore
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      937 2023-03-22 19:16:00.000000 iqrfpy-0.1.4/.gitlab-ci.yml
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      203 2023-03-22 19:16:00.000000 iqrfpy-0.1.4/.pylintrc
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)    11346 2023-03-24 07:47:59.000000 iqrfpy-0.1.4/LICENSE
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      663 2023-03-25 07:04:37.000000 iqrfpy-0.1.4/Makefile
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      859 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/PKG-INFO
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        9 2023-03-07 12:47:49.000000 iqrfpy-0.1.4/README.md
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      671 2023-04-06 07:28:51.000000 iqrfpy-0.1.4/example.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/examples/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2081 2023-03-25 07:08:59.000000 iqrfpy-0.1.4/examples/response_factories.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       44 2023-04-06 11:28:53.000000 iqrfpy-0.1.4/iqrfpy/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy/enums/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     5379 2023-03-24 10:38:31.000000 iqrfpy-0.1.4/iqrfpy/enums/Commands.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4646 2023-03-24 10:31:05.000000 iqrfpy-0.1.4/iqrfpy/enums/MessageTypes.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       90 2023-03-24 10:27:58.000000 iqrfpy-0.1.4/iqrfpy/enums/__init__.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      708 2023-03-24 10:49:19.000000 iqrfpy-0.1.4/iqrfpy/enums/peripherals.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy/messages/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       61 2023-03-24 07:14:54.000000 iqrfpy-0.1.4/iqrfpy/messages/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy/messages/requests/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2263 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/IRequest.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-08 11:54:48.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy/messages/requests/binaryoutput/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:27.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/binaryoutput/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      988 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/AddrInfo.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2461 2023-04-02 10:26:37.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/AuthorizeBond.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1434 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Backup.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2161 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/BondNode.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1008 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/BondedDevices.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1010 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/ClearAllBonds.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1024 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/DiscoveredDevices.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1812 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Discovery.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1506 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/RemoveBond.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1668 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Restore.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1429 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetDpaParams.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2006 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetHops.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1912 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetMID.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4590 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SmartConnect.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      955 2023-03-16 15:28:35.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/dali/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:18.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/dali/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/eeeprom/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:26.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/eeeprom/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/eeprom/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:21.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/eeprom/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/exploration/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/exploration/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/frc/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:40.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/frc/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/generic/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/generic/Raw.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/generic/RawHdp.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-14 15:30:10.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/generic/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/io/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:21.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/io/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/ledg/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:15.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/ledg/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/ledr/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:11.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/ledr/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/light/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:37.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/light/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/node/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      949 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/node/Read.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:41:43.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/node/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/os/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:14.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/os/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/ram/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:43:31.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/ram/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/sensor/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:45:31.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/sensor/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/thermometer/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:27.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/thermometer/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/requests/uart/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 09:44:32.000000 iqrfpy-0.1.4/iqrfpy/messages/requests/uart/__init__.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     8146 2023-04-02 10:45:04.000000 iqrfpy-0.1.4/iqrfpy/messages/response_factory.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2202 2023-03-24 12:37:34.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/AsyncResponse.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1932 2023-03-24 12:38:06.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/Confirmation.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     6896 2023-03-24 12:50:58.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/IResponse.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-17 10:12:06.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/binaryoutput/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:04.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/binaryoutput/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2144 2023-03-24 12:33:06.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/AddrInfo.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2229 2023-03-24 12:31:46.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/AuthorizeBond.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2075 2023-03-24 12:36:12.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Backup.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2189 2023-03-24 12:33:30.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/BondNode.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2145 2023-03-24 12:33:06.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/BondedDevices.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1808 2023-03-24 12:33:46.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/ClearAllBonds.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2201 2023-03-24 12:35:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/DiscoveredDevices.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2049 2023-03-24 12:35:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Discovery.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2053 2023-03-24 12:35:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/RemoveBond.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1683 2023-03-24 12:35:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Restore.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2193 2023-03-24 12:35:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetDpaParams.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2241 2023-03-24 12:35:21.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetHops.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1677 2023-03-24 12:35:48.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetMID.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2221 2023-03-24 12:35:48.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SmartConnect.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      983 2023-03-24 07:27:46.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/dali/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:58.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/dali/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/eeeprom/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:01.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/eeeprom/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/eeprom/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:56.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/eeprom/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/frc/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:43.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/frc/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/io/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:27.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/io/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/ledg/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:23.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/ledg/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/ledr/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:19.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/ledr/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/light/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:14.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/light/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/node/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2492 2023-03-24 12:33:06.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/node/Read.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:49.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/node/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/os/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:06:52.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/os/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/ram/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:05.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/ram/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/sensor/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:08:09.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/sensor/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/thermometer/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:32.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/thermometer/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/messages/responses/uart/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-11 10:07:37.000000 iqrfpy-0.1.4/iqrfpy/messages/responses/uart/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/transports/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      300 2023-03-22 19:16:00.000000 iqrfpy-0.1.4/iqrfpy/transports/__init__.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2133 2023-04-06 09:43:24.000000 iqrfpy-0.1.4/iqrfpy/transports/itransport.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2076 2023-03-24 09:57:48.000000 iqrfpy-0.1.4/iqrfpy/transports/mqtt_transport.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3788 2023-03-24 09:57:48.000000 iqrfpy-0.1.4/iqrfpy/transports/udp_transport.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/iqrfpy/utils/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       50 2023-03-24 11:33:36.000000 iqrfpy-0.1.4/iqrfpy/utils/__init__.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)    19524 2023-03-25 06:51:06.000000 iqrfpy-0.1.4/iqrfpy/utils/common.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      343 2023-03-24 11:01:36.000000 iqrfpy-0.1.4/iqrfpy/utils/enums.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.268975 iqrfpy-0.1.4/iqrfpy.egg-info/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      859 2023-04-06 11:30:07.000000 iqrfpy-0.1.4/iqrfpy.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     6091 2023-04-06 11:30:07.000000 iqrfpy-0.1.4/iqrfpy.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        1 2023-04-06 11:30:07.000000 iqrfpy-0.1.4/iqrfpy.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      159 2023-04-06 11:30:07.000000 iqrfpy-0.1.4/iqrfpy.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        7 2023-04-06 11:30:07.000000 iqrfpy-0.1.4/iqrfpy.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      138 2023-03-24 09:25:00.000000 iqrfpy-0.1.4/pyproject.toml
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       85 2023-03-24 07:40:43.000000 iqrfpy-0.1.4/requirements.txt
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1162 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/setup.cfg
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      102 2023-03-22 19:16:00.000000 iqrfpy-0.1.4/test_requirements.txt
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.272975 iqrfpy-0.1.4/tests/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)        0 2023-03-07 12:49:34.000000 iqrfpy-0.1.4/tests/__init__.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/enums/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1241 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/enums/Peripherals_test.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/messages/
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/messages/requests/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1292 2023-03-18 09:19:32.000000 iqrfpy-0.1.4/tests/messages/requests/IRequest_test.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/messages/requests/coordinator/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      869 2023-03-18 09:24:49.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/AddrInfoRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4015 2023-04-02 10:26:13.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/AuthorizeBondRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2194 2023-03-18 09:44:00.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/BackupRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3758 2023-03-18 09:50:37.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/BondNodeRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      903 2023-03-18 09:24:46.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/BondedDevicesRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      904 2023-03-18 09:57:38.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/ClearAllBondsRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)      925 2023-03-18 09:59:43.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/DiscoveredDevicesRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3445 2023-03-18 10:11:35.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/DiscoveryRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2322 2023-03-18 10:17:19.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/RemoveBondRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4241 2023-03-18 10:45:18.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/RestoreRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2257 2023-03-18 10:55:51.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/SetDpaParamsRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3672 2023-03-18 11:08:56.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/SetHopsRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3511 2023-03-18 11:37:09.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/SetMIDRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)    11030 2023-03-19 07:20:25.000000 iqrfpy-0.1.4/tests/messages/requests/coordinator/SmartConnectRequest_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4549 2023-03-25 07:00:13.000000 iqrfpy-0.1.4/tests/messages/response_factory_test.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/messages/responses/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     2161 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/AsyncResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     1280 2023-03-24 12:50:58.000000 iqrfpy-0.1.4/tests/messages/responses/Confirmation_test.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/messages/responses/coordinator/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4324 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/AddrInfoResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4513 2023-04-02 10:41:56.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/AuthorizeBondResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4764 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/BackupResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4390 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/BondNodeResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4211 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/BondedDevicesResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3154 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/ClearAllBondsResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4343 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/DiscoveredDevicesResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3784 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/DiscoveryResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3794 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/RemoveNodeResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3054 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/RestoreResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3930 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/SetDpaParamsResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4490 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/SetHopsResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     3052 2023-03-24 10:31:41.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/SetMIDResponse_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)     4486 2023-03-24 10:47:04.000000 iqrfpy-0.1.4/tests/messages/responses/coordinator/SmartConnectResponse_test.py
+│ │ +drwxrwxr-x   0 khanak    (1000) khanak    (1000)        0 2023-04-06 11:30:07.276975 iqrfpy-0.1.4/tests/utils/
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)    15855 2023-03-25 06:53:49.000000 iqrfpy-0.1.4/tests/utils/Common_test.py
+│ │ +-rw-rw-r--   0 khanak    (1000) khanak    (1000)       78 2023-03-22 19:16:00.000000 iqrfpy-0.1.4/tox.ini
+│ │   --- iqrfpy-0.1.3/.gitlab-ci.yml
+│ ├── +++ iqrfpy-0.1.4/.gitlab-ci.yml
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/LICENSE
+│ ├── +++ iqrfpy-0.1.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/Makefile
+│ ├── +++ iqrfpy-0.1.4/Makefile
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/PKG-INFO
+│ ├── +++ iqrfpy-0.1.4/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: iqrfpy
+│ │ -Version: 0.1.3
+│ │ +Version: 0.1.4
+│ │  Summary: A python library for communication with IQRF Network
+│ │  Home-page: https://gitlab.iqrf.org/microrisc/libiqrf-python
+│ │  Author: Karel Hanák
+│ │  Author-email: karel.hanak@iqrf.org
+│ │  License: Apache-2.0
+│ │  Keywords: iqrf,dpa
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- iqrfpy-0.1.3/example.py
+│ ├── +++ iqrfpy-0.1.4/example.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,11 +1,15 @@
+│ │  from iqrfpy.messages.requests.coordinator import *
+│ │  from iqrfpy.transports.itransport import ITransport
+│ │  from iqrfpy.messages.requests.coordinator.AuthorizeBond import AuthorizeBondParams
+│ │  
+│ │ +trans = ITransport()
+│ │ +
+│ │ +trans.receive()
+│ │ +
+│ │  data = [
+│ │      AuthorizeBondParams(reqAddr=1, mid=0),
+│ │      AuthorizeBondParams(reqAddr=2, mid=2164554855),
+│ │      AuthorizeBondParams(reqAddr=3, mid=2164554771),
+│ │  ]
+│ │  request = AuthorizeBondRequest(data)
+│ │  print(request.to_dpa())
+│ │   --- iqrfpy-0.1.3/examples/response_factories.py
+│ ├── +++ iqrfpy-0.1.4/examples/response_factories.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/enums/Commands.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/enums/Commands.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/enums/MessageTypes.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/enums/MessageTypes.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/enums/peripherals.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/enums/peripherals.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/IRequest.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/IRequest.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/AddrInfo.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/AddrInfo.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/AuthorizeBond.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/AuthorizeBond.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Backup.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Backup.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/BondNode.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/BondNode.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/BondedDevices.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/BondedDevices.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/ClearAllBonds.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/ClearAllBonds.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/DiscoveredDevices.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/DiscoveredDevices.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Discovery.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Discovery.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/RemoveBond.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/RemoveBond.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/Restore.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/Restore.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetDpaParams.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetDpaParams.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetHops.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetHops.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SetMID.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SetMID.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/SmartConnect.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/SmartConnect.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/coordinator/__init__.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/coordinator/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/requests/node/Read.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/requests/node/Read.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/response_factory.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/response_factory.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/AsyncResponse.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/AsyncResponse.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/Confirmation.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/Confirmation.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/IResponse.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/IResponse.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/AddrInfo.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/AddrInfo.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/AuthorizeBond.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/AuthorizeBond.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Backup.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Backup.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/BondNode.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/BondNode.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/BondedDevices.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/BondedDevices.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/ClearAllBonds.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/ClearAllBonds.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/DiscoveredDevices.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/DiscoveredDevices.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Discovery.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Discovery.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/RemoveBond.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/RemoveBond.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/Restore.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/Restore.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetDpaParams.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetDpaParams.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetHops.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetHops.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SetMID.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SetMID.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/SmartConnect.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/SmartConnect.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/coordinator/__init__.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/coordinator/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/messages/responses/node/Read.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/messages/responses/node/Read.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/transports/itransport.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/transports/itransport.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -20,58 +20,47 @@
+│ │      receive() -> IResponse:
+│ │          Receive a response synchronously, deserialize data from communication channel to a response object.
+│ │      receive_async(callback: Callable[[IResponse], None]) -> None:
+│ │          Receive a response asynchronously, deserialize data from communication channel to a response object
+│ │          and execute a callback if a function was passed.
+│ │      """
+│ │  
+│ │ -    @abstractmethod
+│ │      def initialize(self) -> None:
+│ │          """
+│ │          Initialize transport and create a connection if applicable.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │          """
+│ │ +        raise NotImplementedError("Abstract method not implemented.")
+│ │  
+│ │ -    @abstractmethod
+│ │      def send(self, request: IRequest) -> None:
+│ │          """
+│ │          Serialize passed request to format acceptable by the communication channel and send request.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          request: IRequest
+│ │              Request to send
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │          """
+│ │ +        raise NotImplementedError("Abstract method not implemented.")
+│ │  
+│ │ -    @abstractmethod
+│ │ -    def receive(self) -> IResponse:
+│ │ -        """
+│ │ -        Receive a response synchronously, deserialize data from communication channel to a response object.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        response: IResponse
+│ │ -            Deserialized response object, returns concrete response class objects
+│ │ -        """
+│ │ -
+│ │ -    @abstractmethod
+│ │ -    def receive_async(self, callback: Callable[[IResponse], None]) -> None:
+│ │ +    def set_receive_callback(self, callback: Callable[[IResponse], None]) -> None:
+│ │          """
+│ │          Receive a response asynchronously, deserialize data from communication channel to a response object
+│ │          and execute a callback if a function was passed.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          callback: Callable[[IResponse], None
+│ │              Function to call once a message has been received and successfully deserialized
+│ │  
+│ │          Returns
+│ │          -------
+│ │          None
+│ │          """
+│ │ +        raise NotImplementedError("Abstract method not implemented.")
+│ │   --- iqrfpy-0.1.3/iqrfpy/transports/mqtt_transport.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/transports/mqtt_transport.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/transports/udp_transport.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/transports/udp_transport.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy/utils/common.py
+│ ├── +++ iqrfpy-0.1.4/iqrfpy/utils/common.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/iqrfpy.egg-info/PKG-INFO
+│ ├── +++ iqrfpy-0.1.4/iqrfpy.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: iqrfpy
+│ │ -Version: 0.1.3
+│ │ +Version: 0.1.4
+│ │  Summary: A python library for communication with IQRF Network
+│ │  Home-page: https://gitlab.iqrf.org/microrisc/libiqrf-python
+│ │  Author: Karel Hanák
+│ │  Author-email: karel.hanak@iqrf.org
+│ │  License: Apache-2.0
+│ │  Keywords: iqrf,dpa
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- iqrfpy-0.1.3/iqrfpy.egg-info/SOURCES.txt
+│ ├── +++ iqrfpy-0.1.4/iqrfpy.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/setup.cfg
+│ ├── +++ iqrfpy-0.1.4/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/enums/Peripherals_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/enums/Peripherals_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/IRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/IRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/AddrInfoRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/AddrInfoRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/AuthorizeBondRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/AuthorizeBondRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/BackupRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/BackupRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/BondNodeRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/BondNodeRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/BondedDevicesRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/BondedDevicesRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/ClearAllBondsRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/ClearAllBondsRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/DiscoveredDevicesRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/DiscoveredDevicesRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/DiscoveryRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/DiscoveryRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/RemoveBondRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/RemoveBondRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/RestoreRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/RestoreRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/SetDpaParamsRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/SetDpaParamsRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/SetHopsRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/SetHopsRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/SetMIDRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/SetMIDRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/requests/coordinator/SmartConnectRequest_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/requests/coordinator/SmartConnectRequest_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/response_factory_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/response_factory_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/AsyncResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/AsyncResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/Confirmation_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/Confirmation_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/AddrInfoResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/AddrInfoResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/AuthorizeBondResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/AuthorizeBondResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/BackupResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/BackupResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/BondNodeResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/BondNodeResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/BondedDevicesResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/BondedDevicesResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/ClearAllBondsResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/ClearAllBondsResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/DiscoveredDevicesResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/DiscoveredDevicesResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/DiscoveryResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/DiscoveryResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/RemoveNodeResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/RemoveNodeResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/RestoreResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/RestoreResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/SetDpaParamsResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/SetDpaParamsResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/SetHopsResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/SetHopsResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/SetMIDResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/SetMIDResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/messages/responses/coordinator/SmartConnectResponse_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/messages/responses/coordinator/SmartConnectResponse_test.py
+│ │┄ Files identical despite different names
+│ │   --- iqrfpy-0.1.3/tests/utils/Common_test.py
+│ ├── +++ iqrfpy-0.1.4/tests/utils/Common_test.py
+│ │┄ Files identical despite different names

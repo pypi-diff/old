@@ -1,0 +1,202 @@
+# Comparing `tmp/converito-0.0.1.tar.gz` & `tmp/converito-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "converito-0.0.1.tar", last modified: Wed Apr  5 11:31:10 2023, max compression
++gzip compressed data, was "converito-0.0.2.tar", last modified: Thu Apr  6 11:23:28 2023, max compression
+```
+
+## Comparing `converito-0.0.1.tar` & `converito-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,123 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 11:31:10.055021 converito-0.0.1/
+--rw-r--r--   0 runner    (1001) docker     (123)     1103 2023-04-05 11:30:45.000000 converito-0.0.1/LICENSE.md
+--rw-r--r--   0 runner    (1001) docker     (123)      624 2023-04-05 11:31:10.055021 converito-0.0.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-05 11:30:45.000000 converito-0.0.1/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      613 2023-04-05 11:30:45.000000 converito-0.0.1/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 11:31:10.055021 converito-0.0.1/setup.cfg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 11:31:10.055021 converito-0.0.1/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 11:31:10.055021 converito-0.0.1/src/converito/
+--rw-r--r--   0 runner    (1001) docker     (123)       94 2023-04-05 11:30:45.000000 converito-0.0.1/src/converito/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      171 2023-04-05 11:30:45.000000 converito-0.0.1/src/converito/binary2decimal.py
+--rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-05 11:30:45.000000 converito-0.0.1/src/converito/binary2hexadecimal.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 11:31:10.055021 converito-0.0.1/src/converito.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      624 2023-04-05 11:31:10.000000 converito-0.0.1/src/converito.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      339 2023-04-05 11:31:10.000000 converito-0.0.1/src/converito.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 11:31:10.000000 converito-0.0.1/src/converito.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-05 11:31:10.000000 converito-0.0.1/src/converito.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 11:31:10.055021 converito-0.0.1/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)      358 2023-04-05 11:30:45.000000 converito-0.0.1/tests/test_binary2decimal.py
+--rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-05 11:30:45.000000 converito-0.0.1/tests/test_binary2hexadecimal.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:23:28.445253 converito-0.0.2/
++-rw-r--r--   0 runner    (1001) docker     (123)     1104 2023-04-06 11:22:55.000000 converito-0.0.2/LICENSE.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-04-06 11:23:28.445253 converito-0.0.2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      849 2023-04-06 11:22:55.000000 converito-0.0.2/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      613 2023-04-06 11:22:55.000000 converito-0.0.2/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 11:23:28.445253 converito-0.0.2/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:23:28.425252 converito-0.0.2/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:23:28.437252 converito-0.0.2/src/converito/
++-rw-r--r--   0 runner    (1001) docker     (123)     2212 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      171 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/binary2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/binary2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/binary2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       66 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/days2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      172 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/decimal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      199 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/decimal2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      167 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/decimal2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      249 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hexadecimal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      180 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hexadecimal2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      243 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hexadecimal2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)       69 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       60 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       65 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/hours2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       87 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       66 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)       87 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/minutes2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)       60 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       66 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)       78 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       60 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/months2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      213 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/octal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/octal2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)       84 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/octal2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)       91 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       98 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/seconds2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)       56 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       69 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/weeks2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)       64 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)       59 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-06 11:22:55.000000 converito-0.0.2/src/converito/years2weeks.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:23:28.437252 converito-0.0.2/src/converito.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-04-06 11:23:28.000000 converito-0.0.2/src/converito.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3383 2023-04-06 11:23:28.000000 converito-0.0.2/src/converito.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:23:28.000000 converito-0.0.2/src/converito.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 11:23:28.000000 converito-0.0.2/src/converito.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:23:28.445253 converito-0.0.2/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)      358 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_binary2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_binary2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      359 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_binary2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      316 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      336 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      341 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      328 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_days2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      349 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_decimal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      382 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_decimal2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      340 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_decimal2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      383 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hexadecimal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      382 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hexadecimal2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hexadecimal2octal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      339 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      342 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      344 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_hours2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      342 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      347 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      369 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      353 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      346 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_minutes2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      354 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      359 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      328 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_months2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      406 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_octal2binary.py
++-rw-r--r--   0 runner    (1001) docker     (123)      340 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_octal2decimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_octal2hexadecimal.py
++-rw-r--r--   0 runner    (1001) docker     (123)      341 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      344 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      353 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2weeks.py
++-rw-r--r--   0 runner    (1001) docker     (123)      355 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_seconds2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      315 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      326 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      346 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      343 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_weeks2years.py
++-rw-r--r--   0 runner    (1001) docker     (123)      320 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2days.py
++-rw-r--r--   0 runner    (1001) docker     (123)      331 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2hours.py
++-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2minutes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2months.py
++-rw-r--r--   0 runner    (1001) docker     (123)      355 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2seconds.py
++-rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-06 11:22:55.000000 converito-0.0.2/tests/test_years2weeks.py
+```
+
+### Comparing `converito-0.0.1/LICENSE.md` & `converito-0.0.2/LICENSE.md`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ The MIT License (MIT)
+ 
+-Copyright (c) 2023 Codinasion X <codinasionx@gmail.com>
++Copyright (c) 2023 harshraj8843 <harshraj8843@gmail.com>
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+```
+
+### Comparing `converito-0.0.1/pyproject.toml` & `converito-0.0.2/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "converito"
+-version = "0.0.1"
++version = "0.0.2"
+ authors = [{ name = "Codinasion X", email = "codinasionx@gmail.com" }]
+ description = "Converito is a collection of useful functions for developers."
+ readme = "README.md"
+ requires-python = ">=3.10"
+ classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+```
+

@@ -1,0 +1,514 @@
+# Comparing `tmp/torchrec_nightly-2023.4.4-py39-none-any.whl.zip` & `tmp/torchrec_nightly-2023.4.6-py39-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,139 +1,139 @@
+-Zip file size: 331322 bytes, number of entries: 137
+--rw-r--r--  2.0 unx      811 b- defN 23-Apr-04 11:17 torchrec/__init__.py
+--rw-r--r--  2.0 unx     1638 b- defN 23-Apr-04 11:17 torchrec/streamable.py
+--rw-r--r--  2.0 unx      854 b- defN 23-Apr-04 11:17 torchrec/types.py
+--rw-r--r--  2.0 unx     1153 b- defN 23-Apr-04 11:17 torchrec/datasets/__init__.py
+--rw-r--r--  2.0 unx    41469 b- defN 23-Apr-04 11:17 torchrec/datasets/criteo.py
+--rw-r--r--  2.0 unx     4548 b- defN 23-Apr-04 11:17 torchrec/datasets/movielens.py
+--rw-r--r--  2.0 unx     6539 b- defN 23-Apr-04 11:17 torchrec/datasets/random.py
+--rw-r--r--  2.0 unx    10909 b- defN 23-Apr-04 11:17 torchrec/datasets/utils.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/datasets/scripts/__init__.py
+--rw-r--r--  2.0 unx     2448 b- defN 23-Apr-04 11:17 torchrec/datasets/scripts/contiguous_preproc_criteo.py
+--rw-r--r--  2.0 unx     2847 b- defN 23-Apr-04 11:17 torchrec/datasets/scripts/npy_preproc_criteo.py
+--rw-r--r--  2.0 unx     3077 b- defN 23-Apr-04 11:17 torchrec/datasets/scripts/shuffle_preproc_criteo.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/datasets/test_utils/__init__.py
+--rw-r--r--  2.0 unx     5308 b- defN 23-Apr-04 11:17 torchrec/datasets/test_utils/criteo_test_utils.py
+--rw-r--r--  2.0 unx     1912 b- defN 23-Apr-04 11:17 torchrec/distributed/__init__.py
+--rw-r--r--  2.0 unx    36247 b- defN 23-Apr-04 11:17 torchrec/distributed/batched_embedding_kernel.py
+--rw-r--r--  2.0 unx     2069 b- defN 23-Apr-04 11:17 torchrec/distributed/collective_utils.py
+--rw-r--r--  2.0 unx     4925 b- defN 23-Apr-04 11:17 torchrec/distributed/comm.py
+--rw-r--r--  2.0 unx    55820 b- defN 23-Apr-04 11:17 torchrec/distributed/comm_ops.py
+--rw-r--r--  2.0 unx    35423 b- defN 23-Apr-04 11:17 torchrec/distributed/dist_data.py
+--rw-r--r--  2.0 unx    29817 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding.py
+--rw-r--r--  2.0 unx     3872 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding_kernel.py
+--rw-r--r--  2.0 unx    26074 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding_lookup.py
+--rw-r--r--  2.0 unx    14951 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding_sharding.py
+--rw-r--r--  2.0 unx    37089 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding_tower_sharding.py
+--rw-r--r--  2.0 unx    15021 b- defN 23-Apr-04 11:17 torchrec/distributed/embedding_types.py
+--rw-r--r--  2.0 unx    34339 b- defN 23-Apr-04 11:17 torchrec/distributed/embeddingbag.py
+--rw-r--r--  2.0 unx     7129 b- defN 23-Apr-04 11:17 torchrec/distributed/fbgemm_qcomm_codec.py
+--rw-r--r--  2.0 unx     5273 b- defN 23-Apr-04 11:17 torchrec/distributed/fused_embedding.py
+--rw-r--r--  2.0 unx     5110 b- defN 23-Apr-04 11:17 torchrec/distributed/fused_embeddingbag.py
+--rw-r--r--  2.0 unx     3807 b- defN 23-Apr-04 11:17 torchrec/distributed/grouped_position_weighted.py
+--rw-r--r--  2.0 unx    19345 b- defN 23-Apr-04 11:17 torchrec/distributed/model_parallel.py
+--rw-r--r--  2.0 unx    12699 b- defN 23-Apr-04 11:17 torchrec/distributed/quant_embedding.py
+--rw-r--r--  2.0 unx    11122 b- defN 23-Apr-04 11:17 torchrec/distributed/quant_embedding_kernel.py
+--rw-r--r--  2.0 unx     9878 b- defN 23-Apr-04 11:17 torchrec/distributed/quant_embeddingbag.py
+--rw-r--r--  2.0 unx     8710 b- defN 23-Apr-04 11:17 torchrec/distributed/shard.py
+--rw-r--r--  2.0 unx    19218 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding_plan.py
+--rw-r--r--  2.0 unx    22330 b- defN 23-Apr-04 11:17 torchrec/distributed/train_pipeline.py
+--rw-r--r--  2.0 unx    24913 b- defN 23-Apr-04 11:17 torchrec/distributed/types.py
+--rw-r--r--  2.0 unx    11373 b- defN 23-Apr-04 11:17 torchrec/distributed/utils.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/distributed/composable/__init__.py
+--rw-r--r--  2.0 unx     3207 b- defN 23-Apr-04 11:17 torchrec/distributed/composable/table_batched_embedding_slice.py
+--rw-r--r--  2.0 unx     1025 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/__init__.py
+--rw-r--r--  2.0 unx     3135 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/constants.py
+--rw-r--r--  2.0 unx    10318 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/enumerators.py
+--rw-r--r--  2.0 unx    12103 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/partitioners.py
+--rw-r--r--  2.0 unx      824 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/perf_models.py
+--rw-r--r--  2.0 unx    11869 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/planners.py
+--rw-r--r--  2.0 unx    11094 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/proposers.py
+--rw-r--r--  2.0 unx    34788 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/shard_estimators.py
+--rw-r--r--  2.0 unx    21469 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/stats.py
+--rw-r--r--  2.0 unx     9125 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/storage_reservations.py
+--rw-r--r--  2.0 unx    12611 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/types.py
+--rw-r--r--  2.0 unx     1119 b- defN 23-Apr-04 11:17 torchrec/distributed/planner/utils.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/__init__.py
+--rw-r--r--  2.0 unx     2539 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/cw_sequence_sharding.py
+--rw-r--r--  2.0 unx     9519 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/cw_sharding.py
+--rw-r--r--  2.0 unx     2802 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/dp_sequence_sharding.py
+--rw-r--r--  2.0 unx     7452 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/dp_sharding.py
+--rw-r--r--  2.0 unx     5041 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/rw_sequence_sharding.py
+--rw-r--r--  2.0 unx    12850 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/rw_sharding.py
+--rw-r--r--  2.0 unx     3114 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/sequence_sharding.py
+--rw-r--r--  2.0 unx     7620 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/tw_sequence_sharding.py
+--rw-r--r--  2.0 unx    16102 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/tw_sharding.py
+--rw-r--r--  2.0 unx     1284 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/twcw_sharding.py
+--rw-r--r--  2.0 unx    19840 b- defN 23-Apr-04 11:17 torchrec/distributed/sharding/twrw_sharding.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/__init__.py
+--rw-r--r--  2.0 unx     8078 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/infer_utils.py
+--rw-r--r--  2.0 unx     4868 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/multi_process.py
+--rw-r--r--  2.0 unx    33925 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/test_model.py
+--rw-r--r--  2.0 unx    11193 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/test_model_parallel.py
+--rw-r--r--  2.0 unx    25075 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/test_model_parallel_base.py
+--rw-r--r--  2.0 unx    15367 b- defN 23-Apr-04 11:17 torchrec/distributed/test_utils/test_sharding.py
+--rw-r--r--  2.0 unx      422 b- defN 23-Apr-04 11:17 torchrec/fx/__init__.py
+--rw-r--r--  2.0 unx     6477 b- defN 23-Apr-04 11:17 torchrec/fx/tracer.py
+--rw-r--r--  2.0 unx     3839 b- defN 23-Apr-04 11:17 torchrec/fx/utils.py
+--rw-r--r--  2.0 unx     1223 b- defN 23-Apr-04 11:17 torchrec/inference/__init__.py
+--rw-r--r--  2.0 unx     3614 b- defN 23-Apr-04 11:17 torchrec/inference/client.py
+--rw-r--r--  2.0 unx     3957 b- defN 23-Apr-04 11:17 torchrec/inference/model_packager.py
+--rw-r--r--  2.0 unx     7834 b- defN 23-Apr-04 11:17 torchrec/inference/modules.py
+--rw-r--r--  2.0 unx     3797 b- defN 23-Apr-04 11:17 torchrec/inference/state_dict_transform.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/metrics/__init__.py
+--rw-r--r--  2.0 unx    11254 b- defN 23-Apr-04 11:17 torchrec/metrics/auc.py
+--rw-r--r--  2.0 unx     3703 b- defN 23-Apr-04 11:17 torchrec/metrics/calibration.py
+--rw-r--r--  2.0 unx     3465 b- defN 23-Apr-04 11:17 torchrec/metrics/ctr.py
+--rw-r--r--  2.0 unx     3836 b- defN 23-Apr-04 11:17 torchrec/metrics/mae.py
+--rw-r--r--  2.0 unx    17448 b- defN 23-Apr-04 11:17 torchrec/metrics/metric_module.py
+--rw-r--r--  2.0 unx     6001 b- defN 23-Apr-04 11:17 torchrec/metrics/metrics_config.py
+--rw-r--r--  2.0 unx     3543 b- defN 23-Apr-04 11:17 torchrec/metrics/metrics_namespace.py
+--rw-r--r--  2.0 unx     3904 b- defN 23-Apr-04 11:17 torchrec/metrics/model_utils.py
+--rw-r--r--  2.0 unx     4631 b- defN 23-Apr-04 11:17 torchrec/metrics/mse.py
+--rw-r--r--  2.0 unx     5605 b- defN 23-Apr-04 11:17 torchrec/metrics/multiclass_recall.py
+--rw-r--r--  2.0 unx     6811 b- defN 23-Apr-04 11:17 torchrec/metrics/ne.py
+--rw-r--r--  2.0 unx    30635 b- defN 23-Apr-04 11:17 torchrec/metrics/rec_metric.py
+--rw-r--r--  2.0 unx     6057 b- defN 23-Apr-04 11:17 torchrec/metrics/throughput.py
+--rw-r--r--  2.0 unx    10622 b- defN 23-Apr-04 11:17 torchrec/metrics/tower_qps.py
+--rw-r--r--  2.0 unx     2867 b- defN 23-Apr-04 11:17 torchrec/metrics/weighted_avg.py
+--rw-r--r--  2.0 unx    16441 b- defN 23-Apr-04 11:17 torchrec/metrics/test_utils/__init__.py
+--rw-r--r--  2.0 unx      913 b- defN 23-Apr-04 11:17 torchrec/models/__init__.py
+--rw-r--r--  2.0 unx    11325 b- defN 23-Apr-04 11:17 torchrec/models/deepfm.py
+--rw-r--r--  2.0 unx    29989 b- defN 23-Apr-04 11:17 torchrec/models/dlrm.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-04 11:17 torchrec/models/experimental/__init__.py
+--rw-r--r--  2.0 unx     9823 b- defN 23-Apr-04 11:17 torchrec/models/experimental/test_transformerdlrm.py
+--rw-r--r--  2.0 unx     7434 b- defN 23-Apr-04 11:17 torchrec/models/experimental/transformerdlrm.py
+--rw-r--r--  2.0 unx     1179 b- defN 23-Apr-04 11:17 torchrec/modules/__init__.py
+--rw-r--r--  2.0 unx     1456 b- defN 23-Apr-04 11:17 torchrec/modules/activation.py
+--rw-r--r--  2.0 unx    15163 b- defN 23-Apr-04 11:17 torchrec/modules/crossnet.py
+--rw-r--r--  2.0 unx     8415 b- defN 23-Apr-04 11:17 torchrec/modules/deepfm.py
+--rw-r--r--  2.0 unx     5131 b- defN 23-Apr-04 11:17 torchrec/modules/embedding_configs.py
+--rw-r--r--  2.0 unx    12822 b- defN 23-Apr-04 11:17 torchrec/modules/embedding_modules.py
+--rw-r--r--  2.0 unx     4858 b- defN 23-Apr-04 11:17 torchrec/modules/embedding_tower.py
+--rw-r--r--  2.0 unx    12103 b- defN 23-Apr-04 11:17 torchrec/modules/feature_processor.py
+--rw-r--r--  2.0 unx    31184 b- defN 23-Apr-04 11:17 torchrec/modules/fused_embedding_modules.py
+--rw-r--r--  2.0 unx    10696 b- defN 23-Apr-04 11:17 torchrec/modules/lazy_extension.py
+--rw-r--r--  2.0 unx     6309 b- defN 23-Apr-04 11:17 torchrec/modules/mlp.py
+--rw-r--r--  2.0 unx     4022 b- defN 23-Apr-04 11:17 torchrec/modules/utils.py
+--rw-r--r--  2.0 unx     1639 b- defN 23-Apr-04 11:17 torchrec/optim/__init__.py
+--rw-r--r--  2.0 unx     2012 b- defN 23-Apr-04 11:17 torchrec/optim/apply_optimizer_in_backward.py
+--rw-r--r--  2.0 unx     1569 b- defN 23-Apr-04 11:17 torchrec/optim/clipping.py
+--rw-r--r--  2.0 unx     1353 b- defN 23-Apr-04 11:17 torchrec/optim/fused.py
+--rw-r--r--  2.0 unx    16069 b- defN 23-Apr-04 11:17 torchrec/optim/keyed.py
+--rw-r--r--  2.0 unx     4420 b- defN 23-Apr-04 11:17 torchrec/optim/optimizers.py
+--rw-r--r--  2.0 unx     7405 b- defN 23-Apr-04 11:17 torchrec/optim/rowwise_adagrad.py
+--rw-r--r--  2.0 unx     4865 b- defN 23-Apr-04 11:17 torchrec/optim/warmup.py
+--rw-r--r--  2.0 unx      560 b- defN 23-Apr-04 11:17 torchrec/optim/test_utils/__init__.py
+--rw-r--r--  2.0 unx     1140 b- defN 23-Apr-04 11:17 torchrec/quant/__init__.py
+--rw-r--r--  2.0 unx    21598 b- defN 23-Apr-04 11:17 torchrec/quant/embedding_modules.py
+--rw-r--r--  2.0 unx     3691 b- defN 23-Apr-04 11:17 torchrec/quant/utils.py
+--rw-r--r--  2.0 unx     1163 b- defN 23-Apr-04 11:17 torchrec/sparse/__init__.py
+--rw-r--r--  2.0 unx    52592 b- defN 23-Apr-04 11:17 torchrec/sparse/jagged_tensor.py
+--rw-r--r--  2.0 unx     1430 b- defN 23-Apr-04 11:17 torchrec/sparse/test_utils/__init__.py
+--rw-r--r--  2.0 unx     5661 b- defN 23-Apr-04 11:17 torchrec/test_utils/__init__.py
+--rw-r--r--  2.0 unx     1530 b- defN 23-Apr-04 11:22 torchrec_nightly-2023.4.4.dist-info/LICENSE
+--rw-r--r--  2.0 unx     5011 b- defN 23-Apr-04 11:22 torchrec_nightly-2023.4.4.dist-info/METADATA
+--rw-r--r--  2.0 unx       93 b- defN 23-Apr-04 11:22 torchrec_nightly-2023.4.4.dist-info/WHEEL
+--rw-r--r--  2.0 unx        9 b- defN 23-Apr-04 11:22 torchrec_nightly-2023.4.4.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx    12787 b- defN 23-Apr-04 11:22 torchrec_nightly-2023.4.4.dist-info/RECORD
+-137 files, 1346828 bytes uncompressed, 310854 bytes compressed:  76.9%
++Zip file size: 331305 bytes, number of entries: 137
++-rw-r--r--  2.0 unx      811 b- defN 23-Apr-06 11:17 torchrec/__init__.py
++-rw-r--r--  2.0 unx     1638 b- defN 23-Apr-06 11:17 torchrec/streamable.py
++-rw-r--r--  2.0 unx      854 b- defN 23-Apr-06 11:17 torchrec/types.py
++-rw-r--r--  2.0 unx     1153 b- defN 23-Apr-06 11:17 torchrec/datasets/__init__.py
++-rw-r--r--  2.0 unx    41469 b- defN 23-Apr-06 11:17 torchrec/datasets/criteo.py
++-rw-r--r--  2.0 unx     4548 b- defN 23-Apr-06 11:17 torchrec/datasets/movielens.py
++-rw-r--r--  2.0 unx     6539 b- defN 23-Apr-06 11:17 torchrec/datasets/random.py
++-rw-r--r--  2.0 unx    10909 b- defN 23-Apr-06 11:17 torchrec/datasets/utils.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/datasets/scripts/__init__.py
++-rw-r--r--  2.0 unx     2448 b- defN 23-Apr-06 11:17 torchrec/datasets/scripts/contiguous_preproc_criteo.py
++-rw-r--r--  2.0 unx     2847 b- defN 23-Apr-06 11:17 torchrec/datasets/scripts/npy_preproc_criteo.py
++-rw-r--r--  2.0 unx     3077 b- defN 23-Apr-06 11:17 torchrec/datasets/scripts/shuffle_preproc_criteo.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/datasets/test_utils/__init__.py
++-rw-r--r--  2.0 unx     5308 b- defN 23-Apr-06 11:17 torchrec/datasets/test_utils/criteo_test_utils.py
++-rw-r--r--  2.0 unx     1912 b- defN 23-Apr-06 11:17 torchrec/distributed/__init__.py
++-rw-r--r--  2.0 unx    36247 b- defN 23-Apr-06 11:17 torchrec/distributed/batched_embedding_kernel.py
++-rw-r--r--  2.0 unx     2069 b- defN 23-Apr-06 11:17 torchrec/distributed/collective_utils.py
++-rw-r--r--  2.0 unx     4925 b- defN 23-Apr-06 11:17 torchrec/distributed/comm.py
++-rw-r--r--  2.0 unx    55820 b- defN 23-Apr-06 11:17 torchrec/distributed/comm_ops.py
++-rw-r--r--  2.0 unx    35423 b- defN 23-Apr-06 11:17 torchrec/distributed/dist_data.py
++-rw-r--r--  2.0 unx    29817 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding.py
++-rw-r--r--  2.0 unx     3872 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding_kernel.py
++-rw-r--r--  2.0 unx    26074 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding_lookup.py
++-rw-r--r--  2.0 unx    14951 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding_sharding.py
++-rw-r--r--  2.0 unx    37089 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding_tower_sharding.py
++-rw-r--r--  2.0 unx    15021 b- defN 23-Apr-06 11:17 torchrec/distributed/embedding_types.py
++-rw-r--r--  2.0 unx    34339 b- defN 23-Apr-06 11:17 torchrec/distributed/embeddingbag.py
++-rw-r--r--  2.0 unx     7129 b- defN 23-Apr-06 11:17 torchrec/distributed/fbgemm_qcomm_codec.py
++-rw-r--r--  2.0 unx     5273 b- defN 23-Apr-06 11:17 torchrec/distributed/fused_embedding.py
++-rw-r--r--  2.0 unx     5110 b- defN 23-Apr-06 11:17 torchrec/distributed/fused_embeddingbag.py
++-rw-r--r--  2.0 unx     3807 b- defN 23-Apr-06 11:17 torchrec/distributed/grouped_position_weighted.py
++-rw-r--r--  2.0 unx    19345 b- defN 23-Apr-06 11:17 torchrec/distributed/model_parallel.py
++-rw-r--r--  2.0 unx    12699 b- defN 23-Apr-06 11:17 torchrec/distributed/quant_embedding.py
++-rw-r--r--  2.0 unx    11122 b- defN 23-Apr-06 11:17 torchrec/distributed/quant_embedding_kernel.py
++-rw-r--r--  2.0 unx     9878 b- defN 23-Apr-06 11:17 torchrec/distributed/quant_embeddingbag.py
++-rw-r--r--  2.0 unx     8710 b- defN 23-Apr-06 11:17 torchrec/distributed/shard.py
++-rw-r--r--  2.0 unx    19218 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding_plan.py
++-rw-r--r--  2.0 unx    22330 b- defN 23-Apr-06 11:17 torchrec/distributed/train_pipeline.py
++-rw-r--r--  2.0 unx    24913 b- defN 23-Apr-06 11:17 torchrec/distributed/types.py
++-rw-r--r--  2.0 unx    11373 b- defN 23-Apr-06 11:17 torchrec/distributed/utils.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/distributed/composable/__init__.py
++-rw-r--r--  2.0 unx     3207 b- defN 23-Apr-06 11:17 torchrec/distributed/composable/table_batched_embedding_slice.py
++-rw-r--r--  2.0 unx     1025 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/__init__.py
++-rw-r--r--  2.0 unx     3135 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/constants.py
++-rw-r--r--  2.0 unx    10318 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/enumerators.py
++-rw-r--r--  2.0 unx    12103 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/partitioners.py
++-rw-r--r--  2.0 unx      824 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/perf_models.py
++-rw-r--r--  2.0 unx    11869 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/planners.py
++-rw-r--r--  2.0 unx    11094 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/proposers.py
++-rw-r--r--  2.0 unx    34788 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/shard_estimators.py
++-rw-r--r--  2.0 unx    21410 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/stats.py
++-rw-r--r--  2.0 unx     9125 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/storage_reservations.py
++-rw-r--r--  2.0 unx    12611 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/types.py
++-rw-r--r--  2.0 unx     1119 b- defN 23-Apr-06 11:17 torchrec/distributed/planner/utils.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/__init__.py
++-rw-r--r--  2.0 unx     2539 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/cw_sequence_sharding.py
++-rw-r--r--  2.0 unx     9519 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/cw_sharding.py
++-rw-r--r--  2.0 unx     2802 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/dp_sequence_sharding.py
++-rw-r--r--  2.0 unx     7452 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/dp_sharding.py
++-rw-r--r--  2.0 unx     5041 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/rw_sequence_sharding.py
++-rw-r--r--  2.0 unx    12850 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/rw_sharding.py
++-rw-r--r--  2.0 unx     3114 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/sequence_sharding.py
++-rw-r--r--  2.0 unx     7620 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/tw_sequence_sharding.py
++-rw-r--r--  2.0 unx    16102 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/tw_sharding.py
++-rw-r--r--  2.0 unx     1284 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/twcw_sharding.py
++-rw-r--r--  2.0 unx    19840 b- defN 23-Apr-06 11:17 torchrec/distributed/sharding/twrw_sharding.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/__init__.py
++-rw-r--r--  2.0 unx     8078 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/infer_utils.py
++-rw-r--r--  2.0 unx     4868 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/multi_process.py
++-rw-r--r--  2.0 unx    33925 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/test_model.py
++-rw-r--r--  2.0 unx    11193 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/test_model_parallel.py
++-rw-r--r--  2.0 unx    25075 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/test_model_parallel_base.py
++-rw-r--r--  2.0 unx    15367 b- defN 23-Apr-06 11:17 torchrec/distributed/test_utils/test_sharding.py
++-rw-r--r--  2.0 unx      422 b- defN 23-Apr-06 11:17 torchrec/fx/__init__.py
++-rw-r--r--  2.0 unx     6477 b- defN 23-Apr-06 11:17 torchrec/fx/tracer.py
++-rw-r--r--  2.0 unx     3839 b- defN 23-Apr-06 11:17 torchrec/fx/utils.py
++-rw-r--r--  2.0 unx     1223 b- defN 23-Apr-06 11:17 torchrec/inference/__init__.py
++-rw-r--r--  2.0 unx     3614 b- defN 23-Apr-06 11:17 torchrec/inference/client.py
++-rw-r--r--  2.0 unx     3957 b- defN 23-Apr-06 11:17 torchrec/inference/model_packager.py
++-rw-r--r--  2.0 unx     7834 b- defN 23-Apr-06 11:17 torchrec/inference/modules.py
++-rw-r--r--  2.0 unx     3797 b- defN 23-Apr-06 11:17 torchrec/inference/state_dict_transform.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/metrics/__init__.py
++-rw-r--r--  2.0 unx    11254 b- defN 23-Apr-06 11:17 torchrec/metrics/auc.py
++-rw-r--r--  2.0 unx     3703 b- defN 23-Apr-06 11:17 torchrec/metrics/calibration.py
++-rw-r--r--  2.0 unx     3465 b- defN 23-Apr-06 11:17 torchrec/metrics/ctr.py
++-rw-r--r--  2.0 unx     3836 b- defN 23-Apr-06 11:17 torchrec/metrics/mae.py
++-rw-r--r--  2.0 unx    17448 b- defN 23-Apr-06 11:17 torchrec/metrics/metric_module.py
++-rw-r--r--  2.0 unx     6001 b- defN 23-Apr-06 11:17 torchrec/metrics/metrics_config.py
++-rw-r--r--  2.0 unx     3543 b- defN 23-Apr-06 11:17 torchrec/metrics/metrics_namespace.py
++-rw-r--r--  2.0 unx     3904 b- defN 23-Apr-06 11:17 torchrec/metrics/model_utils.py
++-rw-r--r--  2.0 unx     4631 b- defN 23-Apr-06 11:17 torchrec/metrics/mse.py
++-rw-r--r--  2.0 unx     5605 b- defN 23-Apr-06 11:17 torchrec/metrics/multiclass_recall.py
++-rw-r--r--  2.0 unx     6811 b- defN 23-Apr-06 11:17 torchrec/metrics/ne.py
++-rw-r--r--  2.0 unx    30635 b- defN 23-Apr-06 11:17 torchrec/metrics/rec_metric.py
++-rw-r--r--  2.0 unx     6057 b- defN 23-Apr-06 11:17 torchrec/metrics/throughput.py
++-rw-r--r--  2.0 unx    10622 b- defN 23-Apr-06 11:17 torchrec/metrics/tower_qps.py
++-rw-r--r--  2.0 unx     2867 b- defN 23-Apr-06 11:17 torchrec/metrics/weighted_avg.py
++-rw-r--r--  2.0 unx    16441 b- defN 23-Apr-06 11:17 torchrec/metrics/test_utils/__init__.py
++-rw-r--r--  2.0 unx      913 b- defN 23-Apr-06 11:17 torchrec/models/__init__.py
++-rw-r--r--  2.0 unx    11325 b- defN 23-Apr-06 11:17 torchrec/models/deepfm.py
++-rw-r--r--  2.0 unx    29989 b- defN 23-Apr-06 11:17 torchrec/models/dlrm.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:17 torchrec/models/experimental/__init__.py
++-rw-r--r--  2.0 unx     9823 b- defN 23-Apr-06 11:17 torchrec/models/experimental/test_transformerdlrm.py
++-rw-r--r--  2.0 unx     7434 b- defN 23-Apr-06 11:17 torchrec/models/experimental/transformerdlrm.py
++-rw-r--r--  2.0 unx     1179 b- defN 23-Apr-06 11:17 torchrec/modules/__init__.py
++-rw-r--r--  2.0 unx     1456 b- defN 23-Apr-06 11:17 torchrec/modules/activation.py
++-rw-r--r--  2.0 unx    15163 b- defN 23-Apr-06 11:17 torchrec/modules/crossnet.py
++-rw-r--r--  2.0 unx     8415 b- defN 23-Apr-06 11:17 torchrec/modules/deepfm.py
++-rw-r--r--  2.0 unx     5131 b- defN 23-Apr-06 11:17 torchrec/modules/embedding_configs.py
++-rw-r--r--  2.0 unx    12822 b- defN 23-Apr-06 11:17 torchrec/modules/embedding_modules.py
++-rw-r--r--  2.0 unx     4858 b- defN 23-Apr-06 11:17 torchrec/modules/embedding_tower.py
++-rw-r--r--  2.0 unx    12103 b- defN 23-Apr-06 11:17 torchrec/modules/feature_processor.py
++-rw-r--r--  2.0 unx    31184 b- defN 23-Apr-06 11:17 torchrec/modules/fused_embedding_modules.py
++-rw-r--r--  2.0 unx    10696 b- defN 23-Apr-06 11:17 torchrec/modules/lazy_extension.py
++-rw-r--r--  2.0 unx     6309 b- defN 23-Apr-06 11:17 torchrec/modules/mlp.py
++-rw-r--r--  2.0 unx     4022 b- defN 23-Apr-06 11:17 torchrec/modules/utils.py
++-rw-r--r--  2.0 unx     1639 b- defN 23-Apr-06 11:17 torchrec/optim/__init__.py
++-rw-r--r--  2.0 unx     2012 b- defN 23-Apr-06 11:17 torchrec/optim/apply_optimizer_in_backward.py
++-rw-r--r--  2.0 unx     1569 b- defN 23-Apr-06 11:17 torchrec/optim/clipping.py
++-rw-r--r--  2.0 unx     1353 b- defN 23-Apr-06 11:17 torchrec/optim/fused.py
++-rw-r--r--  2.0 unx    16069 b- defN 23-Apr-06 11:17 torchrec/optim/keyed.py
++-rw-r--r--  2.0 unx     4420 b- defN 23-Apr-06 11:17 torchrec/optim/optimizers.py
++-rw-r--r--  2.0 unx     7405 b- defN 23-Apr-06 11:17 torchrec/optim/rowwise_adagrad.py
++-rw-r--r--  2.0 unx     4865 b- defN 23-Apr-06 11:17 torchrec/optim/warmup.py
++-rw-r--r--  2.0 unx      560 b- defN 23-Apr-06 11:17 torchrec/optim/test_utils/__init__.py
++-rw-r--r--  2.0 unx     1140 b- defN 23-Apr-06 11:17 torchrec/quant/__init__.py
++-rw-r--r--  2.0 unx    21598 b- defN 23-Apr-06 11:17 torchrec/quant/embedding_modules.py
++-rw-r--r--  2.0 unx     3691 b- defN 23-Apr-06 11:17 torchrec/quant/utils.py
++-rw-r--r--  2.0 unx     1163 b- defN 23-Apr-06 11:17 torchrec/sparse/__init__.py
++-rw-r--r--  2.0 unx    52592 b- defN 23-Apr-06 11:17 torchrec/sparse/jagged_tensor.py
++-rw-r--r--  2.0 unx     1430 b- defN 23-Apr-06 11:17 torchrec/sparse/test_utils/__init__.py
++-rw-r--r--  2.0 unx     5661 b- defN 23-Apr-06 11:17 torchrec/test_utils/__init__.py
++-rw-r--r--  2.0 unx     1530 b- defN 23-Apr-06 11:21 torchrec_nightly-2023.4.6.dist-info/LICENSE
++-rw-r--r--  2.0 unx     5011 b- defN 23-Apr-06 11:21 torchrec_nightly-2023.4.6.dist-info/METADATA
++-rw-r--r--  2.0 unx       93 b- defN 23-Apr-06 11:21 torchrec_nightly-2023.4.6.dist-info/WHEEL
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-06 11:21 torchrec_nightly-2023.4.6.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx    12787 b- defN 23-Apr-06 11:21 torchrec_nightly-2023.4.6.dist-info/RECORD
++137 files, 1346769 bytes uncompressed, 310837 bytes compressed:  76.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -390,23 +390,23 @@
+ 
+ Filename: torchrec/sparse/test_utils/__init__.py
+ Comment: 
+ 
+ Filename: torchrec/test_utils/__init__.py
+ Comment: 
+ 
+-Filename: torchrec_nightly-2023.4.4.dist-info/LICENSE
++Filename: torchrec_nightly-2023.4.6.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: torchrec_nightly-2023.4.4.dist-info/METADATA
++Filename: torchrec_nightly-2023.4.6.dist-info/METADATA
+ Comment: 
+ 
+-Filename: torchrec_nightly-2023.4.4.dist-info/WHEEL
++Filename: torchrec_nightly-2023.4.6.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: torchrec_nightly-2023.4.4.dist-info/top_level.txt
++Filename: torchrec_nightly-2023.4.6.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: torchrec_nightly-2023.4.4.dist-info/RECORD
++Filename: torchrec_nightly-2023.4.6.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## torchrec/distributed/planner/stats.py
+
+```diff
+@@ -225,84 +225,81 @@
+             param_table: List[List[Union[str, int]]] = [
+                 [
+                     "FQN",
+                     "Sharding",
+                     "Compute Kernel",
+                     "Perf (ms)",
+                     "Pooling Factor",
+-                    "Number of Poolings",
++                    "Num Poolings",
+                     "Output",
+                     "Features",
+-                    # TODO(T149392538): remove num_poolings and batch_sizes if not specified
+-                    "Per-Feature Batch Sizes",
+                     "Emb Dim",
+                     "Hash Size",
+                     "Ranks",
+                 ],
+                 [
+                     "-----",
+                     "----------",
+                     "----------------",
+                     "-----------",
+                     "----------------",
+-                    "--------------------",
++                    "--------------",
+                     "--------",
+                     "----------",
+-                    "-------------",
+                     "---------",
+                     "-----------",
+                     "-------",
+                 ],
+             ]
+-            for so in best_plan:
++            feat_batch_sizes = [
++                constraints[so.name].batch_sizes
++                if constraints and constraints.get(so.name)
++                else None
++                for so in best_plan
++            ]
++            if include_batch_sizes := any(feat_batch_sizes):
++                param_table[0].append("Batch Sizes")
++                param_table[1].append("-------------")
++            for i, so in enumerate(best_plan):
+                 ranks = sorted([cast(int, shard.rank) for shard in so.shards])
+                 ranks = _collapse_consecutive_ranks(ranks)
+                 shard_perfs = str(
+                     round(sum([cast(float, shard.perf) for shard in so.shards]), 3)
+                 )
+                 pooling_factor = str(round(sum(so.input_lengths), 3))
+-
+-                table_name = so.name
+-                if constraints:
+-                    table_constraints = constraints.get(table_name)
+-                else:
+-                    table_constraints = None
+-                per_feature_batch_sizes = "N/A"
+-                if table_constraints:
+-                    num_poolings = table_constraints.num_poolings
+-                    if table_constraints.batch_sizes:
+-                        per_feature_batch_sizes = _reduce_list_string(
+-                            table_constraints.batch_sizes
+-                        )
+-                else:
+-                    num_poolings = None
+-
+-                num_poolings = num_poolings or [NUM_POOLINGS] * len(so.input_lengths)
++                num_poolings = (
++                    cast(List[float], constraints[so.name].num_poolings)
++                    if constraints
++                    and constraints.get(so.name)
++                    and constraints[so.name].num_poolings
++                    else [NUM_POOLINGS] * len(so.input_lengths)
++                )
+                 num_poolings = str(round(sum(num_poolings), 3))
+-
+                 output = "pooled" if so.is_pooled else "sequence"
+                 num_features = len(so.input_lengths)
+                 embedding_dim = so.tensor.shape[1]
+                 hash_size = so.tensor.shape[0]
+                 param_table.append(
+                     [
+                         so.fqn,
+                         _get_sharding_type_abbr(so.sharding_type),
+                         so.compute_kernel,
+                         shard_perfs,
+                         pooling_factor,
+                         num_poolings,
+                         output,
+                         num_features,
+-                        per_feature_batch_sizes,
+                         embedding_dim,
+                         hash_size,
+                         ",".join(ranks),
+                     ]
+                 )
++                if include_batch_sizes:
++                    bs = feat_batch_sizes[i]
++                    param_table[-1].append(_reduce_int_list(bs) if bs else "n/a")
+             formatted_param_table = _format_table(param_table)
+             self._width = max(self._width, len(formatted_param_table[0]) + 6)
+ 
+         self._stats_table.clear()
+         self._stats_table.append("#" * self._width)
+         header_text = "--- Planner Statistics ---"
+         self._stats_table.append(f"#{header_text: ^{self._width-2}}#")
+@@ -517,15 +514,15 @@
+ def _collapse_consecutive_ranks(ranks: List[int]) -> List[str]:
+     if len(ranks) > 1 and ranks == list(range(min(ranks), max(ranks) + 1)):
+         return [f"{min(ranks)}-{max(ranks)}"]
+     else:
+         return [str(rank) for rank in ranks]
+ 
+ 
+-def _reduce_list_string(input_list: List[int]) -> str:
++def _reduce_int_list(input_list: List[int]) -> str:
+     if len(input_list) == 0:
+         return ""
+     reduced = []
+     count = 1
+     prev_num = input_list[0]
+ 
+     for num in input_list[1:]:
+```
+
+## Comparing `torchrec_nightly-2023.4.4.dist-info/LICENSE` & `torchrec_nightly-2023.4.6.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `torchrec_nightly-2023.4.4.dist-info/METADATA` & `torchrec_nightly-2023.4.6.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: torchrec-nightly
+-Version: 2023.4.4
++Version: 2023.4.6
+ Summary: Pytorch domain library for recommendation systems
+ Home-page: https://github.com/pytorch/torchrec
+ Author: TorchRec Team
+ Author-email: packages@pytorch.org
+ License: BSD-3
+ Keywords: pytorch,recommendation systems,sharding
+ Classifier: Development Status :: 4 - Beta
+```
+
+## Comparing `torchrec_nightly-2023.4.4.dist-info/RECORD` & `torchrec_nightly-2023.4.6.dist-info/RECORD`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -44,15 +44,15 @@
+ torchrec/distributed/planner/constants.py,sha256=MkeVqYO2QGg57i6fs29lZb2dScaaR9mdQVsee4NxyFc,3135
+ torchrec/distributed/planner/enumerators.py,sha256=hZzhnfMrOz65lBoddxTKBb01hm43R_5tdpysJFSzCLE,10318
+ torchrec/distributed/planner/partitioners.py,sha256=I2fTqnKWcaL7G8Cz6aXC61S1sa3ZtHSz1Xp8xGbEAr8,12103
+ torchrec/distributed/planner/perf_models.py,sha256=srFJ0AkOhLVhumdcuyYzl5J1qzezt6knt-TxZvK6Zy4,824
+ torchrec/distributed/planner/planners.py,sha256=ZccWhKg9QUA2f3oAtVnFWjPfKEiSjRzZVCMGcenyG7c,11869
+ torchrec/distributed/planner/proposers.py,sha256=A-adzCCshGZUIyCP7DPOGDuh4hbojawWuObxsIf-rOg,11094
+ torchrec/distributed/planner/shard_estimators.py,sha256=RrqugawNv1dAMjOnI1WpJ4ZshUwaB4NK9a82-Cd7mFw,34788
+-torchrec/distributed/planner/stats.py,sha256=m3qhh6zh_bEiHqalZb2DrhLHixVDAtx8505L1hnxCfc,21469
++torchrec/distributed/planner/stats.py,sha256=my1OB-r1HO-ixc7joRz1CltZlQJDBrjJOtLIXDY7B5c,21410
+ torchrec/distributed/planner/storage_reservations.py,sha256=rPqeD03f3mg8yoSqy9CZfOmxVMUGrCz98nPqwvxhApc,9125
+ torchrec/distributed/planner/types.py,sha256=R-NCgPEq_QImroSWlreGPCtq_fNBKkdiIegzM8CJF4Y,12611
+ torchrec/distributed/planner/utils.py,sha256=YwOUrqb-D6HaVtWCRFz9RWhBdMRBqjMaYYhoQgyOkQg,1119
+ torchrec/distributed/sharding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ torchrec/distributed/sharding/cw_sequence_sharding.py,sha256=o8RZAs2zivNP8MZ5QUWF0alw7KwWZnJVG9iKHM4EJdE,2539
+ torchrec/distributed/sharding/cw_sharding.py,sha256=PLJHgxkQvX_sNI8RJlz4xIemb4vO2KHOe_9PylZ2je8,9519
+ torchrec/distributed/sharding/dp_sequence_sharding.py,sha256=zQmERguEGVd5IAbmVsIhqdKXb0f2g8tQamN838qVvfM,2802
+@@ -126,12 +126,12 @@
+ torchrec/quant/__init__.py,sha256=A6NIA6ztq6iP1JTLRLNzlgnCcd-LaN8efnxGub3Ii4A,1140
+ torchrec/quant/embedding_modules.py,sha256=pxHWBEDwtYDeAPrfcl2IkMJ1JBlF7RO7h0o495gMjfk,21598
+ torchrec/quant/utils.py,sha256=2oUJIsrzE7ijvPs5DYUa06wOfmRvU1KdU1aQI7DUccs,3691
+ torchrec/sparse/__init__.py,sha256=dLqSye4Jo6obnNNTUKdPDxPQb9sL2U4weemSn-DjpYk,1163
+ torchrec/sparse/jagged_tensor.py,sha256=B-97CiiaT8iS5PwceZAXul0ka3UooRpg64zqK7Jm-tU,52592
+ torchrec/sparse/test_utils/__init__.py,sha256=BLxfGKJvwjjCiQM64O5wGAA_Cea0sG-buw9lTDWuqug,1430
+ torchrec/test_utils/__init__.py,sha256=JncJcXS4N3gI7-fsizQ2-qiWM6MhIrpvskF_9gDf0Go,5661
+-torchrec_nightly-2023.4.4.dist-info/LICENSE,sha256=e0Eotbf_rHOYPuEUlppIbvwy4SN98CZnl_hqwvbDA4Q,1530
+-torchrec_nightly-2023.4.4.dist-info/METADATA,sha256=I_PT5KbhfF36cl0Zc5mJW-q2dllZ9go8XvmjjWcsMuI,5011
+-torchrec_nightly-2023.4.4.dist-info/WHEEL,sha256=ns_9KNZvwSNZtRgVV_clzMUG_fXjGc5Z8Tx4hxQ0gkw,93
+-torchrec_nightly-2023.4.4.dist-info/top_level.txt,sha256=LoLcTAPLj_7x62AuyYmhEVBcx2WJ1Z1Nrknv0Jnk_gQ,9
+-torchrec_nightly-2023.4.4.dist-info/RECORD,,
++torchrec_nightly-2023.4.6.dist-info/LICENSE,sha256=e0Eotbf_rHOYPuEUlppIbvwy4SN98CZnl_hqwvbDA4Q,1530
++torchrec_nightly-2023.4.6.dist-info/METADATA,sha256=ILIBWC63pR8HqtERkSZIsxq0UmH_WObhFQ2TNke6_-I,5011
++torchrec_nightly-2023.4.6.dist-info/WHEEL,sha256=ns_9KNZvwSNZtRgVV_clzMUG_fXjGc5Z8Tx4hxQ0gkw,93
++torchrec_nightly-2023.4.6.dist-info/top_level.txt,sha256=LoLcTAPLj_7x62AuyYmhEVBcx2WJ1Z1Nrknv0Jnk_gQ,9
++torchrec_nightly-2023.4.6.dist-info/RECORD,,
+```
+

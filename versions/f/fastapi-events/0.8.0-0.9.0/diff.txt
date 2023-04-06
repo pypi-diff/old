@@ -1,0 +1,535 @@
+--- tmp/fastapi-events-0.8.0.tar.gz
++++ tmp/fastapi-events-0.9.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "/home/runner/work/fastapi-events/fastapi-events/dist/tmpnq33gezv/fastapi-events-0.8.0.tar", last modified: Tue Nov 22 14:04:45 2022, max compression
+│ +gzip compressed data, was "/home/runner/work/fastapi-events/fastapi-events/dist/.tmp-t9xohjxy/fastapi-events-0.9.0.tar", last modified: Thu Apr  6 11:25:48 2023, max compression
+│   --- fastapi-events-0.8.0.tar
+├── +++ fastapi-events-0.9.0.tar
+│ ├── file list
+│ │ @@ -1,46 +1,46 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1067 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    16589 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    15574 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      874 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      196 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5186 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/dispatcher.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      105 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/errors.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/handlers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2341 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/aws.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      393 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      318 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/echo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1898 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/gcp.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1945 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/local.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      426 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/handlers/null.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2626 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/middleware.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/otel/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      165 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       61 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/attributes.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/otel/propagate/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      308 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/propagate/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      224 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/propagate/dummy.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/otel/trace/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      262 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/trace/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      585 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/trace/dummy.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3262 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/otel/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       26 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/py.typed
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events/registry/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/registry/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1031 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/registry/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      245 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/registry/payload_schema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      349 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/typing.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      751 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/fastapi_events/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    16589 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1055 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      413 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       21 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/fastapi_events.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       38 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2341 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:45.000000 fastapi-events-0.8.0/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     6456 2022-11-22 14:04:36.000000 fastapi-events-0.8.0/tests/test_dispatcher.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1067 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17709 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16694 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      874 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      196 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5186 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/dispatcher.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      105 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/errors.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/handlers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/aws.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      393 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      318 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/echo.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1898 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/gcp.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6013 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/local.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/handlers/null.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2626 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/middleware.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/otel/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      165 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/attributes.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/otel/propagate/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      308 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/propagate/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      224 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/propagate/dummy.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/otel/trace/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/trace/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      585 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/trace/dummy.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3262 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/otel/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/py.typed
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events/registry/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/registry/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1031 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/registry/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      245 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/registry/payload_schema.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      349 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/typing.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      751 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/fastapi_events/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17709 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1055 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      429 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       21 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/fastapi_events.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2381 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:48.000000 fastapi-events-0.9.0/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6456 2023-04-06 11:25:33.000000 fastapi-events-0.9.0/tests/test_dispatcher.py
+│ │   --- fastapi-events-0.8.0/LICENSE
+│ ├── +++ fastapi-events-0.9.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/PKG-INFO
+│ ├── +++ fastapi-events-0.9.0/README.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,53 +1,29 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: fastapi-events
+│ │ -Version: 0.8.0
+│ │ -Summary: Event dispatching library for FastAPI
+│ │ -Home-page: https://github.com/melvinkcx/fastapi-events
+│ │ -Author: Melvin Koh
+│ │ -Author-email: melvinkcx@gmail.com
+│ │ -Keywords: starlette,fastapi,starlite,pydantic
+│ │ -Classifier: Operating System :: OS Independent
+│ │ -Classifier: Programming Language :: Python :: 3.11
+│ │ -Classifier: Development Status :: 5 - Production/Stable
+│ │ -Classifier: Programming Language :: Python :: 3.9
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │ -Classifier: Environment :: Web Environment
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Intended Audience :: Developers
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ -Classifier: Programming Language :: Python
+│ │ -Classifier: Programming Language :: Python :: 3.10
+│ │ -Requires-Python: >=3.7
+│ │ -Description-Content-Type: text/markdown
+│ │ -Provides-Extra: test
+│ │ -Provides-Extra: aws
+│ │ -Provides-Extra: google
+│ │ -Provides-Extra: otel
+│ │ -License-File: LICENSE
+│ │ -
+│ │  # fastapi-events
+│ │  
+│ │  An event dispatching/handling library for FastAPI, and Starlette.
+│ │  
+│ │  [![](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml/badge.svg?branch=dev&event=push)](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dw/fastapi-events)
+│ │  
+│ │  Features:
+│ │  
+│ │  * straightforward API to emit events anywhere in your code
+│ │  * events are handled after responses are returned (doesn't affect response time)
+│ │  * supports event piping to remote queues
+│ │  * powerful built-in handlers to handle events locally and remotely
+│ │  * coroutine functions (`async def`) are the first-class citizen
+│ │  * write your handlers, never be limited to just what `fastapi_events` provides
+│ │  * (__>=0.3.0__) supports event payload validation via Pydantic (See [here](#event-payload-validation-with-pydantic))
+│ │  * (__>=0.4.0__) supports event chaining: dispatching events within handlers (thank [@ndopj](https://github.com/ndopj)
+│ │    for contributing to the idea)
+│ │  * (__>=0.7.0__) supports OpenTelemetry: see [this section](#opentelemetry-otel-support) for details
+│ │ +* (__>=0.9.0__) supports dependencies in local handlers: see [this section](#using-dependencies-in-local-handler) for details
+│ │ +
+│ │ +If you use or like this project, please consider giving it a star so it can reach more developers. Thanks =)
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```shell
+│ │  pip install fastapi-events
+│ │  ```
+│ │  
+│ │ @@ -240,14 +216,50 @@
+│ │  
+│ │  @local_handler.register(event_name="*")
+│ │  async def handle_all_events(event: Event):
+│ │      # event handlers can be coroutine function too (`async def`)
+│ │      pass
+│ │  ```
+│ │  
+│ │ +#### Using Dependencies in Local Handler
+│ │ +
+│ │ +> new feature in fastapi-events>=0.9.0
+│ │ +
+│ │ +Dependencies can now be used with local handler. Sub-dependencies are also supported.
+│ │ +
+│ │ +However, dependencies using generator (with `yield` keyword) is not supported yet. I have the intention to support it in the future.
+│ │ +
+│ │ +
+│ │ +```python
+│ │ +# ex: in handlers.py
+│ │ +from fastapi import Depends
+│ │ +
+│ │ +from fastapi_events.handlers.local import local_handler
+│ │ +from fastapi_events.typing import Event
+│ │ +
+│ │ +async def get_db_conn():
+│ │ +    pass    # return a DB conn
+│ │ +
+│ │ +
+│ │ +async def get_db_session(
+│ │ +    db_conn=Depends(get_db_conn)
+│ │ +):
+│ │ +    pass    # return a DB session created from `db_conn`
+│ │ +
+│ │ +
+│ │ +
+│ │ +@local_handler.register(event_name="*")
+│ │ +async def handle_all_events(
+│ │ +    event: Event, 
+│ │ +    db_session=Depends(get_db_session)
+│ │ +):
+│ │ +    # use the `db_session` here
+│ │ +    pass
+│ │ +```
+│ │ +
+│ │  ### Piping Events To Remote Queues
+│ │  
+│ │  For larger projects, you might have services dedicated to handling events separately.
+│ │  
+│ │  For instance, `fastapi-events` comes with AWS SQS forwarder to forward events to a remote queue.
+│ │  
+│ │  1. Register `SQSForwardHandler` as handlers:
+│ │ @@ -452,8 +464,8 @@
+│ │  
+│ │     Make sure the module where your local event handlers are defined is loaded during runtime. A simple fix is to import
+│ │     the module in your `__init__.py`. This will ensure the modules are properly loaded during runtime.
+│ │  
+│ │  # Feedback, Questions?
+│ │  
+│ │  Any form of feedback and questions are welcome! Please create an
+│ │ -issue [here](https://github.com/melvinkcx/fastapi-events/issues/new).
+│ │ +issue [here](https://github.com/melvinkcx/fastapi-events/issues/new).
+│ │   --- fastapi-events-0.8.0/README.md
+│ ├── +++ fastapi-events-0.9.0/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,25 +1,57 @@
+│ │ +Metadata-Version: 2.1
+│ │ +Name: fastapi-events
+│ │ +Version: 0.9.0
+│ │ +Summary: Event dispatching library for FastAPI
+│ │ +Home-page: https://github.com/melvinkcx/fastapi-events
+│ │ +Author: Melvin Koh
+│ │ +Author-email: melvinkcx@gmail.com
+│ │ +Keywords: starlette,fastapi,starlite,pydantic
+│ │ +Classifier: Programming Language :: Python :: 3.7
+│ │ +Classifier: Operating System :: OS Independent
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │ +Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │ +Classifier: Programming Language :: Python
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: Development Status :: 5 - Production/Stable
+│ │ +Classifier: Environment :: Web Environment
+│ │ +Requires-Python: >=3.7
+│ │ +Description-Content-Type: text/markdown
+│ │ +Provides-Extra: test
+│ │ +Provides-Extra: aws
+│ │ +Provides-Extra: google
+│ │ +Provides-Extra: otel
+│ │ +License-File: LICENSE
+│ │ +
+│ │  # fastapi-events
+│ │  
+│ │  An event dispatching/handling library for FastAPI, and Starlette.
+│ │  
+│ │  [![](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml/badge.svg?branch=dev&event=push)](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dw/fastapi-events)
+│ │  
+│ │  Features:
+│ │  
+│ │  * straightforward API to emit events anywhere in your code
+│ │  * events are handled after responses are returned (doesn't affect response time)
+│ │  * supports event piping to remote queues
+│ │  * powerful built-in handlers to handle events locally and remotely
+│ │  * coroutine functions (`async def`) are the first-class citizen
+│ │  * write your handlers, never be limited to just what `fastapi_events` provides
+│ │  * (__>=0.3.0__) supports event payload validation via Pydantic (See [here](#event-payload-validation-with-pydantic))
+│ │  * (__>=0.4.0__) supports event chaining: dispatching events within handlers (thank [@ndopj](https://github.com/ndopj)
+│ │    for contributing to the idea)
+│ │  * (__>=0.7.0__) supports OpenTelemetry: see [this section](#opentelemetry-otel-support) for details
+│ │ +* (__>=0.9.0__) supports dependencies in local handlers: see [this section](#using-dependencies-in-local-handler) for details
+│ │ +
+│ │ +If you use or like this project, please consider giving it a star so it can reach more developers. Thanks =)
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```shell
+│ │  pip install fastapi-events
+│ │  ```
+│ │  
+│ │ @@ -212,14 +244,50 @@
+│ │  
+│ │  @local_handler.register(event_name="*")
+│ │  async def handle_all_events(event: Event):
+│ │      # event handlers can be coroutine function too (`async def`)
+│ │      pass
+│ │  ```
+│ │  
+│ │ +#### Using Dependencies in Local Handler
+│ │ +
+│ │ +> new feature in fastapi-events>=0.9.0
+│ │ +
+│ │ +Dependencies can now be used with local handler. Sub-dependencies are also supported.
+│ │ +
+│ │ +However, dependencies using generator (with `yield` keyword) is not supported yet. I have the intention to support it in the future.
+│ │ +
+│ │ +
+│ │ +```python
+│ │ +# ex: in handlers.py
+│ │ +from fastapi import Depends
+│ │ +
+│ │ +from fastapi_events.handlers.local import local_handler
+│ │ +from fastapi_events.typing import Event
+│ │ +
+│ │ +async def get_db_conn():
+│ │ +    pass    # return a DB conn
+│ │ +
+│ │ +
+│ │ +async def get_db_session(
+│ │ +    db_conn=Depends(get_db_conn)
+│ │ +):
+│ │ +    pass    # return a DB session created from `db_conn`
+│ │ +
+│ │ +
+│ │ +
+│ │ +@local_handler.register(event_name="*")
+│ │ +async def handle_all_events(
+│ │ +    event: Event, 
+│ │ +    db_session=Depends(get_db_session)
+│ │ +):
+│ │ +    # use the `db_session` here
+│ │ +    pass
+│ │ +```
+│ │ +
+│ │  ### Piping Events To Remote Queues
+│ │  
+│ │  For larger projects, you might have services dedicated to handling events separately.
+│ │  
+│ │  For instance, `fastapi-events` comes with AWS SQS forwarder to forward events to a remote queue.
+│ │  
+│ │  1. Register `SQSForwardHandler` as handlers:
+│ │ @@ -424,8 +492,8 @@
+│ │  
+│ │     Make sure the module where your local event handlers are defined is loaded during runtime. A simple fix is to import
+│ │     the module in your `__init__.py`. This will ensure the modules are properly loaded during runtime.
+│ │  
+│ │  # Feedback, Questions?
+│ │  
+│ │  Any form of feedback and questions are welcome! Please create an
+│ │ -issue [here](https://github.com/melvinkcx/fastapi-events/issues/new).
+│ │ +issue [here](https://github.com/melvinkcx/fastapi-events/issues/new).
+│ │   --- fastapi-events-0.8.0/fastapi_events/__init__.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/__init__.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  from collections import defaultdict
+│ │  from contextvars import ContextVar
+│ │  from typing import Dict, Iterable
+│ │  
+│ │  from fastapi_events.handlers.base import BaseEventHandler
+│ │  
+│ │ -__version__ = "0.8.0"
+│ │ +__version__ = "0.9.0"
+│ │  
+│ │  # handlers keeps track of all handlers registered via EventHandlerASGIMiddleware
+│ │  handler_store: Dict[int, Iterable[BaseEventHandler]] = defaultdict(list)
+│ │  
+│ │  # event_store keeps track of all events dispatched the request-response cycle
+│ │  event_store: ContextVar = ContextVar("fastapi_event_store")
+│ │   --- fastapi-events-0.8.0/fastapi_events/dispatcher.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/dispatcher.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/handlers/aws.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/handlers/aws.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/handlers/gcp.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/handlers/gcp.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/middleware.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/middleware.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/otel/trace/dummy.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/otel/trace/dummy.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/otel/utils.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/otel/utils.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/registry/base.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/registry/base.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events/utils.py
+│ ├── +++ fastapi-events-0.9.0/fastapi_events/utils.py
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/fastapi_events.egg-info/PKG-INFO
+│ ├── +++ fastapi-events-0.9.0/fastapi_events.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,53 +1,57 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: fastapi-events
+│ │ -Version: 0.8.0
+│ │ +Version: 0.9.0
+│ │  Summary: Event dispatching library for FastAPI
+│ │  Home-page: https://github.com/melvinkcx/fastapi-events
+│ │  Author: Melvin Koh
+│ │  Author-email: melvinkcx@gmail.com
+│ │  Keywords: starlette,fastapi,starlite,pydantic
+│ │ +Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Operating System :: OS Independent
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ -Classifier: Development Status :: 5 - Production/Stable
+│ │ -Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │ -Classifier: Environment :: Web Environment
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Intended Audience :: Developers
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python
+│ │ -Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: Development Status :: 5 - Production/Stable
+│ │ +Classifier: Environment :: Web Environment
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: test
+│ │  Provides-Extra: aws
+│ │  Provides-Extra: google
+│ │  Provides-Extra: otel
+│ │  License-File: LICENSE
+│ │  
+│ │  # fastapi-events
+│ │  
+│ │  An event dispatching/handling library for FastAPI, and Starlette.
+│ │  
+│ │  [![](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml/badge.svg?branch=dev&event=push)](https://github.com/melvinkcx/fastapi-events/actions/workflows/tests.yml)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dw/fastapi-events)
+│ │  
+│ │  Features:
+│ │  
+│ │  * straightforward API to emit events anywhere in your code
+│ │  * events are handled after responses are returned (doesn't affect response time)
+│ │  * supports event piping to remote queues
+│ │  * powerful built-in handlers to handle events locally and remotely
+│ │  * coroutine functions (`async def`) are the first-class citizen
+│ │  * write your handlers, never be limited to just what `fastapi_events` provides
+│ │  * (__>=0.3.0__) supports event payload validation via Pydantic (See [here](#event-payload-validation-with-pydantic))
+│ │  * (__>=0.4.0__) supports event chaining: dispatching events within handlers (thank [@ndopj](https://github.com/ndopj)
+│ │    for contributing to the idea)
+│ │  * (__>=0.7.0__) supports OpenTelemetry: see [this section](#opentelemetry-otel-support) for details
+│ │ +* (__>=0.9.0__) supports dependencies in local handlers: see [this section](#using-dependencies-in-local-handler) for details
+│ │ +
+│ │ +If you use or like this project, please consider giving it a star so it can reach more developers. Thanks =)
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```shell
+│ │  pip install fastapi-events
+│ │  ```
+│ │  
+│ │ @@ -240,14 +244,50 @@
+│ │  
+│ │  @local_handler.register(event_name="*")
+│ │  async def handle_all_events(event: Event):
+│ │      # event handlers can be coroutine function too (`async def`)
+│ │      pass
+│ │  ```
+│ │  
+│ │ +#### Using Dependencies in Local Handler
+│ │ +
+│ │ +> new feature in fastapi-events>=0.9.0
+│ │ +
+│ │ +Dependencies can now be used with local handler. Sub-dependencies are also supported.
+│ │ +
+│ │ +However, dependencies using generator (with `yield` keyword) is not supported yet. I have the intention to support it in the future.
+│ │ +
+│ │ +
+│ │ +```python
+│ │ +# ex: in handlers.py
+│ │ +from fastapi import Depends
+│ │ +
+│ │ +from fastapi_events.handlers.local import local_handler
+│ │ +from fastapi_events.typing import Event
+│ │ +
+│ │ +async def get_db_conn():
+│ │ +    pass    # return a DB conn
+│ │ +
+│ │ +
+│ │ +async def get_db_session(
+│ │ +    db_conn=Depends(get_db_conn)
+│ │ +):
+│ │ +    pass    # return a DB session created from `db_conn`
+│ │ +
+│ │ +
+│ │ +
+│ │ +@local_handler.register(event_name="*")
+│ │ +async def handle_all_events(
+│ │ +    event: Event, 
+│ │ +    db_session=Depends(get_db_session)
+│ │ +):
+│ │ +    # use the `db_session` here
+│ │ +    pass
+│ │ +```
+│ │ +
+│ │  ### Piping Events To Remote Queues
+│ │  
+│ │  For larger projects, you might have services dedicated to handling events separately.
+│ │  
+│ │  For instance, `fastapi-events` comes with AWS SQS forwarder to forward events to a remote queue.
+│ │  
+│ │  1. Register `SQSForwardHandler` as handlers:
+│ │   --- fastapi-events-0.8.0/fastapi_events.egg-info/SOURCES.txt
+│ ├── +++ fastapi-events-0.9.0/fastapi_events.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- fastapi-events-0.8.0/setup.py
+│ ├── +++ fastapi-events-0.9.0/setup.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -60,13 +60,14 @@
+│ │              "pydantic>=1.5.0",
+│ │              "google-cloud-pubsub>=2.13.6",
+│ │              "opentelemetry-sdk>=1.12.0",
+│ │              "opentelemetry-test-utils>=0.33b0",
+│ │              "starlette>=0.21.0",
+│ │              "starlite>=1.38.0",
+│ │              "httpx>=0.23.0",
+│ │ +            "fastapi>=0.92.0",  # FIXME
+│ │          ],
+│ │          "aws": ["boto3>=1.14"],
+│ │          "google": ["google-cloud-pubsub>=2.13.6"],
+│ │          "otel": ["opentelemetry-api>=1.12.0,<2.0"],
+│ │      },
+│ │  )
+│ │   --- fastapi-events-0.8.0/tests/test_dispatcher.py
+│ ├── +++ fastapi-events-0.9.0/tests/test_dispatcher.py
+│ │┄ Files identical despite different names

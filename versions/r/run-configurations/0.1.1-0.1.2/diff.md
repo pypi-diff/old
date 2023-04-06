@@ -1,0 +1,263 @@
+# Comparing `tmp/run_configurations-0.1.1.tar.gz` & `tmp/run_configurations-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "run_configurations-0.1.1.tar", last modified: Thu Mar 30 18:18:53 2023, max compression
++gzip compressed data, was "run_configurations-0.1.2.tar", last modified: Thu Apr  6 11:13:09 2023, max compression
+```
+
+## Comparing `run_configurations-0.1.1.tar` & `run_configurations-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,14 @@
+-drwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)        0 2023-03-30 18:18:53.880014 run_configurations-0.1.1/
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1059 2023-03-30 17:50:05.000000 run_configurations-0.1.1/LICENCE
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1445 2023-03-30 18:18:53.880014 run_configurations-0.1.1/PKG-INFO
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1101 2023-03-30 17:55:47.000000 run_configurations-0.1.1/README.md
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1140 2023-03-30 18:15:02.000000 run_configurations-0.1.1/README.rst
+-drwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)        0 2023-03-30 18:18:53.880014 run_configurations-0.1.1/run_configurations.egg-info/
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1445 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/PKG-INFO
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)      313 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/SOURCES.txt
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)        1 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/dependency_links.txt
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       46 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/entry_points.txt
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)        6 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/requires.txt
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       19 2023-03-30 18:18:53.000000 run_configurations-0.1.1/run_configurations.egg-info/top_level.txt
+--rwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)     4979 2023-03-30 17:57:42.000000 run_configurations-0.1.1/run_configurations.py
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       38 2023-03-30 18:18:53.880014 run_configurations-0.1.1/setup.cfg
+--rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1744 2023-03-30 18:18:44.000000 run_configurations-0.1.1/setup.py
++drwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)        0 2023-04-06 11:13:09.119139 run_configurations-0.1.2/
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1059 2023-03-30 17:50:05.000000 run_configurations-0.1.2/LICENCE
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1837 2023-04-06 11:13:09.119139 run_configurations-0.1.2/PKG-INFO
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1514 2023-04-06 10:57:59.000000 run_configurations-0.1.2/README.md
++drwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)        0 2023-04-06 11:13:09.115139 run_configurations-0.1.2/run_configurations.egg-info/
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)     1837 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/PKG-INFO
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)      302 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/SOURCES.txt
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)        1 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/dependency_links.txt
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       46 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/entry_points.txt
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)        6 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/requires.txt
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       19 2023-04-06 11:13:09.000000 run_configurations-0.1.2/run_configurations.egg-info/top_level.txt
++-rwxrwxr-x   0 bvolkmer  (1000) bvolkmer  (1000)     8126 2023-04-06 10:54:57.000000 run_configurations-0.1.2/run_configurations.py
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)       38 2023-04-06 11:13:09.119139 run_configurations-0.1.2/setup.cfg
++-rw-rw-r--   0 bvolkmer  (1000) bvolkmer  (1000)      752 2023-04-06 11:11:11.000000 run_configurations-0.1.2/setup.py
+```
+
+### Comparing `run_configurations-0.1.1/LICENCE` & `run_configurations-0.1.2/LICENCE`
+
+ * *Files identical despite different names*
+
+### Comparing `run_configurations-0.1.1/PKG-INFO` & `run_configurations-0.1.2/README.md`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,37 +1,32 @@
+-Metadata-Version: 2.1
+-Name: run_configurations
+-Version: 0.1.1
+-Summary: A small script that allows quickly executing run configurations from the command line including shell completions 
+-Home-page: https://github.com/bvolkmer/run_configurations
+-Author: Benedikt Volkmer
+-License: MIT
+-License-File: LICENCE
++A small script that allows quickly executing run configurations from the command
++line including shell completions.
+ 
+-A small script that allows quickly executing run configurations from the
+-command line including shell completions.
+-
+-A run configurations can be any executable placed in a ``.run_configs``
+-directory in any parent of the current working directory. Configurations
+-are always executed in the directory containing the ``.run_configs``
+-folder to get the same behavior independent of the current working
+-directory.
+-
+-::
+-
+-   Usage: rc [OPTIONS] RUN_CONFIG [ARGS]...
+-
+-
+-     Run a run config
+-
+-     A run config can be any executable file in the .run_configs directory.
+-
+-   Options:
+-     --make-executable     Make run config executable if it isn't already.
+-     --base-dir DIRECTORY  Base directory to run from. Defaults to the first
+-                           directory containing a .run_configs directory. Should
+-                           contain a .run_configs directory with executable run
+-                           configs.
+-     --list                List available run configs.
+-     --zsh-completion      Print zsh completion script.
+-     --version             Show the version and exit.
+-     --help                Show this message and exit.
++A run configurations can be any executable placed in a `.run_configs` directory
++in any parent of the current working directory. Configurations are always
++executed in the directory containing the `.run_configs` folder to get the same
++behavior independent of the current working directory.
++
++```
++Usage: rc [OPTIONS] RUN_CONFIG [ARGS]...
++
++  Run a run config
++
++  A run config can be any executable file in the .run_configs directory.
++
++Options:
++  -e, --edit                      Edit run config instead of running.
++  -l, --list                      List available run configs.
++  -x, --make-executable           Make run config executable if it isn't
++                                  already.
++  --base-dir DIRECTORY            Base directory to run from. Defaults to the
++                                  first directory containing a .run_configs
++                                  directory. Should contain a .run_configs
++                                  directory with executable run configs.
++  --get-base-dir                  Print base directory.
++  --get-rc-dir                    Print run configuration directory.
++  --zsh-completion                Print zsh completion script.
++  --log-level [DEBUG|INFO|WARNING|ERROR|CRITICAL]
++                                  Log level.
++  --version                       Show the version and exit.
++  --help                          Show this message and exit.
++```
+```
+
+### Comparing `run_configurations-0.1.1/README.md` & `run_configurations-0.1.2/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,27 +1,41 @@
++Metadata-Version: 2.1
++Name: run_configurations
++Version: 0.1.2
++Summary: A small script that allows quickly executing run configurations from the command line including shell completions 
++Home-page: https://github.com/bvolkmer/run_configurations
++Author: Benedikt Volkmer
++License: MIT
++Description-Content-Type: text/markdown
++
+ A small script that allows quickly executing run configurations from the command
+ line including shell completions.
+ 
+ A run configurations can be any executable placed in a `.run_configs` directory
+ in any parent of the current working directory. Configurations are always
+ executed in the directory containing the `.run_configs` folder to get the same
+ behavior independent of the current working directory.
+ 
+ ```
+ Usage: rc [OPTIONS] RUN_CONFIG [ARGS]...
+ 
+-
+   Run a run config
+ 
+   A run config can be any executable file in the .run_configs directory.
+ 
+ Options:
+-  --make-executable     Make run config executable if it isn't already.
+-  --base-dir DIRECTORY  Base directory to run from. Defaults to the first
+-                        directory containing a .run_configs directory. Should
+-                        contain a .run_configs directory with executable run
+-                        configs.
+-  --list                List available run configs.
+-  --zsh-completion      Print zsh completion script.
+-  --version             Show the version and exit.
+-  --help                Show this message and exit.
++  -e, --edit                      Edit run config instead of running.
++  -l, --list                      List available run configs.
++  -x, --make-executable           Make run config executable if it isn't
++                                  already.
++  --base-dir DIRECTORY            Base directory to run from. Defaults to the
++                                  first directory containing a .run_configs
++                                  directory. Should contain a .run_configs
++                                  directory with executable run configs.
++  --get-base-dir                  Print base directory.
++  --get-rc-dir                    Print run configuration directory.
++  --zsh-completion                Print zsh completion script.
++  --log-level [DEBUG|INFO|WARNING|ERROR|CRITICAL]
++                                  Log level.
++  --version                       Show the version and exit.
++  --help                          Show this message and exit.
+ ```
+```
+
+### Comparing `run_configurations-0.1.1/README.rst` & `run_configurations-0.1.2/run_configurations.egg-info/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,28 +1,41 @@
+-A small script that allows quickly executing run configurations from the
+-command line including shell completions.
+-
+-A run configurations can be any executable placed in a ``.run_configs``
+-directory in any parent of the current working directory. Configurations
+-are always executed in the directory containing the ``.run_configs``
+-folder to get the same behavior independent of the current working
+-directory.
+-
+-::
+-
+-   Usage: rc [OPTIONS] RUN_CONFIG [ARGS]...
+-
+-
+-     Run a run config
+-
+-     A run config can be any executable file in the .run_configs directory.
+-
+-   Options:
+-     --make-executable     Make run config executable if it isn't already.
+-     --base-dir DIRECTORY  Base directory to run from. Defaults to the first
+-                           directory containing a .run_configs directory. Should
+-                           contain a .run_configs directory with executable run
+-                           configs.
+-     --list                List available run configs.
+-     --zsh-completion      Print zsh completion script.
+-     --version             Show the version and exit.
+-     --help                Show this message and exit.
++Metadata-Version: 2.1
++Name: run-configurations
++Version: 0.1.2
++Summary: A small script that allows quickly executing run configurations from the command line including shell completions 
++Home-page: https://github.com/bvolkmer/run_configurations
++Author: Benedikt Volkmer
++License: MIT
++Description-Content-Type: text/markdown
++
++A small script that allows quickly executing run configurations from the command
++line including shell completions.
++
++A run configurations can be any executable placed in a `.run_configs` directory
++in any parent of the current working directory. Configurations are always
++executed in the directory containing the `.run_configs` folder to get the same
++behavior independent of the current working directory.
++
++```
++Usage: rc [OPTIONS] RUN_CONFIG [ARGS]...
++
++  Run a run config
++
++  A run config can be any executable file in the .run_configs directory.
++
++Options:
++  -e, --edit                      Edit run config instead of running.
++  -l, --list                      List available run configs.
++  -x, --make-executable           Make run config executable if it isn't
++                                  already.
++  --base-dir DIRECTORY            Base directory to run from. Defaults to the
++                                  first directory containing a .run_configs
++                                  directory. Should contain a .run_configs
++                                  directory with executable run configs.
++  --get-base-dir                  Print base directory.
++  --get-rc-dir                    Print run configuration directory.
++  --zsh-completion                Print zsh completion script.
++  --log-level [DEBUG|INFO|WARNING|ERROR|CRITICAL]
++                                  Log level.
++  --version                       Show the version and exit.
++  --help                          Show this message and exit.
++```
+```
+
