@@ -1,0 +1,307 @@
+--- tmp/wavfile-4.6.0.tar.gz
++++ tmp/wavfile-4.6.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "wavfile-4.6.0.tar", last modified: Sat Feb 18 12:01:06 2023, max compression
+│ +gzip compressed data, was "wavfile-4.6.1.tar", last modified: Thu Apr  6 13:19:52 2023, max compression
+│   --- wavfile-4.6.0.tar
+├── +++ wavfile-4.6.1.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-18 12:01:06.014285 wavfile-4.6.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1065 2023-02-18 12:00:53.000000 wavfile-4.6.0/LICENSE.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-02-18 12:00:53.000000 wavfile-4.6.0/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7957 2023-02-18 12:01:06.014285 wavfile-4.6.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7246 2023-02-18 12:00:53.000000 wavfile-4.6.0/README.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-18 12:01:06.014285 wavfile-4.6.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1459 2023-02-18 12:00:53.000000 wavfile-4.6.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-18 12:01:06.002285 wavfile-4.6.0/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-18 12:01:06.006285 wavfile-4.6.0/src/wavfile/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7800 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6468 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20808 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/chunk.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      281 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/exception.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      116 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7151 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/wavread.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6953 2023-02-18 12:00:53.000000 wavfile-4.6.0/src/wavfile/wavwrite.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-18 12:01:06.006285 wavfile-4.6.0/src/wavfile.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7957 2023-02-18 12:01:05.000000 wavfile-4.6.0/src/wavfile.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      574 2023-02-18 12:01:05.000000 wavfile-4.6.0/src/wavfile.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-18 12:01:05.000000 wavfile-4.6.0/src/wavfile.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        8 2023-02-18 12:01:05.000000 wavfile-4.6.0/src/wavfile.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-18 12:01:06.014285 wavfile-4.6.0/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       44 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/empty.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  3969304 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/noise_44100_24bit_w_metadata.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/osc_tri.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4140 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/osc_tri_unsigned.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/osc_tri_wrong_chunk_order.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/osc_tri_wrong_size.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  1059146 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/test-file-1.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   384044 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/test-file-2.wav
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   720044 2023-02-18 12:00:53.000000 wavfile-4.6.0/tests/test-file-3.wav
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:51.996040 wavfile-4.6.1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1065 2023-04-06 13:19:38.000000 wavfile-4.6.1/LICENSE.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 13:19:38.000000 wavfile-4.6.1/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7957 2023-04-06 13:19:51.996040 wavfile-4.6.1/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7246 2023-04-06 13:19:38.000000 wavfile-4.6.1/README.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:19:51.996040 wavfile-4.6.1/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1459 2023-04-06 13:19:38.000000 wavfile-4.6.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:51.976040 wavfile-4.6.1/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:51.980040 wavfile-4.6.1/src/wavfile/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7800 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6843 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20669 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/chunk.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      281 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/exception.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      116 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7082 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/wavread.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7069 2023-04-06 13:19:38.000000 wavfile-4.6.1/src/wavfile/wavwrite.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:51.980040 wavfile-4.6.1/src/wavfile.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7957 2023-04-06 13:19:51.000000 wavfile-4.6.1/src/wavfile.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      574 2023-04-06 13:19:51.000000 wavfile-4.6.1/src/wavfile.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:19:51.000000 wavfile-4.6.1/src/wavfile.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 13:19:51.000000 wavfile-4.6.1/src/wavfile.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:51.992040 wavfile-4.6.1/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/empty.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  3969304 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/noise_44100_24bit_w_metadata.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/osc_tri.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4140 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/osc_tri_unsigned.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/osc_tri_wrong_chunk_order.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8236 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/osc_tri_wrong_size.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  1059146 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/test-file-1.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   384044 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/test-file-2.wav
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   720044 2023-04-06 13:19:38.000000 wavfile-4.6.1/tests/test-file-3.wav
+│ │   --- wavfile-4.6.0/LICENSE.txt
+│ ├── +++ wavfile-4.6.1/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/PKG-INFO
+│ ├── +++ wavfile-4.6.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: wavfile
+│ │ -Version: 4.6.0
+│ │ +Version: 4.6.1
+│ │  Summary: Read/write wave audio files to/from lists of native Python types.
+│ │  Home-page: https://github.com/chummersone/pywavfile
+│ │  Author: Christopher Hummersone
+│ │  Author-email: chummersone@users.noreply.github.com
+│ │  License: MIT
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- wavfile-4.6.0/README.rst
+│ ├── +++ wavfile-4.6.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/setup.py
+│ ├── +++ wavfile-4.6.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/src/wavfile/__init__.py
+│ ├── +++ wavfile-4.6.1/src/wavfile/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/src/wavfile/base.py
+│ ├── +++ wavfile-4.6.1/src/wavfile/base.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -183,24 +183,31 @@
+│ │          self._data_chunk.seek(frame_number, whence)
+│ │          return self
+│ │  
+│ │      def tell(self) -> int:
+│ │          """Get the current frame number."""
+│ │          return self._data_chunk.tell()
+│ │  
+│ │ +    def _get_total_size(self) -> int:
+│ │ +        """Get the total size of the file"""
+│ │ +        total_size = self._data_chunk.size + self._data_chunk.pad + chunk.Chunk.offset + \
+│ │ +            self._data_chunk.fmt_chunk.size + self._data_chunk.fmt_chunk.pad + chunk.Chunk.offset + \
+│ │ +            chunk.Chunk.word_size  # riff chunk contains four bytes indicating the format
+│ │ +        if self._list_chunk is not None:
+│ │ +            total_size += self._list_chunk.size + self._list_chunk.pad + chunk.Chunk.offset
+│ │ +        return total_size
+│ │ +
+│ │      def close(self) -> None:
+│ │          """
+│ │          Close the wav file.
+│ │          """
+│ │ -        total_size = \
+│ │ -            self._data_chunk.size + chunk.Chunk.offset + \
+│ │ -            self._data_chunk.fmt_chunk.size + chunk.Chunk.offset + \
+│ │ -            chunk.Chunk.word_size  # riff chunk contains four bytes indicating the format
+│ │ -        self._riff_chunk.size = total_size
+│ │ +        self._riff_chunk.size = self._get_total_size()
+│ │          self._data_chunk.close()
+│ │ +        if self._list_chunk is not None:
+│ │ +            self._list_chunk.close()
+│ │          self._riff_chunk.close()
+│ │  
+│ │      def __del__(self) -> None:
+│ │          self.close()
+│ │  
+│ │      def __enter__(self) -> 'Wavfile':
+│ │          return self
+│ │   --- wavfile-4.6.0/src/wavfile/chunk.py
+│ ├── +++ wavfile-4.6.1/src/wavfile/chunk.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -104,14 +104,17 @@
+│ │                  self.chunk_id = ChunkID(self.read(self.word_size))
+│ │              except ValueError:
+│ │                  self.chunk_id = ChunkID.UNKNOWN_CHUNK
+│ │              self.size = self.read_int(self.word_size, signed=True)
+│ │          else:
+│ │              self.write_header()
+│ │  
+│ │ +    def __del__(self) -> None:
+│ │ +        self.close()
+│ │ +
+│ │      @property
+│ │      def endianness(self) -> Literal['big', 'little']:
+│ │          """The endianness in text form."""
+│ │          if self.bigendian:
+│ │              return 'big'
+│ │          else:
+│ │              return 'little'
+│ │ @@ -159,18 +162,14 @@
+│ │          :param data: Data to write to the chunk.
+│ │          :param update_size: Update the chunk size (not required for padding words).
+│ │          """
+│ │          data_size = len(data)
+│ │          real_size = data_size - (self.size - (self.fp.tell() - self.content_start))
+│ │          if update_size:
+│ │              self.size += max(real_size, 0)
+│ │ -        if 'w' in self.fp.mode and not self.fp.closed:
+│ │ -            pos = self.fp.tell()
+│ │ -            self.write_header()
+│ │ -            self.fp.seek(pos)
+│ │          self.fp.write(data)
+│ │  
+│ │      def write_header(self) -> None:
+│ │          """Write the chunk header to the file, esp. the updated chunk size."""
+│ │          self.fp.seek(self.start)
+│ │          self.fp.write(self.chunk_id.value)
+│ │          self.fp.write(self.int_to_bytes(self.size, self.word_size, signed=False))
+│ │ @@ -440,20 +439,20 @@
+│ │          if nframes is None or nframes < 0:
+│ │              # read all remaining frames
+│ │              nframes = self.num_frames
+│ │  
+│ │          # do not try to read past the end
+│ │          num_frames = min(nframes, self.num_frames - self.tell())
+│ │  
+│ │ -        audio = []
+│ │ -        for n in range(num_frames):
+│ │ -            frame = []
+│ │ -            for m in range(self.fmt_chunk.num_channels):
+│ │ -                frame.append(self.read_sample())
+│ │ -            audio.append(frame)
+│ │ +        audio = [
+│ │ +            [
+│ │ +                self.read_sample() for _ in range(self.fmt_chunk.num_channels)
+│ │ +            ]
+│ │ +            for _ in range(num_frames)
+│ │ +        ]
+│ │  
+│ │          return audio
+│ │  
+│ │      @property
+│ │      def _max_val(self) -> Union[float, int]:
+│ │          """Maximum value"""
+│ │          if self.fmt_chunk.audio_fmt == WavFormat.PCM:
+│ │   --- wavfile-4.6.0/src/wavfile/wavread.py
+│ ├── +++ wavfile-4.6.1/src/wavfile/wavread.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -148,17 +148,15 @@
+│ │          :return: The audio samples as a list of lists.
+│ │          """
+│ │          audio: List[List[Union[int, float]]] = []
+│ │          if self.format == chunk.WavFormat.IEEE_FLOAT:
+│ │              audio = self._data_chunk.read_frames(num_frames)
+│ │          elif self.format == chunk.WavFormat.PCM:
+│ │              audio = self.read_int(num_frames)
+│ │ -            for i in range(0, len(audio)):
+│ │ -                for j in range(0, len(audio[i])):
+│ │ -                    audio[i][j] = self._convert_int_to_float(audio[i][j])
+│ │ +            audio = [[self._convert_int_to_float(sample) for sample in frame] for frame in audio]
+│ │  
+│ │          return audio
+│ │  
+│ │      def iter_float(self, num_frames: Optional[int] = None) -> \
+│ │              Generator[List[List[float]], None, None]:
+│ │          """
+│ │          This method is equivalent to :meth:`read_float`, except that it returns a generator rather
+│ │   --- wavfile-4.6.0/src/wavfile/wavwrite.py
+│ ├── +++ wavfile-4.6.1/src/wavfile/wavwrite.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -64,15 +64,15 @@
+│ │          Check for any floats in data.
+│ │  
+│ │          data: Audio buffer to analyse for floats.
+│ │          """
+│ │          return any([any([isinstance(y, float) for y in x]) for x in data]) or \
+│ │              base.Wavfile._buffer_max_abs(data) <= 1.0
+│ │  
+│ │ -    def __check_metadata(self):
+│ │ +    def __check_metadata(self) -> None:
+│ │          """
+│ │          Prevent new audio data from overwriting the metadata chunk.
+│ │          """
+│ │          if self._list_chunk is not None:
+│ │              if self._list_chunk.start > self._data_chunk.start:
+│ │                  raise exception.WriteError('Audio may overwrite metadata chunk')
+│ │  
+│ │ @@ -156,14 +156,16 @@
+│ │          self._list_chunk = chunk.ListChunk(self.fp)
+│ │          self._list_chunk.info = kwargs
+│ │          self._list_chunk.write_info()
+│ │          if recreate_data_chunk:
+│ │              # recreate data chunk
+│ │              fmt_chunk = self._data_chunk.fmt_chunk
+│ │              self._data_chunk = chunk.WavDataChunk(self.fp, fmt_chunk)
+│ │ +        self._riff_chunk.size = self._get_total_size()
+│ │ +        self.fp.seek(self._data_chunk.content_start)
+│ │  
+│ │      def close(self) -> None:
+│ │          """Close the file."""
+│ │          num_align_bytes = self._data_chunk.size % chunk.Chunk.align
+│ │          if num_align_bytes > 0:
+│ │              self._data_chunk.skip(include_pad=False)
+│ │              self._data_chunk.write(bytearray(num_align_bytes), update_size=False)
+│ │   --- wavfile-4.6.0/src/wavfile.egg-info/PKG-INFO
+│ ├── +++ wavfile-4.6.1/src/wavfile.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: wavfile
+│ │ -Version: 4.6.0
+│ │ +Version: 4.6.1
+│ │  Summary: Read/write wave audio files to/from lists of native Python types.
+│ │  Home-page: https://github.com/chummersone/pywavfile
+│ │  Author: Christopher Hummersone
+│ │  Author-email: chummersone@users.noreply.github.com
+│ │  License: MIT
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- wavfile-4.6.0/src/wavfile.egg-info/SOURCES.txt
+│ ├── +++ wavfile-4.6.1/src/wavfile.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/noise_44100_24bit_w_metadata.wav
+│ ├── +++ wavfile-4.6.1/tests/noise_44100_24bit_w_metadata.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/osc_tri.wav
+│ ├── +++ wavfile-4.6.1/tests/osc_tri.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/osc_tri_unsigned.wav
+│ ├── +++ wavfile-4.6.1/tests/osc_tri_unsigned.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/osc_tri_wrong_chunk_order.wav
+│ ├── +++ wavfile-4.6.1/tests/osc_tri_wrong_chunk_order.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/osc_tri_wrong_size.wav
+│ ├── +++ wavfile-4.6.1/tests/osc_tri_wrong_size.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/test-file-1.wav
+│ ├── +++ wavfile-4.6.1/tests/test-file-1.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/test-file-2.wav
+│ ├── +++ wavfile-4.6.1/tests/test-file-2.wav
+│ │┄ Files identical despite different names
+│ │   --- wavfile-4.6.0/tests/test-file-3.wav
+│ ├── +++ wavfile-4.6.1/tests/test-file-3.wav
+│ │┄ Files identical despite different names

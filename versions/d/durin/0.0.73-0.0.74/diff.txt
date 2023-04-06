@@ -1,0 +1,748 @@
+--- tmp/durin-0.0.73.tar.gz
++++ tmp/durin-0.0.74.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "durin-0.0.73.tar", last modified: Thu Apr  6 13:07:03 2023, max compression
+│ +gzip compressed data, was "durin-0.0.74.tar", last modified: Thu Apr  6 13:20:00 2023, max compression
+│   --- durin-0.0.73.tar
+├── +++ durin-0.0.74.tar
+│ ├── file list
+│ │ @@ -1,50 +1,50 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.053076 durin-0.0.73/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 13:06:51.000000 durin-0.0.73/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:07:03.053076 durin-0.0.73/PKG-INFO
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2683 2023-04-06 13:06:51.000000 durin-0.0.73/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.045076 durin-0.0.73/bin/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)       34 2023-04-06 13:06:51.000000 durin-0.0.73/bin/durin
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.049076 durin-0.0.73/durin/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 13:06:51.000000 durin-0.0.73/durin/Profiler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-06 13:06:51.000000 durin-0.0.73/durin/Read_profilers.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)       80 2023-04-06 13:06:51.000000 durin-0.0.73/durin/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      475 2023-04-06 13:06:51.000000 durin-0.0.73/durin/__main__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      766 2023-04-06 13:06:51.000000 durin-0.0.73/durin/actuator.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4148 2023-04-06 13:06:51.000000 durin-0.0.73/durin/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.049076 durin-0.0.73/durin/controller/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)       40 2023-04-06 13:06:51.000000 durin-0.0.73/durin/controller/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      344 2023-04-06 13:06:51.000000 durin-0.0.73/durin/controller/dvs.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4307 2023-04-06 13:06:51.000000 durin-0.0.73/durin/controller/server.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.049076 durin-0.0.73/durin/controller/test/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:06:51.000000 durin-0.0.73/durin/controller/test/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      947 2023-04-06 13:06:51.000000 durin-0.0.73/durin/controller/test/test_stream.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4694 2023-04-06 13:06:51.000000 durin-0.0.73/durin/durin.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)   181742 2023-04-06 13:06:51.000000 durin-0.0.73/durin/durin_birdseye.jpg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 13:06:51.000000 durin-0.0.73/durin/dvs.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.053076 durin-0.0.73/durin/examples/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/CPU_test.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2281 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/braitenberg.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2631 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/commands.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1459 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/dashboard.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      923 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/main.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      589 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/record.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1972 2023-04-06 13:06:51.000000 durin-0.0.73/durin/examples/stats.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.053076 durin-0.0.73/durin/io/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      673 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4815 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/command.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1442 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/gamepad.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     6181 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/network.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      525 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/ringbuffer.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1824 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/runnable.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8932 2023-04-06 13:06:51.000000 durin-0.0.73/durin/io/schema.capnp
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     6844 2023-04-06 13:06:51.000000 durin-0.0.73/durin/sensor.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)    12157 2023-04-06 13:06:51.000000 durin-0.0.73/durin/ui.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:07:03.049076 durin-0.0.73/durin.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:07:03.000000 durin-0.0.73/durin.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      883 2023-04-06 13:07:03.000000 durin-0.0.73/durin.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:07:03.000000 durin-0.0.73/durin.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 13:07:03.000000 durin-0.0.73/durin.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 13:07:03.000000 durin-0.0.73/durin.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:07:03.053076 durin-0.0.73/setup.cfg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      663 2023-04-06 13:06:51.000000 durin-0.0.73/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.738633 durin-0.0.74/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 13:19:47.000000 durin-0.0.74/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:20:00.738633 durin-0.0.74/PKG-INFO
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2683 2023-04-06 13:19:47.000000 durin-0.0.74/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.730633 durin-0.0.74/bin/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)       34 2023-04-06 13:19:47.000000 durin-0.0.74/bin/durin
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 13:19:47.000000 durin-0.0.74/durin/Profiler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-06 13:19:47.000000 durin-0.0.74/durin/Read_profilers.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)       80 2023-04-06 13:19:47.000000 durin-0.0.74/durin/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      475 2023-04-06 13:19:47.000000 durin-0.0.74/durin/__main__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      766 2023-04-06 13:19:47.000000 durin-0.0.74/durin/actuator.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4148 2023-04-06 13:19:47.000000 durin-0.0.74/durin/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/controller/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)       40 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      344 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/dvs.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4307 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/server.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/controller/test/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/test/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      947 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/test/test_stream.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4694 2023-04-06 13:19:47.000000 durin-0.0.74/durin/durin.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)   181742 2023-04-06 13:19:47.000000 durin-0.0.74/durin/durin_birdseye.jpg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 13:19:47.000000 durin-0.0.74/durin/dvs.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/examples/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/CPU_test.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2281 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/braitenberg.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2631 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/commands.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1459 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/dashboard.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      923 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/main.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      589 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/record.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1972 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/stats.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.738633 durin-0.0.74/durin/io/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      673 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/command.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1442 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/gamepad.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     6181 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/network.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      525 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/ringbuffer.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1824 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/runnable.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9042 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/schema.capnp
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7102 2023-04-06 13:19:47.000000 durin-0.0.74/durin/sensor.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)    13629 2023-04-06 13:19:47.000000 durin-0.0.74/durin/ui.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      883 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:20:00.738633 durin-0.0.74/setup.cfg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      663 2023-04-06 13:19:47.000000 durin-0.0.74/setup.py
+│ │   --- durin-0.0.73/PKG-INFO
+│ ├── +++ durin-0.0.74/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: durin
+│ │ -Version: 0.0.73
+│ │ +Version: 0.0.74
+│ │  Summary: Python control interface for the Durin robot
+│ │  Maintainer: Jens E. Pedersen
+│ │  Maintainer-email: jeped@kth.se
+│ │  License: LGPLv3
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: aestream
+│ │   --- durin-0.0.73/README.md
+│ ├── +++ durin-0.0.74/README.md
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/actuator.py
+│ ├── +++ durin-0.0.74/durin/actuator.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/cli.py
+│ ├── +++ durin-0.0.74/durin/cli.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/controller/server.py
+│ ├── +++ durin-0.0.74/durin/controller/server.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/controller/test/test_stream.py
+│ ├── +++ durin-0.0.74/durin/controller/test/test_stream.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/durin.py
+│ ├── +++ durin-0.0.74/durin/durin.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/durin_birdseye.jpg
+│ ├── +++ durin-0.0.74/durin/durin_birdseye.jpg
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/braitenberg.py
+│ ├── +++ durin-0.0.74/durin/examples/braitenberg.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/commands.py
+│ ├── +++ durin-0.0.74/durin/examples/commands.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/dashboard.py
+│ ├── +++ durin-0.0.74/durin/examples/dashboard.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/main.py
+│ ├── +++ durin-0.0.74/durin/examples/main.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/record.py
+│ ├── +++ durin-0.0.74/durin/examples/record.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/examples/stats.py
+│ ├── +++ durin-0.0.74/durin/examples/stats.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/__init__.py
+│ ├── +++ durin-0.0.74/durin/io/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/command.py
+│ ├── +++ durin-0.0.74/durin/io/command.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -121,16 +121,16 @@
+│ │  
+│ │      def __init__(self, sensor: str, period: int):
+│ │          """
+│ │          Sets how often a given sensor should report to the client in ms.
+│ │          """
+│ │          if not sensor in self._SUPPORTED_SENSORS:
+│ │              raise ValueError(f"Sensor '{sensor}' unsupported. Please choose from {self._SUPPORTED_SENSORS}")
+│ │ -        
+│ │ -        
+│ │ +
+│ │ +
+│ │          self.sensor = sensor
+│ │          self.period = period
+│ │  
+│ │      def encode(self):
+│ │          message_type = f"Set" + self.sensor + "StreamPeriod"
+│ │  
+│ │          message = getattr(schema, message_type).new_message()
+│ │ @@ -146,15 +146,15 @@
+│ │          self.port = port
+│ │  
+│ │      def encode(self):
+│ │          enable_message = schema.EnableStreaming.new_message()
+│ │          udpOnly = enable_message.destination.init("udpOnly")
+│ │          udpOnly.ip = list(map(lambda x: int(x), self.host.split(".")))
+│ │          udpOnly.port = self.port
+│ │ -        return _wrap_base(enable_message, "enableStreaming")   
+│ │ +        return _wrap_base(enable_message, "enableStreaming")
+│ │  
+│ │  
+│ │  class StreamOff(Command):
+│ │      def __init__(self):
+│ │          self.cmd_id = 19
+│ │  
+│ │      def encode(self):
+│ │ @@ -163,8 +163,16 @@
+│ │  
+│ │  class GetSystemInfo(Command):
+│ │      """ Returns IP address, MAC address, and Durin ID """
+│ │      def __init__(self):
+│ │          self.cmd_id = 20
+│ │  
+│ │      def encode(self):
+│ │ -        return _wrap_base(schema.GetSystemInfo.new_message(), "getSystemInfo")
+│ │ +        return _wrap_base(schema.GetSystemInfo.new_message(), "getSystemInfo")
+│ │ +
+│ │ +class EnableTofStatus(Command):
+│ │ +    """ Enables the 2 bit status in ToF distances """
+│ │ +
+│ │ +    def __init__(self, enabled):
+│ │ +        self.enabled = enabled
+│ │ +    def encode(self):
+│ │ +        return _wrap_base(schema.EnableTofStatus.new_message(enabled=self.enabled), "enableTofStatus")
+│ │   --- durin-0.0.73/durin/io/gamepad.py
+│ ├── +++ durin-0.0.74/durin/io/gamepad.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/network.py
+│ ├── +++ durin-0.0.74/durin/io/network.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/ringbuffer.py
+│ ├── +++ durin-0.0.74/durin/io/ringbuffer.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/runnable.py
+│ ├── +++ durin-0.0.74/durin/io/runnable.py
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/durin/io/schema.capnp
+│ ├── +++ durin-0.0.74/durin/io/schema.capnp
+│ │┄ Files 2% similar despite different names
+│ │ @@ -13,27 +13,28 @@
+│ │  ## all types are implemented here so this is the message you want to listen for. Then you can check which field of the union you actually got
+│ │  struct DurinBase {
+│ │      union {
+│ │          reject @0 :Reject;
+│ │          acknowledge @1 :Acknowledge;
+│ │          ping @31 :Ping;
+│ │          powerOff @2 :PowerOff;
+│ │ -        setRobotVelocity @3 :SetRobotVelocity; 
+│ │ +        setRobotVelocity @3 :SetRobotVelocity;
+│ │          setWheelVelocity @4 :SetWheelVelocity;
+│ │          setBuzzer @5 :SetBuzzer;
+│ │          setLed @6 :SetLed;
+│ │ -        
+│ │ +
+│ │          enableStreaming @7 :EnableStreaming;
+│ │          disableStreaming @8 :DisableStreaming;
+│ │ -        
+│ │ +
+│ │          setTofStreamPeriod @9 :SetTofStreamPeriod;
+│ │          getTofObservations @10 :GetTofObservations;
+│ │          setTofResolution @11 :SetTofResolution;
+│ │          tofObservations @12 :TofObservations;
+│ │ -        
+│ │ +        enableTofStatus @35 :EnableTofStatus;
+│ │ +
+│ │          setImuStreamPeriod @13 :SetImuStreamPeriod;
+│ │          getImuMeasurement @14 :GetImuMeasurement;
+│ │          imuMeasurement @15 :ImuMeasurement;
+│ │  
+│ │          setSystemStatusStreamPeriod @16 :SetSystemStatusStreamPeriod;
+│ │          getSystemStatus @17 :GetSystemStatus;
+│ │          systemStatus @18 :SystemStatus;
+│ │ @@ -73,15 +74,15 @@
+│ │  ### control
+│ │  
+│ │  # powers off durin
+│ │  struct PowerOff {
+│ │  
+│ │  }
+│ │  
+│ │ -# Sets the velocity of durin, positive Y is forward, rotation is counterclockwise 
+│ │ +# Sets the velocity of durin, positive Y is forward, rotation is counterclockwise
+│ │  # velocity in millimeters/second
+│ │  # rotaional velocity in degrees/s
+│ │  struct SetRobotVelocity {
+│ │      velocityXMms @0 :Int16;
+│ │      velocityYMms @1 :Int16;
+│ │      rotationDegs @2 :Int16;
+│ │  }
+│ │ @@ -129,15 +130,15 @@
+│ │  struct DisableStreaming {
+│ │  
+│ │  }
+│ │  
+│ │  
+│ │  ### TOF measurements
+│ │  
+│ │ -# Sets the rate at which data will be streamed. The period is in MS 
+│ │ +# Sets the rate at which data will be streamed. The period is in MS
+│ │  # Set to STREAM_PERIOD_MAX (65535) to not stream any data
+│ │  # Set to STREAM_PERIOD_MIN (0) to only stream new values at the rate they are sampled by durin
+│ │  # any other value will send the data at that period even if means sending stale data
+│ │  struct SetTofStreamPeriod {
+│ │      periodMs @0 :UInt16;
+│ │  }
+│ │  
+│ │ @@ -146,38 +147,42 @@
+│ │      ids @0 :List(UInt8);
+│ │  }
+│ │  
+│ │  # Sets the resolution and update rate for the TOF sensors
+│ │  enum TofResolutions {
+│ │      resolution4x4rate60Hz @0;
+│ │      resolution8x8rate15Hz @1;
+│ │ -} 
+│ │ +}
+│ │  struct SetTofResolution {
+│ │      resolution @0 :TofResolutions;
+│ │  }
+│ │  
+│ │ +struct EnableTofStatus {
+│ │ +    enabled @0 :Bool;
+│ │ +}
+│ │ +
+│ │  # A list with TOF observations
+│ │  # Durin has 8 ToF sensors each spanning 45° degrees.
+│ │ -# The ID tells the angle ccw from the front of according to the formula id*45°. So id 0 faces forward, 2 left and 6 right 
+│ │ +# The ID tells the angle ccw from the front of according to the formula id*45°. So id 0 faces forward, 2 left and 6 right
+│ │  # The ranging measurements come in a list of distances in row-major order
+│ │  # bits 0:14 contain the distance in mm
+│ │ -# bits 15:16 contain an enum specifying the state 
+│ │ +# bits 15:16 contain an enum specifying the state
+│ │  ## 0 - valid
+│ │  ## 1 - 50% valid
+│ │  ## 2 - invalid
+│ │  ## 3 - not updated
+│ │  struct TofObservations {
+│ │      observations @0 :List(TofObservation);
+│ │      struct TofObservation {
+│ │          id @0 :UInt8;
+│ │          ranges @1 :List(UInt16);
+│ │      }
+│ │  }
+│ │  
+│ │ -# Sets the rate at which data will be streamed. The period is in MS 
+│ │ +# Sets the rate at which data will be streamed. The period is in MS
+│ │  # Set to STREAM_PERIOD_MAX (65535) to not stream any data
+│ │  # Set to STREAM_PERIOD_MIN (0) to only stream new values at the rate they are sampled by durin
+│ │  # any other value will send the data at that period even if means sending stale data
+│ │  struct SetImuStreamPeriod {
+│ │      periodMs @0 :UInt16;
+│ │  }
+│ │  
+│ │ @@ -202,15 +207,15 @@
+│ │      magnetometerY @7 :Int16;
+│ │      magnetometerZ @8 :Int16;
+│ │  }
+│ │  
+│ │  
+│ │  ### system status
+│ │  
+│ │ -# Sets the rate at which data will be streamed. The period is in MS 
+│ │ +# Sets the rate at which data will be streamed. The period is in MS
+│ │  # Set to STREAM_PERIOD_MAX (65535) to not stream any data
+│ │  # Set to STREAM_PERIOD_MIN (0) to only stream new values at the rate they are sampled by durin
+│ │  # any other value will send the data at that period even if means sending stale data
+│ │  struct SetSystemStatusStreamPeriod {
+│ │      periodMs @0 :UInt16;
+│ │  }
+│ │  
+│ │ @@ -219,21 +224,22 @@
+│ │  
+│ │  }
+│ │  
+│ │  # batteryvoltage in millivolts
+│ │  struct SystemStatus {
+│ │      batteryMv @0 :UInt16;
+│ │      batteryPercent @1 :UInt8;
+│ │ +    batteryDischarge @2 :UInt8;
+│ │  }
+│ │  
+│ │  ### uwb ranging
+│ │  
+│ │  # polls one node over UWB
+│ │  struct GetDistanceMeasurement {
+│ │ -    nodeId @0 :UInt8;   
+│ │ +    nodeId @0 :UInt8;
+│ │  }
+│ │  
+│ │  struct DistanceMeasurement {
+│ │      nodeId @0 :UInt8;
+│ │      distanceMm @1 :UInt32;
+│ │      position :union {
+│ │          unknown @2 :Void;
+│ │ @@ -241,25 +247,25 @@
+│ │              x @3 :Int32;
+│ │              y @4 :Int32;
+│ │              z @5 :Int32;
+│ │          }
+│ │      }
+│ │  }
+│ │  
+│ │ -# Sets the rate at which data will be streamed. The period is in MS 
+│ │ +# Sets the rate at which data will be streamed. The period is in MS
+│ │  # Set to STREAM_PERIOD_MAX (65535) to not stream any data
+│ │  # Set to STREAM_PERIOD_MIN (0) to only stream new values at the rate they are sampled by durin
+│ │  # any other value will send the data at that period even if means sending stale data
+│ │  struct SetPositionStreamPeriod {
+│ │      periodMs @0 :UInt16;
+│ │  }
+│ │  
+│ │  # gets the position as caluclated from UWB beacons, responds over the same channel as the request was sent (UART or TCP)
+│ │  struct GetPosition {
+│ │ -   
+│ │ +
+│ │  }
+│ │  
+│ │  enum UwbNodePurpose {
+│ │      origin @0;
+│ │      x @1;
+│ │      y @2;
+│ │      z @3;
+│ │ @@ -308,14 +314,15 @@
+│ │  }
+│ │  
+│ │  
+│ │  ### system configuration
+│ │  struct SetWifiConfig {
+│ │      ssid @0 :Text;
+│ │      password @1 :Text;
+│ │ +    index @2 :UInt8;
+│ │  }
+│ │  
+│ │  struct SetNodeId {
+│ │      nodeId @0 :UInt8;
+│ │  }
+│ │   --- durin-0.0.73/durin/sensor.py
+│ ├── +++ durin-0.0.74/durin/sensor.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -12,14 +12,15 @@
+│ │  from durin.io.ringbuffer import RingBuffer
+│ │  
+│ │  T = TypeVar("T")
+│ │  
+│ │  
+│ │  class Observation(NamedTuple):
+│ │      tof: np.ndarray = np.zeros((8, 8, 8))
+│ │ +    tof_status: np.ndarray = np.zeros((8, 8, 8))
+│ │      tof_frequency: float = 0
+│ │      charge: float = 0
+│ │      voltage: float = 0
+│ │      imu: np.ndarray = np.zeros((3, 3))
+│ │      uwb: np.ndarray = np.zeros((10, 2))
+│ │      position: np.ndarray = np.zeros((1, 3))
+│ │      imu_frequency: float = 0
+│ │ @@ -42,14 +43,15 @@
+│ │      _BUFFER_LENGTH = 50
+│ │  
+│ │      def __init__(self, link: UDPLink):
+│ │          self.link = link
+│ │          context = multiprocessing.get_context("spawn")
+│ │  
+│ │          self.tof = context.Array("f", 8 * 8 * 8)
+│ │ +        self.tof_status = context.Array("f", 8 * 8 * 8)
+│ │          self.tof_ringbuffer = context.Array("d", self._BUFFER_LENGTH)
+│ │          self.tof_ringbuffer_idx = context.Value("i", 0)
+│ │  
+│ │          self.charge = context.Value("f", 0)
+│ │          self.voltage = context.Value("f", 0)
+│ │          self.imu = context.Array("f", 3 * 3)
+│ │          self.uwb = context.Array("f", 10*2)
+│ │ @@ -66,14 +68,15 @@
+│ │  
+│ │          self.uwb_ringbuffer = context.Array("d", self._BUFFER_LENGTH)
+│ │          self.uwb_ringbuffer_idx = context.Value("i", 0)
+│ │  
+│ │          super().__init__(
+│ │              self.link.buffer,
+│ │              self.tof,
+│ │ +            self.tof_status,
+│ │              self.tof_ringbuffer,
+│ │              self.tof_ringbuffer_idx,
+│ │              self.charge,
+│ │              self.voltage,
+│ │              self.status_ringbuffer,
+│ │              self.status_ringbuffer_idx,
+│ │              self.imu,
+│ │ @@ -90,20 +93,22 @@
+│ │          buffer = RingBuffer(buffer.get_obj(), index.value)
+│ │          difference = buffer.get_newest() - buffer.get_oldest()
+│ │          if difference != 0:
+│ │              return self._BUFFER_LENGTH / difference
+│ │  
+│ │      def read(self):
+│ │          tof = np.frombuffer(self.tof.get_obj(),dtype=np.float32).reshape((8, 8, 8))
+│ │ +        tof_status = np.frombuffer(self.tof_status.get_obj(),dtype=np.float32).reshape((8, 8, 8))
+│ │          imu = np.frombuffer(self.imu.get_obj(),dtype=np.float32).reshape((3, 3))
+│ │          uwb = np.frombuffer(self.uwb.get_obj(),dtype=np.float32).reshape((10,2))
+│ │          position = np.frombuffer(self.position.get_obj(),dtype=np.float32)
+│ │ -        
+│ │ +
+│ │          return Observation(
+│ │              tof=tof,
+│ │ +            tof_status=tof_status,
+│ │              tof_frequency=self._read_buffer_frequency(self.tof_ringbuffer, self.tof_ringbuffer_idx),
+│ │              charge=self.charge.value,
+│ │              voltage=self.voltage.value,
+│ │              status_frequency=self._read_buffer_frequency(self.status_ringbuffer, self.status_ringbuffer_idx),
+│ │              imu=imu,
+│ │              uwb = uwb,
+│ │              position=position,
+│ │ @@ -119,14 +124,15 @@
+│ │          super().stop()
+│ │          self.link.stop()
+│ │  
+│ │      def consume(
+│ │          self,
+│ │          item,
+│ │          tof,
+│ │ +        tof_status,
+│ │          tof_ringbuffer,
+│ │          tof_ringbuffer_idx,
+│ │          charge,
+│ │          voltage,
+│ │          status_ringbuffer,
+│ │          status_ringbuffer_idx,
+│ │          imu,
+│ │ @@ -140,18 +146,18 @@
+│ │      ):
+│ │          which = item.which()
+│ │  
+│ │          try:
+│ │              if which == "tofObservations":
+│ │                  for obs in item.tofObservations.observations:
+│ │                      data = np.array(obs.ranges)
+│ │ +                    status = data >> 14
+│ │                      data = data & 0b0011111111111111
+│ │ -                    # TODO use the status bytes
+│ │ -                    # status = data & 0b1100000000000000
+│ │                      tof.get_obj()[obs.id * 64: (obs.id+1) * 64] = data
+│ │ +                    tof_status.get_obj()[obs.id * 64: (obs.id+1) * 64] = status
+│ │                  self._update_frequency(tof_ringbuffer, tof_ringbuffer_idx)
+│ │  
+│ │  
+│ │              elif which == "systemStatus":
+│ │                  voltage.value = item.systemStatus.batteryMv
+│ │                  charge.value = item.systemStatus.batteryPercent
+│ │                  self._update_frequency(status_ringbuffer, status_ringbuffer_idx)
+│ │ @@ -162,15 +168,15 @@
+│ │                              item.imuMeasurement.gyroscopeX, item.imuMeasurement.gyroscopeY, item.imuMeasurement.gyroscopeZ,
+│ │                              item.imuMeasurement.magnetometerX, item.imuMeasurement.magnetometerY, item.imuMeasurement.magnetometerZ]
+│ │                  for i in range(9):
+│ │                      imu.get_obj()[i] = imu_quantity[i]
+│ │                  self._update_frequency(imu_ringbuffer, imu_ringbuffer_idx)
+│ │  
+│ │  
+│ │ -            
+│ │ +
+│ │              elif which == "uwbNodes":
+│ │                  node_list = item.uwbNodes.nodes
+│ │  
+│ │                  uwb.get_obj()[:] = 20*[0]   # Reset beacon list
+│ │  
+│ │                  for i in range(len(node_list)):
+│ │                      data = np.array([node_list[i].nodeId, node_list[i].distanceMm])
+│ │ @@ -179,18 +185,17 @@
+│ │  
+│ │              try:
+│ │                  if which == "position":
+│ │                      data = np.array([item.position.vectorMm.x,item.position.vectorMm.y,item.position.vectorMm.z])
+│ │                      position.get_obj()[:] = data
+│ │              except:
+│ │                  pass
+│ │ -                
+│ │ +
+│ │          except Exception as e:
+│ │              logging.warning("Error when receiving sensor data " + str(e))
+│ │  
+│ │      def _update_frequency(self, buffer_name, buffer_idx):
+│ │          buffer_obj = buffer_name.get_obj()
+│ │          buffer = RingBuffer(np.frombuffer(buffer_obj), buffer_idx.value)
+│ │          buffer.append(time.time())
+│ │          buffer_obj[:] = buffer.buffer
+│ │          buffer_idx.value = buffer.counter
+│ │ -
+│ │   --- durin-0.0.73/durin/ui.py
+│ ├── +++ durin-0.0.74/durin/ui.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -7,34 +7,34 @@
+│ │  import time
+│ │  
+│ │  import numpy as np
+│ │  from durin.actuator import Move
+│ │  
+│ │  from durin.durin import Durin
+│ │  from durin.io.gamepad import Gamepad
+│ │ -from durin import SetSensorPeriod, GetSystemInfo
+│ │ +from durin import SetSensorPeriod, GetSystemInfo, EnableTofStatus
+│ │  
+│ │  
+│ │  # Constants
+│ │  surface_width = 200
+│ │  surface_height = 200
+│ │  sleep_interval = 0.02
+│ │  
+│ │  SENSOR_PLACEMENTS = [
+│ │ -    (0.45, 0.4),
+│ │ -    (0.41, 0.03),
+│ │ -    (0.25, 0.02),
+│ │ -    (0.41, 0.7),
+│ │ -    (0.25, 0.78),
+│ │ -    (0.02, 0.7),
+│ │ +    (0.25, 0.01),
+│ │      (0.02, 0.03),
+│ │      (0.02, 0.4),
+│ │ +    (0.02, 0.7),
+│ │ +    (0.25, 0.78),
+│ │ +    (0.41, 0.7),
+│ │ +    (0.47, 0.4),
+│ │ +    (0.41, 0.02),
+│ │  ]
+│ │  
+│ │ -SENSOR_ROTATIONS = [180, 180+45, -90, 180-45, 90, 45, -45, 0]
+│ │ +SENSOR_ROTATIONS = [0 - 90, 45 - 90, 90 - 90, 135 - 90, 180 - 90, 225 - 90, 270 - 90, 315 - 90]
+│ │  
+│ │  # A distance (in % of screen size) constant related to the layout.
+│ │  d= 0.02
+│ │  x=0.68
+│ │  y0 = 0.1
+│ │  
+│ │  TITLE_PLACEMENT = (x, 0.05)
+│ │ @@ -49,17 +49,17 @@
+│ │  
+│ │  IMU_INTEG_PLACEMENT = (x, 0.1 + 17*d)
+│ │  
+│ │  POSITION_PLACEMENT = (x,0.1+21*d)
+│ │  
+│ │  MV_CMD_PLACEMENT = (x+7*d,0.1+21*d)         # Movement command placement
+│ │  
+│ │ -UWB_PLACEMENT = (x, 0.1+25*d)              # Upper left corner
+│ │ -
+│ │ +UWB_PLACEMENT = (x, 0.1+29*d)              # Upper left corner
+│ │  
+│ │ +TOF_STATUS_PLACEMENT = (x, 0.1+25*d)
+│ │  
+│ │  
+│ │  class DurinUI(Durin):
+│ │      def __init__(self, *args, **kwargs):
+│ │          super().__init__(*args, **kwargs)
+│ │          self.gamepad = Gamepad()
+│ │  
+│ │ @@ -72,14 +72,15 @@
+│ │          self.tau = 0.9999
+│ │          self.rot = 0
+│ │  
+│ │      def __enter__(self):
+│ │          self.a = 0 # Just for debugging. Delete soon!
+│ │  
+│ │          self.set_frequency()
+│ │ +        self(EnableTofStatus(True))
+│ │  
+│ │          pygame.init()
+│ │          self.clock = pygame.time.Clock()
+│ │          self.font = pygame.font.SysFont(None, 22)
+│ │          self.big_font = pygame.font.SysFont(None, 34)
+│ │  
+│ │  
+│ │ @@ -229,14 +230,32 @@
+│ │          # Update IMU ######################
+│ │          imu = obs.imu
+│ │          #type = ["Acce", "Gyro", "Magn."]
+│ │          for type in range(3):
+│ │              for xyz in range(3):
+│ │                  self.render_text(str(imu[type][xyz]), (IMU_PLACEMENT[0]+(xyz+1)*3*d, IMU_PLACEMENT[1]+(type+1)*d))
+│ │  
+│ │ +        # Update ToF status ###################
+│ │ +        summed_status = [0] * 8
+│ │ +        for i in range(8):
+│ │ +            tot = 0
+│ │ +            for v in obs.tof_status[i].flat:
+│ │ +                if v != 0 and v != 3:
+│ │ +                    tot += 1
+│ │ +            summed_status[i] = tot
+│ │ +
+│ │ +        self.render_text(f"ToF: reported faulty pixels", (TOF_STATUS_PLACEMENT[0], TOF_STATUS_PLACEMENT[1]), "o")
+│ │ +        self.render_text(f"0: {summed_status[0]}", (TOF_STATUS_PLACEMENT[0] + 0 * d * 2, TOF_STATUS_PLACEMENT[1] + d))
+│ │ +        self.render_text(f"1: {summed_status[1]}", (TOF_STATUS_PLACEMENT[0] + 1 * d * 2, TOF_STATUS_PLACEMENT[1] + d))
+│ │ +        self.render_text(f"2: {summed_status[2]}", (TOF_STATUS_PLACEMENT[0] + 2 * d * 2, TOF_STATUS_PLACEMENT[1] + d))
+│ │ +        self.render_text(f"3: {summed_status[3]}", (TOF_STATUS_PLACEMENT[0] + 3 * d * 2, TOF_STATUS_PLACEMENT[1] + d))
+│ │ +        self.render_text(f"4: {summed_status[4]}", (TOF_STATUS_PLACEMENT[0] + 0 * d * 2, TOF_STATUS_PLACEMENT[1] + d + d))
+│ │ +        self.render_text(f"5: {summed_status[5]}", (TOF_STATUS_PLACEMENT[0] + 1 * d * 2, TOF_STATUS_PLACEMENT[1] + d + d))
+│ │ +        self.render_text(f"6: {summed_status[6]}", (TOF_STATUS_PLACEMENT[0] + 2 * d * 2, TOF_STATUS_PLACEMENT[1] + d + d))
+│ │ +        self.render_text(f"7: {summed_status[7]}", (TOF_STATUS_PLACEMENT[0] + 3 * d * 2, TOF_STATUS_PLACEMENT[1] + d + d))
+│ │  
+│ │          # Update battery level and voltage ######################
+│ │          voltage = obs.voltage
+│ │          charge = obs.charge
+│ │          self.render_text(str(charge) + " %", BATTERY_PLACEMENT)
+│ │          self.render_text(str(voltage) + " mV", (BATTERY_PLACEMENT[0]+5*d,BATTERY_PLACEMENT[1]))
+│ │  
+│ │ @@ -342,11 +361,11 @@
+│ │          sensor_frequencies = (["Imu", 50],
+│ │                                ["Position", 50],
+│ │                                ["SystemStatus", 1],
+│ │                                ["Uwb", 50],
+│ │                                ["Tof", 50],
+│ │                                )
+│ │  
+│ │ -        
+│ │ +
+│ │          for sensor in sensor_frequencies:
+│ │              self(SetSensorPeriod(sensor[0],1000/sensor[1]))    # Frequency (Hz) to period (ms)
+│ │   --- durin-0.0.73/durin.egg-info/PKG-INFO
+│ ├── +++ durin-0.0.74/durin.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: durin
+│ │ -Version: 0.0.73
+│ │ +Version: 0.0.74
+│ │  Summary: Python control interface for the Durin robot
+│ │  Maintainer: Jens E. Pedersen
+│ │  Maintainer-email: jeped@kth.se
+│ │  License: LGPLv3
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: aestream
+│ │   --- durin-0.0.73/durin.egg-info/SOURCES.txt
+│ ├── +++ durin-0.0.74/durin.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- durin-0.0.73/setup.py
+│ ├── +++ durin-0.0.74/setup.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │      requirements = fp.read().split("\n")
+│ │  
+│ │  with open("README.md", "r") as fp:
+│ │      long_description = fp.read()
+│ │  
+│ │  setup(
+│ │      name="durin",
+│ │ -    version="0.0.73",
+│ │ +    version="0.0.74",
+│ │      install_requires=requirements,
+│ │      packages=find_packages(),
+│ │      license="LGPLv3",
+│ │      maintainer="Jens E. Pedersen",
+│ │      maintainer_email="jeped@kth.se",
+│ │      extras_require={"aestream": ["aestream"]},
+│ │      scripts=["bin/durin"],

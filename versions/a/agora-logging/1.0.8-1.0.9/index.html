@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/agora_logging-1.0.8-py2.py3-none-any.whl.zip tmp/agora_logging-1.0.9-py2.py3-none-any.whl.zip --html versions/a/agora-logging/1.0.8-1.0.9/index.html --text versions/a/agora-logging/1.0.8-1.0.9/diff.txt --markdown versions/a/agora-logging/1.0.8-1.0.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">4.53 KB</span></div>
+  <div><span class="source">tmp/agora_logging-1.0.8-py2.py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/agora_logging-1.0.9-py2.py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.73 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>648<del>9</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>12</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>648<ins>8</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>12</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>67<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-13<span class="dp">·</span>16:55<span class="dp">·</span>agora_logging/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>67<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-13<span class="dp">·</span>16:55<span class="dp">·</span>agora_logging/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5933<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-31<span class="dp">·</span>08:54<span class="dp">·</span>agora_logging/agora_logger.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5933<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-31<span class="dp">·</span>08:54<span class="dp">·</span>agora_logging/agora_logger.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1618<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-07<span class="dp">·</span>13:03<span class="dp">·</span>agora_logging/colored_text.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1618<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-07<span class="dp">·</span>13:03<span class="dp">·</span>agora_logging/colored_text.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>993<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Dec-07<span class="dp">·</span>13:53<span class="dp">·</span>agora_logging/log_level.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>993<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Dec-07<span class="dp">·</span>13:53<span class="dp">·</span>agora_logging/log_level.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Mar-<del>09</del><span class="dp">·</span><del>19</del>:1<del>6</del><span class="dp">·</span>agora_logging/version.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Mar-<ins>16</ins><span class="dp">·</span><ins>20</ins>:1<ins>9</ins><span class="dp">·</span>agora_logging/version.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-23<span class="dp">·</span>15:58<span class="dp">·</span>agora_logging/handlers/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-23<span class="dp">·</span>15:58<span class="dp">·</span>agora_logging/handlers/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2824<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-07<span class="dp">·</span>12:33<span class="dp">·</span>agora_logging/handlers/base_handler.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2824<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Feb-07<span class="dp">·</span>12:33<span class="dp">·</span>agora_logging/handlers/base_handler.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>895<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-25<span class="dp">·</span>14:34<span class="dp">·</span>agora_logging/handlers/stream_handler.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>895<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Jan-25<span class="dp">·</span>14:34<span class="dp">·</span>agora_logging/handlers/stream_handler.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Mar-07<span class="dp">·</span>09:10<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/LICENSE</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Mar-07<span class="dp">·</span>09:10<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>99<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/WHEEL</td><td class="diffline">11 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>99<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>718<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/METADATA</td><td class="diffline">12 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>718<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1008<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/RECORD</td><td class="diffline">13 </td><td class="diffpresent">?rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1008<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>16-Jan-01<span class="dp">·</span>00:00<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">12<span class="dp">·</span>files,<span class="dp">·</span>14318<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>477<del>3</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>66.7%</td><td class="diffline">14 </td><td class="diffpresent">12<span class="dp">·</span>files,<span class="dp">·</span>14318<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>477<ins>2</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>66.7%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">630 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 18, 20 lines modified</td><td colspan="2">Offset 18, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging/handlers/base_handler.py</td><td class="diffline">18 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging/handlers/base_handler.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">19 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging/handlers/stream_handler.py</td><td class="diffline">20 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging/handlers/stream_handler.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">21 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/LICENSE</td><td class="diffline">22 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">23 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/WHEEL</td><td class="diffline">24 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">25 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/METADATA</td><td class="diffline">26 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">27 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<del>8</del>.dist-info/RECORD</td><td class="diffline">28 </td><td class="diffpresent">Filename:<span class="dp">·</span>agora_logging-1.0.<ins>9</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">29 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">110 B</span></div>
+    <div id="agora_logging-version.py"><span class="source">agora_logging/version.py</span>
+      <a class="anchor" href="#agora_logging-version.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.0.<del>8</del>&#x27;<em>\xd</em><em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.0.<ins>9</ins>&#x27;<em>\xd</em><em>\xd</em></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">479 B</span></div>
+    <div><span class="source">agora_logging-1.0.8.dist-info/METADATA</span> vs.</div>
+    <div id="agora_logging--.-.-.dist-info-METADATA"><span class="source">agora_logging-1.0.9.dist-info/METADATA</span>
+      <a class="anchor" href="#agora_logging--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 14% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>agora_logging</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>agora_logging</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Logging<span class="dp">·</span>libraries<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Agora<span class="dp">·</span>Edge<span class="dp">·</span>Apps<span class="dp">·</span>SDK<span class="dp">·</span>2.0<span class="dp">·</span>(Python)</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Logging<span class="dp">·</span>libraries<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Agora<span class="dp">·</span>Edge<span class="dp">·</span>Apps<span class="dp">·</span>SDK<span class="dp">·</span>2.0<span class="dp">·</span>(Python)</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>AgoraIoT<span class="dp">·</span>&lt;agoraiot@slb.com&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>AgoraIoT<span class="dp">·</span>&lt;agoraiot@slb.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">6 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Home,<span class="dp">·</span>https://agoraiot.github.io</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Home,<span class="dp">·</span>https://agoraiot.github.io</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.51 KB</span></div>
+    <div><span class="source">agora_logging-1.0.8.dist-info/RECORD</span> vs.</div>
+    <div id="agora_logging--.-.-.dist-info-RECORD"><span class="source">agora_logging-1.0.9.dist-info/RECORD</span>
+      <a class="anchor" href="#agora_logging--.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 12% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">agora_logging/__init__.py,sha256=PPi6BVmhWVjdeOMQYg-FEj51McSHrNif9p05X9otteo,67</td><td class="diffline">1 </td><td class="diffpresent">agora_logging/__init__.py,sha256=PPi6BVmhWVjdeOMQYg-FEj51McSHrNif9p05X9otteo,67</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">agora_logging/agora_logger.py,sha256=lpTlV7nZia8G_0jU4xGkJ6pA1cdrd6ve1K_jcNAaV0o,5933</td><td class="diffline">2 </td><td class="diffpresent">agora_logging/agora_logger.py,sha256=lpTlV7nZia8G_0jU4xGkJ6pA1cdrd6ve1K_jcNAaV0o,5933</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">agora_logging/colored_text.py,sha256=b2sPEecFHco5Nye5EmqUK3sOJqVUBtwPADf9-rlZQD8,1618</td><td class="diffline">3 </td><td class="diffpresent">agora_logging/colored_text.py,sha256=b2sPEecFHco5Nye5EmqUK3sOJqVUBtwPADf9-rlZQD8,1618</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">agora_logging/log_level.py,sha256=sNp1II2mLhfRoWyVOrXGbraoJJujY245xLzAgtRRImY,993</td><td class="diffline">4 </td><td class="diffpresent">agora_logging/log_level.py,sha256=sNp1II2mLhfRoWyVOrXGbraoJJujY245xLzAgtRRImY,993</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">agora_logging/version.py,sha256=H<del>XG2Fim729WF9R0Op7tV</del>dz<del>k8</del><del>ojlvSCoafD127C</del>l<del>8</del><del>8T4</del>,24</td><td class="diffline">5 </td><td class="diffpresent">agora_logging/version.py,sha256=<ins>-n</ins>H<ins>d</ins><ins>mfbrEEZoCUg1nFNZBjm</ins>dz<ins>MhPwWALABnXcpt</ins>l<ins>i_o</ins>,24</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">agora_logging/handlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0</td><td class="diffline">6 </td><td class="diffpresent">agora_logging/handlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">agora_logging/handlers/base_handler.py,sha256=rEfP6S3PZL8TsYX1qISy5kCYHQpS3Le9toV2itWQqzc,2824</td><td class="diffline">7 </td><td class="diffpresent">agora_logging/handlers/base_handler.py,sha256=rEfP6S3PZL8TsYX1qISy5kCYHQpS3Le9toV2itWQqzc,2824</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">agora_logging/handlers/stream_handler.py,sha256=jX4zNGMHlHgSiXuq8-1MZ_Nx2-2q6xp_vtO23OPrELE,895</td><td class="diffline">8 </td><td class="diffpresent">agora_logging/handlers/stream_handler.py,sha256=jX4zNGMHlHgSiXuq8-1MZ_Nx2-2q6xp_vtO23OPrELE,895</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">agora_logging-1.0.<del>8</del>.dist-info/LICENSE,sha256=0FV-B2w7SRxv5WB_RriZppfctNE6t4pLFm_BUw2Ajcw,139</td><td class="diffline">9 </td><td class="diffpresent">agora_logging-1.0.<ins>9</ins>.dist-info/LICENSE,sha256=0FV-B2w7SRxv5WB_RriZppfctNE6t4pLFm_BUw2Ajcw,139</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">agora_logging-1.0.<del>8</del>.dist-info/WHEEL,sha256=kdeDBNPvBI0w3meLKPoGgAnEr54n1jzrZWUoaLmGzVY,99</td><td class="diffline">10 </td><td class="diffpresent">agora_logging-1.0.<ins>9</ins>.dist-info/WHEEL,sha256=kdeDBNPvBI0w3meLKPoGgAnEr54n1jzrZWUoaLmGzVY,99</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">agora_logging-1.0.<del>8</del>.dist-info/METADATA,sha256=<del>oZXMlhFYhFKZnmvh0d9IO0SiUvDibCGdfYz_D32lPk4</del>,718</td><td class="diffline">11 </td><td class="diffpresent">agora_logging-1.0.<ins>9</ins>.dist-info/METADATA,sha256=<ins>YbviV0LLcTU1aFGVolNGRv4A6LRmcDQNEwQZmrPKSaI</ins>,718</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">agora_logging-1.0.<del>8</del>.dist-info/RECORD,,</td><td class="diffline">12 </td><td class="diffpresent">agora_logging-1.0.<ins>9</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

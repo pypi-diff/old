@@ -1,0 +1,211 @@
+--- tmp/robin_sd_download-0.2.93.tar.gz
++++ tmp/robin_sd_download-0.2.94.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/robin_sd_download-0.2.93.tar", last modified: Tue Apr  4 19:15:56 2023, max compression
+│ +gzip compressed data, was "dist/robin_sd_download-0.2.94.tar", last modified: Thu Apr  6 13:14:08 2023, max compression
+│   --- robin_sd_download-0.2.93.tar
+├── +++ robin_sd_download-0.2.94.tar
+│ ├── file list
+│ │ @@ -1,40 +1,40 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/
+│ │ --rw-r--r--   0 root         (0) root         (0)      650 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      157 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      188 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/__main__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       71 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/_version.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download/api_interaction/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       48 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/api_interaction/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1722 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_bearer_token.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4907 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_software.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4338 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_software_info.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1880 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/ensure_hook.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3851 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/ensure_local_repo.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    15269 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/offline_install.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4768 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/apt_interaction/prepare_install.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download/slack_interaction/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/slack_interaction/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2952 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/slack_interaction/slack_handler.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3426 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/arg_parse.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2126 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/logger.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1574 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/sudo_file.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1396 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/version_checker.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3537 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/yaml_parser.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)      650 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     1254 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       71 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       59 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       24 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/robin_sd_download.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1068 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/setup.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 19:15:56.000000 robin_sd_download-0.2.93/tests/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/tests/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3747 2023-04-04 19:15:43.000000 robin_sd_download-0.2.93/tests/test.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      650 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      157 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      188 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/__main__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       71 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/_version.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download/api_interaction/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       48 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/api_interaction/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1722 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_bearer_token.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4907 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_software.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4729 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_software_info.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1895 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/ensure_hook.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3851 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/ensure_local_repo.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    15269 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/offline_install.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4768 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/apt_interaction/prepare_install.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download/slack_interaction/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/slack_interaction/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2952 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/slack_interaction/slack_handler.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3426 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/arg_parse.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2126 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/logger.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1574 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/sudo_file.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1396 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/version_checker.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3537 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/yaml_parser.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      650 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1254 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       71 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       59 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       24 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/robin_sd_download.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1068 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 13:14:08.000000 robin_sd_download-0.2.94/tests/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       47 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/tests/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3747 2023-04-06 13:13:54.000000 robin_sd_download-0.2.94/tests/test.py
+│ │   --- robin_sd_download-0.2.93/PKG-INFO
+│ ├── +++ robin_sd_download-0.2.94/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: robin_sd_download
+│ │ -Version: 0.2.93
+│ │ +Version: 0.2.94
+│ │  Summary: Package to download files to the Robin Radar API
+│ │  Home-page: https://bitbucket.org/robin-radar-systems/sd-api-download-pip-package.git
+│ │  Author: Robin Radar Systems
+│ │  Author-email: it-team@robinradar.com
+│ │  License: MIT
+│ │  Description: # robin-sd-download
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_bearer_token.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_bearer_token.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_software.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_software.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/api_interaction/get_software_info.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/api_interaction/get_software_info.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -64,17 +64,23 @@
+│ │          api_endpoint = f'/api/radars/{radar_id}'
+│ │  
+│ │          try:
+│ │              response = requests.get(
+│ │                  request_url + api_endpoint, headers=headers)
+│ │              response.raise_for_status()
+│ │          except requests.exceptions.HTTPError as e:
+│ │ -            logger.log(
+│ │ -                message=f"Failed to get software info: {e}", log_level="error", to_terminal=True)
+│ │ -            return None
+│ │ +            # If error contains Unauthorized, exit after logging that there is a permission issue
+│ │ +            if "Unauthorized" in str(e):
+│ │ +                logger.log(
+│ │ +                    message=f"Error: {e}. Please check your API key, or send logs to Slack. There is a permission issue.", log_level="error", to_terminal=True)
+│ │ +                sys.exit(1)
+│ │ +            else:
+│ │ +                logger.log(
+│ │ +                    message=f"Error: {e}. Please send logs to Slack.", log_level="error", to_terminal=True)
+│ │ +                sys.exit(1)
+│ │  
+│ │          software_info = response.json()['radar']['software']
+│ │  
+│ │          # Extract the relevant information from the software object
+│ │          software = {
+│ │              'id': software_info['_id'],
+│ │              'software_path': software_info['softwarePath'],
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/apt_interaction/ensure_hook.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/apt_interaction/ensure_hook.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -10,15 +10,16 @@
+│ │  
+│ │  
+│ │  def ensure_hook():
+│ │      """Ensures the local apt hook file exists and contains the expected contents."""
+│ │  
+│ │      hook_file = "/etc/apt/apt.conf.d/100-robinsw"
+│ │      # contents = 'APT::Update::Pre-Invoke  {"/bin/python -m robin_sd_download --pull";};\n'
+│ │ -    contents = 'APT::Update::Pre-Invoke {"python3 -m robin_sd_download --pull";};\n'
+│ │ +    contents = 'APT::Update::Pre-Invoke {"sudo -u robin python3 -m robin_sd_download --pull";};\n'
+│ │ +
+│ │  
+│ │   #   contents = contents.replace('script_location', script_location)
+│ │  
+│ │      if os.path.isfile(hook_file):
+│ │          logger.log(message="Hook file exists, checking contents.",
+│ │                     log_level="info", to_terminal=False)
+│ │          # Ensure the contents of the file match the contents of the variable
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/apt_interaction/ensure_local_repo.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/apt_interaction/ensure_local_repo.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/apt_interaction/offline_install.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/apt_interaction/offline_install.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/apt_interaction/prepare_install.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/apt_interaction/prepare_install.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/slack_interaction/slack_handler.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/slack_interaction/slack_handler.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/arg_parse.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/arg_parse.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/logger.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/logger.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/sudo_file.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/sudo_file.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/version_checker.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/version_checker.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download/supportive_scripts/yaml_parser.py
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download/supportive_scripts/yaml_parser.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/robin_sd_download.egg-info/PKG-INFO
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: robin-sd-download
+│ │ -Version: 0.2.93
+│ │ +Version: 0.2.94
+│ │  Summary: Package to download files to the Robin Radar API
+│ │  Home-page: https://bitbucket.org/robin-radar-systems/sd-api-download-pip-package.git
+│ │  Author: Robin Radar Systems
+│ │  Author-email: it-team@robinradar.com
+│ │  License: MIT
+│ │  Description: # robin-sd-download
+│ │   --- robin_sd_download-0.2.93/robin_sd_download.egg-info/SOURCES.txt
+│ ├── +++ robin_sd_download-0.2.94/robin_sd_download.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/setup.py
+│ ├── +++ robin_sd_download-0.2.94/setup.py
+│ │┄ Files identical despite different names
+│ │   --- robin_sd_download-0.2.93/tests/test.py
+│ ├── +++ robin_sd_download-0.2.94/tests/test.py
+│ │┄ Files identical despite different names

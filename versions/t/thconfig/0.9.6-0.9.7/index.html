@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/thconfig-0.9.6.tar.gz tmp/thconfig-0.9.7.tar.gz --html versions/t/thconfig/0.9.6-0.9.7/index.html --text versions/t/thconfig/0.9.6-0.9.7/diff.txt --markdown versions/t/thconfig/0.9.6-0.9.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">18.5 KB</span></div>
+  <div><span class="source">tmp/thconfig-0.9.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/thconfig-0.9.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">184 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;thconfig-0.9.<del>6</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;thconfig-0.9.<ins>7</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">18.3 KB</span></div>
+    <div><span class="source">thconfig-0.9.6.tar</span> vs.</div>
+    <div id="thconfig--.-.-.tar"><span class="source">thconfig-0.9.7.tar</span>
+      <a class="anchor" href="#thconfig--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.81 KB</span></div>
+      <div id="thconfig--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>138151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5912<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5912<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>138151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1181<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1181<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>139151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>00</del>0<del>000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>14</ins>0<ins>151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>00</del>0<del>000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/config.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>14</ins>0<ins>151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>00</del>0<del>000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/error.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>14</ins>0<ins>151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/error.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>00</del>0<del>000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/file/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>14</ins>0<ins>151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/file/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>00</del>0<del>000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/file/file_config.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>14</ins>0<ins>151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/file/file_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>10</del><span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/http/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>68</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>141151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/http/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6799<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/http/couch_config.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6799<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>141151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/http/couch_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/http/etcd_config.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>141151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/http/etcd_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>1</del>6<span class="dp">·</span>1<del>2</del>:17:<del>07</del>.<del>000000</del><span class="dp">·</span>thconfig-0.9.<del>6</del>/thconfig/http/http_config.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>0</ins>6<span class="dp">·</span>1<ins>3</ins>:17:<ins>58</ins>.<ins>141151</ins><span class="dp">·</span>thconfig-0.9.<ins>7</ins>/thconfig/http/http_config.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6996<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>thconfig-0.9.6/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7159<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>thconfig-0.9.<del>6</del>/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7159<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>thconfig-0.9.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">thconfig-0.9.6/LICENSE</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--LICENSE"><span class="source">thconfig-0.9.7/LICENSE</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">thconfig-0.9.6/README.md</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--README.md"><span class="source">thconfig-0.9.7/README.md</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">570 B</span></div>
+      <div><span class="source">thconfig-0.9.6/pyproject.toml</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--pyproject.toml"><span class="source">thconfig-0.9.7/pyproject.toml</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>Refference:<span class="dp">·</span>https://python-poetry.org/docs/pyproject/</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>Refference:<span class="dp">·</span>https://python-poetry.org/docs/pyproject/</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">2 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;thconfig&quot;</td><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;thconfig&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>6</del>&quot;</td><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-clause&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-clause&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;TangledHub<span class="dp">·</span>&lt;info@tangledgroup.com&gt;&quot;]</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;TangledHub<span class="dp">·</span>&lt;info@tangledgroup.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/tangledlabs/thconfig&quot;</td><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/tangledlabs/thconfig&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;tangled&quot;,<span class="dp">·</span>&quot;tangledhub&quot;,<span class="dp">·</span>&quot;tangledlabs&quot;,<span class="dp">·</span>&quot;thconfig&quot;]</td><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;tangled&quot;,<span class="dp">·</span>&quot;tangledhub&quot;,<span class="dp">·</span>&quot;tangledlabs&quot;,<span class="dp">·</span>&quot;thconfig&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Classifiers<span class="dp">·</span>reference:<span class="dp">·</span>https://pypi.org/classifiers/</td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Classifiers<span class="dp">·</span>reference:<span class="dp">·</span>https://pypi.org/classifiers/</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">thconfig-0.9.6/thconfig/config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-config.py"><span class="source">thconfig-0.9.7/thconfig/config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">thconfig-0.9.6/thconfig/file/file_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-file-file_config.py"><span class="source">thconfig-0.9.7/thconfig/file/file_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-file-file_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">thconfig-0.9.6/thconfig/http/couch_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-http-couch_config.py"><span class="source">thconfig-0.9.7/thconfig/http/couch_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-http-couch_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">thconfig-0.9.6/thconfig/http/etcd_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-http-etcd_config.py"><span class="source">thconfig-0.9.7/thconfig/http/etcd_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-http-etcd_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">14.2 KB</span></div>
+      <div><span class="source">thconfig-0.9.6/setup.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--setup.py"><span class="source">thconfig-0.9.7/PKG-INFO</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 22% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 35 lines modified</td><td colspan="2">Offset 1, 297 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>-*-<span class="dp">·</span>coding:<span class="dp">·</span>utf-8<span class="dp">·</span>-*-</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent"><del>f</del><del>rom<span class="dp">·</span>se</del>t<del>u</del><del>ptool</del>s<del><span class="dp">·</span></del>i<del>mp</del>o<del>rt</del><span class="dp">·</span><del>se</del><del>tup</del></td><td class="diffline">1 </td><td class="diffpresent"><ins>Metada</ins>t<ins>a-Ver</ins>sio<ins>n:</ins><span class="dp">·</span><ins>2.1</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>thconfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.7</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>3-clause</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tangled,tangledhub,tangledlabs,thconfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>TangledHub</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@tangledgroup.com</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>BSD<span class="dp">·</span>License</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>Other/Proprietary<span class="dp">·</span>License</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>PyYAML<span class="dp">·</span>(&gt;=6.0,&lt;7.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>aetcd<span class="dp">·</span>(&gt;=1.0.0a2,&lt;2.0.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>aiohttp<span class="dp">·</span>(&gt;=3.8.3,&lt;4.0.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>json5<span class="dp">·</span>(&gt;=0.9.10,&lt;0.10.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>thresult<span class="dp">·</span>(&gt;=0.9.25,&lt;0.10.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>toml<span class="dp">·</span>(&gt;=0.10.2,&lt;0.11.0)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>\</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">[<del>&#x27;th</del><del>conf</del>i<del>g&#x27;,<span class="dp">·</span>&#x27;thco</del><del>nfig.f</del>il<del>e&#x27;,<span class="dp">·</span>&#x27;thco</del><del>nf</del>i<del>g.http&#x27;]</del></td><td class="diffline">31 </td><td class="diffpresent">[<ins>![Bu</ins>i<ins>ld][bu</ins>il<ins>d-</ins>i<ins>mage]]()</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">[![Status][status-image]][pypi-project-url]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">[![Stable<span class="dp">·</span>Version][stable-ver-image]][pypi-project-url]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">[![Coverage][coverage-image]]()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">[![Python][python-ver-image]][pypi-project-url]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">[![License][bsd3-image]][bsd3-url]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">package_data<span class="dp">·</span>=<span class="dp">·</span>\</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">#<span class="dp">·</span>thconfig</td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">[&#x27;PyYAML&gt;=6.0,&lt;7.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span>&#x27;aetcd&gt;=1.0.0a2,&lt;2.0.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span>&#x27;aiohttp&gt;=3.8.3,&lt;4.0.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span>&#x27;json5&gt;=0.9.10,&lt;0.10.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span>&#x27;thresult&gt;=0.9.25,&lt;0.10.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span>&#x27;toml&gt;=0.10.2,&lt;0.11.0&#x27;]</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">14 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;thconfig&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.9.6&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&quot;[![Build][build-image]]()\n[![Status][status-image]][pypi-project-url]\n[![Stable<span class="dp">·</span>Version][stable-ver-image]][pypi-project-url]\n[![Coverage][coverage-image]]()\n[![Python][python-ver-image]][pypi-project-url]\n[![License][bsd3-image]][bsd3-url]\n\n\n#<span class="dp">·</span>thconfig\n\n##<span class="dp">·</span>Overview\nTangledHub<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>config<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>focus<span class="dp">·</span>on<span class="dp">·</span>asynchronous<span class="dp">·</span>functions\n\n##<span class="dp">·</span>Licensing\nthconfig<span class="dp">·</span>is<span class="dp">·</span>licensed<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>BSD<span class="dp">·</span>license.<span class="dp">·</span>Check<span class="dp">·</span>the<span class="dp">·</span>[LICENSE](https://opensource.org/licenses/BSD-3-Clause)<span class="dp">·</span>for<span class="dp">·</span>details\n\n##<span class="dp">·</span>Installation\n```bash\npip<span class="dp">·</span>install<span class="dp">·</span>thconfig\n```\n\n---\n\n##<span class="dp">·</span>Testing\n```bash\ndocker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-test<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-test\n```\n\n##<span class="dp">·</span>Building\n```bash\ndocker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-build<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-build\n```\n\n##<span class="dp">·</span>Publish\n```bash\ndocker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-publish<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>-e<span class="dp">·</span>PYPI_USERNAME=__token__<span class="dp">·</span>-e<span class="dp">·</span>PYPI_PASSWORD=__SECRET__<span class="dp">·</span>thconfig-publish\n```\n\n\n##<span class="dp">·</span>THCONFIG<span class="dp">·</span>supported<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>library\n...\n\n##<span class="dp">·</span>Testing\n```python\ndocker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-test<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-test\n```\n\n##<span class="dp">·</span>Usage\n\n###<span class="dp">·</span>File<span class="dp">·</span>\nConfiguration<span class="dp">·</span>from<span class="dp">·</span>file<span class="dp">·</span>\n\n####<span class="dp">·</span>setup\n```python\n&#x27;&#x27;&#x27;\nA<span class="dp">·</span>class<span class="dp">·</span>to<span class="dp">·</span>handle<span class="dp">·</span>reading<span class="dp">·</span>and<span class="dp">·</span>writing<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>file\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>data<span class="dp">·</span>{<span class="dp">·</span>configuration<span class="dp">·</span>}\nconfig_path<span class="dp">·</span>=<span class="dp">·</span>&#x27;example_1.json&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>FileConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>FileConfig(config_path)\n```\n\n####<span class="dp">·</span>fetch\n```python\n&#x27;&#x27;&#x27;\nReads<span class="dp">·</span>config<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>file\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>data<span class="dp">·</span>{<span class="dp">·</span>configuration<span class="dp">·</span>}\nconfig_path<span class="dp">·</span>=<span class="dp">·</span>&#x27;example_1.json&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>FileConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>FileConfig(config_path)\n\n#<span class="dp">·</span>load<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>configuration<span class="dp">·</span>file<span class="dp">·</span>if<span class="dp">·</span>success\nres:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>(await<span class="dp">·</span>config.fetch()).unwrap()\n```\n\n####<span class="dp">·</span>commit\n```python\n&#x27;&#x27;&#x27;\nWrite<span class="dp">·</span>config<span class="dp">·</span>data<span class="dp">·</span>to<span class="dp">·</span>file\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>data<span class="dp">·</span>{<span class="dp">·</span>configuration<span class="dp">·</span>}\nconfig_path<span class="dp">·</span>=<span class="dp">·</span>&#x27;example_1.json&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>FileConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>FileConfig(config_path)\n\n#<span class="dp">·</span>set<span class="dp">·</span>title\nconfig[&#x27;title&#x27;]<span class="dp">·</span>=<span class="dp">·</span>&#x27;Config<span class="dp">·</span>Example&#x27;\n\nconfig.title2<span class="dp">·</span>=<span class="dp">·</span>&#x27;Config<span class="dp">·</span>Example&#x27;\n\n#<span class="dp">·</span>this<span class="dp">·</span>function<span class="dp">·</span>change<span class="dp">·</span>title<span class="dp">·</span>in<span class="dp">·</span>file\n(await<span class="dp">·</span>config.commit()).unwrap()\n```\n\n###<span class="dp">·</span>CouchConfig<span class="dp">·</span>\nConfiguration<span class="dp">·</span>from<span class="dp">·</span>couchdb<span class="dp">·</span>\n\n####<span class="dp">·</span>setup\n```python\n&#x27;&#x27;&#x27;\nA<span class="dp">·</span>class<span class="dp">·</span>to<span class="dp">·</span>handle<span class="dp">·</span>reading<span class="dp">·</span>and<span class="dp">·</span>writing<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>couchdb\n\ninstantiate<span class="dp">·</span>CouchConfig:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>uri:<span class="dp">·</span>str\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>this<span class="dp">·</span>is<span class="dp">·</span>url<span class="dp">·</span>for<span class="dp">·</span>couchdb<span class="dp">·</span>where<span class="dp">·</span>are<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>\nURI<span class="dp">·</span>=<span class="dp">·</span>&#x27;http://tangledhub:tangledhub@couchdb-test:5984/thconfig-test/test_couch_config&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>intance<span class="dp">·</span>CouchConfig<span class="dp">·</span>and<span class="dp">·</span>set<span class="dp">·</span>URI<span class="dp">·</span>property\nconfig<span class="dp">·</span>=<span class="dp">·</span>CouchConfig(URI)\n```\n\n####<span class="dp">·</span>fetch\nFetching<span class="dp">·</span>configuration<span class="dp">·</span>document<span class="dp">·</span>from<span class="dp">·</span>couchdb\n```python\n&#x27;&#x27;&#x27;\nFetching<span class="dp">·</span>document<span class="dp">·</span>and<span class="dp">·</span>store<span class="dp">·</span>data<span class="dp">·</span>in<span class="dp">·</span>self._state\nSync<span class="dp">·</span>couchdb<span class="dp">·</span>-&gt;<span class="dp">·</span>self._state\nhttps://docs.couchdb.org/en/stable/api/document/common.html#get--db-docid\n\nFetch:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self:<span class="dp">·</span>CouchConfig\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>this<span class="dp">·</span>is<span class="dp">·</span>url<span class="dp">·</span>for<span class="dp">·</span>couchdb<span class="dp">·</span>where<span class="dp">·</span>are<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>\nURI<span class="dp">·</span>=<span class="dp">·</span>&#x27;http://tangledhub:tangledhub@couchdb-test:5984/thconfig-test/test_couch_config&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>intance<span class="dp">·</span>CouchConfig<span class="dp">·</span>and<span class="dp">·</span>set<span class="dp">·</span>URI<span class="dp">·</span>property\nconfig<span class="dp">·</span>=<span class="dp">·</span>CouchConfig(URI)\n\n#<span class="dp">·</span>fetching<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>database\nfetched_data<span class="dp">·</span>=<span class="dp">·</span>(await<span class="dp">·</span>config.fetch()).unwrap()\n```\n\n####<span class="dp">·</span>commit\nCommit<span class="dp">·</span>changes<span class="dp">·</span>in<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>in<span class="dp">·</span>documment<span class="dp">·</span>in<span class="dp">·</span>couchdb\n```python\n&#x27;&#x27;&#x27;\nCommit<span class="dp">·</span>document,<span class="dp">·</span>save<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>self._state<span class="dp">·</span>to<span class="dp">·</span>couchdb\nSync<span class="dp">·</span>self._state<span class="dp">·</span>-&gt;<span class="dp">·</span>couchdb\nhttps://docs.couchdb.org/en/stable/api/document/common.html#put--db-docid\n\nCommit:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self:<span class="dp">·</span>CouchConfig\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>this<span class="dp">·</span>is<span class="dp">·</span>url<span class="dp">·</span>for<span class="dp">·</span>couchdb<span class="dp">·</span>where<span class="dp">·</span>are<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>\nURI<span class="dp">·</span>=<span class="dp">·</span>&#x27;http://tangledhub:tangledhub@couchdb-test:5984/thconfig-test/test_couch_config_commit_changes&#x27;\n\n#<span class="dp">·</span>create<span class="dp">·</span>intance<span class="dp">·</span>CouchConfig<span class="dp">·</span>and<span class="dp">·</span>set<span class="dp">·</span>URI<span class="dp">·</span>property\nconfig<span class="dp">·</span>=<span class="dp">·</span>CouchConfig(URI)\n\ntitle<span class="dp">·</span>=<span class="dp">·</span>&#x27;Couch<span class="dp">·</span>Config<span class="dp">·</span>Example&#x27;\ndatabase<span class="dp">·</span>=<span class="dp">·</span>{&#x27;server&#x27;:<span class="dp">·</span>&#x27;192.168.1.1&#x27;}\n\n#<span class="dp">·</span>set<span class="dp">·</span>title<span class="dp">·</span>and<span class="dp">·</span>database\nconfig[&#x27;title&#x27;]<span class="dp">·</span>=<span class="dp">·</span>title\nconfig[&#x27;database&#x27;]<span class="dp">·</span>=<span class="dp">·</span>database\n\n#<span class="dp">·</span>commit\ncommit_0<span class="dp">·</span>=<span class="dp">·</span>(await<span class="dp">·</span>config.commit()).unwrap()\n```\n\n###<span class="dp">·</span>EtcdConfig<span class="dp">·</span>\nConfiguration<span class="dp">·</span>from<span class="dp">·</span>EtcdConfig<span class="dp">·</span>\n\n####<span class="dp">·</span>setup\n```python\n&#x27;&#x27;&#x27;\nA<span class="dp">·</span>class<span class="dp">·</span>to<span class="dp">·</span>handle<span class="dp">·</span>reading<span class="dp">·</span>and<span class="dp">·</span>writing<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>etcd\ninstantiate<span class="dp">·</span>EtcdConfig:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>HOST:<span class="dp">·</span>str\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>PORT:<span class="dp">·</span>int\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>host<span class="dp">·</span>and<span class="dp">·</span>port\nHOST<span class="dp">·</span>=<span class="dp">·</span>&#x27;etcd-test&#x27;\nPORT<span class="dp">·</span>=<span class="dp">·</span>2379\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>EtcdConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>EtcdConfig(host<span class="dp">·</span>=<span class="dp">·</span>HOST,<span class="dp">·</span>port<span class="dp">·</span>=<span class="dp">·</span>PORT)\n```\n\n####<span class="dp">·</span>fetch\nFetching<span class="dp">·</span>configuration<span class="dp">·</span>document<span class="dp">·</span>from<span class="dp">·</span>etcd\n```python\n&#x27;&#x27;&#x27;\nFetching<span class="dp">·</span>document<span class="dp">·</span>and<span class="dp">·</span>store<span class="dp">·</span>data<span class="dp">·</span>in<span class="dp">·</span>self._state\nSync<span class="dp">·</span>etcd<span class="dp">·</span>-&gt;<span class="dp">·</span>self._state\nhttps://aetcd3.readthedocs.io/en/latest/reference/client.html#aetcd3.client.Etcd3Client.get_all\n\nFetch:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self:<span class="dp">·</span>EtcdConfig\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>host<span class="dp">·</span>and<span class="dp">·</span>port\nHOST<span class="dp">·</span>=<span class="dp">·</span>&#x27;etcd-test&#x27;\nPORT<span class="dp">·</span>=<span class="dp">·</span>2379\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>EtcdConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>EtcdConfig(host<span class="dp">·</span>=<span class="dp">·</span>HOST,<span class="dp">·</span>port<span class="dp">·</span>=<span class="dp">·</span>PORT)\n\n#<span class="dp">·</span>fetching<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>etcd\nfetched_data<span class="dp">·</span>=<span class="dp">·</span>(await<span class="dp">·</span>config.fetch()).unwrap()\n```\n\n####<span class="dp">·</span>commit\nCommit<span class="dp">·</span>changes<span class="dp">·</span>in<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>to<span class="dp">·</span>etcd\n```python\n&#x27;&#x27;&#x27;\nCommit<span class="dp">·</span>document,<span class="dp">·</span>save<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>self._state<span class="dp">·</span>to<span class="dp">·</span>etcd\nSync<span class="dp">·</span>self._state<span class="dp">·</span>-&gt;<span class="dp">·</span>etcd\nhttps://aetcd3.readthedocs.io/en/latest/reference/client.html#aetcd3.client.Etcd3Client.put\n\ncommit<span class="dp">·</span>changes:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parameters:\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self:<span class="dp">·</span>EtcdConfig\n&#x27;&#x27;&#x27;\n\n#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>host<span class="dp">·</span>and<span class="dp">·</span>port\nHOST<span class="dp">·</span>=<span class="dp">·</span>&#x27;etcd-test&#x27;\nPORT<span class="dp">·</span>=<span class="dp">·</span>2379\n\n#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>EtcdConfig\nconfig<span class="dp">·</span>=<span class="dp">·</span>EtcdConfig(host<span class="dp">·</span>=<span class="dp">·</span>HOST,<span class="dp">·</span>port<span class="dp">·</span>=<span class="dp">·</span>PORT)\n\ntitle<span class="dp">·</span>=<span class="dp">·</span>&#x27;Couch<span class="dp">·</span>Config<span class="dp">·</span>Example&#x27;\ndatabase<span class="dp">·</span>=<span class="dp">·</span>{&#x27;server&#x27;:<span class="dp">·</span>&#x27;192.168.1.1&#x27;}\n\n#<span class="dp">·</span>set<span class="dp">·</span>title<span class="dp">·</span>and<span class="dp">·</span>database\nconfig[&#x27;title&#x27;]<span class="dp">·</span>=<span class="dp">·</span>title\nconfig[&#x27;database&#x27;]<span class="dp">·</span>=<span class="dp">·</span>database\n\n#<span class="dp">·</span>commit\ncommit_0<span class="dp">·</span>=<span class="dp">·</span>(await<span class="dp">·</span>config.commit()).unwrap()\n```\n\n&lt;!--<span class="dp">·</span>Links<span class="dp">·</span>--&gt;\n\n&lt;!--<span class="dp">·</span>Badges<span class="dp">·</span>--&gt;\n[bsd3-image]:<span class="dp">·</span>https://img.shields.io/badge/License-BSD_3--Clause-blue.svg\n[bsd3-url]:<span class="dp">·</span>https://opensource.org/licenses/BSD-3-Clause\n[build-image]:<span class="dp">·</span>https://img.shields.io/badge/build-success-brightgreen\n[coverage-image]:<span class="dp">·</span>https://img.shields.io/badge/Coverage-100%25-green\n\n[pypi-project-url]:<span class="dp">·</span>https://pypi.org/project/thquickjs/\n[stable-ver-image]:<span class="dp">·</span>https://img.shields.io/pypi/v/thquickjs?label=stable\n[python-ver-image]:<span class="dp">·</span>https://img.shields.io/pypi/pyversions/thquickjs.svg?logo=python&amp;logoColor=FBE072\n[status-image]:<span class="dp">·</span>https://img.shields.io/pypi/status/thquickjs.svg\n\n\n&quot;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;TangledHub&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;info@tangledgroup.com&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://gitlab.com/tangledlabs/thconfig&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;packages&#x27;:<span class="dp">·</span>packages,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;package_data&#x27;:<span class="dp">·</span>package_data,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;install_requires&#x27;:<span class="dp">·</span>install_requires,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;python_requires&#x27;:<span class="dp">·</span>&#x27;&gt;=3.10,&lt;4.0&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent"><del>}</del></td><td class="diffline">38 </td><td class="diffpresent"><ins>##<span class="dp">·</span>Overvie</ins><ins>w</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">39 </td><td class="diffpresent">TangledHub<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>config<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>focus<span class="dp">·</span>on<span class="dp">·</span>asynchronous<span class="dp">·</span>functions</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">40 </td><td class="diffpresent">##<span class="dp">·</span>Licensing</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">41 </td><td class="diffpresent">thconfig<span class="dp">·</span>is<span class="dp">·</span>licensed<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>BSD<span class="dp">·</span>license.<span class="dp">·</span>Check<span class="dp">·</span>the<span class="dp">·</span>[LICENSE](https://opensource.org/licenses/BSD-3-Clause)<span class="dp">·</span>for<span class="dp">·</span>details</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">42 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>thconfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">46 </td><td class="diffpresent">---</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">47 </td><td class="diffpresent">##<span class="dp">·</span>Testing</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">49 </td><td class="diffpresent">docker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-test<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-test</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">50 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">51 </td><td class="diffpresent">##<span class="dp">·</span>Building</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">52 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">53 </td><td class="diffpresent">docker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-build<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-build</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">55 </td><td class="diffpresent">##<span class="dp">·</span>Publish</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">56 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">docker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-publish<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>-e<span class="dp">·</span>PYPI_USERNAME=__token__<span class="dp">·</span>-e<span class="dp">·</span>PYPI_PASSWORD=__SECRET__<span class="dp">·</span>thconfig-publish</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">58 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">59 </td><td class="diffpresent">##<span class="dp">·</span>THCONFIG<span class="dp">·</span>supported<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>library</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">60 </td><td class="diffpresent">...</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">61 </td><td class="diffpresent">##<span class="dp">·</span>Testing</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">62 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent">docker-compose<span class="dp">·</span>build<span class="dp">·</span>thconfig-test<span class="dp">·</span>;<span class="dp">·</span>docker-compose<span class="dp">·</span>run<span class="dp">·</span>--rm<span class="dp">·</span>thconfig-test</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">64 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">65 </td><td class="diffpresent">##<span class="dp">·</span>Usage</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">66 </td><td class="diffpresent">###<span class="dp">·</span>File<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">67 </td><td class="diffpresent">Configuration<span class="dp">·</span>from<span class="dp">·</span>file<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">68 </td><td class="diffpresent">####<span class="dp">·</span>setup</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">69 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">70 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">71 </td><td class="diffpresent">A<span class="dp">·</span>class<span class="dp">·</span>to<span class="dp">·</span>handle<span class="dp">·</span>reading<span class="dp">·</span>and<span class="dp">·</span>writing<span class="dp">·</span>configuration<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>file</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">72 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">73 </td><td class="diffpresent">#<span class="dp">·</span>you<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>data<span class="dp">·</span>{<span class="dp">·</span>configuration<span class="dp">·</span>}</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">74 </td><td class="diffpresent">config_path<span class="dp">·</span>=<span class="dp">·</span>&#x27;example_1.json&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">75 </td><td class="diffpresent">#<span class="dp">·</span>create<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>FileConfig</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">76 </td><td class="diffpresent">config<span class="dp">·</span>=<span class="dp">·</span>FileConfig(config_path)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">77 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">78 </td><td class="diffpresent">####<span class="dp">·</span>fetch</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">79 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">80 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">81 </td><td class="diffpresent">Reads<span class="dp">·</span>config<span class="dp">·</span>data<span class="dp">·</span>from<span class="dp">·</span>file</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">82 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="error"><td colspan="4">
+Max diff block lines reached; 25/14496 bytes (0.17%) of diff not shown.
+</td></tr></table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

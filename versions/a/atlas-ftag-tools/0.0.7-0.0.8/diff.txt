@@ -1,0 +1,224 @@
+--- tmp/atlas-ftag-tools-0.0.7.tar.gz
++++ tmp/atlas-ftag-tools-0.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "atlas-ftag-tools-0.0.7.tar", last modified: Tue Apr  4 16:08:20 2023, max compression
+│ +gzip compressed data, was "atlas-ftag-tools-0.0.8.tar", last modified: Thu Apr  6 13:18:14 2023, max compression
+│   --- atlas-ftag-tools-0.0.7.tar
+├── +++ atlas-ftag-tools-0.0.8.tar
+│ ├── file list
+│ │ @@ -1,26 +1,27 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 16:08:20.332382 atlas-ftag-tools-0.0.7/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1196 2023-04-04 16:08:20.332382 atlas-ftag-tools-0.0.7/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      894 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 16:08:20.328382 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1196 2023-04-04 16:08:20.000000 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      442 2023-04-04 16:08:20.000000 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-04 16:08:20.000000 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-04 16:08:20.000000 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-04 16:08:20.000000 atlas-ftag-tools-0.0.7/atlas_ftag_tools.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 16:08:20.332382 atlas-ftag-tools-0.0.7/ftag/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      731 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2733 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/cuts.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2033 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/flavour.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3121 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/flavours.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 16:08:20.332382 atlas-ftag-tools-0.0.7/ftag/hdf5/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/hdf5/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7699 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/hdf5/h5reader.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2376 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/hdf5/h5utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3094 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/hdf5/h5writer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/mock.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      371 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/region.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2319 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/sample.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1671 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/ftag/vds.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1233 2023-04-04 16:07:59.000000 atlas-ftag-tools-0.0.7/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-04 16:08:20.332382 atlas-ftag-tools-0.0.7/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1581 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1279 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1581 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      485 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 13:18:14.000000 atlas-ftag-tools-0.0.8/atlas_ftag_tools.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/ftag/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      731 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2733 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/cuts.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2033 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/flavour.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3121 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/flavours.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/ftag/hdf5/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/hdf5/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8446 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/hdf5/h5reader.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2376 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/hdf5/h5utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3094 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/hdf5/h5writer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/mock.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      371 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/region.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2319 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/sample.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2352 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/ftag/vds.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-04-06 13:17:54.000000 atlas-ftag-tools-0.0.8/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:18:14.730051 atlas-ftag-tools-0.0.8/setup.cfg
+│ │   --- atlas-ftag-tools-0.0.7/PKG-INFO
+│ ├── +++ atlas-ftag-tools-0.0.8/README.md
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,18 +1,7 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: atlas-ftag-tools
+│ │ -Version: 0.0.7
+│ │ -Summary: ATLAS Flavour Tagging Tools
+│ │ -Author: Sam Van Stroud, Philipp Gadow
+│ │ -License: MIT
+│ │ -Project-URL: Homepage, https://github.com/umami-hep/atlas-ftag-tools/
+│ │ -Requires-Python: >=3.8
+│ │ -Description-Content-Type: text/markdown
+│ │ -Provides-Extra: dev
+│ │ -
+│ │  # ATLAS FTAG Python Tools
+│ │  
+│ │  This is a collection of Python tools for working with files produced with the FTAG [ntuple dumper](https://gitlab.cern.ch/atlas-flavor-tagging-tools/training-dataset-dumper/).
+│ │  The code is intended to be used a [library](https://iscinumpy.dev/post/app-vs-library/) for other projects.
+│ │  Please see the [example notebook](ftag/example.ipynb) for usage.
+│ │  
+│ │  ## Installation
+│ │ @@ -33,7 +22,20 @@
+│ │  pip install atlas-ftag-tools[dev]
+│ │  ```
+│ │  
+│ │  or from source
+│ │  ```bash
+│ │  python -m pip install -e ".[dev]"
+│ │  ```
+│ │ +
+│ │ +
+│ │ +## Create virtual file
+│ │ +
+│ │ +This package contains a script to easily merge a set of H5 files.
+│ │ +A virtual file is a fast and lightweight way to wrap a set of files.
+│ │ +See the [h5py documentation](https://docs.h5py.org/en/stable/vds.html) for more information on virtual datasets.
+│ │ +
+│ │ +The script is `vds.py` and can be run after installing this package with
+│ │ +
+│ │ +```
+│ │ +vds <pattern> <output path>
+│ │ +```
+│ │   --- atlas-ftag-tools-0.0.7/ftag/__init__.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/__init__.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  """atlas-ftag-tools - Common tools for ATLAS flavour tagging software."""
+│ │  
+│ │  
+│ │ -__version__ = "v0.0.7"
+│ │ +__version__ = "v0.0.8"
+│ │  
+│ │  from pathlib import Path
+│ │  
+│ │  import yaml
+│ │  
+│ │  import ftag.hdf5 as hdf5
+│ │  from ftag.cuts import Cuts
+│ │   --- atlas-ftag-tools-0.0.7/ftag/cuts.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/cuts.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/flavour.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/flavour.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/flavours.yaml
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/flavours.yaml
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/hdf5/h5reader.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/hdf5/h5reader.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -107,34 +107,55 @@
+│ │                      break
+│ │  
+│ │                  yield data
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class H5Reader:
+│ │ +    """Reads data from multiple HDF5 files.
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    fname : Path | str | list[Path | str]
+│ │ +        Path to the HDF5 file or list of paths
+│ │ +    batch_size : int, optional
+│ │ +        Number of jets to read at a time, by default 100_000
+│ │ +    jets_name : str, optional
+│ │ +        Name of the jets dataset, by default "jets"
+│ │ +    precision : str | None, optional
+│ │ +        Cast floats to given precision, by default None
+│ │ +    shuffle : bool, optional
+│ │ +        Read batches in a shuffled order, by default True
+│ │ +    weights : list[float] | None, optional
+│ │ +        Weights for different input datasets, by default None
+│ │ +    do_remove_inf : bool, optional
+│ │ +        Remove jets with inf values, by default False
+│ │ +    """
+│ │ +
+│ │      fname: Path | str | list[Path | str]
+│ │      batch_size: int = 100_000
+│ │      jets_name: str = "jets"
+│ │      precision: str | None = None
+│ │      shuffle: bool = True
+│ │      weights: list[float] | None = None
+│ │ +    do_remove_inf: bool = False
+│ │  
+│ │      def __post_init__(self) -> None:
+│ │          if isinstance(self.fname, (str, Path)):
+│ │              self.fname = [self.fname]
+│ │  
+│ │          # calculate batch sizes
+│ │          if self.weights is None:
+│ │              self.weights = [1 / len(self.fname)] * len(self.fname)
+│ │          self.batch_sizes = [int(w * self.batch_size) for w in self.weights]
+│ │  
+│ │          # create readers
+│ │          self.readers = [
+│ │ -            H5SingleReader(fname, batch_size, self.jets_name, self.precision, self.shuffle)
+│ │ -            for fname, batch_size in zip(self.fname, self.batch_sizes)
+│ │ +            H5SingleReader(f, b, self.jets_name, self.precision, self.shuffle, self.do_remove_inf)
+│ │ +            for f, b in zip(self.fname, self.batch_sizes)
+│ │          ]
+│ │  
+│ │      @property
+│ │      def num_jets(self) -> int:
+│ │          return sum(r.num_jets for r in self.readers)
+│ │  
+│ │      @property
+│ │   --- atlas-ftag-tools-0.0.7/ftag/hdf5/h5utils.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/hdf5/h5utils.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/hdf5/h5writer.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/hdf5/h5writer.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/mock.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/mock.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/ftag/sample.py
+│ ├── +++ atlas-ftag-tools-0.0.8/ftag/sample.py
+│ │┄ Files identical despite different names
+│ │   --- atlas-ftag-tools-0.0.7/pyproject.toml
+│ ├── +++ atlas-ftag-tools-0.0.8/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -22,14 +22,17 @@
+│ │    "pre-commit==3.1.1",
+│ │    "pytest==7.2.2",
+│ │    "pytest-cov==4.0.0",
+│ │    "pytest_notebook==0.8.1",
+│ │    "ipykernel==6.21.3",
+│ │  ]
+│ │  
+│ │ +[project.scripts]
+│ │ +vds = "ftag.vds:main"
+│ │ +
+│ │  [tool.setuptools]
+│ │  packages = ["ftag", "ftag.hdf5"]
+│ │  include-package-data = true
+│ │  
+│ │  [tool.setuptools.dynamic]
+│ │  version = {attr = "ftag.__version__"}
