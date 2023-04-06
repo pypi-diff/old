@@ -1,0 +1,4685 @@
+# Comparing `tmp/mimesis-7.0.0.tar.gz` & `tmp/mimesis-7.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mimesis-7.0.0.tar", max compression
++gzip compressed data, was "mimesis-7.1.0.tar", max compression
+```
+
+## Comparing `mimesis-7.0.0.tar` & `mimesis-7.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,286 +1,286 @@
+--rw-r--r--   0        0        0     1123 2022-12-17 18:17:45.148841 mimesis-7.0.0/LICENSE
+--rw-r--r--   0        0        0     7579 2022-12-17 18:17:45.148841 mimesis-7.0.0/README.rst
+--rw-r--r--   0        0        0     1450 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/__init__.py
+--rw-r--r--   0        0        0      552 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/__init__.py
+--rw-r--r--   0        0        0      428 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/base.py
+--rw-r--r--   0        0        0     3579 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/da.py
+--rw-r--r--   0        0        0     1748 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/en.py
+--rw-r--r--   0        0        0     1523 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/it.py
+--rw-r--r--   0        0        0     1507 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/nl.py
+--rw-r--r--   0        0        0     3261 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/pl.py
+--rw-r--r--   0        0        0     3389 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/pt_br.py
+--rw-r--r--   0        0        0     7424 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/ru.py
+--rw-r--r--   0        0        0     1063 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/builtins/uk.py
+--rw-r--r--   0        0        0      127 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/compat.py
+--rw-r--r--   0        0        0      403 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/data/__init__.py
+--rw-r--r--   0        0        0   182787 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/data/bin/sample.aac
+--rw-r--r--   0        0        0   385692 2022-12-17 18:17:45.152841 mimesis-7.0.0/mimesis/data/bin/sample.docx
+--rw-r--r--   0        0        0   115256 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.gif
+--rw-r--r--   0        0        0      269 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.gz
+--rw-r--r--   0        0        0    88187 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.jpg
+--rw-r--r--   0        0        0   281424 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.mov
+--rw-r--r--   0        0        0    67911 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.mp3
+--rw-r--r--   0        0        0   304520 2022-12-17 18:17:45.156841 mimesis-7.0.0/mimesis/data/bin/sample.mp4
+--rw-r--r--   0        0        0   414593 2022-12-17 18:17:45.160841 mimesis-7.0.0/mimesis/data/bin/sample.pdf
+--rw-r--r--   0        0        0   221697 2022-12-17 18:17:45.160841 mimesis-7.0.0/mimesis/data/bin/sample.png
+--rw-r--r--   0        0        0   223362 2022-12-17 18:17:45.164841 mimesis-7.0.0/mimesis/data/bin/sample.pptx
+--rw-r--r--   0        0        0     4857 2022-12-17 18:17:45.164841 mimesis-7.0.0/mimesis/data/bin/sample.xlsx
+--rw-r--r--   0        0        0      673 2022-12-17 18:17:45.164841 mimesis-7.0.0/mimesis/data/bin/sample.zip
+--rw-r--r--   0        0        0    79583 2022-12-17 18:18:29.429309 mimesis-7.0.0/mimesis/data/cs/address.json
+--rw-r--r--   0        0        0      515 2022-12-17 18:18:29.429309 mimesis-7.0.0/mimesis/data/cs/datetime.json
+--rw-r--r--   0        0        0      360 2022-12-17 18:18:29.429309 mimesis-7.0.0/mimesis/data/cs/finance.json
+--rw-r--r--   0        0        0     1845 2022-12-17 18:18:29.433309 mimesis-7.0.0/mimesis/data/cs/food.json
+--rw-r--r--   0        0        0    33117 2022-12-17 18:18:29.433309 mimesis-7.0.0/mimesis/data/cs/person.json
+--rw-r--r--   0        0        0    49335 2022-12-17 18:18:29.433309 mimesis-7.0.0/mimesis/data/cs/text.json
+--rw-r--r--   0        0        0    82900 2022-12-17 18:18:29.437309 mimesis-7.0.0/mimesis/data/da/address.json
+--rw-r--r--   0        0        0      494 2022-12-17 18:18:29.437309 mimesis-7.0.0/mimesis/data/da/datetime.json
+--rw-r--r--   0        0        0     3481 2022-12-17 18:18:29.437309 mimesis-7.0.0/mimesis/data/da/finance.json
+--rw-r--r--   0        0        0     3873 2022-12-17 18:18:29.437309 mimesis-7.0.0/mimesis/data/da/food.json
+--rw-r--r--   0        0        0    23273 2022-12-17 18:18:29.441309 mimesis-7.0.0/mimesis/data/da/person.json
+--rw-r--r--   0        0        0    17323 2022-12-17 18:18:29.441309 mimesis-7.0.0/mimesis/data/da/text.json
+--rw-r--r--   0        0        0   251577 2022-12-17 18:18:29.449309 mimesis-7.0.0/mimesis/data/de/address.json
+--rw-r--r--   0        0        0      512 2022-12-17 18:18:29.449309 mimesis-7.0.0/mimesis/data/de/datetime.json
+--rw-r--r--   0        0        0     1718 2022-12-17 18:18:29.449309 mimesis-7.0.0/mimesis/data/de/finance.json
+--rw-r--r--   0        0        0     6237 2022-12-17 18:18:29.449309 mimesis-7.0.0/mimesis/data/de/food.json
+--rw-r--r--   0        0        0    18346 2022-12-17 18:18:29.449309 mimesis-7.0.0/mimesis/data/de/person.json
+--rw-r--r--   0        0        0   773143 2022-12-17 18:18:29.465309 mimesis-7.0.0/mimesis/data/de/text.json
+--rw-r--r--   0        0        0    73006 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/address.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/datetime.json
+--rw-r--r--   0        0        0     2759 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/finance.json
+--rw-r--r--   0        0        0     2335 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/food.json
+--rw-r--r--   0        0        0    28622 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-at/text.json
+--rw-r--r--   0        0        0    42841 2022-12-17 18:18:29.469309 mimesis-7.0.0/mimesis/data/de-ch/address.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.473309 mimesis-7.0.0/mimesis/data/de-ch/datetime.json
+--rw-r--r--   0        0        0     4371 2022-12-17 18:18:29.473309 mimesis-7.0.0/mimesis/data/de-ch/finance.json
+--rw-r--r--   0        0        0      152 2022-12-17 18:18:29.473309 mimesis-7.0.0/mimesis/data/de-ch/food.json
+--rw-r--r--   0        0        0    71143 2022-12-17 18:18:29.473309 mimesis-7.0.0/mimesis/data/de-ch/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.473309 mimesis-7.0.0/mimesis/data/de-ch/text.json
+--rw-r--r--   0        0        0    99824 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/address.json
+--rw-r--r--   0        0        0      817 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/datetime.json
+--rw-r--r--   0        0        0     1612 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/finance.json
+--rw-r--r--   0        0        0     4461 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/food.json
+--rw-r--r--   0        0        0    14494 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/person.json
+--rw-r--r--   0        0        0    10297 2022-12-17 18:18:29.477309 mimesis-7.0.0/mimesis/data/el/text.json
+--rw-r--r--   0        0        0    50488 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/address.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/builtin.json
+--rw-r--r--   0        0        0      501 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/datetime.json
+--rw-r--r--   0        0        0    20887 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/finance.json
+--rw-r--r--   0        0        0    14076 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/food.json
+--rw-r--r--   0        0        0    64738 2022-12-17 18:18:29.481310 mimesis-7.0.0/mimesis/data/en/person.json
+--rw-r--r--   0        0        0   343671 2022-12-17 18:18:29.489309 mimesis-7.0.0/mimesis/data/en/text.json
+--rw-r--r--   0        0        0    68774 2022-12-17 18:18:29.493310 mimesis-7.0.0/mimesis/data/en-au/address.json
+--rw-r--r--   0        0        0       49 2022-12-17 18:18:29.493310 mimesis-7.0.0/mimesis/data/en-au/datetime.json
+--rw-r--r--   0        0        0   115714 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-au/finance.json
+--rw-r--r--   0        0        0      504 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-au/food.json
+--rw-r--r--   0        0        0    41658 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-au/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-au/text.json
+--rw-r--r--   0        0        0    24229 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/address.json
+--rw-r--r--   0        0        0       49 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/datetime.json
+--rw-r--r--   0        0        0     2892 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/finance.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/food.json
+--rw-r--r--   0        0        0    13729 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.497310 mimesis-7.0.0/mimesis/data/en-ca/text.json
+--rw-r--r--   0        0        0    84033 2022-12-17 18:18:29.501309 mimesis-7.0.0/mimesis/data/en-gb/address.json
+--rw-r--r--   0        0        0       49 2022-12-17 18:18:29.501309 mimesis-7.0.0/mimesis/data/en-gb/datetime.json
+--rw-r--r--   0        0        0     6514 2022-12-17 18:18:29.501309 mimesis-7.0.0/mimesis/data/en-gb/finance.json
+--rw-r--r--   0        0        0     1316 2022-12-17 18:18:29.501309 mimesis-7.0.0/mimesis/data/en-gb/food.json
+--rw-r--r--   0        0        0    45054 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/en-gb/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/en-gb/text.json
+--rw-r--r--   0        0        0    23805 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/es/address.json
+--rw-r--r--   0        0        0      561 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/es/datetime.json
+--rw-r--r--   0        0        0     1850 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/es/finance.json
+--rw-r--r--   0        0        0     4757 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/es/food.json
+--rw-r--r--   0        0        0    14143 2022-12-17 18:18:29.505310 mimesis-7.0.0/mimesis/data/es/person.json
+--rw-r--r--   0        0        0   128149 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es/text.json
+--rw-r--r--   0        0        0    11619 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/address.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/datetime.json
+--rw-r--r--   0        0        0     2411 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/finance.json
+--rw-r--r--   0        0        0     1081 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/food.json
+--rw-r--r--   0        0        0    16998 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.509310 mimesis-7.0.0/mimesis/data/es-mx/text.json
+--rw-r--r--   0        0        0    21806 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/address.json
+--rw-r--r--   0        0        0      533 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/datetime.json
+--rw-r--r--   0        0        0     6785 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/finance.json
+--rw-r--r--   0        0        0     3683 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/food.json
+--rw-r--r--   0        0        0    33842 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/person.json
+--rw-r--r--   0        0        0    11545 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/et/text.json
+--rw-r--r--   0        0        0    13562 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/fa/address.json
+--rw-r--r--   0        0        0      665 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/fa/datetime.json
+--rw-r--r--   0        0        0     2398 2022-12-17 18:18:29.513310 mimesis-7.0.0/mimesis/data/fa/finance.json
+--rw-r--r--   0        0        0     6628 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fa/food.json
+--rw-r--r--   0        0        0    56905 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fa/person.json
+--rw-r--r--   0        0        0    11302 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fa/text.json
+--rw-r--r--   0        0        0     5488 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fi/address.json
+--rw-r--r--   0        0        0      542 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fi/datetime.json
+--rw-r--r--   0        0        0     7726 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fi/finance.json
+--rw-r--r--   0        0        0     3674 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fi/food.json
+--rw-r--r--   0        0        0    26719 2022-12-17 18:18:29.521310 mimesis-7.0.0/mimesis/data/fi/person.json
+--rw-r--r--   0        0        0    57968 2022-12-17 18:18:29.525310 mimesis-7.0.0/mimesis/data/fi/text.json
+--rw-r--r--   0        0        0    39318 2022-12-17 18:18:29.525310 mimesis-7.0.0/mimesis/data/fr/address.json
+--rw-r--r--   0        0        0      529 2022-12-17 18:18:29.525310 mimesis-7.0.0/mimesis/data/fr/datetime.json
+--rw-r--r--   0        0        0     2520 2022-12-17 18:18:29.525310 mimesis-7.0.0/mimesis/data/fr/finance.json
+--rw-r--r--   0        0        0     7024 2022-12-17 18:18:29.525310 mimesis-7.0.0/mimesis/data/fr/food.json
+--rw-r--r--   0        0        0    46272 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/fr/person.json
+--rw-r--r--   0        0        0    37433 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/fr/text.json
+--rw-r--r--   0        0        0    13842 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/hu/address.json
+--rw-r--r--   0        0        0      515 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/hu/datetime.json
+--rw-r--r--   0        0        0      545 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/hu/finance.json
+--rw-r--r--   0        0        0     4302 2022-12-17 18:18:29.529310 mimesis-7.0.0/mimesis/data/hu/food.json
+--rw-r--r--   0        0        0    26944 2022-12-17 18:18:29.533310 mimesis-7.0.0/mimesis/data/hu/person.json
+--rw-r--r--   0        0        0    22876 2022-12-17 18:18:29.533310 mimesis-7.0.0/mimesis/data/hu/text.json
+--rw-r--r--   0        0        0      398 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/__init__.py
+--rw-r--r--   0        0        0    20986 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/address.py
+--rw-r--r--   0        0        0     2735 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/code.py
+--rw-r--r--   0        0        0     2223 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/common.py
+--rw-r--r--   0        0        0    27537 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/cryptographic.py
+--rw-r--r--   0        0        0    11625 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/datetime.py
+--rw-r--r--   0        0        0     7778 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/development.py
+--rw-r--r--   0        0        0    55049 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/file.py
+--rw-r--r--   0        0        0   264126 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/finance.py
+--rw-r--r--   0        0        0     5175 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/hardware.py
+--rw-r--r--   0        0        0    37083 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/internet.py
+--rw-r--r--   0        0        0      320 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/path.py
+--rw-r--r--   0        0        0      171 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/payment.py
+--rw-r--r--   0        0        0   140341 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/person.py
+--rw-r--r--   0        0        0      606 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/scientific.py
+--rw-r--r--   0        0        0      364 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/text.py
+--rw-r--r--   0        0        0    31498 2022-12-17 18:17:45.188841 mimesis-7.0.0/mimesis/data/int/transport.py
+--rw-r--r--   0        0        0   121675 2022-12-17 18:18:29.537310 mimesis-7.0.0/mimesis/data/is/address.json
+--rw-r--r--   0        0        0      546 2022-12-17 18:18:29.537310 mimesis-7.0.0/mimesis/data/is/datetime.json
+--rw-r--r--   0        0        0     1473 2022-12-17 18:18:29.537310 mimesis-7.0.0/mimesis/data/is/finance.json
+--rw-r--r--   0        0        0     1651 2022-12-17 18:18:29.537310 mimesis-7.0.0/mimesis/data/is/food.json
+--rw-r--r--   0        0        0    68768 2022-12-17 18:18:29.541310 mimesis-7.0.0/mimesis/data/is/person.json
+--rw-r--r--   0        0        0    51794 2022-12-17 18:18:29.541310 mimesis-7.0.0/mimesis/data/is/text.json
+--rw-r--r--   0        0        0   123349 2022-12-17 18:18:29.545310 mimesis-7.0.0/mimesis/data/it/address.json
+--rw-r--r--   0        0        0      142 2022-12-17 18:18:29.545310 mimesis-7.0.0/mimesis/data/it/builtin.json
+--rw-r--r--   0        0        0      535 2022-12-17 18:18:29.545310 mimesis-7.0.0/mimesis/data/it/datetime.json
+--rw-r--r--   0        0        0     4416 2022-12-17 18:18:29.545310 mimesis-7.0.0/mimesis/data/it/finance.json
+--rw-r--r--   0        0        0     5352 2022-12-17 18:18:29.545310 mimesis-7.0.0/mimesis/data/it/food.json
+--rw-r--r--   0        0        0    64650 2022-12-17 18:18:29.549310 mimesis-7.0.0/mimesis/data/it/person.json
+--rw-r--r--   0        0        0    77862 2022-12-17 18:18:29.549310 mimesis-7.0.0/mimesis/data/it/text.json
+--rw-r--r--   0        0        0    10631 2022-12-17 18:18:29.549310 mimesis-7.0.0/mimesis/data/ja/address.json
+--rw-r--r--   0        0        0      494 2022-12-17 18:18:29.549310 mimesis-7.0.0/mimesis/data/ja/datetime.json
+--rw-r--r--   0        0        0    22437 2022-12-17 18:18:29.553310 mimesis-7.0.0/mimesis/data/ja/finance.json
+--rw-r--r--   0        0        0    13902 2022-12-17 18:18:29.553310 mimesis-7.0.0/mimesis/data/ja/food.json
+--rw-r--r--   0        0        0    69460 2022-12-17 18:18:29.553310 mimesis-7.0.0/mimesis/data/ja/person.json
+--rw-r--r--   0        0        0    56672 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/ja/text.json
+--rw-r--r--   0        0        0    33301 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/address.json
+--rw-r--r--   0        0        0      768 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/datetime.json
+--rw-r--r--   0        0        0     6526 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/finance.json
+--rw-r--r--   0        0        0       95 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/food.json
+--rw-r--r--   0        0        0    28448 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/person.json
+--rw-r--r--   0        0        0    14350 2022-12-17 18:18:29.557310 mimesis-7.0.0/mimesis/data/kk/text.json
+--rw-r--r--   0        0        0    30313 2022-12-17 18:18:29.561310 mimesis-7.0.0/mimesis/data/ko/address.json
+--rw-r--r--   0        0        0      492 2022-12-17 18:18:29.561310 mimesis-7.0.0/mimesis/data/ko/datetime.json
+--rw-r--r--   0        0        0    17399 2022-12-17 18:18:29.561310 mimesis-7.0.0/mimesis/data/ko/finance.json
+--rw-r--r--   0        0        0    12695 2022-12-17 18:18:29.561310 mimesis-7.0.0/mimesis/data/ko/food.json
+--rw-r--r--   0        0        0    39279 2022-12-17 18:18:29.561310 mimesis-7.0.0/mimesis/data/ko/person.json
+--rw-r--r--   0        0        0    68560 2022-12-17 18:18:29.565310 mimesis-7.0.0/mimesis/data/ko/text.json
+--rw-r--r--   0        0        0    60825 2022-12-17 18:18:29.565310 mimesis-7.0.0/mimesis/data/nl/address.json
+--rw-r--r--   0        0        0      507 2022-12-17 18:18:29.569310 mimesis-7.0.0/mimesis/data/nl/datetime.json
+--rw-r--r--   0        0        0     1312 2022-12-17 18:18:29.569310 mimesis-7.0.0/mimesis/data/nl/finance.json
+--rw-r--r--   0        0        0     7412 2022-12-17 18:18:29.569310 mimesis-7.0.0/mimesis/data/nl/food.json
+--rw-r--r--   0        0        0   109294 2022-12-17 18:18:29.573310 mimesis-7.0.0/mimesis/data/nl/person.json
+--rw-r--r--   0        0        0   202851 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl/text.json
+--rw-r--r--   0        0        0    53656 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/address.json
+--rw-r--r--   0        0        0       31 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/datetime.json
+--rw-r--r--   0        0        0     2097 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/finance.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/food.json
+--rw-r--r--   0        0        0     1371 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.577310 mimesis-7.0.0/mimesis/data/nl-be/text.json
+--rw-r--r--   0        0        0    40052 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/address.json
+--rw-r--r--   0        0        0      500 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/datetime.json
+--rw-r--r--   0        0        0     9629 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/finance.json
+--rw-r--r--   0        0        0     4479 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/food.json
+--rw-r--r--   0        0        0    43488 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/person.json
+--rw-r--r--   0        0        0    31334 2022-12-17 18:18:29.581310 mimesis-7.0.0/mimesis/data/no/text.json
+--rw-r--r--   0        0        0    80118 2022-12-17 18:18:29.585310 mimesis-7.0.0/mimesis/data/pl/address.json
+--rw-r--r--   0        0        0      567 2022-12-17 18:18:29.585310 mimesis-7.0.0/mimesis/data/pl/datetime.json
+--rw-r--r--   0        0        0     9475 2022-12-17 18:18:29.585310 mimesis-7.0.0/mimesis/data/pl/finance.json
+--rw-r--r--   0        0        0     4693 2022-12-17 18:18:29.585310 mimesis-7.0.0/mimesis/data/pl/food.json
+--rw-r--r--   0        0        0    27705 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pl/person.json
+--rw-r--r--   0        0        0    65088 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pl/text.json
+--rw-r--r--   0        0        0    19169 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pt/address.json
+--rw-r--r--   0        0        0      563 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pt/datetime.json
+--rw-r--r--   0        0        0     1336 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pt/finance.json
+--rw-r--r--   0        0        0     4310 2022-12-17 18:18:29.589311 mimesis-7.0.0/mimesis/data/pt/food.json
+--rw-r--r--   0        0        0    38175 2022-12-17 18:18:29.593310 mimesis-7.0.0/mimesis/data/pt/person.json
+--rw-r--r--   0        0        0    25766 2022-12-17 18:18:29.593310 mimesis-7.0.0/mimesis/data/pt/text.json
+--rw-r--r--   0        0        0    94350 2022-12-17 18:18:29.597310 mimesis-7.0.0/mimesis/data/pt-br/address.json
+--rw-r--r--   0        0        0      564 2022-12-17 18:18:29.597310 mimesis-7.0.0/mimesis/data/pt-br/datetime.json
+--rw-r--r--   0        0        0    23474 2022-12-17 18:18:29.597310 mimesis-7.0.0/mimesis/data/pt-br/finance.json
+--rw-r--r--   0        0        0     3162 2022-12-17 18:18:29.597310 mimesis-7.0.0/mimesis/data/pt-br/food.json
+--rw-r--r--   0        0        0    63714 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/pt-br/person.json
+--rw-r--r--   0        0        0        2 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/pt-br/text.json
+--rw-r--r--   0        0        0   101129 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/ru/address.json
+--rw-r--r--   0        0        0    10949 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/ru/builtin.json
+--rw-r--r--   0        0        0      790 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/ru/datetime.json
+--rw-r--r--   0        0        0    21038 2022-12-17 18:18:29.601311 mimesis-7.0.0/mimesis/data/ru/finance.json
+--rw-r--r--   0        0        0    20262 2022-12-17 18:18:29.605311 mimesis-7.0.0/mimesis/data/ru/food.json
+--rw-r--r--   0        0        0    86369 2022-12-17 18:18:29.605311 mimesis-7.0.0/mimesis/data/ru/person.json
+--rw-r--r--   0        0        0    89215 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/ru/text.json
+--rw-r--r--   0        0        0    38882 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/address.json
+--rw-r--r--   0        0        0      485 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/datetime.json
+--rw-r--r--   0        0        0      236 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/finance.json
+--rw-r--r--   0        0        0      284 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/food.json
+--rw-r--r--   0        0        0     5828 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/person.json
+--rw-r--r--   0        0        0      752 2022-12-17 18:18:29.609311 mimesis-7.0.0/mimesis/data/sk/text.json
+--rw-r--r--   0        0        0    97258 2022-12-17 18:18:29.613311 mimesis-7.0.0/mimesis/data/sv/address.json
+--rw-r--r--   0        0        0      508 2022-12-17 18:18:29.613311 mimesis-7.0.0/mimesis/data/sv/datetime.json
+--rw-r--r--   0        0        0     4278 2022-12-17 18:18:29.613311 mimesis-7.0.0/mimesis/data/sv/finance.json
+--rw-r--r--   0        0        0     6863 2022-12-17 18:18:29.613311 mimesis-7.0.0/mimesis/data/sv/food.json
+--rw-r--r--   0        0        0    32781 2022-12-17 18:18:29.613311 mimesis-7.0.0/mimesis/data/sv/person.json
+--rw-r--r--   0        0        0    41878 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/sv/text.json
+--rw-r--r--   0        0        0    12375 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/tr/address.json
+--rw-r--r--   0        0        0      508 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/tr/datetime.json
+--rw-r--r--   0        0        0    10537 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/tr/finance.json
+--rw-r--r--   0        0        0     1819 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/tr/food.json
+--rw-r--r--   0        0        0    29265 2022-12-17 18:18:29.617311 mimesis-7.0.0/mimesis/data/tr/person.json
+--rw-r--r--   0        0        0     8857 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/tr/text.json
+--rw-r--r--   0        0        0    54571 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/address.json
+--rw-r--r--   0        0        0     6247 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/builtin.json
+--rw-r--r--   0        0        0      790 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/datetime.json
+--rw-r--r--   0        0        0     5734 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/finance.json
+--rw-r--r--   0        0        0     9121 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/food.json
+--rw-r--r--   0        0        0    52753 2022-12-17 18:18:29.621311 mimesis-7.0.0/mimesis/data/uk/person.json
+--rw-r--r--   0        0        0    21072 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/uk/text.json
+--rw-r--r--   0        0        0    10240 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/address.json
+--rw-r--r--   0        0        0      539 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/datetime.json
+--rw-r--r--   0        0        0     1762 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/finance.json
+--rw-r--r--   0        0        0     2301 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/food.json
+--rw-r--r--   0        0        0    96427 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/person.json
+--rw-r--r--   0        0        0    17796 2022-12-17 18:18:29.625311 mimesis-7.0.0/mimesis/data/zh/text.json
+--rw-r--r--   0        0        0     6827 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/enums.py
+--rw-r--r--   0        0        0     1688 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/exceptions.py
+--rw-r--r--   0        0        0      507 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/locales.py
+--rw-r--r--   0        0        0     1450 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/__init__.py
+--rw-r--r--   0        0        0     7716 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/address.py
+--rw-r--r--   0        0        0     6580 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/base.py
+--rw-r--r--   0        0        0     3058 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/binaryfile.py
+--rw-r--r--   0        0        0     2797 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/choice.py
+--rw-r--r--   0        0        0     2655 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/code.py
+--rw-r--r--   0        0        0     3325 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/cryptographic.py
+--rw-r--r--   0        0        0     8637 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/date.py
+--rw-r--r--   0        0        0     2626 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/development.py
+--rw-r--r--   0        0        0     2355 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/file.py
+--rw-r--r--   0        0        0     3556 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/finance.py
+--rw-r--r--   0        0        0     1712 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/food.py
+--rw-r--r--   0        0        0     5363 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/generic.py
+--rw-r--r--   0        0        0     3054 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/hardware.py
+--rw-r--r--   0        0        0    11422 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/internet.py
+--rw-r--r--   0        0        0     7042 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/numeric.py
+--rw-r--r--   0        0        0     2746 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/path.py
+--rw-r--r--   0        0        0     5125 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/payment.py
+--rw-r--r--   0        0        0    13655 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/person.py
+--rw-r--r--   0        0        0     2126 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/science.py
+--rw-r--r--   0        0        0     4375 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/text.py
+--rw-r--r--   0        0        0     1454 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/providers/transport.py
+--rw-r--r--   0        0        0        1 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/py.typed
+--rw-r--r--   0        0        0     4389 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/random.py
+--rw-r--r--   0        0        0    11591 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/schema.py
+--rw-r--r--   0        0        0     1375 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/shortcuts.py
+--rw-r--r--   0        0        0      948 2022-12-17 18:17:45.212841 mimesis-7.0.0/mimesis/types.py
+--rw-r--r--   0        0        0     2828 2022-12-17 18:17:45.212841 mimesis-7.0.0/pyproject.toml
+--rw-r--r--   0        0        0     9400 1970-01-01 00:00:00.000000 mimesis-7.0.0/setup.py
+--rw-r--r--   0        0        0     9087 1970-01-01 00:00:00.000000 mimesis-7.0.0/PKG-INFO
++-rw-r--r--   0        0        0     1123 2023-04-06 21:11:08.800162 mimesis-7.1.0/LICENSE
++-rw-r--r--   0        0        0     6945 2023-04-06 21:11:08.800162 mimesis-7.1.0/README.rst
++-rw-r--r--   0        0        0     2286 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/__init__.py
++-rw-r--r--   0        0        0      552 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/__init__.py
++-rw-r--r--   0        0        0      428 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/base.py
++-rw-r--r--   0        0        0     3671 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/da.py
++-rw-r--r--   0        0        0     1776 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/en.py
++-rw-r--r--   0        0        0     1543 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/it.py
++-rw-r--r--   0        0        0     1535 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/nl.py
++-rw-r--r--   0        0        0     3281 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/pl.py
++-rw-r--r--   0        0        0     3354 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/pt_br.py
++-rw-r--r--   0        0        0     7494 2023-04-06 21:11:08.804162 mimesis-7.1.0/mimesis/builtins/ru.py
++-rw-r--r--   0        0        0     1083 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/builtins/uk.py
++-rw-r--r--   0        0        0      127 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/compat.py
++-rw-r--r--   0        0        0      403 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/__init__.py
++-rw-r--r--   0        0        0   182787 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/bin/sample.aac
++-rw-r--r--   0        0        0   385692 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/bin/sample.docx
++-rw-r--r--   0        0        0   115256 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/bin/sample.gif
++-rw-r--r--   0        0        0      269 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/bin/sample.gz
++-rw-r--r--   0        0        0    88187 2023-04-06 21:11:08.808162 mimesis-7.1.0/mimesis/data/bin/sample.jpg
++-rw-r--r--   0        0        0   281424 2023-04-06 21:11:08.812162 mimesis-7.1.0/mimesis/data/bin/sample.mov
++-rw-r--r--   0        0        0    67911 2023-04-06 21:11:08.812162 mimesis-7.1.0/mimesis/data/bin/sample.mp3
++-rw-r--r--   0        0        0   304520 2023-04-06 21:11:08.812162 mimesis-7.1.0/mimesis/data/bin/sample.mp4
++-rw-r--r--   0        0        0   414593 2023-04-06 21:11:08.816162 mimesis-7.1.0/mimesis/data/bin/sample.pdf
++-rw-r--r--   0        0        0   221697 2023-04-06 21:11:08.816162 mimesis-7.1.0/mimesis/data/bin/sample.png
++-rw-r--r--   0        0        0   223362 2023-04-06 21:11:08.816162 mimesis-7.1.0/mimesis/data/bin/sample.pptx
++-rw-r--r--   0        0        0     4857 2023-04-06 21:11:08.816162 mimesis-7.1.0/mimesis/data/bin/sample.xlsx
++-rw-r--r--   0        0        0      673 2023-04-06 21:11:08.816162 mimesis-7.1.0/mimesis/data/bin/sample.zip
++-rw-r--r--   0        0        0    79583 2023-04-06 21:11:28.872534 mimesis-7.1.0/mimesis/data/cs/address.json
++-rw-r--r--   0        0        0      515 2023-04-06 21:11:28.872534 mimesis-7.1.0/mimesis/data/cs/datetime.json
++-rw-r--r--   0        0        0      360 2023-04-06 21:11:28.872534 mimesis-7.1.0/mimesis/data/cs/finance.json
++-rw-r--r--   0        0        0     1845 2023-04-06 21:11:28.872534 mimesis-7.1.0/mimesis/data/cs/food.json
++-rw-r--r--   0        0        0    33117 2023-04-06 21:11:28.876534 mimesis-7.1.0/mimesis/data/cs/person.json
++-rw-r--r--   0        0        0    49335 2023-04-06 21:11:28.876534 mimesis-7.1.0/mimesis/data/cs/text.json
++-rw-r--r--   0        0        0    82900 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/address.json
++-rw-r--r--   0        0        0      494 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/datetime.json
++-rw-r--r--   0        0        0     3481 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/finance.json
++-rw-r--r--   0        0        0     3873 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/food.json
++-rw-r--r--   0        0        0    23273 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/person.json
++-rw-r--r--   0        0        0    17323 2023-04-06 21:11:28.880534 mimesis-7.1.0/mimesis/data/da/text.json
++-rw-r--r--   0        0        0   251577 2023-04-06 21:11:28.888534 mimesis-7.1.0/mimesis/data/de/address.json
++-rw-r--r--   0        0        0      512 2023-04-06 21:11:28.892534 mimesis-7.1.0/mimesis/data/de/datetime.json
++-rw-r--r--   0        0        0     1718 2023-04-06 21:11:28.892534 mimesis-7.1.0/mimesis/data/de/finance.json
++-rw-r--r--   0        0        0     6237 2023-04-06 21:11:28.892534 mimesis-7.1.0/mimesis/data/de/food.json
++-rw-r--r--   0        0        0    18346 2023-04-06 21:11:28.892534 mimesis-7.1.0/mimesis/data/de/person.json
++-rw-r--r--   0        0        0   773143 2023-04-06 21:11:28.908534 mimesis-7.1.0/mimesis/data/de/text.json
++-rw-r--r--   0        0        0    73006 2023-04-06 21:11:28.908534 mimesis-7.1.0/mimesis/data/de-at/address.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-at/datetime.json
++-rw-r--r--   0        0        0     2759 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-at/finance.json
++-rw-r--r--   0        0        0     2335 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-at/food.json
++-rw-r--r--   0        0        0    28622 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-at/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-at/text.json
++-rw-r--r--   0        0        0    42841 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-ch/address.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-ch/datetime.json
++-rw-r--r--   0        0        0     4371 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-ch/finance.json
++-rw-r--r--   0        0        0      152 2023-04-06 21:11:28.912535 mimesis-7.1.0/mimesis/data/de-ch/food.json
++-rw-r--r--   0        0        0    71143 2023-04-06 21:11:28.916535 mimesis-7.1.0/mimesis/data/de-ch/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.916535 mimesis-7.1.0/mimesis/data/de-ch/text.json
++-rw-r--r--   0        0        0    99824 2023-04-06 21:11:28.916535 mimesis-7.1.0/mimesis/data/el/address.json
++-rw-r--r--   0        0        0      817 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/el/datetime.json
++-rw-r--r--   0        0        0     1612 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/el/finance.json
++-rw-r--r--   0        0        0     4461 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/el/food.json
++-rw-r--r--   0        0        0    14494 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/el/person.json
++-rw-r--r--   0        0        0    10297 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/el/text.json
++-rw-r--r--   0        0        0    50488 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/en/address.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/en/builtin.json
++-rw-r--r--   0        0        0      501 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/en/datetime.json
++-rw-r--r--   0        0        0    20887 2023-04-06 21:11:28.920535 mimesis-7.1.0/mimesis/data/en/finance.json
++-rw-r--r--   0        0        0    14076 2023-04-06 21:11:28.924535 mimesis-7.1.0/mimesis/data/en/food.json
++-rw-r--r--   0        0        0    64738 2023-04-06 21:11:28.924535 mimesis-7.1.0/mimesis/data/en/person.json
++-rw-r--r--   0        0        0   343508 2023-04-06 21:11:28.932535 mimesis-7.1.0/mimesis/data/en/text.json
++-rw-r--r--   0        0        0    68774 2023-04-06 21:11:28.936535 mimesis-7.1.0/mimesis/data/en-au/address.json
++-rw-r--r--   0        0        0       49 2023-04-06 21:11:28.936535 mimesis-7.1.0/mimesis/data/en-au/datetime.json
++-rw-r--r--   0        0        0   115714 2023-04-06 21:11:28.936535 mimesis-7.1.0/mimesis/data/en-au/finance.json
++-rw-r--r--   0        0        0      504 2023-04-06 21:11:28.936535 mimesis-7.1.0/mimesis/data/en-au/food.json
++-rw-r--r--   0        0        0    41658 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-au/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-au/text.json
++-rw-r--r--   0        0        0    24229 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/address.json
++-rw-r--r--   0        0        0       49 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/datetime.json
++-rw-r--r--   0        0        0     2892 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/finance.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/food.json
++-rw-r--r--   0        0        0    13729 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.940535 mimesis-7.1.0/mimesis/data/en-ca/text.json
++-rw-r--r--   0        0        0    84033 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/address.json
++-rw-r--r--   0        0        0       49 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/datetime.json
++-rw-r--r--   0        0        0     6514 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/finance.json
++-rw-r--r--   0        0        0     1316 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/food.json
++-rw-r--r--   0        0        0    45054 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/en-gb/text.json
++-rw-r--r--   0        0        0    23805 2023-04-06 21:11:28.944535 mimesis-7.1.0/mimesis/data/es/address.json
++-rw-r--r--   0        0        0      561 2023-04-06 21:11:28.948536 mimesis-7.1.0/mimesis/data/es/datetime.json
++-rw-r--r--   0        0        0     1850 2023-04-06 21:11:28.948536 mimesis-7.1.0/mimesis/data/es/finance.json
++-rw-r--r--   0        0        0     4757 2023-04-06 21:11:28.948536 mimesis-7.1.0/mimesis/data/es/food.json
++-rw-r--r--   0        0        0    14143 2023-04-06 21:11:28.948536 mimesis-7.1.0/mimesis/data/es/person.json
++-rw-r--r--   0        0        0   128149 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es/text.json
++-rw-r--r--   0        0        0    11619 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/address.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/datetime.json
++-rw-r--r--   0        0        0     2411 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/finance.json
++-rw-r--r--   0        0        0     1081 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/food.json
++-rw-r--r--   0        0        0    16998 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/es-mx/text.json
++-rw-r--r--   0        0        0    21806 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/et/address.json
++-rw-r--r--   0        0        0      533 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/et/datetime.json
++-rw-r--r--   0        0        0     6381 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/et/finance.json
++-rw-r--r--   0        0        0     3683 2023-04-06 21:11:28.952535 mimesis-7.1.0/mimesis/data/et/food.json
++-rw-r--r--   0        0        0    33842 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/et/person.json
++-rw-r--r--   0        0        0    11545 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/et/text.json
++-rw-r--r--   0        0        0    13562 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/fa/address.json
++-rw-r--r--   0        0        0      665 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/fa/datetime.json
++-rw-r--r--   0        0        0     2398 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/fa/finance.json
++-rw-r--r--   0        0        0     6628 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/fa/food.json
++-rw-r--r--   0        0        0    56905 2023-04-06 21:11:28.956536 mimesis-7.1.0/mimesis/data/fa/person.json
++-rw-r--r--   0        0        0    11302 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fa/text.json
++-rw-r--r--   0        0        0     5488 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fi/address.json
++-rw-r--r--   0        0        0      542 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fi/datetime.json
++-rw-r--r--   0        0        0     7726 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fi/finance.json
++-rw-r--r--   0        0        0     3674 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fi/food.json
++-rw-r--r--   0        0        0    26719 2023-04-06 21:11:28.960536 mimesis-7.1.0/mimesis/data/fi/person.json
++-rw-r--r--   0        0        0    57968 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fi/text.json
++-rw-r--r--   0        0        0    39318 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fr/address.json
++-rw-r--r--   0        0        0      529 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fr/datetime.json
++-rw-r--r--   0        0        0     2520 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fr/finance.json
++-rw-r--r--   0        0        0     7024 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fr/food.json
++-rw-r--r--   0        0        0    46272 2023-04-06 21:11:28.964536 mimesis-7.1.0/mimesis/data/fr/person.json
++-rw-r--r--   0        0        0    37433 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/fr/text.json
++-rw-r--r--   0        0        0    13842 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/address.json
++-rw-r--r--   0        0        0      515 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/datetime.json
++-rw-r--r--   0        0        0      545 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/finance.json
++-rw-r--r--   0        0        0     4302 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/food.json
++-rw-r--r--   0        0        0    26944 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/person.json
++-rw-r--r--   0        0        0    22876 2023-04-06 21:11:28.968536 mimesis-7.1.0/mimesis/data/hu/text.json
++-rw-r--r--   0        0        0      398 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/__init__.py
++-rw-r--r--   0        0        0    20986 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/address.py
++-rw-r--r--   0        0        0     2735 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/code.py
++-rw-r--r--   0        0        0     2223 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/common.py
++-rw-r--r--   0        0        0    27537 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/cryptographic.py
++-rw-r--r--   0        0        0    11625 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/datetime.py
++-rw-r--r--   0        0        0     7778 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/development.py
++-rw-r--r--   0        0        0    67892 2023-04-06 21:11:08.840163 mimesis-7.1.0/mimesis/data/int/file.py
++-rw-r--r--   0        0        0   264126 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/finance.py
++-rw-r--r--   0        0        0     5221 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/hardware.py
++-rw-r--r--   0        0        0    37473 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/internet.py
++-rw-r--r--   0        0        0      320 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/path.py
++-rw-r--r--   0        0        0      171 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/payment.py
++-rw-r--r--   0        0        0   140341 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/person.py
++-rw-r--r--   0        0        0      606 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/scientific.py
++-rw-r--r--   0        0        0      364 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/text.py
++-rw-r--r--   0        0        0    31498 2023-04-06 21:11:08.844164 mimesis-7.1.0/mimesis/data/int/transport.py
++-rw-r--r--   0        0        0   121675 2023-04-06 21:11:28.972536 mimesis-7.1.0/mimesis/data/is/address.json
++-rw-r--r--   0        0        0      546 2023-04-06 21:11:28.976536 mimesis-7.1.0/mimesis/data/is/datetime.json
++-rw-r--r--   0        0        0     1473 2023-04-06 21:11:28.976536 mimesis-7.1.0/mimesis/data/is/finance.json
++-rw-r--r--   0        0        0     1651 2023-04-06 21:11:28.976536 mimesis-7.1.0/mimesis/data/is/food.json
++-rw-r--r--   0        0        0    68768 2023-04-06 21:11:28.976536 mimesis-7.1.0/mimesis/data/is/person.json
++-rw-r--r--   0        0        0    51794 2023-04-06 21:11:28.980536 mimesis-7.1.0/mimesis/data/is/text.json
++-rw-r--r--   0        0        0   123349 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/address.json
++-rw-r--r--   0        0        0      142 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/builtin.json
++-rw-r--r--   0        0        0      535 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/datetime.json
++-rw-r--r--   0        0        0     4416 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/finance.json
++-rw-r--r--   0        0        0     5352 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/food.json
++-rw-r--r--   0        0        0    64650 2023-04-06 21:11:28.984536 mimesis-7.1.0/mimesis/data/it/person.json
++-rw-r--r--   0        0        0    77862 2023-04-06 21:11:28.988536 mimesis-7.1.0/mimesis/data/it/text.json
++-rw-r--r--   0        0        0    10631 2023-04-06 21:11:28.988536 mimesis-7.1.0/mimesis/data/ja/address.json
++-rw-r--r--   0        0        0      494 2023-04-06 21:11:28.988536 mimesis-7.1.0/mimesis/data/ja/datetime.json
++-rw-r--r--   0        0        0    22437 2023-04-06 21:11:28.988536 mimesis-7.1.0/mimesis/data/ja/finance.json
++-rw-r--r--   0        0        0    13902 2023-04-06 21:11:28.988536 mimesis-7.1.0/mimesis/data/ja/food.json
++-rw-r--r--   0        0        0    69460 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/ja/person.json
++-rw-r--r--   0        0        0    56672 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/ja/text.json
++-rw-r--r--   0        0        0    33301 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/kk/address.json
++-rw-r--r--   0        0        0      768 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/kk/datetime.json
++-rw-r--r--   0        0        0     6526 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/kk/finance.json
++-rw-r--r--   0        0        0       95 2023-04-06 21:11:28.992536 mimesis-7.1.0/mimesis/data/kk/food.json
++-rw-r--r--   0        0        0    28448 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/kk/person.json
++-rw-r--r--   0        0        0    14350 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/kk/text.json
++-rw-r--r--   0        0        0    30313 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/ko/address.json
++-rw-r--r--   0        0        0      492 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/ko/datetime.json
++-rw-r--r--   0        0        0    17399 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/ko/finance.json
++-rw-r--r--   0        0        0    12695 2023-04-06 21:11:28.996537 mimesis-7.1.0/mimesis/data/ko/food.json
++-rw-r--r--   0        0        0    39279 2023-04-06 21:11:29.000537 mimesis-7.1.0/mimesis/data/ko/person.json
++-rw-r--r--   0        0        0    68560 2023-04-06 21:11:29.000537 mimesis-7.1.0/mimesis/data/ko/text.json
++-rw-r--r--   0        0        0    60825 2023-04-06 21:11:29.004537 mimesis-7.1.0/mimesis/data/nl/address.json
++-rw-r--r--   0        0        0      507 2023-04-06 21:11:29.004537 mimesis-7.1.0/mimesis/data/nl/datetime.json
++-rw-r--r--   0        0        0     1312 2023-04-06 21:11:29.004537 mimesis-7.1.0/mimesis/data/nl/finance.json
++-rw-r--r--   0        0        0     7412 2023-04-06 21:11:29.004537 mimesis-7.1.0/mimesis/data/nl/food.json
++-rw-r--r--   0        0        0   109294 2023-04-06 21:11:29.008537 mimesis-7.1.0/mimesis/data/nl/person.json
++-rw-r--r--   0        0        0   202851 2023-04-06 21:11:29.012537 mimesis-7.1.0/mimesis/data/nl/text.json
++-rw-r--r--   0        0        0    53656 2023-04-06 21:11:29.012537 mimesis-7.1.0/mimesis/data/nl-be/address.json
++-rw-r--r--   0        0        0       31 2023-04-06 21:11:29.012537 mimesis-7.1.0/mimesis/data/nl-be/datetime.json
++-rw-r--r--   0        0        0     2097 2023-04-06 21:11:29.012537 mimesis-7.1.0/mimesis/data/nl-be/finance.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/nl-be/food.json
++-rw-r--r--   0        0        0     1371 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/nl-be/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/nl-be/text.json
++-rw-r--r--   0        0        0    40052 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/no/address.json
++-rw-r--r--   0        0        0      500 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/no/datetime.json
++-rw-r--r--   0        0        0     9629 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/no/finance.json
++-rw-r--r--   0        0        0     4479 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/no/food.json
++-rw-r--r--   0        0        0    43488 2023-04-06 21:11:29.016537 mimesis-7.1.0/mimesis/data/no/person.json
++-rw-r--r--   0        0        0    31334 2023-04-06 21:11:29.020537 mimesis-7.1.0/mimesis/data/no/text.json
++-rw-r--r--   0        0        0    80118 2023-04-06 21:11:29.020537 mimesis-7.1.0/mimesis/data/pl/address.json
++-rw-r--r--   0        0        0      567 2023-04-06 21:11:29.020537 mimesis-7.1.0/mimesis/data/pl/datetime.json
++-rw-r--r--   0        0        0     9475 2023-04-06 21:11:29.024537 mimesis-7.1.0/mimesis/data/pl/finance.json
++-rw-r--r--   0        0        0     4693 2023-04-06 21:11:29.024537 mimesis-7.1.0/mimesis/data/pl/food.json
++-rw-r--r--   0        0        0    27705 2023-04-06 21:11:29.024537 mimesis-7.1.0/mimesis/data/pl/person.json
++-rw-r--r--   0        0        0    65088 2023-04-06 21:11:29.024537 mimesis-7.1.0/mimesis/data/pl/text.json
++-rw-r--r--   0        0        0    19169 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/address.json
++-rw-r--r--   0        0        0      563 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/datetime.json
++-rw-r--r--   0        0        0     1336 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/finance.json
++-rw-r--r--   0        0        0     4310 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/food.json
++-rw-r--r--   0        0        0    38175 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/person.json
++-rw-r--r--   0        0        0    25766 2023-04-06 21:11:29.028537 mimesis-7.1.0/mimesis/data/pt/text.json
++-rw-r--r--   0        0        0    94350 2023-04-06 21:11:29.032538 mimesis-7.1.0/mimesis/data/pt-br/address.json
++-rw-r--r--   0        0        0      564 2023-04-06 21:11:29.032538 mimesis-7.1.0/mimesis/data/pt-br/datetime.json
++-rw-r--r--   0        0        0    23474 2023-04-06 21:11:29.032538 mimesis-7.1.0/mimesis/data/pt-br/finance.json
++-rw-r--r--   0        0        0     3162 2023-04-06 21:11:29.032538 mimesis-7.1.0/mimesis/data/pt-br/food.json
++-rw-r--r--   0        0        0    63714 2023-04-06 21:11:29.036538 mimesis-7.1.0/mimesis/data/pt-br/person.json
++-rw-r--r--   0        0        0        2 2023-04-06 21:11:29.036538 mimesis-7.1.0/mimesis/data/pt-br/text.json
++-rw-r--r--   0        0        0   101129 2023-04-06 21:11:29.036538 mimesis-7.1.0/mimesis/data/ru/address.json
++-rw-r--r--   0        0        0    10949 2023-04-06 21:11:29.036538 mimesis-7.1.0/mimesis/data/ru/builtin.json
++-rw-r--r--   0        0        0      790 2023-04-06 21:11:29.040538 mimesis-7.1.0/mimesis/data/ru/datetime.json
++-rw-r--r--   0        0        0    21038 2023-04-06 21:11:29.040538 mimesis-7.1.0/mimesis/data/ru/finance.json
++-rw-r--r--   0        0        0    20262 2023-04-06 21:11:29.040538 mimesis-7.1.0/mimesis/data/ru/food.json
++-rw-r--r--   0        0        0    86369 2023-04-06 21:11:29.040538 mimesis-7.1.0/mimesis/data/ru/person.json
++-rw-r--r--   0        0        0    89215 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/ru/text.json
++-rw-r--r--   0        0        0    38882 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/address.json
++-rw-r--r--   0        0        0      485 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/datetime.json
++-rw-r--r--   0        0        0      236 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/finance.json
++-rw-r--r--   0        0        0      284 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/food.json
++-rw-r--r--   0        0        0     5828 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/person.json
++-rw-r--r--   0        0        0      752 2023-04-06 21:11:29.044538 mimesis-7.1.0/mimesis/data/sk/text.json
++-rw-r--r--   0        0        0    97258 2023-04-06 21:11:29.048538 mimesis-7.1.0/mimesis/data/sv/address.json
++-rw-r--r--   0        0        0      508 2023-04-06 21:11:29.048538 mimesis-7.1.0/mimesis/data/sv/datetime.json
++-rw-r--r--   0        0        0     4278 2023-04-06 21:11:29.048538 mimesis-7.1.0/mimesis/data/sv/finance.json
++-rw-r--r--   0        0        0     6863 2023-04-06 21:11:29.048538 mimesis-7.1.0/mimesis/data/sv/food.json
++-rw-r--r--   0        0        0    32781 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/sv/person.json
++-rw-r--r--   0        0        0    41878 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/sv/text.json
++-rw-r--r--   0        0        0    12375 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/tr/address.json
++-rw-r--r--   0        0        0      508 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/tr/datetime.json
++-rw-r--r--   0        0        0    10537 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/tr/finance.json
++-rw-r--r--   0        0        0     1819 2023-04-06 21:11:29.052538 mimesis-7.1.0/mimesis/data/tr/food.json
++-rw-r--r--   0        0        0    29265 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/tr/person.json
++-rw-r--r--   0        0        0     8857 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/tr/text.json
++-rw-r--r--   0        0        0    54571 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/uk/address.json
++-rw-r--r--   0        0        0     6247 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/uk/builtin.json
++-rw-r--r--   0        0        0      790 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/uk/datetime.json
++-rw-r--r--   0        0        0     5734 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/uk/finance.json
++-rw-r--r--   0        0        0     9121 2023-04-06 21:11:29.056538 mimesis-7.1.0/mimesis/data/uk/food.json
++-rw-r--r--   0        0        0    52753 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/uk/person.json
++-rw-r--r--   0        0        0    21072 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/uk/text.json
++-rw-r--r--   0        0        0    10240 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/zh/address.json
++-rw-r--r--   0        0        0      539 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/zh/datetime.json
++-rw-r--r--   0        0        0     1762 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/zh/finance.json
++-rw-r--r--   0        0        0     2301 2023-04-06 21:11:29.060538 mimesis-7.1.0/mimesis/data/zh/food.json
++-rw-r--r--   0        0        0    96427 2023-04-06 21:11:29.064538 mimesis-7.1.0/mimesis/data/zh/person.json
++-rw-r--r--   0        0        0    17796 2023-04-06 21:11:29.064538 mimesis-7.1.0/mimesis/data/zh/text.json
++-rw-r--r--   0        0        0      377 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/entrypoints.py
++-rw-r--r--   0        0        0     6827 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/enums.py
++-rw-r--r--   0        0        0     1712 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/exceptions.py
++-rw-r--r--   0        0        0      507 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/locales.py
++-rw-r--r--   0        0        0     1450 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/__init__.py
++-rw-r--r--   0        0        0     7716 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/address.py
++-rw-r--r--   0        0        0     7676 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/base.py
++-rw-r--r--   0        0        0     3058 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/binaryfile.py
++-rw-r--r--   0        0        0     3190 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/choice.py
++-rw-r--r--   0        0        0     2655 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/code.py
++-rw-r--r--   0        0        0     3325 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/cryptographic.py
++-rw-r--r--   0        0        0     8676 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/date.py
++-rw-r--r--   0        0        0     2768 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/development.py
++-rw-r--r--   0        0        0     2136 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/file.py
++-rw-r--r--   0        0        0     3556 2023-04-06 21:11:08.864164 mimesis-7.1.0/mimesis/providers/finance.py
++-rw-r--r--   0        0        0     1712 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/food.py
++-rw-r--r--   0        0        0     5419 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/generic.py
++-rw-r--r--   0        0        0     3044 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/hardware.py
++-rw-r--r--   0        0        0    15706 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/internet.py
++-rw-r--r--   0        0        0     7042 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/numeric.py
++-rw-r--r--   0        0        0     2746 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/path.py
++-rw-r--r--   0        0        0     5199 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/payment.py
++-rw-r--r--   0        0        0    13766 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/person.py
++-rw-r--r--   0        0        0     2126 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/science.py
++-rw-r--r--   0        0        0     4375 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/text.py
++-rw-r--r--   0        0        0     1454 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/providers/transport.py
++-rw-r--r--   0        0        0        1 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/py.typed
++-rw-r--r--   0        0        0     4502 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/random.py
++-rw-r--r--   0        0        0    11691 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/schema.py
++-rw-r--r--   0        0        0     1373 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/shortcuts.py
++-rw-r--r--   0        0        0     1190 2023-04-06 21:11:08.868164 mimesis-7.1.0/mimesis/types.py
++-rw-r--r--   0        0        0     2743 2023-04-06 21:11:08.868164 mimesis-7.1.0/pyproject.toml
++-rw-r--r--   0        0        0     8504 1970-01-01 00:00:00.000000 mimesis-7.1.0/PKG-INFO
+```
+
+### Comparing `mimesis-7.0.0/LICENSE` & `mimesis-7.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/README.rst` & `mimesis-7.1.0/README.rst`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -31,18 +31,16 @@
+      :target: https://pypi.org/project/mimesis/
+      :alt: PyPI - Downloads
+ 
+ .. image:: https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%20pypy-brightgreen
+      :target: https://pypi.org/project/mimesis/
+      :alt: Python version
+ 
+-Mimesis (`/mɪˈmiːsɪs <https://mimesis.name/en/master/about.html#what-does-name-mean>`_) is a high-performance fake data generator for Python,
+-which provides data for a variety of purposes in a variety of languages. The fake data could be used to populate
+-a testing database, create fake API endpoints, create JSON and XML files of arbitrary structure, anonymize data taken
+-from production and etc.
++
++Mimesis (`/mɪˈmiːsɪs <https://mimesis.name/en/master/about.html#what-does-name-mean>`_) is a robust data generator for Python that can produce a wide range of fake data in various languages. This tool is useful for populating testing databases, creating fake API endpoints, generating JSON and XML files with custom structures, and anonymizing production data, among other purposes. 
+ 
+ Installation
+ ------------
+ 
+ 
+ To install mimesis, simply use pip:
+ 
+@@ -50,31 +48,28 @@
+ 
+     pip install mimesis
+ 
+ 
+ Python compatibility
+ ---------------------
+ 
+-Mimesis supports Python 3.8^ (also PyPy 3.8) or higher.
+-
+-The Mimesis 4.1.3 is the last to support Python 3.6 and 3.7.
++Mimesis is compatible with Python, including PyPy, version 3.8 or higher. The Mimesis 4.1.3 is the last release that accommodates Python 3.6 and 3.7.
+ 
+ Supported Features
+ ------------------
+ 
+-- **Easy**: Designed to be easy to use and learn.
+-- **Multilingual**: Supports data for `a lot of languages <https://mimesis.name/en/latest/getting_started.html#supported-locales>`_.
+-- **Performance**: The `fastest <https://mimesis.name/en/latest/about.html#performance>`_ data generator available for Python.
+-- **Data variety**: Supports `a lot of data providers <https://mimesis.name/en/latest/api.html>`_ for a variety of purposes.
+-- **Country-specific data providers**: Provides data specific only for `some countries <https://mimesis.name/en/latest/api.html#builtin-data-providers>`_.
+-- **Extensibility**: You can create your own data providers and use them with Mimesis.
+-- **Generic data provider**: The `simplified <https://mimesis.name/en/latest/getting_started.html#generic-provider>`_ access to all the providers from a single object.
+-- **Zero hard dependencies**: Does not require any modules other than the Python standard library.
+-- **Schema-based generators**: Provides an easy mechanism to `generate data by the schema <https://mimesis.name/en/master/getting_started.html#schema-and-fields>`_ of any complexity.
+-
++- **Easy**: A simple design and clear documentation for easy and swift data generation.
++- **Multilingual**: Mimesis generates data in a vast range of `languages <https://mimesis.name/en/latest/getting_started.html#supported-locales>`_.
++- **Performance**: Mimesis has excellent performance and is widely regarded as the fastest data generator among all Python solutions available.
++- **Data variety**: Mimesis supports a broad range of data providers, including names, addresses, phone numbers, email addresses, dates, times, and more, enabling users to generate data for various purposes.
++- **Country-specific data providers**: Mimesis supports country-specific data providers for generating country-specific data.
++- **Extensibility**: Mimesis is extensible, allowing developers to create and integrate their own data providers with the library.
++- **Generic data provider**: Mimesis provides a generic data provider that offers easy access to all the available data providers within the library from a single object.
++- **Zero hard dependencies**: Mimesis has zero hard dependencies and does not require the installation of any thrid-party libraries.
++- **Schema-based generators**: Mimesis provides schema-based data generators, offering an effortless way to produce data by the schema of any complexity.
+ 
+ Documentation
+ -------------
+ 
+ You can find the complete documentation on the `Read the Docs <https://mimesis.name/en/latest/>`_.
+ 
+ It is divided into several sections:
+@@ -87,19 +82,17 @@
+ -  `Changelog <https://mimesis.name/en/latest/changelog.html>`_
+ 
+ You can improve it by sending pull requests to this repository.
+ 
+ Usage
+ -----
+ 
+-This library is really easy to use and everything you need is just import an object which
+-represents a type of data you need (we call such object a *Provider*).
++The library is exceptionally user-friendly, and it only requires you to import a **Data Provider** object that corresponds to the desired data type. 
+ 
+-In the example below we import provider `Person <https://mimesis.name/en/latest/api.html#person>`_,
+-which represents data related to personal information, such as name, surname, email and etc:
++For instance, the `Person <https://mimesis.name/en/latest/api.html#person>`_ provider can be imported to access personal information, including name, surname, email, and other related fields:
+ 
+ .. code:: python
+ 
+     >>> from mimesis import Person
+     >>> from mimesis.locales import Locale
+     >>> person = Person(Locale.EN)
+ 
+@@ -120,19 +113,17 @@
+ 
+ .. _documentation: https://mimesis.name/en/latest/getting_started.html#data-providers
+ 
+ 
+ Locales
+ -------
+ 
+-Mimesis currently includes support for 34 different `locales`_. You can
+-specify a locale when creating providers and they will return data that
+-is appropriate for the language or country associated with that locale.
++Mimesis presently encompasses 34 distinct `locales`_, enabling users to specify the desired region and language when creating providers.
+ 
+-Let's take a look how it works:
++Here's how it operates practically:
+ 
+ .. code:: python
+ 
+     >>> from mimesis import Person
+     >>> from mimesis.locales import Locale
+     >>> from mimesis.enums import Gender
+ 
+@@ -147,34 +138,15 @@
+ 
+ 
+ .. _locales: https://mimesis.name/en/latest/getting_started.html#supported-locales
+ 
+ Providers
+ ---------
+ 
+-Mimesis support over twenty different data providers available,
+-which can produce data related to people, food, computer hardware,
+-transportation, addresses, internet and more.
+-
+-
+-You can generate a lot of extremely detailed data:
+-
+-.. code:: python
+-
+-    >>> from mimesis import Internet, Development
+-    >>> from mimesis.enums import URLScheme, DSNType
+-    >>> internet = Internet()
+-    >>> development = Development()
+-    >>> internet.url(scheme=URLScheme.WSS, subdomains=["chat"])
+-    'wss://chat.system.io/'
+-    >>> development.dsn(dsn_type=DSNType.REDIS, subdomains=["cache"])
+-    'redis://cache.fisher.app:5432'
+-    >>> development.dsn(dsn_type=DSNType.POSTGRES, tld_type=TLDType.CCTLD)
+-    'postgres://posted.sy:5432'
+-
++Mimesis provides more than twenty data providers which can generate a broad range of data related to food, transportation, computer hardware, people, internet, addresses, and more. 
+ 
+ See `API Reference <https://mimesis.name/en/latest/api.html>`_ and `Data Providers <https://mimesis.name/en/latest/getting_started.html#data-providers>`_ for more info.
+ 
+ How to Contribute
+ -----------------
+ 
+ 1. Take a look at `contributing guidelines`_.
+@@ -186,25 +158,19 @@
+ 5. Send a pull request and bug the maintainer until it gets merged and
+    published.
+ 
+ .. _contributing guidelines: https://github.com/lk-geimfari/mimesis/blob/master/CONTRIBUTING.rst
+ .. _contributors: https://github.com/lk-geimfari/mimesis/blob/master/CONTRIBUTORS.rst
+ 
+ 
+-Useful links
+-------------
+-
+-I have a Telegram channel where I daily post news, announces and all the open-source
+-goodies I found, so subscribe: `@software_dev_channel <https://t.me/software_dev_channel>`_.
+-
+ Disclaimer
+ ----------
+ 
+-The authors of `Mimesis` do not assume any responsibility for how you use it or how you use data generated with it.
+-This library was designed with good intentions to make testing easier. Do not use the data generated with Mimesis for illegal purposes.
++The creators of `Mimesis` do not hold themselves accountable for how you employ the library's functionalities or the data generated with it. 
++Mimesis is designed to facilitate testing and with good intentions. Mimesis should not be used for illicit purposes.
+ 
+ License
+ -------
+ 
+ Mimesis is licensed under the MIT License. See `LICENSE`_ for more
+ information.
+```
+
+### Comparing `mimesis-7.0.0/mimesis/__init__.py` & `mimesis-7.1.0/mimesis/__init__.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,15 +1,40 @@
+ """Mimesis is a Python library, which helps generate fake data.
+ 
+-Copyright (c) 2016 - 2022 Isaak Uchakaev (Likid Geimfari).
++Copyright (c) 2016 - 2023 Isaak Uchakaev (Likid Geimfari).
+ Website: https://mimesis.name
+ Email: <likid.geimfari@gmail.com>
+ Repository: https://github.com/lk-geimfari/mimesis
+ """
+ 
++from mimesis.enums import (
++    Algorithm,
++    AudioFile,
++    CardType,
++    CompressedFile,
++    CountryCode,
++    DocumentFile,
++    DSNType,
++    EANFormat,
++    FileType,
++    Gender,
++    ImageFile,
++    ISBNFormat,
++    MeasureUnit,
++    MetricPrefixSign,
++    MimeType,
++    NumType,
++    PortRange,
++    TimezoneRegion,
++    TitleType,
++    TLDType,
++    URLScheme,
++    VideoFile,
++)
++from mimesis.locales import Locale
+ from mimesis.providers import (
+     Address,
+     BaseDataProvider,
+     BaseProvider,
+     BinaryFile,
+     Choice,
+     Code,
+@@ -55,24 +80,49 @@
+     "Transport",
+     "Cryptographic",
+     # Has all:
+     "Generic",
+     # Schema:
+     "Field",
+     "Schema",
++    # Locale:
++    "Locale",
++    # Enums:
++    "Algorithm",
++    "AudioFile",
++    "CardType",
++    "CompressedFile",
++    "CountryCode",
++    "DocumentFile",
++    "DSNType",
++    "EANFormat",
++    "FileType",
++    "Gender",
++    "ImageFile",
++    "ISBNFormat",
++    "MeasureUnit",
++    "MetricPrefixSign",
++    "MimeType",
++    "NumType",
++    "PortRange",
++    "TimezoneRegion",
++    "TitleType",
++    "TLDType",
++    "URLScheme",
++    "VideoFile",
+     # Meta:
+     "__version__",
+     "__title__",
+     "__description__",
+     "__url__",
+     "__author__",
+     "__author_email__",
+     "__license__",
+ ]
+ 
+-__version__ = "7.0.0"
++__version__ = "7.1.0"
+ __title__ = "mimesis"
+ __description__ = "Mimesis: Fake Data Generator."
+ __url__ = "https://github.com/lk-geimfari/mimesis"
+ __author__ = "Isaak Uchakaev (Likid Geimfari)"
+ __author_email__ = "likid.geimfari@gmail.com"
+ __license__ = "MIT License"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/__init__.py` & `mimesis-7.1.0/mimesis/builtins/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/da.py` & `mimesis-7.1.0/mimesis/builtins/da.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,26 +1,30 @@
+ """Specific data provider for Denmark (da)."""
+ import operator
+ import typing as t
+ 
+ from mimesis import Datetime
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["DenmarkSpecProvider"]
+ 
+ 
+ class DenmarkSpecProvider(BaseSpecProvider):
+     """Class that provides special data for Denmark (da)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.DA, seed=seed)
+-        self._datetime = Datetime(locale=Locale.DA, seed=seed)
++        self._datetime = Datetime(
++            locale=Locale.DA,
++            seed=seed,
++            random=self.random,
++        )
+         self._checksum_factors = (4, 3, 2, 7, 6, 5, 4, 3, 2)
+ 
+     class Meta:
+         """The name of the provider."""
+ 
+         name: t.Final[str] = "denmark_provider"
+ 
+@@ -62,15 +66,15 @@
+         cpr_digit_products = list(
+             map(
+                 operator.mul,
+                 cpr_digits,
+                 self._checksum_factors,
+             )
+         )
+-        remainder = sum(cpr_digit_products) % 11
++        remainder: int = sum(cpr_digit_products) % 11
+         if remainder == 0:
+             return 0
+         return 11 - remainder
+ 
+     def _generate_serial_checksum(self, cpr_century: str) -> t.Tuple[str, int]:
+         """Generate a serial number and checksum from cpr_century."""
+         serial_number = f"{self.random.randint(0, 99):02d}"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/en.py` & `mimesis-7.1.0/mimesis/builtins/en.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+-"""Specific data provider for USA (en)."""
++"""Specific data provider for the USA (en)."""
+ 
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["USASpecProvider"]
+ 
+ 
+ class USASpecProvider(BaseSpecProvider):
+-    """Class that provides special data for USA (en)."""
++    """Class that provides special data for the USA (en)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.EN, seed=seed)
+ 
+     class Meta:
+         """The name of the provider."""
+ 
+         name: t.Final[str] = "usa_provider"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/it.py` & `mimesis-7.1.0/mimesis/builtins/it.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -2,23 +2,23 @@
+ 
+ import string
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.enums import Gender
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["ItalySpecProvider"]
+ 
+ 
+ class ItalySpecProvider(BaseSpecProvider):
+     """Specific-provider of misc data for Italy."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.IT, seed=seed)
+         self._load_datafile(self._datafile)
+ 
+     class Meta:
+         """The name of the provider."""
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/nl.py` & `mimesis-7.1.0/mimesis/builtins/nl.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+-"""Specific data provider for Netherlands (nl)."""
++"""Specific data provider for the Netherlands (nl)."""
+ 
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["NetherlandsSpecProvider"]
+ 
+ 
+ class NetherlandsSpecProvider(BaseSpecProvider):
+-    """Class that provides special data for Netherlands (nl)."""
++    """Class that provides special data for the Netherlands (nl)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.NL, seed=seed)
+ 
+     class Meta:
+         """The name of the provider."""
+ 
+         name: t.Final[str] = "netherlands_provider"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/pl.py` & `mimesis-7.1.0/mimesis/builtins/pl.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -2,23 +2,23 @@
+ 
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.enums import Gender
+ from mimesis.locales import Locale
+ from mimesis.providers import Datetime
+-from mimesis.types import DateTime, Seed
++from mimesis.types import DateTime, MissingSeed, Seed
+ 
+ __all__ = ["PolandSpecProvider"]
+ 
+ 
+ class PolandSpecProvider(BaseSpecProvider):
+     """Class that provides special data for Poland (pl)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.PL, seed=seed)
+ 
+     class Meta:
+         """The name of the provider."""
+ 
+         name: t.Final[str] = "poland_provider"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/pt_br.py` & `mimesis-7.1.0/mimesis/builtins/pt_br.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,105 +1,111 @@
+ """Specific data provider for Brazil (pt-br)."""
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["BrazilSpecProvider"]
+ 
+ 
+-# TODO: Refactor this piece of s... some code.
+ class BrazilSpecProvider(BaseSpecProvider):
+     """Class that provides special data for Brazil (pt-br)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.PT_BR, seed=seed)
+ 
+     class Meta:
+         """The name of the provider."""
+ 
+         name: t.Final[str] = "brazil_provider"
+ 
++    @staticmethod
++    def __get_verifying_digit_cpf(cpf: t.List[int], weight: int) -> int:
++        """Calculate the verifying digit for the CPF.
++
++        :param cpf: List of integers with the CPF.
++        :param weight: Integer with the weight for the modulo 11 calculate.
++        :returns: The verifying digit for the CPF.
++        """
++        total = 0
++
++        for index, digit in enumerate(cpf):
++            total += digit * (weight - index)
++
++        remainder = total % 11
++
++        if remainder == 0 or remainder == 1 or remainder >= 11:
++            return 0
++
++        return 11 - remainder
++
+     def cpf(self, with_mask: bool = True) -> str:
+         """Get a random CPF.
+ 
+         :param with_mask: Use CPF mask (###.###.###-##).
+         :returns: Random CPF.
+ 
+         :Example:
+             001.137.297-40
+         """
+ 
+-        def get_verifying_digit_cpf(cpf: t.List[int], peso: int) -> int:
+-            """Calculate the verifying digit for the CPF.
+-
+-            :param cpf: List of integers with the CPF.
+-            :param peso: Integer with the weight for the modulo 11 calculate.
+-            :returns: The verifying digit for the CPF.
+-            """
+-            soma = 0
+-            for index, digit in enumerate(cpf):
+-                soma += digit * (peso - index)
+-            resto = soma % 11
+-            if resto == 0 or resto == 1 or resto >= 11:
+-                return 0
+-            return 11 - resto
+-
+         cpf_without_dv = [self.random.randint(0, 9) for _ in range(9)]
+-        first_dv = get_verifying_digit_cpf(cpf_without_dv, 10)
++        first_dv = self.__get_verifying_digit_cpf(cpf_without_dv, 10)
+ 
+         cpf_without_dv.append(first_dv)
+-        second_dv = get_verifying_digit_cpf(cpf_without_dv, 11)
++        second_dv = self.__get_verifying_digit_cpf(cpf_without_dv, 11)
+         cpf_without_dv.append(second_dv)
+ 
+-        cpf = "".join(map(str, cpf_without_dv))
++        cpf = "".join(str(i) for i in cpf_without_dv)
+ 
+         if with_mask:
+-            return cpf[:3] + "." + cpf[3:6] + "." + cpf[6:9] + "-" + cpf[9:]
++            return f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
+         return cpf
+ 
++    @staticmethod
++    def __get_verifying_digit_cnpj(cnpj: t.List[int], weight: int) -> int:
++        """Calculate the verifying digit for the CNPJ.
++
++        :param cnpj: List of integers with the CNPJ.
++        :param weight: Integer with the weight for the modulo 11 calculate.
++        :returns: The verifying digit for the CNPJ.
++        """
++        total = 0
++        weights_dict = {
++            5: [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
++            6: [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
++        }
++        weights = weights_dict[weight]
++
++        for i, _ in enumerate(cnpj):
++            total += weights[i] * cnpj[i]
++
++        remainder = total % 11
++        return 0 if (remainder < 2) else (11 - remainder)
++
+     def cnpj(self, with_mask: bool = True) -> str:
+         """Get a random CNPJ.
+ 
+         :param with_mask: Use cnpj mask (###.###.###-##)
+         :returns: Random cnpj.
+ 
+         :Example:
+             77.732.230/0001-70
+         """
+ 
+-        def get_verifying_digit_cnpj(cnpj: t.List[int], peso: int) -> int:
+-            """Calculate the verifying digit for the CNPJ.
+-
+-            :param cnpj: List of integers with the CNPJ.
+-            :param peso: Integer with the weight for the modulo 11 calculate.
+-            :returns: The verifying digit for the CNPJ.
+-            """
+-            soma = 0
+-            if peso == 5:
+-                peso_list = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+-            elif peso == 6:
+-                peso_list = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+-            for i, _ in enumerate(cnpj):
+-                soma += peso_list[i] * cnpj[i]
+-            resto = soma % 11
+-            if resto < 2:
+-                return 0
+-            return 11 - resto
+-
+         cnpj_without_dv = [self.random.randint(0, 9) for _ in range(12)]
+ 
+-        first_dv = get_verifying_digit_cnpj(cnpj_without_dv, 5)
++        first_dv = self.__get_verifying_digit_cnpj(cnpj_without_dv, 5)
+         cnpj_without_dv.append(first_dv)
+ 
+-        second_dv = get_verifying_digit_cnpj(cnpj_without_dv, 6)
++        second_dv = self.__get_verifying_digit_cnpj(cnpj_without_dv, 6)
+         cnpj_without_dv.append(second_dv)
+ 
+-        cnpj = "".join(map(str, cnpj_without_dv))
++        cnpj = "".join(str(i) for i in cnpj_without_dv)
+ 
+         if with_mask:
+             return "{}.{}.{}/{}-{}".format(
+                 cnpj[:2], cnpj[2:5], cnpj[5:8], cnpj[8:12], cnpj[12:]
+             )
+         return cnpj
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/ru.py` & `mimesis-7.1.0/mimesis/builtins/ru.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -2,23 +2,23 @@
+ 
+ import typing as t
+ from datetime import datetime
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.enums import Gender
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["RussiaSpecProvider"]
+ 
+ 
+ class RussiaSpecProvider(BaseSpecProvider):
+     """Class that provides special data for Russia (ru)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.RU, seed=seed)
+         self._load_datafile(self._datafile)
+         self._current_year = str(datetime.now().year)
+ 
+     class Meta:
+         """The name of the provider."""
+@@ -117,14 +117,15 @@
+ 
+         if control_code > 101:
+             control_code = control_code % 101
+             if control_code == 100:
+                 control_code = 0
+             snils = code + f"{control_code:02}"
+             return snils
++        raise RuntimeError("Must not be reached")
+ 
+     def inn(self) -> str:
+         """Generate random, but valid ``INN``.
+ 
+         :return: INN.
+         """
+```
+
+### Comparing `mimesis-7.0.0/mimesis/builtins/uk.py` & `mimesis-7.1.0/mimesis/builtins/uk.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ """Specific data provider for Ukraine (uk)."""
+ import typing as t
+ 
+ from mimesis.builtins.base import BaseSpecProvider
+ from mimesis.enums import Gender
+ from mimesis.locales import Locale
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["UkraineSpecProvider"]
+ 
+ 
+ class UkraineSpecProvider(BaseSpecProvider):
+     """Class that provides special data for Ukraine (uk)."""
+ 
+-    def __init__(self, seed: Seed = None) -> None:
++    def __init__(self, seed: Seed = MissingSeed) -> None:
+         """Initialize attributes."""
+         super().__init__(locale=Locale.UK, seed=seed)
+         self._load_datafile(self._datafile)
+ 
+     class Meta:
+         """The name of the provider."""
+```
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.aac` & `mimesis-7.1.0/mimesis/data/bin/sample.aac`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.docx` & `mimesis-7.1.0/mimesis/data/bin/sample.docx`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.gif` & `mimesis-7.1.0/mimesis/data/bin/sample.gif`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.jpg` & `mimesis-7.1.0/mimesis/data/bin/sample.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.mov` & `mimesis-7.1.0/mimesis/data/bin/sample.mov`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.mp3` & `mimesis-7.1.0/mimesis/data/bin/sample.mp3`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.mp4` & `mimesis-7.1.0/mimesis/data/bin/sample.mp4`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.pdf` & `mimesis-7.1.0/mimesis/data/bin/sample.pdf`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.png` & `mimesis-7.1.0/mimesis/data/bin/sample.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.pptx` & `mimesis-7.1.0/mimesis/data/bin/sample.pptx`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.xlsx` & `mimesis-7.1.0/mimesis/data/bin/sample.xlsx`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/bin/sample.zip` & `mimesis-7.1.0/mimesis/data/bin/sample.zip`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/cs/address.json` & `mimesis-7.1.0/mimesis/data/cs/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/cs/datetime.json` & `mimesis-7.1.0/mimesis/data/cs/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/cs/food.json` & `mimesis-7.1.0/mimesis/data/cs/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/cs/person.json` & `mimesis-7.1.0/mimesis/data/cs/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/cs/text.json` & `mimesis-7.1.0/mimesis/data/cs/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/da/address.json` & `mimesis-7.1.0/mimesis/data/da/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/da/finance.json` & `mimesis-7.1.0/mimesis/data/da/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/da/food.json` & `mimesis-7.1.0/mimesis/data/da/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/da/person.json` & `mimesis-7.1.0/mimesis/data/da/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/da/text.json` & `mimesis-7.1.0/mimesis/data/da/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/address.json` & `mimesis-7.1.0/mimesis/data/de/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/datetime.json` & `mimesis-7.1.0/mimesis/data/de/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/finance.json` & `mimesis-7.1.0/mimesis/data/de/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/food.json` & `mimesis-7.1.0/mimesis/data/de/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/person.json` & `mimesis-7.1.0/mimesis/data/de/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de/text.json` & `mimesis-7.1.0/mimesis/data/de/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-at/address.json` & `mimesis-7.1.0/mimesis/data/de-at/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-at/finance.json` & `mimesis-7.1.0/mimesis/data/de-at/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-at/food.json` & `mimesis-7.1.0/mimesis/data/de-at/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-at/person.json` & `mimesis-7.1.0/mimesis/data/de-at/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-ch/address.json` & `mimesis-7.1.0/mimesis/data/de-ch/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-ch/finance.json` & `mimesis-7.1.0/mimesis/data/de-ch/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/de-ch/person.json` & `mimesis-7.1.0/mimesis/data/de-ch/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/address.json` & `mimesis-7.1.0/mimesis/data/el/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/datetime.json` & `mimesis-7.1.0/mimesis/data/el/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/finance.json` & `mimesis-7.1.0/mimesis/data/el/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/food.json` & `mimesis-7.1.0/mimesis/data/el/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/person.json` & `mimesis-7.1.0/mimesis/data/el/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/el/text.json` & `mimesis-7.1.0/mimesis/data/el/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en/address.json` & `mimesis-7.1.0/mimesis/data/en/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en/finance.json` & `mimesis-7.1.0/mimesis/data/en/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en/food.json` & `mimesis-7.1.0/mimesis/data/en/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en/person.json` & `mimesis-7.1.0/mimesis/data/en/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en/text.json` & `mimesis-7.1.0/mimesis/data/en/text.json`
+
+ * *Files 0% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.999337300217188%*
+
+ * *Differences: {"'questions'": '{delete: [1262, 975, 911]}',*
+
+ * * "'words'": "{'bad': {insert: [(21, 'blowjob'), (25, 'booty'), (37, 'busty'), (53, 'cocks'), (168, "*
+
+ * *            "'pussy'), (214, 'upskirt')], delete: [74, 40, 2]}, 'normal': {insert: [(221, "*
+
+ * *            "'anarchist')], delete: [5640, 4869, 4305, 1019, 1018, 728, 725, 638, 610, 609, 464]}}"}*
+
+```diff
+@@ -993,15 +993,14 @@
+         "Is there any possibility of a ww3?",
+         "As fake jbl speakers are also sold in market?",
+         "What do i do?",
+         "What are the applications of binary search trees?",
+         "What is the difference between thaats and ragas in hindustani classical music?",
+         "Why nothing is done to solve kashmir issue?",
+         "Is math an art or a science?",
+-        "Is scientology bullshit?",
+         "Who will win the 2016 u.s. presidential election and why?",
+         "Jess lee?",
+         "What is the best book for self-learning special and general theory of relativity. what are some beginner and advanced level books on these topics?",
+         "Is heat capacity the same as specific heat?",
+         "What should i do if i'm badly bored?",
+         "Can biological complexity be computed to a particular mathematical value and is it irreducible?",
+         "What is your honest review of dangal (2016 movie)?",
+@@ -1057,15 +1056,14 @@
+         "What are the causes of low sperm count?",
+         "What makes india different from all other countries in the world?",
+         "How is the word 'inarticulate' used in a sentence?",
+         "How do you promote an app for free?",
+         "What is your review of the crystal method?",
+         "How can i make the color aqua using other colors?",
+         "Why should i not vote for hillary clinton or donald trump?",
+-        "Why do some people enjoy giving blowjobs?",
+         "Why do the dubai police have super cars?",
+         "How do you care for guinea pigs?",
+         "How do you draw a cat step-by-step?",
+         "I am planning to apply for canada pr. what are my chances?",
+         "What is the best time to withdraw money from working atm in present india?",
+         "What individuals and events in history are a source of pride for belarus?",
+         "Why do serbs like russians?",
+@@ -1344,15 +1342,14 @@
+         "What is state in constitution of india?",
+         "Tagalog: what does salamat po mean in english?",
+         "How do i get rid of severe dandruff?",
+         "I want to study biotechnology abroad what do i have to do?",
+         "When is the next batch of infosys after 9 jan 2016?",
+         "Is donald trump going to be the worst president?",
+         "How are stolen passports used?",
+-        "Are ethics bullshit?",
+         "How much did microsoft pay for liveloop?",
+         "What are the best movies of hollywood?",
+         "What should i do if i have a cat scratch under my eye?",
+         "Could we think the world can be at peace then?",
+         "How do i get rid of mosquito bite marks?",
+         "Why does tywin sleep with shae in a storm of swords?",
+         "What is it like to be third-wheeled in a polyamorous relationship?",
+@@ -5068,15 +5065,14 @@
+         "She spent her earliest years reading classic literature, and writing poetry.",
+         "The Galactic Empire is nearing completion of the Death Star, a space station with the power to destroy entire planets."
+     ],
+     "words": {
+         "bad": [
+             "alcoholic",
+             "amateur",
+-            "anarchist",
+             "ape",
+             "arse",
+             "arselicker",
+             "ass",
+             "ass master",
+             "ass-kisser",
+             "ass-nugget",
+@@ -5088,44 +5084,47 @@
+             "bandit",
+             "barbar",
+             "bastard",
+             "beavis",
+             "beginner",
+             "biest",
+             "bitch",
++            "blowjob",
+             "blubber gut",
+             "bogeyman",
+             "booby",
++            "booty",
+             "boozer",
+             "bozo",
+             "brain-fart",
+             "brainless",
+             "brainy",
+             "brontosaurus",
+             "brownie",
+             "bugger",
+             "bulloks",
+             "bum",
+             "bum-fucker",
++            "busty",
+             "butt",
+             "buttfucker",
+             "callboy",
+             "callgirl",
+-            "camel",
+             "cannibal",
+             "cave man",
+             "chaavanist",
+             "chaot",
+             "chauvi",
+             "cheater",
+             "chicken",
+             "children fucker",
+             "clit",
+             "clown",
+             "cock",
++            "cocks",
+             "cock master",
+             "cock up",
+             "cockboy",
+             "cockfucker",
+             "cockroach",
+             "coky",
+             "con merchant",
+@@ -5140,15 +5139,14 @@
+             "daywalker",
+             "deathlord",
+             "derr brain",
+             "desperado",
+             "devil",
+             "dickhead",
+             "dinosaur",
+-            "disguesting packet",
+             "diz brain",
+             "do-do",
+             "dog",
+             "dogshit",
+             "donkey",
+             "drakula",
+             "dreamer",
+@@ -5233,14 +5231,15 @@
+             "pencil dick",
+             "pervert",
+             "pig",
+             "piggy-wiggy",
+             "pirate",
+             "prick",
+             "prolet",
++            "pussy",
+             "queer",
+             "querulant",
+             "rat",
+             "rat-fink",
+             "reject",
+             "retard",
+             "riff-raff",
+@@ -5278,14 +5277,15 @@
+             "swindler",
+             "swine",
+             "teletubby",
+             "thief",
+             "toilett cleaner",
+             "tussi",
+             "typ",
++            "upskirt",
+             "vandale",
+             "varmit",
+             "wallflower",
+             "wanker",
+             "weeze bag",
+             "whore",
+             "wierdo",
+@@ -5520,14 +5520,15 @@
+             "amp",
+             "amsterdam",
+             "amy",
+             "an",
+             "analog",
+             "analysis",
+             "analyst",
++            "anarchist",
+             "ancient",
+             "and",
+             "anderson",
+             "andrew",
+             "andy",
+             "angel",
+             "angeles",
+@@ -5763,15 +5764,14 @@
+             "backup",
+             "bad",
+             "bag",
+             "bags",
+             "baker",
+             "balance",
+             "ball",
+-            "balls",
+             "baltimore",
+             "ban",
+             "band",
+             "bands",
+             "bandwidth",
+             "bang",
+             "bank",
+@@ -5908,16 +5908,14 @@
+             "blog",
+             "blogger",
+             "blogging",
+             "blogs",
+             "blonde",
+             "blood",
+             "blow",
+-            "blowjob",
+-            "blowjobs",
+             "blue",
+             "blues",
+             "bluetooth",
+             "blvd",
+             "bmw",
+             "board",
+             "boards",
+@@ -5937,15 +5935,14 @@
+             "booking",
+             "bookmark",
+             "books",
+             "bookstore",
+             "boost",
+             "boot",
+             "boots",
+-            "booty",
+             "border",
+             "born",
+             "boss",
+             "boston",
+             "both",
+             "bottle",
+             "bottom",
+@@ -6024,18 +6021,16 @@
+             "bureau",
+             "burn",
+             "burning",
+             "bus",
+             "bush",
+             "business",
+             "businesses",
+-            "busty",
+             "busy",
+             "but",
+-            "butt",
+             "button",
+             "buttons",
+             "buy",
+             "buyer",
+             "buyers",
+             "buying",
+             "by",
+@@ -6317,16 +6312,14 @@
+             "coach",
+             "coaching",
+             "coal",
+             "coalition",
+             "coast",
+             "coastal",
+             "coat",
+-            "cock",
+-            "cocks",
+             "cod",
+             "code",
+             "codes",
+             "coding",
+             "coffee",
+             "coins",
+             "cold",
+@@ -9604,15 +9597,14 @@
+             "purchasing",
+             "pure",
+             "purple",
+             "purpose",
+             "purposes",
+             "pursuant",
+             "push",
+-            "pussy",
+             "put",
+             "puts",
+             "putting",
+             "puzzle",
+             "python",
+             "qty",
+             "qualifications",
+@@ -10168,15 +10160,14 @@
+             "shift",
+             "ship",
+             "shipped",
+             "shipping",
+             "ships",
+             "shirt",
+             "shirts",
+-            "shit",
+             "shock",
+             "shoe",
+             "shoes",
+             "shoot",
+             "shooting",
+             "shop",
+             "shopper",
+@@ -10939,15 +10930,14 @@
+             "updated",
+             "updates",
+             "upgrade",
+             "upload",
+             "upon",
+             "upper",
+             "ups",
+-            "upskirt",
+             "urban",
+             "url",
+             "urw",
+             "us",
+             "usa",
+             "usage",
+             "usb",
+```
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-au/address.json` & `mimesis-7.1.0/mimesis/data/en-au/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-au/finance.json` & `mimesis-7.1.0/mimesis/data/en-au/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-au/person.json` & `mimesis-7.1.0/mimesis/data/en-au/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-ca/address.json` & `mimesis-7.1.0/mimesis/data/en-ca/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-ca/finance.json` & `mimesis-7.1.0/mimesis/data/en-ca/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-ca/person.json` & `mimesis-7.1.0/mimesis/data/en-ca/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-gb/address.json` & `mimesis-7.1.0/mimesis/data/en-gb/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-gb/finance.json` & `mimesis-7.1.0/mimesis/data/en-gb/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-gb/food.json` & `mimesis-7.1.0/mimesis/data/en-gb/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/en-gb/person.json` & `mimesis-7.1.0/mimesis/data/en-gb/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/address.json` & `mimesis-7.1.0/mimesis/data/es/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/datetime.json` & `mimesis-7.1.0/mimesis/data/es/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/finance.json` & `mimesis-7.1.0/mimesis/data/es/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/food.json` & `mimesis-7.1.0/mimesis/data/es/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/person.json` & `mimesis-7.1.0/mimesis/data/es/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es/text.json` & `mimesis-7.1.0/mimesis/data/es/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es-mx/address.json` & `mimesis-7.1.0/mimesis/data/es-mx/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es-mx/finance.json` & `mimesis-7.1.0/mimesis/data/es-mx/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es-mx/food.json` & `mimesis-7.1.0/mimesis/data/es-mx/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/es-mx/person.json` & `mimesis-7.1.0/mimesis/data/es-mx/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/address.json` & `mimesis-7.1.0/mimesis/data/et/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/datetime.json` & `mimesis-7.1.0/mimesis/data/et/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/finance.json` & `mimesis-7.1.0/mimesis/data/et/finance.json`
+
+ * *Files 11% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.980593607305936%*
+
+ * *Differences: {"'company'": "{'name': {insert: [(4, 'Abja Linavabrik'), (5, 'AB Kindlustuse Grupp'), (10, 'Ahtme "*
+
+ * *              "Soojuselektrijaam'), (12, 'Aidu Karjäär'), (30, 'Balti Seebivabrik'), (31, 'Balti "*
+
+ * *              "Spordiriistade Vabrik'), (45, 'CVO Group'), (46, 'Cybernetica'), (65, 'Eesti "*
+
+ * *              "Portselanitööstus'), (80, 'Eesti Päevaleht'), (84, 'Eesti Ringhäälingu "*
+
+ * *              "Saatekeskus'), (85, 'Eesti Soojuselektrijaam'), (91, 'Eestimaa Kinnitus'), (92, "*
+
+ * *              "'Estakland'), (95, […]*
+
+```diff
+@@ -1,24 +1,23 @@
+ {
+     "company": {
+         "name": [
+             "A.L.A.R.A.",
+             "A. Le Coq Group",
+-            "A. Le Coq",
+             "A. T\u00f5nisson & Ko",
+             "ABB AS",
+-            "Abja Linavabrik, Abja-Vanam\u00f5isa k\u00fclas",
+-            "AB Kindlustuse Grupp (AS AB Kindlustuse Grupp)",
++            "Abja Linavabrik",
++            "AB Kindlustuse Grupp",
+             "Advokaadib\u00fcroo Sorainen",
+             "Aero Airlines",
+             "Aeronaut",
+             "Ago",
+-            "Ahtme soojuselektrijaam",
++            "Ahtme Soojuselektrijaam",
+             "Aidem Pot",
+-            "Aidu karj\u00e4\u00e4r",
++            "Aidu Karj\u00e4\u00e4r",
+             "Air Livonia",
+             "Apollo Raamatud",
+             "Arco Vara",
+             "Argo",
+             "Asper Biotech",
+             "ATKO",
+             "Audes",
+@@ -28,91 +27,90 @@
+             "Avita",
+             "Balteco",
+             "Balbiino",
+             "Balti Investeeringute Grupi Pank",
+             "Balti Kaubad ja Teenused",
+             "Balti Puuvilla Ketramise ja Kudumise Vabrik",
+             "Balti Elektrijaam",
+-            "Balti seebivabrik Tallinnas",
+-            "Balti spordiriistade vabrik Tartus",
++            "Balti Seebivabrik",
++            "Balti Spordiriistade Vabrik",
+             "Baltic Beverages Holding AB",
+             "Baltic Business Partner",
+             "Baltic Hotel Group",
+             "Baltic Models",
+             "Baltic Scandinavian Lines",
+             "Baltika",
+             "Beer House",
+             "Bekkeri laevatehas",
+             "Bigbank",
+             "Biodiesel Paldiski",
+             "BLRT Grupp",
+             "Bravocom",
+             "Bussireisid",
+-            "CVO Group O\u00dc",
+-            "Cybernetica AS",
++            "CVO Group",
++            "Cybernetica",
+             "Dalkia Eesti",
+             "Desintegraator",
+             "Dharma kirjastus",
+             "Downtown Studios",
+             "DOT Films",
+-            "Dr Aune (O\u00dc Dr Aune)",
+             "Dvigatel",
+             "Edelaraudtee",
+             "Eesti AGA",
+             "Eesti Ajalehed",
+             "Eesti Digiraamatute Keskus",
+             "Eesti Dolomiit",
+             "Eesti Ekspressi Kirjastus",
+             "Eesti Energia",
+             "Eesti Energia Kaevandused",
+             "Eesti Ents\u00fcklopeediakirjastus",
+             "Eesti Forekspank",
+             "Eesti Gaas",
+             "Eesti Hoiupank",
+-            "Eesti I Portselanit\u00f6\u00f6stus",
++            "Eesti Portselanit\u00f6\u00f6stus",
+             "Eesti Joonisfilm",
+             "Eesti Krediidipank",
+             "Eesti K\u00fctus",
+             "Eesti Lloyd",
+             "Eesti Loodusfoto",
+             "Eesti Loots",
+             "Eesti Loto",
+             "Eesti Maaehitusprojekt",
+             "Eesti Maapank",
+             "Eesti Merelaevandus",
+             "Eesti Mobiiltelefon",
+             "Eesti M\u00fcsli",
+             "Eesti Pagar",
+             "Eesti Post",
+-            "Eesti P\u00e4evalehe AS",
++            "Eesti P\u00e4evaleht",
+             "Eesti Raamat",
+             "Eesti Rahvusringh\u00e4\u00e4ling",
+             "Eesti Raudtee",
+-            "AS Eesti Ringh\u00e4\u00e4lingu Saatekeskus",
+-            "Eesti soojuselektrijaam",
++            "Eesti Ringh\u00e4\u00e4lingu Saatekeskus",
++            "Eesti Soojuselektrijaam",
+             "Eesti Sotsiaalpank",
+             "Eesti Tarbijate\u00fchistute Kesk\u00fchistu",
+             "Eesti Telekom",
+             "Eesti Video",
+             "Eesti-L\u00e4ti Laevas\u00f5idu Agentuur",
+-            "Eestimaa Kinnituse A./S.",
+-            "Eestimaa P\u00f5llumajanduse ja T\u00f6\u00f6stuse AS Estakland",
++            "Eestimaa Kinnitus",
++            "Estakland",
+             "Ekspress Grupp",
+             "Ekspress Hotline",
+-            "Elektriraudtee AS",
++            "Elektriraudtee",
+             "Elektroskandia",
+             "Elering",
+             "Elion",
+             "Elisa Eesti",
+             "Ellamaa elektrijaam",
+             "Elmatar",
+             "Eltel Networks",
+             "TNS Emor",
+             "Enics Eesti",
+-            "ENTEC (ENTEC AS)",
++            "ENTEC",
+             "ERGO Kindlustus",
+             "ERGO Kindlustusgrupp",
+             "Ericsson Eesti",
+             "EsData",
+             "EstDomains",
+             "Estiko",
+             "Estiko-Plastar",
+@@ -142,159 +140,157 @@
+             "GoRail",
+             "Hansabuss",
+             "HansaNet",
+             "Hansapank",
+             "Harju AB",
+             "Harju Elekter",
+             "Harju Pank",
+-            "O.\u00dc Havanna tubakavabrik",
++            "Havanna Tubakavabrik",
+             "Helmes",
+             "Hermes",
+-            "Hiiu-K\u00e4rdla kalevivabrik",
+-            "Hoolekandeteenused AS",
+-            "Horizon Tselluloosi ja Paberi AS",
++            "Hiiu-K\u00e4rdla Kalevivabrik",
++            "Hoolekandeteenused",
++            "Horizon Tselluloosi ja Paberi",
+             "Huma",
+-            "IIZI Kindlustusmaakler AS",
++            "IIZI Kindlustusmaakler",
+             "Ilmamaa",
+             "Ilmarine",
+             "Ilo",
+-            "Iru soojuselektrijaam",
+-            "Inglise-Balti laevatehas",
++            "Iru Soojuselektrijaam",
++            "Inglise-Balti Laevatehas",
+             "Jungent",
+             "J\u00e4rve Keskus",
+             "K-Most",
+             "Kaaluj\u00e4lgijad",
+-            "AS Kalev",
+-            "Kalev Chocolate Factory AS",
++            "Kalev",
+             "Kentaur",
+             "Kihnu Veeteed",
+             "Kiriku Varahaldus",
+             "Klementi",
+-            "AS Kodumaja",
++            "Kodumaja",
+             "Koger Projektijuhtimine",
+             "Koger & Sumberg",
+             "Kohtla-J\u00e4rve Soojus",
+-            "Kohtla-J\u00e4rve soojuselektrijaam",
+-            "AS Kohuke",
++            "Kohtla-J\u00e4rve Soojuselektrijaam",
++            "Kohuke",
+             "Kohvik Werner",
+             "Koolibri",
+             "Krediidiinfo",
+             "Kreenholmi Manufaktuur",
+             "Krimelte",
+-            "Kristiine keskus",
+-            "AS Franz Krull",
++            "Kristiine Keskus",
++            "Franz Krull",
+             "Kunda Nordic Tsement",
+             "KSA Silmakeskus",
+             "Kunst",
+-            "A/S Laferme tubakavabrik",
++            "Laferme Tubakavabrik",
+             "Lasering",
+             "Tubakavabrik Leek",
+             "LeHelMus",
+             "Lehepunkt",
+             "Lemeks",
+-            "Lennuliiklusteeninduse AS",
++            "Lennuliiklusteenindus",
+             "Levira",
+             "LHV Group",
+-            "Lihakarn (Lihakarn O\u00dc)",
+-            "Lindaliini AS",
++            "Lihakarn",
++            "Lindaliini",
+             "Liviko",
+-            "Loksa Laevatehase AS",
++            "Loksa Laevatehas",
+             "Luku-Expert",
+-            "Lutheri vabrik",
++            "Lutheri Vabrik",
+             "Luterma",
+             "LHV Pank",
+-            "AS Maaleht",
++            "Maaleht",
+             "Maiasmoka kohvik",
+-            "AS Maru Ehitus",
+-            "AS Master",
++            "Maru Ehitus",
++            "Master",
+             "Merita Pank",
+             "Merko Ehitus",
+-            "Metra AP O\u00dc",
++            "Metra AP",
+             "MicroLink",
+             "Microsoft Eesti",
+-            "MK Projekteerimine O\u00dc",
++            "MK Projekteerimine",
+             "Molycorp Silmet",
+             "Moonwalk",
+             "Mulgi Reisid",
+             "M\u00f5igu KEK",
+-            "O\u00dc Nantecom",
++            "Nantecom",
+             "Narva Elektrijaamad",
+-            "Narva karj\u00e4\u00e4r",
++            "Narva Karj\u00e4\u00e4r",
+             "Netikuller",
+             "Nitrofert",
+-            "Noblessneri laevatehas",
++            "Noblessneri Laevatehas",
+             "Norby Telecom",
+             "Nordecon",
+             "Nordecon Betoon",
+             "Nordic Aviation Group",
+-            "Norma AS",
++            "Norma",
+             "O.K. Records",
+             "Ober-Haus",
+             "OG Elektra kontsern",
+-            "Okidoki O\u00dc",
++            "Okidoki",
+             "Olion",
+             "Olympic Casino Eesti",
+             "Olympic Entertainment Group",
+             "Optiva Pank",
+             "Ordi",
+             "Orica Eesti",
+-            "AS Orto",
++            "Orto",
+             "Otep\u00e4\u00e4 \u00dchispank",
+             "Pakker Avio",
+             "Pakterminal",
+             "Panaviatic",
+             "PKC Eesti",
+             "Pegasus",
+             "AS Pere",
+             "Pere Leib",
+             "Piksel",
+             "Pillapalu Koosolekukeskus",
+             "Photopoint",
+             "Premia Foods",
+             "Printall",
+             "Pro Konsultatsioonid",
+-            "P\u00f5ltsamaa Felix AS",
++            "P\u00f5ltsamaa Felix",
+             "P\u00e4rnu ATP",
+             "P\u00f5hja K\u00f5rgepingev\u00f5rgud",
+             "P\u00f5hja Paberi- ja Tselluloosivabrik",
+-            "Rand & Tuulberg (Rand ja Tuulberg)",
++            "Rand & Tuulberg",
+             "Randvelt Kirjastus",
+             "Rautakirja Estonia",
+             "Records 2000",
+             "Regio",
+-            "Respo Haagised AS",
++            "Respo Haagised",
+             "Riigimetsa Majandamise Keskus",
+             "Rimi Eesti Food",
+-            "Roman Tavast (ettev\u00f5te)",
+             "Roosta Puhkek\u00fcla",
+-            "Roosiorg O\u00dc",
++            "Roosiorg",
+             "Rove Digital",
+             "Roy Strider Records",
+-            "A/S Rotermanni leivavabrik",
++            "Rotermanni Leivavabrik",
+             "R\u00e4pina Paberivabrik",
+             "Saaremaa Laevakompanii",
+             "Saarte Liinid",
+             "Saint-Gobain Glass Estonia",
+             "Saku \u00d5lletehas",
+             "Salto AB",
+             "Sampo Pank",
+             "Sareta",
+             "Savi",
+             "Schenkenberg",
+-            "SE&JS",
++            "SE & JS",
+             "SeaWind Line",
+             "SEB Pank",
+-            "AS SEBE",
++            "SEBE",
+             "Securitas Eesti",
+             "Seksound",
+             "Selver",
+             "Seven Real Estate Advisors",
+             "Silja Line",
+             "Sillam\u00e4e Soojuselektrijaam",
+-            "AS Silva",
++            "Silva",
+             "Sinisukk",
+             "Skarabeus",
+             "Skinest Grupp",
+             "Spacecom",
+             "Starman",
+             "Stokker",
+             "Suwem",
+@@ -307,63 +303,63 @@
+             "Tallink",
+             "Tallinna Autobussikoondis",
+             "Tallinna Farmaatsiatehas",
+             "Tallinna Gaasijaam",
+             "Tallinna Kaubamaja",
+             "Tallinna K\u00fclmhoone",
+             "Tallinna Laeva\u00fchisus",
+-            "Tallinna Lennujaam AS",
++            "Tallinna Lennujaam",
+             "Tallinna Lihat\u00f6\u00f6stus",
+-            "Tallinna Linnatranspordi AS",
++            "Tallinna Linnatransport",
+             "Tallinna Piimakombinaat",
+             "Tallinna Pooljuhttakistite Tehas",
+             "Tallinna Sadam",
+             "Tallinna Taksopark",
+             "Tallinna Trammi- ja Trollibussikoondis",
+             "Tallinna Vesi",
+             "Tallinna \u00c4ripank",
+             "Tallinna \u00dclikooli Kirjastus",
+             "Tartu Autode Remondi Katsetehas",
+-            "Tartu Ehitusmaterjalide Tehas (TET)",
++            "Tartu Ehitusmaterjalide Tehas",
+             "Tartu Gaasivabrik",
+-            "O\u00dc Tartu Keskkonnauuringud",
++            "Tartu Keskkonnauuringud",
+             "Tartu Kommertspank",
+             "Tartu Tarbijate Kooperatiiv",
+             "Tartu \u00dclikooli Kirjastus",
+             "Tavid",
+             "TEA Kirjastus",
+             "Teaduste Akadeemia Kirjastus",
+             "Teede Tehnokeskus",
+-            "O\u00dc Tehnokontrollikeskus",
+-            "Tele2 Eesti AS",
+-            "Tere AS",
++            "Tehnokontrollikeskus",
++            "Tele2 Eesti",
++            "Tere",
+             "Timps & Co tuletikuvabrik",
+             "Tiritamm",
+             "Toftan",
+             "Top Connect",
+-            "Top Marine O\u00dc",
++            "Top Marine",
+             "TopTen",
+             "Tornim\u00e4e Apartments",
+             "Trigon Wealth Management",
+             "Tulika Takso",
+             "TV1",
+-            "T\u00f5rva Ehituskontor AS",
++            "T\u00f5rva Ehituskontor",
+             "T\u00f5stamaa sovhoos",
+             "T\u00e4di Anni juures",
+             "T\u00e4nap\u00e4ev",
+             "Uninet",
+             "Uus Maa Kinnisvarab\u00fcroo",
+             "Valga Lihat\u00f6\u00f6stus",
+             "Valgus",
+-            "Valio Eesti AS",
+-            "Valnes AS",
++            "Valio Eesti",
++            "Valnes",
+             "Varrak",
+             "VARUL",
+             "Vene-Balti laevaehitustehas",
+-            "Versobank AS",
++            "Versobank",
+             "Viking Window",
+             "Virgela",
+             "Viru kaevandus",
+             "Viru Keemia Grupp",
+             "Viru \u00d5lu",
+             "Volta tehas",
+             "Vopak E.O.S.",
+```
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/food.json` & `mimesis-7.1.0/mimesis/data/et/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/person.json` & `mimesis-7.1.0/mimesis/data/et/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/et/text.json` & `mimesis-7.1.0/mimesis/data/et/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/address.json` & `mimesis-7.1.0/mimesis/data/fa/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/datetime.json` & `mimesis-7.1.0/mimesis/data/fa/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/finance.json` & `mimesis-7.1.0/mimesis/data/fa/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/food.json` & `mimesis-7.1.0/mimesis/data/fa/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/person.json` & `mimesis-7.1.0/mimesis/data/fa/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fa/text.json` & `mimesis-7.1.0/mimesis/data/fa/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/address.json` & `mimesis-7.1.0/mimesis/data/fi/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/datetime.json` & `mimesis-7.1.0/mimesis/data/fi/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/finance.json` & `mimesis-7.1.0/mimesis/data/fi/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/food.json` & `mimesis-7.1.0/mimesis/data/fi/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/person.json` & `mimesis-7.1.0/mimesis/data/fi/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fi/text.json` & `mimesis-7.1.0/mimesis/data/fi/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/address.json` & `mimesis-7.1.0/mimesis/data/fr/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/datetime.json` & `mimesis-7.1.0/mimesis/data/fr/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/finance.json` & `mimesis-7.1.0/mimesis/data/fr/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/food.json` & `mimesis-7.1.0/mimesis/data/fr/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/person.json` & `mimesis-7.1.0/mimesis/data/fr/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/fr/text.json` & `mimesis-7.1.0/mimesis/data/fr/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/address.json` & `mimesis-7.1.0/mimesis/data/hu/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/datetime.json` & `mimesis-7.1.0/mimesis/data/hu/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/finance.json` & `mimesis-7.1.0/mimesis/data/hu/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/food.json` & `mimesis-7.1.0/mimesis/data/hu/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/person.json` & `mimesis-7.1.0/mimesis/data/hu/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/hu/text.json` & `mimesis-7.1.0/mimesis/data/hu/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/address.py` & `mimesis-7.1.0/mimesis/data/int/address.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/code.py` & `mimesis-7.1.0/mimesis/data/int/code.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/common.py` & `mimesis-7.1.0/mimesis/data/int/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/cryptographic.py` & `mimesis-7.1.0/mimesis/data/int/cryptographic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/datetime.py` & `mimesis-7.1.0/mimesis/data/int/datetime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/development.py` & `mimesis-7.1.0/mimesis/data/int/development.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/finance.py` & `mimesis-7.1.0/mimesis/data/int/finance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/hardware.py` & `mimesis-7.1.0/mimesis/data/int/hardware.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -246,14 +246,16 @@
+     "iPhone 13",
+     "iPhone 13 Pro",
+     "iPhone 13 Pro Max",
+     "iPhone 14",
+     "iPhone 14 Plus",
+     "iPhone 14 Pro",
+     "iPhone 14 Pro Max",
++    "iPhone 15 Pro",
++    "iPhone 15 Pro Max",
+     "Nothing Phone",
+     "Samsung Galaxy S22 Ultra",
+     "Samsung Galaxy S22 Plus",
+     "Samsung Galaxy Fold 4",
+     "Samsung Galaxy Z Flip 4",
+     "Xiaomi Redmi Note 11",
+     "Xiaomi 12 Pro",
+```
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/internet.py` & `mimesis-7.1.0/mimesis/data/int/internet.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1960,7 +1960,33 @@
+     "76.76.19.19",
+     "8.8.4.4",
+     "8.8.8.8",
+     "9.9.9.9",
+     "94.140.14.14",
+     "94.140.15.15",
+ ]
++
++CONTENT_ENCODING_DIRECTIVES = [
++    "*",
++    "gzip",
++    "compress",
++    "deflate",
++    "br",
++    "identity",
++]
++CORS_RESOURCE_POLICIES = [
++    "same-origin",
++    "same-site",
++    "cross-origin",
++]
++
++CORS_OPENER_POLICIES = [
++    "same-origin",
++    "unsafe-none",
++    "same-origin-allow-popups",
++]
++
++HTTP_SERVERS = [
++    "cloudflare",
++    "Apache/2.4.1 (Unix)",
++    "nginx/1.14.0 (Ubuntu)",
++]
+```
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/person.py` & `mimesis-7.1.0/mimesis/data/int/person.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/scientific.py` & `mimesis-7.1.0/mimesis/data/int/scientific.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/int/transport.py` & `mimesis-7.1.0/mimesis/data/int/transport.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/address.json` & `mimesis-7.1.0/mimesis/data/is/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/datetime.json` & `mimesis-7.1.0/mimesis/data/is/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/finance.json` & `mimesis-7.1.0/mimesis/data/is/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/food.json` & `mimesis-7.1.0/mimesis/data/is/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/person.json` & `mimesis-7.1.0/mimesis/data/is/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/is/text.json` & `mimesis-7.1.0/mimesis/data/is/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/address.json` & `mimesis-7.1.0/mimesis/data/it/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/datetime.json` & `mimesis-7.1.0/mimesis/data/it/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/finance.json` & `mimesis-7.1.0/mimesis/data/it/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/food.json` & `mimesis-7.1.0/mimesis/data/it/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/person.json` & `mimesis-7.1.0/mimesis/data/it/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/it/text.json` & `mimesis-7.1.0/mimesis/data/it/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ja/address.json` & `mimesis-7.1.0/mimesis/data/ja/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ja/finance.json` & `mimesis-7.1.0/mimesis/data/ja/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ja/food.json` & `mimesis-7.1.0/mimesis/data/ja/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ja/person.json` & `mimesis-7.1.0/mimesis/data/ja/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ja/text.json` & `mimesis-7.1.0/mimesis/data/ja/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/kk/address.json` & `mimesis-7.1.0/mimesis/data/kk/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/kk/datetime.json` & `mimesis-7.1.0/mimesis/data/kk/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/kk/finance.json` & `mimesis-7.1.0/mimesis/data/kk/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/kk/person.json` & `mimesis-7.1.0/mimesis/data/kk/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/kk/text.json` & `mimesis-7.1.0/mimesis/data/kk/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ko/address.json` & `mimesis-7.1.0/mimesis/data/ko/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ko/finance.json` & `mimesis-7.1.0/mimesis/data/ko/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ko/food.json` & `mimesis-7.1.0/mimesis/data/ko/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ko/person.json` & `mimesis-7.1.0/mimesis/data/ko/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ko/text.json` & `mimesis-7.1.0/mimesis/data/ko/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl/address.json` & `mimesis-7.1.0/mimesis/data/nl/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl/finance.json` & `mimesis-7.1.0/mimesis/data/nl/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl/food.json` & `mimesis-7.1.0/mimesis/data/nl/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl/person.json` & `mimesis-7.1.0/mimesis/data/nl/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl/text.json` & `mimesis-7.1.0/mimesis/data/nl/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl-be/address.json` & `mimesis-7.1.0/mimesis/data/nl-be/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl-be/finance.json` & `mimesis-7.1.0/mimesis/data/nl-be/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/nl-be/person.json` & `mimesis-7.1.0/mimesis/data/nl-be/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/no/address.json` & `mimesis-7.1.0/mimesis/data/no/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/no/finance.json` & `mimesis-7.1.0/mimesis/data/no/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/no/food.json` & `mimesis-7.1.0/mimesis/data/no/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/no/person.json` & `mimesis-7.1.0/mimesis/data/no/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/no/text.json` & `mimesis-7.1.0/mimesis/data/no/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/address.json` & `mimesis-7.1.0/mimesis/data/pl/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/datetime.json` & `mimesis-7.1.0/mimesis/data/pl/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/finance.json` & `mimesis-7.1.0/mimesis/data/pl/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/food.json` & `mimesis-7.1.0/mimesis/data/pl/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/person.json` & `mimesis-7.1.0/mimesis/data/pl/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pl/text.json` & `mimesis-7.1.0/mimesis/data/pl/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/address.json` & `mimesis-7.1.0/mimesis/data/pt/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/datetime.json` & `mimesis-7.1.0/mimesis/data/pt/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/finance.json` & `mimesis-7.1.0/mimesis/data/pt/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/food.json` & `mimesis-7.1.0/mimesis/data/pt/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/person.json` & `mimesis-7.1.0/mimesis/data/pt/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt/text.json` & `mimesis-7.1.0/mimesis/data/pt/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt-br/address.json` & `mimesis-7.1.0/mimesis/data/pt-br/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt-br/datetime.json` & `mimesis-7.1.0/mimesis/data/pt-br/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt-br/finance.json` & `mimesis-7.1.0/mimesis/data/pt-br/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt-br/food.json` & `mimesis-7.1.0/mimesis/data/pt-br/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/pt-br/person.json` & `mimesis-7.1.0/mimesis/data/pt-br/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/address.json` & `mimesis-7.1.0/mimesis/data/ru/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/builtin.json` & `mimesis-7.1.0/mimesis/data/ru/builtin.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/datetime.json` & `mimesis-7.1.0/mimesis/data/ru/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/finance.json` & `mimesis-7.1.0/mimesis/data/ru/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/food.json` & `mimesis-7.1.0/mimesis/data/ru/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/person.json` & `mimesis-7.1.0/mimesis/data/ru/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/ru/text.json` & `mimesis-7.1.0/mimesis/data/ru/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sk/address.json` & `mimesis-7.1.0/mimesis/data/sk/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sk/person.json` & `mimesis-7.1.0/mimesis/data/sk/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sk/text.json` & `mimesis-7.1.0/mimesis/data/sk/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sv/address.json` & `mimesis-7.1.0/mimesis/data/sv/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sv/finance.json` & `mimesis-7.1.0/mimesis/data/sv/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sv/food.json` & `mimesis-7.1.0/mimesis/data/sv/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sv/person.json` & `mimesis-7.1.0/mimesis/data/sv/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/sv/text.json` & `mimesis-7.1.0/mimesis/data/sv/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/tr/address.json` & `mimesis-7.1.0/mimesis/data/tr/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/tr/finance.json` & `mimesis-7.1.0/mimesis/data/tr/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/tr/food.json` & `mimesis-7.1.0/mimesis/data/tr/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/tr/person.json` & `mimesis-7.1.0/mimesis/data/tr/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/tr/text.json` & `mimesis-7.1.0/mimesis/data/tr/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/address.json` & `mimesis-7.1.0/mimesis/data/uk/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/builtin.json` & `mimesis-7.1.0/mimesis/data/uk/builtin.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/datetime.json` & `mimesis-7.1.0/mimesis/data/uk/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/finance.json` & `mimesis-7.1.0/mimesis/data/uk/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/food.json` & `mimesis-7.1.0/mimesis/data/uk/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/person.json` & `mimesis-7.1.0/mimesis/data/uk/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/uk/text.json` & `mimesis-7.1.0/mimesis/data/uk/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/address.json` & `mimesis-7.1.0/mimesis/data/zh/address.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/datetime.json` & `mimesis-7.1.0/mimesis/data/zh/datetime.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/finance.json` & `mimesis-7.1.0/mimesis/data/zh/finance.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/food.json` & `mimesis-7.1.0/mimesis/data/zh/food.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/person.json` & `mimesis-7.1.0/mimesis/data/zh/person.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/data/zh/text.json` & `mimesis-7.1.0/mimesis/data/zh/text.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/enums.py` & `mimesis-7.1.0/mimesis/enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/exceptions.py` & `mimesis-7.1.0/mimesis/exceptions.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-"""Custom exceptions which used in Mimesis."""
++"""Custom exceptions which are used in Mimesis."""
+ 
+ import typing as t
+ 
+ from mimesis.enums import Locale
+ 
+ 
+ class LocaleError(ValueError):
+@@ -16,18 +16,18 @@
+         self.locale = locale
+ 
+     def __str__(self) -> str:
+         return f"Invalid locale «{self.locale}»"
+ 
+ 
+ class SchemaError(ValueError):
+-    """Raised when schema is unsupported."""
++    """Raised when a schema is unsupported."""
+ 
+     def __str__(self) -> str:
+-        return "Schema should a callable object."
++        return "The schema must be a callable object."
+ 
+ 
+ class NonEnumerableError(TypeError):
+     """Raised when object is not instance of Enum."""
+ 
+     message = "You should use one item of: «{}» of the object mimesis.enums.{}"
+ 
+@@ -46,17 +46,17 @@
+         return self.message.format(self.items, self.name.__name__)
+ 
+ 
+ class FieldError(ValueError):
+     def __init__(self, name: t.Optional[str] = None) -> None:
+         """Initialize attributes for more informative output.
+ 
+-        :param name: Name of the field..
++        :param name: Name of the field.
+         """
+         self.name = name
+-        self.message = "A field «{}» is not supported."
+-        self.message_none = "Field cannot be None."
++        self.message = "Field «{}» is not supported."
++        self.message_none = "The field cannot have the value None."
+ 
+     def __str__(self) -> str:
+         if self.name is None:
+             return self.message_none
+         return self.message.format(self.name)
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/__init__.py` & `mimesis-7.1.0/mimesis/providers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/address.py` & `mimesis-7.1.0/mimesis/providers/address.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/base.py` & `mimesis-7.1.0/mimesis/providers/base.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -3,86 +3,117 @@
+ import contextlib
+ import json
+ import operator
+ import typing as t
+ from functools import reduce
+ from pathlib import Path
+ 
++from mimesis import random as _random
+ from mimesis.exceptions import NonEnumerableError
+ from mimesis.locales import Locale, validate_locale
+-from mimesis.random import Random, get_random_item
+-from mimesis.types import JSON, Seed
++from mimesis.types import JSON, MissingSeed, Seed
+ 
+ __all__ = ["BaseDataProvider", "BaseProvider"]
+ 
+ 
+ class BaseProvider:
+     """This is a base class for all providers."""
+ 
+     class Meta:
+         name: str
+ 
+-    def __init__(self, *, seed: Seed = None, **kwargs: t.Any) -> None:
++    def __init__(
++        self,
++        *,
++        seed: Seed = MissingSeed,
++        random: t.Optional[_random.Random] = None,
++    ) -> None:
+         """Initialize attributes.
+ 
+         Keep in mind, that locale-independent data providers will work
+         only with keyword-only arguments since version 5.0.0.
+ 
+         :param seed: Seed for random.
+             When set to `None` the current system time is used.
++        :param random: Custom random.
++            See https://github.com/lk-geimfari/mimesis/issues/1313 for details.
+         """
++        if random is not None:
++            if not isinstance(random, _random.Random):
++                raise TypeError(
++                    "The random must be an " "instance of mimesis.random.Random"
++                )
++            self.random = random
++        else:
++            self.random = _random.Random()
+         self.seed = seed
+-        self.random = Random()
+         self.reseed(seed)
+ 
+-    def reseed(self, seed: Seed = None) -> None:
++    def reseed(self, seed: Seed = MissingSeed) -> None:
+         """Reseed the internal random generator.
+ 
+         In case we use the default seed, we need to create a per instance
+         random generator, in this case two providers with the same seed
+         will always return the same values.
+ 
+         :param seed: Seed for random.
+             When set to `None` the current system time is used.
+         """
+         self.seed = seed
+-        self.random.seed(seed)
++        if seed is MissingSeed:
++            # Remove casts after mypy will fix this inference:
++            if _random.global_seed is not MissingSeed:
++                self.random.seed(t.cast(t.Any, _random.global_seed))
++        else:
++            self.random.seed(t.cast(t.Any, seed))
+ 
+     def validate_enum(self, item: t.Any, enum: t.Any) -> t.Any:
+         """Validate enum parameter of method in subclasses of BaseProvider.
+ 
+         :param item: Item of enum object.
+         :param enum: Enum object.
+         :return: Value of item.
+         :raises NonEnumerableError: if ``item`` not in ``enum``.
+         """
+         if item is None:
+-            result = get_random_item(enum, self.random)
++            result = _random.get_random_item(enum, self.random)
+         elif item and isinstance(item, enum):
+             result = item
+         else:
+             raise NonEnumerableError(enum)
+ 
+         return result.value
+ 
++    def _has_seed(self) -> bool:
++        """Internal API to check if seed is set."""
++        return (self.seed is not None and self.seed is not MissingSeed) or (
++            _random.global_seed is not None and _random.global_seed is not MissingSeed
++        )
++
+     def __str__(self) -> str:
+         """Human-readable representation of locale."""
+         return self.__class__.__name__
+ 
+ 
+ class BaseDataProvider(BaseProvider):
+     """This is a base class for all data providers."""
+ 
+-    def __init__(self, locale: Locale = Locale.DEFAULT, seed: Seed = None) -> None:
++    def __init__(
++        self,
++        locale: Locale = Locale.DEFAULT,
++        seed: Seed = MissingSeed,
++        *args: t.Any,
++        **kwargs: t.Any,
++    ) -> None:
+         """Initialize attributes for data providers.
+ 
+         :param locale: Current locale.
+         :param seed: Seed to all the random functions.
+         """
+-        super().__init__(seed=seed)
++        super().__init__(seed=seed, *args, **kwargs)
+         self._data: JSON = {}
+         self._datafile: str = ""
+         self._setup_locale(locale)
+         self._data_dir = Path(__file__).parent.parent.joinpath("data")
+ 
+     def _setup_locale(self, locale: Locale = Locale.DEFAULT) -> None:
+         """Set up locale after pre-check.
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/binaryfile.py` & `mimesis-7.1.0/mimesis/providers/binaryfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/choice.py` & `mimesis-7.1.0/mimesis/providers/choice.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -10,14 +10,25 @@
+     """Class for generating a random choice from items in a sequence."""
+ 
+     class Meta:
+         """Class for metadata."""
+ 
+         name: t.Final[str] = "choice"
+ 
++    def choice(self, *args: t.Any, **kwargs: t.Any) -> t.Any:
++        """Choice random item form sequence.
++
++        See https://github.com/lk-geimfari/mimesis/issues/619
++
++        :param args: Positional arguments.
++        :param kwargs: Keyword arguments.
++        :return: Sequence or uncontained element randomly chosen from items.
++        """
++        return self.__call__(*args, **kwargs)
++
+     def __call__(
+         self,
+         items: t.Optional[t.Sequence[t.Any]],
+         length: int = 0,
+         unique: bool = False,
+     ) -> t.Union[t.Sequence[t.Any], t.Any]:
+         """Generate a randomly-chosen sequence or bare element from a sequence.
+@@ -44,14 +55,15 @@
+         ['a']
+         >>> choice(items='abc', length=2)
+         'ba'
+         >>> choice(items=('a', 'b', 'c'), length=5)
+         ('c', 'a', 'a', 'b', 'c')
+         >>> choice(items='aabbbccccddddd', length=4, unique=True)
+         'cdba'
++
+         """
+ 
+         if not isinstance(items, t.Sequence):
+             raise TypeError("**items** must be non-empty sequence.")
+ 
+         if not items:
+             raise ValueError("**items** must be a non-empty sequence.")
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/code.py` & `mimesis-7.1.0/mimesis/providers/code.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/cryptographic.py` & `mimesis-7.1.0/mimesis/providers/cryptographic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/date.py` & `mimesis-7.1.0/mimesis/providers/date.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -14,14 +14,15 @@
+ 
+ 
+ class Datetime(BaseDataProvider):
+     """Class for generating data related to the date and time."""
+ 
+     # See: https://git.io/Jf15A
+     _CURRENT_YEAR = datetime.now().year
++    CURRENT_YEAR = datetime.now().year
+ 
+     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+         """Initialize attributes."""
+         super().__init__(*args, **kwargs)
+         self._datafile = "datetime.json"
+         self._load_datafile(self._datafile)
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/development.py` & `mimesis-7.1.0/mimesis/providers/development.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,25 +1,31 @@
+ """Data related to the development."""
+ 
+ import typing as t
++from datetime import datetime
+ 
+ from mimesis.data import LICENSES, OS, PROGRAMMING_LANGS
+ from mimesis.enums import DSNType
+ from mimesis.providers.base import BaseProvider
+ from mimesis.providers.internet import Internet
+ 
+ __all__ = ["Development"]
+ 
+ 
+ class Development(BaseProvider):
+     """Class for getting fake data for Developers."""
+ 
+     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+         super().__init__(*args, **kwargs)
+-        self._internet = Internet(*args, **kwargs)
++        self._internet = Internet(
++            random=self.random,
++            *args,
++            **kwargs,
++        )
++        self._now = datetime.now()
+ 
+     class Meta:
+         """Class for metadata."""
+ 
+         name: t.Final[str] = "development"
+ 
+     def dsn(self, dsn_type: t.Optional[DSNType] = None, **kwargs: t.Any) -> str:
+@@ -49,15 +55,15 @@
+         :param pre_release: Pre-release.
+         :return: Version.
+ 
+         :Example:
+             0.2.1
+         """
+         if calver:
+-            major = self.random.randint(2016, 2018)
++            major = self.random.randint(2016, self._now.year)
+             minor, patch = self.random.randints(2, 1, 10)
+         else:
+             major, minor, patch = self.random.randints(3, 0, 10)
+ 
+         version = f"{major}.{minor}.{patch}"
+ 
+         if pre_release:
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/file.py` & `mimesis-7.1.0/mimesis/providers/file.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,32 +1,28 @@
+ """File data provider."""
+ 
+-import re
+ import typing as t
+ 
+-from mimesis.data import EXTENSIONS, MIME_TYPES
++from mimesis.data import EXTENSIONS, FILENAMES, MIME_TYPES
+ from mimesis.enums import FileType, MimeType
+-from mimesis.locales import Locale
+ from mimesis.providers.base import BaseProvider
+-from mimesis.providers.text import Text
+ 
+ __all__ = ["File"]
+ 
+ 
+ class File(BaseProvider):
+     """Class for generate data related to files."""
+ 
+     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+         """Initialize attributes.
+ 
+         :param args: Arguments.
+         :param kwargs: Keyword arguments.
+         """
+         super().__init__(*args, **kwargs)
+-        self._text = Text(Locale.EN, seed=self.seed)
+ 
+     class Meta:
+         """Class for metadata."""
+ 
+         name: t.Final[str] = "file"
+ 
+     def extension(self, file_type: t.Optional[FileType] = None) -> str:
+@@ -71,12 +67,10 @@
+ 
+         :param file_type: Enum object FileType
+         :return: File name.
+ 
+         :Example:
+             legislative.txt
+         """
+-        word = self._text.word().strip()
+-        replacer = self.random.choice(["_", "-"])
+-        name = re.sub(r"\s+", replacer, word)
+         ext = self.extension(file_type)
++        name = self.random.choice(FILENAMES)
+         return f"{name}{ext}"
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/finance.py` & `mimesis-7.1.0/mimesis/providers/finance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/food.py` & `mimesis-7.1.0/mimesis/providers/food.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/generic.py` & `mimesis-7.1.0/mimesis/providers/generic.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -20,15 +20,15 @@
+ from mimesis.providers.numeric import Numeric
+ from mimesis.providers.path import Path
+ from mimesis.providers.payment import Payment
+ from mimesis.providers.person import Person
+ from mimesis.providers.science import Science
+ from mimesis.providers.text import Text
+ from mimesis.providers.transport import Transport
+-from mimesis.types import Seed
++from mimesis.types import MissingSeed, Seed
+ 
+ __all__ = ["Generic"]
+ 
+ DEFAULT_PROVIDERS = (
+     Address,
+     BinaryFile,
+     Finance,
+@@ -51,15 +51,19 @@
+     Cryptographic,
+ )
+ 
+ 
+ class Generic(BaseProvider):
+     """Class which contain all providers at one."""
+ 
+-    def __init__(self, locale: Locale = Locale.DEFAULT, seed: Seed = None) -> None:
++    def __init__(
++        self,
++        locale: Locale = Locale.DEFAULT,
++        seed: Seed = MissingSeed,
++    ) -> None:
+         """Initialize attributes lazily."""
+         super().__init__(seed=seed)
+         self.locale = locale
+ 
+         for provider in DEFAULT_PROVIDERS:
+             name = getattr(provider.Meta, "name")  # type: ignore
+ 
+@@ -104,15 +108,15 @@
+                 if attr.startswith("_"):
+                     attribute = attr.replace("_", "", 1)
+                     attributes.append(attribute)
+                 else:
+                     attributes.append(attr)
+         return attributes
+ 
+-    def reseed(self, seed: Seed = None) -> None:
++    def reseed(self, seed: Seed = MissingSeed) -> None:
+         """Reseed the internal random generator.
+ 
+         Overrides method `BaseProvider.reseed()`.
+ 
+         :param seed: Seed for random.
+         """
+         # Ensure that we reseed the random generator on Generic itself.
+@@ -156,15 +160,15 @@
+ 
+         :param providers: Custom providers.
+         :return: None
+         """
+         for provider in providers:
+             self.add_provider(provider)
+ 
+-    def __iadd__(self, other: t.Type["BaseProvider"]) -> "Generic":
++    def __iadd__(self, other: t.Type[BaseProvider]) -> "Generic":
+         """Add a custom provider to Generic() object.
+ 
+         :param other: Custom provider.
+         :return: None
+         :raises TypeError: if cls is not class or is not a subclass
+             of BaseProvider.
+         """
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/hardware.py` & `mimesis-7.1.0/mimesis/providers/hardware.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ """Provides data related to hardware."""
+ import typing as t
+ 
+ from mimesis.data import (
+-    AUTO_MANUFACTURERS,
+     CPU,
+     CPU_CODENAMES,
+     GENERATION,
+     GRAPHICS,
+     HDD_SSD,
++    MANUFACTURERS,
+     PHONE_MODELS,
+     RAM_SIZES,
+     RAM_TYPES,
+     RESOLUTIONS,
+     SCREEN_SIZES,
+ )
+ from mimesis.providers.base import BaseProvider
+@@ -132,15 +132,15 @@
+         """Get a random manufacturer.
+ 
+         :return: Manufacturer.
+ 
+         :Example:
+             Dell.
+         """
+-        return self.random.choice(AUTO_MANUFACTURERS)
++        return self.random.choice(MANUFACTURERS)
+ 
+     def phone_model(self) -> str:
+         """Get a random phone model.
+ 
+         :return: Phone model.
+ 
+         :Example:
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/internet.py` & `mimesis-7.1.0/mimesis/providers/internet.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,28 +1,34 @@
+ """Provides data related to internet."""
+ 
+ import typing as t
+ import urllib.error
+ import urllib.parse
+ import urllib.request
++from base64 import b64encode
+ from ipaddress import IPv4Address, IPv6Address
+ 
+ from mimesis.data import (
++    CONTENT_ENCODING_DIRECTIVES,
++    CORS_OPENER_POLICIES,
++    CORS_RESOURCE_POLICIES,
+     EMOJI,
+     HTTP_METHODS,
++    HTTP_SERVERS,
+     HTTP_STATUS_CODES,
+     HTTP_STATUS_MSGS,
+     PUBLIC_DNS,
+     TLD,
+     USER_AGENTS,
+     USERNAMES,
+ )
+ from mimesis.enums import MimeType, PortRange, TLDType, URLScheme
+ from mimesis.locales import Locale
+ from mimesis.providers.base import BaseProvider
++from mimesis.providers.code import Code
+ from mimesis.providers.date import Datetime
+ from mimesis.providers.file import File
+ from mimesis.providers.text import Text
+ from mimesis.types import Keywords
+ 
+ __all__ = ["Internet"]
+ 
+@@ -36,33 +42,47 @@
+     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+         """Initialize attributes.
+ 
+         :param args: Arguments.
+         :param kwargs: Keyword arguments.
+         """
+         super().__init__(*args, **kwargs)
+-        self._file = File(seed=self.seed)
+-        self._text = Text(locale=Locale.EN, seed=self.seed)
+-        self._datetime = Datetime(locale=Locale.EN)
++        self._file = File(
++            seed=self.seed,
++            random=self.random,
++        )
++        self._code = Code(
++            seed=self.seed,
++            random=self.random,
++        )
++        self._text = Text(
++            locale=Locale.EN,
++            seed=self.seed,
++            random=self.random,
++        )
++        self._datetime = Datetime(
++            locale=Locale.EN,
++            seed=self.seed,
++            random=self.random,
++        )
+ 
+     class Meta:
+         """Class for metadata."""
+ 
+         name: t.Final[str] = "internet"
+ 
+     def content_type(self, mime_type: t.Optional[MimeType] = None) -> str:
+         """Get a random HTTP content type.
+ 
+         :return: Content type.
+ 
+         :Example:
+-            Content-Type: application/json
++            application/json
+         """
+-        fmt = self._file.mime_type(type_=mime_type)
+-        return f"Content-Type: {fmt}"
++        return self._file.mime_type(type_=mime_type)
+ 
+     def http_status_message(self) -> str:
+         """Get a random HTTP status message.
+ 
+         :return: HTTP status message.
+ 
+         :Example:
+@@ -168,49 +188,35 @@
+ 
+         :Example:
+             :kissing:
+         """
+         return self.random.choice(EMOJI)
+ 
+     @staticmethod
+-    def stock_image(
++    def stock_image_url(
+         width: t.Union[int, str] = 1920,
+         height: t.Union[int, str] = 1080,
+         keywords: t.Optional[Keywords] = None,
+-        writable: bool = False,
+-    ) -> t.Union[str, bytes]:
+-        """Generate random stock image (JPG/JPEG) hosted on Unsplash.
++    ) -> str:
++        """Generate a random stock image URL hosted on Unsplash.
+ 
+         See «Random search term» on https://source.unsplash.com/
+         for more details.
+ 
+-        .. note:: This method required an active HTTP connection
+-            if you want to get a writable object.
+-
+         :param width: Width of the image.
+         :param height: Height of the image.
+-        :param keywords: List of search keywords.
+-        :param writable: Return image as sequence ob bytes.
+-        :return: Link to the image.
++        :param keywords: Sequence of search keywords.
++        :return: URL of the image.
+         """
+         if keywords is not None:
+             keywords_str = ",".join(keywords)
+         else:
+             keywords_str = ""
+ 
+-        url = f"https://source.unsplash.com/{width}x{height}?{keywords_str}"
+-
+-        if writable:
+-            try:
+-                response = urllib.request.urlopen(url)
+-                content: bytes = response.read()
+-                return content
+-            except urllib.error.URLError:
+-                raise urllib.error.URLError("Required an active HTTP connection")
+-        return url
++        return f"https://source.unsplash.com/{width}x{height}?{keywords_str}"
+ 
+     def hashtags(self, quantity: int = 4) -> t.List[str]:
+         """Generate a list of hashtags.
+ 
+         :param quantity: The quantity of hashtags.
+         :return: The list of hashtags.
+         :raises NonEnumerableError: if category is not in Hashtag.
+@@ -225,15 +231,15 @@
+         return ["#" + self._text.word() for _ in range(quantity)]
+ 
+     def hostname(
+         self,
+         tld_type: t.Optional[TLDType] = None,
+         subdomains: t.Optional[t.List[str]] = None,
+     ) -> str:
+-        """Generate a random hostname without scheme.
++        """Generate a random hostname without a scheme.
+ 
+         :param tld_type: TLDType.
+         :param subdomains: List of subdomains (make sure they are valid).
+         :return: Hostname.
+         """
+         tld = self.tld(tld_type=tld_type)
+         host = self.random.choice(USERNAMES)
+@@ -247,17 +253,17 @@
+     def url(
+         self,
+         scheme: t.Optional[URLScheme] = URLScheme.HTTPS,
+         port_range: t.Optional[PortRange] = None,
+         tld_type: t.Optional[TLDType] = None,
+         subdomains: t.Optional[t.List[str]] = None,
+     ) -> str:
+-        """Generate random URL.
++        """Generate a random URL.
+ 
+-        :param scheme: Scheme.
++        :param scheme: The scheme.
+         :param port_range: PortRange enum object.
+         :param tld_type: TLDType.
+         :param subdomains: List of subdomains (make sure they are valid).
+         :return: URL.
+         """
+         host = self.hostname(tld_type, subdomains)
+         url_scheme = self.validate_enum(scheme, URLScheme)
+@@ -366,14 +372,23 @@
+         :Example:
+             8080
+         """
+ 
+         rng = self.validate_enum(port_range, PortRange)
+         return self.random.randint(*rng)
+ 
++    def path(self, *args: t.Any, **kwargs: t.Any) -> str:
++        """Generates a random path.
++
++        :param args: Arguments to pass to :meth:`slug`.
++        :param kwargs: Keyword arguments to pass to :meth:`slug`.
++        :return: Path.
++        """
++        return self.slug(*args, **kwargs).replace("-", "/")
++
+     def slug(self, parts_count: t.Optional[int] = None) -> str:
+         """Generate a random slug of given parts count.
+ 
+         :param parts_count: Slug's parts count.
+         :return: Slug.
+         """
+ 
+@@ -391,7 +406,126 @@
+     def public_dns(self) -> str:
+         """Generates a random public DNS.
+ 
+         :Example:
+             1.1.1.1
+         """
+         return self.random.choice(PUBLIC_DNS)
++
++    def http_response_headers(self) -> t.Dict[str, t.Any]:
++        """Generate a random HTTP response headers.
++
++        The following headers are included:
++
++        - Allow
++        - Age
++        - Server
++        - Content-Type
++        - X-Request-ID
++        - Content-Language
++        - Content-Location
++        - Set-Cookie
++        - Upgrade-Insecure-Requests
++        - X-Content-Type-Options
++        - X-XSS-Protection
++        - Connection
++        - X-Frame-Options
++        - Content-Encoding
++        - Cross-Origin-Opener-Policy
++        - Cross-Origin-Resource-Policy
++        - Strict-Transport-Security
++
++        :return: Response headers as dict.
++        """
++        max_age = self.random.randint(0, 60 * 60 * 15)
++        cookie_attributes = [
++            "Secure",
++            "HttpOnly",
++            "SameSite=Lax",
++            "SameSite=Strict",
++            f"Max-Age={max_age}",
++            f"Domain={self.hostname()}",
++        ]
++        k, v = self._text.words(quantity=2)
++        cookie_attr = self.random.choice(cookie_attributes)
++        csrf_token = b64encode(self.random.randbytes(n=32)).decode()
++        cookie_value = f"csrftoken={csrf_token}; {k}={v}; {cookie_attr}"
++
++        headers = {
++            "Allow": "*",
++            "Age": max_age,
++            "Server": self.random.choice(HTTP_SERVERS),
++            "Content-Type": self._file.mime_type(),
++            "X-Request-ID": self.random.randbytes(16).hex(),
++            "Content-Language": self._code.locale_code(),
++            "Content-Location": self.path(parts_count=4),
++            "Set-Cookie": cookie_value,
++            "Upgrade-Insecure-Requests": 1,
++            "X-Content-Type-Options": "nosniff",
++            "X-XSS-Protection": 1,
++            "Connection": self.random.choice(["close", "keep-alive"]),
++            "X-Frame-Options": self.random.choice(["DENY", "SAMEORIGIN"]),
++            "Content-Encoding": self.random.choice(CONTENT_ENCODING_DIRECTIVES),
++            "Cross-Origin-Opener-Policy": self.random.choice(CORS_OPENER_POLICIES),
++            "Cross-Origin-Resource-Policy": self.random.choice(CORS_RESOURCE_POLICIES),
++            "Strict-Transport-Security": f"max-age={max_age}",
++        }
++        return headers
++
++    def http_request_headers(self) -> t.Dict[str, t.Any]:
++        """Generates a random HTTP request headers.
++
++        The following headers are included:
++
++        - Referer
++        - Authorization
++        - Cookie
++        - User-Agent
++        - X-CSRF-Token
++        - Content-Type
++        - Content-Length
++        - Connection
++        - Cache-Control
++        - Accept
++        - Host
++        - Accept-Language
++
++        :return: Request headers as dict.
++        """
++        k, v = self._text.words(quantity=2)
++        max_age = self.random.randint(0, 60 * 60 * 15)
++        token = b64encode(self.random.randbytes(64)).hex()
++        csrf_token = b64encode(self.random.randbytes(n=32)).decode()
++        headers = {
++            "Referer": self.uri(),
++            "Authorization": f"Bearer {token}",
++            "Cookie": f"csrftoken={csrf_token}; {k}={v}",
++            "User-Agent": self.user_agent(),
++            "X-CSRF-Token": b64encode(self.random.randbytes(32)).hex(),
++            "Content-Type": self._file.mime_type(),
++            "Content-Length": self.random.randint(0, 10000),
++            "Connection": self.random.choice(["close", "keep-alive"]),
++            "Cache-Control": self.random.choice(
++                [
++                    "no-cache",
++                    "no-store",
++                    "must-revalidate",
++                    "public",
++                    "private",
++                    f"max-age={max_age}",
++                ]
++            ),
++            "Accept": self.random.choice(
++                [
++                    "*/*",
++                    self._file.mime_type(),
++                ]
++            ),
++            "Host": self.hostname(),
++            "Accept-Language": self.random.choice(
++                [
++                    "*",
++                    self._code.locale_code(),
++                ]
++            ),
++        }
++        return headers
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/numeric.py` & `mimesis-7.1.0/mimesis/providers/numeric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/path.py` & `mimesis-7.1.0/mimesis/providers/path.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/payment.py` & `mimesis-7.1.0/mimesis/providers/payment.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -22,15 +22,19 @@
+     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+         """Initialize attributes.
+ 
+         :param args: Arguments.
+         :param kwargs: Keyword arguments.
+         """
+         super().__init__(*args, **kwargs)
+-        self._person = Person(Locale.EN, seed=self.seed)
++        self._person = Person(
++            locale=Locale.EN,
++            seed=self.seed,
++            random=self.random,
++        )
+ 
+     class Meta:
+         """Class for metadata."""
+ 
+         name: t.Final[str] = "payment"
+ 
+     def cid(self) -> str:
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/person.py` & `mimesis-7.1.0/mimesis/providers/person.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -165,22 +165,22 @@
+         name = self.name(gender)
+         surname = self.surname(gender)
+         return f"{surname} {name}" if reverse else f"{name} {surname}"
+ 
+     def username(
+         self, mask: t.Optional[str] = None, drange: t.Tuple[int, int] = (1800, 2100)
+     ) -> str:
+-        """Generate username by template.
++        """Generate username by mask.
+ 
+-        You can create many different usernames using masks.
++        Masks allow you to generate a variety of usernames.
+ 
+         - **C** stands for capitalized username.
+         - **U** stands for uppercase username.
+         - **l** stands for lowercase username.
+-        - **d** stands for digits in username.
++        - **d** stands for digits in the username.
+ 
+         You can also use symbols to separate the different parts
+         of the username: **.** **_** **-**
+ 
+         :param mask: Mask.
+         :param drange: Digits range.
+         :raises ValueError: If template is not supported.
+@@ -255,15 +255,15 @@
+         :param unique: Makes email addresses unique.
+         :return: Email address.
+         :raises ValueError: if «unique» is True and the provider was seeded.
+ 
+         :Example:
+             foretime10@live.com
+         """
+-        if unique and self.seed is not None:
++        if unique and self._has_seed():
+             raise ValueError(
+                 "You cannot use «unique» parameter with the seeded provider"
+             )
+ 
+         if not domains:
+             domains = EMAIL_DOMAINS
+ 
+@@ -442,15 +442,15 @@
+ 
+         :Example:
+             Irish.
+         """
+         languages: t.List[str] = self.extract(["language"])
+         return self.random.choice(languages)
+ 
+-    def telephone(self, mask: str = "", placeholder: str = "#") -> str:
++    def phone_number(self, mask: str = "", placeholder: str = "#") -> str:
+         """Generate a random phone number.
+ 
+         :param mask: Mask for formatting number.
+         :param placeholder: A placeholder for a mask (default is #).
+         :return: Phone number.
+ 
+         :Example:
+@@ -460,14 +460,17 @@
+             code = self.random.choice(CALLING_CODES)
+             default = f"{code}-(###)-###-####"
+             masks = self.extract(["telephone_fmt"], default=[default])
+             mask = self.random.choice(masks)
+ 
+         return self.random.custom_code(mask=mask, digit=placeholder)
+ 
++    def telephone(self, *args: t.Any, **kwargs: t.Any) -> str:
++        return self.phone_number(*args, **kwargs)
++
+     def identifier(self, mask: str = "##-##/##") -> str:
+         """Generate a random identifier by mask.
+ 
+         With this method you can generate any identifiers that
+         you need. Simply select the mask that you need.
+ 
+         :param mask:
+```
+
+### Comparing `mimesis-7.0.0/mimesis/providers/science.py` & `mimesis-7.1.0/mimesis/providers/science.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/text.py` & `mimesis-7.1.0/mimesis/providers/text.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/providers/transport.py` & `mimesis-7.1.0/mimesis/providers/transport.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mimesis-7.0.0/mimesis/random.py` & `mimesis-7.1.0/mimesis/random.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,29 +1,34 @@
+ """Implements various helpers which are used in the various data providers.
+ 
+ This module contains custom ``Random()`` class where implemented a lot of
+ methods which are not included in standard :py:class:`random.Random`,
+ but frequently used in this project.
+ """
+ 
+-import os
+ import random as random_module
+ import string
+ import typing as t
+ import uuid
+ 
++from mimesis.types import MissingSeed, Seed
++
+ __all__ = ["Random", "get_random_item", "random"]
+ 
++#: Different plugins (like `pytest-randomly`)
++#: can set custom values to a global seed,
++#: which are going to be the new default.
++global_seed: Seed = MissingSeed
++
+ 
+ class Random(random_module.Random):
+     """Custom class for the possibility of extending.
+ 
+     The class is a subclass of the class :py:class:`random.Random`
+     from the module random of the standard library, which provides the custom methods.
+-
+     """
+ 
+     def randints(self, amount: int = 3, a: int = 1, b: int = 100) -> t.List[int]:
+         """Generate list of random integers.
+ 
+         :param amount: Amount of elements.
+         :param a: Minimum value of range.
+@@ -32,23 +37,14 @@
+         :raises ValueError: if amount less or equal to zero.
+         """
+         if amount <= 0:
+             raise ValueError("Amount out of range.")
+ 
+         return [int(self.random() * (b - a)) + a for _ in range(amount)]
+ 
+-    @staticmethod
+-    def urandom(size: int = 8) -> bytes:
+-        """Return a bytes object containing random bytes.
+-
+-        :param size: The size of byte object.
+-        :return: Bytes.
+-        """
+-        return os.urandom(size)
+-
+     def generate_string(self, str_seq: str, length: int = 10) -> str:
+         """Generate random string created from string sequence.
+ 
+         :param str_seq: String sequence of letters or digits.
+         :param length: Max value.
+         :return: Single string.
+         """
+@@ -114,14 +110,18 @@
+ 
+         if length is None:
+             length = self.randint(16, 128)
+ 
+         characters = string.ascii_letters + string.digits
+         return "".join(self.choices(characters, k=length))
+ 
++    def randbytes(self, n: int = 16) -> bytes:
++        """Generate n random bytes."""
++        return self.getrandbits(n * 8).to_bytes(n, "little")
++
+ 
+ def get_random_item(enum: t.Any, rnd: t.Optional[Random] = None) -> t.Any:
+     """Get random item of enum object.
+ 
+     :param enum: Enum object.
+     :param rnd: Custom random object.
+     :return: Random item of enum.
+```
+
+### Comparing `mimesis-7.0.0/mimesis/schema.py` & `mimesis-7.1.0/mimesis/schema.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,54 +1,112 @@
+ """Implements classes for generating data by schema."""
++
+ import csv
+ import json
+ import pickle
+ import re
+ import typing as t
+ import warnings
+ 
+ from mimesis.exceptions import FieldError, SchemaError
+ from mimesis.locales import Locale
+ from mimesis.providers.generic import Generic
+-from mimesis.types import JSON, CallableSchema, Key, Seed
++from mimesis.types import (
++    JSON,
++    CallableSchema,
++    FieldCache,
++    Key,
++    MissingSeed,
++    Seed,
++)
+ 
+ __all__ = ["BaseField", "Field", "Schema"]
+ 
+ 
+ class BaseField:
+-    """
+-    BaseField is a class for generating data by the name of the method.
+-
+-    Instance of this object takes any string which represents the name
+-    of any method of any supported data provider (:class:`~mimesis.Generic`)
+-    and the ``**kwargs`` of the method.
+-
+-    See :class:`~mimesis.schema.BaseField.perform` for more details.
+-    """
+-
+-    class Meta:
+-        base = True
+-
+     def __init__(
+         self,
+         locale: Locale = Locale.DEFAULT,
+-        seed: Seed = None,
++        seed: Seed = MissingSeed,
+         providers: t.Optional[t.Sequence[t.Any]] = None,
+     ) -> None:
+         """Initialize field.
+ 
+         :param locale: Locale
+         :param seed: Seed for random.
+         """
+         self._gen = Generic(locale, seed)
+ 
+         if providers:
+             self._gen.add_providers(*providers)
+ 
+-        self._table = {}  # type: ignore
++        self._cache: FieldCache = {}
++
++    def reseed(self, seed: Seed = MissingSeed) -> None:
++        """Reseed the random generator.
++
++        :param seed: Seed for random.
++        """
++        self._gen.reseed(seed)
++
++    def _explicit_lookup(self, name: str) -> t.Any:
++        """An explicit method lookup.
++
++        This method is called when the field
++        defined explicitly, like this: ``provider.method``
++
++        :param name: The field name.
++        :return: Callable object.
++        :raise FieldError: When field is invalid.
++        """
++        provider_name, method_name = name.split(".", 1)
++        try:
++            provider = getattr(self._gen, provider_name)
++            return getattr(provider, method_name)
++        except AttributeError:
++            raise FieldError(name)
++
++    def _fuzzy_lookup(self, name: str) -> t.Any:
++        """A fuzzy method lookup.
++
++        This method is called when the field definition
++        is fuzzy, like this: ``method``
++
++        :param name: The field name.
++        :return: Callable object.
++        :raise FieldError: When field is invalid.
++        """
++        for provider in dir(self._gen):
++            provider = getattr(self._gen, provider)
++            if name in dir(provider):
++                return getattr(provider, name)
++
++        raise FieldError(name)
++
++    def _lookup_method(self, name: str) -> t.Any:
++        """Lookup method by the field name.
++
++        :param name: The field name.
++        :return: Callable object.
++        :raise FieldError: When field is invalid.
++        """
++        # Support additional delimiters
++        name = re.sub(r"[/:\s]", ".", name)
++
++        if name.count(".") > 1:
++            raise FieldError(name)
++
++        if name not in self._cache:
++            if "." not in name:
++                method = self._fuzzy_lookup(name)
++            else:
++                method = self._explicit_lookup(name)
++            self._cache[name] = method
++
++        return self._cache[name]
+ 
+     def perform(
+         self,
+         name: t.Optional[str] = None,
+         key: Key = None,
+         **kwargs: t.Any,
+     ) -> t.Any:
+@@ -81,56 +139,20 @@
+         :return: Value which represented by method.
+         :raises ValueError: if provider not
+             supported or if field not defined.
+         """
+         if name is None:
+             raise FieldError()
+ 
+-        # Support additional delimiters
+-        name = re.sub(r"[/:\s]", ".", name)
+-
+-        def tail_parser(tails: str, obj: t.Any) -> t.Any:
+-            """Return method from end of tail.
++        result = self._lookup_method(name)(**kwargs)
+ 
+-            :param tails: Tail string
+-            :param obj: Search tail from this object
+-            :return last tailed method
+-            """
+-            provider_name, method_name = tails.split(".", 1)
+-
+-            if "." in method_name:
+-                raise FieldError(name)
+-
+-            attr = getattr(obj, provider_name)
+-            if attr is not None:
+-                try:
+-                    return getattr(attr, method_name)
+-                except AttributeError:
+-                    raise FieldError(name)
++        if key and callable(key):
++            return key(result)
+ 
+-        try:
+-            if name not in self._table:
+-                if "." not in name:
+-                    # Fix https://github.com/lk-geimfari/mimesis/issues/619
+-                    if name == self._gen.choice.Meta.name:
+-                        self._table[name] = self._gen.choice
+-                    else:
+-                        for provider in dir(self._gen):
+-                            provider = getattr(self._gen, provider)
+-                            if name in dir(provider):
+-                                self._table[name] = getattr(provider, name)
+-                else:
+-                    self._table[name] = tail_parser(name, self._gen)
+-
+-            result = self._table[name](**kwargs)
+-            if key and callable(key):
+-                return key(result)
+-            return result
+-        except KeyError:
+-            raise FieldError(name)
++        return result
+ 
+     def __str__(self) -> str:
+         return f"{self.__class__.__name__} <{self._gen.locale}>"
+ 
+ 
+ class Field(BaseField):
+     """Greedy field.
+@@ -170,17 +192,18 @@
+     __slots__ = ("_schema",)
+ 
+     def __init__(self, schema: CallableSchema) -> None:
+         """Initialize schema.
+ 
+         :param schema: A schema (must be a callable object).
+         """
+-        if schema and callable(schema):
++        if schema and callable(schema):  # type: ignore[truthy-function]
+             self._schema = schema
+         else:
++            # This is just a better error message
+             raise SchemaError()
+ 
+     def __mul__(self, other: int) -> t.List[JSON]:
+         """Multiplies the schema by the number of iterations.
+ 
+         Schema multiplication is not lazy, so it will be performed immediately (in fact,
+         you're using :meth:`~mimesis.schema.Schema.create` under the hood).
+@@ -213,26 +236,24 @@
+ 
+             Where you evaluate the schema 2 times and then multiply the resulting list 10 times, you should do this:
+ 
+             >>> schema * (2 * 10) # Evaluates the schema 20 times.
+ 
+             In other words, the first multiplier evaluetes the schema:
+ 
+-            >>> 1 * schema * 5
++            >>> 1 * schema * 3
+ 
+             The result will be:
+ 
+             .. code-block:: json
+ 
+                 [
+                     {"email": "efforts1859@test.com", "token": "f4a29754"},
+                     {"email": "efforts1859@test.com", "token": "f4a29754"},
+                     {"email": "efforts1859@test.com", "token": "f4a29754"},
+-                    {"email": "efforts1859@test.com", "token": "f4a29754"},
+-                    {"email": "efforts1859@test.com", "token": "f4a29754"},
+                 ]
+ 
+             Because schema is evaluated first (`1 * schema`), and then the second multiplier is
+             applied on the result of the first expression since.
+ 
+         :param other: The multiplier.
+         """
+@@ -301,19 +322,19 @@
+             raise ValueError("The number of iterations must be greater than 0.")
+ 
+         return [self._schema() for _ in range(iterations)]
+ 
+     def loop(self) -> t.Iterator[JSON]:
+         """Fulfills a schema **infinitely** in a lazy way.
+ 
+-        This method can be useful when you have some dynamic
+-        conditions in depend on which the generation must be interrupted.
++        This method can be useful when you have dynamic conditions
++        on which the generation must depend and be interrupted accordingly.
+ 
+-        Since data `mimesis` provides are limited, frequent calls of
+-        this method can cause data duplication.
++        Since the data provided by mimesis is limited, frequent
++        calls of this method may cause data duplication.
+ 
+         Before using this method, ask yourself: **Do I really need this**?
+         In most cases, the answer is: Nah, :meth:`iterator` is enough.
+ 
+         **Do not use** this method without **interrupt conditions**, otherwise,
+         you're risking running out of memory.
+ 
+@@ -327,15 +348,15 @@
+             method — **infinite** called infinite for a reason.
+ 
+         :return: An infinite iterator with fulfilled schemas.
+         """
+ 
+         warnings.warn(
+             "You're iterating over the infinite object! "
+-            "The schema.loop() can cause a serious memory leak."
++            "The schema.loop() may cause a serious memory leak."
+             "Please, see: https://mimesis.name/en/latest/api.html#mimesis.schema.Schema.loop"
+         )
+ 
+         while True:
+             yield self._schema()
+ 
+     def iterator(self, iterations: int = 1) -> t.Iterator[JSON]:
+```
+
+### Comparing `mimesis-7.0.0/mimesis/shortcuts.py` & `mimesis-7.1.0/mimesis/shortcuts.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-"""This module is provide internal util functions."""
++"""This module provides internal util functions."""
+ 
+ import functools
+ import typing as t
+ 
+ from mimesis.data import COMMON_LETTERS, ROMANIZATION_DICT
+ from mimesis.locales import Locale, validate_locale
+```
+
+### Comparing `mimesis-7.0.0/mimesis/types.py` & `mimesis-7.1.0/mimesis/types.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -13,43 +13,53 @@
+ """
+ 
+ import datetime
+ import typing as t
+ from decimal import Decimal
+ 
+ __all__ = [
++    "CallableSchema",
+     "Date",
+     "DateTime",
++    "FieldCache",
+     "JSON",
++    "Key",
++    "Keywords",
+     "Matrix",
++    "MissingSeed",
+     "Seed",
+     "Time",
+     "Timestamp",
+-    "Keywords",
+-    "CallableSchema",
+-    "Key",
+ ]
+ 
+ JSON = t.Dict[str, t.Any]
+ 
+ DateTime = datetime.datetime
+ 
+ Time = datetime.time
+ 
+ Date = datetime.date
+ 
+ Timestamp = t.Union[str, int]
+ 
+-Seed = t.Union[None, int, float, str, bytes, bytearray]
++
++class _MissingSeed:
++    """We use this type as a placeholder for cases when seed is not set."""
++
++
++MissingSeed: t.Final = _MissingSeed()
++Seed = t.Union[None, int, float, str, bytes, bytearray, _MissingSeed]
+ 
+ Keywords = t.Union[t.List[str], t.Set[str], t.Tuple[str, ...]]
+ 
+ Matrix = t.Union[
+     t.List[int],
+     t.List[float],
+     t.List[complex],
+     t.List[Decimal],
+ ]
+ 
+ CallableSchema = t.Callable[[], JSON]
+ 
+ Key = t.Optional[t.Callable[[t.Any], t.Any]]
++
++FieldCache = t.Dict[str, t.Callable[[t.Any], t.Any]]
+```
+
+### Comparing `mimesis-7.0.0/pyproject.toml` & `mimesis-7.1.0/pyproject.toml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "mimesis"
+-version = "7.0.0"
++version = "7.1.0"
+ description = "Mimesis: Fake Data Generator."
+ authors = ["Isaak Uchakaev <likid.geimfari@gmail.com>"]
+ license = "MIT"
+ readme = "README.rst"
+ homepage = "https://github.com/lk-geimfari/mimesis"
+ repository = "https://github.com/lk-geimfari/mimesis"
+ documentation = "https://mimesis.name"
+@@ -27,14 +27,15 @@
+     "Intended Audience :: Developers",
+     "Programming Language :: Python",
+     "Programming Language :: Python :: 3",
+     "Programming Language :: Python :: 3 :: Only",
+     "Programming Language :: Python :: 3.8",
+     "Programming Language :: Python :: 3.9",
+     "Programming Language :: Python :: 3.10",
++    "Programming Language :: Python :: 3.11",
+     "Programming Language :: Python :: Implementation :: CPython",
+     "Programming Language :: Python :: Implementation :: PyPy",
+     "Operating System :: OS Independent",
+     "Topic :: Utilities",
+     "Topic :: Software Development",
+     "Topic :: Software Development :: Testing",
+     "License :: OSI Approved :: MIT License",
+@@ -42,41 +43,41 @@
+ exclude = [
+     "mimesis/data/locale_template",
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.8"
+ 
+-[tool.poetry.dev-dependencies]
++[tool.poetry.group.dev.dependencies]
+ codecov = "^2.1"
+-pytest = "^7.1"
+-pytest-isort = "^3.0.0"
++pytest = "^7.2"
+ pytest-cov = "^3.0"
+ pytest-mock = "^3.10"
+ requests = "^2.28"
+-mypy = "^0.960"
+-colorama = "^0.4.5"
++mypy = "^1.1"
++colorama = "^0.4.6"
+ pygments = "^2.13"
+ pytest-randomly = "^3.12"
+-check-manifest = "^0.48"
+-readme-renderer = "^36.0"
+-pytz = "^2022.5"
+-black = "^22.10.0"
+-autoflake = "^1.7"
+-types-pytz = "^2022.4.0"
++pytz = "^2023.3"
++black = "^22.10"
++autoflake = "^2.0"
++types-pytz = "^2023.3"
+ taskipy = "^1.10.1"
+ validators = "^0.20.0"
+ pytest-repeat = "^0.9.1"
+-memory-profiler = "^0.60.0"
++memory-profiler = "^0.61.0"
+ Sphinx = "^5.1.1"
+ sphinx-copybutton = "^0.5.0"
+ sphinx-autodoc-typehints = "^1.19.2"
++isort = "^5.12"
++
++[tool.poetry.plugins."pytest_randomly.random_seeder"]
++mimesis = "mimesis.entrypoints:pytest_randomly_reseed"
+ 
+ [tool.pytest.ini_options]
+-addopts = "--isort"
+ testpaths = [
+     "mimesis",
+     "tests",
+     "minifier.py",
+ ]
+ 
+ [tool.mypy]
+@@ -96,24 +97,15 @@
+ disallow_incomplete_defs = true
+ disallow_untyped_decorators = true
+ no_implicit_optional = true
+ warn_return_any = true
+ strict_equality = true
+ 
+ [tool.isort]
+-multi_line_output = 3
+-include_trailing_comma = true
+-sections = [
+-    "FUTURE",
+-    "STDLIB",
+-    "THIRDPARTY",
+-    "FIRSTPARTY",
+-    "LOCALFOLDER",
+-]
+-default_section = "FIRSTPARTY"
++profile = "wemake"
+ 
+ [tool.taskipy.tasks]
+ minify = "python minifier.py"
+ [build-system]
+ requires = ["poetry-core>=1.0.0"]
+ build-backend = "poetry.core.masonry.api"
+```
+
+### Comparing `mimesis-7.0.0/PKG-INFO` & `mimesis-7.1.0/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mimesis
+-Version: 7.0.0
++Version: 7.1.0
+ Summary: Mimesis: Fake Data Generator.
+ Home-page: https://github.com/lk-geimfari/mimesis
+ License: MIT
+ Keywords: data,datascince,database,dummy,fake,faker,fixtures,generate,mimesis,mock,populate,testing
+ Author: Isaak Uchakaev
+ Author-email: likid.geimfari@gmail.com
+ Requires-Python: >=3.8,<4.0
+@@ -17,14 +17,15 @@
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3 :: Only
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: Implementation :: CPython
+ Classifier: Programming Language :: Python :: Implementation :: PyPy
+ Classifier: Topic :: Software Development
+ Classifier: Topic :: Software Development :: Testing
+ Classifier: Topic :: Utilities
+@@ -65,18 +66,16 @@
+      :target: https://pypi.org/project/mimesis/
+      :alt: PyPI - Downloads
+ 
+ .. image:: https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%20pypy-brightgreen
+      :target: https://pypi.org/project/mimesis/
+      :alt: Python version
+ 
+-Mimesis (`/mɪˈmiːsɪs <https://mimesis.name/en/master/about.html#what-does-name-mean>`_) is a high-performance fake data generator for Python,
+-which provides data for a variety of purposes in a variety of languages. The fake data could be used to populate
+-a testing database, create fake API endpoints, create JSON and XML files of arbitrary structure, anonymize data taken
+-from production and etc.
++
++Mimesis (`/mɪˈmiːsɪs <https://mimesis.name/en/master/about.html#what-does-name-mean>`_) is a robust data generator for Python that can produce a wide range of fake data in various languages. This tool is useful for populating testing databases, creating fake API endpoints, generating JSON and XML files with custom structures, and anonymizing production data, among other purposes. 
+ 
+ Installation
+ ------------
+ 
+ 
+ To install mimesis, simply use pip:
+ 
+@@ -84,31 +83,28 @@
+ 
+     pip install mimesis
+ 
+ 
+ Python compatibility
+ ---------------------
+ 
+-Mimesis supports Python 3.8^ (also PyPy 3.8) or higher.
+-
+-The Mimesis 4.1.3 is the last to support Python 3.6 and 3.7.
++Mimesis is compatible with Python, including PyPy, version 3.8 or higher. The Mimesis 4.1.3 is the last release that accommodates Python 3.6 and 3.7.
+ 
+ Supported Features
+ ------------------
+ 
+-- **Easy**: Designed to be easy to use and learn.
+-- **Multilingual**: Supports data for `a lot of languages <https://mimesis.name/en/latest/getting_started.html#supported-locales>`_.
+-- **Performance**: The `fastest <https://mimesis.name/en/latest/about.html#performance>`_ data generator available for Python.
+-- **Data variety**: Supports `a lot of data providers <https://mimesis.name/en/latest/api.html>`_ for a variety of purposes.
+-- **Country-specific data providers**: Provides data specific only for `some countries <https://mimesis.name/en/latest/api.html#builtin-data-providers>`_.
+-- **Extensibility**: You can create your own data providers and use them with Mimesis.
+-- **Generic data provider**: The `simplified <https://mimesis.name/en/latest/getting_started.html#generic-provider>`_ access to all the providers from a single object.
+-- **Zero hard dependencies**: Does not require any modules other than the Python standard library.
+-- **Schema-based generators**: Provides an easy mechanism to `generate data by the schema <https://mimesis.name/en/master/getting_started.html#schema-and-fields>`_ of any complexity.
+-
++- **Easy**: A simple design and clear documentation for easy and swift data generation.
++- **Multilingual**: Mimesis generates data in a vast range of `languages <https://mimesis.name/en/latest/getting_started.html#supported-locales>`_.
++- **Performance**: Mimesis has excellent performance and is widely regarded as the fastest data generator among all Python solutions available.
++- **Data variety**: Mimesis supports a broad range of data providers, including names, addresses, phone numbers, email addresses, dates, times, and more, enabling users to generate data for various purposes.
++- **Country-specific data providers**: Mimesis supports country-specific data providers for generating country-specific data.
++- **Extensibility**: Mimesis is extensible, allowing developers to create and integrate their own data providers with the library.
++- **Generic data provider**: Mimesis provides a generic data provider that offers easy access to all the available data providers within the library from a single object.
++- **Zero hard dependencies**: Mimesis has zero hard dependencies and does not require the installation of any thrid-party libraries.
++- **Schema-based generators**: Mimesis provides schema-based data generators, offering an effortless way to produce data by the schema of any complexity.
+ 
+ Documentation
+ -------------
+ 
+ You can find the complete documentation on the `Read the Docs <https://mimesis.name/en/latest/>`_.
+ 
+ It is divided into several sections:
+@@ -121,19 +117,17 @@
+ -  `Changelog <https://mimesis.name/en/latest/changelog.html>`_
+ 
+ You can improve it by sending pull requests to this repository.
+ 
+ Usage
+ -----
+ 
+-This library is really easy to use and everything you need is just import an object which
+-represents a type of data you need (we call such object a *Provider*).
++The library is exceptionally user-friendly, and it only requires you to import a **Data Provider** object that corresponds to the desired data type. 
+ 
+-In the example below we import provider `Person <https://mimesis.name/en/latest/api.html#person>`_,
+-which represents data related to personal information, such as name, surname, email and etc:
++For instance, the `Person <https://mimesis.name/en/latest/api.html#person>`_ provider can be imported to access personal information, including name, surname, email, and other related fields:
+ 
+ .. code:: python
+ 
+     >>> from mimesis import Person
+     >>> from mimesis.locales import Locale
+     >>> person = Person(Locale.EN)
+ 
+@@ -154,19 +148,17 @@
+ 
+ .. _documentation: https://mimesis.name/en/latest/getting_started.html#data-providers
+ 
+ 
+ Locales
+ -------
+ 
+-Mimesis currently includes support for 34 different `locales`_. You can
+-specify a locale when creating providers and they will return data that
+-is appropriate for the language or country associated with that locale.
++Mimesis presently encompasses 34 distinct `locales`_, enabling users to specify the desired region and language when creating providers.
+ 
+-Let's take a look how it works:
++Here's how it operates practically:
+ 
+ .. code:: python
+ 
+     >>> from mimesis import Person
+     >>> from mimesis.locales import Locale
+     >>> from mimesis.enums import Gender
+ 
+@@ -181,34 +173,15 @@
+ 
+ 
+ .. _locales: https://mimesis.name/en/latest/getting_started.html#supported-locales
+ 
+ Providers
+ ---------
+ 
+-Mimesis support over twenty different data providers available,
+-which can produce data related to people, food, computer hardware,
+-transportation, addresses, internet and more.
+-
+-
+-You can generate a lot of extremely detailed data:
+-
+-.. code:: python
+-
+-    >>> from mimesis import Internet, Development
+-    >>> from mimesis.enums import URLScheme, DSNType
+-    >>> internet = Internet()
+-    >>> development = Development()
+-    >>> internet.url(scheme=URLScheme.WSS, subdomains=["chat"])
+-    'wss://chat.system.io/'
+-    >>> development.dsn(dsn_type=DSNType.REDIS, subdomains=["cache"])
+-    'redis://cache.fisher.app:5432'
+-    >>> development.dsn(dsn_type=DSNType.POSTGRES, tld_type=TLDType.CCTLD)
+-    'postgres://posted.sy:5432'
+-
++Mimesis provides more than twenty data providers which can generate a broad range of data related to food, transportation, computer hardware, people, internet, addresses, and more. 
+ 
+ See `API Reference <https://mimesis.name/en/latest/api.html>`_ and `Data Providers <https://mimesis.name/en/latest/getting_started.html#data-providers>`_ for more info.
+ 
+ How to Contribute
+ -----------------
+ 
+ 1. Take a look at `contributing guidelines`_.
+@@ -220,25 +193,19 @@
+ 5. Send a pull request and bug the maintainer until it gets merged and
+    published.
+ 
+ .. _contributing guidelines: https://github.com/lk-geimfari/mimesis/blob/master/CONTRIBUTING.rst
+ .. _contributors: https://github.com/lk-geimfari/mimesis/blob/master/CONTRIBUTORS.rst
+ 
+ 
+-Useful links
+-------------
+-
+-I have a Telegram channel where I daily post news, announces and all the open-source
+-goodies I found, so subscribe: `@software_dev_channel <https://t.me/software_dev_channel>`_.
+-
+ Disclaimer
+ ----------
+ 
+-The authors of `Mimesis` do not assume any responsibility for how you use it or how you use data generated with it.
+-This library was designed with good intentions to make testing easier. Do not use the data generated with Mimesis for illegal purposes.
++The creators of `Mimesis` do not hold themselves accountable for how you employ the library's functionalities or the data generated with it. 
++Mimesis is designed to facilitate testing and with good intentions. Mimesis should not be used for illicit purposes.
+ 
+ License
+ -------
+ 
+ Mimesis is licensed under the MIT License. See `LICENSE`_ for more
+ information.
+```
+

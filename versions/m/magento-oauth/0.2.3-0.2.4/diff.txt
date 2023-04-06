@@ -1,0 +1,124 @@
+--- tmp/magento_oauth-0.2.3.tar.gz
++++ tmp/magento_oauth-0.2.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "magento_oauth-0.2.3.tar", last modified: Thu Apr  6 19:34:38 2023, max compression
+│ +gzip compressed data, was "magento_oauth-0.2.4.tar", last modified: Thu Apr  6 21:16:13 2023, max compression
+│   --- magento_oauth-0.2.3.tar
+├── +++ magento_oauth-0.2.4.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 19:34:38.516446 magento_oauth-0.2.3/
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)      689 2023-04-06 19:34:38.514461 magento_oauth-0.2.3/PKG-INFO
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)       38 2023-04-06 19:34:38.517445 magento_oauth-0.2.3/setup.cfg
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)      848 2023-04-06 19:34:25.000000 magento_oauth-0.2.3/setup.py
+│ │ -drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 19:34:38.365370 magento_oauth-0.2.3/src/
+│ │ -drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 19:34:38.462409 magento_oauth-0.2.3/src/magento_oauth.egg-info/
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)      689 2023-04-06 19:34:38.000000 magento_oauth-0.2.3/src/magento_oauth.egg-info/PKG-INFO
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)      285 2023-04-06 19:34:38.000000 magento_oauth-0.2.3/src/magento_oauth.egg-info/SOURCES.txt
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)        1 2023-04-06 19:34:38.000000 magento_oauth-0.2.3/src/magento_oauth.egg-info/dependency_links.txt
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)       47 2023-04-06 19:34:38.000000 magento_oauth-0.2.3/src/magento_oauth.egg-info/requires.txt
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)       14 2023-04-06 19:34:38.000000 magento_oauth-0.2.3/src/magento_oauth.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 19:34:38.496447 magento_oauth-0.2.3/src/oauth_magento/
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 13:45:44.000000 magento_oauth-0.2.3/src/oauth_magento/__init__.py
+│ │ --rwxrwxrwx   0 noone     (1000) noone     (1000)     1056 2023-04-06 19:34:13.000000 magento_oauth-0.2.3/src/oauth_magento/oauth_magento_openedx.py
+│ │ +drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 21:16:14.098166 magento_oauth-0.2.4/
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)      689 2023-04-06 21:16:14.096164 magento_oauth-0.2.4/PKG-INFO
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)       38 2023-04-06 21:16:14.099164 magento_oauth-0.2.4/setup.cfg
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)      848 2023-04-06 21:16:08.000000 magento_oauth-0.2.4/setup.py
+│ │ +drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 21:16:13.959166 magento_oauth-0.2.4/src/
+│ │ +drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 21:16:14.046485 magento_oauth-0.2.4/src/magento_oauth.egg-info/
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)      689 2023-04-06 21:16:13.000000 magento_oauth-0.2.4/src/magento_oauth.egg-info/PKG-INFO
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)      285 2023-04-06 21:16:13.000000 magento_oauth-0.2.4/src/magento_oauth.egg-info/SOURCES.txt
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)        1 2023-04-06 21:16:13.000000 magento_oauth-0.2.4/src/magento_oauth.egg-info/dependency_links.txt
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)       47 2023-04-06 21:16:13.000000 magento_oauth-0.2.4/src/magento_oauth.egg-info/requires.txt
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)       14 2023-04-06 21:16:13.000000 magento_oauth-0.2.4/src/magento_oauth.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 21:16:14.079485 magento_oauth-0.2.4/src/oauth_magento/
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)        0 2023-04-06 13:45:44.000000 magento_oauth-0.2.4/src/oauth_magento/__init__.py
+│ │ +-rwxrwxrwx   0 noone     (1000) noone     (1000)     1214 2023-04-06 21:15:52.000000 magento_oauth-0.2.4/src/oauth_magento/oauth_magento_openedx.py
+│ │   --- magento_oauth-0.2.3/PKG-INFO
+│ ├── +++ magento_oauth-0.2.4/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: magento_oauth
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: A Python package for Magento OAuth2 authentication
+│ │  Home-page: https://github.com/Francisco-Huerta/oauth_magento_openedx
+│ │  Author: Francisco Huerta Yumha
+│ │  Author-email: UNKNOWN
+│ │  License: UNKNOWN
+│ │  Description: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │   --- magento_oauth-0.2.3/setup.py
+│ ├── +++ magento_oauth-0.2.4/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name='magento_oauth',
+│ │ -    version='0.2.3',
+│ │ +    version='0.2.4',
+│ │      packages=find_packages('src'),
+│ │      package_dir={'': 'src'},
+│ │      install_requires=[
+│ │          'social-auth-core>=4.0,<5.0',
+│ │          'requests>=2.25,<3.0'
+│ │      ],
+│ │      author='Francisco Huerta Yumha',
+│ │   --- magento_oauth-0.2.3/src/magento_oauth.egg-info/PKG-INFO
+│ ├── +++ magento_oauth-0.2.4/src/magento_oauth.egg-info/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: magento-oauth
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: A Python package for Magento OAuth2 authentication
+│ │  Home-page: https://github.com/Francisco-Huerta/oauth_magento_openedx
+│ │  Author: Francisco Huerta Yumha
+│ │  Author-email: UNKNOWN
+│ │  License: UNKNOWN
+│ │  Description: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │   --- magento_oauth-0.2.3/src/oauth_magento/oauth_magento_openedx.py
+│ ├── +++ magento_oauth-0.2.4/src/oauth_magento/oauth_magento_openedx.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,26 +1,29 @@
+│ │ +import random
+│ │ +import string
+│ │  from social_core.backends.oauth import BaseOAuth1
+│ │  
+│ │  class MagentoOAuth1(BaseOAuth1):
+│ │      name = 'magento'
+│ │      ID_KEY = 'id'
+│ │      REQUEST_TOKEN_URL = 'https://docentedigital.app/oauth/token/request'
+│ │      AUTHORIZATION_URL = 'https://docentedigital.app/oauth/authorize'
+│ │      ACCESS_TOKEN_URL = 'https://docentedigital.app/oauth/token/access'
+│ │      USER_DATA_URL = 'https://docentedigital.app/rest/V1/customers/me'
+│ │  
+│ │      def get_user_details(self, response):
+│ │          """Extract user details from the response object."""
+│ │          return {
+│ │              'email': response.get('email', ''),
+│ │ -            'first_name': response.get('firstname', ''),
+│ │ -            'last_name': response.get('lastname', ''),
+│ │ +            'first_name': response.get('first_name', ''),
+│ │ +            'last_name': response.get('last_name', ''),
+│ │          }
+│ │  
+│ │ -    def user_data(self, access_token, access_token_secret, *args, **kwargs):
+│ │ +    def user_data(self, access_token, *args, **kwargs):
+│ │          """Load user data from the remote service."""
+│ │          headers = {
+│ │ -            'Authorization': 'Bearer ' + access_token,
+│ │ -            'Content-Type': 'application/json',
+│ │ +            'oauth_consumer_key': self.setting('KEY'),
+│ │ +            'oauth_nonce': ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(32)),
+│ │ +            'oauth_signature_method': 'HMAC-SHA1',
+│ │          }
+│ │ -        response = self.get_json(self.USER_DATA_URL, headers=headers)
+│ │ +        response = self.get_json(self.USER_DATA_URL, headers=headers, auth=self.oauth_auth(access_token))
+│ │          return response

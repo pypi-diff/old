@@ -1,0 +1,2095 @@
+--- tmp/databricks-feature-lookup-0.3.1a2.tar.gz
++++ tmp/databricks-feature-lookup-0.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "databricks-feature-lookup-0.3.1a2.tar", last modified: Fri Jan 27 23:32:28 2023, max compression
+│ +gzip compressed data, was "databricks-feature-lookup-0.4.0.tar", last modified: Thu Apr  6 20:47:14 2023, max compression
+│   --- databricks-feature-lookup-0.3.1a2.tar
+├── +++ databricks-feature-lookup-0.4.0.tar
+│ ├── file list
+│ │ @@ -1,70 +1,72 @@
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.409430 databricks-feature-lookup-0.3.1a2/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2414 2022-07-20 05:31:47.000000 databricks-feature-lookup-0.3.1a2/LICENSE.md
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      426 2022-07-20 05:31:47.000000 databricks-feature-lookup-0.3.1a2/NOTICE.md
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     4221 2023-01-27 23:32:28.409254 databricks-feature-lookup-0.3.1a2/PKG-INFO
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     3488 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/README.md
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.381754 databricks-feature-lookup-0.3.1a2/databricks/
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.384919 databricks-feature-lookup-0.3.1a2/databricks/_feature_store_pkg_metadata/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      166 2022-10-06 23:48:00.000000 databricks-feature-lookup-0.3.1a2/databricks/_feature_store_pkg_metadata/__init__.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.385325 databricks-feature-lookup-0.3.1a2/databricks/_feature_store_pkg_metadata/_lookup_client_pkg_metadata/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)        0 2022-10-06 23:48:00.000000 databricks-feature-lookup-0.3.1a2/databricks/_feature_store_pkg_metadata/_lookup_client_pkg_metadata/__init__.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.387110 databricks-feature-lookup-0.3.1a2/databricks/feature_store/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1980 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/__init__.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.395477 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)        0 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/__init__.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1297 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/_feature_store_object.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1489 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/_proto_enum_entity.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      444 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/cloud.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      257 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/column_info.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      913 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/data_type.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2525 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_column_info.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    13718 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_spec.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      378 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_spec_constants.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1098 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_table_info.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     3635 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_tables_for_serving.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     6817 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/online_feature_table.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     5484 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/online_store_for_serving.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      489 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/query_mode.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      715 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/source_data_column_info.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      607 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/store_type.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      141 2023-01-27 23:26:25.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/feature_lookup_version.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.398433 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      780 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/__init__.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     6956 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_cosmosdb_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    20127 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_dynamodb_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      773 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2832 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_mysql_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     6934 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_sql_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2130 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_sql_server_engine.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    24511 2023-01-27 23:26:25.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/mlflow_model.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1338 2023-01-27 23:26:25.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/mlflow_model_constants.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    10562 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/online_lookup_client.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.399683 databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)        0 2022-07-20 05:31:47.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/__init__.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     4459 2023-01-20 23:51:27.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/feature_spec_pb2.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    18242 2023-01-20 23:51:27.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/feature_store_serving_pb2.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.407545 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)        0 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/__init__.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     3877 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/converter_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1736 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/cosmosdb_type_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      949 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/cosmosdb_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      765 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/data_type_details_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1739 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/dynamodb_type_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     4955 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/dynamodb_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      347 2023-01-20 18:29:21.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/feature_serving_patch.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1397 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/feature_spec_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1236 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/file_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)    11749 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/pandas_type_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     8049 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/serving_test_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     1278 2023-01-13 00:15:59.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/sql_type_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      318 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/test_utils_common.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     8595 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/uc_utils.py
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)      485 2023-01-03 23:39:08.000000 databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/utils_common.py
+│ │ -drwxr-xr-x   0 mingyang.ge   (502) staff       (20)        0 2023-01-27 23:32:28.408938 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     4221 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2896 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)        1 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)       94 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/requires.txt
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)       11 2023-01-27 23:32:28.000000 databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/top_level.txt
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)       38 2023-01-27 23:32:28.409495 databricks-feature-lookup-0.3.1a2/setup.cfg
+│ │ --rw-r--r--   0 mingyang.ge   (502) staff       (20)     2724 2023-01-13 00:17:50.000000 databricks-feature-lookup-0.3.1a2/setup.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.623471 databricks-feature-lookup-0.4.0/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2414 2022-04-15 06:23:53.000000 databricks-feature-lookup-0.4.0/LICENSE.md
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      426 2022-04-15 06:23:53.000000 databricks-feature-lookup-0.4.0/NOTICE.md
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     4219 2023-04-06 20:47:14.623304 databricks-feature-lookup-0.4.0/PKG-INFO
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     3488 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/README.md
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.597884 databricks-feature-lookup-0.4.0/databricks/
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.599890 databricks-feature-lookup-0.4.0/databricks/_feature_store_pkg_metadata/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      166 2022-09-26 23:04:45.000000 databricks-feature-lookup-0.4.0/databricks/_feature_store_pkg_metadata/__init__.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.600250 databricks-feature-lookup-0.4.0/databricks/_feature_store_pkg_metadata/_lookup_client_pkg_metadata/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)        0 2022-09-26 23:04:45.000000 databricks-feature-lookup-0.4.0/databricks/_feature_store_pkg_metadata/_lookup_client_pkg_metadata/__init__.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.601666 databricks-feature-lookup-0.4.0/databricks/feature_store/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1980 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/__init__.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.613784 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)        0 2022-09-28 20:02:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/__init__.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1309 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/_feature_store_object.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1489 2022-09-28 20:02:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/_proto_enum_entity.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      444 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/cloud.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     3039 2023-04-04 22:12:23.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/column_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      913 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/data_type.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2553 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_column_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    19284 2023-04-04 22:12:23.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_spec.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      715 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_spec_constants.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1055 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_table_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     3635 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_tables_for_serving.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      891 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/function_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1978 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/on_demand_column_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     6817 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/online_feature_table.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     5484 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/online_store_for_serving.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      489 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/query_mode.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      855 2023-04-04 22:12:23.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/source_data_column_info.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      607 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/entities/store_type.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      139 2023-04-06 20:39:11.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/feature_lookup_version.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.615838 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      753 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/__init__.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     7740 2023-04-04 23:58:41.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_cosmosdb_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    21707 2023-04-04 23:58:41.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_dynamodb_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      923 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2832 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_mysql_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     7533 2023-04-04 23:58:41.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_sql_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2130 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_sql_server_engine.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    27030 2023-04-04 23:33:14.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/mlflow_model.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1638 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/mlflow_model_constants.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    10759 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/online_lookup_client.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.616924 databricks-feature-lookup-0.4.0/databricks/feature_store/protos/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)        0 2022-04-15 06:23:53.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/protos/__init__.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     6382 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/protos/feature_spec_pb2.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    20655 2023-04-04 23:58:41.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/protos/feature_store_serving_pb2.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.621869 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)        0 2022-09-28 20:02:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/__init__.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     3877 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/converter_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1736 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/cosmosdb_type_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      949 2022-12-14 01:59:08.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/cosmosdb_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      765 2022-12-14 01:59:08.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/data_type_details_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1739 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/dynamodb_type_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     4955 2023-03-28 23:36:17.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/dynamodb_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      347 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/feature_serving_patch.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2302 2023-03-30 17:46:27.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/feature_spec_test_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2631 2023-04-04 23:58:41.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/metrics_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)    11749 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/pandas_type_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     8049 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/serving_test_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1278 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/sql_type_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)      318 2022-09-28 20:02:48.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/test_utils_common.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     8595 2022-12-14 01:59:08.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/uc_utils.py
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     1539 2023-04-04 22:12:23.000000 databricks-feature-lookup-0.4.0/databricks/feature_store/utils/utils_common.py
+│ │ +drwxr-xr-x   0 victor.sun   (502) staff       (20)        0 2023-04-06 20:47:14.623037 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     4219 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     3014 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)        1 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)       94 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/requires.txt
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)       11 2023-04-06 20:47:14.000000 databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)       38 2023-04-06 20:47:14.623526 databricks-feature-lookup-0.4.0/setup.cfg
+│ │ +-rw-r--r--   0 victor.sun   (502) staff       (20)     2724 2023-03-03 03:12:48.000000 databricks-feature-lookup-0.4.0/setup.py
+│ │   --- databricks-feature-lookup-0.3.1a2/LICENSE.md
+│ ├── +++ databricks-feature-lookup-0.4.0/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/PKG-INFO
+│ ├── +++ databricks-feature-lookup-0.4.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: databricks-feature-lookup
+│ │ -Version: 0.3.1a2
+│ │ +Version: 0.4.0
+│ │  Summary: Databricks Feature Store Feature Lookup Client
+│ │  Author: Databricks
+│ │  Author-email: feedback@databricks.com
+│ │  License: Databricks Proprietary License
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: License :: Other/Proprietary License
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │   --- databricks-feature-lookup-0.3.1a2/README.md
+│ ├── +++ databricks-feature-lookup-0.4.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/__init__.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/_feature_store_object.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/_feature_store_object.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,11 +1,12 @@
+│ │ +import abc
+│ │  import pprint
+│ │  
+│ │  
+│ │ -class _FeatureStoreObject(object):
+│ │ +class _FeatureStoreObject(abc.ABC):
+│ │      def __iter__(self):
+│ │          # Iterate through list of properties and yield as key -> value
+│ │          for prop in self._properties():
+│ │              yield prop, self.__getattribute__(prop)
+│ │  
+│ │      @classmethod
+│ │      def _properties(cls):
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/_proto_enum_entity.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/_proto_enum_entity.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/data_type.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/data_type.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_column_info.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_column_info.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  from typing import List, Optional
+│ │  
+│ │ -from databricks.feature_store.entities.column_info import ColumnInfo
+│ │ +from databricks.feature_store.entities._feature_store_object import _FeatureStoreObject
+│ │  from databricks.feature_store.protos.feature_spec_pb2 import (
+│ │      FeatureColumnInfo as ProtoFeatureColumnInfo,
+│ │  )
+│ │  
+│ │  
+│ │ -class FeatureColumnInfo(ColumnInfo):
+│ │ +class FeatureColumnInfo(_FeatureStoreObject):
+│ │      def __init__(
+│ │          self,
+│ │          table_name: str,
+│ │          feature_name: str,
+│ │          lookup_key: List[str],
+│ │          output_name: str,
+│ │          timestamp_lookup_key: Optional[List[str]] = None,
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_spec.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_spec.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,272 +1,383 @@
+│ │  import os
+│ │ -from typing import List, Union
+│ │ +from typing import Any, Dict, List, Type, Union
+│ │  
+│ │  import mlflow
+│ │  from google.protobuf.json_format import MessageToDict, ParseDict
+│ │ -from mlflow.utils import file_utils as mlflow_file_utils
+│ │ -from mlflow.utils.file_utils import TempDir
+│ │ +from mlflow.utils.file_utils import TempDir, read_yaml, write_yaml
+│ │  
+│ │ +from databricks.feature_store.entities._feature_store_object import _FeatureStoreObject
+│ │ +from databricks.feature_store.entities.column_info import ColumnInfo
+│ │  from databricks.feature_store.entities.feature_column_info import FeatureColumnInfo
+│ │  from databricks.feature_store.entities.feature_spec_constants import (
+│ │ +    BOUND_TO,
+│ │      FEATURE_COLUMN_INFO,
+│ │      FEATURE_STORE,
+│ │ +    INCLUDE,
+│ │ +    INPUT_BINDINGS,
+│ │      INPUT_COLUMNS,
+│ │ +    INPUT_FUNCTIONS,
+│ │      INPUT_TABLES,
+│ │      NAME,
+│ │ +    ON_DEMAND_COLUMN_INFO,
+│ │ +    ON_DEMAND_FEATURE,
+│ │      OUTPUT_NAME,
+│ │ +    PARAMETER,
+│ │      SERIALIZATION_VERSION,
+│ │      SOURCE,
+│ │      SOURCE_DATA_COLUMN_INFO,
+│ │ -    TABLE_ID,
+│ │      TABLE_NAME,
+│ │      TRAINING_DATA,
+│ │ +    UDF_NAME,
+│ │  )
+│ │  from databricks.feature_store.entities.feature_table_info import FeatureTableInfo
+│ │ +from databricks.feature_store.entities.function_info import FunctionInfo
+│ │ +from databricks.feature_store.entities.on_demand_column_info import OnDemandColumnInfo
+│ │  from databricks.feature_store.entities.source_data_column_info import (
+│ │      SourceDataColumnInfo,
+│ │  )
+│ │  from databricks.feature_store.protos.feature_spec_pb2 import (
+│ │ -    ColumnInfo as ProtoColumnInfo,
+│ │ -)
+│ │ -from databricks.feature_store.protos.feature_spec_pb2 import (
+│ │      FeatureSpec as ProtoFeatureSpec,
+│ │  )
+│ │ -from databricks.feature_store.utils import file_utils as fs_file_utils
+│ │ +from databricks.feature_store.utils import utils_common
+│ │  from databricks.feature_store.utils.utils_common import is_artifact_uri
+│ │  
+│ │ -# Change log for serialization version
+│ │ -# Please update for each serialization version.
+│ │ -# 1. initial.
+│ │ -# 2. (2021/06/16): Record feature_store_client_version to help us
+│ │ -# making backward compatible changes in the future.
+│ │ +# Change log for serialization version. Please update for each serialization version.
+│ │ +# 1. Initial.
+│ │ +# 2. (2021/06/16): Record feature_store_client_version to help us make backward compatible changes in the future.
+│ │  # 3. (2021/08/25): Record table_id to handle feature table lineage stability if tables are deleted.
+│ │  # 4. (2021/09/25): Record timestamp_lookup_key to handle point-in-time lookups.
+│ │ +# 5. (2021/02/15): Record include flag for column info if False.
+│ │ +#                  Record input functions as FunctionInfo and function computation as OnDemandColumnInfo.
+│ │ +#                  Remove redundant fields: table_name from table_infos, output_name from column_infos.
+│ │  
+│ │  
+│ │ -class FeatureSpec:
+│ │ +class FeatureSpec(_FeatureStoreObject):
+│ │  
+│ │      FEATURE_ARTIFACT_FILE = "feature_spec.yaml"
+│ │ -    SERIALIZATION_VERSION_NUMBER = 4
+│ │ +    SERIALIZATION_VERSION_NUMBER = 5
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ -        column_infos: List[Union[FeatureColumnInfo, SourceDataColumnInfo]],
+│ │ +        column_infos: List[ColumnInfo],
+│ │          table_infos: List[FeatureTableInfo],
+│ │ +        function_infos: List[FunctionInfo],
+│ │          workspace_id: int,
+│ │          feature_store_client_version: str,
+│ │ +        serialization_version: int,
+│ │      ):
+│ │ -        if not column_infos:
+│ │ +        self._column_infos = column_infos
+│ │ +        self._table_infos = table_infos
+│ │ +        self._function_infos = function_infos
+│ │ +        self._workspace_id = workspace_id
+│ │ +        # The Feature Store Python client version which wrote this FeatureSpec.
+│ │ +        # If empty, the client version is <=0.3.1.
+│ │ +        self._feature_store_client_version = feature_store_client_version
+│ │ +        self._serialization_version = serialization_version
+│ │ +
+│ │ +        # Perform validations
+│ │ +        self._validate_column_infos()
+│ │ +        self._validate_table_infos()
+│ │ +        self._validate_function_infos()
+│ │ +
+│ │ +    def _validate_column_infos(self):
+│ │ +        if not self.column_infos:
+│ │              raise ValueError("column_infos must be non-empty.")
+│ │  
+│ │ -        for column_info in column_infos:
+│ │ -            if not isinstance(column_info, (FeatureColumnInfo, SourceDataColumnInfo)):
+│ │ +        for column_info in self.column_infos:
+│ │ +            if not isinstance(column_info, ColumnInfo):
+│ │                  raise ValueError(
+│ │ -                    f"Expected all elements of column_infos to be instances of SourceDataColumnInfo"
+│ │ -                    f" or FeatureColumnInfo. '{column_info}' is of the wrong type."
+│ │ +                    f"Expected all elements of column_infos to be instances of ColumnInfo. "
+│ │ +                    f"'{column_info}' is of the wrong type."
+│ │                  )
+│ │  
+│ │ -        self._column_infos = column_infos
+│ │ -        # table_infos must be present
+│ │ -        if table_infos is None:
+│ │ -            raise ValueError("table_infos must be provided.")
+│ │ -        # The mapping of feature table name to feature table ids.
+│ │ -        self._table_infos = table_infos
+│ │ -        self._workspace_id = workspace_id
+│ │ -        # The Feature Store python client version which wrote this FeatureSpec. If empty, the
+│ │ -        # version is <=0.3.1.
+│ │ -        self._feature_store_client_version = feature_store_client_version
+│ │ +    def _validate_table_infos(self):
+│ │ +        if self.table_infos is None:
+│ │ +            raise ValueError("Internal Error: table_infos must be provided.")
+│ │ +
+│ │ +        # table_infos should not be duplicated
+│ │ +        utils_common.validate_strings_unique(
+│ │ +            [table_info.table_name for table_info in self.table_infos],
+│ │ +            "Internal Error: Expect all table_names in table_infos to be unique. Found duplicates {}",
+│ │ +        )
+│ │  
+│ │ -    def __eq__(self, other):
+│ │ -        if not isinstance(other, FeatureSpec):
+│ │ -            return False
+│ │ -        return self.__dict__ == other.__dict__
+│ │ +        # Starting FeatureSpec v3, unique table names in table_infos must match those in column_infos.
+│ │ +        if self.serialization_version >= 3:
+│ │ +            unique_table_names = set(
+│ │ +                [table_info.table_name for table_info in self.table_infos]
+│ │ +            )
+│ │ +            unique_column_table_names = set(
+│ │ +                [fci.table_name for fci in self.feature_column_infos]
+│ │ +            )
+│ │ +            if unique_table_names != unique_column_table_names:
+│ │ +                raise Exception(
+│ │ +                    f"Internal Error: table_names from table_infos {sorted(unique_table_names)} "
+│ │ +                    f"must match those from column_infos {sorted(unique_column_table_names)}"
+│ │ +                )
+│ │ +
+│ │ +    def _validate_function_infos(self):
+│ │ +        if self.function_infos is None:
+│ │ +            raise ValueError("Internal Error: function_infos must be provided.")
+│ │ +
+│ │ +        # function_infos should not be duplicated
+│ │ +        utils_common.validate_strings_unique(
+│ │ +            [function_info.udf_name for function_info in self.function_infos],
+│ │ +            "Internal Error: Expect all udf_names in function_infos to be unique. Found duplicates {}",
+│ │ +        )
+│ │ +
+│ │ +        # Unique UDF names in function_infos must match those in column_infos.
+│ │ +        # No version check is required as both fields were added simultaneously in FeatureSpec v5.
+│ │ +        unique_udf_names = set(
+│ │ +            [function_info.udf_name for function_info in self.function_infos]
+│ │ +        )
+│ │ +        unique_column_udf_names = set(
+│ │ +            [odci.udf_name for odci in self.on_demand_column_infos]
+│ │ +        )
+│ │ +        if unique_udf_names != unique_column_udf_names:
+│ │ +            raise Exception(
+│ │ +                f"Internal Error: udf_names from function_infos {sorted(unique_udf_names)} "
+│ │ +                f"must match those from column_infos {sorted(unique_column_udf_names)}"
+│ │ +            )
+│ │  
+│ │      @property
+│ │      def column_infos(self):
+│ │          return self._column_infos
+│ │  
+│ │      @property
+│ │      def table_infos(self):
+│ │          return self._table_infos
+│ │  
+│ │      @property
+│ │ -    def source_data_column_infos(self) -> List[SourceDataColumnInfo]:
+│ │ +    def function_infos(self):
+│ │ +        return self._function_infos
+│ │ +
+│ │ +    def _get_infos_of_type(
+│ │ +        self,
+│ │ +        info_type: Union[
+│ │ +            Type[SourceDataColumnInfo],
+│ │ +            Type[FeatureColumnInfo],
+│ │ +            Type[OnDemandColumnInfo],
+│ │ +        ],
+│ │ +    ):
+│ │ +        """
+│ │ +        Helper method to return the ColumnInfo.info subinfo field based on its type.
+│ │ +        """
+│ │          return [
+│ │ -            col_info
+│ │ -            for col_info in self._column_infos
+│ │ -            if isinstance(col_info, SourceDataColumnInfo)
+│ │ +            column_info.info
+│ │ +            for column_info in self.column_infos
+│ │ +            if isinstance(column_info.info, info_type)
+│ │          ]
+│ │  
+│ │      @property
+│ │ +    def source_data_column_infos(self) -> List[SourceDataColumnInfo]:
+│ │ +        return self._get_infos_of_type(SourceDataColumnInfo)
+│ │ +
+│ │ +    @property
+│ │      def feature_column_infos(self) -> List[FeatureColumnInfo]:
+│ │ -        return [
+│ │ -            col_info
+│ │ -            for col_info in self._column_infos
+│ │ -            if isinstance(col_info, FeatureColumnInfo)
+│ │ -        ]
+│ │ +        return self._get_infos_of_type(FeatureColumnInfo)
+│ │ +
+│ │ +    @property
+│ │ +    def on_demand_column_infos(self) -> List[OnDemandColumnInfo]:
+│ │ +        return self._get_infos_of_type(OnDemandColumnInfo)
+│ │  
+│ │      @property
+│ │      def workspace_id(self):
+│ │          return self._workspace_id
+│ │  
+│ │ +    @property
+│ │ +    def serialization_version(self) -> int:
+│ │ +        return self._serialization_version
+│ │ +
+│ │      @classmethod
+│ │      def from_proto(cls, feature_spec_proto):
+│ │          # Serialization version is not deserialized from the proto as there is currently only one
+│ │          # possible version.
+│ │ -        column_infos = []
+│ │ -        for proto_column_info in feature_spec_proto.input_columns:
+│ │ -            if proto_column_info.HasField(SOURCE_DATA_COLUMN_INFO):
+│ │ -                column_infos.append(
+│ │ -                    SourceDataColumnInfo.from_proto(
+│ │ -                        proto_column_info.source_data_column_info
+│ │ -                    )
+│ │ -                )
+│ │ -            elif proto_column_info.HasField(FEATURE_COLUMN_INFO):
+│ │ -                column_infos.append(
+│ │ -                    FeatureColumnInfo.from_proto(proto_column_info.feature_column_info)
+│ │ -                )
+│ │ -            else:
+│ │ -                raise ValueError(
+│ │ -                    f"Expected column_info to be a SourceDataColumnInfo or FeatureColumnInfo proto "
+│ │ -                    f"message. '{proto_column_info}' is of the wrong proto message type."
+│ │ -                )
+│ │ +        column_infos = [
+│ │ +            ColumnInfo.from_proto(column_info_proto)
+│ │ +            for column_info_proto in feature_spec_proto.input_columns
+│ │ +        ]
+│ │          table_infos = [
+│ │ -            FeatureTableInfo.from_proto(proto_table_info)
+│ │ -            for proto_table_info in feature_spec_proto.input_tables
+│ │ +            FeatureTableInfo.from_proto(table_info_proto)
+│ │ +            for table_info_proto in feature_spec_proto.input_tables
+│ │ +        ]
+│ │ +        function_infos = [
+│ │ +            FunctionInfo.from_proto(function_info_proto)
+│ │ +            for function_info_proto in feature_spec_proto.input_functions
+│ │          ]
+│ │          return cls(
+│ │              column_infos=column_infos,
+│ │              table_infos=table_infos,
+│ │ +            function_infos=function_infos,
+│ │              workspace_id=feature_spec_proto.workspace_id,
+│ │              feature_store_client_version=feature_spec_proto.feature_store_client_version,
+│ │ +            serialization_version=feature_spec_proto.serialization_version,
+│ │          )
+│ │  
+│ │      def to_proto(self):
+│ │          proto_feature_spec = ProtoFeatureSpec()
+│ │          for column_info in self.column_infos:
+│ │ -            ci = ProtoColumnInfo()
+│ │ -            # Using CopyFrom since both the SourceDataColumnInfo and FeatureColumnInfo create their
+│ │ -            # own protos
+│ │ -            if isinstance(column_info, SourceDataColumnInfo):
+│ │ -                ci.source_data_column_info.CopyFrom(column_info.to_proto())
+│ │ -            elif isinstance(column_info, FeatureColumnInfo):
+│ │ -                ci.feature_column_info.CopyFrom(column_info.to_proto())
+│ │ -            else:
+│ │ -                raise ValueError(
+│ │ -                    f"Expected column_info to be instances of SourceDataColumnInfo"
+│ │ -                    f" or FeatureColumnInfo. '{column_info}' is of the wrong type."
+│ │ -                )
+│ │ -            proto_feature_spec.input_columns.append(ci)
+│ │ +            proto_feature_spec.input_columns.append(column_info.to_proto())
+│ │          for table_info in self.table_infos:
+│ │              proto_feature_spec.input_tables.append(table_info.to_proto())
+│ │ -        proto_feature_spec.serialization_version = self.SERIALIZATION_VERSION_NUMBER
+│ │ +        for function_info in self.function_infos:
+│ │ +            proto_feature_spec.input_functions.append(function_info.to_proto())
+│ │ +        proto_feature_spec.serialization_version = self.serialization_version
+│ │          proto_feature_spec.workspace_id = self.workspace_id
+│ │          proto_feature_spec.feature_store_client_version = (
+│ │              self._feature_store_client_version
+│ │          )
+│ │          return proto_feature_spec
+│ │  
+│ │      @staticmethod
+│ │ -    def _dict_key_by_name(column_info):
+│ │ +    def _input_columns_proto_to_yaml_dict(column_info: Dict[str, Any]):
+│ │ +        """
+│ │ +        Converts a single ColumnInfo's proto dict to the expected element in FeatureSpec YAML's input_columns.
+│ │ +        To keep the YAML clean, unnecessary fields are removed (e.g. SourceDataColumnInfo.name field, ColumnInfo.include when True).
+│ │ +
+│ │ +        Example of a column_info transformation. Note that "name" and "include" attributes were excluded.
+│ │ +        {"source_data_column_info": {"name": "source_column"}, "include": True} -> {"source_column": {"source": "training_data"}}
+│ │ +
+│ │ +        Order of elements in the YAML dict should be:
+│ │ +        1. Attributes present in ColumnInfo.info, using the proto field order
+│ │ +        2. Remaining attributes of ColumnInfo, using the proto field order
+│ │ +        3. Feature Store source type
+│ │ +        """
+│ │ +        # Parse oneof field ColumnInfo.info level attributes as column_info_attributes; record column_name, source
+│ │          if SOURCE_DATA_COLUMN_INFO in column_info:
+│ │ -            source_data = column_info[SOURCE_DATA_COLUMN_INFO]
+│ │ -            source_name = source_data.pop(NAME)
+│ │ -            source_data[SOURCE] = TRAINING_DATA
+│ │ -            return {source_name: source_data}
+│ │ +            column_info_attributes = column_info[SOURCE_DATA_COLUMN_INFO]
+│ │ +            # pop NAME attribute and use as the YAML key for this column_info to avoid redundancy in YAML
+│ │ +            column_name, source = column_info_attributes.pop(NAME), TRAINING_DATA
+│ │          elif FEATURE_COLUMN_INFO in column_info:
+│ │ -            feature_data = column_info[FEATURE_COLUMN_INFO]
+│ │ -            feature_data[SOURCE] = FEATURE_STORE
+│ │ -            return {feature_data[OUTPUT_NAME]: feature_data}
+│ │ +            column_info_attributes = column_info[FEATURE_COLUMN_INFO]
+│ │ +            # pop OUTPUT_NAME attribute and use as the YAML key for this column_info to avoid redundancy in YAML
+│ │ +            column_name, source = column_info_attributes.pop(OUTPUT_NAME), FEATURE_STORE
+│ │ +        elif ON_DEMAND_COLUMN_INFO in column_info:
+│ │ +            column_info_attributes = column_info[ON_DEMAND_COLUMN_INFO]
+│ │ +            # Map InputBindings message dictionary to {parameter: bound_to} KV dictionary if defined
+│ │ +            if INPUT_BINDINGS in column_info_attributes:
+│ │ +                column_info_attributes[INPUT_BINDINGS] = {
+│ │ +                    ib[PARAMETER]: ib[BOUND_TO]
+│ │ +                    for ib in column_info_attributes[INPUT_BINDINGS]
+│ │ +                }
+│ │ +            # pop OUTPUT_NAME attribute and use as the YAML key for this column_info to avoid redundancy in YAML
+│ │ +            column_name, source = (
+│ │ +                column_info_attributes.pop(OUTPUT_NAME),
+│ │ +                ON_DEMAND_FEATURE,
+│ │ +            )
+│ │          else:
+│ │              raise ValueError(
+│ │ -                f"Expected column_info to be keyed by '{SOURCE_DATA_COLUMN_INFO}' and "
+│ │ -                f"'{FEATURE_COLUMN_INFO}'. '{column_info}' has key '{list(column_info)[0]}'."
+│ │ +                f"Expected column_info to be keyed by a valid ColumnInfo.info type. "
+│ │ +                f"'{column_info}' has key '{list(column_info)[0]}'."
+│ │              )
+│ │  
+│ │ +        # Parse and insert ColumnInfo level attributes
+│ │ +        if not column_info[INCLUDE]:
+│ │ +            column_info_attributes[INCLUDE] = False
+│ │ +
+│ │ +        # Insert source; return YAML keyed by column_name
+│ │ +        column_info_attributes[SOURCE] = source
+│ │ +        return {column_name: column_info_attributes}
+│ │ +
+│ │      def _to_dict(self):
+│ │          """
+│ │ -        Convert FeatureSpec to a writeable YAML artifact. Uses MessageToDict to convert a
+│ │ -        FeatureSpec proto message to a dict, then modifies the dict to be keyed by name
+│ │ -        :return: dict with column infos keyed by column name
+│ │ -        """
+│ │ -        # In all newer feature store clients, the unique feature tables names in input columns should always match
+│ │ -        # feature table names in input tables.
+│ │ -        unique_tables_from_feature_column_infos = set(
+│ │ -            [
+│ │ -                feature_column_info.table_name
+│ │ -                for feature_column_info in self.feature_column_infos
+│ │ -            ]
+│ │ -        )
+│ │ -        unique_tables_from_table_infos = set(
+│ │ -            [table_info.table_name for table_info in self.table_infos]
+│ │ -        )
+│ │ -        if unique_tables_from_feature_column_infos != unique_tables_from_table_infos:
+│ │ -            raise Exception(
+│ │ -                "Internal Error: Feature table names from input_tables "
+│ │ -                "does not match feature table names from input_columns."
+│ │ -            )
+│ │ +        Convert FeatureSpec to a writeable YAML artifact. Uses MessageToDict to convert FeatureSpec proto to dict.
+│ │ +        Sanitizes and modifies the dict as follows:
+│ │ +        1. Remove redundant or unnecessary information for cleanliness in the YAML
+│ │ +        2. Modifies the dict to be of the format {column_name: column_attributes_dict}
+│ │  
+│ │ +        :return: Sanitized FeatureSpec dictionary of {column_name: column_attributes}
+│ │ +        """
+│ │          yaml_dict = MessageToDict(self.to_proto(), preserving_proto_field_name=True)
+│ │          yaml_dict[INPUT_COLUMNS] = [
+│ │ -            self._dict_key_by_name(column_info)
+│ │ +            self._input_columns_proto_to_yaml_dict(column_info)
+│ │              for column_info in yaml_dict[INPUT_COLUMNS]
+│ │          ]
+│ │  
+│ │          if INPUT_TABLES in yaml_dict:
+│ │ +            # pop TABLE_NAME attribute and use as the YAML key for each table_info to avoid redundancy in YAML
+│ │              yaml_dict[INPUT_TABLES] = [
+│ │ -                {table_info[TABLE_NAME]: table_info}
+│ │ +                {table_info.pop(TABLE_NAME): table_info}
+│ │                  for table_info in yaml_dict[INPUT_TABLES]
+│ │              ]
+│ │ +        if INPUT_FUNCTIONS in yaml_dict:
+│ │ +            # pop UDF_NAME attribute and use as the YAML key for each table_info to avoid redundancy in YAML
+│ │ +            yaml_dict[INPUT_FUNCTIONS] = [
+│ │ +                {function_info.pop(UDF_NAME): function_info}
+│ │ +                for function_info in yaml_dict[INPUT_FUNCTIONS]
+│ │ +            ]
+│ │ +
+│ │          # For readability, place SERIALIZATION_VERSION last in the dictionary.
+│ │ -        reordered_keys = [k for k in yaml_dict.keys() if k != SERIALIZATION_VERSION] + [
+│ │ -            SERIALIZATION_VERSION
+│ │ -        ]
+│ │ -        return {k: yaml_dict[k] for k in reordered_keys}
+│ │ +        yaml_dict[SERIALIZATION_VERSION] = yaml_dict.pop(SERIALIZATION_VERSION)
+│ │ +        return yaml_dict
+│ │  
+│ │      def save(self, path: str):
+│ │          """
+│ │          Convert spec to a YAML artifact and store at given `path` location.
+│ │          :param path: Root path to where YAML artifact is expected to be stored.
+│ │          :return: None
+│ │          """
+│ │ -        # TODO(ML-15922): Migrate to use mlflow file_utils once `sort_keys` argument is supported
+│ │ -        fs_file_utils.write_yaml(
+│ │ -            path, self.FEATURE_ARTIFACT_FILE, self._to_dict(), sort_keys=False
+│ │ +        write_yaml(
+│ │ +            root=path,
+│ │ +            file_name=self.FEATURE_ARTIFACT_FILE,
+│ │ +            data=self._to_dict(),
+│ │ +            sort_keys=False,
+│ │          )
+│ │  
+│ │      @staticmethod
+│ │ -    def _dict_key_by_source(column_info):
+│ │ +    def _input_columns_yaml_to_proto_dict(column_info: Dict[str, Any]):
+│ │ +        """
+│ │ +        Convert the FeatureSpec YAML dictionary to the expected ColumnInfo proto dictionary.
+│ │ +
+│ │ +        Example of a column_info transformation.
+│ │ +        {"source_column": {"source": "training_data"}} -> {"source_data_column_info": {"name": "source_column"}}
+│ │ +        """
+│ │          if len(column_info) != 1:
+│ │              raise ValueError(
+│ │ -                f"Expected column_info dictionary to only have one key, value pair. '{column_info}'"
+│ │ -                f" has length {len(column_info)}."
+│ │ +                f"Expected column_info dictionary to only have one key, value pair. "
+│ │ +                f"'{column_info}' has length {len(column_info)}."
+│ │              )
+│ │          column_name, column_data = list(column_info.items())[0]
+│ │          if not column_data:
+│ │              raise ValueError(
+│ │                  f"Expected values of '{column_name}' dictionary to be non-empty."
+│ │              )
+│ │          if SOURCE not in column_data:
+│ │              raise ValueError(
+│ │                  f"Expected values of column_info dictionary to include the source. No source found "
+│ │                  f"for '{column_name}'."
+│ │              )
+│ │ +
+│ │ +        # Parse oneof field ColumnInfo.info level attributes
+│ │          source = column_data.pop(SOURCE)
+│ │          if source == TRAINING_DATA:
+│ │              column_data[NAME] = column_name
+│ │ -            return {SOURCE_DATA_COLUMN_INFO: column_data}
+│ │ +            column_info_dict = {SOURCE_DATA_COLUMN_INFO: column_data}
+│ │          elif source == FEATURE_STORE:
+│ │ -            return {FEATURE_COLUMN_INFO: column_data}
+│ │ +            column_data[OUTPUT_NAME] = column_name
+│ │ +            column_info_dict = {FEATURE_COLUMN_INFO: column_data}
+│ │ +        elif source == ON_DEMAND_FEATURE:
+│ │ +            column_data[OUTPUT_NAME] = column_name
+│ │ +            # Map {parameter_val: bound_to_val} dictionary to InputBindings(parameter, bound_to) message dictionary.
+│ │ +            column_data[INPUT_BINDINGS] = [
+│ │ +                {PARAMETER: parameter, BOUND_TO: bound_to}
+│ │ +                for parameter, bound_to in column_data.get(INPUT_BINDINGS, {}).items()
+│ │ +            ]
+│ │ +            column_info_dict = {ON_DEMAND_COLUMN_INFO: column_data}
+│ │          else:
+│ │              raise ValueError(
+│ │ -                f"Expected column_info to have source of '{TRAINING_DATA}' or '{FEATURE_STORE}'. "
+│ │ +                f"Internal Error: Expected column_info to have source matching oneof ColumnInfo.info. "
+│ │                  f"'{column_info}' has source of '{source}'."
+│ │              )
+│ │  
+│ │ +        # Parse ColumnInfo level attributes
+│ │ +        # INCLUDE is supported starting FeatureSpec v5 and only present in the YAML when INCLUDE = False
+│ │ +        if INCLUDE in column_data:
+│ │ +            column_info_dict[INCLUDE] = column_data.pop(INCLUDE)
+│ │ +        return column_info_dict
+│ │ +
+│ │      @classmethod
+│ │      def _from_dict(cls, spec_dict):
+│ │          """
+│ │          Convert YAML artifact to FeatureSpec. Transforms YAML artifact to dict keyed by
+│ │          source_data_column_info or feature_column_info, such that ParseDict can convert the dict to
+│ │          a proto message, and from_proto can convert the proto message to a FeatureSpec object
+│ │          :return: :py:class:`~databricks.feature_store.entities.feature_spec.FeatureSpec`
+│ │ @@ -276,44 +387,44 @@
+│ │                  f"{INPUT_COLUMNS} must be a key in {cls.FEATURE_ARTIFACT_FILE}."
+│ │              )
+│ │          if not spec_dict[INPUT_COLUMNS]:
+│ │              raise ValueError(
+│ │                  f"{INPUT_COLUMNS} in {cls.FEATURE_ARTIFACT_FILE} must be non-empty."
+│ │              )
+│ │          spec_dict[INPUT_COLUMNS] = [
+│ │ -            cls._dict_key_by_source(column_info)
+│ │ +            cls._input_columns_yaml_to_proto_dict(column_info)
+│ │              for column_info in spec_dict[INPUT_COLUMNS]
+│ │          ]
+│ │ -        # For feature_spec.yaml wrote by older version of the client and for feature_spec.yaml that only has
+│ │ -        # source data, table_infos field may not be present
+│ │ -        if INPUT_TABLES not in spec_dict:
+│ │ -            spec_dict[INPUT_TABLES] = []
+│ │ -        else:
+│ │ -            spec_dict[INPUT_TABLES] = [
+│ │ -                list(input_table.values())[0] for input_table in spec_dict[INPUT_TABLES]
+│ │ -            ]
+│ │ -            # table_name in all table_infos must be unique
+│ │ -            unique_table_names = set(
+│ │ -                [input_table[TABLE_NAME] for input_table in spec_dict[INPUT_TABLES]]
+│ │ -            )
+│ │ -            if len(spec_dict[INPUT_TABLES]) != len(unique_table_names):
+│ │ -                raise Exception(
+│ │ -                    "Internal Error: Expect all table_name in input_tables to be unique. Duplicate table_name found."
+│ │ -                )
+│ │ +
+│ │ +        # feature_spec.yaml doesn't include input_tables, input_functions if any are true:
+│ │ +        # 1. The YAML is written by an older client that does not support the functionality.
+│ │ +        # 2. The FeatureSpec does not contain FeatureLookups (input_tables), FeatureFunctions (input_functions).
+│ │ +        input_tables = []
+│ │ +        for input_table in spec_dict.get(INPUT_TABLES, []):
+│ │ +            table_name, attributes = list(input_table.items())[0]
+│ │ +            input_tables.append({TABLE_NAME: table_name, **attributes})
+│ │ +        spec_dict[INPUT_TABLES] = input_tables
+│ │ +
+│ │ +        input_functions = []
+│ │ +        for input_function in spec_dict.get(INPUT_FUNCTIONS, []):
+│ │ +            udf_name, attributes = list(input_function.items())[0]
+│ │ +            input_functions.append({UDF_NAME: udf_name, **attributes})
+│ │ +        spec_dict[INPUT_FUNCTIONS] = input_functions
+│ │ +
+│ │          return cls.from_proto(
+│ │              ParseDict(spec_dict, ProtoFeatureSpec(), ignore_unknown_fields=True)
+│ │          )
+│ │  
+│ │      @classmethod
+│ │      def _read_file(cls, path: str):
+│ │          """
+│ │          Read the YAML artifact from a file path.
+│ │          """
+│ │          parent_dir, file = os.path.split(path)
+│ │ -        spec_dict = mlflow_file_utils.read_yaml(parent_dir, file)
+│ │ +        spec_dict = read_yaml(parent_dir, file)
+│ │          return cls._from_dict(spec_dict)
+│ │  
+│ │      @classmethod
+│ │      def load(cls, path: str):
+│ │          """
+│ │          Load the FeatureSpec YAML artifact in the provided root directory (at path/feature_spec.yaml).
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/feature_tables_for_serving.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/feature_tables_for_serving.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/online_feature_table.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/online_feature_table.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/online_store_for_serving.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/online_store_for_serving.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/entities/store_type.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/entities/store_type.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_cosmosdb_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_cosmosdb_engine.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -21,14 +21,19 @@
+│ │      FEATURE_STORE_SENTINEL_ID_VALUE,
+│ │      PARTITION_KEY,
+│ │      PATHS,
+│ │      PRIMARY_KEY_PROPERTY_NAME_VALUE,
+│ │      is_read_item_not_found_error,
+│ │      to_cosmosdb_primary_key,
+│ │  )
+│ │ +from databricks.feature_store.utils.metrics_utils import (
+│ │ +    NAN_FEATURE_COUNT,
+│ │ +    LookupClientMetrics,
+│ │ +    lookup_call_maybe_with_metrics,
+│ │ +)
+│ │  
+│ │  _logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  class LookupCosmosDbEngine(LookupEngine):
+│ │      def __init__(
+│ │          self, online_feature_table: OnlineFeatureTable, authorization_key: str
+│ │ @@ -73,17 +78,23 @@
+│ │          partition_key_paths = container_desc[PARTITION_KEY][PATHS]
+│ │          if partition_key_paths != [f"/{PRIMARY_KEY_PROPERTY_NAME_VALUE}"]:
+│ │              raise ValueError(
+│ │                  f"Online Table {self.online_table_name} primary key schema is not configured properly."
+│ │              )
+│ │  
+│ │      def lookup_features(
+│ │ -        self, lookup_df: pd.DataFrame, feature_names: List[str]
+│ │ +        self,
+│ │ +        lookup_df: pd.DataFrame,
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │ -        query = functools.partial(self._run_lookup_cosmosdb_query, feature_names)
+│ │ +        query = functools.partial(
+│ │ +            self._run_lookup_cosmosdb_query, feature_names, metrics=metrics
+│ │ +        )
+│ │          feature_df = lookup_df.apply(query, axis=1, result_type="expand")
+│ │          feature_df.columns = feature_names
+│ │          return feature_df
+│ │  
+│ │      def _lookup_primary_key(self, cosmosdb_primary_key: str):
+│ │          try:
+│ │              # The expected response is the item with additional system properties, e.g. {"feat1": ..., "sys1": ...}
+│ │ @@ -102,34 +113,48 @@
+│ │                  return None
+│ │              _logger.warning(
+│ │                  f"Encountered error reading from {self.online_table_name}:\n{e}"
+│ │              )
+│ │              raise e
+│ │  
+│ │      def _run_lookup_cosmosdb_query(
+│ │ -        self, feature_names: List[str], lookup_row: pd.core.series.Series
+│ │ +        self,
+│ │ +        feature_names: List[str],
+│ │ +        lookup_row: pd.core.series.Series,
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ):
+│ │          """
+│ │          This helper function executes a single Cosmos DB query.
+│ │          """
+│ │ +        nan_features_count = 0
+│ │          cosmosdb_lookup_row = self._pandas_to_cosmosdb(lookup_row)
+│ │          cosmosdb_primary_key = to_cosmosdb_primary_key(cosmosdb_lookup_row)
+│ │          if self.query_mode == QueryMode.PRIMARY_KEY_LOOKUP:
+│ │ -            feature_values = self._lookup_primary_key(cosmosdb_primary_key)
+│ │ +            lookup_pk = lookup_call_maybe_with_metrics(
+│ │ +                self._lookup_primary_key, metrics
+│ │ +            )
+│ │ +            feature_values = lookup_pk(cosmosdb_primary_key)
+│ │          else:
+│ │              raise ValueError(f"Unsupported query mode: {self.query_mode}")
+│ │  
+│ │          if not feature_values:
+│ │              _logger.warning(
+│ │                  f"No feature values found in {self.online_table_name} for {cosmosdb_lookup_row}."
+│ │              )
+│ │ +            nan_features_count = len(feature_names)
+│ │              return np.full(len(feature_names), np.nan)
+│ │  
+│ │ -        # Return the result
+│ │          results = [feature_values.get(f, np.nan) for f in feature_names]
+│ │ +        nan_features_count = sum([pd.isnull(x) for x in results])
+│ │ +        if metrics:
+│ │ +            # 0 nan feature count still needs to be recorded to propogate metrics for inference request
+│ │ +            metrics.increase_metric(NAN_FEATURE_COUNT, nan_features_count)
+│ │ +
+│ │ +        # Return the result
+│ │          return self._cosmosdb_to_pandas(results, feature_names)
+│ │  
+│ │      def _pandas_to_cosmosdb(self, row: pd.core.series.Series) -> List[Any]:
+│ │          """
+│ │          Converts the input Pandas row to the Cosmos DB online equivalent Python types.
+│ │          """
+│ │          return [
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_dynamodb_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_dynamodb_engine.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -33,14 +33,19 @@
+│ │      key_schemas_equal,
+│ │      merge_batched_results,
+│ │      paginate_keys,
+│ │      to_dynamodb_primary_key,
+│ │      to_range_schema,
+│ │      to_safe_select_expression,
+│ │  )
+│ │ +from databricks.feature_store.utils.metrics_utils import (
+│ │ +    NAN_FEATURE_COUNT,
+│ │ +    LookupClientMetrics,
+│ │ +    lookup_call_maybe_with_metrics,
+│ │ +)
+│ │  
+│ │  _logger = logging.getLogger(__name__)
+│ │  LookupKeyType = Tuple[str, ...]
+│ │  
+│ │  
+│ │  def as_list(obj, default=None):
+│ │      if not obj:
+│ │ @@ -121,32 +126,39 @@
+│ │              secret_access_key=access_key.secret_access_key if access_key else None,
+│ │              region=self._region,
+│ │          )
+│ │          self._dynamodb_client = self._dynamodb_resource.meta.client
+│ │          self._validate_online_feature_table()
+│ │  
+│ │      def lookup_features(
+│ │ -        self, lookup_df: pd.DataFrame, feature_names: List[str]
+│ │ +        self,
+│ │ +        lookup_df: pd.DataFrame,
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │          # Serial lookup on the only online feature table.
+│ │          if len(self._online_feature_table_names_list) > 1:
+│ │              raise ValueError(f"Batch engine should not use serial lookup.")
+│ │          query = functools.partial(
+│ │              self._run_lookup_dynamodb_query,
+│ │              feature_names,
+│ │              self._online_feature_table_names_list[0],
+│ │ +            metrics=metrics,
+│ │          )
+│ │          feature_df = lookup_df.apply(query, axis=1, result_type="expand")
+│ │          feature_df.columns = feature_names
+│ │          return feature_df
+│ │  
+│ │      def batch_lookup_features(
+│ │          self,
+│ │          lookup_df_dict: Dict[str, Dict[LookupKeyType, pd.DataFrame]],
+│ │          feature_names_dict: Dict[str, Dict[LookupKeyType, List[str]]],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> Dict[str, Dict[LookupKeyType, pd.DataFrame]]:
+│ │          """
+│ │          :param lookup_df_dict: dictionary from online feature table name to a dictionary from
+│ │              lookup key to primary key dfs.
+│ │          :param feature_names_dict:  dictionary from online feature table name to feature names.
+│ │          :return Dictionary from online feature table name to a dictionary from lookup key to feature values dataframe.
+│ │          """
+│ │ @@ -180,23 +192,25 @@
+│ │  
+│ │              concatenated_primary_key_df = (
+│ │                  pd.concat(primary_key_dfs_list).drop_duplicates().reset_index(drop=True)
+│ │              )
+│ │              batch_keys[table] = concatenated_primary_key_df.to_dict("records")
+│ │              attribute_map[table] = feature_names + [PRIMARY_KEY_ATTRIBUTE_NAME_VALUE]
+│ │  
+│ │ -        response = self._paginated_batch_get(batch_keys, attribute_map)
+│ │ +        response = self._paginated_batch_get(batch_keys, attribute_map, metrics=metrics)
+│ │          return self._dynamodb_batch_to_pandas(
+│ │ -            response, primary_key_dict, feature_names_dict
+│ │ +            response, primary_key_dict, feature_names_dict, metrics=metrics
+│ │          )
+│ │  
+│ │      def _paginated_batch_get(
+│ │          self,
+│ │          batch_keys: Dict[str, List[Any]],
+│ │          attribute_map: Dict[str, List[str]],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │          batch_size=BATCH_GET_ITEM_LIMIT,
+│ │      ) -> Dict[str, List[Any]]:
+│ │          """
+│ │          Make paginated get batch item request to Amazon DynamoDB.
+│ │          :param batch_keys: dictionary from online feature table name to a list of items to retrieve
+│ │          :param attribute_map:  dictionary from online feature table name to feature names.
+│ │          """
+│ │ @@ -210,20 +224,25 @@
+│ │          for batch in paginated_keys:
+│ │              batch_keys_dyanmodb_format = {}
+│ │              for table in batch.keys():
+│ │                  batch_keys_dyanmodb_format[table] = {
+│ │                      KEYS: batch[table],
+│ │                      ATTRIBUTES_TO_GET: attribute_map[table],
+│ │                  }
+│ │ -            batched_results.append(self._do_batch_get(batch_keys_dyanmodb_format))
+│ │ +            batched_results.append(
+│ │ +                self._do_batch_get(batch_keys_dyanmodb_format, metrics=metrics)
+│ │ +            )
+│ │ +
+│ │          return merge_batched_results(batched_results)
+│ │  
+│ │      # Modified from code example
+│ │      # https://docs.aws.amazon.com/code-samples/latest/catalog/python-dynamodb-batching-dynamo_batching.py.html
+│ │ -    def _do_batch_get(self, batch_keys: Dict[str, Dict]) -> Dict[str, List]:
+│ │ +    def _do_batch_get(
+│ │ +        self, batch_keys: Dict[str, Dict], *, metrics: LookupClientMetrics = None
+│ │ +    ) -> Dict[str, List]:
+│ │          """
+│ │          Gets a batch of items from Amazon DynamoDB. Batches can contain keys from
+│ │          more than one table.
+│ │  
+│ │          When Amazon DynamoDB cannot process all items in a batch, a set of unprocessed
+│ │          keys is returned. This function uses an deterministic exponential backoff algorithm to retry
+│ │          getting the unprocessed keys until all are retrieved or the specified
+│ │ @@ -240,15 +259,19 @@
+│ │          max_tries = 5
+│ │          backoff_in_seconds = (
+│ │              1  # Start with 1 second of sleep, then exponentially increase.
+│ │          )
+│ │          aggregated_response = {key: [] for key in batch_keys}
+│ │          unprocessed_keys = []
+│ │          while num_retry < max_tries:
+│ │ -            response = self._dynamodb_resource.batch_get_item(RequestItems=batch_keys)
+│ │ +            batch_get_item = lookup_call_maybe_with_metrics(
+│ │ +                self._dynamodb_resource.batch_get_item, metrics
+│ │ +            )
+│ │ +            response = batch_get_item(RequestItems=batch_keys)
+│ │ +
+│ │              # Collect any retrieved items and retry unprocessed keys.
+│ │              for key in response.get("Responses", []):
+│ │                  aggregated_response[key] += response["Responses"][key]
+│ │              unprocessed_keys = response["UnprocessedKeys"]
+│ │              if len(unprocessed_keys) > 0:
+│ │                  batch_keys = unprocessed_keys
+│ │                  unprocessed_count = sum(
+│ │ @@ -273,14 +296,16 @@
+│ │          return aggregated_response
+│ │  
+│ │      def _dynamodb_batch_to_pandas(
+│ │          self,
+│ │          batch_response: Dict[str, List[Dict]],
+│ │          primary_key_dict: Dict[str, Dict[LookupKeyType, List]],
+│ │          feature_names_dict: Dict[str, Dict[LookupKeyType, List]],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> Dict[str, Dict[LookupKeyType, pd.DataFrame]]:
+│ │          """
+│ │          Converts raw batch response which is a map from table name to retrieved items into a
+│ │          dictionary from table name to lookup key to df map. For each table's items, we will group the
+│ │          items by lookup keys and order the items in the order of primary key order for that lookup
+│ │          key and convert the dynamoDB type to python compatible type. Any missing rows will be
+│ │          substituted with a row of Nan values
+│ │ @@ -290,40 +315,48 @@
+│ │              to primary key list.
+│ │          :param feature_names_dict: A dictionary from online table name to a a map from lookup key to
+│ │              list of features to retrieve.
+│ │          :return: The dictionary of retrieved items grouped under their respective
+│ │                  table names and lookup keys.
+│ │          """
+│ │          batch_sorted_df = {}
+│ │ +        nan_features_count = 0
+│ │          for table in self._online_feature_table_names_list:
+│ │              response = batch_response[table]
+│ │              sorted_response_by_lookup_key = {}
+│ │              for lookup_key, primary_key_rows in primary_key_dict[table].items():
+│ │                  feature_names = feature_names_dict[table][lookup_key]
+│ │                  sorted_response = []
+│ │                  # (TODO: ML-26588): Performance profiling. Consider a left join.
+│ │                  for pk_val in primary_key_rows:
+│ │                      is_item_missing = True
+│ │                      for item in response:
+│ │                          if item[PRIMARY_KEY_ATTRIBUTE_NAME_VALUE] == pk_val:
+│ │                              result = [item.get(f, np.nan) for f in feature_names]
+│ │ +                            nan_features_count += sum([pd.isnull(x) for x in result])
+│ │                              sorted_response.append(
+│ │                                  self._dynamodb_to_pandas(result, feature_names, table)
+│ │                              )
+│ │                              is_item_missing = False
+│ │                              continue
+│ │                      if is_item_missing:
+│ │                          _logger.warning(
+│ │                              f"No feature values found in {table} for {pk_val}."
+│ │                          )
+│ │                          sorted_response.append(np.full(len(feature_names), np.nan))
+│ │ +                        nan_features_count += len(feature_names)
+│ │                  response_df = pd.DataFrame(sorted_response)
+│ │                  response_df.columns = feature_names
+│ │                  sorted_response_by_lookup_key[lookup_key] = response_df
+│ │              batch_sorted_df[table] = sorted_response_by_lookup_key
+│ │ +
+│ │ +        if metrics:
+│ │ +            # 0 nan feature count still needs to be recorded to propogate metrics for inference request
+│ │ +            metrics.increase_metric(NAN_FEATURE_COUNT, nan_features_count)
+│ │ +
+│ │          return batch_sorted_df
+│ │  
+│ │      def _validate_online_feature_table(
+│ │          self,
+│ │      ) -> None:
+│ │          def _validate_schema_for_pk_lookup():
+│ │              """
+│ │ @@ -364,36 +397,48 @@
+│ │                  _validate_schema_for_range_lookup()
+│ │              else:
+│ │                  raise ValueError(
+│ │                      f"Unsupported query mode: {self._query_mode_map[table_name]}"
+│ │                  )
+│ │  
+│ │      def _lookup_primary_key(
+│ │ -        self, dynamodb_primary_key: Dict[str, str], feature_names: List[str]
+│ │ +        self,
+│ │ +        dynamodb_primary_key: Dict[str, str],
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ):
+│ │          table = self._dynamodb_resource.Table(self._online_feature_table_names_list[0])
+│ │ -        response = table.get_item(
+│ │ +        lookup_pk = lookup_call_maybe_with_metrics(table.get_item, metrics)
+│ │ +        response = lookup_pk(
+│ │              Key=dynamodb_primary_key,
+│ │              AttributesToGet=feature_names,
+│ │          )
+│ │ +
+│ │          # Response is expected to have form {"Item": {...}, ...}
+│ │          return response.get(ITEM, None)
+│ │  
+│ │      def _lookup_range_query(
+│ │ -        self, dynamodb_primary_key: Dict[str, str], feature_names: List[str]
+│ │ +        self,
+│ │ +        dynamodb_primary_key: Dict[str, str],
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ):
+│ │          table = self._dynamodb_resource.Table(self._online_feature_table_names_list[0])
+│ │ -        response = table.query(
+│ │ +        lookup_range = lookup_call_maybe_with_metrics(table.query, metrics)
+│ │ +        response = lookup_range(
+│ │              ScanIndexForward=False,
+│ │              Limit=1,
+│ │              KeyConditionExpression=Key(PRIMARY_KEY_ATTRIBUTE_NAME_VALUE).eq(
+│ │                  dynamodb_primary_key[PRIMARY_KEY_ATTRIBUTE_NAME_VALUE]
+│ │              ),
+│ │              **to_safe_select_expression(feature_names),
+│ │          )
+│ │ +
+│ │          # Response is expected to have form {"Items": [{...}], ...}
+│ │          items = response.get(ITEMS, [])
+│ │          return items[0] if len(items) else None
+│ │  
+│ │      def _pandas_to_dynamodb_primary_keys(
+│ │          self, table_name: str, lookup_row: pd.core.series.Series
+│ │      ):
+│ │ @@ -402,39 +447,46 @@
+│ │          return dynamodb_primary_key
+│ │  
+│ │      def _run_lookup_dynamodb_query(
+│ │          self,
+│ │          feature_names: List[str],
+│ │          feature_table_name: str,
+│ │          lookup_row: pd.core.series.Series,
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ):
+│ │          """
+│ │          This helper function executes a single DynamoDB query.
+│ │          """
+│ │          dynamodb_lookup_row = self._pandas_to_dynamodb(feature_table_name, lookup_row)
+│ │          dynamodb_primary_key = to_dynamodb_primary_key(dynamodb_lookup_row)
+│ │ +
+│ │          if self._query_mode_map[feature_table_name] == QueryMode.PRIMARY_KEY_LOOKUP:
+│ │              feature_values = self._lookup_primary_key(
+│ │ -                dynamodb_primary_key, feature_names
+│ │ +                dynamodb_primary_key, feature_names, metrics=metrics
+│ │              )
+│ │          elif self._query_mode_map[feature_table_name] == QueryMode.RANGE_QUERY:
+│ │              feature_values = self._lookup_range_query(
+│ │ -                dynamodb_primary_key, feature_names
+│ │ +                dynamodb_primary_key, feature_names, metrics=metrics
+│ │              )
+│ │          else:
+│ │              raise ValueError(f"Unsupported query mode: {self.query_mode}")
+│ │  
+│ │          if not feature_values:
+│ │              _logger.warning(
+│ │                  f"No feature values found in {feature_table_name} for {dynamodb_lookup_row}."
+│ │              )
+│ │              return np.full(len(feature_names), np.nan)
+│ │  
+│ │          # Return the result
+│ │          results = [feature_values.get(f, np.nan) for f in feature_names]
+│ │ +        if metrics:
+│ │ +            metrics.increase_metric(
+│ │ +                NAN_FEATURE_COUNT, sum([pd.isnull(x) for x in results])
+│ │ +            )
+│ │          return self._dynamodb_to_pandas(results, feature_names, feature_table_name)
+│ │  
+│ │      def _pandas_to_dynamodb(
+│ │          self, feature_table_name: str, row: pd.core.series.Series
+│ │      ) -> List[Any]:
+│ │          """
+│ │          Converts the input Pandas row to dynamodb compatible python types based on
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_engine.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -12,19 +12,24 @@
+│ │  import pandas as pd
+│ │  
+│ │  from databricks.feature_store.entities.online_feature_table import OnlineFeatureTable
+│ │  from databricks.feature_store.entities.online_store_for_serving import (
+│ │      MySqlConf,
+│ │      SqlServerConf,
+│ │  )
+│ │ +from databricks.feature_store.utils.metrics_utils import LookupClientMetrics
+│ │  
+│ │  
+│ │  class LookupEngine(abc.ABC):
+│ │      @abc.abstractmethod
+│ │      def lookup_features(
+│ │ -        self, lookup_df: pd.DataFrame, feature_names: List[str]
+│ │ +        self,
+│ │ +        lookup_df: pd.DataFrame,
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │          raise NotImplementedError
+│ │  
+│ │      @abc.abstractmethod
+│ │      def shutdown(self) -> None:
+│ │          raise NotImplementedError
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_mysql_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_mysql_engine.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_sql_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_sql_engine.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -11,14 +11,19 @@
+│ │  
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  import sqlalchemy
+│ │  
+│ │  from databricks.feature_store.entities.online_feature_table import OnlineFeatureTable
+│ │  from databricks.feature_store.lookup_engine.lookup_engine import LookupEngine
+│ │ +from databricks.feature_store.utils.metrics_utils import (
+│ │ +    NAN_FEATURE_COUNT,
+│ │ +    LookupClientMetrics,
+│ │ +    lookup_call_maybe_with_metrics,
+│ │ +)
+│ │  from databricks.feature_store.utils.sql_type_utils import (
+│ │      SQL_DATA_TYPE_CONVERTER_FACTORY,
+│ │  )
+│ │  
+│ │  _logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │ @@ -84,28 +89,36 @@
+│ │          engine.dispose()
+│ │  
+│ │      @property
+│ │      def engine_url(self) -> str:
+│ │          raise NotImplementedError
+│ │  
+│ │      def lookup_features(
+│ │ -        self, lookup_df: pd.DataFrame, feature_names: List[str]
+│ │ +        self,
+│ │ +        lookup_df: pd.DataFrame,
+│ │ +        feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │          pk_filter_phrase = " AND ".join(
+│ │              [f"{self._sql_safe_name(pk)} = :{pk}" for pk in lookup_df.columns]
+│ │          )
+│ │          select_feat_phrase = ", ".join(
+│ │              f"{self._sql_safe_name(f)}" for f in feature_names
+│ │          )
+│ │          query = sqlalchemy.sql.text(
+│ │              f"SELECT {select_feat_phrase} FROM {self._sql_safe_name(self.table_name)} WHERE {pk_filter_phrase}"
+│ │          )
+│ │          with self._get_connection() as sql_connection:
+│ │              sql_query = functools.partial(
+│ │ -                self._run_lookup_sql_query, sql_connection, query, feature_names
+│ │ +                self._run_lookup_sql_query,
+│ │ +                sql_connection,
+│ │ +                query,
+│ │ +                feature_names,
+│ │ +                metrics,
+│ │              )
+│ │              # TODO: Optimize the SQL query by batching: https://databricks.atlassian.net/browse/ML-16636
+│ │              feature_df = lookup_df.apply(sql_query, axis=1, result_type="expand")
+│ │          feature_df.columns = feature_names
+│ │          for feature in feature_names:
+│ │              feature_df[feature] = feature_df[feature].map(
+│ │                  lambda x: self.features_to_type_converter[feature].to_pandas(x)
+│ │ @@ -145,28 +158,35 @@
+│ │  
+│ │      def _close(self) -> None:
+│ │          """
+│ │          This is a no-op because a new sql connection is opened for each query and closed after the query executes.
+│ │          """
+│ │          pass
+│ │  
+│ │ -    def _run_lookup_sql_query(self, sql_connection, query, feature_names, lookup_row):
+│ │ +    def _run_lookup_sql_query(
+│ │ +        self, sql_connection, query, feature_names, metrics, lookup_row
+│ │ +    ):
+│ │          """
+│ │          This helper function executes a single SQL query .
+│ │          """
+│ │          query_params = lookup_row.to_dict()
+│ │ -        sql_data = sql_connection.execute(query, query_params)
+│ │ +        run_lookup = lookup_call_maybe_with_metrics(sql_connection.execute, metrics)
+│ │ +        sql_data = run_lookup(query, query_params)
+│ │          feat_values = sql_data.fetchall()
+│ │  
+│ │          if len(feat_values) == 0:
+│ │              _logger.warning(
+│ │                  f"No feature values found in {self.table_name} for {query_params}."
+│ │              )
+│ │              nan_features = np.empty(len(feature_names))
+│ │              nan_features[:] = np.nan
+│ │ +            if metrics:
+│ │ +                # 0 nan feature count still needs to be recorded to propogate metrics for inference request
+│ │ +                metrics.increase_metric(NAN_FEATURE_COUNT, len(nan_features))
+│ │ +
+│ │              return nan_features
+│ │  
+│ │          # Return the first result
+│ │          return feat_values[0]
+│ │  
+│ │      @classmethod
+│ │      def _sql_safe_name(cls, name):
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/lookup_engine/lookup_sql_server_engine.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/lookup_engine/lookup_sql_server_engine.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/mlflow_model.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/mlflow_model.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -28,24 +28,32 @@
+│ │      OnlineLookupClient,
+│ │      is_primary_key_lookup,
+│ │      tables_share_dynamodb_access_keys,
+│ │  )
+│ │  from databricks.feature_store.utils.feature_serving_patch import (
+│ │      patch_feature_serving_predictions_to_json,
+│ │  )
+│ │ +from databricks.feature_store.utils.metrics_utils import (
+│ │ +    OVERRIDEN_FEATURE_COUNT,
+│ │ +    LookupClientMetrics,
+│ │ +    lookup_call_maybe_with_metrics,
+│ │ +)
+│ │  from databricks.feature_store.utils.uc_utils import (
+│ │      get_feature_spec_with_full_table_names,
+│ │      get_feature_spec_with_reformat_full_table_names,
+│ │  )
+│ │  
+│ │  # The provisioner of this model is expected to set an environment variable with the path to a
+│ │  # feature_tables_for_serving.dat file.
+│ │  FEATURE_TABLES_FOR_SERVING_FILEPATH_ENV = "FEATURE_TABLES_FOR_SERVING_FILEPATH"
+│ │ +# should match LOOKUP_CLIENT_INSTRUMENTATION_ENABLED_ENV in
+│ │ +# model-serving/model-serving-common/src/main/scala/com/databricks/mlflow/utils/serving/FeatureStoreConstants.scala
+│ │ +LOOKUP_CLIENT_INSTRUMENTATION_ENABLED_ENV = "LOOKUP_CLIENT_INSTRUMENTATION_ENABLED"
+│ │  
+│ │ -FEATURE_SERVING_RESPONSE_FORMAT_ENABLED = True
+│ │ +FEATURE_SERVING_RESPONSE_FORMAT_ENABLED = False
+│ │  
+│ │  LookupKeyType = Tuple[str, ...]
+│ │  LookupKeyToFeatureColumnInfosType = Dict[LookupKeyType, List[FeatureColumnInfo]]
+│ │  
+│ │  
+│ │  class _FeatureTableMetadata:
+│ │      """
+│ │ @@ -145,14 +153,19 @@
+│ │      @staticmethod
+│ │      def _get_serving_environment() -> str:
+│ │          if os.environ.get(SERVING_ENVIRONMENT) == SAGEMAKER_SERVING_ENVIRONMENT:
+│ │              return mlflow_model_constants.SAGEMAKER
+│ │          return mlflow_model_constants.DATABRICKS
+│ │  
+│ │      @staticmethod
+│ │ +    def _is_lookup_client_instrumentation_enabled() -> bool:
+│ │ +        # environment variables stored as string, rather than boolean
+│ │ +        return os.getenv(LOOKUP_CLIENT_INSTRUMENTATION_ENABLED_ENV) == "true"
+│ │ +
+│ │ +    @staticmethod
+│ │      def _check_support():
+│ │          if (
+│ │              databricks_utils.is_in_databricks_notebook()
+│ │              or databricks_utils.is_in_databricks_job()
+│ │          ):
+│ │              raise NotImplementedError(
+│ │                  "Feature Store packaged models cannot be loaded with MLflow APIs. For batch "
+│ │ @@ -185,16 +198,37 @@
+│ │  
+│ │          return OnlineLookupClient(
+│ │              online_fts, serving_environment=self.serving_environment
+│ │          )
+│ │  
+│ │      def predict(self, df: pd.DataFrame):
+│ │          self._validate_input(df)
+│ │ -        model_input_df = self._augment_with_features(df)
+│ │ -        return self.raw_model.predict(model_input_df)
+│ │ +
+│ │ +        # if enabled, use metrics class to record metric values in child function calls
+│ │ +        output_metrics = None
+│ │ +        if self._is_lookup_client_instrumentation_enabled():
+│ │ +            output_metrics = LookupClientMetrics({})
+│ │ +
+│ │ +        augment_with_features = lookup_call_maybe_with_metrics(
+│ │ +            self._augment_with_features, output_metrics, measuring_e2e_latency=True
+│ │ +        )
+│ │ +
+│ │ +        model_input_df = augment_with_features(df, metrics=output_metrics)
+│ │ +        prediction = self.raw_model.predict(model_input_df)
+│ │ +
+│ │ +        # will add any captured metrics to output via pandas series attributes
+│ │ +        if output_metrics:
+│ │ +            # if prediction is not pandas object (aka list or np array), convert prediction to panda series so it will have pandas attributes
+│ │ +            if not isinstance(prediction, pd.DataFrame) and not isinstance(
+│ │ +                prediction, pd.Series
+│ │ +            ):
+│ │ +                prediction = pd.Series(prediction)
+│ │ +            prediction.attrs = output_metrics.get_metrics()
+│ │ +
+│ │ +        return prediction
+│ │  
+│ │      def _get_ft_metadata(
+│ │          self,
+│ │          feature_spec: FeatureSpec,
+│ │          fts_for_serving: AbstractFeatureTablesForServing,
+│ │      ) -> Dict[str, _FeatureTableMetadata]:
+│ │          ft_to_lookup_key_to_feature_col_infos = (
+│ │ @@ -324,23 +358,26 @@
+│ │          if cols_with_nulls:
+│ │              raise ValueError(
+│ │                  f"Failed to lookup feature values due to null values for lookup_key columns "
+│ │                  f"{cols_with_nulls}. The following columns cannot contain null values: "
+│ │                  f"{lookup_key_columns}"
+│ │              )
+│ │  
+│ │ -    def _augment_with_features(self, df: pd.DataFrame):
+│ │ +    def _augment_with_features(
+│ │ +        self, df: pd.DataFrame, *, metrics: LookupClientMetrics = None
+│ │ +    ):
+│ │          """
+│ │          :param df: Pandas DataFrame provided by user as model input. This is expected to contain
+│ │          columns for each SourceColumnInfo, and for each lookup key of a FeatureColumnInfo. Columns
+│ │          with the same name as FeatureColumnInfo output_names will override those features, meaning
+│ │          they will not be queried from the online store.
+│ │          :return: Pandas DataFrame containing all features specified in the FeatureSpec, in order.
+│ │          """
+│ │          feature_dfs = []
+│ │ +        overridden_features_count = 0
+│ │          (
+│ │              fully_overridden_feature_output_names,
+│ │              partially_overridden_feature_output_names,
+│ │          ) = self._get_overridden_feature_output_names(df)
+│ │  
+│ │          pk_dfs = defaultdict(lambda: defaultdict(list))
+│ │          feature_column_infos_to_lookup_dict = defaultdict(lambda: defaultdict(list))
+│ │ @@ -380,25 +417,29 @@
+│ │                  feature_column_infos_to_lookup_dict[
+│ │                      ft_meta.online_ft.online_feature_table_name
+│ │                  ][lookup_key] = feature_column_infos_to_lookup
+│ │  
+│ │          feature_values_dfs = defaultdict(lambda: defaultdict(list))
+│ │          if self.is_model_eligible_for_batch_lookup and pk_dfs:
+│ │              feature_values_dfs = self._batch_lookup_and_rename_features(
+│ │ -                self.batch_lookup_client, pk_dfs, feature_column_infos_to_lookup_dict
+│ │ +                self.batch_lookup_client,
+│ │ +                pk_dfs,
+│ │ +                feature_column_infos_to_lookup_dict,
+│ │ +                metrics=metrics,
+│ │              )
+│ │          else:
+│ │              for oft_name, pk_df_by_lookup_key in pk_dfs.items():
+│ │                  for lookup_key in pk_df_by_lookup_key.keys():
+│ │                      feature_values_dfs[oft_name][
+│ │                          lookup_key
+│ │                      ] = self._lookup_and_rename_features(
+│ │                          lookup_clients[oft_name],
+│ │                          pk_dfs[oft_name][lookup_key],
+│ │                          feature_column_infos_to_lookup_dict[oft_name][lookup_key],
+│ │ +                        metrics=metrics,
+│ │                      )
+│ │  
+│ │          for oft_name, feature_values_df_by_lookup_key in feature_values_dfs.items():
+│ │              for (
+│ │                  lookup_key,
+│ │                  feature_values_df,
+│ │              ) in feature_values_df_by_lookup_key.items():
+│ │ @@ -413,14 +454,19 @@
+│ │                  # are in the feature table currently being processed.
+│ │                  partially_overridden_feats = [
+│ │                      c
+│ │                      for c in feature_values_df.columns
+│ │                      if c in partially_overridden_feature_output_names
+│ │                  ]
+│ │                  if partially_overridden_feats:
+│ │ +                    # add partially overriden features to override count, count() returns the number of non-NaN values per column
+│ │ +                    # those are the values that will get overriden
+│ │ +                    overridden_features_count += (
+│ │ +                        df[partially_overridden_feats].count().sum()
+│ │ +                    )
+│ │                      # For each cell of overridden column, use the overridden value if provided, else
+│ │                      # the value looked up from the online store.
+│ │                      partially_overridden_feats_df = df[
+│ │                          partially_overridden_feats
+│ │                      ].combine_first(feature_values_df[partially_overridden_feats])
+│ │                      feature_values_df[
+│ │                          partially_overridden_feats
+│ │ @@ -431,26 +477,31 @@
+│ │          source_data_df = df[
+│ │              [sdci.name for sdci in self.feature_spec.source_data_column_infos]
+│ │          ]
+│ │          # Renaming columns of source_data_df is not necessary because SourceDataColumnInfo's name
+│ │          # is always the same as the output_name.
+│ │  
+│ │          overridden_features_df = df[fully_overridden_feature_output_names]
+│ │ +        # add fully overriden features to override count
+│ │ +        overridden_features_count += overridden_features_df.count().sum()
+│ │  
+│ │          # Concatenate the following DataFrames, where N is the number of rows in `df`.
+│ │          #  1. feature_dfs - List of DataFrames, one per feature table looked up from the online
+│ │          #       store. Each DataFrame has N rows.
+│ │          #  2. source_data_df - DataFrame with N rows, containing SourceDataColumnInfo features
+│ │          #       from `df`.
+│ │          #  3. overridden_features_df - DataFrame with N rows, containing feature values from `df`
+│ │          #       that override FeatureColumnInfo features with non-null values for all rows.
+│ │          model_input_unordered = pd.concat(
+│ │              feature_dfs + [source_data_df, overridden_features_df], axis=1
+│ │          )
+│ │  
+│ │ +        if metrics:
+│ │ +            metrics.increase_metric(OVERRIDEN_FEATURE_COUNT, overridden_features_count)
+│ │ +
+│ │          output_cols = [ci.output_name for ci in self.feature_spec.column_infos]
+│ │          model_input_df = model_input_unordered[output_cols]
+│ │          return model_input_df
+│ │  
+│ │      def _get_primary_key_df(
+│ │          self,
+│ │          lookup_key: LookupKeyType,
+│ │ @@ -473,33 +524,39 @@
+│ │          return lookup_key_df.rename(lookup_key_to_ft_pk, axis=1)
+│ │  
+│ │      def _lookup_and_rename_features(
+│ │          self,
+│ │          lookup_client: OnlineLookupClient,
+│ │          primary_key_df: pd.DataFrame,
+│ │          feature_column_infos: List[FeatureColumnInfo],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │          """
+│ │          Looks up features from a single feature table, then renames them. Feature metadata is
+│ │           specified via `feature_column_infos`.
+│ │          """
+│ │          feature_names = [fci.feature_name for fci in feature_column_infos]
+│ │ -        feature_values = lookup_client.lookup_features(primary_key_df, feature_names)
+│ │ +        feature_values = lookup_client.lookup_features(
+│ │ +            primary_key_df, feature_names, metrics=metrics
+│ │ +        )
+│ │          feature_name_to_output_name = {
+│ │              fci.feature_name: fci.output_name for fci in feature_column_infos
+│ │          }
+│ │          return feature_values.rename(feature_name_to_output_name, axis=1)
+│ │  
+│ │      def _batch_lookup_and_rename_features(
+│ │          self,
+│ │          batch_lookup_client: OnlineLookupClient,
+│ │          primary_key_dfs: Dict[str, Dict[LookupKeyType, pd.DataFrame]],
+│ │          feature_column_infos_dict: Dict[
+│ │              str, Dict[LookupKeyType, List[FeatureColumnInfo]]
+│ │          ],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> Dict[str, Dict[LookupKeyType, pd.DataFrame]]:
+│ │          """
+│ │          Looks up features from all the feature tables in batch, then renames them. Feature metadata
+│ │           is specified via `feature_column_infos`.
+│ │          """
+│ │          feature_names = defaultdict(lambda: defaultdict(list))
+│ │          feature_name_to_output_names = defaultdict(lambda: defaultdict(list))
+│ │ @@ -514,15 +571,15 @@
+│ │                  feature_names[oft_name][lookup_key] = [
+│ │                      fci.feature_name for fci in feature_column_infos
+│ │                  ]
+│ │                  feature_name_to_output_names[oft_name][lookup_key] = {
+│ │                      fci.feature_name: fci.output_name for fci in feature_column_infos
+│ │                  }
+│ │          feature_values = batch_lookup_client.batch_lookup_features(
+│ │ -            primary_key_dfs, feature_names
+│ │ +            primary_key_dfs, feature_names, metrics=metrics
+│ │          )
+│ │  
+│ │          for oft_name, feature_values_by_lookup_key in feature_values.items():
+│ │              for lookup_key, _ in feature_values_by_lookup_key.items():
+│ │                  feature_values[oft_name][lookup_key] = feature_values[oft_name][
+│ │                      lookup_key
+│ │                  ].rename(feature_name_to_output_names[oft_name][lookup_key], axis=1)
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/mlflow_model_constants.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/mlflow_model_constants.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -20,9 +20,16 @@
+│ │  #
+│ │  # - The Feature lookup client major version (eg `{FEATURE_LOOKUP_CLIENT_PIP_PACKAGE}.0.1`)
+│ │  # - The pinned major version of the databricks-feature-lookup requirement in logged model's conda.yaml
+│ │  #
+│ │  # If needed, these can be decoupled into separate constants, but that decision should be carefully considered.
+│ │  FEATURE_LOOKUP_CLIENT_MAJOR_VERSION = 0
+│ │  
+│ │ +# The minor.micro version number of the feature lookup client Alpha version. The Alpha version is used
+│ │ +# by core client when logging model to create Feature Serving Endpoint.
+│ │ +# Minor version
+│ │ +FEATURE_LOOKUP_CLIENT_ALPHA_MINOR_VERSION = 3
+│ │ +# Micro version
+│ │ +FEATURE_LOOKUP_CLIENT_ALPHA_MICRO_VERSION = 1
+│ │ +
+│ │  DATABRICKS = "Databricks"
+│ │  SAGEMAKER = "SageMaker"
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/online_lookup_client.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/online_lookup_client.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -16,14 +16,15 @@
+│ │      LookupDynamoDbEngine,
+│ │      LookupEngine,
+│ │      LookupMySqlEngine,
+│ │      LookupSqlEngine,
+│ │      LookupSqlServerEngine,
+│ │  )
+│ │  from databricks.feature_store.mlflow_model_constants import DATABRICKS, SAGEMAKER
+│ │ +from databricks.feature_store.utils.metrics_utils import LookupClientMetrics
+│ │  
+│ │  # The provisioner of this model is expected to set the following environment variable for each
+│ │  # feature table if the feature store is SQL based:
+│ │  #  (1) <online_store_for_serving.read_secret_prefix>_USER
+│ │  #  (2) <online_store_for_serving.read_secret_prefix>_PASSWORD
+│ │  USER_SUFFIX = "_USER"
+│ │  PASSWORD_SUFFIX = "_PASSWORD"
+│ │ @@ -233,29 +234,32 @@
+│ │      ):
+│ │          return generate_lookup_dynamodb_engine(online_feature_table, creds=None)
+│ │  
+│ │      def batch_lookup_features(
+│ │          self,
+│ │          lookup_df_dict: Dict[str, Dict[LookupKeyType, pd.DataFrame]],
+│ │          feature_names_dict: Dict[str, Dict[LookupKeyType, List[str]]],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> Dict[str, Dict[LookupKeyType, pd.DataFrame]]:
+│ │          """
+│ │          :param lookup_df_dict: dictionary from online feature table name to primary key dfs.
+│ │          :param feature_names_dict:  dictionary from online feature table name to feature names.
+│ │          :return a Dictionary from online feature table name to feature values.
+│ │          """
+│ │          return self.lookup_engine.batch_lookup_features(
+│ │ -            lookup_df_dict,
+│ │ -            feature_names_dict,
+│ │ +            lookup_df_dict, feature_names_dict, metrics=metrics
+│ │          )
+│ │  
+│ │      def lookup_features(
+│ │          self,
+│ │          lookup_df: pd.DataFrame,
+│ │          feature_names: List[str],
+│ │ +        *,
+│ │ +        metrics: LookupClientMetrics = None,
+│ │      ) -> pd.DataFrame:
+│ │          """Uses a Python database connection to lookup features in feature_names using
+│ │          the lookup keys and values in lookup_df. The online store database and table name are
+│ │          obtained from the AbstractOnlineFeatureTable passed to the constructor.
+│ │  
+│ │          The resulting DataFrame has the same number of rows as lookup_df. In the case that a lookup
+│ │          key cannot be found, a row of NaNs will be returned in the resulting DataFrame.
+│ │ @@ -266,16 +270,15 @@
+│ │          :param lookup_df: Pandas DataFrame containing lookup keys and values. The DataFrame should
+│ │          contain one column for each primary key of the online feature table, and one row for each
+│ │          entity to look up.
+│ │          :param feature_names: A list of feature names to look up.
+│ │          :return: Pandas DataFrame containing feature keys and values fetched from the online store.
+│ │          """
+│ │          features = self.lookup_engine.lookup_features(
+│ │ -            lookup_df,
+│ │ -            feature_names,
+│ │ +            lookup_df, feature_names, metrics=metrics
+│ │          )
+│ │          return features
+│ │  
+│ │      def cleanup(self):
+│ │          """
+│ │          Performs any cleanup associated with the online store.
+│ │          :return:
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/feature_spec_pb2.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/protos/feature_spec_pb2.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -12,22 +12,25 @@
+│ │  _sym_db = _symbol_database.Default()
+│ │  
+│ │  
+│ │  from mlflow.protos.scalapb import scalapb_pb2 as scalapb_dot_scalapb__pb2
+│ │  from mlflow.protos import databricks_pb2 as databricks__pb2
+│ │  
+│ │  
+│ │ -DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12\x66\x65\x61ture_spec.proto\x12\x12\x66\x65\x61turestorecommon\x1a\x15scalapb/scalapb.proto\x1a\x10\x64\x61tabricks.proto\"$\n\x14SourceDataColumnInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x84\x01\n\x11\x46\x65\x61tureColumnInfo\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x14\n\x0c\x66\x65\x61ture_name\x18\x02 \x01(\t\x12\x12\n\nlookup_key\x18\x03 \x03(\t\x12\x13\n\x0boutput_name\x18\x04 \x01(\t\x12\x1c\n\x14timestamp_lookup_key\x18\x05 \x03(\t\"\xa7\x01\n\nColumnInfo\x12K\n\x17source_data_column_info\x18\x01 \x01(\x0b\x32(.featurestorecommon.SourceDataColumnInfoH\x00\x12\x44\n\x13\x66\x65\x61ture_column_info\x18\x02 \x01(\x0b\x32%.featurestorecommon.FeatureColumnInfoH\x00\x42\x06\n\x04info\"8\n\x10\x46\x65\x61tureTableInfo\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x10\n\x08table_id\x18\x02 \x01(\t\"\xdb\x01\n\x0b\x46\x65\x61tureSpec\x12\x35\n\rinput_columns\x18\x01 \x03(\x0b\x32\x1e.featurestorecommon.ColumnInfo\x12\x1d\n\x15serialization_version\x18\x02 \x01(\x05\x12\x14\n\x0cworkspace_id\x18\x03 \x01(\x03\x12$\n\x1c\x66\x65\x61ture_store_client_version\x18\x04 \x01(\t\x12:\n\x0cinput_tables\x18\x05 \x03(\x0b\x32$.featurestorecommon.FeatureTableInfoBC\n\'com.databricks.proto.featurestorecommonB\x10\x46\x65\x61tureSpecProto\xa0\x01\x01\xe2?\x02\x10\x01')
+│ │ +DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12\x66\x65\x61ture_spec.proto\x12\x12\x66\x65\x61turestorecommon\x1a\x15scalapb/scalapb.proto\x1a\x10\x64\x61tabricks.proto\"$\n\x14SourceDataColumnInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x84\x01\n\x11\x46\x65\x61tureColumnInfo\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x14\n\x0c\x66\x65\x61ture_name\x18\x02 \x01(\t\x12\x12\n\nlookup_key\x18\x03 \x03(\t\x12\x13\n\x0boutput_name\x18\x04 \x01(\t\x12\x1c\n\x14timestamp_lookup_key\x18\x05 \x03(\t\"3\n\x0cInputBinding\x12\x11\n\tparameter\x18\x01 \x01(\t\x12\x10\n\x08\x62ound_to\x18\x02 \x01(\t\"u\n\x12OnDemandColumnInfo\x12\x10\n\x08udf_name\x18\x01 \x01(\t\x12\x38\n\x0einput_bindings\x18\x02 \x03(\x0b\x32 .featurestorecommon.InputBinding\x12\x13\n\x0boutput_name\x18\x03 \x01(\t\"\x87\x02\n\nColumnInfo\x12K\n\x17source_data_column_info\x18\x01 \x01(\x0b\x32(.featurestorecommon.SourceDataColumnInfoH\x00\x12\x44\n\x13\x66\x65\x61ture_column_info\x18\x02 \x01(\x0b\x32%.featurestorecommon.FeatureColumnInfoH\x00\x12G\n\x15on_demand_column_info\x18\x03 \x01(\x0b\x32&.featurestorecommon.OnDemandColumnInfoH\x00\x12\x15\n\x07include\x18\n \x01(\x08:\x04trueB\x06\n\x04info\"8\n\x10\x46\x65\x61tureTableInfo\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x10\n\x08table_id\x18\x02 \x01(\t\"-\n\x0c\x46unctionInfo\x12\x10\n\x08udf_name\x18\x01 \x01(\t\x12\x0b\n\x03md5\x18\x02 \x01(\t\"\x96\x02\n\x0b\x46\x65\x61tureSpec\x12\x35\n\rinput_columns\x18\x01 \x03(\x0b\x32\x1e.featurestorecommon.ColumnInfo\x12\x1d\n\x15serialization_version\x18\x02 \x01(\x05\x12\x14\n\x0cworkspace_id\x18\x03 \x01(\x03\x12$\n\x1c\x66\x65\x61ture_store_client_version\x18\x04 \x01(\t\x12:\n\x0cinput_tables\x18\x05 \x03(\x0b\x32$.featurestorecommon.FeatureTableInfo\x12\x39\n\x0finput_functions\x18\x06 \x03(\x0b\x32 .featurestorecommon.FunctionInfoBC\n\'com.databricks.proto.featurestorecommonB\x10\x46\x65\x61tureSpecProto\xa0\x01\x01\xe2?\x02\x10\x01')
+│ │  
+│ │  
+│ │  
+│ │  _SOURCEDATACOLUMNINFO = DESCRIPTOR.message_types_by_name['SourceDataColumnInfo']
+│ │  _FEATURECOLUMNINFO = DESCRIPTOR.message_types_by_name['FeatureColumnInfo']
+│ │ +_INPUTBINDING = DESCRIPTOR.message_types_by_name['InputBinding']
+│ │ +_ONDEMANDCOLUMNINFO = DESCRIPTOR.message_types_by_name['OnDemandColumnInfo']
+│ │  _COLUMNINFO = DESCRIPTOR.message_types_by_name['ColumnInfo']
+│ │  _FEATURETABLEINFO = DESCRIPTOR.message_types_by_name['FeatureTableInfo']
+│ │ +_FUNCTIONINFO = DESCRIPTOR.message_types_by_name['FunctionInfo']
+│ │  _FEATURESPEC = DESCRIPTOR.message_types_by_name['FeatureSpec']
+│ │  SourceDataColumnInfo = _reflection.GeneratedProtocolMessageType('SourceDataColumnInfo', (_message.Message,), {
+│ │    'DESCRIPTOR' : _SOURCEDATACOLUMNINFO,
+│ │    '__module__' : 'feature_spec_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.SourceDataColumnInfo)
+│ │    })
+│ │  _sym_db.RegisterMessage(SourceDataColumnInfo)
+│ │ @@ -35,28 +38,49 @@
+│ │  FeatureColumnInfo = _reflection.GeneratedProtocolMessageType('FeatureColumnInfo', (_message.Message,), {
+│ │    'DESCRIPTOR' : _FEATURECOLUMNINFO,
+│ │    '__module__' : 'feature_spec_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureColumnInfo)
+│ │    })
+│ │  _sym_db.RegisterMessage(FeatureColumnInfo)
+│ │  
+│ │ +InputBinding = _reflection.GeneratedProtocolMessageType('InputBinding', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _INPUTBINDING,
+│ │ +  '__module__' : 'feature_spec_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.InputBinding)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(InputBinding)
+│ │ +
+│ │ +OnDemandColumnInfo = _reflection.GeneratedProtocolMessageType('OnDemandColumnInfo', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _ONDEMANDCOLUMNINFO,
+│ │ +  '__module__' : 'feature_spec_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.OnDemandColumnInfo)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(OnDemandColumnInfo)
+│ │ +
+│ │  ColumnInfo = _reflection.GeneratedProtocolMessageType('ColumnInfo', (_message.Message,), {
+│ │    'DESCRIPTOR' : _COLUMNINFO,
+│ │    '__module__' : 'feature_spec_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.ColumnInfo)
+│ │    })
+│ │  _sym_db.RegisterMessage(ColumnInfo)
+│ │  
+│ │  FeatureTableInfo = _reflection.GeneratedProtocolMessageType('FeatureTableInfo', (_message.Message,), {
+│ │    'DESCRIPTOR' : _FEATURETABLEINFO,
+│ │    '__module__' : 'feature_spec_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureTableInfo)
+│ │    })
+│ │  _sym_db.RegisterMessage(FeatureTableInfo)
+│ │  
+│ │ +FunctionInfo = _reflection.GeneratedProtocolMessageType('FunctionInfo', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _FUNCTIONINFO,
+│ │ +  '__module__' : 'feature_spec_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.FunctionInfo)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(FunctionInfo)
+│ │ +
+│ │  FeatureSpec = _reflection.GeneratedProtocolMessageType('FeatureSpec', (_message.Message,), {
+│ │    'DESCRIPTOR' : _FEATURESPEC,
+│ │    '__module__' : 'feature_spec_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureSpec)
+│ │    })
+│ │  _sym_db.RegisterMessage(FeatureSpec)
+│ │  
+│ │ @@ -64,14 +88,20 @@
+│ │  
+│ │    DESCRIPTOR._options = None
+│ │    DESCRIPTOR._serialized_options = b'\n\'com.databricks.proto.featurestorecommonB\020FeatureSpecProto\240\001\001\342?\002\020\001'
+│ │    _SOURCEDATACOLUMNINFO._serialized_start=83
+│ │    _SOURCEDATACOLUMNINFO._serialized_end=119
+│ │    _FEATURECOLUMNINFO._serialized_start=122
+│ │    _FEATURECOLUMNINFO._serialized_end=254
+│ │ -  _COLUMNINFO._serialized_start=257
+│ │ -  _COLUMNINFO._serialized_end=424
+│ │ -  _FEATURETABLEINFO._serialized_start=426
+│ │ -  _FEATURETABLEINFO._serialized_end=482
+│ │ -  _FEATURESPEC._serialized_start=485
+│ │ -  _FEATURESPEC._serialized_end=704
+│ │ +  _INPUTBINDING._serialized_start=256
+│ │ +  _INPUTBINDING._serialized_end=307
+│ │ +  _ONDEMANDCOLUMNINFO._serialized_start=309
+│ │ +  _ONDEMANDCOLUMNINFO._serialized_end=426
+│ │ +  _COLUMNINFO._serialized_start=429
+│ │ +  _COLUMNINFO._serialized_end=692
+│ │ +  _FEATURETABLEINFO._serialized_start=694
+│ │ +  _FEATURETABLEINFO._serialized_end=750
+│ │ +  _FUNCTIONINFO._serialized_start=752
+│ │ +  _FUNCTIONINFO._serialized_end=797
+│ │ +  _FEATURESPEC._serialized_start=800
+│ │ +  _FEATURESPEC._serialized_end=1078
+│ │  # @@protoc_insertion_point(module_scope)
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/protos/feature_store_serving_pb2.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/protos/feature_store_serving_pb2.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -12,15 +12,15 @@
+│ │  
+│ │  _sym_db = _symbol_database.Default()
+│ │  
+│ │  
+│ │  from mlflow.protos.scalapb import scalapb_pb2 as scalapb_dot_scalapb__pb2
+│ │  
+│ │  
+│ │ -DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x66\x65\x61ture_store_serving.proto\x12\x12\x66\x65\x61turestorecommon\x1a\x15scalapb/scalapb.proto\"\xdc\x03\n\x15OnlineStoreForServing\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x1a\n\x12read_secret_prefix\x18\x03 \x01(\t\x12\x1d\n\x15\x63reation_timestamp_ms\x18\x04 \x01(\x03\x12\x33\n\nmysql_conf\x18\x05 \x01(\x0b\x32\x1d.featurestorecommon.MySqlConfH\x00\x12<\n\x0fsql_server_conf\x18\x06 \x01(\x0b\x32!.featurestorecommon.SqlServerConfH\x00\x12\x39\n\rdynamodb_conf\x18\x07 \x01(\x0b\x32 .featurestorecommon.DynamoDbConfH\x00\x12\x39\n\rcosmosdb_conf\x18\x08 \x01(\x0b\x32 .featurestorecommon.CosmosDbConfH\x00\x12\x31\n\nquery_mode\x18\x15 \x01(\x0e\x32\x1d.featurestorecommon.QueryModeB\x0f\n\rextra_configs\"\'\n\tMySqlConf\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"+\n\rSqlServerConf\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"\x1e\n\x0c\x44ynamoDbConf\x12\x0e\n\x06region\x18\x01 \x01(\t\"#\n\x0c\x43osmosDbConf\x12\x13\n\x0b\x61\x63\x63ount_uri\x18\x01 \x01(\t\"j\n\x0e\x46\x65\x61tureDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\x12\x19\n\x11\x64\x61ta_type_details\x18\x03 \x01(\t\"R\n\x11PrimaryKeyDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\"T\n\x13TimestampKeyDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\"\xe2\x02\n\x12OnlineFeatureTable\x12\x1a\n\x12\x66\x65\x61ture_table_name\x18\x01 \x01(\t\x12!\n\x19online_feature_table_name\x18\x02 \x01(\t\x12?\n\x0conline_store\x18\x03 \x01(\x0b\x32).featurestorecommon.OnlineStoreForServing\x12;\n\x0cprimary_keys\x18\x04 \x03(\x0b\x32%.featurestorecommon.PrimaryKeyDetails\x12\x18\n\x10\x66\x65\x61ture_table_id\x18\x05 \x01(\t\x12\x34\n\x08\x66\x65\x61tures\x18\x06 \x03(\x0b\x32\".featurestorecommon.FeatureDetails\x12?\n\x0etimestamp_keys\x18\x07 \x03(\x0b\x32\'.featurestorecommon.TimestampKeyDetails\"X\n\x17\x46\x65\x61tureTablesForServing\x12=\n\ronline_tables\x18\x01 \x03(\x0b\x32&.featurestorecommon.OnlineFeatureTable\"+\n\rMySqlMetadata\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"/\n\x11SqlServerMetadata\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"B\n\x10\x44ynamoDbMetadata\x12\x0e\n\x06region\x18\x01 \x01(\t\x12\x11\n\ttable_arn\x18\x02 \x01(\t\x12\x0b\n\x03ttl\x18\x03 \x01(\x03\"K\n\x10\x43osmosDbMetadata\x12\x13\n\x0b\x61\x63\x63ount_uri\x18\x01 \x01(\t\x12\x15\n\rcontainer_uri\x18\x02 \x01(\t\x12\x0b\n\x03ttl\x18\x03 \x01(\x03\"\xa9\x04\n\x0bOnlineStore\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x1a\n\x12\x63reation_timestamp\x18\x04 \x01(\x03\x12\x1e\n\x16last_updated_timestamp\x18\x05 \x01(\x03\x12\x12\n\ncreator_id\x18\x06 \x01(\t\x12\x10\n\x04host\x18\x07 \x01(\tB\x02\x18\x01\x12\x10\n\x04port\x18\x08 \x01(\x05\x42\x02\x18\x01\x12\x1b\n\x13last_update_user_id\x18\t \x01(\t\x12;\n\x0emysql_metadata\x18\n \x01(\x0b\x32!.featurestorecommon.MySqlMetadataH\x00\x12\x44\n\x13sql_server_metadata\x18\x0b \x01(\x0b\x32%.featurestorecommon.SqlServerMetadataH\x00\x12\x41\n\x11\x64ynamodb_metadata\x18\x0c \x01(\x0b\x32$.featurestorecommon.DynamoDbMetadataH\x00\x12\x41\n\x11\x63osmosdb_metadata\x18\r \x01(\x0b\x32$.featurestorecommon.CosmosDbMetadataH\x00\x42\x15\n\x13\x61\x64\x64itional_metadata\"\xdf\x04\n\x13OnlineStoreDetailed\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x1a\n\x12\x63reation_timestamp\x18\x04 \x01(\x03\x12\x1e\n\x16last_updated_timestamp\x18\x05 \x01(\x03\x12\x12\n\ncreator_id\x18\x06 \x01(\t\x12\x10\n\x04host\x18\x07 \x01(\tB\x02\x18\x01\x12\x10\n\x04port\x18\x08 \x01(\x05\x42\x02\x18\x01\x12\x1b\n\x13last_update_user_id\x18\t \x01(\t\x12\x10\n\x08\x66\x65\x61tures\x18\n \x03(\t\x12\x1a\n\x12read_secret_prefix\x18\x0b \x01(\t\x12;\n\x0emysql_metadata\x18\x0c \x01(\x0b\x32!.featurestorecommon.MySqlMetadataH\x00\x12\x44\n\x13sql_server_metadata\x18\r \x01(\x0b\x32%.featurestorecommon.SqlServerMetadataH\x00\x12\x41\n\x11\x64ynamodb_metadata\x18\x0e \x01(\x0b\x32$.featurestorecommon.DynamoDbMetadataH\x00\x12\x41\n\x11\x63osmosdb_metadata\x18\x0f \x01(\x0b\x32$.featurestorecommon.CosmosDbMetadataH\x00\x42\x15\n\x13\x61\x64\x64itional_metadata\"t\n FeatureTablesForSageMakerServing\x12P\n\ronline_tables\x18\x01 \x03(\x0b\x32\x39.featurestorecommon.OnlineFeatureTableForSageMakerServing\"\xfe\x02\n%OnlineFeatureTableForSageMakerServing\x12\x1a\n\x12\x66\x65\x61ture_table_name\x18\x01 \x01(\t\x12!\n\x19online_feature_table_name\x18\x02 \x01(\t\x12H\n\x0conline_store\x18\x03 \x01(\x0b\x32\x32.featurestorecommon.OnlineStoreForSageMakerServing\x12;\n\x0cprimary_keys\x18\x04 \x03(\x0b\x32%.featurestorecommon.PrimaryKeyDetails\x12\x18\n\x10\x66\x65\x61ture_table_id\x18\x05 \x01(\t\x12\x34\n\x08\x66\x65\x61tures\x18\x06 \x03(\x0b\x32\".featurestorecommon.FeatureDetails\x12?\n\x0etimestamp_keys\x18\x07 \x03(\x0b\x32\'.featurestorecommon.TimestampKeyDetails\"\xbe\x01\n\x1eOnlineStoreForSageMakerServing\x12\x1d\n\x15\x63reation_timestamp_ms\x18\x01 \x01(\x03\x12\x39\n\rdynamodb_conf\x18\x02 \x01(\x0b\x32 .featurestorecommon.DynamoDbConfH\x00\x12\x31\n\nquery_mode\x18\x10 \x01(\x0e\x32\x1d.featurestorecommon.QueryModeB\x0f\n\rextra_configs*$\n\x05\x43loud\x12\x07\n\x03\x41WS\x10\x01\x12\t\n\x05\x41ZURE\x10\x02\x12\x07\n\x03GCP\x10\x03*T\n\tStoreType\x12\x10\n\x0c\x41URORA_MYSQL\x10\x01\x12\x0e\n\nSQL_SERVER\x10\x02\x12\t\n\x05MYSQL\x10\x03\x12\x0c\n\x08\x44YNAMODB\x10\x04\x12\x0c\n\x08\x43OSMOSDB\x10\x05*\xa2\x01\n\x08\x44\x61taType\x12\x0b\n\x07INTEGER\x10\x01\x12\t\n\x05\x46LOAT\x10\x02\x12\x0b\n\x07\x42OOLEAN\x10\x03\x12\n\n\x06STRING\x10\x04\x12\n\n\x06\x44OUBLE\x10\x05\x12\x08\n\x04LONG\x10\x06\x12\r\n\tTIMESTAMP\x10\x07\x12\x08\n\x04\x44\x41TE\x10\x08\x12\t\n\x05SHORT\x10\t\x12\t\n\x05\x41RRAY\x10\n\x12\x07\n\x03MAP\x10\x0b\x12\n\n\x06\x42INARY\x10\x0c\x12\x0b\n\x07\x44\x45\x43IMAL\x10\r*4\n\tQueryMode\x12\x16\n\x12PRIMARY_KEY_LOOKUP\x10\x00\x12\x0f\n\x0bRANGE_QUERY\x10\x01\x42\x31\n\'com.databricks.proto.featurestorecommon\xa0\x01\x01\xe2?\x02\x10\x01')
+│ │ +DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x66\x65\x61ture_store_serving.proto\x12\x12\x66\x65\x61turestorecommon\x1a\x15scalapb/scalapb.proto\"\xdc\x03\n\x15OnlineStoreForServing\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x1a\n\x12read_secret_prefix\x18\x03 \x01(\t\x12\x1d\n\x15\x63reation_timestamp_ms\x18\x04 \x01(\x03\x12\x33\n\nmysql_conf\x18\x05 \x01(\x0b\x32\x1d.featurestorecommon.MySqlConfH\x00\x12<\n\x0fsql_server_conf\x18\x06 \x01(\x0b\x32!.featurestorecommon.SqlServerConfH\x00\x12\x39\n\rdynamodb_conf\x18\x07 \x01(\x0b\x32 .featurestorecommon.DynamoDbConfH\x00\x12\x39\n\rcosmosdb_conf\x18\x08 \x01(\x0b\x32 .featurestorecommon.CosmosDbConfH\x00\x12\x31\n\nquery_mode\x18\x15 \x01(\x0e\x32\x1d.featurestorecommon.QueryModeB\x0f\n\rextra_configs\"\'\n\tMySqlConf\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"+\n\rSqlServerConf\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"\x1e\n\x0c\x44ynamoDbConf\x12\x0e\n\x06region\x18\x01 \x01(\t\"#\n\x0c\x43osmosDbConf\x12\x13\n\x0b\x61\x63\x63ount_uri\x18\x01 \x01(\t\"j\n\x0e\x46\x65\x61tureDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\x12\x19\n\x11\x64\x61ta_type_details\x18\x03 \x01(\t\"R\n\x11PrimaryKeyDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\"T\n\x13TimestampKeyDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\tdata_type\x18\x02 \x01(\x0e\x32\x1c.featurestorecommon.DataType\"\xe2\x02\n\x12OnlineFeatureTable\x12\x1a\n\x12\x66\x65\x61ture_table_name\x18\x01 \x01(\t\x12!\n\x19online_feature_table_name\x18\x02 \x01(\t\x12?\n\x0conline_store\x18\x03 \x01(\x0b\x32).featurestorecommon.OnlineStoreForServing\x12;\n\x0cprimary_keys\x18\x04 \x03(\x0b\x32%.featurestorecommon.PrimaryKeyDetails\x12\x18\n\x10\x66\x65\x61ture_table_id\x18\x05 \x01(\t\x12\x34\n\x08\x66\x65\x61tures\x18\x06 \x03(\x0b\x32\".featurestorecommon.FeatureDetails\x12?\n\x0etimestamp_keys\x18\x07 \x03(\x0b\x32\'.featurestorecommon.TimestampKeyDetails\"X\n\x17\x46\x65\x61tureTablesForServing\x12=\n\ronline_tables\x18\x01 \x03(\x0b\x32&.featurestorecommon.OnlineFeatureTable\"+\n\rMySqlMetadata\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"/\n\x11SqlServerMetadata\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"B\n\x10\x44ynamoDbMetadata\x12\x0e\n\x06region\x18\x01 \x01(\t\x12\x11\n\ttable_arn\x18\x02 \x01(\t\x12\x0b\n\x03ttl\x18\x03 \x01(\x03\"K\n\x10\x43osmosDbMetadata\x12\x13\n\x0b\x61\x63\x63ount_uri\x18\x01 \x01(\t\x12\x15\n\rcontainer_uri\x18\x02 \x01(\t\x12\x0b\n\x03ttl\x18\x03 \x01(\x03\"\xa9\x04\n\x0bOnlineStore\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x1a\n\x12\x63reation_timestamp\x18\x04 \x01(\x03\x12\x1e\n\x16last_updated_timestamp\x18\x05 \x01(\x03\x12\x12\n\ncreator_id\x18\x06 \x01(\t\x12\x10\n\x04host\x18\x07 \x01(\tB\x02\x18\x01\x12\x10\n\x04port\x18\x08 \x01(\x05\x42\x02\x18\x01\x12\x1b\n\x13last_update_user_id\x18\t \x01(\t\x12;\n\x0emysql_metadata\x18\n \x01(\x0b\x32!.featurestorecommon.MySqlMetadataH\x00\x12\x44\n\x13sql_server_metadata\x18\x0b \x01(\x0b\x32%.featurestorecommon.SqlServerMetadataH\x00\x12\x41\n\x11\x64ynamodb_metadata\x18\x0c \x01(\x0b\x32$.featurestorecommon.DynamoDbMetadataH\x00\x12\x41\n\x11\x63osmosdb_metadata\x18\r \x01(\x0b\x32$.featurestorecommon.CosmosDbMetadataH\x00\x42\x15\n\x13\x61\x64\x64itional_metadata\"\xdf\x04\n\x13OnlineStoreDetailed\x12(\n\x05\x63loud\x18\x01 \x01(\x0e\x32\x19.featurestorecommon.Cloud\x12\x31\n\nstore_type\x18\x02 \x01(\x0e\x32\x1d.featurestorecommon.StoreType\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x1a\n\x12\x63reation_timestamp\x18\x04 \x01(\x03\x12\x1e\n\x16last_updated_timestamp\x18\x05 \x01(\x03\x12\x12\n\ncreator_id\x18\x06 \x01(\t\x12\x10\n\x04host\x18\x07 \x01(\tB\x02\x18\x01\x12\x10\n\x04port\x18\x08 \x01(\x05\x42\x02\x18\x01\x12\x1b\n\x13last_update_user_id\x18\t \x01(\t\x12\x10\n\x08\x66\x65\x61tures\x18\n \x03(\t\x12\x1a\n\x12read_secret_prefix\x18\x0b \x01(\t\x12;\n\x0emysql_metadata\x18\x0c \x01(\x0b\x32!.featurestorecommon.MySqlMetadataH\x00\x12\x44\n\x13sql_server_metadata\x18\r \x01(\x0b\x32%.featurestorecommon.SqlServerMetadataH\x00\x12\x41\n\x11\x64ynamodb_metadata\x18\x0e \x01(\x0b\x32$.featurestorecommon.DynamoDbMetadataH\x00\x12\x41\n\x11\x63osmosdb_metadata\x18\x0f \x01(\x0b\x32$.featurestorecommon.CosmosDbMetadataH\x00\x42\x15\n\x13\x61\x64\x64itional_metadata\"t\n FeatureTablesForSageMakerServing\x12P\n\ronline_tables\x18\x01 \x03(\x0b\x32\x39.featurestorecommon.OnlineFeatureTableForSageMakerServing\"\xfe\x02\n%OnlineFeatureTableForSageMakerServing\x12\x1a\n\x12\x66\x65\x61ture_table_name\x18\x01 \x01(\t\x12!\n\x19online_feature_table_name\x18\x02 \x01(\t\x12H\n\x0conline_store\x18\x03 \x01(\x0b\x32\x32.featurestorecommon.OnlineStoreForSageMakerServing\x12;\n\x0cprimary_keys\x18\x04 \x03(\x0b\x32%.featurestorecommon.PrimaryKeyDetails\x12\x18\n\x10\x66\x65\x61ture_table_id\x18\x05 \x01(\t\x12\x34\n\x08\x66\x65\x61tures\x18\x06 \x03(\x0b\x32\".featurestorecommon.FeatureDetails\x12?\n\x0etimestamp_keys\x18\x07 \x03(\x0b\x32\'.featurestorecommon.TimestampKeyDetails\"\xbe\x01\n\x1eOnlineStoreForSageMakerServing\x12\x1d\n\x15\x63reation_timestamp_ms\x18\x01 \x01(\x03\x12\x39\n\rdynamodb_conf\x18\x02 \x01(\x0b\x32 .featurestorecommon.DynamoDbConfH\x00\x12\x31\n\nquery_mode\x18\x10 \x01(\x0e\x32\x1d.featurestorecommon.QueryModeB\x0f\n\rextra_configs\"\x83\x01\n\x1c\x46\x65\x61tureFunctionParameterInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\ttype_text\x18\x02 \x01(\t\x12\x11\n\ttype_json\x18\x03 \x01(\t\x12/\n\ttype_name\x18\x04 \x01(\x0e\x32\x1c.featurestorecommon.DataType\"\xdb\x01\n\x19\x46\x65\x61tureFunctionForServing\x12\x11\n\tfull_name\x18\x01 \x01(\t\x12\x46\n\x0cinput_params\x18\x02 \x03(\x0b\x32\x30.featurestorecommon.FeatureFunctionParameterInfo\x12/\n\tdata_type\x18\x03 \x01(\x0e\x32\x1c.featurestorecommon.DataType\x12\x16\n\x0e\x66ull_data_type\x18\x04 \x01(\t\x12\x1a\n\x12routine_definition\x18\x05 \x01(\t\"c\n\x1a\x46\x65\x61tureFunctionsForServing\x12\x45\n\x0e\x66\x66_for_serving\x18\x01 \x03(\x0b\x32-.featurestorecommon.FeatureFunctionForServing*$\n\x05\x43loud\x12\x07\n\x03\x41WS\x10\x01\x12\t\n\x05\x41ZURE\x10\x02\x12\x07\n\x03GCP\x10\x03*T\n\tStoreType\x12\x10\n\x0c\x41URORA_MYSQL\x10\x01\x12\x0e\n\nSQL_SERVER\x10\x02\x12\t\n\x05MYSQL\x10\x03\x12\x0c\n\x08\x44YNAMODB\x10\x04\x12\x0c\n\x08\x43OSMOSDB\x10\x05*\xa2\x01\n\x08\x44\x61taType\x12\x0b\n\x07INTEGER\x10\x01\x12\t\n\x05\x46LOAT\x10\x02\x12\x0b\n\x07\x42OOLEAN\x10\x03\x12\n\n\x06STRING\x10\x04\x12\n\n\x06\x44OUBLE\x10\x05\x12\x08\n\x04LONG\x10\x06\x12\r\n\tTIMESTAMP\x10\x07\x12\x08\n\x04\x44\x41TE\x10\x08\x12\t\n\x05SHORT\x10\t\x12\t\n\x05\x41RRAY\x10\n\x12\x07\n\x03MAP\x10\x0b\x12\n\n\x06\x42INARY\x10\x0c\x12\x0b\n\x07\x44\x45\x43IMAL\x10\r*4\n\tQueryMode\x12\x16\n\x12PRIMARY_KEY_LOOKUP\x10\x00\x12\x0f\n\x0bRANGE_QUERY\x10\x01\x42\x31\n\'com.databricks.proto.featurestorecommon\xa0\x01\x01\xe2?\x02\x10\x01')
+│ │  
+│ │  _CLOUD = DESCRIPTOR.enum_types_by_name['Cloud']
+│ │  Cloud = enum_type_wrapper.EnumTypeWrapper(_CLOUD)
+│ │  _STORETYPE = DESCRIPTOR.enum_types_by_name['StoreType']
+│ │  StoreType = enum_type_wrapper.EnumTypeWrapper(_STORETYPE)
+│ │  _DATATYPE = DESCRIPTOR.enum_types_by_name['DataType']
+│ │  DataType = enum_type_wrapper.EnumTypeWrapper(_DATATYPE)
+│ │ @@ -66,14 +66,17 @@
+│ │  _DYNAMODBMETADATA = DESCRIPTOR.message_types_by_name['DynamoDbMetadata']
+│ │  _COSMOSDBMETADATA = DESCRIPTOR.message_types_by_name['CosmosDbMetadata']
+│ │  _ONLINESTORE = DESCRIPTOR.message_types_by_name['OnlineStore']
+│ │  _ONLINESTOREDETAILED = DESCRIPTOR.message_types_by_name['OnlineStoreDetailed']
+│ │  _FEATURETABLESFORSAGEMAKERSERVING = DESCRIPTOR.message_types_by_name['FeatureTablesForSageMakerServing']
+│ │  _ONLINEFEATURETABLEFORSAGEMAKERSERVING = DESCRIPTOR.message_types_by_name['OnlineFeatureTableForSageMakerServing']
+│ │  _ONLINESTOREFORSAGEMAKERSERVING = DESCRIPTOR.message_types_by_name['OnlineStoreForSageMakerServing']
+│ │ +_FEATUREFUNCTIONPARAMETERINFO = DESCRIPTOR.message_types_by_name['FeatureFunctionParameterInfo']
+│ │ +_FEATUREFUNCTIONFORSERVING = DESCRIPTOR.message_types_by_name['FeatureFunctionForServing']
+│ │ +_FEATUREFUNCTIONSFORSERVING = DESCRIPTOR.message_types_by_name['FeatureFunctionsForServing']
+│ │  OnlineStoreForServing = _reflection.GeneratedProtocolMessageType('OnlineStoreForServing', (_message.Message,), {
+│ │    'DESCRIPTOR' : _ONLINESTOREFORSERVING,
+│ │    '__module__' : 'feature_store_serving_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.OnlineStoreForServing)
+│ │    })
+│ │  _sym_db.RegisterMessage(OnlineStoreForServing)
+│ │  
+│ │ @@ -199,34 +202,55 @@
+│ │  OnlineStoreForSageMakerServing = _reflection.GeneratedProtocolMessageType('OnlineStoreForSageMakerServing', (_message.Message,), {
+│ │    'DESCRIPTOR' : _ONLINESTOREFORSAGEMAKERSERVING,
+│ │    '__module__' : 'feature_store_serving_pb2'
+│ │    # @@protoc_insertion_point(class_scope:featurestorecommon.OnlineStoreForSageMakerServing)
+│ │    })
+│ │  _sym_db.RegisterMessage(OnlineStoreForSageMakerServing)
+│ │  
+│ │ +FeatureFunctionParameterInfo = _reflection.GeneratedProtocolMessageType('FeatureFunctionParameterInfo', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _FEATUREFUNCTIONPARAMETERINFO,
+│ │ +  '__module__' : 'feature_store_serving_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureFunctionParameterInfo)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(FeatureFunctionParameterInfo)
+│ │ +
+│ │ +FeatureFunctionForServing = _reflection.GeneratedProtocolMessageType('FeatureFunctionForServing', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _FEATUREFUNCTIONFORSERVING,
+│ │ +  '__module__' : 'feature_store_serving_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureFunctionForServing)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(FeatureFunctionForServing)
+│ │ +
+│ │ +FeatureFunctionsForServing = _reflection.GeneratedProtocolMessageType('FeatureFunctionsForServing', (_message.Message,), {
+│ │ +  'DESCRIPTOR' : _FEATUREFUNCTIONSFORSERVING,
+│ │ +  '__module__' : 'feature_store_serving_pb2'
+│ │ +  # @@protoc_insertion_point(class_scope:featurestorecommon.FeatureFunctionsForServing)
+│ │ +  })
+│ │ +_sym_db.RegisterMessage(FeatureFunctionsForServing)
+│ │ +
+│ │  if _descriptor._USE_C_DESCRIPTORS == False:
+│ │  
+│ │    DESCRIPTOR._options = None
+│ │    DESCRIPTOR._serialized_options = b'\n\'com.databricks.proto.featurestorecommon\240\001\001\342?\002\020\001'
+│ │    _ONLINESTORE.fields_by_name['host']._options = None
+│ │    _ONLINESTORE.fields_by_name['host']._serialized_options = b'\030\001'
+│ │    _ONLINESTORE.fields_by_name['port']._options = None
+│ │    _ONLINESTORE.fields_by_name['port']._serialized_options = b'\030\001'
+│ │    _ONLINESTOREDETAILED.fields_by_name['host']._options = None
+│ │    _ONLINESTOREDETAILED.fields_by_name['host']._serialized_options = b'\030\001'
+│ │    _ONLINESTOREDETAILED.fields_by_name['port']._options = None
+│ │    _ONLINESTOREDETAILED.fields_by_name['port']._serialized_options = b'\030\001'
+│ │ -  _CLOUD._serialized_start=3534
+│ │ -  _CLOUD._serialized_end=3570
+│ │ -  _STORETYPE._serialized_start=3572
+│ │ -  _STORETYPE._serialized_end=3656
+│ │ -  _DATATYPE._serialized_start=3659
+│ │ -  _DATATYPE._serialized_end=3821
+│ │ -  _QUERYMODE._serialized_start=3823
+│ │ -  _QUERYMODE._serialized_end=3875
+│ │ +  _CLOUD._serialized_start=3991
+│ │ +  _CLOUD._serialized_end=4027
+│ │ +  _STORETYPE._serialized_start=4029
+│ │ +  _STORETYPE._serialized_end=4113
+│ │ +  _DATATYPE._serialized_start=4116
+│ │ +  _DATATYPE._serialized_end=4278
+│ │ +  _QUERYMODE._serialized_start=4280
+│ │ +  _QUERYMODE._serialized_end=4332
+│ │    _ONLINESTOREFORSERVING._serialized_start=75
+│ │    _ONLINESTOREFORSERVING._serialized_end=551
+│ │    _MYSQLCONF._serialized_start=553
+│ │    _MYSQLCONF._serialized_end=592
+│ │    _SQLSERVERCONF._serialized_start=594
+│ │    _SQLSERVERCONF._serialized_end=637
+│ │    _DYNAMODBCONF._serialized_start=639
+│ │ @@ -257,8 +281,14 @@
+│ │    _ONLINESTOREDETAILED._serialized_end=2836
+│ │    _FEATURETABLESFORSAGEMAKERSERVING._serialized_start=2838
+│ │    _FEATURETABLESFORSAGEMAKERSERVING._serialized_end=2954
+│ │    _ONLINEFEATURETABLEFORSAGEMAKERSERVING._serialized_start=2957
+│ │    _ONLINEFEATURETABLEFORSAGEMAKERSERVING._serialized_end=3339
+│ │    _ONLINESTOREFORSAGEMAKERSERVING._serialized_start=3342
+│ │    _ONLINESTOREFORSAGEMAKERSERVING._serialized_end=3532
+│ │ +  _FEATUREFUNCTIONPARAMETERINFO._serialized_start=3535
+│ │ +  _FEATUREFUNCTIONPARAMETERINFO._serialized_end=3666
+│ │ +  _FEATUREFUNCTIONFORSERVING._serialized_start=3669
+│ │ +  _FEATUREFUNCTIONFORSERVING._serialized_end=3888
+│ │ +  _FEATUREFUNCTIONSFORSERVING._serialized_start=3890
+│ │ +  _FEATUREFUNCTIONSFORSERVING._serialized_end=3989
+│ │  # @@protoc_insertion_point(module_scope)
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/converter_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/converter_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/cosmosdb_type_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/cosmosdb_type_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/cosmosdb_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/cosmosdb_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/data_type_details_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/data_type_details_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/dynamodb_type_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/dynamodb_type_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/dynamodb_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/dynamodb_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/feature_spec_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/feature_spec_test_utils.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,42 +1,62 @@
+│ │ -from typing import List, Union
+│ │ +from typing import List
+│ │  
+│ │ +from databricks.feature_store.entities.column_info import ColumnInfo
+│ │  from databricks.feature_store.entities.feature_column_info import FeatureColumnInfo
+│ │  from databricks.feature_store.entities.feature_spec import FeatureSpec
+│ │  from databricks.feature_store.entities.feature_table_info import FeatureTableInfo
+│ │ -from databricks.feature_store.entities.source_data_column_info import (
+│ │ -    SourceDataColumnInfo,
+│ │ -)
+│ │ +from databricks.feature_store.entities.function_info import FunctionInfo
+│ │ +from databricks.feature_store.entities.on_demand_column_info import OnDemandColumnInfo
+│ │  
+│ │  TEST_WORKSPACE_ID = 123
+│ │  
+│ │  
+│ │ -def get_test_table_info_from_column_info(
+│ │ -    column_infos: List[Union[FeatureColumnInfo, SourceDataColumnInfo]]
+│ │ -):
+│ │ +def get_test_table_infos_from_column_infos(column_infos: List[ColumnInfo]):
+│ │      table_infos = []
+│ │      unique_table_names = set(
+│ │          [
+│ │ -            column_info.table_name
+│ │ +            column_info.info.table_name
+│ │              for column_info in column_infos
+│ │ -            if isinstance(column_info, FeatureColumnInfo)
+│ │ +            if isinstance(column_info, ColumnInfo)
+│ │ +            and isinstance(column_info.info, FeatureColumnInfo)
+│ │          ]
+│ │      )
+│ │      for table_name in unique_table_names:
+│ │          table_id = table_name + "123456"
+│ │          table_infos.append(FeatureTableInfo(table_name=table_name, table_id=table_id))
+│ │      return table_infos
+│ │  
+│ │  
+│ │ +def get_test_function_infos_from_column_infos(column_infos: List[ColumnInfo]):
+│ │ +    function_infos = []
+│ │ +    unique_udf_names = set(
+│ │ +        [
+│ │ +            column_info.info.udf_name
+│ │ +            for column_info in column_infos
+│ │ +            if isinstance(column_info, ColumnInfo)
+│ │ +            and isinstance(column_info.info, OnDemandColumnInfo)
+│ │ +        ]
+│ │ +    )
+│ │ +    for udf_name in unique_udf_names:
+│ │ +        md5 = udf_name + "_md5"
+│ │ +        function_infos.append(FunctionInfo(udf_name=udf_name, md5=md5))
+│ │ +    return function_infos
+│ │ +
+│ │ +
+│ │  def create_test_feature_spec(
+│ │ -    column_infos: List[Union[FeatureColumnInfo, SourceDataColumnInfo]],
+│ │ +    column_infos: List[ColumnInfo],
+│ │      table_infos: List[FeatureTableInfo] = None,
+│ │ +    function_infos: List[FunctionInfo] = None,
+│ │      workspace_id: int = TEST_WORKSPACE_ID,
+│ │  ):
+│ │      if table_infos is None:
+│ │ -        table_infos = get_test_table_info_from_column_info(column_infos)
+│ │ +        table_infos = get_test_table_infos_from_column_infos(column_infos)
+│ │ +    if function_infos is None:
+│ │ +        function_infos = get_test_function_infos_from_column_infos(column_infos)
+│ │      return FeatureSpec(
+│ │          column_infos=column_infos,
+│ │          table_infos=table_infos,
+│ │ +        function_infos=function_infos,
+│ │          workspace_id=workspace_id,
+│ │          feature_store_client_version="test0",
+│ │ +        serialization_version=FeatureSpec.SERIALIZATION_VERSION_NUMBER,
+│ │      )
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/pandas_type_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/pandas_type_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/serving_test_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/serving_test_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/sql_type_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/sql_type_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks/feature_store/utils/uc_utils.py
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks/feature_store/utils/uc_utils.py
+│ │┄ Files identical despite different names
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/PKG-INFO
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: databricks-feature-lookup
+│ │ -Version: 0.3.1a2
+│ │ +Version: 0.4.0
+│ │  Summary: Databricks Feature Store Feature Lookup Client
+│ │  Author: Databricks
+│ │  Author-email: feedback@databricks.com
+│ │  License: Databricks Proprietary License
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: License :: Other/Proprietary License
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │   --- databricks-feature-lookup-0.3.1a2/databricks_feature_lookup.egg-info/SOURCES.txt
+│ ├── +++ databricks-feature-lookup-0.4.0/databricks_feature_lookup.egg-info/SOURCES.txt
+│ │┄ Files 3% similar despite different names
+│ │ @@ -16,14 +16,16 @@
+│ │  databricks/feature_store/entities/column_info.py
+│ │  databricks/feature_store/entities/data_type.py
+│ │  databricks/feature_store/entities/feature_column_info.py
+│ │  databricks/feature_store/entities/feature_spec.py
+│ │  databricks/feature_store/entities/feature_spec_constants.py
+│ │  databricks/feature_store/entities/feature_table_info.py
+│ │  databricks/feature_store/entities/feature_tables_for_serving.py
+│ │ +databricks/feature_store/entities/function_info.py
+│ │ +databricks/feature_store/entities/on_demand_column_info.py
+│ │  databricks/feature_store/entities/online_feature_table.py
+│ │  databricks/feature_store/entities/online_store_for_serving.py
+│ │  databricks/feature_store/entities/query_mode.py
+│ │  databricks/feature_store/entities/source_data_column_info.py
+│ │  databricks/feature_store/entities/store_type.py
+│ │  databricks/feature_store/lookup_engine/__init__.py
+│ │  databricks/feature_store/lookup_engine/lookup_cosmosdb_engine.py
+│ │ @@ -39,16 +41,16 @@
+│ │  databricks/feature_store/utils/converter_utils.py
+│ │  databricks/feature_store/utils/cosmosdb_type_utils.py
+│ │  databricks/feature_store/utils/cosmosdb_utils.py
+│ │  databricks/feature_store/utils/data_type_details_utils.py
+│ │  databricks/feature_store/utils/dynamodb_type_utils.py
+│ │  databricks/feature_store/utils/dynamodb_utils.py
+│ │  databricks/feature_store/utils/feature_serving_patch.py
+│ │ -databricks/feature_store/utils/feature_spec_utils.py
+│ │ -databricks/feature_store/utils/file_utils.py
+│ │ +databricks/feature_store/utils/feature_spec_test_utils.py
+│ │ +databricks/feature_store/utils/metrics_utils.py
+│ │  databricks/feature_store/utils/pandas_type_utils.py
+│ │  databricks/feature_store/utils/serving_test_utils.py
+│ │  databricks/feature_store/utils/sql_type_utils.py
+│ │  databricks/feature_store/utils/test_utils_common.py
+│ │  databricks/feature_store/utils/uc_utils.py
+│ │  databricks/feature_store/utils/utils_common.py
+│ │  databricks_feature_lookup.egg-info/PKG-INFO
+│ │   --- databricks-feature-lookup-0.3.1a2/setup.py
+│ ├── +++ databricks-feature-lookup-0.4.0/setup.py
+│ │┄ Files identical despite different names

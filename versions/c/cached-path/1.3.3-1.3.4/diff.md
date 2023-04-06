@@ -1,0 +1,270 @@
+# Comparing `tmp/cached_path-1.3.3.tar.gz` & `tmp/cached_path-1.3.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cached_path-1.3.3.tar", last modified: Thu Feb 16 18:04:24 2023, max compression
++gzip compressed data, was "cached_path-1.3.4.tar", last modified: Thu Apr  6 21:14:01 2023, max compression
+```
+
+## Comparing `cached_path-1.3.3.tar` & `cached_path-1.3.4.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 18:04:24.435563 cached_path-1.3.3/
+--rw-r--r--   0 runner    (1001) docker     (123)    11359 2023-02-16 18:04:08.000000 cached_path-1.3.3/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     4953 2023-02-16 18:04:24.435563 cached_path-1.3.3/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4310 2023-02-16 18:04:08.000000 cached_path-1.3.3/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 18:04:24.431563 cached_path-1.3.3/cached_path/
+--rw-r--r--   0 runner    (1001) docker     (123)     1206 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14125 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/_cached_path.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1572 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/cache_file.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1110 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/common.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1879 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/file_lock.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3472 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/meta.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3355 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/progress.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 18:04:24.435563 cached_path-1.3.3/cached_path/schemes/
+--rw-r--r--   0 runner    (1001) docker     (123)     1586 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1770 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/beaker.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1703 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/gs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2831 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/hf.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2985 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/http.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1774 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/s3.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3645 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/schemes/scheme_client.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1231 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/testing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4828 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/util.py
+--rw-r--r--   0 runner    (1001) docker     (123)      464 2023-02-16 18:04:08.000000 cached_path-1.3.3/cached_path/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 18:04:24.431563 cached_path-1.3.3/cached_path.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4953 2023-02-16 18:04:24.000000 cached_path-1.3.3/cached_path.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      655 2023-02-16 18:04:24.000000 cached_path-1.3.3/cached_path.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-16 18:04:24.000000 cached_path-1.3.3/cached_path.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      482 2023-02-16 18:04:24.000000 cached_path-1.3.3/cached_path.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       12 2023-02-16 18:04:24.000000 cached_path-1.3.3/cached_path.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      347 2023-02-16 18:04:08.000000 cached_path-1.3.3/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-16 18:04:24.435563 cached_path-1.3.3/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2208 2023-02-16 18:04:08.000000 cached_path-1.3.3/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:14:01.244251 cached_path-1.3.4/
++-rw-r--r--   0 runner    (1001) docker     (123)    11359 2023-04-06 21:13:47.000000 cached_path-1.3.4/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     4953 2023-04-06 21:14:01.244251 cached_path-1.3.4/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4310 2023-04-06 21:13:47.000000 cached_path-1.3.4/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:14:01.240251 cached_path-1.3.4/cached_path/
++-rw-r--r--   0 runner    (1001) docker     (123)     1206 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14126 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/_cached_path.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1572 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/cache_file.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1110 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/common.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1879 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/file_lock.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3472 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/meta.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3358 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/progress.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:14:01.244251 cached_path-1.3.4/cached_path/schemes/
++-rw-r--r--   0 runner    (1001) docker     (123)     1586 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1770 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/beaker.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1703 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/gs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2831 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/hf.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2985 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/http.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1774 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/s3.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3645 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/schemes/scheme_client.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1231 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/testing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4828 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/util.py
++-rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-06 21:13:47.000000 cached_path-1.3.4/cached_path/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:14:01.240251 cached_path-1.3.4/cached_path.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4953 2023-04-06 21:14:01.000000 cached_path-1.3.4/cached_path.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      655 2023-04-06 21:14:01.000000 cached_path-1.3.4/cached_path.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 21:14:01.000000 cached_path-1.3.4/cached_path.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      482 2023-04-06 21:14:01.000000 cached_path-1.3.4/cached_path.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-06 21:14:01.000000 cached_path-1.3.4/cached_path.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      347 2023-04-06 21:13:47.000000 cached_path-1.3.4/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 21:14:01.244251 cached_path-1.3.4/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2208 2023-04-06 21:13:47.000000 cached_path-1.3.4/setup.py
+```
+
+### Comparing `cached_path-1.3.3/LICENSE` & `cached_path-1.3.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/PKG-INFO` & `cached_path-1.3.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cached_path
+-Version: 1.3.3
++Version: 1.3.4
+ Home-page: https://github.com/allenai/cached_path
+ Author: Allen Institute for Artificial Intelligence
+ Author-email: contact@allenai.org
+ License: Apache
+ Keywords: allennlp cached_path file utils
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: cached_path Version: 1.3.3 Home-page: https://
++Metadata-Version: 2.1 Name: cached_path Version: 1.3.4 Home-page: https://
+ github.com/allenai/cached_path Author: Allen Institute for Artificial
+ Intelligence Author-email: contact@allenai.org License: Apache Keywords:
+ allennlp cached_path file utils Classifier: Intended Audience :: Science/
+ Research Classifier: Development Status :: 5 - Production/Stable Classifier:
+ License :: OSI Approved :: Apache Software License Classifier: Programming
+ Language :: Python :: 3 Classifier: Topic :: Scientific/Engineering ::
+ Artificial Intelligence Requires-Python: >=3.7 Description-Content-Type: text/
+```
+
+### Comparing `cached_path-1.3.3/README.md` & `cached_path-1.3.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/__init__.py` & `cached_path-1.3.4/cached_path/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/_cached_path.py` & `cached_path-1.3.4/cached_path/_cached_path.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -339,15 +339,15 @@
+                 start_and_cleanup = progress is None
+                 progress = progress or get_download_progress(quiet=quiet)
+ 
+                 if start_and_cleanup:
+                     progress.start()
+ 
+                 try:
+-                    display_url = url if len(url) <= 50 else f"{url[:49]}\N{horizontal ellipsis}"
++                    display_url = url if len(url) <= 30 else f"\N{horizontal ellipsis}{url[-30:]}"
+                     task_id = progress.add_task(f"Downloading [cyan i]{display_url}[/]", total=size)
+                     writer_with_progress = BufferedWriterWithProgress(cache_file, progress, task_id)
+                     client.get_resource(writer_with_progress)
+                     progress.update(
+                         task_id,
+                         total=writer_with_progress.total_written,
+                         completed=writer_with_progress.total_written,
+```
+
+### Comparing `cached_path-1.3.3/cached_path/cache_file.py` & `cached_path-1.3.4/cached_path/cache_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/common.py` & `cached_path-1.3.4/cached_path/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/file_lock.py` & `cached_path-1.3.4/cached_path/file_lock.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/meta.py` & `cached_path-1.3.4/cached_path/meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/progress.py` & `cached_path-1.3.4/cached_path/progress.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -100,15 +100,15 @@
+         return n
+ 
+     def writelines(self, lines):
+         return self.handle.writelines(lines)
+ 
+     def seek(self, offset: int, whence: int = 0) -> int:
+         pos = self.handle.seek(offset, whence)
+-        self.progress.update(self.task_id, completed=pos)
++        #  self.progress.update(self.task_id, completed=pos)
+         return pos
+ 
+     def tell(self) -> int:
+         return self.handle.tell()
+ 
+     @property
+     def raw(self):
+```
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/__init__.py` & `cached_path-1.3.4/cached_path/schemes/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/beaker.py` & `cached_path-1.3.4/cached_path/schemes/beaker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/gs.py` & `cached_path-1.3.4/cached_path/schemes/gs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/hf.py` & `cached_path-1.3.4/cached_path/schemes/hf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/http.py` & `cached_path-1.3.4/cached_path/schemes/http.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/s3.py` & `cached_path-1.3.4/cached_path/schemes/s3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/schemes/scheme_client.py` & `cached_path-1.3.4/cached_path/schemes/scheme_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/testing.py` & `cached_path-1.3.4/cached_path/testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path/util.py` & `cached_path-1.3.4/cached_path/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/cached_path.egg-info/PKG-INFO` & `cached_path-1.3.4/cached_path.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cached-path
+-Version: 1.3.3
++Version: 1.3.4
+ Home-page: https://github.com/allenai/cached_path
+ Author: Allen Institute for Artificial Intelligence
+ Author-email: contact@allenai.org
+ License: Apache
+ Keywords: allennlp cached_path file utils
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: cached-path Version: 1.3.3 Home-page: https://
++Metadata-Version: 2.1 Name: cached-path Version: 1.3.4 Home-page: https://
+ github.com/allenai/cached_path Author: Allen Institute for Artificial
+ Intelligence Author-email: contact@allenai.org License: Apache Keywords:
+ allennlp cached_path file utils Classifier: Intended Audience :: Science/
+ Research Classifier: Development Status :: 5 - Production/Stable Classifier:
+ License :: OSI Approved :: Apache Software License Classifier: Programming
+ Language :: Python :: 3 Classifier: Topic :: Scientific/Engineering ::
+ Artificial Intelligence Requires-Python: >=3.7 Description-Content-Type: text/
+```
+
+### Comparing `cached_path-1.3.3/cached_path.egg-info/SOURCES.txt` & `cached_path-1.3.4/cached_path.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `cached_path-1.3.3/setup.py` & `cached_path-1.3.4/setup.py`
+
+ * *Files identical despite different names*
+
