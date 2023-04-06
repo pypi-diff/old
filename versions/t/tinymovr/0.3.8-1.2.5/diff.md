@@ -1,0 +1,158 @@
+# Comparing `tmp/tinymovr-0.3.8.tar.gz` & `tmp/tinymovr-1.2.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\tinymovr-0.3.8.tar", last modified: Wed Jun  2 09:41:14 2021, max compression
++gzip compressed data, was "tinymovr-1.2.5.tar", last modified: Thu Apr  6 13:07:46 2023, max compression
+```
+
+## Comparing `tinymovr-0.3.8.tar` & `tinymovr-1.2.5.tar`
+
+### file list
+
+```diff
+@@ -1,40 +1,31 @@
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:14.000000 tinymovr-0.3.8/
+--rw-rw-rw-   0        0        0     2431 2021-06-02 09:41:14.000000 tinymovr-0.3.8/PKG-INFO
+--rw-rw-rw-   0        0        0     1581 2021-05-14 21:36:06.000000 tinymovr-0.3.8/README.md
+--rw-rw-rw-   0        0        0       42 2021-06-02 09:41:14.000000 tinymovr-0.3.8/setup.cfg
+--rw-rw-rw-   0        0        0     1244 2021-06-01 19:49:55.000000 tinymovr-0.3.8/setup.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/
+--rw-rw-rw-   0        0        0      175 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/__init__.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/bus/
+--rw-rw-rw-   0        0        0       44 2020-12-31 13:35:19.000000 tinymovr-0.3.8/tinymovr/bus/__init__.py
+--rw-rw-rw-   0        0        0    10375 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/bus/insilico.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/codec/
+--rw-rw-rw-   0        0        0       66 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/codec/__init__.py
+--rw-rw-rw-   0        0        0     2342 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/codec/codec.py
+--rw-rw-rw-   0        0        0     1551 2021-06-01 19:49:55.000000 tinymovr-0.3.8/tinymovr/constants.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/iface/
+--rw-rw-rw-   0        0        0       44 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/iface/__init__.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/iface/can_bus/
+--rw-rw-rw-   0        0        0      191 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/iface/can_bus/__init__.py
+--rw-rw-rw-   0        0        0     2803 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/iface/can_bus/can_bus.py
+--rw-rw-rw-   0        0        0    10506 2021-06-01 19:49:55.000000 tinymovr-0.3.8/tinymovr/iface/can_bus/endpoints.py
+--rw-rw-rw-   0        0        0      455 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/iface/iface.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr/plotter/
+--rw-rw-rw-   0        0        0       41 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/plotter/__init__.py
+--rw-rw-rw-   0        0        0     3442 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/plotter/plotter.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:14.000000 tinymovr-0.3.8/tinymovr/presenter/
+--rw-rw-rw-   0        0        0      268 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/presenter/__init__.py
+--rw-rw-rw-   0        0        0      529 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/presenter/dict_obj.py
+--rw-rw-rw-   0        0        0      706 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/presenter/presenters.py
+--rw-rw-rw-   0        0        0     1357 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/presenter/state_obj.py
+--rw-rw-rw-   0        0        0     4339 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/shell.py
+--rw-rw-rw-   0        0        0     7174 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/tinymovr.py
+--rw-rw-rw-   0        0        0      210 2020-12-28 15:56:25.000000 tinymovr-0.3.8/tinymovr/units.py
+--rw-rw-rw-   0        0        0     4138 2021-05-14 21:36:06.000000 tinymovr-0.3.8/tinymovr/user_wrapper.py
+-drwxrwxrwx   0        0        0        0 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/
+--rw-rw-rw-   0        0        0     2431 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      778 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      107 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       88 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2021-06-02 09:41:13.000000 tinymovr-0.3.8/tinymovr.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.175089 tinymovr-1.2.5/
++-rw-rw-rw-   0        0        0     2245 2023-04-06 13:07:46.175089 tinymovr-1.2.5/PKG-INFO
++-rw-rw-rw-   0        0        0     1735 2023-03-13 07:31:22.000000 tinymovr-1.2.5/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-06 13:07:46.176089 tinymovr-1.2.5/setup.cfg
++-rw-rw-rw-   0        0        0     2330 2023-04-04 13:46:51.000000 tinymovr-1.2.5/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.149089 tinymovr-1.2.5/tinymovr/
++-rw-rw-rw-   0        0        0       55 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/__init__.py
++-rw-rw-rw-   0        0        0     3639 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/channel.py
++-rw-rw-rw-   0        0        0     2966 2023-04-06 12:59:26.000000 tinymovr-1.2.5/tinymovr/cli.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.164089 tinymovr-1.2.5/tinymovr/codec/
++-rw-rw-rw-   0        0        0       66 2022-06-07 06:55:58.000000 tinymovr-1.2.5/tinymovr/codec/__init__.py
++-rw-rw-rw-   0        0        0     3036 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/codec/codec.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.166089 tinymovr-1.2.5/tinymovr/config/
++-rw-rw-rw-   0        0        0      167 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/config/__init__.py
++-rw-rw-rw-   0        0        0     3457 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/config/config.py
++-rw-rw-rw-   0        0        0     1107 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/constants.py
++-rw-rw-rw-   0        0        0     3389 2023-03-20 08:12:07.000000 tinymovr-1.2.5/tinymovr/discovery.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.173090 tinymovr-1.2.5/tinymovr/gui/
++-rw-rw-rw-   0        0        0      428 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/gui/__init__.py
++-rw-rw-rw-   0        0        0     1762 2023-04-06 12:59:26.000000 tinymovr-1.2.5/tinymovr/gui/gui.py
++-rw-rw-rw-   0        0        0     9242 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/gui/helpers.py
++-rw-rw-rw-   0        0        0    12517 2023-03-20 08:12:07.000000 tinymovr-1.2.5/tinymovr/gui/window.py
++-rw-rw-rw-   0        0        0     4602 2023-04-04 13:46:51.000000 tinymovr-1.2.5/tinymovr/gui/worker.py
++-rw-rw-rw-   0        0        0     3206 2023-03-10 10:27:34.000000 tinymovr-1.2.5/tinymovr/tee.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:07:46.159089 tinymovr-1.2.5/tinymovr.egg-info/
++-rw-rw-rw-   0        0        0     2245 2023-04-06 13:07:45.000000 tinymovr-1.2.5/tinymovr.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      549 2023-04-06 13:07:46.000000 tinymovr-1.2.5/tinymovr.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 13:07:45.000000 tinymovr-1.2.5/tinymovr.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       82 2023-04-06 13:07:45.000000 tinymovr-1.2.5/tinymovr.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0      135 2023-04-06 13:07:45.000000 tinymovr-1.2.5/tinymovr.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 13:07:45.000000 tinymovr-1.2.5/tinymovr.egg-info/top_level.txt
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `tinymovr-0.3.8/README.md` & `tinymovr-1.2.5/README.md`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -7,38 +7,40 @@
+ 
+ ### Installing using pip
+ 
+ This is the most straightforward method to install Tinymovr studio and have access to hardware. We use pip3 to ensure Tinymovr is installed using Python 3 (required).
+ 
+     pip3 install tinymovr
+ 
+-#### Installing earlier versions
+-
+-The above command will install the latest version of Tinymovr Studio available on PyPI. In order to maintain backwards compatibility with existing projects, earlier versions of Tinymovr are made available. Currently, the following versions are recommended:
+-
+-- [Tinymovr Studio Latest](https://pypi.org/project/tinymovr/) (latest version)
+-- [Tinymovr Studio 2.7](https://pypi.org/project/tinymovr/0.2.7/) (latest version without units)
+-
+ ### Installing using git clone
+ 
+ First clone the Tinymovr repo to a local directory:
+ 
+     git clone https://github.com/yconst/Tinymovr
+ 
+ Then cd to the cloned repo directory and install in developer mode:
+ 
+     cd Tinymovr/studio/Python
+     pip3 install -e .
+ 
+-### Launching the command line app
++### Launching the GUI app
+ 
+     tinymovr
+ 
+-### More information
++### Launching the command line app
+ 
+-For documentation:
++    tinymovr_cli
++
++## Getting Help
++
++[Full documentation is available at Readthedocs](https://tinymovr.readthedocs.io).
++
++Please visit the [Discussions Page](https://github.com/tinymovr/Tinymovr/discussions) and the [Discord Server](https://discord.gg/vNvmpfthug) to ask any questions. If you are unable to find an answer to your question, you are welcome to [start a new discussion](https://github.com/tinymovr/Tinymovr/discussions/new/choose) or ask away at [our Discord server](https://discord.gg/vNvmpfthug).
++
++If you would like to propose a feature or think you have found a bug, [open a new issue](https://github.com/tinymovr/Tinymovr/issues/new).
++
++### More information
+ 
+-https://tinymovr.readthedocs.io
++[Website and Store](https://tinymovr.com)
+ 
+-For more information on Tinymovr:
++[Documentation](https://tinymovr.readthedocs.io)
+ 
+-https://hackaday.io/project/168650-tinymovr-motor-controller
+```
+

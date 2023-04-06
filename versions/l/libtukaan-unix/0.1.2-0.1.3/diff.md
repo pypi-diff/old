@@ -1,0 +1,91 @@
+# Comparing `tmp/libtukaan-unix-0.1.2.tar.gz` & `tmp/libtukaan-unix-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "libtukaan-unix-0.1.2.tar", last modified: Tue Aug 30 21:42:14 2022, max compression
++gzip compressed data, was "libtukaan-unix-0.1.3.tar", last modified: Thu Apr  6 13:08:42 2023, max compression
+```
+
+## Comparing `libtukaan-unix-0.1.2.tar` & `libtukaan-unix-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/
+--rw-r--r--   0 runner    (1001) docker     (122)      424 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/PKG-INFO
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/libtukaan/
+--rw-r--r--   0 runner    (1001) docker     (122)       25 2022-08-30 21:42:01.000000 libtukaan-unix-0.1.2/libtukaan/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1576 2022-08-30 21:42:01.000000 libtukaan-unix-0.1.2/libtukaan/serif.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/libtukaan/unix/
+--rwxr-xr-x   0 runner    (1001) docker     (122)    16920 2022-08-30 21:42:01.000000 libtukaan-unix-0.1.2/libtukaan/unix/libserif_x64.so
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/libtukaan_unix.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (122)      424 2022-08-30 21:42:14.000000 libtukaan-unix-0.1.2/libtukaan_unix.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)      232 2022-08-30 21:42:14.000000 libtukaan-unix-0.1.2/libtukaan_unix.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2022-08-30 21:42:14.000000 libtukaan-unix-0.1.2/libtukaan_unix.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       10 2022-08-30 21:42:14.000000 libtukaan-unix-0.1.2/libtukaan_unix.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       38 2022-08-30 21:42:14.273010 libtukaan-unix-0.1.2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (122)      658 2022-08-30 21:42:01.000000 libtukaan-unix-0.1.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/
++-rw-r--r--   0 runner    (1001) docker     (123)      424 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/PKG-INFO
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/libtukaan/
++-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 13:08:33.000000 libtukaan-unix-0.1.3/libtukaan/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1612 2023-04-06 13:08:33.000000 libtukaan-unix-0.1.3/libtukaan/serif.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/libtukaan/unix/
++-rwxr-xr-x   0 runner    (1001) docker     (123)    16920 2023-04-06 13:08:33.000000 libtukaan-unix-0.1.3/libtukaan/unix/libserif_x64.so
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/libtukaan_unix.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      424 2023-04-06 13:08:42.000000 libtukaan-unix-0.1.3/libtukaan_unix.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      232 2023-04-06 13:08:42.000000 libtukaan-unix-0.1.3/libtukaan_unix.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:08:42.000000 libtukaan-unix-0.1.3/libtukaan_unix.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 13:08:42.000000 libtukaan-unix-0.1.3/libtukaan_unix.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:08:42.455684 libtukaan-unix-0.1.3/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      658 2023-04-06 13:08:33.000000 libtukaan-unix-0.1.3/setup.py
+```
+
+### Comparing `libtukaan-unix-0.1.2/libtukaan/serif.py` & `libtukaan-unix-0.1.3/libtukaan/serif.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,7 +1,9 @@
++from __future__ import annotations
++
+ import sys
+ from pathlib import Path
+ 
+ from tukaan._tcl import Tcl
+ 
+ 
+ class Serif:
+```
+
+### Comparing `libtukaan-unix-0.1.2/libtukaan/unix/libserif_x64.so` & `libtukaan-unix-0.1.3/libtukaan/unix/libserif_x64.so`
+
+ * *Files identical despite different names*
+
+### Comparing `libtukaan-unix-0.1.2/setup.py` & `libtukaan-unix-0.1.3/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ from setuptools import setup
+ 
+ platform = {"darwin": "mac", "win32": "win"}.get(sys.platform, "unix")
+ 
+ 
+ setup(
+     name=f"libtukaan-{platform}",
+-    version="0.1.2",
++    version="0.1.3",
+     license="MIT",
+     author="rdbende",
+     author_email="rdbende@gmail.com",
+     description="Binary extensions for Tukaan",
+     url="https://tukaan.github.io",
+     project_urls={
+         "Documentation": "https://tukaan.github.io/docs",
+```
+

@@ -1,0 +1,183 @@
+--- tmp/dj-ms-auth-router-1.4.0.tar.gz
++++ tmp/dj-ms-auth-router-1.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dj-ms-auth-router-1.4.0.tar", last modified: Wed Mar  1 05:38:50 2023, max compression
+│ +gzip compressed data, was "dj-ms-auth-router-1.5.0.tar", last modified: Thu Apr  6 13:02:14 2023, max compression
+│   --- dj-ms-auth-router-1.4.0.tar
+├── +++ dj-ms-auth-router-1.5.0.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:50.482430 dj-ms-auth-router-1.4.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1545 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       58 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2714 2023-03-01 05:38:50.482430 dj-ms-auth-router-1.4.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1525 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:50.482430 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2714 2023-03-01 05:38:50.000000 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      350 2023-03-01 05:38:50.000000 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-01 05:38:50.000000 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       12 2023-03-01 05:38:50.000000 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       15 2023-03-01 05:38:50.000000 dj-ms-auth-router-1.4.0/dj_ms_auth_router.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:50.478430 dj-ms-auth-router-1.4.0/docs/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:50.482430 dj-ms-auth-router-1.4.0/docs/media/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   232442 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/docs/media/scheme.png
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:50.482430 dj-ms-auth-router-1.4.0/ms_auth_router/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/ms_auth_router/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/ms_auth_router/apps.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2214 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/ms_auth_router/routers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1115 2023-03-01 05:38:50.486430 dj-ms-auth-router-1.4.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      242 2023-03-01 05:38:40.000000 dj-ms-auth-router-1.4.0/setup.py
+│ │ +drwxr-xr-x   0 rustam     (501) staff       (20)        0 2023-04-06 13:02:14.359276 dj-ms-auth-router-1.5.0/
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     1545 2022-11-28 11:45:05.000000 dj-ms-auth-router-1.5.0/LICENSE
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)       58 2022-11-28 11:45:05.000000 dj-ms-auth-router-1.5.0/MANIFEST.in
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     3324 2023-04-06 13:02:14.359366 dj-ms-auth-router-1.5.0/PKG-INFO
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     2136 2023-03-01 06:26:54.000000 dj-ms-auth-router-1.5.0/README.md
+│ │ +drwxr-xr-x   0 rustam     (501) staff       (20)        0 2023-04-06 13:02:14.356034 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     3324 2023-04-06 13:02:14.000000 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)      350 2023-04-06 13:02:14.000000 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)        1 2023-04-06 13:02:14.000000 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)       12 2023-04-06 13:02:14.000000 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/requires.txt
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)       15 2023-04-06 13:02:14.000000 dj-ms-auth-router-1.5.0/dj_ms_auth_router.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 rustam     (501) staff       (20)        0 2023-04-06 13:02:14.353082 dj-ms-auth-router-1.5.0/docs/
+│ │ +drwxr-xr-x   0 rustam     (501) staff       (20)        0 2023-04-06 13:02:14.356298 dj-ms-auth-router-1.5.0/docs/media/
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)   232442 2023-02-04 13:33:44.000000 dj-ms-auth-router-1.5.0/docs/media/scheme.png
+│ │ +drwxr-xr-x   0 rustam     (501) staff       (20)        0 2023-04-06 13:02:14.358888 dj-ms-auth-router-1.5.0/ms_auth_router/
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)        0 2023-02-01 11:09:19.000000 dj-ms-auth-router-1.5.0/ms_auth_router/__init__.py
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     1765 2023-03-01 04:55:08.000000 dj-ms-auth-router-1.5.0/ms_auth_router/apps.py
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     2214 2023-03-01 05:36:54.000000 dj-ms-auth-router-1.5.0/ms_auth_router/routers.py
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)     1114 2023-04-06 13:02:14.359772 dj-ms-auth-router-1.5.0/setup.cfg
+│ │ +-rw-r--r--   0 rustam     (501) staff       (20)      242 2023-02-01 11:08:10.000000 dj-ms-auth-router-1.5.0/setup.py
+│ │   --- dj-ms-auth-router-1.4.0/LICENSE
+│ ├── +++ dj-ms-auth-router-1.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dj-ms-auth-router-1.4.0/README.md
+│ ├── +++ dj-ms-auth-router-1.5.0/README.md
+│ │┄ Files 16% similar despite different names
+│ │ @@ -8,27 +8,40 @@
+│ │  But all of your microservices need to use the same authentication database.
+│ │  This router will help you to do that.
+│ │  
+│ │  ---
+│ │  
+│ │  
+│ │  ## How it works
+│ │ -Django project that provides authentication also shares some database with other microservices.
+│ │ -Other microservices may have their own databases, but they all use the same authentication database.
+│ │ -Let's look how this scheme looks like:
+│ │ -<p align="center">
+│ │ -  <img src="docs/media/scheme.png" alt="How it works" align="center">
+│ │ -</p>
+│ │ +  
+│ │ +1. Django project that provides authentication also shares default database with other microservices.  
+│ │ +2. Other microservices may have their own databases, but they all use the same authentication database.  
+│ │ +
+│ │ +Which apps are routed to `auth_db` database?
+│ │ +- `contenttypes`
+│ │ +- `sites`
+│ │ +- `auth`
+│ │ +- `admin`
+│ │ +- `flatpages`
+│ │ +- `redirects`
+│ │ +- `auditlog`
+│ │ +- `sessions`
+│ │ +  
+│ │ +Models of these apps are routed to `auth_db` database. 
+│ │ +  
+│ │ +These apps are hardcoded in `ms_auth_router.routers.DefaultRouter`.  
+│ │ +  
+│ │ +List can be extended by adding `ROUTE_APP_LABELS` setting.  
+│ │ +  
+│ │ +> If you know that some reusable Django apps should be routed to `auth_db` database, please create an issue or pull request.
+│ │  
+│ │ -This is an example from [dj-ms](https://github.com/dj-ms/dj-ms-core) project.
+│ │ -Follow the link to explore more.
+│ │  
+│ │  
+│ │ -## Quickstart
+│ │ -
+│ │ +## Quickstart  
+│ │ +  
+│ │  Add `ms_auth_router` to your `INSTALLED_APPS` setting like this:
+│ │  ```python
+│ │  INSTALLED_APPS = [
+│ │      ...,
+│ │      'ms_auth_router',
+│ │      ...
+│ │  ]
+│ │ @@ -55,8 +68,22 @@
+│ │  ```
+│ │  
+│ │  Finally, add `AUTH_DB` setting:
+│ │  ```python
+│ │  AUTH_DB = 'auth_db'
+│ │  ```
+│ │  
+│ │ -Without this setting router will use `default` db connection.
+│ │ +Without this setting router will use `default` db connection.  
+│ │ +  
+│ │ +> Note: To get session authentication working between microservices, the `SECRET_KEY` setting must be the same 
+│ │ +> in all microservices.
+│ │ +
+│ │ +
+│ │ +## Use with custom auth app  
+│ │ +  
+│ │ +If you're using custom auth app and want it to be routed to `auth_db` database, 
+│ │ +you need to add `ROUTE_APP_LABELS` setting:
+│ │ +```python
+│ │ +ROUTE_APP_LABELS = ['my_custom_auth_app', ]
+│ │ +```
+│ │ +  
+│ │ +
+│ │   --- dj-ms-auth-router-1.4.0/docs/media/scheme.png
+│ ├── +++ dj-ms-auth-router-1.5.0/docs/media/scheme.png
+│ │┄ Files identical despite different names
+│ │   --- dj-ms-auth-router-1.4.0/ms_auth_router/apps.py
+│ ├── +++ dj-ms-auth-router-1.5.0/ms_auth_router/apps.py
+│ │┄ Files identical despite different names
+│ │   --- dj-ms-auth-router-1.4.0/ms_auth_router/routers.py
+│ ├── +++ dj-ms-auth-router-1.5.0/ms_auth_router/routers.py
+│ │┄ Files identical despite different names
+│ │   --- dj-ms-auth-router-1.4.0/setup.cfg
+│ ├── +++ dj-ms-auth-router-1.5.0/setup.cfg
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,20 +1,20 @@
+│ │  [metadata]
+│ │  name = dj-ms-auth-router
+│ │ -version = 1.4.0
+│ │ +version = 1.5.0
+│ │  description = Simple database router that helps to implement microservices architecture with Django.
+│ │  long_description = file: README.md
+│ │  url = https://github.com/dj-ms/dj-ms-auth-router
+│ │  author = Astafeev Rustam
+│ │  author_email = astafeev0308@gmail.com
+│ │  license = BSD-3-Clause
+│ │  classifiers = 
+│ │  	Environment :: Web Environment
+│ │  	Framework :: Django
+│ │ -	Framework :: Django :: 4.1
+│ │ +	Framework :: Django :: 3.1
+│ │  	Intended Audience :: Developers
+│ │  	License :: OSI Approved :: BSD License
+│ │  	Operating System :: OS Independent
+│ │  	Programming Language :: Python
+│ │  	Programming Language :: Python :: 3
+│ │  	Programming Language :: Python :: 3 :: Only
+│ │  	Programming Language :: Python :: 3.6
+│ │ @@ -25,15 +25,15 @@
+│ │  	Programming Language :: Python :: 3.11
+│ │  	Topic :: Internet :: WWW/HTTP
+│ │  	Topic :: Internet :: WWW/HTTP :: Dynamic Content
+│ │  
+│ │  [options]
+│ │  include_package_data = true
+│ │  packages = find:
+│ │ -python_requires = ~= 3.10
+│ │ +python_requires = ~= 3.8
+│ │  install_requires = 
+│ │ -	Django >= 4.1
+│ │ +	Django >= 3.1
+│ │  
+│ │  [egg_info]
+│ │  tag_build = 
+│ │  tag_date = 0

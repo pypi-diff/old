@@ -1,0 +1,3512 @@
+--- tmp/propan-0.0.8.6.tar.gz
++++ tmp/propan-0.0.8.7.tar.gz
+│   --- propan-0.0.8.6.tar
+├── +++ propan-0.0.8.7.tar
+│ ├── file list
+│ │ @@ -1,67 +1,68 @@
+│ │ --rw-r--r--   0        0        0     1837 2020-02-02 00:00:00.000000 propan-0.0.8.6/CONTRIBUTING.md
+│ │ --rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/1_basic_usage.py
+│ │ --rw-r--r--   0        0        0      479 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/2_specific_exchange.py
+│ │ --rw-r--r--   0        0        0      685 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/3_lifespan_events.py
+│ │ --rw-r--r--   0        0        0      681 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/4_cli_attributes_promotion.py
+│ │ --rw-r--r--   0        0        0      513 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/5_publishing.py
+│ │ --rw-r--r--   0        0        0     1010 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/6_arguments_casting.py
+│ │ --rw-r--r--   0        0        0      681 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/7_handler_errors_processing.py
+│ │ --rw-r--r--   0        0        0     1010 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/1_dependency_injection.py
+│ │ --rw-r--r--   0        0        0      580 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/2_dependency_declaration.py
+│ │ --rw-r--r--   0        0        0      379 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/3_dependency_aliases.py
+│ │ --rw-r--r--   0        0        0      568 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/4_dependency_deep_aliases.py
+│ │ --rw-r--r--   0        0        0      576 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/5_dependency_nesting.py
+│ │ --rw-r--r--   0        0        0      786 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/dependencies/6_dependecy_calling.py
+│ │ --rw-r--r--   0        0        0      667 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/aiohttp.py
+│ │ --rw-r--r--   0        0        0      593 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/blacksheep.py
+│ │ --rw-r--r--   0        0        0      960 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/falcon.py
+│ │ --rw-r--r--   0        0        0      542 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/fastapi.py
+│ │ --rw-r--r--   0        0        0      535 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/quart.py
+│ │ --rw-r--r--   0        0        0      615 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/sanic.py
+│ │ --rw-r--r--   0        0        0      738 2020-02-02 00:00:00.000000 propan-0.0.8.6/examples/http_frameworks_integrations/tornado.py
+│ │ --rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/__about__.py
+│ │ --rw-r--r--   0        0        0      387 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/__init__.py
+│ │ --rw-r--r--   0        0        0       65 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/__main__.py
+│ │ --rw-r--r--   0        0        0     2564 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/app.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/__init__.py
+│ │ --rw-r--r--   0        0        0     2690 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/push_back_watcher.py
+│ │ --rw-r--r--   0        0        0      157 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/model/__init__.py
+│ │ --rw-r--r--   0        0        0     4672 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/model/broker_usecase.py
+│ │ --rw-r--r--   0        0        0      480 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/model/schemas.py
+│ │ --rw-r--r--   0        0        0       89 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/nats/__init__.py
+│ │ --rw-r--r--   0        0        0     4775 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/nats/nats_broker.py
+│ │ --rw-r--r--   0        0        0     4704 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/nats/nats_broker.pyi
+│ │ --rw-r--r--   0        0        0     1569 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/nats/nats_js_broker.py
+│ │ --rw-r--r--   0        0        0      484 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/nats/schemas.py
+│ │ --rw-r--r--   0        0        0      241 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/rabbit/__init__.py
+│ │ --rw-r--r--   0        0        0     8021 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/rabbit/rabbit_broker.py
+│ │ --rw-r--r--   0        0        0     4820 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/rabbit/rabbit_broker.pyi
+│ │ --rw-r--r--   0        0        0      995 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/brokers/rabbit/schemas.py
+│ │ --rw-r--r--   0        0        0       58 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/__init__.py
+│ │ --rw-r--r--   0        0        0     3820 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/main.py
+│ │ --rw-r--r--   0        0        0     4876 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/startproject.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/supervisors/__init__.py
+│ │ --rw-r--r--   0        0        0     1715 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/supervisors/basereload.py
+│ │ --rw-r--r--   0        0        0     1576 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/supervisors/multiprocess.py
+│ │ --rw-r--r--   0        0        0     4633 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/supervisors/utils.py
+│ │ --rw-r--r--   0        0        0     4306 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/cli/supervisors/watchgodreloader.py
+│ │ --rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/log/__init__.py
+│ │ --rw-r--r--   0        0        0     2331 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/log/formatter.py
+│ │ --rw-r--r--   0        0        0     1435 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/log/logging.py
+│ │ --rw-r--r--   0        0        0      236 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/__init__.py
+│ │ --rw-r--r--   0        0        0      193 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/classes.py
+│ │ --rw-r--r--   0        0        0      513 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/functions.py
+│ │ --rw-r--r--   0        0        0      220 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/context/__init__.py
+│ │ --rw-r--r--   0        0        0     2563 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/context/decorate.py
+│ │ --rw-r--r--   0        0        0      746 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/context/main.py
+│ │ --rw-r--r--   0        0        0      195 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/context/types.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/types/__init__.py
+│ │ --rw-r--r--   0        0        0     1632 2020-02-02 00:00:00.000000 propan-0.0.8.6/propan/utils/types/decorate.py
+│ │ --rwxr-xr-x   0        0        0       37 2020-02-02 00:00:00.000000 propan-0.0.8.6/scripts/publish.sh
+│ │ --rwxr-xr-x   0        0        0       87 2020-02-02 00:00:00.000000 propan-0.0.8.6/scripts/test-cov.sh
+│ │ --rwxr-xr-x   0        0        0       33 2020-02-02 00:00:00.000000 propan-0.0.8.6/scripts/test.sh
+│ │ --rw-r--r--   0        0        0      166 2020-02-02 00:00:00.000000 propan-0.0.8.6/.gitignore
+│ │ --rw-r--r--   0        0        0     1082 2020-02-02 00:00:00.000000 propan-0.0.8.6/LICENSE
+│ │ --rw-r--r--   0        0        0     6236 2020-02-02 00:00:00.000000 propan-0.0.8.6/README.md
+│ │ --rw-r--r--   0        0        0     3198 2020-02-02 00:00:00.000000 propan-0.0.8.6/pyproject.toml
+│ │ --rw-r--r--   0        0        0     8833 2020-02-02 00:00:00.000000 propan-0.0.8.6/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1837 2020-02-02 00:00:00.000000 propan-0.0.8.7/CONTRIBUTING.md
+│ │ +-rw-r--r--   0        0        0      377 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/1_basic_usage.py
+│ │ +-rw-r--r--   0        0        0      478 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/2_specific_exchange.py
+│ │ +-rw-r--r--   0        0        0      679 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/3_lifespan_events.py
+│ │ +-rw-r--r--   0        0        0      711 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/4_cli_attributes_promotion.py
+│ │ +-rw-r--r--   0        0        0      548 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/5_publishing.py
+│ │ +-rw-r--r--   0        0        0     1004 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/6_arguments_casting.py
+│ │ +-rw-r--r--   0        0        0      672 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/7_handler_errors_processing.py
+│ │ +-rw-r--r--   0        0        0      897 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/1_dependency_injection.py
+│ │ +-rw-r--r--   0        0        0      575 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/2_dependency_declaration.py
+│ │ +-rw-r--r--   0        0        0      374 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/3_dependency_aliases.py
+│ │ +-rw-r--r--   0        0        0      599 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/4_dependency_deep_aliases.py
+│ │ +-rw-r--r--   0        0        0      570 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/5_dependency_nesting.py
+│ │ +-rw-r--r--   0        0        0      749 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/dependencies/6_dependecy_calling.py
+│ │ +-rw-r--r--   0        0        0      670 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/aiohttp.py
+│ │ +-rw-r--r--   0        0        0      593 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/blacksheep.py
+│ │ +-rw-r--r--   0        0        0      950 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/falcon.py
+│ │ +-rw-r--r--   0        0        0      541 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/fastapi.py
+│ │ +-rw-r--r--   0        0        0      534 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/quart.py
+│ │ +-rw-r--r--   0        0        0      615 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/sanic.py
+│ │ +-rw-r--r--   0        0        0      757 2020-02-02 00:00:00.000000 propan-0.0.8.7/examples/http_frameworks_integrations/tornado.py
+│ │ +-rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/__about__.py
+│ │ +-rw-r--r--   0        0        0      388 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/__init__.py
+│ │ +-rw-r--r--   0        0        0       65 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/__main__.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/__init__.py
+│ │ +-rw-r--r--   0        0        0     2773 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/push_back_watcher.py
+│ │ +-rw-r--r--   0        0        0      147 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/model/__init__.py
+│ │ +-rw-r--r--   0        0        0     5277 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/model/broker_usecase.py
+│ │ +-rw-r--r--   0        0        0      601 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/model/schemas.py
+│ │ +-rw-r--r--   0        0        0       82 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/nats/__init__.py
+│ │ +-rw-r--r--   0        0        0     4505 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/nats/nats_broker.py
+│ │ +-rw-r--r--   0        0        0     5152 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/nats/nats_broker.pyi
+│ │ +-rw-r--r--   0        0        0     1537 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/nats/nats_js_broker.py
+│ │ +-rw-r--r--   0        0        0      505 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/nats/schemas.py
+│ │ +-rw-r--r--   0        0        0      241 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/rabbit/__init__.py
+│ │ +-rw-r--r--   0        0        0     8088 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/rabbit/rabbit_broker.py
+│ │ +-rw-r--r--   0        0        0     5113 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/rabbit/rabbit_broker.pyi
+│ │ +-rw-r--r--   0        0        0     1084 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/brokers/rabbit/schemas.py
+│ │ +-rw-r--r--   0        0        0       52 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/__init__.py
+│ │ +-rw-r--r--   0        0        0     2701 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/app.py
+│ │ +-rw-r--r--   0        0        0     4274 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/main.py
+│ │ +-rw-r--r--   0        0        0     5846 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/startproject.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/supervisors/__init__.py
+│ │ +-rw-r--r--   0        0        0     1619 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/supervisors/basereload.py
+│ │ +-rw-r--r--   0        0        0     1328 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/supervisors/multiprocess.py
+│ │ +-rw-r--r--   0        0        0     4687 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/supervisors/utils.py
+│ │ +-rw-r--r--   0        0        0     4106 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/cli/supervisors/watchgodreloader.py
+│ │ +-rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/log/__init__.py
+│ │ +-rw-r--r--   0        0        0     2557 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/log/formatter.py
+│ │ +-rw-r--r--   0        0        0     1503 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/log/logging.py
+│ │ +-rw-r--r--   0        0        0      218 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0      242 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/classes.py
+│ │ +-rw-r--r--   0        0        0      592 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/functions.py
+│ │ +-rw-r--r--   0        0        0      219 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/context/__init__.py
+│ │ +-rw-r--r--   0        0        0     2681 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/context/decorate.py
+│ │ +-rw-r--r--   0        0        0      811 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/context/main.py
+│ │ +-rw-r--r--   0        0        0      210 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/context/types.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/types/__init__.py
+│ │ +-rw-r--r--   0        0        0     1675 2020-02-02 00:00:00.000000 propan-0.0.8.7/propan/utils/types/decorate.py
+│ │ +-rw-r--r--   0        0        0      100 2020-02-02 00:00:00.000000 propan-0.0.8.7/scripts/lint.sh
+│ │ +-rwxr-xr-x   0        0        0       37 2020-02-02 00:00:00.000000 propan-0.0.8.7/scripts/publish.sh
+│ │ +-rwxr-xr-x   0        0        0       87 2020-02-02 00:00:00.000000 propan-0.0.8.7/scripts/test-cov.sh
+│ │ +-rwxr-xr-x   0        0        0       33 2020-02-02 00:00:00.000000 propan-0.0.8.7/scripts/test.sh
+│ │ +-rw-r--r--   0        0        0      178 2020-02-02 00:00:00.000000 propan-0.0.8.7/.gitignore
+│ │ +-rw-r--r--   0        0        0     1082 2020-02-02 00:00:00.000000 propan-0.0.8.7/LICENSE
+│ │ +-rw-r--r--   0        0        0     6186 2020-02-02 00:00:00.000000 propan-0.0.8.7/README.md
+│ │ +-rw-r--r--   0        0        0     3832 2020-02-02 00:00:00.000000 propan-0.0.8.7/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     8938 2020-02-02 00:00:00.000000 propan-0.0.8.7/PKG-INFO
+│ │   --- propan-0.0.8.6/CONTRIBUTING.md
+│ ├── +++ propan-0.0.8.7/CONTRIBUTING.md
+│ │┄ Files identical despite different names
+│ │   --- propan-0.0.8.6/examples/3_lifespan_events.py
+│ ├── +++ propan-0.0.8.7/examples/3_lifespan_events.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,19 +1,18 @@
+│ │ -'''
+│ │ -Also you can use sync/async functions as 
+│ │ +"""
+│ │ +Also you can use sync/async functions as
+│ │  application lifecycle hooks
+│ │  
+│ │  All `on_startup` hooks runs before broker has been started
+│ │  All `on_shutdown` hooks runs after broker has been stopped
+│ │ -'''
+│ │ +"""
+│ │  
+│ │ -from propan.app import PropanApp
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  @app.on_startup
+│ │  def setup():
+│ │   --- propan-0.0.8.6/examples/4_cli_attributes_promotion.py
+│ ├── +++ propan-0.0.8.7/examples/4_cli_attributes_promotion.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,28 +1,27 @@
+│ │ -'''
+│ │ +"""
+│ │  Using propan cli tool allows to pass command-line
+│ │  options inside your Context dependencies.
+│ │  
+│ │  Ex:
+│ │  propan run serve:app --env=.env.dev
+│ │  
+│ │  You can pass options following ways:
+│ │  ... --env=.env
+│ │  ... -env=.env
+│ │  ... env=.env
+│ │ -"=" is required 
+│ │ +"=" is required
+│ │  
+│ │  Or you can pass a boolean flags
+│ │  ... --use-smth  # passes as use_smth=True
+│ │ -'''
+│ │ -from propan import PropanApp, RabbitBroker, Context
+│ │ -
+│ │ +"""
+│ │ +from propan import Context, PropanApp
+│ │ +from propan.brokers.rabbit import RabbitBroker
+│ │  from pydantic import BaseSettings
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  class Settings(BaseSettings):
+│ │      ...
+│ │   --- propan-0.0.8.6/examples/5_publishing.py
+│ ├── +++ propan-0.0.8.7/examples/5_publishing.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,20 +1,23 @@
+│ │ -'''
+│ │ +"""
+│ │  Propan provides the easiest way to publish messages:
+│ │  just use Broker as context manager and publish whatever you want!
+│ │ -'''
+│ │ +"""
+│ │  import asyncio
+│ │  
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │  
+│ │  async def main():
+│ │      async with RabbitBroker("amqp://guest:guest@localhost:5672/") as broker:
+│ │          await broker.publish_message("Hello, Propan!", queue="test")
+│ │ -        
+│ │ -        await broker.publish_message({
+│ │ -            "hello": "again!",
+│ │ -        }, queue="test")
+│ │ +
+│ │ +        await broker.publish_message(
+│ │ +            {
+│ │ +                "hello": "again!",
+│ │ +            },
+│ │ +            queue="test",
+│ │ +        )
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      asyncio.run(main())
+│ │   --- propan-0.0.8.6/examples/6_arguments_casting.py
+│ ├── +++ propan-0.0.8.7/examples/6_arguments_casting.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,21 +1,19 @@
+│ │ -'''
+│ │ +"""
+│ │  Propan has @apply_types decorator to cast incoming function
+│ │  arguments to type according their type annotation.
+│ │  
+│ │  If you doesn't create broker as `RabbitBroker(apply_types=False)`,
+│ │  all broker handlers are wrapped by @apply_types by default.
+│ │ -'''
+│ │ -from propan.app import PropanApp
+│ │ -from propan.utils import apply_types
+│ │ +"""
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ -
+│ │ +from propan.utils import apply_types
+│ │  from pydantic import BaseModel
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  class SimpleMessage(BaseModel):
+│ │      key: int
+│ │   --- propan-0.0.8.6/examples/7_handler_errors_processing.py
+│ ├── +++ propan-0.0.8.7/examples/7_handler_errors_processing.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,29 +1,28 @@
+│ │ -'''
+│ │ +"""
+│ │  By default handler drops with rejecting messages due
+│ │  process exceptions.
+│ │  
+│ │  If you want to redelivere messages just use
+│ │  @handler(retry=...) parameter.
+│ │  
+│ │  For more complex usecases just use the `tenacity` library.
+│ │ -'''
+│ │ +"""
+│ │  
+│ │ -from propan.app import PropanApp
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  @broker.handle("test", retry=True)
+│ │  async def base_handler(body):
+│ │ -    ''' Message will be requeue endlessly at exception '''
+│ │ +    """Message will be requeue endlessly at exception"""
+│ │      print(body)
+│ │  
+│ │  
+│ │  @broker.handle("test2", retry=3)
+│ │  async def another_handler(body):
+│ │ -    ''' Message will be processed at most 3 times and drops after '''
+│ │ +    """Message will be processed at most 3 times and drops after"""
+│ │      print(body)
+│ │   --- propan-0.0.8.6/examples/dependencies/1_dependency_injection.py
+│ ├── +++ propan-0.0.8.7/examples/dependencies/1_dependency_injection.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,32 +1,32 @@
+│ │ -'''
+│ │ +"""
+│ │  Propan use dependencies management policy close to `pytest fixtures`.
+│ │  You can specify in functions argument parameters which dependencies
+│ │  you would to use. And framework passes them from the global Context object.
+│ │  
+│ │  Default context fields are: app, broker, context (itself), logger and message.
+│ │  If you call not existed field it returns None value.
+│ │ -'''
+│ │ +"""
+│ │  from logging import Logger
+│ │  
+│ │  import aio_pika
+│ │ -
+│ │ -from propan.app import PropanApp
+│ │ -from propan.utils import Context
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ -
+│ │ +from propan.utils import Context
+│ │  
+│ │  rabbit_broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(rabbit_broker)
+│ │  
+│ │  
+│ │  @rabbit_broker.handle("test")
+│ │ -async def base_handler(body: dict,
+│ │ -                       app: PropanApp,
+│ │ -                       broker: RabbitBroker,
+│ │ -                       context: Context,
+│ │ -                       logger: Logger,
+│ │ -                       message: aio_pika.Message,
+│ │ -                       not_existed_field):
+│ │ +async def base_handler(
+│ │ +    body: dict,
+│ │ +    app: PropanApp,
+│ │ +    broker: RabbitBroker,
+│ │ +    context: Context,
+│ │ +    logger: Logger,
+│ │ +    message: aio_pika.Message,
+│ │ +    not_existed_field,
+│ │ +):
+│ │      assert broker is rabbit_broker
+│ │      assert not_existed_field is None
+│ │   --- propan-0.0.8.6/examples/dependencies/2_dependency_declaration.py
+│ ├── +++ propan-0.0.8.7/examples/dependencies/2_dependency_declaration.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,17 +1,16 @@
+│ │ -'''
+│ │ +"""
+│ │  All Context dependencies also available from on_startup hook
+│ │  (Some of them are None at application starting).
+│ │  
+│ │  You can use it to setup your custom context fields.
+│ │ -'''
+│ │ -from propan.app import PropanApp
+│ │ -from propan.utils import Context
+│ │ +"""
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ -
+│ │ +from propan.utils import Context
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  @app.on_startup
+│ │   --- propan-0.0.8.6/examples/dependencies/4_dependency_deep_aliases.py
+│ ├── +++ propan-0.0.8.7/examples/dependencies/4_dependency_deep_aliases.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,15 +1,14 @@
+│ │ -'''
+│ │ +"""
+│ │  Alias is able to provide access to specific attributes of dependency
+│ │ -'''
+│ │ -from propan import PropanApp, RabbitBroker, Alias, Context
+│ │ -
+│ │ +"""
+│ │ +from propan import Alias, Context, PropanApp
+│ │ +from propan.brokers.rabbit import RabbitBroker
+│ │  from pydantic import BaseSettings, Field
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  KEY = "my-secret-key"
+│ │   --- propan-0.0.8.6/examples/dependencies/5_dependency_nesting.py
+│ ├── +++ propan-0.0.8.7/examples/dependencies/5_dependency_nesting.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,18 +1,16 @@
+│ │ -'''
+│ │ +"""
+│ │  @use_context decorator allows pass context dependencies
+│ │  to all functions with the same context through the functions
+│ │  calling stack.
+│ │ -'''
+│ │ +"""
+│ │  import aio_pika
+│ │ -
+│ │ -from propan.app import PropanApp
+│ │ -from propan.utils import use_context
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ -
+│ │ +from propan.utils import use_context
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │   --- propan-0.0.8.6/examples/dependencies/6_dependecy_calling.py
+│ ├── +++ propan-0.0.8.7/examples/dependencies/6_dependecy_calling.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,16 +1,15 @@
+│ │ -'''
+│ │ +"""
+│ │  Depends parameter allows to call function before
+│ │  natural handler with providing all arguments and context
+│ │  inside dependency function
+│ │ -'''
+│ │ -from propan.app import PropanApp
+│ │ -from propan.utils import Depends, use_context
+│ │ +"""
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ -
+│ │ +from propan.utils import Depends, use_context
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = PropanApp(broker)
+│ │  
+│ │  
+│ │  @use_context
+│ │ @@ -21,12 +20,13 @@
+│ │  
+│ │  def sync_dependency():
+│ │      print("Hello, i am here!")
+│ │      return True
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │ -async def base_handler(body: dict,
+│ │ -                       async_called: bool = Depends(async_dependency),
+│ │ -                       sync_called: bool = Depends(sync_dependency)):
+│ │ +async def base_handler(
+│ │ +    body: dict,
+│ │ +    async_called: bool = Depends(async_dependency),
+│ │ +    sync_called: bool = Depends(sync_dependency),
+│ │ +):
+│ │      assert async_called and sync_called
+│ │ -
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/aiohttp.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/aiohttp.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,33 +1,35 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ +"""
+│ │  from aiohttp import web
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │  async def base_handler(body):
+│ │      print(body)
+│ │  
+│ │ +
+│ │  async def start_broker(app):
+│ │      await broker.start()
+│ │  
+│ │ +
+│ │  async def stop_broker(app):
+│ │      await broker.close()
+│ │  
+│ │ +
+│ │  async def hello(request):
+│ │      return web.Response(text="Hello, world")
+│ │  
+│ │  
+│ │  app = web.Application()
+│ │ -app.add_routes([web.get('/', hello)])
+│ │ +app.add_routes([web.get("/", hello)])
+│ │  app.on_startup.append(start_broker)
+│ │  app.on_cleanup.append(stop_broker)
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │ -    web.run_app(app)
+│ │ +    web.run_app(app)
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/blacksheep.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/blacksheep.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,15 +1,14 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ +"""
+│ │  from blacksheep import Application
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  app = Application()
+│ │  
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │ @@ -25,8 +24,8 @@
+│ │  @app.on_stop
+│ │  async def stop_broker(application: Application) -> None:
+│ │      await broker.close()
+│ │  
+│ │  
+│ │  @app.route("/")
+│ │  async def home():
+│ │ -    return "Hello, World!"
+│ │ +    return "Hello, World!"
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/falcon.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/falcon.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,38 +1,39 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ +"""
+│ │  import falcon
+│ │  import falcon.asgi
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │  async def base_handler(body):
+│ │      print(body)
+│ │  
+│ │  
+│ │  class ThingsResource:
+│ │      async def on_get(self, req, resp):
+│ │          resp.status = falcon.HTTP_200
+│ │          resp.content_type = falcon.MEDIA_TEXT
+│ │ -        resp.text = ('\nTwo things awe me most, the starry sky '
+│ │ -                     'above me and the moral law within me.\n'
+│ │ -                     '\n'
+│ │ -                     '    ~ Immanuel Kant\n\n')
+│ │ +        resp.text = (
+│ │ +            "\nTwo things awe me most, the starry sky "
+│ │ +            "above me and the moral law within me.\n"
+│ │ +            "\n"
+│ │ +            "    ~ Immanuel Kant\n\n"
+│ │ +        )
+│ │  
+│ │  
+│ │  class PropanMiddleware:
+│ │      async def process_startup(self, scope, event):
+│ │          await broker.start()
+│ │ -    
+│ │ +
+│ │      async def process_shutdown(self, scope, event):
+│ │          await broker.close()
+│ │  
+│ │  
+│ │  app = falcon.asgi.App()
+│ │  app.add_middleware(PropanMiddleware())
+│ │ -app.add_route('/things', ThingsResource())
+│ │ +app.add_route("/things", ThingsResource())
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/fastapi.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/fastapi.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,15 +1,14 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ +"""
+│ │  from fastapi import FastAPI
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │ -
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │  app = FastAPI()
+│ │  
+│ │  
+│ │  @broker.handle("test")
+│ │  async def base_handler(body):
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/quart.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/sanic.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,31 +1,30 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ -from quart import Quart
+│ │ +"""
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ +from sanic import Sanic
+│ │ +from sanic.response import text
+│ │  
+│ │ +app = Sanic("MyHelloWorldApp")
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │ -app = Quart(__name__)
+│ │ -
+│ │  
+│ │  @broker.handle("test")
+│ │  async def base_handler(body):
+│ │      print(body)
+│ │  
+│ │  
+│ │ -@app.before_serving
+│ │ -async def start_broker():
+│ │ -    await broker.start()
+│ │ -
+│ │ +@app.get("/")
+│ │ +async def hello_world(request):
+│ │ +    return text("Hello, world.")
+│ │  
+│ │ -@app.after_serving
+│ │ -async def stop_broker():
+│ │ -    await broker.close()
+│ │  
+│ │ +@app.after_server_start
+│ │ +async def start_broker(app, loop):
+│ │ +    await broker.start()
+│ │  
+│ │ -@app.route("/")
+│ │ -async def json():
+│ │ -    return {"hello": "world"}
+│ │  
+│ │ +@app.after_server_stop
+│ │ +async def stop_broker(app, loop):
+│ │ +    await broker.close()
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/sanic.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/quart.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,31 +1,30 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ -from sanic import Sanic
+│ │ -from sanic.response import text
+│ │ +"""
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │ +from quart import Quart
+│ │  
+│ │ -
+│ │ -app = Sanic("MyHelloWorldApp")
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │ +app = Quart(__name__)
+│ │ +
+│ │  
+│ │  @broker.handle("test")
+│ │  async def base_handler(body):
+│ │      print(body)
+│ │  
+│ │  
+│ │ -@app.get("/")
+│ │ -async def hello_world(request):
+│ │ -    return text("Hello, world.")
+│ │ +@app.before_serving
+│ │ +async def start_broker():
+│ │ +    await broker.start()
+│ │  
+│ │  
+│ │ -@app.after_server_start
+│ │ -async def start_broker(app, loop):
+│ │ -    await broker.start()
+│ │ +@app.after_serving
+│ │ +async def stop_broker():
+│ │ +    await broker.close()
+│ │  
+│ │  
+│ │ -@app.after_server_stop
+│ │ -async def stop_broker(app, loop):
+│ │ -    await broker.close()
+│ │ +@app.route("/")
+│ │ +async def json():
+│ │ +    return {"hello": "world"}
+│ │   --- propan-0.0.8.6/examples/http_frameworks_integrations/tornado.py
+│ ├── +++ propan-0.0.8.7/examples/http_frameworks_integrations/tornado.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │ -'''
+│ │ +"""
+│ │  You can use Propan MQBrokers without PropanApp
+│ │  Just start and stop them whenever you want
+│ │ -'''
+│ │ +"""
+│ │  import asyncio
+│ │  
+│ │  import tornado.web
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  
+│ │ @@ -17,25 +17,27 @@
+│ │  
+│ │  class MainHandler(tornado.web.RequestHandler):
+│ │      def get(self):
+│ │          self.write("Hello, world")
+│ │  
+│ │  
+│ │  def make_app():
+│ │ -    return tornado.web.Application([
+│ │ -        (r"/", MainHandler),
+│ │ -    ])
+│ │ +    return tornado.web.Application(
+│ │ +        [
+│ │ +            (r"/", MainHandler),
+│ │ +        ]
+│ │ +    )
+│ │  
+│ │  
+│ │  async def main():
+│ │      app = make_app()
+│ │      app.listen(8888)
+│ │ -    
+│ │ +
+│ │      await broker.start()
+│ │      try:
+│ │          await asyncio.Event().wait()
+│ │      finally:
+│ │          await broker.close()
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │ -    asyncio.run(main())
+│ │ +    asyncio.run(main())
+│ │   --- propan-0.0.8.6/propan/app.py
+│ ├── +++ propan-0.0.8.7/propan/cli/app.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,83 +1,84 @@
+│ │  import asyncio
+│ │  import logging
+│ │  import sys
+│ │ -from typing import (
+│ │ -    Optional, Callable, NoReturn,
+│ │ -    List, Dict, Any
+│ │ -)
+│ │ +from typing import Any, Callable, Dict, List, Optional
+│ │  
+│ │ -if sys.platform not in ('win32', 'cygwin', 'cli'):
+│ │ +if sys.platform not in ("win32", "cygwin", "cli"):
+│ │      import uvloop
+│ │ +
+│ │      uvloop.install()
+│ │  
+│ │ +from propan.brokers.model.broker_usecase import BrokerUsecase
+│ │ +from propan.cli.supervisors.utils import set_exit
+│ │  from propan.log import logger
+│ │  from propan.utils.classes import Singlethon
+│ │ -from propan.utils.context import use_context, context
+│ │ +from propan.utils.context import context, use_context
+│ │  from propan.utils.functions import call_or_await
+│ │ -from propan.brokers.model.broker_usecase import BrokerUsecase
+│ │ -from propan.cli.supervisors.utils import set_exit
+│ │  
+│ │  
+│ │  class PropanApp(Singlethon):
+│ │      _context: Dict[str, Any] = {}
+│ │ -    _on_startup_calling: List[Callable] = []
+│ │ -    _on_shutdown_calling: List[Callable] = []
+│ │ +    _on_startup_calling: List[Callable[..., None]] = []
+│ │ +    _on_shutdown_calling: List[Callable[..., None]] = []
+│ │  
+│ │      def __init__(
+│ │ -        self,
+│ │ -        broker: Optional[BrokerUsecase] = None,
+│ │ -        logger: logging.Logger = logger
+│ │ +        self, broker: Optional[BrokerUsecase] = None, logger: logging.Logger = logger
+│ │      ):
+│ │          self.broker = broker
+│ │          self.logger = logger
+│ │          self.context = context
+│ │  
+│ │          context.set_context("app", self)
+│ │  
+│ │          self.loop = asyncio.get_event_loop()
+│ │ -    
+│ │ -    def set_broker(self, broker: BrokerUsecase):
+│ │ +
+│ │ +    def set_broker(self, broker: BrokerUsecase) -> None:
+│ │          self.broker = broker
+│ │  
+│ │ -    def on_startup(self, func: Callable):
+│ │ +    def on_startup(self, func: Callable[..., None]) -> Callable[..., None]:
+│ │          self._on_startup_calling.append(use_context(func))
+│ │          return func
+│ │  
+│ │ -    def on_shutdown(self, func: Callable):
+│ │ +    def on_shutdown(self, func: Callable[..., None]) -> Callable[..., None]:
+│ │          self._on_shutdown_calling.append(use_context(func))
+│ │          return func
+│ │  
+│ │ -    def run(self, log_level: int = logging.INFO, **context_kwargs) -> NoReturn:
+│ │ +    def run(self, log_level: int = logging.INFO, **context_kwargs: Any) -> None:
+│ │          for k, v in context_kwargs.items():
+│ │              self.context.set_context(k, v)
+│ │  
+│ │          set_exit(lambda *_: self.loop.stop())
+│ │          try:
+│ │              self._start(log_level)
+│ │          finally:
+│ │              self._stop(log_level)
+│ │ -            
+│ │ -    def _start(self, log_level: int) -> NoReturn:
+│ │ +
+│ │ +    def _start(self, log_level: int) -> None:
+│ │          self.logger.log(log_level, "Propan app starting...")
+│ │          self.loop.run_until_complete(self._startup())
+│ │ -        self.logger.log(log_level, "Propan app started successfully! To exit press CTRL+C")
+│ │ +        self.logger.log(
+│ │ +            log_level, "Propan app started successfully! To exit press CTRL+C"
+│ │ +        )
+│ │          self.loop.run_forever()
+│ │  
+│ │ -    def _stop(self, log_level: int):
+│ │ +    def _stop(self, log_level: int) -> None:
+│ │          self.logger.log(log_level, "Propan app shutting down...")
+│ │          self.loop.run_until_complete(self._shutdown())
+│ │          self.logger.log(log_level, "Propan app shut down gracefully.")
+│ │  
+│ │ -    async def _startup(self):
+│ │ +    async def _startup(self) -> None:
+│ │          for func in self._on_startup_calling:
+│ │              await call_or_await(func)
+│ │ -        
+│ │ -        if (broker := self.broker) is not None:
+│ │ -            await broker.start()
+│ │  
+│ │ -    async def _shutdown(self):
+│ │ -        if getattr(self.broker, "_connection", False) is not False:
+│ │ +        if self.broker is not None:
+│ │ +            await self.broker.start()
+│ │ +
+│ │ +    async def _shutdown(self) -> None:
+│ │ +        if (
+│ │ +            self.broker is not None
+│ │ +            and getattr(self.broker, "_connection", False) is not False
+│ │ +        ):
+│ │              await self.broker.close()
+│ │  
+│ │          for func in self._on_shutdown_calling:
+│ │              await call_or_await(func)
+│ │   --- propan-0.0.8.6/propan/brokers/push_back_watcher.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/push_back_watcher.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,97 +1,97 @@
+│ │  from abc import ABC, abstractmethod
+│ │ -from logging import Logger
+│ │  from collections import Counter
+│ │ -from typing import Optional, Type, Callable
+│ │ +from logging import Logger
+│ │  from types import TracebackType
+│ │ +from typing import Callable, Optional, Type
+│ │ +
+│ │ +from propan.utils.functions import call_or_await
+│ │  
+│ │  
+│ │  class BaseWatcher(ABC):
+│ │      max_tries: int
+│ │  
+│ │ -    def __init__(self, max_tries: int = None, logger: Optional[Logger] = None):
+│ │ +    def __init__(self, max_tries: int = 0, logger: Optional[Logger] = None):
+│ │          self.logger = logger
+│ │          self.max_tries = max_tries
+│ │  
+│ │      @abstractmethod
+│ │      def add(self, message_id: str) -> None:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │      def is_max(self, message_id: str) -> bool:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │ -    def remove(self, message_id: str):
+│ │ +    def remove(self, message_id: str) -> None:
+│ │          raise NotImplementedError()
+│ │  
+│ │  
+│ │  class FakePushBackWatcher(BaseWatcher):
+│ │ -    def __init__(self):
+│ │ -        pass
+│ │ -
+│ │ -    def add(self, message_id: str):
+│ │ +    def add(self, message_id: str) -> None:
+│ │          pass
+│ │  
+│ │ -    def is_max(self, message_id: str):
+│ │ +    def is_max(self, message_id: str) -> bool:
+│ │          return False
+│ │  
+│ │ -    def remove(self, message_id: str):
+│ │ +    def remove(self, message_id: str) -> None:
+│ │          pass
+│ │  
+│ │  
+│ │  class PushBackWatcher(BaseWatcher):
+│ │ -    memory = Counter()
+│ │ +    memory: Counter[str] = Counter()
+│ │  
+│ │      def __init__(self, max_tries: int = 3, logger: Optional[Logger] = None):
+│ │          super().__init__(logger=logger, max_tries=max_tries)
+│ │  
+│ │      def add(self, message_id: str) -> None:
+│ │          self.memory[message_id] += 1
+│ │  
+│ │      def is_max(self, message_id: str) -> bool:
+│ │          is_max = self.memory[message_id] > self.max_tries
+│ │          if self.logger is not None:
+│ │              if is_max:
+│ │ -                self.logger.error(f'Already retried {self.max_tries} times. Skipped.')
+│ │ +                self.logger.error(f"Already retried {self.max_tries} times. Skipped.")
+│ │              else:
+│ │ -                self.logger.error('Error is occured. Pushing back to queue.')
+│ │ +                self.logger.error("Error is occured. Pushing back to queue.")
+│ │          return is_max
+│ │  
+│ │      def remove(self, message: str) -> None:
+│ │          self.memory[message] = 0
+│ │          self.memory += Counter()
+│ │  
+│ │  
+│ │  class WatcherContext:
+│ │ -    def __init__(self,
+│ │ -                 watcher: BaseWatcher,
+│ │ -                 message_id,
+│ │ -                 *args,
+│ │ -                 on_success: Callable = lambda: None,
+│ │ -                 on_max: Callable = lambda: None,
+│ │ -                 on_error: Callable = lambda: None):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        watcher: BaseWatcher,
+│ │ +        message_id: str,
+│ │ +        on_success: Callable[[], None] = lambda: None,
+│ │ +        on_max: Callable[[], None] = lambda: None,
+│ │ +        on_error: Callable[[], None] = lambda: None,
+│ │ +    ):
+│ │          self.watcher = watcher
+│ │          self.on_success = on_success
+│ │          self.on_max = on_max
+│ │          self.on_error = on_error
+│ │          self._message_id = message_id
+│ │  
+│ │ -    async def __aenter__(self):
+│ │ +    async def __aenter__(self) -> None:
+│ │          self.watcher.add(self._message_id)
+│ │  
+│ │      async def __aexit__(
+│ │          self,
+│ │          exc_type: Optional[Type[BaseException]],
+│ │          exc_val: Optional[BaseException],
+│ │          exc_tb: Optional[TracebackType],
+│ │      ) -> None:
+│ │          if not exc_type:
+│ │ -            await self.on_success()
+│ │ +            await call_or_await(self.on_success)
+│ │              self.watcher.remove(self._message_id)
+│ │  
+│ │          elif self.watcher.is_max(self._message_id):
+│ │ -            await self.on_max()
+│ │ +            await call_or_await(self.on_max)
+│ │              self.watcher.remove(self._message_id)
+│ │  
+│ │          else:
+│ │ -            await self.on_error()
+│ │ +            await call_or_await(self.on_error)
+│ │   --- propan-0.0.8.6/propan/brokers/model/broker_usecase.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/model/broker_usecase.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,148 +1,176 @@
+│ │ -from abc import ABC, abstractmethod
+│ │  import logging
+│ │ -from time import perf_counter
+│ │ +from abc import ABC, abstractmethod
+│ │  from functools import wraps
+│ │ -from typing import Callable, Union, Optional, Any
+│ │ +from time import perf_counter
+│ │ +from typing import Any, Callable, Dict, Optional, Union
+│ │  
+│ │ +from propan.brokers.push_back_watcher import (
+│ │ +    BaseWatcher,
+│ │ +    FakePushBackWatcher,
+│ │ +    PushBackWatcher,
+│ │ +)
+│ │  from propan.log import access_logger
+│ │  from propan.utils import apply_types, use_context
+│ │ -from propan.utils.context import message as message_context, context
+│ │ -from propan.brokers.push_back_watcher import BaseWatcher, PushBackWatcher, FakePushBackWatcher
+│ │ +from propan.utils.context import context
+│ │ +from propan.utils.context import message as message_context
+│ │  
+│ │  
+│ │  class BrokerUsecase(ABC):
+│ │ -    logger: logging.Logger
+│ │ +    logger: Optional[logging.Logger]
+│ │      log_level: int
+│ │ -    _fmt: str = '%(asctime)s %(levelname)s - %(message)s'
+│ │ -    
+│ │ -    def __init__(self,
+│ │ -                 *args,
+│ │ -                 apply_types: bool = True,
+│ │ -                 logger: Optional[logging.Logger] = access_logger,
+│ │ -                 log_level: int = logging.INFO,
+│ │ -                 **kwargs):
+│ │ +    _connection: Any = None
+│ │ +    _fmt: str = "%(asctime)s %(levelname)s - %(message)s"
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        *args: Any,
+│ │ +        apply_types: bool = True,
+│ │ +        logger: Optional[logging.Logger] = access_logger,
+│ │ +        log_level: int = logging.INFO,
+│ │ +        **kwargs: Any,
+│ │ +    ):
+│ │          self.logger = logger
+│ │          self.log_level = log_level
+│ │  
+│ │          self._is_apply_types = apply_types
+│ │          self._connection_args = args
+│ │          self._connection_kwargs = kwargs
+│ │  
+│ │          context.set_context("logger", logger)
+│ │          context.set_context("broker", self)
+│ │  
+│ │ -    async def connect(self, *args, **kwargs):
+│ │ +    async def connect(self, *args: Any, **kwargs: Any) -> Any:
+│ │          if self._connection is None:
+│ │              _args = args or self._connection_args
+│ │              _kwargs = kwargs or self._connection_kwargs
+│ │              self._connection = await self._connect(*_args, **_kwargs)
+│ │              return self._connection
+│ │  
+│ │      @abstractmethod
+│ │ -    async def _connect(self, *args, **kwargs) -> Any:
+│ │ +    async def _connect(self, *args: Any, **kwargs: Any) -> Any:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │ -    def publish_message(self, queue_name: str, message: str) -> None:
+│ │ +    async def publish_message(self, message: Any, *args: Any, **kwargs: Any) -> Any:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │ -    def close(self) -> None:
+│ │ +    async def close(self) -> None:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │ -    def _decode_message(self) -> Union[str, dict]:
+│ │ +    async def _decode_message(self, message: Any) -> Union[str, Dict[str, Any]]:
+│ │          raise NotImplementedError()
+│ │  
+│ │      @abstractmethod
+│ │ -    def _process_message(self, func: Callable, watcher: Optional[BaseWatcher]) -> Callable:
+│ │ +    def _process_message(
+│ │ +        self, func: Callable[..., Any], watcher: Optional[BaseWatcher]
+│ │ +    ) -> Callable[..., Any]:
+│ │          raise NotImplementedError()
+│ │ -    
+│ │ +
+│ │      async def start(self) -> None:
+│ │ -        self._init_logger()
+│ │ +        if self.logger is not None:
+│ │ +            self._init_logger(self.logger)
+│ │ +
+│ │          await self.connect()
+│ │ -    
+│ │ -    def _get_log_context(self, *kwargs) -> dict[str, Any]:
+│ │ +
+│ │ +    def _get_log_context(self, **kwargs: Any) -> Dict[str, Any]:
+│ │          return {}
+│ │  
+│ │ -    def handle(self, func: Callable, retry: Union[bool, int] = False, **broker_args) -> Callable:
+│ │ -        return self._wrap_handler(func, retry, **broker_args)
+│ │ -    
+│ │ +    @abstractmethod
+│ │ +    def handle(
+│ │ +        self,
+│ │ +        *broker_args: Any,
+│ │ +        retry: Union[bool, int] = False,
+│ │ +        **broker_kwargs: Any,
+│ │ +    ) -> Callable[[Callable[..., Any]], None]:
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │      @property
+│ │ -    def fmt(self):
+│ │ +    def fmt(self) -> str:
+│ │          return self._fmt
+│ │  
+│ │ -    def _init_logger(self):
+│ │ -        for handler in self.logger.handlers:
+│ │ -            handler.setFormatter(type(handler.formatter)(self.fmt))
+│ │ +    def _init_logger(self, logger: logging.Logger) -> None:
+│ │ +        for handler in logger.handlers:
+│ │ +            if handler.formatter is not None:
+│ │ +                handler.setFormatter(type(handler.formatter)(self.fmt))
+│ │  
+│ │ -    async def __aenter__(self) -> 'BrokerUsecase':
+│ │ +    async def __aenter__(self) -> "BrokerUsecase":
+│ │          await self.connect()
+│ │          return self
+│ │ -    
+│ │ -    async def __aexit__(self, *args, **kwargs):
+│ │ +
+│ │ +    async def __aexit__(self, *args: Any, **kwargs: Any) -> None:
+│ │          await self.close()
+│ │  
+│ │ -    def _wrap_handler(self,
+│ │ -                      func: Callable,
+│ │ -                      retry: Union[bool, int],
+│ │ -                      **broker_args) -> Callable:
+│ │ +    def _wrap_handler(
+│ │ +        self, func: Callable[..., Any], retry: Union[bool, int], **broker_args: Any
+│ │ +    ) -> Callable[..., Any]:
+│ │          func = use_context(func)
+│ │  
+│ │          if self._is_apply_types:
+│ │              func = apply_types(func)
+│ │  
+│ │          func = self._wrap_decode_message(func)
+│ │  
+│ │          func = self._process_message(func, _get_watcher(self.logger, retry))
+│ │  
+│ │          if self.logger is not None:
+│ │ -            func = self._log_execution(**broker_args)(func)
+│ │ +            func = self._log_execution(self.logger, **broker_args)(func)
+│ │  
+│ │          func = _set_message_context(func)
+│ │  
+│ │          return func
+│ │  
+│ │ -    def _wrap_decode_message(self, func: Callable) -> Callable:
+│ │ +    def _wrap_decode_message(self, func: Callable[..., Any]) -> Callable[..., Any]:
+│ │          @wraps(func)
+│ │ -        async def wrapper(message) -> None:
+│ │ +        async def wrapper(message: Any) -> Any:
+│ │              return await func(await self._decode_message(message))
+│ │ +
+│ │          return wrapper
+│ │  
+│ │ -    def _log_execution(self, **broker_args):
+│ │ -        def decor(func):
+│ │ +    def _log_execution(
+│ │ +        self, logger: logging.Logger, **broker_args: Any
+│ │ +    ) -> Callable[[Callable[..., Any]], Any]:
+│ │ +        def decor(func: Callable[..., Any]) -> Callable[..., Any]:
+│ │              @wraps(func)
+│ │ -            async def wrapper(message):
+│ │ +            async def wrapper(message: Any) -> Any:
+│ │                  start = perf_counter()
+│ │  
+│ │                  self._get_log_context(message=message, **broker_args)
+│ │ -                self.logger.log(self.log_level, "Received")
+│ │ +                logger.log(self.log_level, "Received")
+│ │  
+│ │                  try:
+│ │                      r = await func(message)
+│ │                  except Exception as e:
+│ │ -                    self.logger.error(repr(e))
+│ │ +                    logger.error(repr(e))
+│ │                  else:
+│ │ -                    self.logger.log(self.log_level,
+│ │ -                                    f"Processed by {(perf_counter() - start):.4f}")
+│ │ +                    logger.log(
+│ │ +                        self.log_level, f"Processed by {(perf_counter() - start):.4f}"
+│ │ +                    )
+│ │                      return r
+│ │ +
+│ │              return wrapper
+│ │ +
+│ │          return decor
+│ │  
+│ │  
+│ │ -def _get_watcher(logger: logging.Logger, try_number: Union[bool, int] = True) -> Optional[BaseWatcher]:
+│ │ +def _get_watcher(
+│ │ +    logger: Optional[logging.Logger], try_number: Union[bool, int] = True
+│ │ +) -> Optional[BaseWatcher]:
+│ │ +    watcher: Optional[BaseWatcher]
+│ │      if try_number is True:
+│ │ -        watcher = FakePushBackWatcher(logger=logger)
+│ │ +        watcher = FakePushBackWatcher()
+│ │      elif try_number is False:
+│ │          watcher = None
+│ │      else:
+│ │          watcher = PushBackWatcher(logger=logger, max_tries=try_number)
+│ │      return watcher
+│ │  
+│ │  
+│ │ -def _set_message_context(func: Callable) -> Callable:
+│ │ +def _set_message_context(func: Callable[..., Any]) -> Callable[[Any], Any]:
+│ │      @wraps(func)
+│ │ -    async def wrapper(message) -> None:
+│ │ +    async def wrapper(message: Any) -> Any:
+│ │          message_context.set(message)
+│ │          return await func(message)
+│ │ +
+│ │      return wrapper
+│ │   --- propan-0.0.8.6/propan/brokers/nats/nats_broker.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/nats/nats_broker.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,149 +1,138 @@
+│ │  import json
+│ │  from functools import wraps
+│ │ -from typing import (
+│ │ -    Optional, Callable, Union,
+│ │ -    List, Dict, Any
+│ │ -)
+│ │ +from typing import Any, Callable, Dict, List, Optional, Union
+│ │  from uuid import uuid4
+│ │  
+│ │  import nats
+│ │  from nats.aio.client import Client
+│ │  from nats.aio.msg import Msg
+│ │ -
+│ │ -from propan.log.formatter import expand_log_field
+│ │ -from propan.utils.context.main import log_context
+│ │  from propan.brokers.model import BrokerUsecase
+│ │ +from propan.brokers.nats.schemas import Handler
+│ │  from propan.brokers.push_back_watcher import BaseWatcher
+│ │ -
+│ │ -from propan.brokers.nats.schemas import Handler, JetStream
+│ │ +from propan.utils.context.main import log_context
+│ │  
+│ │  
+│ │  class NatsBroker(BrokerUsecase):
+│ │      handlers: List[Handler] = []
+│ │      _connection: Optional[Client] = None
+│ │  
+│ │      __max_queue_len = 0
+│ │      __max_subject_len = 4
+│ │  
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        *args,
+│ │ -        log_fmt: Optional[str] = None,
+│ │ -        **kwargs
+│ │ -    ):
+│ │ +    def __init__(self, *args: Any, log_fmt: Optional[str] = None, **kwargs: Any):
+│ │          super().__init__(*args, **kwargs)
+│ │          self._fmt = log_fmt
+│ │  
+│ │ -    async def _connect(self, *args, **kwargs) -> Client:
+│ │ +    async def _connect(self, *args: Any, **kwargs: Any) -> Client:
+│ │          return await nats.connect(*args, **kwargs)
+│ │  
+│ │ -    def handle(self,
+│ │ -               subject: str,
+│ │ -               queue: str = "",
+│ │ -               retry: Union[bool, int] = False) -> Callable:
+│ │ +    def handle(
+│ │ +        self, subject: str, queue: str = "", retry: Union[bool, int] = False
+│ │ +    ) -> Callable[[Callable[..., Any]], None]:
+│ │          if (i := len(subject)) > self.__max_subject_len:
+│ │              self.__max_subject_len = i
+│ │  
+│ │          if (i := len(queue)) > self.__max_queue_len:
+│ │              self.__max_queue_len = i
+│ │  
+│ │          parent = super()
+│ │  
+│ │ -        def wrapper(func) -> None:
+│ │ +        def wrapper(func: Callable[..., Any]) -> None:
+│ │              for handler in self.handlers:
+│ │                  if handler.subject == subject and handler.queue == queue:
+│ │ -                    raise ValueError(f"`{func.__name__}` uses already "
+│ │ -                                     f"using `{subject}` subject with "
+│ │ -                                     f"`{queue}` queue")
+│ │ +                    raise ValueError(
+│ │ +                        f"`{func.__name__}` uses already "
+│ │ +                        f"using `{subject}` subject with "
+│ │ +                        f"`{queue}` queue"
+│ │ +                    )
+│ │  
+│ │              func = parent.handle(func, retry, queue=queue, subject=subject)
+│ │              handler = Handler(callback=func, subject=subject, queue=queue)
+│ │              self.handlers.append(handler)
+│ │  
+│ │          return wrapper
+│ │  
+│ │ -    async def start(self):
+│ │ +    async def start(self) -> None:
+│ │          await super().start()
+│ │  
+│ │          for handler in self.handlers:
+│ │ -            func = handler.callback            
+│ │ +            func = handler.callback
+│ │  
+│ │              if self.logger:
+│ │                  self._get_log_context(None, handler.subject, handler.queue)
+│ │ -                self.logger.info(f'`{func.__name__}` waiting for messages')
+│ │ +                self.logger.info(f"`{func.__name__}` waiting for messages")
+│ │  
+│ │              sub = await self._connection.subscribe(handler.subject, cb=func)
+│ │              handler.subscription = sub
+│ │  
+│ │ -    async def publish_message(self,
+│ │ -                              message: Union[str, dict],
+│ │ -                              subject: str,
+│ │ -                              **publish_args) -> None:
+│ │ +    async def publish_message(
+│ │ +        self, message: Union[str, Dict[str, Any]], subject: str, **publish_args: Any
+│ │ +    ) -> None:
+│ │          if self._connection is None:
+│ │              raise ValueError("NatsConnection not started yet")
+│ │  
+│ │          if isinstance(message, dict):
+│ │              message = json.dumps(message)
+│ │              headers = {
+│ │                  **publish_args.pop("headers", {}),
+│ │ -                "content-type": "application/json"
+│ │ +                "content-type": "application/json",
+│ │              }
+│ │          else:
+│ │              headers = {
+│ │                  **publish_args.pop("headers", {}),
+│ │ -                "content-type": "text/plain"
+│ │ +                "content-type": "text/plain",
+│ │              }
+│ │  
+│ │ -        return await self._connection.publish(subject,
+│ │ -                                              message.encode(),
+│ │ -                                              headers=headers,
+│ │ -                                              **publish_args)
+│ │ +        return await self._connection.publish(
+│ │ +            subject, message.encode(), headers=headers, **publish_args
+│ │ +        )
+│ │  
+│ │ -    async def close(self):
+│ │ +    async def close(self) -> None:
+│ │          for h in self.handlers:
+│ │              await h.subscription.unsubscribe()
+│ │  
+│ │          if self._connection:
+│ │              await self._connection.drain()
+│ │  
+│ │ -    def _get_log_context(self,
+│ │ -                         message: Optional[Msg],
+│ │ -                         subject: str,
+│ │ -                         queue: str = "",
+│ │ -                         **kwrags) -> Dict[str, Any]:
+│ │ +    def _get_log_context(
+│ │ +        self, message: Optional[Msg], subject: str, queue: str = "", **kwargs
+│ │ +    ) -> Dict[str, Any]:
+│ │          if message is not None:
+│ │              message_id = message.reply or uuid4().hex
+│ │              message.message_id = message_id
+│ │  
+│ │          context = {
+│ │              "subject": subject,
+│ │              "queue": queue,
+│ │ -            "message_id": message.message_id[:10] if message else  ""
+│ │ +            "message_id": message.message_id[:10] if message else "",
+│ │          }
+│ │  
+│ │          log_context.set(context)
+│ │          return context
+│ │  
+│ │      @property
+│ │ -    def fmt(self):
+│ │ +    def fmt(self) -> str:
+│ │          return self._fmt or (
+│ │ -            '%(asctime)s %(levelname)s - '
+│ │ -            f'%(subject)-{self.__max_subject_len}s | ' + 
+│ │ -            (f'%(queue)-{self.__max_queue_len}s | ' if self.__max_queue_len else "") +
+│ │ -            '%(message_id)-10s '
+│ │ -            '- %(message)s'
+│ │ +            "%(asctime)s %(levelname)s - "
+│ │ +            f"%(subject)-{self.__max_subject_len}s | "
+│ │ +            + (f"%(queue)-{self.__max_queue_len}s | " if self.__max_queue_len else "")
+│ │ +            + "%(message_id)-10s "
+│ │ +            "- %(message)s"
+│ │          )
+│ │  
+│ │      @staticmethod
+│ │      async def _decode_message(message: Msg) -> Union[str, dict]:
+│ │          body = message.data.decode()
+│ │          if message.header and message.header.get("content-type") == "application/json":
+│ │              body = json.loads(body)
+│ │          return body
+│ │  
+│ │      @staticmethod
+│ │ -    def _process_message(func: Callable, watcher: Optional[BaseWatcher] = None) -> Callable:
+│ │ +    def _process_message(
+│ │ +        func: Callable[..., Any], watcher: Optional[BaseWatcher] = None
+│ │ +    ) -> Callable[[Msg], Any]:
+│ │          @wraps(func)
+│ │          async def wrapper(message: Msg):
+│ │              return await func(message)
+│ │ +
+│ │          return wrapper
+│ │   --- propan-0.0.8.6/propan/brokers/nats/nats_broker.pyi
+│ ├── +++ propan-0.0.8.7/propan/brokers/nats/nats_broker.pyi
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,51 +1,42 @@
+│ │ -import ssl
+│ │  import logging
+│ │ -from typing import (
+│ │ -    Callable,
+│ │ -    List,
+│ │ -    Dict,
+│ │ -    Optional,
+│ │ -    Union,
+│ │ -)
+│ │ +import ssl
+│ │ +from typing import Any, Callable, Dict, List, Optional, Union
+│ │  
+│ │  from nats.aio.client import (
+│ │ -    Client,
+│ │ -    Callback,
+│ │ -    ErrorCallback,
+│ │ -    SignatureCallback,
+│ │ -    JWTCallback,
+│ │ -    Credentials,
+│ │      DEFAULT_CONNECT_TIMEOUT,
+│ │ -    DEFAULT_RECONNECT_TIME_WAIT,
+│ │ -    DEFAULT_MAX_RECONNECT_ATTEMPTS,
+│ │ -    DEFAULT_PING_INTERVAL,
+│ │ -    DEFAULT_MAX_OUTSTANDING_PINGS,
+│ │ -    DEFAULT_MAX_FLUSHER_QUEUE_SIZE,
+│ │      DEFAULT_DRAIN_TIMEOUT,
+│ │      DEFAULT_INBOX_PREFIX,
+│ │ +    DEFAULT_MAX_FLUSHER_QUEUE_SIZE,
+│ │ +    DEFAULT_MAX_OUTSTANDING_PINGS,
+│ │ +    DEFAULT_MAX_RECONNECT_ATTEMPTS,
+│ │      DEFAULT_PENDING_SIZE,
+│ │ +    DEFAULT_PING_INTERVAL,
+│ │ +    DEFAULT_RECONNECT_TIME_WAIT,
+│ │ +    Callback,
+│ │ +    Client,
+│ │ +    Credentials,
+│ │ +    ErrorCallback,
+│ │ +    JWTCallback,
+│ │ +    SignatureCallback,
+│ │  )
+│ │ -
+│ │ -from propan.log import access_logger
+│ │ +from nats.aio.msg import Msg
+│ │  from propan.brokers.model import BrokerUsecase
+│ │ -
+│ │  from propan.brokers.nats.schemas import Handler
+│ │ -
+│ │ +from propan.brokers.push_back_watcher import BaseWatcher
+│ │ +from propan.log import access_logger
+│ │  
+│ │  class NatsBroker(BrokerUsecase):
+│ │      logger: logging.Logger
+│ │      handlers: List[Handler] = []
+│ │      _connection: Optional[Client] = None
+│ │  
+│ │ -    __max_queue_len = 4
+│ │ -
+│ │      def __init__(
+│ │          self,
+│ │ -        servers: Union[str, List[str]] = ["nats://localhost:4222"],
+│ │ +        servers: Union[str, List[str]] = ["nats://localhost:4222"],  # noqa: B006
+│ │          error_cb: Optional[ErrorCallback] = None,
+│ │          disconnected_cb: Optional[Callback] = None,
+│ │          closed_cb: Optional[Callback] = None,
+│ │          discovered_server_cb: Optional[Callback] = None,
+│ │          reconnected_cb: Optional[Callback] = None,
+│ │          name: Optional[str] = None,
+│ │          pedantic: bool = False,
+│ │ @@ -74,20 +65,18 @@
+│ │          flush_timeout: Optional[float] = None,
+│ │          *,
+│ │          logger: Optional[logging.Logger] = access_logger,
+│ │          log_level: int = logging.INFO,
+│ │          log_fmt: Optional[str] = None,
+│ │          apply_types: bool = True,
+│ │          consumers: Optional[int] = None,
+│ │ -    ):
+│ │ -        ...
+│ │ -
+│ │ +    ) -> None: ...
+│ │      async def connect(
+│ │          self,
+│ │ -        servers: Union[str, List[str]] = ["nats://localhost:4222"],
+│ │ +        servers: Union[str, List[str]] = ["nats://localhost:4222"],  # noqa: B006
+│ │          error_cb: Optional[ErrorCallback] = None,
+│ │          disconnected_cb: Optional[Callback] = None,
+│ │          closed_cb: Optional[Callback] = None,
+│ │          discovered_server_cb: Optional[Callback] = None,
+│ │          reconnected_cb: Optional[Callback] = None,
+│ │          name: Optional[str] = None,
+│ │          pedantic: bool = False,
+│ │ @@ -109,25 +98,31 @@
+│ │          drain_timeout: int = DEFAULT_DRAIN_TIMEOUT,
+│ │          signature_cb: Optional[SignatureCallback] = None,
+│ │          user_jwt_cb: Optional[JWTCallback] = None,
+│ │          user_credentials: Optional[Credentials] = None,
+│ │          nkeys_seed: Optional[str] = None,
+│ │          inbox_prefix: Union[str, bytes] = DEFAULT_INBOX_PREFIX,
+│ │          pending_size: int = DEFAULT_PENDING_SIZE,
+│ │ -        flush_timeout: Optional[float] = None) -> Client:
+│ │ -        ...
+│ │ -
+│ │ -    async def publish_message(self,
+│ │ -                              message: Union[str, dict],
+│ │ -                              subject: str,
+│ │ -                              reply: str = '',
+│ │ -                              headers: Optional[Dict[str, str]] = None) -> None:
+│ │ -        ...
+│ │ -    
+│ │ -    def handle(self,
+│ │ -               subject: str,
+│ │ -               queue: str = "",
+│ │ -               retry: Union[bool, int] = False) -> Callable:
+│ │ -        ...
+│ │ -
+│ │ -    async def __aenter__(self) -> 'NatsBroker':
+│ │ -        ...
+│ │ +        flush_timeout: Optional[float] = None,
+│ │ +    ) -> Client: ...
+│ │ +    async def publish_message(
+│ │ +        self,
+│ │ +        message: Union[str, Dict[str, Any]],
+│ │ +        subject: str,
+│ │ +        reply: str = "",
+│ │ +        headers: Optional[Dict[str, str]] = None,
+│ │ +    ) -> None: ...
+│ │ +    def handle(
+│ │ +        self, subject: str, queue: str = "", retry: Union[bool, int] = False
+│ │ +    ) -> Callable[[Callable[..., Any]], None]: ...
+│ │ +    async def __aenter__(self) -> "NatsBroker": ...
+│ │ +    async def _connect(self, *args: Any, **kwargs: Any) -> Client: ...
+│ │ +    async def close(self) -> None: ...
+│ │ +    def _get_log_context(
+│ │ +        self, message: Optional[Msg], subject: str, queue: str = "", **kwargs
+│ │ +    ) -> Dict[str, Any]: ...
+│ │ +    @staticmethod
+│ │ +    async def _decode_message(message: Msg) -> Union[str, dict]: ...
+│ │ +    @staticmethod
+│ │ +    def _process_message(
+│ │ +        func: Callable[..., Any], watcher: Optional[BaseWatcher] = None
+│ │ +    ) -> Callable[[Msg], Any]: ...
+│ │   --- propan-0.0.8.6/propan/brokers/nats/nats_js_broker.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/nats/nats_js_broker.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,49 +1,48 @@
+│ │ -from functools import wraps, partial
+│ │ -from typing import Optional, Callable
+│ │ +from functools import partial, wraps
+│ │ +from typing import Callable, Optional
+│ │  
+│ │  import nats
+│ │ -from nats.js.client import JetStreamContext
+│ │  from nats.aio.msg import Msg
+│ │ -
+│ │ -from propan.brokers.push_back_watcher import BaseWatcher, WatcherContext
+│ │ -
+│ │ +from nats.js.client import JetStreamContext
+│ │  from propan.brokers.nats.nats_broker import NatsBroker
+│ │  from propan.brokers.nats.schemas import JetStream
+│ │ +from propan.brokers.push_back_watcher import BaseWatcher, WatcherContext
+│ │  
+│ │  
+│ │  class NatsJSBroker(NatsBroker):
+│ │      _js: Optional[JetStream] = None
+│ │      _connection: Optional[JetStreamContext] = None
+│ │  
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        *args,
+│ │ -        jetstream: JetStream,
+│ │ -        **kwargs
+│ │ -    ):
+│ │ +    def __init__(self, *args, jetstream: JetStream, **kwargs):
+│ │          super().__init__(*args, **kwargs)
+│ │          self._js = jetstream
+│ │  
+│ │      async def _connect(self, *args, **kwargs) -> JetStreamContext:
+│ │          nc = await nats.connect(*args, **kwargs)
+│ │  
+│ │          stream = await nc.jetstream(
+│ │              **self._js.dict(include={"prefix", "domain", "timeout"})
+│ │          )
+│ │  
+│ │          return stream
+│ │  
+│ │      @staticmethod
+│ │ -    def _process_message(func: Callable, watcher: Optional[BaseWatcher] = None) -> Callable:
+│ │ +    def _process_message(
+│ │ +        func: Callable, watcher: Optional[BaseWatcher] = None
+│ │ +    ) -> Callable:
+│ │          @wraps(func)
+│ │          async def wrapper(message: Msg):
+│ │              if watcher is None:
+│ │                  return await func(message)
+│ │              else:
+│ │ -                async with WatcherContext(watcher, message.message_id,
+│ │ -                                          on_success=partial(message.ack),
+│ │ -                                          on_error=partial(message.nak),
+│ │ -                                          on_max=partial(message.term)):
+│ │ +                async with WatcherContext(
+│ │ +                    watcher,
+│ │ +                    message.message_id,
+│ │ +                    on_success=partial(message.ack),
+│ │ +                    on_error=partial(message.nak),
+│ │ +                    on_max=partial(message.term),
+│ │ +                ):
+│ │                      await message.in_progress()
+│ │                      return await func(message)
+│ │ +
+│ │          return wrapper
+│ │   --- propan-0.0.8.6/propan/brokers/rabbit/rabbit_broker.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/rabbit/rabbit_broker.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,49 +1,45 @@
+│ │  import asyncio
+│ │  import json
+│ │ -from functools import wraps, partial
+│ │ -from typing import (
+│ │ -    Optional, Callable, Union,
+│ │ -    List, Dict, Any
+│ │ -)
+│ │ +from functools import partial, wraps
+│ │ +from typing import Any, Callable, Dict, List, Optional, Union
+│ │  
+│ │  import aio_pika
+│ │ -
+│ │ -from propan.utils.context.main import log_context
+│ │ +import aiormq
+│ │  from propan.brokers.model import BrokerUsecase
+│ │  from propan.brokers.push_back_watcher import BaseWatcher, WatcherContext
+│ │ -
+│ │ -from propan.brokers.rabbit.schemas import RabbitQueue, RabbitExchange, Handler
+│ │ +from propan.brokers.rabbit.schemas import Handler, RabbitExchange, RabbitQueue
+│ │ +from propan.utils.context.main import log_context
+│ │  
+│ │  
+│ │  class RabbitBroker(BrokerUsecase):
+│ │      handlers: List[Handler] = []
+│ │      _connection: Optional[aio_pika.RobustConnection] = None
+│ │      _channel: Optional[aio_pika.RobustChannel] = None
+│ │  
+│ │      __max_queue_len = 4
+│ │      __max_exchange_len = 4
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ -        *args,
+│ │ +        *args: Any,
+│ │          consumers: Optional[int] = None,
+│ │          log_fmt: Optional[str] = None,
+│ │ -        **kwargs
+│ │ +        **kwargs: Any,
+│ │      ):
+│ │          super().__init__(*args, **kwargs)
+│ │          self._max_consumers = consumers
+│ │          self._fmt = log_fmt
+│ │  
+│ │ -    async def __aenter__(self) -> 'RabbitBroker':
+│ │ +    async def __aenter__(self) -> "RabbitBroker":
+│ │          await self.connect()
+│ │          await self.init_channel()
+│ │          return self
+│ │  
+│ │ -    async def _connect(self, *args, **kwargs) -> aio_pika.Connection:
+│ │ +    async def _connect(self, *args: Any, **kwargs: Any) -> aio_pika.Connection:
+│ │          return await aio_pika.connect_robust(
+│ │              *args, **kwargs, loop=asyncio.get_event_loop()
+│ │          )
+│ │  
+│ │      async def init_channel(self, max_consumers: Optional[int] = None) -> None:
+│ │          if self._channel is None:
+│ │              if self._connection is None:
+│ │ @@ -51,167 +47,183 @@
+│ │  
+│ │              max_consumers = max_consumers or self._max_consumers
+│ │              self._channel = await self._connection.channel()
+│ │              if max_consumers and self.logger:
+│ │                  self.logger.info(f"Set max consumers to {max_consumers}")
+│ │                  await self._channel.set_qos(prefetch_count=int(max_consumers))
+│ │  
+│ │ -    def handle(self,
+│ │ -               queue: Union[str, RabbitQueue],
+│ │ -               exchange: Union[str, RabbitExchange, None] = None,
+│ │ -               retry: Union[bool, int] = False) -> Callable:
+│ │ +    def handle(
+│ │ +        self,
+│ │ +        queue: Union[str, RabbitQueue],
+│ │ +        exchange: Union[str, RabbitExchange, None] = None,
+│ │ +        retry: Union[bool, int] = False,
+│ │ +    ) -> Callable[[Callable[..., Any]], None]:
+│ │          queue, exchange = _validate_exchange_and_queue(queue, exchange)
+│ │  
+│ │          if exchange and (i := len(exchange.name)) > self.__max_exchange_len:
+│ │              self.__max_exchange_len = i
+│ │ -        
+│ │ +
+│ │          if (i := len(queue.name)) > self.__max_queue_len:
+│ │              self.__max_queue_len = i
+│ │  
+│ │          parent = super()
+│ │  
+│ │ -        def wrapper(func) -> None:
+│ │ +        def wrapper(func: Callable[..., Any]) -> None:
+│ │              for handler in self.handlers:
+│ │                  if handler.exchange == exchange and handler.queue == queue:
+│ │ -                    raise ValueError(f"`{func.__name__}` uses already "
+│ │ -                                     f"using `{queue.name}` queue to listen "
+│ │ -                                     f"`{exchange.name if exchange else 'default'}` exchange")
+│ │ +                    raise ValueError(
+│ │ +                        f"`{func.__name__}` uses already "
+│ │ +                        f"using `{queue.name}` queue to listen "
+│ │ +                        f"`{exchange.name if exchange else 'default'}` exchange"
+│ │ +                    )
+│ │  
+│ │ -            func = parent.handle(func, retry, queue=queue, exchange=exchange)
+│ │ +            func = parent._wrap_handler(func, retry, queue=queue, exchange=exchange)
+│ │              handler = Handler(callback=func, queue=queue, exchange=exchange)
+│ │              self.handlers.append(handler)
+│ │  
+│ │          return wrapper
+│ │  
+│ │ -    async def start(self):
+│ │ +    async def start(self) -> None:
+│ │          await super().start()
+│ │          await self.init_channel()
+│ │  
+│ │          for handler in self.handlers:
+│ │              queue = await self._init_handler(handler)
+│ │  
+│ │              func = handler.callback
+│ │  
+│ │              if self.logger:
+│ │                  self._get_log_context(None, handler.queue, handler.exchange)
+│ │ -                self.logger.info(f'`{func.__name__}` waiting for messages')
+│ │ +                self.logger.info(f"`{func.__name__}` waiting for messages")
+│ │  
+│ │              await queue.consume(func)
+│ │  
+│ │ -    async def publish_message(self,
+│ │ -                              message: Union[aio_pika.Message, str, dict],
+│ │ -                              queue: Union[RabbitQueue, str] = "",
+│ │ -                              exchange: Union[RabbitExchange, str, None] = None,
+│ │ -                              **publish_args) -> None:
+│ │ +    async def publish_message(
+│ │ +        self,
+│ │ +        message: Union[aio_pika.Message, str, Dict[str, Any]],
+│ │ +        queue: Union[RabbitQueue, str] = "",
+│ │ +        exchange: Union[RabbitExchange, str, None] = None,
+│ │ +        **publish_args,
+│ │ +    ) -> Optional[aiormq.abc.ConfirmationFrameType]:
+│ │          if self._channel is None:
+│ │              raise ValueError("RabbitBroker channel not started yet")
+│ │  
+│ │          queue, exchange = _validate_exchange_and_queue(queue, exchange)
+│ │  
+│ │          if not isinstance(message, aio_pika.Message):
+│ │              if isinstance(message, dict):
+│ │                  message = aio_pika.Message(
+│ │ -                    json.dumps(message).encode(),
+│ │ -                    content_type="application/json"
+│ │ +                    json.dumps(message).encode(), content_type="application/json"
+│ │                  )
+│ │              else:
+│ │ -                message = aio_pika.Message(
+│ │ -                    message.encode(),
+│ │ -                    content_type="text/plain"
+│ │ -                )
+│ │ +                message = aio_pika.Message(message.encode(), content_type="text/plain")
+│ │  
+│ │          if exchange is None:
+│ │              exchange_obj = self._channel.default_exchange
+│ │          else:
+│ │              exchange_obj = await self._init_exchange(exchange)
+│ │  
+│ │          return await exchange_obj.publish(
+│ │              message=message,
+│ │              routing_key=queue.name,
+│ │              **publish_args,
+│ │          )
+│ │  
+│ │ -    async def close(self):
+│ │ +    async def close(self) -> None:
+│ │          if self._connection:
+│ │              await self._connection.close()
+│ │  
+│ │ -    async def _init_handler(self, handler: Handler):
+│ │ +    async def _init_handler(self, handler: Handler) -> aio_pika.abc.AbstractRobustQueue:
+│ │          queue = await self._init_queue(handler.queue)
+│ │          if handler.exchange is not None:
+│ │              exchange = await self._init_exchange(handler.exchange)
+│ │              await queue.bind(exchange)
+│ │          return queue
+│ │  
+│ │      async def _init_queue(self, queue: RabbitQueue) -> aio_pika.abc.AbstractRobustQueue:
+│ │          if queue.declare is True:
+│ │              return await self._channel.declare_queue(**queue.dict())
+│ │          else:
+│ │              return await self._channel.get_queue(queue.name, ensure=False)
+│ │ -    
+│ │ -    async def _init_exchange(self, exchange: RabbitExchange) -> aio_pika.abc.AbstractRobustExchange:
+│ │ +
+│ │ +    async def _init_exchange(
+│ │ +        self, exchange: RabbitExchange
+│ │ +    ) -> aio_pika.abc.AbstractRobustExchange:
+│ │          if exchange.declare is True:
+│ │              return await self._channel.declare_exchange(**exchange.dict())
+│ │          else:
+│ │              return await self._channel.get_exchange(exchange.name, ensure=False)
+│ │  
+│ │ -    def _get_log_context(self,
+│ │ -                         message: Optional[aio_pika.Message],
+│ │ -                         queue: RabbitQueue,
+│ │ -                         exchange: Optional[RabbitExchange] = None,
+│ │ -                        **kwrags) -> Dict[str, Any]:
+│ │ +    def _get_log_context(
+│ │ +        self,
+│ │ +        message: Optional[aio_pika.Message],
+│ │ +        queue: RabbitQueue,
+│ │ +        exchange: Optional[RabbitExchange] = None,
+│ │ +        **kwrags,
+│ │ +    ) -> Dict[str, Any]:
+│ │          exchange_name = exchange.name if exchange else "default"
+│ │          context = {
+│ │              "exchange": exchange_name,
+│ │              "queue": queue.name,
+│ │ -            "message_id": message.message_id[:10] if message else  ""
+│ │ +            "message_id": message.message_id[:10] if message else "",
+│ │          }
+│ │          log_context.set(context)
+│ │          return context
+│ │  
+│ │      @property
+│ │ -    def fmt(self):
+│ │ +    def fmt(self) -> str:
+│ │          return self._fmt or (
+│ │ -            '%(asctime)s %(levelname)s - '
+│ │ -            f'%(exchange)-{self.__max_exchange_len}s | '
+│ │ -            f'%(queue)-{self.__max_queue_len}s | '
+│ │ -            f'%(message_id)-10s '
+│ │ -            '- %(message)s'
+│ │ +            "%(asctime)s %(levelname)s - "
+│ │ +            f"%(exchange)-{self.__max_exchange_len}s | "
+│ │ +            f"%(queue)-{self.__max_queue_len}s | "
+│ │ +            f"%(message_id)-10s "
+│ │ +            "- %(message)s"
+│ │          )
+│ │  
+│ │      @staticmethod
+│ │ -    async def _decode_message(message: aio_pika.IncomingMessage) -> Union[str, dict]:
+│ │ +    async def _decode_message(
+│ │ +        message: aio_pika.IncomingMessage,
+│ │ +    ) -> Union[str, Dict[str, Any]]:
+│ │          body = message.body.decode()
+│ │          if message.content_type == "application/json":
+│ │              body = json.loads(body)
+│ │          return body
+│ │  
+│ │      @staticmethod
+│ │ -    def _process_message(func: Callable, watcher: Optional[BaseWatcher] = None) -> Callable:
+│ │ +    def _process_message(
+│ │ +        func: Callable[..., Any], watcher: Optional[BaseWatcher] = None
+│ │ +    ) -> Callable[..., Any]:
+│ │          @wraps(func)
+│ │          async def wrapper(message: aio_pika.Message):
+│ │              if watcher is None:
+│ │                  context = message.process()
+│ │              else:
+│ │ -                context = WatcherContext(watcher, message.message_id,
+│ │ -                                         on_success=partial(message.ack),
+│ │ -                                         on_error=partial(message.reject, True),
+│ │ -                                         on_max=partial(message.reject, False))
+│ │ +                context = WatcherContext(
+│ │ +                    watcher,
+│ │ +                    message.message_id,
+│ │ +                    on_success=partial(message.ack),
+│ │ +                    on_error=partial(message.reject, True),
+│ │ +                    on_max=partial(message.reject, False),
+│ │ +                )
+│ │              async with context:
+│ │                  return await func(message)
+│ │ +
+│ │          return wrapper
+│ │  
+│ │  
+│ │  def _validate_exchange_and_queue(
+│ │ -        queue: Union[str, RabbitQueue],
+│ │ -        exchange: Union[str, RabbitExchange, None] = None) -> tuple[RabbitQueue, Optional[RabbitExchange]]:
+│ │ +    queue: Union[str, RabbitQueue], exchange: Union[str, RabbitExchange, None] = None
+│ │ +) -> tuple[RabbitQueue, Optional[RabbitExchange]]:
+│ │      if isinstance(queue, str):
+│ │          queue = RabbitQueue(name=queue)
+│ │      elif not isinstance(queue, RabbitQueue):
+│ │          raise ValueError(f"Queue '{queue}' should be 'str' | 'RabbitQueue' instance")
+│ │  
+│ │      if exchange is not None:
+│ │          if isinstance(exchange, str):
+│ │              exchange = RabbitExchange(name=exchange)
+│ │          elif not isinstance(exchange, RabbitExchange):
+│ │ -            raise ValueError(f"Exchange '{exchange}' should be 'str' | 'RabbitExchange' instance")
+│ │ -    
+│ │ +            raise ValueError(
+│ │ +                f"Exchange '{exchange}' should be 'str' | 'RabbitExchange' instance"
+│ │ +            )
+│ │ +
+│ │      return queue, exchange
+│ │   --- propan-0.0.8.6/propan/brokers/rabbit/rabbit_broker.pyi
+│ ├── +++ propan-0.0.8.7/propan/brokers/rabbit/rabbit_broker.pyi
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,41 +1,42 @@
+│ │ -from ssl import SSLContext
+│ │  import logging
+│ │ -from typing import Union, Optional, Callable
+│ │ -from yarl import URL
+│ │ +from ssl import SSLContext
+│ │ +from typing import Any, Callable, Dict, Optional, Union
+│ │  
+│ │  import aio_pika
+│ │ +import aiormq
+│ │  from pamqp.common import FieldTable
+│ │ -
+│ │ -from propan.log import access_logger
+│ │  from propan.brokers.model import BrokerUsecase
+│ │ -
+│ │ -from .schemas import RabbitExchange, RabbitQueue
+│ │ -
+│ │ +from propan.brokers.push_back_watcher import BaseWatcher
+│ │ +from propan.brokers.rabbit.schemas import RabbitExchange, RabbitQueue
+│ │ +from propan.log import access_logger
+│ │ +from yarl import URL
+│ │  
+│ │  class RabbitBroker(BrokerUsecase):
+│ │ -    async def __init__(self,
+│ │ -                       url: Union[str, URL, None] = None,
+│ │ -                       host: str = "localhost",
+│ │ -                       port: int = 5672,
+│ │ -                       login: str = "guest",
+│ │ -                       password: str = "guest",
+│ │ -                       virtualhost: str = "/",
+│ │ -                       ssl: bool = False,
+│ │ -                       ssl_options: Optional[aio_pika.abc.SSLOptions] = None,
+│ │ -                       ssl_context: Optional[SSLContext] = None,
+│ │ -                       timeout: aio_pika.abc.TimeoutType = None,
+│ │ -                       client_properties: Optional[FieldTable] = None,
+│ │ -                       *,
+│ │ -                       logger: Optional[logging.Logger] = access_logger,
+│ │ -                       log_level: int = logging.INFO,
+│ │ -                       log_fmt: Optional[str] = None,
+│ │ -                       apply_types: bool = True,
+│ │ -                       consumers: Optional[int] = None):
+│ │ -        '''
+│ │ +    async def __init__(
+│ │ +        self,
+│ │ +        url: Union[str, URL, None] = None,
+│ │ +        host: str = "localhost",
+│ │ +        port: int = 5672,
+│ │ +        login: str = "guest",
+│ │ +        password: str = "guest",
+│ │ +        virtualhost: str = "/",
+│ │ +        ssl: bool = False,
+│ │ +        ssl_options: Optional[aio_pika.abc.SSLOptions] = None,
+│ │ +        ssl_context: Optional[SSLContext] = None,
+│ │ +        timeout: aio_pika.abc.TimeoutType = None,
+│ │ +        client_properties: Optional[FieldTable] = None,
+│ │ +        *,
+│ │ +        logger: Optional[logging.Logger] = access_logger,
+│ │ +        log_level: int = logging.INFO,
+│ │ +        log_fmt: Optional[str] = None,
+│ │ +        apply_types: bool = True,
+│ │ +        consumers: Optional[int] = None,
+│ │ +    ):
+│ │ +        """
+│ │          URL string might be contain ssl parameters e.g.
+│ │          `amqps://user:pass@host//?ca_certs=ca.pem&certfile=crt.pem&keyfile=key.pem`
+│ │  
+│ │          :param client_properties: add custom client capability.
+│ │          :param url:
+│ │              RFC3986_ formatted broker address. When :class:`None`
+│ │              will be used keyword arguments.
+│ │ @@ -47,30 +48,31 @@
+│ │          :param ssl: use SSL for connection. Should be used with addition kwargs.
+│ │          :param ssl_options: A dict of values for the SSL connection.
+│ │          :param timeout: connection timeout in seconds
+│ │          :param ssl_context: ssl.SSLContext instance
+│ │  
+│ │          .. _RFC3986: https://goo.gl/MzgYAs
+│ │          .. _official Python documentation: https://goo.gl/pty9xA
+│ │ -        '''
+│ │ +        """
+│ │          ...
+│ │ -
+│ │ -    async def connect(self,
+│ │ -                      url: Union[str, URL, None] = None,
+│ │ -                      host: str = "localhost",
+│ │ -                      port: int = 5672,
+│ │ -                      login: str = "guest",
+│ │ -                      password: str = "guest",
+│ │ -                      virtualhost: str = "/",
+│ │ -                      ssl: bool = False,
+│ │ -                      ssl_options: Optional[aio_pika.abc.SSLOptions] = None,
+│ │ -                      ssl_context: Optional[SSLContext] = None,
+│ │ -                      timeout: aio_pika.abc.TimeoutType = None,
+│ │ -                      client_properties: Optional[FieldTable] = None):
+│ │ -        '''
+│ │ +    async def connect(
+│ │ +        self,
+│ │ +        url: Union[str, URL, None] = None,
+│ │ +        host: str = "localhost",
+│ │ +        port: int = 5672,
+│ │ +        login: str = "guest",
+│ │ +        password: str = "guest",
+│ │ +        virtualhost: str = "/",
+│ │ +        ssl: bool = False,
+│ │ +        ssl_options: Optional[aio_pika.abc.SSLOptions] = None,
+│ │ +        ssl_context: Optional[SSLContext] = None,
+│ │ +        timeout: aio_pika.abc.TimeoutType = None,
+│ │ +        client_properties: Optional[FieldTable] = None,
+│ │ +    ) -> aio_pika.Connection:
+│ │ +        """
+│ │          URL string might be contain ssl parameters e.g.
+│ │          `amqps://user:pass@host//?ca_certs=ca.pem&certfile=crt.pem&keyfile=key.pem`
+│ │  
+│ │          :param client_properties: add custom client capability.
+│ │          :param url:
+│ │              RFC3986_ formatted broker address. When :class:`None`
+│ │              will be used keyword arguments.
+│ │ @@ -82,30 +84,46 @@
+│ │          :param ssl: use SSL for connection. Should be used with addition kwargs.
+│ │          :param ssl_options: A dict of values for the SSL connection.
+│ │          :param timeout: connection timeout in seconds
+│ │          :param ssl_context: ssl.SSLContext instance
+│ │  
+│ │          .. _RFC3986: https://goo.gl/MzgYAs
+│ │          .. _official Python documentation: https://goo.gl/pty9xA
+│ │ -        '''
+│ │ -        ...
+│ │ -
+│ │ -    async def publish_message(self,
+│ │ -                              message: Union[aio_pika.Message, str, dict],
+│ │ -                              queue: Union[RabbitQueue, str] = "",
+│ │ -                              exchange: Union[RabbitExchange, str, None] = None,
+│ │ -                              mandatory: bool = True,
+│ │ -                              immediate: bool = False,
+│ │ -                              timeout: aio_pika.abc.TimeoutType = None) -> None:
+│ │ +        """
+│ │          ...
+│ │ -
+│ │ -    def handle(self,
+│ │ -               queue: Union[str, RabbitQueue],
+│ │ -               exchange: Union[str, RabbitExchange, None] = None,
+│ │ -               retry: Union[bool, int] = False) -> Callable:
+│ │ -        '''
+│ │ +    async def publish_message(
+│ │ +        self,
+│ │ +        message: Union[aio_pika.Message, str, Dict[str, Any]],
+│ │ +        queue: Union[RabbitQueue, str] = "",
+│ │ +        exchange: Union[RabbitExchange, str, None] = None,
+│ │ +        mandatory: bool = True,
+│ │ +        immediate: bool = False,
+│ │ +        timeout: aio_pika.abc.TimeoutType = None,
+│ │ +    ) -> Optional[aiormq.abc.ConfirmationFrameType]: ...
+│ │ +    def handle(
+│ │ +        self,
+│ │ +        queue: Union[str, RabbitQueue],
+│ │ +        exchange: Union[str, RabbitExchange, None] = None,
+│ │ +        retry: Union[bool, int] = False,
+│ │ +    ) -> Callable[[Callable[..., Any]], None]:
+│ │ +        """
+│ │          retry: Union[bool, int] - at exeption message will returns to queue `int` times or endless if `True`
+│ │ -        '''
+│ │ -        ...
+│ │ -
+│ │ -    async def __aenter__(self) -> 'RabbitBroker':
+│ │ +        """
+│ │          ...
+│ │ +    async def __aenter__(self) -> "RabbitBroker": ...
+│ │ +    async def _connect(self, *args: Any, **kwargs: Any) -> aio_pika.Connection: ...
+│ │ +    async def close(self) -> None: ...
+│ │ +    @staticmethod
+│ │ +    async def _decode_message(
+│ │ +        message: aio_pika.IncomingMessage,
+│ │ +    ) -> Union[str, Dict[str, Any]]: ...
+│ │ +    @staticmethod
+│ │ +    def _process_message(
+│ │ +        func: Callable[..., Any], watcher: Optional[BaseWatcher] = None
+│ │ +    ) -> Callable[..., Any]: ...
+│ │ +    def _get_log_context(
+│ │ +        self,
+│ │ +        message: Optional[aio_pika.Message],
+│ │ +        queue: RabbitQueue,
+│ │ +        exchange: Optional[RabbitExchange] = None,
+│ │ +        **kwrags,
+│ │ +    ) -> Dict[str, Any]: ...
+│ │   --- propan-0.0.8.6/propan/brokers/rabbit/schemas.py
+│ ├── +++ propan-0.0.8.7/propan/brokers/rabbit/schemas.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,36 +1,41 @@
+│ │ -from typing import Optional, Dict, Any, Callable, Optional, Union
+│ │ +from typing import Any, Callable, Dict, Optional, Union
+│ │  
+│ │ -from aio_pika.abc import TimeoutType, ExchangeType
+│ │ +from aio_pika.abc import ExchangeType, TimeoutType
+│ │ +from propan.brokers.model.schemas import NameRequired, Queue
+│ │  from pydantic import BaseModel, Field
+│ │  
+│ │ -from propan.brokers.model.schemas import Queue, NameRequired
+│ │ +__all__ = (
+│ │ +    "RabbitQueue",
+│ │ +    "RabbitExchange",
+│ │ +    "Handler",
+│ │ +    "ExchangeType",
+│ │ +)
+│ │  
+│ │  
+│ │  class RabbitQueue(Queue):
+│ │      durable: bool = False
+│ │      exclusive: bool = False
+│ │      passive: bool = False
+│ │      auto_delete: bool = False
+│ │      arguments: Optional[Dict[str, Any]] = None
+│ │      timeout: TimeoutType = None
+│ │      robust: bool = True
+│ │      declare: bool = Field(default=True, exclude=True)
+│ │  
+│ │  
+│ │ -
+│ │  class RabbitExchange(NameRequired):
+│ │      type: Union[ExchangeType, str] = ExchangeType.DIRECT
+│ │      durable: bool = False
+│ │      auto_delete: bool = False
+│ │      internal: bool = False
+│ │      passive: bool = False
+│ │      arguments: Optional[Dict[str, Any]] = None
+│ │      timeout: TimeoutType = None
+│ │      robust: bool = True
+│ │      declare: bool = Field(default=True, exclude=True)
+│ │  
+│ │  
+│ │  class Handler(BaseModel):
+│ │ -    callback: Callable
+│ │ +    callback: Callable[..., Any]
+│ │      queue: RabbitQueue
+│ │      exchange: Optional[RabbitExchange] = None
+│ │   --- propan-0.0.8.6/propan/cli/main.py
+│ ├── +++ propan-0.0.8.7/propan/cli/main.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,51 +1,54 @@
+│ │  """Simple and fast framework to create message brokers based microservices"""
+│ │ -import sys
+│ │  import logging
+│ │ +import sys
+│ │  from typing import Dict, Sequence, Union
+│ │  
+│ │  import click
+│ │ -
+│ │  from propan.__about__ import __version__
+│ │ -from propan.log import logger, access_logger
+│ │ -
+│ │ +from propan.cli.app import PropanApp
+│ │ +from propan.log import access_logger, logger
+│ │  
+│ │  LOG_LEVELS: Dict[str, int] = {
+│ │      "critical": logging.CRITICAL,
+│ │      "error": logging.ERROR,
+│ │      "warning": logging.WARNING,
+│ │      "info": logging.INFO,
+│ │      "debug": logging.DEBUG,
+│ │  }
+│ │  
+│ │  
+│ │  @click.group()
+│ │ -def cli():
+│ │ +def cli() -> None:
+│ │      pass
+│ │  
+│ │  
+│ │  @cli.add_command
+│ │  @click.command()
+│ │ -def version():
+│ │ +def version() -> None:
+│ │      return _print_version()
+│ │  
+│ │  
+│ │  @cli.add_command
+│ │  @click.command(help="Create new Propan project at [APPNAME] directory")
+│ │  @click.argument("appname")
+│ │ -def create(appname: str):
+│ │ +def create(appname: str) -> None:
+│ │      from propan.cli.startproject import create
+│ │ +
+│ │      create(appname, __version__)
+│ │  
+│ │  
+│ │  @cli.add_command
+│ │ -@click.command(context_settings=dict(
+│ │ -    ignore_unknown_options=True,
+│ │ -    allow_extra_args=True,
+│ │ -), help="Run Propan app from [module:app]")
+│ │ +@click.command(
+│ │ +    context_settings={
+│ │ +        "ignore_unknown_options": True,
+│ │ +        "allow_extra_args": True,
+│ │ +    },
+│ │ +    help="Run Propan app from [module:app]",
+│ │ +)
+│ │  @click.argument("app")
+│ │  @click.option(
+│ │      "--reload",
+│ │      is_flag=True,
+│ │      default=False,
+│ │      help="Reload app at code changing.",
+│ │      show_default=True,
+│ │ @@ -55,97 +58,111 @@
+│ │      type=int,
+│ │      default=1,
+│ │      help="Select number of processes.",
+│ │      show_default=True,
+│ │  )
+│ │  @click.option(
+│ │      "--log-level",
+│ │ -    type=click.Choice(LOG_LEVELS.keys()),
+│ │ +    type=click.Choice(tuple(LOG_LEVELS.keys())),
+│ │      default="info",
+│ │      help="Log level. [default: info]",
+│ │      show_default=True,
+│ │  )
+│ │  @click.pass_context
+│ │  def run(
+│ │      ctx: click.Context,
+│ │      app: str,
+│ │      log_level: str = "info",
+│ │      reload: bool = False,
+│ │      workers: int = 1,
+│ │ -):
+│ │ +) -> None:
+│ │      if reload and workers > 1:
+│ │          raise ValueError("You can't use reload option with multiprocessing")
+│ │  
+│ │ -    _set_log_level(log_level)    
+│ │ +    _set_log_level(log_level)
+│ │  
+│ │      args = (app, _parse_cli_extra_options(ctx.args))
+│ │  
+│ │      if reload is True:
+│ │          from propan.cli.supervisors.watchgodreloader import WatchGodReload
+│ │ +
+│ │          WatchGodReload(target=_run, args=args).run()
+│ │  
+│ │      elif workers > 1:
+│ │          from propan.cli.supervisors.multiprocess import Multiprocess
+│ │ +
+│ │          Multiprocess(target=_run, args=(*args, logging.DEBUG), workers=workers).run()
+│ │  
+│ │      else:
+│ │          _run(*args)
+│ │  
+│ │  
+│ │ -def _run(app: str,
+│ │ -         context_kwargs: Dict[str, Union[bool, str]],
+│ │ -         log_level: int = logging.INFO):
+│ │ +def _run(
+│ │ +    app: str, context_kwargs: Dict[str, Union[bool, str]], log_level: int = logging.INFO
+│ │ +) -> None:
+│ │      try:
+│ │          propan_app = _get_app_object(app)
+│ │  
+│ │      except (ValueError, FileNotFoundError, AttributeError) as e:
+│ │          logger.error(e)
+│ │ -        logger.error('Please, input module like python_file:propan_app_name')
+│ │ +        logger.error("Please, input module like python_file:propan_app_name")
+│ │          exit()
+│ │  
+│ │      else:
+│ │          propan_app.run(log_level, **context_kwargs)
+│ │  
+│ │  
+│ │ -def _get_app_object(app: str):
+│ │ -    from importlib.util import spec_from_file_location, module_from_spec
+│ │ +def _get_app_object(app: str) -> PropanApp:
+│ │ +    from importlib.util import module_from_spec, spec_from_file_location
+│ │      from pathlib import Path
+│ │  
+│ │      f, func = app.split(":", 2)
+│ │  
+│ │      mod_path = Path.cwd()
+│ │ -    for i in f.split('.'):
+│ │ +    for i in f.split("."):
+│ │          mod_path = mod_path / i
+│ │  
+│ │      sys.path.insert(0, str(mod_path.parent))
+│ │  
+│ │ -    spec = spec_from_file_location("mode", f'{mod_path}.py')
+│ │ +    spec = spec_from_file_location("mode", f"{mod_path}.py")
+│ │ +    if spec is None:
+│ │ +        raise FileNotFoundError(f"{mod_path}.py not found")
+│ │ +
+│ │      mod = module_from_spec(spec)
+│ │ -    spec.loader.exec_module(mod)
+│ │ -    return getattr(mod, func)
+│ │ +    loader = spec.loader
+│ │ +    if loader is None:
+│ │ +        raise ValueError(f"{spec} has no loader")
+│ │ +
+│ │ +    loader.exec_module(mod)
+│ │ +    app = getattr(mod, func)
+│ │ +    if not isinstance(app, PropanApp):
+│ │ +        raise ValueError(f"{app} is not a PropanApp")
+│ │ +
+│ │ +    return app
+│ │  
+│ │  
+│ │  def _parse_cli_extra_options(args: Sequence[str]) -> Dict[str, Union[bool, str]]:
+│ │ -    extra_kwargs = dict()
+│ │ +    extra_kwargs: Dict[str, Union[bool, str]] = {}
+│ │      for item in args:
+│ │          arg = item.split("=")
+│ │  
+│ │ +        v: Union[bool, str]
+│ │          if len(arg) == 0:
+│ │              k, v = arg[0], True
+│ │          elif len(arg) == 2:
+│ │              k, v = arg
+│ │          else:
+│ │ -            raise ValueError(f"{arg} is not valid argument")
+│ │ +            raise ValueError(f"{arg} is not a valid argument")
+│ │  
+│ │          k = k.strip("-").strip().replace("-", "_")
+│ │          extra_kwargs[k] = v
+│ │      return extra_kwargs
+│ │  
+│ │  
+│ │ -def _set_log_level(level: str):
+│ │ +def _set_log_level(level: str) -> None:
+│ │      log_level = LOG_LEVELS[level]
+│ │      logger.setLevel(log_level)
+│ │      access_logger.setLevel(log_level)
+│ │  
+│ │  
+│ │  def _print_version() -> None:
+│ │      import platform
+│ │   --- propan-0.0.8.6/propan/cli/startproject.py
+│ ├── +++ propan-0.0.8.7/propan/cli/startproject.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,188 +1,223 @@
+│ │  from pathlib import Path
+│ │ -from typing import Optional, Sequence
+│ │  
+│ │  
+│ │ -def create(dirname: str, version: str):
+│ │ +def create(dirname: str, version: str) -> None:
+│ │      project_dir = _create_project_dir(dirname, version)
+│ │      app_dir = _create_app_dir(project_dir / "app")
+│ │      _create_config_dir(app_dir / "config")
+│ │      _create_core_dir(app_dir / "core")
+│ │      _create_apps_dir(app_dir / "apps")
+│ │      exit()
+│ │  
+│ │  
+│ │  def _create_project_dir(dirname: str, version: str) -> Path:
+│ │      project_dir = _touch_dir(Path.cwd() / dirname)
+│ │  
+│ │      if project_dir.exists() is False:
+│ │          project_dir.mkdir()
+│ │  
+│ │ -    _write_file(project_dir / 'README.md')
+│ │ -    _write_file(project_dir / 'Dockerfile')
+│ │ +    _write_file(project_dir / "README.md")
+│ │  
+│ │      _write_file(
+│ │ -        project_dir / 'docker-compose.yaml',
+│ │ +        project_dir / "Dockerfile",
+│ │ +        "FROM python:3.11.3-slim",
+│ │ +        "",
+│ │ +        "RUN useradd -ms /bin/bash user",
+│ │ +        "",
+│ │ +        "USER user",
+│ │ +        "WORKDIR /home/user",
+│ │ +        "",
+│ │ +        "COPY requirements.txt requirements.txt",
+│ │ +        "",
+│ │ +        "RUN pip install -r requirements.txt",
+│ │ +        "",
+│ │ +        "COPY ./app ./app",
+│ │ +        "",
+│ │ +        'ENTRYPOINT [ "python", "-m", "propan", "run", "app.serve:app" ]',
+│ │ +    )
+│ │ +
+│ │ +    _write_file(
+│ │ +        project_dir / "docker-compose.yaml",
+│ │          'version: "3"',
+│ │ -        '',
+│ │ -        'services:',
+│ │ -        '  rabbit:',
+│ │ -        '    image: rabbitmq',
+│ │ -        '    environment:',
+│ │ -        '      RABBITMQ_DEFAULT_USER: guest',
+│ │ -        '      RABBITMQ_DEFAULT_PASS: guest',
+│ │ -        '    ports:',
+│ │ -        '      - 5672:5672',
+│ │ +        "",
+│ │ +        "services:",
+│ │ +        "  rabbit:",
+│ │ +        "    image: rabbitmq",
+│ │ +        "    environment:",
+│ │ +        "      RABBITMQ_DEFAULT_USER: guest",
+│ │ +        "      RABBITMQ_DEFAULT_PASS: guest",
+│ │ +        "    ports:",
+│ │ +        "      - 5672:5672",
+│ │ +        "",
+│ │ +        "  app:",
+│ │ +        "    build: .",
+│ │ +        "    environment:",
+│ │ +        "      APP_RABBIT__URL: amqp://guest:guest@rabbit:5672/",
+│ │ +        "    volumes:",
+│ │ +        "      - ./app:/home/user/app:ro",
+│ │ +        "    depends_on:",
+│ │ +        "      - rabbit",
+│ │      )
+│ │  
+│ │      _write_file(
+│ │ -        project_dir / 'requirements.txt',
+│ │ -        f'propan[async_rabbit]=={version}',
+│ │ -        'pydantic[dotenv]'
+│ │ +        project_dir / "requirements.txt",
+│ │ +        f"propan[async_rabbit]=={version}",
+│ │ +        "pydantic[dotenv]",
+│ │      )
+│ │  
+│ │      _write_file(
+│ │ -        project_dir / '.gitignore',
+│ │ -        '*.env*',
+│ │ -        '__pycache__',
+│ │ -        'env/',
+│ │ -        'venv/',
+│ │ +        project_dir / ".gitignore",
+│ │ +        "*.env*",
+│ │ +        "__pycache__",
+│ │ +        "env/",
+│ │ +        "venv/",
+│ │      )
+│ │  
+│ │      return project_dir
+│ │  
+│ │  
+│ │  def _create_app_dir(app: Path) -> Path:
+│ │      app_dir = _touch_dir(app)
+│ │  
+│ │      _write_file(
+│ │ -        app_dir / 'serve.py',
+│ │ -        'import logging',
+│ │ -        'from typing import Optional',
+│ │ -        '',
+│ │ -        'from propan.app import PropanApp',
+│ │ -        'from propan.utils import Context',
+│ │ -        'from propan.brokers.rabbit import RabbitBroker',
+│ │ -        '',
+│ │ -        'from core import broker',
+│ │ -        'from config import Settings, BASE_DIR',
+│ │ -        '',
+│ │ -        'from apps import *  # import to register handlers  # NOQA',
+│ │ -        '',
+│ │ -        '',
+│ │ -        'app = PropanApp(broker)',
+│ │ -        '',
+│ │ -        '',
+│ │ -        '@app.on_startup',
+│ │ -        'async def init_settings(broker: RabbitBroker, env: Optional[str], context: Context):',
+│ │ -        '    env_file = BASE_DIR / "config" / (env or ".env")',
+│ │ -        '    settings = Settings(_env_file=env_file)',
+│ │ +        app_dir / "serve.py",
+│ │ +        "import logging",
+│ │ +        "from typing import Optional",
+│ │ +        "",
+│ │ +        "from propan import PropanApp",
+│ │ +        "from propan.utils import Context",
+│ │ +        "from propan.brokers.rabbit import RabbitBroker",
+│ │ +        "",
+│ │ +        "from core import broker",
+│ │ +        "from config import init_settings",
+│ │ +        "",
+│ │ +        "from apps import *  # import to register handlers  # NOQA",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "app = PropanApp(broker)",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "@app.on_startup",
+│ │ +        "async def init_app(broker: RabbitBroker, env: Optional[str], context: Context):",
+│ │ +        "    settings = init_settings(env)",
+│ │          '    context.set_context("settings", settings)',
+│ │ -        '',
+│ │ -        '    logger_level = logging.DEBUG if settings.debug else logging.INFO',
+│ │ -        '    app.logger.setLevel(logger_level)',
+│ │ -        '    broker.logger.setLevel(logger_level)',
+│ │ -        '',
+│ │ -        '    await broker.connect(url=settings.rabbit.url)',
+│ │ -        '',
+│ │ -        '',
+│ │ +        "",
+│ │ +        "    logger_level = logging.DEBUG if settings.debug else logging.INFO",
+│ │ +        "    app.logger.setLevel(logger_level)",
+│ │ +        "    broker.logger.setLevel(logger_level)",
+│ │ +        "",
+│ │ +        "    await broker.connect(url=settings.rabbit.url)",
+│ │ +        "",
+│ │ +        "",
+│ │          'if __name__ == "__main__":',
+│ │ -        '    app.run()',
+│ │ +        "    app.run()",
+│ │      )
+│ │  
+│ │      return app_dir
+│ │  
+│ │  
+│ │  def _create_config_dir(config: Path) -> Path:
+│ │      config_dir = _touch_dir(config)
+│ │  
+│ │      _write_file(
+│ │ -        config_dir / '.env',
+│ │ -        'APP_DEBUG=True',
+│ │ -        'APP_RABBIT__URL=amqp://guest:guest@localhost:5672/',
+│ │ +        config_dir / ".env",
+│ │ +        "APP_DEBUG=True",
+│ │ +        "APP_RABBIT__URL=amqp://guest:guest@localhost:5672/",
+│ │      )
+│ │  
+│ │      _write_file(
+│ │ -        config_dir / 'settings.py',
+│ │ -        'from pathlib import Path',
+│ │ -        '',
+│ │ -        'from pydantic import BaseSettings, BaseModel, Field',
+│ │ -        '',
+│ │ -        '',
+│ │ -        'BASE_DIR = Path(__file__).resolve().parent.parent',
+│ │ -        '',
+│ │ -        '',
+│ │ -        'class RabbitSettings(BaseModel):',
+│ │ -        '    url: str = Field(...)',
+│ │ -        '',
+│ │ -        '',
+│ │ -        'class Settings(BaseSettings):',
+│ │ -        '    debug: bool = Field(True)',
+│ │ -        '    rabbit: RabbitSettings = Field(default_factory=RabbitSettings)',
+│ │ -        '    base_dir: Path = BASE_DIR',
+│ │ -        '',
+│ │ -        '    class Config:',
+│ │ +        config_dir / "settings.py",
+│ │ +        "from pathlib import Path",
+│ │ +        "from typing import Optional",
+│ │ +        "",
+│ │ +        "from pydantic import BaseSettings, BaseModel, Field",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "CONFIG_DIR = Path(__file__).resolve().parent",
+│ │ +        "BASE_DIR = CONFIG_DIR.parent",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "class RabbitSettings(BaseModel):",
+│ │ +        "    url: str = Field(...)",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "class Settings(BaseSettings):",
+│ │ +        "    debug: bool = Field(True)",
+│ │ +        "    rabbit: RabbitSettings = Field(default_factory=RabbitSettings)",
+│ │ +        "    base_dir: Path = BASE_DIR",
+│ │ +        "",
+│ │ +        "    class Config:",
+│ │          "        env_prefix = 'APP_'",
+│ │          "        env_file_encoding = 'utf-8'",
+│ │          "        env_nested_delimiter = '__'",
+│ │ +        "",
+│ │ +        "",
+│ │ +        "def init_settings(env_file: Optional[str]) -> Settings:",
+│ │ +        '    env_file = CONFIG_DIR / (env_file or ".env")',
+│ │ +        "    if env_file.exists():",
+│ │ +        "        settings = Settings(_env_file=env_file)",
+│ │ +        "    else:",
+│ │ +        "        settings = Settings()",
+│ │ +        "    return settings",
+│ │      )
+│ │  
+│ │      _write_file(
+│ │ -        config_dir / '__init__.py',
+│ │ -        'from .settings import Settings, BASE_DIR',
+│ │ +        config_dir / "__init__.py",
+│ │ +        "from .settings import Settings, init_settings",
+│ │      )
+│ │  
+│ │      return config_dir
+│ │  
+│ │  
+│ │  def _create_core_dir(core: Path) -> Path:
+│ │      core_dir = _touch_dir(core)
+│ │  
+│ │      _write_file(
+│ │ -        core_dir / '__init__.py',
+│ │ -        'from .dependencies import broker',
+│ │ +        core_dir / "__init__.py",
+│ │ +        "from .dependencies import broker",
+│ │      )
+│ │  
+│ │      _write_file(
+│ │ -        core_dir / 'dependencies.py',
+│ │ -        'from propan.brokers.rabbit import RabbitBroker',
+│ │ -        '',
+│ │ -        'broker = RabbitBroker()',
+│ │ +        core_dir / "dependencies.py",
+│ │ +        "from propan.brokers.rabbit import RabbitBroker",
+│ │ +        "",
+│ │ +        "broker = RabbitBroker()",
+│ │      )
+│ │  
+│ │      return core_dir
+│ │  
+│ │  
+│ │  def _create_apps_dir(apps: Path) -> Path:
+│ │      apps_dir = _touch_dir(apps)
+│ │  
+│ │      _write_file(
+│ │ -        apps_dir / '__init__.py',
+│ │ -        'from .handlers import base_handler',
+│ │ +        apps_dir / "__init__.py",
+│ │ +        "from .handlers import base_handler",
+│ │      )
+│ │ -    
+│ │ +
+│ │      _write_file(
+│ │ -        apps_dir / 'handlers.py',
+│ │ -        'from core import broker',
+│ │ -        '',
+│ │ -        'from propan.brokers.rabbit import RabbitQueue, RabbitExchange',
+│ │ -        '',
+│ │ -        '',
+│ │ +        apps_dir / "handlers.py",
+│ │ +        "from core import broker",
+│ │ +        "",
+│ │ +        "from propan.brokers.rabbit import RabbitQueue, RabbitExchange",
+│ │ +        "",
+│ │ +        "",
+│ │          '@broker.handle(queue=RabbitQueue("test"),',
+│ │          '               exchange=RabbitExchange("test"))',
+│ │ -        'async def base_handler(body: dict, logger):',
+│ │ -        '    logger.info(body)',
+│ │ +        "async def base_handler(body: dict, logger):",
+│ │ +        "    logger.info(body)",
+│ │      )
+│ │  
+│ │      return apps_dir
+│ │  
+│ │  
+│ │  def _touch_dir(dir: Path) -> Path:
+│ │      if dir.exists() is False:
+│ │          dir.mkdir()
+│ │      return dir
+│ │  
+│ │  
+│ │ -def _write_file(path: Path, *content: Optional[Sequence[str]]):
+│ │ +def _write_file(path: Path, *content: str) -> None:
+│ │      path.touch()
+│ │      if content:
+│ │ -        path.write_text('\n'.join(content))
+│ │ +        path.write_text("\n".join(content))
+│ │   --- propan-0.0.8.6/propan/cli/supervisors/multiprocess.py
+│ ├── +++ propan-0.0.8.7/propan/cli/supervisors/multiprocess.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,48 +1,38 @@
+│ │  import os
+│ │  import threading
+│ │ -from types import FrameType
+│ │ -from typing import Callable, List, Optional, Iterable, Any
+│ │  from multiprocessing.context import SpawnProcess
+│ │ +from typing import Any, Callable, List, Tuple
+│ │  
+│ │ -from propan.log import logger
+│ │  from propan.cli.supervisors.utils import get_subprocess, set_exit
+│ │ +from propan.log import logger
+│ │  
+│ │  
+│ │  class Multiprocess:
+│ │      def __init__(
+│ │ -        self,
+│ │ -        target: Callable,
+│ │ -        args: Iterable[Any],
+│ │ -        workers: int
+│ │ +        self, target: Callable[..., Any], args: Tuple[Any, ...], workers: int
+│ │      ) -> None:
+│ │          self._target = target
+│ │          self._args = args
+│ │  
+│ │          self.workers = workers
+│ │          self.processes: List[SpawnProcess] = []
+│ │ -        
+│ │ +
+│ │          self.should_exit = threading.Event()
+│ │          self.pid = os.getpid()
+│ │  
+│ │ -    def signal_handler(self, sig: int, frame: Optional[FrameType]) -> None:
+│ │ -        """
+│ │ -        A signal handler that is registered with the parent process.
+│ │ -        """
+│ │ -        self.should_exit.set()
+│ │ -
+│ │      def run(self) -> None:
+│ │          self.startup()
+│ │          self.should_exit.wait()
+│ │          self.shutdown()
+│ │  
+│ │      def startup(self) -> None:
+│ │          logger.info(f"Started parent process [{self.pid}]")
+│ │  
+│ │ -        set_exit(self.signal_handler)
+│ │ +        set_exit(lambda *_: self.should_exit.set())
+│ │  
+│ │          for _ in range(self.workers):
+│ │              process = get_subprocess(target=self._target, args=self._args)
+│ │              process.start()
+│ │              logger.info(f"Started child process [{process.pid}]")
+│ │              self.processes.append(process)
+│ │   --- propan-0.0.8.6/propan/cli/supervisors/utils.py
+│ ├── +++ propan-0.0.8.7/propan/cli/supervisors/utils.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,54 +1,53 @@
+│ │ +import multiprocessing
+│ │  import os
+│ │ -import sys
+│ │  import signal
+│ │ -from pathlib import Path
+│ │ -import multiprocessing
+│ │ +import sys
+│ │  from multiprocessing.context import SpawnProcess
+│ │ -from typing import Callable, List, Optional, Union, Tuple
+│ │ +from pathlib import Path
+│ │ +from types import FrameType
+│ │ +from typing import Any, Callable, List, Optional, Sequence, Tuple, Union
+│ │  
+│ │  from propan.log import logger
+│ │  
+│ │ -
+│ │  multiprocessing.allow_connection_pickling()
+│ │  spawn = multiprocessing.get_context("spawn")
+│ │  
+│ │  
+│ │  HANDLED_SIGNALS = (
+│ │      signal.SIGINT,  # Unix signal 2. Sent by Ctrl+C.
+│ │      signal.SIGTERM,  # Unix signal 15. Sent by `kill <pid>`.
+│ │  )
+│ │  
+│ │  
+│ │ -def set_exit(func: Callable):
+│ │ +DIR = Union[Path, str]
+│ │ +DIRS = Union[Sequence[DIR], DIR, None]
+│ │ +
+│ │ +
+│ │ +def set_exit(func: Callable[[int, Optional[FrameType]], Any]) -> None:
+│ │      for sig in HANDLED_SIGNALS:
+│ │          signal.signal(sig, func)
+│ │  
+│ │  
+│ │ -def get_subprocess(
+│ │ -    target: Callable[..., None], args: Tuple
+│ │ -) -> SpawnProcess:
+│ │ +def get_subprocess(target: Callable[..., None], args: Any) -> SpawnProcess:
+│ │      stdin_fileno: Optional[int]
+│ │      try:
+│ │          stdin_fileno = sys.stdin.fileno()
+│ │      except OSError:
+│ │          stdin_fileno = None
+│ │  
+│ │      return spawn.Process(
+│ │          target=subprocess_started,
+│ │          args=args,
+│ │ -        kwargs={
+│ │ -            "t": target,
+│ │ -            "stdin_fileno": stdin_fileno
+│ │ -        }
+│ │ +        kwargs={"t": target, "stdin_fileno": stdin_fileno},
+│ │      )
+│ │  
+│ │  
+│ │  def subprocess_started(
+│ │ -    *args: Tuple,
+│ │ +    *args: Any,
+│ │      t: Callable[..., None],
+│ │      stdin_fileno: Optional[int],
+│ │  ) -> None:
+│ │      if stdin_fileno is not None:
+│ │          sys.stdin = os.fdopen(stdin_fileno)
+│ │      t(*args)
+│ │  
+│ │ @@ -58,26 +57,26 @@
+│ │          if not path.is_absolute():
+│ │              path = path.resolve()
+│ │          return path.is_dir()
+│ │      except OSError:
+│ │          return False
+│ │  
+│ │  
+│ │ -def _normalize_dirs(dirs: Union[List[str], str, None]) -> List[str]:
+│ │ +def _normalize_dirs(dirs: DIRS) -> List[str]:
+│ │      if dirs is None:
+│ │          return []
+│ │ -    if isinstance(dirs, str):
+│ │ -        return [dirs]
+│ │ -    return list(set(dirs))
+│ │ +    if isinstance(dirs, Sequence):
+│ │ +        return list(set(map(str, dirs)))
+│ │ +    else:
+│ │ +        return [str(dirs)]
+│ │  
+│ │  
+│ │  def resolve_reload_patterns(
+│ │      patterns_list: List[str], directories_list: List[str]
+│ │  ) -> Tuple[List[str], List[Path]]:
+│ │ -
+│ │      directories: List[Path] = list(set(map(Path, directories_list.copy())))
+│ │      patterns: List[str] = patterns_list.copy()
+│ │  
+│ │      current_working_directory = Path.cwd()
+│ │      for pattern in patterns_list:
+│ │          if pattern == ".*":
+│ │              continue
+│ │ @@ -87,17 +86,17 @@
+│ │          else:
+│ │              for match in current_working_directory.glob(pattern):
+│ │                  if is_dir(match):
+│ │                      directories.append(match)
+│ │  
+│ │      directories = list(set(directories))
+│ │      directories = list(map(Path, directories))
+│ │ -    directories = list(map(lambda x: x.resolve(), directories))
+│ │ +    directories = [x.resolve() for x in directories]
+│ │      directories = list(
+│ │ -        set([reload_path for reload_path in directories if is_dir(reload_path)])
+│ │ +        {reload_path for reload_path in directories if is_dir(reload_path)}
+│ │      )
+│ │  
+│ │      children = []
+│ │      for j in range(len(directories)):
+│ │          for k in range(j + 1, len(directories)):
+│ │              if directories[j] in directories[k].parents:
+│ │                  children.append(directories[k])
+│ │ @@ -108,17 +107,17 @@
+│ │  
+│ │      return list(set(patterns)), directories
+│ │  
+│ │  
+│ │  class Config:
+│ │      def __init__(
+│ │          self,
+│ │ -        reload_dirs: Optional[Union[List[str], str]] = [Path.cwd()],
+│ │ -        reload_includes: Optional[Union[List[str], str]] = None,
+│ │ -        reload_excludes: Optional[Union[List[str], str]] = None
+│ │ +        reload_dirs: DIRS = None,
+│ │ +        reload_includes: DIRS = None,
+│ │ +        reload_excludes: DIRS = None,
+│ │      ):
+│ │          reload_dirs = _normalize_dirs(reload_dirs)
+│ │          reload_includes = _normalize_dirs(reload_includes)
+│ │          reload_excludes = _normalize_dirs(reload_excludes)
+│ │  
+│ │          self.reload_includes, self.reload_dirs = resolve_reload_patterns(
+│ │              reload_includes, reload_dirs
+│ │ @@ -129,30 +128,32 @@
+│ │          )
+│ │  
+│ │          reload_dirs_tmp = self.reload_dirs.copy()
+│ │  
+│ │          for directory in self.reload_dirs_excludes:
+│ │              for reload_directory in reload_dirs_tmp:
+│ │                  if (
+│ │ -                    directory == reload_directory or
+│ │ -                    directory in reload_directory.parents
+│ │ +                    directory == reload_directory
+│ │ +                    or directory in reload_directory.parents
+│ │                  ):
+│ │                      try:
+│ │                          self.reload_dirs.remove(reload_directory)
+│ │                      except ValueError:
+│ │                          pass
+│ │  
+│ │          for pattern in self.reload_excludes:
+│ │              if pattern in self.reload_includes:
+│ │                  self.reload_includes.remove(pattern)
+│ │          if not self.reload_dirs:
+│ │              if reload_dirs:
+│ │ -                logger.debug((
+│ │ -                    "Provided reload directories %s did not contain valid "
+│ │ -                    "directories, watching current working directory."),
+│ │ +                logger.debug(
+│ │ +                    (
+│ │ +                        "Provided reload directories %s did not contain valid "
+│ │ +                        "directories, watching current working directory."
+│ │ +                    ),
+│ │                      reload_dirs,
+│ │                  )
+│ │ -            self.reload_dirs = [Path.cwd() / 'app']
+│ │ +            self.reload_dirs = [Path.cwd() / "app"]
+│ │  
+│ │          logger.debug(
+│ │ -            f"Will watch for changes in these directories: {sorted(list(map(str, self.reload_dirs)))}",
+│ │ +            f"Will watch for changes in these directories: {sorted(map(str, self.reload_dirs))}",
+│ │          )
+│ │   --- propan-0.0.8.6/propan/cli/supervisors/watchgodreloader.py
+│ ├── +++ propan-0.0.8.7/propan/cli/supervisors/watchgodreloader.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,23 +1,22 @@
+│ │  from pathlib import Path
+│ │ -from typing import TYPE_CHECKING, Callable, Dict, Optional, Tuple
+│ │ -
+│ │ -from watchgod import DefaultWatcher
+│ │ -
+│ │ -from propan.log import logger
+│ │ +from typing import TYPE_CHECKING, Any, Callable, Dict, Optional, Tuple
+│ │  
+│ │  from propan.cli.supervisors.basereload import BaseReload
+│ │  from propan.cli.supervisors.utils import Config
+│ │ -
+│ │ +from propan.log import logger
+│ │ +from watchgod import DefaultWatcher
+│ │  
+│ │  if TYPE_CHECKING:  # pragma: no cover
+│ │      import os
+│ │ +
+│ │      DirEntry = os.DirEntry[str]
+│ │  
+│ │ -config = Config()
+│ │ +
+│ │ +config = Config(reload_dirs=Path.cwd())
+│ │  
+│ │  
+│ │  class CustomWatcher(DefaultWatcher):
+│ │      def __init__(self, root_path: Path):
+│ │          default_includes = ["*.py"]
+│ │          self.includes = [
+│ │              default
+│ │ @@ -95,28 +94,22 @@
+│ │          self.watched_dirs[entry.path] = False
+│ │          return False
+│ │  
+│ │  
+│ │  class WatchGodReload(BaseReload):
+│ │      def __init__(
+│ │          self,
+│ │ -        target: Callable,
+│ │ -        args: Tuple,
+│ │ +        target: Callable[..., Any],
+│ │ +        args: Tuple[Any, ...],
+│ │          reload_delay: Optional[float] = 0.5,
+│ │      ) -> None:
+│ │          super().__init__(target, args, reload_delay)
+│ │          self.reloader_name = "watchgod"
+│ │          self.watchers = []
+│ │ -        reload_dirs = []
+│ │ -        for directory in config.reload_dirs:
+│ │ -            if Path.cwd() not in directory.parents:
+│ │ -                reload_dirs.append(directory)
+│ │ -        if Path.cwd() not in reload_dirs:
+│ │ -            reload_dirs.append(Path.cwd())
+│ │ -        for w in reload_dirs:
+│ │ +        for w in config.reload_dirs:
+│ │              self.watchers.append(CustomWatcher(w.resolve()))
+│ │  
+│ │      def should_restart(self) -> bool:
+│ │          for watcher in self.watchers:
+│ │              change = watcher.check()
+│ │              if change != set():
+│ │                  message = "WatchGodReload detected file change in '%s'. Reloading..."
+│ │   --- propan-0.0.8.6/propan/log/formatter.py
+│ ├── +++ propan-0.0.8.7/propan/log/formatter.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,25 +1,38 @@
+│ │ -import sys
+│ │  import logging
+│ │ +import sys
+│ │ +from collections import defaultdict
+│ │  from copy import copy
+│ │ -from typing import Optional, Literal
+│ │ +from typing import Callable, Literal, Optional
+│ │  
+│ │  import click
+│ │ -
+│ │  from propan.utils.context.main import log_context
+│ │  
+│ │  
+│ │  class ColourizedFormatter(logging.Formatter):
+│ │ -    level_name_colors = {
+│ │ -        logging.DEBUG: lambda level_name: click.style(str(level_name), fg="cyan"),
+│ │ -        logging.INFO: lambda level_name: click.style(str(level_name), fg="green"),
+│ │ -        logging.WARNING: lambda level_name: click.style(str(level_name), fg="yellow"),
+│ │ -        logging.ERROR: lambda level_name: click.style(str(level_name), fg="red"),
+│ │ -        logging.CRITICAL: lambda level_name: click.style(str(level_name), fg="bright_red"),
+│ │ -    }
+│ │ +    level_name_colors: defaultdict[str, Callable[[str], str]] = defaultdict(
+│ │ +        lambda: str,
+│ │ +        **{
+│ │ +            str(logging.DEBUG): lambda level_name: click.style(
+│ │ +                str(level_name), fg="cyan"
+│ │ +            ),
+│ │ +            str(logging.INFO): lambda level_name: click.style(
+│ │ +                str(level_name), fg="green"
+│ │ +            ),
+│ │ +            str(logging.WARNING): lambda level_name: click.style(
+│ │ +                str(level_name), fg="yellow"
+│ │ +            ),
+│ │ +            str(logging.ERROR): lambda level_name: click.style(
+│ │ +                str(level_name), fg="red"
+│ │ +            ),
+│ │ +            str(logging.CRITICAL): lambda level_name: click.style(
+│ │ +                str(level_name), fg="bright_red"
+│ │ +            ),
+│ │ +        },
+│ │ +    )
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          fmt: Optional[str] = None,
+│ │          datefmt: Optional[str] = None,
+│ │          style: Literal["%", "{", "$"] = "%",
+│ │          use_colors: Optional[bool] = None,
+│ │ @@ -27,19 +40,15 @@
+│ │          if use_colors in (True, False):
+│ │              self.use_colors = use_colors
+│ │          else:
+│ │              self.use_colors = sys.stdout.isatty()
+│ │          super().__init__(fmt=fmt, datefmt=datefmt, style=style)
+│ │  
+│ │      def color_level_name(self, level_name: str, level_no: int) -> str:
+│ │ -        def default(level_name: str) -> str:
+│ │ -            return str(level_name)
+│ │ -
+│ │ -        func = self.level_name_colors.get(level_no, default)
+│ │ -        return func(level_name)
+│ │ +        return self.level_name_colors[str(level_no)](level_name)
+│ │  
+│ │      def should_use_colors(self) -> bool:
+│ │          return True
+│ │  
+│ │      def formatMessage(self, record: logging.LogRecord) -> str:
+│ │          recordcopy = copy(record)
+│ │          levelname = expand_log_field(recordcopy.levelname, 8)
+│ │   --- propan-0.0.8.6/propan/log/logging.py
+│ ├── +++ propan-0.0.8.7/propan/log/logging.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,31 +1,33 @@
+│ │  import logging
+│ │  import logging.config
+│ │ -from typing import Dict, Any
+│ │  from functools import partial
+│ │ +from typing import Any, Dict, Type
+│ │  
+│ │ -from propan.log.formatter import DefaultFormatter, AccessFormatter
+│ │ +from propan.log.formatter import AccessFormatter, DefaultFormatter
+│ │  
+│ │  
+│ │ -def configure_formatter(formatter, *args, **kwargs):
+│ │ +def configure_formatter(
+│ │ +    formatter: Type[logging.Formatter], *args: Any, **kwargs: Any
+│ │ +) -> logging.Formatter:
+│ │      return formatter(*args, **kwargs)
+│ │  
+│ │  
+│ │  LOGGING_CONFIG: Dict[str, Any] = {
+│ │      "version": 1,
+│ │      "disable_existing_loggers": False,
+│ │      "formatters": {
+│ │          "default": {
+│ │              "()": partial(configure_formatter, DefaultFormatter),
+│ │              "fmt": "%(asctime)s %(levelname)s - %(message)s",
+│ │              "use_colors": None,
+│ │          },
+│ │          "access": {
+│ │              "()": partial(configure_formatter, AccessFormatter),
+│ │ -            "fmt": '%(asctime)s %(levelname)s - %(message)s',
+│ │ +            "fmt": "%(asctime)s %(levelname)s - %(message)s",
+│ │          },
+│ │      },
+│ │      "handlers": {
+│ │          "default": {
+│ │              "formatter": "default",
+│ │              "class": "logging.StreamHandler",
+│ │              "stream": "ext://sys.stderr",
+│ │   --- propan-0.0.8.6/propan/utils/context/decorate.py
+│ ├── +++ propan-0.0.8.7/propan/utils/context/decorate.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,35 +1,36 @@
+│ │  from functools import wraps
+│ │ -from inspect import signature, iscoroutinefunction
+│ │ +from inspect import iscoroutinefunction, signature
+│ │  from typing import Any, Callable, Dict, List
+│ │  
+│ │ -from propan.utils.functions import call_or_await, remove_useless_arguments
+│ │ -from propan.utils.context.types import Alias, Depends
+│ │  from propan.utils.context.main import context as global_context
+│ │ -
+│ │ +from propan.utils.context.types import Alias, Depends
+│ │ +from propan.utils.functions import call_or_await, remove_useless_arguments
+│ │  
+│ │  FuncArgName = str
+│ │  AliasStr = str
+│ │  
+│ │  
+│ │ -def use_context(func):
+│ │ +def use_context(func: Callable[..., Any]) -> Callable[..., Any]:
+│ │      sig = signature(func).parameters
+│ │  
+│ │      aliases: Dict[AliasStr, FuncArgName] = {}
+│ │ -    dependencies: Dict[FuncArgName, Callable] = {}
+│ │ +    dependencies: Dict[FuncArgName, Callable[..., Any]] = {}
+│ │  
+│ │      for name, param in sig.items():
+│ │          if isinstance(param.default, Alias):
+│ │              aliases[param.default.name] = name
+│ │          elif isinstance(param.default, Depends):
+│ │              dependencies[name] = param.default.func
+│ │  
+│ │ -    func_args_with_aliases_casted = (set(sig.keys()) - set(aliases.values())) | set(aliases.keys())
+│ │ +    func_args_with_aliases_casted = (set(sig.keys()) - set(aliases.values())) | set(
+│ │ +        aliases.keys()
+│ │ +    )
+│ │  
+│ │ -    def _cast_context(*args, **kwargs) -> tuple[tuple, dict]:
+│ │ +    def _cast_context(*args: Any, **kwargs: Any) -> tuple[Any, Any]:
+│ │          context = global_context.context
+│ │  
+│ │          context_keys = context.keys()
+│ │  
+│ │          for k in func_args_with_aliases_casted:
+│ │              keys = k.split(".")
+│ │  
+│ │ @@ -41,37 +42,39 @@
+│ │              else:
+│ │                  func_argument_value = None
+│ │              kwargs[func_argument_name] = func_argument_value
+│ │  
+│ │          return args, kwargs
+│ │  
+│ │      if iscoroutinefunction(func) is True:
+│ │ +
+│ │          @wraps(func)
+│ │ -        async def wrapper(*args, **kwargs):
+│ │ +        async def wrapper(*args: Any, **kwargs: Any) -> Any:
+│ │              args, kwargs = _cast_context(*args, **kwargs)
+│ │              for k, f in dependencies.items():
+│ │                  kw = remove_useless_arguments(f, *args, **kwargs)
+│ │                  kwargs[k] = await call_or_await(f, **kw)
+│ │              return await func(*args, **kwargs)
+│ │  
+│ │      else:
+│ │ +
+│ │          @wraps(func)
+│ │ -        def wrapper(*args, **kwargs):
+│ │ +        def wrapper(*args: Any, **kwargs: Any) -> Any:
+│ │              args, kwargs = _cast_context(*args, **kwargs)
+│ │              for k, f in dependencies.items():
+│ │                  if iscoroutinefunction(f) is True:
+│ │                      raise ValueError("You can't use async Depends with sync function")
+│ │  
+│ │                  kw = remove_useless_arguments(f, *args, **kwargs)
+│ │                  kwargs[k] = f(**kw)
+│ │              return func(*args, **kwargs)
+│ │  
+│ │      return wrapper
+│ │  
+│ │  
+│ │ -def _get_context_by_key(context: dict, keys: List[str]) -> Any:
+│ │ +def _get_context_by_key(context: Dict[str, Any], keys: List[str]) -> Any:
+│ │      v = context.get(keys[0])
+│ │      for i in keys[1:]:
+│ │          v = getattr(v, i, None)
+│ │          if v is None:
+│ │              return v
+│ │      return v
+│ │   --- propan-0.0.8.6/propan/utils/context/main.py
+│ ├── +++ propan-0.0.8.7/propan/utils/context/main.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,35 +1,30 @@
+│ │  from contextvars import ContextVar
+│ │ -from typing import Any, Dict
+│ │ +from typing import Any, Dict, Optional
+│ │  
+│ │  from propan.utils.classes import Singlethon
+│ │  
+│ │ -
+│ │ -message = ContextVar("message", default=None)
+│ │ -log_context = ContextVar("message", default={})
+│ │ +message: ContextVar[Optional[str]] = ContextVar("message", default=None)
+│ │ +log_context: ContextVar[Dict[str, Any]] = ContextVar("message", default={})
+│ │  
+│ │  
+│ │  class Context(Singlethon):
+│ │      _context: Dict[str, Any] = {}
+│ │  
+│ │ -    def set_context(self, key: str, v: Any):
+│ │ +    def set_context(self, key: str, v: Any) -> None:
+│ │          self._context[key] = v
+│ │  
+│ │ -    def remove_context(self, key: str):
+│ │ +    def remove_context(self, key: str) -> None:
+│ │          self._context.pop(key, None)
+│ │ -    
+│ │ -    def clear(self):
+│ │ +
+│ │ +    def clear(self) -> None:
+│ │          self._context = {}
+│ │  
+│ │      def __getattr__(self, __name: str) -> Any:
+│ │          return self.context.get(__name)
+│ │  
+│ │      @property
+│ │ -    def context(self):
+│ │ -        return {
+│ │ -            **self._context,
+│ │ -            "context": self,
+│ │ -            "message": message.get()
+│ │ -        }
+│ │ +    def context(self) -> Dict[str, Any]:
+│ │ +        return {**self._context, "context": self, "message": message.get()}
+│ │  
+│ │  
+│ │ -context = Context()
+│ │ +context: Context = Context()
+│ │   --- propan-0.0.8.6/propan/utils/types/decorate.py
+│ ├── +++ propan-0.0.8.7/propan/utils/types/decorate.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,52 +1,51 @@
+│ │  from functools import wraps
+│ │  from inspect import signature
+│ │ -from typing import Callable, Any, Dict
+│ │ +from typing import Any, Callable, Dict
+│ │  
+│ │ +from propan.utils.context.types import Alias, Depends
+│ │  from pydantic import BaseConfig
+│ │  from pydantic.fields import ModelField, Undefined
+│ │  
+│ │ -from propan.utils.context.types import Alias, Depends
+│ │ -
+│ │ -
+│ │  NOT_CAST = (Alias, Depends)
+│ │  
+│ │  
+│ │ -def apply_types(func: Callable) -> Callable:
+│ │ +def apply_types(func: Callable[..., Any]) -> Callable[..., Any]:
+│ │      sig = signature(func).parameters
+│ │      arg_names = tuple(sig.keys())
+│ │  
+│ │      annotations = {}
+│ │      for name, param in sig.items():
+│ │ -        if type(param.default) not in NOT_CAST and any((
+│ │ -            (has_annotation := (param.annotation != param.empty)),
+│ │ -            (has_default := (param.default != param.empty))
+│ │ -        )):
+│ │ +        if type(param.default) not in NOT_CAST and any(
+│ │ +            (
+│ │ +                (has_annotation := (param.annotation != param.empty)),
+│ │ +                (has_default := (param.default != param.empty)),
+│ │ +            )
+│ │ +        ):
+│ │              annotations[name] = ModelField(
+│ │                  name=name,
+│ │                  type_=param.annotation if has_annotation else type(param.default),
+│ │                  default=param.default if has_default else Undefined,
+│ │                  class_validators=None,
+│ │                  required=not has_default,
+│ │                  model_config=BaseConfig,
+│ │              )
+│ │  
+│ │ -    def _cast_type(arg_name: str, arg_value: Any, values: Dict[str, Any]):
+│ │ +    def _cast_type(arg_name: str, arg_value: Any, values: Dict[str, Any]) -> Any:
+│ │          if (arg_type := annotations.get(arg_name)) is not None:
+│ │              arg_value, err = arg_type.validate(arg_value, values, loc=arg_type.alias)
+│ │              if err:
+│ │                  raise ValueError(err)
+│ │          return arg_value
+│ │  
+│ │      @wraps(func)
+│ │ -    def wrapper(*args, **kwargs):
+│ │ -        kw = {
+│ │ -            k: v for k, v in (*zip(arg_names, args), *kwargs.items())
+│ │ -        }
+│ │ +    def wrapper(*args: Any, **kwargs: Any) -> Any:
+│ │ +        kw = dict((*zip(arg_names, args), *kwargs.items()))
+│ │  
+│ │          kw = {
+│ │              arg_name: _cast_type(arg_name, arg_value, kw)
+│ │              for arg_name, arg_value in kw.items()
+│ │          }
+│ │  
+│ │          return func(**kw)
+│ │ +
+│ │      return wrapper
+│ │   --- propan-0.0.8.6/LICENSE
+│ ├── +++ propan-0.0.8.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- propan-0.0.8.6/README.md
+│ ├── +++ propan-0.0.8.7/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  <p align="center">
+│ │ -    <img src="https://github.com/Lancetnik/Propan/blob/main/docs/files/logo-no-background.png" alt="Propan logo" style="height: 250px; width: 600px;"/>
+│ │ +    <img src="docs/files/logo-no-background.png" alt="Propan logo" style="height: 250px; width: 600px;"/>
+│ │  </p>
+│ │  
+│ │  <p align="center">
+│ │      <a href="https://pypi.org/project/propan" target="_blank">
+│ │          <img src="https://img.shields.io/pypi/v/propan?label=pypi%20package" alt="Package version">
+│ │      </a>
+│ │      <a href="https://pepy.tech/project/propan" target="_blank">
+│ │ @@ -47,15 +47,15 @@
+│ │  ```
+│ │  
+│ │  ### Basic usage
+│ │  
+│ │  Create an application with the following code at `serve.py`:
+│ │  
+│ │  ```python
+│ │ -from propan.app import PropanApp
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  # from propan.brokers.nats import NatsBroker
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  # broker = NatsBroker("nats://localhost:4222")
+│ │  
+│ │  app = PropanApp(broker)
+│ │   --- propan-0.0.8.6/pyproject.toml
+│ ├── +++ propan-0.0.8.7/pyproject.toml
+│ │┄ Files 17% similar despite different names
+│ │ @@ -72,23 +72,26 @@
+│ │      "nats-py>=2"
+│ │  ]
+│ │  
+│ │  test = [
+│ │      "propan[async_rabbit]",
+│ │      "propan[async_nats]",
+│ │  
+│ │ -    "ruff",
+│ │ -
+│ │ -    "coverage[toml]",
+│ │ -    "pytest",
+│ │ -    "pytest-asyncio",
+│ │ +    "coverage[toml]>=7.2",
+│ │ +    "pytest>=7",
+│ │ +    "pytest-asyncio>=0.21",
+│ │  ]
+│ │  
+│ │  dev = [
+│ │      "propan[test]",
+│ │ +
+│ │ +    "mypy==1.1.1",
+│ │ +    "black==23.3.0",
+│ │ +    "isort==5.12.0",
+│ │ +    "ruff==0.0.261",
+│ │  ]
+│ │  
+│ │  [tool.hatch.metadata]
+│ │  allow-direct-references = true
+│ │  allow-ambiguous-features = true
+│ │  
+│ │  [tool.hatch.version]
+│ │ @@ -112,21 +115,49 @@
+│ │  features = [
+│ │    "test",
+│ │  ]
+│ │  
+│ │  [[tool.hatch.envs.test.matrix]]
+│ │  python = ["37", "38", "39", "310", "311"]
+│ │  
+│ │ +[tool.mypy]
+│ │ +strict = true
+│ │ +ignore_missing_imports = true
+│ │ +
+│ │ +[tool.isort]
+│ │ +profile = "black"
+│ │ +known_third_party = ["propan", "pydantic", "aio-pika", "nats-py"]
+│ │ +
+│ │ +[tool.ruff]
+│ │ +select = [
+│ │ +    "E",  # pycodestyle errors
+│ │ +    "W",  # pycodestyle warnings
+│ │ +    "F",  # pyflakes
+│ │ +    "I",  # isort
+│ │ +    "C",  # flake8-comprehensions
+│ │ +    "B",  # flake8-bugbear
+│ │ +]
+│ │ +ignore = [
+│ │ +    "E501",  # line too long, handled by black
+│ │ +    "C901",  # too complex
+│ │ +]
+│ │ +
+│ │ +[tool.ruff.isort]
+│ │ +known-third-party = ["propan", "pydantic", "aio-pika", "nats-py"]
+│ │ +
+│ │  [tool.coverage.run]
+│ │  parallel = true
+│ │  source = [
+│ │      "propan",
+│ │      "tests"
+│ │  ]
+│ │  context = '${CONTEXT}'
+│ │ +omit = [
+│ │ +    "**/__init__.py",
+│ │ +]
+│ │  
+│ │  [tool.coverage.report]
+│ │  show_missing = true
+│ │  skip_empty = true
+│ │  exclude_lines = [
+│ │      "if __name__ == .__main__.:",
+│ │      "from .*",
+│ │   --- propan-0.0.8.6/PKG-INFO
+│ ├── +++ propan-0.0.8.7/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: propan
+│ │ -Version: 0.0.8.6
+│ │ +Version: 0.0.8.7
+│ │  Summary: Propan framework: the simplest way to work with a messaging queues
+│ │  Project-URL: Homepage, https://github.com/Lancetnik/Propan
+│ │  Project-URL: Documentation, https://github.com/Lancetnik/Propan
+│ │  Project-URL: Tracker, https://github.com/Lancetnik/Propan/issues
+│ │  Project-URL: Source, https://github.com/Lancetnik/Propan
+│ │  Author-email: Pastukhov Nikita <diementros@yandex.ru>
+│ │  License-Expression: MIT
+│ │ @@ -42,26 +42,29 @@
+│ │  Requires-Dist: watchgod
+│ │  Provides-Extra: async_nats
+│ │  Requires-Dist: nats-py>=2; extra == 'async_nats'
+│ │  Provides-Extra: async_rabbit
+│ │  Requires-Dist: aio-pika>=9; extra == 'async_rabbit'
+│ │  Requires-Dist: pika-stubs; extra == 'async_rabbit'
+│ │  Provides-Extra: dev
+│ │ +Requires-Dist: black==23.3.0; extra == 'dev'
+│ │ +Requires-Dist: isort==5.12.0; extra == 'dev'
+│ │ +Requires-Dist: mypy==1.1.1; extra == 'dev'
+│ │  Requires-Dist: propan[test]; extra == 'dev'
+│ │ +Requires-Dist: ruff==0.0.261; extra == 'dev'
+│ │  Provides-Extra: test
+│ │ -Requires-Dist: coverage[toml]; extra == 'test'
+│ │ +Requires-Dist: coverage[toml]>=7.2; extra == 'test'
+│ │  Requires-Dist: propan[async-nats]; extra == 'test'
+│ │  Requires-Dist: propan[async-rabbit]; extra == 'test'
+│ │ -Requires-Dist: pytest; extra == 'test'
+│ │ -Requires-Dist: pytest-asyncio; extra == 'test'
+│ │ -Requires-Dist: ruff; extra == 'test'
+│ │ +Requires-Dist: pytest-asyncio>=0.21; extra == 'test'
+│ │ +Requires-Dist: pytest>=7; extra == 'test'
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  <p align="center">
+│ │ -    <img src="https://github.com/Lancetnik/Propan/blob/main/docs/files/logo-no-background.png" alt="Propan logo" style="height: 250px; width: 600px;"/>
+│ │ +    <img src="docs/files/logo-no-background.png" alt="Propan logo" style="height: 250px; width: 600px;"/>
+│ │  </p>
+│ │  
+│ │  <p align="center">
+│ │      <a href="https://pypi.org/project/propan" target="_blank">
+│ │          <img src="https://img.shields.io/pypi/v/propan?label=pypi%20package" alt="Package version">
+│ │      </a>
+│ │      <a href="https://pepy.tech/project/propan" target="_blank">
+│ │ @@ -105,15 +108,15 @@
+│ │  ```
+│ │  
+│ │  ### Basic usage
+│ │  
+│ │  Create an application with the following code at `serve.py`:
+│ │  
+│ │  ```python
+│ │ -from propan.app import PropanApp
+│ │ +from propan import PropanApp
+│ │  from propan.brokers.rabbit import RabbitBroker
+│ │  # from propan.brokers.nats import NatsBroker
+│ │  
+│ │  broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
+│ │  # broker = NatsBroker("nats://localhost:4222")
+│ │  
+│ │  app = PropanApp(broker)

@@ -1,0 +1,2057 @@
+# Comparing `tmp/diart-0.6.0.tar.gz` & `tmp/diart-0.7.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "diart-0.6.0.tar", last modified: Mon Oct 31 10:45:03 2022, max compression
++gzip compressed data, was "diart-0.7.0.tar", last modified: Thu Apr  6 12:56:27 2023, max compression
+```
+
+## Comparing `diart-0.6.0.tar` & `diart-0.7.0.tar`
+
+### file list
+
+```diff
+@@ -1,39 +1,45 @@
+-drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2022-10-31 10:45:03.697464 diart-0.6.0/
+--rw-rw-r--   0 coria     (1001) coria     (1001)     1105 2021-10-15 15:22:12.000000 diart-0.6.0/LICENSE
+--rw-rw-r--   0 coria     (1001) coria     (1001)    13840 2022-10-31 10:45:03.697464 diart-0.6.0/PKG-INFO
+--rw-rw-r--   0 coria     (1001) coria     (1001)    13235 2022-10-31 10:43:06.000000 diart-0.6.0/README.md
+--rw-rw-r--   0 coria     (1001) coria     (1001)      107 2021-12-15 08:25:04.000000 diart-0.6.0/pyproject.toml
+--rw-rw-r--   0 coria     (1001) coria     (1001)     1151 2022-10-31 10:45:03.697464 diart-0.6.0/setup.cfg
+--rw-rw-r--   0 coria     (1001) coria     (1001)       37 2021-12-15 08:25:04.000000 diart-0.6.0/setup.py
+-drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2022-10-31 10:45:03.697464 diart-0.6.0/src/
+-drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2022-10-31 10:45:03.697464 diart-0.6.0/src/diart/
+--rw-rw-r--   0 coria     (1001) coria     (1001)       61 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/__init__.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     1040 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/argdoc.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     1446 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/audio.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     3117 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/benchmark.py
+-drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2022-10-31 10:45:03.697464 diart-0.6.0/src/diart/blocks/
+--rw-rw-r--   0 coria     (1001) coria     (1001)      510 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/__init__.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     8107 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/aggregation.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     8125 2022-10-28 08:48:08.000000 diart-0.6.0/src/diart/blocks/clustering.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     6642 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/diarization.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     6293 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/embedding.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     1604 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/segmentation.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     4566 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/blocks/utils.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     5091 2022-09-13 08:24:12.000000 diart-0.6.0/src/diart/features.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)    12311 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/inference.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)    14001 2022-09-13 08:24:12.000000 diart-0.6.0/src/diart/mapping.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     4206 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/models.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)    11251 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/operators.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     4224 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/optim.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     5602 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/sinks.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     8898 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/sources.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     3800 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/stream.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     4332 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/tune.py
+--rw-rw-r--   0 coria     (1001) coria     (1001)     2146 2022-10-31 10:43:06.000000 diart-0.6.0/src/diart/utils.py
+-drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2022-10-31 10:45:03.697464 diart-0.6.0/src/diart.egg-info/
+--rw-rw-r--   0 coria     (1001) coria     (1001)    13840 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/PKG-INFO
+--rw-rw-r--   0 coria     (1001) coria     (1001)      773 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/SOURCES.txt
+--rw-rw-r--   0 coria     (1001) coria     (1001)        1 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/dependency_links.txt
+--rw-rw-r--   0 coria     (1001) coria     (1001)      116 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/entry_points.txt
+--rw-rw-r--   0 coria     (1001) coria     (1001)      271 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/requires.txt
+--rw-rw-r--   0 coria     (1001) coria     (1001)        6 2022-10-31 10:45:03.000000 diart-0.6.0/src/diart.egg-info/top_level.txt
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.210188 diart-0.7.0/
++-rw-rw-r--   0 coria     (1001) coria     (1001)     1105 2021-10-15 15:22:12.000000 diart-0.7.0/LICENSE
++-rw-rw-r--   0 coria     (1001) coria     (1001)    14766 2023-04-06 12:56:27.210188 diart-0.7.0/PKG-INFO
++-rw-rw-r--   0 coria     (1001) coria     (1001)    14161 2023-04-06 12:53:13.000000 diart-0.7.0/README.md
++-rw-rw-r--   0 coria     (1001) coria     (1001)      107 2021-12-15 08:25:04.000000 diart-0.7.0/pyproject.toml
++-rw-rw-r--   0 coria     (1001) coria     (1001)     1319 2023-04-06 12:56:27.210188 diart-0.7.0/setup.cfg
++-rw-rw-r--   0 coria     (1001) coria     (1001)       37 2021-12-15 08:25:04.000000 diart-0.7.0/setup.py
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.206188 diart-0.7.0/src/
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.206188 diart-0.7.0/src/diart/
++-rw-rw-r--   0 coria     (1001) coria     (1001)      116 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/__init__.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     1131 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/argdoc.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     1446 2022-10-31 10:43:06.000000 diart-0.7.0/src/diart/audio.py
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.210188 diart-0.7.0/src/diart/blocks/
++-rw-rw-r--   0 coria     (1001) coria     (1001)      563 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/blocks/__init__.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     8107 2022-10-31 11:16:38.000000 diart-0.7.0/src/diart/blocks/aggregation.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     8125 2023-01-19 08:00:03.000000 diart-0.7.0/src/diart/blocks/clustering.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     5157 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/blocks/config.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     5577 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/blocks/diarization.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     6293 2022-10-31 11:16:38.000000 diart-0.7.0/src/diart/blocks/embedding.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     1604 2022-10-31 11:16:38.000000 diart-0.7.0/src/diart/blocks/segmentation.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     4566 2022-10-31 10:43:06.000000 diart-0.7.0/src/diart/blocks/utils.py
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.210188 diart-0.7.0/src/diart/console/
++-rw-rw-r--   0 coria     (1001) coria     (1001)        0 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/__init__.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     2928 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/benchmark.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     2228 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/client.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     2907 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/serve.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     3509 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/stream.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     3969 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/console/tune.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     5091 2022-09-13 08:24:12.000000 diart-0.7.0/src/diart/features.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)    18435 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/inference.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)    14001 2022-09-13 08:24:12.000000 diart-0.7.0/src/diart/mapping.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     4897 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/models.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)    11251 2022-10-31 10:43:06.000000 diart-0.7.0/src/diart/operators.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     5287 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/optim.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     4005 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/progress.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     5656 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/sinks.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     9268 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/sources.py
++-rw-rw-r--   0 coria     (1001) coria     (1001)     3285 2023-04-06 12:53:13.000000 diart-0.7.0/src/diart/utils.py
++drwxrwxr-x   0 coria     (1001) coria     (1001)        0 2023-04-06 12:56:27.210188 diart-0.7.0/src/diart.egg-info/
++-rw-rw-r--   0 coria     (1001) coria     (1001)    14766 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/PKG-INFO
++-rw-rw-r--   0 coria     (1001) coria     (1001)      931 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/SOURCES.txt
++-rw-rw-r--   0 coria     (1001) coria     (1001)        1 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/dependency_links.txt
++-rw-rw-r--   0 coria     (1001) coria     (1001)      218 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/entry_points.txt
++-rw-rw-r--   0 coria     (1001) coria     (1001)      336 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/requires.txt
++-rw-rw-r--   0 coria     (1001) coria     (1001)        6 2023-04-06 12:56:27.000000 diart-0.7.0/src/diart.egg-info/top_level.txt
+```
+
+### Comparing `diart-0.6.0/LICENSE` & `diart-0.7.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/PKG-INFO` & `diart-0.7.0/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: diart
+-Version: 0.6.0
++Version: 0.7.0
+ Summary: Speaker diarization in real time
+ Home-page: https://github.com/juanmc2005/StreamingSpeakerDiarization
+ Author: Juan Manuel Coria
+ License: MIT
+ Keywords: speaker diarization,streaming,online,real time,rxpy
+ Classifier: Development Status :: 4 - Beta
+ Classifier: License :: OSI Approved :: MIT License
+@@ -13,15 +13,15 @@
+ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ <br/>
+ 
+ <p align="center">
+-<img src="/logo.png" title="Logo" />
++<img width="40%" src="/logo.jpg" title="Logo" />
+ </p>
+ 
+ <p align="center">
+ <img alt="PyPI Version" src="https://img.shields.io/pypi/v/diart?color=g">
+ <img alt="PyPI Downloads" src="https://static.pepy.tech/personalized-badge/diart?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads">
+ <img alt="Top language" src="https://img.shields.io/github/languages/top/juanmc2005/StreamingSpeakerDiarization?color=g">
+ <img alt="Code size in bytes" src="https://img.shields.io/github/languages/code-size/juanmc2005/StreamingSpeakerDiarization?color=g">
+@@ -79,24 +79,21 @@
+ 1) Create environment:
+ 
+ ```shell
+ conda create -n diart python=3.8
+ conda activate diart
+ ```
+ 
+-2) Install `PortAudio` and `soundfile`:
++2) Install audio libraries:
+ 
+ ```shell
+-conda install portaudio
+-conda install pysoundfile -c conda-forge
++conda install portaudio pysoundfile ffmpeg -c conda-forge
+ ```
+ 
+-3) [Install PyTorch >= 1.12.1](https://pytorch.org/get-started/locally/#start-locally)
+-
+-4) Install diart:
++3) Install diart:
+ ```shell
+ pip install diart
+ ```
+ 
+ ### Get access to pyannote models
+ 
+ By default, diart is based on [pyannote.audio](https://github.com/pyannote/pyannote-audio) models stored in the [huggingface](https://huggingface.co/) hub.
+@@ -115,14 +112,16 @@
+ ```shell
+ diart.stream /path/to/audio.wav
+ ```
+ 
+ A live conversation:
+ 
+ ```shell
++# Use "microphone:ID" to select a non-default device
++# See `python -m sounddevice` for available devices
+ diart.stream microphone
+ ```
+ 
+ See `diart.stream -h` for more options.
+ 
+ ### From python
+ 
+@@ -141,37 +140,57 @@
+ prediction = inference()
+ ```
+ 
+ For inference and evaluation on a dataset we recommend to use `Benchmark` (see notes on [reproducibility](#reproducibility)).
+ 
+ ## Custom models
+ 
+-Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel`:
++Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel` (which are PyTorch `Module` subclasses):
+ 
+ ```python
+-import torch
+-from typing import Optional
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+-from diart.models import EmbeddingModel
++from diart.models import EmbeddingModel, SegmentationModel
+ from diart.sources import MicrophoneAudioSource
+ from diart.inference import RealTimeInference
+ 
++
++def model_loader():
++    return load_pretrained_model("my_model.ckpt")
++
++
++class MySegmentationModel(SegmentationModel):
++    def __init__(self):
++        super().__init__(model_loader)
++    
++    @property
++    def sample_rate(self) -> int:
++        return 16000
++    
++    @property
++    def duration(self) -> float:
++        return 2  # seconds
++    
++    def forward(self, waveform):
++        # self.model is created lazily
++        return self.model(waveform)
++
++    
+ class MyEmbeddingModel(EmbeddingModel):
+     def __init__(self):
+-        super().__init__()
+-        self.my_pretrained_model = load("my_model.ckpt")
++        super().__init__(model_loader)
+     
+-    def __call__(
+-        self,
+-        waveform: torch.Tensor,
+-        weights: Optional[torch.Tensor] = None
+-    ) -> torch.Tensor:
+-        return self.my_pretrained_model(waveform, weights)
++    def forward(self, waveform, weights):
++        # self.model is created lazily
++        return self.model(waveform, weights)
+ 
+-config = PipelineConfig(embedding=MyEmbeddingModel())
++    
++config = PipelineConfig(
++    segmentation=MySegmentationModel(),
++    embedding=MyEmbeddingModel()
++)
+ pipeline = OnlineSpeakerDiarization(config)
+ mic = MicrophoneAudioSource(config.sample_rate)
+ inference = RealTimeInference(pipeline, mic)
+ prediction = inference()
+ ```
+ 
+ ## Tune hyper-parameters
+@@ -239,15 +258,15 @@
+ import rx.operators as ops
+ import diart.operators as dops
+ from diart.sources import MicrophoneAudioSource
+ from diart.blocks import SpeakerSegmentation, OverlapAwareSpeakerEmbedding
+ 
+ segmentation = SpeakerSegmentation.from_pyannote("pyannote/segmentation")
+ embedding = OverlapAwareSpeakerEmbedding.from_pyannote("pyannote/embedding")
+-sample_rate = segmentation.model.get_sample_rate()
++sample_rate = segmentation.model.sample_rate
+ mic = MicrophoneAudioSource(sample_rate)
+ 
+ stream = mic.stream.pipe(
+     # Reformat stream to 5s duration and 500ms shift
+     dops.rearrange_audio_stream(sample_rate=sample_rate),
+     ops.map(lambda wav: (wav, segmentation(wav))),
+     ops.starmap(embedding)
+@@ -266,24 +285,37 @@
+ ...
+ ```
+ 
+ ## WebSockets
+ 
+ Diart is also compatible with the WebSocket protocol to serve pipelines on the web.
+ 
+-In the following example we build a minimal server that receives audio chunks and sends back predictions in RTTM format:
++### From the command line
++
++```commandline
++diart.serve --host 0.0.0.0 --port 7007
++diart.client microphone --host <server-address> --port 7007
++```
++
++**Note:** please make sure that the client uses the same `step` and `sample_rate` than the server with `--step` and `-sr`.
++
++See `-h` for more options.
++
++### From python
++
++For customized solutions, a server can also be created in python using the `WebSocketAudioSource`:
+ 
+ ```python
+ from diart import OnlineSpeakerDiarization
+ from diart.sources import WebSocketAudioSource
+ from diart.inference import RealTimeInference
+ 
+ pipeline = OnlineSpeakerDiarization()
+ source = WebSocketAudioSource(pipeline.config.sample_rate, "localhost", 7007)
+-inference = RealTimeInference(pipeline, source, do_plot=True)
++inference = RealTimeInference(pipeline, source)
+ inference.attach_hooks(lambda ann_wav: source.send(ann_wav[0].to_rttm()))
+ prediction = inference()
+ ```
+ 
+ ## Powered by research
+ 
+ Diart is the official implementation of the paper *[Overlap-aware low-latency online speaker diarization based on end-to-end local segmentation](/paper.pdf)* by [Juan Manuel Coria](https://juanmc2005.github.io/), [Hervé Bredin](https://herve.niderb.fr), [Sahar Ghannay](https://saharghannay.github.io/) and [Sophie Rosset](https://perso.limsi.fr/rosset/).
+@@ -332,30 +364,37 @@
+ ```shell
+ diart.benchmark /wav/dir --reference /rttm/dir --tau=0.555 --rho=0.422 --delta=1.517 --segmentation pyannote/segmentation@Interspeech2021
+ ```
+ 
+ or using the inference API:
+ 
+ ```python
+-from diart.inference import Benchmark
++from diart.inference import Benchmark, Parallelize
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+ from diart.models import SegmentationModel
+ 
++benchmark = Benchmark("/wav/dir", "/rttm/dir")
++
++name = "pyannote/segmentation@Interspeech2021"
++segmentation = SegmentationModel.from_pyannote(name)
+ config = PipelineConfig(
+     # Set the model used in the paper
+-    segmentation=SegmentationModel.from_pyannote("pyannote/segmentation@Interspeech2021"),
++    segmentation=segmentation,
+     step=0.5,
+     latency=0.5,
+     tau_active=0.555,
+     rho_update=0.422,
+     delta_new=1.517
+ )
+-pipeline = OnlineSpeakerDiarization(config)
+-benchmark = Benchmark("/wav/dir", "/rttm/dir")
+-benchmark(pipeline)
++benchmark(OnlineSpeakerDiarization, config)
++
++# Run the same benchmark in parallel
++p_benchmark = Parallelize(benchmark, num_workers=4)
++if __name__ == "__main__":  # Needed for multiprocessing
++    p_benchmark(OnlineSpeakerDiarization, config)
+ ```
+ 
+ This pre-calculates model outputs in batches, so it runs a lot faster.
+ See `diart.benchmark -h` for more options.
+ 
+ For convenience and to facilitate future comparisons, we also provide the [expected outputs](/expected_outputs) of the paper implementation in RTTM format for every entry of Table 1 and Figure 5. This includes the VBx offline topline as well as our proposed online approach with latencies 500ms, 1s, 2s, 3s, 4s, and 5s.
+```
+
+### Comparing `diart-0.6.0/README.md` & `diart-0.7.0/README.md`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ <br/>
+ 
+ <p align="center">
+-<img src="/logo.png" title="Logo" />
++<img width="40%" src="/logo.jpg" title="Logo" />
+ </p>
+ 
+ <p align="center">
+ <img alt="PyPI Version" src="https://img.shields.io/pypi/v/diart?color=g">
+ <img alt="PyPI Downloads" src="https://static.pepy.tech/personalized-badge/diart?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads">
+ <img alt="Top language" src="https://img.shields.io/github/languages/top/juanmc2005/StreamingSpeakerDiarization?color=g">
+ <img alt="Code size in bytes" src="https://img.shields.io/github/languages/code-size/juanmc2005/StreamingSpeakerDiarization?color=g">
+@@ -63,24 +63,21 @@
+ 1) Create environment:
+ 
+ ```shell
+ conda create -n diart python=3.8
+ conda activate diart
+ ```
+ 
+-2) Install `PortAudio` and `soundfile`:
++2) Install audio libraries:
+ 
+ ```shell
+-conda install portaudio
+-conda install pysoundfile -c conda-forge
++conda install portaudio pysoundfile ffmpeg -c conda-forge
+ ```
+ 
+-3) [Install PyTorch >= 1.12.1](https://pytorch.org/get-started/locally/#start-locally)
+-
+-4) Install diart:
++3) Install diart:
+ ```shell
+ pip install diart
+ ```
+ 
+ ### Get access to pyannote models
+ 
+ By default, diart is based on [pyannote.audio](https://github.com/pyannote/pyannote-audio) models stored in the [huggingface](https://huggingface.co/) hub.
+@@ -99,14 +96,16 @@
+ ```shell
+ diart.stream /path/to/audio.wav
+ ```
+ 
+ A live conversation:
+ 
+ ```shell
++# Use "microphone:ID" to select a non-default device
++# See `python -m sounddevice` for available devices
+ diart.stream microphone
+ ```
+ 
+ See `diart.stream -h` for more options.
+ 
+ ### From python
+ 
+@@ -125,37 +124,57 @@
+ prediction = inference()
+ ```
+ 
+ For inference and evaluation on a dataset we recommend to use `Benchmark` (see notes on [reproducibility](#reproducibility)).
+ 
+ ## Custom models
+ 
+-Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel`:
++Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel` (which are PyTorch `Module` subclasses):
+ 
+ ```python
+-import torch
+-from typing import Optional
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+-from diart.models import EmbeddingModel
++from diart.models import EmbeddingModel, SegmentationModel
+ from diart.sources import MicrophoneAudioSource
+ from diart.inference import RealTimeInference
+ 
++
++def model_loader():
++    return load_pretrained_model("my_model.ckpt")
++
++
++class MySegmentationModel(SegmentationModel):
++    def __init__(self):
++        super().__init__(model_loader)
++    
++    @property
++    def sample_rate(self) -> int:
++        return 16000
++    
++    @property
++    def duration(self) -> float:
++        return 2  # seconds
++    
++    def forward(self, waveform):
++        # self.model is created lazily
++        return self.model(waveform)
++
++    
+ class MyEmbeddingModel(EmbeddingModel):
+     def __init__(self):
+-        super().__init__()
+-        self.my_pretrained_model = load("my_model.ckpt")
++        super().__init__(model_loader)
+     
+-    def __call__(
+-        self,
+-        waveform: torch.Tensor,
+-        weights: Optional[torch.Tensor] = None
+-    ) -> torch.Tensor:
+-        return self.my_pretrained_model(waveform, weights)
++    def forward(self, waveform, weights):
++        # self.model is created lazily
++        return self.model(waveform, weights)
+ 
+-config = PipelineConfig(embedding=MyEmbeddingModel())
++    
++config = PipelineConfig(
++    segmentation=MySegmentationModel(),
++    embedding=MyEmbeddingModel()
++)
+ pipeline = OnlineSpeakerDiarization(config)
+ mic = MicrophoneAudioSource(config.sample_rate)
+ inference = RealTimeInference(pipeline, mic)
+ prediction = inference()
+ ```
+ 
+ ## Tune hyper-parameters
+@@ -223,15 +242,15 @@
+ import rx.operators as ops
+ import diart.operators as dops
+ from diart.sources import MicrophoneAudioSource
+ from diart.blocks import SpeakerSegmentation, OverlapAwareSpeakerEmbedding
+ 
+ segmentation = SpeakerSegmentation.from_pyannote("pyannote/segmentation")
+ embedding = OverlapAwareSpeakerEmbedding.from_pyannote("pyannote/embedding")
+-sample_rate = segmentation.model.get_sample_rate()
++sample_rate = segmentation.model.sample_rate
+ mic = MicrophoneAudioSource(sample_rate)
+ 
+ stream = mic.stream.pipe(
+     # Reformat stream to 5s duration and 500ms shift
+     dops.rearrange_audio_stream(sample_rate=sample_rate),
+     ops.map(lambda wav: (wav, segmentation(wav))),
+     ops.starmap(embedding)
+@@ -250,24 +269,37 @@
+ ...
+ ```
+ 
+ ## WebSockets
+ 
+ Diart is also compatible with the WebSocket protocol to serve pipelines on the web.
+ 
+-In the following example we build a minimal server that receives audio chunks and sends back predictions in RTTM format:
++### From the command line
++
++```commandline
++diart.serve --host 0.0.0.0 --port 7007
++diart.client microphone --host <server-address> --port 7007
++```
++
++**Note:** please make sure that the client uses the same `step` and `sample_rate` than the server with `--step` and `-sr`.
++
++See `-h` for more options.
++
++### From python
++
++For customized solutions, a server can also be created in python using the `WebSocketAudioSource`:
+ 
+ ```python
+ from diart import OnlineSpeakerDiarization
+ from diart.sources import WebSocketAudioSource
+ from diart.inference import RealTimeInference
+ 
+ pipeline = OnlineSpeakerDiarization()
+ source = WebSocketAudioSource(pipeline.config.sample_rate, "localhost", 7007)
+-inference = RealTimeInference(pipeline, source, do_plot=True)
++inference = RealTimeInference(pipeline, source)
+ inference.attach_hooks(lambda ann_wav: source.send(ann_wav[0].to_rttm()))
+ prediction = inference()
+ ```
+ 
+ ## Powered by research
+ 
+ Diart is the official implementation of the paper *[Overlap-aware low-latency online speaker diarization based on end-to-end local segmentation](/paper.pdf)* by [Juan Manuel Coria](https://juanmc2005.github.io/), [Hervé Bredin](https://herve.niderb.fr), [Sahar Ghannay](https://saharghannay.github.io/) and [Sophie Rosset](https://perso.limsi.fr/rosset/).
+@@ -316,30 +348,37 @@
+ ```shell
+ diart.benchmark /wav/dir --reference /rttm/dir --tau=0.555 --rho=0.422 --delta=1.517 --segmentation pyannote/segmentation@Interspeech2021
+ ```
+ 
+ or using the inference API:
+ 
+ ```python
+-from diart.inference import Benchmark
++from diart.inference import Benchmark, Parallelize
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+ from diart.models import SegmentationModel
+ 
++benchmark = Benchmark("/wav/dir", "/rttm/dir")
++
++name = "pyannote/segmentation@Interspeech2021"
++segmentation = SegmentationModel.from_pyannote(name)
+ config = PipelineConfig(
+     # Set the model used in the paper
+-    segmentation=SegmentationModel.from_pyannote("pyannote/segmentation@Interspeech2021"),
++    segmentation=segmentation,
+     step=0.5,
+     latency=0.5,
+     tau_active=0.555,
+     rho_update=0.422,
+     delta_new=1.517
+ )
+-pipeline = OnlineSpeakerDiarization(config)
+-benchmark = Benchmark("/wav/dir", "/rttm/dir")
+-benchmark(pipeline)
++benchmark(OnlineSpeakerDiarization, config)
++
++# Run the same benchmark in parallel
++p_benchmark = Parallelize(benchmark, num_workers=4)
++if __name__ == "__main__":  # Needed for multiprocessing
++    p_benchmark(OnlineSpeakerDiarization, config)
+ ```
+ 
+ This pre-calculates model outputs in batches, so it runs a lot faster.
+ See `diart.benchmark -h` for more options.
+ 
+ For convenience and to facilitate future comparisons, we also provide the [expected outputs](/expected_outputs) of the paper implementation in RTTM format for every entry of Table 1 and Figure 5. This includes the VBx offline topline as well as our proposed online approach with latencies 500ms, 1s, 2s, 3s, 4s, and 5s.
+```
+
+### Comparing `diart-0.6.0/setup.cfg` & `diart-0.7.0/setup.cfg`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = diart
+-version = 0.6.0
++version = 0.7.0
+ author = Juan Manuel Coria
+ description = Speaker diarization in real time
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+ keywords = speaker diarization, streaming, online, real time, rxpy
+ url = https://github.com/juanmc2005/StreamingSpeakerDiarization
+ license = MIT
+@@ -25,28 +25,33 @@
+ 	rx>=3.2.0
+ 	scipy>=1.6.0
+ 	sounddevice>=0.4.2
+ 	einops>=0.3.0
+ 	tqdm>=4.64.0
+ 	pandas>=1.4.2
+ 	torch>=1.12.1
++	torchvision>=0.14.0
+ 	torchaudio>=0.12.1,<1.0
+ 	pyannote.audio>=2.1.1
+ 	pyannote.core>=4.5
+ 	pyannote.database>=4.1.1
+ 	pyannote.metrics>=3.2
+ 	optuna>=2.10
+-	websockets>=10.3
++	websocket-server>=0.6.4
++	websocket-client>=0.58.0
++	rich>=12.5.1
+ 
+ [options.packages.find]
+ where = src
+ 
+ [options.entry_points]
+ console_scripts = 
+-	diart.stream=diart.stream:run
+-	diart.benchmark=diart.benchmark:run
+-	diart.tune=diart.tune:run
++	diart.stream=diart.console.stream:run
++	diart.benchmark=diart.console.benchmark:run
++	diart.tune=diart.console.tune:run
++	diart.serve=diart.console.serve:run
++	diart.client=diart.console.client:run
+ 
+ [egg_info]
+ tag_build = 
+ tag_date = 0
+```
+
+### Comparing `diart-0.6.0/src/diart/argdoc.py` & `diart-0.7.0/src/diart/argdoc.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -6,9 +6,11 @@
+ RHO = "Speech ratio threshold to decide if centroids are updated with a given speaker. 0 <= RHO <= 1"
+ DELTA = "Embedding-to-centroid distance threshold to flag a speaker as known or new. 0 <= DELTA <= 2"
+ GAMMA = "Parameter gamma for overlapped speech penalty"
+ BETA = "Parameter beta for overlapped speech penalty"
+ MAX_SPEAKERS = "Maximum number of speakers"
+ CPU = "Force models to run on CPU"
+ BATCH_SIZE = "For segmentation and embedding pre-calculation. If BATCH_SIZE < 2, run fully online and estimate real-time latency"
++NUM_WORKERS = "Number of parallel workers"
+ OUTPUT = "Directory to store the system's output in RTTM format"
+ HF_TOKEN = "Huggingface authentication token for hosted models ('true' | 'false' | <token>). If 'true', it will use the token from huggingface-cli login"
++SAMPLE_RATE = "Sample rate of the audio stream"
+```
+
+### Comparing `diart-0.6.0/src/diart/audio.py` & `diart-0.7.0/src/diart/audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/benchmark.py` & `diart-0.7.0/src/diart/console/benchmark.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,17 +1,14 @@
+ import argparse
+ from pathlib import Path
+ 
+ import diart.argdoc as argdoc
+ import pandas as pd
+-import torch
+-from diart import utils
+ from diart.blocks import OnlineSpeakerDiarization, PipelineConfig
+-from diart.inference import Benchmark
+-from diart.models import SegmentationModel, EmbeddingModel
++from diart.inference import Benchmark, Parallelize
+ 
+ 
+ def run():
+     parser = argparse.ArgumentParser()
+     parser.add_argument("root", type=Path, help="Directory with audio files CONVERSATION.(wav|flac|m4a|...)")
+     parser.add_argument("--segmentation", default="pyannote/segmentation", type=str,
+                         help=f"{argdoc.SEGMENTATION}. Defaults to pyannote/segmentation")
+@@ -24,37 +21,37 @@
+     parser.add_argument("--tau", default=0.5, type=float, help=f"{argdoc.TAU}. Defaults to 0.5")
+     parser.add_argument("--rho", default=0.3, type=float, help=f"{argdoc.RHO}. Defaults to 0.3")
+     parser.add_argument("--delta", default=1, type=float, help=f"{argdoc.DELTA}. Defaults to 1")
+     parser.add_argument("--gamma", default=3, type=float, help=f"{argdoc.GAMMA}. Defaults to 3")
+     parser.add_argument("--beta", default=10, type=float, help=f"{argdoc.BETA}. Defaults to 10")
+     parser.add_argument("--max-speakers", default=20, type=int, help=f"{argdoc.MAX_SPEAKERS}. Defaults to 20")
+     parser.add_argument("--batch-size", default=32, type=int, help=f"{argdoc.BATCH_SIZE}. Defaults to 32")
++    parser.add_argument("--num-workers", default=0, type=int,
++                        help=f"{argdoc.NUM_WORKERS}. Defaults to 0 (no parallelism)")
+     parser.add_argument("--cpu", dest="cpu", action="store_true",
+                         help=f"{argdoc.CPU}. Defaults to GPU if available, CPU otherwise")
+     parser.add_argument("--output", type=Path, help=f"{argdoc.OUTPUT}. Defaults to no writing")
+     parser.add_argument("--hf-token", default="true", type=str,
+                         help=f"{argdoc.HF_TOKEN}. Defaults to 'true' (required by pyannote)")
+     args = parser.parse_args()
+-    args.device = torch.device("cpu") if args.cpu else None
+-    args.hf_token = utils.parse_hf_token_arg(args.hf_token)
+-
+-    # Download pyannote models (or get from cache)
+-    args.segmentation = SegmentationModel.from_pyannote(args.segmentation, args.hf_token)
+-    args.embedding = EmbeddingModel.from_pyannote(args.embedding, args.hf_token)
+ 
+     benchmark = Benchmark(
+         args.root,
+         args.reference,
+         args.output,
+         show_progress=True,
+         show_report=True,
+         batch_size=args.batch_size,
+     )
+ 
+-    pipeline = OnlineSpeakerDiarization(PipelineConfig.from_namespace(args))
+-    report = benchmark(pipeline)
++    config = PipelineConfig.from_dict(vars(args))
++    if args.num_workers > 0:
++        benchmark = Parallelize(benchmark, args.num_workers)
++
++    report = benchmark(OnlineSpeakerDiarization, config)
++
+     if args.output is not None and isinstance(report, pd.DataFrame):
+         report.to_csv(args.output / "benchmark_report.csv")
+ 
+ 
+ if __name__ == "__main__":
+     run()
+```
+
+### Comparing `diart-0.6.0/src/diart/blocks/aggregation.py` & `diart-0.7.0/src/diart/blocks/aggregation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/blocks/clustering.py` & `diart-0.7.0/src/diart/blocks/clustering.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/blocks/diarization.py` & `diart-0.7.0/src/diart/blocks/diarization.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,138 +1,100 @@
+-from typing import Optional, Any, Union, Tuple, Sequence
++from typing import Optional, Tuple, Sequence
+ 
+ import numpy as np
+ import torch
+-from pyannote.core import Annotation, SlidingWindowFeature, SlidingWindow
+-from typing_extensions import Literal
++from pyannote.core import Annotation, SlidingWindowFeature, SlidingWindow, Segment
+ 
+ from .aggregation import DelayedAggregation
+ from .clustering import OnlineSpeakerClustering
+ from .embedding import OverlapAwareSpeakerEmbedding
+ from .segmentation import SpeakerSegmentation
+ from .utils import Binarize
+-from .. import models as m
++from .config import BasePipelineConfig, PipelineConfig
+ 
+ 
+-class PipelineConfig:
+-    def __init__(
+-        self,
+-        segmentation: Optional[m.SegmentationModel] = None,
+-        embedding: Optional[m.EmbeddingModel] = None,
+-        duration: Optional[float] = None,
+-        step: float = 0.5,
+-        latency: Optional[Union[float, Literal["max", "min"]]] = None,
+-        tau_active: float = 0.6,
+-        rho_update: float = 0.3,
+-        delta_new: float = 1,
+-        gamma: float = 3,
+-        beta: float = 10,
+-        max_speakers: int = 20,
+-        device: Optional[torch.device] = None,
+-        **kwargs,
+-    ):
+-        # Default segmentation model is pyannote/segmentation
+-        self.segmentation = segmentation
+-        if self.segmentation is None:
+-            self.segmentation = m.SegmentationModel.from_pyannote("pyannote/segmentation")
+-
+-        # Default duration is the one given by the segmentation model
+-        self.duration = duration
+-        if self.duration is None:
+-            self.duration = self.segmentation.get_duration()
+-
+-        # Expected sample rate is given by the segmentation model
+-        self.sample_rate = self.segmentation.get_sample_rate()
+-
+-        # Default embedding model is pyannote/embedding
+-        self.embedding = embedding
+-        if self.embedding is None:
+-            self.embedding = m.EmbeddingModel.from_pyannote("pyannote/embedding")
+-
+-        # Latency defaults to the step duration
+-        self.step = step
+-        self.latency = latency
+-        if self.latency is None or self.latency == "min":
+-            self.latency = self.step
+-        elif latency == "max":
+-            self.latency = self.duration
+-
+-        self.tau_active = tau_active
+-        self.rho_update = rho_update
+-        self.delta_new = delta_new
+-        self.gamma = gamma
+-        self.beta = beta
+-        self.max_speakers = max_speakers
+-
+-        self.device = device
+-        if self.device is None:
+-            self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+-
++class BasePipeline:
+     @staticmethod
+-    def from_namespace(args: Any) -> 'PipelineConfig':
+-        return PipelineConfig(
+-            segmentation=getattr(args, "segmentation", None),
+-            embedding=getattr(args, "embedding", None),
+-            duration=getattr(args, "duration", None),
+-            step=args.step,
+-            latency=args.latency,
+-            tau_active=args.tau,
+-            rho_update=args.rho,
+-            delta_new=args.delta,
+-            gamma=args.gamma,
+-            beta=args.beta,
+-            max_speakers=args.max_speakers,
+-            device=args.device,
+-        )
++    def get_config_class() -> type:
++        raise NotImplementedError
+ 
++    @property
++    def config(self) -> BasePipelineConfig:
++        raise NotImplementedError
++
++    def reset(self):
++        raise NotImplementedError
+ 
+-class OnlineSpeakerDiarization:
++    def set_timestamp_shift(self, shift: float):
++        raise NotImplementedError
++
++    def __call__(
++        self,
++        waveforms: Sequence[SlidingWindowFeature]
++    ) -> Sequence[Tuple[Annotation, SlidingWindowFeature]]:
++        raise NotImplementedError
++
++
++class OnlineSpeakerDiarization(BasePipeline):
+     def __init__(self, config: Optional[PipelineConfig] = None):
+-        self.config = PipelineConfig() if config is None else config
++        self._config = PipelineConfig() if config is None else config
+ 
+-        msg = f"Latency should be in the range [{self.config.step}, {self.config.duration}]"
+-        assert self.config.step <= self.config.latency <= self.config.duration, msg
++        msg = f"Latency should be in the range [{self._config.step}, {self._config.duration}]"
++        assert self._config.step <= self._config.latency <= self._config.duration, msg
+ 
+-        self.segmentation = SpeakerSegmentation(self.config.segmentation, self.config.device)
++        self.segmentation = SpeakerSegmentation(self._config.segmentation, self._config.device)
+         self.embedding = OverlapAwareSpeakerEmbedding(
+-            self.config.embedding, self.config.gamma, self.config.beta, norm=1, device=self.config.device
++            self._config.embedding, self._config.gamma, self._config.beta, norm=1, device=self._config.device
+         )
+         self.pred_aggregation = DelayedAggregation(
+-            self.config.step,
+-            self.config.latency,
++            self._config.step,
++            self._config.latency,
+             strategy="hamming",
+             cropping_mode="loose",
+         )
+         self.audio_aggregation = DelayedAggregation(
+-            self.config.step,
+-            self.config.latency,
++            self._config.step,
++            self._config.latency,
+             strategy="first",
+             cropping_mode="center",
+         )
+-        self.binarize = Binarize(self.config.tau_active)
++        self.binarize = Binarize(self._config.tau_active)
+ 
+         # Internal state, handle with care
++        self.timestamp_shift = 0
+         self.clustering = None
+         self.chunk_buffer, self.pred_buffer = [], []
+         self.reset()
+ 
++    @staticmethod
++    def get_config_class() -> type:
++        return PipelineConfig
++
++    @property
++    def config(self) -> PipelineConfig:
++        return self._config
++
++    def set_timestamp_shift(self, shift: float):
++        self.timestamp_shift = shift
++
+     def reset(self):
++        self.set_timestamp_shift(0)
+         self.clustering = OnlineSpeakerClustering(
+             self.config.tau_active,
+             self.config.rho_update,
+             self.config.delta_new,
+             "cosine",
+             self.config.max_speakers,
+         )
+         self.chunk_buffer, self.pred_buffer = [], []
+ 
+     def __call__(
+         self,
+         waveforms: Sequence[SlidingWindowFeature]
+-    ) -> Sequence[Optional[Tuple[Annotation, SlidingWindowFeature]]]:
++    ) -> Sequence[Tuple[Annotation, SlidingWindowFeature]]:
+         batch_size = len(waveforms)
+         msg = "Pipeline expected at least 1 input"
+         assert batch_size >= 1, msg
+ 
+         # Create batch from chunk sequence, shape (batch, samples, channels)
+         batch = torch.stack([torch.from_numpy(w.data) for w in waveforms])
+ 
+@@ -162,15 +124,28 @@
+             # Update sliding buffer
+             self.chunk_buffer.append(wav)
+             self.pred_buffer.append(permuted_seg)
+ 
+             # Aggregate buffer outputs for this time step
+             agg_waveform = self.audio_aggregation(self.chunk_buffer)
+             agg_prediction = self.pred_aggregation(self.pred_buffer)
+-            outputs.append((self.binarize(agg_prediction), agg_waveform))
++            agg_prediction = self.binarize(agg_prediction)
++
++            # Shift prediction timestamps if required
++            if self.timestamp_shift != 0:
++                shifted_agg_prediction = Annotation(agg_prediction.uri)
++                for segment, track, speaker in agg_prediction.itertracks(yield_label=True):
++                    new_segment = Segment(
++                        segment.start + self.timestamp_shift,
++                        segment.end + self.timestamp_shift,
++                    )
++                    shifted_agg_prediction[new_segment, track] = speaker
++                agg_prediction = shifted_agg_prediction
++
++            outputs.append((agg_prediction, agg_waveform))
+ 
+             # Make place for new chunks in buffer if required
+             if len(self.chunk_buffer) == self.pred_aggregation.num_overlapping_windows:
+                 self.chunk_buffer = self.chunk_buffer[1:]
+                 self.pred_buffer = self.pred_buffer[1:]
+ 
+         return outputs
+```
+
+### Comparing `diart-0.6.0/src/diart/blocks/embedding.py` & `diart-0.7.0/src/diart/blocks/embedding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/blocks/segmentation.py` & `diart-0.7.0/src/diart/blocks/segmentation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/blocks/utils.py` & `diart-0.7.0/src/diart/blocks/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/features.py` & `diart-0.7.0/src/diart/features.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/mapping.py` & `diart-0.7.0/src/diart/mapping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/models.py` & `diart-0.7.0/src/diart/models.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,24 +1,56 @@
+-from typing import Optional, Text, Union
++from typing import Optional, Text, Union, Callable
+ 
+ import torch
+ import torch.nn as nn
+ 
+ try:
+-    import pyannote.audio.pipelines.utils as pyannote
++    import pyannote.audio.pipelines.utils as pyannote_loader
+     _has_pyannote = True
+ except ImportError:
+     _has_pyannote = False
+ 
+ 
+-class SegmentationModel(nn.Module):
++class PyannoteLoader:
++    def __init__(self, model_info, hf_token: Union[Text, bool, None] = True):
++        super().__init__()
++        self.model_info = model_info
++        self.hf_token = hf_token
++
++    def __call__(self) -> nn.Module:
++        return pyannote_loader.get_model(self.model_info, self.hf_token)
++
++
++class LazyModel(nn.Module):
++    def __init__(self, loader: Callable[[], nn.Module]):
++        super().__init__()
++        self.get_model = loader
++        self.model: Optional[nn.Module] = None
++
++    def is_in_memory(self) -> bool:
++        """Return whether the model has been loaded into memory"""
++        return self.model is not None
++
++    def load(self):
++        if not self.is_in_memory():
++            self.model = self.get_model()
++
++    def to(self, *args, **kwargs) -> nn.Module:
++        self.load()
++        return super().to(*args, **kwargs)
++
++    def __call__(self, *args, **kwargs):
++        self.load()
++        return super().__call__(*args, **kwargs)
++
++
++class SegmentationModel(LazyModel):
+     """
+     Minimal interface for a segmentation model.
+     """
+-
+     @staticmethod
+     def from_pyannote(model, use_hf_token: Union[Text, bool, None] = True) -> 'SegmentationModel':
+         """
+         Returns a `SegmentationModel` wrapping a pyannote model.
+ 
+         Parameters
+         ----------
+@@ -30,57 +62,59 @@
+             Defaults to None.
+ 
+         Returns
+         -------
+         wrapper: SegmentationModel
+         """
+         assert _has_pyannote, "No pyannote.audio installation found"
+-
+-        class PyannoteSegmentationModel(SegmentationModel):
+-            def __init__(self, pyannote_model, token: Union[Text, bool, None] = True):
+-                super().__init__()
+-                self.model = pyannote.get_model(pyannote_model, token)
+-
+-            def get_sample_rate(self) -> int:
+-                return self.model.audio.sample_rate
+-
+-            def get_duration(self) -> float:
+-                return self.model.specifications.duration
+-
+-            def __call__(self, waveform: torch.Tensor) -> torch.Tensor:
+-                return self.model(waveform)
+-
+         return PyannoteSegmentationModel(model, use_hf_token)
+ 
+-    def get_sample_rate(self) -> int:
+-        """Return the sample rate expected for model inputs"""
++    @property
++    def sample_rate(self) -> int:
+         raise NotImplementedError
+ 
+-    def get_duration(self) -> float:
+-        """Return the input duration by default (usually the one used during training)"""
++    @property
++    def duration(self) -> float:
+         raise NotImplementedError
+ 
+-    def __call__(self, waveform: torch.Tensor) -> torch.Tensor:
++    def forward(self, waveform: torch.Tensor) -> torch.Tensor:
+         """
+-        Forward pass of a segmentation model.
++        Forward pass of the segmentation model.
+ 
+         Parameters
+         ----------
+         waveform: torch.Tensor, shape (batch, channels, samples)
+ 
+         Returns
+         -------
+         speaker_segmentation: torch.Tensor, shape (batch, frames, speakers)
+         """
+         raise NotImplementedError
+ 
+ 
+-class EmbeddingModel(nn.Module):
+-    """Minimal interface for an embedding model."""
++class PyannoteSegmentationModel(SegmentationModel):
++    def __init__(self, model_info, hf_token: Union[Text, bool, None] = True):
++        super().__init__(PyannoteLoader(model_info, hf_token))
++
++    @property
++    def sample_rate(self) -> int:
++        self.load()
++        return self.model.audio.sample_rate
++
++    @property
++    def duration(self) -> float:
++        self.load()
++        return self.model.specifications.duration
++
++    def forward(self, waveform: torch.Tensor) -> torch.Tensor:
++        return self.model(waveform)
+ 
++
++class EmbeddingModel(LazyModel):
++    """Minimal interface for an embedding model."""
+     @staticmethod
+     def from_pyannote(model, use_hf_token: Union[Text, bool, None] = True) -> 'EmbeddingModel':
+         """
+         Returns an `EmbeddingModel` wrapping a pyannote model.
+ 
+         Parameters
+         ----------
+@@ -92,30 +126,17 @@
+             Defaults to None.
+ 
+         Returns
+         -------
+         wrapper: EmbeddingModel
+         """
+         assert _has_pyannote, "No pyannote.audio installation found"
+-
+-        class PyannoteEmbeddingModel(EmbeddingModel):
+-            def __init__(self, pyannote_model, token: Union[Text, bool, None] = True):
+-                super().__init__()
+-                self.model = pyannote.get_model(pyannote_model, token)
+-
+-            def __call__(
+-                self,
+-                waveform: torch.Tensor,
+-                weights: Optional[torch.Tensor] = None,
+-            ) -> torch.Tensor:
+-                return self.model(waveform, weights=weights)
+-
+         return PyannoteEmbeddingModel(model, use_hf_token)
+ 
+-    def __call__(
++    def forward(
+         self,
+         waveform: torch.Tensor,
+         weights: Optional[torch.Tensor] = None
+     ) -> torch.Tensor:
+         """
+         Forward pass of an embedding model with optional weights.
+ 
+@@ -126,7 +147,19 @@
+             Temporal weights for each sample in the batch. Defaults to no weights.
+ 
+         Returns
+         -------
+         speaker_embeddings: torch.Tensor, shape (batch, embedding_dim)
+         """
+         raise NotImplementedError
++
++
++class PyannoteEmbeddingModel(EmbeddingModel):
++    def __init__(self, model_info, hf_token: Union[Text, bool, None] = True):
++        super().__init__(PyannoteLoader(model_info, hf_token))
++
++    def forward(
++        self,
++        waveform: torch.Tensor,
++        weights: Optional[torch.Tensor] = None,
++    ) -> torch.Tensor:
++        return self.model(waveform, weights=weights)
+```
+
+### Comparing `diart-0.6.0/src/diart/operators.py` & `diart-0.7.0/src/diart/operators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `diart-0.6.0/src/diart/optim.py` & `diart-0.7.0/src/diart/optim.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -5,16 +5,16 @@
+ 
+ from optuna import TrialPruned, Study, create_study
+ from optuna.samplers import TPESampler
+ from optuna.trial import Trial, FrozenTrial
+ from tqdm import trange, tqdm
+ 
+ from .audio import FilePath
+-from .benchmark import Benchmark
+-from .blocks import PipelineConfig, OnlineSpeakerDiarization
++from .blocks import BasePipelineConfig, PipelineConfig, OnlineSpeakerDiarization
++from .inference import Benchmark
+ 
+ 
+ @dataclass
+ class HyperParameter:
+     name: Text
+     low: float
+     high: float
+@@ -35,32 +35,50 @@
+ DeltaNew = HyperParameter("delta_new", low=0, high=2)
+ 
+ 
+ class Optimizer:
+     def __init__(
+         self,
+         speech_path: Union[Text, Path],
+-        reference_path: Optional[Union[Text, Path]],
++        reference_path: Union[Text, Path],
+         study_or_path: Union[FilePath, Study],
+         batch_size: int = 32,
++        pipeline_class: type = OnlineSpeakerDiarization,
+         hparams: Optional[Sequence[HyperParameter]] = None,
+-        base_config: Optional[PipelineConfig] = None,
++        base_config: Optional[BasePipelineConfig] = None,
++        do_kickstart_hparams: bool = True,
+     ):
++        self.pipeline_class = pipeline_class
++        # FIXME can we run this benchmark in parallel?
++        #  Currently it breaks the trial progress bar
+         self.benchmark = Benchmark(
+             speech_path,
+             reference_path,
+             show_progress=True,
+             show_report=False,
+             batch_size=batch_size,
+         )
+-        self.base_config = PipelineConfig() if base_config is None else base_config
++
++        self.base_config = base_config
++        self.do_kickstart_hparams = do_kickstart_hparams
++        if self.base_config is None:
++            self.base_config = PipelineConfig()
++            self.do_kickstart_hparams = False
++
+         self.hparams = hparams
+         if self.hparams is None:
+             self.hparams = [TauActive, RhoUpdate, DeltaNew]
+ 
++        # Make sure hyper-parameters exist in the configuration class given
++        possible_hparams = vars(self.base_config)
++        for param in self.hparams:
++            msg = f"Hyper-parameter {param.name} not found " \
++                  f"in configuration {self.base_config.__class__.__name__}"
++            assert param.name in possible_hparams, msg
++
+         self._progress: Optional[tqdm] = None
+ 
+         if isinstance(study_or_path, Study):
+             self.study = study_or_path
+         elif isinstance(study_or_path, str) or isinstance(study_or_path, Path):
+             study_or_path = Path(study_or_path)
+             self.study = create_study(
+@@ -100,25 +118,31 @@
+                 hparam.name, hparam.low, hparam.high
+             )
+ 
+         # Prune trial if required
+         if trial.should_prune():
+             raise TrialPruned()
+ 
+-        # Instantiate pipeline with the new configuration
+-        pipeline = OnlineSpeakerDiarization(PipelineConfig(**trial_config))
++        # Instantiate the new configuration for the trial
++        config = self.base_config.__class__(**trial_config)
+ 
+         # Run pipeline over the dataset
+-        report = self.benchmark(pipeline)
++        report = self.benchmark(self.pipeline_class, config)
+ 
+         # Extract DER from report
+         return report.loc["TOTAL", "diarization error rate"]["%"]
+ 
+     def __call__(self, num_iter: int, show_progress: bool = True):
+         self._progress = None
+         if show_progress:
+             self._progress = trange(num_iter)
+             last_trial = -1
+             if self.study.trials:
+                 last_trial = self.study.trials[-1].number
+             self._progress.set_description(f"Trial {last_trial + 1}")
++        # Start with base config hyper-parameters if config was given
++        if self.do_kickstart_hparams:
++            self.study.enqueue_trial({
++                param.name: getattr(self.base_config, param.name)
++                for param in self.hparams
++            }, skip_if_exists=True)
+         self.study.optimize(self.objective, num_iter, callbacks=[self._callback])
+```
+
+### Comparing `diart-0.6.0/src/diart/sinks.py` & `diart-0.7.0/src/diart/sinks.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -29,14 +29,16 @@
+         self.patch_collar = patch_collar
+         self.path = Path(path).expanduser()
+         if self.path.exists():
+             self.path.unlink()
+ 
+     def patch(self):
+         """Stitch same-speaker turns that are close to each other"""
++        if not self.path.exists():
++            return
+         annotations = list(load_rttm(self.path).values())
+         if annotations:
+             annotation = annotations[0]
+             annotation.uri = self.uri
+             with open(self.path, 'w') as file:
+                 annotation.support(self.patch_collar).write_rttm(file)
+```
+
+### Comparing `diart-0.6.0/src/diart/sources.py` & `diart-0.7.0/src/diart/sources.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,21 +1,19 @@
+-import asyncio
+-import base64
+ from pathlib import Path
+ from queue import SimpleQueue
+-from typing import Text, Optional, AnyStr
++from typing import Text, Optional, AnyStr, Dict, Any, Union, Tuple
+ 
+ import numpy as np
+ import sounddevice as sd
+ import torch
+-import websockets
++from diart import utils
+ from einops import rearrange
+ from rx.subject import Subject
+ from torchaudio.io import StreamReader
+-import signal
++from websocket_server import WebsocketServer
+ 
+ from .audio import FilePath, AudioLoader
+ 
+ 
+ class AudioSource:
+     """Represents a source of audio that can start streaming via the `stream` property.
+ 
+@@ -50,40 +48,52 @@
+ 
+     Parameters
+     ----------
+     file: FilePath
+         Path to the file to stream.
+     sample_rate: int
+         Sample rate of the chunks emitted.
++    padding: (float, float)
++        Left and right padding to add to the file (in seconds).
++        Defaults to (0, 0).
++    block_size: int
++        Number of samples per chunk emitted.
++        Defaults to 1000.
+     """
+     def __init__(
+         self,
+         file: FilePath,
+         sample_rate: int,
+-        padding_end: float = 0,
++        padding: Tuple[float, float] = (0, 0),
+         block_size: int = 1000,
+     ):
+         super().__init__(Path(file).stem, sample_rate)
+         self.loader = AudioLoader(self.sample_rate, mono=True)
+         self._duration = self.loader.get_duration(file)
+         self.file = file
+         self.resolution = 1 / self.sample_rate
+         self.block_size = block_size
+-        self.padding_end = padding_end
++        self.padding_start, self.padding_end = padding
+         self.is_closed = False
+ 
+     @property
+     def duration(self) -> Optional[float]:
+         # The duration of a file is known
+-        return self._duration + self.padding_end
++        return self.padding_start + self._duration + self.padding_end
+ 
+     def read(self):
+         """Send each chunk of samples through the stream"""
+         waveform = self.loader.load(self.file)
+ 
++        # Add zero padding at the beginning if required
++        if self.padding_start > 0:
++            num_pad_samples = int(np.rint(self.padding_start * self.sample_rate))
++            zero_padding = torch.zeros(waveform.shape[0], num_pad_samples)
++            waveform = torch.cat([zero_padding, waveform], dim=1)
++
+         # Add zero padding at the end if required
+         if self.padding_end > 0:
+             num_pad_samples = int(np.rint(self.padding_end * self.sample_rate))
+             zero_padding = torch.zeros(waveform.shape[0], num_pad_samples)
+             waveform = torch.cat([waveform, zero_padding], dim=1)
+ 
+         # Split into blocks
+@@ -113,25 +123,44 @@
+         self.close()
+ 
+     def close(self):
+         self.is_closed = True
+ 
+ 
+ class MicrophoneAudioSource(AudioSource):
+-    """Represents an audio source tied to the default microphone available"""
++    """Audio source tied to a local microphone.
++
++    Parameters
++    ----------
++    sample_rate: int
++        Sample rate for the emitted audio chunks.
++    block_size: int
++        Number of samples per chunk emitted.
++        Defaults to 1000.
++    device: int | str | (int, str) | None
++        Device identifier compatible for the sounddevice stream.
++        If None, use the default device.
++        Defaults to None.
++    """
+ 
+-    def __init__(self, sample_rate: int, block_size: int = 1000):
++    def __init__(
++        self,
++        sample_rate: int,
++        block_size: int = 1000,
++        device: Optional[Union[int, Text, Tuple[int, Text]]] = None,
++    ):
+         super().__init__("live_recording", sample_rate)
+         self.block_size = block_size
+         self._mic_stream = sd.InputStream(
+             channels=1,
+             samplerate=sample_rate,
+             latency=0,
+             blocksize=self.block_size,
+-            callback=self._read_callback
++            callback=self._read_callback,
++            device=device,
+         )
+         self._queue = SimpleQueue()
+ 
+     def _read_callback(self, samples, *args):
+         self._queue.put_nowait(samples[:, [0]].T)
+ 
+     def read(self):
+@@ -156,86 +185,74 @@
+ class WebSocketAudioSource(AudioSource):
+     """Represents a source of audio coming from the network using the WebSocket protocol.
+ 
+     Parameters
+     ----------
+     sample_rate: int
+         Sample rate of the chunks emitted.
+-    host: Text | None
+-        The host to run the websocket server. Defaults to ``None`` (all interfaces).
++    host: Text
++        The host to run the websocket server.
++        Defaults to 127.0.0.1.
+     port: int
+-        The port to run the websocket server. Defaults to 7007.
++        The port to run the websocket server.
++        Defaults to 7007.
++    key: Text | Path | None
++        Path to a key if using SSL.
++        Defaults to no key.
++    certificate: Text | Path | None
++        Path to a certificate if using SSL.
++        Defaults to no certificate.
+     """
+-    def __init__(self, sample_rate: int, host: Optional[Text] = None, port: int = 7007):
+-        name = host if host is not None and host else "localhost"
+-        uri = f"{name}:{port}"
++    def __init__(
++        self,
++        sample_rate: int,
++        host: Text = "127.0.0.1",
++        port: int = 7007,
++        key: Optional[Union[Text, Path]] = None,
++        certificate: Optional[Union[Text, Path]] = None
++    ):
+         # FIXME sample_rate is not being used, this can be confusing and lead to incompatibilities.
+         #  I would prefer the client to send a JSON with data and sample rate, then resample if needed
+-        super().__init__(uri, sample_rate)
+-        self.host = host
+-        self.port = port
+-        self.websocket = None
+-        self.stop = None
+-
+-    async def _ws_handler(self, websocket):
+-        self.websocket = websocket
+-        try:
+-            async for message in websocket:
+-                # Decode chunk encoded in base64
+-                byte_samples = base64.decodebytes(message.encode("utf-8"))
+-                # Recover array from bytes
+-                samples = np.frombuffer(byte_samples, dtype=np.float32)
+-                # Reshape and send through
+-                self.stream.on_next(samples.reshape(1, -1))
+-            self.stream.on_completed()
+-            self.close()
+-        except websockets.ConnectionClosedError as e:
+-            self.stream.on_error(e)
+-
+-    async def _async_read(self):
+-        loop = asyncio.get_running_loop()
+-        self.stop = loop.create_future()
+-        loop.add_signal_handler(signal.SIGTERM, self.stop.set_result, None)
+-        async with websockets.serve(self._ws_handler, self.host, self.port):
+-            await self.stop
++        super().__init__(f"{host}:{port}", sample_rate)
++        self.client: Optional[Dict[Text, Any]] = None
++        self.server = WebsocketServer(host, port, key=key, cert=certificate)
++        self.server.set_fn_message_received(self._on_message_received)
+ 
+-    async def _async_send(self, message: AnyStr):
+-        await self.websocket.send(message)
++    def _on_message_received(
++        self,
++        client: Dict[Text, Any],
++        server: WebsocketServer,
++        message: AnyStr,
++    ):
++        # Only one client at a time is allowed
++        if self.client is None or self.client["id"] != client["id"]:
++            self.client = client
++        # Send decoded audio to pipeline
++        self.stream.on_next(utils.decode_audio(message))
+ 
+     def read(self):
+         """Starts running the websocket server and listening for audio chunks"""
+-        asyncio.run(self._async_read())
++        self.server.run_forever()
+ 
+     def close(self):
+-        if self.websocket is not None:
+-            # The value could be anything
+-            self.stop.set_result(True)
++        """Close the websocket server"""
++        if self.server is not None:
++            self.stream.on_completed()
++            self.server.shutdown_gracefully()
+ 
+     def send(self, message: AnyStr):
+         """Send a message through the current websocket.
+ 
+         Parameters
+         ----------
+         message: AnyStr
+             Bytes or string to send.
+         """
+-        # A running loop must exist in order to send back a message
+-        ws_closed = "Websocket isn't open, try calling `read()` first"
+-        try:
+-            loop = asyncio.get_running_loop()
+-        except RuntimeError:
+-            raise RuntimeError(ws_closed)
+-
+-        if not loop.is_running():
+-            raise RuntimeError(ws_closed)
+-
+-        # TODO support broadcasting to many clients
+-        # Schedule a coroutine to send back the message
+-        if message:
+-            asyncio.run_coroutine_threadsafe(self._async_send(message), loop=loop)
++        if len(message) > 0:
++            self.server.send_message(self.client, message)
+ 
+ 
+ class TorchStreamAudioSource(AudioSource):
+     def __init__(
+         self,
+         uri: Text,
+         sample_rate: int,
+```
+
+### Comparing `diart-0.6.0/src/diart/stream.py` & `diart-0.7.0/src/diart/console/stream.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,24 +1,20 @@
+ import argparse
+ from pathlib import Path
+ 
+ import diart.argdoc as argdoc
+ import diart.sources as src
+-import numpy as np
+-import torch
+-from diart import utils
+ from diart.blocks import OnlineSpeakerDiarization, PipelineConfig
+ from diart.inference import RealTimeInference
+-from diart.models import SegmentationModel, EmbeddingModel
+ from diart.sinks import RTTMWriter
+ 
+ 
+ def run():
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("source", type=str, help="Path to an audio file | 'microphone'")
++    parser.add_argument("source", type=str, help="Path to an audio file | 'microphone' | 'microphone:<DEVICE_ID>'")
+     parser.add_argument("--segmentation", default="pyannote/segmentation", type=str,
+                         help=f"{argdoc.SEGMENTATION}. Defaults to pyannote/segmentation")
+     parser.add_argument("--embedding", default="pyannote/embedding", type=str,
+                         help=f"{argdoc.EMBEDDING}. Defaults to pyannote/embedding")
+     parser.add_argument("--step", default=0.5, type=float, help=f"{argdoc.STEP}. Defaults to 0.5")
+     parser.add_argument("--latency", default=0.5, type=float, help=f"{argdoc.LATENCY}. Defaults to 0.5")
+     parser.add_argument("--tau", default=0.5, type=float, help=f"{argdoc.TAU}. Defaults to 0.5")
+@@ -31,45 +27,41 @@
+     parser.add_argument("--cpu", dest="cpu", action="store_true",
+                         help=f"{argdoc.CPU}. Defaults to GPU if available, CPU otherwise")
+     parser.add_argument("--output", type=str,
+                         help=f"{argdoc.OUTPUT}. Defaults to home directory if SOURCE == 'microphone' or parent directory if SOURCE is a file")
+     parser.add_argument("--hf-token", default="true", type=str,
+                         help=f"{argdoc.HF_TOKEN}. Defaults to 'true' (required by pyannote)")
+     args = parser.parse_args()
+-    args.device = torch.device("cpu") if args.cpu else None
+-    args.hf_token = utils.parse_hf_token_arg(args.hf_token)
+-
+-    # Download pyannote models (or get from cache)
+-    args.segmentation = SegmentationModel.from_pyannote(args.segmentation, args.hf_token)
+-    args.embedding = EmbeddingModel.from_pyannote(args.embedding, args.hf_token)
+ 
+     # Define online speaker diarization pipeline
+-    config = PipelineConfig.from_namespace(args)
++    config = PipelineConfig.from_dict(vars(args))
+     pipeline = OnlineSpeakerDiarization(config)
+ 
+     # Manage audio source
+-    block_size = int(np.rint(config.step * config.sample_rate))
+-    if args.source != "microphone":
++    block_size = config.optimal_block_size()
++    source_components = args.source.split(":")
++    if source_components[0] != "microphone":
+         args.source = Path(args.source).expanduser()
+         args.output = args.source.parent if args.output is None else Path(args.output)
+-        stream_padding = config.latency - config.step
+-        audio_source = src.FileAudioSource(args.source, config.sample_rate, stream_padding, block_size)
++        padding = config.get_file_padding(args.source)
++        audio_source = src.FileAudioSource(args.source, config.sample_rate, padding, block_size)
++        pipeline.set_timestamp_shift(-padding[0])
+     else:
+         args.output = Path("~/").expanduser() if args.output is None else Path(args.output)
+-        audio_source = src.MicrophoneAudioSource(config.sample_rate, block_size)
++        device = int(source_components[1]) if len(source_components) > 1 else None
++        audio_source = src.MicrophoneAudioSource(config.sample_rate, block_size, device)
+ 
+     # Run online inference
+     inference = RealTimeInference(
+         pipeline,
+         audio_source,
+         batch_size=1,
+         do_profile=True,
+         do_plot=not args.no_plot,
+         show_progress=True,
+-        leave_progress_bar=True,
+     )
+     inference.attach_observers(RTTMWriter(audio_source.uri, args.output / f"{audio_source.uri}.rttm"))
+     inference()
+ 
+ 
+ if __name__ == "__main__":
+     run()
+```
+
+### Comparing `diart-0.6.0/src/diart/tune.py` & `diart-0.7.0/src/diart/console/tune.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,16 +1,13 @@
+ import argparse
+ from pathlib import Path
+ 
+ import diart.argdoc as argdoc
+ import optuna
+-import torch
+-from diart import utils
+-from diart.blocks import PipelineConfig
+-from diart.models import SegmentationModel, EmbeddingModel
++from diart.blocks import PipelineConfig, OnlineSpeakerDiarization
+ from diart.optim import Optimizer, HyperParameter
+ from optuna.samplers import TPESampler
+ 
+ 
+ def run():
+     parser = argparse.ArgumentParser()
+     parser.add_argument("root", type=str, help="Directory with audio files CONVERSATION.(wav|flac|m4a|...)")
+@@ -36,23 +33,17 @@
+     parser.add_argument("--num-iter", default=100, type=int, help="Number of optimization trials")
+     parser.add_argument("--storage", type=str,
+                         help="Optuna storage string. If provided, continue a previous study instead of creating one. The database name must match the study name")
+     parser.add_argument("--output", type=str, help="Working directory")
+     parser.add_argument("--hf-token", default="true", type=str,
+                         help=f"{argdoc.HF_TOKEN}. Defaults to 'true' (required by pyannote)")
+     args = parser.parse_args()
+-    args.device = torch.device("cpu") if args.cpu else None
+-    args.hf_token = utils.parse_hf_token_arg(args.hf_token)
+-
+-    # Download pyannote models (or get from cache)
+-    args.segmentation = SegmentationModel.from_pyannote(args.segmentation, args.hf_token)
+-    args.embedding = EmbeddingModel.from_pyannote(args.embedding, args.hf_token)
+ 
+     # Create the base configuration for each trial
+-    base_config = PipelineConfig.from_namespace(args)
++    base_config = PipelineConfig.from_dict(vars(args))
+ 
+     # Create hyper-parameters to optimize
+     hparams = [HyperParameter.from_name(name) for name in args.hparams]
+ 
+     # Use a custom storage if given
+     if args.output is not None:
+         msg = "Both `output` and `storage` were set, but only one was expected"
+@@ -69,14 +60,15 @@
+ 
+     # Run optimization
+     Optimizer(
+         speech_path=args.root,
+         reference_path=args.reference,
+         study_or_path=study_or_path,
+         batch_size=args.batch_size,
++        pipeline_class=OnlineSpeakerDiarization,
+         hparams=hparams,
+         base_config=base_config,
+     )(num_iter=args.num_iter, show_progress=True)
+ 
+ 
+ if __name__ == "__main__":
+     run()
+```
+
+### Comparing `diart-0.6.0/src/diart.egg-info/PKG-INFO` & `diart-0.7.0/src/diart.egg-info/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: diart
+-Version: 0.6.0
++Version: 0.7.0
+ Summary: Speaker diarization in real time
+ Home-page: https://github.com/juanmc2005/StreamingSpeakerDiarization
+ Author: Juan Manuel Coria
+ License: MIT
+ Keywords: speaker diarization,streaming,online,real time,rxpy
+ Classifier: Development Status :: 4 - Beta
+ Classifier: License :: OSI Approved :: MIT License
+@@ -13,15 +13,15 @@
+ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ <br/>
+ 
+ <p align="center">
+-<img src="/logo.png" title="Logo" />
++<img width="40%" src="/logo.jpg" title="Logo" />
+ </p>
+ 
+ <p align="center">
+ <img alt="PyPI Version" src="https://img.shields.io/pypi/v/diart?color=g">
+ <img alt="PyPI Downloads" src="https://static.pepy.tech/personalized-badge/diart?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads">
+ <img alt="Top language" src="https://img.shields.io/github/languages/top/juanmc2005/StreamingSpeakerDiarization?color=g">
+ <img alt="Code size in bytes" src="https://img.shields.io/github/languages/code-size/juanmc2005/StreamingSpeakerDiarization?color=g">
+@@ -79,24 +79,21 @@
+ 1) Create environment:
+ 
+ ```shell
+ conda create -n diart python=3.8
+ conda activate diart
+ ```
+ 
+-2) Install `PortAudio` and `soundfile`:
++2) Install audio libraries:
+ 
+ ```shell
+-conda install portaudio
+-conda install pysoundfile -c conda-forge
++conda install portaudio pysoundfile ffmpeg -c conda-forge
+ ```
+ 
+-3) [Install PyTorch >= 1.12.1](https://pytorch.org/get-started/locally/#start-locally)
+-
+-4) Install diart:
++3) Install diart:
+ ```shell
+ pip install diart
+ ```
+ 
+ ### Get access to pyannote models
+ 
+ By default, diart is based on [pyannote.audio](https://github.com/pyannote/pyannote-audio) models stored in the [huggingface](https://huggingface.co/) hub.
+@@ -115,14 +112,16 @@
+ ```shell
+ diart.stream /path/to/audio.wav
+ ```
+ 
+ A live conversation:
+ 
+ ```shell
++# Use "microphone:ID" to select a non-default device
++# See `python -m sounddevice` for available devices
+ diart.stream microphone
+ ```
+ 
+ See `diart.stream -h` for more options.
+ 
+ ### From python
+ 
+@@ -141,37 +140,57 @@
+ prediction = inference()
+ ```
+ 
+ For inference and evaluation on a dataset we recommend to use `Benchmark` (see notes on [reproducibility](#reproducibility)).
+ 
+ ## Custom models
+ 
+-Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel`:
++Third-party models can be integrated seamlessly by subclassing `SegmentationModel` and `EmbeddingModel` (which are PyTorch `Module` subclasses):
+ 
+ ```python
+-import torch
+-from typing import Optional
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+-from diart.models import EmbeddingModel
++from diart.models import EmbeddingModel, SegmentationModel
+ from diart.sources import MicrophoneAudioSource
+ from diart.inference import RealTimeInference
+ 
++
++def model_loader():
++    return load_pretrained_model("my_model.ckpt")
++
++
++class MySegmentationModel(SegmentationModel):
++    def __init__(self):
++        super().__init__(model_loader)
++    
++    @property
++    def sample_rate(self) -> int:
++        return 16000
++    
++    @property
++    def duration(self) -> float:
++        return 2  # seconds
++    
++    def forward(self, waveform):
++        # self.model is created lazily
++        return self.model(waveform)
++
++    
+ class MyEmbeddingModel(EmbeddingModel):
+     def __init__(self):
+-        super().__init__()
+-        self.my_pretrained_model = load("my_model.ckpt")
++        super().__init__(model_loader)
+     
+-    def __call__(
+-        self,
+-        waveform: torch.Tensor,
+-        weights: Optional[torch.Tensor] = None
+-    ) -> torch.Tensor:
+-        return self.my_pretrained_model(waveform, weights)
++    def forward(self, waveform, weights):
++        # self.model is created lazily
++        return self.model(waveform, weights)
+ 
+-config = PipelineConfig(embedding=MyEmbeddingModel())
++    
++config = PipelineConfig(
++    segmentation=MySegmentationModel(),
++    embedding=MyEmbeddingModel()
++)
+ pipeline = OnlineSpeakerDiarization(config)
+ mic = MicrophoneAudioSource(config.sample_rate)
+ inference = RealTimeInference(pipeline, mic)
+ prediction = inference()
+ ```
+ 
+ ## Tune hyper-parameters
+@@ -239,15 +258,15 @@
+ import rx.operators as ops
+ import diart.operators as dops
+ from diart.sources import MicrophoneAudioSource
+ from diart.blocks import SpeakerSegmentation, OverlapAwareSpeakerEmbedding
+ 
+ segmentation = SpeakerSegmentation.from_pyannote("pyannote/segmentation")
+ embedding = OverlapAwareSpeakerEmbedding.from_pyannote("pyannote/embedding")
+-sample_rate = segmentation.model.get_sample_rate()
++sample_rate = segmentation.model.sample_rate
+ mic = MicrophoneAudioSource(sample_rate)
+ 
+ stream = mic.stream.pipe(
+     # Reformat stream to 5s duration and 500ms shift
+     dops.rearrange_audio_stream(sample_rate=sample_rate),
+     ops.map(lambda wav: (wav, segmentation(wav))),
+     ops.starmap(embedding)
+@@ -266,24 +285,37 @@
+ ...
+ ```
+ 
+ ## WebSockets
+ 
+ Diart is also compatible with the WebSocket protocol to serve pipelines on the web.
+ 
+-In the following example we build a minimal server that receives audio chunks and sends back predictions in RTTM format:
++### From the command line
++
++```commandline
++diart.serve --host 0.0.0.0 --port 7007
++diart.client microphone --host <server-address> --port 7007
++```
++
++**Note:** please make sure that the client uses the same `step` and `sample_rate` than the server with `--step` and `-sr`.
++
++See `-h` for more options.
++
++### From python
++
++For customized solutions, a server can also be created in python using the `WebSocketAudioSource`:
+ 
+ ```python
+ from diart import OnlineSpeakerDiarization
+ from diart.sources import WebSocketAudioSource
+ from diart.inference import RealTimeInference
+ 
+ pipeline = OnlineSpeakerDiarization()
+ source = WebSocketAudioSource(pipeline.config.sample_rate, "localhost", 7007)
+-inference = RealTimeInference(pipeline, source, do_plot=True)
++inference = RealTimeInference(pipeline, source)
+ inference.attach_hooks(lambda ann_wav: source.send(ann_wav[0].to_rttm()))
+ prediction = inference()
+ ```
+ 
+ ## Powered by research
+ 
+ Diart is the official implementation of the paper *[Overlap-aware low-latency online speaker diarization based on end-to-end local segmentation](/paper.pdf)* by [Juan Manuel Coria](https://juanmc2005.github.io/), [Hervé Bredin](https://herve.niderb.fr), [Sahar Ghannay](https://saharghannay.github.io/) and [Sophie Rosset](https://perso.limsi.fr/rosset/).
+@@ -332,30 +364,37 @@
+ ```shell
+ diart.benchmark /wav/dir --reference /rttm/dir --tau=0.555 --rho=0.422 --delta=1.517 --segmentation pyannote/segmentation@Interspeech2021
+ ```
+ 
+ or using the inference API:
+ 
+ ```python
+-from diart.inference import Benchmark
++from diart.inference import Benchmark, Parallelize
+ from diart import OnlineSpeakerDiarization, PipelineConfig
+ from diart.models import SegmentationModel
+ 
++benchmark = Benchmark("/wav/dir", "/rttm/dir")
++
++name = "pyannote/segmentation@Interspeech2021"
++segmentation = SegmentationModel.from_pyannote(name)
+ config = PipelineConfig(
+     # Set the model used in the paper
+-    segmentation=SegmentationModel.from_pyannote("pyannote/segmentation@Interspeech2021"),
++    segmentation=segmentation,
+     step=0.5,
+     latency=0.5,
+     tau_active=0.555,
+     rho_update=0.422,
+     delta_new=1.517
+ )
+-pipeline = OnlineSpeakerDiarization(config)
+-benchmark = Benchmark("/wav/dir", "/rttm/dir")
+-benchmark(pipeline)
++benchmark(OnlineSpeakerDiarization, config)
++
++# Run the same benchmark in parallel
++p_benchmark = Parallelize(benchmark, num_workers=4)
++if __name__ == "__main__":  # Needed for multiprocessing
++    p_benchmark(OnlineSpeakerDiarization, config)
+ ```
+ 
+ This pre-calculates model outputs in batches, so it runs a lot faster.
+ See `diart.benchmark -h` for more options.
+ 
+ For convenience and to facilitate future comparisons, we also provide the [expected outputs](/expected_outputs) of the paper implementation in RTTM format for every entry of Table 1 and Figure 5. This includes the VBx offline topline as well as our proposed online approach with latencies 500ms, 1s, 2s, 3s, 4s, and 5s.
+```
+
+### Comparing `diart-0.6.0/src/diart.egg-info/SOURCES.txt` & `diart-0.7.0/src/diart.egg-info/SOURCES.txt`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -2,32 +2,37 @@
+ README.md
+ pyproject.toml
+ setup.cfg
+ setup.py
+ src/diart/__init__.py
+ src/diart/argdoc.py
+ src/diart/audio.py
+-src/diart/benchmark.py
+ src/diart/features.py
+ src/diart/inference.py
+ src/diart/mapping.py
+ src/diart/models.py
+ src/diart/operators.py
+ src/diart/optim.py
++src/diart/progress.py
+ src/diart/sinks.py
+ src/diart/sources.py
+-src/diart/stream.py
+-src/diart/tune.py
+ src/diart/utils.py
+ src/diart.egg-info/PKG-INFO
+ src/diart.egg-info/SOURCES.txt
+ src/diart.egg-info/dependency_links.txt
+ src/diart.egg-info/entry_points.txt
+ src/diart.egg-info/requires.txt
+ src/diart.egg-info/top_level.txt
+ src/diart/blocks/__init__.py
+ src/diart/blocks/aggregation.py
+ src/diart/blocks/clustering.py
++src/diart/blocks/config.py
+ src/diart/blocks/diarization.py
+ src/diart/blocks/embedding.py
+ src/diart/blocks/segmentation.py
+-src/diart/blocks/utils.py
++src/diart/blocks/utils.py
++src/diart/console/__init__.py
++src/diart/console/benchmark.py
++src/diart/console/client.py
++src/diart/console/serve.py
++src/diart/console/stream.py
++src/diart/console/tune.py
+```
+

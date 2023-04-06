@@ -1,0 +1,158 @@
+# Comparing `tmp/Bgolearn-1.4.0.tar.gz` & `tmp/Bgolearn-1.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "Bgolearn-1.4.0.tar", last modified: Thu Apr  6 13:01:30 2023, max compression
++gzip compressed data, was "Bgolearn-1.5.0.tar", last modified: Thu Apr  6 13:06:16 2023, max compression
+```
+
+## Comparing `Bgolearn-1.4.0.tar` & `Bgolearn-1.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:01:30.971384 Bgolearn-1.4.0/
+-drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:01:30.970037 Bgolearn-1.4.0/Bgolearn/
+--rwxr-xr-x   0 jacob      (501) staff       (20)    24205 2023-04-06 12:56:14.000000 Bgolearn-1.4.0/Bgolearn/BGO_eval.py
+--rwxr-xr-x   0 jacob      (501) staff       (20)     3933 2022-11-06 07:11:02.000000 Bgolearn-1.4.0/Bgolearn/BGOclf.py
+--rwxr-xr-x   0 jacob      (501) staff       (20)    18438 2022-10-13 07:31:41.000000 Bgolearn-1.4.0/Bgolearn/BGOmax.py
+--rwxr-xr-x   0 jacob      (501) staff       (20)    18412 2022-10-14 04:10:19.000000 Bgolearn-1.4.0/Bgolearn/BGOmin.py
+--rwxr-xr-x   0 jacob      (501) staff       (20)    20046 2023-04-06 12:58:55.000000 Bgolearn-1.4.0/Bgolearn/BGOsampling.py
+--rwxr-xr-x   0 jacob      (501) staff       (20)      313 2023-04-06 12:59:22.000000 Bgolearn-1.4.0/Bgolearn/__init__.py
+-drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:01:30.970917 Bgolearn-1.4.0/Bgolearn.egg-info/
+--rw-r--r--   0 jacob      (501) staff       (20)     2476 2023-04-06 13:01:30.000000 Bgolearn-1.4.0/Bgolearn.egg-info/PKG-INFO
+--rw-r--r--   0 jacob      (501) staff       (20)      300 2023-04-06 13:01:30.000000 Bgolearn-1.4.0/Bgolearn.egg-info/SOURCES.txt
+--rw-r--r--   0 jacob      (501) staff       (20)        1 2023-04-06 13:01:30.000000 Bgolearn-1.4.0/Bgolearn.egg-info/dependency_links.txt
+--rw-r--r--   0 jacob      (501) staff       (20)       38 2023-04-06 13:01:30.000000 Bgolearn-1.4.0/Bgolearn.egg-info/requires.txt
+--rw-r--r--   0 jacob      (501) staff       (20)        9 2023-04-06 13:01:30.000000 Bgolearn-1.4.0/Bgolearn.egg-info/top_level.txt
+--rw-r--r--   0 jacob      (501) staff       (20)     2476 2023-04-06 13:01:30.971241 Bgolearn-1.4.0/PKG-INFO
+--rw-r--r--   0 jacob      (501) staff       (20)     1917 2022-11-06 12:06:03.000000 Bgolearn-1.4.0/README.md
+--rw-r--r--   0 jacob      (501) staff       (20)       38 2023-04-06 13:01:30.971552 Bgolearn-1.4.0/setup.cfg
+--rw-r--r--   0 jacob      (501) staff       (20)     1359 2023-04-06 13:00:40.000000 Bgolearn-1.4.0/setup.py
++drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:06:16.751654 Bgolearn-1.5.0/
++drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:06:16.750538 Bgolearn-1.5.0/Bgolearn/
++-rwxr-xr-x   0 jacob      (501) staff       (20)    24205 2023-04-06 12:56:14.000000 Bgolearn-1.5.0/Bgolearn/BGO_eval.py
++-rwxr-xr-x   0 jacob      (501) staff       (20)     3933 2022-11-06 07:11:02.000000 Bgolearn-1.5.0/Bgolearn/BGOclf.py
++-rwxr-xr-x   0 jacob      (501) staff       (20)    18438 2022-10-13 07:31:41.000000 Bgolearn-1.5.0/Bgolearn/BGOmax.py
++-rwxr-xr-x   0 jacob      (501) staff       (20)    18412 2022-10-14 04:10:19.000000 Bgolearn-1.5.0/Bgolearn/BGOmin.py
++-rwxr-xr-x   0 jacob      (501) staff       (20)    20046 2023-04-06 12:58:55.000000 Bgolearn-1.5.0/Bgolearn/BGOsampling.py
++-rwxr-xr-x   0 jacob      (501) staff       (20)      401 2023-04-06 13:05:54.000000 Bgolearn-1.5.0/Bgolearn/__init__.py
++drwxr-xr-x   0 jacob      (501) staff       (20)        0 2023-04-06 13:06:16.751309 Bgolearn-1.5.0/Bgolearn.egg-info/
++-rw-r--r--   0 jacob      (501) staff       (20)     2478 2023-04-06 13:06:16.000000 Bgolearn-1.5.0/Bgolearn.egg-info/PKG-INFO
++-rw-r--r--   0 jacob      (501) staff       (20)      300 2023-04-06 13:06:16.000000 Bgolearn-1.5.0/Bgolearn.egg-info/SOURCES.txt
++-rw-r--r--   0 jacob      (501) staff       (20)        1 2023-04-06 13:06:16.000000 Bgolearn-1.5.0/Bgolearn.egg-info/dependency_links.txt
++-rw-r--r--   0 jacob      (501) staff       (20)       38 2023-04-06 13:06:16.000000 Bgolearn-1.5.0/Bgolearn.egg-info/requires.txt
++-rw-r--r--   0 jacob      (501) staff       (20)        9 2023-04-06 13:06:16.000000 Bgolearn-1.5.0/Bgolearn.egg-info/top_level.txt
++-rw-r--r--   0 jacob      (501) staff       (20)     2478 2023-04-06 13:06:16.751509 Bgolearn-1.5.0/PKG-INFO
++-rw-r--r--   0 jacob      (501) staff       (20)     1917 2022-11-06 12:06:03.000000 Bgolearn-1.5.0/README.md
++-rw-r--r--   0 jacob      (501) staff       (20)       38 2023-04-06 13:06:16.751716 Bgolearn-1.5.0/setup.cfg
++-rw-r--r--   0 jacob      (501) staff       (20)     1361 2023-04-06 13:05:04.000000 Bgolearn-1.5.0/setup.py
+```
+
+### Comparing `Bgolearn-1.4.0/Bgolearn/BGO_eval.py` & `Bgolearn-1.5.0/Bgolearn/BGO_eval.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/Bgolearn/BGOclf.py` & `Bgolearn-1.5.0/Bgolearn/BGOclf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/Bgolearn/BGOmax.py` & `Bgolearn-1.5.0/Bgolearn/BGOmax.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/Bgolearn/BGOmin.py` & `Bgolearn-1.5.0/Bgolearn/BGOmin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/Bgolearn/BGOsampling.py` & `Bgolearn-1.5.0/Bgolearn/BGOsampling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/Bgolearn.egg-info/PKG-INFO` & `Bgolearn-1.5.0/Bgolearn.egg-info/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ Metadata-Version: 2.1
+ Name: Bgolearn
+-Version: 1.4.0
++Version: 1.5.0
+ Summary: A Bayesian global optimization package for material design
+ Home-page: https://github.com/Bin-Cao/Bgolearn
+ Author: CaoBin
+ Author-email: bcao@shu.edu.com
+ Maintainer: CaoBin
+-Maintainer-email: 17734910905@163.com
++Maintainer-email: binjacobcao@gmail.com
+ License: MIT License
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Topic :: Software Development :: Build Tools
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Requires-Python: >=3.7
+```
+
+### Comparing `Bgolearn-1.4.0/PKG-INFO` & `Bgolearn-1.5.0/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ Metadata-Version: 2.1
+ Name: Bgolearn
+-Version: 1.4.0
++Version: 1.5.0
+ Summary: A Bayesian global optimization package for material design
+ Home-page: https://github.com/Bin-Cao/Bgolearn
+ Author: CaoBin
+ Author-email: bcao@shu.edu.com
+ Maintainer: CaoBin
+-Maintainer-email: 17734910905@163.com
++Maintainer-email: binjacobcao@gmail.com
+ License: MIT License
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Topic :: Software Development :: Build Tools
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Requires-Python: >=3.7
+```
+
+### Comparing `Bgolearn-1.4.0/README.md` & `Bgolearn-1.5.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Bgolearn-1.4.0/setup.py` & `Bgolearn-1.5.0/setup.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ from setuptools import setup, find_packages
+ setup(
+     name='Bgolearn',  # 包名
+-    version='1.4.0',  # 版本
++    version='1.5.0',  # 版本
+     description="A Bayesian global optimization package for material design",  # 包简介
+     long_description=open('README.md',encoding='utf-8').read(),  # 读取文件中介绍包的详细内容
+     include_package_data=True,  # 是否允许上传资源文件
+     author='CaoBin',  # 作者
+     author_email='bcao@shu.edu.com',  # 作者邮件
+     maintainer='CaoBin',  # 维护者
+-    maintainer_email='17734910905@163.com',  # 维护者邮件
++    maintainer_email='binjacobcao@gmail.com',  # 维护者邮件
+     license='MIT License',  # 协议
+     url='https://github.com/Bin-Cao/Bgolearn',  # github或者自己的网站地址
+     packages=find_packages(include=['Bgolearn', 'Bgolearn.*']),
+     classifiers=[
+         'Development Status :: 3 - Alpha',
+         'Intended Audience :: Developers',
+         'Topic :: Software Development :: Build Tools',
+```
+

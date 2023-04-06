@@ -1,0 +1,435 @@
+# Comparing `tmp/odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6-py3-none-any.whl.zip` & `tmp/odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,22 +1,22 @@
+-Zip file size: 30706 bytes, number of entries: 20
+--rw-r--r--  2.0 unx     3276 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/README.rst
+--rw-r--r--  2.0 unx       21 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/__init__.py
+--rw-r--r--  2.0 unx      687 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/__manifest__.py
+--rw-r--r--  2.0 unx      910 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/i18n/fleet_vehicle_fuel_capacity.pot
+--rw-r--r--  2.0 unx     1160 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/i18n/it.po
+--rw-r--r--  2.0 unx     1172 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/i18n/pt_BR.po
+--rw-r--r--  2.0 unx       28 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/models/__init__.py
+--rw-r--r--  2.0 unx      477 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/models/fleet_vehicle.py
+--rw-r--r--  2.0 unx       53 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx      138 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/readme/CREDITS.rst
+--rw-r--r--  2.0 unx      115 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx       79 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/readme/ROADMAP.rst
+--rw-r--r--  2.0 unx     6733 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/static/description/banner.png
+--rw-r--r--  2.0 unx     9455 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/static/description/icon.png
+--rw-r--r--  2.0 unx    12871 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html
+--rw-r--r--  2.0 unx      632 b- defN 23-Mar-31 04:17 odoo/addons/fleet_vehicle_fuel_capacity/views/fleet_vehicle.xml
+--rw-r--r--  2.0 unx     3906 b- defN 23-Mar-31 04:18 odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Mar-31 04:18 odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Mar-31 04:18 odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     2313 b- defN 23-Mar-31 04:18 odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/RECORD
+-20 files, 44123 bytes uncompressed, 26674 bytes compressed:  39.5%
++Zip file size: 30807 bytes, number of entries: 20
++-rw-r--r--  2.0 unx     3323 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/README.rst
++-rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/__init__.py
++-rw-r--r--  2.0 unx      687 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/__manifest__.py
++-rw-r--r--  2.0 unx      910 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/i18n/fleet_vehicle_fuel_capacity.pot
++-rw-r--r--  2.0 unx     1160 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/i18n/it.po
++-rw-r--r--  2.0 unx     1172 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/i18n/pt_BR.po
++-rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/models/__init__.py
++-rw-r--r--  2.0 unx      477 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/models/fleet_vehicle.py
++-rw-r--r--  2.0 unx      100 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx      138 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/readme/CREDITS.rst
++-rw-r--r--  2.0 unx      115 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx       79 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/readme/ROADMAP.rst
++-rw-r--r--  2.0 unx     6733 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/static/description/banner.png
++-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/static/description/icon.png
++-rw-r--r--  2.0 unx    13016 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html
++-rw-r--r--  2.0 unx      632 b- defN 23-Apr-06 13:05 odoo/addons/fleet_vehicle_fuel_capacity/views/fleet_vehicle.xml
++-rw-r--r--  2.0 unx     3954 b- defN 23-Apr-06 13:05 odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 13:05 odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 13:05 odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     2314 b- defN 23-Apr-06 13:05 odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/RECORD
++20 files, 44411 bytes uncompressed, 26775 bytes compressed:  39.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -42,20 +42,20 @@
+ 
+ Filename: odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html
+ Comment: 
+ 
+ Filename: odoo/addons/fleet_vehicle_fuel_capacity/views/fleet_vehicle.xml
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/METADATA
++Filename: odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/WHEEL
++Filename: odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/top_level.txt
++Filename: odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/RECORD
++Filename: odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/fleet_vehicle_fuel_capacity/README.rst
+
+```diff
+@@ -10,21 +10,21 @@
+ .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+     :target: https://odoo-community.org/page/development-status
+     :alt: Beta
+ .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+     :alt: License: AGPL-3
+ .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github
+-    :target: https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity
++    :target: https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity
+     :alt: OCA/fleet
+ .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
+-    :target: https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_fuel_capacity
++    :target: https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_fuel_capacity
+     :alt: Translate me on Weblate
+ .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+-    :target: https://runbot.odoo-community.org/runbot/291/15.0
++    :target: https://runbot.odoo-community.org/runbot/291/16.0
+     :alt: Try me on Runbot
+ 
+ |badge1| |badge2| |badge3| |badge4| |badge5| 
+ 
+ This module extends the functionality of fleet management. It allows the registration of a vehicle's fuel capacity
+ 
+ **Table of contents**
+@@ -39,15 +39,15 @@
+ 
+ Bug Tracker
+ ===========
+ 
+ Bugs are tracked on `GitHub Issues <https://github.com/OCA/fleet/issues>`_.
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
++`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+ 
+ Do not contact contributors directly about support or help with technical issues.
+ 
+ Credits
+ =======
+ 
+ Authors
+@@ -55,14 +55,15 @@
+ 
+ * Escodoo
+ 
+ Contributors
+ ~~~~~~~~~~~~
+ 
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+ 
+ Other credits
+ ~~~~~~~~~~~~~
+ 
+ The development of this module has been financially supported by:
+ 
+ * Escodoo - `https://www.escodoo.com.br <https://www.escodoo.com.br>`_
+@@ -84,10 +85,10 @@
+     :target: https://github.com/marcelsavegnago
+     :alt: marcelsavegnago
+ 
+ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+ 
+ |maintainer-marcelsavegnago| 
+ 
+-This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity>`_ project on GitHub.
++This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity>`_ project on GitHub.
+ 
+ You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+```
+
+## odoo/addons/fleet_vehicle_fuel_capacity/__manifest__.py
+
+```diff
+@@ -2,15 +2,15 @@
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+ 
+ {
+     "name": "Fleet Vehicle Fuel Capacity",
+     "summary": """
+         This module extends the functionality of fleet management. It allows the
+         registration of a vehicle's fuel capacity.""",
+-    "version": "15.0.1.0.1",
++    "version": "16.0.1.0.0",
+     "license": "AGPL-3",
+     "category": "Human Resources/Fleet",
+     "author": "Escodoo,Odoo Community Association (OCA)",
+     "maintainers": ["marcelsavegnago"],
+     "images": ["static/description/banner.png"],
+     "website": "https://github.com/OCA/fleet",
+     "depends": [
+```
+
+## odoo/addons/fleet_vehicle_fuel_capacity/i18n/fleet_vehicle_fuel_capacity.pot
+
+```diff
+@@ -1,14 +1,14 @@
+ # Translation of Odoo Server.
+ # This file contains the translation of the following modules:
+ # 	* fleet_vehicle_fuel_capacity
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: Odoo Server 15.0\n"
++"Project-Id-Version: Odoo Server 16.0\n"
+ "Report-Msgid-Bugs-To: \n"
+ "Last-Translator: \n"
+ "Language-Team: \n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: \n"
+ "Plural-Forms: \n"
+```
+
+## odoo/addons/fleet_vehicle_fuel_capacity/readme/CONTRIBUTORS.rst
+
+```diff
+@@ -1 +1,2 @@
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+```
+
+## odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html
+
+### odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html
+
+```diff
+@@ -367,21 +367,21 @@
+       <p>
+         <a class="reference external" href="https://odoo-community.org/page/development-status">
+           <img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png"/>
+         </a>
+         <a class="reference external" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html">
+           <img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png"/>
+         </a>
+-        <a class="reference external" href="https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity">
++        <a class="reference external" href="https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity">
+           <img alt="OCA/fleet" src="https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github"/>
+         </a>
+-        <a class="reference external" href="https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_fuel_capacity">
++        <a class="reference external" href="https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_fuel_capacity">
+           <img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png"/>
+         </a>
+-        <a class="reference external" href="https://runbot.odoo-community.org/runbot/291/15.0">
++        <a class="reference external" href="https://runbot.odoo-community.org/runbot/291/16.0">
+           <img alt="Try me on Runbot" src="https://img.shields.io/badge/runbot-Try%20me-875A7B.png"/>
+         </a>
+       </p>
+       <p>This module extends the functionality of fleet management. It allows the registration of a vehicle’s fuel capacity</p>
+       <p>
+         <strong>Table of contents</strong>
+       </p>
+@@ -426,15 +426,15 @@
+         </h1>
+         <p>
+           Bugs are tracked on
+           <a class="reference external" href="https://github.com/OCA/fleet/issues">GitHub Issues</a>
+           .
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-          <a class="reference external" href="https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>
++          <a class="reference external" href="https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>
+           .
+         </p>
+         <p>Do not contact contributors directly about support or help with technical issues.</p>
+       </div>
+       <div class="section" id="credits">
+         <h1>
+           <a class="toc-backref" href="#id3">Credits</a>
+@@ -453,14 +453,19 @@
+           </h2>
+           <ul class="simple">
+             <li>
+               Marcel Savegnago &lt;
+               <a class="reference external" href="mailto:marcel.savegnago@escodoo.com.br">marcel.savegnago@escodoo.com.br</a>
+               &gt;
+             </li>
++            <li>
++              Kaynnan Lemes &lt;
++              <a class="reference external" href="mailto:kaynnan.lemes@escodoo.com.br">kaynnan.lemes@escodoo.com.br</a>
++              &gt;
++            </li>
+           </ul>
+         </div>
+         <div class="section" id="other-credits">
+           <h2>
+             <a class="toc-backref" href="#id6">Other credits</a>
+           </h2>
+           <p>The development of this module has been financially supported by:</p>
+@@ -490,15 +495,15 @@
+           <p>
+             <a class="reference external" href="https://github.com/marcelsavegnago">
+               <img alt="marcelsavegnago" src="https://github.com/marcelsavegnago.png?size=40px"/>
+             </a>
+           </p>
+           <p>
+             This module is part of the
+-            <a class="reference external" href="https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity">OCA/fleet</a>
++            <a class="reference external" href="https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity">OCA/fleet</a>
+             project on GitHub.
+           </p>
+           <p>
+             You are welcome to contribute. To learn how please visit
+             <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>
+             .
+           </p>
+```
+
+## Comparing `odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/METADATA` & `odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/METADATA`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-fleet-vehicle-fuel-capacity
+-Version: 15.0.1.0.1.6
++Version: 16.0.1.0.0.3
+ Summary: This module extends the functionality of fleet management. It allows the registration of a vehicle's fuel capacity.
+ Home-page: https://github.com/OCA/fleet
+ Author: Escodoo,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Framework :: Odoo
+-Classifier: Framework :: Odoo :: 15.0
++Classifier: Framework :: Odoo :: 16.0
+ Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+-Requires-Python: >=3.8
+-Requires-Dist: odoo (<15.1dev,>=15.0a)
++Requires-Python: >=3.10
++Requires-Dist: odoo (<16.1dev,>=16.0a)
+ 
+ ===========================
+ Fleet Vehicle Fuel Capacity
+ ===========================
+ 
+ .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    !! This file is generated by oca-gen-addon-readme !!
+@@ -26,21 +26,21 @@
+ .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+     :target: https://odoo-community.org/page/development-status
+     :alt: Beta
+ .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+     :alt: License: AGPL-3
+ .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github
+-    :target: https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity
++    :target: https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity
+     :alt: OCA/fleet
+ .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
+-    :target: https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_fuel_capacity
++    :target: https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_fuel_capacity
+     :alt: Translate me on Weblate
+ .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+-    :target: https://runbot.odoo-community.org/runbot/291/15.0
++    :target: https://runbot.odoo-community.org/runbot/291/16.0
+     :alt: Try me on Runbot
+ 
+ |badge1| |badge2| |badge3| |badge4| |badge5| 
+ 
+ This module extends the functionality of fleet management. It allows the registration of a vehicle's fuel capacity
+ 
+ **Table of contents**
+@@ -55,15 +55,15 @@
+ 
+ Bug Tracker
+ ===========
+ 
+ Bugs are tracked on `GitHub Issues <https://github.com/OCA/fleet/issues>`_.
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
++`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_fuel_capacity%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+ 
+ Do not contact contributors directly about support or help with technical issues.
+ 
+ Credits
+ =======
+ 
+ Authors
+@@ -71,14 +71,15 @@
+ 
+ * Escodoo
+ 
+ Contributors
+ ~~~~~~~~~~~~
+ 
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+ 
+ Other credits
+ ~~~~~~~~~~~~~
+ 
+ The development of this module has been financially supported by:
+ 
+ * Escodoo - `https://www.escodoo.com.br <https://www.escodoo.com.br>`_
+@@ -100,12 +101,12 @@
+     :target: https://github.com/marcelsavegnago
+     :alt: marcelsavegnago
+ 
+ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+ 
+ |maintainer-marcelsavegnago| 
+ 
+-This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_fuel_capacity>`_ project on GitHub.
++This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_fuel_capacity>`_ project on GitHub.
+ 
+ You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+```
+
+## Comparing `odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/RECORD` & `odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/RECORD`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,20 +1,20 @@
+-odoo/addons/fleet_vehicle_fuel_capacity/README.rst,sha256=31pHAeQM2M0HNk2Gc9el_qULBHcg1yqjlRXV4C255Ys,3276
++odoo/addons/fleet_vehicle_fuel_capacity/README.rst,sha256=n1ROFNiT0iWKQfjifEU4VLQe_G-tvMCGs4qWbgpsaLI,3323
+ odoo/addons/fleet_vehicle_fuel_capacity/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+-odoo/addons/fleet_vehicle_fuel_capacity/__manifest__.py,sha256=RgnAO_T8Hv8c6crALm3PtImKjJy6nebkdWMWuD-taZ4,687
+-odoo/addons/fleet_vehicle_fuel_capacity/i18n/fleet_vehicle_fuel_capacity.pot,sha256=FNomvyVCQuQQgVvbXSU0mZwZssw1JKL2_yt-0PiQW4Y,910
++odoo/addons/fleet_vehicle_fuel_capacity/__manifest__.py,sha256=D87_u0XK3cEt9WtDMTbw-XJM_YCx_V0P9n6f_15wmyY,687
++odoo/addons/fleet_vehicle_fuel_capacity/i18n/fleet_vehicle_fuel_capacity.pot,sha256=OtfgDCrETTjZqgn16wWEa8vZnQRhCLwdY50jvnou4gc,910
+ odoo/addons/fleet_vehicle_fuel_capacity/i18n/it.po,sha256=UEpm3-8bMfmOO6MuQg5Qi6vabENh4Sjk1ac6pXwEqvI,1160
+ odoo/addons/fleet_vehicle_fuel_capacity/i18n/pt_BR.po,sha256=b22JBhyl8AxeTa77AFlhJxJXTd7FuCMMFpE68_BjL20,1172
+ odoo/addons/fleet_vehicle_fuel_capacity/models/__init__.py,sha256=ku2qIAvSU_4ayTA99S_HyNxr0fU7JtKvyI0ySgNsrFM,28
+ odoo/addons/fleet_vehicle_fuel_capacity/models/fleet_vehicle.py,sha256=k7il42m5W-u85IW6viOwkWJdiBsf-NdY8O-pEh85ha0,477
+-odoo/addons/fleet_vehicle_fuel_capacity/readme/CONTRIBUTORS.rst,sha256=hoRjiPwYOuaiK2la4qIUE7lFzaeVzUQKgD1U5chwTvw,53
++odoo/addons/fleet_vehicle_fuel_capacity/readme/CONTRIBUTORS.rst,sha256=yu2XFc537lnn-1JOaVoYSckjxsFIXgw90_yjeowSsaQ,100
+ odoo/addons/fleet_vehicle_fuel_capacity/readme/CREDITS.rst,sha256=thk7jDdbNIP5vEWAeYAryEYOHSukHlmoi07Zk9QMMGs,138
+ odoo/addons/fleet_vehicle_fuel_capacity/readme/DESCRIPTION.rst,sha256=PpAgWwQ8aZqd46-t6lLrb4XEK_5SEDsoOv9TX6BCW7E,115
+ odoo/addons/fleet_vehicle_fuel_capacity/readme/ROADMAP.rst,sha256=uLJC0w4vKFqVyZ5VWDeEIk4P9AlqpnlVUBpkWvXQi70,79
+ odoo/addons/fleet_vehicle_fuel_capacity/static/description/banner.png,sha256=79JnvZusJn5gdi7q1pyW-clP6q0U8X2ecMGV-w-6FI0,6733
+ odoo/addons/fleet_vehicle_fuel_capacity/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+-odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html,sha256=ZU62VfvdyxQkldfFw8h_s2rt5wg8YbZ2HMiwWbuIzag,12871
++odoo/addons/fleet_vehicle_fuel_capacity/static/description/index.html,sha256=VNEDEJXNRT4oYgI8YwsW6H-Q61yH_eJViaM9qeREIg4,13016
+ odoo/addons/fleet_vehicle_fuel_capacity/views/fleet_vehicle.xml,sha256=1J5FyzTKmBVSXOetzZuEA1vF6WljQ2S_NZjJ7GVyano,632
+-odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/METADATA,sha256=N4VjUgTkiVm6jOh7ZDqMoyCmojoEohUxNhWU5_BWPto,3906
+-odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_fleet_vehicle_fuel_capacity-15.0.1.0.1.6.dist-info/RECORD,,
++odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/METADATA,sha256=LaLGp6LHqYY0MKhIFgIpx9yNHHDCcJkw9C7t0cO8L8M,3954
++odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_fleet_vehicle_fuel_capacity-16.0.1.0.0.3.dist-info/RECORD,,
+```
+

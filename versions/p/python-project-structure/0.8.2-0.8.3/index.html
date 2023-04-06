@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/python-project-structure-0.8.2.tar.gz tmp/python-project-structure-0.8.3.tar.gz --html versions/p/python-project-structure/0.8.2-0.8.3/index.html --text versions/p/python-project-structure/0.8.2-0.8.3/diff.txt --markdown versions/p/python-project-structure/0.8.2-0.8.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">22.9 KB</span></div>
+  <div><span class="source">tmp/python-project-structure-0.8.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/python-project-structure-0.8.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">298 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python-project-structure-0.8.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Dec<span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>23:<del>04</del>:<del>58</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python-project-structure-0.8.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Dec<span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">22.6 KB</span></div>
+    <div><span class="source">python-project-structure-0.8.2.tar</span> vs.</div>
+    <div id="python-project-structure--.-.-.tar"><span class="source">python-project-structure-0.8.3.tar</span>
+      <a class="anchor" href="#python-project-structure--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">16.6 KB</span></div>
+      <div id="python-project-structure--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 49 lines modified</td><td colspan="2">Offset 1, 49 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>347515</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>116452</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.dir-locals.el.in</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.dir-locals.el.in</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1499<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.dockerignore</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1499<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.dockerignore</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>447<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.env.in</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>447<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.env.in</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>3</del><del>4</del>0<del>51</del>5<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.github/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>1</ins>0<ins>74</ins>5<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.github/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>345515</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.github/workflows/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>112452</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.github/workflows/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4364<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.github/workflows/ci-cd.yml</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4364<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.github/workflows/ci-cd.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1499<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.gitignore</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1499<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2915<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.gitlab-ci.yml</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2915<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.gitlab-ci.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>555<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/.pre-commit-config.yaml</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>555<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/.pre-commit-config.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1822<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/Dockerfile</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1822<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/Dockerfile</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1029<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/Dockerfile.devel</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1029<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/Dockerfile.devel</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1081<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/LICENSE</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1081<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<del>40</del><span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/Makefile</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<ins>91</ins><span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/Makefile</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>4944</del><span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>03</del>:<del>10</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/NEWS.rst</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>5163</ins><span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>21</ins>:<ins>24</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/NEWS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8282<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>348515</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/PKG-INFO</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8282<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>116452</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7474<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/README.rst</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7474<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1760<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/TODO.rst</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1760<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/TODO.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.34<del>5</del>5<del>1</del><del>5</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/bin/</td><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>11</ins>345<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/bin/</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>936<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/bin/entrypoint</td><td class="diffline">20 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>936<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/bin/entrypoint</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2728<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/docker-compose.override.yml</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2728<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/docker-compose.override.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>611<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/docker-compose.yml</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>611<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/docker-compose.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.34<del>5</del>5<del>1</del><del>5</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/home/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>11</ins>345<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/home/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/home/.gitignore</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/home/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>327<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/home/.pypirc.in</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>327<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/home/.pypirc.in</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2043<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>03</del>:<del>11</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/pyproject.toml</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2043<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>21</ins>:<ins>24</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2961<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/requirements-build.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2961<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/requirements-build.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>812<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/requirements-build.txt.in</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>812<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/requirements-build.txt.in</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2914<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/requirements-devel.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2914<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/requirements-devel.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>186<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>03</del>:<del>11</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/requirements.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>186<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>21</ins>:<ins>25</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>348515</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/setup.cfg</td><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>117452</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>3</del><del>4</del>0<del>51</del>5<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/</td><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>1</ins>0<ins>74</ins>5<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>3</del>4<del>6</del>5<del>1</del><del>5</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/</td><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>1</ins><ins>1</ins>4<ins>4</ins>5<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8282<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/PKG-INFO</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8282<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>979<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/SOURCES.txt</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>979<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/dependency_links.txt</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/entry_points.txt</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>105<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/requires.txt</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>105<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/python_project_structure.egg-info/top_level.txt</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/python_project_structure.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>3</del><del>47</del>5<del>1</del>5<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/</td><td class="diffline">40 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>11</ins>5<ins>4</ins>5<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3395<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/__init__.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3395<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>223<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/__main__.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>223<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>3</del><del>47</del>5<del>1</del>5<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/newsfragments/</td><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>11</ins>5<ins>4</ins>5<ins>2</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/newsfragments/</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>91<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/newsfragments/.gitignore</td><td class="diffline">44 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>91<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/newsfragments/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.<del>347515</del><span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/tests/</td><td class="diffline">45 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.<ins>116452</ins><span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>72<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/tests/__init__.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>72<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3875<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/tests/test_cli.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3875<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/tests/test_cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>176<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>04</del>:<del>58</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/src/pythonprojectstructure/version.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>176<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>23</ins>:<ins>16</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/src/pythonprojectstructure/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2036<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<del>02</del>:<del>37</del>.000000<span class="dp">·</span>python-project-structure-0.8.<del>2</del>/tox.ini</td><td class="diffline">49 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>python-project-structure<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2036<span class="dp">·</span>2022-12-09<span class="dp">·</span>23:<ins>20</ins>:<ins>50</ins>.000000<span class="dp">·</span>python-project-structure-0.8.<ins>3</ins>/tox.ini</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/.dockerignore</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--.dockerignore"><span class="source">python-project-structure-0.8.3/.dockerignore</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--.dockerignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/.github/workflows/ci-cd.yml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--.github-workflows-ci-cd.yml"><span class="source">python-project-structure-0.8.3/.github/workflows/ci-cd.yml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--.github-workflows-ci-cd.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/.gitignore</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--.gitignore"><span class="source">python-project-structure-0.8.3/.gitignore</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/.gitlab-ci.yml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--.gitlab-ci.yml"><span class="source">python-project-structure-0.8.3/.gitlab-ci.yml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--.gitlab-ci.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/.pre-commit-config.yaml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--.pre-commit-config.yaml"><span class="source">python-project-structure-0.8.3/.pre-commit-config.yaml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--.pre-commit-config.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/Dockerfile</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--Dockerfile"><span class="source">python-project-structure-0.8.3/Dockerfile</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--Dockerfile">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/Dockerfile.devel</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--Dockerfile.devel"><span class="source">python-project-structure-0.8.3/Dockerfile.devel</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--Dockerfile.devel">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/LICENSE</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--LICENSE"><span class="source">python-project-structure-0.8.3/LICENSE</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">728 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/Makefile</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--Makefile"><span class="source">python-project-structure-0.8.3/Makefile</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--Makefile">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 9, 15 lines modified</td><td colspan="2">Offset 9, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">.DELETE_ON_ERROR:</td><td class="diffline">9 </td><td class="diffpresent">.DELETE_ON_ERROR:</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">MAKEFLAGS+=--warn-undefined-variables</td><td class="diffline">10 </td><td class="diffpresent">MAKEFLAGS+=--warn-undefined-variables</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">MAKEFLAGS+=--no-builtin-rules</td><td class="diffline">11 </td><td class="diffpresent">MAKEFLAGS+=--no-builtin-rules</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">PS1?=$$</td><td class="diffline">12 </td><td class="diffpresent">PS1?=$$</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>Project-specific<span class="dp">·</span>variables</td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>Project-specific<span class="dp">·</span>variables</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">GPG_SIGNING_KEYID=2EFF7CCE6828E359</td><td class="diffline">14 </td><td class="diffpresent">GPG_SIGNING_KEYID=2EFF7CCE6828E359</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">GITHUB_REPOSITORY_OWNER=rpatterson</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">CI_REGISTRY_IMAGE=registry.gitlab.com/<del>rpatterson</del>/python-project-structure</td><td class="diffline">16 </td><td class="diffpresent">CI_REGISTRY_IMAGE=registry.gitlab.com/<ins>$(GITHUB_REPOSIT</ins><ins>ORY_OWNER)</ins>/python-project-structure</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">#<span class="dp">·</span>Values<span class="dp">·</span>derived<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>environment</td><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>Values<span class="dp">·</span>derived<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>environment</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">USER_NAME:=$(shell<span class="dp">·</span>id<span class="dp">·</span>-u<span class="dp">·</span>-n)</td><td class="diffline">18 </td><td class="diffpresent">USER_NAME:=$(shell<span class="dp">·</span>id<span class="dp">·</span>-u<span class="dp">·</span>-n)</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">USER_FULL_NAME=$(shell<span class="dp">·</span>getent<span class="dp">·</span>passwd<span class="dp">·</span>&quot;$(USER_NAME)&quot;<span class="dp">·</span>|<span class="dp">·</span>cut<span class="dp">·</span>-d<span class="dp">·</span>&quot;:&quot;<span class="dp">·</span>-f<span class="dp">·</span>5<span class="dp">·</span>|<span class="dp">·</span>cut<span class="dp">·</span>-d<span class="dp">·</span>&quot;,&quot;<span class="dp">·</span>-f<span class="dp">·</span>1)</td><td class="diffline">19 </td><td class="diffpresent">USER_FULL_NAME=$(shell<span class="dp">·</span>getent<span class="dp">·</span>passwd<span class="dp">·</span>&quot;$(USER_NAME)&quot;<span class="dp">·</span>|<span class="dp">·</span>cut<span class="dp">·</span>-d<span class="dp">·</span>&quot;:&quot;<span class="dp">·</span>-f<span class="dp">·</span>5<span class="dp">·</span>|<span class="dp">·</span>cut<span class="dp">·</span>-d<span class="dp">·</span>&quot;,&quot;<span class="dp">·</span>-f<span class="dp">·</span>1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">ifeq<span class="dp">·</span>($(USER_FULL_NAME),)</td><td class="diffline">20 </td><td class="diffpresent">ifeq<span class="dp">·</span>($(USER_FULL_NAME),)</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">USER_FULL_NAME=$(USER_NAME)</td><td class="diffline">21 </td><td class="diffpresent">USER_FULL_NAME=$(USER_NAME)</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">endif</td><td class="diffline">22 </td><td class="diffpresent">endif</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">531 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/NEWS.rst</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--NEWS.rst"><span class="source">python-project-structure-0.8.3/NEWS.rst</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--NEWS.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">1 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.3<span class="dp">·</span>(2022-12-09)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">=========================================</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">No<span class="dp">·</span>significant<span class="dp">·</span>changes.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.3b0<span class="dp">·</span>(2022-12-09)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">===========================================</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">Misc</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">----</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">-<span class="dp">·</span>#37</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.2<span class="dp">·</span>(2022-12-09)</td><td class="diffline">9 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.2<span class="dp">·</span>(2022-12-09)</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">=========================================</td><td class="diffline">10 </td><td class="diffpresent">=========================================</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">No<span class="dp">·</span>significant<span class="dp">·</span>changes.</td><td class="diffline">11 </td><td class="diffpresent">No<span class="dp">·</span>significant<span class="dp">·</span>changes.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.2b2<span class="dp">·</span>(2022-12-09)</td><td class="diffline">12 </td><td class="diffpresent">Pythonprojectstructure<span class="dp">·</span>0.8.2b2<span class="dp">·</span>(2022-12-09)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">521 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/PKG-INFO</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--PKG-INFO"><span class="source">python-project-structure-0.8.3/PKG-INFO</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-project-structure</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-project-structure</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>project<span class="dp">·</span>structure<span class="dp">·</span>foundation<span class="dp">·</span>or<span class="dp">·</span>template,<span class="dp">·</span>CLI<span class="dp">·</span>console<span class="dp">·</span>scripts.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>project<span class="dp">·</span>structure<span class="dp">·</span>foundation<span class="dp">·</span>or<span class="dp">·</span>template,<span class="dp">·</span>CLI<span class="dp">·</span>console<span class="dp">·</span>scripts.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/rpatterson/python-project-structure</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/rpatterson/python-project-structure</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Ross<span class="dp">·</span>Patterson</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Ross<span class="dp">·</span>Patterson</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@rpatterson.net</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@rpatterson.net</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>Console</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>Console</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/README.rst</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--README.rst"><span class="source">python-project-structure-0.8.3/README.rst</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/TODO.rst</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--TODO.rst"><span class="source">python-project-structure-0.8.3/TODO.rst</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--TODO.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/bin/entrypoint</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--bin-entrypoint"><span class="source">python-project-structure-0.8.3/bin/entrypoint</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--bin-entrypoint">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/docker-compose.override.yml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--docker-compose.override.yml"><span class="source">python-project-structure-0.8.3/docker-compose.override.yml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--docker-compose.override.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/docker-compose.yml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--docker-compose.yml"><span class="source">python-project-structure-0.8.3/docker-compose.yml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--docker-compose.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">733 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/pyproject.toml</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--pyproject.toml"><span class="source">python-project-structure-0.8.3/pyproject.toml</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 15 lines modified</td><td colspan="2">Offset 12, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>local_scheme<span class="dp">·</span>=<span class="dp">·</span>&quot;no-local-version&quot;</td><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>local_scheme<span class="dp">·</span>=<span class="dp">·</span>&quot;no-local-version&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">[tool.commitizen]</td><td class="diffline">13 </td><td class="diffpresent">[tool.commitizen]</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>Parse<span class="dp">·</span>commit<span class="dp">·</span>messages<span class="dp">·</span>according<span class="dp">·</span>to<span class="dp">·</span>conventional<span class="dp">·</span>commits<span class="dp">·</span>to<span class="dp">·</span>decide<span class="dp">·</span>wether<span class="dp">·</span>the<span class="dp">·</span>next</td><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>Parse<span class="dp">·</span>commit<span class="dp">·</span>messages<span class="dp">·</span>according<span class="dp">·</span>to<span class="dp">·</span>conventional<span class="dp">·</span>commits<span class="dp">·</span>to<span class="dp">·</span>decide<span class="dp">·</span>wether<span class="dp">·</span>the<span class="dp">·</span>next</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>versin<span class="dp">·</span>tag<span class="dp">·</span>should<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>major,<span class="dp">·</span>minor<span class="dp">·</span>or<span class="dp">·</span>patch<span class="dp">·</span>bump<span class="dp">·</span>and<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>VCS<span class="dp">·</span>tag.<span class="dp">·</span><span class="dp">·</span>Also</td><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>versin<span class="dp">·</span>tag<span class="dp">·</span>should<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>major,<span class="dp">·</span>minor<span class="dp">·</span>or<span class="dp">·</span>patch<span class="dp">·</span>bump<span class="dp">·</span>and<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>VCS<span class="dp">·</span>tag.<span class="dp">·</span><span class="dp">·</span>Also</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">#<span class="dp">·</span>provides<span class="dp">·</span>VCS<span class="dp">·</span>hooks<span class="dp">·</span>to<span class="dp">·</span>enforce<span class="dp">·</span>that<span class="dp">·</span>commit<span class="dp">·</span>messages<span class="dp">·</span>comply<span class="dp">·</span>with<span class="dp">·</span>conventional<span class="dp">·</span>commits:</td><td class="diffline">16 </td><td class="diffpresent">#<span class="dp">·</span>provides<span class="dp">·</span>VCS<span class="dp">·</span>hooks<span class="dp">·</span>to<span class="dp">·</span>enforce<span class="dp">·</span>that<span class="dp">·</span>commit<span class="dp">·</span>messages<span class="dp">·</span>comply<span class="dp">·</span>with<span class="dp">·</span>conventional<span class="dp">·</span>commits:</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>https://commitizen-tools.github.io/commitizen/</td><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>https://commitizen-tools.github.io/commitizen/</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;cz_conventional_commits&quot;</td><td class="diffline">18 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;cz_conventional_commits&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.8.<del>2</del>&quot;</td><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.8.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">tag_format<span class="dp">·</span>=<span class="dp">·</span>&quot;v$version&quot;</td><td class="diffline">20 </td><td class="diffpresent">tag_format<span class="dp">·</span>=<span class="dp">·</span>&quot;v$version&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">annotated_tag<span class="dp">·</span>=<span class="dp">·</span>true</td><td class="diffline">21 </td><td class="diffpresent">annotated_tag<span class="dp">·</span>=<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">bump_message<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;\</td><td class="diffline">22 </td><td class="diffpresent">bump_message<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;\</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">build(release):<span class="dp">·</span>Version<span class="dp">·</span>$current_version<span class="dp">·</span>→<span class="dp">·</span>$new_version</td><td class="diffline">23 </td><td class="diffpresent">build(release):<span class="dp">·</span>Version<span class="dp">·</span>$current_version<span class="dp">·</span>→<span class="dp">·</span>$new_version</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">[actions<span class="dp">·</span>skip]</td><td class="diffline">24 </td><td class="diffpresent">[actions<span class="dp">·</span>skip]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">25 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/requirements-build.txt</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-build.txt"><span class="source">python-project-structure-0.8.3/requirements-build.txt</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-build.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/requirements-build.txt.in</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-build.txt.in"><span class="source">python-project-structure-0.8.3/requirements-build.txt.in</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-build.txt.in">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/requirements-devel.txt</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-devel.txt"><span class="source">python-project-structure-0.8.3/requirements-devel.txt</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--requirements-devel.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/setup.cfg</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--setup.cfg"><span class="source">python-project-structure-0.8.3/setup.cfg</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">597 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/src/python_project_structure.egg-info/PKG-INFO</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--src-python_project_structure.egg-info-PKG-INFO"><span class="source">python-project-structure-0.8.3/src/python_project_structure.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--src-python_project_structure.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-project-structure</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-project-structure</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>project<span class="dp">·</span>structure<span class="dp">·</span>foundation<span class="dp">·</span>or<span class="dp">·</span>template,<span class="dp">·</span>CLI<span class="dp">·</span>console<span class="dp">·</span>scripts.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>project<span class="dp">·</span>structure<span class="dp">·</span>foundation<span class="dp">·</span>or<span class="dp">·</span>template,<span class="dp">·</span>CLI<span class="dp">·</span>console<span class="dp">·</span>scripts.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/rpatterson/python-project-structure</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/rpatterson/python-project-structure</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Ross<span class="dp">·</span>Patterson</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Ross<span class="dp">·</span>Patterson</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@rpatterson.net</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@rpatterson.net</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>Console</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>Console</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/src/python_project_structure.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--src-python_project_structure.egg-info-SOURCES.txt"><span class="source">python-project-structure-0.8.3/src/python_project_structure.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--src-python_project_structure.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/src/pythonprojectstructure/__init__.py</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--src-pythonprojectstructure-__init__.py"><span class="source">python-project-structure-0.8.3/src/pythonprojectstructure/__init__.py</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--src-pythonprojectstructure-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/src/pythonprojectstructure/tests/test_cli.py</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--src-pythonprojectstructure-tests-test_cli.py"><span class="source">python-project-structure-0.8.3/src/pythonprojectstructure/tests/test_cli.py</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--src-pythonprojectstructure-tests-test_cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">python-project-structure-0.8.2/tox.ini</span> vs.</div>
+      <div id="python-project-structure--.-.-.tar---python-project-structure--.-.--tox.ini"><span class="source">python-project-structure-0.8.3/tox.ini</span>
+        <a class="anchor" href="#python-project-structure--.-.-.tar---python-project-structure--.-.--tox.ini">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

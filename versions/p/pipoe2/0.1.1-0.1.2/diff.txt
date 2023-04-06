@@ -1,0 +1,46 @@
+--- tmp/pipoe2-0.1.1.tar.gz
++++ tmp/pipoe2-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pipoe2-0.1.1.tar", max compression
+│ +gzip compressed data, was "pipoe2-0.1.2.tar", max compression
+│   --- pipoe2-0.1.1.tar
+├── +++ pipoe2-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,5 +1,5 @@
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 19:36:53.055989 pipoe2-0.1.1/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 19:31:37.931925 pipoe2-0.1.1/pipoe2/__init__.py
+│ │ --rw-r--r--   0        0        0     6489 2023-04-06 13:00:30.473060 pipoe2-0.1.1/pipoe2/__main__.py
+│ │ --rw-r--r--   0        0        0      503 2023-04-06 13:02:17.259947 pipoe2-0.1.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      502 1970-01-01 00:00:00.000000 pipoe2-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0        0 2023-04-05 19:36:53.055989 pipoe2-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0        0 2023-04-05 19:31:37.931925 pipoe2-0.1.2/pipoe2/__init__.py
+│ │ +-rw-r--r--   0        0        0     6509 2023-04-06 13:05:39.685875 pipoe2-0.1.2/pipoe2/__main__.py
+│ │ +-rw-r--r--   0        0        0      503 2023-04-06 13:06:00.361666 pipoe2-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      502 1970-01-01 00:00:00.000000 pipoe2-0.1.2/PKG-INFO
+│ │   --- pipoe2-0.1.1/pipoe2/__main__.py
+│ ├── +++ pipoe2-0.1.2/pipoe2/__main__.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -120,21 +120,21 @@
+│ │              progress.update(task, description="Creating MD5 hash")
+│ │              progress.advance(task)
+│ │              md5_returned = hashlib.md5(data).hexdigest()
+│ │              sha_returned = hashlib.sha256(data).hexdigest()
+│ │  
+│ │              progress.update(task, description="Creating Folder")
+│ │              progress.advance(task)
+│ │ -            Path(f"python3").mkdir(parents=True, exist_ok=True)
+│ │ +            Path(f"python3-{package}").mkdir(parents=True, exist_ok=True)
+│ │  
+│ │              
+│ │              progress.update(task, description="Creating bb File")
+│ │              progress.advance(task)
+│ │  
+│ │ -            f = open(f"python3/python3-{package}_{version}.bb", "w")
+│ │ +            f = open(f"python3-{package}/python3-{package}_{version}.bb", "w")
+│ │              progress.update(task, description="Writing bb File")
+│ │              progress.advance(task)
+│ │  
+│ │              builder = "setuptools3"
+│ │              if is_poetry:
+│ │                  builder = "python_poetry_core"

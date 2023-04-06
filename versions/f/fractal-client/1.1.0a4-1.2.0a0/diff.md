@@ -1,0 +1,985 @@
+# Comparing `tmp/fractal_client-1.1.0a4.tar.gz` & `tmp/fractal_client-1.2.0a0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fractal_client-1.1.0a4.tar", max compression
++gzip compressed data, was "fractal_client-1.2.0a0.tar", max compression
+```
+
+## Comparing `fractal_client-1.1.0a4.tar` & `fractal_client-1.2.0a0.tar`
+
+### file list
+
+```diff
+@@ -1,84 +1,84 @@
+--rw-r--r--   0        0        0     1576 2023-01-24 13:38:35.992771 fractal_client-1.1.0a4/LICENSE
+--rw-r--r--   0        0        0     2619 2023-02-21 11:48:17.528833 fractal_client-1.1.0a4/README.md
+--rw-r--r--   0        0        0       24 2023-03-16 09:21:41.648102 fractal_client-1.1.0a4/fractal/__init__.py
+--rw-r--r--   0        0        0      124 2023-01-24 13:38:35.992771 fractal_client-1.1.0a4/fractal/__main__.py
+--rw-r--r--   0        0        0     3308 2023-03-07 10:20:25.689818 fractal_client-1.1.0a4/fractal/authclient.py
+--rw-r--r--   0        0        0     3607 2023-02-21 10:48:25.467156 fractal_client-1.1.0a4/fractal/client.py
+--rw-r--r--   0        0        0     7295 2023-03-15 14:37:28.093556 fractal_client-1.1.0a4/fractal/cmd/__init__.py
+--rw-r--r--   0        0        0     4750 2023-03-15 12:00:23.815956 fractal_client-1.1.0a4/fractal/cmd/_dataset.py
+--rw-r--r--   0        0        0     4633 2023-02-24 10:01:10.056439 fractal_client-1.1.0a4/fractal/cmd/_job.py
+--rw-r--r--   0        0        0     5266 2023-03-15 14:37:28.093556 fractal_client-1.1.0a4/fractal/cmd/_project.py
+--rw-r--r--   0        0        0     5377 2023-03-07 10:20:30.985750 fractal_client-1.1.0a4/fractal/cmd/_task.py
+--rw-r--r--   0        0        0     4161 2023-03-06 14:58:53.922478 fractal_client-1.1.0a4/fractal/cmd/_user.py
+--rw-r--r--   0        0        0     8392 2023-03-07 10:20:30.985750 fractal_client-1.1.0a4/fractal/cmd/_workflow.py
+--rw-r--r--   0        0        0     2413 2023-02-20 15:10:43.839845 fractal_client-1.1.0a4/fractal/cmd/utils.py
+--rw-r--r--   0        0        0       42 2023-02-21 08:49:25.750218 fractal_client-1.1.0a4/fractal/common/.git
+--rw-r--r--   0        0        0      717 2023-03-06 13:52:20.997699 fractal_client-1.1.0a4/fractal/common/.github/workflows/ci.yml
+--rw-r--r--   0        0        0      364 2023-02-21 08:49:27.594201 fractal_client-1.1.0a4/fractal/common/.github/workflows/project-management.yml
+--rw-r--r--   0        0        0       34 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/.gitignore
+--rw-r--r--   0        0        0      620 2023-02-21 08:49:27.594201 fractal_client-1.1.0a4/fractal/common/.pre-commit-config.yaml
+--rw-r--r--   0        0        0     1964 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/README.md
+--rw-r--r--   0        0        0        0 2023-02-21 08:49:27.594201 fractal_client-1.1.0a4/fractal/common/__init__.py
+--rw-r--r--   0        0        0      149 2023-02-21 10:13:04.505672 fractal_client-1.1.0a4/fractal/common/__pycache__/__init__.cpython-310.pyc
+--rw-r--r--   0        0        0      147 2023-03-16 09:04:47.705157 fractal_client-1.1.0a4/fractal/common/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0       48 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/requirements.txt
+--rw-r--r--   0        0        0      525 2023-02-21 08:49:27.594201 fractal_client-1.1.0a4/fractal/common/schemas/__init__.py
+--rw-r--r--   0        0        0      374 2023-02-21 10:13:04.505672 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/__init__.cpython-310.pyc
+--rw-r--r--   0        0        0      372 2023-03-16 09:04:47.705157 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0      490 2023-03-03 14:13:42.839064 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/_validator.cpython-310.pyc
+--rw-r--r--   0        0        0     1253 2023-03-06 14:43:01.309210 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/_validators.cpython-310.pyc
+--rw-r--r--   0        0        0     1251 2023-03-16 09:04:47.793156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/_validators.cpython-39.pyc
+--rw-r--r--   0        0        0     2035 2023-03-06 13:52:30.237594 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/applyworkflow.cpython-310.pyc
+--rw-r--r--   0        0        0     2027 2023-03-16 09:04:47.705157 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/applyworkflow.cpython-39.pyc
+--rw-r--r--   0        0        0     3527 2023-02-21 10:13:04.645671 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/manifest.cpython-310.pyc
+--rw-r--r--   0        0        0     3515 2023-03-16 09:04:47.797156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/manifest.cpython-39.pyc
+--rw-r--r--   0        0        0     3701 2023-03-15 12:01:05.691490 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/project.cpython-310.pyc
+--rw-r--r--   0        0        0     3711 2023-03-16 09:04:47.797156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/project.cpython-39.pyc
+--rw-r--r--   0        0        0     1191 2023-03-06 14:07:54.286234 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/state.cpython-310.pyc
+--rw-r--r--   0        0        0     1185 2023-03-16 09:04:47.801156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/state.cpython-39.pyc
+--rw-r--r--   0        0        0     4998 2023-03-06 13:52:30.321592 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/task.cpython-310.pyc
+--rw-r--r--   0        0        0     4994 2023-03-16 09:04:47.805156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/task.cpython-39.pyc
+--rw-r--r--   0        0        0     1002 2023-03-06 13:52:30.325592 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/user.cpython-310.pyc
+--rw-r--r--   0        0        0     1024 2023-03-16 09:04:47.809156 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/user.cpython-39.pyc
+--rw-r--r--   0        0        0     3513 2023-03-06 14:38:40.632474 fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/workflow.cpython-310.pyc
+--rw-r--r--   0        0        0     1015 2023-03-06 14:42:57.941252 fractal_client-1.1.0a4/fractal/common/schemas/_validators.py
+--rw-r--r--   0        0        0     1716 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/schemas/applyworkflow.py
+--rw-r--r--   0        0        0     2817 2023-02-21 08:49:27.594201 fractal_client-1.1.0a4/fractal/common/schemas/manifest.py
+--rw-r--r--   0        0        0     2737 2023-03-15 12:00:37.523804 fractal_client-1.1.0a4/fractal/common/schemas/project.py
+--rw-r--r--   0        0        0      695 2023-03-06 14:07:44.150418 fractal_client-1.1.0a4/fractal/common/schemas/state.py
+--rw-r--r--   0        0        0     4484 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/schemas/task.py
+--rw-r--r--   0        0        0      546 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/schemas/user.py
+--rw-r--r--   0        0        0     2362 2023-03-06 14:35:04.563194 fractal_client-1.1.0a4/fractal/common/schemas/workflow.py
+--rw-r--r--   0        0        0      415 2023-03-06 13:52:30.189594 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/conftest.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0      415 2023-03-07 09:47:31.002846 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/conftest.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     1578 2023-03-06 13:52:30.221594 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     1578 2023-03-07 09:47:31.038845 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     3382 2023-03-15 10:53:32.644401 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_dataset.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0      859 2023-03-06 13:52:30.469591 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0      859 2023-03-07 09:47:31.354842 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     2236 2023-03-06 13:52:30.469591 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     1258 2023-03-15 10:53:32.648401 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     1763 2023-03-06 14:08:06.438014 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     1763 2023-03-07 09:47:31.358842 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     2222 2023-03-06 13:52:30.473591 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     2222 2023-03-07 09:47:31.358842 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     1317 2023-03-06 13:52:30.473591 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     1317 2023-03-07 09:47:31.358842 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0     2579 2023-03-06 14:43:41.164713 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.1.pyc
+--rw-r--r--   0        0        0     2579 2023-03-07 09:47:31.362842 fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.2.pyc
+--rw-r--r--   0        0        0      139 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/tests/conftest.py
+--rw-r--r--   0        0        0     1065 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/tests/test_applyworkflow.py
+--rw-r--r--   0        0        0     2144 2023-03-14 13:42:31.592919 fractal_client-1.1.0a4/fractal/common/tests/test_dataset.py
+--rw-r--r--   0        0        0      541 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/tests/test_manifest.py
+--rw-r--r--   0        0        0      704 2023-03-14 13:42:31.592919 fractal_client-1.1.0a4/fractal/common/tests/test_project.py
+--rw-r--r--   0        0        0      551 2023-03-06 14:07:44.150418 fractal_client-1.1.0a4/fractal/common/tests/test_state.py
+--rw-r--r--   0        0        0      748 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/tests/test_task.py
+--rw-r--r--   0        0        0      583 2023-03-06 13:52:21.001699 fractal_client-1.1.0a4/fractal/common/tests/test_user.py
+--rw-r--r--   0        0        0     2361 2023-03-06 14:42:57.941252 fractal_client-1.1.0a4/fractal/common/tests/test_workflow.py
+--rw-r--r--   0        0        0     1285 2023-02-13 07:58:20.733904 fractal_client-1.1.0a4/fractal/config.py
+--rw-r--r--   0        0        0     1609 2023-01-24 13:38:35.996771 fractal_client-1.1.0a4/fractal/interface.py
+--rw-r--r--   0        0        0    20577 2023-03-15 14:37:28.093556 fractal_client-1.1.0a4/fractal/parser.py
+--rw-r--r--   0        0        0     1265 2023-02-03 10:03:12.204782 fractal_client-1.1.0a4/fractal/response.py
+--rw-r--r--   0        0        0     1824 2023-03-16 09:21:41.648102 fractal_client-1.1.0a4/pyproject.toml
+--rw-r--r--   0        0        0     3872 1970-01-01 00:00:00.000000 fractal_client-1.1.0a4/setup.py
+--rw-r--r--   0        0        0     3512 1970-01-01 00:00:00.000000 fractal_client-1.1.0a4/PKG-INFO
++-rw-r--r--   0        0        0     1576 2023-01-24 13:38:35.992771 fractal_client-1.2.0a0/LICENSE
++-rw-r--r--   0        0        0     2619 2023-02-21 11:48:17.528833 fractal_client-1.2.0a0/README.md
++-rw-r--r--   0        0        0       24 2023-04-06 13:06:33.921838 fractal_client-1.2.0a0/fractal/__init__.py
++-rw-r--r--   0        0        0      124 2023-01-24 13:38:35.992771 fractal_client-1.2.0a0/fractal/__main__.py
++-rw-r--r--   0        0        0     3308 2023-03-07 10:20:25.689818 fractal_client-1.2.0a0/fractal/authclient.py
++-rw-r--r--   0        0        0     3607 2023-02-21 10:48:25.467156 fractal_client-1.2.0a0/fractal/client.py
++-rw-r--r--   0        0        0     7295 2023-03-15 14:37:28.093556 fractal_client-1.2.0a0/fractal/cmd/__init__.py
++-rw-r--r--   0        0        0     4750 2023-03-15 12:00:23.815956 fractal_client-1.2.0a0/fractal/cmd/_dataset.py
++-rw-r--r--   0        0        0     4633 2023-02-24 10:01:10.056439 fractal_client-1.2.0a0/fractal/cmd/_job.py
++-rw-r--r--   0        0        0     5091 2023-04-06 13:06:04.654184 fractal_client-1.2.0a0/fractal/cmd/_project.py
++-rw-r--r--   0        0        0     5377 2023-03-07 10:20:30.985750 fractal_client-1.2.0a0/fractal/cmd/_task.py
++-rw-r--r--   0        0        0     4463 2023-04-06 13:06:04.654184 fractal_client-1.2.0a0/fractal/cmd/_user.py
++-rw-r--r--   0        0        0     8392 2023-03-07 10:20:30.985750 fractal_client-1.2.0a0/fractal/cmd/_workflow.py
++-rw-r--r--   0        0        0     2413 2023-02-20 15:10:43.839845 fractal_client-1.2.0a0/fractal/cmd/utils.py
++-rw-r--r--   0        0        0       42 2023-02-21 08:49:25.750218 fractal_client-1.2.0a0/fractal/common/.git
++-rw-r--r--   0        0        0      717 2023-03-06 13:52:20.997699 fractal_client-1.2.0a0/fractal/common/.github/workflows/ci.yml
++-rw-r--r--   0        0        0      364 2023-02-21 08:49:27.594201 fractal_client-1.2.0a0/fractal/common/.github/workflows/project-management.yml
++-rw-r--r--   0        0        0       34 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/.gitignore
++-rw-r--r--   0        0        0      620 2023-02-21 08:49:27.594201 fractal_client-1.2.0a0/fractal/common/.pre-commit-config.yaml
++-rw-r--r--   0        0        0     1964 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/README.md
++-rw-r--r--   0        0        0        0 2023-02-21 08:49:27.594201 fractal_client-1.2.0a0/fractal/common/__init__.py
++-rw-r--r--   0        0        0      149 2023-02-21 10:13:04.505672 fractal_client-1.2.0a0/fractal/common/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      147 2023-03-16 09:04:47.705157 fractal_client-1.2.0a0/fractal/common/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0       48 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/requirements.txt
++-rw-r--r--   0        0        0      525 2023-02-21 08:49:27.594201 fractal_client-1.2.0a0/fractal/common/schemas/__init__.py
++-rw-r--r--   0        0        0      374 2023-02-21 10:13:04.505672 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      372 2023-03-16 09:04:47.705157 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0      490 2023-03-03 14:13:42.839064 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/_validator.cpython-310.pyc
++-rw-r--r--   0        0        0     1253 2023-03-06 14:43:01.309210 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/_validators.cpython-310.pyc
++-rw-r--r--   0        0        0     1251 2023-03-16 09:04:47.793156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/_validators.cpython-39.pyc
++-rw-r--r--   0        0        0     2035 2023-03-06 13:52:30.237594 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/applyworkflow.cpython-310.pyc
++-rw-r--r--   0        0        0     2027 2023-03-16 09:04:47.705157 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/applyworkflow.cpython-39.pyc
++-rw-r--r--   0        0        0     3527 2023-02-21 10:13:04.645671 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/manifest.cpython-310.pyc
++-rw-r--r--   0        0        0     3515 2023-03-16 09:04:47.797156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/manifest.cpython-39.pyc
++-rw-r--r--   0        0        0     3701 2023-03-15 12:01:05.691490 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/project.cpython-310.pyc
++-rw-r--r--   0        0        0     3711 2023-03-16 09:04:47.797156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/project.cpython-39.pyc
++-rw-r--r--   0        0        0     1191 2023-03-06 14:07:54.286234 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/state.cpython-310.pyc
++-rw-r--r--   0        0        0     1185 2023-03-16 09:04:47.801156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/state.cpython-39.pyc
++-rw-r--r--   0        0        0     4998 2023-03-06 13:52:30.321592 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/task.cpython-310.pyc
++-rw-r--r--   0        0        0     4994 2023-03-16 09:04:47.805156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/task.cpython-39.pyc
++-rw-r--r--   0        0        0     1002 2023-03-06 13:52:30.325592 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/user.cpython-310.pyc
++-rw-r--r--   0        0        0     1024 2023-03-16 09:04:47.809156 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/user.cpython-39.pyc
++-rw-r--r--   0        0        0     3513 2023-03-06 14:38:40.632474 fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/workflow.cpython-310.pyc
++-rw-r--r--   0        0        0     1616 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/schemas/_validators.py
++-rw-r--r--   0        0        0     1716 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/schemas/applyworkflow.py
++-rw-r--r--   0        0        0     2817 2023-02-21 08:49:27.594201 fractal_client-1.2.0a0/fractal/common/schemas/manifest.py
++-rw-r--r--   0        0        0     2527 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/schemas/project.py
++-rw-r--r--   0        0        0      695 2023-03-06 14:07:44.150418 fractal_client-1.2.0a0/fractal/common/schemas/state.py
++-rw-r--r--   0        0        0     4484 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/schemas/task.py
++-rw-r--r--   0        0        0      998 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/schemas/user.py
++-rw-r--r--   0        0        0     2709 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/schemas/workflow.py
++-rw-r--r--   0        0        0      415 2023-03-06 13:52:30.189594 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/conftest.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0      415 2023-03-07 09:47:31.002846 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/conftest.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     1578 2023-03-06 13:52:30.221594 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     1578 2023-03-07 09:47:31.038845 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     3382 2023-03-15 10:53:32.644401 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_dataset.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0      859 2023-03-06 13:52:30.469591 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0      859 2023-03-07 09:47:31.354842 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     2236 2023-03-06 13:52:30.469591 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     1258 2023-03-15 10:53:32.648401 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     1763 2023-03-06 14:08:06.438014 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     1763 2023-03-07 09:47:31.358842 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     2222 2023-03-06 13:52:30.473591 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     2222 2023-03-07 09:47:31.358842 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     1317 2023-03-06 13:52:30.473591 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     1317 2023-03-07 09:47:31.358842 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0     2579 2023-03-06 14:43:41.164713 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.1.pyc
++-rw-r--r--   0        0        0     2579 2023-03-07 09:47:31.362842 fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.2.pyc
++-rw-r--r--   0        0        0      139 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/tests/conftest.py
++-rw-r--r--   0        0        0     1065 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/tests/test_applyworkflow.py
++-rw-r--r--   0        0        0     2144 2023-03-14 13:42:31.592919 fractal_client-1.2.0a0/fractal/common/tests/test_dataset.py
++-rw-r--r--   0        0        0      541 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/tests/test_manifest.py
++-rw-r--r--   0        0        0      525 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/tests/test_project.py
++-rw-r--r--   0        0        0      551 2023-03-06 14:07:44.150418 fractal_client-1.2.0a0/fractal/common/tests/test_state.py
++-rw-r--r--   0        0        0      748 2023-03-06 13:52:21.001699 fractal_client-1.2.0a0/fractal/common/tests/test_task.py
++-rw-r--r--   0        0        0     1224 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/tests/test_user.py
++-rw-r--r--   0        0        0     2838 2023-04-06 11:30:39.096144 fractal_client-1.2.0a0/fractal/common/tests/test_workflow.py
++-rw-r--r--   0        0        0     1285 2023-02-13 07:58:20.733904 fractal_client-1.2.0a0/fractal/config.py
++-rw-r--r--   0        0        0     1609 2023-01-24 13:38:35.996771 fractal_client-1.2.0a0/fractal/interface.py
++-rw-r--r--   0        0        0    20730 2023-04-06 13:06:04.654184 fractal_client-1.2.0a0/fractal/parser.py
++-rw-r--r--   0        0        0     1265 2023-02-03 10:03:12.204782 fractal_client-1.2.0a0/fractal/response.py
++-rw-r--r--   0        0        0     1824 2023-04-06 13:06:33.917838 fractal_client-1.2.0a0/pyproject.toml
++-rw-r--r--   0        0        0     3872 1970-01-01 00:00:00.000000 fractal_client-1.2.0a0/setup.py
++-rw-r--r--   0        0        0     3512 1970-01-01 00:00:00.000000 fractal_client-1.2.0a0/PKG-INFO
+```
+
+### Comparing `fractal_client-1.1.0a4/LICENSE` & `fractal_client-1.2.0a0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/README.md` & `fractal_client-1.2.0a0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/authclient.py` & `fractal_client-1.2.0a0/fractal/authclient.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/client.py` & `fractal_client-1.2.0a0/fractal/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/__init__.py` & `fractal_client-1.2.0a0/fractal/cmd/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_dataset.py` & `fractal_client-1.2.0a0/fractal/cmd/_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_job.py` & `fractal_client-1.2.0a0/fractal/cmd/_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_project.py` & `fractal_client-1.2.0a0/fractal/cmd/_project.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,21 +18,20 @@
+ from ..interface import RichJsonInterface
+ from ..response import check_response
+ 
+ 
+ async def project_create(
+     client: AuthClient,
+     name: str,
+-    path: str,
+     dataset: Optional[str] = None,
+     batch: bool = False,
+     **kwargs,
+ ) -> BaseInterface:
+     # Prepare a ProjectCreate request body
+-    project_dict = dict(name=name, project_dir=path)
++    project_dict = dict(name=name)
+     if dataset:
+         project_dict["default_dataset_name"] = dataset
+     project = ProjectCreate(**project_dict)
+     logging.info(project)
+     # Send API request
+     res = await client.post(
+         f"{settings.BASE_URL}/project/",
+@@ -74,15 +73,14 @@
+             read_only_icon = "❌"
+ 
+         p_dataset_list = str([dataset.name for dataset in p.dataset_list])
+ 
+         table.add_row(
+             str(p.id),
+             p.name,
+-            p.project_dir,
+             str(p_dataset_list),
+             read_only_icon,
+         )
+ 
+     return RichConsoleInterface(retcode=0, data=table)
+ 
+ 
+@@ -140,24 +138,21 @@
+     return PrintInterface(retcode=0, data="")
+ 
+ 
+ async def project_edit(
+     client: AuthClient,
+     project_id: int,
+     new_name: Optional[str] = None,
+-    new_project_dir: Optional[str] = None,
+     make_read_only: bool = False,
+     remove_read_only: bool = False,
+     **kwargs,
+ ) -> Union[RichJsonInterface, PrintInterface]:
+     update = {}
+     if new_name:
+         update["name"] = new_name
+-    if new_project_dir:
+-        update["project_dir"] = new_project_dir
+     if make_read_only:
+         update["read_only"] = True
+     if remove_read_only:
+         update["read_only"] = False
+ 
+     project_update = ProjectUpdate(**update)  # validation
+     payload = project_update.dict(exclude_unset=True)
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_task.py` & `fractal_client-1.2.0a0/fractal/cmd/_task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_user.py` & `fractal_client-1.2.0a0/fractal/cmd/_user.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -12,25 +12,28 @@
+ 
+ 
+ async def user_register(
+     client: AuthClient,
+     new_email: str,
+     new_password: Optional[str] = None,
+     slurm_user: Optional[str] = None,
++    cache_dir: Optional[str] = None,
+     superuser: bool = False,
+     batch: bool = False,
+     **kwargs,
+ ) -> Union[RichJsonInterface, PrintInterface]:
+ 
+     user_dict = dict(
+         email=new_email,
+         password=new_password,
+     )
+     if slurm_user:
+         user_dict["slurm_user"] = slurm_user
++    if cache_dir:
++        user_dict["cache_dir"] = cache_dir
+     new_user = UserCreate(**user_dict)
+ 
+     from getpass import getpass
+ 
+     if new_password is None:
+         new_password = getpass()
+         confirm_new_password = getpass("Confirm password: ")
+@@ -82,24 +85,28 @@
+ 
+ async def user_edit(
+     client: AuthClient,
+     user_id: str,
+     new_email: Optional[str] = None,
+     new_password: Optional[str] = None,
+     new_slurm_user: Optional[str] = None,
++    new_cache_dir: Optional[str] = None,
+     make_superuser: bool = False,
+     remove_superuser: bool = False,
+     **kwargs,
+ ) -> Union[RichJsonInterface, PrintInterface]:
+-
+-    user_update = UserUpdate(
++    user_dict = dict(
+         email=new_email,
+         password=new_password,
+-        slurm_user=new_slurm_user,
+     )
++    if new_cache_dir is not None:
++        user_dict["cache_dir"] = new_cache_dir
++    if new_slurm_user is not None:
++        user_dict["slurm_user"] = new_slurm_user
++    user_update = UserUpdate(**user_dict)
+ 
+     if make_superuser:
+         user_update.is_superuser = True
+     if remove_superuser:
+         user_update.is_superuser = False
+ 
+     payload = user_update.dict(exclude_unset=True, exclude_none=True)
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/_workflow.py` & `fractal_client-1.2.0a0/fractal/cmd/_workflow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/cmd/utils.py` & `fractal_client-1.2.0a0/fractal/cmd/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/.github/workflows/ci.yml` & `fractal_client-1.2.0a0/fractal/common/.github/workflows/ci.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/.pre-commit-config.yaml` & `fractal_client-1.2.0a0/fractal/common/.pre-commit-config.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/README.md` & `fractal_client-1.2.0a0/fractal/common/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__init__.py` & `fractal_client-1.2.0a0/fractal/common/schemas/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/_validators.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/_validators.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/_validators.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/_validators.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/applyworkflow.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/applyworkflow.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/applyworkflow.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/applyworkflow.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/manifest.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/manifest.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/manifest.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/manifest.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/project.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/project.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/project.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/project.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/state.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/state.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/state.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/state.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/task.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/task.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/task.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/task.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/user.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/user.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/user.cpython-39.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/user.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/__pycache__/workflow.cpython-310.pyc` & `fractal_client-1.2.0a0/fractal/common/schemas/__pycache__/workflow.cpython-310.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/_validators.py` & `fractal_client-1.2.0a0/fractal/common/schemas/_validators.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,7 +1,10 @@
++import os
++
++
+ def valstr(attribute: str):
+     """
+     Check that a string attribute is not an empty string, and remove the
+     leading and trailing whitespace characters.
+     """
+ 
+     def val(string: str):
+@@ -28,7 +31,28 @@
+             raise ValueError(
+                 f"Integer attribute '{attribute}' cannot be less than "
+                 f"{min_val} (given {integer})"
+             )
+         return integer
+ 
+     return val
++
++
++def val_absolute_path(attribute: str):
++    """
++    Check that a string attribute is an absolute path
++    """
++
++    def val(string: str):
++        if string is None:
++            raise ValueError(f"String attribute '{attribute}' cannot be None")
++        s = string.strip()
++        if not s:
++            raise ValueError(f"String attribute '{attribute}' cannot be empty")
++        if not os.path.isabs(s):
++            raise ValueError(
++                f"String attribute '{attribute}' must be an absolute path "
++                f"(given '{s}')."
++            )
++        return s
++
++    return val
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/applyworkflow.py` & `fractal_client-1.2.0a0/fractal/common/schemas/applyworkflow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/manifest.py` & `fractal_client-1.2.0a0/fractal/common/schemas/manifest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/project.py` & `fractal_client-1.2.0a0/fractal/common/schemas/project.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ from typing import List
+ from typing import Optional
+ 
+ from pydantic import Field
+ from pydantic import validator
+ from sqlmodel import SQLModel
+ 
++from ._validators import val_absolute_path
+ from ._validators import valstr
+ 
+ 
+ __all__ = (
+     "ProjectCreate",
+     "ProjectRead",
+     "ProjectUpdate",
+@@ -32,20 +33,20 @@
+     """
+ 
+     path: str
+ 
+ 
+ class ResourceCreate(_ResourceBase):
+     # Validators
+-    _path = validator("path", allow_reuse=True)(valstr("path"))
++    _path = validator("path", allow_reuse=True)(val_absolute_path("path"))
+ 
+ 
+ class ResourceUpdate(_ResourceBase):
+     # Validators
+-    _path = validator("path", allow_reuse=True)(valstr("path"))
++    _path = validator("path", allow_reuse=True)(val_absolute_path("path"))
+ 
+ 
+ class ResourceRead(_ResourceBase):
+     id: int
+     dataset_id: int
+ 
+ 
+@@ -97,44 +98,35 @@
+ 
+ class _ProjectBase(SQLModel):
+     """
+     Base class for Project
+ 
+     Attributes:
+         name: TBD
+-        project_dir: TBD
+         read_only: TBD
+     """
+ 
+     name: str
+-    project_dir: str
+     read_only: bool = False
+ 
+ 
+ class ProjectCreate(_ProjectBase):
+     default_dataset_name: Optional[str] = "default"
+ 
+     # Validators
+     _name = validator("name", allow_reuse=True)(valstr("name"))
+-    _project_dir = validator("project_dir", allow_reuse=True)(
+-        valstr("project_dir")
+-    )
+     _default_dataset_name = validator(
+         "default_dataset_name", allow_reuse=True
+     )(valstr("default_dataset_name"))
+ 
+ 
+ class ProjectRead(_ProjectBase):
+     id: int
+     dataset_list: List[DatasetRead] = []
+ 
+ 
+ class ProjectUpdate(_ProjectBase):
+     name: Optional[str]
+-    project_dir: Optional[str]
+     read_only: Optional[bool]
+ 
+     # Validators
+     _name = validator("name", allow_reuse=True)(valstr("name"))
+-    _project_dir = validator("project_dir", allow_reuse=True)(
+-        valstr("project_dir")
+-    )
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/state.py` & `fractal_client-1.2.0a0/fractal/common/schemas/state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/task.py` & `fractal_client-1.2.0a0/fractal/common/schemas/task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/schemas/workflow.py` & `fractal_client-1.2.0a0/fractal/common/schemas/workflow.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -24,29 +24,30 @@
+     "WorkflowTaskExport",
+     "WorkflowTaskRead",
+     "WorkflowTaskUpdate",
+ )
+ 
+ 
+ class _WorkflowTaskBase(SQLModel):
+-    order: Optional[int]
++
+     meta: Optional[Dict[str, Any]] = None
+     args: Optional[Dict[str, Any]] = None
+ 
+ 
+ class WorkflowTaskCreate(_WorkflowTaskBase):
++    order: Optional[int]
+     task_id: int
+-
+     # Validators
+     _order = validator("order", allow_reuse=True)(valint("order", min_val=0))
+     _task_id = validator("task_id", allow_reuse=True)(valint("task_id"))
+ 
+ 
+ class WorkflowTaskRead(_WorkflowTaskBase):
+     id: int
++    order: Optional[int]
+     workflow_id: int
+     task_id: int
+     task: TaskRead
+ 
+ 
+ class WorkflowTaskImport(_WorkflowTaskBase):
+     task: TaskImport
+@@ -54,16 +55,14 @@
+ 
+ class WorkflowTaskExport(_WorkflowTaskBase):
+     task: TaskExport
+ 
+ 
+ class WorkflowTaskUpdate(_WorkflowTaskBase):
+     # Validators
+-    _order = validator("order", allow_reuse=True)(valint("order", min_val=0))
+-
+     @validator("meta")
+     def check_no_parallelisation_level(cls, m):
+         if "parallelization_level" in m:
+             raise ValueError(
+                 "Overriding task parallelization level currently not allowed"
+             )
+         return m
+@@ -87,18 +86,27 @@
+     _project_id = validator("project_id", allow_reuse=True)(
+         valint("project_id")
+     )
+ 
+ 
+ class WorkflowUpdate(_WorkflowBase):
+     name: Optional[str]
++    reordered_workflowtask_ids: Optional[List[int]]
+ 
+     # Validators
+     _name = validator("name", allow_reuse=True)(valstr("name"))
+ 
++    @validator("reordered_workflowtask_ids")
++    def check_positive_and_unique(cls, value):
++        if any(i < 0 for i in value):
++            raise ValueError("Negative `id` in `reordered_workflowtask_ids`")
++        if len(value) != len(set(value)):
++            raise ValueError("`reordered_workflowtask_ids` has repetitions")
++        return value
++
+ 
+ class WorkflowImport(_WorkflowBase):
+     task_list: List[WorkflowTaskImport]
+ 
+     # Validators
+     _name = validator("name", allow_reuse=True)(valstr("name"))
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_applyworkflow.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_dataset.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_dataset.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_manifest.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_project.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_state.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_task.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_user.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.1.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.1.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.2.pyc` & `fractal_client-1.2.0a0/fractal/common/tests/__pycache__/test_workflow.cpython-310-pytest-7.2.2.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_applyworkflow.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_applyworkflow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_dataset.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_manifest.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_manifest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_state.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_task.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/common/tests/test_workflow.py` & `fractal_client-1.2.0a0/fractal/common/tests/test_workflow.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -7,14 +7,15 @@
+ from schemas import WorkflowCreate
+ from schemas import WorkflowImport
+ from schemas import WorkflowRead
+ from schemas import WorkflowTaskCreate
+ from schemas import WorkflowTaskImport
+ from schemas import WorkflowTaskRead
+ from schemas import WorkflowTaskUpdate
++from schemas import WorkflowUpdate
+ 
+ 
+ def test_workflow_task_create():
+     # Successful creation
+     t = WorkflowTaskCreate(task_id=1)
+     debug(t)
+     # Missing arguments
+@@ -74,7 +75,17 @@
+     wft1 = WorkflowTaskRead(id=1, task_id=1, workflow_id=1, task=t1)
+     wft2 = WorkflowTaskRead(id=2, task_id=1, workflow_id=1, task=t1)
+     # Create a WorkflowRead
+     w = WorkflowRead(
+         id=1, name="workflow", project_id=1, task_list=[wft1, wft2]
+     )
+     debug(w)
++
++
++def test_workflow_update():
++    WorkflowUpdate(name="workflow", reordered_workflowtask_ids=[0, 1, 3, 2])
++    WorkflowUpdate(name="workflow")
++    WorkflowUpdate(reordered_workflowtask_ids=[0, 1, 3, 2])
++    with pytest.raises(ValidationError):
++        WorkflowUpdate(name="workflow", reordered_workflowtask_ids=[1, 3, 1])
++    with pytest.raises(ValidationError):
++        WorkflowUpdate(name="workflow", reordered_workflowtask_ids=[1, 3, -1])
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/config.py` & `fractal_client-1.2.0a0/fractal/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/interface.py` & `fractal_client-1.2.0a0/fractal/interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/fractal/parser.py` & `fractal_client-1.2.0a0/fractal/parser.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -63,21 +63,14 @@
+ project_new_parser = project_subparsers.add_parser(
+     "new",
+     description="Create new project",
+     allow_abbrev=False,
+ )
+ project_new_parser.add_argument("name", help="Name of new project", type=str)
+ project_new_parser.add_argument(
+-    "path",
+-    help=(
+-        "Project directory of new project. "
+-        "New datasets will be written here."
+-    ),
+-)
+-project_new_parser.add_argument(
+     "-d",
+     "--dataset",
+     help=(
+         "Name of new dataset to create. "
+         "By default, the dataset `default` is created."
+     ),
+ )
+@@ -134,17 +127,14 @@
+ )
+ project_edit_parser.add_argument(
+     "project_id", type=int, help="ID of the project to edit"
+ )
+ project_edit_parser.add_argument(
+     "--new-name", help="New project name", type=str, required=False
+ )
+-project_edit_parser.add_argument(
+-    "--new-project-dir", help="New project directory", type=str, required=False
+-)
+ project_edit_parser_read_only = (
+     project_edit_parser.add_mutually_exclusive_group()
+ )
+ project_edit_parser_read_only.add_argument(
+     "--make-read-only",
+     help="Set the read-only flag for this project",
+     action="store_true",
+@@ -717,14 +707,22 @@
+ user_register_parser.add_argument(
+     "new_email", help="Email to be used as username"
+ )
+ user_register_parser.add_argument(
+     "new_password", help="Password for the new user"
+ )
+ user_register_parser.add_argument(
++    "--cache-dir",
++    help=(
++        "User's cache directory "
++        "(necessary for workflow execution when using the SLURM backend)."
++    ),
++    required=False,
++)
++user_register_parser.add_argument(
+     "--slurm-user",
+     help="Username to login into SLURM cluster",
+     required=False,
+ )
+ user_register_parser.add_argument(
+     "--superuser",
+     help="Give superuser privileges to the new user",
+@@ -757,14 +755,23 @@
+ user_edit_parser.add_argument(
+     "--new-email", help="New email address", type=str, required=False
+ )
+ user_edit_parser.add_argument(
+     "--new-password", help="New password", type=str, required=False
+ )
+ user_edit_parser.add_argument(
++    "--new-cache-dir",
++    help=(
++        "New user's cache directory "
++        "(necessary for workflow execution when using the SLURM backend)."
++    ),
++    type=str,
++    required=False,
++)
++user_edit_parser.add_argument(
+     "--new-slurm-user", help="New SLURM username", type=str, required=False
+ )
+ 
+ user_edit_parser_superuser = user_edit_parser.add_mutually_exclusive_group()
+ user_edit_parser_superuser.add_argument(
+     "--make-superuser",
+     help="Give superuser privileges to user",
+```
+
+### Comparing `fractal_client-1.1.0a4/fractal/response.py` & `fractal_client-1.2.0a0/fractal/response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fractal_client-1.1.0a4/pyproject.toml` & `fractal_client-1.2.0a0/pyproject.toml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "fractal-client"
+-version = "1.1.0a4"
++version = "1.2.0a0"
+ description = "Client component of the Fractal analytics platform"
+ authors = [
+     "Tommaso Comparin <tommaso.comparin@exact-lab.it>",
+     "Marco Franzon <marco.franzon@exact-lab.it>",
+     "Jacopo Nespolo <jacopo.nespolo@exact-lab.it>",
+ ]
+ readme = "README.md"
+@@ -43,15 +43,15 @@
+ requires = ["poetry-core"]
+ build-backend = "poetry.core.masonry.api"
+ 
+ [tool.pytest.ini_options]
+ asyncio_mode = "auto"
+ 
+ [tool.bumpver]
+-current_version = "1.1.0a4"
++current_version = "1.2.0a0"
+ version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+ commit_message = "bump version {old_version} -> {new_version}"
+ commit = true
+ tag = true
+ push = true
+ 
+ [tool.bumpver.file_patterns]
+```
+
+### Comparing `fractal_client-1.1.0a4/setup.py` & `fractal_client-1.2.0a0/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -23,15 +23,15 @@
+ entry_points = \
+ {'console_scripts': ['fractal = fractal.__main__:run',
+                      'fractal_new = fractal.new:run',
+                      'fractal_old = fractal.old:run']}
+ 
+ setup_kwargs = {
+     'name': 'fractal-client',
+-    'version': '1.1.0a4',
++    'version': '1.2.0a0',
+     'description': 'Client component of the Fractal analytics platform',
+     'long_description': '# Fractal Client\n\n[![PyPI version](https://img.shields.io/pypi/v/fractal-client?color=gree)](https://pypi.org/project/fractal-client/)\n[![CI Status](https://github.com/fractal-analytics-platform/fractal/actions/workflows/ci.yml/badge.svg)](https://github.com/fractal-analytics-platform/fractal/actions/workflows/ci.yml)\n[![Coverage](https://raw.githubusercontent.com/fractal-analytics-platform/fractal/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/fractal-analytics-platform/fractal/blob/python-coverage-comment-action-data/htmlcov/index.html)\n[![Documentation Status](https://github.com/fractal-analytics-platform/fractal/actions/workflows/documentation.yaml/badge.svg)](https://fractal-analytics-platform.github.io/fractal)\n[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n\nFractal is a framework to process high-content imaging data at scale and prepare it for interactive visualization.\n\n![Fractal_Overview](https://fractal-analytics-platform.github.io/assets/fractal_overview.jpg)\n\nFractal provides distributed workflows that convert TBs of image data into OME-Zarr files. The platform then processes the 3D image data by applying tasks like illumination correction, maximum intensity projection, 3D segmentation using [cellpose](https://cellpose.readthedocs.io/en/latest/) and measurements using [napari workflows](https://github.com/haesleinhuepf/napari-workflows). The pyramidal OME-Zarr files enable interactive visualization in the napari viewer.\n\nThis is the repository that contains the **Fractal client**. Find more information about Fractal in general and the other repositories at the [Fractal home page](https://fractal-analytics-platform.github.io).\n\n## Documentation\n\nSee https://fractal-analytics-platform.github.io/fractal.\n\n# Contributors and license\n\nUnless otherwise stated in each individual module, all Fractal components are released according to a BSD 3-Clause License, and Copyright is with Friedrich Miescher Institute for Biomedical Research and University of Zurich.\n\nFractal was conceived in the Liberali Lab at the Friedrich Miescher Institute for Biomedical Research and in the Pelkmans Lab at the University of Zurich (both in Switzerland). The project lead is with [@gusqgm](https://github.com/gusqgm) & [@jluethi](https://github.com/jluethi). The core development is done under contract by [@mfranzon](https://github.com/mfranzon), [@tcompa](https://github.com/tcompa) & [@jacopo-exact](https://github.com/jacopo-exact) from [eXact lab S.r.l.](exact-lab.it).\n',
+     'author': 'Tommaso Comparin',
+     'author_email': 'tommaso.comparin@exact-lab.it',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/fractal-analytics-platform/fractal',
+```
+
+### Comparing `fractal_client-1.1.0a4/PKG-INFO` & `fractal_client-1.2.0a0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fractal-client
+-Version: 1.1.0a4
++Version: 1.2.0a0
+ Summary: Client component of the Fractal analytics platform
+ Home-page: https://github.com/fractal-analytics-platform/fractal
+ License: BSD-3-Clause
+ Author: Tommaso Comparin
+ Author-email: tommaso.comparin@exact-lab.it
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: BSD License
+```
+

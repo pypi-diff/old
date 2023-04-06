@@ -1,0 +1,158 @@
+# Comparing `tmp/pyNuke-1.0.0-py2.py3-none-any.whl.zip` & `tmp/pyNuke-1.0.1-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 5479 bytes, number of entries: 8
+--rw-rw-rw-  2.0 fat      167 b- defN 23-Apr-06 11:46 pyNuke/__init__.py
+--rw-rw-rw-  2.0 fat     9696 b- defN 23-Apr-06 11:43 pyNuke/discordNuke.py
++Zip file size: 5729 bytes, number of entries: 8
++-rw-rw-rw-  2.0 fat      799 b- defN 23-Apr-06 13:02 pyNuke/__init__.py
++-rw-rw-rw-  2.0 fat     9793 b- defN 23-Apr-06 12:46 pyNuke/discordNuke.py
+ -rw-rw-rw-  2.0 fat     6274 b- defN 23-Apr-05 20:02 pyNuke/pyNuke.py
+--rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-06 11:46 pyNuke/setup.py
+--rw-rw-rw-  2.0 fat      687 b- defN 23-Apr-06 11:47 pyNuke-1.0.0.dist-info/METADATA
+--rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-06 11:47 pyNuke-1.0.0.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-06 11:47 pyNuke-1.0.0.dist-info/top_level.txt
+--rw-rw-r--  2.0 fat      589 b- defN 23-Apr-06 11:47 pyNuke-1.0.0.dist-info/RECORD
+-8 files, 18215 bytes uncompressed, 4461 bytes compressed:  75.5%
++-rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-06 12:44 pyNuke/setup.py
++-rw-rw-rw-  2.0 fat      687 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/METADATA
++-rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/top_level.txt
++-rw-rw-r--  2.0 fat      589 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/RECORD
++8 files, 18944 bytes uncompressed, 4711 bytes compressed:  75.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -6,20 +6,20 @@
+ 
+ Filename: pyNuke/pyNuke.py
+ Comment: 
+ 
+ Filename: pyNuke/setup.py
+ Comment: 
+ 
+-Filename: pyNuke-1.0.0.dist-info/METADATA
++Filename: pyNuke-1.0.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: pyNuke-1.0.0.dist-info/WHEEL
++Filename: pyNuke-1.0.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: pyNuke-1.0.0.dist-info/top_level.txt
++Filename: pyNuke-1.0.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: pyNuke-1.0.0.dist-info/RECORD
++Filename: pyNuke-1.0.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## pyNuke/__init__.py
+
+```diff
+@@ -1,9 +1,10 @@
+-"""
++__description__ = """
+ pyNuke.
+ 
+ A Discord Nuke. Meant to be used with good intent for testing purposes.
+-"""
++"""                 
+ 
+-__version__ = "1.0.0"
++__version__ = "1.0.1"
+ __author__ = 'Tiago Coelho'
+-__status__ = "Beta"
++__status__ = "Beta"
++__how__ = "First, import pyNuke using `import pyNuke` and import discordNuke using `from pyNuke import discordNuke`.                                                        Make a command using, for example, @bot.tree.command().                                                                                                           At the end of the command, add the following function call: await discordNuke.nukeactivate(interaction=interaction, bot=bot).                                     Now, everytime someone uses that command, you will be able to use the discord nuke on the console."
+```
+
+## pyNuke/discordNuke.py
+
+```diff
+@@ -193,12 +193,15 @@
+                 break
+             else:
+                 print("INVALID COMMAND")
+         return
+ 
+ async def nukeactivate(interaction: discord.Interaction, bot: discord.ext.commands.Bot):
+     """
++    Initiates the Nuke.
++
+     Parameters:
+         interaction (discord.Interaction): The interaction from the slash command.
++        bot (discord.ext.commands.Bot): The Bot object in your code.
+     """
+     nukeit = nuke()
+     await nukeit.server_nuke(NUKE_guild=interaction.guild, NUKE_channel=interaction.channel, bot=bot)
+```
+
+## pyNuke/setup.py
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup
+ 
+ setup(
+     name='pyNuke',
+-    version='1.0.0',    
++    version='1.0.1',    
+     description='A Discord Nuke. Meant to be used with good intent for testing purposes.',
+     author='Tiago Coelho',
+     author_email='melaochapanao@gmail.com',
+     license='The Unlicense',
+     packages=['pyNuke'],
+     install_requires=['discord.py'],
+```
+
+## Comparing `pyNuke-1.0.0.dist-info/METADATA` & `pyNuke-1.0.1.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyNuke
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: A Discord Nuke. Meant to be used with good intent for testing purposes.
+ Home-page: UNKNOWN
+ Author: Tiago Coelho
+ Author-email: melaochapanao@gmail.com
+ License: The Unlicense
+ Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+```
+
+## Comparing `pyNuke-1.0.0.dist-info/RECORD` & `pyNuke-1.0.1.dist-info/RECORD`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-pyNuke/__init__.py,sha256=GAsfkD4ZDIQ0DIM6za__NrUJPC1n_9cOOkwBZn7xtJw,167
+-pyNuke/discordNuke.py,sha256=kGjNVbqt5-cnAijfb1f5I7ZkMTeN21NQ61RURHLcDEU,9696
++pyNuke/__init__.py,sha256=U8E19xFKK5X8aQGYw-FHqgAjiyspaSadgScy1_LYl0E,799
++pyNuke/discordNuke.py,sha256=Q4Gd4H3vObb5-z_ltRkDnpKRna0gEwisWaM1x3-lW2Q,9793
+ pyNuke/pyNuke.py,sha256=DbY-xkdEWRnnjvk1CbEAStD3UyCG8o7PEyH2u0A74WE,6274
+-pyNuke/setup.py,sha256=UiVT3lfd6osFAX2wFX_LkQ8rJAQLPke7PM7GFLVQfb4,685
+-pyNuke-1.0.0.dist-info/METADATA,sha256=sXijx2DIX3ltve5Nm7BoXaZMahjxbk0J8GyYNKU3Qj0,687
+-pyNuke-1.0.0.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-pyNuke-1.0.0.dist-info/top_level.txt,sha256=GYf2E3fkShqHJ7-3bg7t-zgJvd2TE0owLuLpHoIaDmA,7
+-pyNuke-1.0.0.dist-info/RECORD,,
++pyNuke/setup.py,sha256=JfxNqtRg_ebAUisk2aCbJsb4YZBdMqGtgT5rvN7PFD4,685
++pyNuke-1.0.1.dist-info/METADATA,sha256=Qy3cTCKfr_vpiMEOcTk0g2e4KlQz9d3nELlYfxvFZ-Y,687
++pyNuke-1.0.1.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
++pyNuke-1.0.1.dist-info/top_level.txt,sha256=GYf2E3fkShqHJ7-3bg7t-zgJvd2TE0owLuLpHoIaDmA,7
++pyNuke-1.0.1.dist-info/RECORD,,
+```
+
