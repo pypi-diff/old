@@ -1,0 +1,390 @@
+# Comparing `tmp/flask_squeeze-3.0.0.tar.gz` & `tmp/flask_squeeze-3.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "flask_squeeze-3.0.0.tar", max compression
++gzip compressed data, was "flask_squeeze-3.0.1.tar", max compression
+```
+
+## Comparing `flask_squeeze-3.0.0.tar` & `flask_squeeze-3.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,11 @@
+--rw-r--r--   0        0        0     1061 2023-04-04 10:23:19.321417 flask_squeeze-3.0.0/LICENSE
+--rw-r--r--   0        0        0     3539 2023-04-04 12:59:10.236879 flask_squeeze-3.0.0/README.md
+--rw-r--r--   0        0        0       49 2023-04-04 12:50:40.490046 flask_squeeze-3.0.0/flask_squeeze/__init__.py
+--rw-r--r--   0        0        0      878 2023-04-04 12:53:02.403001 flask_squeeze-3.0.0/flask_squeeze/cache.py
+--rw-r--r--   0        0        0     1554 2023-04-04 12:57:27.961772 flask_squeeze-3.0.0/flask_squeeze/debug.py
+--rw-r--r--   0        0        0     8096 2023-04-04 13:03:52.292875 flask_squeeze-3.0.0/flask_squeeze/flask_squeeze.py
+--rw-r--r--   0        0        0     1760 2023-04-04 12:57:27.956281 flask_squeeze-3.0.0/flask_squeeze/log.py
+--rw-r--r--   0        0        0     1482 2023-04-04 12:48:01.274755 flask_squeeze-3.0.0/flask_squeeze/minifiers.py
+--rw-r--r--   0        0        0     1678 2023-04-04 12:58:45.960343 flask_squeeze-3.0.0/flask_squeeze/utils.py
+--rw-r--r--   0        0        0     1347 2023-04-04 13:02:28.940553 flask_squeeze-3.0.0/pyproject.toml
+--rw-r--r--   0        0        0     4575 1970-01-01 00:00:00.000000 flask_squeeze-3.0.0/PKG-INFO
++-rw-r--r--   0        0        0     1061 2023-04-04 10:23:19.321417 flask_squeeze-3.0.1/LICENSE
++-rw-r--r--   0        0        0     3535 2023-04-06 14:07:52.138505 flask_squeeze-3.0.1/README.md
++-rw-r--r--   0        0        0       49 2023-04-04 12:50:40.490046 flask_squeeze-3.0.1/flask_squeeze/__init__.py
++-rw-r--r--   0        0        0      879 2023-04-06 14:07:52.143754 flask_squeeze-3.0.1/flask_squeeze/cache.py
++-rw-r--r--   0        0        0     1554 2023-04-04 12:57:27.961772 flask_squeeze-3.0.1/flask_squeeze/debug.py
++-rw-r--r--   0        0        0     8267 2023-04-06 14:31:05.060736 flask_squeeze-3.0.1/flask_squeeze/flask_squeeze.py
++-rw-r--r--   0        0        0     1760 2023-04-04 12:57:27.956281 flask_squeeze-3.0.1/flask_squeeze/log.py
++-rw-r--r--   0        0        0     1482 2023-04-04 12:48:01.274755 flask_squeeze-3.0.1/flask_squeeze/minifiers.py
++-rw-r--r--   0        0        0     1652 2023-04-06 14:27:12.250458 flask_squeeze-3.0.1/flask_squeeze/models.py
++-rw-r--r--   0        0        0     1347 2023-04-06 14:32:31.191824 flask_squeeze-3.0.1/pyproject.toml
++-rw-r--r--   0        0        0     4571 1970-01-01 00:00:00.000000 flask_squeeze-3.0.1/PKG-INFO
+```
+
+### Comparing `flask_squeeze-3.0.0/LICENSE` & `flask_squeeze-3.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `flask_squeeze-3.0.0/README.md` & `flask_squeeze-3.0.1/README.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -23,16 +23,16 @@
+ ```python
+ from flask_squeeze import Squeeze
+ squeeze = Squeeze()
+ 
+ def create_app():
+     app = Flask(__name__)
+     squeeze.init_app(app)
+-    # Init all other extensions AFTER Flask-Squeeze
+-    # ...
++    # Init all other extensions
++    # AFTER Flask-Squeeze
+ 
+     return app
+ ```
+ 
+ Thats it! The responses of your Flask app will now get minified and compressed, if the browser supports it.
+ To control how Flask-Squeeze behaves, the following options exist:
+```
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/cache.py` & `flask_squeeze-3.0.1/flask_squeeze/cache.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ from typing import Dict, Tuple, Union
+ 
+ from .log import d_log
+-from .utils import Encoding, Minifcation
++from .models import Encoding, Minifcation
+ 
+ 
+ class MemoryCache:
+ 	data: Dict[Tuple[str, Encoding, Minifcation], bytes]
+ 
+ 
+ 	def __init__(self) -> None:
+```
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/debug.py` & `flask_squeeze-3.0.1/flask_squeeze/debug.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/flask_squeeze.py` & `flask_squeeze-3.0.1/flask_squeeze/flask_squeeze.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,15 +8,20 @@
+ import brotli
+ from flask import Flask, Response, request
+ 
+ from .cache import MemoryCache
+ from .debug import add_debug_header, ctx_add_debug_header
+ from .log import d_log, log
+ from .minifiers import minify_css, minify_html, minify_js
+-from .utils import Encoding, Minifcation
++from .models import (
++	Encoding,
++	Minifcation,
++	choose_encoding_from_headers_and_config,
++	choose_minification_from_mimetype_and_config,
++)
+ 
+ 
+ class Squeeze:
+ 
+ 	__slots__ = "cache", "app", "encode_choice", "minify_choice", "resource_type"
+ 	cache: MemoryCache
+ 	app: Flask
+@@ -138,29 +143,30 @@
+ 	@d_log(level=1)
+ 	def run_for_dynamic_resource(self, response: Response) -> None:
+ 		"""
+ 			Compress a dynamic resource.
+ 			- No caching is done.
+ 		"""
+ 
+-		if self.minify_choice:
++		if self.minify_choice is not None:
+ 			self.execute_minify(response)
+-		if self.encode_choice:
++		if self.encode_choice is not None:
+ 			self.execute_compress(response)
+ 		# Protect against BREACH attack
+ 		if self.encode_choice:
+ 			tx = 2 if int(time.time() ** 3.141592) % 2 else 1
+ 			rand_str: str = secrets.token_urlsafe(random.randint(32 * tx, 128 * tx))
+ 			response.headers["X-Breach-Exploit-Protection-Padding"] = rand_str
+ 
+ 
+ 
+ 	@d_log(level=1)
+-	def run_for_static_resource(self,
+-			response: Response,
++	def run_for_static_resource(
++		self,
++		response: Response,
+ 	) -> None:
+ 		"""
+ 			Compress a static resource.
+ 		"""
+ 
+ 		path = request.path
+ 		from_cache = self.cache.get(path, self.encode_choice, self.minify_choice)
+@@ -169,31 +175,32 @@
+ 			response.direct_passthrough = False
+ 			response.set_data(from_cache)
+ 			response.headers["X-Flask-Squeeze-Cache"] = "HIT"
+ 			return
+ 
+ 		# Assert: not in cache
+ 
+-		if self.minify_choice:
++		if self.minify_choice is not None:
+ 			self.execute_minify(response)
+-		if self.encode_choice:
++		if self.encode_choice is not None:
+ 			self.execute_compress(response)
+ 
+ 		# If compression or minification was done, insert into cache
+ 		if self.encode_choice or self.minify_choice:
+ 			response.headers["X-Flask-Squeeze-Cache"] = "MISS"
+ 			data = response.get_data(as_text=False)
+ 			self.cache.insert(path, self.encode_choice, self.minify_choice, data)
+ 
+ 
+ 
+ 	@d_log(level=1, with_args=[1, 2])
+-	def recompute_headers(self,
+-			response: Response,
+-			original_content_length: int
++	def recompute_headers(
++		self,
++		response: Response,
++		original_content_length: int
+ 	) -> None:
+ 		# If direct_passthrough is set, the response was not modified.
+ 		if response.direct_passthrough:
+ 			return
+ 
+ 		if self.encode_choice:
+ 			response.headers["Content-Encoding"] = self.encode_choice.value
+@@ -228,24 +235,24 @@
+ 		if "Content-Encoding" in response.headers:
+ 			log(1, "Response already encoded. RETURN")
+ 			return response
+ 
+ 		# Assert: The response is ok, the size is above threshold, and the response is
+ 		# not already encoded.
+ 
+-		self.encode_choice = Encoding.from_headers_and_config(
++		self.encode_choice = choose_encoding_from_headers_and_config(
+ 			request.headers,
+ 			self.app.config,
+ 		)
+-		self.minify_choice = Minifcation.from_mimetype_and_config(
++		self.minify_choice = choose_minification_from_mimetype_and_config(
+ 			response.mimetype,
+ 			self.app.config,
+ 		)
+ 
+-		if not self.encode_choice and not self.minify_choice:
++		if self.encode_choice is None and self.minify_choice is None:
+ 			log(1, "No compression or minification requested. RETURN")
+ 			return response
+ 
+ 		original_content_length = response.content_length
+ 		self.resource_type = "static" if "/static/" in request.path else "dynamic"
+ 
+ 		if self.resource_type == "dynamic":
+```
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/log.py` & `flask_squeeze-3.0.1/flask_squeeze/log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/minifiers.py` & `flask_squeeze-3.0.1/flask_squeeze/minifiers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flask_squeeze-3.0.0/flask_squeeze/utils.py` & `flask_squeeze-3.0.1/flask_squeeze/models.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -9,56 +9,54 @@
+ 
+ 
+ class Encoding(Enum):
+ 	gzip = "gzip"
+ 	deflate = "deflate"
+ 	br = "br"
+ 
+-	@classmethod
+-	def from_headers_and_config(
+-		cls: Encoding,
+-		headers: Headers,
+-		config: Config,
+-	) -> Union[Encoding, None]:
+-		"""
+-			If the client supports brotli, gzip, or deflate, return the best encoding.
+-			If the client does not accept any of these encodings, or if the config
+-			variable SQUEEZE_COMPRESS is False, return None.
+-		"""
+-		if not config["SQUEEZE_COMPRESS"]:
+-			return None
+-		encoding = headers.get("Accept-Encoding", "").lower()
+-		if "br" in encoding:
+-			return cls.br
+-		if "deflate" in encoding:
+-			return cls.deflate
+-		if "gzip" in encoding:
+-			return cls.gzip
++
++def choose_encoding_from_headers_and_config(
++	headers: Headers,
++	config: Config,
++) -> Union[Encoding, None]:
++	"""
++		If the client supports brotli, gzip, or deflate, return the best encoding.
++		If the client does not accept any of these encodings, or if the config
++		variable SQUEEZE_COMPRESS is False, return None.
++	"""
++	if not config["SQUEEZE_COMPRESS"]:
+ 		return None
++	encoding = headers.get("Accept-Encoding", "").lower()
++	if "br" in encoding:
++		return Encoding.br
++	if "deflate" in encoding:
++		return Encoding.deflate
++	if "gzip" in encoding:
++		return Encoding.gzip
++	return None
+ 
+ 
+ class Minifcation(Enum):
+ 	js = "js"
+ 	css = "css"
+ 	html = "html"
+ 
+-	@classmethod
+-	def from_mimetype_and_config(
+-		cls: Minifcation,
+-		mimetype: str,
+-		config: Config,
+-	) -> Union[Minifcation, None]:
+-		"""
+-			Based on the response mimetype:
+-			- `js` or `json`, and `SQUEEZE_MINIFY_JS=True`: return `Minifcation.js`
+-			- `css` and `SQUEEZE_MINIFY_CSS=True`: return `Minifcation.css`
+-			-  `html` and `SQUEEZE_MINIFY_HTML=True`: return `Minifcation.html`
+-			- Otherwise, return `None`
+-		"""
+-		is_js_or_json = mimetype.endswith("javascript") or mimetype.endswith("json")
+-		if is_js_or_json and config["SQUEEZE_MINIFY_JS"]:
+-			return cls.js
+-		if mimetype.endswith("css") and config["SQUEEZE_MINIFY_CSS"]:
+-			return cls.css
+-		if mimetype.endswith("html") and config["SQUEEZE_MINIFY_HTML"]:
+-			return cls.html
+-		return None
++
++def choose_minification_from_mimetype_and_config(
++	mimetype: str,
++	config: Config,
++) -> Union[Minifcation, None]:
++	"""
++		Based on the response mimetype:
++		- `js` or `json`, and `SQUEEZE_MINIFY_JS=True`: return `Minifcation.js`
++		- `css` and `SQUEEZE_MINIFY_CSS=True`: return `Minifcation.css`
++		-  `html` and `SQUEEZE_MINIFY_HTML=True`: return `Minifcation.html`
++		- Otherwise, return `None`
++	"""
++	is_js_or_json = mimetype.endswith("javascript") or mimetype.endswith("json")
++	if is_js_or_json and config["SQUEEZE_MINIFY_JS"]:
++		return Minifcation.js
++	if mimetype.endswith("css") and config["SQUEEZE_MINIFY_CSS"]:
++		return Minifcation.css
++	if mimetype.endswith("html") and config["SQUEEZE_MINIFY_HTML"]:
++		return Minifcation.html
++	return None
+```
+
+### Comparing `flask_squeeze-3.0.0/pyproject.toml` & `flask_squeeze-3.0.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "flask-squeeze"
+-version = "3.0.0"
++version = "3.0.1"
+ repository = "https://github.com/mkrd/Flask-Squeeze"
+ description = "Compress and minify Flask responses!"
+ readme = "README.md"
+ authors = ["Marcel Kröker <kroeker.marcel@gmail.com>"]
+ license = "MIT"
+ classifiers=[
+ 	"Programming Language :: Python :: 3",
+```
+
+### Comparing `flask_squeeze-3.0.0/PKG-INFO` & `flask_squeeze-3.0.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: flask-squeeze
+-Version: 3.0.0
++Version: 3.0.1
+ Summary: Compress and minify Flask responses!
+ Home-page: https://github.com/mkrd/Flask-Squeeze
+ License: MIT
+ Author: Marcel Kröker
+ Author-email: kroeker.marcel@gmail.com
+ Requires-Python: >=3.8,<4.0
+ Classifier: Intended Audience :: Developers
+@@ -50,16 +50,16 @@
+ ```python
+ from flask_squeeze import Squeeze
+ squeeze = Squeeze()
+ 
+ def create_app():
+     app = Flask(__name__)
+     squeeze.init_app(app)
+-    # Init all other extensions AFTER Flask-Squeeze
+-    # ...
++    # Init all other extensions
++    # AFTER Flask-Squeeze
+ 
+     return app
+ ```
+ 
+ Thats it! The responses of your Flask app will now get minified and compressed, if the browser supports it.
+ To control how Flask-Squeeze behaves, the following options exist:
+```
+

@@ -1,0 +1,273 @@
+# Comparing `tmp/dotrun-2.0.2.tar.gz` & `tmp/dotrun-2.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dotrun-2.0.2.tar", max compression
++gzip compressed data, was "dotrun-2.1.0.tar", max compression
+```
+
+## Comparing `dotrun-2.0.2.tar` & `dotrun-2.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,5 +1,4 @@
+--rw-r--r--   0        0        0     3457 2022-08-11 10:59:42.292691 dotrun-2.0.2/README.md
+--rw-r--r--   0        0        0     4818 2022-08-11 10:59:42.292691 dotrun-2.0.2/dotrun.py
+--rw-r--r--   0        0        0      471 2022-08-11 10:59:42.292691 dotrun-2.0.2/pyproject.toml
+--rw-r--r--   0        0        0     4271 2022-08-11 10:59:57.697244 dotrun-2.0.2/setup.py
+--rw-r--r--   0        0        0     4248 2022-08-11 10:59:57.697545 dotrun-2.0.2/PKG-INFO
++-rw-r--r--   0        0        0     3981 2023-04-06 14:38:08.067333 dotrun-2.1.0/README.md
++-rw-r--r--   0        0        0     5212 2023-04-06 14:38:08.067333 dotrun-2.1.0/dotrun.py
++-rw-r--r--   0        0        0      471 2023-04-06 14:38:08.067333 dotrun-2.1.0/pyproject.toml
++-rw-r--r--   0        0        0     4823 1970-01-01 00:00:00.000000 dotrun-2.1.0/PKG-INFO
+```
+
+### Comparing `dotrun-2.0.2/README.md` & `dotrun-2.1.0/README.md`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-![dotrun](https://assets.ubuntu.com/v1/9dcb3655-dotrun.png?w=200)
++<img src="https://assets.ubuntu.com/v1/14a3bac5-dotrun.svg?w=200" width="200" alt="dotrun" />
+ 
+ # A tool for developing Node.js and Python projects
+ 
+ `dotrun` makes use of a [Docker image](https://github.com/canonical/dotrun-image/) to provide a predictable sandbox for running Node and Python projects.
+ 
+ Features:
+ 
+@@ -25,34 +25,57 @@
+ $ dotrun {script-name}           # Install dependencies and run `yarn run {script-name}`
+ $ dotrun -s {script}             # Run {script} but skip installing dependencies
+ $ dotrun --env FOO=bar {script}  # Run {script} with FOO environment variable
+ ```
+ 
+ ## Installation
+ 
++### Docker
++
++First, install Docker ([Get Docker](https://docs.docker.com/get-docker/)).
++
++Linux users may also need to follow the [post install instructions](https://docs.docker.com/engine/install/linux-postinstall/) to be able to run Docker as a non-root user.
++
++### Linux
++
+ To install dotrun run:
++
++```
++sudo apt install python3-pip
++sudo pip3 install dotrun
+ ```
++
++### Mac
++
++To install dotrun on a mac you will need [Homebrew](https://brew.sh/) (follow
++the install
++instructions on that page).
++
++Then run:
++
++```
++brew install python3
+ sudo pip3 install dotrun
+ ```
+ 
+ ### Requirements
+ 
+ - Linux / macOS
+ - Docker ([Get Docker](https://docs.docker.com/get-docker/))
+ - Python > 3.6 and PIP
+ 
+ ### macOS performance
+ 
+ For optimal performance on Docker we recommend enabling a new experimental file sharing implementation called virtiofs. Virtiofs is only available to users of the following macOS versions:
++
+ - macOS 12.2 and above (for Apple Silicon)
+ - macOS 12.3 and above (for Intel)
+ 
+ [How to enable virtiofs](https://www.docker.com/blog/speed-boost-achievement-unlocked-on-docker-desktop-4-6-for-mac/)
+ 
+-
+ ## Add dotrun on new projects
+ 
+ To fully support dotrun in a new project you should do the following:
+ 
+ - For Python projects, ensure [Talisker](https://pypi.org/project/talisker/) is at `0.16.0` or greater in `requirements.txt`
+ - Add `.dotrun.json` and `.venv` to `.gitignore`
+ - Create a `start` script in `package.json` to do everything needed to set up local development. E.g.:
+```
+
+### Comparing `dotrun-2.0.2/dotrun.py` & `dotrun-2.1.0/dotrun.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -19,14 +19,16 @@
+ class Dotrun:
+     def __init__(self):
+         self.cwd = os.getcwd()
+         self.project_name = slugify(os.path.basename(self.cwd))
+         self.project_port = dotenv_values(".env").get("PORT", 8080)
+         self.container_home = "/home/ubuntu/"
+         self.container_path = f"{self.container_home}{self.project_name}"
++        # --network host is only supported on Linux
++        self.network_host_mode = sys.platform.startswith("linux")
+         self._get_docker_client()
+         self._check_image_updates()
+         self._create_cache_volume()
+ 
+     def _get_docker_client(self):
+         try:
+             self.docker_client = docker.from_env()
+@@ -109,38 +111,43 @@
+         name = "-".join(name)
+ 
+         # Remove duplicated hyphens
+         return re.sub(r"(-)+", r"\1", name)
+ 
+     def create_container(self, command):
+         ports = {self.project_port: self.project_port}
+-
++        # Run on the same network mode as the host
++        network_mode = None
+         if command[1:]:
+             first_cmd = command[1:][0]
+ 
+             # Avoid port conflict when running multiple commands
+             if first_cmd not in ["start", "serve"]:
+                 ports = {}
+ 
+             # Set a different container name to run a specific command
+             name = self._get_container_name(first_cmd)
+         else:
+             name = self._get_container_name()
+-
++        if self.network_host_mode:
++            # network_mode host is incompatible with ports option
++            ports = None
++            network_mode = "host"
+         return self.docker_client.containers.create(
+             image="canonicalwebteam/dotrun-image",
+             name=name,
+             hostname=name,
+             mounts=self._prepare_mounts(),
+             working_dir=self.container_path,
+             environment=[f"DOTRUN_VERSION={__version__}"],
+             stdin_open=True,
+             tty=True,
+             command=command,
+             ports=ports,
++            network_mode=network_mode,
+         )
+ 
+ 
+ def cli():
+     dotrun = Dotrun()
+     command = ["dotrun"]
+     command.extend(sys.argv[1:])
+```
+
+### Comparing `dotrun-2.0.2/PKG-INFO` & `dotrun-2.1.0/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,29 +1,30 @@
+ Metadata-Version: 2.1
+ Name: dotrun
+-Version: 2.0.2
++Version: 2.1.0
+ Summary: A tool for developing Node.js and Python projects
+ License: LGPL-3.0
+ Author: Canonical Web Team
+ Author-email: webteam@canonical.com
+ Requires-Python: >=3.6,<4.0
+ Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+ Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: docker (==5.0.3)
+ Requires-Dist: dockerpty (==0.4.1)
+ Requires-Dist: python-dotenv (==0.20.0)
+ Requires-Dist: python-slugify (==6.1.2)
+ Description-Content-Type: text/markdown
+ 
+-![dotrun](https://assets.ubuntu.com/v1/9dcb3655-dotrun.png?w=200)
++<img src="https://assets.ubuntu.com/v1/14a3bac5-dotrun.svg?w=200" width="200" alt="dotrun" />
+ 
+ # A tool for developing Node.js and Python projects
+ 
+ `dotrun` makes use of a [Docker image](https://github.com/canonical/dotrun-image/) to provide a predictable sandbox for running Node and Python projects.
+ 
+ Features:
+ 
+@@ -46,34 +47,57 @@
+ $ dotrun {script-name}           # Install dependencies and run `yarn run {script-name}`
+ $ dotrun -s {script}             # Run {script} but skip installing dependencies
+ $ dotrun --env FOO=bar {script}  # Run {script} with FOO environment variable
+ ```
+ 
+ ## Installation
+ 
++### Docker
++
++First, install Docker ([Get Docker](https://docs.docker.com/get-docker/)).
++
++Linux users may also need to follow the [post install instructions](https://docs.docker.com/engine/install/linux-postinstall/) to be able to run Docker as a non-root user.
++
++### Linux
++
+ To install dotrun run:
++
++```
++sudo apt install python3-pip
++sudo pip3 install dotrun
++```
++
++### Mac
++
++To install dotrun on a mac you will need [Homebrew](https://brew.sh/) (follow
++the install
++instructions on that page).
++
++Then run:
++
+ ```
++brew install python3
+ sudo pip3 install dotrun
+ ```
+ 
+ ### Requirements
+ 
+ - Linux / macOS
+ - Docker ([Get Docker](https://docs.docker.com/get-docker/))
+ - Python > 3.6 and PIP
+ 
+ ### macOS performance
+ 
+ For optimal performance on Docker we recommend enabling a new experimental file sharing implementation called virtiofs. Virtiofs is only available to users of the following macOS versions:
++
+ - macOS 12.2 and above (for Apple Silicon)
+ - macOS 12.3 and above (for Intel)
+ 
+ [How to enable virtiofs](https://www.docker.com/blog/speed-boost-achievement-unlocked-on-docker-desktop-4-6-for-mac/)
+ 
+-
+ ## Add dotrun on new projects
+ 
+ To fully support dotrun in a new project you should do the following:
+ 
+ - For Python projects, ensure [Talisker](https://pypi.org/project/talisker/) is at `0.16.0` or greater in `requirements.txt`
+ - Add `.dotrun.json` and `.venv` to `.gitignore`
+ - Create a `start` script in `package.json` to do everything needed to set up local development. E.g.:
+```
+

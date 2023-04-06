@@ -1,0 +1,614 @@
+# Comparing `tmp/ggtag-0.0.5.tar.gz` & `tmp/ggtag-0.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ggtag-0.0.5.tar", last modified: Thu Mar 30 14:32:04 2023, max compression
++gzip compressed data, was "ggtag-0.1.0.tar", last modified: Thu Apr  6 14:36:56 2023, max compression
+```
+
+## Comparing `ggtag-0.0.5.tar` & `ggtag-0.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,33 +1,33 @@
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      246 2023-03-30 14:32:04.465460 ggtag-0.0.5/PKG-INFO
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       26 2023-03-24 11:10:45.751888 ggtag-0.0.5/README
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     2301 2023-03-30 06:13:07.497421 ggtag-0.0.5/cggtag.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     2718 2023-03-30 11:06:44.453796 ggtag-0.0.5/ggtag.py
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/host/
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/host/include/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      877 2023-03-30 14:32:04.325461 ggtag-0.0.5/host/include/ggtag.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      233 2023-03-30 14:32:04.325461 ggtag-0.0.5/host/include/utils.h
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/host/src/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    24856 2023-03-30 14:32:04.321461 ggtag-0.0.5/host/src/ggtag.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      254 2023-03-30 14:32:04.325461 ggtag-0.0.5/host/src/rfid.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    28757 2023-03-30 14:32:04.321461 ggtag-0.0.5/host/src/utils.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1030 2023-03-28 12:27:30.118168 ggtag-0.0.5/setup.py
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/shared/
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/shared/include/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1810 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/Debug.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     7274 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/GUI_Paint.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     3107 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/fonts.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1237 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/protocol.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17866 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/qrcodegen.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/rfid.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)   199033 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/include/stb_truetype.h
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-03-30 14:32:04.465460 ggtag-0.0.5/shared/src/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    32647 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/GUI_Paint.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)  1250359 2023-03-30 14:32:04.329461 ggtag-0.0.5/shared/src/fa.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    25780 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/font12.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    47973 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/font16.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    64320 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/font20.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    96590 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/font24.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17398 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/font8.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     8686 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/protocol.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    41771 2023-03-30 14:32:04.325461 ggtag-0.0.5/shared/src/qrcodegen.c
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1338 2023-04-06 14:36:56.978210 ggtag-0.1.0/PKG-INFO
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     2301 2023-03-30 06:13:07.497421 ggtag-0.1.0/cggtag.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     4267 2023-04-06 07:34:30.201216 ggtag-0.1.0/ggtag.py
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.974210 ggtag-0.1.0/host/
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/host/include/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      877 2023-04-06 14:36:56.842212 ggtag-0.1.0/host/include/ggtag.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      233 2023-04-06 14:36:56.842212 ggtag-0.1.0/host/include/utils.h
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/host/src/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    24874 2023-04-06 14:36:56.838212 ggtag-0.1.0/host/src/ggtag.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      254 2023-04-06 14:36:56.842212 ggtag-0.1.0/host/src/rfid.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    28757 2023-04-06 14:36:56.838212 ggtag-0.1.0/host/src/utils.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1171 2023-04-06 14:36:27.858493 ggtag-0.1.0/setup.py
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/shared/
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/shared/include/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     7274 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/GUI_Paint.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/debug.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     3107 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/fonts.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1237 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/protocol.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17866 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/qrcodegen.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/rfid.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)   199033 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/include/stb_truetype.h
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:36:56.978210 ggtag-0.1.0/shared/src/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    31639 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/GUI_Paint.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      453 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/src/debug.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)  1250359 2023-04-06 14:36:56.846212 ggtag-0.1.0/shared/src/fa.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    25780 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/font12.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    47973 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/font16.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    64320 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/font20.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    96590 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/font24.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17398 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/font8.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     8696 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/protocol.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    41771 2023-04-06 14:36:56.842212 ggtag-0.1.0/shared/src/qrcodegen.c
+```
+
+### Comparing `ggtag-0.0.5/cggtag.c` & `ggtag-0.1.0/cggtag.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/host/include/ggtag.h` & `ggtag-0.1.0/host/include/ggtag.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/host/src/ggtag.cpp` & `ggtag-0.1.0/host/src/ggtag.cpp`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ #include <cstdlib>
+ #include <cstring>
+ #include <cstdio>
+ #include <cstdint>
++#include "debug.h"
+ #include "ggtag.h"
+ #include "utils.h"
+ #include "protocol.h"
+ #include "GUI_Paint.h"
+ 
+ struct TextCmd {
+     int x;
+@@ -882,15 +883,15 @@
+     if (parse(input, &buf, &offset)) {
+         // clear the error message if parsing was successful
+         sprintf(lastError, "OK");
+     }
+     if (buf.size() == 0) {
+         return 0;
+     }
+-    printf("Bit buffer length: %d\n", buf.ind);
++    debug("Bit buffer length: %d\n", buf.ind);
+     int w = width / 8;
+     if (width % 8 != 0) {
+         w += 1;
+     }
+     int total = w * height;
+     uint8_t *bitmap = (uint8_t*) malloc(total);
+     if (!bitmap) {
+```
+
+### Comparing `ggtag-0.0.5/host/src/utils.cpp` & `ggtag-0.1.0/host/src/utils.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/include/GUI_Paint.h` & `ggtag-0.1.0/shared/include/GUI_Paint.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/include/fonts.h` & `ggtag-0.1.0/shared/include/fonts.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/include/protocol.h` & `ggtag-0.1.0/shared/include/protocol.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/include/qrcodegen.h` & `ggtag-0.1.0/shared/include/qrcodegen.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/include/stb_truetype.h` & `ggtag-0.1.0/shared/include/stb_truetype.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/GUI_Paint.c` & `ggtag-0.1.0/shared/src/GUI_Paint.c`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -73,15 +73,15 @@
+ * LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ ******************************************************************************/
+ #include "GUI_Paint.h"
+ #include "qrcodegen.h"
+-#include "Debug.h"
++#include "debug.h"
+ #include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h> //memset()
+ #include <math.h>
+ 
+ PAINT Paint;
+ 
+@@ -133,34 +133,34 @@
+ function: Select Image Rotate
+ parameter:
+     Rotate : 0,90,180,270
+ ******************************************************************************/
+ void Paint_SetRotate(UWORD Rotate)
+ {
+     if(Rotate == ROTATE_0 || Rotate == ROTATE_90 || Rotate == ROTATE_180 || Rotate == ROTATE_270) {
+-        Debug("Set image Rotate %d\r\n", Rotate);
++        debug("Set image Rotate %d\r\n", Rotate);
+         Paint.Rotate = Rotate;
+     } else {
+-        Debug("rotate = 0, 90, 180, 270\r\n");
++        debug("rotate = 0, 90, 180, 270\r\n");
+     }
+ }
+ 
+ /******************************************************************************
+ function:	Select Image mirror
+ parameter:
+     mirror   :Not mirror,Horizontal mirror,Vertical mirror,Origin mirror
+ ******************************************************************************/
+ void Paint_SetMirroring(UBYTE mirror)
+ {
+     if(mirror == MIRROR_NONE || mirror == MIRROR_HORIZONTAL ||
+         mirror == MIRROR_VERTICAL || mirror == MIRROR_ORIGIN) {
+-        Debug("mirror image x:%s, y:%s\r\n",(mirror & 0x01)? "mirror":"none", ((mirror >> 1) & 0x01)? "mirror":"none");
++        debug("mirror image x:%s, y:%s\r\n",(mirror & 0x01)? "mirror":"none", ((mirror >> 1) & 0x01)? "mirror":"none");
+         Paint.Mirror = mirror;
+     } else {
+-        Debug("mirror should be MIRROR_NONE, MIRROR_HORIZONTAL, \
++        debug("mirror should be MIRROR_NONE, MIRROR_HORIZONTAL, \
+         MIRROR_VERTICAL or MIRROR_ORIGIN\r\n");
+     }
+ }
+ 
+ void Paint_SetScale(UBYTE scale)
+ {
+     if(scale == 2){
+@@ -169,29 +169,29 @@
+     }else if(scale == 4){
+         Paint.Scale = scale;
+         Paint.WidthByte = (Paint.WidthMemory % 4 == 0)? (Paint.WidthMemory / 4 ): (Paint.WidthMemory / 4 + 1);
+     }else if(scale == 7){//Only applicable with 5in65 e-Paper
+ 		Paint.Scale = scale;
+ 		Paint.WidthByte = (Paint.WidthMemory % 2 == 0)? (Paint.WidthMemory / 2 ): (Paint.WidthMemory / 2 + 1);;
+ 	}else{
+-        Debug("Set Scale Input parameter error\r\n");
+-        Debug("Scale Only support: 2 4 7\r\n");
++        debug("Set Scale Input parameter error\r\n");
++        debug("Scale Only support: 2 4 7\r\n");
+     }
+ }
+ /******************************************************************************
+ function: Draw Pixels
+ parameter:
+     Xpoint : At point X
+     Ypoint : At point Y
+     Color  : Painted colors
+ ******************************************************************************/
+ void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color)
+ {
+     if(Xpoint >= Paint.Width || Ypoint >= Paint.Height){
+-        Debug("Exceeding display boundaries\r\n");
++        debug("Exceeding display boundaries\r\n");
+         return;
+     }
+     UWORD X, Y;
+     switch(Paint.Rotate) {
+     case 0:
+         X = Xpoint;
+         Y = Ypoint;
+@@ -226,15 +226,15 @@
+         Y = Paint.HeightMemory - Y - 1;
+         break;
+     default:
+         return;
+     }
+ 
+     if(X > Paint.WidthMemory || Y > Paint.HeightMemory){
+-        Debug("Exceeding display boundaries\r\n");
++        debug("Exceeding display boundaries\r\n");
+         return;
+     }
+ 
+     if(Paint.Scale == 2){
+         UDOUBLE Addr = X / 8 + Y * Paint.WidthByte;
+         UBYTE Rdata = Paint.Image[Addr];
+         if(Color == BLACK)
+@@ -309,36 +309,16 @@
+     Color		: Painted color
+     Dot_Pixel	: point size
+     Dot_Style	: point Style
+ ******************************************************************************/
+ void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color,
+                      DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_Style)
+ {
+-    if (Xpoint > Paint.Width || Ypoint > Paint.Height) {
+-        Debug("Paint_DrawPoint Input exceeds the normal display range\r\n");
+-        return;
+-    }
+-
+-    int16_t XDir_Num , YDir_Num;
+-    if (Dot_Style == DOT_FILL_AROUND) {
+-        for (XDir_Num = 0; XDir_Num < 2 * Dot_Pixel - 1; XDir_Num++) {
+-            for (YDir_Num = 0; YDir_Num < 2 * Dot_Pixel - 1; YDir_Num++) {
+-                if(Xpoint + XDir_Num - Dot_Pixel < 0 || Ypoint + YDir_Num - Dot_Pixel < 0)
+-                    break;
+-                // printf("x = %d, y = %d\r\n", Xpoint + XDir_Num - Dot_Pixel, Ypoint + YDir_Num - Dot_Pixel);
+-                Paint_SetPixel(Xpoint + XDir_Num - Dot_Pixel, Ypoint + YDir_Num - Dot_Pixel, Color);
+-            }
+-        }
+-    } else {
+-        for (XDir_Num = 0; XDir_Num <  Dot_Pixel; XDir_Num++) {
+-            for (YDir_Num = 0; YDir_Num <  Dot_Pixel; YDir_Num++) {
+-                Paint_SetPixel(Xpoint + XDir_Num - 1, Ypoint + YDir_Num - 1, Color);
+-            }
+-        }
+-    }
++    // ignore dot_pixel and dot_style
++    Paint_SetPixel(Xpoint, Ypoint, Color);
+ }
+ 
+ /******************************************************************************
+ function: Draw a line of arbitrary slope
+ parameter:
+     Xstart ：Starting Xpoint point coordinates
+     Ystart ：Starting Xpoint point coordinates
+@@ -347,17 +327,16 @@
+     Color  ：The color of the line segment
+     Line_width : Line width
+     Line_Style: Solid and dotted lines
+ ******************************************************************************/
+ void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend,
+                     UWORD Color, DOT_PIXEL Line_width, LINE_STYLE Line_Style)
+ {
+-    if (Xstart > Paint.Width || Ystart > Paint.Height ||
+-        Xend > Paint.Width || Yend > Paint.Height) {
+-        Debug("Paint_DrawLine Input exceeds the normal display range\r\n");
++    if (Xstart >= Paint.Width || Ystart >= Paint.Height) {
++        debug("Paint_DrawLine Input exceeds the normal display range\n");
+         return;
+     }
+ 
+     UWORD Xpoint = Xstart;
+     UWORD Ypoint = Ystart;
+     int dx = (int)Xend - (int)Xstart >= 0 ? Xend - Xstart : Xstart - Xend;
+     int dy = (int)Yend - (int)Ystart <= 0 ? Yend - Ystart : Ystart - Yend;
+@@ -405,30 +384,29 @@
+     Color  ：The color of the Rectangular segment
+     Line_width: Line width
+     Draw_Fill : Whether to fill the inside of the rectangle
+ ******************************************************************************/
+ void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend,
+                          UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill)
+ {
+-    if (Xstart > Paint.Width || Ystart > Paint.Height ||
+-        Xend > Paint.Width || Yend > Paint.Height) {
+-        Debug("Input exceeds the normal display range\r\n");
++    if (Xstart >= Paint.Width || Ystart >= Paint.Height) {
++        debug("Input exceeds the normal display range\r\n");
+         return;
+     }
+ 
+     if (Draw_Fill) {
+         UWORD Ypoint;
+         for(Ypoint = Ystart; Ypoint < Yend; Ypoint++) {
+             Paint_DrawLine(Xstart, Ypoint, Xend, Ypoint, Color , Line_width, LINE_STYLE_SOLID);
+         }
+     } else {
+         Paint_DrawLine(Xstart, Ystart, Xend, Ystart, Color, Line_width, LINE_STYLE_SOLID);
+         Paint_DrawLine(Xstart, Ystart, Xstart, Yend, Color, Line_width, LINE_STYLE_SOLID);
+-        Paint_DrawLine(Xend, Yend, Xend, Ystart, Color, Line_width, LINE_STYLE_SOLID);
+-        Paint_DrawLine(Xend, Yend, Xstart, Yend, Color, Line_width, LINE_STYLE_SOLID);
++        Paint_DrawLine(Xstart, Yend, Xend, Yend, Color, Line_width, LINE_STYLE_SOLID);
++        Paint_DrawLine(Xend, Ystart, Xend, Yend, Color, Line_width, LINE_STYLE_SOLID);
+     }
+ }
+ 
+ /******************************************************************************
+ function: Use the 8-point method to draw a circle of the
+             specified size at the specified position->
+ parameter:
+@@ -438,16 +416,16 @@
+     Color     ：The color of the ：circle segment
+     Line_width: Line width
+     Draw_Fill : Whether to fill the inside of the Circle
+ ******************************************************************************/
+ void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius,
+                       UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill)
+ {
+-    if (X_Center > Paint.Width || Y_Center >= Paint.Height) {
+-        Debug("Paint_DrawCircle Input exceeds the normal display range\r\n");
++    if (X_Center >= Paint.Width || Y_Center >= Paint.Height) {
++        debug("Paint_DrawCircle Input exceeds the normal display range\r\n");
+         return;
+     }
+ 
+     //Draw a circle from(0, R) as a starting point
+     int16_t XCurrent, YCurrent;
+     XCurrent = 0;
+     YCurrent = Radius;
+@@ -509,16 +487,16 @@
+     Color_Background : Select the background color
+ ******************************************************************************/
+ void Paint_DrawChar(UWORD Xpoint, UWORD Ypoint, const char Acsii_Char,
+                     sFONT* Font, UWORD Color_Foreground, UWORD Color_Background)
+ {
+     UWORD Page, Column;
+ 
+-    if (Xpoint > Paint.Width || Ypoint > Paint.Height) {
+-        Debug("Paint_DrawChar Input exceeds the normal display range\r\n");
++    if (Xpoint >= Paint.Width || Ypoint >= Paint.Height) {
++        debug("Paint_DrawChar Input exceeds the normal display range\r\n");
+         return;
+     }
+ 
+     uint32_t Char_Offset = (Acsii_Char - ' ') * Font->Height * (Font->Width / 8 + (Font->Width % 8 ? 1 : 0));
+     const unsigned char *ptr = &Font->table[Char_Offset];
+ 
+     for (Page = 0; Page < Font->Height; Page ++ ) {
+@@ -559,16 +537,16 @@
+ ******************************************************************************/
+ void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString,
+                          sFONT* Font, UWORD Color_Foreground, UWORD Color_Background)
+ {
+     UWORD Xpoint = Xstart;
+     UWORD Ypoint = Ystart;
+ 
+-    if (Xstart > Paint.Width || Ystart > Paint.Height) {
+-        Debug("Paint_DrawString_EN Input exceeds the normal display range\r\n");
++    if (Xstart >= Paint.Width || Ystart >= Paint.Height) {
++        debug("Paint_DrawString_EN Input exceeds the normal display range\r\n");
+         return;
+     }
+ 
+     while (* pString != '\0') {
+         //if X direction filled , reposition to(Xstart,Ypoint),Ypoint is Y direction plus the Height of the character
+         if ((Xpoint + Font->Width ) > Paint.Width ) {
+             Xpoint = Xstart;
+@@ -703,15 +681,15 @@
+ {
+ 
+     int16_t Num_Bit = 0, Str_Bit = 0;
+     uint8_t Str_Array[ARRAY_LEN] = {0}, Num_Array[ARRAY_LEN] = {0};
+     uint8_t *pStr = Str_Array;
+ 
+     if (Xpoint > Paint.Width || Ypoint > Paint.Height) {
+-        Debug("Paint_DisNum Input exceeds the normal display range\r\n");
++        debug("Paint_DisNum Input exceeds the normal display range\r\n");
+         return;
+     }
+ 
+     //Converts a number to a string
+     while (Nummber) {
+         Num_Array[Num_Bit] = Nummber % 10 + '0';
+         Num_Bit++;
+```
+
+### Comparing `ggtag-0.0.5/shared/src/fa.c` & `ggtag-0.1.0/shared/src/fa.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/font12.c` & `ggtag-0.1.0/shared/src/font12.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/font16.c` & `ggtag-0.1.0/shared/src/font16.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/font20.c` & `ggtag-0.1.0/shared/src/font20.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/font24.c` & `ggtag-0.1.0/shared/src/font24.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/font8.c` & `ggtag-0.1.0/shared/src/font8.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.0.5/shared/src/protocol.cpp` & `ggtag-0.1.0/shared/src/protocol.cpp`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include "rfid.h"
++#include "debug.h"
+ #include "protocol.h"
+ #include "GUI_Paint.h"
+ #define STB_TRUETYPE_IMPLEMENTATION
+ #include "stb_truetype.h" /* http://nothings.org/stb/stb_truetype.h */
+ 
+ struct BitReader {
+     const uint8_t *buffer;
+@@ -88,15 +89,15 @@
+                     return;
+                 }
+                 for (int i = 0; i < length; i++) {
+                     int ch = br.read(CHAR_BITS);
+                     text[i] = ch;
+                 }
+                 text[length] = 0;
+-                printf("Render x=%d y=%d font=%d text=%s\n", x, y, fontNum, text);
++                debug("Render x=%d y=%d font=%d text=%s\n", x, y, fontNum, text);
+                 sFONT* font = &Font8;
+                 if (fontNum == 1) {
+                     font = &Font12;
+                 } else if (fontNum == 2) {
+                     font = &Font16;
+                 } else if (fontNum == 3) {
+                     font = &Font20;
+@@ -113,40 +114,40 @@
+                 int y = br.read(Y_BITS);
+                 int w = br.read(X_BITS);
+                 int h = br.read(Y_BITS);
+                 if (x < 0 || y < 0 || w < 0 || h < 0) {
+                     return;
+                 }
+                 DRAW_FILL fill = (cmd == RECT_CMD) ? DRAW_FILL_EMPTY : DRAW_FILL_FULL;
+-                printf("Render rect x=%d y=%d w=%d h=%d fill=%d\n", x, y, w, h, fill);
++                debug("Render rect x=%d y=%d w=%d h=%d fill=%d\n", x, y, w, h, fill);
+                 Paint_DrawRectangle(x, y, x+w, y+h, BLACK, DOT_PIXEL_1X1, fill);
+                 break;
+             }
+             case CIRCLE_CMD:
+             case FILL_CIRCLE_CMD: {
+                 int x = br.read(X_BITS);
+                 int y = br.read(Y_BITS);
+                 int r = br.read(R_BITS);
+                 if (x < 0 || y < 0 || r < 0) {
+                     return;
+                 }
+                 DRAW_FILL fill = (cmd == CIRCLE_CMD) ? DRAW_FILL_EMPTY : DRAW_FILL_FULL;
+-                printf("Render circle x=%d y=%d r=%d fill=%d\n", x, y, r, fill);
++                debug("Render circle x=%d y=%d r=%d fill=%d\n", x, y, r, fill);
+                 Paint_DrawCircle(x, y, r, BLACK, DOT_PIXEL_1X1, fill);
+                 break;
+             }
+             case LINE_CMD: {
+                 int x1 = br.read(X_BITS);
+                 int y1 = br.read(Y_BITS);
+                 int x2 = br.read(X_BITS);
+                 int y2 = br.read(Y_BITS);
+                 if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0) {
+                     return;
+                 }
+-                printf("Render line x1=%d y1=%d x2=%d y2=%d\n", x1, y1, x2, y2);
++                debug("Render line x1=%d y1=%d x2=%d y2=%d\n", x1, y1, x2, y2);
+                 Paint_DrawLine(x1, y1, x2, y2, BLACK, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+                 break;
+             }
+             case QRCODE_CMD: {
+                 int x = br.read(X_BITS);
+                 int y = br.read(Y_BITS);
+                 int pixel_width = br.read(QR_PIXEL_WIDTH);
+@@ -156,15 +157,15 @@
+                 }
+                 char *text = (char*) malloc(length+1);
+                 for (int i = 0; i < length; i++) {
+                     int ch = br.read(CHAR_BITS);
+                     text[i] = ch;
+                 }
+                 text[length] = 0;
+-                printf("Render qrcode x=%d y=%d text=%s\n", x, y, text);
++                debug("Render qrcode x=%d y=%d text=%s\n", x, y, text);
+                 DOT_PIXEL dot_pixel = DOT_PIXEL_1X1;
+                 if (pixel_width == 1) {
+                     dot_pixel = DOT_PIXEL_2X2;
+                 } else if (pixel_width == 2) {
+                     dot_pixel = DOT_PIXEL_3X3;
+                 } else if (pixel_width == 3) {
+                     dot_pixel = DOT_PIXEL_4X4;
+@@ -177,15 +178,15 @@
+                 int x = br.read(X_BITS);
+                 int y = br.read(Y_BITS);
+                 int width = br.read(X_BITS);
+                 int height = br.read(Y_BITS);
+                 if (x < 0 || y < 0 || width < 0 || height < 0) {
+                     return;
+                 }
+-                printf("Render image x=%d y=%d width=%d height=%d\n", x, y, width, height);
++                debug("Render image x=%d y=%d width=%d height=%d\n", x, y, width, height);
+                 for (int i = 0; i < height; i++) {
+                     for (int j = 0; j < width; j++) {
+                         int color = br.read(1);
+                         if (color < 0) {
+                             return;
+                         }
+                         Paint_SetPixel(x + j, y + i, color ? BLACK : WHITE);
+@@ -197,15 +198,15 @@
+                 int x = br.read(X_BITS);
+                 int y = br.read(Y_BITS);
+                 int height = br.read(Y_BITS);
+                 int codepoint = br.read(ICON_BITS);
+                 if (codepoint < 0 || x < 0 || y < 0 || height < 0) {
+                     return;
+                 }
+-                printf("Render icon codepoint=%x x=%d y=%d height=%d\n", codepoint, x, y, height);
++                debug("Render icon codepoint=%x x=%d y=%d height=%d\n", codepoint, x, y, height);
+                 int w, h;
+                 uint8_t *cp = renderCodepoint(codepoint, height, &w, &h);
+                 BitReader br(cp, w * h);
+                 for (int i = 0; i < h; i++) {
+                     for (int j = 0; j < w; j++) {
+                         int color = br.read(1);
+                         if (color < 0) {
+@@ -219,18 +220,18 @@
+                 break;
+             }
+             case RFID_CMD: {
+                 uint8_t is_hid = br.read(1);
+                 uint16_t id1 = br.read(RFID1_BITS);
+                 uint32_t id2 = br.read(RFID2_BITS);
+                 if (is_hid) {
+-                    printf("Programming HID id1=%x id2=%x\n", id1, id2);
++                    debug("Programming HID id1=%x id2=%x\n", id1, id2);
+                     program_hid_rfid(id1, id2);
+                 } else {
+-                    printf("Programming EM4102 mfr_id=%x uid=%x\n", id1, id2);
++                    debug("Programming EM4102 mfr_id=%x uid=%x\n", id1, id2);
+                     program_em_rfid(id1, id2);
+                 }
+                 break;
+             }
+             default:
+                 return;
+         }
+```
+
+### Comparing `ggtag-0.0.5/shared/src/qrcodegen.c` & `ggtag-0.1.0/shared/src/qrcodegen.c`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,162 @@
+--- tmp/async_doclient-0.1.1.tar.gz
++++ tmp/async_doclient-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "async_doclient-0.1.1.tar", max compression
+│ +gzip compressed data, was "async_doclient-0.1.2.tar", max compression
+│   --- async_doclient-0.1.1.tar
+├── +++ async_doclient-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,9 +1,9 @@
+│ │ --rw-r--r--   0        0        0     1062 2023-01-10 15:12:27.771380 async_doclient-0.1.1/LICENSE
+│ │ --rw-r--r--   0        0        0       38 2023-01-14 12:39:34.470175 async_doclient-0.1.1/README.md
+│ │ --rw-r--r--   0        0        0       63 2023-01-11 17:37:36.043709 async_doclient-0.1.1/doclient/clients/__init__.py
+│ │ --rw-r--r--   0        0        0     8855 2023-03-19 13:58:17.731895 async_doclient-0.1.1/doclient/clients/k8s_client.py
+│ │ --rw-r--r--   0        0        0       42 2023-01-11 14:47:37.355774 async_doclient-0.1.1/doclient/exceptions/apiexceptions.py
+│ │ --rw-r--r--   0        0        0     2151 2023-03-19 12:56:15.010304 async_doclient-0.1.1/doclient/resources/k8s/schemas.py
+│ │ --rw-r--r--   0        0        0      175 2023-03-19 13:43:41.639860 async_doclient-0.1.1/doclient/resources/vpc/schemas.py
+│ │ --rw-r--r--   0        0        0      956 2023-03-19 13:59:01.533420 async_doclient-0.1.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      728 1970-01-01 00:00:00.000000 async_doclient-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1062 2023-01-10 15:12:27.771380 async_doclient-0.1.2/LICENSE
+│ │ +-rw-r--r--   0        0        0       38 2023-01-14 12:39:34.470175 async_doclient-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0       63 2023-01-11 17:37:36.043709 async_doclient-0.1.2/doclient/clients/__init__.py
+│ │ +-rw-r--r--   0        0        0     9815 2023-04-02 06:10:06.356580 async_doclient-0.1.2/doclient/clients/k8s_client.py
+│ │ +-rw-r--r--   0        0        0       42 2023-01-11 14:47:37.355774 async_doclient-0.1.2/doclient/exceptions/apiexceptions.py
+│ │ +-rw-r--r--   0        0        0     2241 2023-04-01 09:52:37.418659 async_doclient-0.1.2/doclient/resources/k8s/schemas.py
+│ │ +-rw-r--r--   0        0        0      175 2023-03-19 13:43:41.639860 async_doclient-0.1.2/doclient/resources/vpc/schemas.py
+│ │ +-rw-r--r--   0        0        0      956 2023-04-06 14:40:29.348414 async_doclient-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      728 1970-01-01 00:00:00.000000 async_doclient-0.1.2/PKG-INFO
+│ │   --- async_doclient-0.1.1/LICENSE
+│ ├── +++ async_doclient-0.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- async_doclient-0.1.1/doclient/clients/k8s_client.py
+│ ├── +++ async_doclient-0.1.2/doclient/clients/k8s_client.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -5,27 +5,31 @@
+│ │  from doclient.exceptions.apiexceptions import K8SCreateError
+│ │  from doclient.resources.k8s.schemas import (
+│ │      K8SClusterOptions,
+│ │      KubernetesPayload,
+│ │      KubernetesResponse,
+│ │      KubernetesUpdatePayload,
+│ │      NodePool,
+│ │ +    Kubernetes1clickApps,
+│ │  )
+│ │  
+│ │  
+│ │  class DoK8Sclient:
+│ │      def __init__(self, api_key: str = None) -> None:
+│ │          self.api_key = api_key or os.getenv("DO_TOKEN")
+│ │ -        self.base_url = "https://api.digitalocean.com/v2/kubernetes"
+│ │ +        
+│ │ +        self.api_url = "https://api.digitalocean.com"
+│ │ +        self.base_url = f"{self.api_url}/v2/kubernetes"
+│ │ +        self.addon_apps_url = f"{self.api_url}/v2/1-clicks/kubernetes"
+│ │          self.headers = {"Authorization": f"Bearer {self.api_key}"}
+│ │  
+│ │      async def create_k8s_cluster(self, payload: KubernetesPayload) -> dict:
+│ │          async with aiohttp.ClientSession() as session:
+│ │              async with session.post(
+│ │ -                self.base_url, json=payload.dict(), headers=self.headers
+│ │ +                f"{self.base_url}/clusters", json=payload.dict(), headers=self.headers
+│ │              ) as response:
+│ │                  if response.ok:
+│ │                      data = await response.json()
+│ │                      if data.get("kubernetes_cluster"):
+│ │                          return KubernetesResponse(**data.get("kubernetes_cluster"))
+│ │                  raise K8SCreateError(await response.text())
+│ │  
+│ │ @@ -77,19 +81,17 @@
+│ │                  f"{self.base_url}/clusters", headers=self.headers
+│ │              ) as response:
+│ │                  if response.ok:
+│ │                      return await response.json()
+│ │          return []
+│ │  
+│ │      async def get_k8s_cluster(self, cluster_id: str) -> dict:
+│ │ -        url = f"{self.base_url}/{cluster_id}"
+│ │ +        url = f"{self.base_url}/clusters/{cluster_id}"
+│ │          async with aiohttp.ClientSession() as session:
+│ │ -            async with session.get(
+│ │ -                f"{self.base_url}/clusters", headers=self.headers
+│ │ -            ) as response:
+│ │ +            async with session.get(url, headers=self.headers) as response:
+│ │                  if response.ok:
+│ │                      return await response.json()
+│ │  
+│ │      async def update_k8s_cluster(
+│ │          self, payload: KubernetesUpdatePayload, cluster_id: str
+│ │      ):
+│ │          url = f"{self.base_url}/clusters/{cluster_id}"
+│ │ @@ -210,7 +212,25 @@
+│ │  
+│ │      async def get_k8s_associated_user(self, cluster_id: str):
+│ │          url = f"{self.base_url}/clusters/{cluster_id}/user"
+│ │          async with aiohttp.ClientSession() as session:
+│ │              async with session.get(url, headers=self.headers) as response:
+│ │                  if response.ok:
+│ │                      return await response.json()
+│ │ +
+│ │ +    # async def run_k8s_clusterlint(self, cluster_id: str, node_info: NodePool):
+│ │ +    #     url = f"{self.base_url}/clusters/{cluster_id}/node_pools"
+│ │ +    #     async with aiohttp.ClientSession() as session:
+│ │ +    #         async with session.post(
+│ │ +    #             url, json=node_info.dict(exclude_none=True), headers=self.headers
+│ │ +    #         ) as response:
+│ │ +    #             if response.ok:
+│ │ +    #                 return await response.json()
+│ │ +
+│ │ +    async def install_1click_to_k8s(self, addon_info: Kubernetes1clickApps):
+│ │ +        url = f"{self.addon_apps_url}"
+│ │ +        async with aiohttp.ClientSession() as session:
+│ │ +            async with session.post(
+│ │ +                url, json=addon_info.dict(exclude_none=True), headers=self.headers
+│ │ +            ) as response:
+│ │ +                if response.ok:
+│ │ +                    return await response.json()
+│ │   --- async_doclient-0.1.1/doclient/resources/k8s/schemas.py
+│ ├── +++ async_doclient-0.1.2/doclient/resources/k8s/schemas.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -102,7 +102,12 @@
+│ │      registry_enabled: bool
+│ │      status: ClusterStatus
+│ │      created_at: str
+│ │      updated_at: str
+│ │      supported_features: list[str]
+│ │      endpoint: Optional[str]
+│ │      ipv4: Optional[str]
+│ │ +
+│ │ +
+│ │ +class Kubernetes1clickApps(BaseModel):
+│ │ +    addon_slugs: list[str]
+│ │ +    cluster_uuid: str
+│ │   --- async_doclient-0.1.1/pyproject.toml
+│ ├── +++ async_doclient-0.1.2/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "async-doclient"
+│ │ -version = "0.1.1"
+│ │ +version = "0.1.2"
+│ │  description = "Digitalocean client for python"
+│ │  readme = "README.md"
+│ │  license = "MIT"
+│ │  homepage = "https://github.com/Turall/doclient"
+│ │  repository = "https://github.com/Turall/doclient"
+│ │  authors = ["Tural Muradov <tural_m@hotmail.com>"]
+│ │  packages = [
+│ │   --- async_doclient-0.1.1/PKG-INFO
+│ ├── +++ async_doclient-0.1.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: async-doclient
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Digitalocean client for python
+│ │  Home-page: https://github.com/Turall/doclient
+│ │  License: MIT
+│ │  Author: Tural Muradov
+│ │  Author-email: tural_m@hotmail.com
+│ │  Requires-Python: >=3.8.1,<4.0.0
+│ │  Classifier: License :: OSI Approved :: MIT License

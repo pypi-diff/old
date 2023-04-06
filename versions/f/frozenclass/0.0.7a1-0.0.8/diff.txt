@@ -1,0 +1,280 @@
+--- tmp/frozenclass-0.0.7a1.tar.gz
++++ tmp/frozenclass-0.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "frozenclass-0.0.7a1.tar", last modified: Mon Apr  3 20:15:30 2023, max compression
+│ +gzip compressed data, was "frozenclass-0.0.8.tar", last modified: Thu Apr  6 14:36:38 2023, max compression
+│   --- frozenclass-0.0.7a1.tar
+├── +++ frozenclass-0.0.8.tar
+│ ├── file list
+│ │ @@ -1,18 +1,19 @@
+│ │ -drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-03 20:15:30.296126 frozenclass-0.0.7a1/
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)      677 2023-04-01 20:31:35.000000 frozenclass-0.0.7a1/LICENSE
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     2695 2023-04-03 20:15:30.292793 frozenclass-0.0.7a1/PKG-INFO
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1987 2023-04-02 19:52:26.000000 frozenclass-0.0.7a1/README.md
+│ │ -drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-03 20:15:30.292793 frozenclass-0.0.7a1/frozenclass/
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)      115 2023-04-01 20:31:35.000000 frozenclass-0.0.7a1/frozenclass/__init__.py
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     3189 2023-04-03 12:04:11.000000 frozenclass-0.0.7a1/frozenclass/data_controller.py
+│ │ -drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-03 20:15:30.292793 frozenclass-0.0.7a1/frozenclass.egg-info/
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     2695 2023-04-03 20:15:30.000000 frozenclass-0.0.7a1/frozenclass.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)      285 2023-04-03 20:15:30.000000 frozenclass-0.0.7a1/frozenclass.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)        1 2023-04-03 20:15:30.000000 frozenclass-0.0.7a1/frozenclass.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)       12 2023-04-03 20:15:30.000000 frozenclass-0.0.7a1/frozenclass.egg-info/top_level.txt
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)      980 2023-04-03 20:14:53.000000 frozenclass-0.0.7a1/pyproject.toml
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)       38 2023-04-03 20:15:30.296126 frozenclass-0.0.7a1/setup.cfg
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1227 2023-04-02 19:52:26.000000 frozenclass-0.0.7a1/setup.py
+│ │ -drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-03 20:15:30.292793 frozenclass-0.0.7a1/tests/
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1426 2023-04-03 20:14:19.000000 frozenclass-0.0.7a1/tests/test_save_bases.py
+│ │ --rw-r--r--   0 manjaro   (1000) manjaro   (1000)      902 2023-04-03 20:02:34.000000 frozenclass-0.0.7a1/tests/test_save_load.py
+│ │ +drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-06 14:36:38.897109 frozenclass-0.0.8/
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)      677 2023-04-06 12:43:56.000000 frozenclass-0.0.8/LICENSE
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     2894 2023-04-06 14:36:38.897109 frozenclass-0.0.8/PKG-INFO
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1987 2023-04-06 12:44:06.000000 frozenclass-0.0.8/README.md
+│ │ +drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-06 14:36:38.896109 frozenclass-0.0.8/frozenclass/
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)      115 2023-04-06 12:43:56.000000 frozenclass-0.0.8/frozenclass/__init__.py
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     3567 2023-04-06 12:43:59.000000 frozenclass-0.0.8/frozenclass/data_controller.py
+│ │ +drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-06 14:36:38.897109 frozenclass-0.0.8/frozenclass.egg-info/
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     2894 2023-04-06 14:36:38.000000 frozenclass-0.0.8/frozenclass.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)      314 2023-04-06 14:36:38.000000 frozenclass-0.0.8/frozenclass.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)        1 2023-04-06 14:36:38.000000 frozenclass-0.0.8/frozenclass.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)       12 2023-04-06 14:36:38.000000 frozenclass-0.0.8/frozenclass.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)      985 2023-04-06 14:36:28.000000 frozenclass-0.0.8/pyproject.toml
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)       38 2023-04-06 14:36:38.897109 frozenclass-0.0.8/setup.cfg
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1424 2023-04-06 12:44:09.000000 frozenclass-0.0.8/setup.py
+│ │ +drwxr-xr-x   0 manjaro   (1000) manjaro   (1000)        0 2023-04-06 14:36:38.897109 frozenclass-0.0.8/tests/
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)      934 2023-04-06 14:36:05.000000 frozenclass-0.0.8/tests/test_deep_save_load.py
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1461 2023-04-06 12:44:11.000000 frozenclass-0.0.8/tests/test_save_bases.py
+│ │ +-rw-r--r--   0 manjaro   (1000) manjaro   (1000)     1007 2023-04-06 12:44:13.000000 frozenclass-0.0.8/tests/test_save_load.py
+│ │   --- frozenclass-0.0.7a1/LICENSE
+│ ├── +++ frozenclass-0.0.8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- frozenclass-0.0.7a1/PKG-INFO
+│ ├── +++ frozenclass-0.0.8/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: frozenclass
+│ │ -Version: 0.0.7a1
+│ │ +Version: 0.0.8
+│ │  Summary: Python module for convenient storage of classes in files.
+│ │  Home-page: https://github.com/GigantPro/frozenclass
+│ │  Download-URL: https://github.com/Peopl3s/club-house-api/archive/main.zip
+│ │  Author: GigantPro
+│ │  Author-email: gigantpro2000@gmail.ru
+│ │  License: The GPLv3 License (GPLv3)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python
+│ │ +Classifier: Programming Language :: Python :: 3.7
+│ │ +Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Programming Language :: Python :: Implementation :: PyPy
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # Warning: project is unstable now. At the moment, the library has just begun to be developed, so this is not the final form of the product!
+│ │  
+│ │  <p align="center">
+│ │   --- frozenclass-0.0.7a1/README.md
+│ ├── +++ frozenclass-0.0.8/README.md
+│ │┄ Files identical despite different names
+│ │   --- frozenclass-0.0.7a1/frozenclass/data_controller.py
+│ ├── +++ frozenclass-0.0.8/frozenclass/data_controller.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -25,15 +25,15 @@
+│ │          Returns:
+│ │              list[Any]: List of class instances.
+│ │          """
+│ │          list_dir = os.listdir(self._saves_path)
+│ │          classes_list = []
+│ │  
+│ │          for save in list_dir:
+│ │ -            classes_list.append(DataParser(f"{self._saves_path}/{save}").parse_file())
+│ │ +            classes_list.append(DataParser(f"{self._saves_path}/{save}", self).parse_file())
+│ │  
+│ │          return classes_list
+│ │  
+│ │      def change_saves_path(self, new_path: str, copy_old: bool = False) -> None:
+│ │          """Changes the path where the saves are stored, and, if necessary, moves the old saves there.
+│ │          Be careful, the next time you create a DataController, you will need to specify a new class path.
+│ │  
+│ │ @@ -81,12 +81,21 @@
+│ │  
+│ │          Returns:
+│ │              Any: The instance of the class that was saved
+│ │          """
+│ │          list_dir = os.listdir(self._saves_path)
+│ │  
+│ │          for save_filename in list_dir:
+│ │ -            parser = DataParser(f"{self._saves_path}/{save_filename}")
+│ │ +            parser = DataParser(f"{self._saves_path}/{save_filename}", self)
+│ │              parsed_content = parser.parse_file_content()
+│ │              if parsed_content["SavedModel"]["save_name"] == save_name:
+│ │                  return parser.parse_file()
+│ │          raise NoSave("save_name")
+│ │ +
+│ │ +    def deep_freeze(self, target_class: Any, save_name: str = ...) -> str:
+│ │ +        if isinstance(save_name, type(...)):
+│ │ +            if hasattr(target_class, "__name__"):
+│ │ +                save_name = getattr(target_class, "__name__")
+│ │ +
+│ │ +            else:
+│ │ +                save_name = None
+│ │ +        return DataWriter(self._saves_path, save_name).deep_freeze(target_class)
+│ │   --- frozenclass-0.0.7a1/frozenclass.egg-info/PKG-INFO
+│ ├── +++ frozenclass-0.0.8/frozenclass.egg-info/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: frozenclass
+│ │ -Version: 0.0.7a1
+│ │ +Version: 0.0.8
+│ │  Summary: Python module for convenient storage of classes in files.
+│ │  Home-page: https://github.com/GigantPro/frozenclass
+│ │  Download-URL: https://github.com/Peopl3s/club-house-api/archive/main.zip
+│ │  Author: GigantPro
+│ │  Author-email: gigantpro2000@gmail.ru
+│ │  License: The GPLv3 License (GPLv3)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python
+│ │ +Classifier: Programming Language :: Python :: 3.7
+│ │ +Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Programming Language :: Python :: Implementation :: PyPy
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # Warning: project is unstable now. At the moment, the library has just begun to be developed, so this is not the final form of the product!
+│ │  
+│ │  <p align="center">
+│ │   --- frozenclass-0.0.7a1/pyproject.toml
+│ ├── +++ frozenclass-0.0.8/pyproject.toml
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,17 +1,17 @@
+│ │  [tool.poetry]
+│ │  name = "frozenclass"
+│ │ -version = "0.0.7a1"
+│ │ +version = "0.0.8"
+│ │  description = "Python module for convenient storage of classes in files."
+│ │  authors = ["GigantPro <gigantpro2000@gmail.com>"]
+│ │  license = "The GPLv3 License (GPLv3)"
+│ │  readme = "README.md"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │ -python = ">=3.7.2"
+│ │ +python = ">=3.7"
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  setuptools = "^67.6.1"
+│ │  pylint = "^2.17.1"
+│ │  pytest = "^7.2.2"
+│ │  twine = "^4.0.2"
+│ │  
+│ │ @@ -20,15 +20,15 @@
+│ │  build-backend = "poetry.core.masonry.api"
+│ │  
+│ │  [tool.poetry.scripts]
+│ │  build = "scripts.build:build"
+│ │  public = "scripts.public:public"
+│ │  linting = "scripts.pylint:start_linting"
+│ │  testing = "scripts.testing:start_testing"
+│ │ -autoclean = "scripts.autoclean:autoclean"
+│ │ +clean = "scripts.autoclean:autoclean"
+│ │  
+│ │  [tool.pylint]
+│ │  max-line-length = 120
+│ │  disable = [
+│ │      "C0114",
+│ │      "C0115",
+│ │      "C0116",
+│ │ @@ -42,9 +42,10 @@
+│ │      "E0402",
+│ │      "W0622",
+│ │      "W0105",
+│ │      "C0207",
+│ │      "C2801",
+│ │      "C0206",
+│ │      "C0200",
+│ │ -    "E0401"
+│ │ +    "E0401",
+│ │ +    "W1401"
+│ │  ]
+│ │   --- frozenclass-0.0.7a1/setup.py
+│ ├── +++ frozenclass-0.0.8/setup.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -29,11 +29,15 @@
+│ │      packages=["frozenclass"],
+│ │      install_requires=[],
+│ │      classifiers=[
+│ │          "Operating System :: OS Independent",
+│ │          "Intended Audience :: End Users/Desktop",
+│ │          "Intended Audience :: Developers",
+│ │          "Programming Language :: Python",
+│ │ +        "Programming Language :: Python :: 3.7",
+│ │ +        "Programming Language :: Python :: 3.8",
+│ │ +        "Programming Language :: Python :: 3.9",
+│ │          "Programming Language :: Python :: 3.10",
+│ │ +        "Programming Language :: Python :: 3.11",
+│ │          "Programming Language :: Python :: Implementation :: PyPy",
+│ │      ],
+│ │  )
+│ │   --- frozenclass-0.0.7a1/tests/test_save_bases.py
+│ ├── +++ frozenclass-0.0.8/tests/test_save_bases.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -13,20 +13,22 @@
+│ │      def __init__(self, thrd) -> None:
+│ │          self.thrd = thrd
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "thrd",
+│ │      [
+│ │ -        (1,),
+│ │ -        (2,),
+│ │ -        (2000000,),
+│ │ -        ("qwe",),
+│ │ -        ([1, 2, 3],),
+│ │ -        ({'1': 2},)
+│ │ +        1,
+│ │ +        2,
+│ │ +        2000000,
+│ │ +        "qwe",
+│ │ +        [1, 2, 3],
+│ │ +        {'1': 2},
+│ │ +        "123qwe@",
+│ │ +        [123123123, "123123123"]
+│ │      ],
+│ │  )
+│ │  def test_save_load_with_globals_bases(thrd):
+│ │      save_name = ''.join([choice(ascii_letters) for _ in range(10)])
+│ │  
+│ │      ts_object = PublicClassChild(thrd)
+│ │   --- frozenclass-0.0.7a1/tests/test_save_load.py
+│ ├── +++ frozenclass-0.0.8/tests/test_save_load.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -10,15 +10,17 @@
+│ │      [
+│ │          (1, 2, 3),
+│ │          (2, 3, 4),
+│ │          (10000000, 2000000, 23423456876),
+│ │          ("asd", "qwe", "zxcasd"),
+│ │          ([1, 2, 3], ['1', '2', '3'], (3, 4, 5)),
+│ │          ([1, '2', ['3', '4']], 1, 2),
+│ │ -        ({1: 2}, 2, '3')
+│ │ +        ({1: 2}, 2, '3'),
+│ │ +        ({2: ['1234']}, {3: 'asdqwe'}, ['123234']),
+│ │ +        ({2: ['1234']}, {3: 'asdqwe'}, ['123234']),
+│ │      ],
+│ │  )
+│ │  def test_save_load(fst, sec, thrd):
+│ │      class Test:
+│ │          pass
+│ │  
+│ │      save_name = ''.join([choice(ascii_letters) for _ in range(10)])

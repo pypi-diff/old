@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/large-image-1.9.1.dev6.tar.gz tmp/large-image-1.9.1.dev8.tar.gz --html versions/l/large-image/1.9.1.dev6-1.9.1.dev8/index.html --text versions/l/large-image/1.9.1.dev6-1.9.1.dev8/diff.txt --markdown versions/l/large-image/1.9.1.dev6-1.9.1.dev8/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">18.4 KB</span></div>
+  <div><span class="source">tmp/large-image-1.9.1.dev6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/large-image-1.9.1.dev8.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">292 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/large-image-1.9.1.dev<del>6</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Mon</del><span class="dp">·</span>Dec<span class="dp">·</span>2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06<span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/large-image-1.9.1.dev<ins>8</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Tue</ins><span class="dp">·</span>Dec<span class="dp">·</span>2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06<span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">18.0 KB</span></div>
+    <div><span class="source">large-image-1.9.1.dev6.tar</span> vs.</div>
+    <div id="large-image--.-.-.dev-.tar"><span class="source">large-image-1.9.1.dev8.tar</span>
+      <a class="anchor" href="#large-image--.-.-.dev-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">10.4 KB</span></div>
+      <div id="large-image--.-.-.dev-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 40 lines modified</td><td colspan="2">Offset 1, 40 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>578<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>578<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8183<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8183<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7010<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/README.rst</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7010<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/annotations.rst</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/annotations.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2329<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/conf.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2329<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/conf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4028<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/config_options.rst</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4028<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/config_options.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2234<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/development.rst</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2234<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/development.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>688<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/image_conversion.rst</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>688<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/image_conversion.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1202<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/index.rst</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1202<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/index.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1934<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/make_docs.sh</td><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1934<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/make_docs.sh</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/static/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/static/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>178<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/static/custom.css</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>178<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/static/custom.css</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6242<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/tilesource_options.rst</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6242<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/tilesource_options.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/docs/upgrade.rst</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/docs/upgrade.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/</td><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1026<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/__init__.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1026<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/cache_util/</td><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/cache_util/</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2810<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/cache_util/__init__.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2810<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/cache_util/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8118<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/cache_util/cache.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8118<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/cache_util/cache.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4915<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/cache_util/cachefactory.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4915<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/cache_util/cachefactory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6250<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/cache_util/memcache.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6250<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/cache_util/memcache.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1922<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/config.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1922<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2284<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/constants.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2284<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>487<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/exceptions.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>487<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/tilesource/</td><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/tilesource/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>25</del>4<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/tilesource/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>34</ins>4<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/tilesource/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>113564<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/tilesource/base.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>113564<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/tilesource/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10578<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/tilesource/tiledict.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10578<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/tilesource/tiledict.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20847<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image/tilesource/utilities.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20847<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image/tilesource/utilities.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/</td><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8183<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/PKG-INFO</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8183<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>816<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/SOURCES.txt</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>816<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/dependency_links.txt</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/not-zip-safe</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>362</del><span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/requires.txt</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>408</ins><span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/large_image.egg-info/top_level.txt</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/large_image.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>01</del>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/setup.cfg</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>37</ins>:06.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>061</del><span class="dp">·</span>2021-12-2<del>0</del><span class="dp">·</span><del>21</del>:<del>00</del>:5<del>8</del>.000000<span class="dp">·</span>large-image-1.9.1.dev<del>6</del>/setup.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>116</ins><span class="dp">·</span>2021-12-2<ins>1</ins><span class="dp">·</span><ins>17</ins>:<ins>36</ins>:5<ins>3</ins>.000000<span class="dp">·</span>large-image-1.9.1.dev<ins>8</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/LICENSE</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--LICENSE"><span class="source">large-image-1.9.1.dev8/LICENSE</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">461 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/PKG-INFO</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--PKG-INFO"><span class="source">large-image-1.9.1.dev8/PKG-INFO</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>large-image</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>large-image</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.1.dev<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.1.dev<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>modules<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>large,<span class="dp">·</span>multiresolution<span class="dp">·</span>images.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>modules<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>large,<span class="dp">·</span>multiresolution<span class="dp">·</span>images.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/girder/large_image</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/girder/large_image</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kitware,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kitware,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kitware@kitware.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kitware@kitware.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>large_image</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>large_image</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/README.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--README.rst"><span class="source">large-image-1.9.1.dev8/README.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/conf.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-conf.py"><span class="source">large-image-1.9.1.dev8/docs/conf.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-conf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/config_options.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-config_options.rst"><span class="source">large-image-1.9.1.dev8/docs/config_options.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-config_options.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/development.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-development.rst"><span class="source">large-image-1.9.1.dev8/docs/development.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-development.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/image_conversion.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-image_conversion.rst"><span class="source">large-image-1.9.1.dev8/docs/image_conversion.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-image_conversion.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/index.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-index.rst"><span class="source">large-image-1.9.1.dev8/docs/index.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-index.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/make_docs.sh</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-make_docs.sh"><span class="source">large-image-1.9.1.dev8/docs/make_docs.sh</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-make_docs.sh">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/tilesource_options.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-tilesource_options.rst"><span class="source">large-image-1.9.1.dev8/docs/tilesource_options.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-tilesource_options.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/docs/upgrade.rst</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-upgrade.rst"><span class="source">large-image-1.9.1.dev8/docs/upgrade.rst</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--docs-upgrade.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/__init__.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-__init__.py"><span class="source">large-image-1.9.1.dev8/large_image/__init__.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/cache_util/__init__.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-__init__.py"><span class="source">large-image-1.9.1.dev8/large_image/cache_util/__init__.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/cache_util/cache.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-cache.py"><span class="source">large-image-1.9.1.dev8/large_image/cache_util/cache.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-cache.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/cache_util/cachefactory.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-cachefactory.py"><span class="source">large-image-1.9.1.dev8/large_image/cache_util/cachefactory.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-cachefactory.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/cache_util/memcache.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-memcache.py"><span class="source">large-image-1.9.1.dev8/large_image/cache_util/memcache.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-cache_util-memcache.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/config.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-config.py"><span class="source">large-image-1.9.1.dev8/large_image/config.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/constants.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-constants.py"><span class="source">large-image-1.9.1.dev8/large_image/constants.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.5 KB</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/tilesource/__init__.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-__init__.py"><span class="source">large-image-1.9.1.dev8/large_image/tilesource/__init__.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pkg_resources<span class="dp">·</span>import<span class="dp">·</span>iter_entry_points</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>..<span class="dp">·</span>import<span class="dp">·</span>config</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>..<span class="dp">·</span>import<span class="dp">·</span>config</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>..constants<span class="dp">·</span>import<span class="dp">·</span>SourcePriority</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>..constants<span class="dp">·</span>import<span class="dp">·</span>SourcePriority</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>..exceptions<span class="dp">·</span>import<span class="dp">·</span>(TileGeneralError,<span class="dp">·</span>TileGeneralException,</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>..exceptions<span class="dp">·</span>import<span class="dp">·</span>(TileGeneralError,<span class="dp">·</span>TileGeneralException,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceAssetstoreError,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceAssetstoreError,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceAssetstoreException,<span class="dp">·</span>TileSourceError,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceAssetstoreException,<span class="dp">·</span>TileSourceError,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceException,<span class="dp">·</span>TileSourceFileNotFoundError)</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TileSourceException,<span class="dp">·</span>TileSourceFileNotFoundError)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.base<span class="dp">·</span>import<span class="dp">·</span>(TILE_FORMAT_IMAGE,<span class="dp">·</span>TILE_FORMAT_NUMPY,<span class="dp">·</span>TILE_FORMAT_PIL,</td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>.base<span class="dp">·</span>import<span class="dp">·</span>(TILE_FORMAT_IMAGE,<span class="dp">·</span>TILE_FORMAT_NUMPY,<span class="dp">·</span>TILE_FORMAT_PIL,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 47, 15 lines modified</td><td colspan="2">Offset 45, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Load<span class="dp">·</span>all<span class="dp">·</span>tilesources<span class="dp">·</span>from<span class="dp">·</span>entrypoints<span class="dp">·</span>and<span class="dp">·</span>add<span class="dp">·</span>them<span class="dp">·</span>to<span class="dp">·</span>the</td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Load<span class="dp">·</span>all<span class="dp">·</span>tilesources<span class="dp">·</span>from<span class="dp">·</span>entrypoints<span class="dp">·</span>and<span class="dp">·</span>add<span class="dp">·</span>them<span class="dp">·</span>to<span class="dp">·</span>the</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>AvailableTileSources<span class="dp">·</span>dictionary.</td><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>AvailableTileSources<span class="dp">·</span>dictionary.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>entryPointName:<span class="dp">·</span>the<span class="dp">·</span>name<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>entry<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>load.</td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>entryPointName:<span class="dp">·</span>the<span class="dp">·</span>name<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>entry<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>load.</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>sourceDict:<span class="dp">·</span>a<span class="dp">·</span>dictionary<span class="dp">·</span>to<span class="dp">·</span>populate<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>loaded<span class="dp">·</span>sources.</td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>sourceDict:<span class="dp">·</span>a<span class="dp">·</span>dictionary<span class="dp">·</span>to<span class="dp">·</span>populate<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>loaded<span class="dp">·</span>sources.</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>importlib.metadata<span class="dp">·</span>import<span class="dp">·</span>entry_points</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>ImportError:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>importlib_metadata<span class="dp">·</span>import<span class="dp">·</span>entry_points</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>entryPoint<span class="dp">·</span>in<span class="dp">·</span><del>iter_</del>entry_points(entryPointName<del>)</del>:</td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>entryPoint<span class="dp">·</span>in<span class="dp">·</span>entry_points(<ins>)[</ins>entryPointName<ins>]</ins>:</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sourceClass<span class="dp">·</span>=<span class="dp">·</span>entryPoint.load()</td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sourceClass<span class="dp">·</span>=<span class="dp">·</span>entryPoint.load()</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>sourceClass.name<span class="dp">·</span>and<span class="dp">·</span>None<span class="dp">·</span>in<span class="dp">·</span>sourceClass.extensions:</td><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>sourceClass.name<span class="dp">·</span>and<span class="dp">·</span>None<span class="dp">·</span>in<span class="dp">·</span>sourceClass.extensions:</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sourceDict[entryPoint.name]<span class="dp">·</span>=<span class="dp">·</span>sourceClass</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sourceDict[entryPoint.name]<span class="dp">·</span>=<span class="dp">·</span>sourceClass</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.getConfig(&#x27;logprint&#x27;).debug(&#x27;Loaded<span class="dp">·</span>tile<span class="dp">·</span>source<span class="dp">·</span>%s&#x27;<span class="dp">·</span>%<span class="dp">·</span>entryPoint.name)</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.getConfig(&#x27;logprint&#x27;).debug(&#x27;Loaded<span class="dp">·</span>tile<span class="dp">·</span>source<span class="dp">·</span>%s&#x27;<span class="dp">·</span>%<span class="dp">·</span>entryPoint.name)</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.getConfig(&#x27;logprint&#x27;).exception(</td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.getConfig(&#x27;logprint&#x27;).exception(</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/tilesource/base.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-base.py"><span class="source">large-image-1.9.1.dev8/large_image/tilesource/base.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/tilesource/tiledict.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-tiledict.py"><span class="source">large-image-1.9.1.dev8/large_image/tilesource/tiledict.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-tiledict.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image/tilesource/utilities.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-utilities.py"><span class="source">large-image-1.9.1.dev8/large_image/tilesource/utilities.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image-tilesource-utilities.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">503 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image.egg-info/PKG-INFO</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-PKG-INFO"><span class="source">large-image-1.9.1.dev8/large_image.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>large-image</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>large-image</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.1.dev<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.1.dev<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>modules<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>large,<span class="dp">·</span>multiresolution<span class="dp">·</span>images.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>modules<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>large,<span class="dp">·</span>multiresolution<span class="dp">·</span>images.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/girder/large_image</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/girder/large_image</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kitware,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kitware,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kitware@kitware.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kitware@kitware.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>large_image</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>large_image</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-SOURCES.txt"><span class="source">large-image-1.9.1.dev8/large_image.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.69 KB</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/large_image.egg-info/requires.txt</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-requires.txt"><span class="source">large-image-1.9.1.dev8/large_image.egg-info/requires.txt</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--large_image.egg-info-requires.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 27 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">cachetools&gt;=3.0.0</td><td class="diffline">1 </td><td class="diffpresent">cachetools&gt;=3.0.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">palettable</td><td class="diffline">2 </td><td class="diffpresent">palettable</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Pillow!=8.3.0,!=8.3.1</td><td class="diffline">3 </td><td class="diffpresent">Pillow!=8.3.0,!=8.3.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">psutil&gt;=4.2.0</td><td class="diffline">4 </td><td class="diffpresent">psutil&gt;=4.2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">numpy&gt;=1.10.4</td><td class="diffline">5 </td><td class="diffpresent">numpy&gt;=1.10.4</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">[:python_version<span class="dp">·</span>&lt;<span class="dp">·</span>&quot;3.8&quot;]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">importlib-metadata</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">[all]</td><td class="diffline">8 </td><td class="diffpresent">[all]</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">large-image-source-<del>om</del>e<del>tiff</del></td><td class="diffline">9 </td><td class="diffpresent">large-image-source-<ins>de</ins>e<ins>p</ins><ins>zoom</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">large-image-source-<del>g</del>d<del>a</del><del>l</del></td><td class="diffline">10 </td><td class="diffpresent">large-image-source-<ins>n</ins>d<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">large-image-source-mapnik</td><td class="diffline">11 </td><td class="diffpresent">large-image-source-mapnik</td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">large-image-source-pil</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">large-image-source-openjpeg</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">large-image-source-tiff</td><td class="diffline">12 </td><td class="diffpresent">large-image-source-tiff</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">large-image-source-<del>deep</del><del>zoom</del></td><td class="diffline">13 </td><td class="diffpresent">large-image-source-<ins>gdal</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">large-image-source-ometiff</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">large-image-source-openjpeg</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">large-image-source-openslide</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">large-image-converter</td><td class="diffline">17 </td><td class="diffpresent">large-image-converter</td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">large-image-source-dummy</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">large-image-source-bioformats</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">matplotlib</td><td class="diffline">18 </td><td class="diffpresent">matplotlib</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent">large-image-source-bioformats</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">large-image-source-<del>o</del>p<del>ensl</del>i<del>d</del><del>e</del></td><td class="diffline">20 </td><td class="diffpresent">large-image-source-pi<ins>l</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">large-image-source-<del>nd2</del></td><td class="diffline">21 </td><td class="diffpresent">large-image-source-<ins>du</ins><ins>mmy</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">large-image-source-test</td><td class="diffline">22 </td><td class="diffpresent">large-image-source-test</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">[all:platform_system<span class="dp">·</span>!=<span class="dp">·</span>&quot;Windows&quot;]</td><td class="diffline">23 </td><td class="diffpresent">[all:platform_system<span class="dp">·</span>!=<span class="dp">·</span>&quot;Windows&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">pylibmc&gt;=1.5.1</td><td class="diffline">24 </td><td class="diffpresent">pylibmc&gt;=1.5.1</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">[bioformats]</td><td class="diffline">25 </td><td class="diffpresent">[bioformats]</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">large-image-source-bioformats</td><td class="diffline">26 </td><td class="diffpresent">large-image-source-bioformats</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 61, 25 lines modified</td><td colspan="2">Offset 64, 25 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">[openslide]</td><td class="diffline">64 </td><td class="diffpresent">[openslide]</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">large-image-source-openslide</td><td class="diffline">65 </td><td class="diffpresent">large-image-source-openslide</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">[pil]</td><td class="diffline">66 </td><td class="diffpresent">[pil]</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">large-image-source-pil</td><td class="diffline">67 </td><td class="diffpresent">large-image-source-pil</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">[sources]</td><td class="diffline">68 </td><td class="diffpresent">[sources]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">69 </td><td class="diffpresent">large-image-source-deepzoom</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">70 </td><td class="diffpresent">large-image-source-nd2</td></tr>
+<tr class="diffchanged"><td class="diffline">66 </td><td class="diffpresent">large-image-source-<del>ome</del>tiff</td><td class="diffline">71 </td><td class="diffpresent">large-image-source-tiff</td></tr>
+<tr class="diffdeleted"><td class="diffline">67 </td><td class="diffpresent">large-image-source-gdal</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">large-image-source-mapnik</td><td class="diffline">72 </td><td class="diffpresent">large-image-source-mapnik</td></tr>
+<tr class="diffchanged"><td class="diffline">69 </td><td class="diffpresent">large-image-source-<del>pi</del>l</td><td class="diffline">73 </td><td class="diffpresent">large-image-source-<ins>g</ins><ins>da</ins>l</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">74 </td><td class="diffpresent">large-image-source-ometiff</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent">large-image-source-openjpeg</td><td class="diffline">75 </td><td class="diffpresent">large-image-source-openjpeg</td></tr>
+<tr class="diffdeleted"><td class="diffline">71 </td><td class="diffpresent">large-image-source-tiff</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">72 </td><td class="diffpresent">large-image-source-deepzoom</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">73 </td><td class="diffpresent">large-image-source-dummy</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">74 </td><td class="diffpresent">large-image-source-bioformats</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">large-image-source-openslide</td><td class="diffline">76 </td><td class="diffpresent">large-image-source-openslide</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">77 </td><td class="diffpresent">large-image-source-bioformats</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">78 </td><td class="diffpresent">large-image-source-pil</td></tr>
+<tr class="diffchanged"><td class="diffline">76 </td><td class="diffpresent">large-image-source-<del>nd2</del></td><td class="diffline">79 </td><td class="diffpresent">large-image-source-<ins>du</ins><ins>mmy</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">large-image-source-test</td><td class="diffline">80 </td><td class="diffpresent">large-image-source-test</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">[test]</td><td class="diffline">81 </td><td class="diffpresent">[test]</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">large-image-source-test</td><td class="diffline">82 </td><td class="diffpresent">large-image-source-test</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">[tiff]</td><td class="diffline">83 </td><td class="diffpresent">[tiff]</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">large-image-source-tiff</td><td class="diffline">84 </td><td class="diffpresent">large-image-source-tiff</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">720 B</span></div>
+      <div><span class="source">large-image-1.9.1.dev6/setup.py</span> vs.</div>
+      <div id="large-image--.-.-.dev-.tar---large-image--.-.-.dev--setup.py"><span class="source">large-image-1.9.1.dev8/setup.py</span>
+        <a class="anchor" href="#large-image--.-.-.dev-.tar---large-image--.-.-.dev--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 73, 14 lines modified</td><td colspan="2">Offset 73, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;palettable&#x27;,</td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;palettable&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>We<span class="dp">·</span>don&#x27;t<span class="dp">·</span>pin<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>of<span class="dp">·</span>Pillow,<span class="dp">·</span>as<span class="dp">·</span>anything<span class="dp">·</span>newer<span class="dp">·</span>than<span class="dp">·</span>3.0</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>We<span class="dp">·</span>don&#x27;t<span class="dp">·</span>pin<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>of<span class="dp">·</span>Pillow,<span class="dp">·</span>as<span class="dp">·</span>anything<span class="dp">·</span>newer<span class="dp">·</span>than<span class="dp">·</span>3.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>probably<span class="dp">·</span>works,<span class="dp">·</span>though<span class="dp">·</span>we&#x27;d<span class="dp">·</span>rather<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>latest.<span class="dp">·</span><span class="dp">·</span>8.3.0<span class="dp">·</span>won&#x27;t</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>probably<span class="dp">·</span>works,<span class="dp">·</span>though<span class="dp">·</span>we&#x27;d<span class="dp">·</span>rather<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>latest.<span class="dp">·</span><span class="dp">·</span>8.3.0<span class="dp">·</span>won&#x27;t</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>save<span class="dp">·</span>jpeg<span class="dp">·</span>compressed<span class="dp">·</span>tiffs<span class="dp">·</span>properly.</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>save<span class="dp">·</span>jpeg<span class="dp">·</span>compressed<span class="dp">·</span>tiffs<span class="dp">·</span>properly.</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Pillow!=8.3.0,!=8.3.1&#x27;,</td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Pillow!=8.3.0,!=8.3.1&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;psutil&gt;=4.2.0&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>technically<span class="dp">·</span>optional</td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;psutil&gt;=4.2.0&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>technically<span class="dp">·</span>optional</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&gt;=1.10.4&#x27;,</td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&gt;=1.10.4&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;importlib-metadata<span class="dp">·</span>;<span class="dp">·</span>python_version<span class="dp">·</span>&lt;<span class="dp">·</span>&quot;3.8&quot;&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>extras_require=extraReqs,</td><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>extras_require=extraReqs,</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&#x27;large_image&#x27;,</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&#x27;large_image&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;large_image&#x27;],</td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;large_image&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/girder/large_image&#x27;,</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/girder/large_image&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.6&#x27;,</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.6&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

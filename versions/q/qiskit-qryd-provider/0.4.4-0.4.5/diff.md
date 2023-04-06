@@ -1,0 +1,554 @@
+# Comparing `tmp/qiskit_qryd_provider-0.4.4.tar.gz` & `tmp/qiskit_qryd_provider-0.4.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "qiskit_qryd_provider-0.4.4.tar", max compression
++gzip compressed data, was "qiskit_qryd_provider-0.4.5.tar", max compression
+```
+
+## Comparing `qiskit_qryd_provider-0.4.4.tar` & `qiskit_qryd_provider-0.4.5.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,11 @@
+--rw-r--r--   0        0        0    11358 2022-12-16 11:01:46.366825 qiskit_qryd_provider-0.4.4/LICENSE.txt
+--rw-r--r--   0        0        0     3387 2022-12-16 11:01:46.334824 qiskit_qryd_provider-0.4.4/README.md
+--rw-r--r--   0        0        0      994 2022-12-16 11:01:46.334824 qiskit_qryd_provider-0.4.4/pyproject.toml
+--rw-r--r--   0        0        0      580 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/__init__.py
+--rw-r--r--   0        0        0     4753 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/pcp_gate.py
+--rw-r--r--   0        0        0     4845 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/pcz_gate.py
+--rw-r--r--   0        0        0    41486 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_backend.py
+--rw-r--r--   0        0        0    11168 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_job.py
+--rw-r--r--   0        0        0     4707 2022-12-16 11:01:46.354825 qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_provider.py
+--rw-r--r--   0        0        0     4181 1970-01-01 00:00:00.000000 qiskit_qryd_provider-0.4.4/setup.py
+--rw-r--r--   0        0        0     4125 1970-01-01 00:00:00.000000 qiskit_qryd_provider-0.4.4/PKG-INFO
++-rw-r--r--   0        0        0    11358 2023-04-06 14:35:18.299940 qiskit_qryd_provider-0.4.5/LICENSE.txt
++-rw-r--r--   0        0        0     3387 2023-04-06 14:35:18.287940 qiskit_qryd_provider-0.4.5/README.md
++-rw-r--r--   0        0        0      993 2023-04-06 14:35:21.935940 qiskit_qryd_provider-0.4.5/pyproject.toml
++-rw-r--r--   0        0        0      580 2023-04-06 14:35:18.283940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/__init__.py
++-rw-r--r--   0        0        0     5082 2023-04-06 14:35:18.287940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/pcp_gate.py
++-rw-r--r--   0        0        0     5434 2023-04-06 14:35:18.287940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/pcz_gate.py
++-rw-r--r--   0        0        0    40446 2023-04-06 14:35:18.283940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_backend.py
++-rw-r--r--   0        0        0    11168 2023-04-06 14:35:18.283940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_job.py
++-rw-r--r--   0        0        0     4707 2023-04-06 14:35:18.287940 qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_provider.py
++-rw-r--r--   0        0        0     4180 1970-01-01 00:00:00.000000 qiskit_qryd_provider-0.4.5/setup.py
++-rw-r--r--   0        0        0     4124 1970-01-01 00:00:00.000000 qiskit_qryd_provider-0.4.5/PKG-INFO
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/LICENSE.txt` & `qiskit_qryd_provider-0.4.5/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `qiskit_qryd_provider-0.4.4/README.md` & `qiskit_qryd_provider-0.4.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `qiskit_qryd_provider-0.4.4/pyproject.toml` & `qiskit_qryd_provider-0.4.5/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ [tool.poetry]
+ name = "qiskit-qryd-provider"
+-version = "0.4.4"
++version = "0.4.5"
+ description = "Qiskit provider for accessing the emulator and future Rydberg quantum computer of the QRydDemo consortium"
+ authors = ["Sebastian Weber"]
+ license = "Apache-2.0"
+ readme = "README.md"
+ documentation = "https://thequantumlaend.de/docs/"
+ 
+ [tool.poetry.dependencies]
+-python = ">=3.8,<3.12"
++python = ">=3.8,<4.0"
+ qiskit-terra = ">=0.20"
+ requests = ">=2.27"
+ 
+ [tool.poetry.group.dev.dependencies]
+ qiskit-aer = ">=0.10.3"
+ pydot = "^1.4.2"
+ pillow = "^9.1.0"
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/__init__.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/pcp_gate.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/pcp_gate.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -118,21 +118,29 @@
+         # Reset equivalence library
+         default = []
+         for c in SessionEquivalenceLibrary.get_entry(CPhaseGate(cls._lam)):
+             if not c.get_instructions("pcp"):
+                 default.append(c)
+         SessionEquivalenceLibrary.set_entry(CPhaseGate(cls._lam), default)
+ 
++        SessionEquivalenceLibrary.set_entry(PCPGate(cls._lam), [])
++
+         # Attach new decomposition to the equivalence library
+         def_pcp_cz = QuantumCircuit(2)
+         def_pcp_cz.append(PCPGate(cls._lam), [0, 1])
+         def_pcp_cz.u(0, 0, -cls._theta, 0)
+         def_pcp_cz.u(0, 0, -cls._theta, 1)
+         SessionEquivalenceLibrary.add_equivalence(CPhaseGate(cls._lam), def_pcp_cz)
+ 
++        def_cz_pcp = QuantumCircuit(2)
++        def_cz_pcp.append(CPhaseGate(cls._lam), [0, 1])
++        def_cz_pcp.u(0, 0, cls._theta, 0)
++        def_cz_pcp.u(0, 0, cls._theta, 1)
++        SessionEquivalenceLibrary.add_equivalence(PCPGate(cls._lam), def_cz_pcp)
++
+     @classmethod
+     def get_theta(cls, lam: float) -> float:
+         r"""Get the phase shift of the gate for a given phase :math:`\lambda`.
+ 
+         Args:
+             lam: Phase of the gate.
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/pcz_gate.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/pcz_gate.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -117,14 +117,16 @@
+ 
+         default = []
+         for c in SessionEquivalenceLibrary.get_entry(CZGate()):
+             if not c.get_instructions("pcz"):
+                 default.append(c)
+         SessionEquivalenceLibrary.set_entry(CZGate(), default)
+ 
++        SessionEquivalenceLibrary.set_entry(CZGate(), [])
++
+         # Attach new decomposition to the equivalence library
+         def_pcz_cz = QuantumCircuit(2)
+         def_pcz_cz.append(PCZGate(), [0, 1])
+         def_pcz_cz.u(0, 0, -cls._theta, 0)
+         def_pcz_cz.u(0, 0, -cls._theta, 1)
+         SessionEquivalenceLibrary.add_equivalence(CZGate(), def_pcz_cz)
+ 
+@@ -132,14 +134,28 @@
+         def_pcz_cx.h(1)
+         def_pcz_cx.append(PCZGate(), [0, 1])
+         def_pcz_cx.u(0, 0, -cls._theta, 0)
+         def_pcz_cx.u(0, 0, -cls._theta, 1)
+         def_pcz_cx.h(1)
+         SessionEquivalenceLibrary.add_equivalence(CXGate(), def_pcz_cx)
+ 
++        def_cz_pcz = QuantumCircuit(2)
++        def_cz_pcz.append(CZGate(), [0, 1])
++        def_cz_pcz.u(0, 0, cls._theta, 0)
++        def_cz_pcz.u(0, 0, cls._theta, 1)
++        SessionEquivalenceLibrary.add_equivalence(PCZGate(), def_cz_pcz)
++
++        def_cx_pcz = QuantumCircuit(2)
++        def_cx_pcz.h(1)
++        def_cx_pcz.append(CXGate(), [0, 1])
++        def_cx_pcz.h(1)
++        def_cx_pcz.u(0, 0, cls._theta, 0)
++        def_cx_pcz.u(0, 0, cls._theta, 1)
++        SessionEquivalenceLibrary.add_equivalence(PCZGate(), def_cx_pcz)
++
+     @classmethod
+     def get_theta(cls) -> float:
+         """Get the phase shift of the gate.
+ 
+         Returns:
+             Angle of the phase shift.
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_backend.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_backend.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -27,15 +27,14 @@
+ from qiskit.circuit.library import SXGate
+ from qiskit.circuit.library import UGate
+ from qiskit.circuit.library import XGate
+ from qiskit.circuit.library import YGate
+ from qiskit.circuit.library import ZGate
+ from qiskit.providers import BackendV2 as Backend
+ from qiskit.providers import Options
+-from qiskit.transpiler import InstructionProperties
+ from qiskit.transpiler import Target
+ 
+ from qiskit_qryd_provider.pcz_gate import PCZGate
+ from qiskit_qryd_provider.qryd_job import QRydJob
+ 
+ if TYPE_CHECKING:
+     import qiskit
+@@ -682,89 +681,89 @@
+             if q1 != q2
+         ]
+ 
+         # Create Target
+         self._target = Target()
+ 
+         # Add native gates
+-        meas_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        meas_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(Measure(), meas_props)
+ 
+         lam = Parameter("lambda")
+-        p_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        p_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(PhaseGate(lam), p_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+-        r_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        r_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RGate(theta, phi), r_props)
+ 
+         theta = Parameter("theta")
+-        rx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RXGate(theta), rx_props)
+ 
+         theta = Parameter("theta")
+-        ry_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        ry_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RYGate(theta), ry_props)
+ 
+-        pcz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        pcz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(PCZGate(), pcz_props)
+ 
+         # Add additional gates: single qubit gates
+         # see https://github.com/Qiskit/qiskit-aer/blob/bb47adcf2e49b1e486e9ed15b3d55b6c4a345b1b/qiskit/providers/aer/backends/backend_utils.py#L52  # noqa: E501
+ 
+-        h_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        h_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(HGate(), h_props)
+ 
+         theta = Parameter("theta")
+-        rz_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rz_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RZGate(theta), rz_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+         lam = Parameter("lambda")
+-        u_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        u_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(UGate(theta, phi, lam), u_props)
+ 
+-        x_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        x_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(XGate(), x_props)
+ 
+-        y_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        y_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(YGate(), y_props)
+ 
+-        z_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        z_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(ZGate(), z_props)
+ 
+-        sx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        sx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(SXGate(), sx_props)
+ 
+-        sxdg_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        sxdg_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(SXdgGate(), sxdg_props)
+ 
+         # Add additional gates: controlled gates
+ 
+-        cx_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cx_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CXGate(), cx_props)
+ 
+-        cy_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cy_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CYGate(), cy_props)
+ 
+-        cz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CZGate(), cz_props)
+ 
+         theta = Parameter("theta")
+-        cp_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cp_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CPhaseGate(theta), cp_props)
+ 
+         # Add additional gates: other two qubit unitaries
+ 
+-        swap_props = {tuple(edge): InstructionProperties() for edge in edges}
++        swap_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(SwapGate(), swap_props)
+ 
+-        iswap_props = {tuple(edge): InstructionProperties() for edge in edges}
++        iswap_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(iSwapGate(), iswap_props)
+ 
+ 
+ class QRydEmuCloudcompTriangle(QRydBackend):
+     """Backend for accessing a specific emulator.
+ 
+     The emulator simulates *30 ideal qubits* arranged in a *triangle lattice* with
+@@ -813,89 +812,89 @@
+             if q1 != q2
+         ]
+ 
+         # Create Target
+         self._target = Target()
+ 
+         # Add native gates
+-        meas_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        meas_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(Measure(), meas_props)
+ 
+         lam = Parameter("lambda")
+-        p_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        p_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(PhaseGate(lam), p_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+-        r_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        r_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RGate(theta, phi), r_props)
+ 
+         theta = Parameter("theta")
+-        rx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RXGate(theta), rx_props)
+ 
+         theta = Parameter("theta")
+-        ry_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        ry_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RYGate(theta), ry_props)
+ 
+-        pcz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        pcz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(PCZGate(), pcz_props)
+ 
+         # Add additional gates: single qubit gates
+         # see https://github.com/Qiskit/qiskit-aer/blob/bb47adcf2e49b1e486e9ed15b3d55b6c4a345b1b/qiskit/providers/aer/backends/backend_utils.py#L52  # noqa: E501
+ 
+-        h_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        h_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(HGate(), h_props)
+ 
+         theta = Parameter("theta")
+-        rz_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rz_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RZGate(theta), rz_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+         lam = Parameter("lambda")
+-        u_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        u_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(UGate(theta, phi, lam), u_props)
+ 
+-        x_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        x_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(XGate(), x_props)
+ 
+-        y_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        y_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(YGate(), y_props)
+ 
+-        z_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        z_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(ZGate(), z_props)
+ 
+-        sx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        sx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(SXGate(), sx_props)
+ 
+-        sxdg_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        sxdg_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(SXdgGate(), sxdg_props)
+ 
+         # Add additional gates: controlled gates
+ 
+-        cx_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cx_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CXGate(), cx_props)
+ 
+-        cy_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cy_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CYGate(), cy_props)
+ 
+-        cz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CZGate(), cz_props)
+ 
+         theta = Parameter("theta")
+-        cp_props = {tuple(edge): InstructionProperties() for edge in edges}
++        cp_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(CPhaseGate(theta), cp_props)
+ 
+         # Add additional gates: other two qubit unitaries
+ 
+-        swap_props = {tuple(edge): InstructionProperties() for edge in edges}
++        swap_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(SwapGate(), swap_props)
+ 
+-        iswap_props = {tuple(edge): InstructionProperties() for edge in edges}
++        iswap_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(iSwapGate(), iswap_props)
+ 
+ 
+ class QRydEmuLocalcompSquare(QRydBackend):
+     """Backend for accessing a specific emulator.
+ 
+     The emulator simulates *30 ideal qubits* arranged in a *5x6 square lattice* with
+@@ -950,35 +949,35 @@
+             [i + si * j + si, i + si * j] for i in range(si) for j in range(sj - 1)
+         ]
+ 
+         # Create Target
+         self._target = Target()
+ 
+         # Add native gates
+-        meas_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        meas_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(Measure(), meas_props)
+ 
+         lam = Parameter("lambda")
+-        p_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        p_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(PhaseGate(lam), p_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+-        r_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        r_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RGate(theta, phi), r_props)
+ 
+         theta = Parameter("theta")
+-        rx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RXGate(theta), rx_props)
+ 
+         theta = Parameter("theta")
+-        ry_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        ry_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RYGate(theta), ry_props)
+ 
+-        pcz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        pcz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(PCZGate(), pcz_props)
+ 
+ 
+ class QRydEmuLocalcompTriangle(QRydBackend):
+     """Backend for accessing a specific emulator.
+ 
+     The emulator simulates *30 ideal qubits* arranged in a *triangle lattice* with
+@@ -1067,29 +1066,29 @@
+             for j in range(1, sj - 1, 2)
+         ]
+ 
+         # Create Target
+         self._target = Target()
+ 
+         # Add native gates
+-        meas_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        meas_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(Measure(), meas_props)
+ 
+         lam = Parameter("lambda")
+-        p_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        p_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(PhaseGate(lam), p_props)
+ 
+         theta = Parameter("theta")
+         phi = Parameter("phi")
+-        r_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        r_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RGate(theta, phi), r_props)
+ 
+         theta = Parameter("theta")
+-        rx_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        rx_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RXGate(theta), rx_props)
+ 
+         theta = Parameter("theta")
+-        ry_props = {(qubit,): InstructionProperties() for qubit in range(num_qubits)}
++        ry_props = {(qubit,): None for qubit in range(num_qubits)}
+         self._target.add_instruction(RYGate(theta), ry_props)
+ 
+-        pcz_props = {tuple(edge): InstructionProperties() for edge in edges}
++        pcz_props = {tuple(edge): None for edge in edges}
+         self._target.add_instruction(PCZGate(), pcz_props)
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_job.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `qiskit_qryd_provider-0.4.4/qiskit_qryd_provider/qryd_provider.py` & `qiskit_qryd_provider-0.4.5/qiskit_qryd_provider/qryd_provider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `qiskit_qryd_provider-0.4.4/setup.py` & `qiskit_qryd_provider-0.4.5/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,23 +8,23 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['qiskit-terra>=0.20', 'requests>=2.27']
+ 
+ setup_kwargs = {
+     'name': 'qiskit-qryd-provider',
+-    'version': '0.4.4',
++    'version': '0.4.5',
+     'description': 'Qiskit provider for accessing the emulator and future Rydberg quantum computer of the QRydDemo consortium',
+     'long_description': '# Qiskit QRyd Provider\n\n![Supported Python versions](https://img.shields.io/pypi/pyversions/qiskit_qryd_provider.svg?color=blue)\n[![Package version on PyPI](https://img.shields.io/pypi/v/qiskit_qryd_provider.svg?color=blue)](https://pypi.org/project/qiskit_qryd_provider/)\n[![Documentation](https://img.shields.io/badge/docs-Sphinx-blue.svg)](https://thequantumlaend.de/docs/)\n[![License](https://img.shields.io/pypi/l/qiskit_qryd_provider.svg?color=green)](https://www.apache.org/licenses/LICENSE-2.0)\n\nThis Python library contains a provider for the [Qiskit](https://qiskit.org) quantum computing framework. The provider allows for accessing the GPU-based emulator and the future Rydberg quantum computer of the [QRydDemo](https://thequantumlaend.de/qryddemo/) consortium.\n\nInteractive tutorials can be found on QRydDemo\'s [Jupyter server](https://thequantumlaend.de/frontend).\n\n## Installation\n\nThe provider can be installed via [pip](https://pip.pypa.io/) from\n[PyPI](https://pypi.org/project/qiskit_qryd_provider/):\n\n```bash\npip install qiskit-qryd-provider\n```\n\n## Basic Usage\n\nTo use the provider, a QRydDemo API token is required. The token can be obtained via our [online registration form](https://thequantumlaend.de/frontend/signup_form.php). You can use the token to initialize the provider:\n\n```python\nfrom qiskit_qryd_provider import QRydProvider\n\nprovider = QRydProvider("MY_TOKEN")\n```\n\nAfterwards, you can choose a backend. Different backends are available that are capable of running ideal simulations of quantum circuits. An inclusion of noise models is planned for the future. You can either choose a backend emulating 30 qubits arranged in a 5x6 square lattice with nearest-neighbor connectivity\n\n```python\nbackend = provider.get_backend("qryd_emu_localcomp_square")\n```\n\nor a backend emulating 30 qubits arranged in a triangle lattice with nearest-neighbor connectivity\n\n```python\nbackend = provider.get_backend("qryd_emu_localcomp_triangle")\n```\n\nIf you use these backends, Qiskit automatically transpiles arbitrary quantum circuits to comply with the native gate set and connectivity of the Rydberg platform. The backends are also available as variants where the compilation happens on our servers (`"qryd_emu_cloudcomp_square"` and `"qryd_emu_cloudcomp_triangle"`), using a decomposer developed by [HQS Quantum Simulations](https://quantumsimulations.de/).\n\nAfter selecting a backend, you can run a circuit on the backend:\n\n```python\nfrom qiskit import QuantumCircuit, execute\n\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\njob = execute(qc, backend, shots=200, optimization_level=3)\nprint(job.result().get_counts())\n```\n\n## Expert Options\n\nThe provider adds the phase-shifted controlled-Z gate to Qiskit ([PCZGate](https://thequantumlaend.de/docs/gates.html)). This gate equals the controlled-Z gate up to single-qubit phase gates. It can be realized by the Rydberg platform in multiple ways [[1](https://doi.org/10.1103/PhysRevLett.123.170503), [2](https://doi.org/10.1103/PhysRevResearch.4.033019), [3](https://doi.org/10.22331/q-2022-05-13-712)]. The value of the phase shift can be modified before using the backend via:\n\n```python\nfrom qiskit_qryd_provider import PCZGate\n\nPCZGate.set_theta(1.234)\n```\n\n## License\n\nThe Qiskit QRyd Provider is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).\n',
+     'author': 'Sebastian Weber',
+     'author_email': 'None',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+     'packages': packages,
+     'package_data': package_data,
+     'install_requires': install_requires,
+-    'python_requires': '>=3.8,<3.12',
++    'python_requires': '>=3.8,<4.0',
+ }
+ 
+ 
+ setup(**setup_kwargs)
+```
+
+### Comparing `qiskit_qryd_provider-0.4.4/PKG-INFO` & `qiskit_qryd_provider-0.4.5/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ Metadata-Version: 2.1
+ Name: qiskit-qryd-provider
+-Version: 0.4.4
++Version: 0.4.5
+ Summary: Qiskit provider for accessing the emulator and future Rydberg quantum computer of the QRydDemo consortium
+ License: Apache-2.0
+ Author: Sebastian Weber
+-Requires-Python: >=3.8,<3.12
++Requires-Python: >=3.8,<4.0
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: qiskit-terra (>=0.20)
+```
+

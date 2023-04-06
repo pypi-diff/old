@@ -1,0 +1,156 @@
+# Comparing `tmp/model_lib-0.0.2-py3-none-any.whl.zip` & `tmp/model_lib-0.0.3-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,26 +1,26 @@
+-Zip file size: 23146 bytes, number of entries: 24
+--rw-r--r--  2.0 unx     1265 b- defN 23-Apr-06 14:33 model_lib/__init__.py
+--rw-r--r--  2.0 unx     7132 b- defN 23-Apr-06 14:33 model_lib/base_settings.py
+--rw-r--r--  2.0 unx      596 b- defN 23-Apr-06 14:33 model_lib/constants.py
+--rw-r--r--  2.0 unx     1858 b- defN 23-Apr-06 14:33 model_lib/dump_functions.py
+--rw-r--r--  2.0 unx     1626 b- defN 23-Apr-06 14:33 model_lib/errors.py
+--rw-r--r--  2.0 unx     3393 b- defN 23-Apr-06 14:33 model_lib/model_base.py
+--rw-r--r--  2.0 unx     3095 b- defN 23-Apr-06 14:33 model_lib/model_dump.py
+--rw-r--r--  2.0 unx     3096 b- defN 23-Apr-06 14:33 model_lib/pydantic_utils.py
+--rw-r--r--  2.0 unx      439 b- defN 23-Apr-06 14:33 model_lib/metadata/__init__.py
+--rw-r--r--  2.0 unx     5602 b- defN 23-Apr-06 14:33 model_lib/metadata/context_dict.py
+--rw-r--r--  2.0 unx     1350 b- defN 23-Apr-06 14:33 model_lib/metadata/metadata.py
+--rw-r--r--  2.0 unx     2553 b- defN 23-Apr-06 14:33 model_lib/metadata/metadata_dump.py
+--rw-r--r--  2.0 unx     1277 b- defN 23-Apr-06 14:33 model_lib/metadata/metadata_fields.py
+--rw-r--r--  2.0 unx      426 b- defN 23-Apr-06 14:33 model_lib/serialize/__init__.py
+--rw-r--r--  2.0 unx     1690 b- defN 23-Apr-06 14:33 model_lib/serialize/base_64.py
+--rw-r--r--  2.0 unx     3280 b- defN 23-Apr-06 14:33 model_lib/serialize/dump.py
+--rw-r--r--  2.0 unx     1582 b- defN 23-Apr-06 14:33 model_lib/serialize/json_serialize.py
+--rw-r--r--  2.0 unx     6346 b- defN 23-Apr-06 14:33 model_lib/serialize/parse.py
+--rw-r--r--  2.0 unx     9861 b- defN 23-Apr-06 14:33 model_lib/serialize/yaml_serialize.py
+--rw-r--r--  2.0 unx      353 b- defN 23-Apr-06 14:33 model_lib-0.0.2.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 14:33 model_lib-0.0.2.dist-info/WHEEL
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 14:33 model_lib-0.0.2.dist-info/namespace_packages.txt
+--rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 14:33 model_lib-0.0.2.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     2031 b- defN 23-Apr-06 14:33 model_lib-0.0.2.dist-info/RECORD
+-24 files, 58954 bytes uncompressed, 19844 bytes compressed:  66.3%
++Zip file size: 23150 bytes, number of entries: 24
++-rw-r--r--  2.0 unx     1265 b- defN 23-Apr-06 14:40 model_lib/__init__.py
++-rw-r--r--  2.0 unx     7132 b- defN 23-Apr-06 14:40 model_lib/base_settings.py
++-rw-r--r--  2.0 unx      596 b- defN 23-Apr-06 14:40 model_lib/constants.py
++-rw-r--r--  2.0 unx     1858 b- defN 23-Apr-06 14:40 model_lib/dump_functions.py
++-rw-r--r--  2.0 unx     1626 b- defN 23-Apr-06 14:40 model_lib/errors.py
++-rw-r--r--  2.0 unx     3393 b- defN 23-Apr-06 14:40 model_lib/model_base.py
++-rw-r--r--  2.0 unx     3095 b- defN 23-Apr-06 14:40 model_lib/model_dump.py
++-rw-r--r--  2.0 unx     3096 b- defN 23-Apr-06 14:40 model_lib/pydantic_utils.py
++-rw-r--r--  2.0 unx      439 b- defN 23-Apr-06 14:40 model_lib/metadata/__init__.py
++-rw-r--r--  2.0 unx     5602 b- defN 23-Apr-06 14:40 model_lib/metadata/context_dict.py
++-rw-r--r--  2.0 unx     1350 b- defN 23-Apr-06 14:40 model_lib/metadata/metadata.py
++-rw-r--r--  2.0 unx     2553 b- defN 23-Apr-06 14:40 model_lib/metadata/metadata_dump.py
++-rw-r--r--  2.0 unx     1277 b- defN 23-Apr-06 14:40 model_lib/metadata/metadata_fields.py
++-rw-r--r--  2.0 unx      426 b- defN 23-Apr-06 14:40 model_lib/serialize/__init__.py
++-rw-r--r--  2.0 unx     1690 b- defN 23-Apr-06 14:40 model_lib/serialize/base_64.py
++-rw-r--r--  2.0 unx     3280 b- defN 23-Apr-06 14:40 model_lib/serialize/dump.py
++-rw-r--r--  2.0 unx     1582 b- defN 23-Apr-06 14:40 model_lib/serialize/json_serialize.py
++-rw-r--r--  2.0 unx     6346 b- defN 23-Apr-06 14:40 model_lib/serialize/parse.py
++-rw-r--r--  2.0 unx     9861 b- defN 23-Apr-06 14:40 model_lib/serialize/yaml_serialize.py
++-rw-r--r--  2.0 unx      353 b- defN 23-Apr-06 14:40 model_lib-0.0.3.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 14:40 model_lib-0.0.3.dist-info/WHEEL
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 14:40 model_lib-0.0.3.dist-info/namespace_packages.txt
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 14:40 model_lib-0.0.3.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     2031 b- defN 23-Apr-06 14:40 model_lib-0.0.3.dist-info/RECORD
++24 files, 58954 bytes uncompressed, 19848 bytes compressed:  66.3%
+```
+
+## zipnote {}
+
+```diff
+@@ -51,23 +51,23 @@
+ 
+ Filename: model_lib/serialize/parse.py
+ Comment: 
+ 
+ Filename: model_lib/serialize/yaml_serialize.py
+ Comment: 
+ 
+-Filename: model_lib-0.0.2.dist-info/METADATA
++Filename: model_lib-0.0.3.dist-info/METADATA
+ Comment: 
+ 
+-Filename: model_lib-0.0.2.dist-info/WHEEL
++Filename: model_lib-0.0.3.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: model_lib-0.0.2.dist-info/namespace_packages.txt
++Filename: model_lib-0.0.3.dist-info/namespace_packages.txt
+ Comment: 
+ 
+-Filename: model_lib-0.0.2.dist-info/top_level.txt
++Filename: model_lib-0.0.3.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: model_lib-0.0.2.dist-info/RECORD
++Filename: model_lib-0.0.3.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## model_lib/metadata/__init__.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -1,7 +1,8 @@
++from model_lib.metadata.metadata_fields import EventMetadata, iter_tags
+ from model_lib.metadata.metadata import (
+     current_metadata,
+     metadata_from_context_dict,
+     pop_metadata,
+     read_metadata,
+     read_metadata_or_none,
+     set_metadata,
+@@ -10,8 +11,7 @@
+ from model_lib.metadata.metadata_dump import (
+     add_metadata_dumper,
+     dump_metadata,
+     get_metadata_dumpers,
+     metadata_dumper,
+     set_metadata_dumpers,
+ )
+-from model_lib.metadata.metadata_fields import EventMetadata, iter_tags
+```
+
+## Comparing `model_lib-0.0.2.dist-info/RECORD` & `model_lib-0.0.3.dist-info/RECORD`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -2,23 +2,23 @@
+ model_lib/base_settings.py,sha256=pwhewJC_qTn51Ke_LtcMKYzPcSA0gN_NSOPvAUsXKHs,7132
+ model_lib/constants.py,sha256=zDBuIp5wy6eIl3ttbn6pJwAw_OtudW5-7ggqBIzdYX8,596
+ model_lib/dump_functions.py,sha256=bZqquTIwo4Hrg3ekwIkhazXtpPiVRGXrDQf882P6Aak,1858
+ model_lib/errors.py,sha256=IJ6RhHizdpAYoz2NoSvAv8Gt6ZtDOGwUZpxr8-9Lxrg,1626
+ model_lib/model_base.py,sha256=yhOGsJq5PDRk_FVIAeuF-qJlvBqchNuowFOg8t--4Bo,3393
+ model_lib/model_dump.py,sha256=aD8nNqP4P7x6oN09RdUYAbIWSBFudnJFpuVud049k_s,3095
+ model_lib/pydantic_utils.py,sha256=htRA_Xx1OxqxPbu4O_H_TBvjVBUzB8HRWlKPGhffzqk,3096
+-model_lib/metadata/__init__.py,sha256=uDCaigPq2bJtgXiz6SvPZwat_wWU1FGzR4E1E6d4npY,439
++model_lib/metadata/__init__.py,sha256=aL052e33uwQqPJrTveZA-Yv-pGLJm2xX-XmQ3x6YKBo,439
+ model_lib/metadata/context_dict.py,sha256=kDZXa8724BpIi5X0VMs0TgeTZfUAubLQMgn3yLEytbA,5602
+ model_lib/metadata/metadata.py,sha256=m8Uec3ebBuWr_LT6vSnKytVWrmRlALyzgSwcilinu1c,1350
+ model_lib/metadata/metadata_dump.py,sha256=NtwdMlhC4mD9_hffNqZrPTgPA9zUqgEG7dcNKBGKUyU,2553
+ model_lib/metadata/metadata_fields.py,sha256=NyKZSFGQKDO-yxYZeMe0RRsWfQJjVrIg4bP2VqXrToc,1277
+ model_lib/serialize/__init__.py,sha256=Aw_OS9-sy2TcHam_nlfp4jB-JBAcZOS2Avh3a9ZQoM0,426
+ model_lib/serialize/base_64.py,sha256=ETGiro0PpRdTKtZp81EYUbRFMjhKOONtHZwz2VaTtTI,1690
+ model_lib/serialize/dump.py,sha256=jAKs7yJ4pfG2WRF2ztT0lQydtKwiEa2pZus0xm6uIMw,3280
+ model_lib/serialize/json_serialize.py,sha256=Fn-fn18tw2TH7LpKAbFOW2inFIl9D5jthP1AJzlk8wA,1582
+ model_lib/serialize/parse.py,sha256=AQhlD_0I3FJIbLQgijHpt1rmYrbQw4Q4XcOW6hN_B2A,6346
+ model_lib/serialize/yaml_serialize.py,sha256=oRnBJWzcplBzATf4lePIjZjcjzhnnqzczHTC5t-pNLk,9861
+-model_lib-0.0.2.dist-info/METADATA,sha256=fLIOZ3L7HnA7Agi8Qx3l4_K00txG4TtY5iOifPowB10,353
+-model_lib-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-model_lib-0.0.2.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+-model_lib-0.0.2.dist-info/top_level.txt,sha256=QvcmctPpLtKFumIeIhNZw09uE9F3BPm20kFJyV_H7_8,10
+-model_lib-0.0.2.dist-info/RECORD,,
++model_lib-0.0.3.dist-info/METADATA,sha256=XS04oamCOVVYUtj_jb2pDjjKn6LWTEv7uSDui3o-dvE,353
++model_lib-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++model_lib-0.0.3.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
++model_lib-0.0.3.dist-info/top_level.txt,sha256=QvcmctPpLtKFumIeIhNZw09uE9F3BPm20kFJyV_H7_8,10
++model_lib-0.0.3.dist-info/RECORD,,
+```
+

@@ -1,0 +1,104 @@
+# Comparing `tmp/recon_lw-2.0.0.dev4617307053.tar.gz` & `tmp/recon_lw-2.0.0.dev4629984199.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/recon_lw-2.0.0.dev4617307053.tar", last modified: Wed Apr  5 10:04:59 2023, max compression
++gzip compressed data, was "dist/recon_lw-2.0.0.dev4629984199.tar", last modified: Thu Apr  6 14:30:12 2023, max compression
+```
+
+## Comparing `recon_lw-2.0.0.dev4617307053.tar` & `recon_lw-2.0.0.dev4629984199.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/
+--rw-r--r--   0 runner    (1001) docker     (122)       69 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (122)      294 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)       10 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/README.md
+--rw-r--r--   0 runner    (1001) docker     (122)       76 2023-04-05 10:04:47.000000 recon_lw-2.0.0.dev4617307053/package_info.json
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw/
+--rw-r--r--   0 runner    (1001) docker     (122)        5 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/recon_lw/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)    12849 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/recon_lw/recon_lw.py
+--rw-r--r--   0 runner    (1001) docker     (122)    11801 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/recon_lw/recon_ob.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (122)      294 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)      287 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (122)      219 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        9 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/recon_lw.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (122)      275 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       38 2023-04-05 10:04:59.000000 recon_lw-2.0.0.dev4617307053/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (122)     1582 2023-04-05 10:04:40.000000 recon_lw-2.0.0.dev4617307053/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/
++-rw-r--r--   0 runner    (1001) docker     (122)       69 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (122)      294 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)       10 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/README.md
++-rw-r--r--   0 runner    (1001) docker     (122)       76 2023-04-06 14:29:54.000000 recon_lw-2.0.0.dev4629984199/package_info.json
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw/
++-rw-r--r--   0 runner    (1001) docker     (122)        5 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/recon_lw/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)    12849 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/recon_lw/recon_lw.py
++-rw-r--r--   0 runner    (1001) docker     (122)    11845 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/recon_lw/recon_ob.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (122)      294 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)      287 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (122)      219 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        9 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/recon_lw.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (122)      275 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (122)       38 2023-04-06 14:30:12.000000 recon_lw-2.0.0.dev4629984199/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (122)     1582 2023-04-06 14:29:46.000000 recon_lw-2.0.0.dev4629984199/setup.py
+```
+
+### Comparing `recon_lw-2.0.0.dev4617307053/recon_lw/recon_lw.py` & `recon_lw-2.0.0.dev4629984199/recon_lw/recon_lw.py`
+
+ * *Files identical despite different names*
+
+### Comparing `recon_lw-2.0.0.dev4617307053/recon_lw/recon_ob.py` & `recon_lw-2.0.0.dev4629984199/recon_lw/recon_ob.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -57,15 +57,15 @@
+         sequence.pop(0)
+ 
+ 
+ def process_market_data_update(mess, events,  books_cache, get_book_id_func ,update_book_rule,
+                                check_book_rule, event_sequence, parent_event):
+     book_id, result = get_book_id_func(mess)
+     if result is not None:
+-        book_id_event = recon_lw.create_event("SeqGap:" + parent_event["eventName"], "SeqGap", event_sequence,
++        book_id_event = recon_lw.create_event("GetBookEroor:" + parent_event["eventName"], "GetBookEroor", event_sequence,
+                                               ok=False,
+                                               body=result,
+                                               parentId=parent_event["eventId"])
+         book_id_event["attachedMessageIds"] = [mess["messageId"]]
+         events.append(book_id_event)
+ 
+     if book_id is not None:
+@@ -133,15 +133,16 @@
+ 
+ 
+ def collect_ob_stream(next_batch, rule_dict):
+     sequence_cache = rule_dict["sequence_cache"]
+     sequence_timestamp_extract = rule_dict["sequence_timestamp_extract"]
+     for m in next_batch:
+         seq, ts = sequence_timestamp_extract(m)
+-        sequence_cache_add(seq, ts, m, sequence_cache)
++        if seq is not None:
++            sequence_cache_add(seq, ts, m, sequence_cache)
+ 
+ 
+ def flush_ob_stream(ts,rule_settings,event_sequence, save_events_func):
+     seq_batch = flush_sequence_get_collection(ts, rule_settings["horizon_delay"], rule_settings["sequence_cache"])
+     n_processed = process_ob_rules(seq_batch,
+                                    rule_settings["books_cache"],
+                                    rule_settings["get_book_id"],
+```
+
+### Comparing `recon_lw-2.0.0.dev4617307053/setup.py` & `recon_lw-2.0.0.dev4629984199/setup.py`
+
+ * *Files identical despite different names*
+
