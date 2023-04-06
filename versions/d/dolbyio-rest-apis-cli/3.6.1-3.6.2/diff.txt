@@ -1,0 +1,636 @@
+--- tmp/dolbyio-rest-apis-cli-3.6.1.tar.gz
++++ tmp/dolbyio-rest-apis-cli-3.6.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dolbyio-rest-apis-cli-3.6.1.tar", last modified: Wed Mar  8 20:28:37 2023, max compression
+│ +gzip compressed data, was "dolbyio-rest-apis-cli-3.6.2.tar", last modified: Thu Apr  6 22:13:48 2023, max compression
+│   --- dolbyio-rest-apis-cli-3.6.1.tar
+├── +++ dolbyio-rest-apis-cli-3.6.2.tar
+│ ├── file list
+│ │ @@ -1,148 +1,148 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.973915 dolbyio-rest-apis-cli-3.6.1/.github/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.981915 dolbyio-rest-apis-cli-3.6.1/.github/ISSUE_TEMPLATE/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      213 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/ISSUE_TEMPLATE/feature-request.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      701 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/ISSUE_TEMPLATE/report-an-issue.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.973915 dolbyio-rest-apis-cli-3.6.1/.github/actions/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.985915 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.985915 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      252 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/FUNDING.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      300 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/SECURITY.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.989915 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2689 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/self-smoke-test-action.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1203 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.gitignore
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4074 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.pre-commit-config.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       95 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.yamllint
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      883 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/Dockerfile
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1650 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/LICENSE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7783 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1264 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/action.yml
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      619 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/print-hash.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.989915 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       25 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime-prerequisites.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      465 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime-prerequisites.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      442 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1416 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.txt
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2208 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/twine-upload.sh
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.989915 dolbyio-rest-apis-cli-3.6.1/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      803 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/workflows/build-package.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2773 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/workflows/codeql-analysis.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      992 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.github/workflows/publish-package-to-pypi.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.gitignore
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14181 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/.pylintrc
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1075 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5333 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.993915 dolbyio-rest-apis-cli-3.6.1/cli/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      147 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       18 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2089 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.973915 dolbyio-rest-apis-cli-3.6.1/cli/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.993915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.993915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1635 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.993915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2043 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/authentication.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.997915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2184 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/webhooks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1470 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/remix.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1772 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/streaming.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.997915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/core/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      470 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/core/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.997915 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1544 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.001916 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1245 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/authentication.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/enhance.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1731 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1825 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/jobs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2582 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/mastering.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2104 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/transcode.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.001916 dolbyio-rest-apis-cli-3.6.1/client/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7569 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      147 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       71 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1881 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:36.977915 dolbyio-rest-apis-cli-3.6.1/client/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.001916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1641 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/authentication.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.005915 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1702 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/authentication.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12761 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/conference.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.005915 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/internal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/internal/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11470 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/internal/http_context.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4649 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/models.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.009916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17534 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/conferences.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12032 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/models.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8268 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/recordings.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4762 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/webhooks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2559 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/recording.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3161 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/remix.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5401 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/streaming.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.009916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      518 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/helpers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6279 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/http_context.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1061 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/http_request_error.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1309 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/rate_limiter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      781 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/urls.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.013916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3223 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2936 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze_music.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2950 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze_speech.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3103 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/diagnose.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2778 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/enhance.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.017916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/internal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/internal/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9154 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/internal/http_context.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3425 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4970 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/jobs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5546 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/mastering.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      931 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_music_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      899 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      940 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_speech_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      835 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/diagnose_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      828 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/enhance_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      870 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/job_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/jobs_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1572 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/mastering_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      483 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/paged_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      560 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/result_error.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      844 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/transcode_response.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      680 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/webhook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2682 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/transcode.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4663 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/webhooks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      680 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/models.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1093 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/cluster.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/internal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/internal/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6500 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/internal/http_context.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      972 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/cluster.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      535 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/core.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5094 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/publish_token.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3547 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/subscribe_token.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6568 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/publish_token.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      925 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/stream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4874 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/subscribe_token.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      108 2023-03-08 20:28:14.000000 dolbyio-rest-apis-cli-3.6.1/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-08 20:28:37.021916 dolbyio-rest-apis-cli-3.6.1/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.511578 dolbyio-rest-apis-cli-3.6.2/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.491578 dolbyio-rest-apis-cli-3.6.2/.github/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.495578 dolbyio-rest-apis-cli-3.6.2/.github/ISSUE_TEMPLATE/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      213 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/ISSUE_TEMPLATE/feature-request.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      701 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/ISSUE_TEMPLATE/report-an-issue.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.487578 dolbyio-rest-apis-cli-3.6.2/.github/actions/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.495578 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.495578 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/FUNDING.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      300 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/SECURITY.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.495578 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2689 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/self-smoke-test-action.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1203 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.gitignore
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4074 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       95 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.yamllint
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      883 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/Dockerfile
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1650 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/LICENSE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7783 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1264 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/action.yml
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      619 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/print-hash.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime-prerequisites.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      465 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime-prerequisites.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      442 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1416 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.txt
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2208 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/twine-upload.sh
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      803 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/workflows/build-package.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2773 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/workflows/codeql-analysis.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      992 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.github/workflows/publish-package-to-pypi.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.gitignore
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14208 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/.pylintrc
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1075 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5333 2023-04-06 22:13:48.511578 dolbyio-rest-apis-cli-3.6.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2089 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.491578 dolbyio-rest-apis-cli-3.6.2/cli/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1635 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2043 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/authentication.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2184 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/webhooks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1470 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/remix.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1772 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/streaming.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/core/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      470 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/core/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1544 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.499578 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1245 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/authentication.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/enhance.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1731 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1825 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/jobs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2582 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/mastering.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2104 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/transcode.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7569 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1881 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.491578 dolbyio-rest-apis-cli-3.6.2/client/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1641 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/authentication.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1702 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/authentication.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12761 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/conference.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/internal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/internal/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11470 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/internal/http_context.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4649 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/models.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17534 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/conferences.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12789 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/models.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8268 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/recordings.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4762 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/webhooks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2559 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/recording.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3161 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/remix.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5401 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/streaming.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.503578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      518 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/helpers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6279 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/http_context.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1061 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/http_request_error.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1309 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/rate_limiter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      781 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/urls.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.507578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3223 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2936 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze_music.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2950 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze_speech.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3103 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/diagnose.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2778 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/enhance.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.507578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/internal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/internal/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9154 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/internal/http_context.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3425 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4970 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/jobs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5546 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/mastering.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.507578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      931 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_music_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      899 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      940 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_speech_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      835 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/diagnose_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      828 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/enhance_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      870 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/job_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/jobs_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1572 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/mastering_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      483 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/paged_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      560 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/result_error.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      844 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/transcode_response.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      680 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/webhook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2682 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/transcode.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4663 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/webhooks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      680 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/models.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.507578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1093 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/cluster.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.507578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/internal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/internal/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6500 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/internal/http_context.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:48.511578 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      972 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/cluster.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      535 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/core.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5094 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/publish_token.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3547 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/subscribe_token.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6568 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/publish_token.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      925 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/stream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4874 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/subscribe_token.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      108 2023-04-06 22:13:31.000000 dolbyio-rest-apis-cli-3.6.2/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 22:13:48.511578 dolbyio-rest-apis-cli-3.6.2/setup.cfg
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/ISSUE_TEMPLATE/report-an-issue.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/ISSUE_TEMPLATE/report-an-issue.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/self-smoke-test-action.yml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.github/workflows/self-smoke-test-action.yml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.gitignore
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/.pre-commit-config.yaml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/.pre-commit-config.yaml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/Dockerfile
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/Dockerfile
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/LICENSE.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/README.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/action.yml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/action.yml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/print-hash.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/print-hash.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.txt
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/requirements/runtime.txt
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/actions/gh-action-pypi-publish-1.6.4/twine-upload.sh
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/actions/gh-action-pypi-publish-1.6.4/twine-upload.sh
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/workflows/build-package.yml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/workflows/build-package.yml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/workflows/codeql-analysis.yml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/workflows/codeql-analysis.yml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.github/workflows/publish-package-to-pypi.yml
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.github/workflows/publish-package-to-pypi.yml
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.gitignore
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/.pylintrc
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/.pylintrc
+│ │┄ Files 1% similar despite different names
+│ │ @@ -422,16 +422,16 @@
+│ │  valid-metaclass-classmethod-first-arg=mcs
+│ │  
+│ │  
+│ │  [EXCEPTIONS]
+│ │  
+│ │  # Exceptions that will emit a warning when being caught. Defaults to
+│ │  # "Exception"
+│ │ -overgeneral-exceptions=StandardError,
+│ │ -                       Exception,
+│ │ -                       BaseException
+│ │ +overgeneral-exceptions=builtins.StandardError,
+│ │ +                       builtins.Exception,
+│ │ +                       builtins.BaseException
+│ │  
+│ │  [pylint-quotes]
+│ │  # https://github.com/edaniszewski/pylint-quotes
+│ │  string-quote=single
+│ │  triple-quote=single
+│ │  docstring-quote=double
+│ │   --- dolbyio-rest-apis-cli-3.6.1/LICENSE
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/PKG-INFO
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dolbyio-rest-apis-cli
+│ │ -Version: 3.6.1
+│ │ +Version: 3.6.2
+│ │  Summary: A command line wrapper for the Dolby.io REST APIs.
+│ │  Home-page: https://github.com/dolbyio/dolbyio-rest-apis-client-python
+│ │  Author: Dolby.io
+│ │  Author-email: fabien.lavocat@dolby.com
+│ │  License: MIT
+│ │  Project-URL: Documentation, https://docs.dolby.io/communications-apis/reference
+│ │  Project-URL: Source, https://github.com/dolbyio/dolbyio-rest-apis-client-python
+│ │   --- dolbyio-rest-apis-cli-3.6.1/README.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/README.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/README.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/setup.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/setup.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/cli.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/cli.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/authentication.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/authentication.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/webhooks.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/monitor/webhooks.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/remix.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/remix.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/communications/commands/streaming.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/communications/commands/streaming.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/cli.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/cli.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/authentication.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/authentication.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/enhance.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/enhance.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/io.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/io.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/jobs.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/jobs.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/mastering.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/mastering.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/cli/src/dolbyio_rest_apis_cli/media/commands/transcode.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/cli/src/dolbyio_rest_apis_cli/media/commands/transcode.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/README.md
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/README.md
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/setup.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/setup.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/authentication.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/authentication.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/authentication.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/authentication.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/conference.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/conference.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/internal/http_context.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/internal/http_context.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/models.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/models.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/conferences.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/conferences.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/models.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -112,14 +112,27 @@
+│ │  
+│ │          if in_and_not_none(self, 'maxParticipants'):
+│ │              self.max_participants = ConferenceStatisticsMaxParticipants(self['maxParticipants'])
+│ │  
+│ │          if in_and_not_none(self, 'network'):
+│ │              self.network = ConferenceStatisticsNetwork(self['network'])
+│ │  
+│ │ +class StreamingAPIUsage(dict):
+│ │ +    """Representation of the Streaming API usage."""
+│ │ +
+│ │ +    def __init__(self, dictionary: dict):
+│ │ +        dict.__init__(self, dictionary)
+│ │ +
+│ │ +        self.bytes_in = get_value_or_default(self, 'bytesIn', None)
+│ │ +        self.bytes_out = get_value_or_default(self, 'bytesOut', None)
+│ │ +        self.publish_duration_sec = get_value_or_default(self, 'publishDurationSec', None)
+│ │ +        self.publishes = get_value_or_default(self, 'publishes', None)
+│ │ +        self.view_duration_sec = get_value_or_default(self, 'viewDurationSec', None)
+│ │ +        self.views = get_value_or_default(self, 'views', None)
+│ │ +
+│ │  class ConferenceSummary(dict):
+│ │      """Representation of a Conference Summary."""
+│ │  
+│ │      def __init__(self, dictionary: dict):
+│ │          dict.__init__(self, dictionary)
+│ │  
+│ │          self.conf_id = get_value_or_default(self, 'confId', None)
+│ │ @@ -141,14 +154,17 @@
+│ │  
+│ │          if in_and_not_none(self, 'owner'):
+│ │              self.mix = ConferenceOwner(self['owner'])
+│ │  
+│ │          if in_and_not_none(self, 'statistics'):
+│ │              self.statistics = ConferenceStatistics(self['statistics'])
+│ │  
+│ │ +        if in_and_not_none(self, 'streamingAPIUsage'):
+│ │ +            self.streaming_api_usage = StreamingAPIUsage(self['streamingAPIUsage'])
+│ │ +
+│ │  class GetConferencesResponse(PagedResponse):
+│ │      """Representation of a Conferences response."""
+│ │  
+│ │      def __init__(self, dictionary: dict):
+│ │          PagedResponse.__init__(self, dictionary)
+│ │  
+│ │          self.conferences: List[ConferenceSummary] = []
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/recordings.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/recordings.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/monitor/webhooks.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/monitor/webhooks.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/recording.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/recording.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/remix.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/remix.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/communications/streaming.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/communications/streaming.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/helpers.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/http_context.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/http_context.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/http_request_error.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/http_request_error.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/rate_limiter.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/rate_limiter.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/core/urls.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/core/urls.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze_music.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze_music.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/analyze_speech.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/analyze_speech.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/diagnose.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/diagnose.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/enhance.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/enhance.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/internal/http_context.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/internal/http_context.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/io.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/io.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/jobs.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/jobs.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/mastering.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/mastering.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_music_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_music_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/analyze_speech_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/analyze_speech_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/diagnose_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/diagnose_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/enhance_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/enhance_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/job_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/job_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/jobs_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/jobs_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/mastering_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/mastering_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/result_error.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/result_error.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/transcode_response.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/transcode_response.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/models/webhook.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/models/webhook.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/transcode.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/transcode.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/media/webhooks.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/media/webhooks.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/models.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/models.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/cluster.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/cluster.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/internal/http_context.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/internal/http_context.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/cluster.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/cluster.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/core.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/core.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/publish_token.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/publish_token.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/models/subscribe_token.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/models/subscribe_token.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/publish_token.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/publish_token.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/stream.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/stream.py
+│ │┄ Files identical despite different names
+│ │   --- dolbyio-rest-apis-cli-3.6.1/client/src/dolbyio_rest_apis/streaming/subscribe_token.py
+│ ├── +++ dolbyio-rest-apis-cli-3.6.2/client/src/dolbyio_rest_apis/streaming/subscribe_token.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,1266 @@
+--- tmp/distribute_compute_config-0.14.1.tar.gz
++++ tmp/distribute_compute_config-0.14.2.tar.gz
+│   --- distribute_compute_config-0.14.1.tar
+├── +++ distribute_compute_config-0.14.2.tar
+│ ├── file list
+│ │ @@ -1,186 +1,185 @@
+│ │ --rw-r--r--   0        0        0     1898 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/Cargo.toml
+│ │ --rw-r--r--   0     1001      123     1345 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/.github/workflows/gh-pages.yml
+│ │ --rw-r--r--   0     1001      123      330 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/.github/workflows/paper-compile.yml
+│ │ --rw-r--r--   0     1001      123     1512 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/.github/workflows/python.yml
+│ │ --rw-r--r--   0     1001      123      308 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/.gitignore
+│ │ --rw-r--r--   0     1001      123    55879 2023-03-28 21:10:57.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/Cargo.lock
+│ │ --rw-r--r--   0     1001      123    35149 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/LICENSE
+│ │ --rw-r--r--   0     1001      123      700 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/README.md
+│ │ --rw-r--r--   0     1001      123        5 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/.gitignore
+│ │ --rw-r--r--   0     1001      123      264 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/README.md
+│ │ --rw-r--r--   0     1001      123      110 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/book.toml
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/hit3d-utils-exe
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/hit3d.x
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/energy_helicity.py
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/proposal_plots.py
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/viscous_dissapation.py
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/vtk-analysis-exe
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-1.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-2.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-3.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_1/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_2/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_3/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-1.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-2.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-3.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_1/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_2/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_3/stdout.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/README.md
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/README.md
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case1/flowfield.vtk
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case1/statistics.csv
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case2/flowfield.vtk
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case2/statistics.csv
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case3/flowfield.vtk
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case3/statistics.csv
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/STREAmS/README.md
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/STREAmS/src/main.f90
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/build.py
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/initial_files/file1.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/initial_files/file2.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file1.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file2.txt
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file3.txt
+│ │ --rw-r--r--   0     1001      123     9012 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/apptainer_config_flowchart.svg
+│ │ --rw-r--r--   0     1001      123   286904 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/architecture.png
+│ │ --rw-r--r--   0     1001      123   896850 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/architecture.xcf
+│ │ --rw-r--r--   0     1001      123    14375 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/input_outputs.svg
+│ │ --rw-r--r--   0     1001      123    15607 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/state_machine.svg
+│ │ --rw-r--r--   0     1001      123     1012 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/SUMMARY.md
+│ │ --rw-r--r--   0     1001      123     1030 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/admin_setup.md
+│ │ --rw-r--r--   0     1001      123     2155 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-input-files.md
+│ │ --rw-r--r--   0     1001      123     4603 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-introduction.md
+│ │ --rw-r--r--   0     1001      123     1946 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-mutable-filesystem.md
+│ │ --rw-r--r--   0     1001      123      460 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-packaging-solvers.md
+│ │ --rw-r--r--   0     1001      123     3440 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-running-locally.md
+│ │ --rw-r--r--   0     1001      123      642 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-storing-results.md
+│ │ --rw-r--r--   0     1001      123     6225 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer.md
+│ │ --rw-r--r--   0     1001      123      703 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/capabilities.md
+│ │ --rw-r--r--   0     1001      123     8641 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/commands.md
+│ │ --rw-r--r--   0     1001      123     1405 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/compute_node_setup.md
+│ │ --rw-r--r--   0     1001      123     7642 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/configuration.md
+│ │ --rw-r--r--   0     1001      123    93139 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/figs/apptainer_config_flowchart.png
+│ │ --rw-r--r--   0     1001      123    63775 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/figs/input_outputs.png
+│ │ --rw-r--r--   0     1001      123     1848 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/head_node_setup.md
+│ │ --rw-r--r--   0     1001      123      613 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/install.md
+│ │ --rw-r--r--   0     1001      123     3417 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/introduction.md
+│ │ --rw-r--r--   0     1001      123     1589 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/overview.md
+│ │ --rw-r--r--   0     1001      123     1628 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-build-scripts.md
+│ │ --rw-r--r--   0     1001      123     3378 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-execution-scripts.md
+│ │ --rw-r--r--   0     1001      123      176 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-full-example.md
+│ │ --rw-r--r--   0     1001      123     3142 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-input-files.md
+│ │ --rw-r--r--   0     1001      123     1033 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-storing-results.md
+│ │ --rw-r--r--   0     1001      123     5566 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python.md
+│ │ --rw-r--r--   0     1001      123      367 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python_api.md
+│ │ --rw-r--r--   0     1001      123      682 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/build.apptainer
+│ │ --rw-r--r--   0     1001      123      693 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/build.py
+│ │ --rw-r--r--   0     1001      123       50 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/dataset_always.csv
+│ │ --rw-r--r--   0     1001      123       50 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/dataset_sometimes.csv
+│ │ --rw-r--r--   0     1001      123      481 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123      956 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/run.py
+│ │ --rw-r--r--   0     1001      123      693 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/build.py
+│ │ --rw-r--r--   0     1001      123       50 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/dataset_always.csv
+│ │ --rw-r--r--   0     1001      123       50 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/dataset_sometimes.csv
+│ │ --rw-r--r--   0     1001      123      543 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123      921 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/run.py
+│ │ --rw-r--r--   0     1001      123      404 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/install/distribute-compute.service
+│ │ --rw-r--r--   0     1001      123      510 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/install/distribute-server.service
+│ │ --rw-r--r--   0     1001      123      470 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/install/setup-root.sh
+│ │ --rw-r--r--   0     1001      123      699 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/install/setup.sh
+│ │ --rw-r--r--   0     1001      123      219 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/install/update.sh
+│ │ --rw-r--r--   0     1001      123      180 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/justfile
+│ │ --rw-r--r--   0     1001      123    67552 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/paper/media/node_layout.png
+│ │ --rw-r--r--   0     1001      123    67552 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/paper/node_layout.png
+│ │ --rw-r--r--   0     1001      123    18914 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/paper/node_layout.svg
+│ │ --rw-r--r--   0     1001      123     1181 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/paper/paper.bib
+│ │ --rw-r--r--   0     1001      123     3346 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/paper/paper.md
+│ │ --rw-r--r--   0     1001      123     4216 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/add.rs
+│ │ --rw-r--r--   0     1001      123     2991 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/bin/distribute.rs
+│ │ --rw-r--r--   0     1001      123     9728 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/cli.rs
+│ │ --rw-r--r--   0     1001      123    13238 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/execute.rs
+│ │ --rw-r--r--   0     1001      123    14350 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/mod.rs
+│ │ --rw-r--r--   0     1001      123     7240 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/utils.rs
+│ │ --rw-r--r--   0     1001      123     7042 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/apptainer.rs
+│ │ --rw-r--r--   0     1001      123     7021 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/common.rs
+│ │ --rw-r--r--   0     1001      123     2530 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/hashing.rs
+│ │ --rw-r--r--   0     1001      123    21514 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/mod.rs
+│ │ --rw-r--r--   0     1001      123     7426 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/python.rs
+│ │ --rw-r--r--   0     1001      123     2589 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/requirements.rs
+│ │ --rw-r--r--   0     1001      123    16067 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/error.rs
+│ │ --rw-r--r--   0     1001      123      648 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/kill.rs
+│ │ --rw-r--r--   0     1001      123     4536 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/lib.rs
+│ │ --rw-r--r--   0     1001      123     1987 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/node_status.rs
+│ │ --rw-r--r--   0     1001      123     5782 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/pause/mod.rs
+│ │ --rw-r--r--   0     1001      123     8185 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/pause/unix.rs
+│ │ --rw-r--r--   0     1001      123     1221 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/prelude.rs
+│ │ --rw-r--r--   0     1001      123    11745 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/built.rs
+│ │ --rw-r--r--   0     1001      123    10538 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/compiling.rs
+│ │ --rw-r--r--   0     1001      123    24554 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/executing.rs
+│ │ --rw-r--r--   0     1001      123     9073 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/mod.rs
+│ │ --rw-r--r--   0     1001      123     8218 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/prepare_build.rs
+│ │ --rw-r--r--   0     1001      123     7335 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/mod.rs
+│ │ --rw-r--r--   0     1001      123    14228 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/receiver.rs
+│ │ --rw-r--r--   0     1001      123    12054 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/sender.rs
+│ │ --rw-r--r--   0     1001      123    12741 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/uninit.rs
+│ │ --rw-r--r--   0     1001      123     6593 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/pull.rs
+│ │ --rw-r--r--   0     1001      123     2057 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/run_local.rs
+│ │ --rw-r--r--   0     1001      123     5431 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/job_pool.rs
+│ │ --rw-r--r--   0     1001      123     1587 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/matrix.rs
+│ │ --rw-r--r--   0     1001      123     5642 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/mod.rs
+│ │ --rw-r--r--   0     1001      123    14011 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/node.rs
+│ │ --rw-r--r--   0     1001      123     5306 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/pool_data.rs
+│ │ --rw-r--r--   0     1001      123    34089 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/schedule.rs
+│ │ --rw-r--r--   0     1001      123    23451 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/user_conn.rs
+│ │ --rw-r--r--   0     1001      123     4624 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/server_status.rs
+│ │ --rw-r--r--   0     1001      123    11651 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/slurm.rs
+│ │ --rw-r--r--   0     1001      123     3413 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/template.rs
+│ │ --rw-r--r--   0     1001      123    22459 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/src/transport.rs
+│ │ --rw-r--r--   0     1001      123     1761 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-jobs-apptainer.yaml
+│ │ --rw-r--r--   0     1001      123     2232 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-jobs-python.yaml
+│ │ --rw-r--r--   0     1001      123      606 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-nodes.yaml
+│ │ --rw-r--r--   0     1001      123      165 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/apptainer_local.apt
+│ │ --rw-r--r--   0     1001      123      447 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/build.sh
+│ │ --rw-r--r--   0     1001      123      686 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123       69 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/hello.txt
+│ │ --rw-r--r--   0     1001      123        3 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/input_1.txt
+│ │ --rw-r--r--   0     1001      123        3 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/input_2.txt
+│ │ --rw-r--r--   0     1001      123      715 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/run.py
+│ │ --rw-r--r--   0     1001      123     3528 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local.rs
+│ │ --rw-r--r--   0     1001      123      695 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/cancel_job/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123      117 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/cancel_job/distribute-nodes.yaml
+│ │ --rw-r--r--   0     1001      123     4158 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/cancel_job.rs
+│ │ --rw-r--r--   0     1001      123      117 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_deallocate_jobs/distribute-nodes.yaml
+│ │ --rw-r--r--   0     1001      123     5304 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_deallocate_jobs.rs
+│ │ --rw-r--r--   0     1001      123      242 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_pull/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123       10 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_pull/distribute-nodes.yaml
+│ │ --rw-r--r--   0     1001      123     6073 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_pull.rs
+│ │ --rw-r--r--   0     1001      123      309 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/failed_keepalive/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123      117 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/failed_keepalive/distribute-nodes.yaml
+│ │ --rw-r--r--   0     1001      123     4939 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/failed_keepalive.rs
+│ │ --rw-r--r--   0     1001      123      141 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/filter_files/README.md
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/filter_files/nested_folder/another_file.txt
+│ │ --rw-r--r--   0     1001      123      242 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/pull_large_file/distribute-jobs.yaml
+│ │ --rw-r--r--   0     1001      123       10 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/pull_large_file/distribute-nodes.yaml
+│ │ --rw-r--r--   0     1001      123        0 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/python_sleep/build.py
+│ │ --rw-r--r--   0     1001      123       29 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/python_sleep/sleep30s.py
+│ │ --rw-r--r--   0     1001      123       30 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/tests/python_sleep/sleep500s.py
+│ │ --rwxr-xr-x   0     1001      123      523 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/local_dependencies/distribute/update_python_version.sh
+│ │ --rw-r--r--   0        0        0      425 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.1/Cargo.toml
+│ │ --rw-r--r--   0     1001      123      162 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/.readthedocs.yaml
+│ │ --rw-r--r--   0     1001      123       80 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/MANIFEST.in
+│ │ --rw-r--r--   0     1001      123      605 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/README.md
+│ │ --rw-r--r--   0     1001      123     1233 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/distribute_compute_config.pyi
+│ │ --rw-r--r--   0     1001      123      638 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/Makefile
+│ │ --rw-r--r--   0     1001      123      804 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/make.bat
+│ │ --rw-r--r--   0     1001      123     1542 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/source/api.rst
+│ │ --rw-r--r--   0     1001      123     1923 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/source/conf.py
+│ │ --rw-r--r--   0     1001      123     3545 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/source/example.rst
+│ │ --rw-r--r--   0     1001      123      836 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/docs/source/index.rst
+│ │ --rw-r--r--   0     1001      123      176 2023-03-28 21:09:24.000000 distribute_compute_config-0.14.1/pyproject.toml
+│ │ --rw-r--r--   0     1001      123    14869 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/src/lib.rs
+│ │ --rw-r--r--   0     1001      123     2307 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/src/validate_bindings.py
+│ │ --rw-r--r--   0     1001      123     2082 2023-03-28 21:09:22.000000 distribute_compute_config-0.14.1/src/wrap.rs
+│ │ --rw-r--r--   0     1001      123    17443 2023-03-28 21:10:55.000000 distribute_compute_config-0.14.1/Cargo.lock
+│ │ --rw-r--r--   0        0        0      755 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1898 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/Cargo.toml
+│ │ +-rw-r--r--   0     1001      123     1345 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/.github/workflows/gh-pages.yml
+│ │ +-rw-r--r--   0     1001      123      330 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/.github/workflows/paper-compile.yml
+│ │ +-rw-r--r--   0     1001      123     1512 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/.github/workflows/python.yml
+│ │ +-rw-r--r--   0     1001      123      308 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/.gitignore
+│ │ +-rw-r--r--   0     1001      123    55879 2023-04-06 22:05:12.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/Cargo.lock
+│ │ +-rw-r--r--   0     1001      123    35149 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/LICENSE
+│ │ +-rw-r--r--   0     1001      123      700 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/README.md
+│ │ +-rw-r--r--   0     1001      123        5 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/.gitignore
+│ │ +-rw-r--r--   0     1001      123      264 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/README.md
+│ │ +-rw-r--r--   0     1001      123      110 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/book.toml
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/hit3d-utils-exe
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/hit3d.x
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/energy_helicity.py
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/proposal_plots.py
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/plots/viscous_dissapation.py
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/apptainer-hit3d-example/vtk-analysis-exe
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-1.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-2.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/example_jobset_name_build_ouput-node-3.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_1/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_2/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_01/job_3/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-1.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-2.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/example_jobset_name_build_ouput-node-3.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_1/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_2/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/config-folder-structure/example_namespace/job_batch_02/job_3/stdout.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/README.md
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/README.md
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case1/flowfield.vtk
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case1/statistics.csv
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case2/flowfield.vtk
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case2/statistics.csv
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case3/flowfield.vtk
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/pull/brooks_openfoam_cases/incompressible_5second_cases/case3/statistics.csv
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/STREAmS/README.md
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/STREAmS/src/main.f90
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/build.py
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/initial_files/file1.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/initial_files/file2.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file1.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file2.txt
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/examples/python-root-folder-structure/input/file3.txt
+│ │ +-rw-r--r--   0     1001      123     9012 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/apptainer_config_flowchart.svg
+│ │ +-rw-r--r--   0     1001      123   286904 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/architecture.png
+│ │ +-rw-r--r--   0     1001      123   896850 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/architecture.xcf
+│ │ +-rw-r--r--   0     1001      123    14375 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/input_outputs.svg
+│ │ +-rw-r--r--   0     1001      123    15607 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/state_machine.svg
+│ │ +-rw-r--r--   0     1001      123     1012 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/SUMMARY.md
+│ │ +-rw-r--r--   0     1001      123     1030 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/admin_setup.md
+│ │ +-rw-r--r--   0     1001      123     2155 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-input-files.md
+│ │ +-rw-r--r--   0     1001      123     4603 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-introduction.md
+│ │ +-rw-r--r--   0     1001      123     1946 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-mutable-filesystem.md
+│ │ +-rw-r--r--   0     1001      123      460 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-packaging-solvers.md
+│ │ +-rw-r--r--   0     1001      123     3440 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-running-locally.md
+│ │ +-rw-r--r--   0     1001      123      642 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-storing-results.md
+│ │ +-rw-r--r--   0     1001      123     6225 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer.md
+│ │ +-rw-r--r--   0     1001      123      682 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/capabilities.md
+│ │ +-rw-r--r--   0     1001      123     8641 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/commands.md
+│ │ +-rw-r--r--   0     1001      123     1405 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/compute_node_setup.md
+│ │ +-rw-r--r--   0     1001      123     7642 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/configuration.md
+│ │ +-rw-r--r--   0     1001      123    93139 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/figs/apptainer_config_flowchart.png
+│ │ +-rw-r--r--   0     1001      123    63775 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/figs/input_outputs.png
+│ │ +-rw-r--r--   0     1001      123     1848 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/head_node_setup.md
+│ │ +-rw-r--r--   0     1001      123      613 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/install.md
+│ │ +-rw-r--r--   0     1001      123     3417 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/introduction.md
+│ │ +-rw-r--r--   0     1001      123     1589 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/overview.md
+│ │ +-rw-r--r--   0     1001      123     1628 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-build-scripts.md
+│ │ +-rw-r--r--   0     1001      123     3378 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-execution-scripts.md
+│ │ +-rw-r--r--   0     1001      123      176 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-full-example.md
+│ │ +-rw-r--r--   0     1001      123     3142 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-input-files.md
+│ │ +-rw-r--r--   0     1001      123     1033 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-storing-results.md
+│ │ +-rw-r--r--   0     1001      123     5566 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python.md
+│ │ +-rw-r--r--   0     1001      123      367 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python_api.md
+│ │ +-rw-r--r--   0     1001      123      682 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/build.apptainer
+│ │ +-rw-r--r--   0     1001      123      693 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/build.py
+│ │ +-rw-r--r--   0     1001      123       50 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/dataset_always.csv
+│ │ +-rw-r--r--   0     1001      123       50 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/dataset_sometimes.csv
+│ │ +-rw-r--r--   0     1001      123      481 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123      956 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/run.py
+│ │ +-rw-r--r--   0     1001      123      693 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/build.py
+│ │ +-rw-r--r--   0     1001      123       50 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/dataset_always.csv
+│ │ +-rw-r--r--   0     1001      123       50 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/dataset_sometimes.csv
+│ │ +-rw-r--r--   0     1001      123      543 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123      921 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/run.py
+│ │ +-rw-r--r--   0     1001      123      404 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/install/distribute-compute.service
+│ │ +-rw-r--r--   0     1001      123      510 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/install/distribute-server.service
+│ │ +-rw-r--r--   0     1001      123      470 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/install/setup-root.sh
+│ │ +-rw-r--r--   0     1001      123      699 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/install/setup.sh
+│ │ +-rw-r--r--   0     1001      123      219 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/install/update.sh
+│ │ +-rw-r--r--   0     1001      123      323 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/justfile
+│ │ +-rw-r--r--   0     1001      123    67552 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/paper/node_layout.png
+│ │ +-rw-r--r--   0     1001      123    18914 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/paper/node_layout.svg
+│ │ +-rw-r--r--   0     1001      123     1181 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/paper/paper.bib
+│ │ +-rw-r--r--   0     1001      123     3346 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/paper/paper.md
+│ │ +-rw-r--r--   0     1001      123     4215 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/add.rs
+│ │ +-rw-r--r--   0     1001      123     2991 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/bin/distribute.rs
+│ │ +-rw-r--r--   0     1001      123     9727 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/cli.rs
+│ │ +-rw-r--r--   0     1001      123    13238 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/execute.rs
+│ │ +-rw-r--r--   0     1001      123    14350 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/mod.rs
+│ │ +-rw-r--r--   0     1001      123     7240 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/utils.rs
+│ │ +-rw-r--r--   0     1001      123     7178 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/apptainer.rs
+│ │ +-rw-r--r--   0     1001      123     7020 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/common.rs
+│ │ +-rw-r--r--   0     1001      123     2677 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/hashing.rs
+│ │ +-rw-r--r--   0     1001      123    21664 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/mod.rs
+│ │ +-rw-r--r--   0     1001      123     7562 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/python.rs
+│ │ +-rw-r--r--   0     1001      123     2578 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/requirements.rs
+│ │ +-rw-r--r--   0     1001      123    16061 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/error.rs
+│ │ +-rw-r--r--   0     1001      123      648 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/kill.rs
+│ │ +-rw-r--r--   0     1001      123     4535 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/lib.rs
+│ │ +-rw-r--r--   0     1001      123     1987 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/node_status.rs
+│ │ +-rw-r--r--   0     1001      123     5782 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/pause/mod.rs
+│ │ +-rw-r--r--   0     1001      123     8185 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/pause/unix.rs
+│ │ +-rw-r--r--   0     1001      123     1221 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/prelude.rs
+│ │ +-rw-r--r--   0     1001      123    11745 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/built.rs
+│ │ +-rw-r--r--   0     1001      123    10538 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/compiling.rs
+│ │ +-rw-r--r--   0     1001      123    24554 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/executing.rs
+│ │ +-rw-r--r--   0     1001      123     9073 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/mod.rs
+│ │ +-rw-r--r--   0     1001      123     8218 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/prepare_build.rs
+│ │ +-rw-r--r--   0     1001      123     7335 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/mod.rs
+│ │ +-rw-r--r--   0     1001      123    14228 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/receiver.rs
+│ │ +-rw-r--r--   0     1001      123    12133 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/sender.rs
+│ │ +-rw-r--r--   0     1001      123    12741 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/uninit.rs
+│ │ +-rw-r--r--   0     1001      123     6593 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/pull.rs
+│ │ +-rw-r--r--   0     1001      123     2083 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/run_local.rs
+│ │ +-rw-r--r--   0     1001      123     5431 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/job_pool.rs
+│ │ +-rw-r--r--   0     1001      123     1587 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/matrix.rs
+│ │ +-rw-r--r--   0     1001      123     5640 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/mod.rs
+│ │ +-rw-r--r--   0     1001      123    14011 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/node.rs
+│ │ +-rw-r--r--   0     1001      123     5306 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/pool_data.rs
+│ │ +-rw-r--r--   0     1001      123    34089 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/schedule.rs
+│ │ +-rw-r--r--   0     1001      123    23451 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/user_conn.rs
+│ │ +-rw-r--r--   0     1001      123     4624 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/server_status.rs
+│ │ +-rw-r--r--   0     1001      123    11651 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/slurm.rs
+│ │ +-rw-r--r--   0     1001      123     3413 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/template.rs
+│ │ +-rw-r--r--   0     1001      123    22459 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/src/transport.rs
+│ │ +-rw-r--r--   0     1001      123     1761 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-jobs-apptainer.yaml
+│ │ +-rw-r--r--   0     1001      123     2232 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-jobs-python.yaml
+│ │ +-rw-r--r--   0     1001      123      614 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123      165 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/apptainer_local.apt
+│ │ +-rw-r--r--   0     1001      123      447 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/build.sh
+│ │ +-rw-r--r--   0     1001      123      686 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123       69 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/hello.txt
+│ │ +-rw-r--r--   0     1001      123        3 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/input_1.txt
+│ │ +-rw-r--r--   0     1001      123        3 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/input_2.txt
+│ │ +-rw-r--r--   0     1001      123      715 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/run.py
+│ │ +-rw-r--r--   0     1001      123     3528 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local.rs
+│ │ +-rw-r--r--   0     1001      123      695 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/cancel_job/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123      117 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/cancel_job/distribute-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123     4158 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/cancel_job.rs
+│ │ +-rw-r--r--   0     1001      123      117 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_deallocate_jobs/distribute-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123     5304 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_deallocate_jobs.rs
+│ │ +-rw-r--r--   0     1001      123      242 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_pull/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123       10 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_pull/distribute-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123     6073 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_pull.rs
+│ │ +-rw-r--r--   0     1001      123      309 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/failed_keepalive/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123      117 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/failed_keepalive/distribute-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123     4939 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/failed_keepalive.rs
+│ │ +-rw-r--r--   0     1001      123      141 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/filter_files/README.md
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/filter_files/nested_folder/another_file.txt
+│ │ +-rw-r--r--   0     1001      123      242 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/pull_large_file/distribute-jobs.yaml
+│ │ +-rw-r--r--   0     1001      123       10 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/pull_large_file/distribute-nodes.yaml
+│ │ +-rw-r--r--   0     1001      123        0 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/python_sleep/build.py
+│ │ +-rw-r--r--   0     1001      123       29 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/python_sleep/sleep30s.py
+│ │ +-rw-r--r--   0     1001      123       30 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/tests/python_sleep/sleep500s.py
+│ │ +-rwxr-xr-x   0     1001      123      523 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/local_dependencies/distribute/update_python_version.sh
+│ │ +-rw-r--r--   0        0        0      425 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.2/Cargo.toml
+│ │ +-rw-r--r--   0     1001      123      162 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/.readthedocs.yaml
+│ │ +-rw-r--r--   0     1001      123       80 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/MANIFEST.in
+│ │ +-rw-r--r--   0     1001      123      605 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/README.md
+│ │ +-rw-r--r--   0     1001      123     1233 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/distribute_compute_config.pyi
+│ │ +-rw-r--r--   0     1001      123      638 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/Makefile
+│ │ +-rw-r--r--   0     1001      123      804 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/make.bat
+│ │ +-rw-r--r--   0     1001      123     1542 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/source/api.rst
+│ │ +-rw-r--r--   0     1001      123     1923 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/source/conf.py
+│ │ +-rw-r--r--   0     1001      123     3545 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/source/example.rst
+│ │ +-rw-r--r--   0     1001      123      836 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/docs/source/index.rst
+│ │ +-rw-r--r--   0     1001      123      176 2023-04-06 22:03:56.000000 distribute_compute_config-0.14.2/pyproject.toml
+│ │ +-rw-r--r--   0     1001      123    14869 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/src/lib.rs
+│ │ +-rw-r--r--   0     1001      123     2307 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/src/validate_bindings.py
+│ │ +-rw-r--r--   0     1001      123     2082 2023-04-06 22:03:52.000000 distribute_compute_config-0.14.2/src/wrap.rs
+│ │ +-rw-r--r--   0     1001      123    17443 2023-04-06 22:05:11.000000 distribute_compute_config-0.14.2/Cargo.lock
+│ │ +-rw-r--r--   0        0        0      755 1970-01-01 00:00:00.000000 distribute_compute_config-0.14.2/PKG-INFO
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/Cargo.toml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/Cargo.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [package]
+│ │  name = "distribute"
+│ │ -version = "0.14.1"
+│ │ +version = "0.14.2"
+│ │  edition = "2021"
+│ │  
+│ │  # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+│ │  [lib]
+│ │  crate-type = ["cdylib", "rlib"]
+│ │  
+│ │  [dependencies]
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/.github/workflows/gh-pages.yml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/.github/workflows/gh-pages.yml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/.github/workflows/python.yml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/.github/workflows/python.yml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/Cargo.lock
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/Cargo.lock
+│ │┄ Files 0% similar despite different names
+│ │ @@ -333,15 +333,15 @@
+│ │  dependencies = [
+│ │   "block-buffer",
+│ │   "crypto-common",
+│ │  ]
+│ │  
+│ │  [[package]]
+│ │  name = "distribute"
+│ │ -version = "0.14.1"
+│ │ +version = "0.14.2"
+│ │  dependencies = [
+│ │   "base16",
+│ │   "bincode",
+│ │   "chrono",
+│ │   "clap",
+│ │   "derive_more",
+│ │   "futures",
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/LICENSE
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/README.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/README.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/apptainer_config_flowchart.svg
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/apptainer_config_flowchart.svg
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/architecture.png
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/architecture.png
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/architecture.xcf
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/architecture.xcf
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/input_outputs.svg
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/input_outputs.svg
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/figs/state_machine.svg
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/figs/state_machine.svg
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/SUMMARY.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/SUMMARY.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/admin_setup.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/admin_setup.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-input-files.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-input-files.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-introduction.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-introduction.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-mutable-filesystem.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-mutable-filesystem.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-running-locally.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-running-locally.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer-storing-results.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer-storing-results.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/apptainer.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/apptainer.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/capabilities.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/capabilities.md
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  # Capabilities
+│ │  
+│ │ -Since capabilities are decided by the administrator for your `distribtue` cluster, the capabilities 
+│ │ -for your cluster are cluster-specific.
+│ │ +Since capabilities are decided by the administrator for your `distribute` cluster, 
+│ │ +capabilities are cluster-specific.
+│ │  
+│ │  One recommendation made to administrators, though, is that the capabilities `apptainer` and `gpu` are 
+│ │  included to denote access to an `apptainer` binary on the system and the system containing a NVIDIA gpu, respectively.
+│ │  
+│ │  As long as these capabilities are specified, users can bundle their own dependencies in an `apptainer` image
+│ │  and execute easily. If your group intends to make heavy use of `python` configurations across
+│ │  multiple computers, you may run into robustness issues: these workflows are frail, easy to break, and hard to maintain.
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/commands.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/commands.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/compute_node_setup.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/compute_node_setup.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/configuration.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/configuration.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/figs/apptainer_config_flowchart.png
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/figs/apptainer_config_flowchart.png
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/figs/input_outputs.png
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/figs/input_outputs.png
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/head_node_setup.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/head_node_setup.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/install.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/install.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/introduction.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/introduction.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/overview.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/overview.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-build-scripts.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-build-scripts.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-execution-scripts.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-execution-scripts.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-input-files.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-input-files.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python-storing-results.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python-storing-results.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/docs/src/python.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/docs/src/python.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/build.apptainer
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/build.apptainer
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/build.py
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/build.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/apptainer/run.py
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/apptainer/run.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/build.py
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/build.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/distribute-jobs.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/distribute-jobs.yaml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/examples/python/run.py
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/examples/python/run.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/install/setup.sh
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/install/setup.sh
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/paper/media/node_layout.png
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/paper/node_layout.png
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/paper/node_layout.svg
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/paper/node_layout.svg
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/paper/paper.bib
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/paper/paper.bib
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/paper/paper.md
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/paper/paper.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/add.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/add.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  use crate::error::{self, Error};
+│ │  use crate::prelude::*;
+│ │  
+│ │ -/// add a job batch to the head node 
+│ │ +/// add a job batch to the head node
+│ │  pub async fn add(args: cli::Add) -> Result<(), Error> {
+│ │      //
+│ │      // load the config files
+│ │      //
+│ │      let config = config::load_config::<config::Jobs<config::common::File>>(&args.jobs)?;
+│ │  
+│ │      if config.len_jobs() == 0 {
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/bin/distribute.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/bin/distribute.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/cli.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/cli.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -240,15 +240,15 @@
+│ │      pub(crate) save_dir: PathBuf,
+│ │  
+│ │      #[command(subcommand)]
+│ │      pub(crate) filter: Option<RegexFilter>,
+│ │  }
+│ │  
+│ │  #[derive(Parser, PartialEq, Debug, Eq)]
+│ │ -/// A filter applied to pull queries to the server. 
+│ │ +/// A filter applied to pull queries to the server.
+│ │  ///
+│ │  /// Queries can either be "include" based (only include files specified), or
+│ │  /// exclude based (pull all files except those matching exclude query)
+│ │  pub enum RegexFilter {
+│ │      /// files to include in the pulling operation. all --include flags are included with an OR
+│ │      /// basis.
+│ │      ///
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/execute.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/execute.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/mod.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/client/utils.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/client/utils.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/apptainer.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/apptainer.rs
+│ │┄ Files 8% similar despite different names
+│ │ @@ -45,22 +45,25 @@
+│ │          Ok(())
+│ │      }
+│ │  
+│ │      pub(crate) fn len_jobs(&self) -> usize {
+│ │          self.jobs.len()
+│ │      }
+│ │  
+│ │ -    pub(super) fn hashed(&self) -> Result<Description<common::HashedFile>, super::MissingFilename> {
+│ │ -        let initialize = self.initialize.hashed()?;
+│ │ +    pub(super) fn hashed(
+│ │ +        &self,
+│ │ +        meta: &super::Meta,
+│ │ +    ) -> Result<Description<common::HashedFile>, super::MissingFilename> {
+│ │ +        let initialize = self.initialize.hashed(meta)?;
+│ │  
+│ │          let jobs = self
+│ │              .jobs
+│ │              .iter()
+│ │              .enumerate()
+│ │ -            .map(|(job_idx, job)| job.hashed(job_idx))
+│ │ +            .map(|(job_idx, job)| job.hashed(job_idx, meta))
+│ │              .collect::<Result<Vec<_>, super::MissingFilename>>()?;
+│ │  
+│ │          let desc = Description { initialize, jobs };
+│ │  
+│ │          Ok(desc)
+│ │      }
+│ │  }
+│ │ @@ -118,16 +121,19 @@
+│ │      #[serde(default = "Default::default")]
+│ │      #[getset(get = "pub(crate)")]
+│ │      pub required_mounts: Vec<PathBuf>,
+│ │  }
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  impl Initialize<common::File> {
+│ │ -    fn hashed(&self) -> Result<Initialize<common::HashedFile>, super::MissingFilename> {
+│ │ -        let init_hash = hashing::filename_hash(self);
+│ │ +    fn hashed(
+│ │ +        &self,
+│ │ +        meta: &super::Meta,
+│ │ +    ) -> Result<Initialize<common::HashedFile>, super::MissingFilename> {
+│ │ +        let init_hash = hashing::filename_hash(self, meta);
+│ │  
+│ │          // hash the sif
+│ │          let hashed_path = format!("setup_sif_{init_hash}.dist").into();
+│ │          let unhashed_path = self.sif.path().into();
+│ │          let filename = self.sif.filename()?;
+│ │          let sif = common::HashedFile::new(hashed_path, unhashed_path, filename);
+│ │  
+│ │ @@ -186,19 +192,20 @@
+│ │  }
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  impl Job<common::File> {
+│ │      pub(crate) fn hashed(
+│ │          &self,
+│ │          job_idx: usize,
+│ │ +        meta: &super::Meta,
+│ │      ) -> Result<Job<common::HashedFile>, super::MissingFilename> {
+│ │          //
+│ │          // for each job ...
+│ │          //
+│ │ -        let hash = hashing::filename_hash(self);
+│ │ +        let hash = hashing::filename_hash(self, meta);
+│ │          let required_files = self
+│ │              .required_files
+│ │              .iter()
+│ │              .enumerate()
+│ │              .map(|(file_idx, file)| {
+│ │                  //
+│ │                  // for each file in this job ...
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/common.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/common.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -146,15 +146,15 @@
+│ │      } else {
+│ │          pathbuf
+│ │      }
+│ │  }
+│ │  
+│ │  #[derive(Debug, Clone, Deserialize, Serialize, getset::Getters, Constructor)]
+│ │  /// a hashed file, mostly used on the compute node to remove the possibility of
+│ │ -/// multiple files from different users / job batches colliding in filenames. 
+│ │ +/// multiple files from different users / job batches colliding in filenames.
+│ │  ///
+│ │  /// Normally,
+│ │  /// you do not want to use this type and instead are looking for the more general [`File`] type
+│ │  /// present in configuration files.
+│ │  pub struct HashedFile {
+│ │      // on the server, this is the absolute path to the file on disk
+│ │      //
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/hashing.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/hashing.rs
+│ │┄ Files 6% similar despite different names
+│ │ @@ -76,17 +76,21 @@
+│ │              .into_iter()
+│ │              .map(|f| f.path().to_owned());
+│ │  
+│ │          Box::new(iter)
+│ │      }
+│ │  }
+│ │  
+│ │ -pub(super) fn filename_hash<T: HashableComponent>(data: &T) -> String {
+│ │ +pub(super) fn filename_hash<T: HashableComponent>(data: &T, meta: &super::Meta) -> String {
+│ │      let mut sha = sha1::Sha1::new();
+│ │  
+│ │ +    // hash the meta section first
+│ │ +    sha.update(meta.batch_name().as_bytes());
+│ │ +    sha.update(meta.namespace().as_bytes());
+│ │ +
+│ │      sha.update(data.job_name().as_bytes());
+│ │  
+│ │      for file in data.files() {
+│ │          let filename = file.file_name().unwrap().to_string_lossy();
+│ │          sha.update(filename.as_bytes());
+│ │          let bytes = std::fs::read(file).unwrap();
+│ │          sha.update(&bytes);
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/mod.rs
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  /// apptainer configuration types
+│ │  pub mod apptainer;
+│ │ -/// python configuration types
+│ │ -pub mod python;
+│ │  /// helper types common between python and apptainer
+│ │  pub mod common;
+│ │ +/// python configuration types
+│ │ +pub mod python;
+│ │  /// helper types for job or compute node capabilities
+│ │  pub mod requirements;
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  mod hashing;
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │ @@ -30,18 +30,38 @@
+│ │          pub const $STR: &'static str = stringify!($value);
+│ │      };
+│ │  }
+│ │  
+│ │  //
+│ │  // ports for different communication channels
+│ │  //
+│ │ -const_port!(SERVER_PORT, SERVER_PORT_STR, 8952, "default port that the server listens on for user connections");
+│ │ -const_port!(CLIENT_PORT, CLIENT_PORT_STR, 8953, "default port that the client listens on for server compute connections");
+│ │ -const_port!(CLIENT_KEEPALIVE_PORT, CLIENT_KEEPALIVE_PORT_STR, 8954, "default port that the client listens on for server keepalive checks");
+│ │ -const_port!(CLIENT_CANCEL_PORT, CLIENT_CANCEL_PORT_STR, 8955, "default port that the client listens on for server cancellation notices");
+│ │ +const_port!(
+│ │ +    SERVER_PORT,
+│ │ +    SERVER_PORT_STR,
+│ │ +    8952,
+│ │ +    "default port that the server listens on for user connections"
+│ │ +);
+│ │ +const_port!(
+│ │ +    CLIENT_PORT,
+│ │ +    CLIENT_PORT_STR,
+│ │ +    8953,
+│ │ +    "default port that the client listens on for server compute connections"
+│ │ +);
+│ │ +const_port!(
+│ │ +    CLIENT_KEEPALIVE_PORT,
+│ │ +    CLIENT_KEEPALIVE_PORT_STR,
+│ │ +    8954,
+│ │ +    "default port that the client listens on for server keepalive checks"
+│ │ +);
+│ │ +const_port!(
+│ │ +    CLIENT_CANCEL_PORT,
+│ │ +    CLIENT_CANCEL_PORT_STR,
+│ │ +    8955,
+│ │ +    "default port that the client listens on for server cancellation notices"
+│ │ +);
+│ │  
+│ │  #[derive(Debug, Display, thiserror::Error, Constructor)]
+│ │  #[display(
+│ │      fmt = "configuration file: `{}` reason: `{}`",
+│ │      "configuration_file",
+│ │      "error"
+│ │  )]
+│ │ @@ -382,24 +402,26 @@
+│ │          Ok(())
+│ │      }
+│ │  
+│ │      /// hash all constitutent files of this job set in preparation to move them to the server
+│ │      pub fn hashed(&self) -> Result<Jobs<common::HashedFile>, MissingFilename> {
+│ │          match &self {
+│ │              Self::Python(pyconfig) => {
+│ │ -                let description = pyconfig.description.hashed()?;
+│ │ +                let description = pyconfig.description.hashed(&pyconfig.meta)?;
+│ │  
+│ │                  Ok(Jobs::from(PythonConfig {
+│ │                      meta: pyconfig.meta.clone(),
+│ │                      description,
+│ │                      slurm: pyconfig.slurm.clone(),
+│ │                  }))
+│ │              }
+│ │              Self::Apptainer(apptainer_config) => {
+│ │ -                let description = apptainer_config.description.hashed()?;
+│ │ +                let description = apptainer_config
+│ │ +                    .description
+│ │ +                    .hashed(&apptainer_config.meta)?;
+│ │  
+│ │                  Ok(Jobs::from(ApptainerConfig {
+│ │                      meta: apptainer_config.meta.clone(),
+│ │                      description,
+│ │                      slurm: apptainer_config.slurm.clone(),
+│ │                  }))
+│ │              }
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/python.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/python.rs
+│ │┄ Files 6% similar despite different names
+│ │ @@ -47,21 +47,24 @@
+│ │          Ok(())
+│ │      }
+│ │  
+│ │      pub(crate) fn len_jobs(&self) -> usize {
+│ │          self.jobs.len()
+│ │      }
+│ │  
+│ │ -    pub(super) fn hashed(&self) -> Result<Description<common::HashedFile>, super::MissingFilename> {
+│ │ -        let initialize = self.initialize.hashed()?;
+│ │ +    pub(super) fn hashed(
+│ │ +        &self,
+│ │ +        meta: &super::Meta,
+│ │ +    ) -> Result<Description<common::HashedFile>, super::MissingFilename> {
+│ │ +        let initialize = self.initialize.hashed(meta)?;
+│ │  
+│ │          let mut jobs = Vec::new();
+│ │  
+│ │          for (job_idx, job) in self.jobs.iter().enumerate() {
+│ │ -            let hashed_job = job.hashed(job_idx)?;
+│ │ +            let hashed_job = job.hashed(job_idx, meta)?;
+│ │  
+│ │              jobs.push(hashed_job);
+│ │          }
+│ │  
+│ │          let desc = Description { initialize, jobs };
+│ │  
+│ │          Ok(desc)
+│ │ @@ -120,16 +123,19 @@
+│ │      #[getset(get = "pub(crate)")]
+│ │      /// list of required files used in compilation script
+│ │      pub(super) required_files: Vec<FILE>,
+│ │  }
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  impl Initialize<common::File> {
+│ │ -    pub(crate) fn hashed(&self) -> Result<Initialize<common::HashedFile>, super::MissingFilename> {
+│ │ -        let init_hash = hashing::filename_hash(self);
+│ │ +    pub(crate) fn hashed(
+│ │ +        &self,
+│ │ +        meta: &super::Meta,
+│ │ +    ) -> Result<Initialize<common::HashedFile>, super::MissingFilename> {
+│ │ +        let init_hash = hashing::filename_hash(self, meta);
+│ │  
+│ │          let hashed_path = format!("setup_python_{init_hash}.dist").into();
+│ │          let unhashed_path = self.python_build_file_path.path().into();
+│ │          let filename = self.python_build_file_path.filename()?;
+│ │          let python_build_file_path = common::HashedFile::new(hashed_path, unhashed_path, filename);
+│ │  
+│ │          // hashed required files
+│ │ @@ -187,16 +193,17 @@
+│ │  }
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  impl Job<common::File> {
+│ │      pub(crate) fn hashed(
+│ │          &self,
+│ │          job_idx: usize,
+│ │ +        meta: &super::Meta,
+│ │      ) -> Result<Job<common::HashedFile>, super::MissingFilename> {
+│ │ -        let hash = hashing::filename_hash(self);
+│ │ +        let hash = hashing::filename_hash(self, meta);
+│ │  
+│ │          let required_files = self
+│ │              .required_files
+│ │              .iter()
+│ │              .enumerate()
+│ │              .map(|(file_idx, file)| {
+│ │                  //
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/config/requirements.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/config/requirements.rs
+│ │┄ Files 5% similar despite different names
+│ │ @@ -37,20 +37,20 @@
+│ │          Requirements {
+│ │              reqs: iter.into_iter().collect(),
+│ │              marker: std::marker::PhantomData::<T>,
+│ │          }
+│ │      }
+│ │  }
+│ │  
+│ │ -impl <INTO, T> From<Vec<INTO>> for Requirements<T> 
+│ │ -where INTO: Into<String>
+│ │ +impl<INTO, T> From<Vec<INTO>> for Requirements<T>
+│ │ +where
+│ │ +    INTO: Into<String>,
+│ │  {
+│ │      fn from(reqs: Vec<INTO>) -> Self {
+│ │ -        reqs.into_iter()
+│ │ -            .map(|x| Requirement(x.into())).collect()
+│ │ +        reqs.into_iter().map(|x| Requirement(x.into())).collect()
+│ │      }
+│ │  }
+│ │  
+│ │  impl Requirements<JobRequiredCaps> {
+│ │      pub(crate) fn requires_gpu(&self) -> bool {
+│ │          // TODO: can probably make Requirement<T> and work with
+│ │          // generics to remove this heap allocation
+│ │ @@ -74,15 +74,15 @@
+│ │  pub struct NodeProvidedCaps;
+│ │  
+│ │  #[derive(Debug, Clone, Deserialize, Serialize)]
+│ │  /// marker type denoting that capabilities / requirements are for a job batch
+│ │  pub struct JobRequiredCaps;
+│ │  
+│ │  #[derive(From, Ord, Eq, PartialEq, PartialOrd, Debug, Clone, Deserialize, Serialize, Display)]
+│ │ -/// specifies a required capability that a node should possess in 
+│ │ +/// specifies a required capability that a node should possess in
+│ │  /// order to a job to be scheduled to it.
+│ │  pub struct Requirement(String);
+│ │  
+│ │  impl From<&str> for Requirement {
+│ │      fn from(x: &str) -> Self {
+│ │          Requirement(x.to_string())
+│ │      }
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/error.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/error.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,41 +6,41 @@
+│ │  #[derive(Debug, thiserror::Error)]
+│ │  /// general erorr enum encapsulating most (but not all) error states of all functions
+│ │  pub enum Error {
+│ │      #[error("Could not load configuration file. {0}")]
+│ │      /// the configuration has an error in it
+│ │      InvalidConfiguration(#[from] config::ConfigurationError),
+│ │      #[error("{0}")]
+│ │ -    /// there was a failure in a TCP connection, and it could not be 
+│ │ +    /// there was a failure in a TCP connection, and it could not be
+│ │      /// generalized to a more specific call site than this enum
+│ │      TcpConnection(#[from] TcpConnection),
+│ │      #[error("{0}")]
+│ │ -    /// failed to serialize bytes to transport. The presence of 
+│ │ +    /// failed to serialize bytes to transport. The presence of
+│ │      /// this variant is usually a bug
+│ │      TransportSerialization(#[from] Serialization),
+│ │      #[error("{0}")]
+│ │ -    /// failed to deserialize bytes from transport. The presence of 
+│ │ +    /// failed to deserialize bytes from transport. The presence of
+│ │      /// this variant is usually a bug
+│ │      TransportDeserialization(#[from] Deserialization),
+│ │      #[error("{0}")]
+│ │      /// failed to run a job on a compute node
+│ │      RunJob(#[from] RunJobError),
+│ │      #[error("{0}")]
+│ │ -    /// failed to initialize a job on a compute node, likely 
+│ │ +    /// failed to initialize a job on a compute node, likely
+│ │      /// caused when executing a compiler script from python
+│ │      InitJob(#[from] InitJobError),
+│ │      #[error("{0}")]
+│ │      /// failure to start of execute a server / head node
+│ │      Server(#[from] ServerError),
+│ │      #[error("Failed to setup logging: {0}")]
+│ │      /// failure to setup logging interfaces, usually
+│ │      /// before any other code is called
+│ │      Log(#[from] LogError),
+│ │      #[error("{0}")]
+│ │ -    /// failed to initialize a client on a compute node 
+│ │ +    /// failed to initialize a client on a compute node
+│ │      ClientInit(#[from] ClientInitError),
+│ │      #[error("{0}")]
+│ │      /// failed to pause a job that is being executed
+│ │      Pause(#[from] PauseError),
+│ │      #[error("{0}")]
+│ │      /// failed to add a new batch of jobs from a configuration file
+│ │      Add(#[from] AddError),
+│ │ @@ -78,15 +78,15 @@
+│ │  }
+│ │  
+│ │  #[derive(Debug, Display, From, thiserror::Error)]
+│ │  #[display(
+│ │      fmt = "error serializing data to bytes (this is probably a bug): {}",
+│ │      error
+│ │  )]
+│ │ -/// failure to serialize bytes to bincode format. 
+│ │ +/// failure to serialize bytes to bincode format.
+│ │  ///
+│ │  /// This should not happen
+│ │  pub struct Serialization {
+│ │      error: bincode::Error,
+│ │  }
+│ │  
+│ │  #[derive(Debug, Display, From, thiserror::Error)]
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/kill.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/kill.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/lib.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/lib.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,8 @@
+│ │  #![doc = include_str!("../README.md")]
+│ │ -
+│ │  #![allow(dead_code)]
+│ │  #![deny(missing_docs)]
+│ │  
+│ │  mod config;
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  mod add;
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/node_status.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/node_status.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/pause/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/pause/mod.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/pause/unix.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/pause/unix.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/prelude.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/prelude.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/built.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/built.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/compiling.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/compiling.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/executing.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/executing.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/mod.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/prepare_build.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/prepare_build.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/mod.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/receiver.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/receiver.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/send_files/sender.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/send_files/sender.rs
+│ │┄ Files 1% similar despite different names
+│ │ @@ -227,16 +227,17 @@
+│ │              );
+│ │  
+│ │              let fs_meta =
+│ │                  if let Ok(fs_meta) = tokio::fs::metadata(&metadata.absolute_file_path).await {
+│ │                      fs_meta
+│ │                  } else {
+│ │                      error!(
+│ │ -                        "could not read metadata for {} - skipping",
+│ │ -                        metadata.absolute_file_path.display()
+│ │ +                        "could not read metadata for {} - skipping. Path exists: {}",
+│ │ +                        metadata.absolute_file_path.display(),
+│ │ +                        metadata.absolute_file_path.exists()
+│ │                      );
+│ │                      continue;
+│ │                  };
+│ │  
+│ │              //
+│ │              // check if this file is very large
+│ │              //
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/protocol/uninit.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/protocol/uninit.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/pull.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/pull.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/run_local.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/run_local.rs
+│ │┄ Files 8% similar despite different names
+│ │ @@ -32,15 +32,15 @@
+│ │      fs::create_dir(&archive)?;
+│ │  
+│ │      let distribute_save = args.save_dir.join("distribute_save");
+│ │  
+│ │      for job in apptainer_config.description().jobs().into_iter().cloned() {
+│ │          working_dir.copy_job_files_apptainer(&job).await;
+│ │  
+│ │ -        let job = job.hashed(0).unwrap();
+│ │ +        let job = job.hashed(0, &apptainer_config.meta()).unwrap();
+│ │          let name = job.name().to_string();
+│ │  
+│ │          client::execute::run_apptainer_job(job, &working_dir, &mut rx, &state).await?;
+│ │          fs::rename(&distribute_save, archive.join(name))?;
+│ │          fs::create_dir(&distribute_save)?;
+│ │      }
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/job_pool.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/job_pool.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/matrix.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/matrix.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/mod.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/mod.rs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -149,16 +149,16 @@
+│ │  
+│ │      Ok(())
+│ │  }
+│ │  
+│ │  #[cfg(feature = "cli")]
+│ │  /// map a `Result<(), std::io::Error>` to `Ok(())` if the error is `ErrorKind::AlreadyExists`
+│ │  ///
+│ │ -/// if we attempted to create a file and it already exists, sometimes we wish to simply open 
+│ │ -/// the file instead of creating a fresh file. 
+│ │ +/// if we attempted to create a file and it already exists, sometimes we wish to simply open
+│ │ +/// the file instead of creating a fresh file.
+│ │  ///
+│ │  /// Usually this is applicable to directories that we want to ensure exist but dont care if they already exist.
+│ │  pub(crate) fn ok_if_exists(x: Result<(), std::io::Error>) -> Result<(), std::io::Error> {
+│ │      match x {
+│ │          Ok(_) => Ok(()),
+│ │          Err(e) if e.kind() == std::io::ErrorKind::AlreadyExists => Ok(()),
+│ │          Err(e) => Err(e),
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/node.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/node.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/pool_data.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/pool_data.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/schedule.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/schedule.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server/user_conn.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server/user_conn.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/server_status.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/server_status.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/slurm.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/slurm.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/template.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/template.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/src/transport.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/src/transport.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-jobs-apptainer.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-jobs-apptainer.yaml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-jobs-python.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-jobs-python.yaml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/static/example-nodes.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/static/example-nodes.yaml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -4,12 +4,12 @@
+│ │    - ip: "134.197.94.36"
+│ │      capabilities: [gpu, cargo, singularity, apptainer, lab1, lab1-3, lab1-2, gpu]
+│ │      name: "lab1"
+│ │    - ip: "134.197.27.105"
+│ │      capabilities: [cargo, singularity, apptainer, lab2, lab2-3, python3, lab1-2]
+│ │      name: "lab2"
+│ │    - ip: "134.197.95.113"
+│ │ -    capabilities: [cargo, fftw, python3, openfoam, singularity, apptainer, lab1-3, lab2-3, lab3, gpu]
+│ │ +    capabilities: [cargo, fftw, python3, openfoam, singularity, apptainer, lab1-3, lab2-3, lab3, lab3-5, gpu]
+│ │      name: "lab3"
+│ │    - ip: "134.197.27.69"
+│ │      capabilities: [cargo, singularity, apptainer, lab5, lab3-5, gpu]
+│ │      name: "lab5"
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/distribute-jobs.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/distribute-jobs.yaml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local/run.py
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local/run.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/apptainer_local.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/apptainer_local.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/cancel_job/distribute-jobs.yaml
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/cancel_job/distribute-jobs.yaml
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/cancel_job.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/cancel_job.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_deallocate_jobs.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_deallocate_jobs.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/check_pull.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/check_pull.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/tests/failed_keepalive.rs
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/tests/failed_keepalive.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/local_dependencies/distribute/update_python_version.sh
+│ ├── +++ distribute_compute_config-0.14.2/local_dependencies/distribute/update_python_version.sh
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/README.md
+│ ├── +++ distribute_compute_config-0.14.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/distribute_compute_config.pyi
+│ ├── +++ distribute_compute_config-0.14.2/distribute_compute_config.pyi
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/Makefile
+│ ├── +++ distribute_compute_config-0.14.2/docs/Makefile
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/make.bat
+│ ├── +++ distribute_compute_config-0.14.2/docs/make.bat
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/source/api.rst
+│ ├── +++ distribute_compute_config-0.14.2/docs/source/api.rst
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/source/conf.py
+│ ├── +++ distribute_compute_config-0.14.2/docs/source/conf.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/source/example.rst
+│ ├── +++ distribute_compute_config-0.14.2/docs/source/example.rst
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/docs/source/index.rst
+│ ├── +++ distribute_compute_config-0.14.2/docs/source/index.rst
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/src/lib.rs
+│ ├── +++ distribute_compute_config-0.14.2/src/lib.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/src/validate_bindings.py
+│ ├── +++ distribute_compute_config-0.14.2/src/validate_bindings.py
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/src/wrap.rs
+│ ├── +++ distribute_compute_config-0.14.2/src/wrap.rs
+│ │┄ Files identical despite different names
+│ │   --- distribute_compute_config-0.14.1/Cargo.lock
+│ ├── +++ distribute_compute_config-0.14.2/Cargo.lock
+│ │┄ Files 0% similar despite different names
+│ │ @@ -55,15 +55,15 @@
+│ │   "quote",
+│ │   "rustc_version",
+│ │   "syn",
+│ │  ]
+│ │  
+│ │  [[package]]
+│ │  name = "distribute"
+│ │ -version = "0.14.1"
+│ │ +version = "0.14.2"
+│ │  dependencies = [
+│ │   "base16",
+│ │   "derive_more",
+│ │   "getset",
+│ │   "matrix-notify",
+│ │   "pyo3",
+│ │   "serde",
+│ │   --- distribute_compute_config-0.14.1/PKG-INFO
+│ ├── +++ distribute_compute_config-0.14.2/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: distribute_compute_config
+│ │ -Version: 0.14.1
+│ │ +Version: 0.14.2
+│ │  Summary: 
+│ │  Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+│ │  
+│ │  # pybind
+│ │  
+│ │  Python bindings to `distribute` for automated creation of configuration files

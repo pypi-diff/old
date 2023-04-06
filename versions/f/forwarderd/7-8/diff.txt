@@ -1,0 +1,126 @@
+--- tmp/forwarderd-7.tar.gz
++++ tmp/forwarderd-8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "forwarderd-7.tar", last modified: Tue Apr  4 18:20:46 2023, max compression
+│ +gzip compressed data, was "forwarderd-8.tar", last modified: Thu Apr  6 22:09:52 2023, max compression
+│   --- forwarderd-7.tar
+├── +++ forwarderd-8.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 18:20:46.081540 forwarderd-7/
+│ │ --rw-rw-rw-   0        0        0      568 2023-04-04 14:37:31.000000 forwarderd-7/LICENSE
+│ │ --rw-rw-rw-   0        0        0     1470 2023-04-04 18:20:46.081540 forwarderd-7/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      971 2023-04-04 18:10:30.000000 forwarderd-7/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 18:20:46.075543 forwarderd-7/forwarderd/
+│ │ --rw-rw-rw-   0        0        0      744 2023-04-04 14:54:50.000000 forwarderd-7/forwarderd/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1581 2023-04-04 16:09:59.000000 forwarderd-7/forwarderd/__main__.py
+│ │ --rw-rw-rw-   0        0        0     3106 2023-04-04 18:20:02.000000 forwarderd-7/forwarderd/_daemon.py
+│ │ --rw-rw-rw-   0        0        0     1245 2023-04-04 18:20:16.000000 forwarderd-7/forwarderd/_shared.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 18:20:46.080541 forwarderd-7/forwarderd.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1470 2023-04-04 18:20:46.000000 forwarderd-7/forwarderd.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      291 2023-04-04 18:20:46.000000 forwarderd-7/forwarderd.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-04 18:20:46.000000 forwarderd-7/forwarderd.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       29 2023-04-04 18:20:46.000000 forwarderd-7/forwarderd.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       11 2023-04-04 18:20:46.000000 forwarderd-7/forwarderd.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      691 2023-04-04 18:14:14.000000 forwarderd-7/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-04 18:20:46.081540 forwarderd-7/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:09:52.735497 forwarderd-8/
+│ │ +-rw-rw-rw-   0        0        0      568 2023-04-04 14:37:31.000000 forwarderd-8/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     1470 2023-04-06 22:09:52.735497 forwarderd-8/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      971 2023-04-04 18:10:30.000000 forwarderd-8/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:09:52.723496 forwarderd-8/forwarderd/
+│ │ +-rw-rw-rw-   0        0        0      744 2023-04-04 14:54:50.000000 forwarderd-8/forwarderd/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1581 2023-04-04 16:09:59.000000 forwarderd-8/forwarderd/__main__.py
+│ │ +-rw-rw-rw-   0        0        0     3106 2023-04-04 18:20:02.000000 forwarderd-8/forwarderd/_daemon.py
+│ │ +-rw-rw-rw-   0        0        0     1302 2023-04-06 22:08:15.000000 forwarderd-8/forwarderd/_shared.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:09:52.734497 forwarderd-8/forwarderd.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1470 2023-04-06 22:09:52.000000 forwarderd-8/forwarderd.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      291 2023-04-06 22:09:52.000000 forwarderd-8/forwarderd.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 22:09:52.000000 forwarderd-8/forwarderd.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       29 2023-04-06 22:09:52.000000 forwarderd-8/forwarderd.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       11 2023-04-06 22:09:52.000000 forwarderd-8/forwarderd.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      691 2023-04-06 22:08:29.000000 forwarderd-8/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 22:09:52.735497 forwarderd-8/setup.cfg
+│ │   --- forwarderd-7/LICENSE
+│ ├── +++ forwarderd-8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- forwarderd-7/PKG-INFO
+│ ├── +++ forwarderd-8/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: forwarderd
+│ │ -Version: 7
+│ │ +Version: 8
+│ │  Summary: SSH Forward Daemon
+│ │  Author-email: Elchin Sarkarov <elchin751@gmail.com>
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: POSIX
+│ │  Classifier: Operating System :: Microsoft :: Windows
+│ │   --- forwarderd-7/README.md
+│ ├── +++ forwarderd-8/README.md
+│ │┄ Files identical despite different names
+│ │   --- forwarderd-7/forwarderd/__init__.py
+│ ├── +++ forwarderd-8/forwarderd/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- forwarderd-7/forwarderd/__main__.py
+│ ├── +++ forwarderd-8/forwarderd/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- forwarderd-7/forwarderd/_daemon.py
+│ ├── +++ forwarderd-8/forwarderd/_daemon.py
+│ │┄ Files identical despite different names
+│ │   --- forwarderd-7/forwarderd/_shared.py
+│ ├── +++ forwarderd-8/forwarderd/_shared.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -14,15 +14,17 @@
+│ │  
+│ │  if hasattr(asyncio, 'open_unix_connection'):
+│ │      async def connect():
+│ │          return await asyncio.open_unix_connection(SOCK_PATH)
+│ │  
+│ │      async def start_server(cb):
+│ │          os.makedirs(os.path.dirname(SOCK_PATH), exist_ok=True)
+│ │ -        return await asyncio.start_unix_server(cb, SOCK_PATH)
+│ │ +        server = await asyncio.start_unix_server(cb, SOCK_PATH)
+│ │ +        os.chmod(SOCK_PATH, 777)
+│ │ +        return server
+│ │  
+│ │  else:
+│ │      async def connect():
+│ │          return await asyncio.open_connection(*IP_ADDR)
+│ │  
+│ │      async def start_server(cb):
+│ │          return await asyncio.start_server(cb, *IP_ADDR)
+│ │   --- forwarderd-7/forwarderd.egg-info/PKG-INFO
+│ ├── +++ forwarderd-8/forwarderd.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: forwarderd
+│ │ -Version: 7
+│ │ +Version: 8
+│ │  Summary: SSH Forward Daemon
+│ │  Author-email: Elchin Sarkarov <elchin751@gmail.com>
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: POSIX
+│ │  Classifier: Operating System :: Microsoft :: Windows
+│ │   --- forwarderd-7/pyproject.toml
+│ ├── +++ forwarderd-8/pyproject.toml
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "forwarderd"
+│ │ -version = "7"
+│ │ +version = "8"
+│ │  authors = [
+│ │    { name="Elchin Sarkarov", email="elchin751@gmail.com" },
+│ │  ]
+│ │  description = "SSH Forward Daemon"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │    "Development Status :: 4 - Beta",

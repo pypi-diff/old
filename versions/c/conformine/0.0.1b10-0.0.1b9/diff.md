@@ -1,0 +1,252 @@
+# Comparing `tmp/conformine-0.0.1b10.tar.gz` & `tmp/conformine-0.0.1b9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "conformine-0.0.1b10.tar", last modified: Thu Apr  6 22:06:40 2023, max compression
++gzip compressed data, was "conformine-0.0.1b9.tar", last modified: Thu Apr  6 22:01:53 2023, max compression
+```
+
+## Comparing `conformine-0.0.1b10.tar` & `conformine-0.0.1b9.tar`
+
+### file list
+
+```diff
+@@ -1,36 +1,36 @@
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.849886 conformine-0.0.1b10/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      272 2023-04-06 21:48:26.000000 conformine-0.0.1b10/MANIFEST.in
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     6895 2023-04-06 22:06:40.849204 conformine-0.0.1b10/PKG-INFO
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.808573 conformine-0.0.1b10/conformine/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     5726 2023-04-06 22:00:29.000000 conformine-0.0.1b10/conformine/README.md
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       57 2023-02-08 13:39:41.000000 conformine-0.0.1b10/conformine/__init__.py
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.819412 conformine-0.0.1b10/conformine/utils/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 15:14:39.000000 conformine-0.0.1b10/conformine/utils/__init__.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      607 2023-02-07 13:39:38.000000 conformine-0.0.1b10/conformine/utils/data_utils.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1142 2023-02-07 16:22:52.000000 conformine-0.0.1b10/conformine/utils/dataset_utils.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     4391 2023-04-06 21:57:41.000000 conformine-0.0.1b10/conformine/utils/from_fasta_standalone_predictor.py
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.840693 conformine-0.0.1b10/conformine/utils/models/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      645 2023-02-16 23:19:48.000000 conformine-0.0.1b10/conformine/utils/models/113_correct_normalization_parameters.json
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 15:14:39.000000 conformine-0.0.1b10/conformine/utils/models/__init__.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-23 12:24:25.000000 conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.2.1.pkl
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-23 10:18:36.000000 conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.22.4.pkl
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-04-06 21:47:47.000000 conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_pickle_version_1.2.1.pkl
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-10 16:36:35.000000 conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_sklearn_1.2.1.pkl
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-08 14:26:36.000000 conformine-0.0.1b10/conformine/utils/models/minmax_scaler_ground_sklearn_1.2.1.pkl
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      719 2023-02-14 16:58:01.000000 conformine-0.0.1b10/conformine/utils/models/normalization_parameters.json
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   384187 2023-02-08 12:20:02.000000 conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model.pt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   956859 2023-02-20 16:42:14.000000 conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model_bw_0.13.pt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   956859 2023-02-23 10:00:46.000000 conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model_bw_0.13_clean.pt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     2821 2023-04-06 21:43:23.000000 conformine-0.0.1b10/conformine/utils/network_utils.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     5450 2023-02-20 16:50:17.000000 conformine-0.0.1b10/conformine/utils/pytorch_models.py
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.848078 conformine-0.0.1b10/conformine/wrapper_source/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 16:06:07.000000 conformine-0.0.1b10/conformine/wrapper_source/__init__.py
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      794 2023-02-08 15:04:32.000000 conformine-0.0.1b10/conformine/wrapper_source/conformine_wrapper.py
+-drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:06:40.812568 conformine-0.0.1b10/conformine.egg-info/
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     6895 2023-04-06 22:06:40.000000 conformine-0.0.1b10/conformine.egg-info/PKG-INFO
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1237 2023-04-06 22:06:40.000000 conformine-0.0.1b10/conformine.egg-info/SOURCES.txt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        1 2023-04-06 22:06:40.000000 conformine-0.0.1b10/conformine.egg-info/dependency_links.txt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      143 2023-04-06 22:06:40.000000 conformine-0.0.1b10/conformine.egg-info/requires.txt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       11 2023-04-06 22:06:40.000000 conformine-0.0.1b10/conformine.egg-info/top_level.txt
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       38 2023-04-06 22:06:40.850053 conformine-0.0.1b10/setup.cfg
+--rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     2106 2023-04-06 22:06:25.000000 conformine-0.0.1b10/setup.py
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.096366 conformine-0.0.1b9/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      272 2023-04-06 21:48:26.000000 conformine-0.0.1b9/MANIFEST.in
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1167 2023-04-06 22:01:53.095933 conformine-0.0.1b9/PKG-INFO
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.061108 conformine-0.0.1b9/conformine/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     5726 2023-04-06 22:00:29.000000 conformine-0.0.1b9/conformine/README.md
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       57 2023-02-08 13:39:41.000000 conformine-0.0.1b9/conformine/__init__.py
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.072569 conformine-0.0.1b9/conformine/utils/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 15:14:39.000000 conformine-0.0.1b9/conformine/utils/__init__.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      607 2023-02-07 13:39:38.000000 conformine-0.0.1b9/conformine/utils/data_utils.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1142 2023-02-07 16:22:52.000000 conformine-0.0.1b9/conformine/utils/dataset_utils.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     4391 2023-04-06 21:57:41.000000 conformine-0.0.1b9/conformine/utils/from_fasta_standalone_predictor.py
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.089790 conformine-0.0.1b9/conformine/utils/models/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      645 2023-02-16 23:19:48.000000 conformine-0.0.1b9/conformine/utils/models/113_correct_normalization_parameters.json
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 15:14:39.000000 conformine-0.0.1b9/conformine/utils/models/__init__.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-23 12:24:25.000000 conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.2.1.pkl
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-23 10:18:36.000000 conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.22.4.pkl
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-04-06 21:47:47.000000 conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_pickle_version_1.2.1.pkl
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-10 16:36:35.000000 conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_sklearn_1.2.1.pkl
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      521 2023-02-08 14:26:36.000000 conformine-0.0.1b9/conformine/utils/models/minmax_scaler_ground_sklearn_1.2.1.pkl
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      719 2023-02-14 16:58:01.000000 conformine-0.0.1b9/conformine/utils/models/normalization_parameters.json
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   384187 2023-02-08 12:20:02.000000 conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model.pt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   956859 2023-02-20 16:42:14.000000 conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model_bw_0.13.pt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)   956859 2023-02-23 10:00:46.000000 conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model_bw_0.13_clean.pt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     2821 2023-04-06 21:43:23.000000 conformine-0.0.1b9/conformine/utils/network_utils.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     5450 2023-02-20 16:50:17.000000 conformine-0.0.1b9/conformine/utils/pytorch_models.py
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.095031 conformine-0.0.1b9/conformine/wrapper_source/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        0 2023-02-07 16:06:07.000000 conformine-0.0.1b9/conformine/wrapper_source/__init__.py
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      794 2023-02-08 15:04:32.000000 conformine-0.0.1b9/conformine/wrapper_source/conformine_wrapper.py
++drwxr-xr-x   0 josegavaldagarcia   (501) staff       (20)        0 2023-04-06 22:01:53.064663 conformine-0.0.1b9/conformine.egg-info/
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1167 2023-04-06 22:01:53.000000 conformine-0.0.1b9/conformine.egg-info/PKG-INFO
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     1237 2023-04-06 22:01:53.000000 conformine-0.0.1b9/conformine.egg-info/SOURCES.txt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)        1 2023-04-06 22:01:53.000000 conformine-0.0.1b9/conformine.egg-info/dependency_links.txt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)      143 2023-04-06 22:01:53.000000 conformine-0.0.1b9/conformine.egg-info/requires.txt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       11 2023-04-06 22:01:53.000000 conformine-0.0.1b9/conformine.egg-info/top_level.txt
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)       38 2023-04-06 22:01:53.096471 conformine-0.0.1b9/setup.cfg
++-rw-r--r--   0 josegavaldagarcia   (501) staff       (20)     2066 2023-04-06 22:01:39.000000 conformine-0.0.1b9/setup.py
+```
+
+### Comparing `conformine-0.0.1b10/PKG-INFO` & `conformine-0.0.1b9/conformine/README.md`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,31 +1,7 @@
+-Metadata-Version: 2.1
+-Name: conformine
+-Version: 0.0.1b10
+-Summary: ConforMine, a predictor of conformational variability from amino acid sequence
+-Author: Jose Gavalda-Garcia
+-Author-email: jose.gavalda.garcia@vub.be
+-Maintainer: Jose Gavalda-Garcia, Adrian Diaz, Wim Vranken
+-Maintainer-email: jose.gavalda.garcia@vub.be, adrian.diaz@vub.be, wim.vranken@vub.be
+-Keywords: b2bTools,biology,bioinformatics,bio-informatics,fasta,proteins,protein-conformation,conformational-variability
+-Classifier: Natural Language :: English
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
+-Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+-Classifier: Operating System :: MacOS
+-Classifier: Operating System :: POSIX :: Linux
+-Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+-Classifier: Topic :: Scientific/Engineering :: Chemistry
+-Classifier: Topic :: Scientific/Engineering :: Physics
+-Classifier: Intended Audience :: Science/Research
+-Classifier: Intended Audience :: Education
+-Requires-Python: >=3.6, <3.10
+-Description-Content-Type: text/markdown
+-
+ <h1 align="center">
+   <a href="bio2byte.be/b2btools" target="_blank" ref="noreferrer noopener">
+   <img src="https://pbs.twimg.com/profile_images/1247824923546079232/B9b_Yg7n_400x400.jpg" width="224px"/>
+   </a>
+   <br/>
+   ConforMine
+ </h1>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,23 +1,7 @@
+-Metadata-Version: 2.1 Name: conformine Version: 0.0.1b10 Summary: ConforMine, a
+-predictor of conformational variability from amino acid sequence Author: Jose
+-Gavalda-Garcia Author-email: jose.gavalda.garcia@vub.be Maintainer: Jose
+-Gavalda-Garcia, Adrian Diaz, Wim Vranken Maintainer-email:
+-jose.gavalda.garcia@vub.be, adrian.diaz@vub.be, wim.vranken@vub.be Keywords:
+-b2bTools,biology,bioinformatics,bio-informatics,fasta,proteins,protein-
+-conformation,conformational-variability Classifier: Natural Language :: English
+-Classifier: Programming Language :: Python :: 3.7 Classifier: Programming
+-Language :: Python :: 3.8 Classifier: Programming Language :: Python :: 3.9
+-Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+-Classifier: Operating System :: MacOS Classifier: Operating System :: POSIX ::
+-Linux Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+-Classifier: Topic :: Scientific/Engineering :: Chemistry Classifier: Topic ::
+-Scientific/Engineering :: Physics Classifier: Intended Audience :: Science/
+-Research Classifier: Intended Audience :: Education Requires-Python: >=3.6,
+-<3.10 Description-Content-Type: text/markdown
+        ****** [https://pbs.twimg.com/profile_images/1247824923546079232/
+                             B9b_Yg7n_400x400.jpg]
+                                ConforMine ******
+  This package provides predictions on protein Conformational Variability from
+    their amino acid sequence. This is a standalone package and will be later
+                            incorporated in b2BTools.
+ ## â¡ï¸Quick start First of all, download and install the package: ```console
+```
+
+### Comparing `conformine-0.0.1b10/conformine/utils/data_utils.py` & `conformine-0.0.1b9/conformine/utils/data_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/dataset_utils.py` & `conformine-0.0.1b9/conformine/utils/dataset_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/from_fasta_standalone_predictor.py` & `conformine-0.0.1b9/conformine/utils/from_fasta_standalone_predictor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/113_correct_normalization_parameters.json` & `conformine-0.0.1b9/conformine/utils/models/113_correct_normalization_parameters.json`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.2.1.pkl` & `conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.2.1.pkl`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.22.4.pkl` & `conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_1.22.4.pkl`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_pickle_version_1.2.1.pkl` & `conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_clean_pickle_version_1.2.1.pkl`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/minmax_scaler_bw_0.13_ground_sklearn_1.2.1.pkl` & `conformine-0.0.1b9/conformine/utils/models/minmax_scaler_bw_0.13_ground_sklearn_1.2.1.pkl`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/minmax_scaler_ground_sklearn_1.2.1.pkl` & `conformine-0.0.1b9/conformine/utils/models/minmax_scaler_ground_sklearn_1.2.1.pkl`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/normalization_parameters.json` & `conformine-0.0.1b9/conformine/utils/models/normalization_parameters.json`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model.pt` & `conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model.pt`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model_bw_0.13.pt` & `conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model_bw_0.13.pt`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/models/state_dictionary_torch_model_bw_0.13_clean.pt` & `conformine-0.0.1b9/conformine/utils/models/state_dictionary_torch_model_bw_0.13_clean.pt`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/network_utils.py` & `conformine-0.0.1b9/conformine/utils/network_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/utils/pytorch_models.py` & `conformine-0.0.1b9/conformine/utils/pytorch_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine/wrapper_source/conformine_wrapper.py` & `conformine-0.0.1b9/conformine/wrapper_source/conformine_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/conformine.egg-info/SOURCES.txt` & `conformine-0.0.1b9/conformine.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `conformine-0.0.1b10/setup.py` & `conformine-0.0.1b9/setup.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -10,17 +10,16 @@
+ 
+ with open(os.path.join(os.path.abspath(get_project_root()), "conformine/README.md"), "r") as fh:
+     long_description = fh.read()
+ 
+ 
+ setup(
+     name='conformine',
+-    version='0.0.1b10',
++    version='0.0.1b9',
+     description='ConforMine, a predictor of conformational variability from amino acid sequence',
+-    long_description=long_description,
+     long_description_content_type="text/markdown",
+     keywords="b2bTools,biology,bioinformatics,bio-informatics,fasta,proteins,protein-conformation,"
+              "conformational-variability",
+     # url='https://github.com/your-username/your-package-name',
+     author='Jose Gavalda-Garcia',
+     author_email='jose.gavalda.garcia@vub.be',
+     maintainer="Jose Gavalda-Garcia, Adrian Diaz, Wim Vranken",
+```
+
