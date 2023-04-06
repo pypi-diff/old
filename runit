@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-python3 fetch.py
+python3 fetch.py -s
 AUTHOR="pypi diffbot <foo@bar.com>"
 
 NOW=$(date +'%Y%m%d%H%M')

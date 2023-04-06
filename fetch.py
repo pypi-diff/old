@@ -26,7 +26,6 @@ logDateFormat = "[%Y-%m-%d %H:%M:%S]"
 logfile = datetime.now().strftime("%Y%d%m")
 handler = [
     logging.FileHandler(logfile + ".log"),
-    logging.StreamHandler(stream=sys.stderr),
 ]
 logging.basicConfig(
     level=logging.INFO,
@@ -84,8 +83,19 @@ def main():
         required=False,
         help="Skip if download packages exceed limit",
     )
+    parser.add_argument(
+        "-s",
+        "--silent",
+        default=True,
+        action="store_true",
+        required=False,
+        help="Dont log to stderr",
+    )
 
     args = parser.parse_args()
+
+    if args.silent is False:
+        log.handlers.append(logging.StreamHandler(stream=sys.stderr))
 
     client = xmlrpc.client.ServerProxy("https://pypi.org/pypi")
 
@@ -106,7 +116,7 @@ def main():
     for pkg in changelog:
         if pkg[3] == "new release":
             if args.packages != "all":
-                if not pkg[0] in args.packages.split(','):
+                if not pkg[0] in args.packages.split(","):
                     log.info("Ignoring package [%s], not in package list.", pkg[0])
                     continue
             changedPackages.append(pkgInfo(pkg[0], pkg[1]))
