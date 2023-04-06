@@ -1,0 +1,318 @@
+--- tmp/django_onto-0.1.6a0.tar.gz
++++ tmp/django_onto-0.1.7a0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "django_onto-0.1.6a0.tar", max compression
+│ +gzip compressed data, was "django_onto-0.1.7a0.tar", max compression
+│   --- django_onto-0.1.6a0.tar
+├── +++ django_onto-0.1.7a0.tar
+│ ├── file list
+│ │ @@ -1,28 +1,50 @@
+│ │ --rw-r--r--   0        0        0     1064 2023-02-02 22:30:51.349753 django_onto-0.1.6a0/LICENSE
+│ │ --rw-r--r--   0        0        0       69 2023-02-02 22:54:34.254189 django_onto-0.1.6a0/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 22:30:46.494498 django_onto-0.1.6a0/onto/__init__.py
+│ │ --rw-r--r--   0        0        0     1403 2023-03-17 22:52:06.163302 django_onto-0.1.6a0/onto/admin.py
+│ │ --rw-r--r--   0        0        0      139 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/apps.py
+│ │ --rw-r--r--   0        0        0       33 2023-02-27 20:41:17.386013 django_onto-0.1.6a0/onto/authz/__init__.py
+│ │ --rw-r--r--   0        0        0     1125 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/authz/admin.py
+│ │ --rw-r--r--   0        0        0      258 2023-02-27 20:42:04.313972 django_onto-0.1.6a0/onto/authz/apps.py
+│ │ --rw-r--r--   0        0        0     7738 2023-02-27 22:28:21.672858 django_onto-0.1.6a0/onto/authz/migrations/0001_initial.py
+│ │ --rw-r--r--   0        0        0     3649 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/authz/migrations/0002_domain_membership_domain_entities_and_more.py
+│ │ --rw-r--r--   0        0        0      527 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/authz/migrations/0003_domain_active.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-27 20:41:17.442013 django_onto-0.1.6a0/onto/authz/migrations/__init__.py
+│ │ --rw-r--r--   0        0        0    18291 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/authz/models.py
+│ │ --rw-r--r--   0        0        0    15901 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/authz/signals.py
+│ │ --rw-r--r--   0        0        0      542 2023-02-27 20:41:50.405984 django_onto-0.1.6a0/onto/authz/utils.py
+│ │ --rw-r--r--   0        0        0     5994 2023-02-27 22:28:21.652858 django_onto-0.1.6a0/onto/migrations/0001_initial.py
+│ │ --rw-r--r--   0        0        0      995 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/migrations/0002_remove_domain_entity_remove_membership_domain_and_more.py
+│ │ --rw-r--r--   0        0        0      476 2023-03-16 23:02:27.170394 django_onto-0.1.6a0/onto/migrations/0003_delete_domain_delete_membership.py
+│ │ --rw-r--r--   0        0        0      452 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/migrations/0004_remove_entity_created_time_and_more.py
+│ │ --rw-r--r--   0        0        0      640 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/migrations/0005_entity_created_time.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 22:30:46.498498 django_onto-0.1.6a0/onto/migrations/__init__.py
+│ │ --rw-r--r--   0        0        0     4207 2023-03-16 22:28:50.945520 django_onto-0.1.6a0/onto/mixins.py
+│ │ --rw-r--r--   0        0        0    11736 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/models.py
+│ │ --rw-r--r--   0        0        0      431 2023-03-16 22:06:18.732745 django_onto-0.1.6a0/onto/utils.py
+│ │ --rw-r--r--   0        0        0       63 2023-02-23 22:30:46.498498 django_onto-0.1.6a0/onto/views.py
+│ │ --rw-r--r--   0        0        0      985 2023-03-17 22:58:00.023097 django_onto-0.1.6a0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1062 1970-01-01 00:00:00.000000 django_onto-0.1.6a0/setup.py
+│ │ --rw-r--r--   0        0        0      874 1970-01-01 00:00:00.000000 django_onto-0.1.6a0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1064 2023-02-02 22:30:51.349753 django_onto-0.1.7a0/LICENSE
+│ │ +-rw-r--r--   0        0        0       69 2023-02-02 22:54:34.254189 django_onto-0.1.7a0/README.md
+│ │ +-rw-r--r--   0        0        0        0 2023-02-23 22:30:46.494498 django_onto-0.1.7a0/onto/__init__.py
+│ │ +-rw-r--r--   0        0        0     1403 2023-03-17 22:52:06.163302 django_onto-0.1.7a0/onto/admin.py
+│ │ +-rw-r--r--   0        0        0      139 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/apps.py
+│ │ +-rw-r--r--   0        0        0       33 2023-02-27 20:41:17.386013 django_onto-0.1.7a0/onto/authz/__init__.py
+│ │ +-rw-r--r--   0        0        0     1125 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/authz/admin.py
+│ │ +-rw-r--r--   0        0        0      258 2023-02-27 20:42:04.313972 django_onto-0.1.7a0/onto/authz/apps.py
+│ │ +-rw-r--r--   0        0        0     7738 2023-02-27 22:28:21.672858 django_onto-0.1.7a0/onto/authz/migrations/0001_initial.py
+│ │ +-rw-r--r--   0        0        0     3649 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/authz/migrations/0002_domain_membership_domain_entities_and_more.py
+│ │ +-rw-r--r--   0        0        0      527 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/authz/migrations/0003_domain_active.py
+│ │ +-rw-r--r--   0        0        0        0 2023-02-27 20:41:17.442013 django_onto-0.1.7a0/onto/authz/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0    18628 2023-04-06 17:46:12.254804 django_onto-0.1.7a0/onto/authz/models.py
+│ │ +-rw-r--r--   0        0        0    15893 2023-03-20 19:31:29.302635 django_onto-0.1.7a0/onto/authz/signals.py
+│ │ +-rw-r--r--   0        0        0      542 2023-02-27 20:41:50.405984 django_onto-0.1.7a0/onto/authz/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-21 22:02:02.497753 django_onto-0.1.7a0/onto/crud/__init__.py
+│ │ +-rw-r--r--   0        0        0      169 2023-03-20 19:48:39.153765 django_onto-0.1.7a0/onto/crud/apps.py
+│ │ +-rw-r--r--   0        0        0      291 2023-03-20 19:50:10.385713 django_onto-0.1.7a0/onto/crud/context_processors.py
+│ │ +-rw-r--r--   0        0        0     1237 2023-04-06 17:47:57.066731 django_onto-0.1.7a0/onto/crud/decorators.py
+│ │ +-rw-r--r--   0        0        0      283 2023-03-20 19:49:53.597722 django_onto-0.1.7a0/onto/crud/middleware.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-20 19:48:12.913780 django_onto-0.1.7a0/onto/crud/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-20 19:56:49.709501 django_onto-0.1.7a0/onto/crud/static/onto/crud/base.css
+│ │ +-rw-r--r--   0        0        0    96422 2023-03-20 22:52:53.637416 django_onto-0.1.7a0/onto/crud/static/onto/crud/vendor/_hyperscript.min.js
+│ │ +-rw-r--r--   0        0        0    40883 2023-03-20 22:52:53.689416 django_onto-0.1.7a0/onto/crud/static/onto/crud/vendor/htmx.min.js
+│ │ +-rw-r--r--   0        0        0      878 2023-03-20 22:53:20.577502 django_onto-0.1.7a0/onto/crud/templates/onto/crud/base.html
+│ │ +-rw-r--r--   0        0        0       31 2023-03-20 19:55:27.525543 django_onto-0.1.7a0/onto/crud/templates/onto/crud/base_ajax.html
+│ │ +-rw-r--r--   0        0        0      211 2023-03-20 19:55:27.561543 django_onto-0.1.7a0/onto/crud/templates/onto/crud/base_modal.html
+│ │ +-rw-r--r--   0        0        0      360 2023-04-06 17:47:57.066731 django_onto-0.1.7a0/onto/crud/templates/onto/crud/create.html
+│ │ +-rw-r--r--   0        0        0      301 2023-04-06 17:47:57.066731 django_onto-0.1.7a0/onto/crud/templates/onto/crud/list.html
+│ │ +-rw-r--r--   0        0        0     1464 2023-04-06 17:47:57.066731 django_onto-0.1.7a0/onto/crud/views.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/__init__.py
+│ │ +-rw-r--r--   0        0        0       63 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/admin.py
+│ │ +-rw-r--r--   0        0        0      169 2023-04-06 21:50:08.854400 django_onto-0.1.7a0/onto/jobs/apps.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0       57 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/models.py
+│ │ +-rw-r--r--   0        0        0       60 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/tests.py
+│ │ +-rw-r--r--   0        0        0       63 2023-04-06 21:49:57.850411 django_onto-0.1.7a0/onto/jobs/views.py
+│ │ +-rw-r--r--   0        0        0     5994 2023-02-27 22:28:21.652858 django_onto-0.1.7a0/onto/migrations/0001_initial.py
+│ │ +-rw-r--r--   0        0        0      995 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/migrations/0002_remove_domain_entity_remove_membership_domain_and_more.py
+│ │ +-rw-r--r--   0        0        0      476 2023-03-16 23:02:27.170394 django_onto-0.1.7a0/onto/migrations/0003_delete_domain_delete_membership.py
+│ │ +-rw-r--r--   0        0        0      452 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/migrations/0004_remove_entity_created_time_and_more.py
+│ │ +-rw-r--r--   0        0        0      640 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/migrations/0005_entity_created_time.py
+│ │ +-rw-r--r--   0        0        0        0 2023-02-23 22:30:46.498498 django_onto-0.1.7a0/onto/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0     4207 2023-03-16 22:28:50.945520 django_onto-0.1.7a0/onto/mixins.py
+│ │ +-rw-r--r--   0        0        0    11736 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/models.py
+│ │ +-rw-r--r--   0        0        0      431 2023-03-16 22:06:18.732745 django_onto-0.1.7a0/onto/utils.py
+│ │ +-rw-r--r--   0        0        0       63 2023-02-23 22:30:46.498498 django_onto-0.1.7a0/onto/views.py
+│ │ +-rw-r--r--   0        0        0      985 2023-04-06 22:36:06.561739 django_onto-0.1.7a0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1262 1970-01-01 00:00:00.000000 django_onto-0.1.7a0/setup.py
+│ │ +-rw-r--r--   0        0        0      874 1970-01-01 00:00:00.000000 django_onto-0.1.7a0/PKG-INFO
+│ │   --- django_onto-0.1.6a0/LICENSE
+│ ├── +++ django_onto-0.1.7a0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/admin.py
+│ ├── +++ django_onto-0.1.7a0/onto/admin.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/authz/admin.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/admin.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/authz/migrations/0001_initial.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/authz/migrations/0002_domain_membership_domain_entities_and_more.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/migrations/0002_domain_membership_domain_entities_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/authz/migrations/0003_domain_active.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/migrations/0003_domain_active.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/authz/models.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -98,30 +98,45 @@
+│ │      active = models.BooleanField(
+│ │          default=True,
+│ │          help_text="When inactive, this domain cannot grant authorization."
+│ │      )
+│ │  
+│ │      def add(self, obj: EntityModel) -> "Membership":
+│ │          """
+│ │ -        Add an object to the domain, returning the associated Membership object.
+│ │ +        Add an object (or entity_id) to the domain, returning the associated Membership object.
+│ │          """
+│ │ -        membership, created = self.memberships.get_or_create(entity_id=obj.pk)
+│ │ +        if isinstance(obj, models.Model):
+│ │ +            pk = obj.pk
+│ │ +        else:
+│ │ +            pk = obj
+│ │ +
+│ │ +        membership, created = self.memberships.get_or_create(entity_id=pk)
+│ │          return membership
+│ │  
+│ │      def get(self, obj: EntityModel) -> "Membership":
+│ │          """
+│ │ -        Return the Membership associated with an object. Raises DoesNotExist if not a member.
+│ │ +        Return the Membership associated with an object or entity_id. Raises DoesNotExist if not a member.
+│ │          """
+│ │ -        return self.memberships.get(entity_id=obj.pk)
+│ │ +        if isinstance(obj, models.Model):
+│ │ +            pk = obj.pk
+│ │ +        else:
+│ │ +            pk = obj
+│ │ +
+│ │ +        return self.memberships.get(entity_id=pk)
+│ │      
+│ │      def remove(self, obj: EntityModel):
+│ │          """
+│ │ -        Remove an object from the domain, if it exists.
+│ │ +        Remove an object (or entity_id) from the domain, if it exists.
+│ │          """
+│ │ -        return self.memberships.filter(entity_id=obj.pk).delete()
+│ │ +        if isinstance(obj, models.Model):
+│ │ +            pk = obj.pk
+│ │ +        else:
+│ │ +            pk = obj
+│ │ +
+│ │ +        return self.memberships.filter(entity_id=pk).delete()
+│ │      
+│ │      def xfilter(self, **filters) -> "Membership.QuerySet":
+│ │          return self.memberships.xfilter(**filters)
+│ │  
+│ │      @property
+│ │      def subdomains(self):
+│ │          return Domain.objects.filter(name__startswith=self.name+'.')
+│ │   --- django_onto-0.1.6a0/onto/authz/signals.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/signals.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -38,15 +38,15 @@
+│ │  
+│ │  @receiver(signals.post_save, sender=onto.authz.models.Entitlement)
+│ │  def on_entitlement_save(instance, sender,**kwargs):
+│ │      """
+│ │      When an Entitlement is saved, if its the only one of its kind, emit an `entitlement_enabled` signal.
+│ │      """
+│ │      print("on_entitlement_save", instance)
+│ │ -    audit_log.info(f"ENTITLEMENT ADDED {instance.principal} {instance.action.label} {instance.resource} (domain: {instance.domain}, policy: {instance.policy})")
+│ │ +    audit_log.info(f"ENTITLEMENT ADDED {instance.principal} {instance.action.label} {instance.resource} (policy: {instance.policy})")
+│ │  
+│ │      if not silent_entitlements.active and not instance.peers.exists():  # TODO Verify this won't race.
+│ │          audit_log.info(f"ENABLED {instance.principal} {instance.action.label} {instance.resource} (first entitlement gained)")
+│ │          entitlement_enabled.send(
+│ │              sender=sender,
+│ │              principal=instance.principal,
+│ │              action=instance.action,
+│ │ @@ -55,15 +55,15 @@
+│ │  
+│ │  @receiver(signals.post_delete, sender=onto.authz.models.Entitlement)
+│ │  def on_entitlement_delete(instance, sender, **kwargs):
+│ │      """
+│ │      When an Entitlement is deleted, if it was the only one of its kind, emit an `entitlement_disabled` signal.
+│ │      """
+│ │      print("on_entitlement_delete", instance)
+│ │ -    audit_log.info(f"ENTITLEMENT REMOVED {instance.principal} {instance.action.label} {instance.resource} (domain: {instance.domain}, policy: {instance.policy})")
+│ │ +    audit_log.info(f"ENTITLEMENT REMOVED {instance.principal} {instance.action.label} {instance.resource} (policy: {instance.policy})")
+│ │  
+│ │      if not silent_entitlements.active and not instance.peers.exists():
+│ │          audit_log.info(f"DISABLED {instance.principal} {instance.action.label} {instance.resource} (no entitlements remaining)")
+│ │          entitlement_disabled.send(
+│ │              sender=sender,
+│ │              principal=instance.principal,
+│ │              action=instance.action,
+│ │ @@ -96,15 +96,15 @@
+│ │      domains = domains or instance.domains.filter(active=True)
+│ │      potential_policies = onto.authz.models.Policy.objects.filter(domain__in=domains, actions__source_type=instance.content_type)
+│ │      matching_policies = {policy for policy in potential_policies if policy.principals.filter(pk=instance.pk).exists()}
+│ │      previous_matching_policies = set(past_policies.as_principal)
+│ │  
+│ │      for new_policy in matching_policies - previous_matching_policies:
+│ │          # create entitlements with instance as target resource
+│ │ -        for action in new_policy.actions.filter(source_type=instance.content_type):
+│ │ +        for action in new_policy.actions.filter(source_type=instance.content_type, dispatch_changes=True):
+│ │              for resource in new_policy.resources:
+│ │                  action.entitlements.create(
+│ │                      domain=new_policy.domain,
+│ │                      policy=new_policy,
+│ │                      principal=instance,
+│ │                      resource=resource,
+│ │                  )
+│ │ @@ -114,15 +114,15 @@
+│ │      # Now recompile Entitlements where the instance is a target Resource
+│ │      potential_policies = onto.authz.models.Policy.objects.filter(domain__in=instance.domains.filter(active=True), actions__target_type=instance.content_type)
+│ │      matching_policies = {policy for policy in potential_policies if policy.resources.filter(pk=instance.pk).exists()}
+│ │      previous_matching_policies = set(past_policies.as_resource)
+│ │  
+│ │      for new_policy in matching_policies - previous_matching_policies:
+│ │          # create entitlements with instance as target resource
+│ │ -        for action in new_policy.actions.filter(target_type=instance.content_type):
+│ │ +        for action in new_policy.actions.filter(target_type=instance.content_type, dispatch_changes=True):
+│ │              for principal in new_policy.principals:
+│ │                  action.entitlements.create(
+│ │                      domain=new_policy.domain,
+│ │                      policy=new_policy,
+│ │                      principal=principal,
+│ │                      resource=instance,
+│ │                  )
+│ │   --- django_onto-0.1.6a0/onto/authz/utils.py
+│ ├── +++ django_onto-0.1.7a0/onto/authz/utils.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/migrations/0001_initial.py
+│ ├── +++ django_onto-0.1.7a0/onto/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/migrations/0002_remove_domain_entity_remove_membership_domain_and_more.py
+│ ├── +++ django_onto-0.1.7a0/onto/migrations/0002_remove_domain_entity_remove_membership_domain_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/migrations/0005_entity_created_time.py
+│ ├── +++ django_onto-0.1.7a0/onto/migrations/0005_entity_created_time.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/mixins.py
+│ ├── +++ django_onto-0.1.7a0/onto/mixins.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/onto/models.py
+│ ├── +++ django_onto-0.1.7a0/onto/models.py
+│ │┄ Files identical despite different names
+│ │   --- django_onto-0.1.6a0/pyproject.toml
+│ ├── +++ django_onto-0.1.7a0/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "django-onto"
+│ │ -version = "0.1.6-alpha"
+│ │ +version = "0.1.7-alpha"
+│ │  description = "Onto (as in 'ontology') is a lightweight extension to Django centered around the concept of an Entity graph, which can be used to simplify the implementation of complex business logic. Onto includes a number of subpackages that leverage the Entity graph, including the powerful `onto.authz` authorization plugin."
+│ │  license = "MIT"
+│ │  authors = ["Paul Fischer <pphysch@gmail.com>"]
+│ │  readme = "README.md"
+│ │  packages = [
+│ │      {include = "onto"},
+│ │      {include = "onto/authz"},
+│ │   --- django_onto-0.1.6a0/setup.py
+│ ├── +++ django_onto-0.1.7a0/setup.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -3,25 +3,32 @@
+│ │  
+│ │  packages = \
+│ │  ['authz',
+│ │   'authz.migrations',
+│ │   'onto',
+│ │   'onto.authz',
+│ │   'onto.authz.migrations',
+│ │ + 'onto.crud',
+│ │ + 'onto.crud.migrations',
+│ │ + 'onto.jobs',
+│ │ + 'onto.jobs.migrations',
+│ │   'onto.migrations']
+│ │  
+│ │  package_data = \
+│ │ -{'': ['*']}
+│ │ +{'': ['*'],
+│ │ + 'onto.crud': ['static/onto/crud/*',
+│ │ +               'static/onto/crud/vendor/*',
+│ │ +               'templates/onto/crud/*']}
+│ │  
+│ │  install_requires = \
+│ │  ['django>=4.1.6,<5.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'django-onto',
+│ │ -    'version': '0.1.6a0',
+│ │ +    'version': '0.1.7a0',
+│ │      'description': "Onto (as in 'ontology') is a lightweight extension to Django centered around the concept of an Entity graph, which can be used to simplify the implementation of complex business logic. Onto includes a number of subpackages that leverage the Entity graph, including the powerful `onto.authz` authorization plugin.",
+│ │      'long_description': 'Placeholder - Onto source is being migrated to this new destination.\n',
+│ │      'author': 'Paul Fischer',
+│ │      'author_email': 'pphysch@gmail.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'None',
+│ │   --- django_onto-0.1.6a0/PKG-INFO
+│ ├── +++ django_onto-0.1.7a0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: django-onto
+│ │ -Version: 0.1.6a0
+│ │ +Version: 0.1.7a0
+│ │  Summary: Onto (as in 'ontology') is a lightweight extension to Django centered around the concept of an Entity graph, which can be used to simplify the implementation of complex business logic. Onto includes a number of subpackages that leverage the Entity graph, including the powerful `onto.authz` authorization plugin.
+│ │  License: MIT
+│ │  Author: Paul Fischer
+│ │  Author-email: pphysch@gmail.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
