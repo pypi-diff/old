@@ -1,0 +1,448 @@
+# Comparing `tmp/pytorch-common-0.0.9.tar.gz` & `tmp/pytorch-common-0.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pytorch-common-0.0.9.tar", max compression
++gzip compressed data, was "pytorch-common-0.1.0.tar", max compression
+```
+
+## Comparing `pytorch-common-0.0.9.tar` & `pytorch-common-0.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,55 +1,91 @@
+--rw-r--r--   0        0        0     1293 2022-02-17 01:24:39.454198 pytorch-common-0.0.9/README.md
+--rw-r--r--   0        0        0      661 2022-02-18 23:49:33.842996 pytorch-common-0.0.9/pyproject.toml
+--rw-r--r--   0        0        0       22 2022-02-18 23:49:03.842697 pytorch-common-0.0.9/pytorch_common/__init__.py
+--rw-r--r--   0        0        0      252 2022-02-17 01:26:29.554482 pytorch-common-0.0.9/pytorch_common/callbacks/__init__.py
+--rw-r--r--   0        0        0      368 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0     2088 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/callback.cpython-39.pyc
+--rw-r--r--   0        0        0     2413 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/reduce_lr_on_plateau.cpython-39.pyc
+--rw-r--r--   0        0        0     1682 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/validation.cpython-39.pyc
+--rw-r--r--   0        0        0     1160 2022-02-18 23:40:01.317970 pytorch-common-0.0.9/pytorch_common/callbacks/callback.py
+--rw-r--r--   0        0        0     1591 2022-02-18 23:39:40.230841 pytorch-common-0.0.9/pytorch_common/callbacks/callback_manager.py
+--rw-r--r--   0        0        0      927 2022-02-18 23:40:55.132415 pytorch-common-0.0.9/pytorch_common/callbacks/early_stop.py
+--rw-r--r--   0        0        0     1605 2022-02-18 23:40:16.044950 pytorch-common-0.0.9/pytorch_common/callbacks/mixin/metric_improve_mixin.py
+--rw-r--r--   0        0        0      129 2022-02-17 00:53:40.875290 pytorch-common-0.0.9/pytorch_common/callbacks/output/__init__.py
+--rw-r--r--   0        0        0      340 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0     1205 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/__pycache__/logger_callback.cpython-39.pyc
+--rw-r--r--   0        0        0     1557 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/__pycache__/output_callback.cpython-39.pyc
+--rw-r--r--   0        0        0      627 2022-02-18 22:32:24.693573 pytorch-common-0.0.9/pytorch_common/callbacks/output/logger_callback.py
+--rw-r--r--   0        0        0      722 2022-02-18 23:39:18.767021 pytorch-common-0.0.9/pytorch_common/callbacks/output/output_callback.py
+--rw-r--r--   0        0        0        2 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__init__.py
+--rw-r--r--   0        0        0      179 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0      799 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/metric_logger.cpython-39.pyc
+--rw-r--r--   0        0        0     1648 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/metrics_plotter.cpython-39.pyc
+--rw-r--r--   0        0        0      681 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/plot.cpython-39.pyc
+--rw-r--r--   0        0        0      259 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/metric_logger.py
+--rw-r--r--   0        0        0     1045 2022-02-17 00:53:40.878623 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/metrics_plotter.py
+--rw-r--r--   0        0        0      495 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/plot.py
+--rw-r--r--   0        0        0     1991 2022-02-18 22:11:01.495726 pytorch-common-0.0.9/pytorch_common/callbacks/reduce_lr_on_plateau.py
+--rw-r--r--   0        0        0     1222 2022-02-18 23:39:24.107143 pytorch-common-0.0.9/pytorch_common/callbacks/save_best_model_checkpoint.py
+--rw-r--r--   0        0        0     1371 2022-02-18 22:10:46.882473 pytorch-common-0.0.9/pytorch_common/callbacks/validation.py
+--rw-r--r--   0        0        0      110 2022-02-17 01:32:40.208875 pytorch-common-0.0.9/pytorch_common/error/__init__.py
+--rw-r--r--   0        0        0      814 2022-02-17 01:28:00.334728 pytorch-common-0.0.9/pytorch_common/error/assertions.py
+--rw-r--r--   0        0        0     2432 2022-02-17 01:29:21.788291 pytorch-common-0.0.9/pytorch_common/error/checker.py
+--rw-r--r--   0        0        0      273 2022-02-16 22:18:12.700000 pytorch-common-0.0.9/pytorch_common/error/common_exception.py
+--rw-r--r--   0        0        0      176 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/kfoldcv/__init__.py
+--rw-r--r--   0        0        0     1146 2022-01-10 22:59:53.558378 pytorch-common-0.0.9/pytorch_common/kfoldcv/k_fold_cv.py
+--rw-r--r--   0        0        0        0 2022-01-09 21:00:39.557219 pytorch-common-0.0.9/pytorch_common/kfoldcv/strategy/__init__.py
+--rw-r--r--   0        0        0      194 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/kfoldcv/strategy/k_fold_cv_strategy.py
+--rw-r--r--   0        0        0      335 2022-01-10 22:59:53.565045 pytorch-common-0.0.9/pytorch_common/kfoldcv/strategy/non_parallel_k_fold_cv_strategy.py
+--rw-r--r--   0        0        0      536 2022-01-10 22:59:53.568378 pytorch-common-0.0.9/pytorch_common/kfoldcv/strategy/parallel_k_fold_cv_strategy.py
+--rw-r--r--   0        0        0       89 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/modules/__init__.py
+--rw-r--r--   0        0        0      284 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/modules/__pycache__/__init__.cpython-39.pyc
+--rw-r--r--   0        0        0      948 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/modules/__pycache__/common_mixin.cpython-39.pyc
+--rw-r--r--   0        0        0     1651 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/modules/__pycache__/fit_mixin.cpython-39.pyc
+--rw-r--r--   0        0        0      382 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/modules/common_mixin.py
+--rw-r--r--   0        0        0     1364 2022-02-17 01:38:11.426571 pytorch-common-0.0.9/pytorch_common/modules/fit_mixin.py
+--rw-r--r--   0        0        0     1135 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/modules/fn.py
+--rw-r--r--   0        0        0      304 2022-02-17 01:24:51.994229 pytorch-common-0.0.9/pytorch_common/util/__init__.py
+--rw-r--r--   0        0        0      529 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/util/data_utils.py
+--rw-r--r--   0        0        0      690 2022-02-17 01:17:30.513340 pytorch-common-0.0.9/pytorch_common/util/device_utils.py
+--rw-r--r--   0        0        0      108 2022-02-17 01:22:32.403896 pytorch-common-0.0.9/pytorch_common/util/module_utils.py
+--rw-r--r--   0        0        0      110 2022-01-15 02:50:45.422814 pytorch-common-0.0.9/pytorch_common/util/os_utils.py
+--rw-r--r--   0        0        0      435 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/util/stopwatch.py
+--rw-r--r--   0        0        0       66 2022-01-09 19:51:07.727683 pytorch-common-0.0.9/pytorch_common/util/tensor_utils.py
+--rw-r--r--   0        0        0     2460 2022-02-18 23:49:36.276025 pytorch-common-0.0.9/setup.py
+--rw-r--r--   0        0        0     2200 2022-02-18 23:49:36.276201 pytorch-common-0.0.9/PKG-INFO
++-rw-r--r--   0        0        0     6896 2023-03-25 14:00:35.753299 pytorch-common-0.1.0/README.md
++-rw-r--r--   0        0        0      668 2023-04-06 20:48:06.130689 pytorch-common-0.1.0/pyproject.toml
++-rw-r--r--   0        0        0       22 2023-04-06 20:48:11.714056 pytorch-common-0.1.0/pytorch_common/__init__.py
++-rw-r--r--   0        0        0      252 2022-02-17 01:26:29.554482 pytorch-common-0.1.0/pytorch_common/callbacks/__init__.py
++-rw-r--r--   0        0        0      490 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      368 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0     2001 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/callback.cpython-310.pyc
++-rw-r--r--   0        0        0     2088 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/callback.cpython-39.pyc
++-rw-r--r--   0        0        0     1427 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/callback_manager.cpython-310.pyc
++-rw-r--r--   0        0        0     1562 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/early_stop.cpython-310.pyc
++-rw-r--r--   0        0        0     3978 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/reduce_lr_on_plateau.cpython-310.pyc
++-rw-r--r--   0        0        0     2413 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/reduce_lr_on_plateau.cpython-39.pyc
++-rw-r--r--   0        0        0     2011 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/save_best_model_checkpoint.cpython-310.pyc
++-rw-r--r--   0        0        0     1814 2023-04-06 17:10:38.167508 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/validation.cpython-310.pyc
++-rw-r--r--   0        0        0     1682 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/validation.cpython-39.pyc
++-rw-r--r--   0        0        0     1160 2022-02-18 23:40:01.317970 pytorch-common-0.1.0/pytorch_common/callbacks/callback.py
++-rw-r--r--   0        0        0      807 2023-04-06 16:01:08.445308 pytorch-common-0.1.0/pytorch_common/callbacks/callback_manager.py
++-rw-r--r--   0        0        0      927 2022-02-18 23:40:55.132415 pytorch-common-0.1.0/pytorch_common/callbacks/early_stop.py
++-rw-r--r--   0        0        0     2674 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/mixin/__pycache__/metric_improve_mixin.cpython-310.pyc
++-rw-r--r--   0        0        0     1738 2022-02-19 21:30:07.556994 pytorch-common-0.1.0/pytorch_common/callbacks/mixin/metric_improve_mixin.py
++-rw-r--r--   0        0        0      183 2022-08-13 22:39:37.132234 pytorch-common-0.1.0/pytorch_common/callbacks/output/__init__.py
++-rw-r--r--   0        0        0      399 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      340 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0     1336 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/logger_callback.cpython-310.pyc
++-rw-r--r--   0        0        0     1205 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/logger_callback.cpython-39.pyc
++-rw-r--r--   0        0        0     1582 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/output_callback.cpython-310.pyc
++-rw-r--r--   0        0        0     1557 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/output_callback.cpython-39.pyc
++-rw-r--r--   0        0        0      793 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/output_hook_callback.cpython-310.pyc
++-rw-r--r--   0        0        0      627 2022-02-18 22:32:24.693573 pytorch-common-0.1.0/pytorch_common/callbacks/output/logger_callback.py
++-rw-r--r--   0        0        0      722 2022-02-18 23:39:18.767021 pytorch-common-0.1.0/pytorch_common/callbacks/output/output_callback.py
++-rw-r--r--   0        0        0      280 2022-08-13 22:29:58.789478 pytorch-common-0.1.0/pytorch_common/callbacks/output/output_hook_callback.py
++-rw-r--r--   0        0        0        2 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__init__.py
++-rw-r--r--   0        0        0      190 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      179 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0      814 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metric_logger.cpython-310.pyc
++-rw-r--r--   0        0        0      799 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metric_logger.cpython-39.pyc
++-rw-r--r--   0        0        0     1640 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metrics_plotter.cpython-310.pyc
++-rw-r--r--   0        0        0     1648 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metrics_plotter.cpython-39.pyc
++-rw-r--r--   0        0        0      724 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/plot.cpython-310.pyc
++-rw-r--r--   0        0        0      681 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/plot.cpython-39.pyc
++-rw-r--r--   0        0        0      259 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/metric_logger.py
++-rw-r--r--   0        0        0     1045 2022-02-17 00:53:40.878623 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/metrics_plotter.py
++-rw-r--r--   0        0        0      536 2023-03-25 14:13:30.104415 pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/plot.py
++-rw-r--r--   0        0        0     3814 2022-02-19 21:31:03.207848 pytorch-common-0.1.0/pytorch_common/callbacks/reduce_lr_on_plateau.py
++-rw-r--r--   0        0        0     1405 2022-02-19 21:30:18.417170 pytorch-common-0.1.0/pytorch_common/callbacks/save_best_model_checkpoint.py
++-rw-r--r--   0        0        0     1533 2023-04-06 16:39:15.512635 pytorch-common-0.1.0/pytorch_common/callbacks/validation.py
++-rw-r--r--   0        0        0      110 2022-02-17 01:32:40.208875 pytorch-common-0.1.0/pytorch_common/error/__init__.py
++-rw-r--r--   0        0        0      814 2022-02-17 01:28:00.334728 pytorch-common-0.1.0/pytorch_common/error/assertions.py
++-rw-r--r--   0        0        0     2432 2022-02-17 01:29:21.788291 pytorch-common-0.1.0/pytorch_common/error/checker.py
++-rw-r--r--   0        0        0      273 2022-02-16 22:18:12.700000 pytorch-common-0.1.0/pytorch_common/error/common_exception.py
++-rw-r--r--   0        0        0      176 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/kfoldcv/__init__.py
++-rw-r--r--   0        0        0     1146 2022-01-10 22:59:53.558378 pytorch-common-0.1.0/pytorch_common/kfoldcv/k_fold_cv.py
++-rw-r--r--   0        0        0        0 2022-01-09 21:00:39.557219 pytorch-common-0.1.0/pytorch_common/kfoldcv/strategy/__init__.py
++-rw-r--r--   0        0        0      194 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/kfoldcv/strategy/k_fold_cv_strategy.py
++-rw-r--r--   0        0        0      335 2022-01-10 22:59:53.565045 pytorch-common-0.1.0/pytorch_common/kfoldcv/strategy/non_parallel_k_fold_cv_strategy.py
++-rw-r--r--   0        0        0      536 2022-01-10 22:59:53.568378 pytorch-common-0.1.0/pytorch_common/kfoldcv/strategy/parallel_k_fold_cv_strategy.py
++-rw-r--r--   0        0        0      257 2023-04-06 16:00:59.165265 pytorch-common-0.1.0/pytorch_common/modules/__init__.py
++-rw-r--r--   0        0        0      454 2023-04-06 16:21:38.194340 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      284 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/__init__.cpython-39.pyc
++-rw-r--r--   0        0        0      963 2023-04-06 16:21:38.197673 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/common_mixin.cpython-310.pyc
++-rw-r--r--   0        0        0      948 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/common_mixin.cpython-39.pyc
++-rw-r--r--   0        0        0     1512 2023-04-06 17:32:23.790493 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/fit_context.cpython-310.pyc
++-rw-r--r--   0        0        0     2020 2023-04-06 17:32:23.790493 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/fit_mixin.cpython-310.pyc
++-rw-r--r--   0        0        0     1651 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/fit_mixin.cpython-39.pyc
++-rw-r--r--   0        0        0     2534 2023-04-06 19:17:53.117811 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/fn.cpython-310.pyc
++-rw-r--r--   0        0        0      989 2023-04-06 17:32:23.793826 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/persistent_mixin.cpython-310.pyc
++-rw-r--r--   0        0        0     1502 2023-04-06 17:32:23.793826 pytorch-common-0.1.0/pytorch_common/modules/__pycache__/predict_mixin.cpython-310.pyc
++-rw-r--r--   0        0        0      382 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/modules/common_mixin.py
++-rw-r--r--   0        0        0     1272 2023-04-06 17:24:42.168161 pytorch-common-0.1.0/pytorch_common/modules/fit_context.py
++-rw-r--r--   0        0        0     1981 2023-04-06 17:28:37.839367 pytorch-common-0.1.0/pytorch_common/modules/fit_mixin.py
++-rw-r--r--   0        0        0     2386 2023-04-06 19:17:50.767798 pytorch-common-0.1.0/pytorch_common/modules/fn.py
++-rw-r--r--   0        0        0      553 2023-04-06 17:23:47.241207 pytorch-common-0.1.0/pytorch_common/modules/persistent_mixin.py
++-rw-r--r--   0        0        0      968 2023-04-06 17:32:06.060405 pytorch-common-0.1.0/pytorch_common/modules/predict_mixin.py
++-rw-r--r--   0        0        0      338 2022-02-19 22:44:03.514014 pytorch-common-0.1.0/pytorch_common/util/__init__.py
++-rw-r--r--   0        0        0      617 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0        0        0      717 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/data_utils.cpython-310.pyc
++-rw-r--r--   0        0        0     1142 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/device_utils.cpython-310.pyc
++-rw-r--r--   0        0        0     1712 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/logger.cpython-310.pyc
++-rw-r--r--   0        0        0      503 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/module_utils.cpython-310.pyc
++-rw-r--r--   0        0        0      347 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/os_utils.cpython-310.pyc
++-rw-r--r--   0        0        0     1106 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/stopwatch.cpython-310.pyc
++-rw-r--r--   0        0        0      324 2023-04-06 16:21:38.191007 pytorch-common-0.1.0/pytorch_common/util/__pycache__/tensor_utils.cpython-310.pyc
++-rw-r--r--   0        0        0      529 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/util/data_utils.py
++-rw-r--r--   0        0        0      690 2022-02-17 01:17:30.513340 pytorch-common-0.1.0/pytorch_common/util/device_utils.py
++-rw-r--r--   0        0        0      919 2022-02-19 22:40:31.886000 pytorch-common-0.1.0/pytorch_common/util/logger.py
++-rw-r--r--   0        0        0      108 2022-02-17 01:22:32.403896 pytorch-common-0.1.0/pytorch_common/util/module_utils.py
++-rw-r--r--   0        0        0      110 2022-01-15 02:50:45.422814 pytorch-common-0.1.0/pytorch_common/util/os_utils.py
++-rw-r--r--   0        0        0      435 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/util/stopwatch.py
++-rw-r--r--   0        0        0       66 2022-01-09 19:51:07.727683 pytorch-common-0.1.0/pytorch_common/util/tensor_utils.py
++-rw-r--r--   0        0        0     8302 2023-04-06 20:48:31.554810 pytorch-common-0.1.0/setup.py
++-rw-r--r--   0        0        0     7846 2023-04-06 20:48:31.555137 pytorch-common-0.1.0/PKG-INFO
+```
+
+### Comparing `pytorch-common-0.0.9/pyproject.toml` & `pytorch-common-0.1.0/pyproject.toml`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,27 +1,27 @@
+ [tool.poetry]
+ name = "pytorch-common"
+-version = "0.0.9"
++version = "0.1.0"
+ description = "Common torch tools and extension"
+ authors = ["adrianmarino <adrianmarino@gmail.com>"]
+ keywords = ["pytorch", "common"]
+ include = ["pytorch_common/**/*.py"]
+ readme = "README.md"
+ license = "MIT"
+ repository = "https://github.com/adrianmarino/pytorch-common/tree/master"
+ 
+ [tool.poetry.dependencies]
+-python = "^3.9"
+-seaborn = "^0.11.2"
+-matplotlib = "^3.5.1"
+-numpy = "^1.22.0"
+-bunch = "^1.0.1"
+-torch = "^1.10.1"
+-scikit-learn = "^1.0.2"
+-ipython = "^7.31.0"
++python = ">=3.7"
++seaborn = ">=0.11.2"
++matplotlib = ">=3.5.1"
++numpy = ">=1.20"
++bunch = ">=1.0.1"
++torch = ">=1.10.1"
++scikit-learn = ">=1.0.2"
++ipython = ">=7.31.0"
+ 
+ [tool.poetry.dev-dependencies]
+-pytest = "^5.2"
++pytest = ">=5.2"
+ 
+ [build-system]
+ requires = ["poetry-core>=1.0.0"]
+ build-backend = "poetry.core.masonry.api"
+```
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/callback.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/callback.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/reduce_lr_on_plateau.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/reduce_lr_on_plateau.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/__pycache__/validation.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/__pycache__/validation.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/callback.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/early_stop.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/early_stop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/mixin/metric_improve_mixin.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/mixin/metric_improve_mixin.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -5,40 +5,46 @@
+         :param mode (str): One of `min`, `max`. In `min` mode check that metric go down after each epoch.
+         """
+         self.__last_metric_prefix = last_metric_prefix
+         self._metric_name = metric
+         self._previous_metric_name = '{}_previous_{}'.format(self.__last_metric_prefix, self._metric_name)
+         self._mode = mode
+ 
+-    def __update_last_metric(self, ctx):
+-        if self.__has_metric(ctx):
+-            ctx[self._previous_metric_name] = self._metric(ctx)
++    def _update_last_metric(self, ctx):
++        ctx[self._previous_metric_name] = ctx[self._metric_name]
+ 
+     def _previous_metric(self, ctx):
+         return ctx[self._previous_metric_name]
+ 
+     def _metric(self, ctx):
+         return ctx[self._metric_name]
+ 
+-    def __has_metric(self, ctx):
++    def _has_metric(self, ctx):
+         return self._metric_name in ctx
+ 
+-    def __has_last_metric(self, ctx):
++    def _has_last_metric(self, ctx):
+         return self._previous_metric_name in ctx
+ 
+     def on_after_train(self, ctx):
+-        if self.__has_metric(ctx):
+-            if self.__has_last_metric(ctx):
+-                if self._mode == 'min' and ctx[self._metric_name] < self._previous_metric(ctx):
+-                    self._on_improve(ctx, self._mode)
+-                elif self._mode == 'max' and ctx[self._metric_name] > self._previous_metric(ctx):
++        if self._has_metric(ctx):
++            if self._has_last_metric(ctx):
++                if self._did_improve_metric(ctx):
+                     self._on_improve(ctx, self._mode)
+                 else:
+                     self._on_not_improve(ctx)
+ 
+-            self.__update_last_metric(ctx)
++            self._update_last_metric(ctx)
++
++    def _did_improve_metric(self, ctx):
++        return self._did_improve_min(ctx) or self._did_improve_max(ctx)
++
++    def _did_improve_min(self, ctx):
++        return self._mode == 'min' and ctx[self._metric_name] < self._previous_metric(ctx)
++
++    def _did_improve_max(self, ctx):
++        return self._mode == 'max' and ctx[self._metric_name] > self._previous_metric(ctx)
+ 
+     def _on_improve(self, ctx, mode):
+         pass
+ 
+     def _on_not_improve(self, ctx):
+         pass
+```
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/__pycache__/logger_callback.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/logger_callback.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/__pycache__/output_callback.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/__pycache__/output_callback.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/logger_callback.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/logger_callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/output_callback.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/output_callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/metric_logger.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metric_logger.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/metrics_plotter.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/metrics_plotter.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/__pycache__/plot.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/__pycache__/plot.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/output/plot/metrics_plotter.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/output/plot/metrics_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/save_best_model_checkpoint.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/save_best_model_checkpoint.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,28 +1,32 @@
+ import logging
+ from datetime import datetime
+ 
+ import torch
+-
+ from pytorch_common.callbacks import Callback
+ from pytorch_common.callbacks.mixin.metric_improve_mixin import MetricImproveMixin
+ from pytorch_common.util import create_path
+ 
+ 
+ class SaveBestModel(MetricImproveMixin, Callback):
+     """
+     Save model weights to file while model validation metric improve.
+     """
+ 
+-    def __init__(self, metric, path='./weights', mode='min', experiment_name='model', time_pattern='%Y-%m-%d_%H-%M-%S'):
++    def __init__(self, metric, path='./weights', mode='min', experiment_name='experiment',
++                 time_pattern='%Y-%m-%d_%H-%M-%S'):
+         self._init('checkpoint', metric, mode)
+         self.__path = create_path(path)
+         self.__time_pattern = time_pattern
+         self.__experiment_name = experiment_name
+ 
++    def _update_last_metric(self, ctx):
++        if not self._has_last_metric(ctx) or self._did_improve_metric(ctx):
++            super()._update_last_metric(ctx)
++
+     def _on_improve(self, ctx, mode):
+         file_path = self.__get_file_path(ctx)
+         logging.info("Save best model: {}".format(file_path))
+         torch.save(ctx.model.state_dict(), file_path)
+         ctx['best_model_path'] = file_path
+ 
+     def __get_file_path(self, ctx):
+```
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/callbacks/validation.py` & `pytorch-common-0.1.0/pytorch_common/callbacks/validation.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -3,33 +3,36 @@
+ 
+ 
+ class Validation(Callback):
+     """
+     This callback allows to validation model performance into a validation using one or more specified validation metrics.
+     """
+ 
+-    def __init__(self, data_loader, metrics, each_n_epochs=1):
++    def __init__(self, data_loader, metrics, each_n_epochs=1, validation_fn = Fn.validation):
+         """
+         Validation callback constructor.
+         :param data_loader: validation set data_loader.
+         :param metrics: a dict with each metric name and calculation function. i.e.:
+ 
+             metrics={
+                 'val_loss': lambda y_pred, y_true: BCELoss()(y_pred, y_true).item(),
+                 'val_auc':  lambda y_pred, y_true: roc_auc_score(y_true.cpu().numpy(), y_pred.cpu().numpy())
+             }
+ 
+         :param each_n_epochs: number of epochs to wait to calculate validation metrics.
++        :validation_fn: Validation callback. Usefull to override the default validation process.
+         """
+-        self.data_loader = data_loader
+-        self.metrics = metrics
++        self.data_loader   = data_loader
++        self.metrics       = metrics
+         self.each_n_epochs = each_n_epochs
++        self.validation_fn = validation_fn
++
+ 
+     def on_after_train(self, ctx):
+         if ctx.epoch % self.each_n_epochs == 0:
+-            y_pred, y_true = Fn.validation(ctx.model, self.data_loader, ctx.device)
++            y_pred, y_true = Fn.validation(ctx, self.data_loader)
+             ctx['time'] = ctx.stopwatch.to_str()
+             for (name, fn) in self.metrics.items():
+                 ctx[name] = fn(y_pred, y_true)
+         else:
+             for (name, fn) in self.metrics.items():
+                 ctx[name] = None
+```
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/error/assertions.py` & `pytorch-common-0.1.0/pytorch_common/error/assertions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/error/checker.py` & `pytorch-common-0.1.0/pytorch_common/error/checker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/kfoldcv/k_fold_cv.py` & `pytorch-common-0.1.0/pytorch_common/kfoldcv/k_fold_cv.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/kfoldcv/strategy/parallel_k_fold_cv_strategy.py` & `pytorch-common-0.1.0/pytorch_common/kfoldcv/strategy/parallel_k_fold_cv_strategy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/modules/__pycache__/common_mixin.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/modules/__pycache__/common_mixin.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/modules/__pycache__/fit_mixin.cpython-39.pyc` & `pytorch-common-0.1.0/pytorch_common/modules/__pycache__/fit_mixin.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/util/data_utils.py` & `pytorch-common-0.1.0/pytorch_common/util/data_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytorch-common-0.0.9/pytorch_common/util/device_utils.py` & `pytorch-common-0.1.0/pytorch_common/util/device_utils.py`
+
+ * *Files identical despite different names*
+

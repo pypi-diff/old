@@ -1,0 +1,147 @@
+# Comparing `tmp/PySwitchbot-0.9.0.tar.gz` & `tmp/PySwitchbot-0.9.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "PySwitchbot-0.9.0.tar", last modified: Fri Dec 18 20:06:18 2020, max compression
++gzip compressed data, was "PySwitchbot-0.9.1.tar", last modified: Sun Dec 20 08:05:19 2020, max compression
+```
+
+## Comparing `PySwitchbot-0.9.0.tar` & `PySwitchbot-0.9.1.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-18 20:06:18.203392 PySwitchbot-0.9.0/
+--rw-r--r--   0 runner    (1001) docker     (121)      603 2020-12-18 20:06:18.203392 PySwitchbot-0.9.0/PKG-INFO
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-18 20:06:18.203392 PySwitchbot-0.9.0/PySwitchbot.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)      603 2020-12-18 20:06:18.000000 PySwitchbot-0.9.0/PySwitchbot.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      214 2020-12-18 20:06:18.000000 PySwitchbot-0.9.0/PySwitchbot.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2020-12-18 20:06:18.000000 PySwitchbot-0.9.0/PySwitchbot.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        7 2020-12-18 20:06:18.000000 PySwitchbot-0.9.0/PySwitchbot.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       10 2020-12-18 20:06:18.000000 PySwitchbot-0.9.0/PySwitchbot.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      269 2020-12-18 20:06:09.000000 PySwitchbot-0.9.0/README.md
+--rw-r--r--   0 runner    (1001) docker     (121)       38 2020-12-18 20:06:18.203392 PySwitchbot-0.9.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (121)      659 2020-12-18 20:06:09.000000 PySwitchbot-0.9.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-18 20:06:18.203392 PySwitchbot-0.9.0/switchbot/
+--rw-r--r--   0 runner    (1001) docker     (121)     5046 2020-12-18 20:06:09.000000 PySwitchbot-0.9.0/switchbot/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-20 08:05:19.548960 PySwitchbot-0.9.1/
++-rw-r--r--   0 runner    (1001) docker     (121)      603 2020-12-20 08:05:19.548960 PySwitchbot-0.9.1/PKG-INFO
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-20 08:05:19.548960 PySwitchbot-0.9.1/PySwitchbot.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (121)      603 2020-12-20 08:05:19.000000 PySwitchbot-0.9.1/PySwitchbot.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (121)      214 2020-12-20 08:05:19.000000 PySwitchbot-0.9.1/PySwitchbot.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (121)        1 2020-12-20 08:05:19.000000 PySwitchbot-0.9.1/PySwitchbot.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (121)        7 2020-12-20 08:05:19.000000 PySwitchbot-0.9.1/PySwitchbot.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (121)       10 2020-12-20 08:05:19.000000 PySwitchbot-0.9.1/PySwitchbot.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (121)      269 2020-12-20 08:05:07.000000 PySwitchbot-0.9.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (121)       38 2020-12-20 08:05:19.548960 PySwitchbot-0.9.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (121)      659 2020-12-20 08:05:07.000000 PySwitchbot-0.9.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2020-12-20 08:05:19.548960 PySwitchbot-0.9.1/switchbot/
++-rw-r--r--   0 runner    (1001) docker     (121)     5165 2020-12-20 08:05:07.000000 PySwitchbot-0.9.1/switchbot/__init__.py
+```
+
+### Comparing `PySwitchbot-0.9.0/PKG-INFO` & `PySwitchbot-0.9.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: PySwitchbot
+-Version: 0.9.0
++Version: 0.9.1
+ Summary: A library to communicate with Switchbot
+ Home-page: https://github.com/Danielhiversen/pySwitchbot/
+ Author: Daniel Hjelseth Hoyer
+ Author-email: UNKNOWN
+ License: UNKNOWN
+ Description: UNKNOWN
+ Platform: UNKNOWN
+```
+
+### Comparing `PySwitchbot-0.9.0/PySwitchbot.egg-info/PKG-INFO` & `PySwitchbot-0.9.1/PySwitchbot.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: PySwitchbot
+-Version: 0.9.0
++Version: 0.9.1
+ Summary: A library to communicate with Switchbot
+ Home-page: https://github.com/Danielhiversen/pySwitchbot/
+ Author: Daniel Hjelseth Hoyer
+ Author-email: UNKNOWN
+ License: UNKNOWN
+ Description: UNKNOWN
+ Platform: UNKNOWN
+```
+
+### Comparing `PySwitchbot-0.9.0/setup.py` & `PySwitchbot-0.9.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from setuptools import setup
+ 
+ setup(
+     name = 'PySwitchbot',
+     packages = ['switchbot'],
+     install_requires=['bluepy'],
+-    version = '0.9.0',
++    version = '0.9.1',
+     description = 'A library to communicate with Switchbot',
+     author='Daniel Hjelseth Hoyer',
+     url='https://github.com/Danielhiversen/pySwitchbot/',
+     classifiers=[
+         'Development Status :: 3 - Alpha',
+         'Environment :: Other Environment',
+         'Intended Audience :: Developers',
+```
+
+### Comparing `PySwitchbot-0.9.0/switchbot/__init__.py` & `PySwitchbot-0.9.1/switchbot/__init__.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -30,30 +30,32 @@
+ _LOGGER = logging.getLogger(__name__)
+ 
+ 
+ class SwitchbotDevice:
+     # pylint: disable=too-few-public-methods
+     """Base Representation of a Switchbot Device."""
+ 
+-    def __init__(self, mac, retry_count=DEFAULT_RETRY_COUNT, password=None) -> None:
++    def __init__(self, mac, retry_count=DEFAULT_RETRY_COUNT, password=None, interface=None) -> None:
++        self._interface = interface
+         self._mac = mac
+         self._device = None
+         self._retry_count = retry_count
+         if password is None or password == "":
+             self._password_encoded = None
+         else:
+             self._password_encoded = '%x' % (binascii.crc32(password.encode('ascii')) & 0xffffffff)
+ 
+     def _connect(self) -> None:
+         if self._device is not None:
+             return
+         try:
+             _LOGGER.debug("Connecting to Switchbot...")
+             self._device = bluepy.btle.Peripheral(self._mac,
+-                                                  bluepy.btle.ADDR_TYPE_RANDOM)
++                                                  bluepy.btle.ADDR_TYPE_RANDOM,
++                                                  self._interface)
+             _LOGGER.debug("Connected to Switchbot.")
+         except bluepy.btle.BTLEException:
+             _LOGGER.debug("Failed connecting to Switchbot.", exc_info=True)
+             self._device = None
+             raise
+ 
+     def _disconnect(self) -> None:
+```
+

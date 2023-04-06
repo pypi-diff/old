@@ -1,0 +1,26 @@
+# Comparing `tmp/2d-0.1.0.tar.gz` & `tmp/2d-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "2d-0.1.0.tar", max compression
++gzip compressed data, was "2d-0.1.1.tar", max compression
+```
+
+## Comparing `2d-0.1.0.tar` & `2d-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,4 +1,4 @@
+--rw-r--r--   0        0        0        0 2023-04-06 20:36:48.043072 2d-0.1.0/2d/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-06 20:36:48.043072 2d-0.1.0/README.md
+--rw-r--r--   0        0        0      259 2023-04-06 20:36:48.053072 2d-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      329 1970-01-01 00:00:00.000000 2d-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0        0 2023-04-06 20:36:48.043072 2d-0.1.1/2d/__init__.py
++-rw-r--r--   0        0        0      184 2023-04-06 20:43:49.359741 2d-0.1.1/README.md
++-rw-r--r--   0        0        0      298 2023-04-06 20:44:07.616482 2d-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      552 1970-01-01 00:00:00.000000 2d-0.1.1/PKG-INFO
+```
+
