@@ -1,0 +1,101 @@
+--- tmp/cuquantum_cu11-22.7.1-py3-none-manylinux2014_x86_64.whl.zip
++++ tmp/cuquantum_cu11-23.3.0-py3-none-manylinux2014_x86_64.whl.zip
+├── zipinfo {}
+│ @@ -1,6 +1,7 @@
+│ -Zip file size: 1987 bytes, number of entries: 4
+│ --rw-r--r--  2.0 unx     2698 b- defN 22-Nov-10 17:25 cuquantum_cu11-22.7.1.dist-info/METADATA
+│ --rw-r--r--  2.0 unx      109 b- defN 22-Nov-10 17:25 cuquantum_cu11-22.7.1.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        1 b- defN 22-Nov-10 17:25 cuquantum_cu11-22.7.1.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx      330 b- defN 22-Nov-10 17:25 cuquantum_cu11-22.7.1.dist-info/RECORD
+│ -4 files, 3138 bytes uncompressed, 1341 bytes compressed:  57.3%
+│ +Zip file size: 7000 bytes, number of entries: 5
+│ +-rw-r--r--  2.0 unx    11004 b- defN 23-Mar-30 06:18 cuquantum_cu11-23.3.0.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     2678 b- defN 23-Mar-30 06:18 cuquantum_cu11-23.3.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx      109 b- defN 23-Mar-30 06:18 cuquantum_cu11-23.3.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        1 b- defN 23-Mar-30 06:18 cuquantum_cu11-23.3.0.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx      427 b- defN 23-Mar-30 06:18 cuquantum_cu11-23.3.0.dist-info/RECORD
+│ +5 files, 14219 bytes uncompressed, 6200 bytes compressed:  56.4%
+├── zipnote {}
+│ @@ -1,13 +1,16 @@
+│ -Filename: cuquantum_cu11-22.7.1.dist-info/METADATA
+│ +Filename: cuquantum_cu11-23.3.0.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: cuquantum_cu11-22.7.1.dist-info/WHEEL
+│ +Filename: cuquantum_cu11-23.3.0.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: cuquantum_cu11-22.7.1.dist-info/top_level.txt
+│ +Filename: cuquantum_cu11-23.3.0.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: cuquantum_cu11-22.7.1.dist-info/RECORD
+│ +Filename: cuquantum_cu11-23.3.0.dist-info/top_level.txt
+│ +Comment: 
+│ +
+│ +Filename: cuquantum_cu11-23.3.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- cuquantum_cu11-22.7.1.dist-info/METADATA
+├── +++ cuquantum_cu11-23.3.0.dist-info/METADATA
+│┄ Files 19% similar despite different names
+│ @@ -1,29 +1,26 @@
+│  Metadata-Version: 2.1
+│  Name: cuquantum-cu11
+│ -Version: 22.7.1
+│ +Version: 23.3.0
+│  Summary: NVIDIA cuQuantum SDK
+│  Home-page: https://developer.nvidia.com/cuquantum-sdk
+│  Author: NVIDIA Corporation
+│  Author-email: cuda_installer@nvidia.com
+│  License: NVIDIA Proprietary Software
+│ +Project-URL: Bug Tracker, https://github.com/NVIDIA/cuQuantum/issues
+│ +Project-URL: User Forum, https://github.com/NVIDIA/cuQuantum/discussions
+│ +Project-URL: Documentation, https://docs.nvidia.com/cuda/cuquantum/
+│  Keywords: cuda,nvidia,state vector,tensor network,high-performance computing,quantum computing
+│  Classifier: Topic :: Scientific/Engineering
+│  Classifier: Environment :: GPU :: NVIDIA CUDA
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.0
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.1
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.2
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.3
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.4
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.5
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.6
+│ -Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.7
+│ +Classifier: Environment :: GPU :: NVIDIA CUDA :: 11
+│  Description-Content-Type: text/x-rst
+│ -Requires-Dist: custatevec-cu11 (==1.1.0)
+│ -Requires-Dist: cutensornet-cu11 (==1.1.1)
+│ +License-File: LICENSE
+│ +Requires-Dist: custatevec-cu11 (==1.3.0)
+│ +Requires-Dist: cutensornet-cu11 (==2.1.0)
+│  
+│  **************************************************************************************
+│  cuQuantum SDK: A High-Performance Library for Accelerating Quantum Information Science
+│  **************************************************************************************
+│  
+│  `NVIDIA cuQuantum SDK <https://developer.nvidia.com/cuquantum-sdk>`_ is a high-performance library for quantum information science and beyond.
+│  Currently its primary target is *quantum circuit simulations* and it consists of two major components:
+│ @@ -45,16 +42,18 @@
+│  
+│  The cuQuantum wheel can be installed as follows:
+│  
+│  .. code-block:: bash
+│  
+│     pip install cuquantum-cuXX
+│  
+│ -where XX is the CUDA major version (currently CUDA 11 is supported).
+│ -The package ``cuquantum`` (without the ``-cuXX`` suffix) is considered deprecated.
+│ +where XX is the CUDA major version (currently CUDA 11 and 12 are supported).
+│ +We encourage users to install package *with* the ``-cuXX`` suffix;
+│ +the package ``cuquantum`` (without the ``-cuXX`` suffix) currently points to ``cuquantum-cu11``
+│ +and is subject to change in the future.
+│  
+│  .. note::
+│  
+│     This package is a "meta"-package -- installing it will install both ``custatevec-cuXX`` and ``cutensornet-cuXX``
+│     that are released in the installed cuQuantum SDK version.
+│  
+│  .. note::

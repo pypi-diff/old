@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/multicaller-0.0.0a8.tar.gz tmp/multicaller-0.0.0a9.tar.gz --html versions/m/multicaller/0.0.0a8-0.0.0a9/index.html --text versions/m/multicaller/0.0.0a8-0.0.0a9/diff.txt --markdown versions/m/multicaller/0.0.0a8-0.0.0a9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.56 KB</span></div>
+  <div><span class="source">tmp/multicaller-0.0.0a8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/multicaller-0.0.0a9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">276 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;multicaller-0.0.0a<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Sat<span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;multicaller-0.0.0a<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Sat<span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.24 KB</span></div>
+    <div><span class="source">multicaller-0.0.0a8.tar</span> vs.</div>
+    <div id="multicaller--.-.-a-.tar"><span class="source">multicaller-0.0.0a9.tar</span>
+      <a class="anchor" href="#multicaller--.-.-a-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.27 KB</span></div>
+      <div id="multicaller--.-.-a-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>462</del>1<del>07</del><span class="dp">·</span>multicaller-0.0.0a<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>199</ins>1<ins>28</ins><span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:48:42.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/MANIFEST.in</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:48:42.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>462162</del><span class="dp">·</span>multicaller-0.0.0a<del>8</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>199209</ins><span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:18:46.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:18:46.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>46103</del>1<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>19792</ins>1<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-07<span class="dp">·</span>14:30:30.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-07<span class="dp">·</span>14:30:30.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>461946</del><span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller/abi/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>198882</ins><span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller/abi/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3279<span class="dp">·</span>2021-10-07<span class="dp">·</span>14:08:19.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller/abi/multiCall.json</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3279<span class="dp">·</span>2021-10-07<span class="dp">·</span>14:08:19.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller/abi/multiCall.json</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>32</del>3<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>33</del>:4<del>8</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller/multicaller.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>43</ins>3<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:<ins>18</ins>:4<ins>7</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller/multicaller.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>461819</del><span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/</td><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>198765</ins><span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/PKG-INFO</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>302<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/SOURCES.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>302<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/dependency_links.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/requires.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/multicaller.egg-info/top_level.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/multicaller.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:16:42.000000<span class="dp">·</span>multicaller-0.0.0a<del>8</del>/pyproject.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>2021-10-07<span class="dp">·</span>19:16:42.000000<span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>671<span class="dp">·</span>2022-0<del>3</del>-<del>19</del><span class="dp">·</span><del>19</del>:2<del>7</del>:<del>55</del>.<del>462396</del><span class="dp">·</span>multicaller-0.0.0a<del>8</del>/setup.cfg</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gerg<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>671<span class="dp">·</span>2022-0<ins>4</ins>-<ins>23</ins><span class="dp">·</span><ins>23</ins>:2<ins>0</ins>:<ins>16</ins>.<ins>199458</ins><span class="dp">·</span>multicaller-0.0.0a<ins>9</ins>/setup.cfg</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">454 B</span></div>
+      <div><span class="source">multicaller-0.0.0a8/PKG-INFO</span> vs.</div>
+      <div id="multicaller--.-.-a-.tar---multicaller--.-.-a--PKG-INFO"><span class="source">multicaller-0.0.0a9/PKG-INFO</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---multicaller--.-.-a--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>multicaller</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>multicaller</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0a<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0a<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gerrrg/multicaller</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gerrrg/multicaller</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gerrrg</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gerrrg</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gerrrrrrrg@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gerrrrrrrg@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/gerrrg/multicaller/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/gerrrg/multicaller/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">multicaller-0.0.0a8/multicaller/abi/multiCall.json</span> vs.</div>
+      <div id="multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller-abi-multiCall.json"><span class="source">multicaller-0.0.0a9/multicaller/abi/multiCall.json</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller-abi-multiCall.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.43 KB</span></div>
+      <div><span class="source">multicaller-0.0.0a8/multicaller/multicaller.py</span> vs.</div>
+      <div id="multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller-multicaller.py"><span class="source">multicaller-0.0.0a9/multicaller/multicaller.py</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller-multicaller.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 15 lines modified</td><td colspan="2">Offset 16, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       5:<span class="dp">»</span>     &#x27;0x3b2A02F22fCbc872AF77674ceD303eb269a46ce3&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       5:<span class="dp">»</span>     &#x27;0x3b2A02F22fCbc872AF77674ceD303eb269a46ce3&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       42:<span class="dp">»</span>    &#x27;0x2cc8688C5f75E365aaEEb4ea8D6a480405A48D2A&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       42:<span class="dp">»</span>    &#x27;0x2cc8688C5f75E365aaEEb4ea8D6a480405A48D2A&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       56:<span class="dp">»</span>    &#x27;0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       56:<span class="dp">»</span>    &#x27;0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       100:<span class="dp">»</span>   &#x27;0xb5b692a88BDFc81ca69dcB1d924f59f0413A602a&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       100:<span class="dp">»</span>   &#x27;0xb5b692a88BDFc81ca69dcB1d924f59f0413A602a&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       128:<span class="dp">»</span>   &#x27;0xc9a9F768ebD123A00B52e7A0E590df2e9E998707&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       128:<span class="dp">»</span>   &#x27;0xc9a9F768ebD123A00B52e7A0E590df2e9E998707&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       137:<span class="dp">»</span>   &#x27;0xa1B2b503959aedD81512C37e9dce48164ec6a94d&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       137:<span class="dp">»</span>   &#x27;0xa1B2b503959aedD81512C37e9dce48164ec6a94d&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       250:<span class="dp">»</span>   &#x27;0xb828C456600857abd4ed6C32FAcc607bD0464F4F&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       250:<span class="dp">»</span>   &#x27;0xb828C456600857abd4ed6C32FAcc607bD0464F4F&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       42161:<span class="dp">»</span> &#x27;0x269ff446d9892c9e19082564df3f5e8741e190a1&#x27;</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       42161:<span class="dp">»</span> &#x27;0x269ff446d9892c9e19082564df3f5e8741e190a1&#x27;<ins>,</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       42220:<span class="dp">»</span> &#x27;0x75F59534dd892c1f8a7B172D639FA854D529ada3&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       43114:<span class="dp">»</span> &#x27;0x82979a6f8D628270B29F5687bEA2F73D5D0eC77d&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       };</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">»</span>       };</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__init__(self,<span class="dp">·</span>_chainId,<span class="dp">·</span>_web3=None,<span class="dp">·</span>_rpcEndpoint=None,<span class="dp">·</span>_batches=1,<span class="dp">·</span>_maxRetries=20,<span class="dp">·</span>_verbose=False):</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__init__(self,<span class="dp">·</span>_chainId,<span class="dp">·</span>_web3=None,<span class="dp">·</span>_rpcEndpoint=None,<span class="dp">·</span>_batches=1,<span class="dp">·</span>_maxRetries=20,<span class="dp">·</span>_verbose=False):</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>_web3<span class="dp">·</span>is<span class="dp">·</span>None<span class="dp">·</span>and<span class="dp">·</span>_rpcEndpoint<span class="dp">·</span>is<span class="dp">·</span>None:</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>_web3<span class="dp">·</span>is<span class="dp">·</span>None<span class="dp">·</span>and<span class="dp">·</span>_rpcEndpoint<span class="dp">·</span>is<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;[ERROR]<span class="dp">·</span>You<span class="dp">·</span>must<span class="dp">·</span>provide<span class="dp">·</span>a<span class="dp">·</span>Web3<span class="dp">·</span>instance<span class="dp">·</span>or<span class="dp">·</span>an<span class="dp">·</span>RPC<span class="dp">·</span>Endpoint.&quot;);</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;[ERROR]<span class="dp">·</span>You<span class="dp">·</span>must<span class="dp">·</span>provide<span class="dp">·</span>a<span class="dp">·</span>Web3<span class="dp">·</span>instance<span class="dp">·</span>or<span class="dp">·</span>an<span class="dp">·</span>RPC<span class="dp">·</span>Endpoint.&quot;);</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print();</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print();</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       quit();</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       quit();</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 156, 15 lines modified</td><td colspan="2">Offset 158, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       break;</td><td class="diffline">158 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       break;</td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>OverflowError:</td><td class="diffline">159 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>OverflowError:</td></tr>
+<tr class="diffunmodified"><td class="diffline">158 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.batches<span class="dp">·</span>+=<span class="dp">·</span>1;</td><td class="diffline">160 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.batches<span class="dp">·</span>+=<span class="dp">·</span>1;</td></tr>
+<tr class="diffunmodified"><td class="diffline">159 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;Too<span class="dp">·</span>many<span class="dp">·</span>requests<span class="dp">·</span>in<span class="dp">·</span>one<span class="dp">·</span>batch.<span class="dp">·</span>Reattempting<span class="dp">·</span>with&quot;,<span class="dp">·</span>self.batches,<span class="dp">·</span>&quot;batches...&quot;);</td><td class="diffline">161 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;Too<span class="dp">·</span>many<span class="dp">·</span>requests<span class="dp">·</span>in<span class="dp">·</span>one<span class="dp">·</span>batch.<span class="dp">·</span>Reattempting<span class="dp">·</span>with&quot;,<span class="dp">·</span>self.batches,<span class="dp">·</span>&quot;batches...&quot;);</td></tr>
+<tr class="diffunmodified"><td class="diffline">160 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">162 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+<tr class="diffunmodified"><td class="diffline">161 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;Attempt&quot;,<span class="dp">·</span>retries,<span class="dp">·</span>&quot;of&quot;,<span class="dp">·</span>self.maxRetries,<span class="dp">·</span>&quot;failed.<span class="dp">·</span>Retrying...&quot;);</td><td class="diffline">163 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(&quot;Attempt&quot;,<span class="dp">·</span>retries,<span class="dp">·</span>&quot;of&quot;,<span class="dp">·</span>self.maxRetries,<span class="dp">·</span>&quot;failed.<span class="dp">·</span>Retrying...&quot;);</td></tr>
+<tr class="diffdeleted"><td class="diffline">162 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       print(e.message,<span class="dp">·</span>e.args);</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">164 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.reset();</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">165 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       raise<span class="dp">·</span>e;</td></tr>
+<tr class="diffunmodified"><td class="diffline">163 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.reset();</td><td class="diffline">166 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.reset();</td></tr>
+<tr class="diffunmodified"><td class="diffline">164 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       return(outputData);</td><td class="diffline">167 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       return(outputData);</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">165 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>reset(self):</td><td class="diffline">168 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>reset(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">166 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.payload<span class="dp">·</span>=<span class="dp">·</span>[];</td><td class="diffline">169 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.payload<span class="dp">·</span>=<span class="dp">·</span>[];</td></tr>
+<tr class="diffunmodified"><td class="diffline">167 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.decoders<span class="dp">·</span>=<span class="dp">·</span>[];</td><td class="diffline">170 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.decoders<span class="dp">·</span>=<span class="dp">·</span>[];</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">496 B</span></div>
+      <div><span class="source">multicaller-0.0.0a8/multicaller.egg-info/PKG-INFO</span> vs.</div>
+      <div id="multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller.egg-info-PKG-INFO"><span class="source">multicaller-0.0.0a9/multicaller.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---multicaller--.-.-a--multicaller.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>multicaller</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>multicaller</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0a<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0a<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gerrrg/multicaller</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gerrrg/multicaller</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gerrrg</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gerrrg</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gerrrrrrrg@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gerrrrrrrg@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/gerrrg/multicaller/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/gerrrg/multicaller/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">440 B</span></div>
+      <div><span class="source">multicaller-0.0.0a8/setup.cfg</span> vs.</div>
+      <div id="multicaller--.-.-a-.tar---multicaller--.-.-a--setup.cfg"><span class="source">multicaller-0.0.0a9/setup.cfg</span>
+        <a class="anchor" href="#multicaller--.-.-a-.tar---multicaller--.-.-a--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[metadata]</td><td class="diffline">1 </td><td class="diffpresent">[metadata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>multicaller</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>multicaller</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.0.0a<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.0.0a<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>gerrrg</td><td class="diffline">4 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>gerrrg</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>gerrrrrrrg@gmail.com</td><td class="diffline">5 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>gerrrrrrrg@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>web3py<span class="dp">·</span>multicaller<span class="dp">·</span>simplified<span class="dp">·</span>interface</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.md</td><td class="diffline">7 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/markdown</td><td class="diffline">8 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/gerrrg/multicaller</td><td class="diffline">9 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/gerrrg/multicaller</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,495 @@
+# Comparing `tmp/stactools-sentinel1-0.5.1.tar.gz` & `tmp/stactools-sentinel1-0.5.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "stactools-sentinel1-0.5.1.tar", last modified: Wed Mar 15 16:51:59 2023, max compression
++gzip compressed data, was "stactools-sentinel1-0.5.2.tar", last modified: Thu Apr  6 21:00:07 2023, max compression
+```
+
+## Comparing `stactools-sentinel1-0.5.1.tar` & `stactools-sentinel1-0.5.2.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/
+--rw-r--r--   0 runner    (1001) docker     (123)      641 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     3569 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      122 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      971 2023-03-15 16:51:59.733449 stactools-sentinel1-0.5.1/setup.cfg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.725449 stactools-sentinel1-0.5.1/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.725449 stactools-sentinel1-0.5.1/src/stactools/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/src/stactools/sentinel1/
+--rw-r--r--   0 runner    (1001) docker     (123)      311 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      421 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/commands.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1667 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/bands.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1598 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/commands.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12188 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8348 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/metadata_links.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7240 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/product_metadata.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7134 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/stac.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2058 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/commands.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3307 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7789 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/rtc_metadata.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7072 2023-03-15 16:51:36.000000 stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/stac.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:51:59.729449 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-03-15 16:51:59.000000 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      879 2023-03-15 16:51:59.000000 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-15 16:51:59.000000 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-03-15 16:51:59.000000 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2023-03-15 16:51:59.000000 stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/
++-rw-r--r--   0 runner    (1001) docker     (123)      641 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3569 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      122 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      971 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.707086 stactools-sentinel1-0.5.2/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.707086 stactools-sentinel1-0.5.2/src/stactools/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.707086 stactools-sentinel1-0.5.2/src/stactools/sentinel1/
++-rw-r--r--   0 runner    (1001) docker     (123)      311 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      421 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/commands.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1677 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/bands.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1598 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/commands.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12244 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9320 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/metadata_links.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7240 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/product_metadata.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7134 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/stac.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2058 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/commands.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3307 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7789 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/rtc_metadata.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7072 2023-04-06 20:59:48.000000 stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/stac.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:00:07.711086 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-04-06 21:00:07.000000 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      879 2023-04-06 21:00:07.000000 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 21:00:07.000000 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 21:00:07.000000 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 21:00:07.000000 stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/top_level.txt
+```
+
+### Comparing `stactools-sentinel1-0.5.1/LICENSE` & `stactools-sentinel1-0.5.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/PKG-INFO` & `stactools-sentinel1-0.5.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: stactools-sentinel1
+-Version: 0.5.1
++Version: 0.5.2
+ Summary: stactools subpackage for creating sentinel1 STACs
+ Home-page: https://github.com/stactools-packages/sentinel1
+ Author: stac-utils
+ Author-email: stac@radiant.earth
+ Project-URL: Documentation, https://github.com/stactools-packages/sentinel1
+ Project-URL: Issues, https://github.com/stactools-packages/sentinel1/issues
+ Keywords: stactools,pystac,catalog,STAC,sentinel,GRD,radar
+```
+
+### Comparing `stactools-sentinel1-0.5.1/README.md` & `stactools-sentinel1-0.5.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/setup.cfg` & `stactools-sentinel1-0.5.2/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/bands.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/bands.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -38,15 +38,15 @@
+         band = SENTINEL_POLARIZATIONS[band_id]
+ 
+         # Create asset
+         desc = "Actual SAR data that have been processed into an image"
+         asset = pystac.Asset(
+             href=asset_href,
+             media_type=asset_media_type,
+-            title=band.name,
++            title=f"{band.name} Data",
+             roles=["data"],
+             description=desc,
+         )
+ 
+         asset_eo = EOExtension.ext(asset)
+         asset_eo.bands = [SENTINEL_POLARIZATIONS[band_id]]
+```
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/commands.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/constants.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/constants.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -128,163 +128,163 @@
+     "pixel_spacing_azimuth": [3.5, 10, 25, 40],
+     "looks_equivalent_number": [3.7, 29.7, 398.4, 4.4, 81.8, 2.8, 10.7, 123.7],
+ }
+ 
+ SENTINEL_GRD_ASSETS = {
+     "vh": AssetDefinition(
+         {
+-            "title": "VH",
++            "title": "VH Data",
+             "type": pystac.MediaType.COG,
+             "description": "VH polarization backscattering coefficient, 16-bit DN.",
+             "roles": ["data"],
+         }
+     ),
+     "hh": AssetDefinition(
+         {
+-            "title": "HH",
++            "title": "HH Data",
+             "type": pystac.MediaType.COG,
+             "description": "HH polarization backscattering coefficient, 16-bit DN.",
+             "roles": ["data"],
+         }
+     ),
+     "hv": AssetDefinition(
+         {
+-            "title": "HV",
++            "title": "HV Data",
+             "type": pystac.MediaType.COG,
+             "description": "HV polarization backscattering coefficient, 16-bit DN.",
+             "roles": ["data"],
+         }
+     ),
+     "vv": AssetDefinition(
+         {
+-            "title": "VV",
++            "title": "VV Data",
+             "type": pystac.MediaType.COG,
+             "description": "VV polarization backscattering coefficient, 16-bit DN.",
+             "roles": ["data"],
+         }
+     ),
+     "schema-calibration-hh": AssetDefinition(
+         {
+-            "title": "Calibration Schema",
++            "title": "HH Calibration Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Calibration metadata including calibration information and the beta nought, "
+                 "sigma nought, gamma and digital number look-up tables that can be used for "
+                 "absolute product calibration."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-calibration-hv": AssetDefinition(
+         {
+-            "title": "Calibration Schema",
++            "title": "HV Calibration Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Calibration metadata including calibration information and the beta nought, "
+                 "sigma nought, gamma and digital number look-up tables that can be used for "
+                 "absolute product calibration."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-calibration-vh": AssetDefinition(
+         {
+-            "title": "Calibration Schema",
++            "title": "VH Calibration Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Calibration metadata including calibration information and the beta nought, "
+                 "sigma nought, gamma and digital number look-up tables that can be used for "
+                 "absolute product calibration."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-calibration-vv": AssetDefinition(
+         {
+-            "title": "Calibration Schema",
++            "title": "VV Calibration Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Calibration metadata including calibration information and the beta nought, "
+                 "sigma nought, gamma and digital number look-up tables that can be used for "
+                 "absolute product calibration."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-noise-hh": AssetDefinition(
+         {
+-            "title": "Noise Schema",
++            "title": "HH Noise Schema",
+             "type": pystac.MediaType.XML,
+             "description": "Estimated thermal noise look-up tables",
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-noise-hv": AssetDefinition(
+         {
+-            "title": "Noise Schema",
++            "title": "HV Noise Schema",
+             "type": pystac.MediaType.XML,
+             "description": "Estimated thermal noise look-up tables",
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-noise-vh": AssetDefinition(
+         {
+-            "title": "Noise Schema",
++            "title": "VH Noise Schema",
+             "type": pystac.MediaType.XML,
+             "description": "Estimated thermal noise look-up tables",
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-noise-vv": AssetDefinition(
+         {
+-            "title": "Noise Schema",
++            "title": "VV Noise Schema",
+             "type": pystac.MediaType.XML,
+             "description": "Estimated thermal noise look-up tables",
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-product-hh": AssetDefinition(
+         {
+-            "title": "Product Schema",
++            "title": "HH Product Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Describes the main characteristics corresponding to the band: state of the "
+                 "platform during acquisition, image properties, Doppler information, geographic "
+                 "location, etc."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-product-hv": AssetDefinition(
+         {
+-            "title": "Product Schema",
++            "title": "HV Product Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Describes the main characteristics corresponding to the band: state of the "
+                 "platform during acquisition, image properties, Doppler information, geographic "
+                 "location, etc."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-product-vh": AssetDefinition(
+         {
+-            "title": "Product Schema",
++            "title": "VH Product Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Describes the main characteristics corresponding to the band: state of the "
+                 "platform during acquisition, image properties, Doppler information, geographic "
+                 "location, etc."
+             ),
+             "roles": ["metadata"],
+         }
+     ),
+     "schema-product-vv": AssetDefinition(
+         {
+-            "title": "Product Schema",
++            "title": "VV Product Schema",
+             "type": pystac.MediaType.XML,
+             "description": (
+                 "Describes the main characteristics corresponding to the band: state of the "
+                 "platform during acquisition, image properties, Doppler information, geographic "
+                 "location, etc."
+             ),
+             "roles": ["metadata"],
+```
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/metadata_links.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/metadata_links.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -28,14 +28,22 @@
+     + "-([0-9]{8}t[0-9]{6})"
+     + "-([0-9]{6})"
+     + "-([0-9a-f]{6})"
+     + ".*$"
+ )
+ 
+ 
++def extract_polarisation(href: str) -> str:
++    match = re.search(r"(hh|hv|vv|vh)", href)
++    if match:
++        return match.group(0).upper()
++    else:
++        raise RuntimeError(f"Failed to match polarisation: {href}")
++
++
+ def extract_properties(href: str, properties: List[str]) -> List[str]:
+     matches = dataset_naming_pattern.match(href)
+     if matches is not None:
+         return [matches.group(name) for name in properties]
+     else:
+         raise RuntimeError(f"href doesn't match dataset naming pattern: {href}")
+ 
+@@ -195,47 +203,62 @@
+         assets = []
+         desc = (
+             "Describes the main characteristics corresponding to the band: state of the "
+             "platform during acquisition, image properties, Doppler information, geographic "
+             "location, etc."
+         )
+         for key, href in self.annotation_hrefs:
+-            asset = pystac.Asset(
+-                href=href,
+-                media_type=pystac.MediaType.XML,
+-                title="Product Schema",
+-                roles=["metadata"],
+-                description=desc,
+-            )
+-            assets.append((key, asset))
++            # Extract polarisation from href
++            polarisation = extract_polarisation(href)
++            if polarisation:
++                # Add polarisation to title
++                title = f"{polarisation} Product Schema"
++                asset = pystac.Asset(
++                    href=href,
++                    media_type=pystac.MediaType.XML,
++                    title=title,
++                    roles=["metadata"],
++                    description=desc,
++                )
++                assets.append((key, asset))
+         return assets
+ 
+     def create_calibration_asset(self) -> List[Tuple[str, pystac.asset.Asset]]:
+         assets = []
+         desc = (
+             "Calibration metadata including calibration information and the beta nought, "
+             "sigma nought, gamma and digital number look-up tables that can be used for "
+             "absolute product calibration."
+         )
+         for key, href in self.calibration_hrefs:
+-            asset = pystac.Asset(
+-                href=href,
+-                media_type=pystac.MediaType.XML,
+-                title="Calibration Schema",
+-                roles=["metadata"],
+-                description=desc,
+-            )
+-            assets.append((key, asset))
++            # Extract polarisation from href
++            polarisation = extract_polarisation(href)
++            if polarisation:
++                # Add polarisation to title
++                title = f"{polarisation} Calibration Schema"
++                asset = pystac.Asset(
++                    href=href,
++                    media_type=pystac.MediaType.XML,
++                    title=title,
++                    roles=["metadata"],
++                    description=desc,
++                )
++                assets.append((key, asset))
+         return assets
+ 
+     def create_noise_asset(self) -> List[Tuple[str, pystac.asset.Asset]]:
+         assets = []
+         for key, href in self.noise_hrefs:
+-            asset = pystac.Asset(
+-                href=href,
+-                media_type=pystac.MediaType.XML,
+-                title="Noise Schema",
+-                roles=["metadata"],
+-                description="Estimated thermal noise look-up tables",
+-            )
+-            assets.append((key, asset))
++            # Extract polarisation from href
++            polarisation = extract_polarisation(href)
++            if polarisation:
++                # Add polarisation to title
++                title = f"{polarisation} Noise Schema"
++                asset = pystac.Asset(
++                    href=href,
++                    media_type=pystac.MediaType.XML,
++                    title=title,
++                    roles=["metadata"],
++                    description="Estimated thermal noise look-up tables",
++                )
++                assets.append((key, asset))
+         return assets
+```
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/product_metadata.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/product_metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/properties.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/grd/stac.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/grd/stac.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/commands.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/constants.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/rtc_metadata.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/rtc_metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools/sentinel1/rtc/stac.py` & `stactools-sentinel1-0.5.2/src/stactools/sentinel1/rtc/stac.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/PKG-INFO` & `stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: stactools-sentinel1
+-Version: 0.5.1
++Version: 0.5.2
+ Summary: stactools subpackage for creating sentinel1 STACs
+ Home-page: https://github.com/stactools-packages/sentinel1
+ Author: stac-utils
+ Author-email: stac@radiant.earth
+ Project-URL: Documentation, https://github.com/stactools-packages/sentinel1
+ Project-URL: Issues, https://github.com/stactools-packages/sentinel1/issues
+ Keywords: stactools,pystac,catalog,STAC,sentinel,GRD,radar
+```
+
+### Comparing `stactools-sentinel1-0.5.1/src/stactools_sentinel1.egg-info/SOURCES.txt` & `stactools-sentinel1-0.5.2/src/stactools_sentinel1.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

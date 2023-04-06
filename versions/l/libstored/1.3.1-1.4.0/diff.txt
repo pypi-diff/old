@@ -1,0 +1,1300 @@
+--- tmp/libstored-1.3.1.tar.gz
++++ tmp/libstored-1.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "libstored-1.3.1.tar", last modified: Fri Oct 21 13:30:19 2022, max compression
+│ +gzip compressed data, was "libstored-1.4.0.tar", last modified: Thu Apr  6 20:53:42 2023, max compression
+│   --- libstored-1.3.1.tar
+├── +++ libstored-1.4.0.tar
+│ ├── file list
+│ │ @@ -1,42 +1,42 @@
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    16727 2022-10-20 11:21:51.000000 libstored-1.3.1/LICENSE
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2022-03-28 13:51:58.000000 libstored-1.3.1/MANIFEST.in
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     2178 2022-10-21 13:30:19.319247 libstored-1.3.1/PKG-INFO
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     1562 2021-09-16 07:22:32.000000 libstored-1.3.1/README.md
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)      625 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/__init__.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/cli/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/cli/__init__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     1402 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/cli/__main__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     6596 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/csv.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/gui/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/gui/__init__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    16831 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/gui/__main__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    27668 2022-10-21 06:56:10.000000 libstored-1.3.1/libstored/gui/gui_qrc.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    17238 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/protocol.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     2537 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/serial2zmq.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     2881 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/stdio2zmq.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     4864 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/stream2zmq.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)      345 2022-10-21 13:30:10.000000 libstored-1.3.1/libstored/version.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/visu/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/visu/__init__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     3636 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/visu/__main__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    10511 2022-10-21 06:56:10.000000 libstored-1.3.1/libstored/visu/visu_example.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/wrapper/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/wrapper/__init__.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/wrapper/serial/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/wrapper/serial/__init__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     1887 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/wrapper/serial/__main__.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored/wrapper/stdio/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        0 2021-09-16 07:22:32.000000 libstored-1.3.1/libstored/wrapper/stdio/__init__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     1515 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/wrapper/stdio/__main__.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)    65819 2022-10-21 12:49:51.000000 libstored-1.3.1/libstored/zmq_client.py
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     4247 2022-10-20 11:21:51.000000 libstored-1.3.1/libstored/zmq_server.py
+│ │ -drwxrwxr-x   0 jrt       (1000) jrt       (1000)        0 2022-10-21 13:30:19.319247 libstored-1.3.1/libstored.egg-info/
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     2178 2022-10-21 13:30:19.000000 libstored-1.3.1/libstored.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)      793 2022-10-21 13:30:19.000000 libstored-1.3.1/libstored.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)        1 2022-10-21 13:30:19.000000 libstored-1.3.1/libstored.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)       77 2022-10-21 13:30:19.000000 libstored-1.3.1/libstored.egg-info/requires.txt
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)       14 2022-10-21 13:30:19.000000 libstored-1.3.1/libstored.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)       38 2022-10-21 13:30:19.319247 libstored-1.3.1/setup.cfg
+│ │ --rw-rw-r--   0 jrt       (1000) jrt       (1000)     1564 2022-10-20 11:21:51.000000 libstored-1.3.1/setup.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.558987 libstored-1.4.0/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    16727 2023-04-06 20:44:32.000000 libstored-1.4.0/LICENSE
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2023-04-06 20:44:32.000000 libstored-1.4.0/MANIFEST.in
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     2178 2023-04-06 20:53:42.558625 libstored-1.4.0/PKG-INFO
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     1562 2021-08-24 22:50:38.000000 libstored-1.4.0/README.md
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.548460 libstored-1.4.0/libstored/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)      625 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/__init__.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.551070 libstored-1.4.0/libstored/cli/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/cli/__init__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     1402 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/cli/__main__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     6596 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/csv.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.554127 libstored-1.4.0/libstored/gui/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/gui/__init__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    17207 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/gui/__main__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    28055 2023-04-06 20:53:41.000000 libstored-1.4.0/libstored/gui/gui_qrc.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    17238 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/protocol.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     3285 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/serial2zmq.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     2881 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/stdio2zmq.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     4891 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/stream2zmq.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)      345 2023-04-06 20:46:30.000000 libstored-1.4.0/libstored/version.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.555659 libstored-1.4.0/libstored/visu/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/visu/__init__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     3636 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/visu/__main__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    10496 2023-04-06 20:53:41.000000 libstored-1.4.0/libstored/visu/visu_example.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.556048 libstored-1.4.0/libstored/wrapper/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/wrapper/__init__.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.556641 libstored-1.4.0/libstored/wrapper/serial/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/wrapper/serial/__init__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     1887 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/wrapper/serial/__main__.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.557903 libstored-1.4.0/libstored/wrapper/stdio/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        0 2021-08-24 22:50:38.000000 libstored-1.4.0/libstored/wrapper/stdio/__init__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     1515 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/wrapper/stdio/__main__.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)    65941 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/zmq_client.py
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     4247 2023-04-06 20:44:32.000000 libstored-1.4.0/libstored/zmq_server.py
+│ │ +drwxr-xr-x   0 jochem     (501) staff       (20)        0 2023-04-06 20:53:42.550427 libstored-1.4.0/libstored.egg-info/
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     2178 2023-04-06 20:53:42.000000 libstored-1.4.0/libstored.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)      793 2023-04-06 20:53:42.000000 libstored-1.4.0/libstored.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)        1 2023-04-06 20:53:42.000000 libstored-1.4.0/libstored.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)       77 2023-04-06 20:53:42.000000 libstored-1.4.0/libstored.egg-info/requires.txt
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)       14 2023-04-06 20:53:42.000000 libstored-1.4.0/libstored.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)       38 2023-04-06 20:53:42.559109 libstored-1.4.0/setup.cfg
+│ │ +-rw-r--r--   0 jochem     (501) staff       (20)     1564 2023-04-06 20:44:32.000000 libstored-1.4.0/setup.py
+│ │   --- libstored-1.3.1/LICENSE
+│ ├── +++ libstored-1.4.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- libstored-1.3.1/PKG-INFO
+│ ├── +++ libstored-1.4.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: libstored
+│ │ -Version: 1.3.1
+│ │ +Version: 1.4.0
+│ │  Summary: Embedded Debugger client for libstored's debug protocol
+│ │  Home-page: https://github.com/DEMCON/libstored
+│ │  Author: Jochem Rutgers
+│ │  Author-email: jochem.rutgers@demcon.com
+│ │  License: MPLv2.0
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+│ │   --- libstored-1.3.1/README.md
+│ ├── +++ libstored-1.4.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- libstored-1.3.1/libstored/__init__.py
+│ ├── +++ libstored-1.4.0/libstored/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  from .zmq_server import ZmqServer
+│ │  from .zmq_client import ZmqClient
+│ │   --- libstored-1.3.1/libstored/cli/__main__.py
+│ ├── +++ libstored-1.4.0/libstored/cli/__main__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import sys
+│ │  import argparse
+│ │   --- libstored-1.3.1/libstored/csv.py
+│ ├── +++ libstored-1.4.0/libstored/csv.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import csv
+│ │  import time
+│ │   --- libstored-1.3.1/libstored/gui/__main__.py
+│ ├── +++ libstored-1.4.0/libstored/gui/__main__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,21 +1,23 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │ -import sys
+│ │  import argparse
+│ │ -import os
+│ │ -import natsort
+│ │ +import gc
+│ │  import logging
+│ │ +import natsort
+│ │ +import os
+│ │ +import signal
+│ │ +import sys
+│ │  import time
+│ │  
+│ │  from PySide6.QtGui import QGuiApplication, QIcon
+│ │  from PySide6.QtQml import QQmlApplicationEngine
+│ │  from PySide6.QtCore import QUrl, QAbstractListModel, QModelIndex, Qt, Slot, \
+│ │      QSortFilterProxyModel, QCoreApplication, qInstallMessageHandler, QtMsgType, \
+│ │      QObject, QTimer, Property, Signal
+│ │ @@ -472,14 +474,18 @@
+│ │      except ConnectionResetError:
+│ │          print(f'Reconnecting to lognplot...')
+│ │          try:
+│ │              lognplot.connect()
+│ │          except:
+│ │              pass
+│ │  
+│ │ +def signal_handler(sig, stk, app):
+│ │ +    app.exit(1)
+│ │ +    signal.signal(sig, signal.SIG_DFL)
+│ │ +
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      logger = logging.getLogger('gui')
+│ │      qInstallMessageHandler(msgHandler)
+│ │  
+│ │      QCoreApplication.setApplicationName("Embedded Debugger")
+│ │ @@ -562,23 +568,31 @@
+│ │          print(f'Connecting to lognplot at {args.lognplot}:{args.lognplotport}...')
+│ │          lognplot = LognplotTcpClient(args.lognplot, args.lognplotport)
+│ │          lognplot.connect()
+│ │          for o in client.objects:
+│ │              if o.isFixed():
+│ │                  o.valueUpdated.connect(lambda o=o: lognplot_send(lognplot, o))
+│ │  
+│ │ +    engine.quit.connect(engine.deleteLater)
+│ │ +    engine.destroyed.connect(app.quit)
+│ │ +    app.aboutToQuit.connect(engine.deleteLater)
+│ │ +
+│ │      engine.addImportPath("qrc:/");
+│ │      engine.load('qrc:/main.qml')
+│ │      if not engine.rootObjects():
+│ │          sys.exit(-1)
+│ │  
+│ │      if not args.clearState:
+│ │          # We are not really clearing the state; we won't load it, but we still
+│ │          # do overwrite it afterwards.
+│ │          client.restoreState()
+│ │  
+│ │ +    signal.signal(signal.SIGINT, lambda sig, stk: signal_handler(sig, stk, app))
+│ │      res = app.exec()
+│ │  
+│ │ +    logger.info('Exiting...')
+│ │ +
+│ │      client.saveState()
+│ │      client.close()
+│ │ -    sys.exit(res)
+│ │ +    gc.collect()
+│ │  
+│ │ +    sys.exit(res)
+│ │   --- libstored-1.3.1/libstored/gui/gui_qrc.py
+│ ├── +++ libstored-1.4.0/libstored/gui/gui_qrc.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  # Resource object code (Python 3)
+│ │  # Created by: object code
+│ │ -# Created by: The Resource Compiler for Qt version 6.4.0
+│ │ +# Created by: The Resource Compiler for Qt version 6.5.0
+│ │  # WARNING! All changes made in this file will be lost!
+│ │  
+│ │  from PySide6 import QtCore
+│ │  
+│ │  qt_resource_data = b"\
+│ │  \x00\x00\x04\xc3\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -141,15 +141,15 @@
+│ │  D\xaeB`\x82\
+│ │  \x00\x00\x05t\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -228,118 +228,118 @@
+│ │  anged(x) {\x0a     \
+│ │         append(x)\
+│ │  \x0a        }\x0a    }\
+│ │  \x0a}\x0a\
+│ │  \x00\x00\x06\x13\
+│ │  \x00\
+│ │  \x00\x16Nx\xda\xcdXmo\xdb6\x10\xfe\xee_q\
+│ │ -s\xb1\xd6\xee\x8b\xec\x04\xe8P\xb8\xcb\x8a\xd4H\xb1l\
+│ │ +s\xb1\xd6\xee\x8b\xecd\xe8P\xb8\xcb\x8a\xccH\xb1l\
+│ │  \xc9\x9a&A\x8ba\xdb\x07Z\xa2,64\xa9\x91T\
+│ │  \x1cw\xc8\x7f\xdf\x1d%\xdbz\xb3\xe3&\x1b6\x1bq\
+│ │  $\xde\x1dy|\xee\x95\x1c<\xed\xc0S\x90bb\x9d\
+│ │  6<z\x0e\x91\xb0\xce\x88I\xe6x\x04\x11\x9fd\xd3\
+│ │  )\x9bH\x0e\x11s\x0c<\x8f\x0dHb\xac\xd3\x85\x11\
+│ │ -\xd3\xc4Ao\xdc\x87\xfd\xe1\xfe\xf0\x05\xfe\xec\x03\xfc\xa4\
+│ │ -\xc3\x84\xcf\xe0<sSn,\xb2\x12\xf7e\x22,\x5c\
+│ │ -\xe8\xcc\x84\x1c%#\x0e\xef\xb4\x99\x01\x8e\xd9l\xf2\x99\
+│ │ -\x87\x0e\x9c\x06\x97pp\xdc\xcc,\xe8\xd8\xbf\x9c\xea/\
+│ │ -BJ\x06g\xd9D\x8a\x90\xa69\x11!W\x96?\x87\
+│ │ -\xeb\x00\xf6\x83a\x00\xc710\x08Q\x95\x95\xcc\xd9\x09\
+│ │ -\xcc\x99\x05\xa5]e's\xe1\x12d\x10\xa4\x10\xc4B\
+│ │ -\xe2\x1c\xbf\xea\x0cB\xa6@O\x1c\x13\xf8Oq`\x0e\
+│ │ -\x12\xe7R;\x1a\x0cf\xf9\xe2\x816\xd3\x01N:\xc0\
+│ │ -\xe5\x06\xb4\xf1A\xa7#f\xa96\x0e>\xb8\x0f\x99\x08\
+│ │ -\xafj\xaf\xc1\x09[\xe8\xcc\xd9\xfa\xf0X+g\xb4\xb4\
+│ │ -\x80\xca-\x9fWS\x9d,\xe1G6\x1cQ\x5c9\xcf\
+│ │ -\xb8\x1a\xeft\xce\x11%\xa6\xa6h\x89\xbf:\x80\x1f\xc3\
+│ │ -\xff\xcc\x04R 5:\xe5\xc6-\xe0\x9a\x19\xdc\xcb\xe7\
+│ │ --\xd4\x19\x22/7\xd0\x85r\xf8\x17\xf1\x1bO_\x0d\
+│ │ -O\xb4\x96`\x13=?\x93\xda\x8d f\xd2\xf2\x8eg\
+│ │ -\x11\xd1\x08\x8c\x9e\xfb\xe7\xb9\x88\x5c2\xa2\xd5Q\xcb\x13\
+│ │ -\x84=\xf0#\x9e\x96p\xf2\x12\xe2\xd5.\x88q\xe7\x17\
+│ │ -\xe2\x0bG#\xec{j\xa8\xa56\xa3bO~\xda\xb8\
+│ │ -G\x13|\x14|\x1e\x5c\xd3O\x98\x19\x83x\x1c\x93n\
+│ │ -pp\x90+\xd9_\xf1\xe7\xbbq\x99Q\xd0}\x14\x0d\
+│ │ -\xe9\xdb-O\xe6\xd9\xe1[\xd8'\xd9\xe1\x06\xb9xH\
+│ │ -\xdf\xb5\xdc\x920O\x84\xe3\xf9\xf0m\xbe\xebs=\xcf\
+│ │ -\x0d\x5cR\x99\xa90\xd1\xc6\x06\xe8Vr\x04)#u\
+│ │ -;+\xea%\xbf)3\xd3'\x9f\xc1\xf3\xffX\xa0\xe3\
+│ │ -L\xc67\xf1|\xca\xd1\xdd\xc42\x13J\xcc\xb2Y\xc1\
+│ │ -U\x87\xf9eE\xc4\xa12\xdeN\x81b\xb3\xeal\x5c\
+│ │ -\x8a\x88\x8f\xbc\xba\xc1\x11=\x9f\x8a(\x92U\x9ek\xf4\
+│ │ -\x09\x112y(\xc5T\xcdp\x9b\x05\xbf\x7f\xff8\xc6\
+│ │ -\x01n*\x02\xa4H\x90\x8a\x1b.I\x9d\x9av\x0dN\
+│ │ -\x1a<\xd5+->\x16\xab\xbd\x13%8=\xa4\xe8\x94\
+│ │ -\x97\x22\xad\xa1\xea\x15\x14V`\xb6\x1a\xa1\xabg\x96\x1f\
+│ │ -\x1a\xce\x82\x10'\xc6\xf8\xb6\xa74\xd2\x10\xa8\x02\x02\xcf\
+│ │ -\xa0G\xcfL\x0a\x8c\xbe7\xd0\xfd]\x1d\xd2\xe3\x08\xba\
+│ │ -HZS\xf0\xbd[u\xa5\xdb\xaa\x86\xa7\xcb\xe5[t\
+│ │ -\xa4\xc0Y\xa9\xd7\xa0\xb6:S\x9d)\xd1h\x89#E\
+│ │ -\x899jq\x8c\xdbN\x8bZ\xe3\x84\x87Wo\xf5M\
+│ │ -M#\xd2&\xc5\xd8\x9e\xe8\x9b\xfb\xfahjx\xcc1\
+│ │ -H\xa3\xc2\x05s\xa5\x83<\xf0w\xb5\x5cn\x88n\xbe\
+│ │ -)\xafQw\x1b\xc0!\xed\x86{$1\xa7\x05\xc4_\
+│ │ -\xa1k5\xce9\xc6\x09f\xcd*#\x1c,\xc5;\xad\
+│ │ -\xbe\xb3Lw\xad(\x16\xa9\x9b\x12\xf5D\xb7\xc3\x19c\
+│ │ -mc\xb5\x8d\xc7\x99\x0a\x9d\xd0\x0aK\xa8\xb9\xd4>\x99\
+│ │ -\xf5l\xbf\xcd\x831O\xc7\xa8!9[>\x91}\xdd\
+│ │ -`BB\x8f\x18\x052\x0e_\xe3\xbf\xef!\x0e$W\
+│ │ -S\x97\xe0\xdb\xb3g\xfd\x86D\x91\x0d\xe3\xdf\xc4\x1f\x94\
+│ │ -\x08m;G)\xf7\x89\xe6\xaa\x05\xe5\xc5\xde\xebm\x96\
+│ │ -\xf18\x8f\xca\xfa\xdf3#<\xc0\x03\xebI\xf0Uk\
+│ │ -\xded7\xa5\xbcY8\xad\xaf[0\xa8\xa5\xcdr\x0d\
+│ │ -\x1a\x95M\xb8\xdee\x15P\xa7\xd33\x16EBMG\
+│ │ -0\xacP&\xda9=\xdb@\xc4b\x85\x09\x0f+~\
+│ │ -\xb0\xac\x9a\xf9\xe4\xc5+\xeed\x18|\xb7\xf7j\x83L\
+│ │ -Q\x85\xeb\x93\xa0\xd4^P\xddO\xaa\xd3,\x0dv7\
+│ │ -E\xceO\x99\x94Pp|\xd6\xae_\xa7\x1e\x829l\
+│ │ -\x94\xccWa\xd8\xf4\xf85\x86\x14\x98k\x91\xad\xe1\xbf\
+│ │ -Ve\xb4\x8e\xc9\x136\xe1rcn)T\xc5\xae0\
+│ │ -\x95l\xd1Xa\xc7\xa2\xbb\xabg\xde\xab\x5c~]\x80\
+│ │ -\xd0G\xf2\xd8\xad\x9c\xa9\xea\xf6\x83\xa2\xc5\xdaZ\xe4\xcf\
+│ │ -\xbd\xdd\xee,\x1e\x0fkb\xee\x0a\xcf\x975\xf7\xfc\xfa\
+│ │ -\x00]\x97q\xb7H\xf9/w\xf66\xcdmc\xd1\x15\
+│ │ -_\xa8Uh\xb7VS\xe0\xbf\xeb\x85Z\xec\xb3>@\
+│ │ -\x1c\xab4s-E\xe9\x9a\xc9\x8c\xbf\x13\x5cF\xb5\x16\
+│ │ -8\xf6m|\xb0<9\xac\xfa\x90\xcc\xe9s\xce\xa2\xf7\
+│ │ -\xeaX\x89j\xe7\xff/x\xc0\xdeC\x1d`wp7\
+│ │ -\x1a\xda#\xb7\xc9\xda\x982B\x9eh\x19qs\xb9\xf4\
+│ │ -5x\xfc8w9\xea\x14\xbb\xd4\x14z\x90\xdft\xb7\
+│ │ -I\x8e\xf3\x03O\xf7\xd1\xab!}\xbb5k\x10\xe0r\
+│ │ -\xb1JV\xa5t\x88e\xfb\x00\x9eL\x16\x8e\xdb'\xd5\
+│ │ -\x8a\xc2\xc2\xab\xa9\xd1\x99\x8a\x02\xa6\x9c\xf0\x1d\xaaO\x07\
+│ │ -\x0dc\xdc\xb3*Ur\xcc\xf0\xab[\xf1e;H=\
+│ │ -+\x9e8s\xd0V\xd8]\xe0\x11]M7\xf7\xe5\x88\
+│ │ -m\xa9;\xc7\x86\xfc\x84Y\x07Y\x1a1\xc7\xd7my\
+│ │ -1\x8do\xcc\x1f\xd4\x0a\xe7n\x1f\x1bn\x93\xffQ;\
+│ │ -LZ\xbd0\xb9Z\xbb\xb5\xc5\x04J\xaa\xa5\xacc\xdb\
+│ │ -\xec\x8b\xdb\x0br!\xbb\xa1U.\xba\xc9o\x0a\x1a\x19\
+│ │ -s\xdd^\xb7\xb7\x96\x95\xf6;O&w\xdbiY\xd8\
+│ │ -\xdff\xe8\x9e\xaa\xc5\x5c\x05&9\xfd\x9f2\x98\x98\xa5\
+│ │ -R\x84\xc2}Z\xdda<\xb40u\xcf\xdbl\xb7{\
+│ │ -\xceB\xab\xa1FW\x9b\xcd\xc5\xecB\x85\x94\xae{\xfd\
+│ │ -\x8d\xb0\x96\xc0m;\x9en=x\xd2}\x10\x9bb\xc8\
+│ │ -\xf9\xfb)\xcb\xa3\xa3k\xba\xa3\xaaa\xaa\xd5\x19\xee\xd2\
+│ │ -\x92\x9a=\x7f\xc2\xed\xc3\xc1\x0f5\x8dKwD\xd5\x9b\
+│ │ -\x1d<W\xd4zN\x89\xa7\xdb\xf7\xbb\xb2S\x0d\xdbv\
+│ │ -qT\xba\xdc\xda,\x12\xeb0\xb3\xc8\xdb\xf0\x14\xbf\x9b\
+│ │ -\x80\x85!O\xe96\xb1\xee\xc1\x15p)Y\x1fE\xa2\
+│ │ -\x5c\x84E\x1e\x91\xd4\x97\xd0\xbdi\xa7\x91#\xab\xd3\xb5\
+│ │ -\xdc\xd2\x14s\xff\xcc\x176(\xc3\xcc\xc9\x0e5\x981\
+│ │ -2\xfd0\xfa\xa9\xc3\x08\xb5\xbd\x0b\xc7T\xc4L\x84\xd2\
+│ │ -\x01\xad\xdf\xef7\x8d\xb2\xd4-\xb0\x5c\x22\xe2\x87R\xd6\
+│ │ -\x5c\xa9\xccC7\xae%\xf2r\xfb\xb7\x9d\xbf\x01r\xe0\
+│ │ -5y\
+│ │ +\xd3\xc4Ao\xdc\x87\xfd\xe1\xfe\xf0\x05\xfe|\x03\xf0\x93\
+│ │ +\x0e\x13>\x83\xf3\xccM\xb9\xb1\xc8J\xdc\x97\x89\xb0p\
+│ │ +\xa13\x13r\x94\x8c8\xbc\xd5f\x068f\xb3\xc9'\
+│ │ +\x1e:p\x1a\x5c\xc2\xc1q3\xb3\xa0c\xffr\xaa?\
+│ │ +\x0b)\x19\x9ce\x13)B\x9a\xe6D\x84\x5cY\xfe\x1c\
+│ │ +\xae\x03\xd8\x0f\x86\x01\x1c\xc7\xc0 DUV2g'\
+│ │ +0g\x16\x94v\x95\x9d\xcc\x85K\x90A\x90B\x10\x0b\
+│ │ +\x89s\xfc\xaa3\x08\x99\x02=qL\xe0?\xc5\x819\
+│ │ +H\x9cK\xedh0\x98\xe5\x8b\x07\xdaL\x078\xe9\x00\
+│ │ +\x97\x1b\xd0\xc6\x07\x9d\x8e\x98\xa5\xda8x\xef\xdeg\x22\
+│ │ +\xbc\xaa\xbd\x06'l\xa13g\xeb\xc3c\xad\x9c\xd1\xd2\
+│ │ +\x02*\xb7|^Mu\xb2\x84\x1f\xd9pDq\xe5<\
+│ │ +\xe3j\xbc\xd39G\x94\x98\x9a\xa2%\xfe\xea\x00~\x0c\
+│ │ +\xff3\x13H\x81\xd4\xe8\x94\x1b\xb7\x80kfp/\x9f\
+│ │ +\xb6Pg\x88\xbc\xdc@\x17\xca\xe1_\xc4o<}5\
+│ │ +<\xd1Z\x82M\xf4\xfcLj7\x82\x98I\xcb;\x9e\
+│ │ +ED#0z\xee\x9f\xe7\x22r\xc9\x88VG-O\
+│ │ +\x10\xf6\xc0\x8fxZ\xc2\xc9K\x88W\xbb \xc6\x9d_\
+│ │ +\x88\xcf\x1c\x8d\xb0\xef\xa9\xa1\x96\xda\x8c\x8a=\xf9i\xe3\
+│ │ +\x1eM\xf0A\xf0ypM?af\x0c\xe2qL\xba\
+│ │ +\xc1\xc1A\xaed\x7f\xc5\x9f\xef\xc6eFA\xf7Q4\
+│ │ +\xa4o\xb7<\x99g\x87\xafa\x9fd\x87\x1b\xe4\xe2!\
+│ │ +}\xd7rK\xc2<\x11\x8e\xe7\xc3\xb7\xf9\xae\xcf\xf5<\
+│ │ +7pIe\xa6\xc2D\x1b\x1b\xa0[\xc9\x11\xa4\x8c\xd4\
+│ │ +\xed\xac\xa8\x97\xfc\xa6\xccL\x9f|\x06\xcf\xffc\x81\x8e\
+│ │ +3\x19\xdf\xc4\xf31Gw\x13\xcbL(1\xcbf\x05\
+│ │ +W\x1d\xe6\x97\x15\x11\x87\xcax;\x05\x8a\xcd\xaa\xb3q\
+│ │ +)\x22>\xf2\xea\x06G\xf4|*\xa2HVy\xae\xd1\
+│ │ +'D\xc8\xe4\xa1\x14S5\xc3m\x16\xfc\xfe\xfd\xc3\x18\
+│ │ +\x07\xb8\xa9\x08\x90\x22A*n\xb8$uj\xda58\
+│ │ +i\xf0T\xaf\xb4\xf8P\xac\xf6V\x94\xe0\xf4\x90\xa2S\
+│ │ +^\x8a\xb4\x86\xaaWPX\x81\xd9j\x84\xae\x9eY~\
+│ │ +h8\x0bB\x9c\x18\xe3\xdb\x9e\xd2HC\xa0\x0a\x08<\
+│ │ +\x83\x1e=3)0\xfa\xde@\xf7wuH\x8f#\xe8\
+│ │ +\x22iM\xc1\xf7n\xd5\x95n\xab\x1a\x9e.\x97o\xd1\
+│ │ +\x91\x02g\xa5^\x83\xda\xeaLu\xa6D\xa3%\x8e\x14\
+│ │ +%\xe6\xa8\xc51n;-j\x8d\x13\x1e^\xfd\xa0o\
+│ │ +j\x1a\x916)\xc6\xf6D\xdf\xdc\xd7GS\xc3c\x8e\
+│ │ +A\x1a\x15.\x98+\x1d\xe4\x81\xbf\xab\xe5rCt\xf3\
+│ │ +My\x8d\xba\xdb\x00\x0ei7\xdc#\x899- \xfe\
+│ │ +\x0a]\xabq\xce1N0kV\x19\xe1`)\xdei\
+│ │ +\xf5\x9de\xbakE\xb1H\xdd\x94\xa8'\xba\x1d\xce\x18\
+│ │ +k\x1b\xabm<\xceT\xe8\x84VXB\xcd\xa5\xf6\xc9\
+│ │ +\xacg\xfbm\x1e\x8cy:F\x0d\xc9\xd9\xf2\x89\xec\xeb\
+│ │ +\x06\x13\x12z\xc4(\x90q\xf8\x1a\xff}\x07q \xb9\
+│ │ +\x9a\xba\x04\xdf\x9e=\xeb7$\x8al\x18\xff&\xfe\xa0\
+│ │ +Dh\xdb9J\xb9O4W-(/\xf6^o\xb3\
+│ │ +\x8c\xc7yT\xd6\xff\x9e\x19\xe1\x01\x1eXO\x82\xafZ\
+│ │ +\xf3&\xbb)\xe5\xcd\xc2i}\xdd\x82A-m\x96k\
+│ │ +\xd0\xa8l\xc2\xf5.\xab\x80:\x9d\x9e\xb1(\x12j:\
+│ │ +\x82a\x852\xd1\xce\xe9\xd9\x06\x22\x16+LxX\xf1\
+│ │ +\x83e\xd5\xcc'/^q'\xc3\xe0\xdb\xbdW\x1bd\
+│ │ +\x8a*\x5c\x9f\x04\xa5\xf6\x82\xea~R\x9dfi\xb0\xbb\
+│ │ +)r~\xca\xa4\x84\x82\xe3\xb3v\xfd:\xf5\x10\xcca\
+│ │ +\xa3d\xbe\x0a\xc3\xa6\xc7\xaf1\xa4\xc0\x5c\x8bl\x0d\xff\
+│ │ +\xb5*\xa3uL\x9e\xb0\x09\x97\x1bsK\xa1*v\x85\
+│ │ +\xa9d\x8b\xc6\x0a;\x16\xdd]=\xf3^\xe5\xf2\xcb\x02\
+│ │ +\x84>\x92\xc7n\xe5LU\xb7\x1f\x14-\xd6\xd6\x22\x7f\
+│ │ +\xee\xedvg\xf1xX\x13sWx\xbe\xac\xb9\xe7\x97\
+│ │ +\x07\xe8\xba\x8c\xbbE\xca\x7f\xb9\xb3\xb7in\x1b\x8b\xae\
+│ │ +\xf8L\xadB\xbb\xb5\x9a\x02\xff]/\xd4b\x9f\xf5\x01\
+│ │ +\xe2X\xa5\x99k)J\xd7Lf\xfc\xad\xe02\xaa\xb5\
+│ │ +\xc0\xb1o\xe3\x83\xe5\xc9a\xd5\x87dN\x9fs\x16\xbd\
+│ │ +S\xc7JT;\xff\x7f\xc1\x03\xf6\x1e\xea\x00\xbb\x83\xbb\
+│ │ +\xd1\xd0\x1e\xb9M\xd6\xc6\x94\x11\xf2D\xcb\x88\x9b\xcb\xa5\
+│ │ +\xaf\xc1\xe3\xc7\xb9\xcbQ\xa7\xd8\xa5\xa6\xd0\x83\xfc\xa6\xbb\
+│ │ +Mr\x9c\x1fx\xba\x8f^\x0d\xe9\xdb\xadY\x83\x00\x97\
+│ │ +\x8bU\xb2*\xa5C,\xdb\x07\xf0d\xb2p\xdc>\xa9\
+│ │ +V\x14\x16^M\x8d\xceT\x140\xe5\x84\xefP}:\
+│ │ +h\x18\xe3\x9eU\xa9\x92c\x86_\xdc\x8a/\xdbA\xea\
+│ │ +Y\xf1\xc4\x99\x83\xb6\xc2\xee\x02\x8f\xe8j\xba\xb9/G\
+│ │ +lK\xdd96\xe4'\xcc:\xc8\xd2\x889\xben\xcb\
+│ │ +\x8bi|c\xfe\xa0V8w\xfb\xd8p\x9b\xfc\x8f\xda\
+│ │ +a\xd2\xea\x85\xc9\xd5\xda\xad-&PR-e\x1d\xdb\
+│ │ +f_\xdc^\x90\x0b\xd9\x0d\xadr\xd1M~U\xd0\xc8\
+│ │ +\x98\xeb\xf6\xba\xbd\xb5\xac\xb4\xdfy2\xb9\xdbN\xcb\xc2\
+│ │ +\xfeC\x86\xee\xa9Z\xccU`\x92\xd3\xff)\x83\x89Y\
+│ │ +*E(\xdc\xc7\xd5\x1d\xc6C\x0bS\xf7\xbc\xcdv\xbb\
+│ │ +\xe7,\xb4\x1ajt\xb5\xd9\x5c\xcc.TH\xe9\xba\xd7\
+│ │ +\xdf\x08k\x09\xdc\xb6\xe3\xe9\xd6\x83'\xdd\x07\xb1)\x86\
+│ │ +\x9c\xbf\x9f\xb2<:\xba\xa6;\xaa\x1a\xa6Z\x9d\xe1.\
+│ │ +-\xa9\xd9\xf3'\xdc>\x1c|_\xd3\xb8tGT\xbd\
+│ │ +\xd9\xc1sE\xad\xe7\x94x\xba}\xb7+;\xd5\xb0m\
+│ │ +\x17G\xa5\xcb\xad\xcd\x22\xb1\x0e3\x8b\xbc\x0dO\xf1\xbb\
+│ │ +\x09X\x18\xf2\x94n\x13\xeb\x1e\x5c\x01\x97\x92\xf5Q$\
+│ │ +\xcaEX\xe4\x11I}\x09\xdd\x9bv\x1a9\xb2:]\
+│ │ +\xcb-M1\xf7\xcf|a\x832\xcc\x9c\xecP\x83\x19\
+│ │ +#\xd3\x0f\xa3\x9f:\x8cP\xdb\xbbpLE\xccD(\
+│ │ +\x1d\xd0\xfa\xfd~\xd3(K\xdd\x02\xcb%\x22~(e\
+│ │ +\xcd\x95\xca<t\xe3Z\x22/\xb7\x7f\xdb\xf9\x1b\x88\xe0\
+│ │ +5z\
+│ │  \x00\x00\x02z\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -367,170 +367,180 @@
+│ │      contentItem:\
+│ │   Controls.Label \
+│ │  {\x0a        palett\
+│ │  e.text: root.too\
+│ │  lTipText\x0a       \
+│ │   text: tip.text\x0a\
+│ │      }\x0a}\x0a\x0a\
+│ │ -\x00\x00\x09,\
+│ │ +\x00\x00\x09\xc6\
+│ │  \x00\
+│ │ -\x00%\xefx\xda\xcdZms\xdb\xb8\x11\xfe\xce_\x81\
+│ │ -\xb039*N`\xda\xb9\xdc]\xd5\xfa2\x8e\x9d\xcc\
+│ │ -\xa5cO\x1c\xd9\xd3L\xa7\xed\x07\x88\x84$4 \xc1\
+│ │ -\x00\xa0d'\xa7\xff~\xbb E\x93\x22)\xcb\xb2\xd3\
+│ │ -\x96\x9eH\x22\xb8X,v\x9f}\x03\xb3\xff\xcc#\xcf\
+│ │ -\x88\x14cc\x95\xe6\xf1s\x12\x0bc\xb5\x18\xe7\x96\xc7\
+│ │ -$\xe6\xe3|:ec\xc9I\xcc,#\x8e\xc6P\x9c\
+│ │ -q\xa2\xb2\x1b-\xa63K\x82\x93\x019\x0c\x0f\xc3\x17\
+│ │ -\xf0qH\xc8\xdfT4\xe3\x09\x19\xe5v\xca\xb5\x01R\
+│ │ -\xa4\xbe\x9a\x09C.U\xae#\x0e3cN\xde)\x9d\
+│ │ -\x10\x183\xf9\xf8?<\xb2\xc4*bg\x9cX\xae\x13\
+│ │ -C\xd4\xc4\xdd\x9c\xab\xafBJF.\xf2\xb1\x14\x11\xb2\
+│ │ -9\x13\x11O\x0d\x7fN\xe6\x94\x1c\xd2\x90\x92\xf7\x13\xc2\
+│ │ -H\x04\xa2Ts.\xce\xc8\x82\x19\x92*\xdb\xd8\xc9B\
+│ │ -\xd8\x19\x10\x08\x14\x88L\x84\x04\x1e\xffP9\x89XJ\
+│ │ -\xd4\xd82\x01_)'\xcc\x92\x99\xb5\x99\x19\xee\xef'\
+│ │ -\xc5\xe2T\xe9\xe9>0\xdd\x87\xe5\xf6q\xe3\xfb\x9e'\
+│ │ -\x92LiK>\xda\x8f\xb9\x88>\xaf\xdd\xd23v\xa3\
+│ │ -rk\xd6\x87?\x894V\x8b\xf5\xd1\x13\x95Z\xad\xa4\
+│ │ -! \xf2\xeaw\xb5\xc0\xd9\xca(@\x06#)O\xad\
+│ │ -#\xac\xc6=\xaf\xe0J\xbey\x04.\x11\x0f\x89V\xca\
+│ │ -z\xeeNs\x16\xabT\xde\x90L\xab\x8ck{\x83#\
+│ │ -\x92\xe4\xe22b\x92\x0f\xcb9x\xcd\x99&\x86\x1c\x11\
+│ │ -\x13i\xce\xd3jXL\x82'fP\xdd\xe2\x85T\x1f\
+│ │ --eY\x06\x06aV\xa8\x94\x16\x93\xcc?\xc3\x7fo\
+│ │ -\x9a\xa8\xb9\xcduJ\x0e\xbc:\x91\xa1RM\x81\x8f\xbc\
+│ │ -\x10\xd7\x5c\x9e\x02\x17\x01R>9:\x22y\x1a\xf3\x89\
+│ │ -Hy\xdc\xc9\xa5g\xe23r\xf8\x8a\xfe8 \xfb\xe4\
+│ │ -\xe7\xc3\xdbu\xca9\x86\xc6|\x0e\xe8q3F(\xba\
+│ │ -\xa3X\xba\xcf\xb90b\x8c:\xb1:\xe7nd!b\
+│ │ -;\x1b\x92_\xc2\xd0\xdd\xce8\x22}H~\x82\xfb\x1e\
+│ │ -\xe5FJ*\x0d0V\xf2Jdo\x98\x01n\xfe\x9f\
+│ │ -&p\xf1\xd0\xdff\xca\x15\xbf\xb68%t\x97_,\
+│ │ -S\xd9\x9d\xaa\x14\x7fK\x0eX^7\x9d\x85\x99`\x17\
+│ │ -\xffm2\xe6q\x0cX?u^\xcb\xb5\xef5\xe8D\
+│ │ -\x0cT\x91\x14\xc8N\xc4\xf0)&\xa5\x11\x83A\xdd,\
+│ │ -@\xf7\xf4)R\xa3%\xfc\xd7\xfe\xed\xc3o\x0dk\xb8\
+│ │ -u\xf7\x80\x04\xc4&{0\xc1k<\xc6%\xe7\xb7+\
+│ │ -\xce!\x184\x97*\x97\x9b\xe3j\xf3\xf6b\xadeH\
+│ │ -\x80\xcb\xcc\xe1\x9f?\xf0+\xb2e\xcd\xd4\x80}j\x85\
+│ │ -\x85hu\xe4\xa6y5\x82\xa6\x17L\xc0\xd7.\xc5W\
+│ │ -0\xd2\x9f\x017\xa5O\xact.\xf3$-\xbc\xb8\xb6\
+│ │ -c\x96F3\xa5\x0d\x85\xd8!\x87$c\x1a6\xd5z\
+│ │ -\x980=\x15\xa9\x19\x92W\xb7R\x8d\xd4\xa2\xc5\x0c\xaf\
+│ │ -b\x90f\x9aO\xb8\x06g\xfe\xad\xc4\x98\xdb\xc5J>\
+│ │ -\x04u\xd7,\x94b5a\xc2\xa4\xe1M\xdd\xafB\x09\
+│ │ -ET\xbd\x13\x5c\xc6k\x8b\xaf\xc2\x05\xf0\x81\x90\xdbz\
+│ │ -\xd4\xb1J\xe5\x1a=t\x9f\x0a\x8f\xe9$\xcb$\x8b\xf8\
+│ │ -L\xc9\x98\xeb\x12\xe6\xa0<\xae\xc1\x14S~]\xca\xe0\
+│ │ -\xdf5\xeb\x04\xbd\x05=\xe4\x97\x10\xff\xda\xf4*ud\
+│ │ -3\x96N\xd1I\x1c\xf3+\x91pM!gY\xa6m\
+│ │ -\xd0\x06\xd7\x98E\x9f\xa7ZA\xbc\xa1\x0c\x1c\x82I\xc1\
+│ │ -\x8cH\xa7=\xfb\xb0*\xbb`q\xec\x08\xc26/e\
+│ │ -\xadJ6\x10\xa0Qi\x86\x01\xa8\x80^\xc3\xd2^\x8b\
+│ │ -\xdc\xc9\xdea\xb7*\xd4W\x1b\xec&A\x15\xcf\x19\x80\
+│ │ -\xf5e\x18vRh\x9eqV\x01\xa8\x8b\x02T\x0a9\
+│ │ -\x1eB\x09*T\xb9Lm\xa8\xe1\x00)4\xd9\x88O\
+│ │ -s\xc9\xf4\xdbk\xc0\xb0q\xce\xed\x07\xaf\xc5\x00\xbd\xb4\
+│ │ -\xb0)E'l+}\xe95\xefv\x83.d\x08\x96\
+│ │ -K{\xa1\xa4td\x0f\x05q\xe5\x88%\x92\xd7\xfd\xf0\
+│ │ -\xd5\x16\xb0\xce@\x98J\xf1\x90\xa7\x06\x0fG5\xc4\x15\
+│ │ -\xf1\x15\xa4`\xf2X\x8ai\x9a\x80\xe7\x0c\x09\xce\xa4\xee\
+│ │ -~\x84\x1b\xfb\xdf\xc2Z\xf2\x89}D\xd4\x17\xe9\xb0\x07\
+│ │ -\xf7\xb6G\xcf\xf4_\xa9+1\xe16\xe7XW\xe6\x06\
+│ │ -\x8b\xbe\x19O\x09\xcb\xadz\x01\xb6\x05\x8c\xce\xf0I\xa0\
+│ │ -\xf9\x80\xa7X\xd3\xc6\xd4\xef\xc0f\xdbb\xab\xcc\x81\xd5\
+│ │ -d:-\xd6\xb8t\xbf\x87ev#\xafWi\xae\x86\
+│ │ -\xca\xf7+\xf9@`\xdf\xeb\xdeI\x8d\x97\xd7\x11\xd0\x8e\
+│ │ -\xa3\x88gk)\xbf~mX\xb4\x96\x01\xd7/\xa8\xe0\
+│ │ - \xdd\xc93\x06\xa4\xc1$O\xa3\xa2\x06 \xdfV\xa5\
+│ │ -DM*\xb2\x1c\xdcKGc0\x1f\xe1\xb1\xb0N;\
+│ │ -\x0cX\xcf\xf9;\x15\xe5\x06\xb3\xbcc\xff\xa4\xc1\xbf\xc5\
+│ │ -)*\x1c\xa2d\x01\x8a\xf5\xc1%}\xd4\xe1\x18<\xe7\
+│ │ -\xb3\xdf\xad\xa6j\x99*\xfc\xf7\xc4M(MkB\x0d\
+│ │ -:\x89\xaa\xaac\xb3\xa4\xdb\x85\xb179\xb8O\xda\x13\
+│ │ -\xc3JX\x1eKY\x90\xed\x1c\xc3J\xbf\x18\x950\x07\
+│ │ -\xeb\xfa\xf7t\xc4\xb6VO\xa0\xc6\xff\xdc\xaf\xca\x89\xd2\
+│ │ -\x81++AM\xe1_\xe0\xeb\xafU\x86\xd0jq\x02\
+│ │ -\xc1\x07\x12.\x8c\xef\xed\xf5k\xb9J)\xae3<\x87\
+│ │ -\xc6PRf\x83\xd5p\xc2\xb2+Ut\x8d\xd5\x184\
+│ │ -<\xfc:\x10\xcfI8\x18\xe0B\x03\xca\xccM\x1a\x8d\
+│ │ -\xa0\xba\x0e\xeeN5\x1d\xd6:\x83.\xf1\xef\x82/\xd6\
+│ │ -\xb6\x09\xae\x95u({\x1b\x83lQ\x15\x89*\x9f\xe2\
+│ │ -\xf2\x8dG\x09j\xa1\xca\xb6\x8dG\xf0\x80O\xc1k\x87\
+│ │ -\xe4\x83{:\xc2\xd6\xaf\xb9E\x93\xb1\xc8\xb9\xde\xcb\xc6\
+│ │ -\xf0\x0cD\x95(\xee;\x88\x11jaNr\x8d\x05\xec\
+│ │ -{\xcb\x93\xae\xfc_\xa1\xf72\x82/\xf9\x86i\xac\xdf\
+│ │ --\xb6\x5c\xc3\x8e\x87u!j\x9a\x1d\x81\x88\xe0\x8dP\
+│ │ -\x8e7U\xdbLIm\xe5D\xab\x9c\x18\x85\xf8\xd7D\
+│ │ -\xb2f\xb1\xc8\xcd\xfa\xfe\xb6Py_\xbd\xdd\xc9\x08s\
+│ │ -\xda\xb9+\xe6\x87\xe4 \xec\xa2pg\x1f=$U?\
+│ │ -\x89y\x8a\xc7\x1f*C\xd3\xf2\xc9\xa3\xe1\xb0\xb5\x9b\x08\
+│ │ -\x8c\x03\x86-n\xbbf$\xecZ$y\xb2\xa2/\x1a\
+│ │ -\x19Z4\xb8\xd0:\xbf\xdc\x05\xc9\xeb\xdb\xec\xc2s\x9d\
+│ │ -f\x0bT\x133S\x8b\x0b\xa9PD\xf8\xc4b\x92\xcd\
+│ │ -\x99\x90\xee,\xea{@>*\x1fcx\x19\x92\x17\x07\
+│ │ -\x8f\xe5\x0f\x0d<D\x18\x15\xc9\xaf\xb5*i\xb9u\xa3\
+│ │ -\xb8\x0b\xb6\xff\xab\xbd\xa4\xe6_v\xce_\xf7\xcbM\x0f\
+│ │ -l;#\x95$,\x8d\x1f^\x9b\x7f\xd72{\x87r\
+│ │ -\x10\x1a:Z\x16.ee\x086\x09\x1e\xd2\x84m\xac\
+│ │ -^J\xc7\xbc`\xb9yD\x8b~\x9f^m\xb3\xa9\xfa\
+│ │ -\xea)\x0c@m\xb3G3^\x14F\xab\xc8\x94\xa1\x06\
+│ │ -\xda\x0d\xe8m\x1aX\x8f`-\xd2\xb2!\xa9\xb1\xc4\xef\
+│ │ -\xae\xaa\xb3^\x97U\xd4VM!\xcd:C@\x1d\xbf\
+│ │ -\xdc\xb1\xab\xbar\x5c\x0c\xb6Mv\x06~\x82\xe7\xe9\xb8\
+│ │ -\x82!\x90$\x5c\x1f\x950\x17\xf3\xe4\x0d\xc9\xb3\x18B\
+│ │ -v\xec\x7f\x0f\x5cA\x9f\xc5Yb\xcab\xf6\xff\x0bY\
+│ │ -??\x12\xb2.\x8b=\xfa\xfd\xa0)\xb5@M\x9e\xe1\
+│ │ -\xdb\x80\x0e|5\xa0\xb0\x22/[\x8a\x07\xc0\xa0\xd4;\
+│ │ -\x00\x01\x01p\x9bu%dv\xf7n\xc6\xf4\xc9\xbe\xd1\
+│ │ -\xf6#w\xda\xd4y\xa2\xd5\xbfg\xec\x1a\xab\xc1\xe2\x1b\
+│ │ -\x1b\xc8\x8e~\xba,3\xd6\x88\xa9\xc9\xa4\xb0\xc1\x0f?\
+│ │ -\x0c\xda\xca\xe8\xcb\xb7\xfdY\xa6#;V\xc8\xc6\x98\xf0\
+│ │ -F]\xf7\xf0\xba\x0f\x12\xef\xa8kv\x00\xed\x01=|\
+│ │ -\xe5\xf57a\xe9I\x11\xd0\xee\xe8\x9dk=t\x19\x01\
+│ │ -\x07wP6^.\x95\x06)\x22]\xe0\xccu\xca,\
+│ │ -{\xbe\xe1\x10c\xb0\x15wH\xe7Y\xf1^*\xd2\x88\
+│ │ -\xb0\xea\xa5I\xe0\x7f\xd1\xd1p\xbfp5\xfa%\x91\xfe\
+│ │ -\xdd\x0cqs0\x1f\xf0\xc3l\xee\xb0v\xfb\x0e\x06{\
+│ │ -\xcc\x9bm\xf6\xdc\xc1\xe8\xa8\xce\xe8\xad\xd6J\x0f\xb6b\
+│ │ -S\xf4C\xa9Q\x92S\x8e\xd3\x0a\xae\xeegq.\x11\
+│ │ -\x0c(|'\xc1`;\x86\xbc\xef\xac\xf7\xee\x95\xfd\x13\
+│ │ -\x96\xe2{U\xa9XL\x0a\xad\x92\x85{\x01\xb9\x85b\
+│ │ -\x97n\xe5-\x95\x87f]\xa4\xee}\x15\xee\xb6\xb0k\
+│ │ -\xd1\x1d\x04\x08\xee\xe7\x10\xf0\x12\x86\x9dWqW\x80\x0b\
+│ │ -\xbc\xbf\xeb\xb8\xaa\xeb\x02\xe6\x14;\x8c`{\xf2H*\
+│ │ -\x8c\xeb\x14t\x92\xa2\x1c\xf5\x83\xb3\xed\x15Z8\x0el\
+│ │ -\xac\xff\xd0\xbd\xa5\xb9-\x94\xeb=\x8a\xeaW>\x1a\x0b\
+│ │ -\xd3t\xd2\xcd\x12\xf4\xaf\xde\xfdd\xd9\x13BW\xc5\xc1\
+│ │ -\x19\x1bs\xb9A\xdc\x22OU\xc2y\xdb\xad\xbc\xc5Q\
+│ │ -\xd0Z'\xd7\xd1\x8do\xdbhu\x9f\x19\xdc\xd1{\xff\
+│ │ -x\xdf\xb6\xafv6\xd0\xdf\xb2\x1d\x83M{;\xb6\xcc\
+│ │ -k\xf7\x10,\xfe\x90\xca\x9b\x077jkV\xbe-\x93\
+│ │ -\x86\xbd\x07C\xed\xc3\xa1N\x19\xc6JC\x87F7\x1e\
+│ │ -\x13\xad\xad^U\x18\xd0\x10\xd1\xfa\xa9\xf4\xef\xbf\xbb\xae\
+│ │ -\xa96\xe45!R2:WP[\xaf\xa9r\xe3+\
+│ │ -a<\x11g\xd3U:\x82\xf6\xe0\xed\x1c\xff\xff\xc6\xba\
+│ │ -\xb9T\xfai\xc6\xb1p\x09\x16\xf8= G\xbf\xae)\
+│ │ -\x05\x12\x89{D\x01\xf0b\x22\xb86\xe4)&\xbb\xd2\
+│ │ -\xc8\xe7\xe5h\xdbE\x9b\x98<ja48 {\xa4\
+│ │ -`\xed\x8cq\xca\xa5e\x14\xff\x1fEH\xc30<l\
+│ │ -r\xec\xcc\x1b\xe5\xec\xb2-mE\xb5e}\x9fU\xad\
+│ │ -\x0aa\x05t\xe9v\xea~\xf5\xcfW\xe9\xa9\xca\xc1l\
+│ │ -;M\xbd\x80p\x8d\xf1\xb9\xaaj\xee5\x19\xdfh\x1e\
+│ │ -\xa7\xf1oJ\xee2\xf3\xbe\xcb\x8d\xb8\xe4\xec\x1e\xb3J\
+│ │ -\xc5\xa2RU\xe1(\xb7\x98i\xbc\xdd\x81\x9b/\xb9(\
+│ │ -\xdb\xff\xa5\xb7\xf4\xfe\x00\x81\xe6\x09H\
+│ │ +\x00'ix\xda\xcdZms\xdb\xb8\x11\xfe\xae_\x81\
+│ │ +\xb0392v(\xc5\xb9\x5c\x1a\xb5\xbe\x8cc\xc7s\
+│ │ +\xe98\x13G\xf64\xd3i\xfb\x01\x22!\x095\x080\
+│ │ +\x00(\xd9\xc9\xf9\xbf\xdf.\xf8bR$e\xf9%m\
+│ │ +\x99\x89$\x82\x8b]`\xf7\xd97\xd0\xc3g\x03\xf2\x8c\
+│ │ +\x08>5Vi\x16\xef\x92\x98\x1b\xab\xf94\xb3,&\
+│ │ +1\x9bf\xf39\x9d\x0aFbj)q4&\xc4\x19\
+│ │ +\x87*\xbd\xd2|\xbe\xb0\xc4?\x0c\xc8\xdeho\xf4\x1c\
+│ │ +>^\x12\xf27\x15-XB&\x99\x9d3m\x80\x14\
+│ │ +\xa9\xcf\x17\xdc\x903\x95\xe9\x88\xc1\xcc\x98\x91c\xa5\x13\
+│ │ +\x02c&\x9b\xfe\x87E\x96XE\xec\x82\x11\xcbtb\
+│ │ +\x88\x9a\xb9\x9b\x8f\xea\x1b\x17\x82\x92\xd3l*x\x84l\
+│ │ +Nx\xc4\xa4a\xbbd\x19\x92\xbdp\x14\x92\x0f3B\
+│ │ +I\x04K\xa9\xe6\x9c\x9e\x90\x155D*\xdb\xd8\xc9\x8a\
+│ │ +\xdb\x05\x10p\x5c\x10\x99q\x01<\xfe\xa12\x12QI\
+│ │ +\xd4\xd4R\x0e_\x92\x11j\xc9\xc2\xda\xd4\x8c\x87\xc3$\
+│ │ +\x17\x1e*=\x1f\x02\xd3!\x88\x1b\xe2\xc6\x87\x83\x01O\
+│ │ +R\xa5-\xf9l?g<\xbaX\xbb\x0dO\xe8\x95\xca\
+│ │ +\xacY\x1f\xfe\xc2e\xacV\xeb\xa3\x87JZ\xad\x84!\
+│ │ +\xb0\xe4\xf2w%\xe0\xa44\x0a\x90\xc1\x88d\xd2:\xc2\
+│ │ +j|0\xc8\xb9\x92\xef\x03\x02\x17\x8f\xc7D+e\x07\
+│ │ +\xeeN3\x1a+)\xaeH\xaaU\xca\xb4\xbd\xc2\x11A\
+│ │ +2~\x16Q\xc1\xc6\xc5\x1c\xbc\x96T\x13C\xf6\x89\x89\
+│ │ +4c\xb2\x1a\xe63\xff\x89\x09\xaa[\xbc\x90\xea\xb3\x0d\
+│ │ +i\x9a\x82A\xa8\xe5J\x86\xf9$\xf3\xcf\xd1\xbf7M\
+│ │ +\xd4\xccfZ\x92\x17\x83:\x91\x09\x85\x9a\x03\x1fq\xca\
+│ │ +/\x998\x02.\x1cV\xf9d\x7f\x9fd2f3.\
+│ │ +Y\xdc\xc9\xa5g\xe23\xb2\xf7*\xfc9 C\xf2z\
+│ │ +\xefFN1\xc7\x841[\x02z\xdc\x8c\x09.\xddQ\
+│ │ +\x5c\xbb\xcf%7|\x8a:\x99Qa\x98\x1bZ\xf1\xd8\
+│ │ +.\xc6\xe4\xf5\x9b7\xeev\xc1\x10\xeac\xf2\xcbh\xd4\
+│ │ +\xa7\xddH\x09\xa5\x01\xc7J\x9c\xf3\xf4\x1d5\xc0\xce\xfb\
+│ │ +\xd3\x0c.6\xf2\xb6\x99r\xce.-N\x19\xb9\xcb\xcb\
+│ │ +\xc5T\x86\x0f\x95\xc4\xdf\x82\x01\x98\xd7mga&\x18\
+│ │ +\xc6{\x9fLY\x1c\x03\xd8\x8f\x9c\xdb2\xed\x0d\x1at\
+│ │ +<\x06\xaaHpd\xc7c\xf8\xe4\xb3\xc2\x8a~P\xb7\
+│ │ +\x0b\xd0=}\x8a\xd4h\x0a\xef\xadw\xf3\xf0{\xc3\x1c\
+│ │ +N\xee\x0e\x90\xc0\xb2\xc9\x0eL\x184\x1e\xa3\xc8\xe5\x8d\
+│ │ +\xc4%D\x83\xa6\xa8B\xdc\x12\xa5-\xdb\xc2Zb\x88\
+│ │ +\x8fb\x96\xf0\xdf\x0b\xbc\x8a\xec\xbafk\x00\x7fh\xb9\
+│ │ +\x85p\xb5\xef\xa65\x9f\x14f\xc6g:c7\xd3\x86\
+│ │ +C\x08M\x09[\xa8\xd5\xae\x8b!\x06\x90\xc5\xe5\xbc\x0c\
+│ │ +)\x11\xf8\xa5s\xbd\xe2~\x95\xfb\x1c\x04\xaf\x95Vr\
+│ │ +\xbe[\xe7\x13\xb3\x94\xc9\xd8M\x96\xe4\xe8\xf4\x031\xcc\
+│ │ +Z\xb8\xad&'Jr\xf0\xdd\x90\x90\x09\x8b5]!\
+│ │ +\xa9\xaft\x9dG\xa2\x960:\x84@\xcb\xbf\xe1\xe3\x1b\
+│ │ +\x99\x01\xb0c\x10\x1f!X\xae\x94\xbe\x08\xc91\xbd`\
+│ │ +.\xaa\x91\xe9\x15\x99)\x1d!=\xad3\xd3N\x0a\xa1\
+│ │ +3\x88\xac\x10\xf7\xb4\xb1\x84\xc3\x0a8\xec\xf0[\xee\xc0\
+│ │ +\x15586l\x5c\x9cP \xf5g\x99\x8crd\xac\
+│ │ +\x19\xddi\xd2y\x07\xe8\xb1v\xb3\x03\xce]\x99$\x18\
+│ │ +\xd4,\xd3\x8c?3\xd0\xe6\x19\xff\x06\xde\xf1\x06<\xb6\
+│ │ +\x88F%\xd8E\x96\xc8<~\xd6\xa4R\x19-\x946\
+│ │ +!Dm1&)\xd5`\x8c\xd6\xc3\x84\xea9\x97f\
+│ │ +L^\xdd\xd8u\xa2V-fx\xe5\x83a\xaa\xd9\x8c\
+│ │ +iP\xd0o\x85s\xbb\xdd\x94\xeb\xc3p\xd25\x0bW\
+│ │ +QN\xc8\xc3E\x83\xaa\x0c\xe2!\xba\xf31g\x22^\
+│ │ +\x13^\x06j\xe0\x03zn=\xea\x90\xe2\xc0\xba\x81\xee\
+│ │ +K\x1e\xaa:\xc9RA#\x00\xb6\x88\x99.\xe2\x0b(\
+│ │ +\x0f\x90\xa0\xd9\x9c]\x16k\xf0n\x9bu\x88a\x0aC\
+│ │ +\xd3\x9fG\xf8\xafM\xaf\xa4#[P9\xc7\xe8\xe4\x98\
+│ │ +\x9f\xf3\x84\xe9\x10@l\xa9\xb6~\xdb\xab\xa74\xba\x98\
+│ │ +k\x05\x91>\xa4\xd2\xe1\x91\x1a@o\xcf>\xacJO\
+│ │ +i\x1c;\x82Q\x9b\x97\xb2V%\x1b\x08\xd0\xa8a\x8a\
+│ │ +\xa1?\x87^\xc3\xd2\x83\x16\xb9[{\x87\xdd\xaa$[\
+│ │ +m\xb0\x9b\x04U\xbc\xa4\x00\xd6\x97\xa3Q'\x85\x860\
+│ │ +Am=\xdft\xa8\x14\xaa+\x88\xe1\xa8P\xe5j$\
+│ │ +\x13B09v&\x9b\xb0y&\xa8~\x7f\x09\x186\
+│ │ +.\xaaz\xfe[\x1e`x\xccm\x1ab\xf4k+\xfd\
+│ │ +z\xd0\xbc\xbb\x1ft!7\xd3L\xd8S%\x84#{\
+│ │ +(\x88+G,\x90\xbc\xee\x87\xaf\xb6\x80u\x0a\x8b\xa9\
+│ │ +\x14\x0f\x15B\xf0pTC\x5c\xe1\xdf`\x15T\x1c\x08\
+│ │ +>\x97\x09x\xce\x98\xe0\xcc\xd0\xddOpc\xff[X\
+│ │ +\x0b6\xb3\x8f\x88\xfa\xbc\x0e\xe9\xc1\xbd\xed\xd1s\xf8/\
+│ │ +\xe9\x8a{\xb8\xcd\x18&\xc5\xcc`\xb9\xbd`\x92\xd0\xcc\
+│ │ +\xaa\xe7`[\xc0\xe8\x02\x9f\xf8\x9a\x05Lb7\x11\x87\
+│ │ +^\x076\xdb\x16+3\x07\xd6\xf1\x90\xd9\x9c\x8c3\xf7\
+│ │ +{\x5c\x94\x15\xe4mY_\xd4P\xf9\xa1\x5c\x1f,\xd8\
+│ │ +\x1bt\xef\xa4\xc6k\xd0\x11\xd0\x0e\xa2\x88\xa5k\xb5V\
+│ │ +\xfd\xda t\xad\xf4\xa8_\xbd)\xb6\xac\xe1j\xab*\
+│ │ +\xb3\xe8\xb6:\x9a\x82\xf9\x08\x8b\xb9u\xda\xa1\xc0z\xc9\
+│ │ +\x8eU\x94\x19,\xaf\x1c\xfb'\x0d\xfe-NQ\xee\x10\
+│ │ +\x05\x0bP\xac\x07.\xe9\xa1\x0e\xa7\xe09\x17^\xb7\x9a\
+│ │ +*1U\xf8\xef\x89\x9b\xd0\x14\xd4\x16\x15t\x12U\xe5\
+│ │ +\xde\xe6\x95n\x17\xc6\xdee\xe0>\xb2'\x86\x15\xb0<\
+│ │ +\x10\x22'\xbbw\x0c+\xfcbR\xc0\x1c\xac\xeb\xdd\xd1\
+│ │ +\x11\xdbZ=\x84\xee\xea\xa2_\x95P\xe8\xf9\xae\x9e\x07\
+│ │ +5\x8d\xfe\x02_\x7f\xad2\x84V\xabC\x08>\x90p\
+│ │ +a|g\xa7_\xcbUJq=\xf9Gh\xc9EH\
+│ │ +\xad_\x0e'4=Wy\xbf^\x8dA\x09\xca.}\
+│ │ +\xbeKFA\x80\x82\x82\x90\x9a+\x19M\xa0\xad\xf1o\
+│ │ +O5\x1d\xd6:\x81\xfe\xfc\xef\x9c\xad\xd6\xb6\x09\xae\x95\
+│ │ +v({\x1b\x83lQ\x15\xf1*\x9f\xa2\xf8\xc6\xa3\x04\
+│ │ +\xb5Pe\xdb\xc6#x\xc0\xe6\xe0\xb5c\xf2\xc9=\x9d\
+│ │ +`\xd3\xdd\xdc\xa2Ii\xe4\x5c\xefecx\x01K\x15\
+│ │ +\xb8\xdcc\x88\x11je\x0e3\x8d\x05\xec\x07\xcb\x92\xae\
+│ │ +\xfc_\xa1\xf7,\x82/\xf1\x8ejl\x9c,6\xbb\xe3\
+│ │ +\x8e\x87\xf5E\xd44;\x81%\x827B\xaf\xd3Tm\
+│ │ +3%\xb5\x95\x13\x9591\x1a\xe1\xbf&\x925\x8dy\
+│ │ +f\xd6\xf7\xb7\x85\xca\xfb\xea\xedNF\x98\xd3>\xbab\
+│ │ +~L^\x8c\xba(\xdc\xa9S\x0fI\xd5\xc9c\x9eb\
+│ │ +\xf1\xa7\xca\xd0e\xf3\xf7h8l\xed\xa6h\x13\xf3\xdb\
+│ │ +\xae\x19\x09\xbd\xe4I\x96\x94\xf4y#\x13\xe6'\x0bd\
+│ │ +xw\xb5\x22\x92\xd7\xb7\xd9\x85\xe7:\xcd\x16\xa8&\x06\
+│ │ +\x1a\xe1S\xa1p\x89\xf0\x89\xc5$]R.\xdc)\xe0\
+│ │ +\x8f\x80|T<\xc6\xf02&\xcf_<\x96?4\xf0\
+│ │ +\x10aT$\xbf\xd6\xaa\xa4\xeb\xad\x1b\xc5\xfb`\xfb\xbf\
+│ │ +\xdaKj\xf6\xf5\xde\xf9\xebn\xb9\xe9\x81mg\xa4\x92\
+│ │ +\x84\xca\xf8\xe1\xb5\xf9\x0f-\xb3\xefQ\x0eBC\x17\x16\
+│ │ +\x85KQ\x19\x82M\xfc\x874a\x1b\xab\x97\xc21O\
+│ │ +if\x1e\xd1\xa2?\xa6W\xdbl\xaa\xbez\x0a\x03P\
+│ │ +\xdb\xec\xd1\x82\xe5\x85Q\x19\x99R\xd4@\xbb\x01\xbdI\
+│ │ +\x03\xeb\x11\xacEZ4$5\x96\xf8\xddUu\xd6\xeb\
+│ │ +\xb2\x8a\xda\xaa9\xa4Yg\x08\xa8\xe3\xaf\xef\xd9U\x9d\
+│ │ +;.\x06\xdb&\xbb\x00?\xc1#?\x94`\x08$\x09\
+│ │ +\xd7G%\xd4\xc5<qE\xb24\x86\x90\x1d{?\x02\
+│ │ +W\xd0g1\x9a\x98\xa2\x98\xfd\xffB\xd6\xebGB\xd6\
+│ │ +Y\xbeG\xaf\x1f4\x85\x16B\x93\xa5\xf8\x1e\xa6\x03_\
+│ │ +\x0d(\x94\xe4EK\xf1\x00\x18\x14z\x07  \x00n\
+│ │ +\xb2\xae\x80\xcc\xeeN\x90M\xdf\xda7\xda~\xe2N\x9b\
+│ │ +:O\xb4\xfa\xf7\x8c]c5\x98\x7fc\x03\xd9\xd1O\
+│ │ +\x17e\xc6\x1aqhR\xc1\xad\xff\xd3OA[\x19}\
+│ │ +\xf9\xb6?\xcbtd\xc7\x0a\xd9\x18\x13\xde\xa9\xcb\x1e^\
+│ │ +wA\xe2-u\xcd=@\xfb\x22\xdc{5\xe8o\xc2\
+│ │ +\xe4a\x1e\xd0n\xe9\x9dk=t\x11\x01\x83[(\x1b\
+│ │ +\xaf\xf5\x0a\x83\xe4\x91\xcew\xe6:\xa2\x96\xeen8\xc4\
+│ │ +\x08\xb6\xe2\x0e\xe9<\xcd\xdf\x08F\x1a\x11V\xbd\xad\xf2\
+│ │ +\xbd\xaf:\x1a\x0fsW\x0b\xbf&\xc2\xbb\x9d!n\x0e\
+│ │ +\xe6\x03~\xa8\xcd\x1c\xd6n^~a\x8fy\xb5\xcd\x9e\
+│ │ +;\x18\xed\xd7\x19\xbd\xd7Z\xe9`+6y?$\x8d\
+│ │ +\x12,d8-\xe7\xea~\xe6\xe7\x12~\x10\xc2w\xe2\
+│ │ +\x07\xdb1d}g\xbd\xb7K\xf6\x0e\xa9\xc47\xdaB\
+│ │ +\xd1\x98\xe4Z-^\x09m\xa1\xd8k'yK\xe5\xa1\
+│ │ +YW\xd2\xbd(\xc4\xdd\xe6v\xcd\xbb\x03\x1f\xc1\xbd\x0b\
+│ │ +\x01/\xa1\xd8y\xe5w9\xb8\xc0\xfb\xbb\x8e\xab\xba.\
+│ │ +`\x1eb\x87\xe1oO\x1e\x09\x85q=\x04\x9dH\x5c\
+│ │ +G\xef\xbb\xa9\x8d\x0a\xcd\x1d\x076\xd6\x7f\xe8\xde\xd2\xdc\
+│ │ +\x16\xca\x1d<\x8a\xeaK\x1f\x8d\xb9i:\xe9\xe6\x15\xf4\
+│ │ +K\xef~r\xdd\x13B\xcb\xe2\xe0\x84N\x99\xd8\xb0\xdc\
+│ │ +<OU\x8b\x1bl'y\x8b\xa3\xa0\xb5N\xae\xa3\x1b\
+│ │ +\xdf\xb6\xd1\xea>3\xb8\xa5\xf7\xfe\xf9\xaem_\xedl\
+│ │ +\xa0\xbfe;\x00\x9b\xf6vl\xe9\xa0\xddC\xd0\xf8\x93\
+│ │ +\x14W\x0fn\xd4\xd6\xac|S&\x8d{\x0f\x86\xda\x87\
+│ │ +C\x9dk\x98*\x0d\x1dZ\xb8\xf1\x98hMzUa\
+│ │ +@C\x14\xd6O\xa5\x7f\xff\xdduM\xb5\xa1A\x13\x22\
+│ │ +\x05\xa3\x8f\x0aj\xeb5Un|%\x8c'\xe2t^\
+│ │ +\xa6#h\x0f\xde/\xf1\xf5\xfd\xba\xb9\x94\xfc\xb2`X\
+│ │ +\xb8\xf8+\xfc\x0e\xc8\xfe\xafkJ\x81D\xe2\x1e\x85\x00\
+│ │ +x>\xe3L\x1b\xf2\x14\x93]a\xe4\x8f\xc5h\xdbE\
+│ │ +\x9b\x98\xdcoa\xd4\x7fAvH\xce\xda\x19\xe3\x88\x09\
+│ │ +KC\xfc\x0b\x96Q8\x1a\x8d\xf6\x9a\x1c;\xf3F1\
+│ │ +\xbbhK[Q\xed\xba\xbe\xcf\xaaV\x85\xb0\x02\xbat\
+│ │ +;u\xbf\xfa\xe7+y\xa420\xdb\xbd\xa6\x9eB\xb8\
+│ │ +\xc6\xf8\x5cU5w\x9a\x8co4\x0fd\xfc\x9b\x12\xf7\
+│ │ +\x99yWq\x13&\x18\xbd\xc3\xacB\xb1\xa8T\x95;\
+│ │ +\xca\xf7\xee?\xa0\x80\x9b\xaf\x19\xb7\xe5_B\x5c\x0f\xfe\
+│ │ +\x00\xa5\x04}%\
+│ │  \x00\x00\x06A\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -625,15 +635,15 @@
+│ │  \
+│ │  \x00\x00\x06^\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -738,15 +748,15 @@
+│ │  toreObject.qml\x0a\
+│ │  \x00\x00\x06\xb3\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -901,37 +911,37 @@
+│ │  \x00t\x00o\x00r\x00e\x00O\x00b\x00j\x00e\x00c\x00t\x00.\x00q\x00m\x00l\
+│ │  "
+│ │  
+│ │  qt_resource_struct = b"\
+│ │  \x00\x00\x00\x00\x00\x02\x00\x00\x00\x07\x00\x00\x00\x01\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x17\
+│ │  \x00\x00\x00\x1e\x00\x00\x00\x00\x00\x01\x00\x00\x04\xc7\
+│ │ -\x00\x00\x01\x7f\xd0\xcc7s\
+│ │ +\x00\x00\x01\x87XPW\x18\
+│ │  \x00\x00\x00\x80\x00\x01\x00\x00\x00\x01\x00\x00\x0dy\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x17\
+│ │  \x00\x00\x00\xd4\x00\x01\x00\x00\x00\x01\x00\x00\x16\x0e\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x18\
+│ │  \x00\x00\x00\xbc\x00\x02\x00\x00\x00\x01\x00\x00\x00\x08\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │  \x00\x00\x00f\x00\x00\x00\x00\x00\x01\x00\x00\x08\x01\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x17\
+│ │  \x00\x00\x00\xa0\x00\x00\x00\x00\x00\x01\x00\x00\x13\x90\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x17\
+│ │  \x00\x00\x00\xea\x00\x02\x00\x00\x00\x04\x00\x00\x00\x09\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │ -\x00\x00\x01R\x00\x00\x00\x00\x00\x01\x00\x00,Y\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ -\x00\x00\x01@\x00\x00\x00\x00\x00\x01\x00\x00+\xe5\
+│ │ -\x00\x00\x01\x7f\xd0\xcc7s\
+│ │ -\x00\x00\x01(\x00\x00\x00\x00\x00\x01\x00\x00%\x83\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ -\x00\x00\x01\x04\x00\x00\x00\x00\x00\x01\x00\x00\x1f>\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01R\x00\x00\x00\x00\x00\x01\x00\x00,\xf3\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │ +\x00\x00\x01@\x00\x00\x00\x00\x00\x01\x00\x00,\x7f\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │ +\x00\x00\x01(\x00\x00\x00\x00\x00\x01\x00\x00&\x1d\
+│ │ +\x00\x00\x01\x87XPW\x19\
+│ │ +\x00\x00\x01\x04\x00\x00\x00\x00\x00\x01\x00\x00\x1f\xd8\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │  "
+│ │  
+│ │  def qInitResources():
+│ │      QtCore.qRegisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
+│ │  
+│ │  def qCleanupResources():
+│ │      QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
+│ │   --- libstored-1.3.1/libstored/protocol.py
+│ ├── +++ libstored-1.4.0/libstored/protocol.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import logging
+│ │  import crcmod
+│ │   --- libstored-1.3.1/libstored/serial2zmq.py
+│ ├── +++ libstored-1.4.0/libstored/serial2zmq.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,39 +1,58 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │ -import sys
+│ │ -import serial
+│ │ -import zmq
+│ │ +import errno
+│ │  import logging
+│ │ +import serial
+│ │ +import sys
+│ │  import time
+│ │ +import zmq
+│ │  
+│ │  from .stream2zmq import Stream2Zmq
+│ │  
+│ │  class Serial2Zmq(Stream2Zmq):
+│ │      """Serial port frame grabber to ZmqServer bridge."""
+│ │  
+│ │      def __init__(self, stack='ascii,term', zmqlisten='*', zmqport=Stream2Zmq.default_port, drop_s=1, printStdout=True, **kwargs):
+│ │          super().__init__(stack, listen=zmqlisten, port=zmqport, printStdout=printStdout)
+│ │ +        self.logger = logging.getLogger(__name__)
+│ │ +        self.logger.debug('Opening serial port %s', kwargs['port'])
+│ │          self.serial = None
+│ │ -        self.serial = serial.Serial(**kwargs)
+│ │ +        self.serial = self._serialOpen(**kwargs)
+│ │          self.serial_socket = self.registerStream(self.serial)
+│ │          self.stdin_socket = self.registerStream(sys.stdin)
+│ │          self.rep_queue = []
+│ │ -        self.logger = logging.getLogger(__name__)
+│ │  
+│ │          self._drop = None
+│ │          self._bufferStdin = b''
+│ │          if not drop_s is None:
+│ │              self._drop = time.time() + drop_s
+│ │  
+│ │ +    def _serialOpen(self, timeout_s=60, **kwargs):
+│ │ +        last_e = TimeoutError()
+│ │ +        for i in range(0, timeout_s):
+│ │ +            try:
+│ │ +                return serial.Serial(**kwargs)
+│ │ +            except serial.SerialException as e:
+│ │ +                # For unclear reasons, Windows sometimes reports the port as
+│ │ +                # being in use.  That issue seems to clear automatically after
+│ │ +                # a while.
+│ │ +                if 'PermissionError' not in str(e):
+│ │ +                    raise
+│ │ +
+│ │ +                last_e = e
+│ │ +                self.logger.warning(e)
+│ │ +                time.sleep(1)
+│ │ +        raise last_e
+│ │ +
+│ │      def poll(self, timeout_s = None):
+│ │          dropping = not self._drop is None
+│ │  
+│ │          events = super().poll(timeout_s)
+│ │  
+│ │          if events.get(self.stdin_socket, 0) & zmq.POLLIN:
+│ │              self.recvAll(self.stdin_socket, self.sendToApp)
+│ │ @@ -65,13 +84,13 @@
+│ │              super().encode(data)
+│ │  
+│ │      def close(self):
+│ │          super().close()
+│ │          if self.serial is not None:
+│ │              self.serial.close()
+│ │              self.serial = None
+│ │ +            self.logger.debug('Closed serial port')
+│ │  
+│ │      def drop(self, data):
+│ │          # First drop_s seconds of data is dropped to get rid of
+│ │          # garbage while reset/boot/connecting the UART.
+│ │          self.logger.debug('dropped %s', data)
+│ │ -
+│ │   --- libstored-1.3.1/libstored/stdio2zmq.py
+│ ├── +++ libstored-1.4.0/libstored/stdio2zmq.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import sys
+│ │  import subprocess
+│ │   --- libstored-1.3.1/libstored/stream2zmq.py
+│ ├── +++ libstored-1.4.0/libstored/stream2zmq.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import atexit
+│ │  import sys
+│ │ @@ -102,14 +102,15 @@
+│ │  
+│ │      default_port = ZmqServer.default_port
+│ │  
+│ │      def __init__(self, stack='ascii,term', listen='*', port=default_port, timeout_s=1, printStdout=True):
+│ │          super().__init__()
+│ │          self.logger = logging.getLogger(__name__)
+│ │          self._stack_def = f'zmq={listen}:{port},' + stack
+│ │ +        self._stack = None
+│ │          self._timeout_s = timeout_s
+│ │          self._zmq = None
+│ │          self._printStdout = printStdout
+│ │          if self._printStdout:
+│ │              setInfiniteStdout()
+│ │          self.reset()
+│ │   --- libstored-1.3.1/libstored/visu/__main__.py
+│ ├── +++ libstored-1.4.0/libstored/visu/__main__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import sys
+│ │  import argparse
+│ │   --- libstored-1.3.1/libstored/visu/visu_example.py
+│ ├── +++ libstored-1.4.0/libstored/visu/visu_example.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  # Resource object code (Python 3)
+│ │  # Created by: object code
+│ │ -# Created by: The Resource Compiler for Qt version 6.4.0
+│ │ +# Created by: The Resource Compiler for Qt version 6.5.0
+│ │  # WARNING! All changes made in this file will be lost!
+│ │  
+│ │  from PySide6 import QtCore
+│ │  
+│ │  qt_resource_data = b"\
+│ │  \x00\x00\x06\xbc\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -118,15 +118,15 @@
+│ │   }\x0a    }\x0a}\x0a\
+│ │  \x00\x00\x06A\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -221,15 +221,15 @@
+│ │  \
+│ │  \x00\x00\x06^\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -334,15 +334,15 @@
+│ │  toreObject.qml\x0a\
+│ │  \x00\x00\x06\xb3\
+│ │  /\
+│ │  *\x0a * libstored, \
+│ │  distributed debu\
+│ │  ggable data stor\
+│ │  es.\x0a * Copyright\
+│ │ - (C) 2020-2022  \
+│ │ + (C) 2020-2023  \
+│ │  Jochem Rutgers\x0a \
+│ │  *\x0a * This Source\
+│ │   Code Form is su\
+│ │  bject to the ter\
+│ │  ms of the Mozill\
+│ │  a Public\x0a * Lice\
+│ │  nse, v. 2.0. If \
+│ │ @@ -475,27 +475,27 @@
+│ │  \x00t\x00o\x00r\x00e\x00O\x00b\x00j\x00e\x00c\x00t\x00.\x00q\x00m\x00l\
+│ │  "
+│ │  
+│ │  qt_resource_struct = b"\
+│ │  \x00\x00\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │  \x00\x00\x00\x18\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x19\
+│ │  \x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x03\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │  \x00\x00\x00.\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\
+│ │  \x00\x00\x00\x00\x00\x00\x00\x00\
+│ │  \x00\x00\x00\x96\x00\x00\x00\x00\x00\x01\x00\x00\x13\xdb\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │  \x00\x00\x00\x84\x00\x00\x00\x00\x00\x01\x00\x00\x13g\
+│ │ -\x00\x00\x01\x7f\xd0\xcc7s\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │  \x00\x00\x00l\x00\x00\x00\x00\x00\x01\x00\x00\x0d\x05\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x19\
+│ │  \x00\x00\x00H\x00\x00\x00\x00\x00\x01\x00\x00\x06\xc0\
+│ │ -\x00\x00\x01\x83\xf5 \xcf@\
+│ │ +\x00\x00\x01\x87XPW\x1a\
+│ │  "
+│ │  
+│ │  def qInitResources():
+│ │      QtCore.qRegisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
+│ │  
+│ │  def qCleanupResources():
+│ │      QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
+│ │   --- libstored-1.3.1/libstored/wrapper/serial/__main__.py
+│ ├── +++ libstored-1.4.0/libstored/wrapper/serial/__main__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import argparse
+│ │  import logging
+│ │   --- libstored-1.3.1/libstored/wrapper/stdio/__main__.py
+│ ├── +++ libstored-1.4.0/libstored/wrapper/stdio/__main__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import argparse
+│ │  import logging
+│ │   --- libstored-1.3.1/libstored/zmq_client.py
+│ ├── +++ libstored-1.4.0/libstored/zmq_client.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import zmq
+│ │  import time
+│ │ @@ -1292,15 +1292,16 @@
+│ │                      self._socket.poll(pollInterval)
+│ │  
+│ │      @Slot()
+│ │      def _aboutToQuit(self):
+│ │          self.logger.debug('aboutToQuit')
+│ │          self._useEventLoop = False
+│ │          try:
+│ │ -            self._reqAsyncFlush(10)
+│ │ +            self.logger.debug('flushing before quit...')
+│ │ +            self._reqAsyncFlush(3)
+│ │          except:
+│ │              pass
+│ │  
+│ │          try:
+│ │              app = QCoreApplication.instance()
+│ │              if not app is None:
+│ │                  app.aboutToQuit.disconnect(self._aboutToQuit)
+│ │ @@ -1615,14 +1616,17 @@
+│ │          req = 'W%x ' % pointer
+│ │          for i in range(0, len(data)):
+│ │              req += '%02x' % data[i]
+│ │          rep = self.req(req.encode())
+│ │          return rep == b'!'
+│ │  
+│ │      def streams(self):
+│ │ +        if not 's' in self.capabilities():
+│ │ +            return []
+│ │ +
+│ │          rep = self.req(b's')
+│ │          if rep == b'?':
+│ │              return []
+│ │          else:
+│ │              return list(map(lambda b: chr(b), rep))
+│ │  
+│ │      def otherStreams(self):
+│ │   --- libstored-1.3.1/libstored/zmq_server.py
+│ ├── +++ libstored-1.4.0/libstored/zmq_server.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # libstored, distributed debuggable data stores.
+│ │ -# Copyright (C) 2020-2022  Jochem Rutgers
+│ │ +# Copyright (C) 2020-2023  Jochem Rutgers
+│ │  #
+│ │  # This Source Code Form is subject to the terms of the Mozilla Public
+│ │  # License, v. 2.0. If a copy of the MPL was not distributed with this
+│ │  # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+│ │  
+│ │  import zmq
+│ │  import threading
+│ │   --- libstored-1.3.1/libstored.egg-info/PKG-INFO
+│ ├── +++ libstored-1.4.0/libstored.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: libstored
+│ │ -Version: 1.3.1
+│ │ +Version: 1.4.0
+│ │  Summary: Embedded Debugger client for libstored's debug protocol
+│ │  Home-page: https://github.com/DEMCON/libstored
+│ │  Author: Jochem Rutgers
+│ │  Author-email: jochem.rutgers@demcon.com
+│ │  License: MPLv2.0
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+│ │   --- libstored-1.3.1/libstored.egg-info/SOURCES.txt
+│ ├── +++ libstored-1.4.0/libstored.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- libstored-1.3.1/setup.py
+│ ├── +++ libstored-1.4.0/setup.py
+│ │┄ Files identical despite different names

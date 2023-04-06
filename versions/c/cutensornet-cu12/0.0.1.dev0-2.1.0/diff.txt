@@ -1,0 +1,68 @@
+--- tmp/cutensornet_cu12-0.0.1.dev0-py3-none-manylinux2014_x86_64.whl.zip
++++ tmp/cutensornet_cu12-2.1.0-py3-none-manylinux2014_x86_64.whl.zip
+├── zipinfo {}
+│ @@ -1,7 +1,13 @@
+│ -Zip file size: 6187 bytes, number of entries: 5
+│ --rw-rw-r--  2.0 unx    11004 b- defN 23-Feb-16 18:59 cutensornet_cu12-0.0.1.dev0.dist-info/LICENSE
+│ --rw-rw-r--  2.0 unx      345 b- defN 23-Feb-16 18:59 cutensornet_cu12-0.0.1.dev0.dist-info/METADATA
+│ --rw-rw-r--  2.0 unx      109 b- defN 23-Feb-16 18:59 cutensornet_cu12-0.0.1.dev0.dist-info/WHEEL
+│ --rw-rw-r--  2.0 unx        1 b- defN 23-Feb-16 18:59 cutensornet_cu12-0.0.1.dev0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx      456 b- defN 23-Feb-16 18:59 cutensornet_cu12-0.0.1.dev0.dist-info/RECORD
+│ -5 files, 11915 bytes uncompressed, 5327 bytes compressed:  55.3%
+│ +Zip file size: 1667354 bytes, number of entries: 11
+│ +-rw-r--r--  2.0 unx    11004 b- defN 23-Mar-30 03:39 cuquantum/LICENSE
+│ +-rw-r--r--  2.0 unx     1810 b- defN 23-Mar-30 03:39 cuquantum/distributed_interfaces/activate_mpi.sh
+│ +-rw-r--r--  2.0 unx     5273 b- defN 23-Mar-30 03:39 cuquantum/distributed_interfaces/cutensornet_distributed_interface_mpi.c
+│ +-rw-r--r--  2.0 unx    83159 b- defN 23-Mar-30 03:39 cuquantum/include/cutensornet.h
+│ +-rw-r--r--  2.0 unx    27756 b- defN 23-Mar-30 03:39 cuquantum/include/cutensornet/types.h
+│ +-rw-r--r--  2.0 unx     2172 b- defN 23-Mar-30 03:39 cuquantum/include/cutensornet/typesDistributed.h
+│ +-rwxr-xr-x  2.0 unx  4824817 b- defN 23-Mar-30 06:20 cuquantum/lib/libcutensornet.so.2
+│ +-rw-r--r--  2.0 unx     2051 b- defN 23-Mar-30 06:20 cutensornet_cu12-2.1.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx      109 b- defN 23-Mar-30 06:20 cutensornet_cu12-2.1.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       10 b- defN 23-Mar-30 06:20 cutensornet_cu12-2.1.0.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx     1026 b- defN 23-Mar-30 06:20 cutensornet_cu12-2.1.0.dist-info/RECORD
+│ +11 files, 4959187 bytes uncompressed, 1665596 bytes compressed:  66.4%
+├── zipnote {}
+│ @@ -1,16 +1,34 @@
+│ -Filename: cutensornet_cu12-0.0.1.dev0.dist-info/LICENSE
+│ +Filename: cuquantum/LICENSE
+│  Comment: 
+│  
+│ -Filename: cutensornet_cu12-0.0.1.dev0.dist-info/METADATA
+│ +Filename: cuquantum/distributed_interfaces/activate_mpi.sh
+│  Comment: 
+│  
+│ -Filename: cutensornet_cu12-0.0.1.dev0.dist-info/WHEEL
+│ +Filename: cuquantum/distributed_interfaces/cutensornet_distributed_interface_mpi.c
+│  Comment: 
+│  
+│ -Filename: cutensornet_cu12-0.0.1.dev0.dist-info/top_level.txt
+│ +Filename: cuquantum/include/cutensornet.h
+│  Comment: 
+│  
+│ -Filename: cutensornet_cu12-0.0.1.dev0.dist-info/RECORD
+│ +Filename: cuquantum/include/cutensornet/types.h
+│ +Comment: 
+│ +
+│ +Filename: cuquantum/include/cutensornet/typesDistributed.h
+│ +Comment: 
+│ +
+│ +Filename: cuquantum/lib/libcutensornet.so.2
+│ +Comment: 
+│ +
+│ +Filename: cutensornet_cu12-2.1.0.dist-info/METADATA
+│ +Comment: 
+│ +
+│ +Filename: cutensornet_cu12-2.1.0.dist-info/WHEEL
+│ +Comment: 
+│ +
+│ +Filename: cutensornet_cu12-2.1.0.dist-info/top_level.txt
+│ +Comment: 
+│ +
+│ +Filename: cutensornet_cu12-2.1.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- cutensornet_cu12-0.0.1.dev0.dist-info/LICENSE
+├── +++ cuquantum/LICENSE
+│┄ Files identical despite different names

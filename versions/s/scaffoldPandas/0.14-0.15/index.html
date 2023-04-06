@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/scaffoldpandas-0.14.tar.gz tmp/scaffoldpandas-0.15.tar.gz --html versions/s/scaffoldPandas/0.14-0.15/index.html --text versions/s/scaffoldPandas/0.14-0.15/diff.txt --markdown versions/s/scaffoldPandas/0.14-0.15/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.65 KB</span></div>
+  <div><span class="source">tmp/scaffoldpandas-0.14.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/scaffoldpandas-0.15.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.59 KB</span></div>
+    <div><span class="source">scaffoldpandas-0.14.tar</span> vs.</div>
+    <div id="scaffoldpandas--.--.tar"><span class="source">scaffoldpandas-0.15.tar</span>
+      <a class="anchor" href="#scaffoldpandas--.--.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.78 KB</span></div>
+      <div id="scaffoldpandas--.--.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>137<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.15/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>398<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/setup.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>398<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/scaffoldPandas/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/scaffoldPandas/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>1153</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/scaffoldPandas/scaffol<del>dPan</del>d<del>as</del>.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>3072</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/scaffoldPandas/<ins>pd</ins>scaffold.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1961<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/.gitignore</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1961<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35823<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/LICENSE</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35823<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3486<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/README.md</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3486<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>599<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/pyproject.toml</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>599<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3943<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<del>4</del>/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3943<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>scaffoldpandas-0.1<ins>5</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.44 KB</span></div>
+      <div><span class="source">scaffoldpandas-0.14/scaffoldPandas/scaffoldPandas.py</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---scaffoldPandas-scaffoldPandas.py"><span class="source">scaffoldpandas-0.15/scaffoldPandas/pdscaffold.py</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---scaffoldPandas-scaffoldPandas.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 17% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 292, 30 lines modified</td><td colspan="2">Offset 292, 72 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">292 </td><td class="diffpresent">##<span class="dp">·</span>Connect<span class="dp">·</span>two<span class="dp">·</span>or<span class="dp">·</span>more<span class="dp">·</span>dataframes<span class="dp">·</span>together<span class="dp">·</span>that<span class="dp">·</span>probably<span class="dp">·</span>overlap,<span class="dp">·</span>dropping<span class="dp">·</span><em>\xd</em></td><td class="diffline">292 </td><td class="diffpresent">##<span class="dp">·</span>Connect<span class="dp">·</span>two<span class="dp">·</span>or<span class="dp">·</span>more<span class="dp">·</span>dataframes<span class="dp">·</span>together<span class="dp">·</span>that<span class="dp">·</span>probably<span class="dp">·</span>overlap,<span class="dp">·</span>dropping<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">293 </td><td class="diffpresent">##<span class="dp">·</span>whatever<span class="dp">·</span>is<span class="dp">·</span>duplicated<em>\xd</em></td><td class="diffline">293 </td><td class="diffpresent">##<span class="dp">·</span>whatever<span class="dp">·</span>is<span class="dp">·</span>duplicated<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">294 </td><td class="diffpresent">#firstDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame()<em>\xd</em></td><td class="diffline">294 </td><td class="diffpresent">#firstDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">295 </td><td class="diffpresent">#secondDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame()<em>\xd</em></td><td class="diffline">295 </td><td class="diffpresent">#secondDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">296 </td><td class="diffpresent">#newDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.concat(<span class="dp">·</span>[firstDataFrame<span class="dp">·</span>,<span class="dp">·</span>firstDataFrame]<span class="dp">·</span>).drop_duplicates()<em>\xd</em></td><td class="diffline">296 </td><td class="diffpresent">#newDataFrame<span class="dp">·</span>=<span class="dp">·</span>pandas.concat(<span class="dp">·</span>[firstDataFrame<span class="dp">·</span>,<span class="dp">·</span>firstDataFrame]<span class="dp">·</span>).drop_duplicates()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">297 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">297 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">298 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">298 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">299 </td><td class="diffpresent">##<span class="dp">·</span>Connect<span class="dp">·</span>two<span class="dp">·</span>dataframes<span class="dp">·</span>that<span class="dp">·</span>*don&#x27;t*<span class="dp">·</span>overlap,<span class="dp">·</span>using<span class="dp">·</span>either<span class="dp">·</span>merge<span class="dp">·</span>or<span class="dp">·</span>concat<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">300 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">301 </td><td class="diffpresent">##<span class="dp">·</span>concat<span class="dp">·</span>requires<span class="dp">·</span>implicit<span class="dp">·</span>connecion<span class="dp">·</span>criteria<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">302 </td><td class="diffpresent">#newdataframe<span class="dp">·</span>=<span class="dp">·</span>pandas.concat([onedf,<span class="dp">·</span>otherdf],<span class="dp">·</span>axis=1,<span class="dp">·</span>join=&quot;inner&quot;)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">303 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">304 </td><td class="diffpresent">##<span class="dp">·</span>merge<span class="dp">·</span>requires<span class="dp">·</span>explicit<span class="dp">·</span>connection<span class="dp">·</span>criteria<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">305 </td><td class="diffpresent">#newdataframe<span class="dp">·</span>=<span class="dp">·</span>pandas.merge(onedf,<span class="dp">·</span>otherdf,<span class="dp">·</span>on=CONNECTIONCOLUMN)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">306 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">307 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">299 </td><td class="diffpresent">##<span class="dp">·</span>Change<span class="dp">·</span>the<span class="dp">·</span>encoding<span class="dp">·</span>of<span class="dp">·</span>NotANumber<span class="dp">·</span>on<span class="dp">·</span>import<span class="dp">·</span>-<span class="dp">·</span>useful<span class="dp">·</span>when<span class="dp">·</span>your<span class="dp">·</span>data<span class="dp">·</span>has<span class="dp">·</span><em>\xd</em></td><td class="diffline">308 </td><td class="diffpresent">##<span class="dp">·</span>Change<span class="dp">·</span>the<span class="dp">·</span>encoding<span class="dp">·</span>of<span class="dp">·</span>NotANumber<span class="dp">·</span>on<span class="dp">·</span>import<span class="dp">·</span>-<span class="dp">·</span>useful<span class="dp">·</span>when<span class="dp">·</span>your<span class="dp">·</span>data<span class="dp">·</span>has<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">300 </td><td class="diffpresent">##<span class="dp">·</span>inadvertent<span class="dp">·</span>entries<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>not<span class="dp">·</span>null,<span class="dp">·</span>like<span class="dp">·</span>sodium<span class="dp">·</span>(NA)<em>\xd</em></td><td class="diffline">309 </td><td class="diffpresent">##<span class="dp">·</span>inadvertent<span class="dp">·</span>entries<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>not<span class="dp">·</span>null,<span class="dp">·</span>like<span class="dp">·</span>sodium<span class="dp">·</span>(NA)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">301 </td><td class="diffpresent">#from<span class="dp">·</span>pandas._libs.parsers<span class="dp">·</span>import<span class="dp">·</span>STR_NA_VALUES<em>\xd</em></td><td class="diffline">310 </td><td class="diffpresent">#from<span class="dp">·</span>pandas._libs.parsers<span class="dp">·</span>import<span class="dp">·</span>STR_NA_VALUES<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">302 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">311 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">312 </td><td class="diffpresent">##<span class="dp">·</span>NOTE:<span class="dp">·</span>STR_NA_VALUES<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>set,<span class="dp">·</span>so<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>set<span class="dp">·</span>operations<span class="dp">·</span>on<span class="dp">·</span>it<span class="dp">·</span>(add(),<span class="dp">·</span>remove(),<span class="dp">·</span>clear())<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">313 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">303 </td><td class="diffpresent">#disable_na_values<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&quot;NA&quot;<span class="dp">·</span>}<em>\xd</em></td><td class="diffline">314 </td><td class="diffpresent">#disable_na_values<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&quot;NA&quot;<span class="dp">·</span>}<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">304 </td><td class="diffpresent">#my_default_na_values<span class="dp">·</span>=<span class="dp">·</span>STR_NA_VALUES<del><span class="dp">·</span>-<span class="dp">·</span></del>disable_na_values<em>\xd</em></td><td class="diffline">315 </td><td class="diffpresent">#my_default_na_values<span class="dp">·</span>=<span class="dp">·</span>STR_NA_VALUES<ins>.remo</ins><ins>ve(</ins>disable_na_values<ins>)</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">305 </td><td class="diffpresent">#df<span class="dp">·</span>=<span class="dp">·</span>pandas.read_csv(<span class="dp">·</span>&quot;myCSVfile.csv&quot;<span class="dp">·</span>,<span class="dp">·</span>na_values<span class="dp">·</span>=<span class="dp">·</span>my_default_na_values<span class="dp">·</span>)<em>\xd</em></td><td class="diffline">316 </td><td class="diffpresent">#df<span class="dp">·</span>=<span class="dp">·</span>pandas.read_csv(<span class="dp">·</span>&quot;myCSVfile.csv&quot;<span class="dp">·</span>,<span class="dp">·</span>na_values<span class="dp">·</span>=<span class="dp">·</span>my_default_na_values<span class="dp">·</span>)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">306 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">317 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">307 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">318 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">308 </td><td class="diffpresent">##<span class="dp">·</span>Pad<span class="dp">·</span>out<span class="dp">·</span>values<span class="dp">·</span>with<span class="dp">·</span>4<span class="dp">·</span>leading<span class="dp">·</span>zeros<span class="dp">·</span>on<span class="dp">·</span>pandas.read_csv()<em>\xd</em></td><td class="diffline">319 </td><td class="diffpresent">##<span class="dp">·</span>Pad<span class="dp">·</span>out<span class="dp">·</span>values<span class="dp">·</span>with<span class="dp">·</span>4<span class="dp">·</span>leading<span class="dp">·</span>zeros<span class="dp">·</span>on<span class="dp">·</span>pandas.read_csv()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">309 </td><td class="diffpresent">#df<span class="dp">·</span>=<span class="dp">·</span>pandas.read_csv(&quot;myCSVfile.csv&quot;,<span class="dp">·</span>converters={&#x27;UnpaddedColumn1&#x27;:<span class="dp">·</span>&#x27;{:0&gt;4}&#x27;.format,<span class="dp">·</span>&#x27;UnpaddedColumn2&#x27;:<span class="dp">·</span>&#x27;{:0&gt;4}&#x27;.format})<span class="dp">·</span><em>\xd</em></td><td class="diffline">320 </td><td class="diffpresent">#df<span class="dp">·</span>=<span class="dp">·</span>pandas.read_csv(&quot;myCSVfile.csv&quot;,<span class="dp">·</span>converters={&#x27;UnpaddedColumn1&#x27;:<span class="dp">·</span>&#x27;{:0&gt;4}&#x27;.format,<span class="dp">·</span>&#x27;UnpaddedColumn2&#x27;:<span class="dp">·</span>&#x27;{:0&gt;4}&#x27;.format})<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">310 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">321 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">311 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">322 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">323 </td><td class="diffpresent">##<span class="dp">·</span>Put<span class="dp">·</span>all<span class="dp">·</span>information<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>given<span class="dp">·</span>ID<span class="dp">·</span>from<span class="dp">·</span>multiple<span class="dp">·</span>rows<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>single<span class="dp">·</span>row<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">324 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">325 </td><td class="diffpresent">#raw_data<span class="dp">·</span>=<span class="dp">·</span>{&#x27;patient&#x27;:<span class="dp">·</span>[1,<span class="dp">·</span>1,<span class="dp">·</span>1,<span class="dp">·</span>2,<span class="dp">·</span>2],<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">326 </td><td class="diffpresent">#<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;obs&#x27;:<span class="dp">·</span>[1,<span class="dp">·</span>2,<span class="dp">·</span>3,<span class="dp">·</span>1,<span class="dp">·</span>2],<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">327 </td><td class="diffpresent">#<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;treatment&#x27;:<span class="dp">·</span>[0,<span class="dp">·</span>1,<span class="dp">·</span>0,<span class="dp">·</span>1,<span class="dp">·</span>0],<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">328 </td><td class="diffpresent">#<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;score&#x27;:<span class="dp">·</span>[6252,<span class="dp">·</span>24243,<span class="dp">·</span>2345,<span class="dp">·</span>2342,<span class="dp">·</span>23525],<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">329 </td><td class="diffpresent">#<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;onetime&#x27;:<span class="dp">·</span>[&quot;thing&quot;,pandas.NA,pandas.NA,&quot;stuff&quot;,pandas.NA]}<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">330 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">331 </td><td class="diffpresent">#topivot<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame(raw_data,<span class="dp">·</span>columns<span class="dp">·</span>=<span class="dp">·</span>[&#x27;patient&#x27;,<span class="dp">·</span>&#x27;obs&#x27;,<span class="dp">·</span>&#x27;treatment&#x27;,<span class="dp">·</span>&#x27;score&#x27;,<span class="dp">·</span>&#x27;onetime&#x27;])<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">332 </td><td class="diffpresent">#topivot.head<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">333 </td><td class="diffpresent">#pivoted<span class="dp">·</span>=<span class="dp">·</span>topivot.pivot(index=&#x27;patient&#x27;,<span class="dp">·</span>columns=&#x27;obs&#x27;,<span class="dp">·</span>values=&#x27;score&#x27;)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">334 </td><td class="diffpresent">#pivoted.head<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">335 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">336 </td><td class="diffpresent">##<span class="dp">·</span>Propogate<span class="dp">·</span>the<span class="dp">·</span>first<span class="dp">·</span>value<span class="dp">·</span>down<span class="dp">·</span>a<span class="dp">·</span>column<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>another<span class="dp">·</span>column<span class="dp">·</span>value<span class="dp">·</span>(ID)<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">337 </td><td class="diffpresent">##<span class="dp">·</span>(push<span class="dp">·</span>demographic<span class="dp">·</span>data<span class="dp">·</span>for<span class="dp">·</span>person<span class="dp">·</span>X<span class="dp">·</span>to<span class="dp">·</span>all<span class="dp">·</span>person<span class="dp">·</span>X<span class="dp">·</span>rows).<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">338 </td><td class="diffpresent">#df.columnToFill<span class="dp">·</span>=<span class="dp">·</span>df.groupby(&quot;ID&quot;).columnToFill.transform(&quot;first&quot;)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">339 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">312 </td><td class="diffpresent">##<span class="dp">·</span>Filter<span class="dp">·</span>a<span class="dp">·</span>dataframe<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>subset<span class="dp">·</span>that<span class="dp">·</span>all<span class="dp">·</span>meets<span class="dp">·</span>a<span class="dp">·</span>criteria.<em>\xd</em></td><td class="diffline">340 </td><td class="diffpresent">##<span class="dp">·</span>Filter<span class="dp">·</span>a<span class="dp">·</span>dataframe<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>subset<span class="dp">·</span>that<span class="dp">·</span>all<span class="dp">·</span>meets<span class="dp">·</span>a<span class="dp">·</span>criteria.<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">313 </td><td class="diffpresent">##<span class="dp">·</span>In<span class="dp">·</span>the<span class="dp">·</span>example<span class="dp">·</span>case,<span class="dp">·</span>we<span class="dp">·</span>use<span class="dp">·</span>pandas.factorize()<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>all<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>values,<span class="dp">·</span><em>\xd</em></td><td class="diffline">341 </td><td class="diffpresent">##<span class="dp">·</span>In<span class="dp">·</span>the<span class="dp">·</span>example<span class="dp">·</span>case,<span class="dp">·</span>we<span class="dp">·</span>use<span class="dp">·</span>pandas.factorize()<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>all<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>values,<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">314 </td><td class="diffpresent">##<span class="dp">·</span>because<span class="dp">·</span>it<span class="dp">·</span>_should_<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>small<span class="dp">·</span>set,<span class="dp">·</span>but<span class="dp">·</span>there<span class="dp">·</span>are<span class="dp">·</span>mispellings,<span class="dp">·</span>other<span class="dp">·</span><em>\xd</em></td><td class="diffline">342 </td><td class="diffpresent">##<span class="dp">·</span>because<span class="dp">·</span>it<span class="dp">·</span>_should_<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>small<span class="dp">·</span>set,<span class="dp">·</span>but<span class="dp">·</span>there<span class="dp">·</span>are<span class="dp">·</span>mispellings,<span class="dp">·</span>other<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">315 </td><td class="diffpresent">##<span class="dp">·</span>weirdness<span class="dp">·</span>that<span class="dp">·</span>we<span class="dp">·</span>have<span class="dp">·</span>to<span class="dp">·</span>find,<span class="dp">·</span>so<span class="dp">·</span>this<span class="dp">·</span>pattern<span class="dp">·</span>lets<span class="dp">·</span>us<span class="dp">·</span>group<span class="dp">·</span>all<span class="dp">·</span>rows<span class="dp">·</span><em>\xd</em></td><td class="diffline">343 </td><td class="diffpresent">##<span class="dp">·</span>weirdness<span class="dp">·</span>that<span class="dp">·</span>we<span class="dp">·</span>have<span class="dp">·</span>to<span class="dp">·</span>find,<span class="dp">·</span>so<span class="dp">·</span>this<span class="dp">·</span>pattern<span class="dp">·</span>lets<span class="dp">·</span>us<span class="dp">·</span>group<span class="dp">·</span>all<span class="dp">·</span>rows<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">316 </td><td class="diffpresent">##<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>set<span class="dp">·</span>of<span class="dp">·</span>values<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>list<em>\xd</em></td><td class="diffline">344 </td><td class="diffpresent">##<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>set<span class="dp">·</span>of<span class="dp">·</span>values<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>list<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">317 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">345 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">318 </td><td class="diffpresent">#pos<span class="dp">·</span>=<span class="dp">·</span>[&#x27;DÉTECTÉ&#x27;,<span class="dp">·</span>&#x27;DÉTEDÉTECTÉ&#x27;,<span class="dp">·</span>&#x27;detecté&#x27;,<span class="dp">·</span>&#x27;detecte&#x27;,<span class="dp">·</span>&#x27;03DÉTECTÉ&#x27;]<em>\xd</em></td><td class="diffline">346 </td><td class="diffpresent">#pos<span class="dp">·</span>=<span class="dp">·</span>[&#x27;DÉTECTÉ&#x27;,<span class="dp">·</span>&#x27;DÉTEDÉTECTÉ&#x27;,<span class="dp">·</span>&#x27;detecté&#x27;,<span class="dp">·</span>&#x27;detecte&#x27;,<span class="dp">·</span>&#x27;03DÉTECTÉ&#x27;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">319 </td><td class="diffpresent">#<em>\xd</em></td><td class="diffline">347 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">320 </td><td class="diffpresent">#posCases<span class="dp">·</span>=<span class="dp">·</span>firstDataFrame[firstDataFrame[&quot;RESULTAT&quot;].isin(pos)]<em>\xd</em></td><td class="diffline">348 </td><td class="diffpresent">#posCases<span class="dp">·</span>=<span class="dp">·</span>firstDataFrame[firstDataFrame[&quot;RESULTAT&quot;].isin(pos)]<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">321 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">349 </td><td class="diffpresent"><ins>#</ins><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">350 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">351 </td><td class="diffpresent">##<span class="dp">·</span>Take<span class="dp">·</span>a<span class="dp">·</span>series<span class="dp">·</span>of<span class="dp">·</span>rows<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>sparse<span class="dp">·</span>but<span class="dp">·</span>related<span class="dp">·</span>rows<span class="dp">·</span>with<span class="dp">·</span>an<span class="dp">·</span>identifying<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">352 </td><td class="diffpresent">##<span class="dp">·</span>column,<span class="dp">·</span>and<span class="dp">·</span>turn<span class="dp">·</span>them<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>&quot;flat&quot;<span class="dp">·</span>dataframe<span class="dp">·</span>where<span class="dp">·</span>there<span class="dp">·</span>is<span class="dp">·</span>just<span class="dp">·</span>one<span class="dp">·</span>row<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">353 </td><td class="diffpresent">##<span class="dp">·</span>per<span class="dp">·</span>identifier.<span class="dp">·</span>Look<span class="dp">·</span>at<span class="dp">·</span>&quot;aggregate&quot;<span class="dp">·</span>functions.<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">354 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">355 </td><td class="diffpresent">#df<span class="dp">·</span>=<span class="dp">·</span>pandas.DataFrame([{&quot;id&quot;:0,&quot;a&quot;:1,&quot;b&quot;:pandas.NA,&quot;c&quot;:pandas.NA,},{&quot;id&quot;:0,&quot;a&quot;:pandas.NA,&quot;b&quot;:1,&quot;c&quot;:pandas.NA,},{&quot;id&quot;:0,&quot;a&quot;:pandas.NA,&quot;b&quot;:pandas.NA,&quot;c&quot;:1,},{&quot;id&quot;:0,&quot;a&quot;:pandas.NA,&quot;b&quot;:pandas.NA,&quot;c&quot;:pandas.NA,}])<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">356 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">357 </td><td class="diffpresent">#flatDF<span class="dp">·</span>=<span class="dp">·</span>df.groupby(&quot;id&quot;).first()<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">358 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">359 </td><td class="diffpresent">#<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">360 </td><td class="diffpresent">##<span class="dp">·</span>If<span class="dp">·</span>you<span class="dp">·</span>have<span class="dp">·</span>accents<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>column<span class="dp">·</span>headings,<span class="dp">·</span>it<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>PITA<span class="dp">·</span>to<span class="dp">·</span>type<span class="dp">·</span>and<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">361 </td><td class="diffpresent">##<span class="dp">·</span>use.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>extract<span class="dp">·</span>the<span class="dp">·</span>column<span class="dp">·</span>headings<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>list,<span class="dp">·</span>and<span class="dp">·</span>then<span class="dp">·</span>replace<span class="dp">·</span>then<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">362 </td><td class="diffpresent">##<span class="dp">·</span>by<span class="dp">·</span>index,<span class="dp">·</span>preventing<span class="dp">·</span>you<span class="dp">·</span>from<span class="dp">·</span>typing<span class="dp">·</span>anything<span class="dp">·</span>difficult.<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">363 </td><td class="diffpresent">#<span class="dp">·</span>df.columns.values[2]<span class="dp">·</span>=<span class="dp">·</span>&quot;newname&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">scaffoldpandas-0.14/.gitignore</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---.gitignore"><span class="source">scaffoldpandas-0.15/.gitignore</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">scaffoldpandas-0.14/LICENSE</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---LICENSE"><span class="source">scaffoldpandas-0.15/LICENSE</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scaffoldpandas-0.14/README.md</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---README.md"><span class="source">scaffoldpandas-0.15/README.md</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">481 B</span></div>
+      <div><span class="source">scaffoldpandas-0.14/pyproject.toml</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---pyproject.toml"><span class="source">scaffoldpandas-0.15/pyproject.toml</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">[build-system]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">[project]<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">[project]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;scaffoldPandas&quot;<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;scaffoldPandas&quot;<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1<del>4</del>&quot;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1<ins>5</ins>&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;William<span class="dp">·</span>Witteman&quot;,<span class="dp">·</span>email=&quot;william@witteman.ca&quot;<span class="dp">·</span>},<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;William<span class="dp">·</span>Witteman&quot;,<span class="dp">·</span>email=&quot;william@witteman.ca&quot;<span class="dp">·</span>},<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">]<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Helpful<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>pandas&quot;<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Helpful<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>pandas&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">584 B</span></div>
+      <div><span class="source">scaffoldpandas-0.14/PKG-INFO</span> vs.</div>
+      <div id="scaffoldpandas--.--.tar---scaffoldpandas--.---PKG-INFO"><span class="source">scaffoldpandas-0.15/PKG-INFO</span>
+        <a class="anchor" href="#scaffoldpandas--.--.tar---scaffoldpandas--.---PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scaffoldPandas</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scaffoldPandas</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1<del>4</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1<ins>5</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Helpful<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>pandas</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Helpful<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>pandas</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/PatrickArchambault-EquipeRecherche/scaffold-pandas</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/PatrickArchambault-EquipeRecherche/scaffold-pandas</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>William<span class="dp">·</span>Witteman<span class="dp">·</span>&lt;william@witteman.ca&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>William<span class="dp">·</span>Witteman<span class="dp">·</span>&lt;william@witteman.ca&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">7 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,5552 @@
+# Comparing `tmp/pysipfenn-0.11.0.post1.tar.gz` & `tmp/pysipfenn-0.12.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pysipfenn-0.11.0.post1.tar", last modified: Wed Mar 29 15:13:33 2023, max compression
++gzip compressed data, was "pysipfenn-0.12.0.tar", last modified: Thu Apr  6 20:34:12 2023, max compression
+```
+
+## Comparing `pysipfenn-0.11.0.post1.tar` & `pysipfenn-0.12.0.tar`
+
+### file list
+
+```diff
+@@ -1,88 +1,97 @@
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.074095 pysipfenn-0.11.0.post1/
+--rw-r--r--   0 adam       (501) staff       (20)      104 2023-03-17 23:08:06.000000 pysipfenn-0.11.0.post1/.gitattributes
+--rwx------   0 adam       (501) staff       (20)      408 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/.readthedocs.yaml
+--rwx------   0 adam       (501) staff       (20)    35149 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/LICENSE
+--rwx------   0 adam       (501) staff       (20)      231 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/MANIFEST.in
+--rw-r--r--   0 adam       (501) staff       (20)     7338 2023-03-29 15:13:33.073937 pysipfenn-0.11.0.post1/PKG-INFO
+--rwx------   0 adam       (501) staff       (20)     6258 2023-03-17 01:56:15.000000 pysipfenn-0.11.0.post1/README.md
+--rwx------   0 adam       (501) staff       (20)     1401 2023-03-29 15:12:53.000000 pysipfenn-0.11.0.post1/pyproject.toml
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.060436 pysipfenn-0.11.0.post1/pysipfenn/
+--rwx------   0 adam       (501) staff       (20)      575 2023-02-28 21:07:16.000000 pysipfenn-0.11.0.post1/pysipfenn/__init__.py
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.061407 pysipfenn-0.11.0.post1/pysipfenn/core/
+--rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/core/__init__.py
+--rwx------   0 adam       (501) staff       (20)    43480 2023-03-29 15:12:53.000000 pysipfenn-0.11.0.post1/pysipfenn/core/pysipfenn.py
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.064220 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/
+--rwx------   0 adam       (501) staff       (20)    28016 2023-03-28 18:00:14.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/KS2022.py
+--rwx------   0 adam       (501) staff       (20)    29490 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/KS2022_dilute.py
+--rwx------   0 adam       (501) staff       (20)   141363 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/Magpie_element_properties.csv
+--rwx------   0 adam       (501) staff       (20)      702 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/Magpie_property_names.txt
+--rwx------   0 adam       (501) staff       (20)      151 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/README.md
+--rw-r--r--   0 adam       (501) staff       (20)    36418 2023-03-02 04:50:51.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/Ward2017.py
+--rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__init__.py
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.065640 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/
+--rw-------   0 adam       (501) staff       (20)    18289 2023-03-28 18:01:06.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/KS2022.cpython-39.pyc
+--rw-------   0 adam       (501) staff       (20)    18165 2023-02-27 19:53:52.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/KS2022_dilute.cpython-39.pyc
+--rw-r--r--   0 adam       (501) staff       (20)    20377 2023-03-03 22:14:08.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/Ward2017.cpython-39.pyc
+--rw-------   0 adam       (501) staff       (20)      172 2023-02-27 19:53:51.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/__init__.cpython-39.pyc
+--rwx------   0 adam       (501) staff       (20)     5796 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_KS2022.csv
+--rwx------   0 adam       (501) staff       (20)     5796 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_KS2022_dilute.csv
+--rwx------   0 adam       (501) staff       (20)     6206 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_Ward2017.csv
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.066122 pysipfenn-0.11.0.post1/pysipfenn/modelsSIPFENN/
+--rwx------   0 adam       (501) staff       (20)       86 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/modelsSIPFENN/README.md
+--rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/modelsSIPFENN/__init__.py
+--rwx------   0 adam       (501) staff       (20)     1420 2023-02-28 15:23:16.000000 pysipfenn-0.11.0.post1/pysipfenn/modelsSIPFENN/models.json
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.067983 pysipfenn-0.11.0.post1/pysipfenn/tests/
+--rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/__init__.py
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.068118 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.072963 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/
+--rwx------   0 adam       (501) staff       (20)     1021 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/0-Cr8Fe18Ni4.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1021 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/1-Cr16Fe8Ni6.POSCAR
+--rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/10-Ce4Ti4O12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/11-Fe10Ni20.POSCAR
+--rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/12-Gd4Cr4O12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/13-Fe16Ni14.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/14-Fe24Ni6.POSCAR
+--rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/15-Ta4Tl4O12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/16-Fe18Ni12.POSCAR
+--rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/17-Pr4Ga4O12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1015 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/18-Fe28Ni2.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/19-Fe4Ni26.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/2-Fe8Ni22.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/20-Fe8Ni22.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/21-Fe10Ni20.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/22-Fe10Ni20.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/23-Fe12Ni18.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/24-Fe16Ni14.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1020 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/25-Fe12Ni18.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/26-Fe8Ni22.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/27-Cr28Fe2.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/28-Fe26Ni4.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1019 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/29-Fe12Ni18.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/3-Cr18Fe12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/30-Cr26Fe4.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1923 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/31-Li24Al4Ni32.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1003 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/4-Fe30.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/5-Cr22Fe8.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/6-Fe2Ni28.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/7-Cr18Fe12.POSCAR
+--rwx------   0 adam       (501) staff       (20)     1023 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/8-Cr2Fe16Ni12.POSCAR
+--rwx------   0 adam       (501) staff       (20)      908 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/9-Pb8O12.POSCAR
+--rwx------   0 adam       (501) staff       (20)    68010 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFilesDescriptorTable.csv
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.073661 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/
+--rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/1-Zr220Cu280.POSCAR
+--rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/2-Zr220Cu280.POSCAR
+--rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/3-Zr220Cu280.POSCAR
+--rwx------   0 adam       (501) staff       (20)      526 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_AllCompatibleONNX_Ward2017.py
+--rwx------   0 adam       (501) staff       (20)     2370 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_KS2022.py
+--rwx------   0 adam       (501) staff       (20)    19592 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_KS2022_dilute.py
+--rwx------   0 adam       (501) staff       (20)     1361 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_Krajewski2020_NN9NN20NN24_ONNX.py
+--rwx------   0 adam       (501) staff       (20)     1580 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_Ward2017.py
+--rw-r--r--   0 adam       (501) staff       (20)     1831 2023-02-28 04:02:13.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_customModel.py
+--rwx------   0 adam       (501) staff       (20)     1609 2023-02-27 18:54:19.000000 pysipfenn-0.11.0.post1/pysipfenn/tests/test_pysipfenn.py
+-drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-03-29 15:13:33.061188 pysipfenn-0.11.0.post1/pysipfenn.egg-info/
+--rwx------   0 adam       (501) staff       (20)     7338 2023-03-29 15:13:32.000000 pysipfenn-0.11.0.post1/pysipfenn.egg-info/PKG-INFO
+--rwx------   0 adam       (501) staff       (20)     3931 2023-03-29 15:13:33.000000 pysipfenn-0.11.0.post1/pysipfenn.egg-info/SOURCES.txt
+--rwx------   0 adam       (501) staff       (20)        1 2023-03-29 15:13:32.000000 pysipfenn-0.11.0.post1/pysipfenn.egg-info/dependency_links.txt
+--rwx------   0 adam       (501) staff       (20)      155 2023-03-29 15:13:32.000000 pysipfenn-0.11.0.post1/pysipfenn.egg-info/requires.txt
+--rwx------   0 adam       (501) staff       (20)       10 2023-03-29 15:13:32.000000 pysipfenn-0.11.0.post1/pysipfenn.egg-info/top_level.txt
+--rw-r--r--   0 adam       (501) staff       (20)       38 2023-03-29 15:13:33.074147 pysipfenn-0.11.0.post1/setup.cfg
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.887763 pysipfenn-0.12.0/
++-rw-r--r--   0 adam       (501) staff       (20)      104 2023-03-17 23:08:06.000000 pysipfenn-0.12.0/.gitattributes
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.867852 pysipfenn-0.12.0/.github/
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.871106 pysipfenn-0.12.0/.github/workflows/
++-rw-r--r--   0 adam       (501) staff       (20)     1406 2023-04-06 16:49:48.000000 pysipfenn-0.12.0/.github/workflows/benchmarks.yml
++-rw-r--r--   0 adam       (501) staff       (20)     2667 2023-04-06 15:18:55.000000 pysipfenn-0.12.0/.github/workflows/fullTest.yml
++-rw-r--r--   0 adam       (501) staff       (20)      885 2023-04-06 15:18:55.000000 pysipfenn-0.12.0/.github/workflows/partialTest.yml
++-rwx------   0 adam       (501) staff       (20)      408 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/.readthedocs.yaml
++-rwx------   0 adam       (501) staff       (20)    35149 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/LICENSE
++-rwx------   0 adam       (501) staff       (20)      231 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/MANIFEST.in
++-rw-r--r--   0 adam       (501) staff       (20)     8456 2023-04-06 20:34:12.887599 pysipfenn-0.12.0/PKG-INFO
++-rwx------   0 adam       (501) staff       (20)     7231 2023-04-06 16:22:26.000000 pysipfenn-0.12.0/README.md
++-rwx------   0 adam       (501) staff       (20)     1522 2023-04-06 16:01:12.000000 pysipfenn-0.12.0/pyproject.toml
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.871403 pysipfenn-0.12.0/pysipfenn/
++-rwx------   0 adam       (501) staff       (20)       38 2023-04-05 20:03:47.000000 pysipfenn-0.12.0/pysipfenn/__init__.py
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.872498 pysipfenn-0.12.0/pysipfenn/core/
++-rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/core/__init__.py
++-rwx------   0 adam       (501) staff       (20)    39130 2023-04-06 13:58:04.000000 pysipfenn-0.12.0/pysipfenn/core/pysipfenn.py
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.876880 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/
++-rwx------   0 adam       (501) staff       (20)    28375 2023-04-06 16:33:34.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/KS2022.py
++-rw-r--r--   0 adam       (501) staff       (20)     2036 2023-04-06 16:33:38.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/KS2022_TestResult.csv
++-rwx------   0 adam       (501) staff       (20)    23904 2023-04-06 16:39:11.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/KS2022_dilute.py
++-rw-r--r--   0 adam       (501) staff       (20)     2035 2023-04-06 16:39:13.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/KS2022_dilute_TestResult.csv
++-rwx------   0 adam       (501) staff       (20)   141363 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Magpie_element_properties.csv
++-rwx------   0 adam       (501) staff       (20)      702 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Magpie_property_names.txt
++-rwx------   0 adam       (501) staff       (20)      151 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/README.md
++-rw-r--r--   0 adam       (501) staff       (20)    33100 2023-04-06 16:33:34.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Ward2017.py
++-rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__init__.py
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.878094 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/
++-rw-------   0 adam       (501) staff       (20)    18268 2023-04-06 16:23:37.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/KS2022.cpython-39.pyc
++-rw-------   0 adam       (501) staff       (20)    18165 2023-02-27 19:53:52.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/KS2022_dilute.cpython-39.pyc
++-rw-r--r--   0 adam       (501) staff       (20)    20651 2023-04-06 16:23:35.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/Ward2017.cpython-39.pyc
++-rw-------   0 adam       (501) staff       (20)      172 2023-02-27 19:53:51.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/__init__.cpython-39.pyc
++-rwx------   0 adam       (501) staff       (20)     5796 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_KS2022.csv
++-rwx------   0 adam       (501) staff       (20)     5796 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_KS2022_dilute.csv
++-rwx------   0 adam       (501) staff       (20)     6206 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_Ward2017.csv
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.878481 pysipfenn-0.12.0/pysipfenn/modelsSIPFENN/
++-rwx------   0 adam       (501) staff       (20)       86 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/modelsSIPFENN/README.md
++-rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/modelsSIPFENN/__init__.py
++-rwx------   0 adam       (501) staff       (20)     1420 2023-02-28 15:23:16.000000 pysipfenn-0.12.0/pysipfenn/modelsSIPFENN/models.json
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.880515 pysipfenn-0.12.0/pysipfenn/tests/
++-rwx------   0 adam       (501) staff       (20)        0 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/__init__.py
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.881425 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/
++-rw-r--r--   0 adam       (501) staff       (20)    13122 2023-04-05 21:14:25.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/TestFile_DescriptorData_4_KS2022_labeled_enumerated.csv
++-rw-r--r--   0 adam       (501) staff       (20)    18296 2023-04-05 21:14:25.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/TestFile_DescriptorData_4_KS2022_labeled_named.csv
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.886700 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/
++-rwx------   0 adam       (501) staff       (20)     1021 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/0-Cr8Fe18Ni4.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1021 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/1-Cr16Fe8Ni6.POSCAR
++-rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/10-Ce4Ti4O12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/11-Fe10Ni20.POSCAR
++-rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/12-Gd4Cr4O12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/13-Fe16Ni14.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/14-Fe24Ni6.POSCAR
++-rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/15-Ta4Tl4O12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/16-Fe18Ni12.POSCAR
++-rwx------   0 adam       (501) staff       (20)      916 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/17-Pr4Ga4O12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1015 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/18-Fe28Ni2.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/19-Fe4Ni26.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/2-Fe8Ni22.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/20-Fe8Ni22.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/21-Fe10Ni20.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/22-Fe10Ni20.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/23-Fe12Ni18.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/24-Fe16Ni14.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1020 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/25-Fe12Ni18.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/26-Fe8Ni22.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/27-Cr28Fe2.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/28-Fe26Ni4.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1019 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/29-Fe12Ni18.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1018 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/3-Cr18Fe12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1012 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/30-Cr26Fe4.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1923 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/31-Li24Al4Ni32.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1003 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/4-Fe30.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/5-Cr22Fe8.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1014 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/6-Fe2Ni28.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1016 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/7-Cr18Fe12.POSCAR
++-rwx------   0 adam       (501) staff       (20)     1023 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/8-Cr2Fe16Ni12.POSCAR
++-rwx------   0 adam       (501) staff       (20)      908 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/9-Pb8O12.POSCAR
++-rwx------   0 adam       (501) staff       (20)    68010 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFilesDescriptorTable.csv
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.887311 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/
++-rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/1-Zr220Cu280.POSCAR
++-rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/2-Zr220Cu280.POSCAR
++-rwx------   0 adam       (501) staff       (20)    15121 2023-02-27 18:54:19.000000 pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/3-Zr220Cu280.POSCAR
++-rwx------   0 adam       (501) staff       (20)      743 2023-03-31 18:23:39.000000 pysipfenn-0.12.0/pysipfenn/tests/test_AllCompatibleONNX_Ward2017.py
++-rwx------   0 adam       (501) staff       (20)     2624 2023-04-05 16:12:25.000000 pysipfenn-0.12.0/pysipfenn/tests/test_KS2022.py
++-rwx------   0 adam       (501) staff       (20)    21057 2023-04-05 17:50:14.000000 pysipfenn-0.12.0/pysipfenn/tests/test_KS2022_dilute.py
++-rwx------   0 adam       (501) staff       (20)     1578 2023-03-31 18:23:39.000000 pysipfenn-0.12.0/pysipfenn/tests/test_Krajewski2020_NN9NN20NN24_ONNX.py
++-rwx------   0 adam       (501) staff       (20)     1800 2023-04-05 17:27:15.000000 pysipfenn-0.12.0/pysipfenn/tests/test_Ward2017.py
++-rw-r--r--   0 adam       (501) staff       (20)     2221 2023-03-31 18:23:39.000000 pysipfenn-0.12.0/pysipfenn/tests/test_customModel.py
++-rwx------   0 adam       (501) staff       (20)    12132 2023-04-05 21:17:25.000000 pysipfenn-0.12.0/pysipfenn/tests/test_pysipfenn.py
++drwxr-xr-x   0 adam       (501) staff       (20)        0 2023-04-06 20:34:12.872238 pysipfenn-0.12.0/pysipfenn.egg-info/
++-rwx------   0 adam       (501) staff       (20)     8456 2023-04-06 20:34:12.000000 pysipfenn-0.12.0/pysipfenn.egg-info/PKG-INFO
++-rwx------   0 adam       (501) staff       (20)     4311 2023-04-06 20:34:12.000000 pysipfenn-0.12.0/pysipfenn.egg-info/SOURCES.txt
++-rwx------   0 adam       (501) staff       (20)        1 2023-04-06 20:34:12.000000 pysipfenn-0.12.0/pysipfenn.egg-info/dependency_links.txt
++-rwx------   0 adam       (501) staff       (20)      147 2023-04-06 20:34:12.000000 pysipfenn-0.12.0/pysipfenn.egg-info/requires.txt
++-rwx------   0 adam       (501) staff       (20)       10 2023-04-06 20:34:12.000000 pysipfenn-0.12.0/pysipfenn.egg-info/top_level.txt
++-rw-r--r--   0 adam       (501) staff       (20)       38 2023-04-06 20:34:12.887813 pysipfenn-0.12.0/setup.cfg
+```
+
+### Comparing `pysipfenn-0.11.0.post1/LICENSE` & `pysipfenn-0.12.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/PKG-INFO` & `pysipfenn-0.12.0/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,45 +1,58 @@
+ Metadata-Version: 2.1
+ Name: pysipfenn
+-Version: 0.11.0.post1
+-Summary: Easily extensible Python package for running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)
++Version: 0.12.0
++Summary: Easily extensible Python package for featurizing periodic atomic structures and running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)
+ Author-email: Adam Krajewski <ak@psu.edu>, Jonathan Siegel <jwsiegel@tamu.edu>
+ Project-URL: Research Page, https://phaseslab.com/sipfenn
+ Project-URL: Homepage, https://pysipfenn.org
+ Project-URL: Bug Tracker, https://github.com/PhasesResearchLab/pySIPFENN/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Classifier: Topic :: Scientific/Engineering
+ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
++Classifier: Topic :: Scientific/Engineering :: Chemistry
+ Classifier: Topic :: Scientific/Engineering :: Physics
+ Requires-Python: >=3.9
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ ## pySIPFENN
+ ![GitHub top language](https://img.shields.io/github/languages/top/PhasesResearchLab/pysipfenn)
+ ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysipfenn)
+ ![PyPI](https://img.shields.io/pypi/v/pysipfenn)
+-![PyPI - License](https://img.shields.io/pypi/l/pysipfenn)
+-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
+-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
+-![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.11.0?color=g)
++![PyPI - Downloads](https://img.shields.io/pypi/dm/pysipfenn)
++
+ [![stable](https://img.shields.io/badge/Read%20The%20Docs-Stable-green)](https://pysipfenn.readthedocs.io/en/stable/) 
+ [![latest](https://img.shields.io/badge/Read%20The%20Docs-Latest-green)](https://pysipfenn.readthedocs.io/en/latest/)
++![GitHub license](https://img.shields.io/github/license/PhasesResearchLab/pySIPFENN)
++
++[![Partial Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml)
++[![Full Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml)
++[![codecov](https://codecov.io/gh/PhasesResearchLab/pySIPFENN/branch/main/graph/badge.svg?token=S2J0KR0WKQ)](https://codecov.io/gh/PhasesResearchLab/pySIPFENN)
++
++![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
++![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
++![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.12.0?color=g)
++![GitHub issues](https://img.shields.io/github/issues/PhasesResearchLab/pysipfenn)
+ 
+ [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.commatsci.2022.111254-blue)](https://doi.org/10.1016/j.commatsci.2022.111254)
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7373089.svg)](https://doi.org/10.5281/zenodo.7373089)
+ 
+ ### News
+ 
++- **(v.12.0)** Official Python 3.11 support. 
++- **(v.12.0)** Automated matrix-testing on Linux / Mac / Windows with Python 3.9 / 3.10 / 3.11 through GitHub Actions CLI
++and test coverage report through Codecov. Tests are also generally improved and more extensive.
+ - **(v0.11.0)** Some common questions are now addressed in the [documentation FAQ section](https://pysipfenn.readthedocs.io/en/stable/faq.html).
+ - **(v0.11.0)** The model downloads from Zenodo are now multithreaded and are 15 times faster.
+ - **(March 2023 Workshop)** We would like to thank all of our amazing attendees for making our workshop, co-organized with the
+ [Materials Genome Foundation](https://materialsgenomefoundation.org), such a success! Over 100 of you simultaneously followed
+ all exercises and, at the peak, we loaded over 1,200GB of models into the HPC's RAM. At this point, we would also like to 
+ acknowledge the generous support from [IBM](https://www.ibm.com) who funded the workshop. Please stay tuned for next workshops
+ planned online and in-person at conferences. They will be announced both here and at the [Materials Genome Foundation](https://materialsgenomefoundation.org) website.
+```
+
+### Comparing `pysipfenn-0.11.0.post1/README.md` & `pysipfenn-0.12.0/README.md`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,23 +1,34 @@
+ ## pySIPFENN
+ ![GitHub top language](https://img.shields.io/github/languages/top/PhasesResearchLab/pysipfenn)
+ ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysipfenn)
+ ![PyPI](https://img.shields.io/pypi/v/pysipfenn)
+-![PyPI - License](https://img.shields.io/pypi/l/pysipfenn)
+-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
+-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
+-![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.11.0?color=g)
++![PyPI - Downloads](https://img.shields.io/pypi/dm/pysipfenn)
++
+ [![stable](https://img.shields.io/badge/Read%20The%20Docs-Stable-green)](https://pysipfenn.readthedocs.io/en/stable/) 
+ [![latest](https://img.shields.io/badge/Read%20The%20Docs-Latest-green)](https://pysipfenn.readthedocs.io/en/latest/)
++![GitHub license](https://img.shields.io/github/license/PhasesResearchLab/pySIPFENN)
++
++[![Partial Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml)
++[![Full Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml)
++[![codecov](https://codecov.io/gh/PhasesResearchLab/pySIPFENN/branch/main/graph/badge.svg?token=S2J0KR0WKQ)](https://codecov.io/gh/PhasesResearchLab/pySIPFENN)
++
++![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
++![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
++![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.12.0?color=g)
++![GitHub issues](https://img.shields.io/github/issues/PhasesResearchLab/pysipfenn)
+ 
+ [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.commatsci.2022.111254-blue)](https://doi.org/10.1016/j.commatsci.2022.111254)
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7373089.svg)](https://doi.org/10.5281/zenodo.7373089)
+ 
+ ### News
+ 
++- **(v.12.0)** Official Python 3.11 support. 
++- **(v.12.0)** Automated matrix-testing on Linux / Mac / Windows with Python 3.9 / 3.10 / 3.11 through GitHub Actions CLI
++and test coverage report through Codecov. Tests are also generally improved and more extensive.
+ - **(v0.11.0)** Some common questions are now addressed in the [documentation FAQ section](https://pysipfenn.readthedocs.io/en/stable/faq.html).
+ - **(v0.11.0)** The model downloads from Zenodo are now multithreaded and are 15 times faster.
+ - **(March 2023 Workshop)** We would like to thank all of our amazing attendees for making our workshop, co-organized with the
+ [Materials Genome Foundation](https://materialsgenomefoundation.org), such a success! Over 100 of you simultaneously followed
+ all exercises and, at the peak, we loaded over 1,200GB of models into the HPC's RAM. At this point, we would also like to 
+ acknowledge the generous support from [IBM](https://www.ibm.com) who funded the workshop. Please stay tuned for next workshops
+ planned online and in-person at conferences. They will be announced both here and at the [Materials Genome Foundation](https://materialsgenomefoundation.org) website.
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pyproject.toml` & `pysipfenn-0.12.0/pyproject.toml`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,43 +1,44 @@
+ [build-system]
+ requires = ["setuptools>=61.0", "setuptools-scm"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "pysipfenn"
+-version = "0.11.0post1"
++version = "0.12.0"
+ authors = [
+   { name="Adam Krajewski", email="ak@psu.edu" },
+     { name="Jonathan Siegel", email="jwsiegel@tamu.edu" },
+ ]
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "Programming Language :: Python :: 3.9",
+     "Programming Language :: Python :: 3.10",
++    "Programming Language :: Python :: 3.11",
+     "Development Status :: 4 - Beta",
+     "Intended Audience :: Science/Research",
+     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+     "Operating System :: OS Independent",
+     "Topic :: Scientific/Engineering",
+     "Topic :: Scientific/Engineering :: Artificial Intelligence",
++    "Topic :: Scientific/Engineering :: Chemistry",
+     "Topic :: Scientific/Engineering :: Physics",
+ ]
+-description = "Easily extensible Python package for running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)"
++description = "Easily extensible Python package for featurizing periodic atomic structures and running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)"
+ readme = "README.md"
+ 
+ requires-python = ">=3.9"
+ dependencies = [
+-    "pymatgen>=2022.1.9",
++    "pymatgen>=2023.2.22",
+     "torch>=1.11.0",
+     "onnx2torch>=1.5.2",
+-    "onnx>=1.9.0",
+-    "wget>=3.2",
++    "onnx>=1.13.0",
+     "numpy>=1.22.0",
+-    "tqdm>=4.63.0",
+-    "natsort>=8.0.0",
++    "tqdm>=4.65.0",
++    "natsort>=8.3.0",
+     "pymongo>=4.2",
+     "pySmartDL>=1.3.4",
+     "dnspython",
+ ]
+ 
+ [project.urls]
+ "Research Page" = "https://phaseslab.com/sipfenn"
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/core/pysipfenn.py` & `pysipfenn-0.12.0/pysipfenn/core/pysipfenn.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,11 @@
+ # General Imports
+ import os
+ 
+ import natsort
+-import wget
+ from pySmartDL import SmartDL
+ import csv
+ import numpy as np
+ from pymatgen.core import Structure
+ import json
+ from tqdm import tqdm
+ from tqdm.contrib.concurrent import process_map
+@@ -95,66 +94,27 @@
+             printOut += f'Last prediction run on: {len(self.predictions)} structures\n'
+             printOut += f'                        {len(self.predictions[0])} predictions/structure\n'
+         return printOut
+ 
+     def updateModelAvailability(self) -> None:
+         """
+             Updates availability of models based on the pysipfenn.modelsSIPFENN directory contents. Works only for
+-            current ONNX model definitions. Legacy support for MxNet models is retained in other functions, but they
+-            have to be manually added here.
++            current ONNX model definitions.
+         """
+         with resources.files('pysipfenn.modelsSIPFENN') as p:
+             all_files = os.listdir(p)
+         detectedNets = []
+         for net, netName in zip(self.network_list, self.network_list_names):
+             if all_files.__contains__(net + '.onnx'):
+                 detectedNets.append(net)
+                 print('\u2714 ' + netName)
+             else:
+                 print('\u292B ' + netName)
+         self.network_list_available = detectedNets
+ 
+-    def downloadModels_legacyMxNet(self, network: str = 'all') -> None:
+-        """**Legacy Function** Downloads MxNet models.
+-
+-        Args:
+-            network: Name of the network to download. Defaults to 'all'.
+-        """
+-        with resources.files('pysipfenn.modelsSIPFENN') as modelPath:
+-            # Fetch all
+-            if network == 'all':
+-                print('Fetching all networks!')
+-                for net in self.network_list:
+-                    if net not in self.network_list_available:
+-                        print(f'Fetching: {net}')
+-                        wget.download(self.models[net]['URLjson'], f'{modelPath}/{net}.json')
+-                        print('\nArchitecture Successfully Fetched.')
+-                        print('Downloading the Network Parameters. This process can take a few minutes.')
+-                        wget.download(self.models[net]['URLparams'], f'{modelPath}/{net}.params')
+-                        print('\nNetwork Parameters Fetched.')
+-                    else:
+-                        print(f'{net} detected on disk. Ready to use.')
+-
+-                if self.network_list == self.network_list_available:
+-                    print('All networks available!')
+-                else:
+-                    print('Problem occurred.')
+-
+-            # Fetch single
+-            elif network in self.network_list:
+-                print(f'Fetching: {network}')
+-                wget.download(self.models[network]['URLjson'], f'{modelPath}/{network}.json')
+-                print('\nArchitecture Successfully Fetched.')
+-                print('Downloading the Network Parameters. This process can take a few minutes.')
+-                wget.download(self.models[network]['URLparams'], f'{modelPath}/{network}.params')
+-                print('\nNetwork Parameters Fetched.')
+-            # Not recognized
+-            else:
+-                print('Network name not recognized')
+-
+     def downloadModels(self, network: str = 'all') -> None:
+         """Downloads ONNX models. By default, all available models are downloaded. If a model is already available
+         on disk, it is skipped. If a specific network is given, only that network is downloaded possibly overwriting
+         the existing one. If the networks name is not recognized message is printed.
+ 
+         Args:
+             network: Name of the network to download. Defaults to 'all'.
+@@ -350,15 +310,15 @@
+                 modelDirectory: Directory where the model is located. Defaults to the current directory.
+                 networkName: Name of the network. This is the name used to refer to the ONNX network. It has to be
+                     unique, not contain any spaces, and correspond to the name of the ONNX file (excluding the .onnx
+                     extension).
+                 modelName: Name of the model. This is the name that will be displayed in the model selection menu. It
+                     can be any string desired.
+                 descriptor: Descriptor/feature vector used by the model. pySIPFENN currently supports the following
+-                    descriptors: KS2022, KS2022_dilute, and Ward2017.
++                    descriptors: KS2022, and Ward2017.
+         """
+ 
+         self.loadedModels.update({
+             networkName: onnx2torch.convert(onnx.load(f'{modelDirectory}/{networkName}.onnx')).float()
+         })
+         self.models.update({
+             networkName: {
+@@ -366,71 +326,14 @@
+                 'descriptor': descriptor
+             }})
+         self.network_list.append(networkName)
+         self.network_list_names.append(modelName)
+         self.network_list_available.append(networkName)
+         print(f'Loaded model {modelName} ({networkName}) from {modelDirectory}')
+ 
+-    def makePredictions_legacyMxNet(self,
+-                                    mxnet_networks: List[str],
+-                                    dataInList: List[List[float]]
+-                                    ) -> List[list]:
+-        """Loads legacy mxnet networks models and makes predictions using them. Requires mxnet to be installed. This
+-        may be challenging on Windows systems but is easy on Linux systems.
+-
+-        Args:
+-            mxnet_networks: List of networks to use.
+-            dataInList: List of data to make predictions for. Each element of the list should be a list of descriptors.
+-
+-        Returns:
+-            List of predictions. Each element of the list is a list of predictions for all ran network.
+-
+-        Note:
+-            MxNet support is deprecated as of V0.10.0 and will be removed in future versions. Use at your own risk.
+-            Compatibility with legacy networks is not guaranteed. Use at your own risk.
+-        """
+-
+-        # Import MxNet
+-        import mxnet as mx
+-        from mxnet import nd
+-        from mxnet import gluon
+-        # Create a context for mxnet
+-        self.ctx = mx.gpu() if mx.context.num_gpus() > 0 else mx.cpu()
+-        # Verify if the nets are available
+-        with resources.files('pysipfenn.modelsSIPFENN') as p:
+-            all_files = os.listdir(p)
+-        for net in mxnet_networks:
+-            assert all_files.__contains__(net + '.json')
+-            assert all_files.__contains__(net + '.params')
+-        # Load the models
+-        loadedModels = {}
+-        with resources.files('pysipfenn.modelsSIPFENN') as modelPath:
+-            for net in mxnet_networks:
+-                loadedModels.update({net: gluon.nn.SymbolBlock.imports(
+-                    f'{modelPath}/{net}.json',  # architecture file
+-                    ['Input'],
+-                    f'{modelPath}/{net}.params',  # parameters file
+-                    ctx=self.ctx)})
+-        dataOuts = []
+-        print('Making predictions...')
+-        # Run for each network
+-        for net in loadedModels:
+-            dataIn = nd.array(dataInList)
+-            dataInCTX = dataIn.as_in_context(self.ctx)
+-            model = loadedModels[net]
+-            tempOut = model(dataInCTX)
+-            dataOuts.append(list(tempOut.asnumpy()))
+-            print(f'Obtained predictions from:  {net}')
+-
+-        # Transpose the predictions
+-        dataOuts = np.array(dataOuts).T.tolist()[0]
+-
+-        self.predictions = dataOuts
+-        return dataOuts
+-
+     def makePredictions(self,
+                         models: Dict[str, torch.nn.Module],
+                         toRun: List[str],
+                         dataInList: List[Union[List[float], np.array]]) -> List[list]:
+         """Makes predictions using PyTorch networks listed in toRun and provided in models dictionary.
+ 
+         Args:
+@@ -467,16 +370,15 @@
+ 
+     def findCompatibleModels(self, descriptor: str) -> List[str]:
+         """Finds all models compatible with a given descriptor based on the descriptor definitions loaded from the
+         models.json file.
+ 
+         Args:
+             descriptor: Descriptor to use. Must be one of the available descriptors. See pysipfenn.descriptorDefinitions
+-                to see available modules or add yours. Available default descriptors are: 'Ward2017', 'KS2022',
+-                'KS2022_dilute'.
++                to see available modules or add yours. Available default descriptors are: 'Ward2017', 'KS2022'.
+ 
+         Returns:
+             List of compatible models.
+         """
+ 
+         compatibleList = []
+         for net in self.models:
+@@ -542,24 +444,26 @@
+     def runModels_dilute(self,
+                          descriptor: str,
+                          structList: List[Structure],
+                          baseStruct: Union[str, List[Structure]] = 'pure',
+                          mode: str = 'serial',
+                          max_workers: int = 4) -> List[list]:
+         """Runs all loaded models on a list of Structures using specified descriptor. A critical difference
+-        from runModels() is that this function supports the KS2022_dilute descriptor, which can only be used on dilute
+-        structures (both based on pure elements and on custom base structures, e.g. TCP endmember configurations) that
+-        contain a single alloying atom. Speed increases are substantial compared to the KS2022 descriptor, which is
+-        more general and can be used on any structure. Supports serial and parallel modes in the same way as
+-        runModels().
++        from runModels() is that this function will call dilute-specific featurizer, e.g. KS2022_dilute when KS2022 is
++        provided as input, which can only be used on dilute structures (both based on pure elements and on custom base
++        structures, e.g. TCP endmember configurations) that contain a single alloying atom. Speed increases are
++        substantial compared to the KS2022 descriptor, which is more general and can be used on any structure.
++        Supports serial and parallel modes in the same way as runModels().
+ 
+         Args:
+-            descriptor: Descriptor to use. Must be one of the available descriptors. See pysipfenn.descriptorDefinitions
+-                to see available modules or add yours. Available default descriptors are: 'KS2022_dilute'. The 'KS2022'
+-                should also work, but is not recommended, as it negates the speed increase of the dilute descriptor.
++            descriptor: Descriptor to use for predictions. Must be one of the descriptors which support the dilute
++                structures (i.e. *_dilute). See pysipfenn.descriptorDefinitions to see available modules or add yours
++                here. Available default dilute descriptors are now: 'KS2022'. The 'KS2022' can also be called from
++                runModels() function, but is not recommended for dilute alloys, as it negates the speed increase of the
++                dilute structure featurizer.
+             structList: List of pymatgen Structure objects to run the models on. Must be dilute structures as described
+                 above.
+             baseStruct: Non-diluted references for the dilute structures. Defaults to 'pure', which assumes that the
+                 structures are based on pure elements and generates references automatically. Alternatively, a list of
+                 structures can be provided, which can be either pure elements or custom base structures (e.g. TCP
+                 endmember configurations).
+             mode: Computation mode. 'serial' or 'parallel'. Default is 'serial'. Parallel mode is not recommended for
+@@ -576,20 +480,20 @@
+         """
+ 
+         self.toRun = list(set(self.findCompatibleModels(descriptor)).intersection(set(self.network_list_available)))
+         if len(self.toRun) == 0:
+             print('The list of models to run is empty. This may be caused by selecting a descriptor not '
+                   'defined/available, or if the selected descriptor does not correspond to any available network. '
+                   'Check spelling and invoke the downloadModels() function if you are using base models.')
+-            raise TypeError
++            raise AssertionError
+         else:
+             print(f'Running {self.toRun} models')
+ 
+         print('Calculating descriptors...')
+-        if descriptor == 'KS2022_dilute':
++        if descriptor == 'KS2022':
+             self.descriptorData = self.calculate_KS2022_dilute(structList=structList,
+                                                                baseStruct=baseStruct,
+                                                                mode=mode,
+                                                                max_workers=max_workers)
+         else:
+             print('Descriptor handing not implemented. Check spelling.')
+             raise AssertionError
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/KS2022.py` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/KS2022.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -225,49 +225,49 @@
+         descriptorSplit[2],
+         descriptorSplit[4]
+     ), axis=-1, dtype=np.float32)
+     assert ks2022_structural.shape == (103,)
+ 
+     return ks2022_structural
+ 
+-def profile(test='JVASP-10001'):
++
++def profile(test='JVASP-10001', nRuns=10):
+     """Profiles the descriptor in series using one of the test structures."""
+     if test == 'JVASP-10001':
+-        print('Profiling/testing task. Will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001)')
++        print(f'KS2022 profiling/testing task will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001) {nRuns} times in series.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[4.599305652662459, 0.0098015076998823, 3.1052612865443736], [1.6553257726204653, 4.291108475854712, 3.1052602938979565], [0.0142541214919749, 0.0098025099996131, 5.549419141866351]], "a": 5.549446478152326, "b": 5.549446536179343, "c": 5.549446105810423, "alpha": 55.82714459985832, "beta": 55.82714014289371, "gamma": 55.82713972779092, "volume": 109.15484625642743}, "sites": [{"species": [{"element": "Li", "occu": 1.0}], "abc": [0.2738784872669924, 0.2738784872670407, 0.2738784872673032], "xyz": [1.7169128904007063, 1.1806114167777613, 3.220794775377278], "label": "Li", "properties": {}}, {"species": [{"element": "Li", "occu": 1.0}], "abc": [0.7852272010728069, 0.7852272010728856, 0.785227201073315], "xyz": [4.922499451739965, 3.3848887059434927, 9.234225338163633], "label": "Li", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.8669964454661124, 0.604089882092114, 0.241821769873143], "xyz": [4.990994160164061, 2.603083545876856, 5.910077181137658], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.717840894529788, 0.1213675889628683, 0.393537009186973], "xyz": [3.508082106234713, 0.531695063215412, 4.789863306469278], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.1213675889638402, 0.3935370091873943, 0.7178408945283384], "xyz": [1.2198707830817896, 1.6969362235910317, 5.58251292516964], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.3935370091861915, 0.7178408945293856, 0.1213675889634014], "xyz": [2.999987512595622, 3.085380109860344, 4.124637687962297], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.2418217698721573, 0.8669964454671221, 0.6040898820921513], "xyz": [2.555984564633329, 3.728667610729149, 6.795517372377343], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.6040898820933115, 0.2418217698723637, 0.8669964454664059], "xyz": [3.191046090145173, 1.0521031793025595, 7.4381031350436535], "label": "O", "properties": {}}, {"species": [{"element": "Te", "occu": 1.0}], "abc": [0.4965905610507353, 0.4965905610507355, 0.4965905610507361], "xyz": [3.113069390835793, 2.1406591357024984, 5.8398755612146624], "label": "Te", "properties": {}}, {"species": [{"element": "Zr", "occu": 1.0}], "abc": [0.0006501604980668, 0.0006501604980928, 0.0006501604982344], "xyz": [0.00407578174946036, 0.002802654981945192, 0.007645848918263076], "label": "Zr", "properties": {}}]}'
+     elif test == 'diluteNiAlloy':
+-        print('Profiling/testing task. Will calculate a descriptor for a dilute FCC Ni31Cr1.')
++        print(f'KS2022 profiling/testing task will calculate a descriptor for a dilute FCC Ni31Cr1 alloy {nRuns} times in series.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[6.995692, 0.0, 0.0], [0.0, 6.995692, 0.0], [0.0, 0.0, 6.995692]], "a": 6.995692, "b": 6.995692, "c": 6.995692, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 342.36711365619243}, "sites": [{"species": [{"element": "Cr", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Cr", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.0, 0.5], "xyz": [0.0, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.0], "xyz": [0.0, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.5], "xyz": [0.0, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.0], "xyz": [3.497846, 0.0, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.5], "xyz": [3.497846, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.0], "xyz": [3.497846, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.5], "xyz": [3.497846, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.0], "xyz": [1.748923, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.5], "xyz": [1.748923, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.0], "xyz": [1.748923, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.5], "xyz": [1.748923, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.0], "xyz": [5.2467690000000005, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.5], "xyz": [5.2467690000000005, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.0], "xyz": [5.2467690000000005, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.5], "xyz": [5.2467690000000005, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.25], "xyz": [1.748923, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.7500000000000001], "xyz": [1.748923, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.25], "xyz": [1.748923, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.7500000000000001], "xyz": [1.748923, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.25], "xyz": [5.2467690000000005, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.7500000000000001], "xyz": [5.2467690000000005, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.25], "xyz": [5.2467690000000005, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.7500000000000001], "xyz": [5.2467690000000005, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.25], "xyz": [0.0, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.7500000000000001], "xyz": [0.0, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.25], "xyz": [0.0, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.7500000000000001], "xyz": [0.0, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.25], "xyz": [3.497846, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.7500000000000001], "xyz": [3.497846, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.25], "xyz": [3.497846, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.7500000000000001], "xyz": [3.497846, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}], "@version": null}'
+     else:
+         print('Unrecognized test name.')
+-        return 0
+-    s10 = [Structure.from_dict(json.loads(matStr))] * 10
+-    for s in tqdm(s10):
++        return None
++    structList = [Structure.from_dict(json.loads(matStr))] * nRuns
++    for s in tqdm(structList):
+         d = generate_descriptor(s)
+     with open('KS2022_TestResult.csv', 'w+') as f:
+         f.writelines([f'{v}\n' for v in d])
+     print('Done!')
+-    print(d)
+ 
+-def profileParallel(test='JVASP-10001'):
++def profileParallel(test='JVASP-10001', nRuns=1000):
+     """Profiles the descriptor in parallel using one of the test structures."""
+     from tqdm.contrib.concurrent import process_map
+     if test=='JVASP-10001':
++        print(f'KS2022 profiling/testing task will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001) {nRuns} times in parallel with 8 workers.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[4.599305652662459, 0.0098015076998823, 3.1052612865443736], [1.6553257726204653, 4.291108475854712, 3.1052602938979565], [0.0142541214919749, 0.0098025099996131, 5.549419141866351]], "a": 5.549446478152326, "b": 5.549446536179343, "c": 5.549446105810423, "alpha": 55.82714459985832, "beta": 55.82714014289371, "gamma": 55.82713972779092, "volume": 109.15484625642743}, "sites": [{"species": [{"element": "Li", "occu": 1.0}], "abc": [0.2738784872669924, 0.2738784872670407, 0.2738784872673032], "xyz": [1.7169128904007063, 1.1806114167777613, 3.220794775377278], "label": "Li", "properties": {}}, {"species": [{"element": "Li", "occu": 1.0}], "abc": [0.7852272010728069, 0.7852272010728856, 0.785227201073315], "xyz": [4.922499451739965, 3.3848887059434927, 9.234225338163633], "label": "Li", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.8669964454661124, 0.604089882092114, 0.241821769873143], "xyz": [4.990994160164061, 2.603083545876856, 5.910077181137658], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.717840894529788, 0.1213675889628683, 0.393537009186973], "xyz": [3.508082106234713, 0.531695063215412, 4.789863306469278], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.1213675889638402, 0.3935370091873943, 0.7178408945283384], "xyz": [1.2198707830817896, 1.6969362235910317, 5.58251292516964], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.3935370091861915, 0.7178408945293856, 0.1213675889634014], "xyz": [2.999987512595622, 3.085380109860344, 4.124637687962297], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.2418217698721573, 0.8669964454671221, 0.6040898820921513], "xyz": [2.555984564633329, 3.728667610729149, 6.795517372377343], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.6040898820933115, 0.2418217698723637, 0.8669964454664059], "xyz": [3.191046090145173, 1.0521031793025595, 7.4381031350436535], "label": "O", "properties": {}}, {"species": [{"element": "Te", "occu": 1.0}], "abc": [0.4965905610507353, 0.4965905610507355, 0.4965905610507361], "xyz": [3.113069390835793, 2.1406591357024984, 5.8398755612146624], "label": "Te", "properties": {}}, {"species": [{"element": "Zr", "occu": 1.0}], "abc": [0.0006501604980668, 0.0006501604980928, 0.0006501604982344], "xyz": [0.00407578174946036, 0.002802654981945192, 0.007645848918263076], "label": "Zr", "properties": {}}]}'
+     elif test=='diluteNiAlloy':
++        print(f'KS2022 profiling/testing task will calculate a descriptor for a dilute FCC Ni31Cr1 alloy {nRuns} times in parallel with 8 workers.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[6.995692, 0.0, 0.0], [0.0, 6.995692, 0.0], [0.0, 0.0, 6.995692]], "a": 6.995692, "b": 6.995692, "c": 6.995692, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 342.36711365619243}, "sites": [{"species": [{"element": "Cr", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Cr", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.0, 0.5], "xyz": [0.0, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.0], "xyz": [0.0, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.5], "xyz": [0.0, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.0], "xyz": [3.497846, 0.0, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.5], "xyz": [3.497846, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.0], "xyz": [3.497846, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.5], "xyz": [3.497846, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.0], "xyz": [1.748923, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.5], "xyz": [1.748923, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.0], "xyz": [1.748923, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.5], "xyz": [1.748923, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.0], "xyz": [5.2467690000000005, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.5], "xyz": [5.2467690000000005, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.0], "xyz": [5.2467690000000005, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.5], "xyz": [5.2467690000000005, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.25], "xyz": [1.748923, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.7500000000000001], "xyz": [1.748923, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.25], "xyz": [1.748923, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.7500000000000001], "xyz": [1.748923, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.25], "xyz": [5.2467690000000005, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.7500000000000001], "xyz": [5.2467690000000005, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.25], "xyz": [5.2467690000000005, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.7500000000000001], "xyz": [5.2467690000000005, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.25], "xyz": [0.0, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.7500000000000001], "xyz": [0.0, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.25], "xyz": [0.0, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.7500000000000001], "xyz": [0.0, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.25], "xyz": [3.497846, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.7500000000000001], "xyz": [3.497846, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.25], "xyz": [3.497846, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.7500000000000001], "xyz": [3.497846, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}], "@version": null}'
+     else:
+         print('Unrecognized test name.')
+-        return 0
++        return None
+     s = Structure.from_dict(json.loads(matStr))
+     #s.make_supercell(scaling_matrix=[2,2,2])
+-    s1000 = [s] * 1000
+-    descList = process_map(generate_descriptor, s1000, max_workers=10)
++    structList = [s] * nRuns
++    descList = process_map(generate_descriptor, structList, max_workers=8)
+     print('Done!')
+-    return 1
+ 
+ if __name__ == "__main__":
+     profile(test='JVASP-10001')
+     profile(test='diluteNiAlloy')
+-    profileDilute(test='diluteNiAlloy')
+     profileParallel(test='JVASP-10001')
+     profileParallel(test='diluteNiAlloy')
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/KS2022_dilute.py` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Ward2017.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,45 +1,59 @@
+ # Authors: Jonathan Siegel, Adam M. Krajewski
+ #
+-# Calculates the descriptor first introduced by Ward and Wolverton.
++# Calculates the descriptor / feature vector first introduced by Ward and Wolverton.
+ #
+-# Please Cite:
++# In addition to pySIPFENN please cite:
+ # L. Ward, R. Liu, A. Krishna, V. I. Hegde, A. Agrawal, A. Choudhary, and C. Wolverton,
+ # “Including crystal structure attributes in machine learning models of formation energies
+ # via Voronoi tessellations,” Physical Review B, vol. 96, no. 2, 7 2017.
+ 
+ import math
+-import time
++import json
+ import numpy as np
+ import os
+ from pymatgen.core import Structure, Element
+ from pymatgen.analysis.local_env import VoronoiNN
+-from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+-import json
+ from tqdm import tqdm
+-from collections import Counter
++from typing import List
+ 
+-citation = 'L. Ward, R. Liu, A. Krishna, V. I. Hegde, A. Agrawal, A. Choudhary, and C. Wolverton, “Including crystal structure attributes in machine learning models of formation energies via Voronoi tessellations,” Physical Review B, vol. 96, no. 2, 7 2017.'
++citations = ['Adam M. Krajewski, Jonathan W. Siegel, Jinchao Xu, Zi-Kui Liu, Extensible Structure-Informed Prediction of '
++             'Formation Energy with improved accuracy and usability employing neural networks, Computational '
++             'Materials Science, Volume 208, 2022, 111254',
++             'L. Ward, R. Liu, A. Krishna, V. I. Hegde, A. Agrawal, A. Choudhary, and C. Wolverton, “Including crystal '
++             'structure attributes in machine learning models of formation energies via Voronoi tessellations,” Physical '
++             'Review B, vol. 96, no. 2, 7 2017.',
++             ]
+ 
+ periodic_table_size = 112
+ attribute_matrix = np.loadtxt(os.path.join(os.path.dirname(__file__), 'Magpie_element_properties.csv'), delimiter=',')
+ attribute_matrix = np.nan_to_num(attribute_matrix)
+ # Only select attributes actually used in Magpie.
+ attribute_matrix = attribute_matrix[:,
+-                   [45, 33, 2, 32, 5, 48, 6, 10, 44, 42, 38, 40, 36, 43, 41, 37, 39, 35, 18, 13, 17]]
++                   [45, 33, 2, 32, 5, 48, 6, 10, 44, 42, 38, 40, 36, 43, 41, 37, 39, 35, 18, 13, 17, 50]]
++
++def local_env_function(local_env, site, element_dict) -> list:
++    """A prototype function which computes a weighted average over neighbors, weighted by the area of the voronoi cell
++    between them.
++
++    Args:
++        local_env: A dictionary of the local environment of a site, as returned by a VoronoiNN generator.
++        site: The site number for which the local environment is being computed.
++
++    Returns:
++        A list of the local environment attributes.
++    """
+ 
+-# A prototype function which computes a weighted average over neighbors,
+-# weighted by the area of the voronoi cell between them.
+-def local_env_function(local_env, site, struct):
+     local_attributes = np.zeros(attribute_matrix.shape[1])
+     for key, value in site.species.get_el_amt_dict().items():
+         local_attributes += value * attribute_matrix[Element(key).Z - 1, :]
+     diff_attributes = np.zeros(attribute_matrix.shape[1])
+     total_weight = 0
+     volume = 0
++    neighbor_list = [[value['site'], value['area']] for value in local_env.values()]
+     for ind, neighbor_site in local_env.items():
+         neighbor_attributes = np.zeros(attribute_matrix.shape[1])
+         for key, value in neighbor_site['site'].species.get_el_amt_dict().items():
+             neighbor_attributes += value * attribute_matrix[Element(key).Z - 1, :]
+         diff_attributes += np.abs(local_attributes - neighbor_attributes) * neighbor_site['area']
+         total_weight += neighbor_site['area']
+         volume += neighbor_site['volume']
+@@ -48,131 +62,158 @@
+     average = 0
+     variance = 0
+     for neighbor_site in local_env.values():
+         average += neighbor_site['area']
+         variance += neighbor_site['area'] * neighbor_site['area']
+     eff_coord_num = average * average / variance
+     # Calculate Bond Length Attributes
+-    # AVG
+     blen_average = 0
+     for neighbor_site in local_env.values():
+         blen_average += neighbor_site['area'] * 2 * neighbor_site['face_dist']
+     blen_average /= total_weight
+-    # VAR
+     blen_var = 0
+     for neighbor_site in local_env.values():
+         blen_var += neighbor_site['area'] * abs(2 * neighbor_site['face_dist'] - blen_average)
+     blen_var /= total_weight * blen_average
++    # Calculate WC parameters.
++    path_dict_1 = {}
++    total_weight_1 = 0
++    path_dict_2 = {}
++    total_weight_2 = 0
++    path_dict_3 = {}
++    total_weight_3 = 0
++    for neighbor_site_1 in local_env.values():
++        total_weight_1 += neighbor_site_1['area']
++        for key in neighbor_site['site'].species.get_el_amt_dict():
++            if key in path_dict_1:
++                path_dict_1[key] += neighbor_site_1['area']
++            else:
++                path_dict_1[key] = neighbor_site_1['area']
+     # Calculate Packing Efficiency info
+     sphere_rad = min(neighbor_site['face_dist'] for neighbor_site in local_env.values())
+     sphere_volume = (4.0 / 3.0) * math.pi * math.pow(sphere_rad, 3.0)
+     return [np.concatenate(
+         ([eff_coord_num, blen_average, blen_var, volume, sphere_volume], elemental_properties_attributes[0])),
+-            elemental_properties_attributes[1]]
+-
+-def findDilute(struct):
+-    spoList = struct.species_and_occu
+-    spCount = dict(Counter(spoList))
+-    spDilute = [spoList.index(sp) for sp in spCount if spCount[sp]==1]
+-    if len(spCount)-len(spDilute)==1:
+-        return spDilute[0]
+-    else:
+-        print('Custom dilute structure descriptor calculation is defined only one dilute species in a single element matrix')
+-        raise RuntimeError
+-
+-def generate_voronoi_attributes(struct, baseStruct='pure', local_funct=local_env_function):
+-    local_generator = LocalAttributeGenerator(struct, local_funct)
+-
+-    # Generate a base structure of pure elemental solid or take one as input
+-    if isinstance(baseStruct, Structure):
+-        diluteSite = []
+-        for i, (s1s, s2s) in enumerate(zip(baseStruct.sites, struct.sites)):
+-            if s1s != s2s:
+-                diluteSite.append(i)
+-                continue
+-        if len(diluteSite)==1:
+-            diluteSite = diluteSite[0]
+-        else:
+-            print('Sites in the provided base structure matched the investigated one exactly')
+-            raise TypeError
+-    elif baseStruct=='pure':
+-        baseStruct = struct.copy()
+-        for sp in set(baseStruct.species):
+-            baseStruct.replace_species({sp: 'A'})
+-        # Find position of the 1 dilute atom and calculate output for it
+-        diluteSite = findDilute(struct)
+-    else:
+-        raise TypeError
+-
+-    # Find equivalent positions in the original base structure
+-    spgAbase = SpacegroupAnalyzer(baseStruct, symprec=0.001, angle_tolerance=0.1)
+-    originalEquivalents = list(spgAbase.get_symmetry_dataset()['equivalent_atoms'])
+-
+-    # Output list
+-    attribute_list = list()
+-    attribute_list.append(local_generator.generate_local_attributes_diluteSite(diluteSite))
+-
+-    # Based on the dilute atom output, identify its neighbors
+-    neighborsFacesDict = attribute_list[0][2]
+-
+-    # Create a dictionary of LCE parameters to determine equivalency in a dilute case
+-    siteLCEparams = dict(zip(range(len(originalEquivalents)), [[e] for e in originalEquivalents]))
+-    siteLCEparams[diluteSite] = 'dilute'
+-    for siteN in neighborsFacesDict:
+-        siteLCEparams[siteN].append(neighborsFacesDict[siteN])
+-
+-    # Group into equivalents and remove the dilute atom, already calcualted
+-    equivalentGroups = {}
+-    for siteN in siteLCEparams:
+-        params = ''.join(str(siteLCEparams[siteN]))
+-        if params in equivalentGroups:
+-            equivalentGroups[params].append(siteN)
+-        else:
+-            equivalentGroups.update({params: [siteN]})
+-    del equivalentGroups['dilute']
+-
+-    equivalentSitesMultiplicities = dict(
+-        zip([g[0] for g in equivalentGroups.values()],
+-            [len(g) for g in equivalentGroups.values()]))
+-
+-    for siteN in equivalentSitesMultiplicities:
+-        localAttributes = [local_generator.generate_local_attributes(siteN)]
+-        attribute_list += localAttributes*equivalentSitesMultiplicities[siteN]
++        elemental_properties_attributes[1], neighbor_list]
+ 
+-    return np.array([value[0] for value in attribute_list]), np.array([value[1] for value in attribute_list])
+ 
+-# A wrapper class which contains an instance of an NN generator (the default is a VoronoiNN), a structure, and
+-# a function which computes the local environment attributes.
+ class LocalAttributeGenerator:
+-    def __init__(self, struct, local_env_func, nn_generator=VoronoiNN(compute_adj_neighbors=False, extra_nn_info=False)):
++    """A wrapper class which contains an instance of an NN generator (the default is a VoronoiNN), a structure, and
++    a function which computes the local environment attributes.
++    """
++
++    def __init__(self, struct, local_env_func, element_dict,
++                 nn_generator=VoronoiNN(compute_adj_neighbors=False, extra_nn_info=False)):
+         self.generator = nn_generator
+         self.struct = struct
+         self.function = local_env_func
++        self.element_dict = element_dict
+ 
+-    def generate_local_attributes(self, n):
++    def generate_local_attributes(self, n: int):
++        """Generates the local environment attributes for a given site in the structure."""
+         local_env = self.generator.get_voronoi_polyhedra(self.struct, n)
+-        return self.function(local_env, self.struct[n], self.struct)
++        return self.function(local_env, self.struct[n], self.element_dict)
+ 
+-    def generate_local_attributes_diluteSite(self, n):
+-        local_env = self.generator.get_voronoi_polyhedra(self.struct, n)
+-        local_env_result = self.function(local_env, self.struct[n], self.struct)
+ 
+-        neighbor_dict = {value['site'].index:
+-                             [str(value['site'].species),
+-                              round(value['face_dist'], 2),
+-                              round(value['area'], 2),
+-                              value['n_verts']]
+-                         for value in local_env.values()}
++def generate_voronoi_attributes(struct: Structure, local_funct=local_env_function):
++    """Generates the local environment attributes for a given structure using a VoronoiNN generator. 
++       The local environment attributes consist of averages over the neighbors of each site in the structure.
+ 
+-        local_env_result.append(neighbor_dict)
++    Args:
++        struct: A pymatgen Structure object.
++        local_funct: A function which computes the local environment attributes for a given site.
++
++    """
++    # Collect stoichiometry of structure for use in WC parameter calculation.
++    element_dict = {}
++    for composition in struct.species_and_occu:
++        for key, value in composition.get_el_amt_dict().items():
++            if key in element_dict:
++                element_dict[key] += value / len(struct.species_and_occu)
++            else:
++                element_dict[key] = value / len(struct.species_and_occu)
++    local_generator = LocalAttributeGenerator(struct, local_funct, element_dict)
++    attribute_list = map(local_generator.generate_local_attributes, range(len(struct.sites)))
++    attribute_list = list(attribute_list)
++    return np.array([value[0] for value in attribute_list]), np.array([value[1] for value in attribute_list]), {
++        i: value[2] for (i, value) in enumerate(attribute_list)}
++
++
++def generate_WC_attributes(strc: Structure, neighbor_dict_raw, levels) -> List[float]:
++    """Generates the WC attributes for a given structure. The WC attributes are the ordering parameters for each
++    shell of the Voronoi tessellation. Slightly different than what is implemented by Ward-Wolverton. Only considers
++    immediate backtracking.
++
++    Args:
++        strc: A pymatgen Structure object.
++        neighbor_dict_raw: A dictionary of the neighbors of each site in the structure.
++        levels: The number of shells to consider.
++
++    """
++    if len(strc.composition) == 1:
++        return [0] * levels
++
++    strc_unit_cell = []
++    for pos in strc:
++        strc_unit_cell.append(pos.to_unit_cell())
++    neighbor_dict = {key: [[strc_unit_cell.index(value[0].to_unit_cell()), value[1]] for value in sp_list] for
++                     (key, sp_list) in neighbor_dict_raw.items()}
++
++    # Get a list of types
++    elems, fracs = zip(
++        *strc.composition.element_composition.fractional_composition.items())
++
++    # Evaluate each shell
++    output = []
++    reachable_inds = {i: {(i, i, 0.0): 1.0} for i in range(len(strc))}
++    for shell in range(levels):
++        # Initialize an array to store the ordering parameters
++        ordering = np.zeros((len(strc), len(elems)))
++
++        # Get the ordering of each type of each atom
++        for site_idx in range(len(strc)):
++            r_inds = reachable_inds[site_idx]
++            reachable_inds[site_idx] = {}
++            for idxs, weight in r_inds.items():
++                p_idx = idxs[0]
++                idx = idxs[1]
++                face_area = idxs[2]
++                weight_normalization = 0
++                skipped = False
++                for n_idx in neighbor_dict[idx]:
++                    if n_idx[0] != p_idx or abs(n_idx[1] - face_area) > 1e-9 or skipped:
++                        weight_normalization += n_idx[1]
++                    else:
++                        skipped = True
++                skipped = False
++                for n_idx in neighbor_dict[idx]:
++                    if n_idx[0] != p_idx or abs(n_idx[1] - face_area) > 1e-9 or skipped:
++                        for key, value in strc[n_idx[0]].species.items():
++                            ordering[site_idx, elems.index(key)] += value * n_idx[1] * weight / weight_normalization
++                        if shell < levels - 1:
++                            if (idx, n_idx[0], n_idx[1]) in reachable_inds[site_idx]:
++                                reachable_inds[site_idx][(idx, n_idx[0], n_idx[1])] += \
++                                    n_idx[1] * weight / weight_normalization
++                            else:
++                                reachable_inds[site_idx][(idx, n_idx[0], n_idx[1])] = \
++                                    n_idx[1] * weight / weight_normalization
++                    else:
++                        skipped = True
++
++            # Compute the ordering parameter
++            ordering[site_idx, :] = 1 - ordering[site_idx, :] / np.array(fracs)
++
++        # Compute the average ordering for the entire structure
++        output.append(np.abs(ordering).mean())
++
++    return output
+ 
+-        return local_env_result
+ 
+-# Calculates the attributes corresponding to the most common elements.
+ def magpie_mode(attribute_properties, axis=0):
++    """Calculates the attributes corresponding to the most common elements."""
+     scores = np.unique(np.ravel(attribute_properties[:, 0]))  # get all unique atomic numbers
+     max_occurrence = 0
+     top_elements = []
+     for score in scores:
+         template = (attribute_properties[:, 0] == score)
+         count = np.expand_dims(np.sum(template, axis), axis)[0]
+         if count > max_occurrence:
+@@ -182,51 +223,65 @@
+         elif count == max_occurrence:
+             top_elements.append(score)
+     output = np.zeros_like(attribute_properties[0, :])
+     for elem in top_elements:
+         output += attribute_matrix[int(elem) - 1, :]
+     return output / len(top_elements)
+ 
+-def generate_descriptor(struct: Structure, baseStruct='pure'):
+-    diff_properties, attribute_properties = generate_voronoi_attributes(struct, baseStruct=baseStruct)
+-    properties = np.concatenate(
+-        (np.stack(
+-            (np.mean(diff_properties, axis=0),
+-             np.mean(np.abs(diff_properties - np.mean(diff_properties, axis=0)), axis=0),
+-             np.min(diff_properties, axis=0),
+-             np.max(diff_properties, axis=0),
+-             np.max(diff_properties, axis=0) - np.min(diff_properties, axis=0)), axis=-1).reshape((-1)),
+-        np.stack(
+-            (np.mean(attribute_properties, axis=0),
+-             np.max(attribute_properties, axis=0) - np.min(attribute_properties, axis=0),
+-             np.mean(np.abs(attribute_properties - np.mean(attribute_properties, axis=0)), axis=0),
+-             np.max(attribute_properties, axis=0),
+-             np.min(attribute_properties, axis=0),
+-             magpie_mode(attribute_properties)), axis=-1).reshape((-1))))
++
++def generate_descriptor(struct: Structure) -> np.ndarray:
++    """Main functionality. Generates the Ward2017 descriptor for a given structure.
++
++    Args:
++        struct: A pymatgen Structure object.
++
++    Returns:
++        A 271-lenght numpy array of the descriptor.
++    """
++    diff_properties, attribute_properties, neighbor_dict = generate_voronoi_attributes(struct)
++    properties = np.concatenate((np.stack((np.mean(diff_properties, axis=0),
++                                           np.mean(np.abs(diff_properties - np.mean(diff_properties, axis=0)), axis=0),
++                                           np.min(diff_properties, axis=0),
++                                           np.max(diff_properties, axis=0),
++                                           np.max(diff_properties, axis=0) -
++                                           np.min(diff_properties, axis=0)), axis=-1).reshape((-1)),
++                                 np.stack((np.mean(attribute_properties, axis=0),
++                                           np.max(attribute_properties, axis=0) -
++                                           np.min(attribute_properties, axis=0),
++                                           np.mean(np.abs(attribute_properties - np.mean(attribute_properties, axis=0)),
++                                                   axis=0),
++                                           np.max(attribute_properties, axis=0),
++                                           np.min(attribute_properties, axis=0),
++                                           magpie_mode(attribute_properties)), axis=-1).reshape((-1))))
+     # Normalize Bond Length properties.
+     properties[6] /= properties[5]
+     properties[7] /= properties[5]
+     properties[8] /= properties[5]
+     # Normalize the Cell Volume Deviation.
+     properties[16] /= properties[15]
+     # Remove properties not in magpie.
+     properties = np.delete(properties, [4, 5, 9, 14, 15, 17, 18, 19, 21, 22, 23, 24])
+     # Renormalize the packing efficiency.
+     properties[12] *= len(attribute_properties) / struct.volume
++    # Generate WC attributes
++    wc_attributes = generate_WC_attributes(struct, neighbor_dict, 3)
++    for attribute in reversed(wc_attributes):
++        properties = np.insert(properties, 12, attribute)
+     # Calculate and insert stoichiometry attributes.
+     element_dict = {}
+     for composition in struct.species_and_occu:
+         for key, value in composition.get_el_amt_dict().items():
+             if key in element_dict:
+                 element_dict[key] += value / len(struct.species_and_occu)
+             else:
+                 element_dict[key] = value / len(struct.species_and_occu)
+-    position = 118
++    position = 126
+     for p in [10, 7, 5, 3, 2]:
+-        properties = np.insert(properties, position,
++        properties = np.insert(properties,
++                               position,
+                                math.pow(sum(math.pow(value, p) for value in element_dict.values()), 1.0 / p))
+     properties = np.insert(properties, position, len(element_dict))
+     # Calculate Valence Electron Statistics
+     electron_occupation_dict = {'s': 0, 'p': 0, 'd': 0, 'f': 0}
+     total_valence_factor = 0
+     for key, value in element_dict.items():
+         electron_occupation_dict['s'] += value * attribute_matrix[Element(key).Z - 1][8]
+@@ -235,63 +290,73 @@
+         electron_occupation_dict['f'] += value * attribute_matrix[Element(key).Z - 1][11]
+     total_valence_factor = sum([val for (key, val) in electron_occupation_dict.items()])
+     for orb in ['s', 'p', 'd', 'f']:
+         properties = np.append(properties, electron_occupation_dict[orb] / total_valence_factor)
+     # Calculate ionic compound attributes.
+     max_ionic_char = 0
+     av_ionic_char = 0
++    has_anions = False
++    has_cations = True
++    for el in struct.composition.add_charges_from_oxi_state_guesses().elements:
++        if el.oxi_state > 0:
++            has_anions = True
++        if el.oxi_state < 0:
++            has_cations = True
+     for key1, value1 in element_dict.items():
+         for key2, value2 in element_dict.items():
+             ionic_char = 1.0 - math.exp(-0.25 * (Element(key1).X - Element(key2).X) ** 2)
+             if ionic_char > max_ionic_char:
+                 max_ionic_char = ionic_char
+             av_ionic_char += ionic_char * value1 * value2
++    properties = np.append(properties, (float)(has_anions and has_cations))
+     properties = np.append(properties, max_ionic_char)
+     properties = np.append(properties, av_ionic_char)
+-    properties = properties.astype(np.float32)
+     return properties
+ 
+-def cite():
+-    return citation
+ 
+-def profile(test='JVASP-10001'):
++def cite() -> List[str]:
++    """Citation/s for the descriptor."""
++    return citations
++
++
++def profile(test='JVASP-10001', nRuns=10):
++    """Profiles the descriptor in series using one of the test structures."""
+     if test == 'JVASP-10001':
+-        print('Profiling/testing task. Will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001)')
++        print(f'Ward2017 profiling/testing task will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001) {nRuns} times in series.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[4.599305652662459, 0.0098015076998823, 3.1052612865443736], [1.6553257726204653, 4.291108475854712, 3.1052602938979565], [0.0142541214919749, 0.0098025099996131, 5.549419141866351]], "a": 5.549446478152326, "b": 5.549446536179343, "c": 5.549446105810423, "alpha": 55.82714459985832, "beta": 55.82714014289371, "gamma": 55.82713972779092, "volume": 109.15484625642743}, "sites": [{"species": [{"element": "Li", "occu": 1.0}], "abc": [0.2738784872669924, 0.2738784872670407, 0.2738784872673032], "xyz": [1.7169128904007063, 1.1806114167777613, 3.220794775377278], "label": "Li", "properties": {}}, {"species": [{"element": "Li", "occu": 1.0}], "abc": [0.7852272010728069, 0.7852272010728856, 0.785227201073315], "xyz": [4.922499451739965, 3.3848887059434927, 9.234225338163633], "label": "Li", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.8669964454661124, 0.604089882092114, 0.241821769873143], "xyz": [4.990994160164061, 2.603083545876856, 5.910077181137658], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.717840894529788, 0.1213675889628683, 0.393537009186973], "xyz": [3.508082106234713, 0.531695063215412, 4.789863306469278], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.1213675889638402, 0.3935370091873943, 0.7178408945283384], "xyz": [1.2198707830817896, 1.6969362235910317, 5.58251292516964], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.3935370091861915, 0.7178408945293856, 0.1213675889634014], "xyz": [2.999987512595622, 3.085380109860344, 4.124637687962297], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.2418217698721573, 0.8669964454671221, 0.6040898820921513], "xyz": [2.555984564633329, 3.728667610729149, 6.795517372377343], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.6040898820933115, 0.2418217698723637, 0.8669964454664059], "xyz": [3.191046090145173, 1.0521031793025595, 7.4381031350436535], "label": "O", "properties": {}}, {"species": [{"element": "Te", "occu": 1.0}], "abc": [0.4965905610507353, 0.4965905610507355, 0.4965905610507361], "xyz": [3.113069390835793, 2.1406591357024984, 5.8398755612146624], "label": "Te", "properties": {}}, {"species": [{"element": "Zr", "occu": 1.0}], "abc": [0.0006501604980668, 0.0006501604980928, 0.0006501604982344], "xyz": [0.00407578174946036, 0.002802654981945192, 0.007645848918263076], "label": "Zr", "properties": {}}]}'
+     elif test == 'diluteNiAlloy':
+-        print('Profiling/testing task. Will calculate a descriptor for a dilute FCC Ni31Cr1.')
++        print(f'Ward2017 profiling/testing task will calculate a descriptor for a dilute FCC Ni31Cr1 alloy {nRuns} times in series.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[6.995692, 0.0, 0.0], [0.0, 6.995692, 0.0], [0.0, 0.0, 6.995692]], "a": 6.995692, "b": 6.995692, "c": 6.995692, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 342.36711365619243}, "sites": [{"species": [{"element": "Cr", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Cr", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.0, 0.5], "xyz": [0.0, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.0], "xyz": [0.0, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.5], "xyz": [0.0, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.0], "xyz": [3.497846, 0.0, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.5], "xyz": [3.497846, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.0], "xyz": [3.497846, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.5], "xyz": [3.497846, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.0], "xyz": [1.748923, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.5], "xyz": [1.748923, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.0], "xyz": [1.748923, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.5], "xyz": [1.748923, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.0], "xyz": [5.2467690000000005, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.5], "xyz": [5.2467690000000005, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.0], "xyz": [5.2467690000000005, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.5], "xyz": [5.2467690000000005, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.25], "xyz": [1.748923, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.7500000000000001], "xyz": [1.748923, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.25], "xyz": [1.748923, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.7500000000000001], "xyz": [1.748923, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.25], "xyz": [5.2467690000000005, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.7500000000000001], "xyz": [5.2467690000000005, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.25], "xyz": [5.2467690000000005, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.7500000000000001], "xyz": [5.2467690000000005, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.25], "xyz": [0.0, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.7500000000000001], "xyz": [0.0, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.25], "xyz": [0.0, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.7500000000000001], "xyz": [0.0, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.25], "xyz": [3.497846, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.7500000000000001], "xyz": [3.497846, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.25], "xyz": [3.497846, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.7500000000000001], "xyz": [3.497846, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}], "@version": null}'
+     else:
+         print('Unrecognized test name.')
+-        return 0
+-    s10 = [Structure.from_dict(json.loads(matStr))] * 10
+-    for s in tqdm(s10):
++        return None
++    structList = [Structure.from_dict(json.loads(matStr))] * nRuns
++    for s in tqdm(structList):
+         d = generate_descriptor(s)
+     with open('KS2022_TestResult.csv', 'w+') as f:
+         f.writelines([f'{v}\n' for v in d])
+     print('Done!')
+-    print(d)
+ 
+-def profileParallel(test='JVASP-10001'):
++def profileParallel(test='JVASP-10001', nRuns=1000):
++    """Profiles the descriptor in parallel using one of the test structures."""
+     from tqdm.contrib.concurrent import process_map
+-    if test == 'JVASP-10001':
+-        print('Profiling/testing task. Will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001)')
++    if test=='JVASP-10001':
++        print(f'Ward2017 profiling/testing task will calculate a descriptor for Li2 Zr1 Te1 O6 (JVASP-10001) {nRuns} times in parallel with 8 workers.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[4.599305652662459, 0.0098015076998823, 3.1052612865443736], [1.6553257726204653, 4.291108475854712, 3.1052602938979565], [0.0142541214919749, 0.0098025099996131, 5.549419141866351]], "a": 5.549446478152326, "b": 5.549446536179343, "c": 5.549446105810423, "alpha": 55.82714459985832, "beta": 55.82714014289371, "gamma": 55.82713972779092, "volume": 109.15484625642743}, "sites": [{"species": [{"element": "Li", "occu": 1.0}], "abc": [0.2738784872669924, 0.2738784872670407, 0.2738784872673032], "xyz": [1.7169128904007063, 1.1806114167777613, 3.220794775377278], "label": "Li", "properties": {}}, {"species": [{"element": "Li", "occu": 1.0}], "abc": [0.7852272010728069, 0.7852272010728856, 0.785227201073315], "xyz": [4.922499451739965, 3.3848887059434927, 9.234225338163633], "label": "Li", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.8669964454661124, 0.604089882092114, 0.241821769873143], "xyz": [4.990994160164061, 2.603083545876856, 5.910077181137658], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.717840894529788, 0.1213675889628683, 0.393537009186973], "xyz": [3.508082106234713, 0.531695063215412, 4.789863306469278], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.1213675889638402, 0.3935370091873943, 0.7178408945283384], "xyz": [1.2198707830817896, 1.6969362235910317, 5.58251292516964], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.3935370091861915, 0.7178408945293856, 0.1213675889634014], "xyz": [2.999987512595622, 3.085380109860344, 4.124637687962297], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.2418217698721573, 0.8669964454671221, 0.6040898820921513], "xyz": [2.555984564633329, 3.728667610729149, 6.795517372377343], "label": "O", "properties": {}}, {"species": [{"element": "O", "occu": 1.0}], "abc": [0.6040898820933115, 0.2418217698723637, 0.8669964454664059], "xyz": [3.191046090145173, 1.0521031793025595, 7.4381031350436535], "label": "O", "properties": {}}, {"species": [{"element": "Te", "occu": 1.0}], "abc": [0.4965905610507353, 0.4965905610507355, 0.4965905610507361], "xyz": [3.113069390835793, 2.1406591357024984, 5.8398755612146624], "label": "Te", "properties": {}}, {"species": [{"element": "Zr", "occu": 1.0}], "abc": [0.0006501604980668, 0.0006501604980928, 0.0006501604982344], "xyz": [0.00407578174946036, 0.002802654981945192, 0.007645848918263076], "label": "Zr", "properties": {}}]}'
+-    elif test == 'diluteNiAlloy':
+-        print('Profiling/testing task. Will calculate a descriptor for a dilute FCC Ni31Cr1.')
++    elif test=='diluteNiAlloy':
++        print(f'Ward2017 profiling/testing task will calculate a descriptor for a dilute FCC Ni31Cr1 alloy {nRuns} times in parallel with 8 workers.')
+         matStr = '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": null, "lattice": {"matrix": [[6.995692, 0.0, 0.0], [0.0, 6.995692, 0.0], [0.0, 0.0, 6.995692]], "a": 6.995692, "b": 6.995692, "c": 6.995692, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 342.36711365619243}, "sites": [{"species": [{"element": "Cr", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Cr", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.0, 0.5], "xyz": [0.0, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.0], "xyz": [0.0, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.5, 0.5], "xyz": [0.0, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.0], "xyz": [3.497846, 0.0, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.0, 0.5], "xyz": [3.497846, 0.0, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.0], "xyz": [3.497846, 3.497846, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.5, 0.5], "xyz": [3.497846, 3.497846, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.0], "xyz": [1.748923, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.25, 0.5], "xyz": [1.748923, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.0], "xyz": [1.748923, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.7500000000000001, 0.5], "xyz": [1.748923, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.0], "xyz": [5.2467690000000005, 1.748923, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.25, 0.5], "xyz": [5.2467690000000005, 1.748923, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.0], "xyz": [5.2467690000000005, 5.2467690000000005, 0.0], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.7500000000000001, 0.5], "xyz": [5.2467690000000005, 5.2467690000000005, 3.497846], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.25], "xyz": [1.748923, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.0, 0.7500000000000001], "xyz": [1.748923, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.25], "xyz": [1.748923, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.25, 0.5, 0.7500000000000001], "xyz": [1.748923, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.25], "xyz": [5.2467690000000005, 0.0, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.0, 0.7500000000000001], "xyz": [5.2467690000000005, 0.0, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.25], "xyz": [5.2467690000000005, 3.497846, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.7500000000000001, 0.5, 0.7500000000000001], "xyz": [5.2467690000000005, 3.497846, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.25], "xyz": [0.0, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.25, 0.7500000000000001], "xyz": [0.0, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.25], "xyz": [0.0, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.0, 0.7500000000000001, 0.7500000000000001], "xyz": [0.0, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.25], "xyz": [3.497846, 1.748923, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.25, 0.7500000000000001], "xyz": [3.497846, 1.748923, 5.2467690000000005], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.25], "xyz": [3.497846, 5.2467690000000005, 1.748923], "label": "Ni", "properties": {}}, {"species": [{"element": "Ni", "occu": 1}], "abc": [0.5, 0.7500000000000001, 0.7500000000000001], "xyz": [3.497846, 5.2467690000000005, 5.2467690000000005], "label": "Ni", "properties": {}}], "@version": null}'
+     else:
+         print('Unrecognized test name.')
+-        return 0
++        return None
+     s = Structure.from_dict(json.loads(matStr))
+     #s.make_supercell(scaling_matrix=[2,2,2])
+-    s1000 = [s] * 1000
+-    descList = process_map(generate_descriptor, s1000, max_workers=10)
++    structList = [s] * nRuns
++    descList = process_map(generate_descriptor, structList, max_workers=8)
+     print('Done!')
+-    return 1
++
+ 
+ if __name__ == "__main__":
+-    #profile(test='JVASP-10001')
++    profile(test='JVASP-10001')
+     profile(test='diluteNiAlloy')
+-    #profile(test='JVASP-10001')
+-    #profileParallel(test='JVASP-10001')
+-    profileParallel(test='diluteNiAlloy')
++    profileParallel(test='JVASP-10001')
++    profileParallel(test='diluteNiAlloy')
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/Magpie_element_properties.csv` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Magpie_element_properties.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/Magpie_property_names.txt` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/Magpie_property_names.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/KS2022.cpython-39.pyc` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/KS2022.cpython-39.pyc`
+
+ * *Format-specific differences are supported for Python .pyc files but no file-specific differences were detected; falling back to a binary diff. file(1) reports: Byte-compiled Python module for CPython 3.9, timestamp-based, .py timestamp: Tue Mar 28 18:00:14 2023 UTC, .py size: 28016 bytes*
+
+ * *Could not decompile bytecode: bad marshal data (unknown type code)*
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,1144 +1,1142 @@
+-00000000: 610d 0d0a 0000 0000 2e2b 2364 706d 0000  a........+#dpm..
++00000000: 610d 0d0a 0000 0000 c2f1 2e64 676d 0000  a..........dgm..
+ 00000010: e300 0000 0000 0000 0000 0000 0000 0000  ................
+-00000020: 0006 0000 0040 0000 0073 8201 0000 6400  .....@...s....d.
++00000020: 0006 0000 0040 0000 0073 7801 0000 6400  .....@...sx...d.
+ 00000030: 6401 6c00 5a00 6400 6401 6c01 5a01 6400  d.l.Z.d.d.l.Z.d.
+ 00000040: 6401 6c02 5a03 6400 6401 6c04 5a04 6400  d.l.Z.d.d.l.Z.d.
+ 00000050: 6402 6c05 6d06 5a06 6d07 5a07 0100 6400  d.l.m.Z.m.Z...d.
+ 00000060: 6403 6c08 6d09 5a09 0100 6400 6404 6c0a  d.l.m.Z...d.d.l.
+ 00000070: 6d0b 5a0b 0100 6400 6401 6c0c 5a0c 6400  m.Z...d.d.l.Z.d.
+ 00000080: 6405 6c0d 6d0d 5a0d 0100 6400 6406 6c0e  d.l.m.Z...d.d.l.
+ 00000090: 6d0f 5a0f 0100 6400 6407 6c10 6d11 5a11  m.Z...d.d.l.m.Z.
+ 000000a0: 0100 6408 6701 5a12 6409 5a13 6503 6a14  ..d.g.Z.d.Z.e.j.
+ 000000b0: 6504 6a15 a016 6504 6a15 a017 6518 a101  e.j...e.j...e...
+ 000000c0: 640a a102 640b 640c 8d02 5a19 6503 a01a  d...d.d...Z.e...
+ 000000d0: 6519 a101 5a19 6519 6401 6401 8502 6700  e...Z.e.d.d...g.
+ 000000e0: 640d a201 6602 1900 5a19 640e 640f 8400  d...f...Z.d.d...
+ 000000f0: 5a1b 4700 6410 6411 8400 6411 8302 5a1c  Z.G.d.d...d...Z.
+-00000100: 651b 6601 6412 6413 8401 5a1d 642a 6414  e.f.d.d...Z.d*d.
++00000100: 651b 6601 6412 6413 8401 5a1d 642c 6414  e.f.d.d...Z.d,d.
+ 00000110: 6415 8401 5a1e 6506 6416 9c01 6417 6418  d...Z.e.d...d.d.
+ 00000120: 8404 5a1f 6506 6503 6a20 6419 9c02 641a  ..Z.e.e.j d...d.
+ 00000130: 641b 8404 5a21 6511 6522 1900 641c 9c01  d...Z!e.e"..d...
+ 00000140: 641d 641e 8404 5a23 6503 6a20 6503 6a20  d.d...Z#e.j e.j 
+-00000150: 641f 9c02 6420 6421 8404 5a24 642b 6423  d...d d!..Z$d+d#
+-00000160: 6424 8401 5a25 642c 6425 6426 8401 5a26  d$..Z%d,d%d&..Z&
+-00000170: 6527 6427 6b02 9001 727e 6525 6422 6428  e'd'k...r~e%d"d(
+-00000180: 8d01 0100 6525 6429 6428 8d01 0100 6528  ....e%d)d(....e(
+-00000190: 6429 6428 8d01 0100 6526 6422 6428 8d01  d)d(....e&d"d(..
+-000001a0: 0100 6526 6429 6428 8d01 0100 6401 5300  ..e&d)d(....d.S.
+-000001b0: 292d e900 0000 004e 2902 da09 5374 7275  )-.....N)...Stru
+-000001c0: 6374 7572 65da 0745 6c65 6d65 6e74 2901  cture..Element).
+-000001d0: da09 566f 726f 6e6f 694e 4e29 01da 1253  ..VoronoiNN)...S
+-000001e0: 7061 6365 6772 6f75 7041 6e61 6c79 7a65  pacegroupAnalyze
+-000001f0: 7229 01da 0474 7164 6d29 01da 0743 6f75  r)...tqdm)...Cou
+-00000200: 6e74 6572 2901 da04 4c69 7374 7af5 4164  nter)...Listz.Ad
+-00000210: 616d 204d 2e20 4b72 616a 6577 736b 692c  am M. Krajewski,
+-00000220: 204a 6f6e 6174 6861 6e20 572e 2053 6965   Jonathan W. Sie
+-00000230: 6765 6c2c 204a 696e 6368 616f 2058 752c  gel, Jinchao Xu,
+-00000240: 205a 692d 4b75 6920 4c69 752c 2045 7874   Zi-Kui Liu, Ext
+-00000250: 656e 7369 626c 6520 5374 7275 6374 7572  ensible Structur
+-00000260: 652d 496e 666f 726d 6564 2050 7265 6469  e-Informed Predi
+-00000270: 6374 696f 6e20 6f66 2046 6f72 6d61 7469  ction of Formati
+-00000280: 6f6e 2045 6e65 7267 7920 7769 7468 2069  on Energy with i
+-00000290: 6d70 726f 7665 6420 6163 6375 7261 6379  mproved accuracy
+-000002a0: 2061 6e64 2075 7361 6269 6c69 7479 2065   and usability e
+-000002b0: 6d70 6c6f 7969 6e67 206e 6575 7261 6c20  mploying neural 
+-000002c0: 6e65 7477 6f72 6b73 2c20 436f 6d70 7574  networks, Comput
+-000002d0: 6174 696f 6e61 6c20 4d61 7465 7269 616c  ational Material
+-000002e0: 7320 5363 6965 6e63 652c 2056 6f6c 756d  s Science, Volum
+-000002f0: 6520 3230 382c 2032 3032 322c 2031 3131  e 208, 2022, 111
+-00000300: 3235 34e9 7000 0000 7a1d 4d61 6770 6965  254.p...z.Magpie
+-00000310: 5f65 6c65 6d65 6e74 5f70 726f 7065 7274  _element_propert
+-00000320: 6965 732e 6373 76fa 012c 2901 da09 6465  ies.csv..,)...de
+-00000330: 6c69 6d69 7465 7229 15e9 2d00 0000 e921  limiter)..-....!
+-00000340: 0000 00e9 0200 0000 e920 0000 00e9 0500  ......... ......
+-00000350: 0000 e930 0000 00e9 0600 0000 e90a 0000  ...0............
+-00000360: 00e9 2c00 0000 e92a 0000 00e9 2600 0000  ..,....*....&...
+-00000370: e928 0000 00e9 2400 0000 e92b 0000 00e9  .(....$....+....
+-00000380: 2900 0000 e925 0000 00e9 2700 0000 e923  )....%....'....#
+-00000390: 0000 00e9 1200 0000 e90d 0000 00e9 1100  ................
+-000003a0: 0000 6302 0000 0000 0000 0000 0000 0013  ..c.............
+-000003b0: 0000 0008 0000 0043 0000 0073 0802 0000  .......C...s....
+-000003c0: 7400 a001 7402 6a03 6401 1900 a101 7d02  t...t.j.d.....}.
+-000003d0: 7c01 6a04 a005 a100 a006 a100 4400 5d2a  |.j.........D.]*
+-000003e0: 5c02 7d03 7d04 7c02 7c04 7402 7407 7c03  \.}.}.|.|.t.t.|.
+-000003f0: 8301 6a08 6401 1800 6402 6402 8502 6602  ..j.d...d.d...f.
+-00000400: 1900 1400 3700 7d02 711e 7400 a001 7402  ....7.}.q.t...t.
+-00000410: 6a03 6401 1900 a101 7d05 6403 7d06 6403  j.d.....}.d.}.d.
+-00000420: 7d07 7c00 a006 a100 4400 5d88 5c02 7d08  }.|.....D.].\.}.
+-00000430: 7d09 7400 a001 7402 6a03 6401 1900 a101  }.t...t.j.d.....
+-00000440: 7d0a 7c09 6404 1900 6a04 a005 a100 a006  }.|.d...j.......
+-00000450: a100 4400 5d2a 5c02 7d03 7d04 7c0a 7c04  ..D.]*\.}.}.|.|.
+-00000460: 7402 7407 7c03 8301 6a08 6401 1800 6402  t.t.|...j.d...d.
+-00000470: 6402 8502 6602 1900 1400 3700 7d0a 7194  d...f.....7.}.q.
+-00000480: 7c05 7400 a009 7c02 7c0a 1800 a101 7c09  |.t...|.|.....|.
+-00000490: 6405 1900 1400 3700 7d05 7c06 7c09 6405  d.....7.}.|.|.d.
+-000004a0: 1900 3700 7d06 7c07 7c09 6406 1900 3700  ..7.}.|.|.d...7.
+-000004b0: 7d07 716a 7c05 7c06 1b00 7c02 6702 7d0b  }.qj|.|...|.g.}.
+-000004c0: 6403 7d0c 6403 7d0d 7c00 a00a a100 4400  d.}.d.}.|.....D.
+-000004d0: 5d26 7d09 7c0c 7c09 6405 1900 3700 7d0c  ]&}.|.|.d...7.}.
+-000004e0: 7c0d 7c09 6405 1900 7c09 6405 1900 1400  |.|.d...|.d.....
+-000004f0: 3700 7d0d 9001 7110 7c0c 7c0c 1400 7c0d  7.}...q.|.|...|.
+-00000500: 1b00 7d0e 6403 7d0f 7c00 a00a a100 4400  ..}.d.}.|.....D.
+-00000510: 5d1e 7d09 7c0f 7c09 6405 1900 6407 1400  ].}.|.|.d...d...
+-00000520: 7c09 6408 1900 1400 3700 7d0f 9001 7150  |.d.....7.}...qP
+-00000530: 7c0f 7c06 1d00 7d0f 6403 7d10 7c00 a00a  |.|...}.d.}.|...
+-00000540: a100 4400 5d26 7d09 7c10 7c09 6405 1900  ..D.]&}.|.|.d...
+-00000550: 7409 6407 7c09 6408 1900 1400 7c0f 1800  t.d.|.d.....|...
+-00000560: 8301 1400 3700 7d10 9001 7184 7c10 7c06  ....7.}...q.|.|.
+-00000570: 7c0f 1400 1d00 7d10 740b 6409 640a 8400  |.....}.t.d.d...
+-00000580: 7c00 a00a a100 4400 8301 8301 7d11 640b  |.....D.....}.d.
+-00000590: 740c 6a0d 1400 740c a00e 7c11 640c a102  t.j...t...|.d...
+-000005a0: 1400 7d12 7400 a00f 7c0e 7c0f 7c10 7c07  ..}.t...|.|.|.|.
+-000005b0: 7c12 6705 7c0b 6403 1900 6602 a101 7c0b  |.g.|.d...f...|.
+-000005c0: 6401 1900 6702 5300 290d 61ef 0100 0041  d...g.S.).a....A
+-000005d0: 2070 726f 746f 7479 7065 2066 756e 6374   prototype funct
+-000005e0: 696f 6e20 7768 6963 6820 636f 6d70 7574  ion which comput
+-000005f0: 6573 2061 2077 6569 6768 7465 6420 6176  es a weighted av
+-00000600: 6572 6167 6520 6f76 6572 206e 6569 6768  erage over neigh
+-00000610: 626f 7273 2c20 7765 6967 6874 6564 2062  bors, weighted b
+-00000620: 7920 7468 6520 6172 6561 206f 6620 7468  y the area of th
+-00000630: 6520 766f 726f 6e6f 6920 6365 6c6c 0a20  e voronoi cell. 
+-00000640: 2020 2020 2020 2062 6574 7765 656e 2074         between t
+-00000650: 6865 6d2e 0a0a 2020 2020 2020 2020 4172  hem...        Ar
+-00000660: 6773 3a0a 2020 2020 2020 2020 2020 2020  gs:.            
+-00000670: 6c6f 6361 6c5f 656e 763a 2041 2064 6963  local_env: A dic
+-00000680: 7469 6f6e 6172 7920 6f66 2074 6865 206c  tionary of the l
+-00000690: 6f63 616c 2065 6e76 6972 6f6e 6d65 6e74  ocal environment
+-000006a0: 206f 6620 6120 7369 7465 2c20 6173 2072   of a site, as r
+-000006b0: 6574 7572 6e65 6420 6279 2061 2056 6f72  eturned by a Vor
+-000006c0: 6f6e 6f69 4e4e 2067 656e 6572 6174 6f72  onoiNN generator
+-000006d0: 2e0a 2020 2020 2020 2020 2020 2020 7369  ..            si
+-000006e0: 7465 3a20 5468 6520 7369 7465 206e 756d  te: The site num
+-000006f0: 6265 7220 666f 7220 7768 6963 6820 7468  ber for which th
+-00000700: 6520 6c6f 6361 6c20 656e 7669 726f 6e6d  e local environm
+-00000710: 656e 7420 6973 2062 6569 6e67 2063 6f6d  ent is being com
+-00000720: 7075 7465 642e 0a20 2020 2020 2020 2020  puted..         
+-00000730: 2020 2065 6c65 6d65 6e74 5f64 6963 743a     element_dict:
+-00000740: 2041 2064 6963 7469 6f6e 6172 7920 6f66   A dictionary of
+-00000750: 2074 6865 2065 6c65 6d65 6e74 7320 696e   the elements in
+-00000760: 2074 6865 2073 7472 7563 7475 7265 2e0a   the structure..
+-00000770: 0a20 2020 2020 2020 2052 6574 7572 6e73  .        Returns
+-00000780: 3a0a 2020 2020 2020 2020 2020 2020 4120  :.            A 
+-00000790: 6c69 7374 206f 6620 7468 6520 6c6f 6361  list of the loca
+-000007a0: 6c20 656e 7669 726f 6e6d 656e 7420 6174  l environment at
+-000007b0: 7472 6962 7574 6573 2e0a 2020 2020 e901  tributes..    ..
+-000007c0: 0000 004e 7201 0000 00da 0473 6974 65da  ...Nr......site.
+-000007d0: 0461 7265 61da 0676 6f6c 756d 6572 0e00  .area..volumer..
+-000007e0: 0000 da09 6661 6365 5f64 6973 7463 0100  ....face_distc..
+-000007f0: 0000 0000 0000 0000 0000 0200 0000 0300  ................
+-00000800: 0000 7300 0000 7316 0000 007c 005d 0e7d  ..s...s....|.].}
+-00000810: 017c 0164 0019 0056 0001 0071 0264 0153  .|.d...V...q.d.S
+-00000820: 0029 0272 2500 0000 4ea9 0029 02da 022e  .).r%...N..)....
+-00000830: 30da 0d6e 6569 6768 626f 725f 7369 7465  0..neighbor_site
+-00000840: 7226 0000 0072 2600 0000 fa4f 2f55 7365  r&...r&....O/Use
+-00000850: 7273 2f61 6461 6d2f 5079 6368 6172 6d50  rs/adam/PycharmP
+-00000860: 726f 6a65 6374 732f 7079 5349 5046 454e  rojects/pySIPFEN
+-00000870: 4e2f 7079 7369 7066 656e 6e2f 6465 7363  N/pysipfenn/desc
+-00000880: 7269 7074 6f72 4465 6669 6e69 7469 6f6e  riptorDefinition
+-00000890: 732f 4b53 3230 3232 2e70 79da 093c 6765  s/KS2022.py..<ge
+-000008a0: 6e65 7870 723e 4a00 0000 f300 0000 007a  nexpr>J........z
+-000008b0: 256c 6f63 616c 5f65 6e76 5f66 756e 6374  %local_env_funct
+-000008c0: 696f 6e2e 3c6c 6f63 616c 733e 2e3c 6765  ion.<locals>.<ge
+-000008d0: 6e65 7870 723e 6755 5555 5555 55f5 3f67  nexpr>gUUUUUU.?g
+-000008e0: 0000 0000 0000 0840 2910 da02 6e70 da05  .......@)...np..
+-000008f0: 7a65 726f 73da 1061 7474 7269 6275 7465  zeros..attribute
+-00000900: 5f6d 6174 7269 78da 0573 6861 7065 da07  _matrix..shape..
+-00000910: 7370 6563 6965 73da 0f67 6574 5f65 6c5f  species..get_el_
+-00000920: 616d 745f 6469 6374 da05 6974 656d 7372  amt_dict..itemsr
+-00000930: 0300 0000 da01 5ada 0361 6273 da06 7661  ......Z..abs..va
+-00000940: 6c75 6573 da03 6d69 6eda 046d 6174 68da  lues..min..math.
+-00000950: 0270 69da 0370 6f77 da0b 636f 6e63 6174  .pi..pow..concat
+-00000960: 656e 6174 6529 13da 096c 6f63 616c 5f65  enate)...local_e
+-00000970: 6e76 7222 0000 00da 106c 6f63 616c 5f61  nvr".....local_a
+-00000980: 7474 7269 6275 7465 73da 036b 6579 da05  ttributes..key..
+-00000990: 7661 6c75 65da 0f64 6966 665f 6174 7472  value..diff_attr
+-000009a0: 6962 7574 6573 da0c 746f 7461 6c5f 7765  ibutes..total_we
+-000009b0: 6967 6874 7224 0000 00da 0369 6e64 7228  ightr$.....indr(
+-000009c0: 0000 00da 136e 6569 6768 626f 725f 6174  .....neighbor_at
+-000009d0: 7472 6962 7574 6573 da1f 656c 656d 656e  tributes..elemen
+-000009e0: 7461 6c5f 7072 6f70 6572 7469 6573 5f61  tal_properties_a
+-000009f0: 7474 7269 6275 7465 73da 0761 7665 7261  ttributes..avera
+-00000a00: 6765 da08 7661 7269 616e 6365 da0d 6566  ge..variance..ef
+-00000a10: 665f 636f 6f72 645f 6e75 6dda 0c62 6c65  f_coord_num..ble
+-00000a20: 6e5f 6176 6572 6167 65da 0862 6c65 6e5f  n_average..blen_
+-00000a30: 7661 72da 0a73 7068 6572 655f 7261 64da  var..sphere_rad.
+-00000a40: 0d73 7068 6572 655f 766f 6c75 6d65 7226  .sphere_volumer&
+-00000a50: 0000 0072 2600 0000 7229 0000 00da 126c  ...r&...r).....l
+-00000a60: 6f63 616c 5f65 6e76 5f66 756e 6374 696f  ocal_env_functio
+-00000a70: 6e1d 0000 0073 4600 0000 000c 1001 1601  n....sF.........
+-00000a80: 2401 1001 0401 0401 1001 1001 1a01 2401  $.............$.
+-00000a90: 1a01 0c01 0e01 0c02 0401 0401 0c01 0c01  ................
+-00000aa0: 1801 0c03 0401 0c01 1c01 0802 0401 0c01  ................
+-00000ab0: 2401 0c02 1601 1601 0401 14ff 0202 06fe  $...............
+-00000ac0: 724b 0000 0063 0000 0000 0000 0000 0000  rK...c..........
+-00000ad0: 0000 0000 0000 0400 0000 4000 0000 732c  ..........@...s,
+-00000ae0: 0000 0065 005a 0164 005a 0264 015a 0365  ...e.Z.d.Z.d.Z.e
+-00000af0: 0464 0264 0264 038d 0266 0164 0464 0584  .d.d.d...f.d.d..
+-00000b00: 015a 0564 0664 0784 005a 0664 0853 0029  .Z.d.d...Z.d.S.)
+-00000b10: 09da 174c 6f63 616c 4174 7472 6962 7574  ...LocalAttribut
+-00000b20: 6547 656e 6572 6174 6f72 7ab1 4120 7772  eGeneratorz.A wr
+-00000b30: 6170 7065 7220 636c 6173 7320 7768 6963  apper class whic
+-00000b40: 6820 636f 6e74 6169 6e73 2061 6e20 696e  h contains an in
+-00000b50: 7374 616e 6365 206f 6620 616e 204e 4e20  stance of an NN 
+-00000b60: 6765 6e65 7261 746f 7220 2874 6865 2064  generator (the d
+-00000b70: 6566 6175 6c74 2069 7320 6120 566f 726f  efault is a Voro
+-00000b80: 6e6f 694e 4e29 2c20 6120 7374 7275 6374  noiNN), a struct
+-00000b90: 7572 652c 2061 6e64 0a20 2020 2061 2066  ure, and.    a f
+-00000ba0: 756e 6374 696f 6e20 7768 6963 6820 636f  unction which co
+-00000bb0: 6d70 7574 6573 2074 6865 206c 6f63 616c  mputes the local
+-00000bc0: 2065 6e76 6972 6f6e 6d65 6e74 2061 7474   environment att
+-00000bd0: 7269 6275 7465 732e 0a20 2020 2046 2902  ributes..    F).
+-00000be0: da15 636f 6d70 7574 655f 6164 6a5f 6e65  ..compute_adj_ne
+-00000bf0: 6967 6862 6f72 73da 0d65 7874 7261 5f6e  ighbors..extra_n
+-00000c00: 6e5f 696e 666f 6304 0000 0000 0000 0000  n_infoc.........
+-00000c10: 0000 0004 0000 0002 0000 0043 0000 0073  ...........C...s
+-00000c20: 1600 0000 7c03 7c00 5f00 7c01 7c00 5f01  ....|.|._.|.|._.
+-00000c30: 7c02 7c00 5f02 6400 5300 a901 4e29 03da  |.|._.d.S...N)..
+-00000c40: 0967 656e 6572 6174 6f72 da06 7374 7275  .generator..stru
+-00000c50: 6374 da08 6675 6e63 7469 6f6e 2904 da04  ct..function)...
+-00000c60: 7365 6c66 7251 0000 00da 0e6c 6f63 616c  selfrQ.....local
+-00000c70: 5f65 6e76 5f66 756e 63da 0c6e 6e5f 6765  _env_func..nn_ge
+-00000c80: 6e65 7261 746f 7272 2600 0000 7226 0000  neratorr&...r&..
+-00000c90: 0072 2900 0000 da08 5f5f 696e 6974 5f5f  .r).....__init__
+-00000ca0: 5400 0000 7306 0000 0000 0106 0106 017a  T...s..........z
+-00000cb0: 204c 6f63 616c 4174 7472 6962 7574 6547   LocalAttributeG
+-00000cc0: 656e 6572 6174 6f72 2e5f 5f69 6e69 745f  enerator.__init_
+-00000cd0: 5f63 0200 0000 0000 0000 0000 0000 0300  _c..............
+-00000ce0: 0000 0500 0000 4300 0000 7322 0000 007c  ......C...s"...|
+-00000cf0: 006a 00a0 017c 006a 027c 01a1 027d 027c  .j...|.j.|...}.|
+-00000d00: 00a0 037c 027c 006a 027c 0119 00a1 0253  ...|.|.j.|.....S
+-00000d10: 0072 4f00 0000 2904 7250 0000 00da 1567  .rO...).rP.....g
+-00000d20: 6574 5f76 6f72 6f6e 6f69 5f70 6f6c 7968  et_voronoi_polyh
+-00000d30: 6564 7261 7251 0000 0072 5200 0000 2903  edrarQ...rR...).
+-00000d40: 7253 0000 00da 016e 723b 0000 0072 2600  rS.....nr;...r&.
+-00000d50: 0000 7226 0000 0072 2900 0000 da19 6765  ..r&...r).....ge
+-00000d60: 6e65 7261 7465 5f6c 6f63 616c 5f61 7474  nerate_local_att
+-00000d70: 7269 6275 7465 7359 0000 0073 0400 0000  ributesY...s....
+-00000d80: 0001 1001 7a31 4c6f 6361 6c41 7474 7269  ....z1LocalAttri
+-00000d90: 6275 7465 4765 6e65 7261 746f 722e 6765  buteGenerator.ge
+-00000da0: 6e65 7261 7465 5f6c 6f63 616c 5f61 7474  nerate_local_att
+-00000db0: 7269 6275 7465 734e 2907 da08 5f5f 6e61  ributesN)...__na
+-00000dc0: 6d65 5f5f da0a 5f5f 6d6f 6475 6c65 5f5f  me__..__module__
+-00000dd0: da0c 5f5f 7175 616c 6e61 6d65 5f5f da07  ..__qualname__..
+-00000de0: 5f5f 646f 635f 5f72 0400 0000 7256 0000  __doc__r....rV..
+-00000df0: 0072 5900 0000 7226 0000 0072 2600 0000  .rY...r&...r&...
+-00000e00: 7226 0000 0072 2900 0000 724c 0000 0050  r&...r)...rL...P
+-00000e10: 0000 0073 0600 0000 0801 0403 1405 724c  ...s..........rL
+-00000e20: 0000 0063 0200 0000 0000 0000 0000 0000  ...c............
+-00000e30: 0700 0000 0500 0000 4300 0000 7366 0000  ........C...sf..
+-00000e40: 0074 007c 007c 0183 027d 0274 0183 007d  .t.|.|...}.t...}
+-00000e50: 0374 027c 0083 017d 047c 0444 005d 207d  .t.|...}.|.D.] }
+-00000e60: 057c 02a0 037c 05a1 0167 017d 067c 037c  .|...|...g.}.|.|
+-00000e70: 067c 047c 0519 0014 0037 007d 0371 1c74  .|.|.....7.}.q.t
+-00000e80: 04a0 0564 0164 0284 007c 0344 0083 01a1  ...d.d...|.D....
+-00000e90: 0174 04a0 0564 0364 0284 007c 0344 0083  .t...d.d...|.D..
+-00000ea0: 01a1 0166 0253 0029 0461 0801 0000 4765  ...f.S.).a....Ge
+-00000eb0: 6e65 7261 7465 7320 7468 6520 6c6f 6361  nerates the loca
+-00000ec0: 6c20 656e 7669 726f 6e6d 656e 7420 6174  l environment at
+-00000ed0: 7472 6962 7574 6573 2066 6f72 2061 2067  tributes for a g
+-00000ee0: 6976 656e 2073 7472 7563 7475 7265 2075  iven structure u
+-00000ef0: 7369 6e67 2061 2056 6f72 6f6e 6f69 4e4e  sing a VoronoiNN
+-00000f00: 2067 656e 6572 6174 6f72 2e0a 0a20 2020   generator...   
+-00000f10: 2020 2020 2041 7267 733a 0a20 2020 2020       Args:.     
+-00000f20: 2020 2020 2020 2073 7472 7563 743a 2041         struct: A
+-00000f30: 2070 796d 6174 6765 6e20 5374 7275 6374   pymatgen Struct
+-00000f40: 7572 6520 6f62 6a65 6374 2e0a 2020 2020  ure object..    
+-00000f50: 2020 2020 2020 2020 6c6f 6361 6c5f 6675          local_fu
+-00000f60: 6e63 743a 2041 2066 756e 6374 696f 6e20  nct: A function 
+-00000f70: 7768 6963 6820 636f 6d70 7574 6573 2074  which computes t
+-00000f80: 6865 206c 6f63 616c 2065 6e76 6972 6f6e  he local environ
+-00000f90: 6d65 6e74 2061 7474 7269 6275 7465 7320  ment attributes 
+-00000fa0: 666f 7220 6120 6769 7665 6e20 7369 7465  for a given site
+-00000fb0: 2e0a 2020 2020 6301 0000 0000 0000 0000  ..    c.........
+-00000fc0: 0000 0002 0000 0004 0000 0053 0000 0073  ...........S...s
+-00000fd0: 1400 0000 6700 7c00 5d0c 7d01 7c01 6400  ....g.|.].}.|.d.
+-00000fe0: 1900 9102 7104 5300 2901 7201 0000 0072  ....q.S.).r....r
+-00000ff0: 2600 0000 a902 7227 0000 0072 3e00 0000  &.....r'...r>...
+-00001000: 7226 0000 0072 2600 0000 7229 0000 00da  r&...r&...r)....
+-00001010: 0a3c 6c69 7374 636f 6d70 3e6b 0000 0072  .<listcomp>k...r
+-00001020: 2b00 0000 7a2f 6765 6e65 7261 7465 5f76  +...z/generate_v
+-00001030: 6f72 6f6e 6f69 5f61 7474 7269 6275 7465  oronoi_attribute
+-00001040: 732e 3c6c 6f63 616c 733e 2e3c 6c69 7374  s.<locals>.<list
+-00001050: 636f 6d70 3e63 0100 0000 0000 0000 0000  comp>c..........
+-00001060: 0000 0200 0000 0400 0000 5300 0000 7314  ..........S...s.
+-00001070: 0000 0067 007c 005d 0c7d 017c 0164 0019  ...g.|.].}.|.d..
+-00001080: 0091 0271 0453 0029 0172 2100 0000 7226  ...q.S.).r!...r&
+-00001090: 0000 0072 5e00 0000 7226 0000 0072 2600  ...r^...r&...r&.
+-000010a0: 0000 7229 0000 0072 5f00 0000 6b00 0000  ..r)...r_...k...
+-000010b0: 722b 0000 0029 0672 4c00 0000 da04 6c69  r+...).rL.....li
+-000010c0: 7374 da21 6765 745f 6571 7569 7661 6c65  st.!get_equivale
+-000010d0: 6e74 5369 7465 734d 756c 7469 706c 6963  ntSitesMultiplic
+-000010e0: 6974 6965 7372 5900 0000 722c 0000 00da  itiesrY...r,....
+-000010f0: 0561 7272 6179 2907 7251 0000 00da 0b6c  .array).rQ.....l
+-00001100: 6f63 616c 5f66 756e 6374 da0f 6c6f 6361  ocal_funct..loca
+-00001110: 6c5f 6765 6e65 7261 746f 72da 0e61 7474  l_generator..att
+-00001120: 7269 6275 7465 5f6c 6973 74da 1d65 7175  ribute_list..equ
+-00001130: 6976 616c 656e 7453 6974 6573 4d75 6c74  ivalentSitesMult
+-00001140: 6970 6c69 6369 7469 6573 da05 7369 7465  iplicities..site
+-00001150: 4eda 0f6c 6f63 616c 4174 7472 6962 7574  N..localAttribut
+-00001160: 6573 7226 0000 0072 2600 0000 7229 0000  esr&...r&...r)..
+-00001170: 00da 1b67 656e 6572 6174 655f 766f 726f  ...generate_voro
+-00001180: 6e6f 695f 6174 7472 6962 7574 6573 5e00  noi_attributes^.
+-00001190: 0000 730e 0000 0000 070a 0106 0108 0108  ..s.............
+-000011a0: 010c 0112 0172 6900 0000 6302 0000 0000  .....ri...c.....
+-000011b0: 0000 0000 0000 000a 0000 0007 0000 0043  ...............C
+-000011c0: 0000 0073 d400 0000 7400 a001 7400 a002  ...s....t...t...
+-000011d0: 7c00 6401 6401 8502 6402 6602 1900 a101  |.d.d...d.f.....
+-000011e0: a101 7d02 6402 7d03 6700 7d04 7c02 4400  ..}.d.}.g.}.|.D.
+-000011f0: 5d62 7d05 7c00 6401 6401 8502 6402 6602  ]b}.|.d.d...d.f.
+-00001200: 1900 7c05 6b02 7d06 7400 a003 7400 a004  ..|.k.}.t...t...
+-00001210: 7c06 7c01 a102 7c01 a102 6402 1900 7d07  |.|...|...d...}.
+-00001220: 7c07 7c03 6b04 7278 7c04 a005 a100 0100  |.|.k.rx|.......
+-00001230: 7c04 a006 7c05 a101 0100 7c07 7d03 7128  |...|.....|.}.q(
+-00001240: 7c07 7c03 6b02 7228 7c04 a006 7c05 a101  |.|.k.r(|...|...
+-00001250: 0100 7128 7400 a007 7c00 6402 6401 6401  ..q(t...|.d.d.d.
+-00001260: 8502 6602 1900 a101 7d08 7c04 4400 5d20  ..f.....}.|.D.] 
+-00001270: 7d09 7c08 7408 7409 7c09 8301 6403 1800  }.|.t.t.|...d...
+-00001280: 6401 6401 8502 6602 1900 3700 7d08 71a6  d.d...f...7.}.q.
+-00001290: 7c08 740a 7c04 8301 1b00 5300 2904 7a44  |.t.|.....S.).zD
+-000012a0: 4361 6c63 756c 6174 6573 2074 6865 2061  Calculates the a
+-000012b0: 7474 7269 6275 7465 7320 636f 7272 6573  ttributes corres
+-000012c0: 706f 6e64 696e 6720 746f 2074 6865 206d  ponding to the m
+-000012d0: 6f73 7420 636f 6d6d 6f6e 2065 6c65 6d65  ost common eleme
+-000012e0: 6e74 732e 4e72 0100 0000 7221 0000 0029  nts.Nr....r!...)
+-000012f0: 0b72 2c00 0000 da06 756e 6971 7565 da05  .r,.....unique..
+-00001300: 7261 7665 6cda 0b65 7870 616e 645f 6469  ravel..expand_di
+-00001310: 6d73 da03 7375 6dda 0563 6c65 6172 da06  ms..sum..clear..
+-00001320: 6170 7065 6e64 da0a 7a65 726f 735f 6c69  append..zeros_li
+-00001330: 6b65 722e 0000 00da 0369 6e74 da03 6c65  ker......int..le
+-00001340: 6e29 0ada 1461 7474 7269 6275 7465 5f70  n)...attribute_p
+-00001350: 726f 7065 7274 6965 73da 0461 7869 73da  roperties..axis.
+-00001360: 0673 636f 7265 73da 0e6d 6178 5f6f 6363  .scores..max_occ
+-00001370: 7572 7265 6e63 65da 0c74 6f70 5f65 6c65  urrence..top_ele
+-00001380: 6d65 6e74 73da 0573 636f 7265 da08 7465  ments..score..te
+-00001390: 6d70 6c61 7465 da05 636f 756e 74da 066f  mplate..count..o
+-000013a0: 7574 7075 74da 0465 6c65 6d72 2600 0000  utput..elemr&...
+-000013b0: 7226 0000 0072 2900 0000 da0b 6d61 6770  r&...r).....magp
+-000013c0: 6965 5f6d 6f64 656d 0000 0073 2000 0000  ie_modem...s ...
+-000013d0: 0002 1c01 0401 0401 0801 1401 1801 0801  ................
+-000013e0: 0801 0a01 0601 0801 0c01 1601 0801 1e01  ................
+-000013f0: 727d 0000 0029 0172 5100 0000 6301 0000  r}...).rQ...c...
+-00001400: 0000 0000 0000 0000 0002 0000 0005 0000  ................
+-00001410: 0043 0000 0073 2600 0000 7400 7c00 6401  .C...s&...t.|.d.
+-00001420: 6402 6403 8d03 7d01 7401 7402 7403 7c01  d.d...}.t.t.t.|.
+-00001430: a004 a100 6404 1900 8301 8301 8301 5300  ....d.........S.
+-00001440: 2905 4e67 9a99 9999 9999 b93f 67fc a9f1  ).Ng.......?g...
+-00001450: d24d 6250 3f29 02da 0f61 6e67 6c65 5f74  .MbP?)...angle_t
+-00001460: 6f6c 6572 616e 6365 da07 7379 6d70 7265  olerance..sympre
+-00001470: 63da 1065 7175 6976 616c 656e 745f 6174  c..equivalent_at
+-00001480: 6f6d 7329 0572 0500 0000 da04 6469 6374  oms).r......dict
+-00001490: 7207 0000 0072 6000 0000 da14 6765 745f  r....r`.....get_
+-000014a0: 7379 6d6d 6574 7279 5f64 6174 6173 6574  symmetry_dataset
+-000014b0: 2902 7251 0000 00da 0473 7067 4172 2600  ).rQ.....spgAr&.
+-000014c0: 0000 7226 0000 0072 2900 0000 7261 0000  ..r&...r)...ra..
+-000014d0: 0080 0000 0073 0400 0000 0001 0e01 7261  .....s........ra
+-000014e0: 0000 0029 0272 5100 0000 da06 7265 7475  ...).rQ.....retu
+-000014f0: 726e 6301 0000 0000 0000 0000 0000 0013  rnc.............
+-00001500: 0000 000e 0000 0003 0000 0073 ba03 0000  ...........s....
+-00001510: 7400 7c00 8301 5c02 7d01 7d02 7401 a002  t.|...\.}.}.t...
+-00001520: 7401 6a03 7401 6a04 7c01 6401 6402 8d02  t.j.t.j.|.d.d...
+-00001530: 7401 6a04 7401 a005 7c01 7401 6a04 7c01  t.j.t...|.t.j.|.
+-00001540: 6401 6402 8d02 1800 a101 6401 6402 8d02  d.d.......d.d...
+-00001550: 7401 6a06 7c01 6401 6402 8d02 7401 6a07  t.j.|.d.d...t.j.
+-00001560: 7c01 6401 6402 8d02 7401 6a07 7c01 6401  |.d.d...t.j.|.d.
+-00001570: 6402 8d02 7401 6a06 7c01 6401 6402 8d02  d...t.j.|.d.d...
+-00001580: 1800 6605 6403 6402 8d02 a008 6403 a101  ..f.d.d.....d...
+-00001590: 7401 6a03 7401 6a04 7c02 6401 6402 8d02  t.j.t.j.|.d.d...
+-000015a0: 7401 6a07 7c02 6401 6402 8d02 7401 6a06  t.j.|.d.d...t.j.
+-000015b0: 7c02 6401 6402 8d02 1800 7401 6a04 7401  |.d.d.....t.j.t.
+-000015c0: a005 7c02 7401 6a04 7c02 6401 6402 8d02  ..|.t.j.|.d.d...
+-000015d0: 1800 a101 6401 6402 8d02 7401 6a07 7c02  ....d.d...t.j.|.
+-000015e0: 6401 6402 8d02 7401 6a06 7c02 6401 6402  d.d...t.j.|.d.d.
+-000015f0: 8d02 7409 7c02 8301 6606 6403 6402 8d02  ..t.|...f.d.d...
+-00001600: a008 6403 a101 6602 a101 7d03 7c03 6404  ..d...f...}.|.d.
+-00001610: 0500 1900 7c03 6405 1900 1d00 0300 3c00  ....|.d.......<.
+-00001620: 7c03 6406 0500 1900 7c03 6405 1900 1d00  |.d.....|.d.....
+-00001630: 0300 3c00 7c03 6407 0500 1900 7c03 6405  ..<.|.d.....|.d.
+-00001640: 1900 1d00 0300 3c00 7c03 6408 0500 1900  ......<.|.d.....
+-00001650: 7c03 6409 1900 1d00 0300 3c00 7401 a00a  |.d.......<.t...
+-00001660: 7c03 6700 640a a201 a102 7d03 7c03 640b  |.g.d.....}.|.d.
+-00001670: 0500 1900 740b 7c02 8301 7c00 6a0c 1b00  ....t.|...|.j...
+-00001680: 3900 0300 3c00 6900 7d04 7c00 6a0d 4400  9...<.i.}.|.j.D.
+-00001690: 5d56 7d05 7c05 a00e a100 a00f a100 4400  ]V}.|.........D.
+-000016a0: 5d42 5c02 7d06 7d07 7c06 7c04 7600 9001  ]B\.}.}.|.|.v...
+-000016b0: 72be 7c04 7c06 0500 1900 7c07 740b 7c00  r.|.|.....|.t.|.
+-000016c0: 6a0d 8301 1b00 3700 0300 3c00 6e12 7c07  j.....7...<.n.|.
+-000016d0: 740b 7c00 6a0d 8301 1b00 7c04 7c06 3c00  t.|.j.....|.|.<.
+-000016e0: 9001 7190 9001 7180 640c 7d08 640d 4400  ..q...q.d.}.d.D.
+-000016f0: 5d36 8900 7401 a010 7c03 7c08 7411 a012  ]6..t...|.|.t...
+-00001700: 7413 8700 6601 640e 640f 8408 7c04 a014  t...f.d.d...|...
+-00001710: a100 4400 8301 8301 6410 8800 1b00 a102  ..D.....d.......
+-00001720: a103 7d03 9001 71e0 7401 a010 7c03 7c08  ..}...q.t...|.|.
+-00001730: 740b 7c04 8301 a103 7d03 6401 6401 6401  t.|.....}.d.d.d.
+-00001740: 6401 6411 9c04 7d09 6401 7d0a 7c04 a00f  d.d...}.d.}.|...
+-00001750: a100 4400 5da2 5c02 7d06 7d07 7c09 6412  ..D.].\.}.}.|.d.
+-00001760: 0500 1900 7c07 7415 7416 7c06 8301 6a17  ....|.t.t.|...j.
+-00001770: 6413 1800 1900 6407 1900 1400 3700 0300  d.....d.....7...
+-00001780: 3c00 7c09 6414 0500 1900 7c07 7415 7416  <.|.d.....|.t.t.
+-00001790: 7c06 8301 6a17 6413 1800 1900 6415 1900  |...j.d.....d...
+-000017a0: 1400 3700 0300 3c00 7c09 6416 0500 1900  ..7...<.|.d.....
+-000017b0: 7c07 7415 7416 7c06 8301 6a17 6413 1800  |.t.t.|...j.d...
+-000017c0: 1900 6417 1900 1400 3700 0300 3c00 7c09  ..d.....7...<.|.
+-000017d0: 6418 0500 1900 7c07 7415 7416 7c06 8301  d.....|.t.t.|...
+-000017e0: 6a17 6413 1800 1900 6419 1900 1400 3700  j.d.....d.....7.
+-000017f0: 0300 3c00 9002 7144 7413 641a 641b 8400  ..<...qDt.d.d...
+-00001800: 7c09 a00f a100 4400 8301 8301 7d0a 6411  |.....D.....}.d.
+-00001810: 4400 5d1a 7d0b 7401 a018 7c03 7c09 7c0b  D.].}.t...|.|.|.
+-00001820: 1900 7c0a 1b00 a102 7d03 9003 7102 6401  ..|.....}...q.d.
+-00001830: 7d0c 6401 7d0d 7c04 a00f a100 4400 5d62  }.d.}.|.....D.]b
+-00001840: 5c02 7d0e 7d0f 7c04 a00f a100 4400 5d4e  \.}.}.|.....D.]N
+-00001850: 5c02 7d10 7d11 6410 7411 a019 641c 7416  \.}.}.d.t...d.t.
+-00001860: 7c0e 8301 6a1a 7416 7c10 8301 6a1a 1800  |...j.t.|...j...
+-00001870: 641d 1300 1400 a101 1800 7d12 7c12 7c0c  d.........}.|.|.
+-00001880: 6b04 9003 727a 7c12 7d0c 7c0d 7c12 7c0f  k...rz|.}.|.|.|.
+-00001890: 1400 7c11 1400 3700 7d0d 9003 713e 9003  ..|...7.}...q>..
+-000018a0: 712e 7401 a018 7c03 7c0c a102 7d03 7401  q.t...|.|...}.t.
+-000018b0: a018 7c03 7c0d a102 7d03 7c03 a01b 7401  ..|.|...}.|...t.
+-000018c0: 6a1c a101 7d03 7c03 5300 291e 7ac9 4d61  j...}.|.S.).z.Ma
+-000018d0: 696e 2066 756e 6374 696f 6e61 6c69 7479  in functionality
+-000018e0: 2e20 4765 6e65 7261 7465 7320 7468 6520  . Generates the 
+-000018f0: 4b53 3230 3232 2064 6573 6372 6970 746f  KS2022 descripto
+-00001900: 7220 666f 7220 6120 6769 7665 6e20 7374  r for a given st
+-00001910: 7275 6374 7572 652e 0a0a 2020 2020 4172  ructure...    Ar
+-00001920: 6773 3a0a 2020 2020 2020 2020 7374 7275  gs:.        stru
+-00001930: 6374 3a20 4120 7079 6d61 7467 656e 2053  ct: A pymatgen S
+-00001940: 7472 7563 7475 7265 206f 626a 6563 742e  tructure object.
+-00001950: 0a0a 2020 2020 5265 7475 726e 733a 0a20  ..    Returns:. 
+-00001960: 2020 2020 2020 2041 2032 3731 2d6c 656e         A 271-len
+-00001970: 6768 7420 6e75 6d70 7920 6172 7261 7920  ght numpy array 
+-00001980: 6f66 2074 6865 2064 6573 6372 6970 746f  of the descripto
+-00001990: 722e 0a20 2020 2072 0100 0000 2901 7274  r..    r....).rt
+-000019a0: 0000 00e9 ffff ffff 7212 0000 0072 1000  ........r....r..
+-000019b0: 0000 e907 0000 00e9 0800 0000 e910 0000  ................
+-000019c0: 00e9 0f00 0000 290c e904 0000 0072 1000  ......)......r..
+-000019d0: 0000 e909 0000 00e9 0e00 0000 7289 0000  ............r...
+-000019e0: 0072 2000 0000 721e 0000 00e9 1300 0000  .r ...r.........
+-000019f0: e915 0000 00e9 1600 0000 e917 0000 00e9  ................
+-00001a00: 1800 0000 e90c 0000 00e9 7600 0000 2905  ..........v...).
+-00001a10: 7213 0000 0072 8600 0000 7210 0000 00e9  r....r....r.....
+-00001a20: 0300 0000 720e 0000 0063 0100 0000 0000  ....r....c......
+-00001a30: 0000 0000 0000 0200 0000 0500 0000 3300  ..............3.
+-00001a40: 0000 731a 0000 007c 005d 127d 0174 00a0  ..s....|.].}.t..
+-00001a50: 017c 0188 00a1 0256 0001 0071 0264 0053  .|.....V...q.d.S
+-00001a60: 0072 4f00 0000 2902 7237 0000 0072 3900  .rO...).r7...r9.
+-00001a70: 0000 725e 0000 00a9 01da 0170 7226 0000  ..r^.......pr&..
+-00001a80: 0072 2900 0000 722a 0000 00b2 0000 0072  .r)...r*.......r
+-00001a90: 2b00 0000 7a26 6765 6e65 7261 7465 5f64  +...z&generate_d
+-00001aa0: 6573 6372 6970 746f 722e 3c6c 6f63 616c  escriptor.<local
+-00001ab0: 733e 2e3c 6765 6e65 7870 723e 6700 0000  s>.<genexpr>g...
+-00001ac0: 0000 00f0 3f29 04da 0173 7296 0000 00da  ....?)...sr.....
+-00001ad0: 0164 da01 6672 9700 0000 7221 0000 0072  .d..fr....r!...r
+-00001ae0: 9600 0000 728b 0000 0072 9800 0000 7213  ....r....r....r.
+-00001af0: 0000 0072 9900 0000 e90b 0000 0063 0100  ...r.........c..
+-00001b00: 0000 0000 0000 0000 0000 0300 0000 0400  ................
+-00001b10: 0000 5300 0000 7314 0000 0067 007c 005d  ..S...s....g.|.]
+-00001b20: 0c5c 027d 017d 027c 0291 0271 0453 0072  .\.}.}.|...q.S.r
+-00001b30: 2600 0000 7226 0000 0029 0372 2700 0000  &...r&...).r'...
+-00001b40: 723d 0000 00da 0376 616c 7226 0000 0072  r=.....valr&...r
+-00001b50: 2600 0000 7229 0000 0072 5f00 0000 bc00  &...r)...r_.....
+-00001b60: 0000 722b 0000 007a 2767 656e 6572 6174  ..r+...z'generat
+-00001b70: 655f 6465 7363 7269 7074 6f72 2e3c 6c6f  e_descriptor.<lo
+-00001b80: 6361 6c73 3e2e 3c6c 6973 7463 6f6d 703e  cals>.<listcomp>
+-00001b90: 6700 0000 0000 00d0 bf72 0e00 0000 291d  g........r....).
+-00001ba0: 7269 0000 0072 2c00 0000 723a 0000 00da  ri...r,...r:....
+-00001bb0: 0573 7461 636b da04 6d65 616e 7234 0000  .stack..meanr4..
+-00001bc0: 0072 3600 0000 da03 6d61 78da 0772 6573  .r6.....max..res
+-00001bd0: 6861 7065 727d 0000 00da 0664 656c 6574  haper}.....delet
+-00001be0: 6572 7200 0000 7224 0000 00da 1073 7065  err...r$.....spe
+-00001bf0: 6369 6573 5f61 6e64 5f6f 6363 7572 3100  cies_and_occur1.
+-00001c00: 0000 7232 0000 00da 0669 6e73 6572 7472  ..r2.....insertr
+-00001c10: 3700 0000 7239 0000 0072 6d00 0000 7235  7...r9...rm...r5
+-00001c20: 0000 0072 2e00 0000 7203 0000 0072 3300  ...r....r....r3.
+-00001c30: 0000 726f 0000 00da 0365 7870 da01 58da  ..ro.....exp..X.
+-00001c40: 0661 7374 7970 65da 0766 6c6f 6174 3332  .astype..float32
+-00001c50: 2913 7251 0000 00da 0f64 6966 665f 7072  ).rQ.....diff_pr
+-00001c60: 6f70 6572 7469 6573 7273 0000 00da 0a70  opertiesrs.....p
+-00001c70: 726f 7065 7274 6965 73da 0c65 6c65 6d65  roperties..eleme
+-00001c80: 6e74 5f64 6963 74da 0b63 6f6d 706f 7369  nt_dict..composi
+-00001c90: 7469 6f6e 723d 0000 0072 3e00 0000 da08  tionr=...r>.....
+-00001ca0: 706f 7369 7469 6f6e da18 656c 6563 7472  position..electr
+-00001cb0: 6f6e 5f6f 6363 7570 6174 696f 6e5f 6469  on_occupation_di
+-00001cc0: 6374 da14 746f 7461 6c5f 7661 6c65 6e63  ct..total_valenc
+-00001cd0: 655f 6661 6374 6f72 da03 6f72 62da 0e6d  e_factor..orb..m
+-00001ce0: 6178 5f69 6f6e 6963 5f63 6861 72da 0d61  ax_ionic_char..a
+-00001cf0: 765f 696f 6e69 635f 6368 6172 da04 6b65  v_ionic_char..ke
+-00001d00: 7931 da06 7661 6c75 6531 da04 6b65 7932  y1..value1..key2
+-00001d10: da06 7661 6c75 6532 da0a 696f 6e69 635f  ..value2..ionic_
+-00001d20: 6368 6172 7226 0000 0072 9500 0000 7229  charr&...r....r)
+-00001d30: 0000 00da 1367 656e 6572 6174 655f 6465  .....generate_de
+-00001d40: 7363 7269 7074 6f72 8500 0000 7386 0000  scriptor....s...
+-00001d50: 0000 090c 0104 0104 010c 0120 010c 010c  ........... ....
+-00001d60: 011a fc02 0402 fb06 0502 fb02 0604 010c  ................
+-00001d70: 011a 0120 010c 010c 0106 fb02 0502 fa06  ... ............
+-00001d80: 0602 fa02 fa02 ff04 0f14 0114 0114 0214  ................
+-00001d90: 0210 021a 0204 010a 0114 010a 011c 021a  ................
+-00001da0: 0104 0108 0108 0124 ff08 0212 020e 0104  .......$........
+-00001db0: 0110 0126 0126 0126 012a 0116 0108 0118  ...&.&.&.*......
+-00001dc0: 0204 0104 0110 0110 0126 010a 0104 0118  .........&......
+-00001dd0: 010c 010c 010c 0172 b600 0000 2901 7284  .......r....).r.
+-00001de0: 0000 0063 0000 0000 0000 0000 0000 0000  ...c............
+-00001df0: 0000 0000 0100 0000 4300 0000 7304 0000  ........C...s...
+-00001e00: 0074 0053 0029 017a 1e43 6974 6174 696f  .t.S.).z.Citatio
+-00001e10: 6e2f 7320 666f 7220 7468 6520 6465 7363  n/s for the desc
+-00001e20: 7269 7074 6f72 2e29 01da 0963 6974 6174  riptor.)...citat
+-00001e30: 696f 6e73 7226 0000 0072 2600 0000 7226  ionsr&...r&...r&
+-00001e40: 0000 0072 2900 0000 da04 6369 7465 cd00  ...r).....cite..
+-00001e50: 0000 7302 0000 0000 0272 b800 0000 2902  ..s......r....).
+-00001e60: da0a 6465 7363 7269 7074 6f72 7284 0000  ..descriptorr...
+-00001e70: 0063 0100 0000 0000 0000 0000 0000 0300  .c..............
+-00001e80: 0000 0500 0000 4300 0000 7364 0000 0074  ......C...sd...t
+-00001e90: 007c 0074 016a 0283 0273 104a 0082 017c  .|.t.j...s.J...|
+-00001ea0: 006a 0364 016b 0273 1e4a 0082 0174 01a0  .j.d.k.s.J...t..
+-00001eb0: 047c 0067 0064 02a2 01a1 027d 0174 016a  .|.g.d.....}.t.j
+-00001ec0: 057c 0164 0319 007c 0164 0419 007c 0164  .|.d...|.d...|.d
+-00001ed0: 0519 0066 0364 0674 016a 0664 078d 037d  ...f.d.t.j.d...}
+-00001ee0: 027c 026a 0364 086b 0273 604a 0082 017c  .|.j.d.k.s`J...|
+-00001ef0: 0253 0029 0961 7001 0000 5265 7475 726e  .S.).ap...Return
+-00001f00: 7320 7468 6520 7374 7275 6374 7572 652d  s the structure-
+-00001f10: 6465 7065 6e64 656e 7420 7061 7274 206f  dependent part o
+-00001f20: 6620 7468 6520 4b53 3230 3232 6465 7363  f the KS2022desc
+-00001f30: 7269 7074 6f72 2e0a 0a20 2020 2041 7267  riptor...    Arg
+-00001f40: 733a 0a20 2020 2020 2020 2064 6573 6372  s:.        descr
+-00001f50: 6970 746f 723a 2041 2032 3536 2d6c 656e  iptor: A 256-len
+-00001f60: 6774 6820 6e75 6d70 7920 6172 7261 7920  gth numpy array 
+-00001f70: 6f66 2074 6865 204b 5332 3032 3220 6465  of the KS2022 de
+-00001f80: 7363 7269 7074 6f72 2e0a 0a20 2020 2052  scriptor...    R
+-00001f90: 6574 7572 6e73 3a0a 2020 2020 2020 2020  eturns:.        
+-00001fa0: 4120 3130 332d 6c65 6e67 7468 206e 756d  A 103-length num
+-00001fb0: 7079 2061 7272 6179 206f 6620 7468 6520  py array of the 
+-00001fc0: 7374 7275 6374 7572 652d 6465 7065 6e64  structure-depend
+-00001fd0: 656e 7420 7061 7274 206f 6620 7468 6520  ent part of the 
+-00001fe0: 4b53 3230 3232 2064 6573 6372 6970 746f  KS2022 descripto
+-00001ff0: 722e 2055 7365 6675 6c20 696e 2063 6173  r. Useful in cas
+-00002000: 6573 2077 6865 7265 2074 6865 0a20 2020  es where the.   
+-00002010: 2020 2020 2064 6573 6372 6970 746f 7220       descriptor 
+-00002020: 6973 2075 7365 6420 6173 2061 2066 696e  is used as a fin
+-00002030: 6765 7270 7269 6e74 2074 6f20 636f 6d70  gerprint to comp
+-00002040: 6172 6520 706f 6c79 6d6f 7270 6873 206f  are polymorphs o
+-00002050: 6620 7468 6520 7361 6d65 2063 6f6d 706f  f the same compo
+-00002060: 756e 642e 0a0a 2020 2020 2901 e900 0100  und...    ).....
+-00002070: 0029 05e9 4400 0000 e949 0000 00e9 5d00  .)..D....I....].
+-00002080: 0000 e962 0000 00e9 7100 0000 7201 0000  ...b....q...r...
+-00002090: 0072 0e00 0000 728a 0000 0072 8500 0000  .r....r....r....
+-000020a0: 2902 7274 0000 00da 0564 7479 7065 2901  ).rt.....dtype).
+-000020b0: e967 0000 0029 07da 0a69 7369 6e73 7461  .g...)...isinsta
+-000020c0: 6e63 6572 2c00 0000 da07 6e64 6172 7261  ncer,.....ndarra
+-000020d0: 7972 2f00 0000 da05 7370 6c69 7472 3a00  yr/.....splitr:.
+-000020e0: 0000 72a6 0000 0029 0372 b900 0000 da0f  ..r....).r......
+-000020f0: 6465 7363 7269 7074 6f72 5370 6c69 74da  descriptorSplit.
+-00002100: 116b 7332 3032 325f 7374 7275 6374 7572  .ks2022_structur
+-00002110: 616c 7226 0000 0072 2600 0000 7229 0000  alr&...r&...r)..
+-00002120: 00da 0e6f 6e6c 7953 7472 7563 7475 7261  ...onlyStructura
+-00002130: 6cd1 0000 0073 1800 0000 000b 1001 0e01  l....s..........
+-00002140: 1001 0401 0601 0601 06fd 0204 06fc 0605  ................
+-00002150: 0e02 72c7 0000 00fa 0b4a 5641 5350 2d31  ..r......JVASP-1
+-00002160: 3030 3031 6301 0000 0000 0000 0000 0000  0001c...........
+-00002170: 0006 0000 0008 0000 0043 0000 0073 b600  .........C...s..
+-00002180: 0000 7c00 6401 6b02 7216 7400 6402 8301  ..|.d.k.r.t.d...
+-00002190: 0100 6403 7d01 6e22 7c00 6404 6b02 722c  ..d.}.n"|.d.k.r,
+-000021a0: 7400 6405 8301 0100 6406 7d01 6e0c 7400  t.d.....d.}.n.t.
+-000021b0: 6407 8301 0100 6408 5300 7401 a002 7403  d.....d.S.t...t.
+-000021c0: a004 7c01 a101 a101 6701 6409 1400 7d02  ..|.....g.d...}.
+-000021d0: 7405 7c02 8301 4400 5d0c 7d03 7406 7c03  t.|...D.].}.t.|.
+-000021e0: 8301 7d04 7156 7407 640a 640b 8302 8f24  ..}.qVt.d.d....$
+-000021f0: 7d05 7c05 a008 640c 640d 8400 7c04 4400  }.|...d.d...|.D.
+-00002200: 8301 a101 0100 5700 640e 0400 0400 8303  ......W.d.......
+-00002210: 0100 6e10 3100 7398 3000 0100 0100 0100  ..n.1.s.0.......
+-00002220: 5900 0100 7400 640f 8301 0100 7400 7c04  Y...t.d.....t.|.
+-00002230: 8301 0100 640e 5300 2910 7a43 5072 6f66  ....d.S.).zCProf
+-00002240: 696c 6573 2074 6865 2064 6573 6372 6970  iles the descrip
+-00002250: 746f 7220 696e 2073 6572 6965 7320 7573  tor in series us
+-00002260: 696e 6720 6f6e 6520 6f66 2074 6865 2074  ing one of the t
+-00002270: 6573 7420 7374 7275 6374 7572 6573 2e72  est structures.r
+-00002280: c800 0000 7a54 5072 6f66 696c 696e 672f  ....zTProfiling/
+-00002290: 7465 7374 696e 6720 7461 736b 2e20 5769  testing task. Wi
+-000022a0: 6c6c 2063 616c 6375 6c61 7465 2061 2064  ll calculate a d
+-000022b0: 6573 6372 6970 746f 7220 666f 7220 4c69  escriptor for Li
+-000022c0: 3220 5a72 3120 5465 3120 4f36 2028 4a56  2 Zr1 Te1 O6 (JV
+-000022d0: 4153 502d 3130 3030 3129 e146 0a00 007b  ASP-10001).F...{
+-000022e0: 2240 6d6f 6475 6c65 223a 2022 7079 6d61  "@module": "pyma
+-000022f0: 7467 656e 2e63 6f72 652e 7374 7275 6374  tgen.core.struct
+-00002300: 7572 6522 2c20 2240 636c 6173 7322 3a20  ure", "@class": 
+-00002310: 2253 7472 7563 7475 7265 222c 2022 6368  "Structure", "ch
+-00002320: 6172 6765 223a 206e 756c 6c2c 2022 6c61  arge": null, "la
+-00002330: 7474 6963 6522 3a20 7b22 6d61 7472 6978  ttice": {"matrix
+-00002340: 223a 205b 5b34 2e35 3939 3330 3536 3532  ": [[4.599305652
+-00002350: 3636 3234 3539 2c20 302e 3030 3938 3031  662459, 0.009801
+-00002360: 3530 3736 3939 3838 3233 2c20 332e 3130  5076998823, 3.10
+-00002370: 3532 3631 3238 3635 3434 3337 3336 5d2c  52612865443736],
+-00002380: 205b 312e 3635 3533 3235 3737 3236 3230   [1.655325772620
+-00002390: 3436 3533 2c20 342e 3239 3131 3038 3437  4653, 4.29110847
+-000023a0: 3538 3534 3731 322c 2033 2e31 3035 3236  5854712, 3.10526
+-000023b0: 3032 3933 3839 3739 3536 355d 2c20 5b30  02938979565], [0
+-000023c0: 2e30 3134 3235 3431 3231 3439 3139 3734  .014254121491974
+-000023d0: 392c 2030 2e30 3039 3830 3235 3039 3939  9, 0.00980250999
+-000023e0: 3936 3133 312c 2035 2e35 3439 3431 3931  96131, 5.5494191
+-000023f0: 3431 3836 3633 3531 5d5d 2c20 2261 223a  41866351]], "a":
+-00002400: 2035 2e35 3439 3434 3634 3738 3135 3233   5.5494464781523
+-00002410: 3236 2c20 2262 223a 2035 2e35 3439 3434  26, "b": 5.54944
+-00002420: 3635 3336 3137 3933 3433 2c20 2263 223a  6536179343, "c":
+-00002430: 2035 2e35 3439 3434 3631 3035 3831 3034   5.5494461058104
+-00002440: 3233 2c20 2261 6c70 6861 223a 2035 352e  23, "alpha": 55.
+-00002450: 3832 3731 3434 3539 3938 3538 3332 2c20  82714459985832, 
+-00002460: 2262 6574 6122 3a20 3535 2e38 3237 3134  "beta": 55.82714
+-00002470: 3031 3432 3839 3337 312c 2022 6761 6d6d  014289371, "gamm
+-00002480: 6122 3a20 3535 2e38 3237 3133 3937 3237  a": 55.827139727
+-00002490: 3739 3039 322c 2022 766f 6c75 6d65 223a  79092, "volume":
+-000024a0: 2031 3039 2e31 3534 3834 3632 3536 3432   109.15484625642
+-000024b0: 3734 337d 2c20 2273 6974 6573 223a 205b  743}, "sites": [
+-000024c0: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-000024d0: 6c65 6d65 6e74 223a 2022 4c69 222c 2022  lement": "Li", "
+-000024e0: 6f63 6375 223a 2031 2e30 7d5d 2c20 2261  occu": 1.0}], "a
+-000024f0: 6263 223a 205b 302e 3237 3338 3738 3438  bc": [0.27387848
+-00002500: 3732 3636 3939 3234 2c20 302e 3237 3338  72669924, 0.2738
+-00002510: 3738 3438 3732 3637 3034 3037 2c20 302e  784872670407, 0.
+-00002520: 3237 3338 3738 3438 3732 3637 3330 3332  2738784872673032
+-00002530: 5d2c 2022 7879 7a22 3a20 5b31 2e37 3136  ], "xyz": [1.716
+-00002540: 3931 3238 3930 3430 3037 3036 332c 2031  9128904007063, 1
+-00002550: 2e31 3830 3631 3134 3136 3737 3737 3631  .180611416777761
+-00002560: 332c 2033 2e32 3230 3739 3437 3735 3337  3, 3.22079477537
+-00002570: 3732 3738 5d2c 2022 6c61 6265 6c22 3a20  7278], "label": 
+-00002580: 224c 6922 2c20 2270 726f 7065 7274 6965  "Li", "propertie
+-00002590: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
+-000025a0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
+-000025b0: 3a20 224c 6922 2c20 226f 6363 7522 3a20  : "Li", "occu": 
+-000025c0: 312e 307d 5d2c 2022 6162 6322 3a20 5b30  1.0}], "abc": [0
+-000025d0: 2e37 3835 3232 3732 3031 3037 3238 3036  .785227201072806
+-000025e0: 392c 2030 2e37 3835 3232 3732 3031 3037  9, 0.78522720107
+-000025f0: 3238 3835 362c 2030 2e37 3835 3232 3732  28856, 0.7852272
+-00002600: 3031 3037 3333 3135 5d2c 2022 7879 7a22  01073315], "xyz"
+-00002610: 3a20 5b34 2e39 3232 3439 3934 3531 3733  : [4.92249945173
+-00002620: 3939 3635 2c20 332e 3338 3438 3838 3730  9965, 3.38488870
+-00002630: 3539 3433 3439 3237 2c20 392e 3233 3432  59434927, 9.2342
+-00002640: 3235 3333 3831 3633 3633 335d 2c20 226c  25338163633], "l
+-00002650: 6162 656c 223a 2022 4c69 222c 2022 7072  abel": "Li", "pr
+-00002660: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
+-00002670: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-00002680: 6c65 6d65 6e74 223a 2022 4f22 2c20 226f  lement": "O", "o
+-00002690: 6363 7522 3a20 312e 307d 5d2c 2022 6162  ccu": 1.0}], "ab
+-000026a0: 6322 3a20 5b30 2e38 3636 3939 3634 3435  c": [0.866996445
+-000026b0: 3436 3631 3132 342c 2030 2e36 3034 3038  4661124, 0.60408
+-000026c0: 3938 3832 3039 3231 3134 2c20 302e 3234  9882092114, 0.24
+-000026d0: 3138 3231 3736 3938 3733 3134 335d 2c20  1821769873143], 
+-000026e0: 2278 797a 223a 205b 342e 3939 3039 3934  "xyz": [4.990994
+-000026f0: 3136 3031 3634 3036 312c 2032 2e36 3033  160164061, 2.603
+-00002700: 3038 3335 3435 3837 3638 3536 2c20 352e  083545876856, 5.
+-00002710: 3931 3030 3737 3138 3131 3337 3635 385d  910077181137658]
+-00002720: 2c20 226c 6162 656c 223a 2022 4f22 2c20  , "label": "O", 
+-00002730: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00002740: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00002750: 7b22 656c 656d 656e 7422 3a20 224f 222c  {"element": "O",
+-00002760: 2022 6f63 6375 223a 2031 2e30 7d5d 2c20   "occu": 1.0}], 
+-00002770: 2261 6263 223a 205b 302e 3731 3738 3430  "abc": [0.717840
+-00002780: 3839 3435 3239 3738 382c 2030 2e31 3231  894529788, 0.121
+-00002790: 3336 3735 3838 3936 3238 3638 332c 2030  3675889628683, 0
+-000027a0: 2e33 3933 3533 3730 3039 3138 3639 3733  .393537009186973
+-000027b0: 5d2c 2022 7879 7a22 3a20 5b33 2e35 3038  ], "xyz": [3.508
+-000027c0: 3038 3231 3036 3233 3437 3133 2c20 302e  082106234713, 0.
+-000027d0: 3533 3136 3935 3036 3332 3135 3431 322c  531695063215412,
+-000027e0: 2034 2e37 3839 3836 3333 3036 3436 3932   4.7898633064692
+-000027f0: 3738 5d2c 2022 6c61 6265 6c22 3a20 224f  78], "label": "O
+-00002800: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00002810: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00002820: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00002830: 4f22 2c20 226f 6363 7522 3a20 312e 307d  O", "occu": 1.0}
+-00002840: 5d2c 2022 6162 6322 3a20 5b30 2e31 3231  ], "abc": [0.121
+-00002850: 3336 3735 3838 3936 3338 3430 322c 2030  3675889638402, 0
+-00002860: 2e33 3933 3533 3730 3039 3138 3733 3934  .393537009187394
+-00002870: 332c 2030 2e37 3137 3834 3038 3934 3532  3, 0.71784089452
+-00002880: 3833 3338 345d 2c20 2278 797a 223a 205b  83384], "xyz": [
+-00002890: 312e 3231 3938 3730 3738 3330 3831 3738  1.21987078308178
+-000028a0: 3936 2c20 312e 3639 3639 3336 3232 3335  96, 1.6969362235
+-000028b0: 3931 3033 3137 2c20 352e 3538 3235 3132  910317, 5.582512
+-000028c0: 3932 3531 3639 3634 5d2c 2022 6c61 6265  92516964], "labe
+-000028d0: 6c22 3a20 224f 222c 2022 7072 6f70 6572  l": "O", "proper
+-000028e0: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
+-000028f0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
+-00002900: 6e74 223a 2022 4f22 2c20 226f 6363 7522  nt": "O", "occu"
+-00002910: 3a20 312e 307d 5d2c 2022 6162 6322 3a20  : 1.0}], "abc": 
+-00002920: 5b30 2e33 3933 3533 3730 3039 3138 3631  [0.3935370091861
+-00002930: 3931 352c 2030 2e37 3137 3834 3038 3934  915, 0.717840894
+-00002940: 3532 3933 3835 362c 2030 2e31 3231 3336  5293856, 0.12136
+-00002950: 3735 3838 3936 3334 3031 345d 2c20 2278  75889634014], "x
+-00002960: 797a 223a 205b 322e 3939 3939 3837 3531  yz": [2.99998751
+-00002970: 3235 3935 3632 322c 2033 2e30 3835 3338  2595622, 3.08538
+-00002980: 3031 3039 3836 3033 3434 2c20 342e 3132  0109860344, 4.12
+-00002990: 3436 3337 3638 3739 3632 3239 375d 2c20  4637687962297], 
+-000029a0: 226c 6162 656c 223a 2022 4f22 2c20 2270  "label": "O", "p
+-000029b0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-000029c0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-000029d0: 656c 656d 656e 7422 3a20 224f 222c 2022  element": "O", "
+-000029e0: 6f63 6375 223a 2031 2e30 7d5d 2c20 2261  occu": 1.0}], "a
+-000029f0: 6263 223a 205b 302e 3234 3138 3231 3736  bc": [0.24182176
+-00002a00: 3938 3732 3135 3733 2c20 302e 3836 3639  98721573, 0.8669
+-00002a10: 3936 3434 3534 3637 3132 3231 2c20 302e  964454671221, 0.
+-00002a20: 3630 3430 3839 3838 3230 3932 3135 3133  6040898820921513
+-00002a30: 5d2c 2022 7879 7a22 3a20 5b32 2e35 3535  ], "xyz": [2.555
+-00002a40: 3938 3435 3634 3633 3333 3239 2c20 332e  984564633329, 3.
+-00002a50: 3732 3836 3637 3631 3037 3239 3134 392c  728667610729149,
+-00002a60: 2036 2e37 3935 3531 3733 3732 3337 3733   6.7955173723773
+-00002a70: 3433 5d2c 2022 6c61 6265 6c22 3a20 224f  43], "label": "O
+-00002a80: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00002a90: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00002aa0: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00002ab0: 4f22 2c20 226f 6363 7522 3a20 312e 307d  O", "occu": 1.0}
+-00002ac0: 5d2c 2022 6162 6322 3a20 5b30 2e36 3034  ], "abc": [0.604
+-00002ad0: 3038 3938 3832 3039 3333 3131 352c 2030  0898820933115, 0
+-00002ae0: 2e32 3431 3832 3137 3639 3837 3233 3633  .241821769872363
+-00002af0: 372c 2030 2e38 3636 3939 3634 3435 3436  7, 0.86699644546
+-00002b00: 3634 3035 395d 2c20 2278 797a 223a 205b  64059], "xyz": [
+-00002b10: 332e 3139 3130 3436 3039 3031 3435 3137  3.19104609014517
+-00002b20: 332c 2031 2e30 3532 3130 3331 3739 3330  3, 1.05210317930
+-00002b30: 3235 3539 352c 2037 2e34 3338 3130 3331  25595, 7.4381031
+-00002b40: 3335 3034 3336 3533 355d 2c20 226c 6162  350436535], "lab
+-00002b50: 656c 223a 2022 4f22 2c20 2270 726f 7065  el": "O", "prope
+-00002b60: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
+-00002b70: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
+-00002b80: 656e 7422 3a20 2254 6522 2c20 226f 6363  ent": "Te", "occ
+-00002b90: 7522 3a20 312e 307d 5d2c 2022 6162 6322  u": 1.0}], "abc"
+-00002ba0: 3a20 5b30 2e34 3936 3539 3035 3631 3035  : [0.49659056105
+-00002bb0: 3037 3335 332c 2030 2e34 3936 3539 3035  07353, 0.4965905
+-00002bc0: 3631 3035 3037 3335 352c 2030 2e34 3936  610507355, 0.496
+-00002bd0: 3539 3035 3631 3035 3037 3336 315d 2c20  5905610507361], 
+-00002be0: 2278 797a 223a 205b 332e 3131 3330 3639  "xyz": [3.113069
+-00002bf0: 3339 3038 3335 3739 332c 2032 2e31 3430  390835793, 2.140
+-00002c00: 3635 3931 3335 3730 3234 3938 342c 2035  6591357024984, 5
+-00002c10: 2e38 3339 3837 3535 3631 3231 3436 3632  .839875561214662
+-00002c20: 345d 2c20 226c 6162 656c 223a 2022 5465  4], "label": "Te
+-00002c30: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00002c40: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00002c50: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00002c60: 5a72 222c 2022 6f63 6375 223a 2031 2e30  Zr", "occu": 1.0
+-00002c70: 7d5d 2c20 2261 6263 223a 205b 302e 3030  }], "abc": [0.00
+-00002c80: 3036 3530 3136 3034 3938 3036 3638 2c20  06501604980668, 
+-00002c90: 302e 3030 3036 3530 3136 3034 3938 3039  0.00065016049809
+-00002ca0: 3238 2c20 302e 3030 3036 3530 3136 3034  28, 0.0006501604
+-00002cb0: 3938 3233 3434 5d2c 2022 7879 7a22 3a20  982344], "xyz": 
+-00002cc0: 5b30 2e30 3034 3037 3537 3831 3734 3934  [0.0040757817494
+-00002cd0: 3630 3336 2c20 302e 3030 3238 3032 3635  6036, 0.00280265
+-00002ce0: 3439 3831 3934 3531 3932 2c20 302e 3030  4981945192, 0.00
+-00002cf0: 3736 3435 3834 3839 3138 3236 3330 3736  7645848918263076
+-00002d00: 5d2c 2022 6c61 6265 6c22 3a20 225a 7222  ], "label": "Zr"
+-00002d10: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
+-00002d20: 7b7d 7d5d 7dda 0d64 696c 7574 654e 6941  {}}]}..diluteNiA
+-00002d30: 6c6c 6f79 7a4d 5072 6f66 696c 696e 672f  lloyzMProfiling/
+-00002d40: 7465 7374 696e 6720 7461 736b 2e20 5769  testing task. Wi
+-00002d50: 6c6c 2063 616c 6375 6c61 7465 2061 2064  ll calculate a d
+-00002d60: 6573 6372 6970 746f 7220 666f 7220 6120  escriptor for a 
+-00002d70: 6469 6c75 7465 2046 4343 204e 6933 3143  dilute FCC Ni31C
+-00002d80: 7231 2ee1 d414 0000 7b22 406d 6f64 756c  r1......{"@modul
+-00002d90: 6522 3a20 2270 796d 6174 6765 6e2e 636f  e": "pymatgen.co
+-00002da0: 7265 2e73 7472 7563 7475 7265 222c 2022  re.structure", "
+-00002db0: 4063 6c61 7373 223a 2022 5374 7275 6374  @class": "Struct
+-00002dc0: 7572 6522 2c20 2263 6861 7267 6522 3a20  ure", "charge": 
+-00002dd0: 6e75 6c6c 2c20 226c 6174 7469 6365 223a  null, "lattice":
+-00002de0: 207b 226d 6174 7269 7822 3a20 5b5b 362e   {"matrix": [[6.
+-00002df0: 3939 3536 3932 2c20 302e 302c 2030 2e30  995692, 0.0, 0.0
+-00002e00: 5d2c 205b 302e 302c 2036 2e39 3935 3639  ], [0.0, 6.99569
+-00002e10: 322c 2030 2e30 5d2c 205b 302e 302c 2030  2, 0.0], [0.0, 0
+-00002e20: 2e30 2c20 362e 3939 3536 3932 5d5d 2c20  .0, 6.995692]], 
+-00002e30: 2261 223a 2036 2e39 3935 3639 322c 2022  "a": 6.995692, "
+-00002e40: 6222 3a20 362e 3939 3536 3932 2c20 2263  b": 6.995692, "c
+-00002e50: 223a 2036 2e39 3935 3639 322c 2022 616c  ": 6.995692, "al
+-00002e60: 7068 6122 3a20 3930 2e30 2c20 2262 6574  pha": 90.0, "bet
+-00002e70: 6122 3a20 3930 2e30 2c20 2267 616d 6d61  a": 90.0, "gamma
+-00002e80: 223a 2039 302e 302c 2022 766f 6c75 6d65  ": 90.0, "volume
+-00002e90: 223a 2033 3432 2e33 3637 3131 3336 3536  ": 342.367113656
+-00002ea0: 3139 3234 337d 2c20 2273 6974 6573 223a  19243}, "sites":
+-00002eb0: 205b 7b22 7370 6563 6965 7322 3a20 5b7b   [{"species": [{
+-00002ec0: 2265 6c65 6d65 6e74 223a 2022 4372 222c  "element": "Cr",
+-00002ed0: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00002ee0: 6263 223a 205b 302e 302c 2030 2e30 2c20  bc": [0.0, 0.0, 
+-00002ef0: 302e 305d 2c20 2278 797a 223a 205b 302e  0.0], "xyz": [0.
+-00002f00: 302c 2030 2e30 2c20 302e 305d 2c20 226c  0, 0.0, 0.0], "l
+-00002f10: 6162 656c 223a 2022 4372 222c 2022 7072  abel": "Cr", "pr
+-00002f20: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
+-00002f30: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-00002f40: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
+-00002f50: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
+-00002f60: 223a 205b 302e 302c 2030 2e30 2c20 302e  ": [0.0, 0.0, 0.
+-00002f70: 355d 2c20 2278 797a 223a 205b 302e 302c  5], "xyz": [0.0,
+-00002f80: 2030 2e30 2c20 332e 3439 3738 3436 5d2c   0.0, 3.497846],
+-00002f90: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
+-00002fa0: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00002fb0: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00002fc0: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
+-00002fd0: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-00002fe0: 6162 6322 3a20 5b30 2e30 2c20 302e 352c  abc": [0.0, 0.5,
+-00002ff0: 2030 2e30 5d2c 2022 7879 7a22 3a20 5b30   0.0], "xyz": [0
+-00003000: 2e30 2c20 332e 3439 3738 3436 2c20 302e  .0, 3.497846, 0.
+-00003010: 305d 2c20 226c 6162 656c 223a 2022 4e69  0], "label": "Ni
+-00003020: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00003030: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00003040: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00003050: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
+-00003060: 2c20 2261 6263 223a 205b 302e 302c 2030  , "abc": [0.0, 0
+-00003070: 2e35 2c20 302e 355d 2c20 2278 797a 223a  .5, 0.5], "xyz":
+-00003080: 205b 302e 302c 2033 2e34 3937 3834 362c   [0.0, 3.497846,
+-00003090: 2033 2e34 3937 3834 365d 2c20 226c 6162   3.497846], "lab
+-000030a0: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-000030b0: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-000030c0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-000030d0: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-000030e0: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-000030f0: 205b 302e 352c 2030 2e30 2c20 302e 305d   [0.5, 0.0, 0.0]
+-00003100: 2c20 2278 797a 223a 205b 332e 3439 3738  , "xyz": [3.4978
+-00003110: 3436 2c20 302e 302c 2030 2e30 5d2c 2022  46, 0.0, 0.0], "
+-00003120: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
+-00003130: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-00003140: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00003150: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00003160: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00003170: 6322 3a20 5b30 2e35 2c20 302e 302c 2030  c": [0.5, 0.0, 0
+-00003180: 2e35 5d2c 2022 7879 7a22 3a20 5b33 2e34  .5], "xyz": [3.4
+-00003190: 3937 3834 362c 2030 2e30 2c20 332e 3439  97846, 0.0, 3.49
+-000031a0: 3738 3436 5d2c 2022 6c61 6265 6c22 3a20  7846], "label": 
+-000031b0: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
+-000031c0: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
+-000031d0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
+-000031e0: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
+-000031f0: 317d 5d2c 2022 6162 6322 3a20 5b30 2e35  1}], "abc": [0.5
+-00003200: 2c20 302e 352c 2030 2e30 5d2c 2022 7879  , 0.5, 0.0], "xy
+-00003210: 7a22 3a20 5b33 2e34 3937 3834 362c 2033  z": [3.497846, 3
+-00003220: 2e34 3937 3834 362c 2030 2e30 5d2c 2022  .497846, 0.0], "
+-00003230: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
+-00003240: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-00003250: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00003260: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00003270: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00003280: 6322 3a20 5b30 2e35 2c20 302e 352c 2030  c": [0.5, 0.5, 0
+-00003290: 2e35 5d2c 2022 7879 7a22 3a20 5b33 2e34  .5], "xyz": [3.4
+-000032a0: 3937 3834 362c 2033 2e34 3937 3834 362c  97846, 3.497846,
+-000032b0: 2033 2e34 3937 3834 365d 2c20 226c 6162   3.497846], "lab
+-000032c0: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-000032d0: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-000032e0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-000032f0: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-00003300: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-00003310: 205b 302e 3235 2c20 302e 3235 2c20 302e   [0.25, 0.25, 0.
+-00003320: 305d 2c20 2278 797a 223a 205b 312e 3734  0], "xyz": [1.74
+-00003330: 3839 3233 2c20 312e 3734 3839 3233 2c20  8923, 1.748923, 
+-00003340: 302e 305d 2c20 226c 6162 656c 223a 2022  0.0], "label": "
+-00003350: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
+-00003360: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
+-00003370: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
+-00003380: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
+-00003390: 7d5d 2c20 2261 6263 223a 205b 302e 3235  }], "abc": [0.25
+-000033a0: 2c20 302e 3235 2c20 302e 355d 2c20 2278  , 0.25, 0.5], "x
+-000033b0: 797a 223a 205b 312e 3734 3839 3233 2c20  yz": [1.748923, 
+-000033c0: 312e 3734 3839 3233 2c20 332e 3439 3738  1.748923, 3.4978
+-000033d0: 3436 5d2c 2022 6c61 6265 6c22 3a20 224e  46], "label": "N
+-000033e0: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
+-000033f0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00003400: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00003410: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
+-00003420: 5d2c 2022 6162 6322 3a20 5b30 2e32 352c  ], "abc": [0.25,
+-00003430: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
+-00003440: 3030 312c 2030 2e30 5d2c 2022 7879 7a22  001, 0.0], "xyz"
+-00003450: 3a20 5b31 2e37 3438 3932 332c 2035 2e32  : [1.748923, 5.2
+-00003460: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
+-00003470: 2030 2e30 5d2c 2022 6c61 6265 6c22 3a20   0.0], "label": 
+-00003480: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
+-00003490: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
+-000034a0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
+-000034b0: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
+-000034c0: 317d 5d2c 2022 6162 6322 3a20 5b30 2e32  1}], "abc": [0.2
+-000034d0: 352c 2030 2e37 3530 3030 3030 3030 3030  5, 0.75000000000
+-000034e0: 3030 3030 312c 2030 2e35 5d2c 2022 7879  00001, 0.5], "xy
+-000034f0: 7a22 3a20 5b31 2e37 3438 3932 332c 2035  z": [1.748923, 5
+-00003500: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
+-00003510: 352c 2033 2e34 3937 3834 365d 2c20 226c  5, 3.497846], "l
+-00003520: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
+-00003530: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
+-00003540: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-00003550: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
+-00003560: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
+-00003570: 223a 205b 302e 3735 3030 3030 3030 3030  ": [0.7500000000
+-00003580: 3030 3030 3031 2c20 302e 3235 2c20 302e  000001, 0.25, 0.
+-00003590: 305d 2c20 2278 797a 223a 205b 352e 3234  0], "xyz": [5.24
+-000035a0: 3637 3639 3030 3030 3030 3030 3035 2c20  67690000000005, 
+-000035b0: 312e 3734 3839 3233 2c20 302e 305d 2c20  1.748923, 0.0], 
+-000035c0: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
+-000035d0: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-000035e0: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-000035f0: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
+-00003600: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00003610: 6263 223a 205b 302e 3735 3030 3030 3030  bc": [0.75000000
+-00003620: 3030 3030 3030 3031 2c20 302e 3235 2c20  00000001, 0.25, 
+-00003630: 302e 355d 2c20 2278 797a 223a 205b 352e  0.5], "xyz": [5.
+-00003640: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
+-00003650: 2c20 312e 3734 3839 3233 2c20 332e 3439  , 1.748923, 3.49
+-00003660: 3738 3436 5d2c 2022 6c61 6265 6c22 3a20  7846], "label": 
+-00003670: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
+-00003680: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
+-00003690: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
+-000036a0: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
+-000036b0: 317d 5d2c 2022 6162 6322 3a20 5b30 2e37  1}], "abc": [0.7
+-000036c0: 3530 3030 3030 3030 3030 3030 3030 312c  500000000000001,
+-000036d0: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
+-000036e0: 3030 312c 2030 2e30 5d2c 2022 7879 7a22  001, 0.0], "xyz"
+-000036f0: 3a20 5b35 2e32 3436 3736 3930 3030 3030  : [5.24676900000
+-00003700: 3030 3030 352c 2035 2e32 3436 3736 3930  00005, 5.2467690
+-00003710: 3030 3030 3030 3030 352c 2030 2e30 5d2c  000000005, 0.0],
+-00003720: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
+-00003730: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00003740: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00003750: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
+-00003760: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-00003770: 6162 6322 3a20 5b30 2e37 3530 3030 3030  abc": [0.7500000
+-00003780: 3030 3030 3030 3030 312c 2030 2e37 3530  000000001, 0.750
+-00003790: 3030 3030 3030 3030 3030 3030 312c 2030  0000000000001, 0
+-000037a0: 2e35 5d2c 2022 7879 7a22 3a20 5b35 2e32  .5], "xyz": [5.2
+-000037b0: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
+-000037c0: 2035 2e32 3436 3736 3930 3030 3030 3030   5.2467690000000
+-000037d0: 3030 352c 2033 2e34 3937 3834 365d 2c20  005, 3.497846], 
+-000037e0: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
+-000037f0: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-00003800: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-00003810: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
+-00003820: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00003830: 6263 223a 205b 302e 3235 2c20 302e 302c  bc": [0.25, 0.0,
+-00003840: 2030 2e32 355d 2c20 2278 797a 223a 205b   0.25], "xyz": [
+-00003850: 312e 3734 3839 3233 2c20 302e 302c 2031  1.748923, 0.0, 1
+-00003860: 2e37 3438 3932 335d 2c20 226c 6162 656c  .748923], "label
+-00003870: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
+-00003880: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
+-00003890: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
+-000038a0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
+-000038b0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
+-000038c0: 302e 3235 2c20 302e 302c 2030 2e37 3530  0.25, 0.0, 0.750
+-000038d0: 3030 3030 3030 3030 3030 3030 315d 2c20  0000000000001], 
+-000038e0: 2278 797a 223a 205b 312e 3734 3839 3233  "xyz": [1.748923
+-000038f0: 2c20 302e 302c 2035 2e32 3436 3736 3930  , 0.0, 5.2467690
+-00003900: 3030 3030 3030 3030 355d 2c20 226c 6162  000000005], "lab
+-00003910: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-00003920: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-00003930: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-00003940: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-00003950: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-00003960: 205b 302e 3235 2c20 302e 352c 2030 2e32   [0.25, 0.5, 0.2
+-00003970: 355d 2c20 2278 797a 223a 205b 312e 3734  5], "xyz": [1.74
+-00003980: 3839 3233 2c20 332e 3439 3738 3436 2c20  8923, 3.497846, 
+-00003990: 312e 3734 3839 3233 5d2c 2022 6c61 6265  1.748923], "labe
+-000039a0: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
+-000039b0: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
+-000039c0: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
+-000039d0: 656e 7422 3a20 224e 6922 2c20 226f 6363  ent": "Ni", "occ
+-000039e0: 7522 3a20 317d 5d2c 2022 6162 6322 3a20  u": 1}], "abc": 
+-000039f0: 5b30 2e32 352c 2030 2e35 2c20 302e 3735  [0.25, 0.5, 0.75
+-00003a00: 3030 3030 3030 3030 3030 3030 3031 5d2c  00000000000001],
+-00003a10: 2022 7879 7a22 3a20 5b31 2e37 3438 3932   "xyz": [1.74892
+-00003a20: 332c 2033 2e34 3937 3834 362c 2035 2e32  3, 3.497846, 5.2
+-00003a30: 3436 3736 3930 3030 3030 3030 3030 355d  467690000000005]
+-00003a40: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
+-00003a50: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-00003a60: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-00003a70: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
+-00003a80: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
+-00003a90: 2261 6263 223a 205b 302e 3735 3030 3030  "abc": [0.750000
+-00003aa0: 3030 3030 3030 3030 3031 2c20 302e 302c  0000000001, 0.0,
+-00003ab0: 2030 2e32 355d 2c20 2278 797a 223a 205b   0.25], "xyz": [
+-00003ac0: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
+-00003ad0: 3035 2c20 302e 302c 2031 2e37 3438 3932  05, 0.0, 1.74892
+-00003ae0: 335d 2c20 226c 6162 656c 223a 2022 4e69  3], "label": "Ni
+-00003af0: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00003b00: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00003b10: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00003b20: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
+-00003b30: 2c20 2261 6263 223a 205b 302e 3735 3030  , "abc": [0.7500
+-00003b40: 3030 3030 3030 3030 3030 3031 2c20 302e  000000000001, 0.
+-00003b50: 302c 2030 2e37 3530 3030 3030 3030 3030  0, 0.75000000000
+-00003b60: 3030 3030 315d 2c20 2278 797a 223a 205b  00001], "xyz": [
+-00003b70: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
+-00003b80: 3035 2c20 302e 302c 2035 2e32 3436 3736  05, 0.0, 5.24676
+-00003b90: 3930 3030 3030 3030 3030 355d 2c20 226c  90000000005], "l
+-00003ba0: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
+-00003bb0: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
+-00003bc0: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-00003bd0: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
+-00003be0: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
+-00003bf0: 223a 205b 302e 3735 3030 3030 3030 3030  ": [0.7500000000
+-00003c00: 3030 3030 3031 2c20 302e 352c 2030 2e32  000001, 0.5, 0.2
+-00003c10: 355d 2c20 2278 797a 223a 205b 352e 3234  5], "xyz": [5.24
+-00003c20: 3637 3639 3030 3030 3030 3030 3035 2c20  67690000000005, 
+-00003c30: 332e 3439 3738 3436 2c20 312e 3734 3839  3.497846, 1.7489
+-00003c40: 3233 5d2c 2022 6c61 6265 6c22 3a20 224e  23], "label": "N
+-00003c50: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
+-00003c60: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00003c70: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00003c80: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
+-00003c90: 5d2c 2022 6162 6322 3a20 5b30 2e37 3530  ], "abc": [0.750
+-00003ca0: 3030 3030 3030 3030 3030 3030 312c 2030  0000000000001, 0
+-00003cb0: 2e35 2c20 302e 3735 3030 3030 3030 3030  .5, 0.7500000000
+-00003cc0: 3030 3030 3031 5d2c 2022 7879 7a22 3a20  000001], "xyz": 
+-00003cd0: 5b35 2e32 3436 3736 3930 3030 3030 3030  [5.2467690000000
+-00003ce0: 3030 352c 2033 2e34 3937 3834 362c 2035  005, 3.497846, 5
+-00003cf0: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
+-00003d00: 355d 2c20 226c 6162 656c 223a 2022 4e69  5], "label": "Ni
+-00003d10: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00003d20: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
+-00003d30: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
+-00003d40: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
+-00003d50: 2c20 2261 6263 223a 205b 302e 302c 2030  , "abc": [0.0, 0
+-00003d60: 2e32 352c 2030 2e32 355d 2c20 2278 797a  .25, 0.25], "xyz
+-00003d70: 223a 205b 302e 302c 2031 2e37 3438 3932  ": [0.0, 1.74892
+-00003d80: 332c 2031 2e37 3438 3932 335d 2c20 226c  3, 1.748923], "l
+-00003d90: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
+-00003da0: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
+-00003db0: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
+-00003dc0: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
+-00003dd0: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
+-00003de0: 223a 205b 302e 302c 2030 2e32 352c 2030  ": [0.0, 0.25, 0
+-00003df0: 2e37 3530 3030 3030 3030 3030 3030 3030  .750000000000000
+-00003e00: 315d 2c20 2278 797a 223a 205b 302e 302c  1], "xyz": [0.0,
+-00003e10: 2031 2e37 3438 3932 332c 2035 2e32 3436   1.748923, 5.246
+-00003e20: 3736 3930 3030 3030 3030 3030 355d 2c20  7690000000005], 
+-00003e30: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
+-00003e40: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-00003e50: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-00003e60: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
+-00003e70: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00003e80: 6263 223a 205b 302e 302c 2030 2e37 3530  bc": [0.0, 0.750
+-00003e90: 3030 3030 3030 3030 3030 3030 312c 2030  0000000000001, 0
+-00003ea0: 2e32 355d 2c20 2278 797a 223a 205b 302e  .25], "xyz": [0.
+-00003eb0: 302c 2035 2e32 3436 3736 3930 3030 3030  0, 5.24676900000
+-00003ec0: 3030 3030 352c 2031 2e37 3438 3932 335d  00005, 1.748923]
+-00003ed0: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
+-00003ee0: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-00003ef0: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-00003f00: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
+-00003f10: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
+-00003f20: 2261 6263 223a 205b 302e 302c 2030 2e37  "abc": [0.0, 0.7
+-00003f30: 3530 3030 3030 3030 3030 3030 3030 312c  500000000000001,
+-00003f40: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
+-00003f50: 3030 315d 2c20 2278 797a 223a 205b 302e  001], "xyz": [0.
+-00003f60: 302c 2035 2e32 3436 3736 3930 3030 3030  0, 5.24676900000
+-00003f70: 3030 3030 352c 2035 2e32 3436 3736 3930  00005, 5.2467690
+-00003f80: 3030 3030 3030 3030 355d 2c20 226c 6162  000000005], "lab
+-00003f90: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-00003fa0: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-00003fb0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-00003fc0: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-00003fd0: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-00003fe0: 205b 302e 352c 2030 2e32 352c 2030 2e32   [0.5, 0.25, 0.2
+-00003ff0: 355d 2c20 2278 797a 223a 205b 332e 3439  5], "xyz": [3.49
+-00004000: 3738 3436 2c20 312e 3734 3839 3233 2c20  7846, 1.748923, 
+-00004010: 312e 3734 3839 3233 5d2c 2022 6c61 6265  1.748923], "labe
+-00004020: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
+-00004030: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
+-00004040: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
+-00004050: 656e 7422 3a20 224e 6922 2c20 226f 6363  ent": "Ni", "occ
+-00004060: 7522 3a20 317d 5d2c 2022 6162 6322 3a20  u": 1}], "abc": 
+-00004070: 5b30 2e35 2c20 302e 3235 2c20 302e 3735  [0.5, 0.25, 0.75
+-00004080: 3030 3030 3030 3030 3030 3030 3031 5d2c  00000000000001],
+-00004090: 2022 7879 7a22 3a20 5b33 2e34 3937 3834   "xyz": [3.49784
+-000040a0: 362c 2031 2e37 3438 3932 332c 2035 2e32  6, 1.748923, 5.2
+-000040b0: 3436 3736 3930 3030 3030 3030 3030 355d  467690000000005]
+-000040c0: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
+-000040d0: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-000040e0: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-000040f0: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
+-00004100: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
+-00004110: 2261 6263 223a 205b 302e 352c 2030 2e37  "abc": [0.5, 0.7
+-00004120: 3530 3030 3030 3030 3030 3030 3030 312c  500000000000001,
+-00004130: 2030 2e32 355d 2c20 2278 797a 223a 205b   0.25], "xyz": [
+-00004140: 332e 3439 3738 3436 2c20 352e 3234 3637  3.497846, 5.2467
+-00004150: 3639 3030 3030 3030 3030 3035 2c20 312e  690000000005, 1.
+-00004160: 3734 3839 3233 5d2c 2022 6c61 6265 6c22  748923], "label"
+-00004170: 3a20 224e 6922 2c20 2270 726f 7065 7274  : "Ni", "propert
+-00004180: 6965 7322 3a20 7b7d 7d2c 207b 2273 7065  ies": {}}, {"spe
+-00004190: 6369 6573 223a 205b 7b22 656c 656d 656e  cies": [{"elemen
+-000041a0: 7422 3a20 224e 6922 2c20 226f 6363 7522  t": "Ni", "occu"
+-000041b0: 3a20 317d 5d2c 2022 6162 6322 3a20 5b30  : 1}], "abc": [0
+-000041c0: 2e35 2c20 302e 3735 3030 3030 3030 3030  .5, 0.7500000000
+-000041d0: 3030 3030 3031 2c20 302e 3735 3030 3030  000001, 0.750000
+-000041e0: 3030 3030 3030 3030 3031 5d2c 2022 7879  0000000001], "xy
+-000041f0: 7a22 3a20 5b33 2e34 3937 3834 362c 2035  z": [3.497846, 5
+-00004200: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
+-00004210: 352c 2035 2e32 3436 3736 3930 3030 3030  5, 5.24676900000
+-00004220: 3030 3030 355d 2c20 226c 6162 656c 223a  00005], "label":
+-00004230: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
+-00004240: 6573 223a 207b 7d7d 5d2c 2022 4076 6572  es": {}}], "@ver
+-00004250: 7369 6f6e 223a 206e 756c 6c7d fa17 556e  sion": null}..Un
+-00004260: 7265 636f 676e 697a 6564 2074 6573 7420  recognized test 
+-00004270: 6e61 6d65 2e72 0100 0000 7213 0000 007a  name.r....r....z
+-00004280: 154b 5332 3032 325f 5465 7374 5265 7375  .KS2022_TestResu
+-00004290: 6c74 2e63 7376 7a02 772b 6301 0000 0000  lt.csvz.w+c.....
+-000042a0: 0000 0000 0000 0002 0000 0004 0000 0053  ...............S
+-000042b0: 0000 0073 1600 0000 6700 7c00 5d0e 7d01  ...s....g.|.].}.
+-000042c0: 7c01 9b00 6400 9d02 9102 7104 5300 2901  |...d.....q.S.).
+-000042d0: da01 0a72 2600 0000 2902 7227 0000 00da  ...r&...).r'....
+-000042e0: 0176 7226 0000 0072 2600 0000 7229 0000  .vr&...r&...r)..
+-000042f0: 0072 5f00 0000 f700 0000 722b 0000 007a  .r_.......r+...z
+-00004300: 1b70 726f 6669 6c65 2e3c 6c6f 6361 6c73  .profile.<locals
+-00004310: 3e2e 3c6c 6973 7463 6f6d 703e 4efa 0544  >.<listcomp>N..D
+-00004320: 6f6e 6521 2909 da05 7072 696e 7472 0200  one!)...printr..
+-00004330: 0000 da09 6672 6f6d 5f64 6963 74da 046a  ....from_dict..j
+-00004340: 736f 6eda 056c 6f61 6473 7206 0000 0072  son..loadsr....r
+-00004350: b600 0000 da04 6f70 656e da0a 7772 6974  ......open..writ
+-00004360: 656c 696e 6573 2906 da04 7465 7374 da06  elines)...test..
+-00004370: 6d61 7453 7472 da03 7331 3072 9700 0000  matStr..s10r....
+-00004380: 7298 0000 0072 9900 0000 7226 0000 0072  r....r....r&...r
+-00004390: 2600 0000 7229 0000 00da 0770 726f 6669  &...r).....profi
+-000043a0: 6c65 e800 0000 731e 0000 0000 0208 0108  le....s.........
+-000043b0: 0106 0108 0108 0106 0208 0104 0116 010c  ................
+-000043c0: 010a 010c 0132 0108 0172 d900 0000 6301  .....2...r....c.
+-000043d0: 0000 0000 0000 0000 0000 0006 0000 0005  ................
+-000043e0: 0000 0043 0000 0073 6800 0000 6401 6402  ...C...sh...d.d.
+-000043f0: 6c00 6d01 7d01 0100 7c00 6403 6b02 721a  l.m.}...|.d.k.r.
+-00004400: 6404 7d02 6e1a 7c00 6405 6b02 7228 6406  d.}.n.|.d.k.r(d.
+-00004410: 7d02 6e0c 7402 6407 8301 0100 6401 5300  }.n.t.d.....d.S.
+-00004420: 7403 a004 7405 a006 7c02 a101 a101 7d03  t...t...|.....}.
+-00004430: 7c03 6701 6408 1400 7d04 7c01 7407 7c04  |.g.d...}.|.t.|.
+-00004440: 6409 640a 8d03 7d05 7402 640b 8301 0100  d.d...}.t.d.....
+-00004450: 640c 5300 290d 7a45 5072 6f66 696c 6573  d.S.).zEProfiles
+-00004460: 2074 6865 2064 6573 6372 6970 746f 7220   the descriptor 
+-00004470: 696e 2070 6172 616c 6c65 6c20 7573 696e  in parallel usin
+-00004480: 6720 6f6e 6520 6f66 2074 6865 2074 6573  g one of the tes
+-00004490: 7420 7374 7275 6374 7572 6573 2e72 0100  t structures.r..
+-000044a0: 0000 2901 da0b 7072 6f63 6573 735f 6d61  ..)...process_ma
+-000044b0: 7072 c800 0000 72c9 0000 0072 ca00 0000  pr....r....r....
+-000044c0: 72cb 0000 0072 cc00 0000 69e8 0300 0072  r....r....i....r
+-000044d0: 1300 0000 2901 da0b 6d61 785f 776f 726b  ....)...max_work
+-000044e0: 6572 7372 cf00 0000 7221 0000 0029 08da  ersr....r!...)..
+-000044f0: 1774 7164 6d2e 636f 6e74 7269 622e 636f  .tqdm.contrib.co
+-00004500: 6e63 7572 7265 6e74 72da 0000 0072 d000  ncurrentr....r..
+-00004510: 0000 7202 0000 0072 d100 0000 72d2 0000  ..r....r....r...
+-00004520: 0072 d300 0000 72b6 0000 0029 0672 d600  .r....r....).r..
+-00004530: 0000 72da 0000 0072 d700 0000 7297 0000  ..r....r....r...
+-00004540: 00da 0573 3130 3030 da08 6465 7363 4c69  ...s1000..descLi
+-00004550: 7374 7226 0000 0072 2600 0000 7229 0000  str&...r&...r)..
+-00004560: 00da 0f70 726f 6669 6c65 5061 7261 6c6c  ...profileParall
+-00004570: 656c fb00 0000 7318 0000 0000 020c 0108  el....s.........
+-00004580: 0106 0108 0106 0208 0104 0110 020a 010e  ................
+-00004590: 0108 0172 df00 0000 da08 5f5f 6d61 696e  ...r......__main
+-000045a0: 5f5f 2901 72d6 0000 0072 ca00 0000 2901  __).r....r....).
+-000045b0: 7201 0000 0029 0172 c800 0000 2901 72c8  r....).r....).r.
+-000045c0: 0000 0029 2972 3700 0000 da04 7469 6d65  ...))r7.....time
+-000045d0: da05 6e75 6d70 7972 2c00 0000 da02 6f73  ..numpyr,.....os
+-000045e0: da0d 7079 6d61 7467 656e 2e63 6f72 6572  ..pymatgen.corer
+-000045f0: 0200 0000 7203 0000 00da 1b70 796d 6174  ....r......pymat
+-00004600: 6765 6e2e 616e 616c 7973 6973 2e6c 6f63  gen.analysis.loc
+-00004610: 616c 5f65 6e76 7204 0000 00da 1a70 796d  al_envr......pym
+-00004620: 6174 6765 6e2e 7379 6d6d 6574 7279 2e61  atgen.symmetry.a
+-00004630: 6e61 6c79 7a65 7272 0500 0000 72d2 0000  nalyzerr....r...
+-00004640: 0072 0600 0000 da0b 636f 6c6c 6563 7469  .r......collecti
+-00004650: 6f6e 7372 0700 0000 da06 7479 7069 6e67  onsr......typing
+-00004660: 7208 0000 0072 b700 0000 da13 7065 7269  r....r......peri
+-00004670: 6f64 6963 5f74 6162 6c65 5f73 697a 65da  odic_table_size.
+-00004680: 076c 6f61 6474 7874 da04 7061 7468 da04  .loadtxt..path..
+-00004690: 6a6f 696e da07 6469 726e 616d 65da 085f  join..dirname.._
+-000046a0: 5f66 696c 655f 5f72 2e00 0000 da0a 6e61  _file__r......na
+-000046b0: 6e5f 746f 5f6e 756d 724b 0000 0072 4c00  n_to_numrK...rL.
+-000046c0: 0000 7269 0000 0072 7d00 0000 7261 0000  ..ri...r}...ra..
+-000046d0: 0072 c300 0000 72b6 0000 00da 0373 7472  .r....r......str
+-000046e0: 72b8 0000 0072 c700 0000 72d9 0000 0072  r....r....r....r
+-000046f0: df00 0000 725a 0000 00da 0d70 726f 6669  ....rZ.....profi
+-00004700: 6c65 4469 6c75 7465 7226 0000 0072 2600  leDiluter&...r&.
+-00004710: 0000 7226 0000 0072 2900 0000 da08 3c6d  ..r&...r).....<m
+-00004720: 6f64 756c 653e 0500 0000 7342 0000 0008  odule>....sB....
+-00004730: 0108 0108 0108 0110 010c 010c 0108 010c  ................
+-00004740: 010c 010c 0206 0504 0120 010a 0208 0106  ......... ......
+-00004750: ff06 0308 330e 0e0c 0f0a 130e 0512 4812  ....3.........H.
+-00004760: 0414 170a 130a 110a 010a 010a 010a 010a  ................
+-00004770: 01                                       .
++00000150: 641f 9c02 6420 6421 8404 5a24 642d 6424  d...d d!..Z$d-d$
++00000160: 6425 8401 5a25 642e 6427 6428 8401 5a26  d%..Z%d.d'd(..Z&
++00000170: 6527 6429 6b02 9001 7274 6525 6422 642a  e'd)k...rte%d"d*
++00000180: 8d01 0100 6525 642b 642a 8d01 0100 6526  ....e%d+d*....e&
++00000190: 6422 642a 8d01 0100 6526 642b 642a 8d01  d"d*....e&d+d*..
++000001a0: 0100 6401 5300 292f e900 0000 004e 2902  ..d.S.)/.....N).
++000001b0: da09 5374 7275 6374 7572 65da 0745 6c65  ..Structure..Ele
++000001c0: 6d65 6e74 2901 da09 566f 726f 6e6f 694e  ment)...VoronoiN
++000001d0: 4e29 01da 1253 7061 6365 6772 6f75 7041  N)...SpacegroupA
++000001e0: 6e61 6c79 7a65 7229 01da 0474 7164 6d29  nalyzer)...tqdm)
++000001f0: 01da 0743 6f75 6e74 6572 2901 da04 4c69  ...Counter)...Li
++00000200: 7374 7af5 4164 616d 204d 2e20 4b72 616a  stz.Adam M. Kraj
++00000210: 6577 736b 692c 204a 6f6e 6174 6861 6e20  ewski, Jonathan 
++00000220: 572e 2053 6965 6765 6c2c 204a 696e 6368  W. Siegel, Jinch
++00000230: 616f 2058 752c 205a 692d 4b75 6920 4c69  ao Xu, Zi-Kui Li
++00000240: 752c 2045 7874 656e 7369 626c 6520 5374  u, Extensible St
++00000250: 7275 6374 7572 652d 496e 666f 726d 6564  ructure-Informed
++00000260: 2050 7265 6469 6374 696f 6e20 6f66 2046   Prediction of F
++00000270: 6f72 6d61 7469 6f6e 2045 6e65 7267 7920  ormation Energy 
++00000280: 7769 7468 2069 6d70 726f 7665 6420 6163  with improved ac
++00000290: 6375 7261 6379 2061 6e64 2075 7361 6269  curacy and usabi
++000002a0: 6c69 7479 2065 6d70 6c6f 7969 6e67 206e  lity employing n
++000002b0: 6575 7261 6c20 6e65 7477 6f72 6b73 2c20  eural networks, 
++000002c0: 436f 6d70 7574 6174 696f 6e61 6c20 4d61  Computational Ma
++000002d0: 7465 7269 616c 7320 5363 6965 6e63 652c  terials Science,
++000002e0: 2056 6f6c 756d 6520 3230 382c 2032 3032   Volume 208, 202
++000002f0: 322c 2031 3131 3235 34e9 7000 0000 7a1d  2, 111254.p...z.
++00000300: 4d61 6770 6965 5f65 6c65 6d65 6e74 5f70  Magpie_element_p
++00000310: 726f 7065 7274 6965 732e 6373 76fa 012c  roperties.csv..,
++00000320: 2901 da09 6465 6c69 6d69 7465 7229 15e9  )...delimiter)..
++00000330: 2d00 0000 e921 0000 00e9 0200 0000 e920  -....!......... 
++00000340: 0000 00e9 0500 0000 e930 0000 00e9 0600  .........0......
++00000350: 0000 e90a 0000 00e9 2c00 0000 e92a 0000  ........,....*..
++00000360: 00e9 2600 0000 e928 0000 00e9 2400 0000  ..&....(....$...
++00000370: e92b 0000 00e9 2900 0000 e925 0000 00e9  .+....)....%....
++00000380: 2700 0000 e923 0000 00e9 1200 0000 e90d  '....#..........
++00000390: 0000 00e9 1100 0000 6302 0000 0000 0000  ........c.......
++000003a0: 0000 0000 0013 0000 0008 0000 0043 0000  .............C..
++000003b0: 0073 0802 0000 7400 a001 7402 6a03 6401  .s....t...t.j.d.
++000003c0: 1900 a101 7d02 7c01 6a04 a005 a100 a006  ....}.|.j.......
++000003d0: a100 4400 5d2a 5c02 7d03 7d04 7c02 7c04  ..D.]*\.}.}.|.|.
++000003e0: 7402 7407 7c03 8301 6a08 6401 1800 6402  t.t.|...j.d...d.
++000003f0: 6402 8502 6602 1900 1400 3700 7d02 711e  d...f.....7.}.q.
++00000400: 7400 a001 7402 6a03 6401 1900 a101 7d05  t...t.j.d.....}.
++00000410: 6403 7d06 6403 7d07 7c00 a006 a100 4400  d.}.d.}.|.....D.
++00000420: 5d88 5c02 7d08 7d09 7400 a001 7402 6a03  ].\.}.}.t...t.j.
++00000430: 6401 1900 a101 7d0a 7c09 6404 1900 6a04  d.....}.|.d...j.
++00000440: a005 a100 a006 a100 4400 5d2a 5c02 7d03  ........D.]*\.}.
++00000450: 7d04 7c0a 7c04 7402 7407 7c03 8301 6a08  }.|.|.t.t.|...j.
++00000460: 6401 1800 6402 6402 8502 6602 1900 1400  d...d.d...f.....
++00000470: 3700 7d0a 7194 7c05 7400 a009 7c02 7c0a  7.}.q.|.t...|.|.
++00000480: 1800 a101 7c09 6405 1900 1400 3700 7d05  ....|.d.....7.}.
++00000490: 7c06 7c09 6405 1900 3700 7d06 7c07 7c09  |.|.d...7.}.|.|.
++000004a0: 6406 1900 3700 7d07 716a 7c05 7c06 1b00  d...7.}.qj|.|...
++000004b0: 7c02 6702 7d0b 6403 7d0c 6403 7d0d 7c00  |.g.}.d.}.d.}.|.
++000004c0: a00a a100 4400 5d26 7d09 7c0c 7c09 6405  ....D.]&}.|.|.d.
++000004d0: 1900 3700 7d0c 7c0d 7c09 6405 1900 7c09  ..7.}.|.|.d...|.
++000004e0: 6405 1900 1400 3700 7d0d 9001 7110 7c0c  d.....7.}...q.|.
++000004f0: 7c0c 1400 7c0d 1b00 7d0e 6403 7d0f 7c00  |...|...}.d.}.|.
++00000500: a00a a100 4400 5d1e 7d09 7c0f 7c09 6405  ....D.].}.|.|.d.
++00000510: 1900 6407 1400 7c09 6408 1900 1400 3700  ..d...|.d.....7.
++00000520: 7d0f 9001 7150 7c0f 7c06 1d00 7d0f 6403  }...qP|.|...}.d.
++00000530: 7d10 7c00 a00a a100 4400 5d26 7d09 7c10  }.|.....D.]&}.|.
++00000540: 7c09 6405 1900 7409 6407 7c09 6408 1900  |.d...t.d.|.d...
++00000550: 1400 7c0f 1800 8301 1400 3700 7d10 9001  ..|.......7.}...
++00000560: 7184 7c10 7c06 7c0f 1400 1d00 7d10 740b  q.|.|.|.....}.t.
++00000570: 6409 640a 8400 7c00 a00a a100 4400 8301  d.d...|.....D...
++00000580: 8301 7d11 640b 740c 6a0d 1400 740c a00e  ..}.d.t.j...t...
++00000590: 7c11 640c a102 1400 7d12 7400 a00f 7c0e  |.d.....}.t...|.
++000005a0: 7c0f 7c10 7c07 7c12 6705 7c0b 6403 1900  |.|.|.|.g.|.d...
++000005b0: 6602 a101 7c0b 6401 1900 6702 5300 290d  f...|.d...g.S.).
++000005c0: 61ef 0100 0041 2070 726f 746f 7479 7065  a....A prototype
++000005d0: 2066 756e 6374 696f 6e20 7768 6963 6820   function which 
++000005e0: 636f 6d70 7574 6573 2061 2077 6569 6768  computes a weigh
++000005f0: 7465 6420 6176 6572 6167 6520 6f76 6572  ted average over
++00000600: 206e 6569 6768 626f 7273 2c20 7765 6967   neighbors, weig
++00000610: 6874 6564 2062 7920 7468 6520 6172 6561  hted by the area
++00000620: 206f 6620 7468 6520 766f 726f 6e6f 6920   of the voronoi 
++00000630: 6365 6c6c 0a20 2020 2020 2020 2062 6574  cell.        bet
++00000640: 7765 656e 2074 6865 6d2e 0a0a 2020 2020  ween them...    
++00000650: 2020 2020 4172 6773 3a0a 2020 2020 2020      Args:.      
++00000660: 2020 2020 2020 6c6f 6361 6c5f 656e 763a        local_env:
++00000670: 2041 2064 6963 7469 6f6e 6172 7920 6f66   A dictionary of
++00000680: 2074 6865 206c 6f63 616c 2065 6e76 6972   the local envir
++00000690: 6f6e 6d65 6e74 206f 6620 6120 7369 7465  onment of a site
++000006a0: 2c20 6173 2072 6574 7572 6e65 6420 6279  , as returned by
++000006b0: 2061 2056 6f72 6f6e 6f69 4e4e 2067 656e   a VoronoiNN gen
++000006c0: 6572 6174 6f72 2e0a 2020 2020 2020 2020  erator..        
++000006d0: 2020 2020 7369 7465 3a20 5468 6520 7369      site: The si
++000006e0: 7465 206e 756d 6265 7220 666f 7220 7768  te number for wh
++000006f0: 6963 6820 7468 6520 6c6f 6361 6c20 656e  ich the local en
++00000700: 7669 726f 6e6d 656e 7420 6973 2062 6569  vironment is bei
++00000710: 6e67 2063 6f6d 7075 7465 642e 0a20 2020  ng computed..   
++00000720: 2020 2020 2020 2020 2065 6c65 6d65 6e74           element
++00000730: 5f64 6963 743a 2041 2064 6963 7469 6f6e  _dict: A diction
++00000740: 6172 7920 6f66 2074 6865 2065 6c65 6d65  ary of the eleme
++00000750: 6e74 7320 696e 2074 6865 2073 7472 7563  nts in the struc
++00000760: 7475 7265 2e0a 0a20 2020 2020 2020 2052  ture...        R
++00000770: 6574 7572 6e73 3a0a 2020 2020 2020 2020  eturns:.        
++00000780: 2020 2020 4120 6c69 7374 206f 6620 7468      A list of th
++00000790: 6520 6c6f 6361 6c20 656e 7669 726f 6e6d  e local environm
++000007a0: 656e 7420 6174 7472 6962 7574 6573 2e0a  ent attributes..
++000007b0: 2020 2020 e901 0000 004e 7201 0000 00da      .....Nr.....
++000007c0: 0473 6974 65da 0461 7265 61da 0676 6f6c  .site..area..vol
++000007d0: 756d 6572 0e00 0000 da09 6661 6365 5f64  umer......face_d
++000007e0: 6973 7463 0100 0000 0000 0000 0000 0000  istc............
++000007f0: 0200 0000 0300 0000 7300 0000 7316 0000  ........s...s...
++00000800: 007c 005d 0e7d 017c 0164 0019 0056 0001  .|.].}.|.d...V..
++00000810: 0071 0264 0153 0029 0272 2500 0000 4ea9  .q.d.S.).r%...N.
++00000820: 0029 02da 022e 30da 0d6e 6569 6768 626f  .)....0..neighbo
++00000830: 725f 7369 7465 7226 0000 0072 2600 0000  r_siter&...r&...
++00000840: fa4f 2f55 7365 7273 2f61 6461 6d2f 5079  .O/Users/adam/Py
++00000850: 6368 6172 6d50 726f 6a65 6374 732f 7079  charmProjects/py
++00000860: 5349 5046 454e 4e2f 7079 7369 7066 656e  SIPFENN/pysipfen
++00000870: 6e2f 6465 7363 7269 7074 6f72 4465 6669  n/descriptorDefi
++00000880: 6e69 7469 6f6e 732f 4b53 3230 3232 2e70  nitions/KS2022.p
++00000890: 79da 093c 6765 6e65 7870 723e 4a00 0000  y..<genexpr>J...
++000008a0: f300 0000 007a 256c 6f63 616c 5f65 6e76  .....z%local_env
++000008b0: 5f66 756e 6374 696f 6e2e 3c6c 6f63 616c  _function.<local
++000008c0: 733e 2e3c 6765 6e65 7870 723e 6755 5555  s>.<genexpr>gUUU
++000008d0: 5555 55f5 3f67 0000 0000 0000 0840 2910  UUU.?g.......@).
++000008e0: da02 6e70 da05 7a65 726f 73da 1061 7474  ..np..zeros..att
++000008f0: 7269 6275 7465 5f6d 6174 7269 78da 0573  ribute_matrix..s
++00000900: 6861 7065 da07 7370 6563 6965 73da 0f67  hape..species..g
++00000910: 6574 5f65 6c5f 616d 745f 6469 6374 da05  et_el_amt_dict..
++00000920: 6974 656d 7372 0300 0000 da01 5ada 0361  itemsr......Z..a
++00000930: 6273 da06 7661 6c75 6573 da03 6d69 6eda  bs..values..min.
++00000940: 046d 6174 68da 0270 69da 0370 6f77 da0b  .math..pi..pow..
++00000950: 636f 6e63 6174 656e 6174 6529 13da 096c  concatenate)...l
++00000960: 6f63 616c 5f65 6e76 7222 0000 00da 106c  ocal_envr".....l
++00000970: 6f63 616c 5f61 7474 7269 6275 7465 73da  ocal_attributes.
++00000980: 036b 6579 da05 7661 6c75 65da 0f64 6966  .key..value..dif
++00000990: 665f 6174 7472 6962 7574 6573 da0c 746f  f_attributes..to
++000009a0: 7461 6c5f 7765 6967 6874 7224 0000 00da  tal_weightr$....
++000009b0: 0369 6e64 7228 0000 00da 136e 6569 6768  .indr(.....neigh
++000009c0: 626f 725f 6174 7472 6962 7574 6573 da1f  bor_attributes..
++000009d0: 656c 656d 656e 7461 6c5f 7072 6f70 6572  elemental_proper
++000009e0: 7469 6573 5f61 7474 7269 6275 7465 73da  ties_attributes.
++000009f0: 0761 7665 7261 6765 da08 7661 7269 616e  .average..varian
++00000a00: 6365 da0d 6566 665f 636f 6f72 645f 6e75  ce..eff_coord_nu
++00000a10: 6dda 0c62 6c65 6e5f 6176 6572 6167 65da  m..blen_average.
++00000a20: 0862 6c65 6e5f 7661 72da 0a73 7068 6572  .blen_var..spher
++00000a30: 655f 7261 64da 0d73 7068 6572 655f 766f  e_rad..sphere_vo
++00000a40: 6c75 6d65 7226 0000 0072 2600 0000 7229  lumer&...r&...r)
++00000a50: 0000 00da 126c 6f63 616c 5f65 6e76 5f66  .....local_env_f
++00000a60: 756e 6374 696f 6e1d 0000 0073 4600 0000  unction....sF...
++00000a70: 000c 1001 1601 2401 1001 0401 0401 1001  ......$.........
++00000a80: 1001 1a01 2401 1a01 0c01 0e01 0c02 0401  ....$...........
++00000a90: 0401 0c01 0c01 1801 0c03 0401 0c01 1c01  ................
++00000aa0: 0802 0401 0c01 2401 0c02 1601 1601 0401  ......$.........
++00000ab0: 14ff 0202 06fe 724b 0000 0063 0000 0000  ......rK...c....
++00000ac0: 0000 0000 0000 0000 0000 0000 0400 0000  ................
++00000ad0: 4000 0000 732c 0000 0065 005a 0164 005a  @...s,...e.Z.d.Z
++00000ae0: 0264 015a 0365 0464 0264 0264 038d 0266  .d.Z.e.d.d.d...f
++00000af0: 0164 0464 0584 015a 0564 0664 0784 005a  .d.d...Z.d.d...Z
++00000b00: 0664 0853 0029 09da 174c 6f63 616c 4174  .d.S.)...LocalAt
++00000b10: 7472 6962 7574 6547 656e 6572 6174 6f72  tributeGenerator
++00000b20: 7ab1 4120 7772 6170 7065 7220 636c 6173  z.A wrapper clas
++00000b30: 7320 7768 6963 6820 636f 6e74 6169 6e73  s which contains
++00000b40: 2061 6e20 696e 7374 616e 6365 206f 6620   an instance of 
++00000b50: 616e 204e 4e20 6765 6e65 7261 746f 7220  an NN generator 
++00000b60: 2874 6865 2064 6566 6175 6c74 2069 7320  (the default is 
++00000b70: 6120 566f 726f 6e6f 694e 4e29 2c20 6120  a VoronoiNN), a 
++00000b80: 7374 7275 6374 7572 652c 2061 6e64 0a20  structure, and. 
++00000b90: 2020 2061 2066 756e 6374 696f 6e20 7768     a function wh
++00000ba0: 6963 6820 636f 6d70 7574 6573 2074 6865  ich computes the
++00000bb0: 206c 6f63 616c 2065 6e76 6972 6f6e 6d65   local environme
++00000bc0: 6e74 2061 7474 7269 6275 7465 732e 0a20  nt attributes.. 
++00000bd0: 2020 2046 2902 da15 636f 6d70 7574 655f     F)...compute_
++00000be0: 6164 6a5f 6e65 6967 6862 6f72 73da 0d65  adj_neighbors..e
++00000bf0: 7874 7261 5f6e 6e5f 696e 666f 6304 0000  xtra_nn_infoc...
++00000c00: 0000 0000 0000 0000 0004 0000 0002 0000  ................
++00000c10: 0043 0000 0073 1600 0000 7c03 7c00 5f00  .C...s....|.|._.
++00000c20: 7c01 7c00 5f01 7c02 7c00 5f02 6400 5300  |.|._.|.|._.d.S.
++00000c30: a901 4e29 03da 0967 656e 6572 6174 6f72  ..N)...generator
++00000c40: da06 7374 7275 6374 da08 6675 6e63 7469  ..struct..functi
++00000c50: 6f6e 2904 da04 7365 6c66 7251 0000 00da  on)...selfrQ....
++00000c60: 0e6c 6f63 616c 5f65 6e76 5f66 756e 63da  .local_env_func.
++00000c70: 0c6e 6e5f 6765 6e65 7261 746f 7272 2600  .nn_generatorr&.
++00000c80: 0000 7226 0000 0072 2900 0000 da08 5f5f  ..r&...r).....__
++00000c90: 696e 6974 5f5f 5400 0000 7306 0000 0000  init__T...s.....
++00000ca0: 0106 0106 017a 204c 6f63 616c 4174 7472  .....z LocalAttr
++00000cb0: 6962 7574 6547 656e 6572 6174 6f72 2e5f  ibuteGenerator._
++00000cc0: 5f69 6e69 745f 5f63 0200 0000 0000 0000  _init__c........
++00000cd0: 0000 0000 0300 0000 0500 0000 4300 0000  ............C...
++00000ce0: 7322 0000 007c 006a 00a0 017c 006a 027c  s"...|.j...|.j.|
++00000cf0: 01a1 027d 027c 00a0 037c 027c 006a 027c  ...}.|...|.|.j.|
++00000d00: 0119 00a1 0253 0072 4f00 0000 2904 7250  .....S.rO...).rP
++00000d10: 0000 00da 1567 6574 5f76 6f72 6f6e 6f69  .....get_voronoi
++00000d20: 5f70 6f6c 7968 6564 7261 7251 0000 0072  _polyhedrarQ...r
++00000d30: 5200 0000 2903 7253 0000 00da 016e 723b  R...).rS.....nr;
++00000d40: 0000 0072 2600 0000 7226 0000 0072 2900  ...r&...r&...r).
++00000d50: 0000 da19 6765 6e65 7261 7465 5f6c 6f63  ....generate_loc
++00000d60: 616c 5f61 7474 7269 6275 7465 7359 0000  al_attributesY..
++00000d70: 0073 0400 0000 0001 1001 7a31 4c6f 6361  .s........z1Loca
++00000d80: 6c41 7474 7269 6275 7465 4765 6e65 7261  lAttributeGenera
++00000d90: 746f 722e 6765 6e65 7261 7465 5f6c 6f63  tor.generate_loc
++00000da0: 616c 5f61 7474 7269 6275 7465 734e 2907  al_attributesN).
++00000db0: da08 5f5f 6e61 6d65 5f5f da0a 5f5f 6d6f  ..__name__..__mo
++00000dc0: 6475 6c65 5f5f da0c 5f5f 7175 616c 6e61  dule__..__qualna
++00000dd0: 6d65 5f5f da07 5f5f 646f 635f 5f72 0400  me__..__doc__r..
++00000de0: 0000 7256 0000 0072 5900 0000 7226 0000  ..rV...rY...r&..
++00000df0: 0072 2600 0000 7226 0000 0072 2900 0000  .r&...r&...r)...
++00000e00: 724c 0000 0050 0000 0073 0600 0000 0801  rL...P...s......
++00000e10: 0403 1405 724c 0000 0063 0200 0000 0000  ....rL...c......
++00000e20: 0000 0000 0000 0700 0000 0500 0000 4300  ..............C.
++00000e30: 0000 7366 0000 0074 007c 007c 0183 027d  ..sf...t.|.|...}
++00000e40: 0274 0183 007d 0374 027c 0083 017d 047c  .t...}.t.|...}.|
++00000e50: 0444 005d 207d 057c 02a0 037c 05a1 0167  .D.] }.|...|...g
++00000e60: 017d 067c 037c 067c 047c 0519 0014 0037  .}.|.|.|.|.....7
++00000e70: 007d 0371 1c74 04a0 0564 0164 0284 007c  .}.q.t...d.d...|
++00000e80: 0344 0083 01a1 0174 04a0 0564 0364 0284  .D.....t...d.d..
++00000e90: 007c 0344 0083 01a1 0166 0253 0029 0461  .|.D.....f.S.).a
++00000ea0: 0801 0000 4765 6e65 7261 7465 7320 7468  ....Generates th
++00000eb0: 6520 6c6f 6361 6c20 656e 7669 726f 6e6d  e local environm
++00000ec0: 656e 7420 6174 7472 6962 7574 6573 2066  ent attributes f
++00000ed0: 6f72 2061 2067 6976 656e 2073 7472 7563  or a given struc
++00000ee0: 7475 7265 2075 7369 6e67 2061 2056 6f72  ture using a Vor
++00000ef0: 6f6e 6f69 4e4e 2067 656e 6572 6174 6f72  onoiNN generator
++00000f00: 2e0a 0a20 2020 2020 2020 2041 7267 733a  ...        Args:
++00000f10: 0a20 2020 2020 2020 2020 2020 2073 7472  .            str
++00000f20: 7563 743a 2041 2070 796d 6174 6765 6e20  uct: A pymatgen 
++00000f30: 5374 7275 6374 7572 6520 6f62 6a65 6374  Structure object
++00000f40: 2e0a 2020 2020 2020 2020 2020 2020 6c6f  ..            lo
++00000f50: 6361 6c5f 6675 6e63 743a 2041 2066 756e  cal_funct: A fun
++00000f60: 6374 696f 6e20 7768 6963 6820 636f 6d70  ction which comp
++00000f70: 7574 6573 2074 6865 206c 6f63 616c 2065  utes the local e
++00000f80: 6e76 6972 6f6e 6d65 6e74 2061 7474 7269  nvironment attri
++00000f90: 6275 7465 7320 666f 7220 6120 6769 7665  butes for a give
++00000fa0: 6e20 7369 7465 2e0a 2020 2020 6301 0000  n site..    c...
++00000fb0: 0000 0000 0000 0000 0002 0000 0004 0000  ................
++00000fc0: 0053 0000 0073 1400 0000 6700 7c00 5d0c  .S...s....g.|.].
++00000fd0: 7d01 7c01 6400 1900 9102 7104 5300 2901  }.|.d.....q.S.).
++00000fe0: 7201 0000 0072 2600 0000 a902 7227 0000  r....r&.....r'..
++00000ff0: 0072 3e00 0000 7226 0000 0072 2600 0000  .r>...r&...r&...
++00001000: 7229 0000 00da 0a3c 6c69 7374 636f 6d70  r).....<listcomp
++00001010: 3e6b 0000 0072 2b00 0000 7a2f 6765 6e65  >k...r+...z/gene
++00001020: 7261 7465 5f76 6f72 6f6e 6f69 5f61 7474  rate_voronoi_att
++00001030: 7269 6275 7465 732e 3c6c 6f63 616c 733e  ributes.<locals>
++00001040: 2e3c 6c69 7374 636f 6d70 3e63 0100 0000  .<listcomp>c....
++00001050: 0000 0000 0000 0000 0200 0000 0400 0000  ................
++00001060: 5300 0000 7314 0000 0067 007c 005d 0c7d  S...s....g.|.].}
++00001070: 017c 0164 0019 0091 0271 0453 0029 0172  .|.d.....q.S.).r
++00001080: 2100 0000 7226 0000 0072 5e00 0000 7226  !...r&...r^...r&
++00001090: 0000 0072 2600 0000 7229 0000 0072 5f00  ...r&...r)...r_.
++000010a0: 0000 6b00 0000 722b 0000 0029 0672 4c00  ..k...r+...).rL.
++000010b0: 0000 da04 6c69 7374 da21 6765 745f 6571  ....list.!get_eq
++000010c0: 7569 7661 6c65 6e74 5369 7465 734d 756c  uivalentSitesMul
++000010d0: 7469 706c 6963 6974 6965 7372 5900 0000  tiplicitiesrY...
++000010e0: 722c 0000 00da 0561 7272 6179 2907 7251  r,.....array).rQ
++000010f0: 0000 00da 0b6c 6f63 616c 5f66 756e 6374  .....local_funct
++00001100: da0f 6c6f 6361 6c5f 6765 6e65 7261 746f  ..local_generato
++00001110: 72da 0e61 7474 7269 6275 7465 5f6c 6973  r..attribute_lis
++00001120: 745a 1d65 7175 6976 616c 656e 7453 6974  tZ.equivalentSit
++00001130: 6573 4d75 6c74 6970 6c69 6369 7469 6573  esMultiplicities
++00001140: 5a05 7369 7465 4e5a 0f6c 6f63 616c 4174  Z.siteNZ.localAt
++00001150: 7472 6962 7574 6573 7226 0000 0072 2600  tributesr&...r&.
++00001160: 0000 7229 0000 00da 1b67 656e 6572 6174  ..r).....generat
++00001170: 655f 766f 726f 6e6f 695f 6174 7472 6962  e_voronoi_attrib
++00001180: 7574 6573 5e00 0000 730e 0000 0000 070a  utes^...s.......
++00001190: 0106 0108 0108 010c 0112 0172 6600 0000  ...........rf...
++000011a0: 6302 0000 0000 0000 0000 0000 000a 0000  c...............
++000011b0: 0007 0000 0043 0000 0073 d400 0000 7400  .....C...s....t.
++000011c0: a001 7400 a002 7c00 6401 6401 8502 6402  ..t...|.d.d...d.
++000011d0: 6602 1900 a101 a101 7d02 6402 7d03 6700  f.......}.d.}.g.
++000011e0: 7d04 7c02 4400 5d62 7d05 7c00 6401 6401  }.|.D.]b}.|.d.d.
++000011f0: 8502 6402 6602 1900 7c05 6b02 7d06 7400  ..d.f...|.k.}.t.
++00001200: a003 7400 a004 7c06 7c01 a102 7c01 a102  ..t...|.|...|...
++00001210: 6402 1900 7d07 7c07 7c03 6b04 7278 7c04  d...}.|.|.k.rx|.
++00001220: a005 a100 0100 7c04 a006 7c05 a101 0100  ......|...|.....
++00001230: 7c07 7d03 7128 7c07 7c03 6b02 7228 7c04  |.}.q(|.|.k.r(|.
++00001240: a006 7c05 a101 0100 7128 7400 a007 7c00  ..|.....q(t...|.
++00001250: 6402 6401 6401 8502 6602 1900 a101 7d08  d.d.d...f.....}.
++00001260: 7c04 4400 5d20 7d09 7c08 7408 7409 7c09  |.D.] }.|.t.t.|.
++00001270: 8301 6403 1800 6401 6401 8502 6602 1900  ..d...d.d...f...
++00001280: 3700 7d08 71a6 7c08 740a 7c04 8301 1b00  7.}.q.|.t.|.....
++00001290: 5300 2904 7a44 4361 6c63 756c 6174 6573  S.).zDCalculates
++000012a0: 2074 6865 2061 7474 7269 6275 7465 7320   the attributes 
++000012b0: 636f 7272 6573 706f 6e64 696e 6720 746f  corresponding to
++000012c0: 2074 6865 206d 6f73 7420 636f 6d6d 6f6e   the most common
++000012d0: 2065 6c65 6d65 6e74 732e 4e72 0100 0000   elements.Nr....
++000012e0: 7221 0000 0029 0b72 2c00 0000 da06 756e  r!...).r,.....un
++000012f0: 6971 7565 da05 7261 7665 6cda 0b65 7870  ique..ravel..exp
++00001300: 616e 645f 6469 6d73 da03 7375 6dda 0563  and_dims..sum..c
++00001310: 6c65 6172 da06 6170 7065 6e64 da0a 7a65  lear..append..ze
++00001320: 726f 735f 6c69 6b65 722e 0000 00da 0369  ros_liker......i
++00001330: 6e74 da03 6c65 6e29 0ada 1461 7474 7269  nt..len)...attri
++00001340: 6275 7465 5f70 726f 7065 7274 6965 73da  bute_properties.
++00001350: 0461 7869 73da 0673 636f 7265 73da 0e6d  .axis..scores..m
++00001360: 6178 5f6f 6363 7572 7265 6e63 65da 0c74  ax_occurrence..t
++00001370: 6f70 5f65 6c65 6d65 6e74 73da 0573 636f  op_elements..sco
++00001380: 7265 da08 7465 6d70 6c61 7465 da05 636f  re..template..co
++00001390: 756e 74da 066f 7574 7075 74da 0465 6c65  unt..output..ele
++000013a0: 6d72 2600 0000 7226 0000 0072 2900 0000  mr&...r&...r)...
++000013b0: da0b 6d61 6770 6965 5f6d 6f64 656d 0000  ..magpie_modem..
++000013c0: 0073 2000 0000 0002 1c01 0401 0401 0801  .s .............
++000013d0: 1401 1801 0801 0801 0a01 0601 0801 0c01  ................
++000013e0: 1601 0801 1e01 727a 0000 0029 0172 5100  ......rz...).rQ.
++000013f0: 0000 6301 0000 0000 0000 0000 0000 0002  ..c.............
++00001400: 0000 0005 0000 0043 0000 0073 2600 0000  .......C...s&...
++00001410: 7400 7c00 6401 6402 6403 8d03 7d01 7401  t.|.d.d.d...}.t.
++00001420: 7402 7403 7c01 a004 a100 6404 1900 8301  t.t.|.....d.....
++00001430: 8301 8301 5300 2905 4e67 9a99 9999 9999  ....S.).Ng......
++00001440: b93f 67fc a9f1 d24d 6250 3f29 02da 0f61  .?g....MbP?)...a
++00001450: 6e67 6c65 5f74 6f6c 6572 616e 6365 da07  ngle_tolerance..
++00001460: 7379 6d70 7265 63da 1065 7175 6976 616c  symprec..equival
++00001470: 656e 745f 6174 6f6d 7329 0572 0500 0000  ent_atoms).r....
++00001480: da04 6469 6374 7207 0000 0072 6000 0000  ..dictr....r`...
++00001490: da14 6765 745f 7379 6d6d 6574 7279 5f64  ..get_symmetry_d
++000014a0: 6174 6173 6574 2902 7251 0000 005a 0473  ataset).rQ...Z.s
++000014b0: 7067 4172 2600 0000 7226 0000 0072 2900  pgAr&...r&...r).
++000014c0: 0000 7261 0000 0080 0000 0073 0400 0000  ..ra.......s....
++000014d0: 0001 0e01 7261 0000 0029 0272 5100 0000  ....ra...).rQ...
++000014e0: da06 7265 7475 726e 6301 0000 0000 0000  ..returnc.......
++000014f0: 0000 0000 0013 0000 000e 0000 0003 0000  ................
++00001500: 0073 ba03 0000 7400 7c00 8301 5c02 7d01  .s....t.|...\.}.
++00001510: 7d02 7401 a002 7401 6a03 7401 6a04 7c01  }.t...t.j.t.j.|.
++00001520: 6401 6402 8d02 7401 6a04 7401 a005 7c01  d.d...t.j.t...|.
++00001530: 7401 6a04 7c01 6401 6402 8d02 1800 a101  t.j.|.d.d.......
++00001540: 6401 6402 8d02 7401 6a06 7c01 6401 6402  d.d...t.j.|.d.d.
++00001550: 8d02 7401 6a07 7c01 6401 6402 8d02 7401  ..t.j.|.d.d...t.
++00001560: 6a07 7c01 6401 6402 8d02 7401 6a06 7c01  j.|.d.d...t.j.|.
++00001570: 6401 6402 8d02 1800 6605 6403 6402 8d02  d.d.....f.d.d...
++00001580: a008 6403 a101 7401 6a03 7401 6a04 7c02  ..d...t.j.t.j.|.
++00001590: 6401 6402 8d02 7401 6a07 7c02 6401 6402  d.d...t.j.|.d.d.
++000015a0: 8d02 7401 6a06 7c02 6401 6402 8d02 1800  ..t.j.|.d.d.....
++000015b0: 7401 6a04 7401 a005 7c02 7401 6a04 7c02  t.j.t...|.t.j.|.
++000015c0: 6401 6402 8d02 1800 a101 6401 6402 8d02  d.d.......d.d...
++000015d0: 7401 6a07 7c02 6401 6402 8d02 7401 6a06  t.j.|.d.d...t.j.
++000015e0: 7c02 6401 6402 8d02 7409 7c02 8301 6606  |.d.d...t.|...f.
++000015f0: 6403 6402 8d02 a008 6403 a101 6602 a101  d.d.....d...f...
++00001600: 7d03 7c03 6404 0500 1900 7c03 6405 1900  }.|.d.....|.d...
++00001610: 1d00 0300 3c00 7c03 6406 0500 1900 7c03  ....<.|.d.....|.
++00001620: 6405 1900 1d00 0300 3c00 7c03 6407 0500  d.......<.|.d...
++00001630: 1900 7c03 6405 1900 1d00 0300 3c00 7c03  ..|.d.......<.|.
++00001640: 6408 0500 1900 7c03 6409 1900 1d00 0300  d.....|.d.......
++00001650: 3c00 7401 a00a 7c03 6700 640a a201 a102  <.t...|.g.d.....
++00001660: 7d03 7c03 640b 0500 1900 740b 7c02 8301  }.|.d.....t.|...
++00001670: 7c00 6a0c 1b00 3900 0300 3c00 6900 7d04  |.j...9...<.i.}.
++00001680: 7c00 6a0d 4400 5d56 7d05 7c05 a00e a100  |.j.D.]V}.|.....
++00001690: a00f a100 4400 5d42 5c02 7d06 7d07 7c06  ....D.]B\.}.}.|.
++000016a0: 7c04 7600 9001 72be 7c04 7c06 0500 1900  |.v...r.|.|.....
++000016b0: 7c07 740b 7c00 6a0d 8301 1b00 3700 0300  |.t.|.j.....7...
++000016c0: 3c00 6e12 7c07 740b 7c00 6a0d 8301 1b00  <.n.|.t.|.j.....
++000016d0: 7c04 7c06 3c00 9001 7190 9001 7180 640c  |.|.<...q...q.d.
++000016e0: 7d08 640d 4400 5d36 8900 7401 a010 7c03  }.d.D.]6..t...|.
++000016f0: 7c08 7411 a012 7413 8700 6601 640e 640f  |.t...t...f.d.d.
++00001700: 8408 7c04 a014 a100 4400 8301 8301 6410  ..|.....D.....d.
++00001710: 8800 1b00 a102 a103 7d03 9001 71e0 7401  ........}...q.t.
++00001720: a010 7c03 7c08 740b 7c04 8301 a103 7d03  ..|.|.t.|.....}.
++00001730: 6401 6401 6401 6401 6411 9c04 7d09 6401  d.d.d.d.d...}.d.
++00001740: 7d0a 7c04 a00f a100 4400 5da2 5c02 7d06  }.|.....D.].\.}.
++00001750: 7d07 7c09 6412 0500 1900 7c07 7415 7416  }.|.d.....|.t.t.
++00001760: 7c06 8301 6a17 6413 1800 1900 6407 1900  |...j.d.....d...
++00001770: 1400 3700 0300 3c00 7c09 6414 0500 1900  ..7...<.|.d.....
++00001780: 7c07 7415 7416 7c06 8301 6a17 6413 1800  |.t.t.|...j.d...
++00001790: 1900 6415 1900 1400 3700 0300 3c00 7c09  ..d.....7...<.|.
++000017a0: 6416 0500 1900 7c07 7415 7416 7c06 8301  d.....|.t.t.|...
++000017b0: 6a17 6413 1800 1900 6417 1900 1400 3700  j.d.....d.....7.
++000017c0: 0300 3c00 7c09 6418 0500 1900 7c07 7415  ..<.|.d.....|.t.
++000017d0: 7416 7c06 8301 6a17 6413 1800 1900 6419  t.|...j.d.....d.
++000017e0: 1900 1400 3700 0300 3c00 9002 7144 7413  ....7...<...qDt.
++000017f0: 641a 641b 8400 7c09 a00f a100 4400 8301  d.d...|.....D...
++00001800: 8301 7d0a 6411 4400 5d1a 7d0b 7401 a018  ..}.d.D.].}.t...
++00001810: 7c03 7c09 7c0b 1900 7c0a 1b00 a102 7d03  |.|.|...|.....}.
++00001820: 9003 7102 6401 7d0c 6401 7d0d 7c04 a00f  ..q.d.}.d.}.|...
++00001830: a100 4400 5d62 5c02 7d0e 7d0f 7c04 a00f  ..D.]b\.}.}.|...
++00001840: a100 4400 5d4e 5c02 7d10 7d11 6410 7411  ..D.]N\.}.}.d.t.
++00001850: a019 641c 7416 7c0e 8301 6a1a 7416 7c10  ..d.t.|...j.t.|.
++00001860: 8301 6a1a 1800 641d 1300 1400 a101 1800  ..j...d.........
++00001870: 7d12 7c12 7c0c 6b04 9003 727a 7c12 7d0c  }.|.|.k...rz|.}.
++00001880: 7c0d 7c12 7c0f 1400 7c11 1400 3700 7d0d  |.|.|...|...7.}.
++00001890: 9003 713e 9003 712e 7401 a018 7c03 7c0c  ..q>..q.t...|.|.
++000018a0: a102 7d03 7401 a018 7c03 7c0d a102 7d03  ..}.t...|.|...}.
++000018b0: 7c03 a01b 7401 6a1c a101 7d03 7c03 5300  |...t.j...}.|.S.
++000018c0: 291e 7ac9 4d61 696e 2066 756e 6374 696f  ).z.Main functio
++000018d0: 6e61 6c69 7479 2e20 4765 6e65 7261 7465  nality. Generate
++000018e0: 7320 7468 6520 4b53 3230 3232 2064 6573  s the KS2022 des
++000018f0: 6372 6970 746f 7220 666f 7220 6120 6769  criptor for a gi
++00001900: 7665 6e20 7374 7275 6374 7572 652e 0a0a  ven structure...
++00001910: 2020 2020 4172 6773 3a0a 2020 2020 2020      Args:.      
++00001920: 2020 7374 7275 6374 3a20 4120 7079 6d61    struct: A pyma
++00001930: 7467 656e 2053 7472 7563 7475 7265 206f  tgen Structure o
++00001940: 626a 6563 742e 0a0a 2020 2020 5265 7475  bject...    Retu
++00001950: 726e 733a 0a20 2020 2020 2020 2041 2032  rns:.        A 2
++00001960: 3731 2d6c 656e 6768 7420 6e75 6d70 7920  71-lenght numpy 
++00001970: 6172 7261 7920 6f66 2074 6865 2064 6573  array of the des
++00001980: 6372 6970 746f 722e 0a20 2020 2072 0100  criptor..    r..
++00001990: 0000 2901 7271 0000 00e9 ffff ffff 7212  ..).rq........r.
++000019a0: 0000 0072 1000 0000 e907 0000 00e9 0800  ...r............
++000019b0: 0000 e910 0000 00e9 0f00 0000 290c e904  ............)...
++000019c0: 0000 0072 1000 0000 e909 0000 00e9 0e00  ...r............
++000019d0: 0000 7285 0000 0072 2000 0000 721e 0000  ..r....r ...r...
++000019e0: 00e9 1300 0000 e915 0000 00e9 1600 0000  ................
++000019f0: e917 0000 00e9 1800 0000 e90c 0000 00e9  ................
++00001a00: 7600 0000 2905 7213 0000 0072 8200 0000  v...).r....r....
++00001a10: 7210 0000 00e9 0300 0000 720e 0000 0063  r.........r....c
++00001a20: 0100 0000 0000 0000 0000 0000 0200 0000  ................
++00001a30: 0500 0000 3300 0000 731a 0000 007c 005d  ....3...s....|.]
++00001a40: 127d 0174 00a0 017c 0188 00a1 0256 0001  .}.t...|.....V..
++00001a50: 0071 0264 0053 0072 4f00 0000 2902 7237  .q.d.S.rO...).r7
++00001a60: 0000 0072 3900 0000 725e 0000 00a9 01da  ...r9...r^......
++00001a70: 0170 7226 0000 0072 2900 0000 722a 0000  .pr&...r)...r*..
++00001a80: 00b2 0000 0072 2b00 0000 7a26 6765 6e65  .....r+...z&gene
++00001a90: 7261 7465 5f64 6573 6372 6970 746f 722e  rate_descriptor.
++00001aa0: 3c6c 6f63 616c 733e 2e3c 6765 6e65 7870  <locals>.<genexp
++00001ab0: 723e 6700 0000 0000 00f0 3f29 04da 0173  r>g.......?)...s
++00001ac0: 7292 0000 00da 0164 da01 6672 9300 0000  r......d..fr....
++00001ad0: 7221 0000 0072 9200 0000 7287 0000 0072  r!...r....r....r
++00001ae0: 9400 0000 7213 0000 0072 9500 0000 e90b  ....r....r......
++00001af0: 0000 0063 0100 0000 0000 0000 0000 0000  ...c............
++00001b00: 0300 0000 0400 0000 5300 0000 7314 0000  ........S...s...
++00001b10: 0067 007c 005d 0c5c 027d 017d 027c 0291  .g.|.].\.}.}.|..
++00001b20: 0271 0453 0072 2600 0000 7226 0000 0029  .q.S.r&...r&...)
++00001b30: 0372 2700 0000 723d 0000 00da 0376 616c  .r'...r=.....val
++00001b40: 7226 0000 0072 2600 0000 7229 0000 0072  r&...r&...r)...r
++00001b50: 5f00 0000 bc00 0000 722b 0000 007a 2767  _.......r+...z'g
++00001b60: 656e 6572 6174 655f 6465 7363 7269 7074  enerate_descript
++00001b70: 6f72 2e3c 6c6f 6361 6c73 3e2e 3c6c 6973  or.<locals>.<lis
++00001b80: 7463 6f6d 703e 6700 0000 0000 00d0 bf72  tcomp>g........r
++00001b90: 0e00 0000 291d 7266 0000 0072 2c00 0000  ....).rf...r,...
++00001ba0: 723a 0000 00da 0573 7461 636b da04 6d65  r:.....stack..me
++00001bb0: 616e 7234 0000 0072 3600 0000 da03 6d61  anr4...r6.....ma
++00001bc0: 78da 0772 6573 6861 7065 727a 0000 00da  x..reshaperz....
++00001bd0: 0664 656c 6574 6572 6f00 0000 7224 0000  .deletero...r$..
++00001be0: 00da 1073 7065 6369 6573 5f61 6e64 5f6f  ...species_and_o
++00001bf0: 6363 7572 3100 0000 7232 0000 00da 0669  ccur1...r2.....i
++00001c00: 6e73 6572 7472 3700 0000 7239 0000 0072  nsertr7...r9...r
++00001c10: 6a00 0000 7235 0000 0072 2e00 0000 7203  j...r5...r....r.
++00001c20: 0000 0072 3300 0000 726c 0000 00da 0365  ...r3...rl.....e
++00001c30: 7870 da01 58da 0661 7374 7970 65da 0766  xp..X..astype..f
++00001c40: 6c6f 6174 3332 2913 7251 0000 00da 0f64  loat32).rQ.....d
++00001c50: 6966 665f 7072 6f70 6572 7469 6573 7270  iff_propertiesrp
++00001c60: 0000 00da 0a70 726f 7065 7274 6965 73da  .....properties.
++00001c70: 0c65 6c65 6d65 6e74 5f64 6963 74da 0b63  .element_dict..c
++00001c80: 6f6d 706f 7369 7469 6f6e 723d 0000 0072  ompositionr=...r
++00001c90: 3e00 0000 da08 706f 7369 7469 6f6e da18  >.....position..
++00001ca0: 656c 6563 7472 6f6e 5f6f 6363 7570 6174  electron_occupat
++00001cb0: 696f 6e5f 6469 6374 da14 746f 7461 6c5f  ion_dict..total_
++00001cc0: 7661 6c65 6e63 655f 6661 6374 6f72 da03  valence_factor..
++00001cd0: 6f72 62da 0e6d 6178 5f69 6f6e 6963 5f63  orb..max_ionic_c
++00001ce0: 6861 72da 0d61 765f 696f 6e69 635f 6368  har..av_ionic_ch
++00001cf0: 6172 da04 6b65 7931 da06 7661 6c75 6531  ar..key1..value1
++00001d00: da04 6b65 7932 da06 7661 6c75 6532 da0a  ..key2..value2..
++00001d10: 696f 6e69 635f 6368 6172 7226 0000 0072  ionic_charr&...r
++00001d20: 9100 0000 7229 0000 00da 1367 656e 6572  ....r).....gener
++00001d30: 6174 655f 6465 7363 7269 7074 6f72 8500  ate_descriptor..
++00001d40: 0000 7386 0000 0000 090c 0104 0104 010c  ..s.............
++00001d50: 0120 010c 010c 011a fc02 0402 fb06 0502  . ..............
++00001d60: fb02 0604 010c 011a 0120 010c 010c 0106  ......... ......
++00001d70: fb02 0502 fa06 0602 fa02 fa02 ff04 0f14  ................
++00001d80: 0114 0114 0214 0210 021a 0204 010a 0114  ................
++00001d90: 010a 011c 021a 0104 0108 0108 0124 ff08  .............$..
++00001da0: 0212 020e 0104 0110 0126 0126 0126 012a  .........&.&.&.*
++00001db0: 0116 0108 0118 0204 0104 0110 0110 0126  ...............&
++00001dc0: 010a 0104 0118 010c 010c 010c 0172 b200  .............r..
++00001dd0: 0000 2901 7280 0000 0063 0000 0000 0000  ..).r....c......
++00001de0: 0000 0000 0000 0000 0000 0100 0000 4300  ..............C.
++00001df0: 0000 7304 0000 0074 0053 0029 017a 1e43  ..s....t.S.).z.C
++00001e00: 6974 6174 696f 6e2f 7320 666f 7220 7468  itation/s for th
++00001e10: 6520 6465 7363 7269 7074 6f72 2e29 01da  e descriptor.)..
++00001e20: 0963 6974 6174 696f 6e73 7226 0000 0072  .citationsr&...r
++00001e30: 2600 0000 7226 0000 0072 2900 0000 da04  &...r&...r).....
++00001e40: 6369 7465 cd00 0000 7302 0000 0000 0272  cite....s......r
++00001e50: b400 0000 2902 da0a 6465 7363 7269 7074  ....)...descript
++00001e60: 6f72 7280 0000 0063 0100 0000 0000 0000  orr....c........
++00001e70: 0000 0000 0300 0000 0500 0000 4300 0000  ............C...
++00001e80: 7364 0000 0074 007c 0074 016a 0283 0273  sd...t.|.t.j...s
++00001e90: 104a 0082 017c 006a 0364 016b 0273 1e4a  .J...|.j.d.k.s.J
++00001ea0: 0082 0174 01a0 047c 0067 0064 02a2 01a1  ...t...|.g.d....
++00001eb0: 027d 0174 016a 057c 0164 0319 007c 0164  .}.t.j.|.d...|.d
++00001ec0: 0419 007c 0164 0519 0066 0364 0674 016a  ...|.d...f.d.t.j
++00001ed0: 0664 078d 037d 027c 026a 0364 086b 0273  .d...}.|.j.d.k.s
++00001ee0: 604a 0082 017c 0253 0029 0961 7001 0000  `J...|.S.).ap...
++00001ef0: 5265 7475 726e 7320 7468 6520 7374 7275  Returns the stru
++00001f00: 6374 7572 652d 6465 7065 6e64 656e 7420  cture-dependent 
++00001f10: 7061 7274 206f 6620 7468 6520 4b53 3230  part of the KS20
++00001f20: 3232 6465 7363 7269 7074 6f72 2e0a 0a20  22descriptor... 
++00001f30: 2020 2041 7267 733a 0a20 2020 2020 2020     Args:.       
++00001f40: 2064 6573 6372 6970 746f 723a 2041 2032   descriptor: A 2
++00001f50: 3536 2d6c 656e 6774 6820 6e75 6d70 7920  56-length numpy 
++00001f60: 6172 7261 7920 6f66 2074 6865 204b 5332  array of the KS2
++00001f70: 3032 3220 6465 7363 7269 7074 6f72 2e0a  022 descriptor..
++00001f80: 0a20 2020 2052 6574 7572 6e73 3a0a 2020  .    Returns:.  
++00001f90: 2020 2020 2020 4120 3130 332d 6c65 6e67        A 103-leng
++00001fa0: 7468 206e 756d 7079 2061 7272 6179 206f  th numpy array o
++00001fb0: 6620 7468 6520 7374 7275 6374 7572 652d  f the structure-
++00001fc0: 6465 7065 6e64 656e 7420 7061 7274 206f  dependent part o
++00001fd0: 6620 7468 6520 4b53 3230 3232 2064 6573  f the KS2022 des
++00001fe0: 6372 6970 746f 722e 2055 7365 6675 6c20  criptor. Useful 
++00001ff0: 696e 2063 6173 6573 2077 6865 7265 2074  in cases where t
++00002000: 6865 0a20 2020 2020 2020 2064 6573 6372  he.        descr
++00002010: 6970 746f 7220 6973 2075 7365 6420 6173  iptor is used as
++00002020: 2061 2066 696e 6765 7270 7269 6e74 2074   a fingerprint t
++00002030: 6f20 636f 6d70 6172 6520 706f 6c79 6d6f  o compare polymo
++00002040: 7270 6873 206f 6620 7468 6520 7361 6d65  rphs of the same
++00002050: 2063 6f6d 706f 756e 642e 0a0a 2020 2020   compound...    
++00002060: 2901 e900 0100 0029 05e9 4400 0000 e949  )......)..D....I
++00002070: 0000 00e9 5d00 0000 e962 0000 00e9 7100  ....]....b....q.
++00002080: 0000 7201 0000 0072 0e00 0000 7286 0000  ..r....r....r...
++00002090: 0072 8100 0000 2902 7271 0000 00da 0564  .r....).rq.....d
++000020a0: 7479 7065 2901 e967 0000 0029 07da 0a69  type)..g...)...i
++000020b0: 7369 6e73 7461 6e63 6572 2c00 0000 da07  sinstancer,.....
++000020c0: 6e64 6172 7261 7972 2f00 0000 da05 7370  ndarrayr/.....sp
++000020d0: 6c69 7472 3a00 0000 72a2 0000 0029 0372  litr:...r....).r
++000020e0: b500 0000 5a0f 6465 7363 7269 7074 6f72  ....Z.descriptor
++000020f0: 5370 6c69 745a 116b 7332 3032 325f 7374  SplitZ.ks2022_st
++00002100: 7275 6374 7572 616c 7226 0000 0072 2600  ructuralr&...r&.
++00002110: 0000 7229 0000 00da 0e6f 6e6c 7953 7472  ..r).....onlyStr
++00002120: 7563 7475 7261 6cd1 0000 0073 1800 0000  uctural....s....
++00002130: 000b 1001 0e01 1001 0401 0601 0601 06fd  ................
++00002140: 0204 06fc 0605 0e02 72c1 0000 00fa 0b4a  ........r......J
++00002150: 5641 5350 2d31 3030 3031 7213 0000 0063  VASP-10001r....c
++00002160: 0200 0000 0000 0000 0000 0000 0700 0000  ................
++00002170: 0800 0000 4300 0000 73ae 0000 007c 0064  ....C...s....|.d
++00002180: 016b 0272 1674 0064 0283 0101 0064 037d  .k.r.t.d.....d.}
++00002190: 026e 227c 0064 046b 0272 2c74 0064 0583  .n"|.d.k.r,t.d..
++000021a0: 0101 0064 067d 026e 0c74 0064 0783 0101  ...d.}.n.t.d....
++000021b0: 0064 0853 0074 01a0 0274 03a0 047c 02a1  .d.S.t...t...|..
++000021c0: 01a1 0167 017c 0114 007d 0374 057c 0383  ...g.|...}.t.|..
++000021d0: 0144 005d 0c7d 0474 067c 0483 017d 0571  .D.].}.t.|...}.q
++000021e0: 5674 0764 0964 0a83 028f 247d 067c 06a0  Vt.d.d....$}.|..
++000021f0: 0864 0b64 0c84 007c 0544 0083 01a1 0101  .d.d...|.D......
++00002200: 0057 0064 0804 0004 0083 0301 006e 1031  .W.d.........n.1
++00002210: 0073 9830 0001 0001 0001 0059 0001 0074  .s.0.......Y...t
++00002220: 0064 0d83 0101 0064 0853 0029 0e7a 4350  .d.....d.S.).zCP
++00002230: 726f 6669 6c65 7320 7468 6520 6465 7363  rofiles the desc
++00002240: 7269 7074 6f72 2069 6e20 7365 7269 6573  riptor in series
++00002250: 2075 7369 6e67 206f 6e65 206f 6620 7468   using one of th
++00002260: 6520 7465 7374 2073 7472 7563 7475 7265  e test structure
++00002270: 732e 72c2 0000 007a 5450 726f 6669 6c69  s.r....zTProfili
++00002280: 6e67 2f74 6573 7469 6e67 2074 6173 6b2e  ng/testing task.
++00002290: 2057 696c 6c20 6361 6c63 756c 6174 6520   Will calculate 
++000022a0: 6120 6465 7363 7269 7074 6f72 2066 6f72  a descriptor for
++000022b0: 204c 6932 205a 7231 2054 6531 204f 3620   Li2 Zr1 Te1 O6 
++000022c0: 284a 5641 5350 2d31 3030 3031 29e1 460a  (JVASP-10001).F.
++000022d0: 0000 7b22 406d 6f64 756c 6522 3a20 2270  ..{"@module": "p
++000022e0: 796d 6174 6765 6e2e 636f 7265 2e73 7472  ymatgen.core.str
++000022f0: 7563 7475 7265 222c 2022 4063 6c61 7373  ucture", "@class
++00002300: 223a 2022 5374 7275 6374 7572 6522 2c20  ": "Structure", 
++00002310: 2263 6861 7267 6522 3a20 6e75 6c6c 2c20  "charge": null, 
++00002320: 226c 6174 7469 6365 223a 207b 226d 6174  "lattice": {"mat
++00002330: 7269 7822 3a20 5b5b 342e 3539 3933 3035  rix": [[4.599305
++00002340: 3635 3236 3632 3435 392c 2030 2e30 3039  652662459, 0.009
++00002350: 3830 3135 3037 3639 3938 3832 332c 2033  8015076998823, 3
++00002360: 2e31 3035 3236 3132 3836 3534 3433 3733  .105261286544373
++00002370: 365d 2c20 5b31 2e36 3535 3332 3537 3732  6], [1.655325772
++00002380: 3632 3034 3635 332c 2034 2e32 3931 3130  6204653, 4.29110
++00002390: 3834 3735 3835 3437 3132 2c20 332e 3130  8475854712, 3.10
++000023a0: 3532 3630 3239 3338 3937 3935 3635 5d2c  52602938979565],
++000023b0: 205b 302e 3031 3432 3534 3132 3134 3931   [0.014254121491
++000023c0: 3937 3439 2c20 302e 3030 3938 3032 3530  9749, 0.00980250
++000023d0: 3939 3939 3631 3331 2c20 352e 3534 3934  99996131, 5.5494
++000023e0: 3139 3134 3138 3636 3335 315d 5d2c 2022  19141866351]], "
++000023f0: 6122 3a20 352e 3534 3934 3436 3437 3831  a": 5.5494464781
++00002400: 3532 3332 362c 2022 6222 3a20 352e 3534  52326, "b": 5.54
++00002410: 3934 3436 3533 3631 3739 3334 332c 2022  9446536179343, "
++00002420: 6322 3a20 352e 3534 3934 3436 3130 3538  c": 5.5494461058
++00002430: 3130 3432 332c 2022 616c 7068 6122 3a20  10423, "alpha": 
++00002440: 3535 2e38 3237 3134 3435 3939 3835 3833  55.8271445998583
++00002450: 322c 2022 6265 7461 223a 2035 352e 3832  2, "beta": 55.82
++00002460: 3731 3430 3134 3238 3933 3731 2c20 2267  714014289371, "g
++00002470: 616d 6d61 223a 2035 352e 3832 3731 3339  amma": 55.827139
++00002480: 3732 3737 3930 3932 2c20 2276 6f6c 756d  72779092, "volum
++00002490: 6522 3a20 3130 392e 3135 3438 3436 3235  e": 109.15484625
++000024a0: 3634 3237 3433 7d2c 2022 7369 7465 7322  642743}, "sites"
++000024b0: 3a20 5b7b 2273 7065 6369 6573 223a 205b  : [{"species": [
++000024c0: 7b22 656c 656d 656e 7422 3a20 224c 6922  {"element": "Li"
++000024d0: 2c20 226f 6363 7522 3a20 312e 307d 5d2c  , "occu": 1.0}],
++000024e0: 2022 6162 6322 3a20 5b30 2e32 3733 3837   "abc": [0.27387
++000024f0: 3834 3837 3236 3639 3932 342c 2030 2e32  84872669924, 0.2
++00002500: 3733 3837 3834 3837 3236 3730 3430 372c  738784872670407,
++00002510: 2030 2e32 3733 3837 3834 3837 3236 3733   0.2738784872673
++00002520: 3033 325d 2c20 2278 797a 223a 205b 312e  032], "xyz": [1.
++00002530: 3731 3639 3132 3839 3034 3030 3730 3633  7169128904007063
++00002540: 2c20 312e 3138 3036 3131 3431 3637 3737  , 1.180611416777
++00002550: 3736 3133 2c20 332e 3232 3037 3934 3737  7613, 3.22079477
++00002560: 3533 3737 3237 385d 2c20 226c 6162 656c  5377278], "label
++00002570: 223a 2022 4c69 222c 2022 7072 6f70 6572  ": "Li", "proper
++00002580: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00002590: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000025a0: 6e74 223a 2022 4c69 222c 2022 6f63 6375  nt": "Li", "occu
++000025b0: 223a 2031 2e30 7d5d 2c20 2261 6263 223a  ": 1.0}], "abc":
++000025c0: 205b 302e 3738 3532 3237 3230 3130 3732   [0.785227201072
++000025d0: 3830 3639 2c20 302e 3738 3532 3237 3230  8069, 0.78522720
++000025e0: 3130 3732 3838 3536 2c20 302e 3738 3532  10728856, 0.7852
++000025f0: 3237 3230 3130 3733 3331 355d 2c20 2278  27201073315], "x
++00002600: 797a 223a 205b 342e 3932 3234 3939 3435  yz": [4.92249945
++00002610: 3137 3339 3936 352c 2033 2e33 3834 3838  1739965, 3.38488
++00002620: 3837 3035 3934 3334 3932 372c 2039 2e32  87059434927, 9.2
++00002630: 3334 3232 3533 3338 3136 3336 3333 5d2c  34225338163633],
++00002640: 2022 6c61 6265 6c22 3a20 224c 6922 2c20   "label": "Li", 
++00002650: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00002660: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00002670: 7b22 656c 656d 656e 7422 3a20 224f 222c  {"element": "O",
++00002680: 2022 6f63 6375 223a 2031 2e30 7d5d 2c20   "occu": 1.0}], 
++00002690: 2261 6263 223a 205b 302e 3836 3639 3936  "abc": [0.866996
++000026a0: 3434 3534 3636 3131 3234 2c20 302e 3630  4454661124, 0.60
++000026b0: 3430 3839 3838 3230 3932 3131 342c 2030  4089882092114, 0
++000026c0: 2e32 3431 3832 3137 3639 3837 3331 3433  .241821769873143
++000026d0: 5d2c 2022 7879 7a22 3a20 5b34 2e39 3930  ], "xyz": [4.990
++000026e0: 3939 3431 3630 3136 3430 3631 2c20 322e  994160164061, 2.
++000026f0: 3630 3330 3833 3534 3538 3736 3835 362c  603083545876856,
++00002700: 2035 2e39 3130 3037 3731 3831 3133 3736   5.9100771811376
++00002710: 3538 5d2c 2022 6c61 6265 6c22 3a20 224f  58], "label": "O
++00002720: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00002730: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00002740: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00002750: 4f22 2c20 226f 6363 7522 3a20 312e 307d  O", "occu": 1.0}
++00002760: 5d2c 2022 6162 6322 3a20 5b30 2e37 3137  ], "abc": [0.717
++00002770: 3834 3038 3934 3532 3937 3838 2c20 302e  840894529788, 0.
++00002780: 3132 3133 3637 3538 3839 3632 3836 3833  1213675889628683
++00002790: 2c20 302e 3339 3335 3337 3030 3931 3836  , 0.393537009186
++000027a0: 3937 335d 2c20 2278 797a 223a 205b 332e  973], "xyz": [3.
++000027b0: 3530 3830 3832 3130 3632 3334 3731 332c  508082106234713,
++000027c0: 2030 2e35 3331 3639 3530 3633 3231 3534   0.5316950632154
++000027d0: 3132 2c20 342e 3738 3938 3633 3330 3634  12, 4.7898633064
++000027e0: 3639 3237 385d 2c20 226c 6162 656c 223a  69278], "label":
++000027f0: 2022 4f22 2c20 2270 726f 7065 7274 6965   "O", "propertie
++00002800: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00002810: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00002820: 3a20 224f 222c 2022 6f63 6375 223a 2031  : "O", "occu": 1
++00002830: 2e30 7d5d 2c20 2261 6263 223a 205b 302e  .0}], "abc": [0.
++00002840: 3132 3133 3637 3538 3839 3633 3834 3032  1213675889638402
++00002850: 2c20 302e 3339 3335 3337 3030 3931 3837  , 0.393537009187
++00002860: 3339 3433 2c20 302e 3731 3738 3430 3839  3943, 0.71784089
++00002870: 3435 3238 3333 3834 5d2c 2022 7879 7a22  45283384], "xyz"
++00002880: 3a20 5b31 2e32 3139 3837 3037 3833 3038  : [1.21987078308
++00002890: 3137 3839 362c 2031 2e36 3936 3933 3632  17896, 1.6969362
++000028a0: 3233 3539 3130 3331 372c 2035 2e35 3832  235910317, 5.582
++000028b0: 3531 3239 3235 3136 3936 345d 2c20 226c  51292516964], "l
++000028c0: 6162 656c 223a 2022 4f22 2c20 2270 726f  abel": "O", "pro
++000028d0: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++000028e0: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++000028f0: 656d 656e 7422 3a20 224f 222c 2022 6f63  ement": "O", "oc
++00002900: 6375 223a 2031 2e30 7d5d 2c20 2261 6263  cu": 1.0}], "abc
++00002910: 223a 205b 302e 3339 3335 3337 3030 3931  ": [0.3935370091
++00002920: 3836 3139 3135 2c20 302e 3731 3738 3430  861915, 0.717840
++00002930: 3839 3435 3239 3338 3536 2c20 302e 3132  8945293856, 0.12
++00002940: 3133 3637 3538 3839 3633 3430 3134 5d2c  13675889634014],
++00002950: 2022 7879 7a22 3a20 5b32 2e39 3939 3938   "xyz": [2.99998
++00002960: 3735 3132 3539 3536 3232 2c20 332e 3038  7512595622, 3.08
++00002970: 3533 3830 3130 3938 3630 3334 342c 2034  5380109860344, 4
++00002980: 2e31 3234 3633 3736 3837 3936 3232 3937  .124637687962297
++00002990: 5d2c 2022 6c61 6265 6c22 3a20 224f 222c  ], "label": "O",
++000029a0: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++000029b0: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++000029c0: 5b7b 2265 6c65 6d65 6e74 223a 2022 4f22  [{"element": "O"
++000029d0: 2c20 226f 6363 7522 3a20 312e 307d 5d2c  , "occu": 1.0}],
++000029e0: 2022 6162 6322 3a20 5b30 2e32 3431 3832   "abc": [0.24182
++000029f0: 3137 3639 3837 3231 3537 332c 2030 2e38  17698721573, 0.8
++00002a00: 3636 3939 3634 3435 3436 3731 3232 312c  669964454671221,
++00002a10: 2030 2e36 3034 3038 3938 3832 3039 3231   0.6040898820921
++00002a20: 3531 335d 2c20 2278 797a 223a 205b 322e  513], "xyz": [2.
++00002a30: 3535 3539 3834 3536 3436 3333 3332 392c  555984564633329,
++00002a40: 2033 2e37 3238 3636 3736 3130 3732 3931   3.7286676107291
++00002a50: 3439 2c20 362e 3739 3535 3137 3337 3233  49, 6.7955173723
++00002a60: 3737 3334 335d 2c20 226c 6162 656c 223a  77343], "label":
++00002a70: 2022 4f22 2c20 2270 726f 7065 7274 6965   "O", "propertie
++00002a80: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00002a90: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00002aa0: 3a20 224f 222c 2022 6f63 6375 223a 2031  : "O", "occu": 1
++00002ab0: 2e30 7d5d 2c20 2261 6263 223a 205b 302e  .0}], "abc": [0.
++00002ac0: 3630 3430 3839 3838 3230 3933 3331 3135  6040898820933115
++00002ad0: 2c20 302e 3234 3138 3231 3736 3938 3732  , 0.241821769872
++00002ae0: 3336 3337 2c20 302e 3836 3639 3936 3434  3637, 0.86699644
++00002af0: 3534 3636 3430 3539 5d2c 2022 7879 7a22  54664059], "xyz"
++00002b00: 3a20 5b33 2e31 3931 3034 3630 3930 3134  : [3.19104609014
++00002b10: 3531 3733 2c20 312e 3035 3231 3033 3137  5173, 1.05210317
++00002b20: 3933 3032 3535 3935 2c20 372e 3433 3831  93025595, 7.4381
++00002b30: 3033 3133 3530 3433 3635 3335 5d2c 2022  031350436535], "
++00002b40: 6c61 6265 6c22 3a20 224f 222c 2022 7072  label": "O", "pr
++00002b50: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
++00002b60: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
++00002b70: 6c65 6d65 6e74 223a 2022 5465 222c 2022  lement": "Te", "
++00002b80: 6f63 6375 223a 2031 2e30 7d5d 2c20 2261  occu": 1.0}], "a
++00002b90: 6263 223a 205b 302e 3439 3635 3930 3536  bc": [0.49659056
++00002ba0: 3130 3530 3733 3533 2c20 302e 3439 3635  10507353, 0.4965
++00002bb0: 3930 3536 3130 3530 3733 3535 2c20 302e  905610507355, 0.
++00002bc0: 3439 3635 3930 3536 3130 3530 3733 3631  4965905610507361
++00002bd0: 5d2c 2022 7879 7a22 3a20 5b33 2e31 3133  ], "xyz": [3.113
++00002be0: 3036 3933 3930 3833 3537 3933 2c20 322e  069390835793, 2.
++00002bf0: 3134 3036 3539 3133 3537 3032 3439 3834  1406591357024984
++00002c00: 2c20 352e 3833 3938 3735 3536 3132 3134  , 5.839875561214
++00002c10: 3636 3234 5d2c 2022 6c61 6265 6c22 3a20  6624], "label": 
++00002c20: 2254 6522 2c20 2270 726f 7065 7274 6965  "Te", "propertie
++00002c30: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00002c40: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00002c50: 3a20 225a 7222 2c20 226f 6363 7522 3a20  : "Zr", "occu": 
++00002c60: 312e 307d 5d2c 2022 6162 6322 3a20 5b30  1.0}], "abc": [0
++00002c70: 2e30 3030 3635 3031 3630 3439 3830 3636  .000650160498066
++00002c80: 382c 2030 2e30 3030 3635 3031 3630 3439  8, 0.00065016049
++00002c90: 3830 3932 382c 2030 2e30 3030 3635 3031  80928, 0.0006501
++00002ca0: 3630 3439 3832 3334 345d 2c20 2278 797a  604982344], "xyz
++00002cb0: 223a 205b 302e 3030 3430 3735 3738 3137  ": [0.0040757817
++00002cc0: 3439 3436 3033 362c 2030 2e30 3032 3830  4946036, 0.00280
++00002cd0: 3236 3534 3938 3139 3435 3139 322c 2030  2654981945192, 0
++00002ce0: 2e30 3037 3634 3538 3438 3931 3832 3633  .007645848918263
++00002cf0: 3037 365d 2c20 226c 6162 656c 223a 2022  076], "label": "
++00002d00: 5a72 222c 2022 7072 6f70 6572 7469 6573  Zr", "properties
++00002d10: 223a 207b 7d7d 5d7d da0d 6469 6c75 7465  ": {}}]}..dilute
++00002d20: 4e69 416c 6c6f 797a 4d50 726f 6669 6c69  NiAlloyzMProfili
++00002d30: 6e67 2f74 6573 7469 6e67 2074 6173 6b2e  ng/testing task.
++00002d40: 2057 696c 6c20 6361 6c63 756c 6174 6520   Will calculate 
++00002d50: 6120 6465 7363 7269 7074 6f72 2066 6f72  a descriptor for
++00002d60: 2061 2064 696c 7574 6520 4643 4320 4e69   a dilute FCC Ni
++00002d70: 3331 4372 312e e1d4 1400 007b 2240 6d6f  31Cr1......{"@mo
++00002d80: 6475 6c65 223a 2022 7079 6d61 7467 656e  dule": "pymatgen
++00002d90: 2e63 6f72 652e 7374 7275 6374 7572 6522  .core.structure"
++00002da0: 2c20 2240 636c 6173 7322 3a20 2253 7472  , "@class": "Str
++00002db0: 7563 7475 7265 222c 2022 6368 6172 6765  ucture", "charge
++00002dc0: 223a 206e 756c 6c2c 2022 6c61 7474 6963  ": null, "lattic
++00002dd0: 6522 3a20 7b22 6d61 7472 6978 223a 205b  e": {"matrix": [
++00002de0: 5b36 2e39 3935 3639 322c 2030 2e30 2c20  [6.995692, 0.0, 
++00002df0: 302e 305d 2c20 5b30 2e30 2c20 362e 3939  0.0], [0.0, 6.99
++00002e00: 3536 3932 2c20 302e 305d 2c20 5b30 2e30  5692, 0.0], [0.0
++00002e10: 2c20 302e 302c 2036 2e39 3935 3639 325d  , 0.0, 6.995692]
++00002e20: 5d2c 2022 6122 3a20 362e 3939 3536 3932  ], "a": 6.995692
++00002e30: 2c20 2262 223a 2036 2e39 3935 3639 322c  , "b": 6.995692,
++00002e40: 2022 6322 3a20 362e 3939 3536 3932 2c20   "c": 6.995692, 
++00002e50: 2261 6c70 6861 223a 2039 302e 302c 2022  "alpha": 90.0, "
++00002e60: 6265 7461 223a 2039 302e 302c 2022 6761  beta": 90.0, "ga
++00002e70: 6d6d 6122 3a20 3930 2e30 2c20 2276 6f6c  mma": 90.0, "vol
++00002e80: 756d 6522 3a20 3334 322e 3336 3731 3133  ume": 342.367113
++00002e90: 3635 3631 3932 3433 7d2c 2022 7369 7465  65619243}, "site
++00002ea0: 7322 3a20 5b7b 2273 7065 6369 6573 223a  s": [{"species":
++00002eb0: 205b 7b22 656c 656d 656e 7422 3a20 2243   [{"element": "C
++00002ec0: 7222 2c20 226f 6363 7522 3a20 317d 5d2c  r", "occu": 1}],
++00002ed0: 2022 6162 6322 3a20 5b30 2e30 2c20 302e   "abc": [0.0, 0.
++00002ee0: 302c 2030 2e30 5d2c 2022 7879 7a22 3a20  0, 0.0], "xyz": 
++00002ef0: 5b30 2e30 2c20 302e 302c 2030 2e30 5d2c  [0.0, 0.0, 0.0],
++00002f00: 2022 6c61 6265 6c22 3a20 2243 7222 2c20   "label": "Cr", 
++00002f10: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00002f20: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00002f30: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++00002f40: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++00002f50: 6162 6322 3a20 5b30 2e30 2c20 302e 302c  abc": [0.0, 0.0,
++00002f60: 2030 2e35 5d2c 2022 7879 7a22 3a20 5b30   0.5], "xyz": [0
++00002f70: 2e30 2c20 302e 302c 2033 2e34 3937 3834  .0, 0.0, 3.49784
++00002f80: 365d 2c20 226c 6162 656c 223a 2022 4e69  6], "label": "Ni
++00002f90: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00002fa0: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00002fb0: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00002fc0: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++00002fd0: 2c20 2261 6263 223a 205b 302e 302c 2030  , "abc": [0.0, 0
++00002fe0: 2e35 2c20 302e 305d 2c20 2278 797a 223a  .5, 0.0], "xyz":
++00002ff0: 205b 302e 302c 2033 2e34 3937 3834 362c   [0.0, 3.497846,
++00003000: 2030 2e30 5d2c 2022 6c61 6265 6c22 3a20   0.0], "label": 
++00003010: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
++00003020: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00003030: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00003040: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
++00003050: 317d 5d2c 2022 6162 6322 3a20 5b30 2e30  1}], "abc": [0.0
++00003060: 2c20 302e 352c 2030 2e35 5d2c 2022 7879  , 0.5, 0.5], "xy
++00003070: 7a22 3a20 5b30 2e30 2c20 332e 3439 3738  z": [0.0, 3.4978
++00003080: 3436 2c20 332e 3439 3738 3436 5d2c 2022  46, 3.497846], "
++00003090: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
++000030a0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
++000030b0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
++000030c0: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
++000030d0: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
++000030e0: 6322 3a20 5b30 2e35 2c20 302e 302c 2030  c": [0.5, 0.0, 0
++000030f0: 2e30 5d2c 2022 7879 7a22 3a20 5b33 2e34  .0], "xyz": [3.4
++00003100: 3937 3834 362c 2030 2e30 2c20 302e 305d  97846, 0.0, 0.0]
++00003110: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00003120: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++00003130: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++00003140: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++00003150: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++00003160: 2261 6263 223a 205b 302e 352c 2030 2e30  "abc": [0.5, 0.0
++00003170: 2c20 302e 355d 2c20 2278 797a 223a 205b  , 0.5], "xyz": [
++00003180: 332e 3439 3738 3436 2c20 302e 302c 2033  3.497846, 0.0, 3
++00003190: 2e34 3937 3834 365d 2c20 226c 6162 656c  .497846], "label
++000031a0: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++000031b0: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++000031c0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000031d0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000031e0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000031f0: 302e 352c 2030 2e35 2c20 302e 305d 2c20  0.5, 0.5, 0.0], 
++00003200: 2278 797a 223a 205b 332e 3439 3738 3436  "xyz": [3.497846
++00003210: 2c20 332e 3439 3738 3436 2c20 302e 305d  , 3.497846, 0.0]
++00003220: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00003230: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++00003240: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++00003250: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++00003260: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++00003270: 2261 6263 223a 205b 302e 352c 2030 2e35  "abc": [0.5, 0.5
++00003280: 2c20 302e 355d 2c20 2278 797a 223a 205b  , 0.5], "xyz": [
++00003290: 332e 3439 3738 3436 2c20 332e 3439 3738  3.497846, 3.4978
++000032a0: 3436 2c20 332e 3439 3738 3436 5d2c 2022  46, 3.497846], "
++000032b0: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
++000032c0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
++000032d0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
++000032e0: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
++000032f0: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
++00003300: 6322 3a20 5b30 2e32 352c 2030 2e32 352c  c": [0.25, 0.25,
++00003310: 2030 2e30 5d2c 2022 7879 7a22 3a20 5b31   0.0], "xyz": [1
++00003320: 2e37 3438 3932 332c 2031 2e37 3438 3932  .748923, 1.74892
++00003330: 332c 2030 2e30 5d2c 2022 6c61 6265 6c22  3, 0.0], "label"
++00003340: 3a20 224e 6922 2c20 2270 726f 7065 7274  : "Ni", "propert
++00003350: 6965 7322 3a20 7b7d 7d2c 207b 2273 7065  ies": {}}, {"spe
++00003360: 6369 6573 223a 205b 7b22 656c 656d 656e  cies": [{"elemen
++00003370: 7422 3a20 224e 6922 2c20 226f 6363 7522  t": "Ni", "occu"
++00003380: 3a20 317d 5d2c 2022 6162 6322 3a20 5b30  : 1}], "abc": [0
++00003390: 2e32 352c 2030 2e32 352c 2030 2e35 5d2c  .25, 0.25, 0.5],
++000033a0: 2022 7879 7a22 3a20 5b31 2e37 3438 3932   "xyz": [1.74892
++000033b0: 332c 2031 2e37 3438 3932 332c 2033 2e34  3, 1.748923, 3.4
++000033c0: 3937 3834 365d 2c20 226c 6162 656c 223a  97846], "label":
++000033d0: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
++000033e0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
++000033f0: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
++00003400: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
++00003410: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
++00003420: 3235 2c20 302e 3735 3030 3030 3030 3030  25, 0.7500000000
++00003430: 3030 3030 3031 2c20 302e 305d 2c20 2278  000001, 0.0], "x
++00003440: 797a 223a 205b 312e 3734 3839 3233 2c20  yz": [1.748923, 
++00003450: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
++00003460: 3035 2c20 302e 305d 2c20 226c 6162 656c  05, 0.0], "label
++00003470: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++00003480: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00003490: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000034a0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000034b0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000034c0: 302e 3235 2c20 302e 3735 3030 3030 3030  0.25, 0.75000000
++000034d0: 3030 3030 3030 3031 2c20 302e 355d 2c20  00000001, 0.5], 
++000034e0: 2278 797a 223a 205b 312e 3734 3839 3233  "xyz": [1.748923
++000034f0: 2c20 352e 3234 3637 3639 3030 3030 3030  , 5.246769000000
++00003500: 3030 3035 2c20 332e 3439 3738 3436 5d2c  0005, 3.497846],
++00003510: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
++00003520: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00003530: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00003540: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++00003550: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++00003560: 6162 6322 3a20 5b30 2e37 3530 3030 3030  abc": [0.7500000
++00003570: 3030 3030 3030 3030 312c 2030 2e32 352c  000000001, 0.25,
++00003580: 2030 2e30 5d2c 2022 7879 7a22 3a20 5b35   0.0], "xyz": [5
++00003590: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
++000035a0: 352c 2031 2e37 3438 3932 332c 2030 2e30  5, 1.748923, 0.0
++000035b0: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
++000035c0: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
++000035d0: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
++000035e0: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
++000035f0: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
++00003600: 2022 6162 6322 3a20 5b30 2e37 3530 3030   "abc": [0.75000
++00003610: 3030 3030 3030 3030 3030 312c 2030 2e32  00000000001, 0.2
++00003620: 352c 2030 2e35 5d2c 2022 7879 7a22 3a20  5, 0.5], "xyz": 
++00003630: 5b35 2e32 3436 3736 3930 3030 3030 3030  [5.2467690000000
++00003640: 3030 352c 2031 2e37 3438 3932 332c 2033  005, 1.748923, 3
++00003650: 2e34 3937 3834 365d 2c20 226c 6162 656c  .497846], "label
++00003660: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++00003670: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00003680: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++00003690: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000036a0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000036b0: 302e 3735 3030 3030 3030 3030 3030 3030  0.75000000000000
++000036c0: 3031 2c20 302e 3735 3030 3030 3030 3030  01, 0.7500000000
++000036d0: 3030 3030 3031 2c20 302e 305d 2c20 2278  000001, 0.0], "x
++000036e0: 797a 223a 205b 352e 3234 3637 3639 3030  yz": [5.24676900
++000036f0: 3030 3030 3030 3035 2c20 352e 3234 3637  00000005, 5.2467
++00003700: 3639 3030 3030 3030 3030 3035 2c20 302e  690000000005, 0.
++00003710: 305d 2c20 226c 6162 656c 223a 2022 4e69  0], "label": "Ni
++00003720: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00003730: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00003740: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00003750: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++00003760: 2c20 2261 6263 223a 205b 302e 3735 3030  , "abc": [0.7500
++00003770: 3030 3030 3030 3030 3030 3031 2c20 302e  000000000001, 0.
++00003780: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++00003790: 2c20 302e 355d 2c20 2278 797a 223a 205b  , 0.5], "xyz": [
++000037a0: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
++000037b0: 3035 2c20 352e 3234 3637 3639 3030 3030  05, 5.2467690000
++000037c0: 3030 3030 3035 2c20 332e 3439 3738 3436  000005, 3.497846
++000037d0: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
++000037e0: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
++000037f0: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
++00003800: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
++00003810: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
++00003820: 2022 6162 6322 3a20 5b30 2e32 352c 2030   "abc": [0.25, 0
++00003830: 2e30 2c20 302e 3235 5d2c 2022 7879 7a22  .0, 0.25], "xyz"
++00003840: 3a20 5b31 2e37 3438 3932 332c 2030 2e30  : [1.748923, 0.0
++00003850: 2c20 312e 3734 3839 3233 5d2c 2022 6c61  , 1.748923], "la
++00003860: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
++00003870: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++00003880: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++00003890: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
++000038a0: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
++000038b0: 3a20 5b30 2e32 352c 2030 2e30 2c20 302e  : [0.25, 0.0, 0.
++000038c0: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++000038d0: 5d2c 2022 7879 7a22 3a20 5b31 2e37 3438  ], "xyz": [1.748
++000038e0: 3932 332c 2030 2e30 2c20 352e 3234 3637  923, 0.0, 5.2467
++000038f0: 3639 3030 3030 3030 3030 3035 5d2c 2022  690000000005], "
++00003900: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
++00003910: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
++00003920: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
++00003930: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
++00003940: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
++00003950: 6322 3a20 5b30 2e32 352c 2030 2e35 2c20  c": [0.25, 0.5, 
++00003960: 302e 3235 5d2c 2022 7879 7a22 3a20 5b31  0.25], "xyz": [1
++00003970: 2e37 3438 3932 332c 2033 2e34 3937 3834  .748923, 3.49784
++00003980: 362c 2031 2e37 3438 3932 335d 2c20 226c  6, 1.748923], "l
++00003990: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
++000039a0: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
++000039b0: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
++000039c0: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
++000039d0: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
++000039e0: 223a 205b 302e 3235 2c20 302e 352c 2030  ": [0.25, 0.5, 0
++000039f0: 2e37 3530 3030 3030 3030 3030 3030 3030  .750000000000000
++00003a00: 315d 2c20 2278 797a 223a 205b 312e 3734  1], "xyz": [1.74
++00003a10: 3839 3233 2c20 332e 3439 3738 3436 2c20  8923, 3.497846, 
++00003a20: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
++00003a30: 3035 5d2c 2022 6c61 6265 6c22 3a20 224e  05], "label": "N
++00003a40: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
++00003a50: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++00003a60: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++00003a70: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
++00003a80: 5d2c 2022 6162 6322 3a20 5b30 2e37 3530  ], "abc": [0.750
++00003a90: 3030 3030 3030 3030 3030 3030 312c 2030  0000000000001, 0
++00003aa0: 2e30 2c20 302e 3235 5d2c 2022 7879 7a22  .0, 0.25], "xyz"
++00003ab0: 3a20 5b35 2e32 3436 3736 3930 3030 3030  : [5.24676900000
++00003ac0: 3030 3030 352c 2030 2e30 2c20 312e 3734  00005, 0.0, 1.74
++00003ad0: 3839 3233 5d2c 2022 6c61 6265 6c22 3a20  8923], "label": 
++00003ae0: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
++00003af0: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00003b00: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00003b10: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
++00003b20: 317d 5d2c 2022 6162 6322 3a20 5b30 2e37  1}], "abc": [0.7
++00003b30: 3530 3030 3030 3030 3030 3030 3030 312c  500000000000001,
++00003b40: 2030 2e30 2c20 302e 3735 3030 3030 3030   0.0, 0.75000000
++00003b50: 3030 3030 3030 3031 5d2c 2022 7879 7a22  00000001], "xyz"
++00003b60: 3a20 5b35 2e32 3436 3736 3930 3030 3030  : [5.24676900000
++00003b70: 3030 3030 352c 2030 2e30 2c20 352e 3234  00005, 0.0, 5.24
++00003b80: 3637 3639 3030 3030 3030 3030 3035 5d2c  67690000000005],
++00003b90: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
++00003ba0: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00003bb0: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00003bc0: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++00003bd0: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++00003be0: 6162 6322 3a20 5b30 2e37 3530 3030 3030  abc": [0.7500000
++00003bf0: 3030 3030 3030 3030 312c 2030 2e35 2c20  000000001, 0.5, 
++00003c00: 302e 3235 5d2c 2022 7879 7a22 3a20 5b35  0.25], "xyz": [5
++00003c10: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
++00003c20: 352c 2033 2e34 3937 3834 362c 2031 2e37  5, 3.497846, 1.7
++00003c30: 3438 3932 335d 2c20 226c 6162 656c 223a  48923], "label":
++00003c40: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
++00003c50: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
++00003c60: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
++00003c70: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
++00003c80: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
++00003c90: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++00003ca0: 2c20 302e 352c 2030 2e37 3530 3030 3030  , 0.5, 0.7500000
++00003cb0: 3030 3030 3030 3030 315d 2c20 2278 797a  000000001], "xyz
++00003cc0: 223a 205b 352e 3234 3637 3639 3030 3030  ": [5.2467690000
++00003cd0: 3030 3030 3035 2c20 332e 3439 3738 3436  000005, 3.497846
++00003ce0: 2c20 352e 3234 3637 3639 3030 3030 3030  , 5.246769000000
++00003cf0: 3030 3035 5d2c 2022 6c61 6265 6c22 3a20  0005], "label": 
++00003d00: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
++00003d10: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00003d20: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00003d30: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
++00003d40: 317d 5d2c 2022 6162 6322 3a20 5b30 2e30  1}], "abc": [0.0
++00003d50: 2c20 302e 3235 2c20 302e 3235 5d2c 2022  , 0.25, 0.25], "
++00003d60: 7879 7a22 3a20 5b30 2e30 2c20 312e 3734  xyz": [0.0, 1.74
++00003d70: 3839 3233 2c20 312e 3734 3839 3233 5d2c  8923, 1.748923],
++00003d80: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
++00003d90: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00003da0: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00003db0: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++00003dc0: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++00003dd0: 6162 6322 3a20 5b30 2e30 2c20 302e 3235  abc": [0.0, 0.25
++00003de0: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
++00003df0: 3030 3031 5d2c 2022 7879 7a22 3a20 5b30  0001], "xyz": [0
++00003e00: 2e30 2c20 312e 3734 3839 3233 2c20 352e  .0, 1.748923, 5.
++00003e10: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
++00003e20: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
++00003e30: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
++00003e40: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
++00003e50: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
++00003e60: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
++00003e70: 2022 6162 6322 3a20 5b30 2e30 2c20 302e   "abc": [0.0, 0.
++00003e80: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++00003e90: 2c20 302e 3235 5d2c 2022 7879 7a22 3a20  , 0.25], "xyz": 
++00003ea0: 5b30 2e30 2c20 352e 3234 3637 3639 3030  [0.0, 5.24676900
++00003eb0: 3030 3030 3030 3035 2c20 312e 3734 3839  00000005, 1.7489
++00003ec0: 3233 5d2c 2022 6c61 6265 6c22 3a20 224e  23], "label": "N
++00003ed0: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
++00003ee0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++00003ef0: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++00003f00: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
++00003f10: 5d2c 2022 6162 6322 3a20 5b30 2e30 2c20  ], "abc": [0.0, 
++00003f20: 302e 3735 3030 3030 3030 3030 3030 3030  0.75000000000000
++00003f30: 3031 2c20 302e 3735 3030 3030 3030 3030  01, 0.7500000000
++00003f40: 3030 3030 3031 5d2c 2022 7879 7a22 3a20  000001], "xyz": 
++00003f50: 5b30 2e30 2c20 352e 3234 3637 3639 3030  [0.0, 5.24676900
++00003f60: 3030 3030 3030 3035 2c20 352e 3234 3637  00000005, 5.2467
++00003f70: 3639 3030 3030 3030 3030 3035 5d2c 2022  690000000005], "
++00003f80: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
++00003f90: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
++00003fa0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
++00003fb0: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
++00003fc0: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
++00003fd0: 6322 3a20 5b30 2e35 2c20 302e 3235 2c20  c": [0.5, 0.25, 
++00003fe0: 302e 3235 5d2c 2022 7879 7a22 3a20 5b33  0.25], "xyz": [3
++00003ff0: 2e34 3937 3834 362c 2031 2e37 3438 3932  .497846, 1.74892
++00004000: 332c 2031 2e37 3438 3932 335d 2c20 226c  3, 1.748923], "l
++00004010: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
++00004020: 6f70 6572 7469 6573 223a 207b 7d7d 2c20  operties": {}}, 
++00004030: 7b22 7370 6563 6965 7322 3a20 5b7b 2265  {"species": [{"e
++00004040: 6c65 6d65 6e74 223a 2022 4e69 222c 2022  lement": "Ni", "
++00004050: 6f63 6375 223a 2031 7d5d 2c20 2261 6263  occu": 1}], "abc
++00004060: 223a 205b 302e 352c 2030 2e32 352c 2030  ": [0.5, 0.25, 0
++00004070: 2e37 3530 3030 3030 3030 3030 3030 3030  .750000000000000
++00004080: 315d 2c20 2278 797a 223a 205b 332e 3439  1], "xyz": [3.49
++00004090: 3738 3436 2c20 312e 3734 3839 3233 2c20  7846, 1.748923, 
++000040a0: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
++000040b0: 3035 5d2c 2022 6c61 6265 6c22 3a20 224e  05], "label": "N
++000040c0: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
++000040d0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++000040e0: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++000040f0: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
++00004100: 5d2c 2022 6162 6322 3a20 5b30 2e35 2c20  ], "abc": [0.5, 
++00004110: 302e 3735 3030 3030 3030 3030 3030 3030  0.75000000000000
++00004120: 3031 2c20 302e 3235 5d2c 2022 7879 7a22  01, 0.25], "xyz"
++00004130: 3a20 5b33 2e34 3937 3834 362c 2035 2e32  : [3.497846, 5.2
++00004140: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
++00004150: 2031 2e37 3438 3932 335d 2c20 226c 6162   1.748923], "lab
++00004160: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
++00004170: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
++00004180: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
++00004190: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
++000041a0: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
++000041b0: 205b 302e 352c 2030 2e37 3530 3030 3030   [0.5, 0.7500000
++000041c0: 3030 3030 3030 3030 312c 2030 2e37 3530  000000001, 0.750
++000041d0: 3030 3030 3030 3030 3030 3030 315d 2c20  0000000000001], 
++000041e0: 2278 797a 223a 205b 332e 3439 3738 3436  "xyz": [3.497846
++000041f0: 2c20 352e 3234 3637 3639 3030 3030 3030  , 5.246769000000
++00004200: 3030 3035 2c20 352e 3234 3637 3639 3030  0005, 5.24676900
++00004210: 3030 3030 3030 3035 5d2c 2022 6c61 6265  00000005], "labe
++00004220: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
++00004230: 7274 6965 7322 3a20 7b7d 7d5d 2c20 2240  rties": {}}], "@
++00004240: 7665 7273 696f 6e22 3a20 6e75 6c6c 7dfa  version": null}.
++00004250: 1755 6e72 6563 6f67 6e69 7a65 6420 7465  .Unrecognized te
++00004260: 7374 206e 616d 652e 4e7a 154b 5332 3032  st name.Nz.KS202
++00004270: 325f 5465 7374 5265 7375 6c74 2e63 7376  2_TestResult.csv
++00004280: 7a02 772b 6301 0000 0000 0000 0000 0000  z.w+c...........
++00004290: 0002 0000 0004 0000 0053 0000 0073 1600  .........S...s..
++000042a0: 0000 6700 7c00 5d0e 7d01 7c01 9b00 6400  ..g.|.].}.|...d.
++000042b0: 9d02 9102 7104 5300 2901 da01 0a72 2600  ....q.S.)....r&.
++000042c0: 0000 2902 7227 0000 00da 0176 7226 0000  ..).r'.....vr&..
++000042d0: 0072 2600 0000 7229 0000 0072 5f00 0000  .r&...r)...r_...
++000042e0: f800 0000 722b 0000 007a 1b70 726f 6669  ....r+...z.profi
++000042f0: 6c65 2e3c 6c6f 6361 6c73 3e2e 3c6c 6973  le.<locals>.<lis
++00004300: 7463 6f6d 703e fa05 446f 6e65 2129 09da  tcomp>..Done!)..
++00004310: 0570 7269 6e74 7202 0000 00da 0966 726f  .printr......fro
++00004320: 6d5f 6469 6374 da04 6a73 6f6e da05 6c6f  m_dict..json..lo
++00004330: 6164 7372 0600 0000 72b2 0000 00da 046f  adsr....r......o
++00004340: 7065 6eda 0a77 7269 7465 6c69 6e65 7329  pen..writelines)
++00004350: 07da 0474 6573 74da 056e 5275 6e73 da06  ...test..nRuns..
++00004360: 6d61 7453 7472 da0a 7374 7275 6374 4c69  matStr..structLi
++00004370: 7374 7293 0000 0072 9400 0000 7295 0000  str....r....r...
++00004380: 0072 2600 0000 7226 0000 0072 2900 0000  .r&...r&...r)...
++00004390: da07 7072 6f66 696c 65e9 0000 0073 1c00  ..profile....s..
++000043a0: 0000 0002 0801 0801 0601 0801 0801 0602  ................
++000043b0: 0801 0401 1601 0c01 0a01 0c01 3201 72d4  ............2.r.
++000043c0: 0000 00e9 e803 0000 6302 0000 0000 0000  ........c.......
++000043d0: 0000 0000 0007 0000 0005 0000 0043 0000  .............C..
++000043e0: 0073 6800 0000 6401 6402 6c00 6d01 7d02  .sh...d.d.l.m.}.
++000043f0: 0100 7c00 6403 6b02 721a 6404 7d03 6e1a  ..|.d.k.r.d.}.n.
++00004400: 7c00 6405 6b02 7228 6406 7d03 6e0c 7402  |.d.k.r(d.}.n.t.
++00004410: 6407 8301 0100 6408 5300 7403 a004 7405  d.....d.S.t...t.
++00004420: a006 7c03 a101 a101 7d04 7c04 6701 7c01  ..|.....}.|.g.|.
++00004430: 1400 7d05 7c02 7407 7c05 6409 640a 8d03  ..}.|.t.|.d.d...
++00004440: 7d06 7402 640b 8301 0100 6408 5300 290c  }.t.d.....d.S.).
++00004450: 7a45 5072 6f66 696c 6573 2074 6865 2064  zEProfiles the d
++00004460: 6573 6372 6970 746f 7220 696e 2070 6172  escriptor in par
++00004470: 616c 6c65 6c20 7573 696e 6720 6f6e 6520  allel using one 
++00004480: 6f66 2074 6865 2074 6573 7420 7374 7275  of the test stru
++00004490: 6374 7572 6573 2e72 0100 0000 2901 da0b  ctures.r....)...
++000044a0: 7072 6f63 6573 735f 6d61 7072 c200 0000  process_mapr....
++000044b0: 72c3 0000 0072 c400 0000 72c5 0000 0072  r....r....r....r
++000044c0: c600 0000 4e72 1300 0000 2901 da0b 6d61  ....Nr....)...ma
++000044d0: 785f 776f 726b 6572 7372 c900 0000 2908  x_workersr....).
++000044e0: da17 7471 646d 2e63 6f6e 7472 6962 2e63  ..tqdm.contrib.c
++000044f0: 6f6e 6375 7272 656e 7472 d600 0000 72ca  oncurrentr....r.
++00004500: 0000 0072 0200 0000 72cb 0000 0072 cc00  ...r....r....r..
++00004510: 0000 72cd 0000 0072 b200 0000 2907 72d0  ..r....r....).r.
++00004520: 0000 0072 d100 0000 72d6 0000 0072 d200  ...r....r....r..
++00004530: 0000 7293 0000 0072 d300 0000 da08 6465  ..r....r......de
++00004540: 7363 4c69 7374 7226 0000 0072 2600 0000  scListr&...r&...
++00004550: 7229 0000 00da 0f70 726f 6669 6c65 5061  r).....profilePa
++00004560: 7261 6c6c 656c fb00 0000 7316 0000 0000  rallel....s.....
++00004570: 020c 0108 0106 0108 0106 0208 0104 0110  ................
++00004580: 020a 010e 0172 da00 0000 da08 5f5f 6d61  .....r......__ma
++00004590: 696e 5f5f 2901 72d0 0000 0072 c400 0000  in__).r....r....
++000045a0: 2901 7201 0000 0029 0272 c200 0000 7213  ).r....).r....r.
++000045b0: 0000 0029 0272 c200 0000 72d5 0000 0029  ...).r....r....)
++000045c0: 2872 3700 0000 da04 7469 6d65 da05 6e75  (r7.....time..nu
++000045d0: 6d70 7972 2c00 0000 da02 6f73 da0d 7079  mpyr,.....os..py
++000045e0: 6d61 7467 656e 2e63 6f72 6572 0200 0000  matgen.corer....
++000045f0: 7203 0000 00da 1b70 796d 6174 6765 6e2e  r......pymatgen.
++00004600: 616e 616c 7973 6973 2e6c 6f63 616c 5f65  analysis.local_e
++00004610: 6e76 7204 0000 00da 1a70 796d 6174 6765  nvr......pymatge
++00004620: 6e2e 7379 6d6d 6574 7279 2e61 6e61 6c79  n.symmetry.analy
++00004630: 7a65 7272 0500 0000 72cc 0000 0072 0600  zerr....r....r..
++00004640: 0000 da0b 636f 6c6c 6563 7469 6f6e 7372  ....collectionsr
++00004650: 0700 0000 da06 7479 7069 6e67 7208 0000  ......typingr...
++00004660: 0072 b300 0000 da13 7065 7269 6f64 6963  .r......periodic
++00004670: 5f74 6162 6c65 5f73 697a 65da 076c 6f61  _table_size..loa
++00004680: 6474 7874 da04 7061 7468 da04 6a6f 696e  dtxt..path..join
++00004690: da07 6469 726e 616d 65da 085f 5f66 696c  ..dirname..__fil
++000046a0: 655f 5f72 2e00 0000 da0a 6e61 6e5f 746f  e__r......nan_to
++000046b0: 5f6e 756d 724b 0000 0072 4c00 0000 7266  _numrK...rL...rf
++000046c0: 0000 0072 7a00 0000 7261 0000 0072 bf00  ...rz...ra...r..
++000046d0: 0000 72b2 0000 00da 0373 7472 72b4 0000  ..r......strr...
++000046e0: 0072 c100 0000 72d4 0000 0072 da00 0000  .r....r....r....
++000046f0: 725a 0000 0072 2600 0000 7226 0000 0072  rZ...r&...r&...r
++00004700: 2600 0000 7229 0000 00da 083c 6d6f 6475  &...r).....<modu
++00004710: 6c65 3e05 0000 0073 4000 0000 0801 0801  le>....s@.......
++00004720: 0801 0801 1001 0c01 0c01 0801 0c01 0c01  ................
++00004730: 0c02 0605 0401 2001 0a02 0801 06ff 0603  ...... .........
++00004740: 0833 0e0e 0c0f 0a13 0e05 1248 1204 1418  .3.........H....
++00004750: 0a12 0a10 0a01 0a01 0a01 0a01            ............
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/KS2022_dilute.cpython-39.pyc` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/KS2022_dilute.cpython-39.pyc`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/__pycache__/Ward2017.cpython-39.pyc` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/__pycache__/Ward2017.cpython-39.pyc`
+
+ * *Format-specific differences are supported for Python .pyc files but no file-specific differences were detected; falling back to a binary diff. file(1) reports: Byte-compiled Python module for CPython 3.9, timestamp-based, .py timestamp: Thu Mar  2 04:50:51 2023 UTC, .py size: 36418 bytes*
+
+ * *Could not decompile bytecode: bad marshal data (unknown type code)*
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-00000000: 610d 0d0a 0000 0000 2b2b 0064 428e 0000  a.......++.dB...
++00000000: 610d 0d0a 0000 0000 c2f1 2e64 d47f 0000  a..........d....
+ 00000010: e300 0000 0000 0000 0000 0000 0000 0000  ................
+ 00000020: 0006 0000 0040 0000 0073 5801 0000 6400  .....@...sX...d.
+ 00000030: 6401 6c00 5a00 6400 6401 6c01 5a01 6400  d.l.Z.d.d.l.Z.d.
+ 00000040: 6401 6c02 5a03 6400 6401 6c04 5a04 6400  d.l.Z.d.d.l.Z.d.
+ 00000050: 6402 6c05 6d06 5a06 6d07 5a07 0100 6400  d.l.m.Z.m.Z...d.
+ 00000060: 6403 6c08 6d09 5a09 0100 6400 6404 6c0a  d.l.m.Z...d.d.l.
+ 00000070: 6d0a 5a0a 0100 6400 6405 6c0b 6d0c 5a0c  m.Z...d.d.l.m.Z.
+@@ -10,23 +10,23 @@
+ 00000090: 6a0f 6504 6a10 a011 6504 6a10 a012 6513  j.e.j...e.j...e.
+ 000000a0: a101 6409 a102 640a 640b 8d02 5a14 6503  ..d...d.d...Z.e.
+ 000000b0: a015 6514 a101 5a14 6514 6401 6401 8502  ..e...Z.e.d.d...
+ 000000c0: 6700 640c a201 6602 1900 5a14 6516 640d  g.d...f...Z.e.d.
+ 000000d0: 9c01 640e 640f 8404 5a17 4700 6410 6411  ..d.d...Z.G.d.d.
+ 000000e0: 8400 6411 8302 5a18 6517 6601 6506 6412  ..d...Z.e.f.e.d.
+ 000000f0: 9c01 6413 6414 8405 5a19 6506 650c 651a  ..d.d...Z.e.e.e.
+-00000100: 1900 6415 9c02 6416 6417 8404 5a1b 6427  ..d...d.d...Z.d'
++00000100: 1900 6415 9c02 6416 6417 8404 5a1b 6429  ..d...d.d...Z.d)
+ 00000110: 6418 6419 8401 5a1c 6506 6503 6a1d 641a  d.d...Z.e.e.j.d.
+ 00000120: 9c02 641b 641c 8404 5a1e 650c 651f 1900  ..d.d...Z.e.e...
+-00000130: 640d 9c01 641d 641e 8404 5a20 6428 6420  d...d.d...Z d(d 
+-00000140: 6421 8401 5a21 6429 6422 6423 8401 5a22  d!..Z!d)d"d#..Z"
+-00000150: 6523 6424 6b02 9001 7254 6521 641f 6425  e#d$k...rTe!d.d%
+-00000160: 8d01 0100 6521 6426 6425 8d01 0100 6522  ....e!d&d%....e"
+-00000170: 641f 6425 8d01 0100 6522 6426 6425 8d01  d.d%....e"d&d%..
+-00000180: 0100 6401 5300 292a e900 0000 004e 2902  ..d.S.)*.....N).
++00000130: 640d 9c01 641d 641e 8404 5a20 642a 6421  d...d.d...Z d*d!
++00000140: 6422 8401 5a21 642b 6424 6425 8401 5a22  d"..Z!d+d$d%..Z"
++00000150: 6523 6426 6b02 9001 7254 6521 641f 6427  e#d&k...rTe!d.d'
++00000160: 8d01 0100 6521 6428 6427 8d01 0100 6522  ....e!d(d'....e"
++00000170: 641f 6427 8d01 0100 6522 6428 6427 8d01  d.d'....e"d(d'..
++00000180: 0100 6401 5300 292c e900 0000 004e 2902  ..d.S.),.....N).
+ 00000190: da09 5374 7275 6374 7572 65da 0745 6c65  ..Structure..Ele
+ 000001a0: 6d65 6e74 2901 da09 566f 726f 6e6f 694e  ment)...VoronoiN
+ 000001b0: 4e29 01da 0474 7164 6d29 01da 044c 6973  N)...tqdm)...Lis
+ 000001c0: 747a f541 6461 6d20 4d2e 204b 7261 6a65  tz.Adam M. Kraje
+ 000001d0: 7773 6b69 2c20 4a6f 6e61 7468 616e 2057  wski, Jonathan W
+ 000001e0: 2e20 5369 6567 656c 2c20 4a69 6e63 6861  . Siegel, Jincha
+ 000001f0: 6f20 5875 2c20 5a69 2d4b 7569 204c 6975  o Xu, Zi-Kui Liu
+@@ -460,15 +460,15 @@
+ 00001cb0: 0000 0072 3300 0000 7261 0000 0072 5c00  ...r3...ra...r\.
+ 00001cc0: 0000 da04 6d65 616e 2917 7260 0000 005a  ....mean).r`...Z
+ 00001cd0: 116e 6569 6768 626f 725f 6469 6374 5f72  .neighbor_dict_r
+ 00001ce0: 6177 da06 6c65 7665 6c73 da03 706f 73da  aw..levels..pos.
+ 00001cf0: 0d6e 6569 6768 626f 725f 6469 6374 da05  .neighbor_dict..
+ 00001d00: 656c 656d 735a 0566 7261 6373 da06 6f75  elemsZ.fracs..ou
+ 00001d10: 7470 7574 5a0e 7265 6163 6861 626c 655f  tputZ.reachable_
+-00001d20: 696e 6473 da05 7368 656c 6cda 086f 7264  inds..shell..ord
++00001d20: 696e 6473 da05 7368 656c 6c5a 086f 7264  inds..shellZ.ord
+ 00001d30: 6572 696e 675a 0873 6974 655f 6964 785a  eringZ.site_idxZ
+ 00001d40: 0672 5f69 6e64 73da 0469 6478 73da 0677  .r_inds..idxs..w
+ 00001d50: 6569 6768 74da 0570 5f69 6478 da03 6964  eight..p_idx..id
+ 00001d60: 785a 0966 6163 655f 6172 6561 5a14 7765  xZ.face_areaZ.we
+ 00001d70: 6967 6874 5f6e 6f72 6d61 6c69 7a61 7469  ight_normalizati
+ 00001d80: 6f6e da07 736b 6970 7065 64da 056e 5f69  on..skipped..n_i
+ 00001d90: 6478 7240 0000 0072 2700 0000 7224 0000  dxr@...r'...r$..
+@@ -476,15 +476,15 @@
+ 00001db0: 6572 6174 655f 5743 5f61 7474 7269 6275  erate_WC_attribu
+ 00001dc0: 7465 738d 0000 0073 5800 0000 000b 0e01  tes....sX.......
+ 00001dd0: 0a02 0401 0801 1001 0a01 06ff 0604 0201  ................
+ 00001de0: 0cff 0804 0401 1601 0e02 1603 1201 0801  ................
+ 00001df0: 0801 1201 0801 0801 0801 0401 0401 0c01  ................
+ 00001e00: 2a01 0e02 0601 0401 0c01 2a01 1a01 2e01  *.........*.....
+ 00001e10: 0e01 1c01 1a01 0eff 0804 0eff 1a03 0a03  ................
+-00001e20: 2c03 1602 7277 0000 0063 0200 0000 0000  ,...rw...c......
++00001e20: 2c03 1602 7276 0000 0063 0200 0000 0000  ,...rv...c......
+ 00001e30: 0000 0000 0000 0a00 0000 0700 0000 4300  ..............C.
+ 00001e40: 0000 73d4 0000 0074 00a0 0174 00a0 027c  ..s....t...t...|
+ 00001e50: 0064 0164 0185 0264 0266 0219 00a1 01a1  .d.d...d.f......
+ 00001e60: 017d 0264 027d 0367 007d 047c 0244 005d  .}.d.}.g.}.|.D.]
+ 00001e70: 627d 057c 0064 0164 0185 0264 0266 0219  b}.|.d.d...d.f..
+ 00001e80: 007c 056b 027d 0674 00a0 0374 00a0 047c  .|.k.}.t...t...|
+ 00001e90: 067c 01a1 027c 01a1 0264 0219 007d 077c  .|...|...d...}.|
+@@ -512,15 +512,15 @@
+ 00001ff0: 6e63 655a 0c74 6f70 5f65 6c65 6d65 6e74  nceZ.top_element
+ 00002000: 73da 0573 636f 7265 da08 7465 6d70 6c61  s..score..templa
+ 00002010: 7465 da05 636f 756e 7472 6e00 0000 da04  te..countrn.....
+ 00002020: 656c 656d 7224 0000 0072 2400 0000 7228  elemr$...r$...r(
+ 00002030: 0000 00da 0b6d 6167 7069 655f 6d6f 6465  .....magpie_mode
+ 00002040: d300 0000 7320 0000 0000 021c 0104 0104  ....s ..........
+ 00002050: 0108 0114 0118 0108 0108 010a 0106 0108  ................
+-00002060: 010c 0116 0108 011e 0172 8500 0000 2902  .........r....).
++00002060: 010c 0116 0108 011e 0172 8400 0000 2902  .........r....).
+ 00002070: 7249 0000 0072 2000 0000 6301 0000 0000  rI...r ...c.....
+ 00002080: 0000 0000 0000 0019 0000 000e 0000 0003  ................
+ 00002090: 0000 0073 2c04 0000 7400 7c00 8301 5c03  ...s,...t.|...\.
+ 000020a0: 7d01 7d02 7d03 7401 a002 7401 6a03 7401  }.}.}.t...t.j.t.
+ 000020b0: 6a04 7c01 6401 6402 8d02 7401 6a04 7401  j.|.d.d...t.j.t.
+ 000020c0: a005 7c01 7401 6a04 7c01 6401 6402 8d02  ..|.t.j.|.d.d...
+ 000020d0: 1800 a101 6401 6402 8d02 7401 6a06 7c01  ....d.d...t.j.|.
+@@ -595,680 +595,697 @@
+ 00002520: 2020 2020 2020 2020 7374 7275 6374 3a20          struct: 
+ 00002530: 4120 7079 6d61 7467 656e 2053 7472 7563  A pymatgen Struc
+ 00002540: 7475 7265 206f 626a 6563 742e 0a0a 2020  ture object...  
+ 00002550: 2020 5265 7475 726e 733a 0a20 2020 2020    Returns:.     
+ 00002560: 2020 2041 2032 3731 2d6c 656e 6768 7420     A 271-lenght 
+ 00002570: 6e75 6d70 7920 6172 7261 7920 6f66 2074  numpy array of t
+ 00002580: 6865 2064 6573 6372 6970 746f 722e 0a20  he descriptor.. 
+-00002590: 2020 2072 0100 0000 2901 727f 0000 00e9     r....).r.....
++00002590: 2020 2072 0100 0000 2901 727e 0000 00e9     r....).r~....
+ 000025a0: ffff ffff 7210 0000 0072 0e00 0000 e907  ....r....r......
+ 000025b0: 0000 00e9 0800 0000 e910 0000 00e9 0f00  ................
+ 000025c0: 0000 290c e904 0000 0072 0e00 0000 e909  ..)......r......
+-000025d0: 0000 00e9 0e00 0000 728a 0000 0072 1e00  ........r....r..
++000025d0: 0000 00e9 0e00 0000 7289 0000 0072 1e00  ........r....r..
+ 000025e0: 0000 721c 0000 00e9 1300 0000 e915 0000  ..r.............
+ 000025f0: 00e9 1600 0000 e917 0000 00e9 1800 0000  ................
+ 00002600: e90c 0000 00e9 0300 0000 e97e 0000 0029  ...........~...)
+-00002610: 0572 1100 0000 7287 0000 0072 0e00 0000  .r....r....r....
+-00002620: 7294 0000 0072 0c00 0000 6301 0000 0000  r....r....c.....
++00002610: 0572 1100 0000 7286 0000 0072 0e00 0000  .r....r....r....
++00002620: 7293 0000 0072 0c00 0000 6301 0000 0000  r....r....c.....
+ 00002630: 0000 0000 0000 0002 0000 0005 0000 0033  ...............3
+ 00002640: 0000 0073 1a00 0000 7c00 5d12 7d01 7400  ...s....|.].}.t.
+ 00002650: a001 7c01 8800 a102 5600 0100 7102 6400  ..|.....V...q.d.
+ 00002660: 5300 7247 0000 0029 0272 3a00 0000 723c  S.rG...).r:...r<
+ 00002670: 0000 0072 2500 0000 a901 da01 7072 2400  ...r%.......pr$.
+ 00002680: 0000 7228 0000 0072 2e00 0000 1901 0000  ..r(...r........
+ 00002690: 722a 0000 007a 2667 656e 6572 6174 655f  r*...z&generate_
+ 000026a0: 6465 7363 7269 7074 6f72 2e3c 6c6f 6361  descriptor.<loca
+ 000026b0: 6c73 3e2e 3c67 656e 6578 7072 3e72 6400  ls>.<genexpr>rd.
+-000026c0: 0000 2904 da01 7372 9700 0000 da01 64da  ..)...sr......d.
+-000026d0: 0166 7298 0000 0072 2100 0000 7297 0000  .fr....r!...r...
+-000026e0: 0072 8c00 0000 7299 0000 0072 1100 0000  .r....r....r....
+-000026f0: 729a 0000 00e9 0b00 0000 6301 0000 0000  r.........c.....
++000026c0: 0000 2904 da01 7372 9600 0000 da01 64da  ..)...sr......d.
++000026d0: 0166 7297 0000 0072 2100 0000 7296 0000  .fr....r!...r...
++000026e0: 0072 8b00 0000 7298 0000 0072 1100 0000  .r....r....r....
++000026f0: 7299 0000 00e9 0b00 0000 6301 0000 0000  r.........c.....
+ 00002700: 0000 0000 0000 0003 0000 0004 0000 0053  ...............S
+ 00002710: 0000 0073 1400 0000 6700 7c00 5d0c 5c02  ...s....g.|.].\.
+ 00002720: 7d01 7d02 7c02 9102 7104 5300 7224 0000  }.}.|...q.S.r$..
+ 00002730: 0072 2400 0000 2903 7226 0000 0072 4000  .r$...).r&...r@.
+ 00002740: 0000 da03 7661 6c72 2400 0000 7224 0000  ....valr$...r$..
+ 00002750: 0072 2800 0000 7229 0000 0023 0100 0072  .r(...r)...#...r
+ 00002760: 2a00 0000 7a27 6765 6e65 7261 7465 5f64  *...z'generate_d
+ 00002770: 6573 6372 6970 746f 722e 3c6c 6f63 616c  escriptor.<local
+ 00002780: 733e 2e3c 6c69 7374 636f 6d70 3e46 5467  s>.<listcomp>FTg
+ 00002790: 0000 0000 0000 d0bf 720c 0000 0029 2272  ........r....)"r
+ 000027a0: 5f00 0000 722f 0000 0072 3d00 0000 da05  _...r/...r=.....
+ 000027b0: 7374 6163 6b72 6900 0000 7238 0000 0072  stackri...r8...r
+ 000027c0: 3900 0000 da03 6d61 78da 0772 6573 6861  9.....max..resha
+-000027d0: 7065 7285 0000 00da 0664 656c 6574 6572  per......deleter
+-000027e0: 5700 0000 722b 0000 0072 7700 0000 da08  W...r+...rw.....
++000027d0: 7065 7284 0000 00da 0664 656c 6574 6572  per......deleter
++000027e0: 5700 0000 722b 0000 0072 7600 0000 da08  W...r+...rv.....
+ 000027f0: 7265 7665 7273 6564 da06 696e 7365 7274  reversed..insert
+ 00002800: 7256 0000 0072 3400 0000 7235 0000 0072  rV...r4...r5...r
+-00002810: 3a00 0000 723c 0000 0072 7b00 0000 7237  :...r<...r{...r7
++00002810: 3a00 0000 723c 0000 0072 7a00 0000 7237  :...r<...rz...r7
+ 00002820: 0000 0072 3100 0000 7203 0000 0072 3600  ...r1...r....r6.
+ 00002830: 0000 7265 0000 0072 5e00 0000 da22 6164  ..re...r^...."ad
+ 00002840: 645f 6368 6172 6765 735f 6672 6f6d 5f6f  d_charges_from_o
+ 00002850: 7869 5f73 7461 7465 5f67 7565 7373 6573  xi_state_guesses
+ 00002860: da08 656c 656d 656e 7473 da09 6f78 695f  ..elements..oxi_
+ 00002870: 7374 6174 65da 0365 7870 da01 58da 0566  state..exp..X..f
+ 00002880: 6c6f 6174 2919 7249 0000 005a 0f64 6966  loat).rI...Z.dif
+-00002890: 665f 7072 6f70 6572 7469 6573 727e 0000  f_propertiesr~..
++00002890: 665f 7072 6f70 6572 7469 6573 727d 0000  f_propertiesr}..
+ 000028a0: 0072 6c00 0000 da0a 7072 6f70 6572 7469  .rl.....properti
+ 000028b0: 6573 5a0d 7763 5f61 7474 7269 6275 7465  esZ.wc_attribute
+ 000028c0: 73da 0961 7474 7269 6275 7465 723f 0000  s..attributer?..
+ 000028d0: 0072 5e00 0000 7240 0000 0072 2700 0000  .r^...r@...r'...
+ 000028e0: da08 706f 7369 7469 6f6e 5a18 656c 6563  ..positionZ.elec
+ 000028f0: 7472 6f6e 5f6f 6363 7570 6174 696f 6e5f  tron_occupation_
+ 00002900: 6469 6374 5a14 746f 7461 6c5f 7661 6c65  dictZ.total_vale
+ 00002910: 6e63 655f 6661 6374 6f72 5a03 6f72 625a  nce_factorZ.orbZ
+ 00002920: 0e6d 6178 5f69 6f6e 6963 5f63 6861 725a  .max_ionic_charZ
+ 00002930: 0d61 765f 696f 6e69 635f 6368 6172 5a0a  .av_ionic_charZ.
+ 00002940: 6861 735f 616e 696f 6e73 5a0b 6861 735f  has_anionsZ.has_
+ 00002950: 6361 7469 6f6e 73da 0265 6cda 046b 6579  cations..el..key
+-00002960: 315a 0676 616c 7565 31da 046b 6579 32da  1Z.value1..key2.
++00002960: 315a 0676 616c 7565 31da 046b 6579 325a  1Z.value1..key2Z
+ 00002970: 0676 616c 7565 325a 0a69 6f6e 6963 5f63  .value2Z.ionic_c
+-00002980: 6861 7272 2400 0000 7296 0000 0072 2800  harr$...r....r(.
++00002980: 6861 7272 2400 0000 7295 0000 0072 2800  harr$...r....r(.
+ 00002990: 0000 da13 6765 6e65 7261 7465 5f64 6573  ....generate_des
+ 000029a0: 6372 6970 746f 72e7 0000 0073 a000 0000  criptor....s....
+ 000029b0: 0009 0e01 1401 2001 0c01 0c01 0c01 0cff  ...... .........
+ 000029c0: 02fc 0205 02fb 0605 02fb 0206 1001 0c01  ................
+ 000029d0: 0cff 0202 1a01 02ff 0402 0c01 0c01 06f9  ................
+ 000029e0: 0207 02f9 0607 02f9 02fa 060f 1401 1401  ................
+ 000029f0: 1402 1402 1002 1a02 0c01 0c01 1202 0401  ................
+ 00002a00: 0a01 1401 0a01 1c02 1a01 0401 0801 0601  ................
+ 00002a10: 0201 24fe 0803 1202 0e01 0401 1001 2601  ..$...........&.
+ 00002a20: 2601 2601 2a01 1601 0801 1802 0401 0401  &.&.*...........
+ 00002a30: 0401 0401 1001 0c01 0401 0c01 0801 1001  ................
+ 00002a40: 1001 2601 0a01 0401 1801 1601 0c01 0c01  ..&.............
+-00002a50: 72b0 0000 0063 0000 0000 0000 0000 0000  r....c..........
++00002a50: 72ae 0000 0063 0000 0000 0000 0000 0000  r....c..........
+ 00002a60: 0000 0000 0000 0100 0000 4300 0000 7304  ..........C...s.
+ 00002a70: 0000 0074 0053 0029 017a 1e43 6974 6174  ...t.S.).z.Citat
+ 00002a80: 696f 6e2f 7320 666f 7220 7468 6520 6465  ion/s for the de
+ 00002a90: 7363 7269 7074 6f72 2e29 01da 0963 6974  scriptor.)...cit
+ 00002aa0: 6174 696f 6e73 7224 0000 0072 2400 0000  ationsr$...r$...
+ 00002ab0: 7224 0000 0072 2800 0000 da04 6369 7465  r$...r(.....cite
+-00002ac0: 3c01 0000 7302 0000 0000 0272 b200 0000  <...s......r....
+-00002ad0: fa0b 4a56 4153 502d 3130 3030 3163 0100  ..JVASP-10001c..
+-00002ae0: 0000 0000 0000 0000 0000 0500 0000 0500  ................
+-00002af0: 0000 4300 0000 7378 0000 007c 0064 016b  ..C...sx...|.d.k
+-00002b00: 0272 1674 0064 0283 0101 0064 037d 016e  .r.t.d.....d.}.n
+-00002b10: 227c 0064 046b 0272 2c74 0064 0583 0101  "|.d.k.r,t.d....
+-00002b20: 0064 067d 016e 0c74 0064 0783 0101 0064  .d.}.n.t.d.....d
+-00002b30: 0853 0074 01a0 0274 03a0 047c 01a1 01a1  .S.t...t...|....
+-00002b40: 0167 0164 0914 007d 0274 057c 0283 0144  .g.d...}.t.|...D
+-00002b50: 005d 0c7d 0374 067c 0383 017d 0471 5674  .].}.t.|...}.qVt
+-00002b60: 0064 0a83 0101 0074 007c 0483 0101 0064  .d.....t.|.....d
+-00002b70: 0b53 0029 0c7a 3950 726f 6669 6c65 7320  .S.).z9Profiles 
+-00002b80: 7468 6520 6465 7363 7269 7074 6f72 2075  the descriptor u
+-00002b90: 7369 6e67 206f 6e65 206f 6620 7468 6520  sing one of the 
+-00002ba0: 7465 7374 2073 7472 7563 7475 7265 732e  test structures.
+-00002bb0: 72b3 0000 007a 5450 726f 6669 6c69 6e67  r....zTProfiling
+-00002bc0: 2f74 6573 7469 6e67 2074 6173 6b2e 2057  /testing task. W
+-00002bd0: 696c 6c20 6361 6c63 756c 6174 6520 6120  ill calculate a 
+-00002be0: 6465 7363 7269 7074 6f72 2066 6f72 204c  descriptor for L
+-00002bf0: 6932 205a 7231 2054 6531 204f 3620 284a  i2 Zr1 Te1 O6 (J
+-00002c00: 5641 5350 2d31 3030 3031 29e1 460a 0000  VASP-10001).F...
+-00002c10: 7b22 406d 6f64 756c 6522 3a20 2270 796d  {"@module": "pym
+-00002c20: 6174 6765 6e2e 636f 7265 2e73 7472 7563  atgen.core.struc
+-00002c30: 7475 7265 222c 2022 4063 6c61 7373 223a  ture", "@class":
+-00002c40: 2022 5374 7275 6374 7572 6522 2c20 2263   "Structure", "c
+-00002c50: 6861 7267 6522 3a20 6e75 6c6c 2c20 226c  harge": null, "l
+-00002c60: 6174 7469 6365 223a 207b 226d 6174 7269  attice": {"matri
+-00002c70: 7822 3a20 5b5b 342e 3539 3933 3035 3635  x": [[4.59930565
+-00002c80: 3236 3632 3435 392c 2030 2e30 3039 3830  2662459, 0.00980
+-00002c90: 3135 3037 3639 3938 3832 332c 2033 2e31  15076998823, 3.1
+-00002ca0: 3035 3236 3132 3836 3534 3433 3733 365d  052612865443736]
+-00002cb0: 2c20 5b31 2e36 3535 3332 3537 3732 3632  , [1.65532577262
+-00002cc0: 3034 3635 332c 2034 2e32 3931 3130 3834  04653, 4.2911084
+-00002cd0: 3735 3835 3437 3132 2c20 332e 3130 3532  75854712, 3.1052
+-00002ce0: 3630 3239 3338 3937 3935 3635 5d2c 205b  602938979565], [
+-00002cf0: 302e 3031 3432 3534 3132 3134 3931 3937  0.01425412149197
+-00002d00: 3439 2c20 302e 3030 3938 3032 3530 3939  49, 0.0098025099
+-00002d10: 3939 3631 3331 2c20 352e 3534 3934 3139  996131, 5.549419
+-00002d20: 3134 3138 3636 3335 315d 5d2c 2022 6122  141866351]], "a"
+-00002d30: 3a20 352e 3534 3934 3436 3437 3831 3532  : 5.549446478152
+-00002d40: 3332 362c 2022 6222 3a20 352e 3534 3934  326, "b": 5.5494
+-00002d50: 3436 3533 3631 3739 3334 332c 2022 6322  46536179343, "c"
+-00002d60: 3a20 352e 3534 3934 3436 3130 3538 3130  : 5.549446105810
+-00002d70: 3432 332c 2022 616c 7068 6122 3a20 3535  423, "alpha": 55
+-00002d80: 2e38 3237 3134 3435 3939 3835 3833 322c  .82714459985832,
+-00002d90: 2022 6265 7461 223a 2035 352e 3832 3731   "beta": 55.8271
+-00002da0: 3430 3134 3238 3933 3731 2c20 2267 616d  4014289371, "gam
+-00002db0: 6d61 223a 2035 352e 3832 3731 3339 3732  ma": 55.82713972
+-00002dc0: 3737 3930 3932 2c20 2276 6f6c 756d 6522  779092, "volume"
+-00002dd0: 3a20 3130 392e 3135 3438 3436 3235 3634  : 109.1548462564
+-00002de0: 3237 3433 7d2c 2022 7369 7465 7322 3a20  2743}, "sites": 
+-00002df0: 5b7b 2273 7065 6369 6573 223a 205b 7b22  [{"species": [{"
+-00002e00: 656c 656d 656e 7422 3a20 224c 6922 2c20  element": "Li", 
+-00002e10: 226f 6363 7522 3a20 312e 307d 5d2c 2022  "occu": 1.0}], "
+-00002e20: 6162 6322 3a20 5b30 2e32 3733 3837 3834  abc": [0.2738784
+-00002e30: 3837 3236 3639 3932 342c 2030 2e32 3733  872669924, 0.273
+-00002e40: 3837 3834 3837 3236 3730 3430 372c 2030  8784872670407, 0
+-00002e50: 2e32 3733 3837 3834 3837 3236 3733 3033  .273878487267303
+-00002e60: 325d 2c20 2278 797a 223a 205b 312e 3731  2], "xyz": [1.71
+-00002e70: 3639 3132 3839 3034 3030 3730 3633 2c20  69128904007063, 
+-00002e80: 312e 3138 3036 3131 3431 3637 3737 3736  1.18061141677776
+-00002e90: 3133 2c20 332e 3232 3037 3934 3737 3533  13, 3.2207947753
+-00002ea0: 3737 3237 385d 2c20 226c 6162 656c 223a  77278], "label":
+-00002eb0: 2022 4c69 222c 2022 7072 6f70 6572 7469   "Li", "properti
+-00002ec0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
+-00002ed0: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
+-00002ee0: 223a 2022 4c69 222c 2022 6f63 6375 223a  ": "Li", "occu":
+-00002ef0: 2031 2e30 7d5d 2c20 2261 6263 223a 205b   1.0}], "abc": [
+-00002f00: 302e 3738 3532 3237 3230 3130 3732 3830  0.78522720107280
+-00002f10: 3639 2c20 302e 3738 3532 3237 3230 3130  69, 0.7852272010
+-00002f20: 3732 3838 3536 2c20 302e 3738 3532 3237  728856, 0.785227
+-00002f30: 3230 3130 3733 3331 355d 2c20 2278 797a  201073315], "xyz
+-00002f40: 223a 205b 342e 3932 3234 3939 3435 3137  ": [4.9224994517
+-00002f50: 3339 3936 352c 2033 2e33 3834 3838 3837  39965, 3.3848887
+-00002f60: 3035 3934 3334 3932 372c 2039 2e32 3334  059434927, 9.234
+-00002f70: 3232 3533 3338 3136 3336 3333 5d2c 2022  225338163633], "
+-00002f80: 6c61 6265 6c22 3a20 224c 6922 2c20 2270  label": "Li", "p
+-00002f90: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-00002fa0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00002fb0: 656c 656d 656e 7422 3a20 224f 222c 2022  element": "O", "
+-00002fc0: 6f63 6375 223a 2031 2e30 7d5d 2c20 2261  occu": 1.0}], "a
+-00002fd0: 6263 223a 205b 302e 3836 3639 3936 3434  bc": [0.86699644
+-00002fe0: 3534 3636 3131 3234 2c20 302e 3630 3430  54661124, 0.6040
+-00002ff0: 3839 3838 3230 3932 3131 342c 2030 2e32  89882092114, 0.2
+-00003000: 3431 3832 3137 3639 3837 3331 3433 5d2c  41821769873143],
+-00003010: 2022 7879 7a22 3a20 5b34 2e39 3930 3939   "xyz": [4.99099
+-00003020: 3431 3630 3136 3430 3631 2c20 322e 3630  4160164061, 2.60
+-00003030: 3330 3833 3534 3538 3736 3835 362c 2035  3083545876856, 5
+-00003040: 2e39 3130 3037 3731 3831 3133 3736 3538  .910077181137658
+-00003050: 5d2c 2022 6c61 6265 6c22 3a20 224f 222c  ], "label": "O",
+-00003060: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-00003070: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-00003080: 5b7b 2265 6c65 6d65 6e74 223a 2022 4f22  [{"element": "O"
+-00003090: 2c20 226f 6363 7522 3a20 312e 307d 5d2c  , "occu": 1.0}],
+-000030a0: 2022 6162 6322 3a20 5b30 2e37 3137 3834   "abc": [0.71784
+-000030b0: 3038 3934 3532 3937 3838 2c20 302e 3132  0894529788, 0.12
+-000030c0: 3133 3637 3538 3839 3632 3836 3833 2c20  13675889628683, 
+-000030d0: 302e 3339 3335 3337 3030 3931 3836 3937  0.39353700918697
+-000030e0: 335d 2c20 2278 797a 223a 205b 332e 3530  3], "xyz": [3.50
+-000030f0: 3830 3832 3130 3632 3334 3731 332c 2030  8082106234713, 0
+-00003100: 2e35 3331 3639 3530 3633 3231 3534 3132  .531695063215412
+-00003110: 2c20 342e 3738 3938 3633 3330 3634 3639  , 4.789863306469
+-00003120: 3237 385d 2c20 226c 6162 656c 223a 2022  278], "label": "
+-00003130: 4f22 2c20 2270 726f 7065 7274 6965 7322  O", "properties"
+-00003140: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00003150: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00003160: 224f 222c 2022 6f63 6375 223a 2031 2e30  "O", "occu": 1.0
+-00003170: 7d5d 2c20 2261 6263 223a 205b 302e 3132  }], "abc": [0.12
+-00003180: 3133 3637 3538 3839 3633 3834 3032 2c20  13675889638402, 
+-00003190: 302e 3339 3335 3337 3030 3931 3837 3339  0.39353700918739
+-000031a0: 3433 2c20 302e 3731 3738 3430 3839 3435  43, 0.7178408945
+-000031b0: 3238 3333 3834 5d2c 2022 7879 7a22 3a20  283384], "xyz": 
+-000031c0: 5b31 2e32 3139 3837 3037 3833 3038 3137  [1.2198707830817
+-000031d0: 3839 362c 2031 2e36 3936 3933 3632 3233  896, 1.696936223
+-000031e0: 3539 3130 3331 372c 2035 2e35 3832 3531  5910317, 5.58251
+-000031f0: 3239 3235 3136 3936 345d 2c20 226c 6162  292516964], "lab
+-00003200: 656c 223a 2022 4f22 2c20 2270 726f 7065  el": "O", "prope
+-00003210: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
+-00003220: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
+-00003230: 656e 7422 3a20 224f 222c 2022 6f63 6375  ent": "O", "occu
+-00003240: 223a 2031 2e30 7d5d 2c20 2261 6263 223a  ": 1.0}], "abc":
+-00003250: 205b 302e 3339 3335 3337 3030 3931 3836   [0.393537009186
+-00003260: 3139 3135 2c20 302e 3731 3738 3430 3839  1915, 0.71784089
+-00003270: 3435 3239 3338 3536 2c20 302e 3132 3133  45293856, 0.1213
+-00003280: 3637 3538 3839 3633 3430 3134 5d2c 2022  675889634014], "
+-00003290: 7879 7a22 3a20 5b32 2e39 3939 3938 3735  xyz": [2.9999875
+-000032a0: 3132 3539 3536 3232 2c20 332e 3038 3533  12595622, 3.0853
+-000032b0: 3830 3130 3938 3630 3334 342c 2034 2e31  80109860344, 4.1
+-000032c0: 3234 3633 3736 3837 3936 3232 3937 5d2c  24637687962297],
+-000032d0: 2022 6c61 6265 6c22 3a20 224f 222c 2022   "label": "O", "
+-000032e0: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-000032f0: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-00003300: 2265 6c65 6d65 6e74 223a 2022 4f22 2c20  "element": "O", 
+-00003310: 226f 6363 7522 3a20 312e 307d 5d2c 2022  "occu": 1.0}], "
+-00003320: 6162 6322 3a20 5b30 2e32 3431 3832 3137  abc": [0.2418217
+-00003330: 3639 3837 3231 3537 332c 2030 2e38 3636  698721573, 0.866
+-00003340: 3939 3634 3435 3436 3731 3232 312c 2030  9964454671221, 0
+-00003350: 2e36 3034 3038 3938 3832 3039 3231 3531  .604089882092151
+-00003360: 335d 2c20 2278 797a 223a 205b 322e 3535  3], "xyz": [2.55
+-00003370: 3539 3834 3536 3436 3333 3332 392c 2033  5984564633329, 3
+-00003380: 2e37 3238 3636 3736 3130 3732 3931 3439  .728667610729149
+-00003390: 2c20 362e 3739 3535 3137 3337 3233 3737  , 6.795517372377
+-000033a0: 3334 335d 2c20 226c 6162 656c 223a 2022  343], "label": "
+-000033b0: 4f22 2c20 2270 726f 7065 7274 6965 7322  O", "properties"
+-000033c0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-000033d0: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-000033e0: 224f 222c 2022 6f63 6375 223a 2031 2e30  "O", "occu": 1.0
+-000033f0: 7d5d 2c20 2261 6263 223a 205b 302e 3630  }], "abc": [0.60
+-00003400: 3430 3839 3838 3230 3933 3331 3135 2c20  40898820933115, 
+-00003410: 302e 3234 3138 3231 3736 3938 3732 3336  0.24182176987236
+-00003420: 3337 2c20 302e 3836 3639 3936 3434 3534  37, 0.8669964454
+-00003430: 3636 3430 3539 5d2c 2022 7879 7a22 3a20  664059], "xyz": 
+-00003440: 5b33 2e31 3931 3034 3630 3930 3134 3531  [3.1910460901451
+-00003450: 3733 2c20 312e 3035 3231 3033 3137 3933  73, 1.0521031793
+-00003460: 3032 3535 3935 2c20 372e 3433 3831 3033  025595, 7.438103
+-00003470: 3133 3530 3433 3635 3335 5d2c 2022 6c61  1350436535], "la
+-00003480: 6265 6c22 3a20 224f 222c 2022 7072 6f70  bel": "O", "prop
+-00003490: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-000034a0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-000034b0: 6d65 6e74 223a 2022 5465 222c 2022 6f63  ment": "Te", "oc
+-000034c0: 6375 223a 2031 2e30 7d5d 2c20 2261 6263  cu": 1.0}], "abc
+-000034d0: 223a 205b 302e 3439 3635 3930 3536 3130  ": [0.4965905610
+-000034e0: 3530 3733 3533 2c20 302e 3439 3635 3930  507353, 0.496590
+-000034f0: 3536 3130 3530 3733 3535 2c20 302e 3439  5610507355, 0.49
+-00003500: 3635 3930 3536 3130 3530 3733 3631 5d2c  65905610507361],
+-00003510: 2022 7879 7a22 3a20 5b33 2e31 3133 3036   "xyz": [3.11306
+-00003520: 3933 3930 3833 3537 3933 2c20 322e 3134  9390835793, 2.14
+-00003530: 3036 3539 3133 3537 3032 3439 3834 2c20  06591357024984, 
+-00003540: 352e 3833 3938 3735 3536 3132 3134 3636  5.83987556121466
+-00003550: 3234 5d2c 2022 6c61 6265 6c22 3a20 2254  24], "label": "T
+-00003560: 6522 2c20 2270 726f 7065 7274 6965 7322  e", "properties"
+-00003570: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00003580: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00003590: 225a 7222 2c20 226f 6363 7522 3a20 312e  "Zr", "occu": 1.
+-000035a0: 307d 5d2c 2022 6162 6322 3a20 5b30 2e30  0}], "abc": [0.0
+-000035b0: 3030 3635 3031 3630 3439 3830 3636 382c  006501604980668,
+-000035c0: 2030 2e30 3030 3635 3031 3630 3439 3830   0.0006501604980
+-000035d0: 3932 382c 2030 2e30 3030 3635 3031 3630  928, 0.000650160
+-000035e0: 3439 3832 3334 345d 2c20 2278 797a 223a  4982344], "xyz":
+-000035f0: 205b 302e 3030 3430 3735 3738 3137 3439   [0.004075781749
+-00003600: 3436 3033 362c 2030 2e30 3032 3830 3236  46036, 0.0028026
+-00003610: 3534 3938 3139 3435 3139 322c 2030 2e30  54981945192, 0.0
+-00003620: 3037 3634 3538 3438 3931 3832 3633 3037  0764584891826307
+-00003630: 365d 2c20 226c 6162 656c 223a 2022 5a72  6], "label": "Zr
+-00003640: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
+-00003650: 207b 7d7d 5d7d da0d 6469 6c75 7465 4e69   {}}]}..diluteNi
+-00003660: 416c 6c6f 797a 4d50 726f 6669 6c69 6e67  AlloyzMProfiling
+-00003670: 2f74 6573 7469 6e67 2074 6173 6b2e 2057  /testing task. W
+-00003680: 696c 6c20 6361 6c63 756c 6174 6520 6120  ill calculate a 
+-00003690: 6465 7363 7269 7074 6f72 2066 6f72 2061  descriptor for a
+-000036a0: 2064 696c 7574 6520 4643 4320 4e69 3331   dilute FCC Ni31
+-000036b0: 4372 312e e1d4 1400 007b 2240 6d6f 6475  Cr1......{"@modu
+-000036c0: 6c65 223a 2022 7079 6d61 7467 656e 2e63  le": "pymatgen.c
+-000036d0: 6f72 652e 7374 7275 6374 7572 6522 2c20  ore.structure", 
+-000036e0: 2240 636c 6173 7322 3a20 2253 7472 7563  "@class": "Struc
+-000036f0: 7475 7265 222c 2022 6368 6172 6765 223a  ture", "charge":
+-00003700: 206e 756c 6c2c 2022 6c61 7474 6963 6522   null, "lattice"
+-00003710: 3a20 7b22 6d61 7472 6978 223a 205b 5b36  : {"matrix": [[6
+-00003720: 2e39 3935 3639 322c 2030 2e30 2c20 302e  .995692, 0.0, 0.
+-00003730: 305d 2c20 5b30 2e30 2c20 362e 3939 3536  0], [0.0, 6.9956
+-00003740: 3932 2c20 302e 305d 2c20 5b30 2e30 2c20  92, 0.0], [0.0, 
+-00003750: 302e 302c 2036 2e39 3935 3639 325d 5d2c  0.0, 6.995692]],
+-00003760: 2022 6122 3a20 362e 3939 3536 3932 2c20   "a": 6.995692, 
+-00003770: 2262 223a 2036 2e39 3935 3639 322c 2022  "b": 6.995692, "
+-00003780: 6322 3a20 362e 3939 3536 3932 2c20 2261  c": 6.995692, "a
+-00003790: 6c70 6861 223a 2039 302e 302c 2022 6265  lpha": 90.0, "be
+-000037a0: 7461 223a 2039 302e 302c 2022 6761 6d6d  ta": 90.0, "gamm
+-000037b0: 6122 3a20 3930 2e30 2c20 2276 6f6c 756d  a": 90.0, "volum
+-000037c0: 6522 3a20 3334 322e 3336 3731 3133 3635  e": 342.36711365
+-000037d0: 3631 3932 3433 7d2c 2022 7369 7465 7322  619243}, "sites"
+-000037e0: 3a20 5b7b 2273 7065 6369 6573 223a 205b  : [{"species": [
+-000037f0: 7b22 656c 656d 656e 7422 3a20 2243 7222  {"element": "Cr"
+-00003800: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-00003810: 6162 6322 3a20 5b30 2e30 2c20 302e 302c  abc": [0.0, 0.0,
+-00003820: 2030 2e30 5d2c 2022 7879 7a22 3a20 5b30   0.0], "xyz": [0
+-00003830: 2e30 2c20 302e 302c 2030 2e30 5d2c 2022  .0, 0.0, 0.0], "
+-00003840: 6c61 6265 6c22 3a20 2243 7222 2c20 2270  label": "Cr", "p
+-00003850: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-00003860: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00003870: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00003880: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00003890: 6322 3a20 5b30 2e30 2c20 302e 302c 2030  c": [0.0, 0.0, 0
+-000038a0: 2e35 5d2c 2022 7879 7a22 3a20 5b30 2e30  .5], "xyz": [0.0
+-000038b0: 2c20 302e 302c 2033 2e34 3937 3834 365d  , 0.0, 3.497846]
+-000038c0: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
+-000038d0: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-000038e0: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-000038f0: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
+-00003900: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
+-00003910: 2261 6263 223a 205b 302e 302c 2030 2e35  "abc": [0.0, 0.5
+-00003920: 2c20 302e 305d 2c20 2278 797a 223a 205b  , 0.0], "xyz": [
+-00003930: 302e 302c 2033 2e34 3937 3834 362c 2030  0.0, 3.497846, 0
+-00003940: 2e30 5d2c 2022 6c61 6265 6c22 3a20 224e  .0], "label": "N
+-00003950: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
+-00003960: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00003970: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00003980: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
+-00003990: 5d2c 2022 6162 6322 3a20 5b30 2e30 2c20  ], "abc": [0.0, 
+-000039a0: 302e 352c 2030 2e35 5d2c 2022 7879 7a22  0.5, 0.5], "xyz"
+-000039b0: 3a20 5b30 2e30 2c20 332e 3439 3738 3436  : [0.0, 3.497846
+-000039c0: 2c20 332e 3439 3738 3436 5d2c 2022 6c61  , 3.497846], "la
+-000039d0: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
+-000039e0: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
+-000039f0: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
+-00003a00: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
+-00003a10: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
+-00003a20: 3a20 5b30 2e35 2c20 302e 302c 2030 2e30  : [0.5, 0.0, 0.0
+-00003a30: 5d2c 2022 7879 7a22 3a20 5b33 2e34 3937  ], "xyz": [3.497
+-00003a40: 3834 362c 2030 2e30 2c20 302e 305d 2c20  846, 0.0, 0.0], 
+-00003a50: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
+-00003a60: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-00003a70: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-00003a80: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
+-00003a90: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00003aa0: 6263 223a 205b 302e 352c 2030 2e30 2c20  bc": [0.5, 0.0, 
+-00003ab0: 302e 355d 2c20 2278 797a 223a 205b 332e  0.5], "xyz": [3.
+-00003ac0: 3439 3738 3436 2c20 302e 302c 2033 2e34  497846, 0.0, 3.4
+-00003ad0: 3937 3834 365d 2c20 226c 6162 656c 223a  97846], "label":
+-00003ae0: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
+-00003af0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
+-00003b00: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
+-00003b10: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
+-00003b20: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
+-00003b30: 352c 2030 2e35 2c20 302e 305d 2c20 2278  5, 0.5, 0.0], "x
+-00003b40: 797a 223a 205b 332e 3439 3738 3436 2c20  yz": [3.497846, 
+-00003b50: 332e 3439 3738 3436 2c20 302e 305d 2c20  3.497846, 0.0], 
+-00003b60: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
+-00003b70: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
+-00003b80: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
+-00003b90: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
+-00003ba0: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
+-00003bb0: 6263 223a 205b 302e 352c 2030 2e35 2c20  bc": [0.5, 0.5, 
+-00003bc0: 302e 355d 2c20 2278 797a 223a 205b 332e  0.5], "xyz": [3.
+-00003bd0: 3439 3738 3436 2c20 332e 3439 3738 3436  497846, 3.497846
+-00003be0: 2c20 332e 3439 3738 3436 5d2c 2022 6c61  , 3.497846], "la
+-00003bf0: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
+-00003c00: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
+-00003c10: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
+-00003c20: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
+-00003c30: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
+-00003c40: 3a20 5b30 2e32 352c 2030 2e32 352c 2030  : [0.25, 0.25, 0
+-00003c50: 2e30 5d2c 2022 7879 7a22 3a20 5b31 2e37  .0], "xyz": [1.7
+-00003c60: 3438 3932 332c 2031 2e37 3438 3932 332c  48923, 1.748923,
+-00003c70: 2030 2e30 5d2c 2022 6c61 6265 6c22 3a20   0.0], "label": 
+-00003c80: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
+-00003c90: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
+-00003ca0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
+-00003cb0: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
+-00003cc0: 317d 5d2c 2022 6162 6322 3a20 5b30 2e32  1}], "abc": [0.2
+-00003cd0: 352c 2030 2e32 352c 2030 2e35 5d2c 2022  5, 0.25, 0.5], "
+-00003ce0: 7879 7a22 3a20 5b31 2e37 3438 3932 332c  xyz": [1.748923,
+-00003cf0: 2031 2e37 3438 3932 332c 2033 2e34 3937   1.748923, 3.497
+-00003d00: 3834 365d 2c20 226c 6162 656c 223a 2022  846], "label": "
+-00003d10: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
+-00003d20: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
+-00003d30: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
+-00003d40: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
+-00003d50: 7d5d 2c20 2261 6263 223a 205b 302e 3235  }], "abc": [0.25
+-00003d60: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
+-00003d70: 3030 3031 2c20 302e 305d 2c20 2278 797a  0001, 0.0], "xyz
+-00003d80: 223a 205b 312e 3734 3839 3233 2c20 352e  ": [1.748923, 5.
+-00003d90: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
+-00003da0: 2c20 302e 305d 2c20 226c 6162 656c 223a  , 0.0], "label":
+-00003db0: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
+-00003dc0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
+-00003dd0: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
+-00003de0: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
+-00003df0: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
+-00003e00: 3235 2c20 302e 3735 3030 3030 3030 3030  25, 0.7500000000
+-00003e10: 3030 3030 3031 2c20 302e 355d 2c20 2278  000001, 0.5], "x
+-00003e20: 797a 223a 205b 312e 3734 3839 3233 2c20  yz": [1.748923, 
+-00003e30: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
+-00003e40: 3035 2c20 332e 3439 3738 3436 5d2c 2022  05, 3.497846], "
+-00003e50: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
+-00003e60: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-00003e70: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00003e80: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00003e90: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00003ea0: 6322 3a20 5b30 2e37 3530 3030 3030 3030  c": [0.750000000
+-00003eb0: 3030 3030 3030 312c 2030 2e32 352c 2030  0000001, 0.25, 0
+-00003ec0: 2e30 5d2c 2022 7879 7a22 3a20 5b35 2e32  .0], "xyz": [5.2
+-00003ed0: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
+-00003ee0: 2031 2e37 3438 3932 332c 2030 2e30 5d2c   1.748923, 0.0],
+-00003ef0: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
+-00003f00: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00003f10: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00003f20: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
+-00003f30: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-00003f40: 6162 6322 3a20 5b30 2e37 3530 3030 3030  abc": [0.7500000
+-00003f50: 3030 3030 3030 3030 312c 2030 2e32 352c  000000001, 0.25,
+-00003f60: 2030 2e35 5d2c 2022 7879 7a22 3a20 5b35   0.5], "xyz": [5
+-00003f70: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
+-00003f80: 352c 2031 2e37 3438 3932 332c 2033 2e34  5, 1.748923, 3.4
+-00003f90: 3937 3834 365d 2c20 226c 6162 656c 223a  97846], "label":
+-00003fa0: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
+-00003fb0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
+-00003fc0: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
+-00003fd0: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
+-00003fe0: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
+-00003ff0: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
+-00004000: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
+-00004010: 3030 3031 2c20 302e 305d 2c20 2278 797a  0001, 0.0], "xyz
+-00004020: 223a 205b 352e 3234 3637 3639 3030 3030  ": [5.2467690000
+-00004030: 3030 3030 3035 2c20 352e 3234 3637 3639  000005, 5.246769
+-00004040: 3030 3030 3030 3030 3035 2c20 302e 305d  0000000005, 0.0]
+-00004050: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
+-00004060: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
+-00004070: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
+-00004080: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
+-00004090: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
+-000040a0: 2261 6263 223a 205b 302e 3735 3030 3030  "abc": [0.750000
+-000040b0: 3030 3030 3030 3030 3031 2c20 302e 3735  0000000001, 0.75
+-000040c0: 3030 3030 3030 3030 3030 3030 3031 2c20  00000000000001, 
+-000040d0: 302e 355d 2c20 2278 797a 223a 205b 352e  0.5], "xyz": [5.
+-000040e0: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
+-000040f0: 2c20 352e 3234 3637 3639 3030 3030 3030  , 5.246769000000
+-00004100: 3030 3035 2c20 332e 3439 3738 3436 5d2c  0005, 3.497846],
+-00004110: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
+-00004120: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00004130: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00004140: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
+-00004150: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-00004160: 6162 6322 3a20 5b30 2e32 352c 2030 2e30  abc": [0.25, 0.0
+-00004170: 2c20 302e 3235 5d2c 2022 7879 7a22 3a20  , 0.25], "xyz": 
+-00004180: 5b31 2e37 3438 3932 332c 2030 2e30 2c20  [1.748923, 0.0, 
+-00004190: 312e 3734 3839 3233 5d2c 2022 6c61 6265  1.748923], "labe
+-000041a0: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
+-000041b0: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
+-000041c0: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
+-000041d0: 656e 7422 3a20 224e 6922 2c20 226f 6363  ent": "Ni", "occ
+-000041e0: 7522 3a20 317d 5d2c 2022 6162 6322 3a20  u": 1}], "abc": 
+-000041f0: 5b30 2e32 352c 2030 2e30 2c20 302e 3735  [0.25, 0.0, 0.75
+-00004200: 3030 3030 3030 3030 3030 3030 3031 5d2c  00000000000001],
+-00004210: 2022 7879 7a22 3a20 5b31 2e37 3438 3932   "xyz": [1.74892
+-00004220: 332c 2030 2e30 2c20 352e 3234 3637 3639  3, 0.0, 5.246769
+-00004230: 3030 3030 3030 3030 3035 5d2c 2022 6c61  0000000005], "la
+-00004240: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
+-00004250: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
+-00004260: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
+-00004270: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
+-00004280: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
+-00004290: 3a20 5b30 2e32 352c 2030 2e35 2c20 302e  : [0.25, 0.5, 0.
+-000042a0: 3235 5d2c 2022 7879 7a22 3a20 5b31 2e37  25], "xyz": [1.7
+-000042b0: 3438 3932 332c 2033 2e34 3937 3834 362c  48923, 3.497846,
+-000042c0: 2031 2e37 3438 3932 335d 2c20 226c 6162   1.748923], "lab
+-000042d0: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-000042e0: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-000042f0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-00004300: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-00004310: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-00004320: 205b 302e 3235 2c20 302e 352c 2030 2e37   [0.25, 0.5, 0.7
+-00004330: 3530 3030 3030 3030 3030 3030 3030 315d  500000000000001]
+-00004340: 2c20 2278 797a 223a 205b 312e 3734 3839  , "xyz": [1.7489
+-00004350: 3233 2c20 332e 3439 3738 3436 2c20 352e  23, 3.497846, 5.
+-00004360: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
+-00004370: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
+-00004380: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
+-00004390: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
+-000043a0: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
+-000043b0: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
+-000043c0: 2022 6162 6322 3a20 5b30 2e37 3530 3030   "abc": [0.75000
+-000043d0: 3030 3030 3030 3030 3030 312c 2030 2e30  00000000001, 0.0
+-000043e0: 2c20 302e 3235 5d2c 2022 7879 7a22 3a20  , 0.25], "xyz": 
+-000043f0: 5b35 2e32 3436 3736 3930 3030 3030 3030  [5.2467690000000
+-00004400: 3030 352c 2030 2e30 2c20 312e 3734 3839  005, 0.0, 1.7489
+-00004410: 3233 5d2c 2022 6c61 6265 6c22 3a20 224e  23], "label": "N
+-00004420: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
+-00004430: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00004440: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00004450: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
+-00004460: 5d2c 2022 6162 6322 3a20 5b30 2e37 3530  ], "abc": [0.750
+-00004470: 3030 3030 3030 3030 3030 3030 312c 2030  0000000000001, 0
+-00004480: 2e30 2c20 302e 3735 3030 3030 3030 3030  .0, 0.7500000000
+-00004490: 3030 3030 3031 5d2c 2022 7879 7a22 3a20  000001], "xyz": 
+-000044a0: 5b35 2e32 3436 3736 3930 3030 3030 3030  [5.2467690000000
+-000044b0: 3030 352c 2030 2e30 2c20 352e 3234 3637  005, 0.0, 5.2467
+-000044c0: 3639 3030 3030 3030 3030 3035 5d2c 2022  690000000005], "
+-000044d0: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
+-000044e0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-000044f0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-00004500: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00004510: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00004520: 6322 3a20 5b30 2e37 3530 3030 3030 3030  c": [0.750000000
+-00004530: 3030 3030 3030 312c 2030 2e35 2c20 302e  0000001, 0.5, 0.
+-00004540: 3235 5d2c 2022 7879 7a22 3a20 5b35 2e32  25], "xyz": [5.2
+-00004550: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
+-00004560: 2033 2e34 3937 3834 362c 2031 2e37 3438   3.497846, 1.748
+-00004570: 3932 335d 2c20 226c 6162 656c 223a 2022  923], "label": "
+-00004580: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
+-00004590: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
+-000045a0: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
+-000045b0: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
+-000045c0: 7d5d 2c20 2261 6263 223a 205b 302e 3735  }], "abc": [0.75
+-000045d0: 3030 3030 3030 3030 3030 3030 3031 2c20  00000000000001, 
+-000045e0: 302e 352c 2030 2e37 3530 3030 3030 3030  0.5, 0.750000000
+-000045f0: 3030 3030 3030 315d 2c20 2278 797a 223a  0000001], "xyz":
+-00004600: 205b 352e 3234 3637 3639 3030 3030 3030   [5.246769000000
+-00004610: 3030 3035 2c20 332e 3439 3738 3436 2c20  0005, 3.497846, 
+-00004620: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
+-00004630: 3035 5d2c 2022 6c61 6265 6c22 3a20 224e  05], "label": "N
+-00004640: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
+-00004650: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
+-00004660: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
+-00004670: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
+-00004680: 5d2c 2022 6162 6322 3a20 5b30 2e30 2c20  ], "abc": [0.0, 
+-00004690: 302e 3235 2c20 302e 3235 5d2c 2022 7879  0.25, 0.25], "xy
+-000046a0: 7a22 3a20 5b30 2e30 2c20 312e 3734 3839  z": [0.0, 1.7489
+-000046b0: 3233 2c20 312e 3734 3839 3233 5d2c 2022  23, 1.748923], "
+-000046c0: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
+-000046d0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
+-000046e0: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
+-000046f0: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
+-00004700: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
+-00004710: 6322 3a20 5b30 2e30 2c20 302e 3235 2c20  c": [0.0, 0.25, 
+-00004720: 302e 3735 3030 3030 3030 3030 3030 3030  0.75000000000000
+-00004730: 3031 5d2c 2022 7879 7a22 3a20 5b30 2e30  01], "xyz": [0.0
+-00004740: 2c20 312e 3734 3839 3233 2c20 352e 3234  , 1.748923, 5.24
+-00004750: 3637 3639 3030 3030 3030 3030 3035 5d2c  67690000000005],
+-00004760: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
+-00004770: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
+-00004780: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
+-00004790: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
+-000047a0: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
+-000047b0: 6162 6322 3a20 5b30 2e30 2c20 302e 3735  abc": [0.0, 0.75
+-000047c0: 3030 3030 3030 3030 3030 3030 3031 2c20  00000000000001, 
+-000047d0: 302e 3235 5d2c 2022 7879 7a22 3a20 5b30  0.25], "xyz": [0
+-000047e0: 2e30 2c20 352e 3234 3637 3639 3030 3030  .0, 5.2467690000
+-000047f0: 3030 3030 3035 2c20 312e 3734 3839 3233  000005, 1.748923
+-00004800: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
+-00004810: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
+-00004820: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
+-00004830: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
+-00004840: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
+-00004850: 2022 6162 6322 3a20 5b30 2e30 2c20 302e   "abc": [0.0, 0.
+-00004860: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
+-00004870: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
+-00004880: 3030 3031 5d2c 2022 7879 7a22 3a20 5b30  0001], "xyz": [0
+-00004890: 2e30 2c20 352e 3234 3637 3639 3030 3030  .0, 5.2467690000
+-000048a0: 3030 3030 3035 2c20 352e 3234 3637 3639  000005, 5.246769
+-000048b0: 3030 3030 3030 3030 3035 5d2c 2022 6c61  0000000005], "la
+-000048c0: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
+-000048d0: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
+-000048e0: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
+-000048f0: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
+-00004900: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
+-00004910: 3a20 5b30 2e35 2c20 302e 3235 2c20 302e  : [0.5, 0.25, 0.
+-00004920: 3235 5d2c 2022 7879 7a22 3a20 5b33 2e34  25], "xyz": [3.4
+-00004930: 3937 3834 362c 2031 2e37 3438 3932 332c  97846, 1.748923,
+-00004940: 2031 2e37 3438 3932 335d 2c20 226c 6162   1.748923], "lab
+-00004950: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
+-00004960: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
+-00004970: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
+-00004980: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
+-00004990: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
+-000049a0: 205b 302e 352c 2030 2e32 352c 2030 2e37   [0.5, 0.25, 0.7
+-000049b0: 3530 3030 3030 3030 3030 3030 3030 315d  500000000000001]
+-000049c0: 2c20 2278 797a 223a 205b 332e 3439 3738  , "xyz": [3.4978
+-000049d0: 3436 2c20 312e 3734 3839 3233 2c20 352e  46, 1.748923, 5.
+-000049e0: 3234 3637 3639 3030 3030 3030 3030 3035  2467690000000005
+-000049f0: 5d2c 2022 6c61 6265 6c22 3a20 224e 6922  ], "label": "Ni"
+-00004a00: 2c20 2270 726f 7065 7274 6965 7322 3a20  , "properties": 
+-00004a10: 7b7d 7d2c 207b 2273 7065 6369 6573 223a  {}}, {"species":
+-00004a20: 205b 7b22 656c 656d 656e 7422 3a20 224e   [{"element": "N
+-00004a30: 6922 2c20 226f 6363 7522 3a20 317d 5d2c  i", "occu": 1}],
+-00004a40: 2022 6162 6322 3a20 5b30 2e35 2c20 302e   "abc": [0.5, 0.
+-00004a50: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
+-00004a60: 2c20 302e 3235 5d2c 2022 7879 7a22 3a20  , 0.25], "xyz": 
+-00004a70: 5b33 2e34 3937 3834 362c 2035 2e32 3436  [3.497846, 5.246
+-00004a80: 3736 3930 3030 3030 3030 3030 352c 2031  7690000000005, 1
+-00004a90: 2e37 3438 3932 335d 2c20 226c 6162 656c  .748923], "label
+-00004aa0: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
+-00004ab0: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
+-00004ac0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
+-00004ad0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
+-00004ae0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
+-00004af0: 302e 352c 2030 2e37 3530 3030 3030 3030  0.5, 0.750000000
+-00004b00: 3030 3030 3030 312c 2030 2e37 3530 3030  0000001, 0.75000
+-00004b10: 3030 3030 3030 3030 3030 315d 2c20 2278  00000000001], "x
+-00004b20: 797a 223a 205b 332e 3439 3738 3436 2c20  yz": [3.497846, 
+-00004b30: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
+-00004b40: 3035 2c20 352e 3234 3637 3639 3030 3030  05, 5.2467690000
+-00004b50: 3030 3030 3035 5d2c 2022 6c61 6265 6c22  000005], "label"
+-00004b60: 3a20 224e 6922 2c20 2270 726f 7065 7274  : "Ni", "propert
+-00004b70: 6965 7322 3a20 7b7d 7d5d 2c20 2240 7665  ies": {}}], "@ve
+-00004b80: 7273 696f 6e22 3a20 6e75 6c6c 7dfa 1755  rsion": null}..U
+-00004b90: 6e72 6563 6f67 6e69 7a65 6420 7465 7374  nrecognized test
+-00004ba0: 206e 616d 652e 7201 0000 0072 1100 0000   name.r....r....
+-00004bb0: fa05 446f 6e65 214e 2907 da05 7072 696e  ..Done!N)...prin
+-00004bc0: 7472 0200 0000 da09 6672 6f6d 5f64 6963  tr......from_dic
+-00004bd0: 74da 046a 736f 6eda 056c 6f61 6473 7205  t..json..loadsr.
+-00004be0: 0000 0072 b000 0000 2905 da04 7465 7374  ...r....)...test
+-00004bf0: da06 6d61 7453 7472 5a03 7331 3072 9800  ..matStrZ.s10r..
+-00004c00: 0000 7299 0000 0072 2400 0000 7224 0000  ..r....r$...r$..
+-00004c10: 0072 2800 0000 da07 7072 6f66 696c 6541  .r(.....profileA
+-00004c20: 0100 0073 1a00 0000 0002 0801 0801 061d  ...s............
+-00004c30: 0801 0801 063b 0801 0401 1601 0c01 0a03  .....;..........
+-00004c40: 0801 72bf 0000 0063 0100 0000 0000 0000  ..r....c........
+-00004c50: 0000 0000 0600 0000 0500 0000 4300 0000  ............C...
+-00004c60: 7368 0000 0064 0164 026c 006d 017d 0101  sh...d.d.l.m.}..
+-00004c70: 007c 0064 036b 0272 1a64 047d 026e 1a7c  .|.d.k.r.d.}.n.|
+-00004c80: 0064 056b 0272 2864 067d 026e 0c74 0264  .d.k.r(d.}.n.t.d
+-00004c90: 0783 0101 0064 0153 0074 03a0 0474 05a0  .....d.S.t...t..
+-00004ca0: 067c 02a1 01a1 017d 037c 0367 0164 0814  .|.....}.|.g.d..
+-00004cb0: 007d 047c 0174 077c 0464 0964 0a8d 037d  .}.|.t.|.d.d...}
+-00004cc0: 0574 0264 0b83 0101 0064 0c53 0029 0d7a  .t.d.....d.S.).z
+-00004cd0: 3950 726f 6669 6c65 2074 6865 2070 6172  9Profile the par
+-00004ce0: 616c 6c65 6c20 7665 7273 696f 6e20 6f66  allel version of
+-00004cf0: 2074 6865 2064 6573 6372 6970 746f 7220   the descriptor 
+-00004d00: 6765 6e65 7261 746f 722e 7201 0000 0029  generator.r....)
+-00004d10: 01da 0b70 726f 6365 7373 5f6d 6170 72b3  ...process_mapr.
+-00004d20: 0000 0072 b400 0000 72b5 0000 0072 b600  ...r....r....r..
+-00004d30: 0000 72b7 0000 0069 e803 0000 7211 0000  ..r....i....r...
+-00004d40: 0029 01da 0b6d 6178 5f77 6f72 6b65 7273  .)...max_workers
+-00004d50: 72b8 0000 0072 2100 0000 2908 da17 7471  r....r!...)...tq
+-00004d60: 646d 2e63 6f6e 7472 6962 2e63 6f6e 6375  dm.contrib.concu
+-00004d70: 7272 656e 7472 c000 0000 72b9 0000 0072  rrentr....r....r
+-00004d80: 0200 0000 72ba 0000 0072 bb00 0000 72bc  ....r....r....r.
+-00004d90: 0000 0072 b000 0000 2906 72bd 0000 0072  ...r....).r....r
+-00004da0: c000 0000 72be 0000 0072 9800 0000 5a05  ....r....r....Z.
+-00004db0: 7331 3030 30da 0864 6573 634c 6973 7472  s1000..descListr
+-00004dc0: 2400 0000 7224 0000 0072 2800 0000 da0f  $...r$...r(.....
+-00004dd0: 7072 6f66 696c 6550 6172 616c 6c65 6caa  profileParallel.
+-00004de0: 0100 0073 1800 0000 0002 0c01 0801 061d  ...s............
+-00004df0: 0801 063b 0801 0401 1002 0a01 0e01 0801  ...;............
+-00004e00: 72c4 0000 00da 085f 5f6d 6169 6e5f 5f29  r......__main__)
+-00004e10: 0172 bd00 0000 72b5 0000 0029 0172 0100  .r....r....).r..
+-00004e20: 0000 2901 72b3 0000 0029 0172 b300 0000  ..).r....).r....
+-00004e30: 2924 723a 0000 0072 bb00 0000 da05 6e75  )$r:...r......nu
+-00004e40: 6d70 7972 2f00 0000 da02 6f73 da0d 7079  mpyr/.....os..py
+-00004e50: 6d61 7467 656e 2e63 6f72 6572 0200 0000  matgen.corer....
+-00004e60: 7203 0000 005a 1b70 796d 6174 6765 6e2e  r....Z.pymatgen.
+-00004e70: 616e 616c 7973 6973 2e6c 6f63 616c 5f65  analysis.local_e
+-00004e80: 6e76 7204 0000 0072 0500 0000 da06 7479  nvr....r......ty
+-00004e90: 7069 6e67 7206 0000 0072 b100 0000 5a13  pingr....r....Z.
+-00004ea0: 7065 7269 6f64 6963 5f74 6162 6c65 5f73  periodic_table_s
+-00004eb0: 697a 65da 076c 6f61 6474 7874 da04 7061  ize..loadtxt..pa
+-00004ec0: 7468 da04 6a6f 696e da07 6469 726e 616d  th..join..dirnam
+-00004ed0: 65da 085f 5f66 696c 655f 5f72 3100 0000  e..__file__r1...
+-00004ee0: da0a 6e61 6e5f 746f 5f6e 756d 725b 0000  ..nan_to_numr[..
+-00004ef0: 0072 4500 0000 7246 0000 0072 5f00 0000  .rE...rF...r_...
+-00004f00: 72a8 0000 0072 7700 0000 7285 0000 00da  r....rw...r.....
+-00004f10: 076e 6461 7272 6179 72b0 0000 00da 0373  .ndarrayr......s
+-00004f20: 7472 72b2 0000 0072 bf00 0000 72c4 0000  trr....r....r...
+-00004f30: 0072 4f00 0000 7224 0000 0072 2400 0000  .rO...r$...r$...
+-00004f40: 7224 0000 0072 2800 0000 da08 3c6d 6f64  r$...r(.....<mod
+-00004f50: 756c 653e 0a00 0000 733c 0000 0008 0108  ule>....s<......
+-00004f60: 0108 0108 0110 010c 010c 010c 0202 0302  ................
+-00004f70: fd04 0804 0120 010a 0208 0106 ff06 030e  ..... ..........
+-00004f80: 410e 1212 1814 460a 1412 5512 050a 690a  A.....F...U...i.
+-00004f90: 670a 010a 010a 010a 01                   g........
++00002ac0: 3c01 0000 7302 0000 0000 0272 b000 0000  <...s......r....
++00002ad0: fa0b 4a56 4153 502d 3130 3030 3172 1100  ..JVASP-10001r..
++00002ae0: 0000 6302 0000 0000 0000 0000 0000 0007  ..c.............
++00002af0: 0000 0008 0000 0043 0000 0073 ae00 0000  .......C...s....
++00002b00: 7c00 6401 6b02 7216 7400 6402 8301 0100  |.d.k.r.t.d.....
++00002b10: 6403 7d02 6e22 7c00 6404 6b02 722c 7400  d.}.n"|.d.k.r,t.
++00002b20: 6405 8301 0100 6406 7d02 6e0c 7400 6407  d.....d.}.n.t.d.
++00002b30: 8301 0100 6408 5300 7401 a002 7403 a004  ....d.S.t...t...
++00002b40: 7c02 a101 a101 6701 7c01 1400 7d03 7405  |.....g.|...}.t.
++00002b50: 7c03 8301 4400 5d0c 7d04 7406 7c04 8301  |...D.].}.t.|...
++00002b60: 7d05 7156 7407 6409 640a 8302 8f24 7d06  }.qVt.d.d....$}.
++00002b70: 7c06 a008 640b 640c 8400 7c05 4400 8301  |...d.d...|.D...
++00002b80: a101 0100 5700 6408 0400 0400 8303 0100  ....W.d.........
++00002b90: 6e10 3100 7398 3000 0100 0100 0100 5900  n.1.s.0.......Y.
++00002ba0: 0100 7400 640d 8301 0100 6408 5300 290e  ..t.d.....d.S.).
++00002bb0: 7a43 5072 6f66 696c 6573 2074 6865 2064  zCProfiles the d
++00002bc0: 6573 6372 6970 746f 7220 696e 2073 6572  escriptor in ser
++00002bd0: 6965 7320 7573 696e 6720 6f6e 6520 6f66  ies using one of
++00002be0: 2074 6865 2074 6573 7420 7374 7275 6374   the test struct
++00002bf0: 7572 6573 2e72 b100 0000 7a54 5072 6f66  ures.r....zTProf
++00002c00: 696c 696e 672f 7465 7374 696e 6720 7461  iling/testing ta
++00002c10: 736b 2e20 5769 6c6c 2063 616c 6375 6c61  sk. Will calcula
++00002c20: 7465 2061 2064 6573 6372 6970 746f 7220  te a descriptor 
++00002c30: 666f 7220 4c69 3220 5a72 3120 5465 3120  for Li2 Zr1 Te1 
++00002c40: 4f36 2028 4a56 4153 502d 3130 3030 3129  O6 (JVASP-10001)
++00002c50: e146 0a00 007b 2240 6d6f 6475 6c65 223a  .F...{"@module":
++00002c60: 2022 7079 6d61 7467 656e 2e63 6f72 652e   "pymatgen.core.
++00002c70: 7374 7275 6374 7572 6522 2c20 2240 636c  structure", "@cl
++00002c80: 6173 7322 3a20 2253 7472 7563 7475 7265  ass": "Structure
++00002c90: 222c 2022 6368 6172 6765 223a 206e 756c  ", "charge": nul
++00002ca0: 6c2c 2022 6c61 7474 6963 6522 3a20 7b22  l, "lattice": {"
++00002cb0: 6d61 7472 6978 223a 205b 5b34 2e35 3939  matrix": [[4.599
++00002cc0: 3330 3536 3532 3636 3234 3539 2c20 302e  305652662459, 0.
++00002cd0: 3030 3938 3031 3530 3736 3939 3838 3233  0098015076998823
++00002ce0: 2c20 332e 3130 3532 3631 3238 3635 3434  , 3.105261286544
++00002cf0: 3337 3336 5d2c 205b 312e 3635 3533 3235  3736], [1.655325
++00002d00: 3737 3236 3230 3436 3533 2c20 342e 3239  7726204653, 4.29
++00002d10: 3131 3038 3437 3538 3534 3731 322c 2033  1108475854712, 3
++00002d20: 2e31 3035 3236 3032 3933 3839 3739 3536  .105260293897956
++00002d30: 355d 2c20 5b30 2e30 3134 3235 3431 3231  5], [0.014254121
++00002d40: 3439 3139 3734 392c 2030 2e30 3039 3830  4919749, 0.00980
++00002d50: 3235 3039 3939 3936 3133 312c 2035 2e35  25099996131, 5.5
++00002d60: 3439 3431 3931 3431 3836 3633 3531 5d5d  49419141866351]]
++00002d70: 2c20 2261 223a 2035 2e35 3439 3434 3634  , "a": 5.5494464
++00002d80: 3738 3135 3233 3236 2c20 2262 223a 2035  78152326, "b": 5
++00002d90: 2e35 3439 3434 3635 3336 3137 3933 3433  .549446536179343
++00002da0: 2c20 2263 223a 2035 2e35 3439 3434 3631  , "c": 5.5494461
++00002db0: 3035 3831 3034 3233 2c20 2261 6c70 6861  05810423, "alpha
++00002dc0: 223a 2035 352e 3832 3731 3434 3539 3938  ": 55.8271445998
++00002dd0: 3538 3332 2c20 2262 6574 6122 3a20 3535  5832, "beta": 55
++00002de0: 2e38 3237 3134 3031 3432 3839 3337 312c  .82714014289371,
++00002df0: 2022 6761 6d6d 6122 3a20 3535 2e38 3237   "gamma": 55.827
++00002e00: 3133 3937 3237 3739 3039 322c 2022 766f  13972779092, "vo
++00002e10: 6c75 6d65 223a 2031 3039 2e31 3534 3834  lume": 109.15484
++00002e20: 3632 3536 3432 3734 337d 2c20 2273 6974  625642743}, "sit
++00002e30: 6573 223a 205b 7b22 7370 6563 6965 7322  es": [{"species"
++00002e40: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00002e50: 4c69 222c 2022 6f63 6375 223a 2031 2e30  Li", "occu": 1.0
++00002e60: 7d5d 2c20 2261 6263 223a 205b 302e 3237  }], "abc": [0.27
++00002e70: 3338 3738 3438 3732 3636 3939 3234 2c20  38784872669924, 
++00002e80: 302e 3237 3338 3738 3438 3732 3637 3034  0.27387848726704
++00002e90: 3037 2c20 302e 3237 3338 3738 3438 3732  07, 0.2738784872
++00002ea0: 3637 3330 3332 5d2c 2022 7879 7a22 3a20  673032], "xyz": 
++00002eb0: 5b31 2e37 3136 3931 3238 3930 3430 3037  [1.7169128904007
++00002ec0: 3036 332c 2031 2e31 3830 3631 3134 3136  063, 1.180611416
++00002ed0: 3737 3737 3631 332c 2033 2e32 3230 3739  7777613, 3.22079
++00002ee0: 3437 3735 3337 3732 3738 5d2c 2022 6c61  4775377278], "la
++00002ef0: 6265 6c22 3a20 224c 6922 2c20 2270 726f  bel": "Li", "pro
++00002f00: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++00002f10: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++00002f20: 656d 656e 7422 3a20 224c 6922 2c20 226f  ement": "Li", "o
++00002f30: 6363 7522 3a20 312e 307d 5d2c 2022 6162  ccu": 1.0}], "ab
++00002f40: 6322 3a20 5b30 2e37 3835 3232 3732 3031  c": [0.785227201
++00002f50: 3037 3238 3036 392c 2030 2e37 3835 3232  0728069, 0.78522
++00002f60: 3732 3031 3037 3238 3835 362c 2030 2e37  72010728856, 0.7
++00002f70: 3835 3232 3732 3031 3037 3333 3135 5d2c  85227201073315],
++00002f80: 2022 7879 7a22 3a20 5b34 2e39 3232 3439   "xyz": [4.92249
++00002f90: 3934 3531 3733 3939 3635 2c20 332e 3338  9451739965, 3.38
++00002fa0: 3438 3838 3730 3539 3433 3439 3237 2c20  48887059434927, 
++00002fb0: 392e 3233 3432 3235 3333 3831 3633 3633  9.23422533816363
++00002fc0: 335d 2c20 226c 6162 656c 223a 2022 4c69  3], "label": "Li
++00002fd0: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00002fe0: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00002ff0: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00003000: 4f22 2c20 226f 6363 7522 3a20 312e 307d  O", "occu": 1.0}
++00003010: 5d2c 2022 6162 6322 3a20 5b30 2e38 3636  ], "abc": [0.866
++00003020: 3939 3634 3435 3436 3631 3132 342c 2030  9964454661124, 0
++00003030: 2e36 3034 3038 3938 3832 3039 3231 3134  .604089882092114
++00003040: 2c20 302e 3234 3138 3231 3736 3938 3733  , 0.241821769873
++00003050: 3134 335d 2c20 2278 797a 223a 205b 342e  143], "xyz": [4.
++00003060: 3939 3039 3934 3136 3031 3634 3036 312c  990994160164061,
++00003070: 2032 2e36 3033 3038 3335 3435 3837 3638   2.6030835458768
++00003080: 3536 2c20 352e 3931 3030 3737 3138 3131  56, 5.9100771811
++00003090: 3337 3635 385d 2c20 226c 6162 656c 223a  37658], "label":
++000030a0: 2022 4f22 2c20 2270 726f 7065 7274 6965   "O", "propertie
++000030b0: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++000030c0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++000030d0: 3a20 224f 222c 2022 6f63 6375 223a 2031  : "O", "occu": 1
++000030e0: 2e30 7d5d 2c20 2261 6263 223a 205b 302e  .0}], "abc": [0.
++000030f0: 3731 3738 3430 3839 3435 3239 3738 382c  717840894529788,
++00003100: 2030 2e31 3231 3336 3735 3838 3936 3238   0.1213675889628
++00003110: 3638 332c 2030 2e33 3933 3533 3730 3039  683, 0.393537009
++00003120: 3138 3639 3733 5d2c 2022 7879 7a22 3a20  186973], "xyz": 
++00003130: 5b33 2e35 3038 3038 3231 3036 3233 3437  [3.5080821062347
++00003140: 3133 2c20 302e 3533 3136 3935 3036 3332  13, 0.5316950632
++00003150: 3135 3431 322c 2034 2e37 3839 3836 3333  15412, 4.7898633
++00003160: 3036 3436 3932 3738 5d2c 2022 6c61 6265  06469278], "labe
++00003170: 6c22 3a20 224f 222c 2022 7072 6f70 6572  l": "O", "proper
++00003180: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00003190: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000031a0: 6e74 223a 2022 4f22 2c20 226f 6363 7522  nt": "O", "occu"
++000031b0: 3a20 312e 307d 5d2c 2022 6162 6322 3a20  : 1.0}], "abc": 
++000031c0: 5b30 2e31 3231 3336 3735 3838 3936 3338  [0.1213675889638
++000031d0: 3430 322c 2030 2e33 3933 3533 3730 3039  402, 0.393537009
++000031e0: 3138 3733 3934 332c 2030 2e37 3137 3834  1873943, 0.71784
++000031f0: 3038 3934 3532 3833 3338 345d 2c20 2278  08945283384], "x
++00003200: 797a 223a 205b 312e 3231 3938 3730 3738  yz": [1.21987078
++00003210: 3330 3831 3738 3936 2c20 312e 3639 3639  30817896, 1.6969
++00003220: 3336 3232 3335 3931 3033 3137 2c20 352e  362235910317, 5.
++00003230: 3538 3235 3132 3932 3531 3639 3634 5d2c  58251292516964],
++00003240: 2022 6c61 6265 6c22 3a20 224f 222c 2022   "label": "O", "
++00003250: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
++00003260: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
++00003270: 2265 6c65 6d65 6e74 223a 2022 4f22 2c20  "element": "O", 
++00003280: 226f 6363 7522 3a20 312e 307d 5d2c 2022  "occu": 1.0}], "
++00003290: 6162 6322 3a20 5b30 2e33 3933 3533 3730  abc": [0.3935370
++000032a0: 3039 3138 3631 3931 352c 2030 2e37 3137  091861915, 0.717
++000032b0: 3834 3038 3934 3532 3933 3835 362c 2030  8408945293856, 0
++000032c0: 2e31 3231 3336 3735 3838 3936 3334 3031  .121367588963401
++000032d0: 345d 2c20 2278 797a 223a 205b 322e 3939  4], "xyz": [2.99
++000032e0: 3939 3837 3531 3235 3935 3632 322c 2033  9987512595622, 3
++000032f0: 2e30 3835 3338 3031 3039 3836 3033 3434  .085380109860344
++00003300: 2c20 342e 3132 3436 3337 3638 3739 3632  , 4.124637687962
++00003310: 3239 375d 2c20 226c 6162 656c 223a 2022  297], "label": "
++00003320: 4f22 2c20 2270 726f 7065 7274 6965 7322  O", "properties"
++00003330: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++00003340: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++00003350: 224f 222c 2022 6f63 6375 223a 2031 2e30  "O", "occu": 1.0
++00003360: 7d5d 2c20 2261 6263 223a 205b 302e 3234  }], "abc": [0.24
++00003370: 3138 3231 3736 3938 3732 3135 3733 2c20  18217698721573, 
++00003380: 302e 3836 3639 3936 3434 3534 3637 3132  0.86699644546712
++00003390: 3231 2c20 302e 3630 3430 3839 3838 3230  21, 0.6040898820
++000033a0: 3932 3135 3133 5d2c 2022 7879 7a22 3a20  921513], "xyz": 
++000033b0: 5b32 2e35 3535 3938 3435 3634 3633 3333  [2.5559845646333
++000033c0: 3239 2c20 332e 3732 3836 3637 3631 3037  29, 3.7286676107
++000033d0: 3239 3134 392c 2036 2e37 3935 3531 3733  29149, 6.7955173
++000033e0: 3732 3337 3733 3433 5d2c 2022 6c61 6265  72377343], "labe
++000033f0: 6c22 3a20 224f 222c 2022 7072 6f70 6572  l": "O", "proper
++00003400: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00003410: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++00003420: 6e74 223a 2022 4f22 2c20 226f 6363 7522  nt": "O", "occu"
++00003430: 3a20 312e 307d 5d2c 2022 6162 6322 3a20  : 1.0}], "abc": 
++00003440: 5b30 2e36 3034 3038 3938 3832 3039 3333  [0.6040898820933
++00003450: 3131 352c 2030 2e32 3431 3832 3137 3639  115, 0.241821769
++00003460: 3837 3233 3633 372c 2030 2e38 3636 3939  8723637, 0.86699
++00003470: 3634 3435 3436 3634 3035 395d 2c20 2278  64454664059], "x
++00003480: 797a 223a 205b 332e 3139 3130 3436 3039  yz": [3.19104609
++00003490: 3031 3435 3137 332c 2031 2e30 3532 3130  0145173, 1.05210
++000034a0: 3331 3739 3330 3235 3539 352c 2037 2e34  31793025595, 7.4
++000034b0: 3338 3130 3331 3335 3034 3336 3533 355d  381031350436535]
++000034c0: 2c20 226c 6162 656c 223a 2022 4f22 2c20  , "label": "O", 
++000034d0: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++000034e0: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++000034f0: 7b22 656c 656d 656e 7422 3a20 2254 6522  {"element": "Te"
++00003500: 2c20 226f 6363 7522 3a20 312e 307d 5d2c  , "occu": 1.0}],
++00003510: 2022 6162 6322 3a20 5b30 2e34 3936 3539   "abc": [0.49659
++00003520: 3035 3631 3035 3037 3335 332c 2030 2e34  05610507353, 0.4
++00003530: 3936 3539 3035 3631 3035 3037 3335 352c  965905610507355,
++00003540: 2030 2e34 3936 3539 3035 3631 3035 3037   0.4965905610507
++00003550: 3336 315d 2c20 2278 797a 223a 205b 332e  361], "xyz": [3.
++00003560: 3131 3330 3639 3339 3038 3335 3739 332c  113069390835793,
++00003570: 2032 2e31 3430 3635 3931 3335 3730 3234   2.1406591357024
++00003580: 3938 342c 2035 2e38 3339 3837 3535 3631  984, 5.839875561
++00003590: 3231 3436 3632 345d 2c20 226c 6162 656c  2146624], "label
++000035a0: 223a 2022 5465 222c 2022 7072 6f70 6572  ": "Te", "proper
++000035b0: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++000035c0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000035d0: 6e74 223a 2022 5a72 222c 2022 6f63 6375  nt": "Zr", "occu
++000035e0: 223a 2031 2e30 7d5d 2c20 2261 6263 223a  ": 1.0}], "abc":
++000035f0: 205b 302e 3030 3036 3530 3136 3034 3938   [0.000650160498
++00003600: 3036 3638 2c20 302e 3030 3036 3530 3136  0668, 0.00065016
++00003610: 3034 3938 3039 3238 2c20 302e 3030 3036  04980928, 0.0006
++00003620: 3530 3136 3034 3938 3233 3434 5d2c 2022  501604982344], "
++00003630: 7879 7a22 3a20 5b30 2e30 3034 3037 3537  xyz": [0.0040757
++00003640: 3831 3734 3934 3630 3336 2c20 302e 3030  8174946036, 0.00
++00003650: 3238 3032 3635 3439 3831 3934 3531 3932  2802654981945192
++00003660: 2c20 302e 3030 3736 3435 3834 3839 3138  , 0.007645848918
++00003670: 3236 3330 3736 5d2c 2022 6c61 6265 6c22  263076], "label"
++00003680: 3a20 225a 7222 2c20 2270 726f 7065 7274  : "Zr", "propert
++00003690: 6965 7322 3a20 7b7d 7d5d 7dda 0d64 696c  ies": {}}]}..dil
++000036a0: 7574 654e 6941 6c6c 6f79 7a4d 5072 6f66  uteNiAlloyzMProf
++000036b0: 696c 696e 672f 7465 7374 696e 6720 7461  iling/testing ta
++000036c0: 736b 2e20 5769 6c6c 2063 616c 6375 6c61  sk. Will calcula
++000036d0: 7465 2061 2064 6573 6372 6970 746f 7220  te a descriptor 
++000036e0: 666f 7220 6120 6469 6c75 7465 2046 4343  for a dilute FCC
++000036f0: 204e 6933 3143 7231 2ee1 d414 0000 7b22   Ni31Cr1......{"
++00003700: 406d 6f64 756c 6522 3a20 2270 796d 6174  @module": "pymat
++00003710: 6765 6e2e 636f 7265 2e73 7472 7563 7475  gen.core.structu
++00003720: 7265 222c 2022 4063 6c61 7373 223a 2022  re", "@class": "
++00003730: 5374 7275 6374 7572 6522 2c20 2263 6861  Structure", "cha
++00003740: 7267 6522 3a20 6e75 6c6c 2c20 226c 6174  rge": null, "lat
++00003750: 7469 6365 223a 207b 226d 6174 7269 7822  tice": {"matrix"
++00003760: 3a20 5b5b 362e 3939 3536 3932 2c20 302e  : [[6.995692, 0.
++00003770: 302c 2030 2e30 5d2c 205b 302e 302c 2036  0, 0.0], [0.0, 6
++00003780: 2e39 3935 3639 322c 2030 2e30 5d2c 205b  .995692, 0.0], [
++00003790: 302e 302c 2030 2e30 2c20 362e 3939 3536  0.0, 0.0, 6.9956
++000037a0: 3932 5d5d 2c20 2261 223a 2036 2e39 3935  92]], "a": 6.995
++000037b0: 3639 322c 2022 6222 3a20 362e 3939 3536  692, "b": 6.9956
++000037c0: 3932 2c20 2263 223a 2036 2e39 3935 3639  92, "c": 6.99569
++000037d0: 322c 2022 616c 7068 6122 3a20 3930 2e30  2, "alpha": 90.0
++000037e0: 2c20 2262 6574 6122 3a20 3930 2e30 2c20  , "beta": 90.0, 
++000037f0: 2267 616d 6d61 223a 2039 302e 302c 2022  "gamma": 90.0, "
++00003800: 766f 6c75 6d65 223a 2033 3432 2e33 3637  volume": 342.367
++00003810: 3131 3336 3536 3139 3234 337d 2c20 2273  11365619243}, "s
++00003820: 6974 6573 223a 205b 7b22 7370 6563 6965  ites": [{"specie
++00003830: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
++00003840: 2022 4372 222c 2022 6f63 6375 223a 2031   "Cr", "occu": 1
++00003850: 7d5d 2c20 2261 6263 223a 205b 302e 302c  }], "abc": [0.0,
++00003860: 2030 2e30 2c20 302e 305d 2c20 2278 797a   0.0, 0.0], "xyz
++00003870: 223a 205b 302e 302c 2030 2e30 2c20 302e  ": [0.0, 0.0, 0.
++00003880: 305d 2c20 226c 6162 656c 223a 2022 4372  0], "label": "Cr
++00003890: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++000038a0: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++000038b0: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++000038c0: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++000038d0: 2c20 2261 6263 223a 205b 302e 302c 2030  , "abc": [0.0, 0
++000038e0: 2e30 2c20 302e 355d 2c20 2278 797a 223a  .0, 0.5], "xyz":
++000038f0: 205b 302e 302c 2030 2e30 2c20 332e 3439   [0.0, 0.0, 3.49
++00003900: 3738 3436 5d2c 2022 6c61 6265 6c22 3a20  7846], "label": 
++00003910: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
++00003920: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++00003930: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++00003940: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
++00003950: 317d 5d2c 2022 6162 6322 3a20 5b30 2e30  1}], "abc": [0.0
++00003960: 2c20 302e 352c 2030 2e30 5d2c 2022 7879  , 0.5, 0.0], "xy
++00003970: 7a22 3a20 5b30 2e30 2c20 332e 3439 3738  z": [0.0, 3.4978
++00003980: 3436 2c20 302e 305d 2c20 226c 6162 656c  46, 0.0], "label
++00003990: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++000039a0: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++000039b0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000039c0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000039d0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000039e0: 302e 302c 2030 2e35 2c20 302e 355d 2c20  0.0, 0.5, 0.5], 
++000039f0: 2278 797a 223a 205b 302e 302c 2033 2e34  "xyz": [0.0, 3.4
++00003a00: 3937 3834 362c 2033 2e34 3937 3834 365d  97846, 3.497846]
++00003a10: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00003a20: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++00003a30: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++00003a40: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++00003a50: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++00003a60: 2261 6263 223a 205b 302e 352c 2030 2e30  "abc": [0.5, 0.0
++00003a70: 2c20 302e 305d 2c20 2278 797a 223a 205b  , 0.0], "xyz": [
++00003a80: 332e 3439 3738 3436 2c20 302e 302c 2030  3.497846, 0.0, 0
++00003a90: 2e30 5d2c 2022 6c61 6265 6c22 3a20 224e  .0], "label": "N
++00003aa0: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
++00003ab0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++00003ac0: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++00003ad0: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
++00003ae0: 5d2c 2022 6162 6322 3a20 5b30 2e35 2c20  ], "abc": [0.5, 
++00003af0: 302e 302c 2030 2e35 5d2c 2022 7879 7a22  0.0, 0.5], "xyz"
++00003b00: 3a20 5b33 2e34 3937 3834 362c 2030 2e30  : [3.497846, 0.0
++00003b10: 2c20 332e 3439 3738 3436 5d2c 2022 6c61  , 3.497846], "la
++00003b20: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
++00003b30: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++00003b40: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++00003b50: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
++00003b60: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
++00003b70: 3a20 5b30 2e35 2c20 302e 352c 2030 2e30  : [0.5, 0.5, 0.0
++00003b80: 5d2c 2022 7879 7a22 3a20 5b33 2e34 3937  ], "xyz": [3.497
++00003b90: 3834 362c 2033 2e34 3937 3834 362c 2030  846, 3.497846, 0
++00003ba0: 2e30 5d2c 2022 6c61 6265 6c22 3a20 224e  .0], "label": "N
++00003bb0: 6922 2c20 2270 726f 7065 7274 6965 7322  i", "properties"
++00003bc0: 3a20 7b7d 7d2c 207b 2273 7065 6369 6573  : {}}, {"species
++00003bd0: 223a 205b 7b22 656c 656d 656e 7422 3a20  ": [{"element": 
++00003be0: 224e 6922 2c20 226f 6363 7522 3a20 317d  "Ni", "occu": 1}
++00003bf0: 5d2c 2022 6162 6322 3a20 5b30 2e35 2c20  ], "abc": [0.5, 
++00003c00: 302e 352c 2030 2e35 5d2c 2022 7879 7a22  0.5, 0.5], "xyz"
++00003c10: 3a20 5b33 2e34 3937 3834 362c 2033 2e34  : [3.497846, 3.4
++00003c20: 3937 3834 362c 2033 2e34 3937 3834 365d  97846, 3.497846]
++00003c30: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00003c40: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++00003c50: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++00003c60: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++00003c70: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++00003c80: 2261 6263 223a 205b 302e 3235 2c20 302e  "abc": [0.25, 0.
++00003c90: 3235 2c20 302e 305d 2c20 2278 797a 223a  25, 0.0], "xyz":
++00003ca0: 205b 312e 3734 3839 3233 2c20 312e 3734   [1.748923, 1.74
++00003cb0: 3839 3233 2c20 302e 305d 2c20 226c 6162  8923, 0.0], "lab
++00003cc0: 656c 223a 2022 4e69 222c 2022 7072 6f70  el": "Ni", "prop
++00003cd0: 6572 7469 6573 223a 207b 7d7d 2c20 7b22  erties": {}}, {"
++00003ce0: 7370 6563 6965 7322 3a20 5b7b 2265 6c65  species": [{"ele
++00003cf0: 6d65 6e74 223a 2022 4e69 222c 2022 6f63  ment": "Ni", "oc
++00003d00: 6375 223a 2031 7d5d 2c20 2261 6263 223a  cu": 1}], "abc":
++00003d10: 205b 302e 3235 2c20 302e 3235 2c20 302e   [0.25, 0.25, 0.
++00003d20: 355d 2c20 2278 797a 223a 205b 312e 3734  5], "xyz": [1.74
++00003d30: 3839 3233 2c20 312e 3734 3839 3233 2c20  8923, 1.748923, 
++00003d40: 332e 3439 3738 3436 5d2c 2022 6c61 6265  3.497846], "labe
++00003d50: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
++00003d60: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
++00003d70: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
++00003d80: 656e 7422 3a20 224e 6922 2c20 226f 6363  ent": "Ni", "occ
++00003d90: 7522 3a20 317d 5d2c 2022 6162 6322 3a20  u": 1}], "abc": 
++00003da0: 5b30 2e32 352c 2030 2e37 3530 3030 3030  [0.25, 0.7500000
++00003db0: 3030 3030 3030 3030 312c 2030 2e30 5d2c  000000001, 0.0],
++00003dc0: 2022 7879 7a22 3a20 5b31 2e37 3438 3932   "xyz": [1.74892
++00003dd0: 332c 2035 2e32 3436 3736 3930 3030 3030  3, 5.24676900000
++00003de0: 3030 3030 352c 2030 2e30 5d2c 2022 6c61  00005, 0.0], "la
++00003df0: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
++00003e00: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++00003e10: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++00003e20: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
++00003e30: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
++00003e40: 3a20 5b30 2e32 352c 2030 2e37 3530 3030  : [0.25, 0.75000
++00003e50: 3030 3030 3030 3030 3030 312c 2030 2e35  00000000001, 0.5
++00003e60: 5d2c 2022 7879 7a22 3a20 5b31 2e37 3438  ], "xyz": [1.748
++00003e70: 3932 332c 2035 2e32 3436 3736 3930 3030  923, 5.246769000
++00003e80: 3030 3030 3030 352c 2033 2e34 3937 3834  0000005, 3.49784
++00003e90: 365d 2c20 226c 6162 656c 223a 2022 4e69  6], "label": "Ni
++00003ea0: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00003eb0: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00003ec0: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00003ed0: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++00003ee0: 2c20 2261 6263 223a 205b 302e 3735 3030  , "abc": [0.7500
++00003ef0: 3030 3030 3030 3030 3030 3031 2c20 302e  000000000001, 0.
++00003f00: 3235 2c20 302e 305d 2c20 2278 797a 223a  25, 0.0], "xyz":
++00003f10: 205b 352e 3234 3637 3639 3030 3030 3030   [5.246769000000
++00003f20: 3030 3035 2c20 312e 3734 3839 3233 2c20  0005, 1.748923, 
++00003f30: 302e 305d 2c20 226c 6162 656c 223a 2022  0.0], "label": "
++00003f40: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
++00003f50: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
++00003f60: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
++00003f70: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
++00003f80: 7d5d 2c20 2261 6263 223a 205b 302e 3735  }], "abc": [0.75
++00003f90: 3030 3030 3030 3030 3030 3030 3031 2c20  00000000000001, 
++00003fa0: 302e 3235 2c20 302e 355d 2c20 2278 797a  0.25, 0.5], "xyz
++00003fb0: 223a 205b 352e 3234 3637 3639 3030 3030  ": [5.2467690000
++00003fc0: 3030 3030 3035 2c20 312e 3734 3839 3233  000005, 1.748923
++00003fd0: 2c20 332e 3439 3738 3436 5d2c 2022 6c61  , 3.497846], "la
++00003fe0: 6265 6c22 3a20 224e 6922 2c20 2270 726f  bel": "Ni", "pro
++00003ff0: 7065 7274 6965 7322 3a20 7b7d 7d2c 207b  perties": {}}, {
++00004000: 2273 7065 6369 6573 223a 205b 7b22 656c  "species": [{"el
++00004010: 656d 656e 7422 3a20 224e 6922 2c20 226f  ement": "Ni", "o
++00004020: 6363 7522 3a20 317d 5d2c 2022 6162 6322  ccu": 1}], "abc"
++00004030: 3a20 5b30 2e37 3530 3030 3030 3030 3030  : [0.75000000000
++00004040: 3030 3030 312c 2030 2e37 3530 3030 3030  00001, 0.7500000
++00004050: 3030 3030 3030 3030 312c 2030 2e30 5d2c  000000001, 0.0],
++00004060: 2022 7879 7a22 3a20 5b35 2e32 3436 3736   "xyz": [5.24676
++00004070: 3930 3030 3030 3030 3030 352c 2035 2e32  90000000005, 5.2
++00004080: 3436 3736 3930 3030 3030 3030 3030 352c  467690000000005,
++00004090: 2030 2e30 5d2c 2022 6c61 6265 6c22 3a20   0.0], "label": 
++000040a0: 224e 6922 2c20 2270 726f 7065 7274 6965  "Ni", "propertie
++000040b0: 7322 3a20 7b7d 7d2c 207b 2273 7065 6369  s": {}}, {"speci
++000040c0: 6573 223a 205b 7b22 656c 656d 656e 7422  es": [{"element"
++000040d0: 3a20 224e 6922 2c20 226f 6363 7522 3a20  : "Ni", "occu": 
++000040e0: 317d 5d2c 2022 6162 6322 3a20 5b30 2e37  1}], "abc": [0.7
++000040f0: 3530 3030 3030 3030 3030 3030 3030 312c  500000000000001,
++00004100: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
++00004110: 3030 312c 2030 2e35 5d2c 2022 7879 7a22  001, 0.5], "xyz"
++00004120: 3a20 5b35 2e32 3436 3736 3930 3030 3030  : [5.24676900000
++00004130: 3030 3030 352c 2035 2e32 3436 3736 3930  00005, 5.2467690
++00004140: 3030 3030 3030 3030 352c 2033 2e34 3937  000000005, 3.497
++00004150: 3834 365d 2c20 226c 6162 656c 223a 2022  846], "label": "
++00004160: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
++00004170: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
++00004180: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
++00004190: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
++000041a0: 7d5d 2c20 2261 6263 223a 205b 302e 3235  }], "abc": [0.25
++000041b0: 2c20 302e 302c 2030 2e32 355d 2c20 2278  , 0.0, 0.25], "x
++000041c0: 797a 223a 205b 312e 3734 3839 3233 2c20  yz": [1.748923, 
++000041d0: 302e 302c 2031 2e37 3438 3932 335d 2c20  0.0, 1.748923], 
++000041e0: 226c 6162 656c 223a 2022 4e69 222c 2022  "label": "Ni", "
++000041f0: 7072 6f70 6572 7469 6573 223a 207b 7d7d  properties": {}}
++00004200: 2c20 7b22 7370 6563 6965 7322 3a20 5b7b  , {"species": [{
++00004210: 2265 6c65 6d65 6e74 223a 2022 4e69 222c  "element": "Ni",
++00004220: 2022 6f63 6375 223a 2031 7d5d 2c20 2261   "occu": 1}], "a
++00004230: 6263 223a 205b 302e 3235 2c20 302e 302c  bc": [0.25, 0.0,
++00004240: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
++00004250: 3030 315d 2c20 2278 797a 223a 205b 312e  001], "xyz": [1.
++00004260: 3734 3839 3233 2c20 302e 302c 2035 2e32  748923, 0.0, 5.2
++00004270: 3436 3736 3930 3030 3030 3030 3030 355d  467690000000005]
++00004280: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00004290: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++000042a0: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++000042b0: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++000042c0: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++000042d0: 2261 6263 223a 205b 302e 3235 2c20 302e  "abc": [0.25, 0.
++000042e0: 352c 2030 2e32 355d 2c20 2278 797a 223a  5, 0.25], "xyz":
++000042f0: 205b 312e 3734 3839 3233 2c20 332e 3439   [1.748923, 3.49
++00004300: 3738 3436 2c20 312e 3734 3839 3233 5d2c  7846, 1.748923],
++00004310: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
++00004320: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++00004330: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++00004340: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++00004350: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++00004360: 6162 6322 3a20 5b30 2e32 352c 2030 2e35  abc": [0.25, 0.5
++00004370: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
++00004380: 3030 3031 5d2c 2022 7879 7a22 3a20 5b31  0001], "xyz": [1
++00004390: 2e37 3438 3932 332c 2033 2e34 3937 3834  .748923, 3.49784
++000043a0: 362c 2035 2e32 3436 3736 3930 3030 3030  6, 5.24676900000
++000043b0: 3030 3030 355d 2c20 226c 6162 656c 223a  00005], "label":
++000043c0: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
++000043d0: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
++000043e0: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
++000043f0: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
++00004400: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
++00004410: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++00004420: 2c20 302e 302c 2030 2e32 355d 2c20 2278  , 0.0, 0.25], "x
++00004430: 797a 223a 205b 352e 3234 3637 3639 3030  yz": [5.24676900
++00004440: 3030 3030 3030 3035 2c20 302e 302c 2031  00000005, 0.0, 1
++00004450: 2e37 3438 3932 335d 2c20 226c 6162 656c  .748923], "label
++00004460: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++00004470: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++00004480: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++00004490: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000044a0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000044b0: 302e 3735 3030 3030 3030 3030 3030 3030  0.75000000000000
++000044c0: 3031 2c20 302e 302c 2030 2e37 3530 3030  01, 0.0, 0.75000
++000044d0: 3030 3030 3030 3030 3030 315d 2c20 2278  00000000001], "x
++000044e0: 797a 223a 205b 352e 3234 3637 3639 3030  yz": [5.24676900
++000044f0: 3030 3030 3030 3035 2c20 302e 302c 2035  00000005, 0.0, 5
++00004500: 2e32 3436 3736 3930 3030 3030 3030 3030  .246769000000000
++00004510: 355d 2c20 226c 6162 656c 223a 2022 4e69  5], "label": "Ni
++00004520: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00004530: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00004540: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00004550: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++00004560: 2c20 2261 6263 223a 205b 302e 3735 3030  , "abc": [0.7500
++00004570: 3030 3030 3030 3030 3030 3031 2c20 302e  000000000001, 0.
++00004580: 352c 2030 2e32 355d 2c20 2278 797a 223a  5, 0.25], "xyz":
++00004590: 205b 352e 3234 3637 3639 3030 3030 3030   [5.246769000000
++000045a0: 3030 3035 2c20 332e 3439 3738 3436 2c20  0005, 3.497846, 
++000045b0: 312e 3734 3839 3233 5d2c 2022 6c61 6265  1.748923], "labe
++000045c0: 6c22 3a20 224e 6922 2c20 2270 726f 7065  l": "Ni", "prope
++000045d0: 7274 6965 7322 3a20 7b7d 7d2c 207b 2273  rties": {}}, {"s
++000045e0: 7065 6369 6573 223a 205b 7b22 656c 656d  pecies": [{"elem
++000045f0: 656e 7422 3a20 224e 6922 2c20 226f 6363  ent": "Ni", "occ
++00004600: 7522 3a20 317d 5d2c 2022 6162 6322 3a20  u": 1}], "abc": 
++00004610: 5b30 2e37 3530 3030 3030 3030 3030 3030  [0.7500000000000
++00004620: 3030 312c 2030 2e35 2c20 302e 3735 3030  001, 0.5, 0.7500
++00004630: 3030 3030 3030 3030 3030 3031 5d2c 2022  000000000001], "
++00004640: 7879 7a22 3a20 5b35 2e32 3436 3736 3930  xyz": [5.2467690
++00004650: 3030 3030 3030 3030 352c 2033 2e34 3937  000000005, 3.497
++00004660: 3834 362c 2035 2e32 3436 3736 3930 3030  846, 5.246769000
++00004670: 3030 3030 3030 355d 2c20 226c 6162 656c  0000005], "label
++00004680: 223a 2022 4e69 222c 2022 7072 6f70 6572  ": "Ni", "proper
++00004690: 7469 6573 223a 207b 7d7d 2c20 7b22 7370  ties": {}}, {"sp
++000046a0: 6563 6965 7322 3a20 5b7b 2265 6c65 6d65  ecies": [{"eleme
++000046b0: 6e74 223a 2022 4e69 222c 2022 6f63 6375  nt": "Ni", "occu
++000046c0: 223a 2031 7d5d 2c20 2261 6263 223a 205b  ": 1}], "abc": [
++000046d0: 302e 302c 2030 2e32 352c 2030 2e32 355d  0.0, 0.25, 0.25]
++000046e0: 2c20 2278 797a 223a 205b 302e 302c 2031  , "xyz": [0.0, 1
++000046f0: 2e37 3438 3932 332c 2031 2e37 3438 3932  .748923, 1.74892
++00004700: 335d 2c20 226c 6162 656c 223a 2022 4e69  3], "label": "Ni
++00004710: 222c 2022 7072 6f70 6572 7469 6573 223a  ", "properties":
++00004720: 207b 7d7d 2c20 7b22 7370 6563 6965 7322   {}}, {"species"
++00004730: 3a20 5b7b 2265 6c65 6d65 6e74 223a 2022  : [{"element": "
++00004740: 4e69 222c 2022 6f63 6375 223a 2031 7d5d  Ni", "occu": 1}]
++00004750: 2c20 2261 6263 223a 205b 302e 302c 2030  , "abc": [0.0, 0
++00004760: 2e32 352c 2030 2e37 3530 3030 3030 3030  .25, 0.750000000
++00004770: 3030 3030 3030 315d 2c20 2278 797a 223a  0000001], "xyz":
++00004780: 205b 302e 302c 2031 2e37 3438 3932 332c   [0.0, 1.748923,
++00004790: 2035 2e32 3436 3736 3930 3030 3030 3030   5.2467690000000
++000047a0: 3030 355d 2c20 226c 6162 656c 223a 2022  005], "label": "
++000047b0: 4e69 222c 2022 7072 6f70 6572 7469 6573  Ni", "properties
++000047c0: 223a 207b 7d7d 2c20 7b22 7370 6563 6965  ": {}}, {"specie
++000047d0: 7322 3a20 5b7b 2265 6c65 6d65 6e74 223a  s": [{"element":
++000047e0: 2022 4e69 222c 2022 6f63 6375 223a 2031   "Ni", "occu": 1
++000047f0: 7d5d 2c20 2261 6263 223a 205b 302e 302c  }], "abc": [0.0,
++00004800: 2030 2e37 3530 3030 3030 3030 3030 3030   0.7500000000000
++00004810: 3030 312c 2030 2e32 355d 2c20 2278 797a  001, 0.25], "xyz
++00004820: 223a 205b 302e 302c 2035 2e32 3436 3736  ": [0.0, 5.24676
++00004830: 3930 3030 3030 3030 3030 352c 2031 2e37  90000000005, 1.7
++00004840: 3438 3932 335d 2c20 226c 6162 656c 223a  48923], "label":
++00004850: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
++00004860: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
++00004870: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
++00004880: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
++00004890: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
++000048a0: 302c 2030 2e37 3530 3030 3030 3030 3030  0, 0.75000000000
++000048b0: 3030 3030 312c 2030 2e37 3530 3030 3030  00001, 0.7500000
++000048c0: 3030 3030 3030 3030 315d 2c20 2278 797a  000000001], "xyz
++000048d0: 223a 205b 302e 302c 2035 2e32 3436 3736  ": [0.0, 5.24676
++000048e0: 3930 3030 3030 3030 3030 352c 2035 2e32  90000000005, 5.2
++000048f0: 3436 3736 3930 3030 3030 3030 3030 355d  467690000000005]
++00004900: 2c20 226c 6162 656c 223a 2022 4e69 222c  , "label": "Ni",
++00004910: 2022 7072 6f70 6572 7469 6573 223a 207b   "properties": {
++00004920: 7d7d 2c20 7b22 7370 6563 6965 7322 3a20  }}, {"species": 
++00004930: 5b7b 2265 6c65 6d65 6e74 223a 2022 4e69  [{"element": "Ni
++00004940: 222c 2022 6f63 6375 223a 2031 7d5d 2c20  ", "occu": 1}], 
++00004950: 2261 6263 223a 205b 302e 352c 2030 2e32  "abc": [0.5, 0.2
++00004960: 352c 2030 2e32 355d 2c20 2278 797a 223a  5, 0.25], "xyz":
++00004970: 205b 332e 3439 3738 3436 2c20 312e 3734   [3.497846, 1.74
++00004980: 3839 3233 2c20 312e 3734 3839 3233 5d2c  8923, 1.748923],
++00004990: 2022 6c61 6265 6c22 3a20 224e 6922 2c20   "label": "Ni", 
++000049a0: 2270 726f 7065 7274 6965 7322 3a20 7b7d  "properties": {}
++000049b0: 7d2c 207b 2273 7065 6369 6573 223a 205b  }, {"species": [
++000049c0: 7b22 656c 656d 656e 7422 3a20 224e 6922  {"element": "Ni"
++000049d0: 2c20 226f 6363 7522 3a20 317d 5d2c 2022  , "occu": 1}], "
++000049e0: 6162 6322 3a20 5b30 2e35 2c20 302e 3235  abc": [0.5, 0.25
++000049f0: 2c20 302e 3735 3030 3030 3030 3030 3030  , 0.750000000000
++00004a00: 3030 3031 5d2c 2022 7879 7a22 3a20 5b33  0001], "xyz": [3
++00004a10: 2e34 3937 3834 362c 2031 2e37 3438 3932  .497846, 1.74892
++00004a20: 332c 2035 2e32 3436 3736 3930 3030 3030  3, 5.24676900000
++00004a30: 3030 3030 355d 2c20 226c 6162 656c 223a  00005], "label":
++00004a40: 2022 4e69 222c 2022 7072 6f70 6572 7469   "Ni", "properti
++00004a50: 6573 223a 207b 7d7d 2c20 7b22 7370 6563  es": {}}, {"spec
++00004a60: 6965 7322 3a20 5b7b 2265 6c65 6d65 6e74  ies": [{"element
++00004a70: 223a 2022 4e69 222c 2022 6f63 6375 223a  ": "Ni", "occu":
++00004a80: 2031 7d5d 2c20 2261 6263 223a 205b 302e   1}], "abc": [0.
++00004a90: 352c 2030 2e37 3530 3030 3030 3030 3030  5, 0.75000000000
++00004aa0: 3030 3030 312c 2030 2e32 355d 2c20 2278  00001, 0.25], "x
++00004ab0: 797a 223a 205b 332e 3439 3738 3436 2c20  yz": [3.497846, 
++00004ac0: 352e 3234 3637 3639 3030 3030 3030 3030  5.24676900000000
++00004ad0: 3035 2c20 312e 3734 3839 3233 5d2c 2022  05, 1.748923], "
++00004ae0: 6c61 6265 6c22 3a20 224e 6922 2c20 2270  label": "Ni", "p
++00004af0: 726f 7065 7274 6965 7322 3a20 7b7d 7d2c  roperties": {}},
++00004b00: 207b 2273 7065 6369 6573 223a 205b 7b22   {"species": [{"
++00004b10: 656c 656d 656e 7422 3a20 224e 6922 2c20  element": "Ni", 
++00004b20: 226f 6363 7522 3a20 317d 5d2c 2022 6162  "occu": 1}], "ab
++00004b30: 6322 3a20 5b30 2e35 2c20 302e 3735 3030  c": [0.5, 0.7500
++00004b40: 3030 3030 3030 3030 3030 3031 2c20 302e  000000000001, 0.
++00004b50: 3735 3030 3030 3030 3030 3030 3030 3031  7500000000000001
++00004b60: 5d2c 2022 7879 7a22 3a20 5b33 2e34 3937  ], "xyz": [3.497
++00004b70: 3834 362c 2035 2e32 3436 3736 3930 3030  846, 5.246769000
++00004b80: 3030 3030 3030 352c 2035 2e32 3436 3736  0000005, 5.24676
++00004b90: 3930 3030 3030 3030 3030 355d 2c20 226c  90000000005], "l
++00004ba0: 6162 656c 223a 2022 4e69 222c 2022 7072  abel": "Ni", "pr
++00004bb0: 6f70 6572 7469 6573 223a 207b 7d7d 5d2c  operties": {}}],
++00004bc0: 2022 4076 6572 7369 6f6e 223a 206e 756c   "@version": nul
++00004bd0: 6c7d fa17 556e 7265 636f 676e 697a 6564  l}..Unrecognized
++00004be0: 2074 6573 7420 6e61 6d65 2e4e 7a15 4b53   test name.Nz.KS
++00004bf0: 3230 3232 5f54 6573 7452 6573 756c 742e  2022_TestResult.
++00004c00: 6373 767a 0277 2b63 0100 0000 0000 0000  csvz.w+c........
++00004c10: 0000 0000 0200 0000 0400 0000 5300 0000  ............S...
++00004c20: 7316 0000 0067 007c 005d 0e7d 017c 019b  s....g.|.].}.|..
++00004c30: 0064 009d 0291 0271 0453 0029 01da 010a  .d.....q.S.)....
++00004c40: 7224 0000 0029 0272 2600 0000 da01 7672  r$...).r&.....vr
++00004c50: 2400 0000 7224 0000 0072 2800 0000 7229  $...r$...r(...r)
++00004c60: 0000 0050 0100 0072 2a00 0000 7a1b 7072  ...P...r*...z.pr
++00004c70: 6f66 696c 652e 3c6c 6f63 616c 733e 2e3c  ofile.<locals>.<
++00004c80: 6c69 7374 636f 6d70 3efa 0544 6f6e 6521  listcomp>..Done!
++00004c90: 2909 da05 7072 696e 7472 0200 0000 da09  )...printr......
++00004ca0: 6672 6f6d 5f64 6963 74da 046a 736f 6eda  from_dict..json.
++00004cb0: 056c 6f61 6473 7205 0000 0072 ae00 0000  .loadsr....r....
++00004cc0: da04 6f70 656e da0a 7772 6974 656c 696e  ..open..writelin
++00004cd0: 6573 2907 da04 7465 7374 da05 6e52 756e  es)...test..nRun
++00004ce0: 73da 066d 6174 5374 72da 0a73 7472 7563  s..matStr..struc
++00004cf0: 744c 6973 7472 9700 0000 7298 0000 0072  tListr....r....r
++00004d00: 9900 0000 7224 0000 0072 2400 0000 7228  ....r$...r$...r(
++00004d10: 0000 00da 0770 726f 6669 6c65 4101 0000  .....profileA...
++00004d20: 731c 0000 0000 0208 0108 0106 0108 0108  s...............
++00004d30: 0106 0208 0104 0116 010c 010a 010c 0132  ...............2
++00004d40: 0172 c300 0000 e9e8 0300 0063 0200 0000  .r.........c....
++00004d50: 0000 0000 0000 0000 0700 0000 0500 0000  ................
++00004d60: 4300 0000 7368 0000 0064 0164 026c 006d  C...sh...d.d.l.m
++00004d70: 017d 0201 007c 0064 036b 0272 1a64 047d  .}...|.d.k.r.d.}
++00004d80: 036e 1a7c 0064 056b 0272 2864 067d 036e  .n.|.d.k.r(d.}.n
++00004d90: 0c74 0264 0783 0101 0064 0853 0074 03a0  .t.d.....d.S.t..
++00004da0: 0474 05a0 067c 03a1 01a1 017d 047c 0467  .t...|.....}.|.g
++00004db0: 017c 0114 007d 057c 0274 077c 0564 0964  .|...}.|.t.|.d.d
++00004dc0: 0a8d 037d 0674 0264 0b83 0101 0064 0853  ...}.t.d.....d.S
++00004dd0: 0029 0c7a 4550 726f 6669 6c65 7320 7468  .).zEProfiles th
++00004de0: 6520 6465 7363 7269 7074 6f72 2069 6e20  e descriptor in 
++00004df0: 7061 7261 6c6c 656c 2075 7369 6e67 206f  parallel using o
++00004e00: 6e65 206f 6620 7468 6520 7465 7374 2073  ne of the test s
++00004e10: 7472 7563 7475 7265 732e 7201 0000 0029  tructures.r....)
++00004e20: 01da 0b70 726f 6365 7373 5f6d 6170 72b1  ...process_mapr.
++00004e30: 0000 0072 b200 0000 72b3 0000 0072 b400  ...r....r....r..
++00004e40: 0000 72b5 0000 004e 7211 0000 0029 01da  ..r....Nr....)..
++00004e50: 0b6d 6178 5f77 6f72 6b65 7273 72b8 0000  .max_workersr...
++00004e60: 0029 08da 1774 7164 6d2e 636f 6e74 7269  .)...tqdm.contri
++00004e70: 622e 636f 6e63 7572 7265 6e74 72c5 0000  b.concurrentr...
++00004e80: 0072 b900 0000 7202 0000 0072 ba00 0000  .r....r....r....
++00004e90: 72bb 0000 0072 bc00 0000 72ae 0000 0029  r....r....r....)
++00004ea0: 0772 bf00 0000 72c0 0000 0072 c500 0000  .r....r....r....
++00004eb0: 72c1 0000 0072 9700 0000 72c2 0000 00da  r....r....r.....
++00004ec0: 0864 6573 634c 6973 7472 2400 0000 7224  .descListr$...r$
++00004ed0: 0000 0072 2800 0000 da0f 7072 6f66 696c  ...r(.....profil
++00004ee0: 6550 6172 616c 6c65 6c53 0100 0073 1600  eParallelS...s..
++00004ef0: 0000 0002 0c01 0801 0601 0801 0602 0801  ................
++00004f00: 0401 1002 0a01 0e01 72c9 0000 00da 085f  ........r......_
++00004f10: 5f6d 6169 6e5f 5f29 0172 bf00 0000 72b3  _main__).r....r.
++00004f20: 0000 0029 0172 0100 0000 2902 72b1 0000  ...).r....).r...
++00004f30: 0072 1100 0000 2902 72b1 0000 0072 c400  .r....).r....r..
++00004f40: 0000 2924 723a 0000 0072 bb00 0000 da05  ..)$r:...r......
++00004f50: 6e75 6d70 7972 2f00 0000 da02 6f73 da0d  numpyr/.....os..
++00004f60: 7079 6d61 7467 656e 2e63 6f72 6572 0200  pymatgen.corer..
++00004f70: 0000 7203 0000 005a 1b70 796d 6174 6765  ..r....Z.pymatge
++00004f80: 6e2e 616e 616c 7973 6973 2e6c 6f63 616c  n.analysis.local
++00004f90: 5f65 6e76 7204 0000 0072 0500 0000 da06  _envr....r......
++00004fa0: 7479 7069 6e67 7206 0000 0072 af00 0000  typingr....r....
++00004fb0: 5a13 7065 7269 6f64 6963 5f74 6162 6c65  Z.periodic_table
++00004fc0: 5f73 697a 65da 076c 6f61 6474 7874 da04  _size..loadtxt..
++00004fd0: 7061 7468 da04 6a6f 696e da07 6469 726e  path..join..dirn
++00004fe0: 616d 65da 085f 5f66 696c 655f 5f72 3100  ame..__file__r1.
++00004ff0: 0000 da0a 6e61 6e5f 746f 5f6e 756d 725b  ....nan_to_numr[
++00005000: 0000 0072 4500 0000 7246 0000 0072 5f00  ...rE...rF...r_.
++00005010: 0000 72a7 0000 0072 7600 0000 7284 0000  ..r....rv...r...
++00005020: 00da 076e 6461 7272 6179 72ae 0000 00da  ...ndarrayr.....
++00005030: 0373 7472 72b0 0000 0072 c300 0000 72c9  .strr....r....r.
++00005040: 0000 0072 4f00 0000 7224 0000 0072 2400  ...rO...r$...r$.
++00005050: 0000 7224 0000 0072 2800 0000 da08 3c6d  ..r$...r(.....<m
++00005060: 6f64 756c 653e 0a00 0000 733c 0000 0008  odule>....s<....
++00005070: 0108 0108 0108 0110 010c 010c 010c 0202  ................
++00005080: 0302 fd04 0804 0120 010a 0208 0106 ff06  ....... ........
++00005090: 030e 410e 1212 1814 460a 1412 5512 050a  ..A.....F...U...
++000050a0: 120a 110a 010a 010a 010a 01              ...........
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_KS2022.csv` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_KS2022.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_KS2022_dilute.csv` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_KS2022_dilute.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/descriptorDefinitions/labels_Ward2017.csv` & `pysipfenn-0.12.0/pysipfenn/descriptorDefinitions/labels_Ward2017.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/modelsSIPFENN/models.json` & `pysipfenn-0.12.0/pysipfenn/modelsSIPFENN/models.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/0-Cr8Fe18Ni4.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/0-Cr8Fe18Ni4.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/1-Cr16Fe8Ni6.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/1-Cr16Fe8Ni6.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/10-Ce4Ti4O12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/10-Ce4Ti4O12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/11-Fe10Ni20.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/11-Fe10Ni20.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/12-Gd4Cr4O12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/12-Gd4Cr4O12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/13-Fe16Ni14.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/13-Fe16Ni14.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/14-Fe24Ni6.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/14-Fe24Ni6.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/15-Ta4Tl4O12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/15-Ta4Tl4O12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/16-Fe18Ni12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/16-Fe18Ni12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/17-Pr4Ga4O12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/17-Pr4Ga4O12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/18-Fe28Ni2.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/18-Fe28Ni2.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/19-Fe4Ni26.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/19-Fe4Ni26.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/2-Fe8Ni22.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/2-Fe8Ni22.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/20-Fe8Ni22.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/20-Fe8Ni22.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/21-Fe10Ni20.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/21-Fe10Ni20.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/22-Fe10Ni20.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/22-Fe10Ni20.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/23-Fe12Ni18.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/23-Fe12Ni18.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/24-Fe16Ni14.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/24-Fe16Ni14.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/25-Fe12Ni18.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/25-Fe12Ni18.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/26-Fe8Ni22.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/26-Fe8Ni22.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/27-Cr28Fe2.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/27-Cr28Fe2.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/28-Fe26Ni4.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/28-Fe26Ni4.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/29-Fe12Ni18.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/29-Fe12Ni18.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/3-Cr18Fe12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/3-Cr18Fe12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/30-Cr26Fe4.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/30-Cr26Fe4.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/31-Li24Al4Ni32.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/31-Li24Al4Ni32.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/4-Fe30.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/4-Fe30.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/5-Cr22Fe8.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/5-Cr22Fe8.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/6-Fe2Ni28.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/6-Fe2Ni28.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/7-Cr18Fe12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/7-Cr18Fe12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/8-Cr2Fe16Ni12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/8-Cr2Fe16Ni12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles/9-Pb8O12.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles/9-Pb8O12.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFilesDescriptorTable.csv` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFilesDescriptorTable.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/1-Zr220Cu280.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/1-Zr220Cu280.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/2-Zr220Cu280.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/2-Zr220Cu280.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/3-Zr220Cu280.POSCAR` & `pysipfenn-0.12.0/pysipfenn/tests/testCaseFiles/exampleInputFiles_500atom/3-Zr220Cu280.POSCAR`
+
+ * *Files identical despite different names*
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/test_KS2022.py` & `pysipfenn-0.12.0/pysipfenn/tests/test_KS2022.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -5,45 +5,45 @@
+ from tqdm import tqdm
+ import numpy as np
+ from natsort import natsorted
+ from importlib import resources
+ 
+ from pysipfenn.descriptorDefinitions import KS2022
+ 
+-with resources.files('pysipfenn').\
+-        joinpath('tests/testCaseFiles/exampleInputFilesDescriptorTable.csv').open('r', newline='') as f:
+-    reader = csv.reader(f)
+-    referenceDescriptorTable = list(reader)
+-
+-labels = referenceDescriptorTable[0]
+-testReferenceData = np.float_(referenceDescriptorTable[1:]).tolist()
+-emptyLabels = [
+-    'mean_WCMagnitude_Shell1', 'mean_WCMagnitude_Shell2', 'mean_WCMagnitude_Shell3',
+-    'mean_NeighDiff_shell1_SpaceGroupNumber', 'var_NeighDiff_shell1_SpaceGroupNumber',
+-    'min_NeighDiff_shell1_SpaceGroupNumber', 'max_NeighDiff_shell1_SpaceGroupNumber',
+-    'range_NeighDiff_shell1_SpaceGroupNumber', 'mean_SpaceGroupNumber', 'maxdiff_SpaceGroupNumber',
+-    'dev_SpaceGroupNumber', 'max_SpaceGroupNumber', 'min_SpaceGroupNumber', 'most_SpaceGroupNumber',
+-    'CanFormIonic']
+-emptyLabels.reverse()
+-emptyLabelsIndx = [labels.index(l) for l in emptyLabels]
+-
+-with resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/') as exampleInputsDir:
+-    exampleInputFiles = natsorted(os.listdir(exampleInputsDir))
+-    testStructures = [Structure.from_file(f'{exampleInputsDir}/{eif}') for eif in exampleInputFiles]
+-
+-functionOutput = [KS2022.generate_descriptor(s).tolist() for s in tqdm(testStructures[:25])]
+-with resources.files('pysipfenn').joinpath('tests/KS2022_TestResult.csv').open('w+', newline='') as f:
+-    f.writelines([f'{v}\n' for v in functionOutput[0]])
+-
+ class TestKS2022(unittest.TestCase):
++    def setUp(self):
++        with resources.files('pysipfenn'). \
++                joinpath('tests/testCaseFiles/exampleInputFilesDescriptorTable.csv').open('r', newline='') as f:
++            reader = csv.reader(f)
++            referenceDescriptorTable = list(reader)
++
++        self.labels = referenceDescriptorTable[0]
++        self.testReferenceData = np.float_(referenceDescriptorTable[1:]).tolist()
++        emptyLabels = [
++            'mean_WCMagnitude_Shell1', 'mean_WCMagnitude_Shell2', 'mean_WCMagnitude_Shell3',
++            'mean_NeighDiff_shell1_SpaceGroupNumber', 'var_NeighDiff_shell1_SpaceGroupNumber',
++            'min_NeighDiff_shell1_SpaceGroupNumber', 'max_NeighDiff_shell1_SpaceGroupNumber',
++            'range_NeighDiff_shell1_SpaceGroupNumber', 'mean_SpaceGroupNumber', 'maxdiff_SpaceGroupNumber',
++            'dev_SpaceGroupNumber', 'max_SpaceGroupNumber', 'min_SpaceGroupNumber', 'most_SpaceGroupNumber',
++            'CanFormIonic']
++        emptyLabels.reverse()
++        self.emptyLabelsIndx = [self.labels.index(l) for l in emptyLabels]
++
++        with resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/') as exampleInputsDir:
++            self.exampleInputFiles = natsorted(os.listdir(exampleInputsDir))
++            testStructures = [Structure.from_file(f'{exampleInputsDir}/{eif}') for eif in self.exampleInputFiles]
++
++        self.functionOutput = [KS2022.generate_descriptor(s).tolist() for s in tqdm(testStructures[:25])]
++        with resources.files('pysipfenn').joinpath('tests/KS2022_TestResult.csv').open('w+', newline='') as f:
++            f.writelines([f'{v}\n' for v in self.functionOutput[0]])
+     def test_resutls(self):
+-        for fo, trd, name in zip(functionOutput, testReferenceData, exampleInputFiles):
+-            for eli in emptyLabelsIndx:
++        for fo, trd, name in zip(self.functionOutput, self.testReferenceData, self.exampleInputFiles):
++            for eli in self.emptyLabelsIndx:
+                 trd.pop(eli)
+-            for p_fo, p_trd, l in zip(fo, trd, labels):
++            for p_fo, p_trd, l in zip(fo, trd, self.labels):
+                 if p_trd!=0 and p_fo!=0:
+                     p_fo_relative = p_fo/p_trd
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo_relative, 1, places=2)
+                 else:
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo, p_trd, places=6)
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/test_KS2022_dilute.py` & `pysipfenn-0.12.0/pysipfenn/tests/test_KS2022_dilute.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -5,57 +5,81 @@
+ from tqdm import tqdm
+ import numpy as np
+ from natsort import natsorted
+ from importlib import resources
+ 
+ from pysipfenn.descriptorDefinitions import KS2022, KS2022_dilute
+ 
+-with resources.files('pysipfenn').\
+-        joinpath('descriptorDefinitions/labels_KS2022_dilute.csv').open('r', newline='') as f:
+-    reader = csv.reader(f)
+-    labels = [l[0] for l in list(reader)]
+-
+-testMaterialsLabels = ['mp-13','mp-27','mp-165','mp-1211280']
+-matStrList = ['{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[2.318956, 0.000185, -0.819712], [-1.159251, 2.008215, -0.819524], [2.5e-05, 0.000273, 2.459206]], "pbc": [true, true, true], "a": 2.4595700289085083, "b": 2.4593515311565364, "c": 2.4592060152801354, "alpha": 109.45958252256221, "beta": 109.46706290007663, "gamma": 109.46912204302215, "volume": 11.453776235839058}, "sites": [{"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Fe", "properties": {"magmom": 2.211}}], "@version": null}', '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[0.0, 1.934742, 1.934742], [1.934742, 0.0, 1.934742], [1.934742, 1.934742, 0.0]], "pbc": [true, true, true], "a": 2.7361383760928466, "b": 2.7361383760928466, "c": 2.7361383760928466, "alpha": 60.00000000000001, "beta": 60.00000000000001, "gamma": 60.00000000000001, "volume": 14.484355462473692}, "sites": [{"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Si", "properties": {"magmom": -0.0}}], "@version": null}', '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[1.925241, -3.334615, 0.0], [1.925241, 3.334615, 0.0], [0.0, 0.0, 6.365686]], "pbc": [true, true, true], "a": 3.8504818018406475, "b": 3.8504818018406475, "c": 6.365686, "alpha": 90.0, "beta": 90.0, "gamma": 119.99999659520081, "volume": 81.73461274842057}, "sites": [{"species": [{"element": "Si", "occu": 1}], "abc": [0.333333, 0.666667, 0.062956], "xyz": [1.9252409999999998, 1.11154055641, 0.400758127816], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.666667, 0.333333, 0.562956], "xyz": [1.9252409999999998, -1.11154055641, 3.5836011278160003], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.333333, 0.666667, 0.437044], "xyz": [1.9252409999999998, 1.11154055641, 2.782084872184], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.666667, 0.333333, 0.937044], "xyz": [1.9252409999999998, -1.11154055641, 5.964927872184], "label": "Si", "properties": {"magmom": 0.0}}], "@version": null}', '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[-4.89682112, 0.0, 0.0], [0.0, 0.0, -12.78502184], [0.0, -15.51797977, 0.0]], "pbc": [true, true, true], "a": 4.89682112, "b": 12.78502184, "c": 15.51797977, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 971.5180978201984}, "sites": [{"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.97478069, 0.30478108], "xyz": [0.0, -4.7295866337187515, -12.462592410860271], "label": "Nb", "properties": {"magmom": 0.026}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.47478069, 0.69521892], "xyz": [-2.44841056, -10.788393136281249, -6.07008149086027], "label": "Nb", "properties": {"magmom": 0.026}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.29579212, 0.10069205], "xyz": [0.0, -1.5625371948998286, -3.781708714299901], "label": "Nb", "properties": {"magmom": -0.044}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.79579212, 0.89930795], "xyz": [-2.44841056, -13.955442575100172, -10.1742196342999], "label": "Nb", "properties": {"magmom": -0.044}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.76944669, 0.46134953], "xyz": [0.0, -7.159212673439009, -9.83739273636571], "label": "Nb", "properties": {"magmom": -0.021}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.26944669, 0.53865047], "xyz": [-2.44841056, -8.358767096560992, -3.44488181636571], "label": "Nb", "properties": {"magmom": -0.021}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.48356945, 0.97894996], "xyz": [0.0, -15.19132567512231, -6.182445979406788], "label": "Nb", "properties": {"magmom": -0.089}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.98356945, 0.02105004], "xyz": [-2.44841056, -0.3266540948776908, -12.574956899406788], "label": "Nb", "properties": {"magmom": -0.089}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.41237245, 0.5801905], "xyz": [0.0, -9.003384441746187, -5.272190779464308], "label": "Nb", "properties": {"magmom": -0.051}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.91237245, 0.4198095], "xyz": [-2.44841056, -6.514595328253815, -11.664701699464308], "label": "Nb", "properties": {"magmom": -0.051}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.79693267, 0.79114278], "xyz": [0.0, -12.27693765522156, -10.188801590959514], "label": "Nb", "properties": {"magmom": -0.01}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.29693267, 0.20885722], "xyz": [-2.44841056, -3.2410421147784394, -3.7962906709595132], "label": "Nb", "properties": {"magmom": -0.01}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.40858743, 0.80251763], "xyz": [0.0, -12.453452347408344, -5.223799216099471], "label": "Nb", "properties": {"magmom": 0.074}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.90858743, 0.19748237], "xyz": [-2.44841056, -3.064527422591655, -11.616310136099472], "label": "Nb", "properties": {"magmom": 0.074}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.11012415, 0.99274797], "xyz": [0.0, -15.405442915168567, -1.407939662861436], "label": "Nb", "properties": {"magmom": -0.106}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.61012415, 0.00725203], "xyz": [-2.44841056, -0.1125368548314331, -7.800450582861436], "label": "Nb", "properties": {"magmom": -0.106}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.13724645, 0.5962987], "xyz": [0.0, -9.253351163477298, -1.754698860712468], "label": "Nb", "properties": {"magmom": 0.03}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.63724645, 0.4037013], "xyz": [-2.44841056, -6.264628606522701, -8.147209780712469], "label": "Nb", "properties": {"magmom": 0.03}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.17851661, 0.81163442], "xyz": [0.0, -12.594926510195682, -2.2823387576527625], "label": "Nb", "properties": {"magmom": 0.02}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.67851661, 0.18836558], "xyz": [-2.44841056, -2.9230532598043166, -8.674849677652762], "label": "Nb", "properties": {"magmom": 0.02}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.20409406, 0.29225008], "xyz": [0.0, -4.535130829220882, -2.6093470145142703], "label": "Nb", "properties": {"magmom": -0.082}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.70409406, 0.70774992], "xyz": [-2.44841056, -10.98284894077912, -9.00185793451427], "label": "Nb", "properties": {"magmom": -0.082}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.60209736, 0.28731942], "xyz": [0.0, -4.458616947088133, -7.697827897406343], "label": "Nb", "properties": {"magmom": 0.033}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.10209736, 0.71268058], "xyz": [-2.44841056, -11.059362822911867, -1.3053169774063424], "label": "Nb", "properties": {"magmom": 0.033}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75053738, 0.61136775, 0.57156911], "xyz": [-3.675247293733466, -8.869597886136905, -7.81635003602166], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74946262, 0.11136775, 0.42843089], "xyz": [-3.6699843862665342, -6.648381883863095, -1.4238391160216601], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25053738, 0.11136775, 0.42843089], "xyz": [-1.2268367337334656, -6.648381883863095, -1.4238391160216601], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24946262, 0.61136775, 0.57156911], "xyz": [-1.2215738262665345, -8.869597886136905, -7.81635003602166], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74850271, 0.99123806, 0.8565342], "xyz": [-3.6652838787052353, -13.291680387913134, -12.673000245739232], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75149729, 0.49123806, 0.1434658], "xyz": [-3.679947801294765, -2.226299382086866, -6.2804893257392305], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24850271, 0.49123806, 0.1434658], "xyz": [-1.2168733187052352, -2.226299382086866, -6.2804893257392305], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25149729, 0.99123806, 0.8565342], "xyz": [-1.2315372412947647, -13.291680387913134, -12.673000245739232], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74735209, 0.91029293, 0.61139135], "xyz": [-3.659649498388141, -9.48755860085299, -11.638114990847592], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75264791, 0.41029293, 0.38860865], "xyz": [-3.6855821816118595, -6.030421169147011, -5.245604070847591], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24735209, 0.41029293, 0.38860865], "xyz": [-1.2112389383881408, -6.030421169147011, -5.245604070847591], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25264791, 0.91029293, 0.61139135], "xyz": [-1.2371716216118591, -9.48755860085299, -11.638114990847592], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75166938, 0.60817805, 0.83995675], "xyz": [-3.680790495241306, -13.034431854174947, -7.775569651858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74833062, 0.10817805, 0.16004325], "xyz": [-3.664441184758694, -2.4835479158250524, -1.383058731858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25166938, 0.10817805, 0.16004325], "xyz": [-1.2323799352413056, -2.4835479158250524, -1.383058731858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24833062, 0.60817805, 0.83995675], "xyz": [-1.2160306247586945, -13.034431854174947, -7.775569651858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.79440161, 0.19097721], "xyz": [0.0, -2.963580481311042, -10.156441933581164], "label": "Fe", "properties": {"magmom": 0.69}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.5, 0.29440161, 0.80902279], "xyz": [-2.44841056, -12.554399288688959, -3.7639310135811623], "label": "Fe", "properties": {"magmom": 0.69}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.76035911, 0.29748339, 0.9400256], "xyz": [-3.723342548632403, -14.587298244082113, -3.803331638187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.73964089, 0.79748339, 0.0599744], "xyz": [-3.621889131367597, -0.930681525917888, -10.195842558187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.26035911, 0.79748339, 0.0599744], "xyz": [-1.2749319886324033, -0.930681525917888, -10.195842558187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.23964089, 0.29748339, 0.9400256], "xyz": [-1.1734785713675968, -14.587298244082113, -3.803331638187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.70069204, 0.95071104], "xyz": [0.0, -14.75311468583566, -8.958363034514154], "label": "Fe", "properties": {"magmom": 1.435}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.5, 0.20069204, 0.04928896], "xyz": [-2.44841056, -0.7648650841643392, -2.5658521145141537], "label": "Fe", "properties": {"magmom": 1.435}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.74764183, 0.78530911, 0.31308635], "xyz": [-3.6610683033394498, -4.85846764556314, -10.040194122500964], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.75235817, 0.28530911, 0.68691365], "xyz": [-3.6841633766605506, -10.659512124436862, -3.6476832025009625], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.24764183, 0.28530911, 0.68691365], "xyz": [-1.2126577433394496, -10.659512124436862, -3.6476832025009625], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.25235817, 0.78530911, 0.31308635], "xyz": [-1.2357528166605505, -4.85846764556314, -10.040194122500964], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.64146766, 0.10364917], "xyz": [0.0, -1.608425723237291, -8.201178042753694], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.14146766, 0.89635083], "xyz": [-2.44841056, -13.90955404676271, -1.8086671227536943], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.5557357, 0.45184833], "xyz": [0.0, -7.0117732440482845, -7.105093061767689], "label": "Si", "properties": {"magmom": -0.019}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.0557357, 0.54815167], "xyz": [-2.44841056, -8.506206525951717, -0.712582141767688], "label": "Si", "properties": {"magmom": -0.019}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.57889046, 0.7045276], "xyz": [0.0, -10.932845044206653, -7.401127174067646], "label": "Si", "properties": {"magmom": -0.009}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.07889046, 0.2954724], "xyz": [-2.44841056, -4.585134725793348, -1.0086162540676464], "label": "Si", "properties": {"magmom": -0.009}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.89184192, 0.95303339], "xyz": [0.0, -14.78915286615452, -11.402218425027533], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.39184192, 0.04696661], "xyz": [-2.44841056, -0.7288269038454797, -5.009707505027533], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.97365256, 0.48471181], "xyz": [0.0, -7.521748061860084, -12.448169244171911], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.47365256, 0.51528819], "xyz": [-2.44841056, -7.996231708139917, -6.055658324171911], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.39983905, 0.24978334], "xyz": [0.0, -3.8761328170030316, -5.111950986734852], "label": "Si", "properties": {"magmom": -0.025}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.89983905, 0.75021666], "xyz": [-2.44841056, -11.641846952996968, -11.504461906734852], "label": "Si", "properties": {"magmom": -0.025}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.26618948, 0.45840468], "xyz": [0.0, -7.113514550713324, -3.403238315378243], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.76618948, 0.54159532], "xyz": [-2.44841056, -8.404465219286676, -9.795749235378244], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.95570093, 0.11855176], "xyz": [0.0, -1.8396838133778952, -12.218657262558311], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.45570093, 0.88144824], "xyz": [-2.44841056, -13.678295956622105, -5.826146342558312], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.75095771, 0.62925705], "xyz": [0.0, -9.764798172029879, -9.601010723266388], "label": "Si", "properties": {"magmom": -0.02}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.25095771, 0.37074295], "xyz": [-2.44841056, -5.753181597970122, -3.2084998032663865], "label": "Si", "properties": {"magmom": -0.02}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.99883217, 0.72483758], "xyz": [0.0, -11.248014902975756, -12.770091107944594], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.49883217, 0.27516242], "xyz": [-2.44841056, -4.269964867024243, -6.377580187944593], "label": "Si", "properties": {"magmom": -0.022}}], "@version": null}']
+-
+-testStructures = [Structure.from_str(matStr,fmt='json') for matStr in matStrList]
+-[s.make_supercell([2,2,2]) for s in testStructures]
+-baseStructures = [s.copy() for s in testStructures]
+-[s.replace(0, 'Al') for s in testStructures]
+-testStructures = [s.copy() for s in testStructures]
+-
+-testReferenceData = [KS2022.generate_descriptor(s).tolist() for s in tqdm(testStructures)]
+-
+-functionOutput_assumePure = [KS2022_dilute.generate_descriptor(s, baseStruct='pure').tolist()
+-                             for s in tqdm(testStructures[:3])]
+-functionOutput_explicitBase = [KS2022_dilute.generate_descriptor(s, baseStruct=bs).tolist()
+-                             for s, bs in tqdm(zip(testStructures, baseStructures))]
+-
+-with resources.files('pysipfenn').joinpath('tests/KS2022_dilute_TestResult.csv').open('w+', newline='') as f:
+-    f.writelines([f'{name},{trd},{fo1},{fo2}\n' for fo2, fo1, trd, name in zip(functionOutput_explicitBase[0], functionOutput_assumePure[0], testReferenceData[0], labels)])
+ 
+ class TestKS2022(unittest.TestCase):
++    '''Test the KS2022 descriptor calculator optimized for dilute systems.'''
++    def setUp(self):
++        '''Import the lables expected for the KS2022 dilute descriptor (same as KS2022) and initialize 4 test materials
++        (mp-13, mp-27, mp-165, mp-1211280) to be used in the tests. The 4 test cases should be sufficient to test the
++        dilute descriptor as general KS2022 is tested more extensively and problems should propagate to the dilute
++        featurizer. To create the dilute structures, 2x2x2 supercells of the test materials are created and the
++        atom at site 0 is replaced with aluminum. Results for the first test case, comparing general KS2022, explicit
++        base, and implicit (pure) base, are persisted in the KS2022_dilute_TestReslt.csv'''
++
++        with resources.files('pysipfenn'). \
++                joinpath('descriptorDefinitions/labels_KS2022_dilute.csv').open('r', newline='') as f:
++            reader = csv.reader(f)
++            self.labels = [l[0] for l in list(reader)]
++
++        self.testMaterialsLabels = ['mp-13', 'mp-27', 'mp-165', 'mp-1211280']
++        matStrList = [
++            '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[2.318956, 0.000185, -0.819712], [-1.159251, 2.008215, -0.819524], [2.5e-05, 0.000273, 2.459206]], "pbc": [true, true, true], "a": 2.4595700289085083, "b": 2.4593515311565364, "c": 2.4592060152801354, "alpha": 109.45958252256221, "beta": 109.46706290007663, "gamma": 109.46912204302215, "volume": 11.453776235839058}, "sites": [{"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Fe", "properties": {"magmom": 2.211}}], "@version": null}',
++            '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[0.0, 1.934742, 1.934742], [1.934742, 0.0, 1.934742], [1.934742, 1.934742, 0.0]], "pbc": [true, true, true], "a": 2.7361383760928466, "b": 2.7361383760928466, "c": 2.7361383760928466, "alpha": 60.00000000000001, "beta": 60.00000000000001, "gamma": 60.00000000000001, "volume": 14.484355462473692}, "sites": [{"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.0, 0.0], "xyz": [0.0, 0.0, 0.0], "label": "Si", "properties": {"magmom": -0.0}}], "@version": null}',
++            '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[1.925241, -3.334615, 0.0], [1.925241, 3.334615, 0.0], [0.0, 0.0, 6.365686]], "pbc": [true, true, true], "a": 3.8504818018406475, "b": 3.8504818018406475, "c": 6.365686, "alpha": 90.0, "beta": 90.0, "gamma": 119.99999659520081, "volume": 81.73461274842057}, "sites": [{"species": [{"element": "Si", "occu": 1}], "abc": [0.333333, 0.666667, 0.062956], "xyz": [1.9252409999999998, 1.11154055641, 0.400758127816], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.666667, 0.333333, 0.562956], "xyz": [1.9252409999999998, -1.11154055641, 3.5836011278160003], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.333333, 0.666667, 0.437044], "xyz": [1.9252409999999998, 1.11154055641, 2.782084872184], "label": "Si", "properties": {"magmom": 0.0}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.666667, 0.333333, 0.937044], "xyz": [1.9252409999999998, -1.11154055641, 5.964927872184], "label": "Si", "properties": {"magmom": 0.0}}], "@version": null}',
++            '{"@module": "pymatgen.core.structure", "@class": "Structure", "charge": 0, "lattice": {"matrix": [[-4.89682112, 0.0, 0.0], [0.0, 0.0, -12.78502184], [0.0, -15.51797977, 0.0]], "pbc": [true, true, true], "a": 4.89682112, "b": 12.78502184, "c": 15.51797977, "alpha": 90.0, "beta": 90.0, "gamma": 90.0, "volume": 971.5180978201984}, "sites": [{"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.97478069, 0.30478108], "xyz": [0.0, -4.7295866337187515, -12.462592410860271], "label": "Nb", "properties": {"magmom": 0.026}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.47478069, 0.69521892], "xyz": [-2.44841056, -10.788393136281249, -6.07008149086027], "label": "Nb", "properties": {"magmom": 0.026}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.29579212, 0.10069205], "xyz": [0.0, -1.5625371948998286, -3.781708714299901], "label": "Nb", "properties": {"magmom": -0.044}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.79579212, 0.89930795], "xyz": [-2.44841056, -13.955442575100172, -10.1742196342999], "label": "Nb", "properties": {"magmom": -0.044}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.76944669, 0.46134953], "xyz": [0.0, -7.159212673439009, -9.83739273636571], "label": "Nb", "properties": {"magmom": -0.021}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.26944669, 0.53865047], "xyz": [-2.44841056, -8.358767096560992, -3.44488181636571], "label": "Nb", "properties": {"magmom": -0.021}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.48356945, 0.97894996], "xyz": [0.0, -15.19132567512231, -6.182445979406788], "label": "Nb", "properties": {"magmom": -0.089}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.98356945, 0.02105004], "xyz": [-2.44841056, -0.3266540948776908, -12.574956899406788], "label": "Nb", "properties": {"magmom": -0.089}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.41237245, 0.5801905], "xyz": [0.0, -9.003384441746187, -5.272190779464308], "label": "Nb", "properties": {"magmom": -0.051}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.91237245, 0.4198095], "xyz": [-2.44841056, -6.514595328253815, -11.664701699464308], "label": "Nb", "properties": {"magmom": -0.051}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.79693267, 0.79114278], "xyz": [0.0, -12.27693765522156, -10.188801590959514], "label": "Nb", "properties": {"magmom": -0.01}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.29693267, 0.20885722], "xyz": [-2.44841056, -3.2410421147784394, -3.7962906709595132], "label": "Nb", "properties": {"magmom": -0.01}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.40858743, 0.80251763], "xyz": [0.0, -12.453452347408344, -5.223799216099471], "label": "Nb", "properties": {"magmom": 0.074}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.90858743, 0.19748237], "xyz": [-2.44841056, -3.064527422591655, -11.616310136099472], "label": "Nb", "properties": {"magmom": 0.074}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.11012415, 0.99274797], "xyz": [0.0, -15.405442915168567, -1.407939662861436], "label": "Nb", "properties": {"magmom": -0.106}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.61012415, 0.00725203], "xyz": [-2.44841056, -0.1125368548314331, -7.800450582861436], "label": "Nb", "properties": {"magmom": -0.106}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.13724645, 0.5962987], "xyz": [0.0, -9.253351163477298, -1.754698860712468], "label": "Nb", "properties": {"magmom": 0.03}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.63724645, 0.4037013], "xyz": [-2.44841056, -6.264628606522701, -8.147209780712469], "label": "Nb", "properties": {"magmom": 0.03}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.17851661, 0.81163442], "xyz": [0.0, -12.594926510195682, -2.2823387576527625], "label": "Nb", "properties": {"magmom": 0.02}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.67851661, 0.18836558], "xyz": [-2.44841056, -2.9230532598043166, -8.674849677652762], "label": "Nb", "properties": {"magmom": 0.02}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.20409406, 0.29225008], "xyz": [0.0, -4.535130829220882, -2.6093470145142703], "label": "Nb", "properties": {"magmom": -0.082}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.70409406, 0.70774992], "xyz": [-2.44841056, -10.98284894077912, -9.00185793451427], "label": "Nb", "properties": {"magmom": -0.082}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.0, 0.60209736, 0.28731942], "xyz": [0.0, -4.458616947088133, -7.697827897406343], "label": "Nb", "properties": {"magmom": 0.033}}, {"species": [{"element": "Nb", "occu": 1}], "abc": [0.5, 0.10209736, 0.71268058], "xyz": [-2.44841056, -11.059362822911867, -1.3053169774063424], "label": "Nb", "properties": {"magmom": 0.033}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75053738, 0.61136775, 0.57156911], "xyz": [-3.675247293733466, -8.869597886136905, -7.81635003602166], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74946262, 0.11136775, 0.42843089], "xyz": [-3.6699843862665342, -6.648381883863095, -1.4238391160216601], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25053738, 0.11136775, 0.42843089], "xyz": [-1.2268367337334656, -6.648381883863095, -1.4238391160216601], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24946262, 0.61136775, 0.57156911], "xyz": [-1.2215738262665345, -8.869597886136905, -7.81635003602166], "label": "Fe", "properties": {"magmom": 0.713}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74850271, 0.99123806, 0.8565342], "xyz": [-3.6652838787052353, -13.291680387913134, -12.673000245739232], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75149729, 0.49123806, 0.1434658], "xyz": [-3.679947801294765, -2.226299382086866, -6.2804893257392305], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24850271, 0.49123806, 0.1434658], "xyz": [-1.2168733187052352, -2.226299382086866, -6.2804893257392305], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25149729, 0.99123806, 0.8565342], "xyz": [-1.2315372412947647, -13.291680387913134, -12.673000245739232], "label": "Fe", "properties": {"magmom": 1.063}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74735209, 0.91029293, 0.61139135], "xyz": [-3.659649498388141, -9.48755860085299, -11.638114990847592], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75264791, 0.41029293, 0.38860865], "xyz": [-3.6855821816118595, -6.030421169147011, -5.245604070847591], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24735209, 0.41029293, 0.38860865], "xyz": [-1.2112389383881408, -6.030421169147011, -5.245604070847591], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25264791, 0.91029293, 0.61139135], "xyz": [-1.2371716216118591, -9.48755860085299, -11.638114990847592], "label": "Fe", "properties": {"magmom": 1.55}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.75166938, 0.60817805, 0.83995675], "xyz": [-3.680790495241306, -13.034431854174947, -7.775569651858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.74833062, 0.10817805, 0.16004325], "xyz": [-3.664441184758694, -2.4835479158250524, -1.383058731858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.25166938, 0.10817805, 0.16004325], "xyz": [-1.2323799352413056, -2.4835479158250524, -1.383058731858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.24833062, 0.60817805, 0.83995675], "xyz": [-1.2160306247586945, -13.034431854174947, -7.775569651858612], "label": "Fe", "properties": {"magmom": 1.528}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.79440161, 0.19097721], "xyz": [0.0, -2.963580481311042, -10.156441933581164], "label": "Fe", "properties": {"magmom": 0.69}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.5, 0.29440161, 0.80902279], "xyz": [-2.44841056, -12.554399288688959, -3.7639310135811623], "label": "Fe", "properties": {"magmom": 0.69}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.76035911, 0.29748339, 0.9400256], "xyz": [-3.723342548632403, -14.587298244082113, -3.803331638187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.73964089, 0.79748339, 0.0599744], "xyz": [-3.621889131367597, -0.930681525917888, -10.195842558187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.26035911, 0.79748339, 0.0599744], "xyz": [-1.2749319886324033, -0.930681525917888, -10.195842558187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.23964089, 0.29748339, 0.9400256], "xyz": [-1.1734785713675968, -14.587298244082113, -3.803331638187238], "label": "Fe", "properties": {"magmom": 1.539}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.0, 0.70069204, 0.95071104], "xyz": [0.0, -14.75311468583566, -8.958363034514154], "label": "Fe", "properties": {"magmom": 1.435}}, {"species": [{"element": "Fe", "occu": 1}], "abc": [0.5, 0.20069204, 0.04928896], "xyz": [-2.44841056, -0.7648650841643392, -2.5658521145141537], "label": "Fe", "properties": {"magmom": 1.435}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.74764183, 0.78530911, 0.31308635], "xyz": [-3.6610683033394498, -4.85846764556314, -10.040194122500964], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.75235817, 0.28530911, 0.68691365], "xyz": [-3.6841633766605506, -10.659512124436862, -3.6476832025009625], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.24764183, 0.28530911, 0.68691365], "xyz": [-1.2126577433394496, -10.659512124436862, -3.6476832025009625], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.25235817, 0.78530911, 0.31308635], "xyz": [-1.2357528166605505, -4.85846764556314, -10.040194122500964], "label": "Si", "properties": {"magmom": -0.007}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.64146766, 0.10364917], "xyz": [0.0, -1.608425723237291, -8.201178042753694], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.14146766, 0.89635083], "xyz": [-2.44841056, -13.90955404676271, -1.8086671227536943], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.5557357, 0.45184833], "xyz": [0.0, -7.0117732440482845, -7.105093061767689], "label": "Si", "properties": {"magmom": -0.019}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.0557357, 0.54815167], "xyz": [-2.44841056, -8.506206525951717, -0.712582141767688], "label": "Si", "properties": {"magmom": -0.019}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.57889046, 0.7045276], "xyz": [0.0, -10.932845044206653, -7.401127174067646], "label": "Si", "properties": {"magmom": -0.009}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.07889046, 0.2954724], "xyz": [-2.44841056, -4.585134725793348, -1.0086162540676464], "label": "Si", "properties": {"magmom": -0.009}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.89184192, 0.95303339], "xyz": [0.0, -14.78915286615452, -11.402218425027533], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.39184192, 0.04696661], "xyz": [-2.44841056, -0.7288269038454797, -5.009707505027533], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.97365256, 0.48471181], "xyz": [0.0, -7.521748061860084, -12.448169244171911], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.47365256, 0.51528819], "xyz": [-2.44841056, -7.996231708139917, -6.055658324171911], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.39983905, 0.24978334], "xyz": [0.0, -3.8761328170030316, -5.111950986734852], "label": "Si", "properties": {"magmom": -0.025}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.89983905, 0.75021666], "xyz": [-2.44841056, -11.641846952996968, -11.504461906734852], "label": "Si", "properties": {"magmom": -0.025}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.26618948, 0.45840468], "xyz": [0.0, -7.113514550713324, -3.403238315378243], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.76618948, 0.54159532], "xyz": [-2.44841056, -8.404465219286676, -9.795749235378244], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.95570093, 0.11855176], "xyz": [0.0, -1.8396838133778952, -12.218657262558311], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.45570093, 0.88144824], "xyz": [-2.44841056, -13.678295956622105, -5.826146342558312], "label": "Si", "properties": {"magmom": -0.021}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.75095771, 0.62925705], "xyz": [0.0, -9.764798172029879, -9.601010723266388], "label": "Si", "properties": {"magmom": -0.02}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.25095771, 0.37074295], "xyz": [-2.44841056, -5.753181597970122, -3.2084998032663865], "label": "Si", "properties": {"magmom": -0.02}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.0, 0.99883217, 0.72483758], "xyz": [0.0, -11.248014902975756, -12.770091107944594], "label": "Si", "properties": {"magmom": -0.022}}, {"species": [{"element": "Si", "occu": 1}], "abc": [0.5, 0.49883217, 0.27516242], "xyz": [-2.44841056, -4.269964867024243, -6.377580187944593], "label": "Si", "properties": {"magmom": -0.022}}], "@version": null}']
++
++        testStructures = [Structure.from_str(matStr, fmt='json') for matStr in matStrList]
++        [s.make_supercell([2, 2, 2]) for s in testStructures]
++        baseStructures = [s.copy() for s in testStructures]
++        [s.replace(0, 'Al') for s in testStructures]
++        testStructures = [s.copy() for s in testStructures]
++
++        self.testReferenceData = [KS2022.generate_descriptor(s).tolist() for s in tqdm(testStructures)]
++
++        self.functionOutput_assumePure = [KS2022_dilute.generate_descriptor(s, baseStruct='pure').tolist()
++                                          for s in tqdm(testStructures[:3])]
++        self.functionOutput_explicitBase = [KS2022_dilute.generate_descriptor(s, baseStruct=bs).tolist()
++                                            for s, bs in tqdm(zip(testStructures, baseStructures))]
++
++        with resources.files('pysipfenn').joinpath('tests/KS2022_dilute_TestResult.csv').open('w+', newline='') as f:
++            f.writelines(
++                [f'{name},{trd},{fo1},{fo2}\n' for fo2, fo1, trd, name in
++                 zip(self.functionOutput_explicitBase[0],
++                     self.functionOutput_assumePure[0],
++                     self.testReferenceData[0],
++                     self.labels)])
++
+     def test_resutls_assumePure(self):
+-        for fo, trd, name in zip(functionOutput_assumePure, testReferenceData, testMaterialsLabels):
+-            for p_fo, p_trd, l in zip(fo, trd, labels):
++        '''Compare the KS2022_dilute featurizer results with general KS2022 assuming the base structure is pure.'''
++        for fo, trd, name in zip(self.functionOutput_assumePure, self.testReferenceData, self.testMaterialsLabels):
++            for p_fo, p_trd, l in zip(fo, trd, self.labels):
+                 if p_trd>0.01 and p_fo>0.01:
+                     p_fo_relative = p_fo/p_trd
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo_relative, 1, places=2)
+                 else:
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo, p_trd, places=6)
+ 
+     def test_resutls_explicitBase(self):
+-        for fo, trd, name in zip(functionOutput_explicitBase, testReferenceData, testMaterialsLabels):
+-            for p_fo, p_trd, l in zip(fo, trd, labels):
++        '''Compare the KS2022_dilute featurizer results with general KS2022 using explicit base structures, i.e.
++        structures from before the dilute element was added.'''
++        for fo, trd, name in zip(self.functionOutput_explicitBase, self.testReferenceData, self.testMaterialsLabels):
++            for p_fo, p_trd, l in zip(fo, trd, self.labels):
+                 if p_trd>0.01 and p_fo>0.01:
+                     p_fo_relative = p_fo/p_trd
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo_relative, 1, places=2)
+                 else:
+                     with self.subTest(msg=f'{name:<16} diff in {l}'):
+                         self.assertAlmostEqual(p_fo, p_trd, places=6)
+ 
+ 
++
++
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/test_Krajewski2020_NN9NN20NN24_ONNX.py` & `pysipfenn-0.12.0/pysipfenn/tests/test_Krajewski2020_NN9NN20NN24_ONNX.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,22 +1,27 @@
+ import unittest
++import pytest
++import os
+ from pymatgen.core import Structure
+ from importlib import resources
+ 
+ import pysipfenn
+ 
++IN_GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true" and os.getenv("MODELS_FETCHED") != "true"
++
+ testFile = '0-Cr8Fe18Ni4.POSCAR'
+ toTest = ['SIPFENN_Krajewski2020_NN9', 'SIPFENN_Krajewski2020_NN20', 'SIPFENN_Krajewski2020_NN24']
+ referenceEnergies_MxNet = [0.0790368840098381, 0.0498688854277133, 0.0871851742267608]
+ referenceEnergies_ONNX =  [0.0790369734168053, 0.0498689748346806, 0.0871851146221161]
+ 
+ with resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/') as exampleInputsDir:
+     testStructure = Structure.from_file(f'{exampleInputsDir}/{testFile}')
+ 
+ class TestKrajewski2020ModelsFromONNX(unittest.TestCase):
++    @pytest.mark.skipif(IN_GITHUB_ACTIONS, reason="Test depends on the ONNX network files")
+     def test_resutls(self):
+         c = pysipfenn.Calculator()
+         c.calculate_Ward2017(structList=[testStructure])
+         c.makePredictions(models=c.loadedModels, toRun=toTest, dataInList=c.descriptorData)
+         for p, name, ref_onnx in zip(c.predictions[0], toTest, referenceEnergies_ONNX):
+             with self.subTest(msg=f'Predicting vs ONNX with {name:<16}'):
+                 self.assertAlmostEqual(p, ref_onnx, places=6)
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/test_Ward2017.py` & `pysipfenn-0.12.0/pysipfenn/tests/test_Ward2017.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -4,36 +4,37 @@
+ from pymatgen.core import Structure
+ from tqdm import tqdm
+ import numpy as np
+ from natsort import natsorted
+ from importlib import resources
+ 
+ from pysipfenn.descriptorDefinitions import Ward2017
++class TestWard2017(unittest.TestCase):
+ 
+-with resources.files('pysipfenn').\
+-        joinpath('tests/testCaseFiles/exampleInputFilesDescriptorTable.csv').open('r', newline='') as f:
+-    reader = csv.reader(f)
+-    referenceDescriptorTable = list(reader)
+-
+-labels = referenceDescriptorTable[0]
+-testReferenceData = np.float_(referenceDescriptorTable[1:]).tolist()
+-skipLabels = ['mean_WCMagnitude_Shell3']
+-
+-with resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/') as exampleInputsDir:
+-    exampleInputFiles = natsorted(os.listdir(exampleInputsDir))
+-    testStructures = [Structure.from_file(f'{exampleInputsDir}/{eif}') for eif in exampleInputFiles]
+-
+-functionOutput = [Ward2017.generate_descriptor(s).tolist() for s in tqdm(testStructures[:5])]
+-with resources.files('pysipfenn').\
+-        joinpath('tests/Ward2017_TestResult.csv').open('w+', newline='') as f:
+-    f.writelines([f'{v}\n' for v in functionOutput[0]])
++    def setUp(self):
++        with resources.files('pysipfenn'). \
++                joinpath('tests/testCaseFiles/exampleInputFilesDescriptorTable.csv').open('r', newline='') as f:
++            reader = csv.reader(f)
++            self.referenceDescriptorTable = list(reader)
++
++        self.labels = self.referenceDescriptorTable[0]
++        self.testReferenceData = np.float_(self.referenceDescriptorTable[1:]).tolist()
++        self.skipLabels = ['mean_WCMagnitude_Shell3']
++
++        with resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/') as exampleInputsDir:
++            self.exampleInputFiles = natsorted(os.listdir(exampleInputsDir))
++            self.testStructures = [Structure.from_file(f'{exampleInputsDir}/{eif}') for eif in self.exampleInputFiles]
++
++        self.functionOutput = [Ward2017.generate_descriptor(s).tolist() for s in tqdm(self.testStructures[:5])]
++        with resources.files('pysipfenn'). \
++                joinpath('tests/Ward2017_TestResult.csv').open('w+', newline='') as f:
++            f.writelines([f'{v}\n' for v in self.functionOutput[0]])
+ 
+-class TestWard2017(unittest.TestCase):
+     def test_resutls(self):
+-        for fo, trd, name in zip(functionOutput, testReferenceData, exampleInputFiles):
+-            for p_fo, p_trd, l in zip(fo, trd, labels):
+-                if l not in skipLabels:
++        for fo, trd, name in zip(self.functionOutput, self.testReferenceData, self.exampleInputFiles):
++            for p_fo, p_trd, l in zip(fo, trd, self.labels):
++                if l not in self.skipLabels:
+                     with self.subTest(msg=f'Testing {l} calculated for {name}'):
+                         self.assertAlmostEqual(p_fo, p_trd, places=6)
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn/tests/test_customModel.py` & `pysipfenn-0.12.0/pysipfenn/tests/test_customModel.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,44 +1,49 @@
+ import unittest
+ from pymatgen.core import Structure
+ from importlib import resources
+ import shutil
+ import pysipfenn
++import pytest
+ import os
+ 
+-
++IN_GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true" and os.getenv("MODELS_FETCHED") != "true"
+ class TestCustomModel(unittest.TestCase):
+     '''Test loading a custom model by copying the Krajewski2020_NN24 model to the current directory
+     and loading it from there instead of the default location.
+     '''
++
++    @pytest.mark.skipif(IN_GITHUB_ACTIONS, reason="Test depends on the ONNX network files")
+     def setUp(self) -> None:
+         with open(resources.files('pysipfenn').joinpath('modelsSIPFENN/SIPFENN_Krajewski2020_NN24.onnx'),
+                   'rb') as modelForTest:
+             with open('MyFunNet.onnx', 'wb') as modelForTestCopy:
+                 shutil.copyfileobj(modelForTest, modelForTestCopy)
+         self.assertTrue(os.path.isfile('MyFunNet.onnx'))
+         print('Copied model to current directory')
+         self.c = pysipfenn.Calculator()
+         print(self.c.network_list_available)
+         print('Setup complete')
+ 
++    @pytest.mark.skipif(IN_GITHUB_ACTIONS, reason="Test depends on the ONNX network files")
+     def testCalculation(self):
+         self.c.loadModelCustom(networkName='MyFunNet',
+                                modelName='MyFunNetName',
+                                descriptor='Ward2017',
+                                modelDirectory='.')
+         print(self.c.network_list_available)
+         testFilesDir = resources.files('pysipfenn').joinpath('tests/testCaseFiles/exampleInputFiles/')
+         self.c.runFromDirectory(directory=testFilesDir,
+                                 descriptor='Ward2017',
+                                 mode='serial')
+         for p in self.c.get_resultDictsWithNames()[:3]:
+             self.assertIn('MyFunNet', p.keys())
+             self.assertAlmostEqual(p['MyFunNet'], p['SIPFENN_Krajewski2020_NN24'], places=9)
+ 
++    @pytest.mark.skipif(IN_GITHUB_ACTIONS, reason="Test depends on the ONNX network files")
+     def tearDown(self) -> None:
+         self.c = None
+         print('\nTearing down')
+         os.remove('MyFunNet.onnx')
+         print('Removed MyFunNet')
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn.egg-info/PKG-INFO` & `pysipfenn-0.12.0/pysipfenn.egg-info/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,45 +1,58 @@
+ Metadata-Version: 2.1
+ Name: pysipfenn
+-Version: 0.11.0.post1
+-Summary: Easily extensible Python package for running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)
++Version: 0.12.0
++Summary: Easily extensible Python package for featurizing periodic atomic structures and running Structure-Informed Prediction of Formation Energy using Neural Networks (SIPFENN)
+ Author-email: Adam Krajewski <ak@psu.edu>, Jonathan Siegel <jwsiegel@tamu.edu>
+ Project-URL: Research Page, https://phaseslab.com/sipfenn
+ Project-URL: Homepage, https://pysipfenn.org
+ Project-URL: Bug Tracker, https://github.com/PhasesResearchLab/pySIPFENN/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Classifier: Topic :: Scientific/Engineering
+ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
++Classifier: Topic :: Scientific/Engineering :: Chemistry
+ Classifier: Topic :: Scientific/Engineering :: Physics
+ Requires-Python: >=3.9
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ ## pySIPFENN
+ ![GitHub top language](https://img.shields.io/github/languages/top/PhasesResearchLab/pysipfenn)
+ ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysipfenn)
+ ![PyPI](https://img.shields.io/pypi/v/pysipfenn)
+-![PyPI - License](https://img.shields.io/pypi/l/pysipfenn)
+-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
+-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
+-![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.11.0?color=g)
++![PyPI - Downloads](https://img.shields.io/pypi/dm/pysipfenn)
++
+ [![stable](https://img.shields.io/badge/Read%20The%20Docs-Stable-green)](https://pysipfenn.readthedocs.io/en/stable/) 
+ [![latest](https://img.shields.io/badge/Read%20The%20Docs-Latest-green)](https://pysipfenn.readthedocs.io/en/latest/)
++![GitHub license](https://img.shields.io/github/license/PhasesResearchLab/pySIPFENN)
++
++[![Partial Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/partialTest.yml)
++[![Full Test](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml/badge.svg)](https://github.com/PhasesResearchLab/pySIPFENN/actions/workflows/fullTest.yml)
++[![codecov](https://codecov.io/gh/PhasesResearchLab/pySIPFENN/branch/main/graph/badge.svg?token=S2J0KR0WKQ)](https://codecov.io/gh/PhasesResearchLab/pySIPFENN)
++
++![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/PhasesResearchLab/pysipfenn?label=Last%20Commit)
++![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/PhasesResearchLab/pysipfenn?label=Last%20Release)
++![GitHub commits since tagged version](https://img.shields.io/github/commits-since/PhasesResearchLab/pysipfenn/v0.12.0?color=g)
++![GitHub issues](https://img.shields.io/github/issues/PhasesResearchLab/pysipfenn)
+ 
+ [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.commatsci.2022.111254-blue)](https://doi.org/10.1016/j.commatsci.2022.111254)
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7373089.svg)](https://doi.org/10.5281/zenodo.7373089)
+ 
+ ### News
+ 
++- **(v.12.0)** Official Python 3.11 support. 
++- **(v.12.0)** Automated matrix-testing on Linux / Mac / Windows with Python 3.9 / 3.10 / 3.11 through GitHub Actions CLI
++and test coverage report through Codecov. Tests are also generally improved and more extensive.
+ - **(v0.11.0)** Some common questions are now addressed in the [documentation FAQ section](https://pysipfenn.readthedocs.io/en/stable/faq.html).
+ - **(v0.11.0)** The model downloads from Zenodo are now multithreaded and are 15 times faster.
+ - **(March 2023 Workshop)** We would like to thank all of our amazing attendees for making our workshop, co-organized with the
+ [Materials Genome Foundation](https://materialsgenomefoundation.org), such a success! Over 100 of you simultaneously followed
+ all exercises and, at the peak, we loaded over 1,200GB of models into the HPC's RAM. At this point, we would also like to 
+ acknowledge the generous support from [IBM](https://www.ibm.com) who funded the workshop. Please stay tuned for next workshops
+ planned online and in-person at conferences. They will be announced both here and at the [Materials Genome Foundation](https://materialsgenomefoundation.org) website.
+```
+
+### Comparing `pysipfenn-0.11.0.post1/pysipfenn.egg-info/SOURCES.txt` & `pysipfenn-0.12.0/pysipfenn.egg-info/SOURCES.txt`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,23 +1,28 @@
+ .gitattributes
+ .readthedocs.yaml
+ LICENSE
+ MANIFEST.in
+ README.md
+ pyproject.toml
++.github/workflows/benchmarks.yml
++.github/workflows/fullTest.yml
++.github/workflows/partialTest.yml
+ pysipfenn/__init__.py
+ pysipfenn.egg-info/PKG-INFO
+ pysipfenn.egg-info/SOURCES.txt
+ pysipfenn.egg-info/dependency_links.txt
+ pysipfenn.egg-info/requires.txt
+ pysipfenn.egg-info/top_level.txt
+ pysipfenn/core/__init__.py
+ pysipfenn/core/pysipfenn.py
+ pysipfenn/descriptorDefinitions/KS2022.py
++pysipfenn/descriptorDefinitions/KS2022_TestResult.csv
+ pysipfenn/descriptorDefinitions/KS2022_dilute.py
++pysipfenn/descriptorDefinitions/KS2022_dilute_TestResult.csv
+ pysipfenn/descriptorDefinitions/Magpie_element_properties.csv
+ pysipfenn/descriptorDefinitions/Magpie_property_names.txt
+ pysipfenn/descriptorDefinitions/README.md
+ pysipfenn/descriptorDefinitions/Ward2017.py
+ pysipfenn/descriptorDefinitions/__init__.py
+ pysipfenn/descriptorDefinitions/labels_KS2022.csv
+ pysipfenn/descriptorDefinitions/labels_KS2022_dilute.csv
+@@ -33,14 +38,16 @@
+ pysipfenn/tests/test_AllCompatibleONNX_Ward2017.py
+ pysipfenn/tests/test_KS2022.py
+ pysipfenn/tests/test_KS2022_dilute.py
+ pysipfenn/tests/test_Krajewski2020_NN9NN20NN24_ONNX.py
+ pysipfenn/tests/test_Ward2017.py
+ pysipfenn/tests/test_customModel.py
+ pysipfenn/tests/test_pysipfenn.py
++pysipfenn/tests/testCaseFiles/TestFile_DescriptorData_4_KS2022_labeled_enumerated.csv
++pysipfenn/tests/testCaseFiles/TestFile_DescriptorData_4_KS2022_labeled_named.csv
+ pysipfenn/tests/testCaseFiles/exampleInputFilesDescriptorTable.csv
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/0-Cr8Fe18Ni4.POSCAR
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/1-Cr16Fe8Ni6.POSCAR
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/10-Ce4Ti4O12.POSCAR
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/11-Fe10Ni20.POSCAR
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/12-Gd4Cr4O12.POSCAR
+ pysipfenn/tests/testCaseFiles/exampleInputFiles/13-Fe16Ni14.POSCAR
+```
+

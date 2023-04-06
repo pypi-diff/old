@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/cuquantum_cu11-22.7.1-py3-none-manylinux2014_x86_64.whl.zip tmp/cuquantum_cu11-23.3.0-py3-none-manylinux2014_x86_64.whl.zip --html versions/c/cuquantum-cu11/22.7.1-23.3.0/index.html --text versions/c/cuquantum-cu11/22.7.1-23.3.0/diff.txt --markdown versions/c/cuquantum-cu11/22.7.1-23.3.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">4.55 KB</span></div>
+  <div><span class="source">tmp/cuquantum_cu11-22.7.1-py3-none-manylinux2014_x86_64.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/cuquantum_cu11-23.3.0-py3-none-manylinux2014_x86_64.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.09 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 6 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span><del>1987</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span><del>4</del></td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span><ins>7000</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span><ins>5</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11004<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Mar-30<span class="dp">·</span>06:18<span class="dp">·</span>cuquantum_cu11-23.3.0.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<del>9</del>8<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Nov</del>-<del>1</del>0<span class="dp">·</span><del>17</del>:<del>25</del><span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/METADATA</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<ins>7</ins>8<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Mar</ins>-<ins>3</ins>0<span class="dp">·</span><ins>06</ins>:<ins>18</ins><span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Nov</del>-<del>1</del>0<span class="dp">·</span><del>17</del>:<del>25</del><span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/WHEEL</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Mar</ins>-<ins>3</ins>0<span class="dp">·</span><ins>06</ins>:<ins>18</ins><span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Nov</del>-<del>1</del>0<span class="dp">·</span><del>17</del>:<del>25</del><span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/top_level.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Mar</ins>-<ins>3</ins>0<span class="dp">·</span><ins>06</ins>:<ins>18</ins><span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><del>?</del>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>330</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Nov</del>-<del>1</del>0<span class="dp">·</span><del>17</del>:<del>25</del><span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/RECORD</td><td class="diffline">6 </td><td class="diffpresent"><ins>-</ins>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>427</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Mar</ins>-<ins>3</ins>0<span class="dp">·</span><ins>06</ins>:<ins>18</ins><span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent"><del>4</del><span class="dp">·</span>files,<span class="dp">·</span><del>3138</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span><del>1341</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>5<del>7</del>.<del>3</del>%</td><td class="diffline">7 </td><td class="diffpresent"><ins>5</ins><span class="dp">·</span>files,<span class="dp">·</span><ins>1</ins><ins>4219</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span><ins>6200</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>5<ins>6</ins>.<ins>4</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">590 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/<del>M</del><del>ETADATA</del></td><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/<ins>LICENSE</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/<del>WHEEL</del></td><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/<ins>MET</ins><ins>ADATA</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/<del>top_leve</del><del>l.txt</del></td><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/<ins>WHEEL</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-23.3.0.dist-info/top_level.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<del>2</del>.<del>7</del>.<del>1</del>.dist-info/RECORD</td><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>cuquantum_cu11-2<ins>3</ins>.<ins>3</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">11 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.76 KB</span></div>
+    <div><span class="source">cuquantum_cu11-22.7.1.dist-info/METADATA</span> vs.</div>
+    <div id="cuquantum_cu-----.-.-.dist-info-METADATA"><span class="source">cuquantum_cu11-23.3.0.dist-info/METADATA</span>
+      <a class="anchor" href="#cuquantum_cu-----.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 19% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 29 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cuquantum-cu11</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cuquantum-cu11</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2<del>2</del>.<del>7</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2<ins>3</ins>.<ins>3</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>NVIDIA<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>NVIDIA<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://developer.nvidia.com/cuquantum-sdk</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://developer.nvidia.com/cuquantum-sdk</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>NVIDIA<span class="dp">·</span>Corporation</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>NVIDIA<span class="dp">·</span>Corporation</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>cuda_installer@nvidia.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>cuda_installer@nvidia.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>NVIDIA<span class="dp">·</span>Proprietary<span class="dp">·</span>Software</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>NVIDIA<span class="dp">·</span>Proprietary<span class="dp">·</span>Software</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/NVIDIA/cuQuantum/issues</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>User<span class="dp">·</span>Forum,<span class="dp">·</span>https://github.com/NVIDIA/cuQuantum/discussions</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://docs.nvidia.com/cuda/cuquantum/</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>cuda,nvidia,state<span class="dp">·</span>vector,tensor<span class="dp">·</span>network,high-performance<span class="dp">·</span>computing,quantum<span class="dp">·</span>computing</td><td class="diffline">12 </td><td class="diffpresent">Keywords:<span class="dp">·</span>cuda,nvidia,state<span class="dp">·</span>vector,tensor<span class="dp">·</span>network,high-performance<span class="dp">·</span>computing,quantum<span class="dp">·</span>computing</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Scientific/Engineering</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Scientific/Engineering</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11<del>.0</del></td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11</td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.1</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.2</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.3</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.4</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.5</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.6</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Environment<span class="dp">·</span>::<span class="dp">·</span>GPU<span class="dp">·</span>::<span class="dp">·</span>NVIDIA<span class="dp">·</span>CUDA<span class="dp">·</span>::<span class="dp">·</span>11.7</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">16 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>custatevec-cu11<span class="dp">·</span>(==1.<del>1</del>.0)</td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>custatevec-cu11<span class="dp">·</span>(==1.<ins>3</ins>.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>cutensornet-cu11<span class="dp">·</span>(==<del>1</del>.1.<del>1</del>)</td><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>cutensornet-cu11<span class="dp">·</span>(==<ins>2</ins>.1.<ins>0</ins>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">**************************************************************************************</td><td class="diffline">20 </td><td class="diffpresent">**************************************************************************************</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">cuQuantum<span class="dp">·</span>SDK:<span class="dp">·</span>A<span class="dp">·</span>High-Performance<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>Accelerating<span class="dp">·</span>Quantum<span class="dp">·</span>Information<span class="dp">·</span>Science</td><td class="diffline">21 </td><td class="diffpresent">cuQuantum<span class="dp">·</span>SDK:<span class="dp">·</span>A<span class="dp">·</span>High-Performance<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>Accelerating<span class="dp">·</span>Quantum<span class="dp">·</span>Information<span class="dp">·</span>Science</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">**************************************************************************************</td><td class="diffline">22 </td><td class="diffpresent">**************************************************************************************</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">`NVIDIA<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK<span class="dp">·</span>&lt;https://developer.nvidia.com/cuquantum-sdk&gt;`_<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>high-performance<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>quantum<span class="dp">·</span>information<span class="dp">·</span>science<span class="dp">·</span>and<span class="dp">·</span>beyond.</td><td class="diffline">23 </td><td class="diffpresent">`NVIDIA<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK<span class="dp">·</span>&lt;https://developer.nvidia.com/cuquantum-sdk&gt;`_<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>high-performance<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>quantum<span class="dp">·</span>information<span class="dp">·</span>science<span class="dp">·</span>and<span class="dp">·</span>beyond.</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Currently<span class="dp">·</span>its<span class="dp">·</span>primary<span class="dp">·</span>target<span class="dp">·</span>is<span class="dp">·</span>*quantum<span class="dp">·</span>circuit<span class="dp">·</span>simulations*<span class="dp">·</span>and<span class="dp">·</span>it<span class="dp">·</span>consists<span class="dp">·</span>of<span class="dp">·</span>two<span class="dp">·</span>major<span class="dp">·</span>components:</td><td class="diffline">24 </td><td class="diffpresent">Currently<span class="dp">·</span>its<span class="dp">·</span>primary<span class="dp">·</span>target<span class="dp">·</span>is<span class="dp">·</span>*quantum<span class="dp">·</span>circuit<span class="dp">·</span>simulations*<span class="dp">·</span>and<span class="dp">·</span>it<span class="dp">·</span>consists<span class="dp">·</span>of<span class="dp">·</span>two<span class="dp">·</span>major<span class="dp">·</span>components:</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 45, 16 lines modified</td><td colspan="2">Offset 42, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">The<span class="dp">·</span>cuQuantum<span class="dp">·</span>wheel<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>as<span class="dp">·</span>follows:</td><td class="diffline">42 </td><td class="diffpresent">The<span class="dp">·</span>cuQuantum<span class="dp">·</span>wheel<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>as<span class="dp">·</span>follows:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>bash</td><td class="diffline">43 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>bash</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>cuquantum-cuXX</td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>cuquantum-cuXX</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">where<span class="dp">·</span>XX<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>CUDA<span class="dp">·</span>major<span class="dp">·</span>version<span class="dp">·</span>(currently<span class="dp">·</span>CUDA<span class="dp">·</span>11<span class="dp">·</span><del>is</del><span class="dp">·</span>supported).</td><td class="diffline">45 </td><td class="diffpresent">where<span class="dp">·</span>XX<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>CUDA<span class="dp">·</span>major<span class="dp">·</span>version<span class="dp">·</span>(currently<span class="dp">·</span>CUDA<span class="dp">·</span>11<span class="dp">·</span><ins>and<span class="dp">·</span>12<span class="dp">·</span>a</ins><ins>re</ins><span class="dp">·</span>supported).</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent"><del>T</del><del>h</del>e<span class="dp">·</span><del>pa</del>c<del>k</del>age<span class="dp">·</span><del>``cuqua</del>nt<del>um``</del><span class="dp">·</span><del>(</del>with<del>ou</del><del>t</del><span class="dp">·</span>the<span class="dp">·</span>``-cuXX``<span class="dp">·</span>suffix<del>)<span class="dp">·</span>is<span class="dp">·</span>considered<span class="dp">·</span>deprecated</del><del>.</del></td><td class="diffline">46 </td><td class="diffpresent"><ins>W</ins>e<span class="dp">·</span><ins>en</ins>c<ins>ou</ins><ins>r</ins>age<span class="dp">·</span><ins>use</ins><ins>rs<span class="dp">·</span>to<span class="dp">·</span>i</ins>n<ins>s</ins>t<ins>all<span class="dp">·</span>pac</ins><ins>kage</ins><span class="dp">·</span><ins>*</ins>with<ins>*</ins><span class="dp">·</span>the<span class="dp">·</span>``-cuXX``<span class="dp">·</span>suffix<ins>;</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">47 </td><td class="diffpresent">the<span class="dp">·</span>package<span class="dp">·</span>``cuquantum``<span class="dp">·</span>(without<span class="dp">·</span>the<span class="dp">·</span>``-cuXX``<span class="dp">·</span>suffix)<span class="dp">·</span>currently<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>``cuquantum-cu11``</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent">and<span class="dp">·</span>is<span class="dp">·</span>subject<span class="dp">·</span>to<span class="dp">·</span>change<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>future.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">..<span class="dp">·</span>note::</td><td class="diffline">49 </td><td class="diffpresent">..<span class="dp">·</span>note::</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>&quot;meta&quot;-package<span class="dp">·</span>--<span class="dp">·</span>installing<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>install<span class="dp">·</span>both<span class="dp">·</span>``custatevec-cuXX``<span class="dp">·</span>and<span class="dp">·</span>``cutensornet-cuXX``</td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>&quot;meta&quot;-package<span class="dp">·</span>--<span class="dp">·</span>installing<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>install<span class="dp">·</span>both<span class="dp">·</span>``custatevec-cuXX``<span class="dp">·</span>and<span class="dp">·</span>``cutensornet-cuXX``</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>released<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>installed<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK<span class="dp">·</span>version.</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>released<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>installed<span class="dp">·</span>cuQuantum<span class="dp">·</span>SDK<span class="dp">·</span>version.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">..<span class="dp">·</span>note::</td><td class="diffline">52 </td><td class="diffpresent">..<span class="dp">·</span>note::</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

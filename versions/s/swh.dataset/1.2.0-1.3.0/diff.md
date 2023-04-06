@@ -1,0 +1,353 @@
+# Comparing `tmp/swh.dataset-1.2.0.tar.gz` & `tmp/swh.dataset-1.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/swh.dataset-1.2.0.tar", last modified: Thu Mar 16 12:16:48 2023, max compression
++gzip compressed data, was "dist/swh.dataset-1.3.0.tar", last modified: Thu Apr  6 20:59:57 2023, max compression
+```
+
+## Comparing `swh.dataset-1.2.0.tar` & `swh.dataset-1.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,74 +1,74 @@
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/
+--rw-r--r--   0 jenkins    (115) docker     (999)       83 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/.git-blame-ignore-revs
+--rw-r--r--   0 jenkins    (115) docker     (999)       99 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/.gitignore
+--rw-r--r--   0 jenkins    (115) docker     (999)      848 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/.pre-commit-config.yaml
+--rw-r--r--   0 jenkins    (115) docker     (999)      112 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/AUTHORS
+--rw-r--r--   0 jenkins    (115) docker     (999)     3397 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/CODE_OF_CONDUCT.md
+--rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/CONTRIBUTORS
+--rw-r--r--   0 jenkins    (115) docker     (999)    35147 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/LICENSE
+--rw-r--r--   0 jenkins    (115) docker     (999)      163 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/Makefile
+--rw-r--r--   0 jenkins    (115) docker     (999)     1182 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/PKG-INFO
+--rw-r--r--   0 jenkins    (115) docker     (999)      244 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/README.rst
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/bin/
+--rwxr-xr-x   0 jenkins    (115) docker     (999)     1215 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/bin/orc-merge
+--rwxr-xr-x   0 jenkins    (115) docker     (999)      662 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/bin/orc-print-contents
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/docs/
+--rw-r--r--   0 jenkins    (115) docker     (999)       24 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/.gitignore
+--rw-r--r--   0 jenkins    (115) docker     (999)       39 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/Makefile
+--rw-r--r--   0 jenkins    (115) docker     (999)      244 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/README.rst
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/docs/_static/
+--rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/_static/.placeholder
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/docs/_templates/
+--rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/_templates/.placeholder
+--rw-r--r--   0 jenkins    (115) docker     (999)       43 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/conf.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     3427 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/export.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)     3452 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/generate_subdataset.rst
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/docs/graph/
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/docs/graph/_images/
+--rw-r--r--   0 jenkins    (115) docker     (999)    54727 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/_images/athena_tables.png
+--rw-r--r--   0 jenkins    (115) docker     (999)    14683 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/_images/dataset-schema.dot
+--rw-r--r--   0 jenkins    (115) docker     (999)    44610 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/_images/dataset-schema.svg
+--rw-r--r--   0 jenkins    (115) docker     (999)     3945 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/athena.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)     2482 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/databricks.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)     8786 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/dataset.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)     2239 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/index.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)     6269 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/graph/schema.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)      462 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/docs/index.rst
+--rw-r--r--   0 jenkins    (115) docker     (999)      602 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/mypy.ini
+--rw-r--r--   0 jenkins    (115) docker     (999)      237 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/pyproject.toml
+--rw-r--r--   0 jenkins    (115) docker     (999)       62 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/pytest.ini
+--rw-r--r--   0 jenkins    (115) docker     (999)        6 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/requirements-luigi.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)       15 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/requirements-swh-with-content.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)      134 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/requirements-swh.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)       57 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/requirements-test.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)      255 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/requirements.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)      120 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/setup.cfg
+--rwxr-xr-x   0 jenkins    (115) docker     (999)     2458 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/setup.py
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh/
+--rw-r--r--   0 jenkins    (115) docker     (999)       76 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/__init__.py
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh/dataset/
+--rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/__init__.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     8522 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/athena.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     9351 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/cli.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     2529 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/exporter.py
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh/dataset/exporters/
+--rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/exporters/__init__.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     9311 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/exporters/edges.py
+--rw-r--r--   0 jenkins    (115) docker     (999)    14298 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/exporters/orc.py
+--rw-r--r--   0 jenkins    (115) docker     (999)    18692 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/journalprocessor.py
+--rw-r--r--   0 jenkins    (115) docker     (999)    24795 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/luigi.py
+--rw-r--r--   0 jenkins    (115) docker     (999)       27 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/py.typed
+--rw-r--r--   0 jenkins    (115) docker     (999)     3026 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/relational.py
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh/dataset/test/
+--rw-r--r--   0 jenkins    (115) docker     (999)    19632 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/test/test_edges.py
+--rw-r--r--   0 jenkins    (115) docker     (999)    11486 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/test/test_orc.py
+--rw-r--r--   0 jenkins    (115) docker     (999)      719 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/test/test_utils.py
+--rw-r--r--   0 jenkins    (115) docker     (999)     4462 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/swh/dataset/utils.py
+-drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/
+--rw-r--r--   0 jenkins    (115) docker     (999)     1182 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/PKG-INFO
+--rw-r--r--   0 jenkins    (115) docker     (999)     1365 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/SOURCES.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)        1 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/dependency_links.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)       48 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/entry_points.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)      206 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/requires.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)        4 2023-03-16 12:16:48.000000 swh.dataset-1.2.0/swh.dataset.egg-info/top_level.txt
+--rw-r--r--   0 jenkins    (115) docker     (999)     1549 2023-03-16 12:16:46.000000 swh.dataset-1.2.0/tox.ini
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/
++-rw-r--r--   0 jenkins    (115) docker     (999)       83 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/.git-blame-ignore-revs
++-rw-r--r--   0 jenkins    (115) docker     (999)       99 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/.gitignore
++-rw-r--r--   0 jenkins    (115) docker     (999)      848 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/.pre-commit-config.yaml
++-rw-r--r--   0 jenkins    (115) docker     (999)      112 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/AUTHORS
++-rw-r--r--   0 jenkins    (115) docker     (999)     3397 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/CODE_OF_CONDUCT.md
++-rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/CONTRIBUTORS
++-rw-r--r--   0 jenkins    (115) docker     (999)    35147 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/LICENSE
++-rw-r--r--   0 jenkins    (115) docker     (999)      163 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/Makefile
++-rw-r--r--   0 jenkins    (115) docker     (999)     1182 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/PKG-INFO
++-rw-r--r--   0 jenkins    (115) docker     (999)      244 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/README.rst
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/bin/
++-rwxr-xr-x   0 jenkins    (115) docker     (999)     1215 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/bin/orc-merge
++-rwxr-xr-x   0 jenkins    (115) docker     (999)      662 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/bin/orc-print-contents
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/docs/
++-rw-r--r--   0 jenkins    (115) docker     (999)       24 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/.gitignore
++-rw-r--r--   0 jenkins    (115) docker     (999)       39 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/Makefile
++-rw-r--r--   0 jenkins    (115) docker     (999)      244 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/README.rst
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/docs/_static/
++-rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/_static/.placeholder
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/docs/_templates/
++-rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/_templates/.placeholder
++-rw-r--r--   0 jenkins    (115) docker     (999)       43 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/conf.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     3427 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/export.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)     3452 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/generate_subdataset.rst
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/docs/graph/
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/docs/graph/_images/
++-rw-r--r--   0 jenkins    (115) docker     (999)    54727 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/_images/athena_tables.png
++-rw-r--r--   0 jenkins    (115) docker     (999)    14683 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/_images/dataset-schema.dot
++-rw-r--r--   0 jenkins    (115) docker     (999)    44610 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/_images/dataset-schema.svg
++-rw-r--r--   0 jenkins    (115) docker     (999)     3945 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/athena.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)     2482 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/databricks.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)     9180 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/dataset.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)     2239 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/index.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)     6269 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/graph/schema.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)      462 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/docs/index.rst
++-rw-r--r--   0 jenkins    (115) docker     (999)      602 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/mypy.ini
++-rw-r--r--   0 jenkins    (115) docker     (999)      237 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/pyproject.toml
++-rw-r--r--   0 jenkins    (115) docker     (999)       62 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/pytest.ini
++-rw-r--r--   0 jenkins    (115) docker     (999)        6 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/requirements-luigi.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)       15 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/requirements-swh-with-content.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)      134 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/requirements-swh.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)       57 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/requirements-test.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)      255 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/requirements.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)      120 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/setup.cfg
++-rwxr-xr-x   0 jenkins    (115) docker     (999)     2458 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/setup.py
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh/
++-rw-r--r--   0 jenkins    (115) docker     (999)       76 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/__init__.py
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh/dataset/
++-rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/__init__.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     8522 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/athena.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     9351 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/cli.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     2529 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/exporter.py
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh/dataset/exporters/
++-rw-r--r--   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/exporters/__init__.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     9311 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/exporters/edges.py
++-rw-r--r--   0 jenkins    (115) docker     (999)    14298 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/exporters/orc.py
++-rw-r--r--   0 jenkins    (115) docker     (999)    18692 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/journalprocessor.py
++-rw-r--r--   0 jenkins    (115) docker     (999)    24795 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/luigi.py
++-rw-r--r--   0 jenkins    (115) docker     (999)       27 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/py.typed
++-rw-r--r--   0 jenkins    (115) docker     (999)     3026 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/relational.py
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh/dataset/test/
++-rw-r--r--   0 jenkins    (115) docker     (999)    19632 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/test/test_edges.py
++-rw-r--r--   0 jenkins    (115) docker     (999)    11486 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/test/test_orc.py
++-rw-r--r--   0 jenkins    (115) docker     (999)      719 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/test/test_utils.py
++-rw-r--r--   0 jenkins    (115) docker     (999)     4462 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/swh/dataset/utils.py
++drwxr-xr-x   0 jenkins    (115) docker     (999)        0 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/
++-rw-r--r--   0 jenkins    (115) docker     (999)     1182 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/PKG-INFO
++-rw-r--r--   0 jenkins    (115) docker     (999)     1365 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/SOURCES.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)        1 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/dependency_links.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)       48 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/entry_points.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)      206 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/requires.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)        4 2023-04-06 20:59:57.000000 swh.dataset-1.3.0/swh.dataset.egg-info/top_level.txt
++-rw-r--r--   0 jenkins    (115) docker     (999)     1549 2023-04-06 20:59:55.000000 swh.dataset-1.3.0/tox.ini
+```
+
+### Comparing `swh.dataset-1.2.0/.pre-commit-config.yaml` & `swh.dataset-1.3.0/.pre-commit-config.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/CODE_OF_CONDUCT.md` & `swh.dataset-1.3.0/CODE_OF_CONDUCT.md`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/LICENSE` & `swh.dataset-1.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/PKG-INFO` & `swh.dataset-1.3.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: swh.dataset
+-Version: 1.2.0
++Version: 1.3.0
+ Summary: Software Heritage dataset tools
+ Home-page: https://forge.softwareheritage.org/source/swh-dataset/
+ Author: Software Heritage developers
+ Author-email: swh-devel@inria.fr
+ Project-URL: Bug Reports, https://forge.softwareheritage.org/maniphest
+ Project-URL: Funding, https://www.softwareheritage.org/donate
+ Project-URL: Source, https://forge.softwareheritage.org/source/swh-dataset
+```
+
+### Comparing `swh.dataset-1.2.0/bin/orc-merge` & `swh.dataset-1.3.0/bin/orc-merge`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/bin/orc-print-contents` & `swh.dataset-1.3.0/bin/orc-print-contents`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/export.rst` & `swh.dataset-1.3.0/docs/export.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/generate_subdataset.rst` & `swh.dataset-1.3.0/docs/generate_subdataset.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/_images/athena_tables.png` & `swh.dataset-1.3.0/docs/graph/_images/athena_tables.png`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/_images/dataset-schema.dot` & `swh.dataset-1.3.0/docs/graph/_images/dataset-schema.dot`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/_images/dataset-schema.svg` & `swh.dataset-1.3.0/docs/graph/_images/dataset-schema.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/athena.rst` & `swh.dataset-1.3.0/docs/graph/athena.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/databricks.rst` & `swh.dataset-1.3.0/docs/graph/databricks.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/dataset.rst` & `swh.dataset-1.3.0/docs/graph/dataset.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -128,14 +128,22 @@
+   - **S3**: ``s3://softwareheritage/graph/2022-12-07/orc``
+ 
+ - **Compressed graph**:
+ 
+   - **Total size**: 7.1 TiB
+   - **S3**: ``s3://softwareheritage/graph/2022-12-07/compressed``
+ 
++- **"History and hosting" Compressed graph**:
++
++  - This is a compressed graph of only the "history and hosting" layer (origins,
++    snapshots, releases, revisions) and the root directory (or rarely content) of
++    every revision/release; but most directories and contents are excluded
++  - **Total size**: 1 TiB
++  - **S3**: ``s3://softwareheritage/graph/2022-12-07-history-hosting/compressed``
++
+ 2022-04-25
+ ~~~~~~~~~~
+ 
+ A full export of the graph dated from April 2022
+ 
+ - **Columnar tables (Apache ORC)**:
+```
+
+### Comparing `swh.dataset-1.2.0/docs/graph/index.rst` & `swh.dataset-1.3.0/docs/graph/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/docs/graph/schema.rst` & `swh.dataset-1.3.0/docs/graph/schema.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/mypy.ini` & `swh.dataset-1.3.0/mypy.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/setup.py` & `swh.dataset-1.3.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/athena.py` & `swh.dataset-1.3.0/swh/dataset/athena.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/cli.py` & `swh.dataset-1.3.0/swh/dataset/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/exporter.py` & `swh.dataset-1.3.0/swh/dataset/exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/exporters/edges.py` & `swh.dataset-1.3.0/swh/dataset/exporters/edges.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/exporters/orc.py` & `swh.dataset-1.3.0/swh/dataset/exporters/orc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/journalprocessor.py` & `swh.dataset-1.3.0/swh/dataset/journalprocessor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/luigi.py` & `swh.dataset-1.3.0/swh/dataset/luigi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/relational.py` & `swh.dataset-1.3.0/swh/dataset/relational.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/test/test_edges.py` & `swh.dataset-1.3.0/swh/dataset/test/test_edges.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/test/test_orc.py` & `swh.dataset-1.3.0/swh/dataset/test/test_orc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/test/test_utils.py` & `swh.dataset-1.3.0/swh/dataset/test/test_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh/dataset/utils.py` & `swh.dataset-1.3.0/swh/dataset/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/swh.dataset.egg-info/PKG-INFO` & `swh.dataset-1.3.0/swh.dataset.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: swh.dataset
+-Version: 1.2.0
++Version: 1.3.0
+ Summary: Software Heritage dataset tools
+ Home-page: https://forge.softwareheritage.org/source/swh-dataset/
+ Author: Software Heritage developers
+ Author-email: swh-devel@inria.fr
+ Project-URL: Bug Reports, https://forge.softwareheritage.org/maniphest
+ Project-URL: Funding, https://www.softwareheritage.org/donate
+ Project-URL: Source, https://forge.softwareheritage.org/source/swh-dataset
+```
+
+### Comparing `swh.dataset-1.2.0/swh.dataset.egg-info/SOURCES.txt` & `swh.dataset-1.3.0/swh.dataset.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `swh.dataset-1.2.0/tox.ini` & `swh.dataset-1.3.0/tox.ini`
+
+ * *Files identical despite different names*
+
