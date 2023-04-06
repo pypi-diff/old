@@ -1,0 +1,3478 @@
+--- tmp/kittycad-0.3.4.tar.gz
++++ tmp/kittycad-0.3.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kittycad-0.3.4.tar", max compression
+│ +gzip compressed data, was "kittycad-0.3.5.tar", max compression
+│   --- kittycad-0.3.4.tar
+├── +++ kittycad-0.3.5.tar
+│ ├── file list
+│ │ @@ -1,261 +1,267 @@
+│ │ --rw-r--r--   0        0        0     1065 2023-01-28 00:22:58.017527 kittycad-0.3.4/LICENSE
+│ │ --rw-r--r--   0        0        0      875 2023-01-28 00:22:58.017527 kittycad-0.3.4/README.md
+│ │ --rw-r--r--   0        0        0       90 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/__init__.py
+│ │ --rw-r--r--   0        0        0       47 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/__init__.py
+│ │ --rw-r--r--   0        0        0      105 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/ai/__init__.py
+│ │ --rw-r--r--   0        0        0     2840 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/ai/create_image_to_3d.py
+│ │ --rw-r--r--   0        0        0     2536 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/ai/create_text_to_3d.py
+│ │ --rw-r--r--   0        0        0      185 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/__init__.py
+│ │ --rw-r--r--   0        0        0     2729 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/get_api_call.py
+│ │ --rw-r--r--   0        0        0     2434 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/get_api_call_for_user.py
+│ │ --rw-r--r--   0        0        0     2725 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/get_api_call_metrics.py
+│ │ --rw-r--r--   0        0        0     5499 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/get_async_operation.py
+│ │ --rw-r--r--   0        0        0     3388 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/list_api_calls.py
+│ │ --rw-r--r--   0        0        0     4090 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/list_api_calls_for_user.py
+│ │ --rw-r--r--   0        0        0     3785 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/list_async_operations.py
+│ │ --rw-r--r--   0        0        0     3495 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_calls/user_list_api_calls.py
+│ │ --rw-r--r--   0        0        0      338 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_tokens/__init__.py
+│ │ --rw-r--r--   0        0        0     2257 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_tokens/create_api_token_for_user.py
+│ │ --rw-r--r--   0        0        0     2629 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_tokens/delete_api_token_for_user.py
+│ │ --rw-r--r--   0        0        0     2411 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_tokens/get_api_token_for_user.py
+│ │ --rw-r--r--   0        0        0     3428 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/api_tokens/list_api_tokens_for_user.py
+│ │ --rw-r--r--   0        0        0      102 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/apps/__init__.py
+│ │ --rw-r--r--   0        0        0     2404 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/apps/apps_github_callback.py
+│ │ --rw-r--r--   0        0        0     2581 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/apps/apps_github_consent.py
+│ │ --rw-r--r--   0        0        0     2104 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/apps/apps_github_webhook.py
+│ │ --rw-r--r--   0        0        0      142 2023-01-28 00:22:58.093539 kittycad-0.3.4/kittycad/api/beta/__init__.py
+│ │ --rw-r--r--   0        0        0      104 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/constant/__init__.py
+│ │ --rw-r--r--   0        0        0     2409 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/constant/get_physics_constant.py
+│ │ --rw-r--r--   0        0        0      219 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/__init__.py
+│ │ --rw-r--r--   0        0        0     4186 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_2d_vector_conversion.py
+│ │ --rw-r--r--   0        0        0     4024 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_3d_conversion.py
+│ │ --rw-r--r--   0        0        0     3992 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_center_of_mass.py
+│ │ --rw-r--r--   0        0        0     3515 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_center_of_mass_with_uniform_density.py
+│ │ --rw-r--r--   0        0        0     3974 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_conversion.py
+│ │ --rw-r--r--   0        0        0     1854 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_conversion_with_base64_helper.py
+│ │ --rw-r--r--   0        0        0     3559 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_density.py
+│ │ --rw-r--r--   0        0        0     2643 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_execution.py
+│ │ --rw-r--r--   0        0        0     3574 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_mass.py
+│ │ --rw-r--r--   0        0        0     3313 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_surface_area.py
+│ │ --rw-r--r--   0        0        0     3249 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/create_file_volume.py
+│ │ --rw-r--r--   0        0        0     5511 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/get_file_conversion.py
+│ │ --rw-r--r--   0        0        0     5352 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/get_file_conversion_for_user.py
+│ │ --rw-r--r--   0        0        0     1158 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/file/get_file_conversion_with_base64_helper.py
+│ │ --rw-r--r--   0        0        0      119 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/hidden/__init__.py
+│ │ --rw-r--r--   0        0        0     2388 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/hidden/auth_email.py
+│ │ --rw-r--r--   0        0        0     2539 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/hidden/auth_email_callback.py
+│ │ --rw-r--r--   0        0        0     1954 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/hidden/logout.py
+│ │ --rw-r--r--   0        0        0       91 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/meta/__init__.py
+│ │ --rw-r--r--   0        0        0     2305 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/meta/get_metadata.py
+│ │ --rw-r--r--   0        0        0     1939 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/meta/get_schema.py
+│ │ --rw-r--r--   0        0        0     1959 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/meta/ping.py
+│ │ --rw-r--r--   0        0        0      109 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/oauth2/__init__.py
+│ │ --rw-r--r--   0        0        0      103 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/__init__.py
+│ │ --rw-r--r--   0        0        0     2583 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/create_payment_information_for_user.py
+│ │ --rw-r--r--   0        0        0     2316 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/create_payment_intent_for_user.py
+│ │ --rw-r--r--   0        0        0     2238 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/delete_payment_information_for_user.py
+│ │ --rw-r--r--   0        0        0     2258 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/delete_payment_method_for_user.py
+│ │ --rw-r--r--   0        0        0     2333 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/get_payment_balance_for_user.py
+│ │ --rw-r--r--   0        0        0     2357 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/get_payment_information_for_user.py
+│ │ --rw-r--r--   0        0        0     2274 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/list_invoices_for_user.py
+│ │ --rw-r--r--   0        0        0     2342 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/list_payment_methods_for_user.py
+│ │ --rw-r--r--   0        0        0     2581 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/payments/update_payment_information_for_user.py
+│ │ --rw-r--r--   0        0        0      142 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/sessions/__init__.py
+│ │ --rw-r--r--   0        0        0     2398 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/sessions/get_session_for_user.py
+│ │ --rw-r--r--   0        0        0       87 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/__init__.py
+│ │ --rw-r--r--   0        0        0     3441 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_acceleration_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3245 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_angle_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3533 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_angular_velocity_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3217 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_area_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3271 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_charge_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3467 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_concentration_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3567 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_data_transfer_rate_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3215 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_data_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3299 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_density_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3271 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_energy_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3243 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_force_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3411 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_illuminance_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3271 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_length_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3707 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_magnetic_field_strength_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3447 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_magnetic_flux_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3215 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_mass_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3379 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_metric_power_cubed_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3407 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_metric_power_squared_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3309 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_metric_power_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3243 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_power_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3327 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_pressure_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3355 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_radiation_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3467 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_radioactivity_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3391 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_solid_angle_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3411 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_temperature_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3215 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_time_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3327 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_velocity_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3299 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_voltage_unit_conversion.py
+│ │ --rw-r--r--   0        0        0     3271 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/unit/get_volume_unit_conversion.py
+│ │ --rw-r--r--   0        0        0      283 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/__init__.py
+│ │ --rw-r--r--   0        0        0     2386 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/delete_user_self.py
+│ │ --rw-r--r--   0        0        0     2686 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user.py
+│ │ --rw-r--r--   0        0        0     2804 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user_extended.py
+│ │ --rw-r--r--   0        0        0     2194 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user_front_hash_self.py
+│ │ --rw-r--r--   0        0        0     2190 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user_onboarding_self.py
+│ │ --rw-r--r--   0        0        0     2199 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user_self.py
+│ │ --rw-r--r--   0        0        0     2299 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/get_user_self_extended.py
+│ │ --rw-r--r--   0        0        0     3257 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/list_users.py
+│ │ --rw-r--r--   0        0        0     3339 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/list_users_extended.py
+│ │ --rw-r--r--   0        0        0     2414 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/api/users/update_user_self.py
+│ │ --rw-r--r--   0        0        0     1960 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/client.py
+│ │ --rw-r--r--   0        0        0     4227 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/client_test.py
+│ │ --rw-r--r--   0        0        0     7598 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/__init__.py
+│ │ --rw-r--r--   0        0        0      164 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/account_provider.py
+│ │ --rw-r--r--   0        0        0     1638 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_call_query_group.py
+│ │ --rw-r--r--   0        0        0      268 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_call_query_group_by.py
+│ │ --rw-r--r--   0        0        0      248 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_call_status.py
+│ │ --rw-r--r--   0        0        0     8246 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_call_with_price.py
+│ │ --rw-r--r--   0        0        0     2087 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_call_with_price_results_page.py
+│ │ --rw-r--r--   0        0        0     3218 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_token.py
+│ │ --rw-r--r--   0        0        0     1963 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/api_token_results_page.py
+│ │ --rw-r--r--   0        0        0     1396 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/app_client_info.py
+│ │ --rw-r--r--   0        0        0     5846 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/async_api_call.py
+│ │ --rw-r--r--   0        0        0     2025 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/async_api_call_results_page.py
+│ │ --rw-r--r--   0        0        0      523 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/async_api_call_type.py
+│ │ --rw-r--r--   0        0        0     2131 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/billing_info.py
+│ │ --rw-r--r--   0        0        0     1384 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/cache_metadata.py
+│ │ --rw-r--r--   0        0        0     3356 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/card_details.py
+│ │ --rw-r--r--   0        0        0     2663 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/cluster.py
+│ │ --rw-r--r--   0        0        0      171 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/code_language.py
+│ │ --rw-r--r--   0        0        0     2193 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/code_output.py
+│ │ --rw-r--r--   0        0        0     1574 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/commit.py
+│ │ --rw-r--r--   0        0        0    14432 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/connection.py
+│ │ --rw-r--r--   0        0        0      224 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/created_at_sort_mode.py
+│ │ --rw-r--r--   0        0        0     2337 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/currency.py
+│ │ --rw-r--r--   0        0        0     4342 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/customer.py
+│ │ --rw-r--r--   0        0        0     4238 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/customer_balance.py
+│ │ --rw-r--r--   0        0        0     2413 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/device_access_token_request_form.py
+│ │ --rw-r--r--   0        0        0     1499 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/device_auth_request_form.py
+│ │ --rw-r--r--   0        0        0     1504 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/device_auth_verify_params.py
+│ │ --rw-r--r--   0        0        0    21726 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/docker_system_info.py
+│ │ --rw-r--r--   0        0        0     1735 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/email_authentication_form.py
+│ │ --rw-r--r--   0        0        0     3925 2023-01-28 00:22:58.097540 kittycad-0.3.4/kittycad/models/engine_metadata.py
+│ │ --rw-r--r--   0        0        0      202 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/environment.py
+│ │ --rw-r--r--   0        0        0     1888 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/error.py
+│ │ --rw-r--r--   0        0        0     2707 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/executor_metadata.py
+│ │ --rw-r--r--   0        0        0     5849 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/extended_user.py
+│ │ --rw-r--r--   0        0        0     2019 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/extended_user_results_page.py
+│ │ --rw-r--r--   0        0        0     6350 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file2_d_vector_conversion.py
+│ │ --rw-r--r--   0        0        0      209 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file2_d_vector_export_format.py
+│ │ --rw-r--r--   0        0        0      161 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file2_d_vector_import_format.py
+│ │ --rw-r--r--   0        0        0     6255 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file3_d_conversion.py
+│ │ --rw-r--r--   0        0        0      267 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file3_d_export_format.py
+│ │ --rw-r--r--   0        0        0      289 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file3_d_import_format.py
+│ │ --rw-r--r--   0        0        0     6110 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_center_of_mass.py
+│ │ --rw-r--r--   0        0        0     5898 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_center_of_mass_with_uniform_density.py
+│ │ --rw-r--r--   0        0        0     6220 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_conversion.py
+│ │ --rw-r--r--   0        0        0     5837 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_density.py
+│ │ --rw-r--r--   0        0        0      315 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_export_format.py
+│ │ --rw-r--r--   0        0        0      303 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_import_format.py
+│ │ --rw-r--r--   0        0        0     5822 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_mass.py
+│ │ --rw-r--r--   0        0        0     5629 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_surface_area.py
+│ │ --rw-r--r--   0        0        0     1412 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_system_metadata.py
+│ │ --rw-r--r--   0        0        0     5541 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/file_volume.py
+│ │ --rw-r--r--   0        0        0     2276 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/gateway.py
+│ │ --rw-r--r--   0        0        0      146 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/image_type.py
+│ │ --rw-r--r--   0        0        0     2166 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/index_info.py
+│ │ --rw-r--r--   0        0        0     8343 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/invoice.py
+│ │ --rw-r--r--   0        0        0     2909 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/invoice_line_item.py
+│ │ --rw-r--r--   0        0        0      252 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/invoice_status.py
+│ │ --rw-r--r--   0        0        0     2777 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/jetstream.py
+│ │ --rw-r--r--   0        0        0     1874 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/jetstream_api_stats.py
+│ │ --rw-r--r--   0        0        0     2180 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/jetstream_config.py
+│ │ --rw-r--r--   0        0        0     3190 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/jetstream_stats.py
+│ │ --rw-r--r--   0        0        0     2095 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/leaf_node.py
+│ │ --rw-r--r--   0        0        0     1355 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/mesh.py
+│ │ --rw-r--r--   0        0        0     1894 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/meta_cluster_info.py
+│ │ --rw-r--r--   0        0        0     5250 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/metadata.py
+│ │ --rw-r--r--   0        0        0      317 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/method.py
+│ │ --rw-r--r--   0        0        0     2642 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/new_address.py
+│ │ --rw-r--r--   0        0        0     1992 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/o_auth2_client_info.py
+│ │ --rw-r--r--   0        0        0      218 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/o_auth2_grant_type.py
+│ │ --rw-r--r--   0        0        0     2449 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/onboarding.py
+│ │ --rw-r--r--   0        0        0     1617 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/output_file.py
+│ │ --rw-r--r--   0        0        0     1493 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/payment_intent.py
+│ │ --rw-r--r--   0        0        0     3874 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/payment_method.py
+│ │ --rw-r--r--   0        0        0     2247 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/payment_method_card_checks.py
+│ │ --rw-r--r--   0        0        0      140 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/payment_method_type.py
+│ │ --rw-r--r--   0        0        0     5526 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/physics_constant.py
+│ │ --rw-r--r--   0        0        0     1024 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/physics_constant_name.py
+│ │ --rw-r--r--   0        0        0     2588 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/plugins_info.py
+│ │ --rw-r--r--   0        0        0     1392 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/point_e_metadata.py
+│ │ --rw-r--r--   0        0        0     1385 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/pong.py
+│ │ --rw-r--r--   0        0        0     4159 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/registry_service_config.py
+│ │ --rw-r--r--   0        0        0     1773 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/runtime.py
+│ │ --rw-r--r--   0        0        0     3573 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/session.py
+│ │ --rw-r--r--   0        0        0      214 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/system_info_cgroup_driver_enum.py
+│ │ --rw-r--r--   0        0        0      175 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/system_info_cgroup_version_enum.py
+│ │ --rw-r--r--   0        0        0     1681 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/system_info_default_address_pools.py
+│ │ --rw-r--r--   0        0        0      213 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/system_info_isolation_enum.py
+│ │ --rw-r--r--   0        0        0     6477 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_acceleration_conversion.py
+│ │ --rw-r--r--   0        0        0      285 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_acceleration_format.py
+│ │ --rw-r--r--   0        0        0     6386 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_angle_conversion.py
+│ │ --rw-r--r--   0        0        0      300 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_angle_format.py
+│ │ --rw-r--r--   0        0        0     6520 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_angular_velocity_conversion.py
+│ │ --rw-r--r--   0        0        0      334 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_angular_velocity_format.py
+│ │ --rw-r--r--   0        0        0     6373 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_area_conversion.py
+│ │ --rw-r--r--   0        0        0      333 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_area_format.py
+│ │ --rw-r--r--   0        0        0     6399 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_charge_conversion.py
+│ │ --rw-r--r--   0        0        0      177 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_charge_format.py
+│ │ --rw-r--r--   0        0        0     6490 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_concentration_conversion.py
+│ │ --rw-r--r--   0        0        0      286 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_concentration_format.py
+│ │ --rw-r--r--   0        0        0     6373 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_data_conversion.py
+│ │ --rw-r--r--   0        0        0      199 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_data_format.py
+│ │ --rw-r--r--   0        0        0     6537 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_data_transfer_rate_conversion.py
+│ │ --rw-r--r--   0        0        0      307 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_data_transfer_rate_format.py
+│ │ --rw-r--r--   0        0        0     6412 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_density_conversion.py
+│ │ --rw-r--r--   0        0        0      626 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_density_format.py
+│ │ --rw-r--r--   0        0        0     6399 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_energy_conversion.py
+│ │ --rw-r--r--   0        0        0      441 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_energy_format.py
+│ │ --rw-r--r--   0        0        0     6386 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_force_conversion.py
+│ │ --rw-r--r--   0        0        0      230 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_force_format.py
+│ │ --rw-r--r--   0        0        0     6464 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_illuminance_conversion.py
+│ │ --rw-r--r--   0        0        0      244 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_illuminance_format.py
+│ │ --rw-r--r--   0        0        0     6399 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_length_conversion.py
+│ │ --rw-r--r--   0        0        0      639 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_length_format.py
+│ │ --rw-r--r--   0        0        0     6602 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_magnetic_field_strength_conversion.py
+│ │ --rw-r--r--   0        0        0      176 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_magnetic_field_strength_format.py
+│ │ --rw-r--r--   0        0        0     6481 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_magnetic_flux_conversion.py
+│ │ --rw-r--r--   0        0        0      171 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_magnetic_flux_format.py
+│ │ --rw-r--r--   0        0        0     6373 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_mass_conversion.py
+│ │ --rw-r--r--   0        0        0      345 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_mass_format.py
+│ │ --rw-r--r--   0        0        0      434 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_metric_power.py
+│ │ --rw-r--r--   0        0        0     6419 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_metric_power_conversion.py
+│ │ --rw-r--r--   0        0        0     6447 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_metric_power_cubed_conversion.py
+│ │ --rw-r--r--   0        0        0     6457 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_metric_power_squared_conversion.py
+│ │ --rw-r--r--   0        0        0     6386 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_power_conversion.py
+│ │ --rw-r--r--   0        0        0      196 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_power_format.py
+│ │ --rw-r--r--   0        0        0     6425 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_pressure_conversion.py
+│ │ --rw-r--r--   0        0        0      263 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_pressure_format.py
+│ │ --rw-r--r--   0        0        0     6438 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_radiation_conversion.py
+│ │ --rw-r--r--   0        0        0      182 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_radiation_format.py
+│ │ --rw-r--r--   0        0        0     6490 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_radioactivity_conversion.py
+│ │ --rw-r--r--   0        0        0      206 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_radioactivity_format.py
+│ │ --rw-r--r--   0        0        0     6455 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_solid_angle_conversion.py
+│ │ --rw-r--r--   0        0        0      209 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_solid_angle_format.py
+│ │ --rw-r--r--   0        0        0     6464 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_temperature_conversion.py
+│ │ --rw-r--r--   0        0        0      250 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_temperature_format.py
+│ │ --rw-r--r--   0        0        0     6373 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_time_conversion.py
+│ │ --rw-r--r--   0        0        0      303 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_time_format.py
+│ │ --rw-r--r--   0        0        0     6425 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_velocity_conversion.py
+│ │ --rw-r--r--   0        0        0      311 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_velocity_format.py
+│ │ --rw-r--r--   0        0        0     6412 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_voltage_conversion.py
+│ │ --rw-r--r--   0        0        0      188 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_voltage_format.py
+│ │ --rw-r--r--   0        0        0     6399 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_volume_conversion.py
+│ │ --rw-r--r--   0        0        0      865 2023-01-28 00:22:58.101540 kittycad-0.3.4/kittycad/models/unit_volume_format.py
+│ │ --rw-r--r--   0        0        0     2533 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/models/update_user.py
+│ │ --rw-r--r--   0        0        0     5069 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/models/user.py
+│ │ --rw-r--r--   0        0        0     1901 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/models/user_results_page.py
+│ │ --rw-r--r--   0        0        0       68 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/models/uuid.py
+│ │ --rw-r--r--   0        0        0     3346 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/models/verification_token.py
+│ │ --rw-r--r--   0        0        0       25 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/py.typed
+│ │ --rw-r--r--   0        0        0      984 2023-01-28 00:22:58.105541 kittycad-0.3.4/kittycad/types.py
+│ │ --rw-r--r--   0        0        0     1058 2023-01-28 00:22:58.105541 kittycad-0.3.4/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1939 1970-01-01 00:00:00.000000 kittycad-0.3.4/setup.py
+│ │ --rw-r--r--   0        0        0     1474 1970-01-01 00:00:00.000000 kittycad-0.3.4/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1065 2023-04-06 22:38:56.203191 kittycad-0.3.5/LICENSE
+│ │ +-rw-r--r--   0        0        0      875 2023-04-06 22:38:56.203191 kittycad-0.3.5/README.md
+│ │ +-rw-r--r--   0        0        0       90 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/__init__.py
+│ │ +-rw-r--r--   0        0        0       47 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/__init__.py
+│ │ +-rw-r--r--   0        0        0      105 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/ai/__init__.py
+│ │ +-rw-r--r--   0        0        0     2840 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/ai/create_image_to_3d.py
+│ │ +-rw-r--r--   0        0        0     2536 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/ai/create_text_to_3d.py
+│ │ +-rw-r--r--   0        0        0      185 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/__init__.py
+│ │ +-rw-r--r--   0        0        0     2729 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/get_api_call.py
+│ │ +-rw-r--r--   0        0        0     2434 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/get_api_call_for_user.py
+│ │ +-rw-r--r--   0        0        0     2725 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/get_api_call_metrics.py
+│ │ +-rw-r--r--   0        0        0     5024 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/get_async_operation.py
+│ │ +-rw-r--r--   0        0        0     3388 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/list_api_calls.py
+│ │ +-rw-r--r--   0        0        0     4090 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/list_api_calls_for_user.py
+│ │ +-rw-r--r--   0        0        0     3785 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/list_async_operations.py
+│ │ +-rw-r--r--   0        0        0     3495 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_calls/user_list_api_calls.py
+│ │ +-rw-r--r--   0        0        0      338 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_tokens/__init__.py
+│ │ +-rw-r--r--   0        0        0     2257 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_tokens/create_api_token_for_user.py
+│ │ +-rw-r--r--   0        0        0     2629 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_tokens/delete_api_token_for_user.py
+│ │ +-rw-r--r--   0        0        0     2411 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_tokens/get_api_token_for_user.py
+│ │ +-rw-r--r--   0        0        0     3428 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/api_tokens/list_api_tokens_for_user.py
+│ │ +-rw-r--r--   0        0        0      102 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/apps/__init__.py
+│ │ +-rw-r--r--   0        0        0     2404 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/apps/apps_github_callback.py
+│ │ +-rw-r--r--   0        0        0     2581 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/apps/apps_github_consent.py
+│ │ +-rw-r--r--   0        0        0     2104 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/apps/apps_github_webhook.py
+│ │ +-rw-r--r--   0        0        0      142 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/beta/__init__.py
+│ │ +-rw-r--r--   0        0        0      104 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/constant/__init__.py
+│ │ +-rw-r--r--   0        0        0     2409 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/constant/get_physics_constant.py
+│ │ +-rw-r--r--   0        0        0      219 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/__init__.py
+│ │ +-rw-r--r--   0        0        0     4186 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_2d_vector_conversion.py
+│ │ +-rw-r--r--   0        0        0     4024 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_3d_conversion.py
+│ │ +-rw-r--r--   0        0        0     3329 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_center_of_mass.py
+│ │ +-rw-r--r--   0        0        0     3974 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_conversion.py
+│ │ +-rw-r--r--   0        0        0     1854 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_conversion_with_base64_helper.py
+│ │ +-rw-r--r--   0        0        0     3559 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_density.py
+│ │ +-rw-r--r--   0        0        0     2643 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_execution.py
+│ │ +-rw-r--r--   0        0        0     3574 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_mass.py
+│ │ +-rw-r--r--   0        0        0     3313 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_surface_area.py
+│ │ +-rw-r--r--   0        0        0     3249 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/create_file_volume.py
+│ │ +-rw-r--r--   0        0        0     5036 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/get_file_conversion.py
+│ │ +-rw-r--r--   0        0        0     4877 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/get_file_conversion_for_user.py
+│ │ +-rw-r--r--   0        0        0     1158 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/file/get_file_conversion_with_base64_helper.py
+│ │ +-rw-r--r--   0        0        0      119 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/hidden/__init__.py
+│ │ +-rw-r--r--   0        0        0     2388 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/hidden/auth_email.py
+│ │ +-rw-r--r--   0        0        0     2539 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/hidden/auth_email_callback.py
+│ │ +-rw-r--r--   0        0        0     1954 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/hidden/logout.py
+│ │ +-rw-r--r--   0        0        0       91 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/meta/__init__.py
+│ │ +-rw-r--r--   0        0        0     2091 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/meta/get_ai_plugin_manifest.py
+│ │ +-rw-r--r--   0        0        0     2305 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/meta/get_metadata.py
+│ │ +-rw-r--r--   0        0        0     1939 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/meta/get_schema.py
+│ │ +-rw-r--r--   0        0        0     1959 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/meta/ping.py
+│ │ +-rw-r--r--   0        0        0      109 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/oauth2/__init__.py
+│ │ +-rw-r--r--   0        0        0      103 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/__init__.py
+│ │ +-rw-r--r--   0        0        0     2583 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/create_payment_information_for_user.py
+│ │ +-rw-r--r--   0        0        0     2316 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/create_payment_intent_for_user.py
+│ │ +-rw-r--r--   0        0        0     2238 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/delete_payment_information_for_user.py
+│ │ +-rw-r--r--   0        0        0     2258 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/delete_payment_method_for_user.py
+│ │ +-rw-r--r--   0        0        0     2333 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/get_payment_balance_for_user.py
+│ │ +-rw-r--r--   0        0        0     2357 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/get_payment_information_for_user.py
+│ │ +-rw-r--r--   0        0        0     2274 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/list_invoices_for_user.py
+│ │ +-rw-r--r--   0        0        0     2342 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/list_payment_methods_for_user.py
+│ │ +-rw-r--r--   0        0        0     2581 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/update_payment_information_for_user.py
+│ │ +-rw-r--r--   0        0        0     2298 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/payments/validate_customer_tax_information_for_user.py
+│ │ +-rw-r--r--   0        0        0      142 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/sessions/__init__.py
+│ │ +-rw-r--r--   0        0        0     2398 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/sessions/get_session_for_user.py
+│ │ +-rw-r--r--   0        0        0       87 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/unit/__init__.py
+│ │ +-rw-r--r--   0        0        0     3441 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/unit/get_acceleration_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3245 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/unit/get_angle_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3533 2023-04-06 22:38:56.267193 kittycad-0.3.5/kittycad/api/unit/get_angular_velocity_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3217 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_area_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3271 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_charge_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3467 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_concentration_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3567 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_data_transfer_rate_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3215 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_data_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3299 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_density_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3271 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_energy_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3243 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_force_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3411 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_illuminance_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3271 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_length_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3707 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_magnetic_field_strength_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3447 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_magnetic_flux_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3215 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_mass_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3379 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_metric_power_cubed_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3407 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_metric_power_squared_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3309 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_metric_power_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3243 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_power_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3327 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_pressure_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3355 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_radiation_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3467 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_radioactivity_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3391 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_solid_angle_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3411 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_temperature_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3215 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_time_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3327 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_velocity_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3299 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_voltage_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0     3271 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/unit/get_volume_unit_conversion.py
+│ │ +-rw-r--r--   0        0        0      283 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/__init__.py
+│ │ +-rw-r--r--   0        0        0     2386 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/delete_user_self.py
+│ │ +-rw-r--r--   0        0        0     2686 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user.py
+│ │ +-rw-r--r--   0        0        0     2804 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user_extended.py
+│ │ +-rw-r--r--   0        0        0     2194 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user_front_hash_self.py
+│ │ +-rw-r--r--   0        0        0     2190 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user_onboarding_self.py
+│ │ +-rw-r--r--   0        0        0     2199 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user_self.py
+│ │ +-rw-r--r--   0        0        0     2299 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/get_user_self_extended.py
+│ │ +-rw-r--r--   0        0        0     3257 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/list_users.py
+│ │ +-rw-r--r--   0        0        0     3339 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/list_users_extended.py
+│ │ +-rw-r--r--   0        0        0     2414 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/api/users/update_user_self.py
+│ │ +-rw-r--r--   0        0        0     1960 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/client.py
+│ │ +-rw-r--r--   0        0        0     4227 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/client_test.py
+│ │ +-rw-r--r--   0        0        0     7833 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/__init__.py
+│ │ +-rw-r--r--   0        0        0      164 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/account_provider.py
+│ │ +-rw-r--r--   0        0        0     2261 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_api.py
+│ │ +-rw-r--r--   0        0        0      144 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_api_type.py
+│ │ +-rw-r--r--   0        0        0     2511 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_auth.py
+│ │ +-rw-r--r--   0        0        0      221 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_auth_type.py
+│ │ +-rw-r--r--   0        0        0      167 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_http_auth_type.py
+│ │ +-rw-r--r--   0        0        0     4590 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/ai_plugin_manifest.py
+│ │ +-rw-r--r--   0        0        0     1638 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_call_query_group.py
+│ │ +-rw-r--r--   0        0        0      268 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_call_query_group_by.py
+│ │ +-rw-r--r--   0        0        0      248 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_call_status.py
+│ │ +-rw-r--r--   0        0        0     8246 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_call_with_price.py
+│ │ +-rw-r--r--   0        0        0     2087 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_call_with_price_results_page.py
+│ │ +-rw-r--r--   0        0        0     3218 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_token.py
+│ │ +-rw-r--r--   0        0        0     1963 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/api_token_results_page.py
+│ │ +-rw-r--r--   0        0        0     1396 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/app_client_info.py
+│ │ +-rw-r--r--   0        0        0     5846 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/async_api_call.py
+│ │ +-rw-r--r--   0        0        0     2025 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/async_api_call_results_page.py
+│ │ +-rw-r--r--   0        0        0      439 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/async_api_call_type.py
+│ │ +-rw-r--r--   0        0        0     2131 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/billing_info.py
+│ │ +-rw-r--r--   0        0        0     1384 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/cache_metadata.py
+│ │ +-rw-r--r--   0        0        0     3356 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/card_details.py
+│ │ +-rw-r--r--   0        0        0     2663 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/cluster.py
+│ │ +-rw-r--r--   0        0        0      171 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/code_language.py
+│ │ +-rw-r--r--   0        0        0     2193 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/code_output.py
+│ │ +-rw-r--r--   0        0        0     1574 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/commit.py
+│ │ +-rw-r--r--   0        0        0    14432 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/connection.py
+│ │ +-rw-r--r--   0        0        0     3602 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/country_code.py
+│ │ +-rw-r--r--   0        0        0      224 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/created_at_sort_mode.py
+│ │ +-rw-r--r--   0        0        0     2337 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/currency.py
+│ │ +-rw-r--r--   0        0        0     4342 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/customer.py
+│ │ +-rw-r--r--   0        0        0     4238 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/customer_balance.py
+│ │ +-rw-r--r--   0        0        0     2413 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/device_access_token_request_form.py
+│ │ +-rw-r--r--   0        0        0     1499 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/device_auth_request_form.py
+│ │ +-rw-r--r--   0        0        0     1504 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/device_auth_verify_params.py
+│ │ +-rw-r--r--   0        0        0    21726 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/docker_system_info.py
+│ │ +-rw-r--r--   0        0        0     1735 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/email_authentication_form.py
+│ │ +-rw-r--r--   0        0        0     3925 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/engine_metadata.py
+│ │ +-rw-r--r--   0        0        0      202 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/environment.py
+│ │ +-rw-r--r--   0        0        0     1888 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/error.py
+│ │ +-rw-r--r--   0        0        0     2707 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/executor_metadata.py
+│ │ +-rw-r--r--   0        0        0     5849 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/extended_user.py
+│ │ +-rw-r--r--   0        0        0     2019 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/extended_user_results_page.py
+│ │ +-rw-r--r--   0        0        0     6350 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file2_d_vector_conversion.py
+│ │ +-rw-r--r--   0        0        0      209 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file2_d_vector_export_format.py
+│ │ +-rw-r--r--   0        0        0      161 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file2_d_vector_import_format.py
+│ │ +-rw-r--r--   0        0        0     6255 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file3_d_conversion.py
+│ │ +-rw-r--r--   0        0        0      267 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file3_d_export_format.py
+│ │ +-rw-r--r--   0        0        0      289 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file3_d_import_format.py
+│ │ +-rw-r--r--   0        0        0     5799 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_center_of_mass.py
+│ │ +-rw-r--r--   0        0        0     6220 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_conversion.py
+│ │ +-rw-r--r--   0        0        0     5837 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_density.py
+│ │ +-rw-r--r--   0        0        0      315 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_export_format.py
+│ │ +-rw-r--r--   0        0        0      303 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_import_format.py
+│ │ +-rw-r--r--   0        0        0     5822 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_mass.py
+│ │ +-rw-r--r--   0        0        0     5629 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_surface_area.py
+│ │ +-rw-r--r--   0        0        0     1412 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_system_metadata.py
+│ │ +-rw-r--r--   0        0        0     5541 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/file_volume.py
+│ │ +-rw-r--r--   0        0        0     2276 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/gateway.py
+│ │ +-rw-r--r--   0        0        0      146 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/image_type.py
+│ │ +-rw-r--r--   0        0        0     2166 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/index_info.py
+│ │ +-rw-r--r--   0        0        0     8343 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/invoice.py
+│ │ +-rw-r--r--   0        0        0     2909 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/invoice_line_item.py
+│ │ +-rw-r--r--   0        0        0      252 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/invoice_status.py
+│ │ +-rw-r--r--   0        0        0     2777 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/jetstream.py
+│ │ +-rw-r--r--   0        0        0     1874 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/jetstream_api_stats.py
+│ │ +-rw-r--r--   0        0        0     2180 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/jetstream_config.py
+│ │ +-rw-r--r--   0        0        0     3190 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/jetstream_stats.py
+│ │ +-rw-r--r--   0        0        0     2095 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/leaf_node.py
+│ │ +-rw-r--r--   0        0        0     1355 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/mesh.py
+│ │ +-rw-r--r--   0        0        0     1894 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/meta_cluster_info.py
+│ │ +-rw-r--r--   0        0        0     5250 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/metadata.py
+│ │ +-rw-r--r--   0        0        0      317 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/method.py
+│ │ +-rw-r--r--   0        0        0     2967 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/new_address.py
+│ │ +-rw-r--r--   0        0        0     1992 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/o_auth2_client_info.py
+│ │ +-rw-r--r--   0        0        0      218 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/o_auth2_grant_type.py
+│ │ +-rw-r--r--   0        0        0     2449 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/onboarding.py
+│ │ +-rw-r--r--   0        0        0     1617 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/output_file.py
+│ │ +-rw-r--r--   0        0        0     1493 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/payment_intent.py
+│ │ +-rw-r--r--   0        0        0     3874 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/payment_method.py
+│ │ +-rw-r--r--   0        0        0     2247 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/payment_method_card_checks.py
+│ │ +-rw-r--r--   0        0        0      140 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/payment_method_type.py
+│ │ +-rw-r--r--   0        0        0     5526 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/physics_constant.py
+│ │ +-rw-r--r--   0        0        0     1024 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/physics_constant_name.py
+│ │ +-rw-r--r--   0        0        0     2588 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/plugins_info.py
+│ │ +-rw-r--r--   0        0        0     1392 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/point_e_metadata.py
+│ │ +-rw-r--r--   0        0        0     1385 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/pong.py
+│ │ +-rw-r--r--   0        0        0     4159 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/registry_service_config.py
+│ │ +-rw-r--r--   0        0        0     1773 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/runtime.py
+│ │ +-rw-r--r--   0        0        0     3573 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/session.py
+│ │ +-rw-r--r--   0        0        0      214 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/system_info_cgroup_driver_enum.py
+│ │ +-rw-r--r--   0        0        0      175 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/system_info_cgroup_version_enum.py
+│ │ +-rw-r--r--   0        0        0     1681 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/system_info_default_address_pools.py
+│ │ +-rw-r--r--   0        0        0      213 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/system_info_isolation_enum.py
+│ │ +-rw-r--r--   0        0        0     6477 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_acceleration_conversion.py
+│ │ +-rw-r--r--   0        0        0      285 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_acceleration_format.py
+│ │ +-rw-r--r--   0        0        0     6386 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_angle_conversion.py
+│ │ +-rw-r--r--   0        0        0      300 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_angle_format.py
+│ │ +-rw-r--r--   0        0        0     6520 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_angular_velocity_conversion.py
+│ │ +-rw-r--r--   0        0        0      334 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_angular_velocity_format.py
+│ │ +-rw-r--r--   0        0        0     6373 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_area_conversion.py
+│ │ +-rw-r--r--   0        0        0      333 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_area_format.py
+│ │ +-rw-r--r--   0        0        0     6399 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_charge_conversion.py
+│ │ +-rw-r--r--   0        0        0      177 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_charge_format.py
+│ │ +-rw-r--r--   0        0        0     6490 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_concentration_conversion.py
+│ │ +-rw-r--r--   0        0        0      286 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_concentration_format.py
+│ │ +-rw-r--r--   0        0        0     6373 2023-04-06 22:38:56.271193 kittycad-0.3.5/kittycad/models/unit_data_conversion.py
+│ │ +-rw-r--r--   0        0        0      199 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_data_format.py
+│ │ +-rw-r--r--   0        0        0     6537 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_data_transfer_rate_conversion.py
+│ │ +-rw-r--r--   0        0        0      307 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_data_transfer_rate_format.py
+│ │ +-rw-r--r--   0        0        0     6412 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_density_conversion.py
+│ │ +-rw-r--r--   0        0        0      626 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_density_format.py
+│ │ +-rw-r--r--   0        0        0     6399 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_energy_conversion.py
+│ │ +-rw-r--r--   0        0        0      441 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_energy_format.py
+│ │ +-rw-r--r--   0        0        0     6386 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_force_conversion.py
+│ │ +-rw-r--r--   0        0        0      230 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_force_format.py
+│ │ +-rw-r--r--   0        0        0     6464 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_illuminance_conversion.py
+│ │ +-rw-r--r--   0        0        0      244 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_illuminance_format.py
+│ │ +-rw-r--r--   0        0        0     6399 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_length_conversion.py
+│ │ +-rw-r--r--   0        0        0      639 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_length_format.py
+│ │ +-rw-r--r--   0        0        0     6602 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_magnetic_field_strength_conversion.py
+│ │ +-rw-r--r--   0        0        0      176 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_magnetic_field_strength_format.py
+│ │ +-rw-r--r--   0        0        0     6481 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_magnetic_flux_conversion.py
+│ │ +-rw-r--r--   0        0        0      171 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_magnetic_flux_format.py
+│ │ +-rw-r--r--   0        0        0     6373 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_mass_conversion.py
+│ │ +-rw-r--r--   0        0        0      345 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_mass_format.py
+│ │ +-rw-r--r--   0        0        0      434 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_metric_power.py
+│ │ +-rw-r--r--   0        0        0     6419 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_metric_power_conversion.py
+│ │ +-rw-r--r--   0        0        0     6447 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_metric_power_cubed_conversion.py
+│ │ +-rw-r--r--   0        0        0     6457 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_metric_power_squared_conversion.py
+│ │ +-rw-r--r--   0        0        0     6386 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_power_conversion.py
+│ │ +-rw-r--r--   0        0        0      196 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_power_format.py
+│ │ +-rw-r--r--   0        0        0     6425 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_pressure_conversion.py
+│ │ +-rw-r--r--   0        0        0      263 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_pressure_format.py
+│ │ +-rw-r--r--   0        0        0     6438 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_radiation_conversion.py
+│ │ +-rw-r--r--   0        0        0      182 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_radiation_format.py
+│ │ +-rw-r--r--   0        0        0     6490 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_radioactivity_conversion.py
+│ │ +-rw-r--r--   0        0        0      206 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_radioactivity_format.py
+│ │ +-rw-r--r--   0        0        0     6455 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_solid_angle_conversion.py
+│ │ +-rw-r--r--   0        0        0      209 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_solid_angle_format.py
+│ │ +-rw-r--r--   0        0        0     6464 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_temperature_conversion.py
+│ │ +-rw-r--r--   0        0        0      250 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_temperature_format.py
+│ │ +-rw-r--r--   0        0        0     6373 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_time_conversion.py
+│ │ +-rw-r--r--   0        0        0      303 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_time_format.py
+│ │ +-rw-r--r--   0        0        0     6425 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_velocity_conversion.py
+│ │ +-rw-r--r--   0        0        0      311 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_velocity_format.py
+│ │ +-rw-r--r--   0        0        0     6412 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_voltage_conversion.py
+│ │ +-rw-r--r--   0        0        0      188 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_voltage_format.py
+│ │ +-rw-r--r--   0        0        0     6399 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_volume_conversion.py
+│ │ +-rw-r--r--   0        0        0      865 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/unit_volume_format.py
+│ │ +-rw-r--r--   0        0        0     2533 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/update_user.py
+│ │ +-rw-r--r--   0        0        0     5069 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/user.py
+│ │ +-rw-r--r--   0        0        0     1901 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/user_results_page.py
+│ │ +-rw-r--r--   0        0        0       68 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/uuid.py
+│ │ +-rw-r--r--   0        0        0     3346 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/models/verification_token.py
+│ │ +-rw-r--r--   0        0        0       25 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/py.typed
+│ │ +-rw-r--r--   0        0        0      984 2023-04-06 22:38:56.275194 kittycad-0.3.5/kittycad/types.py
+│ │ +-rw-r--r--   0        0        0     1058 2023-04-06 22:38:56.275194 kittycad-0.3.5/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1474 1970-01-01 00:00:00.000000 kittycad-0.3.5/PKG-INFO
+│ │   --- kittycad-0.3.4/LICENSE
+│ ├── +++ kittycad-0.3.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/README.md
+│ ├── +++ kittycad-0.3.5/README.md
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/ai/create_image_to_3d.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/ai/create_image_to_3d.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/ai/create_text_to_3d.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/ai/create_text_to_3d.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/get_api_call.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/get_api_call.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/get_api_call_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/get_api_call_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/get_api_call_metrics.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/get_api_call_metrics.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/get_async_operation.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/get_file_conversion.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -3,41 +3,40 @@
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │  from ...models.file_conversion import FileConversion
+│ │  from ...models.file2_d_vector_conversion import File2DVectorConversion
+│ │  from ...models.file3_d_conversion import File3DConversion
+│ │  from ...models.file_center_of_mass import FileCenterOfMass
+│ │ -from ...models.file_center_of_mass_with_uniform_density import FileCenterOfMassWithUniformDensity
+│ │  from ...models.file_mass import FileMass
+│ │  from ...models.file_volume import FileVolume
+│ │  from ...models.file_density import FileDensity
+│ │  from ...models.file_surface_area import FileSurfaceArea
+│ │  from ...models.error import Error
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/async/operations/{id}".format(client.base_url, id=id)
+│ │ +	url = "{}/file/conversions/{id}".format(client.base_url, id=id)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	if response.status_code == 200:
+│ │  		data = response.json()
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │  			option = FileConversion.from_dict(data)
+│ │  			return option
+│ │ @@ -63,21 +62,14 @@
+│ │  			option = FileCenterOfMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ -			option = FileCenterOfMassWithUniformDensity.from_dict(data)
+│ │ -			return option
+│ │ -		except:
+│ │ -			pass
+│ │ -		try:
+│ │ -			if not isinstance(data, dict):
+│ │ -				raise TypeError()
+│ │  			option = FileMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ @@ -104,28 +96,28 @@
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.get(
+│ │  		verify=client.verify_ssl,
+│ │ @@ -135,31 +127,31 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async operation.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested async operation for the user.
+│ │ -If the user is not authenticated to view the specified async operation, then it is not returned.
+│ │ -Only KittyCAD employees with the proper access can view async operations for other users. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async file conversion.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user.
+│ │ +If the user is not authenticated to view the specified file conversion, then it is not returned.
+│ │ +Only KittyCAD employees with the proper access can view file conversions for other users. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │  		response = await _client.get(**kwargs)
+│ │ @@ -167,19 +159,19 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async operation.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested async operation for the user.
+│ │ -If the user is not authenticated to view the specified async operation, then it is not returned.
+│ │ -Only KittyCAD employees with the proper access can view async operations for other users. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async file conversion.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user.
+│ │ +If the user is not authenticated to view the specified file conversion, then it is not returned.
+│ │ +Only KittyCAD employees with the proper access can view file conversions for other users. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		id=id,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/list_api_calls.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/list_api_calls.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/list_api_calls_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/list_api_calls_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/list_async_operations.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/list_async_operations.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_calls/user_list_api_calls.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/user_list_api_calls.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_tokens/create_api_token_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_tokens/create_api_token_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_tokens/delete_api_token_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_tokens/delete_api_token_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_tokens/get_api_token_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_tokens/get_api_token_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/api_tokens/list_api_tokens_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_tokens/list_api_tokens_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/apps/apps_github_callback.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/apps/apps_github_callback.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/apps/apps_github_consent.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/apps/apps_github_consent.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/apps/apps_github_webhook.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/apps/apps_github_webhook.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/constant/get_physics_constant.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/constant/get_physics_constant.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_2d_vector_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_2d_vector_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_3d_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_3d_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_center_of_mass.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_mass.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,67 +1,67 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.file_center_of_mass import FileCenterOfMass
+│ │ +from ...models.file_mass import FileMass
+│ │  from ...models.error import Error
+│ │  from ...models.file3_d_import_format import File3DImportFormat
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/center-of-mass?material_density={material_density}&src_format={src_format}".format(client.base_url, material_density=material_density, src_format=src_format)
+│ │ +	url = "{}/file/mass?material_density={material_density}&src_format={src_format}".format(client.base_url, material_density=material_density, src_format=src_format)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileMass, Error]]:
+│ │  	if response.status_code == 201:
+│ │ -		response_201 = FileCenterOfMass.from_dict(response.json())
+│ │ +		response_201 = FileMass.from_dict(response.json())
+│ │  		return response_201
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileMass, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │ +) -> Response[Union[Any, FileMass, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │ @@ -75,17 +75,16 @@
+│ │  
+│ │  def sync(
+│ │  	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │ -	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ -Does the same as the `center_of_mass_with_uniform_density` endpoint; except, this has a redundant `material_density value`. Kept for legacy in this version.
+│ │ +) -> Optional[Union[Any, FileMass, Error]]:
+│ │ +	""" Get the mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │ @@ -94,15 +93,15 @@
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │ +) -> Response[Union[Any, FileMass, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │ @@ -114,17 +113,16 @@
+│ │  
+│ │  async def asyncio(
+│ │  	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │ -	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ -Does the same as the `center_of_mass_with_uniform_density` endpoint; except, this has a redundant `material_density value`. Kept for legacy in this version.
+│ │ +) -> Optional[Union[Any, FileMass, Error]]:
+│ │ +	""" Get the mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_center_of_mass_with_uniform_density.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_surface_area.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,65 +1,65 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.file_center_of_mass_with_uniform_density import FileCenterOfMassWithUniformDensity
+│ │ +from ...models.file_surface_area import FileSurfaceArea
+│ │  from ...models.error import Error
+│ │  from ...models.file3_d_import_format import File3DImportFormat
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/center-of-mass-with-uniform-density?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │ +	url = "{}/file/surface-area?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │  	if response.status_code == 201:
+│ │ -		response_201 = FileCenterOfMassWithUniformDensity.from_dict(response.json())
+│ │ +		response_201 = FileSurfaceArea.from_dict(response.json())
+│ │  		return response_201
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ +) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.post(
+│ │ @@ -71,31 +71,31 @@
+│ │  
+│ │  
+│ │  def sync(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ -	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │ +	""" Get the surface area of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ +) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │ @@ -105,16 +105,16 @@
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileCenterOfMassWithUniformDensity, Error]]:
+│ │ -	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │ +	""" Get the surface area of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  			client=client,
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_conversion_with_base64_helper.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_conversion_with_base64_helper.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_density.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_density.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_execution.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_execution.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_mass.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_center_of_mass.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,131 +1,122 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.file_mass import FileMass
+│ │ +from ...models.file_center_of_mass import FileCenterOfMass
+│ │  from ...models.error import Error
+│ │  from ...models.file3_d_import_format import File3DImportFormat
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │ -	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/mass?material_density={material_density}&src_format={src_format}".format(client.base_url, material_density=material_density, src_format=src_format)
+│ │ +	url = "{}/file/center-of-mass?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileMass, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │  	if response.status_code == 201:
+│ │ -		response_201 = FileMass.from_dict(response.json())
+│ │ +		response_201 = FileCenterOfMass.from_dict(response.json())
+│ │  		return response_201
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileMass, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │ -	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileMass, Error]]:
+│ │ +) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.post(
+│ │  		verify=client.verify_ssl,
+│ │  		**kwargs,
+│ │  	)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │ -	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileMass, Error]]:
+│ │ -	""" Get the mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │ +	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return sync_detailed(
+│ │ -		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │ -	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileMass, Error]]:
+│ │ +) -> Response[Union[Any, FileCenterOfMass, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │  		response = await _client.post(**kwargs)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │ -	material_density: float,
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileMass, Error]]:
+│ │ -	""" Get the mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileCenterOfMass, Error]]:
+│ │ +	""" Get the center of mass of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │ -		material_density=material_density,
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_surface_area.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/create_file_volume.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,65 +1,65 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.file_surface_area import FileSurfaceArea
+│ │ +from ...models.file_volume import FileVolume
+│ │  from ...models.error import Error
+│ │  from ...models.file3_d_import_format import File3DImportFormat
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/surface-area?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │ +	url = "{}/file/volume?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileVolume, Error]]:
+│ │  	if response.status_code == 201:
+│ │ -		response_201 = FileSurfaceArea.from_dict(response.json())
+│ │ +		response_201 = FileVolume.from_dict(response.json())
+│ │  		return response_201
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileVolume, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileVolume, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.post(
+│ │ @@ -71,31 +71,31 @@
+│ │  
+│ │  
+│ │  def sync(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │ -	""" Get the surface area of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileVolume, Error]]:
+│ │ +	""" Get the volume of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileVolume, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │ @@ -105,16 +105,16 @@
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │  	src_format: File3DImportFormat,
+│ │  	body: bytes,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileSurfaceArea, Error]]:
+│ │ -	""" Get the surface area of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ +) -> Optional[Union[Any, FileVolume, Error]]:
+│ │ +	""" Get the volume of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │  If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		src_format=src_format,
+│ │  		body=body,
+│ │  			client=client,
+│ │   --- kittycad-0.3.4/kittycad/api/file/create_file_volume.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user_extended.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,122 +1,113 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.file_volume import FileVolume
+│ │ +from ...models.extended_user import ExtendedUser
+│ │  from ...models.error import Error
+│ │ -from ...models.file3_d_import_format import File3DImportFormat
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │ -	src_format: File3DImportFormat,
+│ │ -	body: bytes,
+│ │ +	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/volume?src_format={src_format}".format(client.base_url, src_format=src_format)
+│ │ +	url = "{}/users-extended/{id}".format(client.base_url, id=id)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │ -		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileVolume, Error]]:
+│ │ -	if response.status_code == 201:
+│ │ -		response_201 = FileVolume.from_dict(response.json())
+│ │ -		return response_201
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ +	if response.status_code == 200:
+│ │ +		response_200 = ExtendedUser.from_dict(response.json())
+│ │ +		return response_200
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileVolume, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │ -	src_format: File3DImportFormat,
+│ │ -	body: bytes,
+│ │ +	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileVolume, Error]]:
+│ │ +) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		src_format=src_format,
+│ │ -		body=body,
+│ │ +		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │ -	response = httpx.post(
+│ │ +	response = httpx.get(
+│ │  		verify=client.verify_ssl,
+│ │  		**kwargs,
+│ │  	)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │ -	src_format: File3DImportFormat,
+│ │ -	body: bytes,
+│ │ +	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileVolume, Error]]:
+│ │ -	""" Get the volume of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ -If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │ +) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ +	""" To get information about yourself, use `/users-extended/me` as the endpoint. By doing so you will get the user information for the authenticated user.
+│ │ +Alternatively, to get information about the authenticated user, use `/user/extended` endpoint.
+│ │ +To get information about any KittyCAD user, you must be a KittyCAD employee. """
+│ │  
+│ │  	return sync_detailed(
+│ │ -		src_format=src_format,
+│ │ -		body=body,
+│ │ +		id=id,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │ -	src_format: File3DImportFormat,
+│ │ -	body: bytes,
+│ │ +	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileVolume, Error]]:
+│ │ +) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		src_format=src_format,
+│ │ -		body=body,
+│ │ +		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │ -		response = await _client.post(**kwargs)
+│ │ +		response = await _client.get(**kwargs)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │ -	src_format: File3DImportFormat,
+│ │ -	body: bytes,
+│ │ +	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileVolume, Error]]:
+│ │ -	""" Get the volume of an object in a CAD file. If the file is larger than 25MB, it will be performed asynchronously.
+│ │ -If the operation is performed asynchronously, the `id` of the operation will be returned. You can use the `id` returned from the request to get status information about the async operation from the `/async/operations/{id}` endpoint. """
+│ │ +) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ +	""" To get information about yourself, use `/users-extended/me` as the endpoint. By doing so you will get the user information for the authenticated user.
+│ │ +Alternatively, to get information about the authenticated user, use `/user/extended` endpoint.
+│ │ +To get information about any KittyCAD user, you must be a KittyCAD employee. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │ -		src_format=src_format,
+│ │ -		body=body,
+│ │ +		id=id,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/file/get_file_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/get_file_conversion_for_user.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -3,41 +3,40 @@
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │  from ...models.file_conversion import FileConversion
+│ │  from ...models.file2_d_vector_conversion import File2DVectorConversion
+│ │  from ...models.file3_d_conversion import File3DConversion
+│ │  from ...models.file_center_of_mass import FileCenterOfMass
+│ │ -from ...models.file_center_of_mass_with_uniform_density import FileCenterOfMassWithUniformDensity
+│ │  from ...models.file_mass import FileMass
+│ │  from ...models.file_volume import FileVolume
+│ │  from ...models.file_density import FileDensity
+│ │  from ...models.file_surface_area import FileSurfaceArea
+│ │  from ...models.error import Error
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/file/conversions/{id}".format(client.base_url, id=id)
+│ │ +	url = "{}/user/file/conversions/{id}".format(client.base_url, id=id)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	if response.status_code == 200:
+│ │  		data = response.json()
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │  			option = FileConversion.from_dict(data)
+│ │  			return option
+│ │ @@ -63,21 +62,14 @@
+│ │  			option = FileCenterOfMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ -			option = FileCenterOfMassWithUniformDensity.from_dict(data)
+│ │ -			return option
+│ │ -		except:
+│ │ -			pass
+│ │ -		try:
+│ │ -			if not isinstance(data, dict):
+│ │ -				raise TypeError()
+│ │  			option = FileMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ @@ -104,28 +96,28 @@
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.get(
+│ │  		verify=client.verify_ssl,
+│ │ @@ -135,31 +127,29 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async file conversion.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user.
+│ │ -If the user is not authenticated to view the specified file conversion, then it is not returned.
+│ │ -Only KittyCAD employees with the proper access can view file conversions for other users. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async file conversion. If completed, the contents of the converted file (`output`) will be returned as a base64 encoded string.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │  		response = await _client.get(**kwargs)
+│ │ @@ -167,19 +157,17 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async file conversion.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user.
+│ │ -If the user is not authenticated to view the specified file conversion, then it is not returned.
+│ │ -Only KittyCAD employees with the proper access can view file conversions for other users. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async file conversion. If completed, the contents of the converted file (`output`) will be returned as a base64 encoded string.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		id=id,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/file/get_file_conversion_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/api_calls/get_async_operation.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -3,41 +3,40 @@
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │  from ...models.file_conversion import FileConversion
+│ │  from ...models.file2_d_vector_conversion import File2DVectorConversion
+│ │  from ...models.file3_d_conversion import File3DConversion
+│ │  from ...models.file_center_of_mass import FileCenterOfMass
+│ │ -from ...models.file_center_of_mass_with_uniform_density import FileCenterOfMassWithUniformDensity
+│ │  from ...models.file_mass import FileMass
+│ │  from ...models.file_volume import FileVolume
+│ │  from ...models.file_density import FileDensity
+│ │  from ...models.file_surface_area import FileSurfaceArea
+│ │  from ...models.error import Error
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/user/file/conversions/{id}".format(client.base_url, id=id)
+│ │ +	url = "{}/async/operations/{id}".format(client.base_url, id=id)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	if response.status_code == 200:
+│ │  		data = response.json()
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │  			option = FileConversion.from_dict(data)
+│ │  			return option
+│ │ @@ -63,21 +62,14 @@
+│ │  			option = FileCenterOfMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ -			option = FileCenterOfMassWithUniformDensity.from_dict(data)
+│ │ -			return option
+│ │ -		except:
+│ │ -			pass
+│ │ -		try:
+│ │ -			if not isinstance(data, dict):
+│ │ -				raise TypeError()
+│ │  			option = FileMass.from_dict(data)
+│ │  			return option
+│ │  		except:
+│ │  			pass
+│ │  		try:
+│ │  			if not isinstance(data, dict):
+│ │  				raise TypeError()
+│ │ @@ -104,28 +96,28 @@
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	response = httpx.get(
+│ │  		verify=client.verify_ssl,
+│ │ @@ -135,29 +127,31 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async file conversion. If completed, the contents of the converted file (`output`) will be returned as a base64 encoded string.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async operation.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested async operation for the user.
+│ │ +If the user is not authenticated to view the specified async operation, then it is not returned.
+│ │ +Only KittyCAD employees with the proper access can view async operations for other users. """
+│ │  
+│ │  	return sync_detailed(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +) -> Response[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │  		id=id,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │  		response = await _client.get(**kwargs)
+│ │ @@ -165,17 +159,19 @@
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │  	id: str,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileCenterOfMassWithUniformDensity, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ -	""" Get the status and output of an async file conversion. If completed, the contents of the converted file (`output`) will be returned as a base64 encoded string.
+│ │ -This endpoint requires authentication by any KittyCAD user. It returns details of the requested file conversion for the user. """
+│ │ +) -> Optional[Union[Any, FileConversion, File2DVectorConversion, File3DConversion, FileCenterOfMass, FileMass, FileVolume, FileDensity, FileSurfaceArea, Error]]:
+│ │ +	""" Get the status and output of an async operation.
+│ │ +This endpoint requires authentication by any KittyCAD user. It returns details of the requested async operation for the user.
+│ │ +If the user is not authenticated to view the specified async operation, then it is not returned.
+│ │ +Only KittyCAD employees with the proper access can view async operations for other users. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │  		id=id,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/file/get_file_conversion_with_base64_helper.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/file/get_file_conversion_with_base64_helper.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/hidden/auth_email.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/hidden/auth_email.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/hidden/auth_email_callback.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/hidden/auth_email_callback.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/hidden/logout.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/hidden/logout.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/meta/get_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/meta/get_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/meta/get_schema.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/meta/get_schema.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/meta/ping.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/meta/ping.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/create_payment_information_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/create_payment_information_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/create_payment_intent_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/create_payment_intent_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/delete_payment_information_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/delete_payment_information_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/delete_payment_method_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/delete_payment_method_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/get_payment_balance_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/get_payment_balance_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/get_payment_information_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/get_payment_information_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/list_invoices_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/list_invoices_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/list_payment_methods_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/list_payment_methods_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/payments/update_payment_information_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/payments/update_payment_information_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/sessions/get_session_for_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/sessions/get_session_for_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_acceleration_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_acceleration_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_angle_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_angle_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_angular_velocity_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_angular_velocity_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_area_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_area_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_charge_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_charge_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_concentration_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_concentration_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_data_transfer_rate_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_data_transfer_rate_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_data_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_data_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_density_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_density_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_energy_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_energy_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_force_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_force_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_illuminance_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_illuminance_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_length_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_length_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_magnetic_field_strength_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_magnetic_field_strength_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_magnetic_flux_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_magnetic_flux_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_mass_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_mass_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_metric_power_cubed_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_metric_power_cubed_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_metric_power_squared_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_metric_power_squared_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_metric_power_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_metric_power_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_power_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_power_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_pressure_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_pressure_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_radiation_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_radiation_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_radioactivity_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_radioactivity_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_solid_angle_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_solid_angle_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_temperature_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_temperature_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_time_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_time_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_velocity_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_velocity_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_voltage_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_voltage_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/unit/get_volume_unit_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/unit/get_volume_unit_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/delete_user_self.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/delete_user_self.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user_extended.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/update_user_self.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,113 +1,111 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.extended_user import ExtendedUser
+│ │ +from ...models.user import User
+│ │  from ...models.error import Error
+│ │ +from ...models.update_user import UpdateUser
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │ -	id: str,
+│ │ +	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/users-extended/{id}".format(client.base_url, id=id)
+│ │ +	url = "{}/user".format(client.base_url)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │ +		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, User, Error]]:
+│ │  	if response.status_code == 200:
+│ │ -		response_200 = ExtendedUser.from_dict(response.json())
+│ │ +		response_200 = User.from_dict(response.json())
+│ │  		return response_200
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, User, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │ -	id: str,
+│ │ +	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │ +) -> Response[Union[Any, User, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		id=id,
+│ │ +		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │ -	response = httpx.get(
+│ │ +	response = httpx.put(
+│ │  		verify=client.verify_ssl,
+│ │  		**kwargs,
+│ │  	)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │ -	id: str,
+│ │ +	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ -	""" To get information about yourself, use `/users-extended/me` as the endpoint. By doing so you will get the user information for the authenticated user.
+│ │ -Alternatively, to get information about the authenticated user, use `/user/extended` endpoint.
+│ │ -To get information about any KittyCAD user, you must be a KittyCAD employee. """
+│ │ +) -> Optional[Union[Any, User, Error]]:
+│ │ +	""" This endpoint requires authentication by any KittyCAD user. It updates information about the authenticated user. """
+│ │  
+│ │  	return sync_detailed(
+│ │ -		id=id,
+│ │ +		body=body,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │ -	id: str,
+│ │ +	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, ExtendedUser, Error]]:
+│ │ +) -> Response[Union[Any, User, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		id=id,
+│ │ +		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │ -		response = await _client.get(**kwargs)
+│ │ +		response = await _client.put(**kwargs)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │ -	id: str,
+│ │ +	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, ExtendedUser, Error]]:
+│ │ -	""" To get information about yourself, use `/users-extended/me` as the endpoint. By doing so you will get the user information for the authenticated user.
+│ │ -Alternatively, to get information about the authenticated user, use `/user/extended` endpoint.
+│ │ -To get information about any KittyCAD user, you must be a KittyCAD employee. """
+│ │ +) -> Optional[Union[Any, User, Error]]:
+│ │ +	""" This endpoint requires authentication by any KittyCAD user. It updates information about the authenticated user. """
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │ -		id=id,
+│ │ +		body=body,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user_front_hash_self.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user_front_hash_self.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user_onboarding_self.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user_onboarding_self.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user_self.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user_self.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/get_user_self_extended.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/get_user_self_extended.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/list_users.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/list_users.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/list_users_extended.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/users/list_users_extended.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/api/users/update_user_self.py
+│ ├── +++ kittycad-0.3.5/kittycad/api/meta/get_ai_plugin_manifest.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,111 +1,98 @@
+│ │  from typing import Any, Dict, Optional, Union, cast
+│ │  
+│ │  import httpx
+│ │  
+│ │  from ...client import Client
+│ │ -from ...models.user import User
+│ │ +from ...models.ai_plugin_manifest import AiPluginManifest
+│ │  from ...models.error import Error
+│ │ -from ...models.update_user import UpdateUser
+│ │  from ...types import Response
+│ │  
+│ │  def _get_kwargs(
+│ │ -	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │  ) -> Dict[str, Any]:
+│ │ -	url = "{}/user".format(client.base_url)
+│ │ +	url = "{}/.well-known/ai-plugin.json".format(client.base_url)
+│ │  
+│ │  	headers: Dict[str, Any] = client.get_headers()
+│ │  	cookies: Dict[str, Any] = client.get_cookies()
+│ │  
+│ │  	return {
+│ │  		"url": url,
+│ │  		"headers": headers,
+│ │  		"cookies": cookies,
+│ │  		"timeout": client.get_timeout(),
+│ │ -		"content": body,
+│ │  	}
+│ │  
+│ │  
+│ │ -def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, User, Error]]:
+│ │ +def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, AiPluginManifest, Error]]:
+│ │  	if response.status_code == 200:
+│ │ -		response_200 = User.from_dict(response.json())
+│ │ +		response_200 = AiPluginManifest.from_dict(response.json())
+│ │  		return response_200
+│ │  	if response.status_code == 400:
+│ │  		response_4XX = Error.from_dict(response.json())
+│ │  		return response_4XX
+│ │  	if response.status_code == 500:
+│ │  		response_5XX = Error.from_dict(response.json())
+│ │  		return response_5XX
+│ │  	return None
+│ │  
+│ │  
+│ │ -def _build_response(*, response: httpx.Response) -> Response[Union[Any, User, Error]]:
+│ │ +def _build_response(*, response: httpx.Response) -> Response[Union[Any, AiPluginManifest, Error]]:
+│ │  	return Response(
+│ │  		status_code=response.status_code,
+│ │  		content=response.content,
+│ │  		headers=response.headers,
+│ │  		parsed=_parse_response(response=response),
+│ │  	)
+│ │  
+│ │  
+│ │  def sync_detailed(
+│ │ -	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, User, Error]]:
+│ │ +) -> Response[Union[Any, AiPluginManifest, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │ -	response = httpx.put(
+│ │ +	response = httpx.get(
+│ │  		verify=client.verify_ssl,
+│ │  		**kwargs,
+│ │  	)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  def sync(
+│ │ -	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, User, Error]]:
+│ │ -	""" This endpoint requires authentication by any KittyCAD user. It updates information about the authenticated user. """
+│ │ +) -> Optional[Union[Any, AiPluginManifest, Error]]:
+│ │  
+│ │  	return sync_detailed(
+│ │ -		body=body,
+│ │  		client=client,
+│ │  	).parsed
+│ │  
+│ │  
+│ │  async def asyncio_detailed(
+│ │ -	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Response[Union[Any, User, Error]]:
+│ │ +) -> Response[Union[Any, AiPluginManifest, Error]]:
+│ │  	kwargs = _get_kwargs(
+│ │ -		body=body,
+│ │  		client=client,
+│ │  	)
+│ │  
+│ │  	async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
+│ │ -		response = await _client.put(**kwargs)
+│ │ +		response = await _client.get(**kwargs)
+│ │  
+│ │  	return _build_response(response=response)
+│ │  
+│ │  
+│ │  async def asyncio(
+│ │ -	body: UpdateUser,
+│ │  	*,
+│ │  	client: Client,
+│ │ -) -> Optional[Union[Any, User, Error]]:
+│ │ -	""" This endpoint requires authentication by any KittyCAD user. It updates information about the authenticated user. """
+│ │ +) -> Optional[Union[Any, AiPluginManifest, Error]]:
+│ │  
+│ │  	return (
+│ │  		await asyncio_detailed(
+│ │ -		body=body,
+│ │  			client=client,
+│ │  		)
+│ │  	).parsed
+│ │   --- kittycad-0.3.4/kittycad/client.py
+│ ├── +++ kittycad-0.3.5/kittycad/client.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/client_test.py
+│ ├── +++ kittycad-0.3.5/kittycad/client_test.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/__init__.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/__init__.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,16 @@
+│ │  """ Contains all the data models used in inputs/outputs """
+│ │  
+│ │  from .account_provider import AccountProvider
+│ │ +from .ai_plugin_api import AiPluginApi
+│ │ +from .ai_plugin_api_type import AiPluginApiType
+│ │ +from .ai_plugin_auth import AiPluginAuth
+│ │ +from .ai_plugin_auth_type import AiPluginAuthType
+│ │ +from .ai_plugin_http_auth_type import AiPluginHttpAuthType
+│ │ +from .ai_plugin_manifest import AiPluginManifest
+│ │  from .api_call_query_group import ApiCallQueryGroup
+│ │  from .api_call_query_group_by import ApiCallQueryGroupBy
+│ │  from .api_call_status import ApiCallStatus
+│ │  from .api_call_with_price import ApiCallWithPrice
+│ │  from .api_call_with_price_results_page import ApiCallWithPriceResultsPage
+│ │  from .api_token import ApiToken
+│ │  from .api_token_results_page import ApiTokenResultsPage
+│ │ @@ -16,14 +22,15 @@
+│ │  from .cache_metadata import CacheMetadata
+│ │  from .card_details import CardDetails
+│ │  from .cluster import Cluster
+│ │  from .code_language import CodeLanguage
+│ │  from .code_output import CodeOutput
+│ │  from .commit import Commit
+│ │  from .connection import Connection
+│ │ +from .country_code import CountryCode
+│ │  from .created_at_sort_mode import CreatedAtSortMode
+│ │  from .currency import Currency
+│ │  from .customer import Customer
+│ │  from .customer_balance import CustomerBalance
+│ │  from .device_access_token_request_form import DeviceAccessTokenRequestForm
+│ │  from .device_auth_request_form import DeviceAuthRequestForm
+│ │  from .device_auth_verify_params import DeviceAuthVerifyParams
+│ │ @@ -38,15 +45,14 @@
+│ │  from .file2_d_vector_conversion import File2DVectorConversion
+│ │  from .file2_d_vector_export_format import File2DVectorExportFormat
+│ │  from .file2_d_vector_import_format import File2DVectorImportFormat
+│ │  from .file3_d_conversion import File3DConversion
+│ │  from .file3_d_export_format import File3DExportFormat
+│ │  from .file3_d_import_format import File3DImportFormat
+│ │  from .file_center_of_mass import FileCenterOfMass
+│ │ -from .file_center_of_mass_with_uniform_density import FileCenterOfMassWithUniformDensity
+│ │  from .file_conversion import FileConversion
+│ │  from .file_density import FileDensity
+│ │  from .file_export_format import FileExportFormat
+│ │  from .file_import_format import FileImportFormat
+│ │  from .file_mass import FileMass
+│ │  from .file_surface_area import FileSurfaceArea
+│ │  from .file_system_metadata import FileSystemMetadata
+│ │   --- kittycad-0.3.4/kittycad/models/api_call_query_group.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/api_call_query_group.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/api_call_with_price.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/api_call_with_price.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/api_call_with_price_results_page.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/api_call_with_price_results_page.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/api_token.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/api_token.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/api_token_results_page.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/api_token_results_page.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/app_client_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/app_client_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/async_api_call.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/async_api_call.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/async_api_call_results_page.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/async_api_call_results_page.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/billing_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/billing_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/cache_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/cache_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/card_details.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/card_details.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/cluster.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/cluster.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/code_output.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/code_output.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/commit.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/commit.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/connection.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/connection.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/currency.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/currency.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/customer.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/customer.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/customer_balance.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/customer_balance.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/device_access_token_request_form.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/device_access_token_request_form.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/device_auth_request_form.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/device_auth_request_form.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/device_auth_verify_params.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/device_auth_verify_params.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/docker_system_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/docker_system_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/email_authentication_form.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/email_authentication_form.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/engine_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/engine_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/error.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/error.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/executor_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/executor_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/extended_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/extended_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/extended_user_results_page.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/extended_user_results_page.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file2_d_vector_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file2_d_vector_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file3_d_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file3_d_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_center_of_mass.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_center_of_mass.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -16,15 +16,14 @@
+│ │  class FileCenterOfMass:
+│ │      """ """
+│ │      center_of_mass: Union[Unset, List[float]] = UNSET
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │ -    material_density: Union[Unset, float] = UNSET
+│ │      src_format: Union[Unset, File3DImportFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │ @@ -37,15 +36,14 @@
+│ │          if not isinstance(self.completed_at, Unset):
+│ │              completed_at = self.completed_at.isoformat()
+│ │          created_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.created_at, Unset):
+│ │              created_at = self.created_at.isoformat()
+│ │          error = self.error
+│ │          id = self.id
+│ │ -        material_density = self.material_density
+│ │          src_format: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.src_format, Unset):
+│ │              src_format = self.src_format.value
+│ │          started_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.started_at, Unset):
+│ │              started_at = self.started_at.isoformat()
+│ │          status: Union[Unset, str] = UNSET
+│ │ @@ -65,16 +63,14 @@
+│ │              field_dict['completed_at'] = completed_at
+│ │          if created_at is not UNSET:
+│ │              field_dict['created_at'] = created_at
+│ │          if error is not UNSET:
+│ │              field_dict['error'] = error
+│ │          if id is not UNSET:
+│ │              field_dict['id'] = id
+│ │ -        if material_density is not UNSET:
+│ │ -            field_dict['material_density'] = material_density
+│ │          if src_format is not UNSET:
+│ │              field_dict['src_format'] = src_format
+│ │          if started_at is not UNSET:
+│ │              field_dict['started_at'] = started_at
+│ │          if status is not UNSET:
+│ │              field_dict['status'] = status
+│ │          if updated_at is not UNSET:
+│ │ @@ -103,16 +99,14 @@
+│ │          else:
+│ │              created_at = isoparse(_created_at)
+│ │  
+│ │          error = d.pop("error", UNSET)
+│ │  
+│ │          id = d.pop("id", UNSET)
+│ │  
+│ │ -        material_density = d.pop("material_density", UNSET)
+│ │ -
+│ │          _src_format = d.pop("src_format", UNSET)
+│ │          src_format: Union[Unset, File3DImportFormat]
+│ │          if isinstance(_src_format, Unset):
+│ │              src_format = UNSET
+│ │          else:
+│ │              src_format = File3DImportFormat(_src_format)
+│ │  
+│ │ @@ -141,15 +135,14 @@
+│ │  
+│ │          file_center_of_mass = cls(
+│ │              center_of_mass=center_of_mass,
+│ │              completed_at=completed_at,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │ -            material_density=material_density,
+│ │              src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │          )
+│ │   --- kittycad-0.3.4/kittycad/models/file_center_of_mass_with_uniform_density.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_volume.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -5,37 +5,34 @@
+│ │  from dateutil.parser import isoparse
+│ │  
+│ │  from ..models.uuid import Uuid
+│ │  from ..models.file3_d_import_format import File3DImportFormat
+│ │  from ..models.api_call_status import ApiCallStatus
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │ -T = TypeVar("T", bound="FileCenterOfMassWithUniformDensity")
+│ │ +T = TypeVar("T", bound="FileVolume")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │ -class FileCenterOfMassWithUniformDensity:
+│ │ +class FileVolume:
+│ │      """ """
+│ │ -    center_of_mass: Union[Unset, List[float]] = UNSET
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │      src_format: Union[Unset, File3DImportFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │ +    volume: Union[Unset, float] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │      def to_dict(self) -> Dict[str, Any]:
+│ │ -        center_of_mass: Union[Unset, List[float]] = UNSET
+│ │ -        if not isinstance(self.center_of_mass, Unset):
+│ │ -            center_of_mass = self.center_of_mass
+│ │          completed_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.completed_at, Unset):
+│ │              completed_at = self.completed_at.isoformat()
+│ │          created_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.created_at, Unset):
+│ │              created_at = self.created_at.isoformat()
+│ │          error = self.error
+│ │ @@ -49,20 +46,19 @@
+│ │          status: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.status, Unset):
+│ │              status = self.status.value
+│ │          updated_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.updated_at, Unset):
+│ │              updated_at = self.updated_at.isoformat()
+│ │          user_id = self.user_id
+│ │ +        volume = self.volume
+│ │  
+│ │          field_dict: Dict[str, Any] = {}
+│ │          field_dict.update(self.additional_properties)
+│ │          field_dict.update({})
+│ │ -        if center_of_mass is not UNSET:
+│ │ -            field_dict['center_of_mass'] = center_of_mass
+│ │          if completed_at is not UNSET:
+│ │              field_dict['completed_at'] = completed_at
+│ │          if created_at is not UNSET:
+│ │              field_dict['created_at'] = created_at
+│ │          if error is not UNSET:
+│ │              field_dict['error'] = error
+│ │          if id is not UNSET:
+│ │ @@ -73,22 +69,22 @@
+│ │              field_dict['started_at'] = started_at
+│ │          if status is not UNSET:
+│ │              field_dict['status'] = status
+│ │          if updated_at is not UNSET:
+│ │              field_dict['updated_at'] = updated_at
+│ │          if user_id is not UNSET:
+│ │              field_dict['user_id'] = user_id
+│ │ +        if volume is not UNSET:
+│ │ +            field_dict['volume'] = volume
+│ │  
+│ │          return field_dict
+│ │  
+│ │      @classmethod
+│ │      def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+│ │          d = src_dict.copy()
+│ │ -        center_of_mass = cast(List[float], d.pop("center_of_mass", UNSET))
+│ │ -
+│ │          _completed_at = d.pop("completed_at", UNSET)
+│ │          completed_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_completed_at, Unset):
+│ │              completed_at = UNSET
+│ │          else:
+│ │              completed_at = isoparse(_completed_at)
+│ │  
+│ │ @@ -129,29 +125,31 @@
+│ │          if isinstance(_updated_at, Unset):
+│ │              updated_at = UNSET
+│ │          else:
+│ │              updated_at = isoparse(_updated_at)
+│ │  
+│ │          user_id = d.pop("user_id", UNSET)
+│ │  
+│ │ -        file_center_of_mass_with_uniform_density = cls(
+│ │ -            center_of_mass=center_of_mass,
+│ │ +        volume = d.pop("volume", UNSET)
+│ │ +
+│ │ +        file_volume = cls(
+│ │              completed_at=completed_at,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │              src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │ +            volume=volume,
+│ │          )
+│ │  
+│ │ -        file_center_of_mass_with_uniform_density.additional_properties = d
+│ │ -        return file_center_of_mass_with_uniform_density
+│ │ +        file_volume.additional_properties = d
+│ │ +        return file_volume
+│ │  
+│ │      @property
+│ │      def additional_keys(self) -> List[str]:
+│ │          return list(self.additional_properties.keys())
+│ │  
+│ │      def __getitem__(self, key: str) -> Any:
+│ │          return self.additional_properties[key]
+│ │   --- kittycad-0.3.4/kittycad/models/file_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_density.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_density.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_mass.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_mass.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_surface_area.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_surface_area.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_system_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/file_system_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/file_volume.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/physics_constant.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,115 +1,115 @@
+│ │  import datetime
+│ │  from typing import Any, Dict, List, Type, TypeVar, Union, cast
+│ │  
+│ │  import attr
+│ │  from dateutil.parser import isoparse
+│ │  
+│ │ +from ..models.physics_constant_name import PhysicsConstantName
+│ │  from ..models.uuid import Uuid
+│ │ -from ..models.file3_d_import_format import File3DImportFormat
+│ │  from ..models.api_call_status import ApiCallStatus
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │ -T = TypeVar("T", bound="FileVolume")
+│ │ +T = TypeVar("T", bound="PhysicsConstant")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │ -class FileVolume:
+│ │ +class PhysicsConstant:
+│ │      """ """
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │ +    constant: Union[Unset, PhysicsConstantName] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │ -    src_format: Union[Unset, File3DImportFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │ -    volume: Union[Unset, float] = UNSET
+│ │ +    value: Union[Unset, float] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │      def to_dict(self) -> Dict[str, Any]:
+│ │          completed_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.completed_at, Unset):
+│ │              completed_at = self.completed_at.isoformat()
+│ │ +        constant: Union[Unset, str] = UNSET
+│ │ +        if not isinstance(self.constant, Unset):
+│ │ +            constant = self.constant.value
+│ │          created_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.created_at, Unset):
+│ │              created_at = self.created_at.isoformat()
+│ │          error = self.error
+│ │          id = self.id
+│ │ -        src_format: Union[Unset, str] = UNSET
+│ │ -        if not isinstance(self.src_format, Unset):
+│ │ -            src_format = self.src_format.value
+│ │          started_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.started_at, Unset):
+│ │              started_at = self.started_at.isoformat()
+│ │          status: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.status, Unset):
+│ │              status = self.status.value
+│ │          updated_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.updated_at, Unset):
+│ │              updated_at = self.updated_at.isoformat()
+│ │          user_id = self.user_id
+│ │ -        volume = self.volume
+│ │ +        value = self.value
+│ │  
+│ │          field_dict: Dict[str, Any] = {}
+│ │          field_dict.update(self.additional_properties)
+│ │          field_dict.update({})
+│ │          if completed_at is not UNSET:
+│ │              field_dict['completed_at'] = completed_at
+│ │ +        if constant is not UNSET:
+│ │ +            field_dict['constant'] = constant
+│ │          if created_at is not UNSET:
+│ │              field_dict['created_at'] = created_at
+│ │          if error is not UNSET:
+│ │              field_dict['error'] = error
+│ │          if id is not UNSET:
+│ │              field_dict['id'] = id
+│ │ -        if src_format is not UNSET:
+│ │ -            field_dict['src_format'] = src_format
+│ │          if started_at is not UNSET:
+│ │              field_dict['started_at'] = started_at
+│ │          if status is not UNSET:
+│ │              field_dict['status'] = status
+│ │          if updated_at is not UNSET:
+│ │              field_dict['updated_at'] = updated_at
+│ │          if user_id is not UNSET:
+│ │              field_dict['user_id'] = user_id
+│ │ -        if volume is not UNSET:
+│ │ -            field_dict['volume'] = volume
+│ │ +        if value is not UNSET:
+│ │ +            field_dict['value'] = value
+│ │  
+│ │          return field_dict
+│ │  
+│ │      @classmethod
+│ │      def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+│ │          d = src_dict.copy()
+│ │          _completed_at = d.pop("completed_at", UNSET)
+│ │          completed_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_completed_at, Unset):
+│ │              completed_at = UNSET
+│ │          else:
+│ │              completed_at = isoparse(_completed_at)
+│ │  
+│ │ +        _constant = d.pop("constant", UNSET)
+│ │ +        constant: Union[Unset, PhysicsConstantName]
+│ │ +        if isinstance(_constant, Unset):
+│ │ +            constant = UNSET
+│ │ +        else:
+│ │ +            constant = PhysicsConstantName(_constant)
+│ │ +
+│ │          _created_at = d.pop("created_at", UNSET)
+│ │          created_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_created_at, Unset):
+│ │              created_at = UNSET
+│ │          else:
+│ │              created_at = isoparse(_created_at)
+│ │  
+│ │          error = d.pop("error", UNSET)
+│ │  
+│ │          id = d.pop("id", UNSET)
+│ │  
+│ │ -        _src_format = d.pop("src_format", UNSET)
+│ │ -        src_format: Union[Unset, File3DImportFormat]
+│ │ -        if isinstance(_src_format, Unset):
+│ │ -            src_format = UNSET
+│ │ -        else:
+│ │ -            src_format = File3DImportFormat(_src_format)
+│ │ -
+│ │          _started_at = d.pop("started_at", UNSET)
+│ │          started_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_started_at, Unset):
+│ │              started_at = UNSET
+│ │          else:
+│ │              started_at = isoparse(_started_at)
+│ │  
+│ │ @@ -125,31 +125,31 @@
+│ │          if isinstance(_updated_at, Unset):
+│ │              updated_at = UNSET
+│ │          else:
+│ │              updated_at = isoparse(_updated_at)
+│ │  
+│ │          user_id = d.pop("user_id", UNSET)
+│ │  
+│ │ -        volume = d.pop("volume", UNSET)
+│ │ +        value = d.pop("value", UNSET)
+│ │  
+│ │ -        file_volume = cls(
+│ │ +        physics_constant = cls(
+│ │              completed_at=completed_at,
+│ │ +            constant=constant,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │ -            src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │ -            volume=volume,
+│ │ +            value=value,
+│ │          )
+│ │  
+│ │ -        file_volume.additional_properties = d
+│ │ -        return file_volume
+│ │ +        physics_constant.additional_properties = d
+│ │ +        return physics_constant
+│ │  
+│ │      @property
+│ │      def additional_keys(self) -> List[str]:
+│ │          return list(self.additional_properties.keys())
+│ │  
+│ │      def __getitem__(self, key: str) -> Any:
+│ │          return self.additional_properties[key]
+│ │   --- kittycad-0.3.4/kittycad/models/gateway.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/gateway.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/index_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/index_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/invoice.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/invoice.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/invoice_line_item.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/invoice_line_item.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/jetstream.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/jetstream.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/jetstream_api_stats.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/jetstream_api_stats.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/jetstream_config.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/jetstream_config.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/jetstream_stats.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/jetstream_stats.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/leaf_node.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/leaf_node.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/mesh.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/mesh.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/meta_cluster_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/meta_cluster_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/new_address.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/new_address.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,32 +1,35 @@
+│ │  from typing import Any, Dict, List, Type, TypeVar, Union, cast
+│ │  
+│ │  import attr
+│ │  
+│ │ +from ..models.country_code import CountryCode
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │  T = TypeVar("T", bound="NewAddress")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │  class NewAddress:
+│ │      """ """
+│ │      city: Union[Unset, str] = UNSET
+│ │ -    country: Union[Unset, str] = UNSET
+│ │ +    country: Union[Unset, CountryCode] = UNSET
+│ │      state: Union[Unset, str] = UNSET
+│ │      street1: Union[Unset, str] = UNSET
+│ │      street2: Union[Unset, str] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │      zip: Union[Unset, str] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │      def to_dict(self) -> Dict[str, Any]:
+│ │          city = self.city
+│ │ -        country = self.country
+│ │ +        country: Union[Unset, str] = UNSET
+│ │ +        if not isinstance(self.country, Unset):
+│ │ +            country = self.country.value
+│ │          state = self.state
+│ │          street1 = self.street1
+│ │          street2 = self.street2
+│ │          user_id = self.user_id
+│ │          zip = self.zip
+│ │  
+│ │          field_dict: Dict[str, Any] = {}
+│ │ @@ -50,15 +53,20 @@
+│ │          return field_dict
+│ │  
+│ │      @classmethod
+│ │      def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+│ │          d = src_dict.copy()
+│ │          city = d.pop("city", UNSET)
+│ │  
+│ │ -        country = d.pop("country", UNSET)
+│ │ +        _country = d.pop("country", UNSET)
+│ │ +        country: Union[Unset, CountryCode]
+│ │ +        if isinstance(_country, Unset):
+│ │ +            country = UNSET
+│ │ +        else:
+│ │ +            country = CountryCode(_country)
+│ │  
+│ │          state = d.pop("state", UNSET)
+│ │  
+│ │          street1 = d.pop("street1", UNSET)
+│ │  
+│ │          street2 = d.pop("street2", UNSET)
+│ │   --- kittycad-0.3.4/kittycad/models/o_auth2_client_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/o_auth2_client_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/onboarding.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/onboarding.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/output_file.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/output_file.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/payment_intent.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/payment_intent.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/payment_method.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/payment_method.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/payment_method_card_checks.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/payment_method_card_checks.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/physics_constant.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_energy_conversion.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,115 +1,136 @@
+│ │  import datetime
+│ │  from typing import Any, Dict, List, Type, TypeVar, Union, cast
+│ │  
+│ │  import attr
+│ │  from dateutil.parser import isoparse
+│ │  
+│ │ -from ..models.physics_constant_name import PhysicsConstantName
+│ │  from ..models.uuid import Uuid
+│ │ +from ..models.unit_energy_format import UnitEnergyFormat
+│ │  from ..models.api_call_status import ApiCallStatus
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │ -T = TypeVar("T", bound="PhysicsConstant")
+│ │ +T = TypeVar("T", bound="UnitEnergyConversion")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │ -class PhysicsConstant:
+│ │ +class UnitEnergyConversion:
+│ │      """ """
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │ -    constant: Union[Unset, PhysicsConstantName] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │ +    input: Union[Unset, float] = UNSET
+│ │ +    output: Union[Unset, float] = UNSET
+│ │ +    output_format: Union[Unset, UnitEnergyFormat] = UNSET
+│ │ +    src_format: Union[Unset, UnitEnergyFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │ -    value: Union[Unset, float] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │      def to_dict(self) -> Dict[str, Any]:
+│ │          completed_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.completed_at, Unset):
+│ │              completed_at = self.completed_at.isoformat()
+│ │ -        constant: Union[Unset, str] = UNSET
+│ │ -        if not isinstance(self.constant, Unset):
+│ │ -            constant = self.constant.value
+│ │          created_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.created_at, Unset):
+│ │              created_at = self.created_at.isoformat()
+│ │          error = self.error
+│ │          id = self.id
+│ │ +        input = self.input
+│ │ +        output = self.output
+│ │ +        output_format: Union[Unset, str] = UNSET
+│ │ +        if not isinstance(self.output_format, Unset):
+│ │ +            output_format = self.output_format.value
+│ │ +        src_format: Union[Unset, str] = UNSET
+│ │ +        if not isinstance(self.src_format, Unset):
+│ │ +            src_format = self.src_format.value
+│ │          started_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.started_at, Unset):
+│ │              started_at = self.started_at.isoformat()
+│ │          status: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.status, Unset):
+│ │              status = self.status.value
+│ │          updated_at: Union[Unset, str] = UNSET
+│ │          if not isinstance(self.updated_at, Unset):
+│ │              updated_at = self.updated_at.isoformat()
+│ │          user_id = self.user_id
+│ │ -        value = self.value
+│ │  
+│ │          field_dict: Dict[str, Any] = {}
+│ │          field_dict.update(self.additional_properties)
+│ │          field_dict.update({})
+│ │          if completed_at is not UNSET:
+│ │              field_dict['completed_at'] = completed_at
+│ │ -        if constant is not UNSET:
+│ │ -            field_dict['constant'] = constant
+│ │          if created_at is not UNSET:
+│ │              field_dict['created_at'] = created_at
+│ │          if error is not UNSET:
+│ │              field_dict['error'] = error
+│ │          if id is not UNSET:
+│ │              field_dict['id'] = id
+│ │ +        if input is not UNSET:
+│ │ +            field_dict['input'] = input
+│ │ +        if output is not UNSET:
+│ │ +            field_dict['output'] = output
+│ │ +        if output_format is not UNSET:
+│ │ +            field_dict['output_format'] = output_format
+│ │ +        if src_format is not UNSET:
+│ │ +            field_dict['src_format'] = src_format
+│ │          if started_at is not UNSET:
+│ │              field_dict['started_at'] = started_at
+│ │          if status is not UNSET:
+│ │              field_dict['status'] = status
+│ │          if updated_at is not UNSET:
+│ │              field_dict['updated_at'] = updated_at
+│ │          if user_id is not UNSET:
+│ │              field_dict['user_id'] = user_id
+│ │ -        if value is not UNSET:
+│ │ -            field_dict['value'] = value
+│ │  
+│ │          return field_dict
+│ │  
+│ │      @classmethod
+│ │      def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+│ │          d = src_dict.copy()
+│ │          _completed_at = d.pop("completed_at", UNSET)
+│ │          completed_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_completed_at, Unset):
+│ │              completed_at = UNSET
+│ │          else:
+│ │              completed_at = isoparse(_completed_at)
+│ │  
+│ │ -        _constant = d.pop("constant", UNSET)
+│ │ -        constant: Union[Unset, PhysicsConstantName]
+│ │ -        if isinstance(_constant, Unset):
+│ │ -            constant = UNSET
+│ │ -        else:
+│ │ -            constant = PhysicsConstantName(_constant)
+│ │ -
+│ │          _created_at = d.pop("created_at", UNSET)
+│ │          created_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_created_at, Unset):
+│ │              created_at = UNSET
+│ │          else:
+│ │              created_at = isoparse(_created_at)
+│ │  
+│ │          error = d.pop("error", UNSET)
+│ │  
+│ │          id = d.pop("id", UNSET)
+│ │  
+│ │ +        input = d.pop("input", UNSET)
+│ │ +
+│ │ +        output = d.pop("output", UNSET)
+│ │ +
+│ │ +        _output_format = d.pop("output_format", UNSET)
+│ │ +        output_format: Union[Unset, UnitEnergyFormat]
+│ │ +        if isinstance(_output_format, Unset):
+│ │ +            output_format = UNSET
+│ │ +        else:
+│ │ +            output_format = UnitEnergyFormat(_output_format)
+│ │ +
+│ │ +        _src_format = d.pop("src_format", UNSET)
+│ │ +        src_format: Union[Unset, UnitEnergyFormat]
+│ │ +        if isinstance(_src_format, Unset):
+│ │ +            src_format = UNSET
+│ │ +        else:
+│ │ +            src_format = UnitEnergyFormat(_src_format)
+│ │ +
+│ │          _started_at = d.pop("started_at", UNSET)
+│ │          started_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_started_at, Unset):
+│ │              started_at = UNSET
+│ │          else:
+│ │              started_at = isoparse(_started_at)
+│ │  
+│ │ @@ -125,31 +146,31 @@
+│ │          if isinstance(_updated_at, Unset):
+│ │              updated_at = UNSET
+│ │          else:
+│ │              updated_at = isoparse(_updated_at)
+│ │  
+│ │          user_id = d.pop("user_id", UNSET)
+│ │  
+│ │ -        value = d.pop("value", UNSET)
+│ │ -
+│ │ -        physics_constant = cls(
+│ │ +        unit_energy_conversion = cls(
+│ │              completed_at=completed_at,
+│ │ -            constant=constant,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │ +            input=input,
+│ │ +            output=output,
+│ │ +            output_format=output_format,
+│ │ +            src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │ -            value=value,
+│ │          )
+│ │  
+│ │ -        physics_constant.additional_properties = d
+│ │ -        return physics_constant
+│ │ +        unit_energy_conversion.additional_properties = d
+│ │ +        return unit_energy_conversion
+│ │  
+│ │      @property
+│ │      def additional_keys(self) -> List[str]:
+│ │          return list(self.additional_properties.keys())
+│ │  
+│ │      def __getitem__(self, key: str) -> Any:
+│ │          return self.additional_properties[key]
+│ │   --- kittycad-0.3.4/kittycad/models/physics_constant_name.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/physics_constant_name.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/plugins_info.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/plugins_info.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/point_e_metadata.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/point_e_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/pong.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/pong.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/registry_service_config.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/registry_service_config.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/runtime.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/runtime.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/session.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/session.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/system_info_default_address_pools.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/system_info_default_address_pools.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_acceleration_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_acceleration_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_angle_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_angle_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_angular_velocity_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_angular_velocity_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_area_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_area_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_charge_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_charge_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_concentration_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_concentration_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_data_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_data_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_data_transfer_rate_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_data_transfer_rate_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_density_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_density_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_density_format.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_density_format.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_energy_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_velocity_conversion.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,32 +1,32 @@
+│ │  import datetime
+│ │  from typing import Any, Dict, List, Type, TypeVar, Union, cast
+│ │  
+│ │  import attr
+│ │  from dateutil.parser import isoparse
+│ │  
+│ │  from ..models.uuid import Uuid
+│ │ -from ..models.unit_energy_format import UnitEnergyFormat
+│ │ +from ..models.unit_velocity_format import UnitVelocityFormat
+│ │  from ..models.api_call_status import ApiCallStatus
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │ -T = TypeVar("T", bound="UnitEnergyConversion")
+│ │ +T = TypeVar("T", bound="UnitVelocityConversion")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │ -class UnitEnergyConversion:
+│ │ +class UnitVelocityConversion:
+│ │      """ """
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │      input: Union[Unset, float] = UNSET
+│ │      output: Union[Unset, float] = UNSET
+│ │ -    output_format: Union[Unset, UnitEnergyFormat] = UNSET
+│ │ -    src_format: Union[Unset, UnitEnergyFormat] = UNSET
+│ │ +    output_format: Union[Unset, UnitVelocityFormat] = UNSET
+│ │ +    src_format: Union[Unset, UnitVelocityFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │ @@ -110,26 +110,26 @@
+│ │          id = d.pop("id", UNSET)
+│ │  
+│ │          input = d.pop("input", UNSET)
+│ │  
+│ │          output = d.pop("output", UNSET)
+│ │  
+│ │          _output_format = d.pop("output_format", UNSET)
+│ │ -        output_format: Union[Unset, UnitEnergyFormat]
+│ │ +        output_format: Union[Unset, UnitVelocityFormat]
+│ │          if isinstance(_output_format, Unset):
+│ │              output_format = UNSET
+│ │          else:
+│ │ -            output_format = UnitEnergyFormat(_output_format)
+│ │ +            output_format = UnitVelocityFormat(_output_format)
+│ │  
+│ │          _src_format = d.pop("src_format", UNSET)
+│ │ -        src_format: Union[Unset, UnitEnergyFormat]
+│ │ +        src_format: Union[Unset, UnitVelocityFormat]
+│ │          if isinstance(_src_format, Unset):
+│ │              src_format = UNSET
+│ │          else:
+│ │ -            src_format = UnitEnergyFormat(_src_format)
+│ │ +            src_format = UnitVelocityFormat(_src_format)
+│ │  
+│ │          _started_at = d.pop("started_at", UNSET)
+│ │          started_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_started_at, Unset):
+│ │              started_at = UNSET
+│ │          else:
+│ │              started_at = isoparse(_started_at)
+│ │ @@ -146,31 +146,31 @@
+│ │          if isinstance(_updated_at, Unset):
+│ │              updated_at = UNSET
+│ │          else:
+│ │              updated_at = isoparse(_updated_at)
+│ │  
+│ │          user_id = d.pop("user_id", UNSET)
+│ │  
+│ │ -        unit_energy_conversion = cls(
+│ │ +        unit_velocity_conversion = cls(
+│ │              completed_at=completed_at,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │              input=input,
+│ │              output=output,
+│ │              output_format=output_format,
+│ │              src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │          )
+│ │  
+│ │ -        unit_energy_conversion.additional_properties = d
+│ │ -        return unit_energy_conversion
+│ │ +        unit_velocity_conversion.additional_properties = d
+│ │ +        return unit_velocity_conversion
+│ │  
+│ │      @property
+│ │      def additional_keys(self) -> List[str]:
+│ │          return list(self.additional_properties.keys())
+│ │  
+│ │      def __getitem__(self, key: str) -> Any:
+│ │          return self.additional_properties[key]
+│ │   --- kittycad-0.3.4/kittycad/models/unit_force_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_force_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_illuminance_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_illuminance_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_length_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_length_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_length_format.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_length_format.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_magnetic_field_strength_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_magnetic_field_strength_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_magnetic_flux_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_magnetic_flux_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_mass_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_mass_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_metric_power_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_metric_power_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_metric_power_cubed_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_metric_power_cubed_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_metric_power_squared_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_metric_power_squared_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_power_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_power_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_pressure_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_pressure_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_radiation_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_radiation_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_radioactivity_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_radioactivity_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_solid_angle_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_solid_angle_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_temperature_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_temperature_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_time_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_time_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_velocity_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_volume_conversion.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,32 +1,32 @@
+│ │  import datetime
+│ │  from typing import Any, Dict, List, Type, TypeVar, Union, cast
+│ │  
+│ │  import attr
+│ │  from dateutil.parser import isoparse
+│ │  
+│ │  from ..models.uuid import Uuid
+│ │ -from ..models.unit_velocity_format import UnitVelocityFormat
+│ │ +from ..models.unit_volume_format import UnitVolumeFormat
+│ │  from ..models.api_call_status import ApiCallStatus
+│ │  from ..types import UNSET, Unset
+│ │  
+│ │ -T = TypeVar("T", bound="UnitVelocityConversion")
+│ │ +T = TypeVar("T", bound="UnitVolumeConversion")
+│ │  
+│ │  
+│ │  @attr.s(auto_attribs=True)
+│ │ -class UnitVelocityConversion:
+│ │ +class UnitVolumeConversion:
+│ │      """ """
+│ │      completed_at: Union[Unset, datetime.datetime] = UNSET
+│ │      created_at: Union[Unset, datetime.datetime] = UNSET
+│ │      error: Union[Unset, str] = UNSET
+│ │      id: Union[Unset, str] = UNSET
+│ │      input: Union[Unset, float] = UNSET
+│ │      output: Union[Unset, float] = UNSET
+│ │ -    output_format: Union[Unset, UnitVelocityFormat] = UNSET
+│ │ -    src_format: Union[Unset, UnitVelocityFormat] = UNSET
+│ │ +    output_format: Union[Unset, UnitVolumeFormat] = UNSET
+│ │ +    src_format: Union[Unset, UnitVolumeFormat] = UNSET
+│ │      started_at: Union[Unset, datetime.datetime] = UNSET
+│ │      status: Union[Unset, ApiCallStatus] = UNSET
+│ │      updated_at: Union[Unset, datetime.datetime] = UNSET
+│ │      user_id: Union[Unset, str] = UNSET
+│ │  
+│ │      additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+│ │  
+│ │ @@ -110,26 +110,26 @@
+│ │          id = d.pop("id", UNSET)
+│ │  
+│ │          input = d.pop("input", UNSET)
+│ │  
+│ │          output = d.pop("output", UNSET)
+│ │  
+│ │          _output_format = d.pop("output_format", UNSET)
+│ │ -        output_format: Union[Unset, UnitVelocityFormat]
+│ │ +        output_format: Union[Unset, UnitVolumeFormat]
+│ │          if isinstance(_output_format, Unset):
+│ │              output_format = UNSET
+│ │          else:
+│ │ -            output_format = UnitVelocityFormat(_output_format)
+│ │ +            output_format = UnitVolumeFormat(_output_format)
+│ │  
+│ │          _src_format = d.pop("src_format", UNSET)
+│ │ -        src_format: Union[Unset, UnitVelocityFormat]
+│ │ +        src_format: Union[Unset, UnitVolumeFormat]
+│ │          if isinstance(_src_format, Unset):
+│ │              src_format = UNSET
+│ │          else:
+│ │ -            src_format = UnitVelocityFormat(_src_format)
+│ │ +            src_format = UnitVolumeFormat(_src_format)
+│ │  
+│ │          _started_at = d.pop("started_at", UNSET)
+│ │          started_at: Union[Unset, datetime.datetime]
+│ │          if isinstance(_started_at, Unset):
+│ │              started_at = UNSET
+│ │          else:
+│ │              started_at = isoparse(_started_at)
+│ │ @@ -146,31 +146,31 @@
+│ │          if isinstance(_updated_at, Unset):
+│ │              updated_at = UNSET
+│ │          else:
+│ │              updated_at = isoparse(_updated_at)
+│ │  
+│ │          user_id = d.pop("user_id", UNSET)
+│ │  
+│ │ -        unit_velocity_conversion = cls(
+│ │ +        unit_volume_conversion = cls(
+│ │              completed_at=completed_at,
+│ │              created_at=created_at,
+│ │              error=error,
+│ │              id=id,
+│ │              input=input,
+│ │              output=output,
+│ │              output_format=output_format,
+│ │              src_format=src_format,
+│ │              started_at=started_at,
+│ │              status=status,
+│ │              updated_at=updated_at,
+│ │              user_id=user_id,
+│ │          )
+│ │  
+│ │ -        unit_velocity_conversion.additional_properties = d
+│ │ -        return unit_velocity_conversion
+│ │ +        unit_volume_conversion.additional_properties = d
+│ │ +        return unit_volume_conversion
+│ │  
+│ │      @property
+│ │      def additional_keys(self) -> List[str]:
+│ │          return list(self.additional_properties.keys())
+│ │  
+│ │      def __getitem__(self, key: str) -> Any:
+│ │          return self.additional_properties[key]
+│ │   --- kittycad-0.3.4/kittycad/models/unit_voltage_conversion.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_voltage_conversion.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/unit_volume_format.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/unit_volume_format.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/update_user.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/update_user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/user.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/user.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/user_results_page.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/user_results_page.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/models/verification_token.py
+│ ├── +++ kittycad-0.3.5/kittycad/models/verification_token.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/kittycad/types.py
+│ ├── +++ kittycad-0.3.5/kittycad/types.py
+│ │┄ Files identical despite different names
+│ │   --- kittycad-0.3.4/pyproject.toml
+│ ├── +++ kittycad-0.3.5/pyproject.toml
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "kittycad"
+│ │ -version = "0.3.4"
+│ │ +version = "0.3.5"
+│ │  description = "A client library for accessing KittyCAD"
+│ │  
+│ │  authors = []
+│ │  
+│ │  readme = "README.md"
+│ │  packages = [
+│ │      {include = "kittycad"},
+│ │ @@ -19,22 +19,22 @@
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  Sphinx = "^4.3.1"
+│ │  flake8 = "^5.0.4"
+│ │  pytest = "^7.0.1"
+│ │  sphinx-autodoc-typehints = "^1.12.0"
+│ │  pyenchant = "^3.2.2"
+│ │ -sphinxcontrib-spelling = "^7.3.0"
+│ │ +sphinxcontrib-spelling = "^8.0.0"
+│ │  toml = "^0.10.2"
+│ │  sphinx-rtd-theme = "^1.0.0"
+│ │ -sphinx-automodapi = "^0.14"
+│ │ +sphinx-automodapi = "^0.15"
+│ │  pytest-cov = "^4.0.0"
+│ │ -pytest-asyncio = "^0.20.3"
+│ │ +pytest-asyncio = "^0.21.0"
+│ │  openapi-parser = "^0.2.6"
+│ │ -autopep8 = "^1.6.0"
+│ │ +autopep8 = "^2.0.0"
+│ │  prance = "^0.22.11"
+│ │  openapi-spec-validator = "^0.4.0"
+│ │  jsonpatch = "^1.32"
+│ │  
+│ │  [build-system]
+│ │  requires = ["poetry>=1.0"]
+│ │  build-backend = "poetry.masonry.api"
+│ │   --- kittycad-0.3.4/PKG-INFO
+│ ├── +++ kittycad-0.3.5/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kittycad
+│ │ -Version: 0.3.4
+│ │ +Version: 0.3.5
+│ │  Summary: A client library for accessing KittyCAD
+│ │  Requires-Python: >=3.7,<4.0
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/cqepyutils-0.1.8.tar.gz tmp/cqepyutils-0.1.9.tar.gz --html versions/c/cqepyutils/0.1.8-0.1.9/index.html --text versions/c/cqepyutils/0.1.8-0.1.9/diff.txt --markdown versions/c/cqepyutils/0.1.8-0.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.36 KB</span></div>
+  <div><span class="source">tmp/cqepyutils-0.1.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/cqepyutils-0.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">270 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;cqepyutils-0.1.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;cqepyutils-0.1.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">9.05 KB</span></div>
+    <div><span class="source">cqepyutils-0.1.8.tar</span> vs.</div>
+    <div id="cqepyutils--.-.-.tar"><span class="source">cqepyutils-0.1.9.tar</span>
+      <a class="anchor" href="#cqepyutils--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.79 KB</span></div>
+      <div id="cqepyutils--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 27 lines modified</td><td colspan="2">Offset 1, 28 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>30855</del>0<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>02713</ins>0<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>3056</del>3<del>6</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/DBUtils/</td><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>0240</ins>3<ins>5</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/DBUtils/</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3053<span class="dp">·</span>2023-04-06<span class="dp">·</span>03:44:45.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/DBUtils/DBUtils.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3053<span class="dp">·</span>2023-04-06<span class="dp">·</span>03:44:45.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/DBUtils/DBUtils.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6840<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:40:12.000000<span class="dp">·</span>cqepyutils-0.1.9/DBUtils/Sample.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:45:36.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/DBUtils/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:45:36.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/DBUtils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>306102</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/FileUtils/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>024543</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/FileUtils/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1519<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/FileUtils/FileUtils.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1519<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/FileUtils/FileUtils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/FileUtils/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/FileUtils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>3</del>0<del>6</del>4<del>79</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/JSONUtils/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.0<ins>2</ins>4<ins>9</ins><ins>24</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/JSONUtils/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1421<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/JSONUtils/JSONUtils.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1421<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/JSONUtils/JSONUtils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/JSONUtils/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/JSONUtils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1086<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/LICENSE</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1086<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>3083</del>6<del>9</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>0268</ins>6<ins>6</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>306764</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/PandasUtils/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>025316</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/PandasUtils/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10755<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/PandasUtils/PandasUtils.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10755<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/PandasUtils/PandasUtils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/PandasUtils/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/PandasUtils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/README.md</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>307083</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/RFUtils/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>025691</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/RFUtils/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4294<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/RFUtils/RFUtils.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4294<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/RFUtils/RFUtils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/RFUtils/__init__.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:41:58.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/RFUtils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>3081</del>3<del>8</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/</td><td class="diffline">21 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.<ins>0265</ins>3<ins>5</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/PKG-INFO</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>53</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>14</del><span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/SOURCES.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>32</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>53</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/dependency_links.txt</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>53</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>6</del>8<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/requires.txt</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>10</ins>8<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>53</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>48<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/cqepyutils.egg-info/top_level.txt</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>48<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>53</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/cqepyutils.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>03</del>:4<del>6</del>:<del>37</del>.<del>3</del>0<del>86</del>2<del>4</del><span class="dp">·</span>cqepyutils-0.1.<del>8</del>/setup.cfg</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>22</ins>:4<ins>3</ins>:<ins>54</ins>.0<ins>27</ins>2<ins>1</ins><ins>0</ins><span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>180</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>22:4<del>1</del>:<del>58</del>.000000<span class="dp">·</span>cqepyutils-0.1.<del>8</del>/setup.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>vaanisridhar<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>406</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>22:4<ins>2</ins>:<ins>45</ins>.000000<span class="dp">·</span>cqepyutils-0.1.<ins>9</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/DBUtils/DBUtils.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--DBUtils-DBUtils.py"><span class="source">cqepyutils-0.1.9/DBUtils/DBUtils.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--DBUtils-DBUtils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/FileUtils/FileUtils.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--FileUtils-FileUtils.py"><span class="source">cqepyutils-0.1.9/FileUtils/FileUtils.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--FileUtils-FileUtils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/JSONUtils/JSONUtils.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--JSONUtils-JSONUtils.py"><span class="source">cqepyutils-0.1.9/JSONUtils/JSONUtils.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--JSONUtils-JSONUtils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/LICENSE</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--LICENSE"><span class="source">cqepyutils-0.1.9/LICENSE</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">439 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/PKG-INFO</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--PKG-INFO"><span class="source">cqepyutils-0.1.9/PKG-INFO</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cqepyutils</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cqepyutils</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Cognitive<span class="dp">·</span>Quality<span class="dp">·</span>Engineer<span class="dp">·</span>-<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Cognitive<span class="dp">·</span>Quality<span class="dp">·</span>Engineer<span class="dp">·</span>-<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cognitiveqe/cqepyutils/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cognitiveqe/cqepyutils/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sridhar<span class="dp">·</span>VP</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sridhar<span class="dp">·</span>VP</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sridharvpmca@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sridharvpmca@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>any</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>any</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/PandasUtils/PandasUtils.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--PandasUtils-PandasUtils.py"><span class="source">cqepyutils-0.1.9/PandasUtils/PandasUtils.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--PandasUtils-PandasUtils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/RFUtils/RFUtils.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--RFUtils-RFUtils.py"><span class="source">cqepyutils-0.1.9/RFUtils/RFUtils.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--RFUtils-RFUtils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">479 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/cqepyutils.egg-info/PKG-INFO</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--cqepyutils.egg-info-PKG-INFO"><span class="source">cqepyutils-0.1.9/cqepyutils.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--cqepyutils.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cqepyutils</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cqepyutils</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Cognitive<span class="dp">·</span>Quality<span class="dp">·</span>Engineer<span class="dp">·</span>-<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Cognitive<span class="dp">·</span>Quality<span class="dp">·</span>Engineer<span class="dp">·</span>-<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cognitiveqe/cqepyutils/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cognitiveqe/cqepyutils/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sridhar<span class="dp">·</span>VP</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sridhar<span class="dp">·</span>VP</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sridharvpmca@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sridharvpmca@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>Python<span class="dp">·</span>Reusable<span class="dp">·</span>Function<span class="dp">·</span>Library</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>any</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>any</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">686 B</span></div>
+      <div><span class="source">cqepyutils-0.1.8/setup.py</span> vs.</div>
+      <div id="cqepyutils--.-.-.tar---cqepyutils--.-.--setup.py"><span class="source">cqepyutils-0.1.9/setup.py</span>
+        <a class="anchor" href="#cqepyutils--.-.-.tar---cqepyutils--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 20% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 14 lines modified</td><td colspan="2">Offset 30, 31 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=setuptools.find_packages(),</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=setuptools.find_packages(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>platforms=&#x27;any&#x27;,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>platforms=&#x27;any&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=CLASSIFIERS.splitlines(),</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=CLASSIFIERS.splitlines(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.6&#x27;,</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.6&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pandas&#x27;,</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pandas&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;xlsxwriter&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;matplotlib&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;requests&#x27;,</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;requests&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;robotframework&#x27;,</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;robotframework&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;robotframework-requests&#x27;,</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;robotframework-requests&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jinja2&#x27;,</td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jinja2&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyyaml&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;sqlalchemy&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">)</td><td class="diffline">47 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;logging&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">49 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;dask&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">50 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;base64&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">51 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;display&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">52 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;difflib&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">53 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;time&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;os&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">55 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;filecmp&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">56 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;fileinput&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;operator&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">58 </td><td class="diffpresent">#<span class="dp">·</span>&#x27;create_engine&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

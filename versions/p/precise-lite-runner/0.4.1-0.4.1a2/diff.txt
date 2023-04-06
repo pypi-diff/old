@@ -1,0 +1,94 @@
+--- tmp/precise_lite_runner-0.4.1-py3-none-any.whl.zip
++++ tmp/precise_lite_runner-0.4.1a2-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,13 +1,13 @@
+│ -Zip file size: 11765 bytes, number of entries: 11
+│ --rw-r--r--  2.0 unx     1572 b- defN 23-Apr-06 22:45 precise_lite_runner/__init__.py
+│ --rw-r--r--  2.0 unx     1358 b- defN 23-Apr-06 22:45 precise_lite_runner/params.py
+│ --rw-r--r--  2.0 unx     8727 b- defN 23-Apr-06 22:45 precise_lite_runner/runner.py
+│ --rw-r--r--  2.0 unx     2741 b- defN 23-Apr-06 22:45 precise_lite_runner/util.py
+│ --rw-r--r--  2.0 unx     1315 b- defN 23-Apr-06 22:45 precise_lite_runner/vectorization.py
+│ --rw-r--r--  2.0 unx      177 b- defN 23-Apr-06 22:45 precise_lite_runner/version.py
+│ --rw-r--r--  2.0 unx    11349 b- defN 23-Apr-06 22:45 precise_lite_runner-0.4.1.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx      436 b- defN 23-Apr-06 22:45 precise_lite_runner-0.4.1.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 22:45 precise_lite_runner-0.4.1.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       20 b- defN 23-Apr-06 22:45 precise_lite_runner-0.4.1.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx      969 b- defN 23-Apr-06 22:45 precise_lite_runner-0.4.1.dist-info/RECORD
+│ -11 files, 28756 bytes uncompressed, 10105 bytes compressed:  64.9%
+│ +Zip file size: 11791 bytes, number of entries: 11
+│ +-rw-r--r--  2.0 unx     1572 b- defN 23-Apr-06 22:43 precise_lite_runner/__init__.py
+│ +-rw-r--r--  2.0 unx     1358 b- defN 23-Apr-06 22:43 precise_lite_runner/params.py
+│ +-rw-r--r--  2.0 unx     8727 b- defN 23-Apr-06 22:43 precise_lite_runner/runner.py
+│ +-rw-r--r--  2.0 unx     2741 b- defN 23-Apr-06 22:43 precise_lite_runner/util.py
+│ +-rw-r--r--  2.0 unx     1315 b- defN 23-Apr-06 22:43 precise_lite_runner/vectorization.py
+│ +-rw-r--r--  2.0 unx      177 b- defN 23-Apr-06 22:43 precise_lite_runner/version.py
+│ +-rw-r--r--  2.0 unx    11349 b- defN 23-Apr-06 22:43 precise_lite_runner-0.4.1a2.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx      438 b- defN 23-Apr-06 22:43 precise_lite_runner-0.4.1a2.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 22:43 precise_lite_runner-0.4.1a2.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       20 b- defN 23-Apr-06 22:43 precise_lite_runner-0.4.1a2.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx      979 b- defN 23-Apr-06 22:43 precise_lite_runner-0.4.1a2.dist-info/RECORD
+│ +11 files, 28768 bytes uncompressed, 10111 bytes compressed:  64.9%
+├── zipnote {}
+│ @@ -12,23 +12,23 @@
+│  
+│  Filename: precise_lite_runner/vectorization.py
+│  Comment: 
+│  
+│  Filename: precise_lite_runner/version.py
+│  Comment: 
+│  
+│ -Filename: precise_lite_runner-0.4.1.dist-info/LICENSE
+│ +Filename: precise_lite_runner-0.4.1a2.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: precise_lite_runner-0.4.1.dist-info/METADATA
+│ +Filename: precise_lite_runner-0.4.1a2.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: precise_lite_runner-0.4.1.dist-info/WHEEL
+│ +Filename: precise_lite_runner-0.4.1a2.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: precise_lite_runner-0.4.1.dist-info/top_level.txt
+│ +Filename: precise_lite_runner-0.4.1a2.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: precise_lite_runner-0.4.1.dist-info/RECORD
+│ +Filename: precise_lite_runner-0.4.1a2.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── precise_lite_runner/version.py
+│ @@ -1,7 +1,7 @@
+│  # The following lines are replaced during the release process.
+│  # START_VERSION_BLOCK
+│  VERSION_MAJOR = 0
+│  VERSION_MINOR = 4
+│  VERSION_BUILD = 1
+│ -VERSION_ALPHA = 0
+│ +VERSION_ALPHA = 2
+│  # END_VERSION_BLOCK
+│   --- precise_lite_runner-0.4.1.dist-info/LICENSE
+├── +++ precise_lite_runner-0.4.1a2.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- precise_lite_runner-0.4.1.dist-info/RECORD
+├── +++ precise_lite_runner-0.4.1a2.dist-info/RECORD
+│┄ Files 21% similar despite different names
+│ @@ -1,11 +1,11 @@
+│  precise_lite_runner/__init__.py,sha256=1oFNsmnAH_Hary-SVr-TaXJ0dDmJi4XBQ2H93jH70Ok,1572
+│  precise_lite_runner/params.py,sha256=_CpLEAKX6ez56Kg1if6wK4ZfmWJTJqoFEDLJcNNv8YA,1358
+│  precise_lite_runner/runner.py,sha256=H8oyiIrlRaUNSN4Ay8flq3A3ZSMdzPrZIY9atRBzsd8,8727
+│  precise_lite_runner/util.py,sha256=6Kx1vWpAcGUNtQkOmBfrQ5ydGqZpKh1ZvwNj0GzwzK8,2741
+│  precise_lite_runner/vectorization.py,sha256=XGlNtWcUWYrqAPCUPVhRV_X4A832NQ8RxupmJeCx-yQ,1315
+│ -precise_lite_runner/version.py,sha256=E9VUQ-nMlrbzIN5WrbOQ0iOYdWwcES5hA09ON_5rAp4,177
+│ -precise_lite_runner-0.4.1.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ -precise_lite_runner-0.4.1.dist-info/METADATA,sha256=AY-4CfMtyg9VEyTNS5x2NqMDgBcLwPF4jtG2WT18MdU,436
+│ -precise_lite_runner-0.4.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -precise_lite_runner-0.4.1.dist-info/top_level.txt,sha256=HDhE401n7_kJUwCVNPCzoLYFPwo7ltaXKO2k1lfTUiM,20
+│ -precise_lite_runner-0.4.1.dist-info/RECORD,,
+│ +precise_lite_runner/version.py,sha256=lmWycRh0if4UuIwI5QrCvityIr3sZ_pPq2rqSw4vEGo,177
+│ +precise_lite_runner-0.4.1a2.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ +precise_lite_runner-0.4.1a2.dist-info/METADATA,sha256=D2qQi0JKmapJYX3GY5og39IQw-xN2pZYVMKca3nL8v0,438
+│ +precise_lite_runner-0.4.1a2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +precise_lite_runner-0.4.1a2.dist-info/top_level.txt,sha256=HDhE401n7_kJUwCVNPCzoLYFPwo7ltaXKO2k1lfTUiM,20
+│ +precise_lite_runner-0.4.1a2.dist-info/RECORD,,
