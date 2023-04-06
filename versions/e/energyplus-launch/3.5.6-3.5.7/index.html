@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/energyplus_launch-3.5.6.tar.gz tmp/energyplus_launch-3.5.7.tar.gz --html versions/e/energyplus-launch/3.5.6-3.5.7/index.html --text versions/e/energyplus-launch/3.5.6-3.5.7/diff.txt --markdown versions/e/energyplus-launch/3.5.6-3.5.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">18.8 KB</span></div>
+  <div><span class="source">tmp/energyplus_launch-3.5.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/energyplus_launch-3.5.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">284 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;energyplus_launch-3.5.<del>6</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>19:4<del>0</del>:<del>11</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;energyplus_launch-3.5.<ins>7</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">18.4 KB</span></div>
+    <div><span class="source">energyplus_launch-3.5.6.tar</span> vs.</div>
+    <div id="energyplus_launch--.-.-.tar"><span class="source">energyplus_launch-3.5.7.tar</span>
+      <a class="anchor" href="#energyplus_launch--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">12.7 KB</span></div>
+      <div id="energyplus_launch--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 46 lines modified</td><td colspan="2">Offset 1, 47 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>726257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1773<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1773<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3037<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>726257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3037<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2407<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2407<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>722257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>397949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3037<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/PKG-INFO</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3037<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<del>2</del>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<ins>6</ins>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/dependency_links.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>220<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/entry_points.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>220<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/entry_points.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:45:44.000000<span class="dp">·</span>energyplus_launch-3.5.7/energyplus_launch.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/energyplus_launch.egg-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/energyplus_launch.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>722257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>397949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/__main__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/configure.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/configure.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>722257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/__init__.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8728<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/config.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8728<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5989<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/dialog_external_viewers.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5989<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/dialog_external_viewers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/dialog_generic.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/dialog_generic.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2489<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/dialog_output.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2489<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/dialog_output.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6469<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/dialog_weather.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6469<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/dialog_weather.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4588<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/dialog_workflow_dirs.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4588<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/dialog_workflow_dirs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57229<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/frame_main.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57229<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/frame_main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5813<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/widget_dir_list.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5813<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/widget_dir_list.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4808<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/interface/widget_file_list.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4808<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/interface/widget_file_list.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>146<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/tk_runner.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>146<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/tk_runner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>722257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/</td><td class="diffline">28 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/__init__.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10882<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/cache.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10882<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/cache.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>624<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/crossplatform.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>624<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/crossplatform.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/exceptions.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3858<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/utilities/version.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3858<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/utilities/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>722257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/</td><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/__init__.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3979<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/base.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3979<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>726257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/default/</td><td class="diffline">37 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/default/</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/default/__init__.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/default/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1369<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/default/file_details.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1369<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/default/file_details.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3136<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/default/idf_details.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3136<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/default/idf_details.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2085<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/default/site_location.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2085<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/default/site_location.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9790<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/manager.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9790<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/manager.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>738<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/workflow.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>738<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/workflow.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7017<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/workflow_tester.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7017<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/workflow_tester.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2052<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/eplaunch/workflows/workflow_thread.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2052<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/eplaunch/workflows/workflow_thread.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>11</del>.<del>726257</del><span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/setup.cfg</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>44</ins>.<ins>401949</ins><span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>54</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<del>0</del>:<del>06</del>.000000<span class="dp">·</span>energyplus_launch-3.5.<del>6</del>/setup.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(122)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>71</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:4<ins>5</ins>:<ins>38</ins>.000000<span class="dp">·</span>energyplus_launch-3.5.<ins>7</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/LICENSE</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--LICENSE"><span class="source">energyplus_launch-3.5.7/LICENSE</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">610 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/PKG-INFO</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--PKG-INFO"><span class="source">energyplus_launch-3.5.7/PKG-INFO</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>energyplus_launch</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>energyplus_launch</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.5.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.5.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/NREL/EP-Launch</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/NREL/EP-Launch</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jason<span class="dp">·</span>Glazer<span class="dp">·</span>and<span class="dp">·</span>Edwin<span class="dp">·</span>Lee<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>United<span class="dp">·</span>States<span class="dp">·</span>Department<span class="dp">·</span>of<span class="dp">·</span>Energy</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jason<span class="dp">·</span>Glazer<span class="dp">·</span>and<span class="dp">·</span>Edwin<span class="dp">·</span>Lee<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>United<span class="dp">·</span>States<span class="dp">·</span>Department<span class="dp">·</span>of<span class="dp">·</span>Energy</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>ModifiedBSD</td><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>ModifiedBSD</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>EP-Launch3</td><td class="diffline">8 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>EP-Launch3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[![GitHub<span class="dp">·</span>release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[![GitHub<span class="dp">·</span>release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/README.md</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--README.md"><span class="source">energyplus_launch-3.5.7/README.md</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">664 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/energyplus_launch.egg-info/PKG-INFO</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--energyplus_launch.egg-info-PKG-INFO"><span class="source">energyplus_launch-3.5.7/energyplus_launch.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--energyplus_launch.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>energyplus-launch</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>energyplus-launch</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.5.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.5.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/NREL/EP-Launch</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/NREL/EP-Launch</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jason<span class="dp">·</span>Glazer<span class="dp">·</span>and<span class="dp">·</span>Edwin<span class="dp">·</span>Lee<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>United<span class="dp">·</span>States<span class="dp">·</span>Department<span class="dp">·</span>of<span class="dp">·</span>Energy</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jason<span class="dp">·</span>Glazer<span class="dp">·</span>and<span class="dp">·</span>Edwin<span class="dp">·</span>Lee<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>United<span class="dp">·</span>States<span class="dp">·</span>Department<span class="dp">·</span>of<span class="dp">·</span>Energy</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>ModifiedBSD</td><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>ModifiedBSD</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>EP-Launch3</td><td class="diffline">8 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>EP-Launch3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[![GitHub<span class="dp">·</span>release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[![GitHub<span class="dp">·</span>release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">620 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/energyplus_launch.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--energyplus_launch.egg-info-SOURCES.txt"><span class="source">energyplus_launch-3.5.7/energyplus_launch.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--energyplus_launch.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 14 lines modified</td><td colspan="2">Offset 2, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">README.md</td><td class="diffline">2 </td><td class="diffpresent">README.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">setup.cfg</td><td class="diffline">3 </td><td class="diffpresent">setup.cfg</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">setup.py</td><td class="diffline">4 </td><td class="diffpresent">setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">energyplus_launch.egg-info/PKG-INFO</td><td class="diffline">5 </td><td class="diffpresent">energyplus_launch.egg-info/PKG-INFO</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">energyplus_launch.egg-info/SOURCES.txt</td><td class="diffline">6 </td><td class="diffpresent">energyplus_launch.egg-info/SOURCES.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">energyplus_launch.egg-info/dependency_links.txt</td><td class="diffline">7 </td><td class="diffpresent">energyplus_launch.egg-info/dependency_links.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">energyplus_launch.egg-info/entry_points.txt</td><td class="diffline">8 </td><td class="diffpresent">energyplus_launch.egg-info/entry_points.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">energyplus_launch.egg-info/requires.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">energyplus_launch.egg-info/top_level.txt</td><td class="diffline">10 </td><td class="diffpresent">energyplus_launch.egg-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">eplaunch/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">eplaunch/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">eplaunch/__main__.py</td><td class="diffline">12 </td><td class="diffpresent">eplaunch/__main__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">eplaunch/configure.py</td><td class="diffline">13 </td><td class="diffpresent">eplaunch/configure.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">eplaunch/tk_runner.py</td><td class="diffline">14 </td><td class="diffpresent">eplaunch/tk_runner.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">eplaunch/interface/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">eplaunch/interface/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">eplaunch/interface/config.py</td><td class="diffline">16 </td><td class="diffpresent">eplaunch/interface/config.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/config.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-config.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/config.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/dialog_external_viewers.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_external_viewers.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/dialog_external_viewers.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_external_viewers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/dialog_generic.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_generic.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/dialog_generic.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_generic.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/dialog_output.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_output.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/dialog_output.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_output.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/dialog_weather.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_weather.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/dialog_weather.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_weather.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/dialog_workflow_dirs.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_workflow_dirs.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/dialog_workflow_dirs.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-dialog_workflow_dirs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/frame_main.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-frame_main.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/frame_main.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-frame_main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/widget_dir_list.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-widget_dir_list.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/widget_dir_list.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-widget_dir_list.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/interface/widget_file_list.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-widget_file_list.py"><span class="source">energyplus_launch-3.5.7/eplaunch/interface/widget_file_list.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-interface-widget_file_list.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/utilities/cache.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-cache.py"><span class="source">energyplus_launch-3.5.7/eplaunch/utilities/cache.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-cache.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/utilities/crossplatform.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-crossplatform.py"><span class="source">energyplus_launch-3.5.7/eplaunch/utilities/crossplatform.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-crossplatform.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/utilities/version.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-version.py"><span class="source">energyplus_launch-3.5.7/eplaunch/utilities/version.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-utilities-version.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/base.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-base.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/base.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/default/file_details.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-file_details.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/default/file_details.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-file_details.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/default/idf_details.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-idf_details.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/default/idf_details.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-idf_details.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/default/site_location.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-site_location.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/default/site_location.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-default-site_location.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/manager.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-manager.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/manager.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-manager.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/workflow.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/workflow.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/workflow_tester.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow_tester.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/workflow_tester.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow_tester.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/eplaunch/workflows/workflow_thread.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow_thread.py"><span class="source">energyplus_launch-3.5.7/eplaunch/workflows/workflow_thread.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--eplaunch-workflows-workflow_thread.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">527 B</span></div>
+      <div><span class="source">energyplus_launch-3.5.6/setup.py</span> vs.</div>
+      <div id="energyplus_launch--.-.-.tar---energyplus_launch--.-.--setup.py"><span class="source">energyplus_launch-3.5.7/setup.py</span>
+        <a class="anchor" href="#energyplus_launch--.-.-.tar---energyplus_launch--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 15 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>eplaunch<span class="dp">·</span>import<span class="dp">·</span>NAME,<span class="dp">·</span>VERSION</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>eplaunch<span class="dp">·</span>import<span class="dp">·</span>NAME,<span class="dp">·</span>VERSION</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">readme_file<span class="dp">·</span>=<span class="dp">·</span>Path(__file__).parent.resolve()<span class="dp">·</span>/<span class="dp">·</span>&#x27;README.md&#x27;</td><td class="diffline">5 </td><td class="diffpresent">readme_file<span class="dp">·</span>=<span class="dp">·</span>Path(__file__).parent.resolve()<span class="dp">·</span>/<span class="dp">·</span>&#x27;README.md&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme_contents<span class="dp">·</span>=<span class="dp">·</span>readme_file.read_text()</td><td class="diffline">6 </td><td class="diffpresent">readme_contents<span class="dp">·</span>=<span class="dp">·</span>readme_file.read_text()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>[]</td><td class="diffline">7 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>[<ins>&#x27;PLAN-Tools&gt;=0.5&#x27;</ins>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">if<span class="dp">·</span>system()<span class="dp">·</span>==<span class="dp">·</span>&#x27;Windows&#x27;:</td><td class="diffline">8 </td><td class="diffpresent">if<span class="dp">·</span>system()<span class="dp">·</span>==<span class="dp">·</span>&#x27;Windows&#x27;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires.append(&#x27;pypiwin32&#x27;)</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires.append(&#x27;pypiwin32&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">setup(</td><td class="diffline">10 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=NAME,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=NAME,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Graphical<span class="dp">·</span>Interface<span class="dp">·</span>and<span class="dp">·</span>Workflow<span class="dp">·</span>Manager<span class="dp">·</span>for<span class="dp">·</span>EnergyPlus&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

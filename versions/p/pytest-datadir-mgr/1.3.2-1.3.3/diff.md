@@ -1,0 +1,130 @@
+# Comparing `tmp/pytest-datadir-mgr-1.3.2.tar.gz` & `tmp/pytest_datadir_mgr-1.3.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pytest-datadir-mgr-1.3.2.tar", max compression
++gzip compressed data, was "pytest_datadir_mgr-1.3.3.tar", max compression
+```
+
+## Comparing `pytest-datadir-mgr-1.3.2.tar` & `pytest_datadir_mgr-1.3.3.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,6 @@
+--rw-r--r--   0        0        0     1603 2022-01-20 18:14:23.611062 pytest-datadir-mgr-1.3.2/LICENSE
+--rw-r--r--   0        0        0      115 2021-02-26 21:41:40.821730 pytest-datadir-mgr-1.3.2/LICENSE.artwork.txt
+--rw-r--r--   0        0        0     4524 2022-01-20 17:54:04.899835 pytest-datadir-mgr-1.3.2/README.rst
+--rw-r--r--   0        0        0     4430 2022-08-16 22:40:45.564502 pytest-datadir-mgr-1.3.2/pyproject.toml
+--rw-r--r--   0        0        0    14997 2022-01-20 17:54:16.776677 pytest-datadir-mgr-1.3.2/pytest_datadir_mgr/__init__.py
+--rw-r--r--   0        0        0     5487 2022-08-16 22:47:04.068985 pytest-datadir-mgr-1.3.2/setup.py
+--rw-r--r--   0        0        0     5698 2022-08-16 22:47:04.069204 pytest-datadir-mgr-1.3.2/PKG-INFO
++-rw-r--r--   0        0        0     1603 2023-04-06 19:23:52.843945 pytest_datadir_mgr-1.3.3/LICENSE
++-rw-r--r--   0        0        0      115 2023-04-06 19:23:52.843945 pytest_datadir_mgr-1.3.3/LICENSE.artwork.txt
++-rw-r--r--   0        0        0     4524 2023-04-06 19:23:52.843945 pytest_datadir_mgr-1.3.3/README.rst
++-rw-r--r--   0        0        0     4433 2023-04-06 19:30:58.912847 pytest_datadir_mgr-1.3.3/pyproject.toml
++-rw-r--r--   0        0        0    14997 2023-04-06 19:23:52.843945 pytest_datadir_mgr-1.3.3/pytest_datadir_mgr/__init__.py
++-rw-r--r--   0        0        0     5908 1970-01-01 00:00:00.000000 pytest_datadir_mgr-1.3.3/PKG-INFO
+```
+
+### Comparing `pytest-datadir-mgr-1.3.2/LICENSE` & `pytest_datadir_mgr-1.3.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pytest-datadir-mgr-1.3.2/README.rst` & `pytest_datadir_mgr-1.3.3/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `pytest-datadir-mgr-1.3.2/pyproject.toml` & `pytest_datadir_mgr-1.3.3/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pytest-datadir-mgr"
+-version = "1.3.2"
++version = "1.3.3"
+ description = "Manager for test data: downloads, artifact caching, and a tmpdir context."
+ authors = ["Joel Berendzen <joel@generisbio.com>"]
+ license = "BSD-3-Clause"
+ readme = "README.rst"
+ homepage = "https://github.com/joelb123/pytest-datadir-mgr"
+ keywords = [
+     "testing",
+@@ -25,18 +25,18 @@
+     "Programming Language :: Python :: 3.9",
+     "Programming Language :: Python :: 3.10",
+     "Programming Language :: Python :: 3.11",
+     "Framework :: Pytest"
+     ]
+ 
+ [tool.poetry.urls]
+-Changelog = "https://github.com/joelb123/svante/releases"
++Changelog = "https://github.com/joelb123/pytest-datadir-mgr/releases"
+ 
+ [tool.poetry.dependencies]
+-python = "^3.7.1,<4.0.0"
++python = "^3.8"
+ progressbar2 = ">=4.0.0"
+ pytest = ">=7.1"
+ requests_download = ">=0.1.2"
+ 
+ [tool.poetry.dev-dependencies]
+ black = ">=22.1.0"
+ coverage = {extras = ["toml"], version = ">=6.3.2"}
+```
+
+### Comparing `pytest-datadir-mgr-1.3.2/pytest_datadir_mgr/__init__.py` & `pytest_datadir_mgr-1.3.3/pytest_datadir_mgr/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytest-datadir-mgr-1.3.2/PKG-INFO` & `pytest_datadir_mgr-1.3.3/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,33 +1,37 @@
+ Metadata-Version: 2.1
+ Name: pytest-datadir-mgr
+-Version: 1.3.2
++Version: 1.3.3
+ Summary: Manager for test data: downloads, artifact caching, and a tmpdir context.
+ Home-page: https://github.com/joelb123/pytest-datadir-mgr
+ License: BSD-3-Clause
+ Keywords: testing,pytest-plugins,downloads,data manager,test data,software engineering
+ Author: Joel Berendzen
+ Author-email: joel@generisbio.com
+-Requires-Python: >=3.7.1,<4.0.0
++Requires-Python: >=3.8,<4.0
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Environment :: Plugins
+ Classifier: Framework :: Pytest
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Requires-Dist: progressbar2 (>=4.0.0)
+ Requires-Dist: pytest (>=7.1)
+ Requires-Dist: requests_download (>=0.1.2)
+-Project-URL: Changelog, https://github.com/joelb123/svante/releases
++Project-URL: Changelog, https://github.com/joelb123/pytest-datadir-mgr/releases
+ Description-Content-Type: text/x-rst
+ 
+ =============================
+ datadir-mgr plugin for pytest
+ =============================
+ .. badges-begin
+```
+

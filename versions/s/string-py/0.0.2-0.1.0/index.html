@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/string_py-0.0.2.tar.gz tmp/string_py-0.1.0.tar.gz --html versions/s/string-py/0.0.2-0.1.0/index.html --text versions/s/string-py/0.0.2-0.1.0/diff.txt --markdown versions/s/string-py/0.0.2-0.1.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.41 KB</span></div>
+  <div><span class="source">tmp/string_py-0.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/string_py-0.1.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">268 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;string_py-0.<del>0</del>.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;string_py-0.<ins>1</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.09 KB</span></div>
+    <div><span class="source">string_py-0.0.2.tar</span> vs.</div>
+    <div id="string_py--.-.-.tar"><span class="source">string_py-0.1.0.tar</span>
+      <a class="anchor" href="#string_py--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.8 KB</span></div>
+      <div id="string_py--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#string_py--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.7<del>64</del>1<del>72</del><span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.7<ins>51</ins>1<ins>35</ins><span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>3</del>3<del>1</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.7<del>63170</del><span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>4</ins>3<ins>5</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.7<ins>35494</ins><span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>899</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:<del>19</del>:<del>52</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1046</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>31</ins>:<ins>01</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/README.md</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>557<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:37:19.000000<span class="dp">·</span>string_py-0.1.0/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.7<del>65</del>1<del>72</del><span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.7<ins>51</ins>1<ins>35</ins><span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>881<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>26</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/setup.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>881<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>34</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.7<del>50158</del><span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.7<ins>19870</ins><span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:<del>27</del>:<del>11</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:<ins>39</ins>:<ins>34</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>7583</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:<del>19</del>:<del>18</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py/string_py.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>13126</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:<ins>35</ins>:<ins>20</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py/string_py.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.7<del>60167</del><span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py.egg-info/</td><td class="diffline">10 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.7<ins>35494</ins><span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>3</del>3<del>1</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py.egg-info/PKG-INFO</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>4</ins>3<ins>5</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>195</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py.egg-info/SOURCES.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>210</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py.egg-info/dependency_links.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>3</del>:3<del>0</del>:<del>42</del>.000000<span class="dp">·</span>string_py-0.<del>0</del>.<del>2</del>/string_py.egg-info/top_level.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>9</ins>:3<ins>9</ins>:<ins>37</ins>.000000<span class="dp">·</span>string_py-0.<ins>1</ins>.<ins>0</ins>/string_py.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.15 KB</span></div>
+      <div><span class="source">string_py-0.0.2/PKG-INFO</span> vs.</div>
+      <div id="string_py--.-.-.tar---string_py--.-.--PKG-INFO"><span class="source">string_py-0.1.0/PKG-INFO</span>
+        <a class="anchor" href="#string_py--.-.-.tar---string_py--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>string_py<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>string_py<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>0</del>.<del>2</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>1</ins>.<ins>0</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>BabyEntchen<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>BabyEntchen<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;baby_entchen@web.de&gt;<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span><ins>BabyEntchen<span class="dp">·</span></ins>&lt;baby_entchen@web.de&gt;<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>python,string,strings,utils,string<span class="dp">·</span>utils,random,random<span class="dp">·</span>strings,formatting,formatter<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>python,string,strings,utils,string<span class="dp">·</span>utils,random,random<span class="dp">·</span>strings,formatting,formatter<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>1<span class="dp">·</span>-<span class="dp">·</span>Planning<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>string_py<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>string_py<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">[![PyPI](https://img.shields.io/pypi/v/string-py?style=flat-square)](https://pypi.org/project/string-py/)<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent">[![PyPI](https://img.shields.io/pypi/v/string-py?style=flat-square)](https://pypi.org/project/string-py/)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 45, 14 lines modified</td><td colspan="2">Offset 45, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td><td class="diffline">45 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td><td class="diffline">47 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">48 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">49 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">Hello<em>\xd</em></td><td class="diffline">50 </td><td class="diffpresent">Hello<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">51 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Information<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">53 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">55 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">56 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).get_upper(index=True))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">58 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">59 </td><td class="diffpresent">{0:<span class="dp">·</span>&#x27;H&#x27;,<span class="dp">·</span>6:<span class="dp">·</span>&#x27;W&#x27;}<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">60 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td><td class="diffline">61 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">```python<em>\xd</em></td><td class="diffline">62 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td><td class="diffline">63 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">64 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td><td class="diffline">65 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">66 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td><td class="diffline">67 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">482 B</span></div>
+      <div><span class="source">string_py-0.0.2/README.md</span> vs.</div>
+      <div id="string_py--.-.-.tar---string_py--.-.--README.md"><span class="source">string_py-0.1.0/README.md</span>
+        <a class="anchor" href="#string_py--.-.-.tar---string_py--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 33, 14 lines modified</td><td colspan="2">Offset 33, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td><td class="diffline">33 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">34 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td><td class="diffline">35 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">36 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">37 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">Hello<em>\xd</em></td><td class="diffline">38 </td><td class="diffpresent">Hello<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">39 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">40 </td><td class="diffpresent">##<span class="dp">·</span>Information<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">41 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">42 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).get_upper(index=True))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">46 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">47 </td><td class="diffpresent">{0:<span class="dp">·</span>&#x27;H&#x27;,<span class="dp">·</span>6:<span class="dp">·</span>&#x27;W&#x27;}<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td><td class="diffline">49 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">```python<em>\xd</em></td><td class="diffline">50 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td><td class="diffline">51 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">52 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td><td class="diffline">53 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">54 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td><td class="diffline">55 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">455 B</span></div>
+      <div><span class="source">string_py-0.0.2/setup.py</span> vs.</div>
+      <div id="string_py--.-.-.tar---string_py--.-.--setup.py"><span class="source">string_py-0.1.0/setup.py</span>
+        <a class="anchor" href="#string_py--.-.-.tar---string_py--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>codecs<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>codecs<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.<del>0</del>.<del>2</del>&#x27;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.<ins>1</ins>.<ins>0</ins>&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python&#x27;<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">this_directory<span class="dp">·</span>=<span class="dp">·</span>Path(__file__).parent<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">this_directory<span class="dp">·</span>=<span class="dp">·</span>Path(__file__).parent<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>(this_directory<span class="dp">·</span>/<span class="dp">·</span>&quot;README.md&quot;).read_text()<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>(this_directory<span class="dp">·</span>/<span class="dp">·</span>&quot;README.md&quot;).read_text()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">setup(<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">setup(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;string_py&quot;,<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;string_py&quot;,<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.19 KB</span></div>
+      <div><span class="source">string_py-0.0.2/string_py.egg-info/PKG-INFO</span> vs.</div>
+      <div id="string_py--.-.-.tar---string_py--.-.--string_py.egg-info-PKG-INFO"><span class="source">string_py-0.1.0/string_py.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#string_py--.-.-.tar---string_py--.-.--string_py.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>string-py<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>string-py<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>0</del>.<del>2</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>1</ins>.<ins>0</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utils<span class="dp">·</span>for<span class="dp">·</span>strings<span class="dp">·</span>in<span class="dp">·</span>python<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>BabyEntchen<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>BabyEntchen<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;baby_entchen@web.de&gt;<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span><ins>BabyEntchen<span class="dp">·</span></ins>&lt;baby_entchen@web.de&gt;<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>python,string,strings,utils,string<span class="dp">·</span>utils,random,random<span class="dp">·</span>strings,formatting,formatter<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>python,string,strings,utils,string<span class="dp">·</span>utils,random,random<span class="dp">·</span>strings,formatting,formatter<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>1<span class="dp">·</span>-<span class="dp">·</span>Planning<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>string_py<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>string_py<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">[![PyPI](https://img.shields.io/pypi/v/string-py?style=flat-square)](https://pypi.org/project/string-py/)<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent">[![PyPI](https://img.shields.io/pypi/v/string-py?style=flat-square)](https://pypi.org/project/string-py/)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 45, 14 lines modified</td><td colspan="2">Offset 45, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td><td class="diffline">45 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td><td class="diffline">47 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).first(5))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">48 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">49 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">Hello<em>\xd</em></td><td class="diffline">50 </td><td class="diffpresent">Hello<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">51 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Information<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">53 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Str<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">55 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">56 </td><td class="diffpresent">print(Str(&quot;Hello<span class="dp">·</span>World!&quot;).get_upper(index=True))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">58 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">59 </td><td class="diffpresent">{0:<span class="dp">·</span>&#x27;H&#x27;,<span class="dp">·</span>6:<span class="dp">·</span>&#x27;W&#x27;}<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">60 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td><td class="diffline">61 </td><td class="diffpresent">##<span class="dp">·</span>Printer<span class="dp">·</span>Example<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">```python<em>\xd</em></td><td class="diffline">62 </td><td class="diffpresent">```python<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td><td class="diffline">63 </td><td class="diffpresent">from<span class="dp">·</span>string_py<span class="dp">·</span>import<span class="dp">·</span>Printer<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">64 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td><td class="diffline">65 </td><td class="diffpresent">print<span class="dp">·</span>=<span class="dp">·</span>Printer()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">66 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td><td class="diffline">67 </td><td class="diffpresent">print.time(&quot;Hello<span class="dp">·</span>World!&quot;)<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

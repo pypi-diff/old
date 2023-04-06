@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/griptape_core-0.1.0.tar.gz tmp/griptape_core-0.1.1.tar.gz --html versions/g/griptape-core/0.1.0-0.1.1/index.html --text versions/g/griptape-core/0.1.0-0.1.1/diff.txt --markdown versions/g/griptape-core/0.1.0-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.1 KB</span></div>
+  <div><span class="source">tmp/griptape_core-0.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/griptape_core-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">194 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;griptape_core-0.1.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;griptape_core-0.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.85 KB</span></div>
+    <div><span class="source">griptape_core-0.1.0.tar</span> vs.</div>
+    <div id="griptape_core--.-.-.tar"><span class="source">griptape_core-0.1.1.tar</span>
+      <a class="anchor" href="#griptape_core--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.67 KB</span></div>
+      <div id="griptape_core--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11339<span class="dp">·</span>2023-01-13<span class="dp">·</span>17:13:04.565000<span class="dp">·</span>griptape_core-0.1.<del>0</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11339<span class="dp">·</span>2023-01-13<span class="dp">·</span>17:13:04.565000<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2802<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:3<del>1</del>:<del>58</del>.<del>8</del>2<del>7486</del><span class="dp">·</span>griptape_core-0.1.<del>0</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2802<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:3<ins>4</ins>:<ins>33</ins>.<ins>3</ins>2<ins>6643</ins><span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:09:44.630061<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:09:44.630061<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-04-04<span class="dp">·</span>16:01:27.358399<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/adapters/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-04-04<span class="dp">·</span>16:01:27.358399<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/adapters/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2379<span class="dp">·</span>2023-04-04<span class="dp">·</span>21:23:44.321087<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/adapters/chatgpt_plugin_adapter.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2379<span class="dp">·</span>2023-04-04<span class="dp">·</span>21:23:44.321087<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/adapters/chatgpt_plugin_adapter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1132<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:47:18.789261<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/adapters/langchain_tool_adapter.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1132<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:47:18.789261<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/adapters/langchain_tool_adapter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>239<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:46:37.597632<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/base_adapter.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>239<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:46:37.597632<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/base_adapter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>462<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:35:53.888348<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/base_executor.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>462<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:35:53.888348<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/base_executor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3278<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:52:45.515990<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/base_tool.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3278<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:52:45.515990<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/base_tool.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>358<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:14:25.338795<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/decorators.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>358<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:14:25.338795<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/decorators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>143<span class="dp">·</span>2023-04-02<span class="dp">·</span>17:23:03.952230<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/executors/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>143<span class="dp">·</span>2023-04-02<span class="dp">·</span>17:23:03.952230<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/executors/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2347<span class="dp">·</span>2023-04-05<span class="dp">·</span>15:55:29.652685<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/executors/docker_executor.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2347<span class="dp">·</span>2023-04-05<span class="dp">·</span>15:55:29.652685<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/executors/docker_executor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1882<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:36:17.373178<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/executors/local_executor.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1882<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:36:17.373178<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/executors/local_executor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>489<span class="dp">·</span>2023-04-04<span class="dp">·</span>16:09:45.081067<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>489<span class="dp">·</span>2023-04-04<span class="dp">·</span>16:09:45.081067<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129<span class="dp">·</span>2023-04-02<span class="dp">·</span>17:04:53.049000<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/resources/docker_executor/Dockerfile</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129<span class="dp">·</span>2023-04-02<span class="dp">·</span>17:04:53.049000<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/resources/docker_executor/Dockerfile</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:42:07.789942<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/utils/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:42:07.789942<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>892<span class="dp">·</span>2023-04-04<span class="dp">·</span>18:05:11.529678<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/utils/j2.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>892<span class="dp">·</span>2023-04-04<span class="dp">·</span>18:05:11.529678<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/utils/j2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>371<span class="dp">·</span>2023-04-04<span class="dp">·</span>18:29:34.984818<span class="dp">·</span>griptape_core-0.1.<del>0</del>/griptape/utils/manifest_validator.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>371<span class="dp">·</span>2023-04-04<span class="dp">·</span>18:29:34.984818<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/griptape/utils/manifest_validator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>638<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:<del>29</del>:<del>26</del>.<del>1</del>7<del>712</del>5<span class="dp">·</span>griptape_core-0.1.<del>0</del>/pyproject.toml</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>638<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:<ins>34</ins>:<ins>55</ins>.<ins>7</ins>7<ins>851</ins>5<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3670<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>griptape_core-0.1.<del>0</del>/PKG-INFO</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3670<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>griptape_core-0.1.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/LICENSE</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--LICENSE"><span class="source">griptape_core-0.1.1/LICENSE</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.21 KB</span></div>
+      <div><span class="source">griptape_core-0.1.0/README.md</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--README.md"><span class="source">griptape_core-0.1.1/README.md</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 21 lines modified</td><td colspan="2">Offset 11, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span>**Tools**:<span class="dp">·</span>call<span class="dp">·</span>external<span class="dp">·</span>APIs,<span class="dp">·</span>access<span class="dp">·</span>databases,<span class="dp">·</span>and<span class="dp">·</span>run<span class="dp">·</span>arbitrary<span class="dp">·</span>code<span class="dp">·</span>or<span class="dp">·</span>CLI<span class="dp">·</span>commands.</td><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span>**Tools**:<span class="dp">·</span>call<span class="dp">·</span>external<span class="dp">·</span>APIs,<span class="dp">·</span>access<span class="dp">·</span>databases,<span class="dp">·</span>and<span class="dp">·</span>run<span class="dp">·</span>arbitrary<span class="dp">·</span>code<span class="dp">·</span>or<span class="dp">·</span>CLI<span class="dp">·</span>commands.</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">-<span class="dp">·</span>**Executors**:<span class="dp">·</span>run<span class="dp">·</span>your<span class="dp">·</span>tools<span class="dp">·</span>safely<span class="dp">·</span>in<span class="dp">·</span>any<span class="dp">·</span>environment:<span class="dp">·</span>local,<span class="dp">·</span>containerized,<span class="dp">·</span>or<span class="dp">·</span>serverless<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>cloud.</td><td class="diffline">12 </td><td class="diffpresent">-<span class="dp">·</span>**Executors**:<span class="dp">·</span>run<span class="dp">·</span>your<span class="dp">·</span>tools<span class="dp">·</span>safely<span class="dp">·</span>in<span class="dp">·</span>any<span class="dp">·</span>environment:<span class="dp">·</span>local,<span class="dp">·</span>containerized,<span class="dp">·</span>or<span class="dp">·</span>serverless<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>cloud.</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">-<span class="dp">·</span>**Adapters**:<span class="dp">·</span>convert<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>underlying<span class="dp">·</span>middleware<span class="dp">·</span>abstractions,<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>ChatGPT<span class="dp">·</span>Plugins,<span class="dp">·</span>LangChain<span class="dp">·</span>tools,<span class="dp">·</span>and<span class="dp">·</span>Fixie.ai<span class="dp">·</span>agents.</td><td class="diffline">13 </td><td class="diffpresent">-<span class="dp">·</span>**Adapters**:<span class="dp">·</span>convert<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>underlying<span class="dp">·</span>middleware<span class="dp">·</span>abstractions,<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>ChatGPT<span class="dp">·</span>Plugins,<span class="dp">·</span>LangChain<span class="dp">·</span>tools,<span class="dp">·</span>and<span class="dp">·</span>Fixie.ai<span class="dp">·</span>agents.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Getting<span class="dp">·</span>Started</td><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Getting<span class="dp">·</span>Started</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Griptape<span class="dp">·</span>separates<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>framework<span class="dp">·</span>from<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>two<span class="dp">·</span>Python<span class="dp">·</span>packages:<span class="dp">·</span>`griptape<del>_</del>core`<span class="dp">·</span>and<span class="dp">·</span>`griptape<del>_</del>tools`.<span class="dp">·</span>Explore<span class="dp">·</span>Griptape<span class="dp">·</span>tools<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[griptape-tools<span class="dp">·</span>repo](https://github.com/griptape-ai/griptape-tools)</td><td class="diffline">15 </td><td class="diffpresent">Griptape<span class="dp">·</span>separates<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>framework<span class="dp">·</span>from<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>two<span class="dp">·</span>Python<span class="dp">·</span>packages:<span class="dp">·</span>`griptape<ins>-</ins>core`<span class="dp">·</span>and<span class="dp">·</span>`griptape<ins>-</ins>tools`.<span class="dp">·</span>Explore<span class="dp">·</span>Griptape<span class="dp">·</span>tools<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[griptape-tools<span class="dp">·</span>repo](https://github.com/griptape-ai/griptape-tools)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">First,<span class="dp">·</span>install<span class="dp">·</span>those<span class="dp">·</span>packages:</td><td class="diffline">16 </td><td class="diffpresent">First,<span class="dp">·</span>install<span class="dp">·</span>those<span class="dp">·</span>packages:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">```</td><td class="diffline">17 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<del>_</del>core</td><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<ins>-</ins>core</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<del>_</del>tools</td><td class="diffline">19 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<ins>-</ins>tools</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">```</td><td class="diffline">20 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Next,<span class="dp">·</span>initialize<span class="dp">·</span>an<span class="dp">·</span>executor<span class="dp">·</span>and<span class="dp">·</span>some<span class="dp">·</span>tools:</td><td class="diffline">21 </td><td class="diffpresent">Next,<span class="dp">·</span>initialize<span class="dp">·</span>an<span class="dp">·</span>executor<span class="dp">·</span>and<span class="dp">·</span>some<span class="dp">·</span>tools:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">```python</td><td class="diffline">22 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>griptape.adapters<span class="dp">·</span>import<span class="dp">·</span>LangchainToolAdapter,<span class="dp">·</span>ChatgptPluginAdapter</td><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>griptape.adapters<span class="dp">·</span>import<span class="dp">·</span>LangchainToolAdapter,<span class="dp">·</span>ChatgptPluginAdapter</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>griptape.executors<span class="dp">·</span>import<span class="dp">·</span>LocalExecutor</td><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>griptape.executors<span class="dp">·</span>import<span class="dp">·</span>LocalExecutor</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/adapters/chatgpt_plugin_adapter.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-adapters-chatgpt_plugin_adapter.py"><span class="source">griptape_core-0.1.1/griptape/adapters/chatgpt_plugin_adapter.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-adapters-chatgpt_plugin_adapter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/adapters/langchain_tool_adapter.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-adapters-langchain_tool_adapter.py"><span class="source">griptape_core-0.1.1/griptape/adapters/langchain_tool_adapter.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-adapters-langchain_tool_adapter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/base_tool.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-base_tool.py"><span class="source">griptape_core-0.1.1/griptape/base_tool.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-base_tool.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/executors/docker_executor.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-executors-docker_executor.py"><span class="source">griptape_core-0.1.1/griptape/executors/docker_executor.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-executors-docker_executor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/executors/local_executor.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-executors-local_executor.py"><span class="source">griptape_core-0.1.1/griptape/executors/local_executor.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-executors-local_executor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/griptape/utils/j2.py</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--griptape-utils-j-.py"><span class="source">griptape_core-0.1.1/griptape/utils/j2.py</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--griptape-utils-j-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">387 B</span></div>
+      <div><span class="source">griptape_core-0.1.0/pyproject.toml</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--pyproject.toml"><span class="source">griptape_core-0.1.1/pyproject.toml</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 18% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;griptape-core&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;griptape-core&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>0</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;LLM<span class="dp">·</span>tools<span class="dp">·</span>runtime<span class="dp">·</span>framework.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;LLM<span class="dp">·</span>tools<span class="dp">·</span>runtime<span class="dp">·</span>framework.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache<span class="dp">·</span>2.0&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache<span class="dp">·</span>2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/griptape-ai/griptape-core&quot;</td><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/griptape-ai/griptape-core&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.59 KB</span></div>
+      <div><span class="source">griptape_core-0.1.0/PKG-INFO</span> vs.</div>
+      <div id="griptape_core--.-.-.tar---griptape_core--.-.--PKG-INFO"><span class="source">griptape_core-0.1.1/PKG-INFO</span>
+        <a class="anchor" href="#griptape_core--.-.-.tar---griptape_core--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>griptape-core</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>griptape-core</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>LLM<span class="dp">·</span>tools<span class="dp">·</span>runtime<span class="dp">·</span>framework.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>LLM<span class="dp">·</span>tools<span class="dp">·</span>runtime<span class="dp">·</span>framework.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/griptape-ai/griptape-core</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/griptape-ai/griptape-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>Other/Proprietary<span class="dp">·</span>License</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>Other/Proprietary<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 36, 21 lines modified</td><td colspan="2">Offset 36, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">-<span class="dp">·</span>**Tools**:<span class="dp">·</span>call<span class="dp">·</span>external<span class="dp">·</span>APIs,<span class="dp">·</span>access<span class="dp">·</span>databases,<span class="dp">·</span>and<span class="dp">·</span>run<span class="dp">·</span>arbitrary<span class="dp">·</span>code<span class="dp">·</span>or<span class="dp">·</span>CLI<span class="dp">·</span>commands.</td><td class="diffline">36 </td><td class="diffpresent">-<span class="dp">·</span>**Tools**:<span class="dp">·</span>call<span class="dp">·</span>external<span class="dp">·</span>APIs,<span class="dp">·</span>access<span class="dp">·</span>databases,<span class="dp">·</span>and<span class="dp">·</span>run<span class="dp">·</span>arbitrary<span class="dp">·</span>code<span class="dp">·</span>or<span class="dp">·</span>CLI<span class="dp">·</span>commands.</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">-<span class="dp">·</span>**Executors**:<span class="dp">·</span>run<span class="dp">·</span>your<span class="dp">·</span>tools<span class="dp">·</span>safely<span class="dp">·</span>in<span class="dp">·</span>any<span class="dp">·</span>environment:<span class="dp">·</span>local,<span class="dp">·</span>containerized,<span class="dp">·</span>or<span class="dp">·</span>serverless<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>cloud.</td><td class="diffline">37 </td><td class="diffpresent">-<span class="dp">·</span>**Executors**:<span class="dp">·</span>run<span class="dp">·</span>your<span class="dp">·</span>tools<span class="dp">·</span>safely<span class="dp">·</span>in<span class="dp">·</span>any<span class="dp">·</span>environment:<span class="dp">·</span>local,<span class="dp">·</span>containerized,<span class="dp">·</span>or<span class="dp">·</span>serverless<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>cloud.</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">-<span class="dp">·</span>**Adapters**:<span class="dp">·</span>convert<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>underlying<span class="dp">·</span>middleware<span class="dp">·</span>abstractions,<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>ChatGPT<span class="dp">·</span>Plugins,<span class="dp">·</span>LangChain<span class="dp">·</span>tools,<span class="dp">·</span>and<span class="dp">·</span>Fixie.ai<span class="dp">·</span>agents.</td><td class="diffline">38 </td><td class="diffpresent">-<span class="dp">·</span>**Adapters**:<span class="dp">·</span>convert<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>underlying<span class="dp">·</span>middleware<span class="dp">·</span>abstractions,<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>ChatGPT<span class="dp">·</span>Plugins,<span class="dp">·</span>LangChain<span class="dp">·</span>tools,<span class="dp">·</span>and<span class="dp">·</span>Fixie.ai<span class="dp">·</span>agents.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">##<span class="dp">·</span>Getting<span class="dp">·</span>Started</td><td class="diffline">39 </td><td class="diffpresent">##<span class="dp">·</span>Getting<span class="dp">·</span>Started</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">Griptape<span class="dp">·</span>separates<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>framework<span class="dp">·</span>from<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>two<span class="dp">·</span>Python<span class="dp">·</span>packages:<span class="dp">·</span>`griptape<del>_</del>core`<span class="dp">·</span>and<span class="dp">·</span>`griptape<del>_</del>tools`.<span class="dp">·</span>Explore<span class="dp">·</span>Griptape<span class="dp">·</span>tools<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[griptape-tools<span class="dp">·</span>repo](https://github.com/griptape-ai/griptape-tools)</td><td class="diffline">40 </td><td class="diffpresent">Griptape<span class="dp">·</span>separates<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>framework<span class="dp">·</span>from<span class="dp">·</span>tools<span class="dp">·</span>into<span class="dp">·</span>two<span class="dp">·</span>Python<span class="dp">·</span>packages:<span class="dp">·</span>`griptape<ins>-</ins>core`<span class="dp">·</span>and<span class="dp">·</span>`griptape<ins>-</ins>tools`.<span class="dp">·</span>Explore<span class="dp">·</span>Griptape<span class="dp">·</span>tools<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>[griptape-tools<span class="dp">·</span>repo](https://github.com/griptape-ai/griptape-tools)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">First,<span class="dp">·</span>install<span class="dp">·</span>those<span class="dp">·</span>packages:</td><td class="diffline">41 </td><td class="diffpresent">First,<span class="dp">·</span>install<span class="dp">·</span>those<span class="dp">·</span>packages:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">```</td><td class="diffline">42 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<del>_</del>core</td><td class="diffline">43 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<ins>-</ins>core</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<del>_</del>tools</td><td class="diffline">44 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>griptape<ins>-</ins>tools</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">```</td><td class="diffline">45 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">Next,<span class="dp">·</span>initialize<span class="dp">·</span>an<span class="dp">·</span>executor<span class="dp">·</span>and<span class="dp">·</span>some<span class="dp">·</span>tools:</td><td class="diffline">46 </td><td class="diffpresent">Next,<span class="dp">·</span>initialize<span class="dp">·</span>an<span class="dp">·</span>executor<span class="dp">·</span>and<span class="dp">·</span>some<span class="dp">·</span>tools:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">```python</td><td class="diffline">47 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">from<span class="dp">·</span>griptape.adapters<span class="dp">·</span>import<span class="dp">·</span>LangchainToolAdapter,<span class="dp">·</span>ChatgptPluginAdapter</td><td class="diffline">48 </td><td class="diffpresent">from<span class="dp">·</span>griptape.adapters<span class="dp">·</span>import<span class="dp">·</span>LangchainToolAdapter,<span class="dp">·</span>ChatgptPluginAdapter</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">from<span class="dp">·</span>griptape.executors<span class="dp">·</span>import<span class="dp">·</span>LocalExecutor</td><td class="diffline">49 </td><td class="diffpresent">from<span class="dp">·</span>griptape.executors<span class="dp">·</span>import<span class="dp">·</span>LocalExecutor</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,238 @@
+--- tmp/energyplus_launch-3.5.6.tar.gz
++++ tmp/energyplus_launch-3.5.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "energyplus_launch-3.5.6.tar", last modified: Thu Apr  6 19:40:11 2023, max compression
+│ +gzip compressed data, was "energyplus_launch-3.5.7.tar", last modified: Thu Apr  6 19:45:44 2023, max compression
+│   --- energyplus_launch-3.5.6.tar
+├── +++ energyplus_launch-3.5.7.tar
+│ ├── file list
+│ │ @@ -1,46 +1,47 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.726257 energyplus_launch-3.5.6/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1773 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3037 2023-04-06 19:40:11.726257 energyplus_launch-3.5.6/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2407 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.722257 energyplus_launch-3.5.6/energyplus_launch.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3037 2023-04-06 19:40:11.000000 energyplus_launch-3.5.6/energyplus_launch.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1220 2023-04-06 19:40:11.000000 energyplus_launch-3.5.6/energyplus_launch.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 19:40:11.000000 energyplus_launch-3.5.6/energyplus_launch.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      220 2023-04-06 19:40:11.000000 energyplus_launch-3.5.6/energyplus_launch.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        9 2023-04-06 19:40:11.000000 energyplus_launch-3.5.6/energyplus_launch.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.722257 energyplus_launch-3.5.6/eplaunch/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      389 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       53 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/__main__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      289 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/configure.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.722257 energyplus_launch-3.5.6/eplaunch/interface/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8728 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5989 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/dialog_external_viewers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      772 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/dialog_generic.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2489 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/dialog_output.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6469 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/dialog_weather.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4588 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/dialog_workflow_dirs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    57229 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/frame_main.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5813 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/widget_dir_list.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4808 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/interface/widget_file_list.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      146 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/tk_runner.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.722257 energyplus_launch-3.5.6/eplaunch/utilities/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/utilities/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    10882 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/utilities/cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      624 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/utilities/crossplatform.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      177 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/utilities/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3858 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/utilities/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.722257 energyplus_launch-3.5.6/eplaunch/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3979 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/base.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:11.726257 energyplus_launch-3.5.6/eplaunch/workflows/default/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/default/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1369 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/default/file_details.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3136 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/default/idf_details.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2085 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/default/site_location.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9790 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      738 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/workflow.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     7017 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/workflow_tester.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2052 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/eplaunch/workflows/workflow_thread.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      216 2023-04-06 19:40:11.726257 energyplus_launch-3.5.6/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1354 2023-04-06 19:40:06.000000 energyplus_launch-3.5.6/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1773 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3037 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2407 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.397949 energyplus_launch-3.5.7/energyplus_launch.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3037 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1260 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      220 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       16 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        9 2023-04-06 19:45:44.000000 energyplus_launch-3.5.7/energyplus_launch.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.397949 energyplus_launch-3.5.7/eplaunch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      389 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       53 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/__main__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      289 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/configure.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/eplaunch/interface/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8728 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5989 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/dialog_external_viewers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      772 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/dialog_generic.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2489 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/dialog_output.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6469 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/dialog_weather.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4588 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/dialog_workflow_dirs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    57229 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/frame_main.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5813 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/widget_dir_list.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4808 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/interface/widget_file_list.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      146 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/tk_runner.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/eplaunch/utilities/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/utilities/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    10882 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/utilities/cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      624 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/utilities/crossplatform.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      177 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/utilities/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3858 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/utilities/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/eplaunch/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3979 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/base.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/eplaunch/workflows/default/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/default/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1369 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/default/file_details.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3136 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/default/idf_details.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2085 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/default/site_location.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9790 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      738 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/workflow.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     7017 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/workflow_tester.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2052 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/eplaunch/workflows/workflow_thread.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      216 2023-04-06 19:45:44.401949 energyplus_launch-3.5.7/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1371 2023-04-06 19:45:38.000000 energyplus_launch-3.5.7/setup.py
+│ │   --- energyplus_launch-3.5.6/LICENSE
+│ ├── +++ energyplus_launch-3.5.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/PKG-INFO
+│ ├── +++ energyplus_launch-3.5.7/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: energyplus_launch
+│ │ -Version: 3.5.6
+│ │ +Version: 3.5.7
+│ │  Summary: Graphical Interface and Workflow Manager for EnergyPlus
+│ │  Home-page: https://github.com/NREL/EP-Launch
+│ │  Author: Jason Glazer and Edwin Lee for the United States Department of Energy
+│ │  License: ModifiedBSD
+│ │  Description: # EP-Launch3
+│ │          
+│ │          [![GitHub release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)
+│ │   --- energyplus_launch-3.5.6/README.md
+│ ├── +++ energyplus_launch-3.5.7/README.md
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/energyplus_launch.egg-info/PKG-INFO
+│ ├── +++ energyplus_launch-3.5.7/energyplus_launch.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: energyplus-launch
+│ │ -Version: 3.5.6
+│ │ +Version: 3.5.7
+│ │  Summary: Graphical Interface and Workflow Manager for EnergyPlus
+│ │  Home-page: https://github.com/NREL/EP-Launch
+│ │  Author: Jason Glazer and Edwin Lee for the United States Department of Energy
+│ │  License: ModifiedBSD
+│ │  Description: # EP-Launch3
+│ │          
+│ │          [![GitHub release](https://img.shields.io/github/release/nrel/ep-launch.svg?style=for-the-badge)](https://github.com/nrel/ep-launch/releases/latest)
+│ │   --- energyplus_launch-3.5.6/energyplus_launch.egg-info/SOURCES.txt
+│ ├── +++ energyplus_launch-3.5.7/energyplus_launch.egg-info/SOURCES.txt
+│ │┄ Files 8% similar despite different names
+│ │ @@ -2,14 +2,15 @@
+│ │  README.md
+│ │  setup.cfg
+│ │  setup.py
+│ │  energyplus_launch.egg-info/PKG-INFO
+│ │  energyplus_launch.egg-info/SOURCES.txt
+│ │  energyplus_launch.egg-info/dependency_links.txt
+│ │  energyplus_launch.egg-info/entry_points.txt
+│ │ +energyplus_launch.egg-info/requires.txt
+│ │  energyplus_launch.egg-info/top_level.txt
+│ │  eplaunch/__init__.py
+│ │  eplaunch/__main__.py
+│ │  eplaunch/configure.py
+│ │  eplaunch/tk_runner.py
+│ │  eplaunch/interface/__init__.py
+│ │  eplaunch/interface/config.py
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/config.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/config.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/dialog_external_viewers.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/dialog_external_viewers.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/dialog_generic.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/dialog_generic.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/dialog_output.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/dialog_output.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/dialog_weather.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/dialog_weather.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/dialog_workflow_dirs.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/dialog_workflow_dirs.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/frame_main.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/frame_main.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/widget_dir_list.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/widget_dir_list.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/interface/widget_file_list.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/interface/widget_file_list.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/utilities/cache.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/utilities/cache.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/utilities/crossplatform.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/utilities/crossplatform.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/utilities/version.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/utilities/version.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/base.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/base.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/default/file_details.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/default/file_details.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/default/idf_details.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/default/idf_details.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/default/site_location.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/default/site_location.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/manager.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/manager.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/workflow.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/workflow.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/workflow_tester.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/workflow_tester.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/eplaunch/workflows/workflow_thread.py
+│ ├── +++ energyplus_launch-3.5.7/eplaunch/workflows/workflow_thread.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_launch-3.5.6/setup.py
+│ ├── +++ energyplus_launch-3.5.7/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  
+│ │  from eplaunch import NAME, VERSION
+│ │  
+│ │  
+│ │  readme_file = Path(__file__).parent.resolve() / 'README.md'
+│ │  readme_contents = readme_file.read_text()
+│ │  
+│ │ -install_requires = []
+│ │ +install_requires = ['PLAN-Tools>=0.5']
+│ │  if system() == 'Windows':
+│ │      install_requires.append('pypiwin32')
+│ │  
+│ │  setup(
+│ │      name=NAME,
+│ │      version=VERSION,
+│ │      description='Graphical Interface and Workflow Manager for EnergyPlus',

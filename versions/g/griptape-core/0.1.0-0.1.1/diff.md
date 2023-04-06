@@ -1,0 +1,181 @@
+# Comparing `tmp/griptape_core-0.1.0.tar.gz` & `tmp/griptape_core-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "griptape_core-0.1.0.tar", max compression
++gzip compressed data, was "griptape_core-0.1.1.tar", max compression
+```
+
+## Comparing `griptape_core-0.1.0.tar` & `griptape_core-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,20 +1,20 @@
+--rw-r--r--   0        0        0    11339 2023-01-13 17:13:04.565000 griptape_core-0.1.0/LICENSE
+--rw-r--r--   0        0        0     2802 2023-04-06 19:31:58.827486 griptape_core-0.1.0/README.md
+--rw-r--r--   0        0        0      389 2023-04-04 19:09:44.630061 griptape_core-0.1.0/griptape/__init__.py
+--rw-r--r--   0        0        0      184 2023-04-04 16:01:27.358399 griptape_core-0.1.0/griptape/adapters/__init__.py
+--rw-r--r--   0        0        0     2379 2023-04-04 21:23:44.321087 griptape_core-0.1.0/griptape/adapters/chatgpt_plugin_adapter.py
+--rw-r--r--   0        0        0     1132 2023-04-04 19:47:18.789261 griptape_core-0.1.0/griptape/adapters/langchain_tool_adapter.py
+--rw-r--r--   0        0        0      239 2023-04-04 19:46:37.597632 griptape_core-0.1.0/griptape/base_adapter.py
+--rw-r--r--   0        0        0      462 2023-04-03 16:35:53.888348 griptape_core-0.1.0/griptape/base_executor.py
+--rw-r--r--   0        0        0     3278 2023-04-06 16:52:45.515990 griptape_core-0.1.0/griptape/base_tool.py
+--rw-r--r--   0        0        0      358 2023-04-04 19:14:25.338795 griptape_core-0.1.0/griptape/decorators.py
+--rw-r--r--   0        0        0      143 2023-04-02 17:23:03.952230 griptape_core-0.1.0/griptape/executors/__init__.py
+--rw-r--r--   0        0        0     2347 2023-04-05 15:55:29.652685 griptape_core-0.1.0/griptape/executors/docker_executor.py
+--rw-r--r--   0        0        0     1882 2023-04-03 16:36:17.373178 griptape_core-0.1.0/griptape/executors/local_executor.py
+--rw-r--r--   0        0        0      489 2023-04-04 16:09:45.081067 griptape_core-0.1.0/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2
+--rw-r--r--   0        0        0      129 2023-04-02 17:04:53.049000 griptape_core-0.1.0/griptape/resources/docker_executor/Dockerfile
+--rw-r--r--   0        0        0      233 2023-04-06 15:42:07.789942 griptape_core-0.1.0/griptape/utils/__init__.py
+--rw-r--r--   0        0        0      892 2023-04-04 18:05:11.529678 griptape_core-0.1.0/griptape/utils/j2.py
+--rw-r--r--   0        0        0      371 2023-04-04 18:29:34.984818 griptape_core-0.1.0/griptape/utils/manifest_validator.py
+--rw-r--r--   0        0        0      638 2023-04-06 19:29:26.177125 griptape_core-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0     3670 1970-01-01 00:00:00.000000 griptape_core-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0    11339 2023-01-13 17:13:04.565000 griptape_core-0.1.1/LICENSE
++-rw-r--r--   0        0        0     2802 2023-04-06 19:34:33.326643 griptape_core-0.1.1/README.md
++-rw-r--r--   0        0        0      389 2023-04-04 19:09:44.630061 griptape_core-0.1.1/griptape/__init__.py
++-rw-r--r--   0        0        0      184 2023-04-04 16:01:27.358399 griptape_core-0.1.1/griptape/adapters/__init__.py
++-rw-r--r--   0        0        0     2379 2023-04-04 21:23:44.321087 griptape_core-0.1.1/griptape/adapters/chatgpt_plugin_adapter.py
++-rw-r--r--   0        0        0     1132 2023-04-04 19:47:18.789261 griptape_core-0.1.1/griptape/adapters/langchain_tool_adapter.py
++-rw-r--r--   0        0        0      239 2023-04-04 19:46:37.597632 griptape_core-0.1.1/griptape/base_adapter.py
++-rw-r--r--   0        0        0      462 2023-04-03 16:35:53.888348 griptape_core-0.1.1/griptape/base_executor.py
++-rw-r--r--   0        0        0     3278 2023-04-06 16:52:45.515990 griptape_core-0.1.1/griptape/base_tool.py
++-rw-r--r--   0        0        0      358 2023-04-04 19:14:25.338795 griptape_core-0.1.1/griptape/decorators.py
++-rw-r--r--   0        0        0      143 2023-04-02 17:23:03.952230 griptape_core-0.1.1/griptape/executors/__init__.py
++-rw-r--r--   0        0        0     2347 2023-04-05 15:55:29.652685 griptape_core-0.1.1/griptape/executors/docker_executor.py
++-rw-r--r--   0        0        0     1882 2023-04-03 16:36:17.373178 griptape_core-0.1.1/griptape/executors/local_executor.py
++-rw-r--r--   0        0        0      489 2023-04-04 16:09:45.081067 griptape_core-0.1.1/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2
++-rw-r--r--   0        0        0      129 2023-04-02 17:04:53.049000 griptape_core-0.1.1/griptape/resources/docker_executor/Dockerfile
++-rw-r--r--   0        0        0      233 2023-04-06 15:42:07.789942 griptape_core-0.1.1/griptape/utils/__init__.py
++-rw-r--r--   0        0        0      892 2023-04-04 18:05:11.529678 griptape_core-0.1.1/griptape/utils/j2.py
++-rw-r--r--   0        0        0      371 2023-04-04 18:29:34.984818 griptape_core-0.1.1/griptape/utils/manifest_validator.py
++-rw-r--r--   0        0        0      638 2023-04-06 19:34:55.778515 griptape_core-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0     3670 1970-01-01 00:00:00.000000 griptape_core-0.1.1/PKG-INFO
+```
+
+### Comparing `griptape_core-0.1.0/LICENSE` & `griptape_core-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/README.md` & `griptape_core-0.1.1/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -11,21 +11,21 @@
+ 
+ - **Tools**: call external APIs, access databases, and run arbitrary code or CLI commands.
+ - **Executors**: run your tools safely in any environment: local, containerized, or serverless in the cloud.
+ - **Adapters**: convert tools into underlying middleware abstractions, such as ChatGPT Plugins, LangChain tools, and Fixie.ai agents.
+ 
+ ## Getting Started
+ 
+-Griptape separates the core framework from tools into two Python packages: `griptape_core` and `griptape_tools`. Explore Griptape tools in the [griptape-tools repo](https://github.com/griptape-ai/griptape-tools)
++Griptape separates the core framework from tools into two Python packages: `griptape-core` and `griptape-tools`. Explore Griptape tools in the [griptape-tools repo](https://github.com/griptape-ai/griptape-tools)
+ 
+ First, install those packages:
+ 
+ ```
+-pip install griptape_core
+-pip install griptape_tools
++pip install griptape-core
++pip install griptape-tools
+ ```
+ 
+ Next, initialize an executor and some tools:
+ 
+ ```python
+ from griptape.adapters import LangchainToolAdapter, ChatgptPluginAdapter
+ from griptape.executors import LocalExecutor
+```
+
+### Comparing `griptape_core-0.1.0/griptape/adapters/chatgpt_plugin_adapter.py` & `griptape_core-0.1.1/griptape/adapters/chatgpt_plugin_adapter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/griptape/adapters/langchain_tool_adapter.py` & `griptape_core-0.1.1/griptape/adapters/langchain_tool_adapter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/griptape/base_tool.py` & `griptape_core-0.1.1/griptape/base_tool.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/griptape/executors/docker_executor.py` & `griptape_core-0.1.1/griptape/executors/docker_executor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/griptape/executors/local_executor.py` & `griptape_core-0.1.1/griptape/executors/local_executor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/griptape/utils/j2.py` & `griptape_core-0.1.1/griptape/utils/j2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griptape_core-0.1.0/pyproject.toml` & `griptape_core-0.1.1/pyproject.toml`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "griptape-core"
+-version = "0.1.0"
++version = "0.1.1"
+ description = "LLM tools runtime framework."
+ authors = []
+ license = "Apache 2.0"
+ readme = "README.md"
+ repository = "https://github.com/griptape-ai/griptape-core"
+ 
+ packages = [
+```
+
+### Comparing `griptape_core-0.1.0/PKG-INFO` & `griptape_core-0.1.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: griptape-core
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: LLM tools runtime framework.
+ Home-page: https://github.com/griptape-ai/griptape-core
+ License: Apache 2.0
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: Other/Proprietary License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+@@ -36,21 +36,21 @@
+ 
+ - **Tools**: call external APIs, access databases, and run arbitrary code or CLI commands.
+ - **Executors**: run your tools safely in any environment: local, containerized, or serverless in the cloud.
+ - **Adapters**: convert tools into underlying middleware abstractions, such as ChatGPT Plugins, LangChain tools, and Fixie.ai agents.
+ 
+ ## Getting Started
+ 
+-Griptape separates the core framework from tools into two Python packages: `griptape_core` and `griptape_tools`. Explore Griptape tools in the [griptape-tools repo](https://github.com/griptape-ai/griptape-tools)
++Griptape separates the core framework from tools into two Python packages: `griptape-core` and `griptape-tools`. Explore Griptape tools in the [griptape-tools repo](https://github.com/griptape-ai/griptape-tools)
+ 
+ First, install those packages:
+ 
+ ```
+-pip install griptape_core
+-pip install griptape_tools
++pip install griptape-core
++pip install griptape-tools
+ ```
+ 
+ Next, initialize an executor and some tools:
+ 
+ ```python
+ from griptape.adapters import LangchainToolAdapter, ChatgptPluginAdapter
+ from griptape.executors import LocalExecutor
+```
+
