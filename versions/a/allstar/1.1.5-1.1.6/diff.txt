@@ -1,0 +1,137 @@
+--- tmp/allstar-1.1.5.tar.gz
++++ tmp/allstar-1.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "allstar-1.1.5.tar", last modified: Thu Apr  6 17:38:37 2023, max compression
+│ +gzip compressed data, was "allstar-1.1.6.tar", last modified: Thu Apr  6 17:53:48 2023, max compression
+│   --- allstar-1.1.5.tar
+├── +++ allstar-1.1.6.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 17:38:37.293414 allstar-1.1.5/
+│ │ --rw-rw-rw-   0        0        0     1089 2023-04-01 00:02:21.000000 allstar-1.1.5/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3375 2023-04-06 17:38:37.291414 allstar-1.1.5/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 17:38:37.275416 allstar-1.1.5/allstar/
+│ │ --rw-rw-rw-   0        0        0       22 2023-04-01 01:16:06.000000 allstar-1.1.5/allstar/__init__.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-31 23:52:40.000000 allstar-1.1.5/allstar/__main__.py
+│ │ --rw-rw-rw-   0        0        0     9241 2023-04-06 17:35:25.000000 allstar-1.1.5/allstar/star.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 17:38:37.288453 allstar-1.1.5/allstar.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3375 2023-04-06 17:38:37.000000 allstar-1.1.5/allstar.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      212 2023-04-06 17:38:37.000000 allstar-1.1.5/allstar.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 17:38:37.000000 allstar-1.1.5/allstar.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-04-06 17:38:37.000000 allstar-1.1.5/allstar.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      636 2023-04-06 17:36:21.000000 allstar-1.1.5/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0     2821 2023-04-06 17:34:57.000000 allstar-1.1.5/readme.md
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 17:38:37.293414 allstar-1.1.5/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:53:48.432745 allstar-1.1.6/
+│ │ +-rw-rw-rw-   0        0        0     1089 2023-04-01 00:02:21.000000 allstar-1.1.6/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3375 2023-04-06 17:53:48.431746 allstar-1.1.6/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:53:48.418747 allstar-1.1.6/allstar/
+│ │ +-rw-rw-rw-   0        0        0       22 2023-04-01 01:16:06.000000 allstar-1.1.6/allstar/__init__.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-31 23:52:40.000000 allstar-1.1.6/allstar/__main__.py
+│ │ +-rw-rw-rw-   0        0        0     9241 2023-04-06 17:35:25.000000 allstar-1.1.6/allstar/star.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:53:48.428747 allstar-1.1.6/allstar.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3375 2023-04-06 17:53:48.000000 allstar-1.1.6/allstar.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      212 2023-04-06 17:53:48.000000 allstar-1.1.6/allstar.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 17:53:48.000000 allstar-1.1.6/allstar.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-06 17:53:48.000000 allstar-1.1.6/allstar.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      636 2023-04-06 17:53:15.000000 allstar-1.1.6/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0     2821 2023-04-06 17:51:28.000000 allstar-1.1.6/readme.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 17:53:48.433753 allstar-1.1.6/setup.cfg
+│ │   --- allstar-1.1.5/LICENSE
+│ ├── +++ allstar-1.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- allstar-1.1.5/PKG-INFO
+│ ├── +++ allstar-1.1.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,24 +1,24 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: allstar
+│ │ -Version: 1.1.5
+│ │ +Version: 1.1.6
+│ │  Summary: A Python manager for the modules __all__ variable.
+│ │  Author-email: Virtual Items <virtualitemsuniverse@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/virtualitems/allstar
+│ │  Project-URL: Bug Tracker, https://github.com/virtualitems/allstar/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # AllStar
+│ │  
+│ │ -"Allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │ +"allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │  
+│ │  The \_\_all\_\_ attribute is used to specify what is imported when using the `from module import *` syntax. This type of import is commonly used by project mapping tools like documentation generators. It is important to manage \_\_all\_\_ because, for example, you may not want to generate documentation for imported classes, only for the ones you have created.
+│ │  
+│ │  > The library is named "allstar" because the \_\_all\_\_ attribute is imported using the star (*) symbol.
+│ │  
+│ │  # Installation
+│ │   --- allstar-1.1.5/allstar/star.py
+│ ├── +++ allstar-1.1.6/allstar/star.py
+│ │┄ Files identical despite different names
+│ │   --- allstar-1.1.5/allstar.egg-info/PKG-INFO
+│ ├── +++ allstar-1.1.6/allstar.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,24 +1,24 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: allstar
+│ │ -Version: 1.1.5
+│ │ +Version: 1.1.6
+│ │  Summary: A Python manager for the modules __all__ variable.
+│ │  Author-email: Virtual Items <virtualitemsuniverse@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/virtualitems/allstar
+│ │  Project-URL: Bug Tracker, https://github.com/virtualitems/allstar/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # AllStar
+│ │  
+│ │ -"Allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │ +"allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │  
+│ │  The \_\_all\_\_ attribute is used to specify what is imported when using the `from module import *` syntax. This type of import is commonly used by project mapping tools like documentation generators. It is important to manage \_\_all\_\_ because, for example, you may not want to generate documentation for imported classes, only for the ones you have created.
+│ │  
+│ │  > The library is named "allstar" because the \_\_all\_\_ attribute is imported using the star (*) symbol.
+│ │  
+│ │  # Installation
+│ │   --- allstar-1.1.5/pyproject.toml
+│ ├── +++ allstar-1.1.6/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=62.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "allstar"
+│ │ -version = "1.1.5"
+│ │ +version = "1.1.6"
+│ │  authors = [
+│ │    { name="Virtual Items", email="virtualitemsuniverse@gmail.com" },
+│ │  ]
+│ │  description = "A Python manager for the modules __all__ variable."
+│ │  readme = "readme.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- allstar-1.1.5/readme.md
+│ ├── +++ allstar-1.1.6/readme.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  # AllStar
+│ │  
+│ │ -"Allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │ +"allstar" is a simple library for managing the the \_\_all\_\_ attribute in modules.
+│ │  
+│ │  The \_\_all\_\_ attribute is used to specify what is imported when using the `from module import *` syntax. This type of import is commonly used by project mapping tools like documentation generators. It is important to manage \_\_all\_\_ because, for example, you may not want to generate documentation for imported classes, only for the ones you have created.
+│ │  
+│ │  > The library is named "allstar" because the \_\_all\_\_ attribute is imported using the star (*) symbol.
+│ │  
+│ │  # Installation

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pymanagebac-0.0.2.tar.gz tmp/pymanagebac-0.0.3.tar.gz --html versions/p/pymanagebac/0.0.2-0.0.3/index.html --text versions/p/pymanagebac/0.0.2-0.0.3/diff.txt --markdown versions/p/pymanagebac/0.0.2-0.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.31 KB</span></div>
+  <div><span class="source">tmp/pymanagebac-0.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pymanagebac-0.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">272 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pymanagebac-0.0.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pymanagebac-0.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.99 KB</span></div>
+    <div><span class="source">pymanagebac-0.0.2.tar</span> vs.</div>
+    <div id="pymanagebac--.-.-.tar"><span class="source">pymanagebac-0.0.3.tar</span>
+      <a class="anchor" href="#pymanagebac--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.63 KB</span></div>
+      <div id="pymanagebac--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.<del>034097</del><span class="dp">·</span>pymanagebac-0.0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.<ins>107278</ins><span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-03-28<span class="dp">·</span>19:37:03.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/LICENCE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-03-28<span class="dp">·</span>19:37:03.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/LICENCE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.<del>034097</del><span class="dp">·</span>pymanagebac-0.0.<del>2</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.<ins>107278</ins><span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>317</del><span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span>1<del>9</del>:<del>37</del>:<del>03</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>505</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>2</ins>:<ins>22</ins>:<ins>32</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.<del>034097</del><span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.<ins>105944</ins><span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>54</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/PKG-INFO</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>235<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>235<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>54</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/dependency_links.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>54</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/requires.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>54</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/pymanagebac.egg-info/top_level.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/pymanagebac.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.<del>034097</del><span class="dp">·</span>pymanagebac-0.0.<del>2</del>/setup.cfg</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.<ins>107278</ins><span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1170<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>11</del>:<del>12</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/setup.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1170<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>24</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>20</del>:<del>12</del>:<del>55</del>.<del>034097</del><span class="dp">·</span>pymanagebac-0.0.<del>2</del>/src/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>54</ins>:<ins>49</ins>.<ins>105944</ins><span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:44:47.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/src/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2023-04-04<span class="dp">·</span>19:44:47.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/src/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>648</del><span class="dp">·</span>2023-04-04<span class="dp">·</span><del>19</del>:<del>44</del>:<del>47</del>.000000<span class="dp">·</span>pymanagebac-0.0.<del>2</del>/src/pymanagebac.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>moik<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>577</ins><span class="dp">·</span>2023-04-04<span class="dp">·</span><ins>20</ins>:<ins>15</ins>:<ins>28</ins>.000000<span class="dp">·</span>pymanagebac-0.0.<ins>3</ins>/src/pymanagebac.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">pymanagebac-0.0.2/LICENCE</span> vs.</div>
+      <div id="pymanagebac--.-.-.tar---pymanagebac--.-.--LICENCE"><span class="source">pymanagebac-0.0.3/LICENCE</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---pymanagebac--.-.--LICENCE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">483 B</span></div>
+      <div><span class="source">pymanagebac-0.0.2/PKG-INFO</span> vs.</div>
+      <div id="pymanagebac--.-.-.tar---pymanagebac--.-.--PKG-INFO"><span class="source">pymanagebac-0.0.3/PKG-INFO</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---pymanagebac--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pymanagebac</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pymanagebac</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/supermikea/pymanagebac</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/supermikea/pymanagebac</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Mike<span class="dp">·</span>Wiegman<span class="dp">·</span>Avila</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Mike<span class="dp">·</span>Wiegman<span class="dp">·</span>Avila</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike12wiegman@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike12wiegman@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>gplv3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>gplv3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>managebac,selenium,api,scraping</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>managebac,selenium,api,scraping</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">525 B</span></div>
+      <div><span class="source">pymanagebac-0.0.2/pymanagebac.egg-info/PKG-INFO</span> vs.</div>
+      <div id="pymanagebac--.-.-.tar---pymanagebac--.-.--pymanagebac.egg-info-PKG-INFO"><span class="source">pymanagebac-0.0.3/pymanagebac.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---pymanagebac--.-.--pymanagebac.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pymanagebac</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pymanagebac</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/supermikea/pymanagebac</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/supermikea/pymanagebac</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Mike<span class="dp">·</span>Wiegman<span class="dp">·</span>Avila</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Mike<span class="dp">·</span>Wiegman<span class="dp">·</span>Avila</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike12wiegman@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike12wiegman@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>gplv3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>gplv3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>managebac,selenium,api,scraping</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>managebac,selenium,api,scraping</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">561 B</span></div>
+      <div><span class="source">pymanagebac-0.0.2/setup.py</span> vs.</div>
+      <div id="pymanagebac--.-.-.tar---pymanagebac--.-.--setup.py"><span class="source">pymanagebac-0.0.3/setup.py</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---pymanagebac--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<del>2</del>&#x27;</td><td class="diffline">2 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<ins>3</ins>&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.&#x27;</td><td class="diffline">3 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;A<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">4 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">pymanagebac<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td><td class="diffline">5 </td><td class="diffpresent">pymanagebac<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>module<span class="dp">·</span>for<span class="dp">·</span>interacting<span class="dp">·</span>with<span class="dp">·</span>Managebac<span class="dp">·</span>using<span class="dp">·</span>selenium.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">this<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>scraper<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>login<span class="dp">·</span>using<span class="dp">·</span>your<span class="dp">·</span>student<span class="dp">·</span>credentials.</td><td class="diffline">6 </td><td class="diffpresent">this<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>scraper<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>login<span class="dp">·</span>using<span class="dp">·</span>your<span class="dp">·</span>student<span class="dp">·</span>credentials.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">you<span class="dp">·</span>can<span class="dp">·</span>get<span class="dp">·</span>your<span class="dp">·</span>soon<span class="dp">·</span>tasks<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>managebac<span class="dp">·</span>website.</td><td class="diffline">7 </td><td class="diffpresent">you<span class="dp">·</span>can<span class="dp">·</span>get<span class="dp">·</span>your<span class="dp">·</span>soon<span class="dp">·</span>tasks<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>managebac<span class="dp">·</span>website.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">you<span class="dp">·</span>can<span class="dp">·</span>get<span class="dp">·</span>your<span class="dp">·</span>grades<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>managebac<span class="dp">·</span>website.</td><td class="diffline">8 </td><td class="diffpresent">you<span class="dp">·</span>can<span class="dp">·</span>get<span class="dp">·</span>your<span class="dp">·</span>grades<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>managebac<span class="dp">·</span>website.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">711 B</span></div>
+      <div><span class="source">pymanagebac-0.0.2/src/pymanagebac.py</span> vs.</div>
+      <div id="pymanagebac--.-.-.tar---pymanagebac--.-.--src-pymanagebac.py"><span class="source">pymanagebac-0.0.3/src/pymanagebac.py</span>
+        <a class="anchor" href="#pymanagebac--.-.-.tar---pymanagebac--.-.--src-pymanagebac.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 293, 15 lines modified</td><td colspan="2">Offset 293, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">293 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parts.pop(0)</td><td class="diffline">293 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parts.pop(0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">294 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parts.pop(-1)</td><td class="diffline">294 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parts.pop(-1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">295 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp<span class="dp">·</span>=<span class="dp">·</span>(parts[0][:-5])</td><td class="diffline">295 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp<span class="dp">·</span>=<span class="dp">·</span>(parts[0][:-5])</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">296 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp_max_grades.append(temp)</td><td class="diffline">296 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp_max_grades.append(temp)</td></tr>
+<tr class="diffunmodified"><td class="diffline">297 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp_grades.append(temp)</td><td class="diffline">297 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>temp_grades.append(temp)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">298 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>TODO<span class="dp">·</span>if<span class="dp">·</span>this<span class="dp">·</span>happens,<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>dictionary<span class="dp">·</span>for<span class="dp">·</span>easier<span class="dp">·</span>access</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">299 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>check<span class="dp">·</span>if<span class="dp">·</span>grade<span class="dp">·</span>has<span class="dp">·</span>criterion<span class="dp">·</span>(basically<span class="dp">·</span>always)</td><td class="diffline">298 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>check<span class="dp">·</span>if<span class="dp">·</span>grade<span class="dp">·</span>has<span class="dp">·</span>criterion<span class="dp">·</span>(basically<span class="dp">·</span>always)</td></tr>
+<tr class="diffunmodified"><td class="diffline">300 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>&quot;&lt;div<span class="dp">·</span>class=\&quot;cell<span class="dp">·</span>criterion-grade\&quot;&gt;&quot;<span class="dp">·</span>in<span class="dp">·</span>item<span class="dp">·</span>or<span class="dp">·</span>criterion:</td><td class="diffline">299 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>&quot;&lt;div<span class="dp">·</span>class=\&quot;cell<span class="dp">·</span>criterion-grade\&quot;&gt;&quot;<span class="dp">·</span>in<span class="dp">·</span>item<span class="dp">·</span>or<span class="dp">·</span>criterion:</td></tr>
+<tr class="diffunmodified"><td class="diffline">301 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>criterion:</td><td class="diffline">300 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>criterion:</td></tr>
+<tr class="diffunmodified"><td class="diffline">302 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>criterion<span class="dp">·</span>=<span class="dp">·</span>True</td><td class="diffline">301 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>criterion<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+<tr class="diffunmodified"><td class="diffline">303 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>continue</td><td class="diffline">302 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>continue</td></tr>
+<tr class="diffunmodified"><td class="diffline">304 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>criterion<span class="dp">·</span>=<span class="dp">·</span>False</td><td class="diffline">303 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>criterion<span class="dp">·</span>=<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td class="diffline">305 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>part<span class="dp">·</span>=<span class="dp">·</span>item[:-1]</td><td class="diffline">304 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>part<span class="dp">·</span>=<span class="dp">·</span>item[:-1]</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
