@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/gfagraphs-0.1.8.tar.gz tmp/gfagraphs-0.1.9.tar.gz --html versions/g/gfagraphs/0.1.8-0.1.9/index.html --text versions/g/gfagraphs/0.1.8-0.1.9/diff.txt --markdown versions/g/gfagraphs/0.1.8-0.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.13 KB</span></div>
+  <div><span class="source">tmp/gfagraphs-0.1.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/gfagraphs-0.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">268 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gfagraphs-0.1.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Wed<span class="dp">·</span>Feb<span class="dp">·</span>15<span class="dp">·</span>16:0<del>3</del>:<del>23</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gfagraphs-0.1.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Wed<span class="dp">·</span>Feb<span class="dp">·</span>15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.81 KB</span></div>
+    <div><span class="source">gfagraphs-0.1.8.tar</span> vs.</div>
+    <div id="gfagraphs--.-.-.tar"><span class="source">gfagraphs-0.1.9.tar</span>
+      <a class="anchor" href="#gfagraphs--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.11 KB</span></div>
+      <div id="gfagraphs--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.<del>17</del>32<del>95</del><span class="dp">·</span>gfagraphs-0.1.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.<ins>78</ins>32<ins>76</ins><span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1066<span class="dp">·</span>2023-02-08<span class="dp">·</span>10:12:32.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1066<span class="dp">·</span>2023-02-08<span class="dp">·</span>10:12:32.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.<del>17</del>22<del>94</del><span class="dp">·</span>gfagraphs-0.1.<del>8</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.<ins>78</ins>22<ins>75</ins><span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-02-15<span class="dp">·</span>11:31:37.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-02-15<span class="dp">·</span>11:31:37.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.<del>15</del>02<del>92</del><span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.<ins>76</ins>02<ins>74</ins><span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>136<span class="dp">·</span>2023-02-15<span class="dp">·</span>13:05:46.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>136<span class="dp">·</span>2023-02-15<span class="dp">·</span>13:05:46.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12170<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:03:03.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs/gfagraphs.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12170<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:03:03.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs/gfagraphs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.<del>16</del>92<del>91</del><span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.<ins>77</ins>92<ins>74</ins><span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>282<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/SOURCES.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>282<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/dependency_links.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:03:22.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/not-zip-safe</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:03:22.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>3</del><span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/requires.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>4</ins><span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/gfagraphs.egg-info/top_level.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/gfagraphs.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>593<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>1</del>:<del>53</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/pyproject.toml</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>593<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>18</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>3</del>:<del>23</del>.<del>17</del>42<del>9</del>5<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/setup.cfg</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>34</ins>.<ins>78</ins>42<ins>7</ins>5<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<del>3</del><span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<del>1</del>:<del>58</del>.000000<span class="dp">·</span>gfagraphs-0.1.<del>8</del>/setup.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>sidubois<span class="dp">·</span>(669136)<span class="dp">·</span>genscale<span class="dp">·</span>(35005)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<ins>4</ins><span class="dp">·</span>2023-02-15<span class="dp">·</span>16:0<ins>7</ins>:<ins>13</ins>.000000<span class="dp">·</span>gfagraphs-0.1.<ins>9</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">gfagraphs-0.1.8/LICENSE</span> vs.</div>
+      <div id="gfagraphs--.-.-.tar---gfagraphs--.-.--LICENSE"><span class="source">gfagraphs-0.1.9/LICENSE</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---gfagraphs--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">496 B</span></div>
+      <div><span class="source">gfagraphs-0.1.8/PKG-INFO</span> vs.</div>
+      <div id="gfagraphs--.-.-.tar---gfagraphs--.-.--PKG-INFO"><span class="source">gfagraphs-0.1.9/PKG-INFO</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---gfagraphs--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gfagraphs</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gfagraphs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tharos</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tharos</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Tharos<span class="dp">·</span>&lt;dubois.siegfried@gmail.com&gt;</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Tharos<span class="dp">·</span>&lt;dubois.siegfried@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes/issues</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes/issues</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">gfagraphs-0.1.8/gfagraphs/gfagraphs.py</span> vs.</div>
+      <div id="gfagraphs--.-.-.tar---gfagraphs--.-.--gfagraphs-gfagraphs.py"><span class="source">gfagraphs-0.1.9/gfagraphs/gfagraphs.py</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---gfagraphs--.-.--gfagraphs-gfagraphs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">534 B</span></div>
+      <div><span class="source">gfagraphs-0.1.8/gfagraphs.egg-info/PKG-INFO</span> vs.</div>
+      <div id="gfagraphs--.-.-.tar---gfagraphs--.-.--gfagraphs.egg-info-PKG-INFO"><span class="source">gfagraphs-0.1.9/gfagraphs.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---gfagraphs--.-.--gfagraphs.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gfagraphs</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gfagraphs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tharos</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tharos</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Tharos<span class="dp">·</span>&lt;dubois.siegfried@gmail.com&gt;</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Tharos<span class="dp">·</span>&lt;dubois.siegfried@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes/issues</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/Tharos-ux/gfatypes/issues</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">480 B</span></div>
+      <div><span class="source">gfagraphs-0.1.8/pyproject.toml</span> vs.</div>
+      <div id="gfagraphs--.-.-.tar---gfagraphs--.-.--pyproject.toml"><span class="source">gfagraphs-0.1.9/pyproject.toml</span>
+        <a class="anchor" href="#gfagraphs--.-.-.tar---gfagraphs--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gfagraphs&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gfagraphs&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>8</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Tharos&quot;,<span class="dp">·</span>email=&quot;dubois.siegfried@gmail.com&quot;<span class="dp">·</span>},</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Tharos&quot;,<span class="dp">·</span>email=&quot;dubois.siegfried@gmail.com&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.&quot;</td><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Package<span class="dp">·</span>that<span class="dp">·</span>packs<span class="dp">·</span>some<span class="dp">·</span>utility<span class="dp">·</span>functions.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10&quot;</td><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

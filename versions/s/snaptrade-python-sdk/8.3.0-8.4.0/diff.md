@@ -1,0 +1,3510 @@
+# Comparing `tmp/snaptrade-python-sdk-8.3.0.tar.gz` & `tmp/snaptrade-python-sdk-8.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/Users/dylanhuang/Git/konfig-monorepo/customers/snaptrade/snaptrade-sdks/sdks/python/dist/.tmp-0y6odb7b/snaptrade-python-sdk-8.", last modified: Fri Mar 31 20:58:37 2023, max compression
++gzip compressed data, was "/Users/dylanhuang/Git/konfig-monorepo/customers/snaptrade/snaptrade-sdks/sdks/python/dist/.tmp-nn5qrylg/snaptrade-python-sdk-8.", last modified: Thu Apr  6 14:16:32 2023, max compression
+```
+
+## Comparing `snaptrade-python-sdk-8.3.0.tar` & `snaptrade-python-sdk-8.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,766 +1,766 @@
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1081 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/LICENSE
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    25990 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/PKG-INFO
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    25658 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/README.md
+--rw-r--r--   0 dylanhuang   (501) staff       (20)       69 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/setup.cfg
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1365 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/setup.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      819 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    63622 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/api_client.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      266 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/api_response.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      214 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16908 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/path_to_api.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      243 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      103 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      207 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      140 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_balances.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      140 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      156 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      188 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy_option_strategy_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      206 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy_option_strategy_id_execute.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      138 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_options.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      149 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_options_chain.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      136 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_orders.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      152 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_orders_cancel.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      142 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_positions.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      136 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      141 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/accounts_account_id_symbols.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/activities.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      115 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/authorizations.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      252 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/authorizations_authorization_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      143 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/brokerage_authorization_types.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/brokerages.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/currencies.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      118 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/currencies_rates.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      144 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/currencies_rates_currency_pair.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      105 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/exchanges.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      103 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      204 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/model_asset_class.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      375 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/model_asset_class_model_asset_class_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      199 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/model_portfolio.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/model_portfolio_model_portfolio_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      122 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/performance_custom.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      202 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      368 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      170 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_accounts.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      170 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_balances.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      186 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      236 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      411 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      250 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      239 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      300 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_excludedassets.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      209 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      169 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_import.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      162 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_info.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      172 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_positions.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      285 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_settings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      171 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_symbols.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      279 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_targets.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      460 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)       95 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/root.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/security_types.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/session_events.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      143 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_accept_disclaimer.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      137 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_delete_user.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      132 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_encrypted_jwt.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      137 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_list_user_errors.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      126 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_list_users.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      120 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_login.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      123 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_partners.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      135 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/snap_trade_register_user.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      104 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/symbols.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/symbols_ticker.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      113 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/trade_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/trade_oco.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      111 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/trade_place.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      116 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/paths/trade_trade_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2150 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tag_to_api.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      703 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1210 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/account_information_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      450 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/api_disclaimer_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      419 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/api_status_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      882 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/authentication_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      833 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/connections_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      460 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/error_logs_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      988 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/options_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4528 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/portfolio_management_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1494 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/reference_data_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1665 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/trading_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      567 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/transactions_and_reporting_api.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2125 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/client.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    18934 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/configuration.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5705 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/exceptions.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2274 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/exceptions_base.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      350 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9841 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6510 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_ids.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14240 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_order_record.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3363 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_order_record_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3537 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_simple.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1007 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/action.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3743 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/balance.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16210 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      608 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_auth_ids.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9121 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3002 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9292 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization_type_read_only.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6057 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2963 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3913 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/calculated_trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1084 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/cash.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5423 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/cash_restriction.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/client_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      603 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/consumer_key.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3477 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/currency.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3061 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/delete_user_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4846 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/dividend_at_date.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      597 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/email.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8415 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/encrypted_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     7033 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/exchange.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3788 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/exchange_rate_pairs.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2623 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/excluded_asset.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      595 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2513 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/jwt.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3154 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/login_redirect_uri.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6972 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5033 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_and_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3807 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_balance.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6623 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_form.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6441 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model400_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model401_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model403_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model404_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2944 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4371 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class_details.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2595 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class_target.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4295 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3507 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_asset_class.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6172 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_details.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3392 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_security.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3984 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/monthly_dividends.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4323 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/net_contributions.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4442 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/net_dividend.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    26146 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_chain.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4767 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_leg.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11299 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_strategy.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5765 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6455 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9267 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1276 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/order_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11142 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/partner_data.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3571 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/past_value.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      784 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/percent.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    29197 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/performance_custom.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2942 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    17810 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_info.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4391 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5295 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_settings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8370 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6202 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/position_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/price.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3013 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/redirect_tokenand_pin.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      605 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/reporting_date.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      610 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/reporting_frequency.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      604 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/rsa_public_key.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4220 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/security_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6797 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/session_event.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      601 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/signature.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      605 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/signed_content.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3174 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_api_disclaimer_accept_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8278 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_holdings_account.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3106 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_holdings_total_value.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5395 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_login_user_request_body.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3029 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_register_user_request_body.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      607 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_user_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      611 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_user_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3641 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1165 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/stop_price.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    17592 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    52741 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_place.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      615 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14444 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_record.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10763 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4419 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/sub_period_return_rate.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4910 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     2427 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbol_query.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5808 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbols_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6644 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/target_asset.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1373 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/target_asset_list.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      596 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/time.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1184 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/time_in_force.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      601 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/timestamp.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     6902 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade_execution_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5329 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     7681 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/underlying_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/units.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16209 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_activity.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     7797 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     7682 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_symbol_ticker.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     7900 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/us_exchange.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     5606 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_error_log.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3109 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_i_dand_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      598 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1262 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_list.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8737 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_settings.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/models/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8159 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/models/__init__.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4875 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/__init__.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      307 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12174 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      329 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14258 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14196 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/put.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_balances/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_balances/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14171 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_balances/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_holdings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_holdings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14054 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_holdings/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    21966 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      399 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13368 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      415 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    22371 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12942 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options_chain/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      357 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options_chain/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13186 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options_chain/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      343 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14318 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders_cancel/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      357 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders_cancel/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    20047 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders_cancel/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_positions/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      349 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_positions/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14196 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_positions/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_quotes/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      343 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_quotes/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_quotes/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    18956 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_symbols/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/activities/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/activities/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13466 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/activities/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12406 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      353 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12591 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13840 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerage_authorization_types/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      349 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerage_authorization_types/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12249 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerage_authorization_types/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerages/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerages/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9616 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerages/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9618 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8847 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates_currency_pair/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      351 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates_currency_pair/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10296 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates_currency_pair/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/exchanges/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      309 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/exchanges/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8723 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/exchanges/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/holdings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      307 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/holdings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13130 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/holdings/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      325 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8779 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8142 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      367 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8544 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10213 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12529 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      321 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8791 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8181 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      359 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8641 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10251 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12637 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/performance_custom/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      327 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/performance_custom/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13216 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/performance_custom/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12056 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16374 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11518 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11125 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    15591 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11737 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12159 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      395 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10242 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      449 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11281 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      467 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11002 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    15254 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      461 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11280 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      453 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11474 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      391 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11862 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    14696 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      411 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8886 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/delete.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      375 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11760 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      371 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11154 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      381 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12285 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11163 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11141 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      377 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16297 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      377 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12191 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16114 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      409 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11996 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11457 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16126 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/root/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      302 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/root/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     8734 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/root/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/security_types/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/security_types/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9631 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/security_types/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/session_events/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/session_events/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13990 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/session_events/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_accept_disclaimer/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_accept_disclaimer/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16961 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_accept_disclaimer/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_delete_user/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      335 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_delete_user/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12422 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_delete_user/delete.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_encrypted_jwt/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      339 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_encrypted_jwt/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    12577 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_encrypted_jwt/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_user_errors/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_user_errors/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    11279 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_user_errors/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_users/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      333 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_users/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9508 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_users/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_login/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_login/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    18563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_login/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_partners/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      329 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_partners/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     9993 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_partners/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_register_user/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      339 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_register_user/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13553 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_register_user/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      305 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13809 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols_ticker/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols_ticker/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13460 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols_ticker/get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_impact/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      315 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_impact/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16095 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_impact/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_oco/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      309 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_oco/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    18576 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_oco/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_place/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      313 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_place/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    16100 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_place/post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    13379 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_trade_id/post.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1325 2023-02-27 07:25:57.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/request_after_hook.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-02-27 07:01:52.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/request_before_hook.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    10747 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/rest.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    94559 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/schemas.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     3172 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/snaptrade_client/validation_metadata.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    25990 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/PKG-INFO
+--rw-r--r--   0 dylanhuang   (501) staff       (20)    34292 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/SOURCES.txt
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        1 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/dependency_links.txt
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      139 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/requires.txt
+--rw-r--r--   0 dylanhuang   (501) staff       (20)       22 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/top_level.txt
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     4846 2023-03-01 04:11:37.000000 snaptrade-python-sdk-8.3.0/test/test_getting_started.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_models/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account_holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account_ids.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account_order_record.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account_order_record_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_account_simple.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_action.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_balance.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      540 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_auth_ids.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      563 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      580 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      614 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization_type_read_only.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_calculated_trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      490 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_cash.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_cash_restriction.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      507 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_client_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_consumer_key.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_currency.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_delete_user_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      532 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_dividend_at_date.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_email.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_encrypted_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_exchange.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      544 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_exchange_rate_pairs.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_excluded_asset.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      482 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      486 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_jwt.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      540 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_login_redirect_uri.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      557 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_and_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_balance.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_form.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      544 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model400_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model401_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model403_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model404_failed_request_response.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      565 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class_details.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      561 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class_target.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_asset_class.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      560 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_details.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_security.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_monthly_dividends.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_net_contributions.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_net_dividend.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_option_chain.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_option_leg.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_option_strategy.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_options_holdings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_options_position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_options_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_order_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_partner_data.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_past_value.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_percent.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_performance_custom.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_info.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_settings.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_position.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_position_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_price.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_redirect_tokenand_pin.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_reporting_date.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      547 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_reporting_frequency.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      524 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_rsa_public_key.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_security_type.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_session_event.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_signature.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_signed_content.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      615 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_api_disclaimer_accept_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_holdings_account.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      586 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_holdings_total_value.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      595 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_login_user_request_body.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      607 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_register_user_request_body.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      537 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_user_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      553 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_user_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_stop_price.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_place.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_record.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      553 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_sub_period_return_rate.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_symbol_query.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_symbols_quotes.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_target_asset.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_target_asset_list.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      490 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_time.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      520 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_time_in_force.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_timestamp.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_trade.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      556 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_trade_execution_status.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_trade_impact.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_underlying_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_units.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_universal_activity.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_universal_symbol.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      560 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_universal_symbol_ticker.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_us_exchange.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      524 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_error_log.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      537 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_i_dand_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      499 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_id.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      507 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_list.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_secret.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_models/test_user_settings.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)     1984 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/__init__.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      766 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      801 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      793 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/test_put.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_balances/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_balances/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_balances/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_holdings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_holdings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      841 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_holdings/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      890 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      921 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      815 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options_chain/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options_chain/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      813 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options_chain/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      816 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders_cancel/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders_cancel/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      823 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders_cancel/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_positions/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_positions/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      824 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_positions/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_quotes/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_quotes/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      790 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_quotes/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      855 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_symbols/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_activities/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_activities/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      765 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_activities/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      789 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      847 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/test_delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      852 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerage_authorization_types/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerage_authorization_types/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerage_authorization_types/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerages/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerages/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      754 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerages/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      763 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      800 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates_currency_pair/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates_currency_pair/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      828 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates_currency_pair/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_exchanges/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_exchanges/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      787 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_exchanges/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:36.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_holdings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_holdings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      802 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_holdings/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      773 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      779 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      854 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      837 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      860 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      767 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      774 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      844 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      849 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_performance_custom/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_performance_custom/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      805 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_performance_custom/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      772 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      776 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      831 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      838 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      873 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      866 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      898 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      984 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      996 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      988 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      984 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      950 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      908 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      887 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      932 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/test_delete.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      867 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      877 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      851 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      857 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      897 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      877 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      978 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_delete.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      906 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_get.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      922 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_patch.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_root/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_root/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      719 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_root/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_security_types/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_security_types/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      768 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_security_types/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_session_events/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_session_events/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      780 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_session_events/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_accept_disclaimer/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_accept_disclaimer/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      829 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_accept_disclaimer/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_delete_user/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_delete_user/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      889 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_delete_user/test_delete.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_encrypted_jwt/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_encrypted_jwt/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      848 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_encrypted_jwt/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_user_errors/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_user_errors/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_user_errors/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_users/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_users/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_users/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_login/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_login/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      829 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_login/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_partners/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_partners/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      795 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_partners/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_register_user/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_register_user/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      849 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_register_user/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      741 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols_ticker/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols_ticker/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      778 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols_ticker/test_get.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_impact/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_impact/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      772 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_impact/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_oco/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_oco/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      766 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_oco/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_place/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_place/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      768 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_place/test_post.py
+-drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:58:37.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_trade_id/
+--rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_trade_id/__init__.py
+--rw-r--r--   0 dylanhuang   (501) staff       (20)      751 2023-03-31 20:57:05.000000 snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_trade_id/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1081 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/LICENSE
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    25990 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/PKG-INFO
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    25658 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/README.md
++-rw-r--r--   0 dylanhuang   (501) staff       (20)       69 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/setup.cfg
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1365 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/setup.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      819 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    63622 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/api_client.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      266 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/api_response.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      214 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16908 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/path_to_api.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      243 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      103 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      207 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      140 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_balances.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      140 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      156 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      188 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy_option_strategy_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      206 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_option_strategy_option_strategy_id_execute.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      138 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_options.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      149 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_options_chain.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      136 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_orders.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      152 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_orders_cancel.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      142 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_positions.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      136 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      141 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/accounts_account_id_symbols.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/activities.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      115 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/authorizations.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      252 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/authorizations_authorization_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      143 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/brokerage_authorization_types.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/brokerages.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/currencies.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      118 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/currencies_rates.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      144 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/currencies_rates_currency_pair.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      105 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/exchanges.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      103 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      204 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/model_asset_class.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      375 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/model_asset_class_model_asset_class_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      199 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/model_portfolio.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/model_portfolio_model_portfolio_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      122 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/performance_custom.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      202 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      368 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      170 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_accounts.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      170 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_balances.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      186 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      236 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      411 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      250 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      239 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      300 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_excludedassets.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      209 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      169 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_import.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      162 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_info.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      172 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_positions.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      285 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_settings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      171 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_symbols.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      279 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_targets.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      460 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)       95 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/root.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/security_types.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/session_events.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      143 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_accept_disclaimer.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      137 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_delete_user.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      132 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_encrypted_jwt.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      137 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_list_user_errors.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      126 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_list_users.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      120 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_login.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      123 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_partners.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      135 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/snap_trade_register_user.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      104 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/symbols.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      114 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/symbols_ticker.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      113 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/trade_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      107 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/trade_oco.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      111 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/trade_place.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      116 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/paths/trade_trade_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2150 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tag_to_api.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      703 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1210 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/account_information_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      450 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/api_disclaimer_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      419 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/api_status_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      882 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/authentication_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      833 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/connections_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      460 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/error_logs_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      988 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/options_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4528 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/portfolio_management_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1494 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/reference_data_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1665 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/trading_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      567 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/transactions_and_reporting_api.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2125 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/client.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    18934 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/configuration.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5705 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/exceptions.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2274 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/exceptions_base.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      350 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9841 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6510 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_ids.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14240 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_order_record.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3363 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_order_record_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3537 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_simple.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1007 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/action.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3743 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/balance.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16210 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      608 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_auth_ids.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9121 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3002 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9292 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization_type_read_only.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6057 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2963 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3913 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/calculated_trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1084 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/cash.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5423 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/cash_restriction.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/client_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      603 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/consumer_key.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3477 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/currency.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3061 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/delete_user_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4846 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/dividend_at_date.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      597 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/email.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8415 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/encrypted_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     7033 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/exchange.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3788 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/exchange_rate_pairs.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2623 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/excluded_asset.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      595 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2513 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/jwt.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3154 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/login_redirect_uri.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6972 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5033 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_and_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3807 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_balance.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6623 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_form.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6441 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model400_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model401_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model403_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model404_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2944 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4371 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class_details.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2595 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class_target.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4295 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3507 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_asset_class.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6172 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_details.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3392 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_security.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3984 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/monthly_dividends.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4323 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/net_contributions.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4442 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/net_dividend.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    26146 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_chain.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4767 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_leg.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11299 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_strategy.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5765 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6455 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9267 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1276 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/order_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11142 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/partner_data.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3571 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/past_value.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      784 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/percent.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    29197 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/performance_custom.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2942 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    17810 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_info.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4391 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5295 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_settings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8370 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6202 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/position_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/price.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3013 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/redirect_tokenand_pin.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      605 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/reporting_date.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      610 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/reporting_frequency.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      604 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/rsa_public_key.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4220 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/security_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6797 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/session_event.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      601 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/signature.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      605 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/signed_content.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3174 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_api_disclaimer_accept_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8278 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_holdings_account.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3106 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_holdings_total_value.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5395 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_login_user_request_body.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3029 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_register_user_request_body.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      607 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_user_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      611 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_user_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3641 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1165 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/stop_price.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    17592 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    52741 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_place.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      615 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14444 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_record.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10763 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4419 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/sub_period_return_rate.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5429 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     2427 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbol_query.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5808 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbols_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6644 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/target_asset.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1373 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/target_asset_list.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      596 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/time.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1184 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/time_in_force.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      601 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/timestamp.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     6902 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade_execution_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5329 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     7681 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/underlying_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      600 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/units.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16209 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_activity.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     7797 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     7682 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_symbol_ticker.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     7900 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/us_exchange.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     5606 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_error_log.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3109 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_i_dand_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      598 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1262 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_list.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8737 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_settings.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/models/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8159 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/models/__init__.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4875 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/__init__.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      307 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12174 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      329 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14258 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14196 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/put.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_balances/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_balances/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14171 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_balances/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_holdings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_holdings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14054 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_holdings/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    21966 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      399 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13368 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      415 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    22371 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12942 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options_chain/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      357 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options_chain/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13186 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options_chain/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      343 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14318 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders_cancel/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      357 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders_cancel/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    20047 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders_cancel/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_positions/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      349 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_positions/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14196 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_positions/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_quotes/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      343 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_quotes/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_quotes/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    18956 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_symbols/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/activities/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/activities/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13466 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/activities/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12406 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      353 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12591 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13840 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerage_authorization_types/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      349 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerage_authorization_types/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12249 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerage_authorization_types/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerages/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerages/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9616 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerages/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      311 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9618 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8847 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates_currency_pair/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      351 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates_currency_pair/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10296 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates_currency_pair/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/exchanges/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      309 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/exchanges/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8723 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/exchanges/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/holdings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      307 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/holdings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13130 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/holdings/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      325 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8779 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8142 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      367 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8544 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10213 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12529 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      321 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8791 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8181 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      359 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8641 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10251 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12637 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/performance_custom/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      327 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/performance_custom/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13216 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/performance_custom/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12056 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16374 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      361 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11518 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11125 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    15591 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11737 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12159 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      395 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10242 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      449 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11281 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      467 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11002 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    15254 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      461 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11280 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      453 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11474 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      391 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11862 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    14696 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      411 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8886 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/delete.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      375 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11760 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      371 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11154 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      381 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12285 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      379 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11163 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11141 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      377 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16297 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      377 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12191 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16114 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      409 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11996 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11457 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16126 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/root/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      302 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/root/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     8734 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/root/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/security_types/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/security_types/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9631 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/security_types/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/session_events/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/session_events/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13990 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/session_events/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_accept_disclaimer/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      347 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_accept_disclaimer/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16961 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_accept_disclaimer/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_delete_user/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      335 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_delete_user/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12422 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_delete_user/delete.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_encrypted_jwt/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      339 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_encrypted_jwt/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    12577 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_encrypted_jwt/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_user_errors/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      345 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_user_errors/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    11279 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_user_errors/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_users/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      333 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_users/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9508 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_users/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_login/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      323 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_login/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    18563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_login/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_partners/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      329 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_partners/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     9993 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_partners/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_register_user/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      339 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_register_user/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13553 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_register_user/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      305 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13809 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols_ticker/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols_ticker/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13460 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols_ticker/get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_impact/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      315 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_impact/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16095 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_impact/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_oco/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      309 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_oco/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    18576 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_oco/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_place/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      313 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_place/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    16100 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_place/post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      319 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    13379 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_trade_id/post.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1325 2023-02-27 07:25:57.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/request_after_hook.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      602 2023-02-27 07:01:52.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/request_before_hook.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    10747 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/rest.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    94592 2023-04-06 14:15:36.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/schemas.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     3172 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/snaptrade_client/validation_metadata.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    25990 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/PKG-INFO
++-rw-r--r--   0 dylanhuang   (501) staff       (20)    34292 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/SOURCES.txt
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        1 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/dependency_links.txt
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      139 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/requires.txt
++-rw-r--r--   0 dylanhuang   (501) staff       (20)       22 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/top_level.txt
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     4846 2023-03-01 04:11:37.000000 snaptrade-python-sdk-8.4.0/test/test_getting_started.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_models/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account_holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account_ids.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account_order_record.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account_order_record_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_account_simple.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_action.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_balance.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      540 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_auth_ids.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      563 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      580 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      614 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization_type_read_only.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_calculated_trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      490 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_cash.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_cash_restriction.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      507 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_client_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_consumer_key.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_currency.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_delete_user_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      532 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_dividend_at_date.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_email.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_encrypted_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_exchange.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      544 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_exchange_rate_pairs.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_excluded_asset.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      482 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      486 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_jwt.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      540 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_login_redirect_uri.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      557 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_and_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_balance.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_form.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      544 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model400_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model401_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model403_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      593 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model404_failed_request_response.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      565 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class_details.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      561 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class_target.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_asset_class.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      560 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_details.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_security.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_monthly_dividends.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_net_contributions.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_net_dividend.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_option_chain.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_option_leg.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_option_strategy.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_options_holdings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_options_position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_options_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_order_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_partner_data.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_past_value.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      502 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_percent.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_performance_custom.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_info.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      564 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_settings.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      506 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_position.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_position_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_price.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_redirect_tokenand_pin.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_reporting_date.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      547 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_reporting_frequency.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      524 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_rsa_public_key.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_security_type.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_session_event.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_signature.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_signed_content.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      615 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_api_disclaimer_accept_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      573 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_holdings_account.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      586 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_holdings_total_value.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      595 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_login_user_request_body.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      607 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_register_user_request_body.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      537 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_user_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      553 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_user_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      511 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_stop_price.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      548 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_place.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      552 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_record.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      531 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      553 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_sub_period_return_rate.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      498 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_symbol_query.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      527 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_symbols_quotes.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_target_asset.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      536 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_target_asset_list.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      490 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_time.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      520 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_time_in_force.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      510 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_timestamp.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_trade.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      556 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_trade_execution_status.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      519 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_trade_impact.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      539 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_underlying_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      494 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_units.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      543 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_universal_activity.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      535 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_universal_symbol.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      560 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_universal_symbol_ticker.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_us_exchange.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      524 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_error_log.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      537 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_i_dand_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      499 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_id.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      507 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_list.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      515 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_secret.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      523 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_models/test_user_settings.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)     1984 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/__init__.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      766 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      801 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      793 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/test_put.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_balances/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_balances/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_balances/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_holdings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_holdings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      841 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_holdings/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      890 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      921 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      815 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options_chain/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options_chain/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      813 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options_chain/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      816 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders_cancel/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders_cancel/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      823 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders_cancel/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_positions/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_positions/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      824 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_positions/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_quotes/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_quotes/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      790 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_quotes/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      855 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_symbols/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_activities/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_activities/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      765 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_activities/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      789 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      847 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/test_delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      852 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerage_authorization_types/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerage_authorization_types/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerage_authorization_types/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerages/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerages/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      754 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerages/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      763 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      800 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates_currency_pair/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates_currency_pair/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      828 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates_currency_pair/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_exchanges/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_exchanges/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      787 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_exchanges/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_holdings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_holdings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      802 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_holdings/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      773 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      779 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      854 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      837 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      860 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      767 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      774 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      844 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      849 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_performance_custom/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_performance_custom/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      805 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_performance_custom/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      772 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      776 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      831 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      838 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      873 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      866 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      898 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      984 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      996 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      988 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      984 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      950 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      908 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      887 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      932 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/test_delete.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      867 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      877 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      851 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      857 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      897 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      877 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      978 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      886 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_delete.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      906 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_get.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      922 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_patch.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_root/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_root/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      719 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_root/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_security_types/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_security_types/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      768 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_security_types/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_session_events/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_session_events/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      780 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_session_events/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_accept_disclaimer/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_accept_disclaimer/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      829 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_accept_disclaimer/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_delete_user/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_delete_user/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      889 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_delete_user/test_delete.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_encrypted_jwt/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_encrypted_jwt/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      848 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_encrypted_jwt/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_user_errors/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_user_errors/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      827 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_user_errors/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_users/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_users/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      825 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_users/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_login/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_login/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      829 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_login/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_partners/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_partners/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      795 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_partners/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_register_user/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_register_user/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      849 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_register_user/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      741 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols_ticker/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols_ticker/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      778 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols_ticker/test_get.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_impact/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_impact/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      772 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_impact/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_oco/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_oco/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      766 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_oco/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_place/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_place/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      768 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_place/test_post.py
++drwxr-xr-x   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:16:32.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_trade_id/
++-rw-r--r--   0 dylanhuang   (501) staff       (20)        0 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_trade_id/__init__.py
++-rw-r--r--   0 dylanhuang   (501) staff       (20)      751 2023-04-06 14:10:49.000000 snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_trade_id/test_post.py
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/LICENSE` & `snaptrade-python-sdk-8.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/PKG-INFO` & `snaptrade-python-sdk-8.4.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,39 +1,39 @@
+ Metadata-Version: 2.1
+ Name: snaptrade-python-sdk
+-Version: 8.3.0
++Version: 8.4.0
+ Summary: SnapTrade
+ Home-page: https://github.com/passiv/snaptrade-sdks/tree/master/sdks/python
+ Author: Konfig
+ Author-email: api@snaptrade.com
+ License: MIT
+ Keywords: Konfig,SnapTrade
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # snaptrade-python-sdk
+ Connect brokerage accounts to your app for live positions and trading
+ 
+ - API version: 1.0.0
+-- Package version: 8.3.0
++- Package version: 8.4.0
+ 
+ ## Requirements.
+ 
+ Python >=3.7
+ 
+ ## Installation & Usage
+ ### pip install
+ 
+ If the python package is hosted on a repository, you can install directly using:
+ 
+ ```sh
+-pip install snaptrade-python-sdk==8.3.0
++pip install snaptrade-python-sdk==8.4.0
+ ```
+-(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.3.0`)
++(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.4.0`)
+ 
+ Then import the package:
+ ```python
+ import snaptrade_client
+ ```
+ ## Getting Started
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/README.md` & `snaptrade-python-sdk-8.4.0/README.md`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,26 +1,26 @@
+ # snaptrade-python-sdk
+ Connect brokerage accounts to your app for live positions and trading
+ 
+ - API version: 1.0.0
+-- Package version: 8.3.0
++- Package version: 8.4.0
+ 
+ ## Requirements.
+ 
+ Python >=3.7
+ 
+ ## Installation & Usage
+ ### pip install
+ 
+ If the python package is hosted on a repository, you can install directly using:
+ 
+ ```sh
+-pip install snaptrade-python-sdk==8.3.0
++pip install snaptrade-python-sdk==8.4.0
+ ```
+-(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.3.0`)
++(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.4.0`)
+ 
+ Then import the package:
+ ```python
+ import snaptrade_client
+ ```
+ ## Getting Started
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/setup.py` & `snaptrade-python-sdk-8.4.0/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -9,15 +9,15 @@
+     Contact: api@snaptrade.com
+     Generated by: https://konfigthis.com
+ """
+ 
+ from setuptools import setup, find_packages  # noqa: H301
+ 
+ NAME = "snaptrade-python-sdk"
+-VERSION = "8.3.0"
++VERSION = "8.4.0"
+ # To install the library, run the following
+ #
+ # python setup.py install
+ #
+ # prerequisite: setuptools
+ # http://pypi.python.org/pypi/setuptools
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/__init__.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+     Connect brokerage accounts to your app for live positions and trading
+ 
+     The version of the OpenAPI document: 1.0.0
+     Contact: api@snaptrade.com
+     Generated by: https://konfigthis.com
+ """
+ 
+-__version__ = "8.3.0"
++__version__ = "8.4.0"
+ 
+ # import ApiClient
+ from snaptrade_client.api_client import ApiClient
+ 
+ # import Configuration
+ from snaptrade_client.configuration import Configuration
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/api_client.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/api_client.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1066,15 +1066,15 @@
+ 
+         self.rest_client = rest.RESTClientObject(configuration)
+         self.default_headers = HTTPHeaderDict()
+         if header_name is not None:
+             self.default_headers[header_name] = header_value
+         self.cookie = cookie
+         # Set default User-Agent.
+-        self.user_agent = 'Konfig/8.3.0/python'
++        self.user_agent = 'Konfig/8.4.0/python'
+ 
+     def __enter__(self):
+         return self
+ 
+     def __exit__(self, exc_type, exc_value, traceback):
+         self.close()
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/path_to_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/path_to_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tag_to_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tag_to_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/__init__.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/account_information_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/account_information_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/authentication_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/authentication_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/connections_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/connections_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/options_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/options_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/portfolio_management_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/portfolio_management_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/reference_data_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/reference_data_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/trading_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/trading_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/apis/tags/transactions_and_reporting_api.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/apis/tags/transactions_and_reporting_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/client.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/configuration.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/configuration.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -439,15 +439,15 @@
+ 
+         :return: The report for debugging.
+         """
+         return "Python SDK Debug Report:\n"\
+                "OS: {env}\n"\
+                "Python Version: {pyversion}\n"\
+                "Version of the API: 1.0.0\n"\
+-               "SDK Package Version: 8.3.0".\
++               "SDK Package Version: 8.4.0".\
+                format(env=sys.platform, pyversion=sys.version)
+ 
+     def get_host_settings(self):
+         """Gets an array of host settings
+ 
+         :return: An array of host settings
+         """
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/exceptions.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/exceptions_base.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/exceptions_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_holdings.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_ids.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_ids.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_order_record.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_order_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_order_record_status.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_order_record_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/account_simple.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/account_simple.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/action.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/balance.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/balance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_auth_ids.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_auth_ids.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization_type.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_authorization_type_read_only.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_authorization_type_read_only.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/brokerage_type.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/brokerage_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/calculated_trade.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/calculated_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/cash.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/cash.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/cash_restriction.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/cash_restriction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/client_id.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/client_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/consumer_key.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/consumer_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/currency.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/currency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/delete_user_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/delete_user_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/dividend_at_date.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/dividend_at_date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/email.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/email.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/encrypted_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/encrypted_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/exchange.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/exchange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/exchange_rate_pairs.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/exchange_rate_pairs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/excluded_asset.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/excluded_asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/id.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/jwt.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/jwt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/login_redirect_uri.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/login_redirect_uri.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_and_impact.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_and_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_balance.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_balance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_form.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_form.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/manual_trade_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/manual_trade_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model400_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model400_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model401_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model401_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model403_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model403_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model404_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model404_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class_details.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_asset_class_target.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_asset_class_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_asset_class.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_asset_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_details.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/model_portfolio_security.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/model_portfolio_security.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/monthly_dividends.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/monthly_dividends.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/net_contributions.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/net_contributions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/net_dividend.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/net_dividend.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_chain.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_chain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_leg.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_leg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/option_strategy.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/option_strategy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_holdings.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_position.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_position.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/options_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/options_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/order_type.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/order_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/partner_data.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/partner_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/past_value.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/past_value.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/percent.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/percent.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/performance_custom.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/performance_custom.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_info.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_position.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_position.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/portfolio_group_settings.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/portfolio_group_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/position.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/position.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/position_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/position_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/price.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/price.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/redirect_tokenand_pin.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/redirect_tokenand_pin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/reporting_date.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/reporting_date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/reporting_frequency.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/reporting_frequency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/rsa_public_key.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/rsa_public_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/security_type.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/security_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/session_event.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/session_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/signature.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/signature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/signed_content.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/signed_content.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_api_disclaimer_accept_status.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_api_disclaimer_accept_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_holdings_account.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_holdings_account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_holdings_total_value.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_holdings_total_value.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_login_user_request_body.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_login_user_request_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_register_user_request_body.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_register_user_request_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_user_id.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_user_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/snap_trade_user_secret.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/snap_trade_user_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/status.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/stop_price.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/stop_price.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_impact.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_place.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_place.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_quotes.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_order_record.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_order_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/strategy_quotes.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/strategy_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/sub_period_return_rate.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/sub_period_return_rate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbol.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -33,35 +33,40 @@
+     Symbol
+     """
+ 
+ 
+     class MetaOapg:
+         
+         class properties:
++            id = schemas.UUIDSchema
+             symbol = schemas.StrSchema
+             raw_symbol = schemas.StrSchema
+             name = schemas.StrSchema
+         
+             @staticmethod
+             def currency() -> typing.Type['Currency']:
+                 return Currency
+         
+             @staticmethod
+             def exchange() -> typing.Type['Exchange']:
+                 return Exchange
+             __annotations__ = {
++                "id": id,
+                 "symbol": symbol,
+                 "raw_symbol": raw_symbol,
+                 "name": name,
+                 "currency": currency,
+                 "exchange": exchange,
+             }
+         additional_properties = schemas.AnyTypeSchema
+     
+     @typing.overload
++    def __getitem__(self, name: typing_extensions.Literal["id"]) -> MetaOapg.properties.id: ...
++    
++    @typing.overload
+     def __getitem__(self, name: typing_extensions.Literal["symbol"]) -> MetaOapg.properties.symbol: ...
+     
+     @typing.overload
+     def __getitem__(self, name: typing_extensions.Literal["raw_symbol"]) -> MetaOapg.properties.raw_symbol: ...
+     
+     @typing.overload
+     def __getitem__(self, name: typing_extensions.Literal["name"]) -> MetaOapg.properties.name: ...
+@@ -71,19 +76,22 @@
+     
+     @typing.overload
+     def __getitem__(self, name: typing_extensions.Literal["exchange"]) -> 'Exchange': ...
+     
+     @typing.overload
+     def __getitem__(self, name: str) -> MetaOapg.additional_properties: ...
+     
+-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["symbol"], typing_extensions.Literal["raw_symbol"], typing_extensions.Literal["name"], typing_extensions.Literal["currency"], typing_extensions.Literal["exchange"], str, ]):
++    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id"], typing_extensions.Literal["symbol"], typing_extensions.Literal["raw_symbol"], typing_extensions.Literal["name"], typing_extensions.Literal["currency"], typing_extensions.Literal["exchange"], str, ]):
+         # dict_instance[name] accessor
+         return super().__getitem__(name)
+     
+     @typing.overload
++    def get_item_oapg(self, name: typing_extensions.Literal["id"]) -> typing.Union[MetaOapg.properties.id, schemas.Unset]: ...
++    
++    @typing.overload
+     def get_item_oapg(self, name: typing_extensions.Literal["symbol"]) -> typing.Union[MetaOapg.properties.symbol, schemas.Unset]: ...
+     
+     @typing.overload
+     def get_item_oapg(self, name: typing_extensions.Literal["raw_symbol"]) -> typing.Union[MetaOapg.properties.raw_symbol, schemas.Unset]: ...
+     
+     @typing.overload
+     def get_item_oapg(self, name: typing_extensions.Literal["name"]) -> typing.Union[MetaOapg.properties.name, schemas.Unset]: ...
+@@ -93,31 +101,33 @@
+     
+     @typing.overload
+     def get_item_oapg(self, name: typing_extensions.Literal["exchange"]) -> typing.Union['Exchange', schemas.Unset]: ...
+     
+     @typing.overload
+     def get_item_oapg(self, name: str) -> typing.Union[MetaOapg.additional_properties, schemas.Unset]: ...
+     
+-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["symbol"], typing_extensions.Literal["raw_symbol"], typing_extensions.Literal["name"], typing_extensions.Literal["currency"], typing_extensions.Literal["exchange"], str, ]):
++    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id"], typing_extensions.Literal["symbol"], typing_extensions.Literal["raw_symbol"], typing_extensions.Literal["name"], typing_extensions.Literal["currency"], typing_extensions.Literal["exchange"], str, ]):
+         return super().get_item_oapg(name)
+ 
+     def __new__(
+         cls,
+         *args: typing.Union[dict, frozendict.frozendict, ],
++        id: typing.Union[MetaOapg.properties.id, str, uuid.UUID, schemas.Unset] = schemas.unset,
+         symbol: typing.Union[MetaOapg.properties.symbol, str, schemas.Unset] = schemas.unset,
+         raw_symbol: typing.Union[MetaOapg.properties.raw_symbol, str, schemas.Unset] = schemas.unset,
+         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
+         currency: typing.Union['Currency', schemas.Unset] = schemas.unset,
+         exchange: typing.Union['Exchange', schemas.Unset] = schemas.unset,
+         _configuration: typing.Optional[schemas.Configuration] = None,
+         **kwargs: typing.Union[MetaOapg.additional_properties, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+     ) -> 'Symbol':
+         return super().__new__(
+             cls,
+             *args,
++            id=id,
+             symbol=symbol,
+             raw_symbol=raw_symbol,
+             name=name,
+             currency=currency,
+             exchange=exchange,
+             _configuration=_configuration,
+             **kwargs,
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbol_query.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbol_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/symbols_quotes.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/symbols_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/target_asset.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/target_asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/target_asset_list.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/target_asset_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/time.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/time.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/time_in_force.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/time_in_force.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/timestamp.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/timestamp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade_execution_status.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade_execution_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/trade_impact.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/trade_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/underlying_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/underlying_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/units.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/units.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_activity.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_activity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_symbol.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/universal_symbol_ticker.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/universal_symbol_ticker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/us_exchange.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/us_exchange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_error_log.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_error_log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_i_dand_secret.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_i_dand_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_id.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_list.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_secret.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/model/user_settings.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/model/user_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/models/__init__.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/models/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/__init__.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id/put.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id/put.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_balances/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_balances/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_holdings/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_holdings/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_option_strategy_option_strategy_id_execute/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_options_chain/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_options_chain/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_orders_cancel/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_orders_cancel/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_positions/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_positions/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_quotes/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_quotes/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/accounts_account_id_symbols/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/accounts_account_id_symbols/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/activities/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/activities/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/authorizations_authorization_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/authorizations_authorization_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerage_authorization_types/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerage_authorization_types/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/brokerages/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/brokerages/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/currencies_rates_currency_pair/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/currencies_rates_currency_pair/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/exchanges/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/exchanges/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/holdings/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/holdings/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_asset_class_model_asset_class_id/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/model_portfolio_model_portfolio_id/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/performance_custom/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/performance_custom/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/patch.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id/patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_accounts/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_balances/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/patch.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_excludedassets_symbol_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_import/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_info/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_positions/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/patch.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_settings/patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_symbols/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/patch.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/portfolio_groups_portfolio_group_id_targets_target_asset_id/patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/root/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/root/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/security_types/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/security_types/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/session_events/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/session_events/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_accept_disclaimer/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_accept_disclaimer/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_delete_user/delete.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_delete_user/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_encrypted_jwt/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_encrypted_jwt/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_user_errors/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_user_errors/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_list_users/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_list_users/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_login/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_login/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_partners/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_partners/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/snap_trade_register_user/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/snap_trade_register_user/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/symbols_ticker/get.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/symbols_ticker/get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_impact/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_impact/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_oco/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_oco/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_place/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_place/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/paths/trade_trade_id/post.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/paths/trade_trade_id/post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/request_after_hook.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/request_after_hook.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/request_before_hook.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/request_before_hook.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/rest.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/rest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/schemas.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/schemas.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -638,16 +638,16 @@
+     class NoneTupleStrDecimalBoolMixin(NoneClass, tuple, str, decimal.Decimal, BoolClass):
+         pass
+     class FrozenDictTupleStrDecimalBoolMixin(frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass):
+         pass
+     # qty 6
+     class NoneFrozenDictTupleStrDecimalBoolMixin(NoneClass, frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass):
+         pass
+-    # qty 8
+-    class NoneFrozenDictTupleStrDecimalBoolFileBytesMixin(NoneClass, frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass, FileIO, bytes):
++    # qty 9
++    class NoneFrozenDictTupleStrIntDecimalBoolFileBytesMixin(NoneClass, frozendict.frozendict, tuple, str, int, decimal.Decimal, BoolClass, FileIO, bytes):
+         pass
+ else:
+     # qty 1
+     class NoneMixin:
+         _types = {NoneClass}
+     class FrozenDictMixin:
+         _types = {frozendict.frozendict}
+@@ -782,17 +782,17 @@
+     class NoneTupleStrDecimalBoolMixin:
+         _types = {NoneClass, tuple, str, decimal.Decimal, BoolClass}
+     class FrozenDictTupleStrDecimalBoolMixin:
+         _types = {frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass}
+     # qty 6
+     class NoneFrozenDictTupleStrDecimalBoolMixin:
+         _types = {NoneClass, frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass}
+-    # qty 8
+-    class NoneFrozenDictTupleStrDecimalBoolFileBytesMixin:
+-        _types = {NoneClass, frozendict.frozendict, tuple, str, decimal.Decimal, BoolClass, FileIO, bytes}
++    # qty 9
++    class NoneFrozenDictTupleStrIntDecimalBoolFileBytesMixin:
++        _types = {NoneClass, frozendict.frozendict, tuple, str, int, decimal.Decimal, BoolClass, FileIO, bytes}
+ 
+ 
+ class ValidatorBase:
+     @staticmethod
+     def _is_json_validation_enabled_oapg(schema_keyword, configuration=None):
+         """Returns true if JSON schema validation is enabled for the specified
+         validation keyword. This can be used to skip JSON schema structural validation
+@@ -2013,14 +2013,15 @@
+     def __new__(cls, arg: None, **kwargs: Configuration):
+         return super().__new__(cls, arg, **kwargs)
+ 
+ 
+ class NumberSchema(
+     NumberBase,
+     Schema,
++    IntMixin,
+     DecimalMixin
+ ):
+     """
+     This is used for type: number with no format
+     Both integers AND floats are accepted
+     """
+ 
+@@ -2337,15 +2338,15 @@
+     DictBase,
+     ListBase,
+     NumberBase,
+     StrBase,
+     BoolBase,
+     NoneBase,
+     Schema,
+-    NoneFrozenDictTupleStrDecimalBoolFileBytesMixin
++    NoneFrozenDictTupleStrIntDecimalBoolFileBytesMixin
+ ):
+     # Python representation of a schema defined as true or {}
+     pass
+ 
+ 
+ class UnsetAnyTypeSchema(AnyTypeSchema):
+     # Used when additionalProperties/items was not explicitly defined and a defining schema is needed
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_client/validation_metadata.py` & `snaptrade-python-sdk-8.4.0/snaptrade_client/validation_metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/PKG-INFO` & `snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,39 +1,39 @@
+ Metadata-Version: 2.1
+ Name: snaptrade-python-sdk
+-Version: 8.3.0
++Version: 8.4.0
+ Summary: SnapTrade
+ Home-page: https://github.com/passiv/snaptrade-sdks/tree/master/sdks/python
+ Author: Konfig
+ Author-email: api@snaptrade.com
+ License: MIT
+ Keywords: Konfig,SnapTrade
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # snaptrade-python-sdk
+ Connect brokerage accounts to your app for live positions and trading
+ 
+ - API version: 1.0.0
+-- Package version: 8.3.0
++- Package version: 8.4.0
+ 
+ ## Requirements.
+ 
+ Python >=3.7
+ 
+ ## Installation & Usage
+ ### pip install
+ 
+ If the python package is hosted on a repository, you can install directly using:
+ 
+ ```sh
+-pip install snaptrade-python-sdk==8.3.0
++pip install snaptrade-python-sdk==8.4.0
+ ```
+-(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.3.0`)
++(you may need to run `pip` with root permission: `sudo pip install snaptrade-python-sdk==8.4.0`)
+ 
+ Then import the package:
+ ```python
+ import snaptrade_client
+ ```
+ ## Getting Started
+```
+
+### Comparing `snaptrade-python-sdk-8.3.0/snaptrade_python_sdk.egg-info/SOURCES.txt` & `snaptrade-python-sdk-8.4.0/snaptrade_python_sdk.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_getting_started.py` & `snaptrade-python-sdk-8.4.0/test/test_getting_started.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_account_holdings.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_account_holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_account_ids.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_account_ids.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_account_order_record.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_account_order_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_account_order_record_status.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_account_order_record_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_account_simple.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_account_simple.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_auth_ids.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_auth_ids.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization_type.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_authorization_type_read_only.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_authorization_type_read_only.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_brokerage_type.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_brokerage_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_calculated_trade.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_calculated_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_cash_restriction.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_cash_restriction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_consumer_key.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_consumer_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_delete_user_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_delete_user_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_dividend_at_date.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_dividend_at_date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_encrypted_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_encrypted_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_exchange_rate_pairs.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_exchange_rate_pairs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_excluded_asset.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_excluded_asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_login_redirect_uri.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_login_redirect_uri.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_and_impact.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_and_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_balance.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_balance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_form.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_form.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_manual_trade_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_manual_trade_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model400_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model400_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model401_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model401_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model403_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model403_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model404_failed_request_response.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model404_failed_request_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class_details.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_asset_class_target.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_asset_class_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_asset_class.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_asset_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_details.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_model_portfolio_security.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_model_portfolio_security.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_monthly_dividends.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_monthly_dividends.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_net_contributions.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_net_contributions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_net_dividend.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_net_dividend.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_option_chain.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_option_chain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_option_strategy.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_option_strategy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_options_holdings.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_options_holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_options_position.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_options_position.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_options_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_options_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_partner_data.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_partner_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_performance_custom.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_performance_custom.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_info.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_position.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_position.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_portfolio_group_settings.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_portfolio_group_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_position_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_position_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_redirect_tokenand_pin.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_redirect_tokenand_pin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_reporting_date.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_reporting_date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_reporting_frequency.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_reporting_frequency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_rsa_public_key.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_rsa_public_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_security_type.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_security_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_session_event.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_session_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_signed_content.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_signed_content.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_api_disclaimer_accept_status.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_api_disclaimer_accept_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_holdings_account.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_holdings_account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_holdings_total_value.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_holdings_total_value.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_login_user_request_body.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_login_user_request_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_register_user_request_body.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_register_user_request_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_user_id.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_user_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_snap_trade_user_secret.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_snap_trade_user_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_impact.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_place.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_place.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_quotes.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_order_record.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_order_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_strategy_quotes.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_strategy_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_sub_period_return_rate.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_sub_period_return_rate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_symbol_query.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_symbol_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_symbols_quotes.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_symbols_quotes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_target_asset.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_target_asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_target_asset_list.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_target_asset_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_time_in_force.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_time_in_force.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_trade_execution_status.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_trade_execution_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_trade_impact.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_trade_impact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_underlying_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_underlying_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_universal_activity.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_universal_activity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_universal_symbol.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_universal_symbol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_universal_symbol_ticker.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_universal_symbol_ticker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_us_exchange.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_us_exchange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_user_error_log.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_user_error_log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_user_i_dand_secret.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_user_i_dand_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_user_secret.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_user_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_models/test_user_settings.py` & `snaptrade-python-sdk-8.4.0/test/test_models/test_user_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/__init__.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id/test_put.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id/test_put.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_balances/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_balances/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_holdings/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_holdings/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_option_strategy_option_strategy_id_execute/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_options_chain/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_options_chain/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_orders_cancel/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_orders_cancel/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_positions/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_positions/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_quotes/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_quotes/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_accounts_account_id_symbols/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_accounts_account_id_symbols/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_activities/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_activities/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_authorizations_authorization_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_authorizations_authorization_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerage_authorization_types/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerage_authorization_types/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_brokerages/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_brokerages/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_currencies_rates_currency_pair/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_currencies_rates_currency_pair/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_exchanges/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_exchanges/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_holdings/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_holdings/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_asset_class_model_asset_class_id/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_model_portfolio_model_portfolio_id/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_performance_custom/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_performance_custom/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_patch.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id/test_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_accounts/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_balances/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_impact/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_patch.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_modify_trade_id/test_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_place_orders/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_calculatedtrades_calculated_trade_id_trade_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_excludedassets_symbol_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_import/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_info/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_positions/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_patch.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_settings/test_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_symbols/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_patch.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_portfolio_groups_portfolio_group_id_targets_target_asset_id/test_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_root/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_root/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_security_types/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_security_types/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_session_events/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_session_events/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_accept_disclaimer/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_accept_disclaimer/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_delete_user/test_delete.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_delete_user/test_delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_encrypted_jwt/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_encrypted_jwt/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_user_errors/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_user_errors/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_list_users/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_list_users/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_login/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_login/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_partners/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_partners/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_snap_trade_register_user/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_snap_trade_register_user/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_symbols_ticker/test_get.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_symbols_ticker/test_get.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_impact/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_impact/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_oco/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_oco/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_place/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_place/test_post.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snaptrade-python-sdk-8.3.0/test/test_paths/test_trade_trade_id/test_post.py` & `snaptrade-python-sdk-8.4.0/test/test_paths/test_trade_trade_id/test_post.py`
+
+ * *Files identical despite different names*
+

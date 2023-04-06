@@ -1,0 +1,473 @@
+--- tmp/autodynatrace-1.1.0.tar.gz
++++ tmp/autodynatrace-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "autodynatrace-1.1.0.tar", last modified: Wed Mar 15 12:53:11 2023, max compression
+│ +gzip compressed data, was "autodynatrace-1.1.1.tar", last modified: Thu Apr  6 14:11:57 2023, max compression
+│   --- autodynatrace-1.1.0.tar
+├── +++ autodynatrace-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,104 +1,104 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.759570 autodynatrace-1.1.0/
+│ │ --rw-rw-rw-   0        0        0    13107 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/LICENSE
+│ │ --rw-rw-rw-   0        0        0     1217 2023-03-15 12:53:11.759570 autodynatrace-1.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2987 2023-03-15 12:18:37.000000 autodynatrace-1.1.0/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.704829 autodynatrace-1.1.0/autodynatrace/
+│ │ --rw-rw-rw-   0        0        0     4062 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/__init__.py
+│ │ --rw-rw-rw-   0        0        0      333 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/log.py
+│ │ --rw-rw-rw-   0        0        0      545 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/sdk.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.712444 autodynatrace-1.1.0/autodynatrace/wrappers/
+│ │ --rw-rw-rw-   0        0        0        0 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.713441 autodynatrace-1.1.0/autodynatrace/wrappers/aiohttp/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/aiohttp/__init__.py
+│ │ --rw-rw-rw-   0        0        0      963 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/aiohttp/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.715443 autodynatrace-1.1.0/autodynatrace/wrappers/bottle/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/bottle/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2090 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/bottle/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.716442 autodynatrace-1.1.0/autodynatrace/wrappers/celery/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/celery/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4582 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/celery/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.718491 autodynatrace-1.1.0/autodynatrace/wrappers/concurrent/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/concurrent/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1731 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/concurrent/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.720499 autodynatrace-1.1.0/autodynatrace/wrappers/confluent_kafka/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/confluent_kafka/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3644 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/confluent_kafka/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.721555 autodynatrace-1.1.0/autodynatrace/wrappers/custom/
+│ │ --rw-rw-rw-   0        0        0       46 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/custom/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2558 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/custom/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.723565 autodynatrace-1.1.0/autodynatrace/wrappers/cx_Oracle/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/cx_Oracle/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4504 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/cx_Oracle/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.724565 autodynatrace-1.1.0/autodynatrace/wrappers/dbapi/
+│ │ --rw-rw-rw-   0        0        0     2704 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/dbapi/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.728619 autodynatrace-1.1.0/autodynatrace/wrappers/django/
+│ │ --rw-rw-rw-   0        0        0      157 2023-03-15 12:40:40.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/__init__.py
+│ │ --rw-rw-rw-   0        0        0      276 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/apps.py
+│ │ --rw-rw-rw-   0        0        0     1878 2023-03-15 12:47:40.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/db.py
+│ │ --rw-rw-rw-   0        0        0     3494 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/middlewares.py
+│ │ --rw-rw-rw-   0        0        0     1788 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/utils.py
+│ │ --rw-rw-rw-   0        0        0      889 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/django/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.730619 autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2443 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/middleware.py
+│ │ --rw-rw-rw-   0        0        0     1359 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.733150 autodynatrace-1.1.0/autodynatrace/wrappers/flask/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/flask/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2612 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/flask/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.735147 autodynatrace-1.1.0/autodynatrace/wrappers/grpc/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/grpc/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2415 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/grpc/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.737147 autodynatrace-1.1.0/autodynatrace/wrappers/paramiko/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/paramiko/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1068 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/paramiko/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.738190 autodynatrace-1.1.0/autodynatrace/wrappers/pika/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pika/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3433 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pika/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.740201 autodynatrace-1.1.0/autodynatrace/wrappers/psycopg2/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/psycopg2/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2232 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/psycopg2/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.741717 autodynatrace-1.1.0/autodynatrace/wrappers/pymongo/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pymongo/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2100 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pymongo/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.742788 autodynatrace-1.1.0/autodynatrace/wrappers/pysnmp/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pysnmp/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4913 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/pysnmp/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.744798 autodynatrace-1.1.0/autodynatrace/wrappers/redis/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/redis/__init__.py
+│ │ --rw-rw-rw-   0        0        0      747 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/redis/utils.py
+│ │ --rw-rw-rw-   0        0        0     2098 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/redis/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.745798 autodynatrace-1.1.0/autodynatrace/wrappers/ruxit/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/ruxit/__init__.py
+│ │ --rw-rw-rw-   0        0        0      475 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/ruxit/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.748925 autodynatrace-1.1.0/autodynatrace/wrappers/sqlalchemy/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/sqlalchemy/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4483 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/sqlalchemy/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.750928 autodynatrace-1.1.0/autodynatrace/wrappers/starlette/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/starlette/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1459 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/starlette/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.752416 autodynatrace-1.1.0/autodynatrace/wrappers/subprocess/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/subprocess/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1401 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/subprocess/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.753493 autodynatrace-1.1.0/autodynatrace/wrappers/suds/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/suds/__init__.py
+│ │ --rw-rw-rw-   0        0        0      715 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/suds/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.755505 autodynatrace-1.1.0/autodynatrace/wrappers/tornado/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/tornado/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1744 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/tornado/wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.756495 autodynatrace-1.1.0/autodynatrace/wrappers/urllib/
+│ │ --rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/urllib/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1563 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/urllib/wrapper.py
+│ │ --rw-rw-rw-   0        0        0      108 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/autodynatrace/wrappers/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.710394 autodynatrace-1.1.0/autodynatrace.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1217 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2781 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       44 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       61 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       20 2023-03-15 12:53:11.000000 autodynatrace-1.1.0/autodynatrace.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      112 2023-03-15 12:53:11.760570 autodynatrace-1.1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1628 2023-03-15 12:48:26.000000 autodynatrace-1.1.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-15 12:53:11.758568 autodynatrace-1.1.0/tests/
+│ │ --rw-rw-rw-   0        0        0        0 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/tests/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6901 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/tests/test_custom.py
+│ │ --rw-rw-rw-   0        0        0     1365 2023-01-05 00:24:24.000000 autodynatrace-1.1.0/tests/test_django.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.843391 autodynatrace-1.1.1/
+│ │ +-rw-rw-rw-   0        0        0    13107 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     1217 2023-04-06 14:11:57.844322 autodynatrace-1.1.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3124 2023-04-06 14:05:33.000000 autodynatrace-1.1.1/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.713250 autodynatrace-1.1.1/autodynatrace/
+│ │ +-rw-rw-rw-   0        0        0     4062 2023-04-06 14:05:33.000000 autodynatrace-1.1.1/autodynatrace/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      333 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/log.py
+│ │ +-rw-rw-rw-   0        0        0      545 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/sdk.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.729153 autodynatrace-1.1.1/autodynatrace/wrappers/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.733230 autodynatrace-1.1.1/autodynatrace/wrappers/aiohttp/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/aiohttp/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      963 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/aiohttp/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.736248 autodynatrace-1.1.1/autodynatrace/wrappers/bottle/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/bottle/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2090 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/bottle/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.740316 autodynatrace-1.1.1/autodynatrace/wrappers/celery/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/celery/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4582 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/celery/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.743765 autodynatrace-1.1.1/autodynatrace/wrappers/concurrent/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/concurrent/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1731 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/concurrent/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.748772 autodynatrace-1.1.1/autodynatrace/wrappers/confluent_kafka/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/confluent_kafka/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3644 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/confluent_kafka/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.754286 autodynatrace-1.1.1/autodynatrace/wrappers/custom/
+│ │ +-rw-rw-rw-   0        0        0       46 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/custom/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2558 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/custom/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.757284 autodynatrace-1.1.1/autodynatrace/wrappers/cx_Oracle/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/cx_Oracle/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4517 2023-04-06 14:09:35.000000 autodynatrace-1.1.1/autodynatrace/wrappers/cx_Oracle/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.759287 autodynatrace-1.1.1/autodynatrace/wrappers/dbapi/
+│ │ +-rw-rw-rw-   0        0        0     2704 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/dbapi/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.774320 autodynatrace-1.1.1/autodynatrace/wrappers/django/
+│ │ +-rw-rw-rw-   0        0        0      157 2023-03-24 23:29:36.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      276 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/apps.py
+│ │ +-rw-rw-rw-   0        0        0     1878 2023-03-24 23:29:36.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/db.py
+│ │ +-rw-rw-rw-   0        0        0     3494 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/middlewares.py
+│ │ +-rw-rw-rw-   0        0        0     1788 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/utils.py
+│ │ +-rw-rw-rw-   0        0        0      889 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/django/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.779330 autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2443 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/middleware.py
+│ │ +-rw-rw-rw-   0        0        0     1359 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.783374 autodynatrace-1.1.1/autodynatrace/wrappers/flask/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/flask/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2612 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/flask/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.788463 autodynatrace-1.1.1/autodynatrace/wrappers/grpc/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/grpc/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2415 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/grpc/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.791462 autodynatrace-1.1.1/autodynatrace/wrappers/paramiko/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/paramiko/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1068 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/paramiko/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.795670 autodynatrace-1.1.1/autodynatrace/wrappers/pika/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pika/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3433 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pika/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.798672 autodynatrace-1.1.1/autodynatrace/wrappers/psycopg2/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/psycopg2/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2245 2023-04-06 14:08:20.000000 autodynatrace-1.1.1/autodynatrace/wrappers/psycopg2/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.801669 autodynatrace-1.1.1/autodynatrace/wrappers/pymongo/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pymongo/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2113 2023-04-06 14:09:35.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pymongo/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.805688 autodynatrace-1.1.1/autodynatrace/wrappers/pysnmp/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pysnmp/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4913 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/pysnmp/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.810696 autodynatrace-1.1.1/autodynatrace/wrappers/redis/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/redis/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      747 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/redis/utils.py
+│ │ +-rw-rw-rw-   0        0        0     2111 2023-04-06 14:09:48.000000 autodynatrace-1.1.1/autodynatrace/wrappers/redis/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.815364 autodynatrace-1.1.1/autodynatrace/wrappers/ruxit/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/ruxit/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      475 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/ruxit/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.818159 autodynatrace-1.1.1/autodynatrace/wrappers/sqlalchemy/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/sqlalchemy/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4496 2023-04-06 14:09:58.000000 autodynatrace-1.1.1/autodynatrace/wrappers/sqlalchemy/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.822168 autodynatrace-1.1.1/autodynatrace/wrappers/starlette/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/starlette/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1459 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/starlette/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.826767 autodynatrace-1.1.1/autodynatrace/wrappers/subprocess/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/subprocess/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1401 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/subprocess/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.829769 autodynatrace-1.1.1/autodynatrace/wrappers/suds/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/suds/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      715 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/suds/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.834289 autodynatrace-1.1.1/autodynatrace/wrappers/tornado/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/tornado/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1744 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/tornado/wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.837810 autodynatrace-1.1.1/autodynatrace/wrappers/urllib/
+│ │ +-rw-rw-rw-   0        0        0       33 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/urllib/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1563 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/urllib/wrapper.py
+│ │ +-rw-rw-rw-   0        0        0      108 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/autodynatrace/wrappers/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.725853 autodynatrace-1.1.1/autodynatrace.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1217 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2781 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       44 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       61 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       20 2023-04-06 14:11:57.000000 autodynatrace-1.1.1/autodynatrace.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      112 2023-04-06 14:11:57.845325 autodynatrace-1.1.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1628 2023-04-06 14:10:07.000000 autodynatrace-1.1.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:11:57.841806 autodynatrace-1.1.1/tests/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/tests/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6901 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/tests/test_custom.py
+│ │ +-rw-rw-rw-   0        0        0     1365 2023-01-05 00:24:24.000000 autodynatrace-1.1.1/tests/test_django.py
+│ │   --- autodynatrace-1.1.0/LICENSE
+│ ├── +++ autodynatrace-1.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/PKG-INFO
+│ ├── +++ autodynatrace-1.1.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: autodynatrace
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: Auto instrumentation for the OneAgent SDK
+│ │  Home-page: https://github.com/dlopes7/autodynatrace
+│ │  Author: David Lopes
+│ │  Author-email: david.lopes@dynatrace.com
+│ │  Project-URL: Issue Tracker, https://github.com/dlopes7/autodynatrace/issues
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- autodynatrace-1.1.0/README.md
+│ ├── +++ autodynatrace-1.1.1/README.md
+│ │┄ Files 10% similar despite different names
+│ │ @@ -3,14 +3,17 @@
+│ │  
+│ │  [![Actions Status](https://github.com/dynatrace-oss/OneAgent-SDK-Python-AutoInstrumentation/workflows/Tests/badge.svg)](https://github.com/dynatrace-oss/OneAgent-SDK-Python-AutoInstrumentation/actions)
+│ │   [![Downloads](https://pepy.tech/badge/autodynatrace)](https://pepy.tech/project/autodynatrace)
+│ │  
+│ │  Dynatrace provides a [powerful SDK](https://github.com/Dynatrace/OneAgent-SDK-for-Python) that can be used to achieve code level visibility and transaction tracing for applications written in multiple languages, including python. This project provides a library called *autodynatrace*, which is a wrapper around the OneAgent SDK for Python and allows you to instrument python applications with minimal code changes.
+│ │  
+│ │  
+│ │ +> **Warning**
+│ │ +> Autodynatrace is opensource and supported via github issues, this is not supported by Dynatrace via support tickets.
+│ │ +
+│ │  ### Usage
+│ │  
+│ │  `pip install autodynatrace`
+│ │  
+│ │  ### Option 1 - Instrumentation without code changes
+│ │  
+│ │  Add the environment variable `AUTOWRAPT_BOOTSTRAP=autodynatrace` to your python processes
+│ │   --- autodynatrace-1.1.0/autodynatrace/__init__.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/sdk.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/sdk.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/aiohttp/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/aiohttp/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/bottle/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/bottle/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/celery/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/celery/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/concurrent/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/concurrent/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/confluent_kafka/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/confluent_kafka/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/custom/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/custom/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/cx_Oracle/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/cx_Oracle/wrapper.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -48,15 +48,15 @@
+│ │                      socket.inet_pton(socket.AF_INET6, host)
+│ │                      host = "[{}]".format(host)
+│ │                  except Exception:
+│ │                      pass
+│ │                  channel = oneagent.sdk.Channel(oneagent.sdk.ChannelType.TCP_IP, "{}:{}".format(host, port))
+│ │  
+│ │              db_info = sdk.create_database_info(service_name, oneagent.sdk.DatabaseVendor.ORACLE, channel)
+│ │ -            with sdk.trace_sql_database_request(db_info, query):
+│ │ +            with sdk.trace_sql_database_request(db_info, "{}".format(query)):
+│ │                  logger.debug(
+│ │                      "Tracing cx_Oracle query: '{}', host: '{}', port: '{}', database: '{}'".format(
+│ │                          query, host, port, service_name
+│ │                      )
+│ │                  )
+│ │                  return wrapped(*args, **kwargs)
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/dbapi/__init__.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/dbapi/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/django/db.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/django/db.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/django/middlewares.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/django/middlewares.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/django/utils.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/django/utils.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/django/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/django/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/middleware.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/middleware.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/fastapi/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/fastapi/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/flask/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/flask/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/grpc/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/grpc/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/paramiko/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/paramiko/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/pika/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/pika/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/psycopg2/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/psycopg2/wrapper.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -14,15 +14,15 @@
+│ │      class DynatraceCursor(psycopg2.extensions.cursor):
+│ │          def __init__(self, *args, **kwargs):
+│ │              self._dynatrace_db_info = kwargs.pop("dynatrace_db_info", None)
+│ │              super(DynatraceCursor, self).__init__(*args, **kwargs)
+│ │  
+│ │          def execute(self, query, vars=None):
+│ │              if hasattr(self, "_dynatrace_db_info") and self._dynatrace_db_info is not None:
+│ │ -                with sdk.trace_sql_database_request(self._dynatrace_db_info, query) as tracer:
+│ │ +                with sdk.trace_sql_database_request(self._dynatrace_db_info, "{}".format(query)) as tracer:
+│ │                      try:
+│ │                          logger.debug("Tracing psycopg2 query: '{}'".format(query))
+│ │                          return super(DynatraceCursor, self).execute(query, vars)
+│ │                      finally:
+│ │                          tracer.set_rows_returned(self.rowcount)
+│ │  
+│ │              return super(DynatraceCursor, self).execute(query, vars)
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/pymongo/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/pymongo/wrapper.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -17,15 +17,15 @@
+│ │                  db_name = event.database_name
+│ │                  collection_name = event.command.get(event.command_name)
+│ │                  operation = "{} at {}".format(event.command_name, collection_name)
+│ │                  host, port = event.connection_id
+│ │                  channel = oneagent.sdk.Channel(oneagent.sdk.ChannelType.TCP_IP, "{}:{}".format(host, port))
+│ │  
+│ │                  db_info = sdk.create_database_info(db_name, self.vendor, channel)
+│ │ -                tracer = sdk.trace_sql_database_request(db_info, operation)
+│ │ +                tracer = sdk.trace_sql_database_request(db_info, "{}".format(operation))
+│ │                  self._tracer_dict[_get_tracer_dict_key(event)] = tracer
+│ │                  tracer.start()
+│ │                  logger.debug("Tracing Mongo call: {}({})@{}:{}".format(operation, db_name, host, port))
+│ │  
+│ │              except Exception as e:
+│ │                  logger.debug("Error instrumenting MongoDB: {}".format(e))
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/pysnmp/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/pysnmp/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/redis/utils.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/redis/utils.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/redis/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/redis/wrapper.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -32,15 +32,15 @@
+│ │          except Exception:
+│ │              pass
+│ │          channel = oneagent.sdk.Channel(oneagent.sdk.ChannelType.TCP_IP, "{}:{}".format(host, port))
+│ │  
+│ │      db_info = sdk.create_database_info("Cache", "Redis", channel)
+│ │  
+│ │      query = format_command_args(args)
+│ │ -    with sdk.trace_sql_database_request(db_info, query):
+│ │ +    with sdk.trace_sql_database_request(db_info, "{}".format(query)):
+│ │          logger.debug("Tracing from Redis: {} {}".format(func.__name__, query))
+│ │          return func(*args, **kwargs)
+│ │  
+│ │  
+│ │  def dynatrace_execute_pipeline(func, instance, args, kwargs):
+│ │      cmds = [format_command_args(c) for c, _ in instance.command_stack]
+│ │      with sdk.trace_custom_service(func.__name__, "Redis"):
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/sqlalchemy/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/sqlalchemy/wrapper.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -36,15 +36,15 @@
+│ │                      socket.inet_pton(socket.AF_INET6, db_host)
+│ │                      db_host = "[{}]".format(db_host)
+│ │                  except Exception:
+│ │                      pass
+│ │                  channel = oneagent.sdk.Channel(oneagent.sdk.ChannelType.TCP_IP, "{}:{}".format(db_host, db_port))
+│ │  
+│ │              db_info = sdk.create_database_info(db_name, db_technology, channel)
+│ │ -            tracer = sdk.trace_sql_database_request(db_info, statement)
+│ │ +            tracer = sdk.trace_sql_database_request(db_info, "{}".format(statement))
+│ │              logger.debug("Tracing SQLAlchemy: '{}, {}@{}:{}".format(statement, db_name, db_host, db_port))
+│ │              tracer.start()
+│ │              context.dynatrace_tracer = tracer
+│ │  
+│ │          except Exception as e:
+│ │              logger.debug("Error instrumenting sqlalchemy: {}".format(e))
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/starlette/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/starlette/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/subprocess/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/subprocess/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/suds/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/suds/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/tornado/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/tornado/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace/wrappers/urllib/wrapper.py
+│ ├── +++ autodynatrace-1.1.1/autodynatrace/wrappers/urllib/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/autodynatrace.egg-info/PKG-INFO
+│ ├── +++ autodynatrace-1.1.1/autodynatrace.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: autodynatrace
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: Auto instrumentation for the OneAgent SDK
+│ │  Home-page: https://github.com/dlopes7/autodynatrace
+│ │  Author: David Lopes
+│ │  Author-email: david.lopes@dynatrace.com
+│ │  Project-URL: Issue Tracker, https://github.com/dlopes7/autodynatrace/issues
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- autodynatrace-1.1.0/autodynatrace.egg-info/SOURCES.txt
+│ ├── +++ autodynatrace-1.1.1/autodynatrace.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/setup.py
+│ ├── +++ autodynatrace-1.1.1/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name="autodynatrace",
+│ │ -    version="1.1.0",
+│ │ +    version="1.1.1",
+│ │      packages=find_packages(),
+│ │      package_data={"autodynatrace": ["wrappers/*"]},
+│ │      install_requires=["wrapt>=1.11.2", "oneagent-sdk>=1.3.0", "six>=1.10.0", "autowrapt>=1.0"],
+│ │      tests_require=["pytest", "mock", "tox", "django"],
+│ │      entry_points={"autodynatrace": ["string = autodynatrace:load"]},
+│ │      python_requires=">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*",
+│ │      author="David Lopes",
+│ │   --- autodynatrace-1.1.0/tests/test_custom.py
+│ ├── +++ autodynatrace-1.1.1/tests/test_custom.py
+│ │┄ Files identical despite different names
+│ │   --- autodynatrace-1.1.0/tests/test_django.py
+│ ├── +++ autodynatrace-1.1.1/tests/test_django.py
+│ │┄ Files identical despite different names

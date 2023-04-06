@@ -1,0 +1,431 @@
+# Comparing `tmp/abml_cli-0.1.2.tar.gz` & `tmp/abml-cli-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "abml_cli-0.1.2.tar", max compression
++gzip compressed data, was "abml-cli-0.1.3.tar", max compression
+```
+
+## Comparing `abml_cli-0.1.2.tar` & `abml-cli-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,22 @@
+--rw-r--r--   0        0        0      149 2023-03-19 13:04:36.000000 abml_cli-0.1.2/abml_cli/__init__.py
+--rw-r--r--   0        0        0     5536 2023-03-08 14:18:33.236588 abml_cli-0.1.2/abml_cli/abml_cli_helpers.py
+--rw-r--r--   0        0        0    11418 2023-03-28 21:56:45.000000 abml_cli-0.1.2/abml_cli/abml_exec.py
+--rw-r--r--   0        0        0      247 2023-03-28 21:40:42.000000 abml_cli-0.1.2/abml_cli/abml_filters.py
+--rw-r--r--   0        0        0     1917 2023-03-27 10:37:24.000000 abml_cli-0.1.2/abml_cli/abml_parser.py
+--rw-r--r--   0        0        0     4178 2023-03-21 10:47:13.077521 abml_cli-0.1.2/abml_cli/abml_subroutines.py
+--rw-r--r--   0        0        0    14049 2023-03-08 11:39:18.967142 abml_cli-0.1.2/abml_cli/dataclasses/abml_schema.json
+--rw-r--r--   0        0        0     4448 2023-03-08 12:22:33.145120 abml_cli-0.1.2/abml_cli/dataclasses/model.py
+--rw-r--r--   0        0        0     2667 2023-03-05 15:19:05.000000 abml_cli-0.1.2/abml_cli/dataclasses/template_schema.json
+--rw-r--r--   0        0        0      215 2023-03-08 11:46:11.768354 abml_cli-0.1.2/abml_cli/examples/test.abml
+--rw-r--r--   0        0        0      168 2023-03-21 09:13:53.978078 abml_cli-0.1.2/abml_cli/subroutines/dload/templates/block.j2.f
+--rw-r--r--   0        0        0      116 2023-03-21 08:43:40.648845 abml_cli-0.1.2/abml_cli/subroutines/dload/templates/circle.j2.f
+--rw-r--r--   0        0        0      298 2023-03-20 10:54:43.000000 abml_cli-0.1.2/abml_cli/subroutines/dload/templates/head.j2.f
+--rw-r--r--   0        0        0      157 2023-03-21 10:23:24.303646 abml_cli-0.1.2/abml_cli/subroutines/dload/templates/rect.j2.f
+--rw-r--r--   0        0        0       68 2023-03-19 14:20:12.000000 abml_cli-0.1.2/abml_cli/subroutines/dload/templates/tail.j2.f
+--rw-r--r--   0        0        0      407 2023-03-18 20:33:18.000000 abml_cli-0.1.2/abml_cli/subroutines/dload/test.f
+--rw-r--r--   0        0        0      502 2023-03-18 20:33:30.000000 abml_cli-0.1.2/abml_cli/subroutines/dload/test.py
+--rw-r--r--   0        0        0      712 2023-03-29 12:40:02.005151 abml_cli-0.1.2/pyproject.toml
+--rw-r--r--   0        0        0        0 2023-03-07 14:06:33.197635 abml_cli-0.1.2/README.md
+--rw-r--r--   0        0        0     1110 1970-01-01 00:00:00.000000 abml_cli-0.1.2/setup.py
+--rw-r--r--   0        0        0      818 1970-01-01 00:00:00.000000 abml_cli-0.1.2/PKG-INFO
++-rw-r--r--   0        0        0      149 2023-03-19 13:04:36.090108 abml-cli-0.1.3/abml_cli/__init__.py
++-rw-r--r--   0        0        0     5536 2023-03-08 14:18:33.000000 abml-cli-0.1.3/abml_cli/abml_cli_helpers.py
++-rw-r--r--   0        0        0    11654 2023-04-05 09:20:25.000000 abml-cli-0.1.3/abml_cli/abml_exec-DESKTOP-N7IPE21.py
++-rw-r--r--   0        0        0    12219 2023-04-06 12:53:10.783391 abml-cli-0.1.3/abml_cli/abml_exec.py
++-rw-r--r--   0        0        0      306 2023-04-03 07:42:15.263976 abml-cli-0.1.3/abml_cli/abml_filters.py
++-rw-r--r--   0        0        0     2346 2023-04-05 07:52:22.000000 abml-cli-0.1.3/abml_cli/abml_parser.py
++-rw-r--r--   0        0        0     4798 2023-04-06 10:13:57.784906 abml-cli-0.1.3/abml_cli/abml_subroutines.py
++-rw-r--r--   0        0        0    14049 2023-03-08 11:39:18.000000 abml-cli-0.1.3/abml_cli/dataclasses/abml_schema.json
++-rw-r--r--   0        0        0     4448 2023-03-08 12:22:33.000000 abml-cli-0.1.3/abml_cli/dataclasses/model.py
++-rw-r--r--   0        0        0     2667 2023-03-05 15:19:05.000000 abml-cli-0.1.3/abml_cli/dataclasses/template_schema.json
++-rw-r--r--   0        0        0      215 2023-03-08 11:46:11.000000 abml-cli-0.1.3/abml_cli/examples/test.abml
++-rw-r--r--   0        0        0      168 2023-03-21 09:13:53.000000 abml-cli-0.1.3/abml_cli/subroutines/dload/templates/block.j2.f
++-rw-r--r--   0        0        0      116 2023-03-21 08:43:40.000000 abml-cli-0.1.3/abml_cli/subroutines/dload/templates/circle.j2.f
++-rw-r--r--   0        0        0      298 2023-03-20 10:54:43.471639 abml-cli-0.1.3/abml_cli/subroutines/dload/templates/head.j2.f
++-rw-r--r--   0        0        0      157 2023-03-21 10:23:24.000000 abml-cli-0.1.3/abml_cli/subroutines/dload/templates/rect.j2.f
++-rw-r--r--   0        0        0       68 2023-03-19 14:20:12.928461 abml-cli-0.1.3/abml_cli/subroutines/dload/templates/tail.j2.f
++-rw-r--r--   0        0        0      407 2023-03-18 20:33:18.495847 abml-cli-0.1.3/abml_cli/subroutines/dload/test.f
++-rw-r--r--   0        0        0      502 2023-03-18 20:33:30.969561 abml-cli-0.1.3/abml_cli/subroutines/dload/test.py
++-rw-r--r--   0        0        0      732 2023-04-06 14:17:19.046830 abml-cli-0.1.3/pyproject.toml
++-rw-r--r--   0        0        0        0 2023-03-07 14:06:33.000000 abml-cli-0.1.3/README.md
++-rw-r--r--   0        0        0     1174 1970-01-01 00:00:00.000000 abml-cli-0.1.3/setup.py
++-rw-r--r--   0        0        0      717 1970-01-01 00:00:00.000000 abml-cli-0.1.3/PKG-INFO
+```
+
+### Comparing `abml_cli-0.1.2/abml_cli/abml_cli_helpers.py` & `abml-cli-0.1.3/abml_cli/abml_cli_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml_cli-0.1.2/abml_cli/abml_exec.py` & `abml-cli-0.1.3/abml_cli/abml_exec-DESKTOP-N7IPE21.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,29 +1,29 @@
+ import subprocess
+ import os
+ import atexit
+ import yaml
+ import itertools
+-import uuid
+ from rich.console import Console
+ from datetime import datetime
+ import json
+ from copy import deepcopy
+-
++from collections import OrderedDict
+ from typing import Any, IO
+ from jinja2 import Environment, FileSystemLoader, select_autoescape, StrictUndefined
+ 
+ from importlib.util import module_from_spec, spec_from_file_location
+ import re
+ from inspect import getmembers, isfunction
+ from pandas import DataFrame, concat
+ 
+ from abml_cli import abml_filters
+ from abml_cli.abml_subroutines import Abml_Subroutine
+ import click
++import sys
+ 
+ 
+ class Loader(yaml.SafeLoader):
+     def __init__(self, stream: IO) -> None:
+         """Initialise Loader."""
+ 
+         try:
+@@ -212,14 +212,16 @@
+ 
+ class Env(Environment):
+     def load_filters(self, module):
+         for filter_func in getmembers(module, isfunction):
+             self.filters[filter_func[0]] = filter_func[1]
+ 
+     def load_filters_local(self, module_path):
++        console.print(module_path)
++        console.print(os.listdir("."))
+         spec = spec_from_file_location("custom_filters", module_path)
+         if spec is not None:
+             module = module_from_spec(spec)
+             for filter_func in getmembers(module, isfunction):
+                 self.filters[filter_func[0]] = filter_func[1]
+ 
+ 
+@@ -235,15 +237,22 @@
+ 
+ 
+ @click.command()
+ @click.option("--files", "-f", help="abml-files", required=False, multiple=True)
+ def run(files=None):
+     env = Env(loader=FileSystemLoader(os.getcwd()), autoescape=select_autoescape())
+     env.load_filters(abml_filters)
+-    env.load_filters_local("_filters.py")
++
++    try:
++        sys.path.append(os.getcwd())
++        import _filters
++
++        env.load_filters(_filters)
++    except ImportError as e:
++        console.print(e)
+ 
+     listdir = os.listdir(".")
+     config_yaml = filter(re.compile("_config.abml").match, listdir)
+ 
+     config = {}
+     for config in config_yaml:
+         with open(os.path.basename("_config.abml"), mode="r", encoding="utf-8") as f:
+```
+
+### Comparing `abml_cli-0.1.2/abml_cli/abml_parser.py` & `abml-cli-0.1.3/abml_cli/abml_parser.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -6,14 +6,16 @@
+ from abml.abml_dataclass import Abml_Cae
+ from abml.abml_helpers import exit_handler, cprint
+ 
+ from yaml import load as yload
+ from yaml import Loader
+ import os
+ 
++import logging
++
+ parser = argparse.ArgumentParser()
+ 
+ group = parser.add_mutually_exclusive_group(required=True)
+ group.add_argument("--cae", type=str, default=None)
+ group.add_argument("--file", type=str, default=None)
+ parser.add_argument("--name", type=str, default=None)
+ parser.add_argument("--input_type", type=str, default="copy")
+@@ -26,14 +28,28 @@
+     cae = ast.literal_eval(dumps(loads(args.cae.replace("'", '"'), encoding="utf-8")))
+ elif args.file is not None:
+     with open(args.file, mode="r", encoding="utf-8") as f:
+         cae = yload(f, Loader=Loader)
+ 
+ 
+ if __name__ == "__main__":
++    logger = logging.getLogger("abml_logger")
++    logger.setLevel(logging.DEBUG)
++    fh = logging.FileHandler(
++        filename="{}.abml.log".format(args.name),
++        mode="w",
++        encoding="utf-8",
++    )
++    formatter = logging.Formatter("%(levelname)s - %(module)s - %(message)s")
++    fh.setFormatter(formatter)
++    logger.addHandler(fh)
++
++    logger.info("test")
++    logger.debug("test")
++
+     if "cae" in globals():
+         cae = Abml_Cae(cae)
+         exit_handler()
+ 
+         cae.save_cae("{}.cae".format(args.name))
+ 
+         if args.input_type == "copy":
+```
+
+### Comparing `abml_cli-0.1.2/abml_cli/abml_subroutines.py` & `abml-cli-0.1.3/abml_cli/abml_subroutines.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ from jinja2 import Environment, FileSystemLoader
+ from collections import OrderedDict
+ from collections import defaultdict
+ from rich.console import Console
+ import os
++import shutil
+ 
+ console = Console()
+ path = os.path.dirname(os.path.abspath(__file__))
+ 
+ 
+ class Abml_Registry:
+     registry = defaultdict(lambda: OrderedDict)
+@@ -19,44 +20,60 @@
+ 
+         return decorator
+ 
+ 
+ def to_object_subroutines(data, **kwargs):
+     object_ = {}
+     for key, value in data.items():
+-        object_[key] = Abml_Registry.registry[key](cmds=value, **kwargs)
+-
++        if key in Abml_Registry.registry.keys():
++            object_[key] = Abml_Registry.registry[key](cmds=value, **kwargs)
++    console.print(object_)
+     return object_
+ 
+ 
+ @Abml_Registry.register("subroutines")
+ class Abml_Subroutine:
+-    def __init__(self, data, cwd=None):
++    def __init__(self, data, cwd=None, **kwargs):
++        self.kwargs = kwargs
++        self.cwd = cwd
++        self.name = f'{self.kwargs.get("name", "subroutine")}.for'
++        self.path = [cwd, self.name]
++        self.path = os.path.join(*[node for node in self.path if node is not None])
+         self.render = ""
+-        self.subroutines = to_object_subroutines(data)
++
++        self.subroutines = to_object_subroutines(data, **kwargs)
+         self.join_subs()
+-        self.save_file(cwd=cwd)
++        self.save_file()
++
++        if "folder" in data:
++            self.copy_file(data["folder"])
+ 
+     def join_subs(self):
+         for subroutine in self.subroutines.values():
++            console.print(subroutine)
+             self.render = f"{subroutine.render}\n"
+ 
+-    def save_file(self, cwd=None):
+-        name = "subs.for"
+-        if cwd is None:
+-            with open(name, mode="w", encoding="utf-8") as f:
+-                f.write(self.render)
+-        else:
+-            with open(os.path.join(cwd, name), mode="w", encoding="utf-8") as f:
+-                f.write(self.render)
++    def save_file(self):
++        with open(self.path, mode="w", encoding="utf-8") as f:
++            f.write(self.render)
++
++    def copy_file(self, folder):
++        path = [self.cwd, "..", folder]
++        path = os.path.join(*[node for node in path if node is not None])
++        if not os.path.isdir(path):
++            os.mkdir(path)
++
++        shutil.copy(self.path, os.path.join(path, self.name))
+ 
+ 
+ @Abml_Registry.register("dload")
+ class Abml_Dload:
+     def __init__(self, cmds, **kwargs):
++        self.kwargs = kwargs
++
+         self.env = Environment(
+             loader=FileSystemLoader(os.path.join(path, "subroutines", "dload", "templates")),
+             trim_blocks=False,
+             lstrip_blocks=False,
+             keep_trailing_newline=True,
+         )
+ 
+@@ -130,12 +147,12 @@
+         body_render = body.render(
+             condition=condition, c1=c1, c2=c2, plane=plane, p1=center[0], p2=center[1], r=radius, load=load
+         )
+         return body_render
+ 
+     def save_file(self, cwd=None):
+         if cwd is None:
+-            with open("subs.for", mode="w", encoding="utf-8") as f:
++            with open(f'{self.kwargs["name"]}.for', mode="w", encoding="utf-8") as f:
+                 f.write(self.render)
+         else:
+-            with open(os.path.join(cwd, "subs.for"), mode="w", encoding="utf-8") as f:
++            with open(os.path.join(cwd, f'{self.kwargs["name"]}.for'), mode="w", encoding="utf-8") as f:
+                 f.write(self.render)
+```
+
+### Comparing `abml_cli-0.1.2/abml_cli/dataclasses/abml_schema.json` & `abml-cli-0.1.3/abml_cli/dataclasses/abml_schema.json`
+
+ * *Files identical despite different names*
+
+### Comparing `abml_cli-0.1.2/abml_cli/dataclasses/model.py` & `abml-cli-0.1.3/abml_cli/dataclasses/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml_cli-0.1.2/abml_cli/dataclasses/template_schema.json` & `abml-cli-0.1.3/abml_cli/dataclasses/template_schema.json`
+
+ * *Files identical despite different names*
+
+### Comparing `abml_cli-0.1.2/pyproject.toml` & `abml-cli-0.1.3/pyproject.toml`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,32 +1,32 @@
+ [tool.poetry]
+ name = "abml-cli"
+-version = "0.1.2"
++version = "0.1.3"
+ description = ""
+ authors = ["DavidNaizheZhou <70525024+DavidNaizheZhou@users.noreply.github.com>"]
+ readme = "README.md"
+ packages = [{include = "abml_cli"} ]
+ 
+ [tool.poetry.dependencies]
+-python = ">3.7"
++python = ">3.8"
+ pyyaml = "^6.0"
+ jinja2 = "^3.1.2"
+ rich = "^13.3.2"
+ abqpy = "^2023.4.3"
+ numpy = "^1.24.2"
+ invoke = "^2.0.0"
+ click = "^8.1.3"
+ pydantic = "^1.10.5"
+ pandas = "^1.5.3"
+ 
+ 
+ [tool.poetry.group.dev.dependencies]
+-prospector = "^1.9.0"
+ black = "^23.1.0"
+ 
+ [build-system]
+ requires = ["poetry-core"]
+ build-backend = "poetry.core.masonry.api"
+ 
+ [tool.poetry.scripts]
+ jnl = "abml_cli.helpers:extract_data_from_jnl"
+ abml = "abml_cli.abml_exec:run"
++abml_grid = "abml_cli.abml_exec:run_grid"
+```
+
+### Comparing `abml_cli-0.1.2/setup.py` & `abml-cli-0.1.3/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -16,28 +16,29 @@
+  'pandas>=1.5.3,<2.0.0',
+  'pydantic>=1.10.5,<2.0.0',
+  'pyyaml>=6.0,<7.0',
+  'rich>=13.3.2,<14.0.0']
+ 
+ entry_points = \
+ {'console_scripts': ['abml = abml_cli.abml_exec:run',
++                     'abml_grid = abml_cli.abml_exec:run_grid',
+                      'jnl = abml_cli.helpers:extract_data_from_jnl']}
+ 
+ setup_kwargs = {
+     'name': 'abml-cli',
+-    'version': '0.1.2',
++    'version': '0.1.3',
+     'description': '',
+     'long_description': '',
+     'author': 'DavidNaizheZhou',
+     'author_email': '70525024+DavidNaizheZhou@users.noreply.github.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+     'packages': packages,
+     'package_data': package_data,
+     'install_requires': install_requires,
+     'entry_points': entry_points,
+-    'python_requires': '>3.7',
++    'python_requires': '>3.8',
+ }
+ 
+ 
+ setup(**setup_kwargs)
+```
+
+### Comparing `abml_cli-0.1.2/PKG-INFO` & `abml-cli-0.1.3/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,19 +1,17 @@
+ Metadata-Version: 2.1
+ Name: abml-cli
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: 
+ Author: DavidNaizheZhou
+ Author-email: 70525024+DavidNaizheZhou@users.noreply.github.com
+-Requires-Python: >3.7
++Requires-Python: >3.8
+ Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+-Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: abqpy (>=2023.4.3,<2024.0.0)
+ Requires-Dist: click (>=8.1.3,<9.0.0)
+ Requires-Dist: invoke (>=2.0.0,<3.0.0)
+ Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+ Requires-Dist: numpy (>=1.24.2,<2.0.0)
+ Requires-Dist: pandas (>=1.5.3,<2.0.0)
+ Requires-Dist: pydantic (>=1.10.5,<2.0.0)
+```
+

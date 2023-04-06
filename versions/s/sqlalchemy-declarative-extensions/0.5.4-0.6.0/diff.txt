@@ -1,0 +1,1373 @@
+--- tmp/sqlalchemy-declarative-extensions-0.5.4.tar.gz
++++ tmp/sqlalchemy-declarative-extensions-0.6.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "sqlalchemy-declarative-extensions-0.5.4.tar", max compression
+│ +gzip compressed data, was "sqlalchemy-declarative-extensions-0.6.0.tar", max compression
+│   --- sqlalchemy-declarative-extensions-0.5.4.tar
+├── +++ sqlalchemy-declarative-extensions-0.6.0.tar
+│ ├── file list
+│ │ @@ -1,55 +1,68 @@
+│ │ --rw-r--r--   0        0        0    11357 2023-03-23 18:19:25.867654 sqlalchemy-declarative-extensions-0.5.4/LICENSE
+│ │ --rw-r--r--   0        0        0     8629 2023-03-23 18:19:25.867654 sqlalchemy-declarative-extensions-0.5.4/README.md
+│ │ --rw-r--r--   0        0        0     3056 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1019 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/__init__.py
+│ │ --rw-r--r--   0        0        0      129 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/__init__.py
+│ │ --rw-r--r--   0        0        0      831 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/base.py
+│ │ --rw-r--r--   0        0        0     1916 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/grant.py
+│ │ --rw-r--r--   0        0        0     1894 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/role.py
+│ │ --rw-r--r--   0        0        0     2153 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/row.py
+│ │ --rw-r--r--   0        0        0     1465 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/schema.py
+│ │ --rw-r--r--   0        0        0     1510 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/view.py
+│ │ --rw-r--r--   0        0        0     7058 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/api.py
+│ │ --rw-r--r--   0        0        0      596 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/__init__.py
+│ │ --rw-r--r--   0        0        0      775 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/from_string.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/mysql/__init__.py
+│ │ --rw-r--r--   0        0        0      958 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/mysql/query.py
+│ │ --rw-r--r--   0        0        0     1008 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/mysql/schema.py
+│ │ --rw-r--r--   0        0        0      778 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/__init__.py
+│ │ --rw-r--r--   0        0        0     4503 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/acl.py
+│ │ --rw-r--r--   0        0        0    11796 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant.py
+│ │ --rw-r--r--   0        0        0     5557 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant_type.py
+│ │ --rw-r--r--   0        0        0     4519 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/query.py
+│ │ --rw-r--r--   0        0        0     8152 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/role.py
+│ │ --rw-r--r--   0        0        0     5452 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/schema.py
+│ │ --rw-r--r--   0        0        0     1840 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/query.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/sqlite/__init__.py
+│ │ --rw-r--r--   0        0        0     1213 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/sqlite/query.py
+│ │ --rw-r--r--   0        0        0     1014 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/sqlite/schema.py
+│ │ --rw-r--r--   0        0        0       93 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/__init__.py
+│ │ --rw-r--r--   0        0        0     2308 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/base.py
+│ │ --rw-r--r--   0        0        0     4462 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/compare.py
+│ │ --rw-r--r--   0        0        0      643 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/ddl.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/py.typed
+│ │ --rw-r--r--   0        0        0       91 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/__init__.py
+│ │ --rw-r--r--   0        0        0     1092 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/base.py
+│ │ --rw-r--r--   0        0        0     3861 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/compare.py
+│ │ --rw-r--r--   0        0        0      707 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/ddl.py
+│ │ --rw-r--r--   0        0        0     1088 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/generic.py
+│ │ --rw-r--r--   0        0        0     2615 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/topological_sort.py
+│ │ --rw-r--r--   0        0        0      176 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/__init__.py
+│ │ --rw-r--r--   0        0        0     1080 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/base.py
+│ │ --rw-r--r--   0        0        0     5633 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/compare.py
+│ │ --rw-r--r--   0        0        0      516 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/query.py
+│ │ --rw-r--r--   0        0        0      118 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/__init__.py
+│ │ --rw-r--r--   0        0        0     1691 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/base.py
+│ │ --rw-r--r--   0        0        0     1457 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/compare.py
+│ │ --rw-r--r--   0        0        0      446 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/ddl.py
+│ │ --rw-r--r--   0        0        0      299 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/sql.py
+│ │ --rw-r--r--   0        0        0     1777 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/sqlalchemy.py
+│ │ --rw-r--r--   0        0        0      215 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/__init__.py
+│ │ --rw-r--r--   0        0        0    16276 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/base.py
+│ │ --rw-r--r--   0        0        0     2747 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/compare.py
+│ │ --rw-r--r--   0        0        0      580 2023-03-23 18:19:25.871654 sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/ddl.py
+│ │ --rw-r--r--   0        0        0    10323 1970-01-01 00:00:00.000000 sqlalchemy-declarative-extensions-0.5.4/setup.py
+│ │ --rw-r--r--   0        0        0     9814 1970-01-01 00:00:00.000000 sqlalchemy-declarative-extensions-0.5.4/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    11357 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/LICENSE
+│ │ +-rw-r--r--   0        0        0    11020 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/README.md
+│ │ +-rw-r--r--   0        0        0     3056 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1350 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/__init__.py
+│ │ +-rw-r--r--   0        0        0      129 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/__init__.py
+│ │ +-rw-r--r--   0        0        0     1054 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/base.py
+│ │ +-rw-r--r--   0        0        0     1338 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/function.py
+│ │ +-rw-r--r--   0        0        0     1916 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/grant.py
+│ │ +-rw-r--r--   0        0        0     1894 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/role.py
+│ │ +-rw-r--r--   0        0        0     2153 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/row.py
+│ │ +-rw-r--r--   0        0        0     1465 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/schema.py
+│ │ +-rw-r--r--   0        0        0     1480 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/trigger.py
+│ │ +-rw-r--r--   0        0        0     1510 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/view.py
+│ │ +-rw-r--r--   0        0        0     8396 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/api.py
+│ │ +-rw-r--r--   0        0        0     7790 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/audit.py
+│ │ +-rw-r--r--   0        0        0      720 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/__init__.py
+│ │ +-rw-r--r--   0        0        0      775 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/from_string.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/mysql/__init__.py
+│ │ +-rw-r--r--   0        0        0      958 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/mysql/query.py
+│ │ +-rw-r--r--   0        0        0     1008 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/mysql/schema.py
+│ │ +-rw-r--r--   0        0        0     1104 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/__init__.py
+│ │ +-rw-r--r--   0        0        0     4503 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/acl.py
+│ │ +-rw-r--r--   0        0        0     1288 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/function.py
+│ │ +-rw-r--r--   0        0        0    11796 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant.py
+│ │ +-rw-r--r--   0        0        0     5557 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant_type.py
+│ │ +-rw-r--r--   0        0        0     5978 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/query.py
+│ │ +-rw-r--r--   0        0        0     8152 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/role.py
+│ │ +-rw-r--r--   0        0        0     7472 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/schema.py
+│ │ +-rw-r--r--   0        0        0     4941 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/trigger.py
+│ │ +-rw-r--r--   0        0        0     2139 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/query.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/sqlite/__init__.py
+│ │ +-rw-r--r--   0        0        0     1213 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/sqlite/query.py
+│ │ +-rw-r--r--   0        0        0     1014 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/sqlite/schema.py
+│ │ +-rw-r--r--   0        0        0      189 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/function/__init__.py
+│ │ +-rw-r--r--   0        0        0     2700 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/function/base.py
+│ │ +-rw-r--r--   0        0        0     2743 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/function/compare.py
+│ │ +-rw-r--r--   0        0        0      529 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/function/ddl.py
+│ │ +-rw-r--r--   0        0        0       93 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/__init__.py
+│ │ +-rw-r--r--   0        0        0     2308 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/base.py
+│ │ +-rw-r--r--   0        0        0     4462 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/compare.py
+│ │ +-rw-r--r--   0        0        0      643 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/ddl.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/py.typed
+│ │ +-rw-r--r--   0        0        0       91 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/__init__.py
+│ │ +-rw-r--r--   0        0        0     1092 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/base.py
+│ │ +-rw-r--r--   0        0        0     3861 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/compare.py
+│ │ +-rw-r--r--   0        0        0      707 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/ddl.py
+│ │ +-rw-r--r--   0        0        0     1088 2023-04-06 14:12:09.282396 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/generic.py
+│ │ +-rw-r--r--   0        0        0     2615 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/topological_sort.py
+│ │ +-rw-r--r--   0        0        0      176 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/__init__.py
+│ │ +-rw-r--r--   0        0        0     1080 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/base.py
+│ │ +-rw-r--r--   0        0        0     5633 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/compare.py
+│ │ +-rw-r--r--   0        0        0      516 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/query.py
+│ │ +-rw-r--r--   0        0        0      118 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/__init__.py
+│ │ +-rw-r--r--   0        0        0     1691 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/base.py
+│ │ +-rw-r--r--   0        0        0     1457 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/compare.py
+│ │ +-rw-r--r--   0        0        0      446 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/ddl.py
+│ │ +-rw-r--r--   0        0        0      299 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/sql.py
+│ │ +-rw-r--r--   0        0        0     1849 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/sqlalchemy.py
+│ │ +-rw-r--r--   0        0        0      182 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/trigger/__init__.py
+│ │ +-rw-r--r--   0        0        0     2148 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/trigger/base.py
+│ │ +-rw-r--r--   0        0        0     2334 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/trigger/compare.py
+│ │ +-rw-r--r--   0        0        0      541 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/trigger/ddl.py
+│ │ +-rw-r--r--   0        0        0      215 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/__init__.py
+│ │ +-rw-r--r--   0        0        0    16276 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/base.py
+│ │ +-rw-r--r--   0        0        0     2747 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/compare.py
+│ │ +-rw-r--r--   0        0        0      580 2023-04-06 14:12:09.286397 sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/ddl.py
+│ │ +-rw-r--r--   0        0        0    12875 1970-01-01 00:00:00.000000 sqlalchemy-declarative-extensions-0.6.0/setup.py
+│ │ +-rw-r--r--   0        0        0    12205 1970-01-01 00:00:00.000000 sqlalchemy-declarative-extensions-0.6.0/PKG-INFO
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/LICENSE
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/README.md
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/README.md
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,70 +1,106 @@
+│ │  # SqlAlchemy Declarative Extensions
+│ │  
+│ │  [![Actions Status](https://github.com/dancardin/sqlalchemy-declarative-extensions/workflows/test/badge.svg)](https://github.com/dancardin/sqlalchemy-declarative-extensions/actions) [![Coverage Status](https://coveralls.io/repos/github/DanCardin/sqlalchemy-declarative-extensions/badge.svg?branch=main)](https://coveralls.io/github/DanCardin/sqlalchemy-declarative-extensions?branch=main) [![Documentation Status](https://readthedocs.org/projects/sqlalchemy-declarative-extensions/badge/?version=latest)](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/?badge=latest)
+│ │  
+│ │  See the full documentation [here](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/).
+│ │  
+│ │ -Adds extensions to SqlAlchemy (and/or Alembic) which allows declaratively
+│ │ +Adds extensions to SQLAlchemy (and/or Alembic) which allows declaratively
+│ │  stating the existence of additional kinds of objects about your database
+│ │  not natively supported by SqlAlchemy/Alembic.
+│ │  
+│ │  This includes:
+│ │  
+│ │  - Schemas
+│ │ +- Views
+│ │  - Roles
+│ │ -- Privileges
+│ │ +- Privileges (Grants/Default Grants)
+│ │ +- Functions
+│ │ +- Triggers
+│ │  - Rows (i.e. data)
+│ │ +- "audit tables" (i.e. triggers which record data changes to some source table)
+│ │  
+│ │  The primary function(s) of this library include:
+│ │  
+│ │  - Registering onto the SqlAlchemy event system such that `metadata.create_all`
+│ │    creates these objects.
+│ │  - (Optionally) Registers into Alembic such that `alembic revision --autogenerate`
+│ │    automatically creates/updates/deletes declared objects.
+│ │  
+│ │ -## Kitchen Sink Example Usage
+│ │ +## Kitchen Sink Example (using all available features)
+│ │  
+│ │  ```python
+│ │  from sqlalchemy import Column, types, select
+│ │  from sqlalchemy.orm import as_declarative
+│ │  from sqlalchemy_declarative_extensions import (
+│ │ -    declarative_database, Schemas, Roles, Grants, Rows, Row, Views, View, view
+│ │ +    declarative_database, Schemas, Roles, Row, View, view,
+│ │  )
+│ │ -from sqlalchemy_declarative_extensions.dialects.postgresql import DefaultGrant, Role
+│ │ +from sqlalchemy_declarative_extensions.dialects.postgresql import (
+│ │ +    DefaultGrant, Function, Trigger, Role
+│ │ +)
+│ │ +from sqlalchemy_declarative_extensions.audit import audit
+│ │  
+│ │  
+│ │  @declarative_database
+│ │  @as_declarative
+│ │  class Base:
+│ │ +    # Note: each object type also has a plural version (i.e. Schemas/Roles/etc) where you can specify
+│ │ +    # collection-level options like `ignore_unspecified`).
+│ │ +    #
+│ │ +    # If you dont set any collection-level options, you can instead use raw list/iterable as the collection.
+│ │      schemas = Schemas().are("example")
+│ │      roles = Roles(ignore_unspecified=True).are(
+│ │          Role("read", login=False),
+│ │          Role(
+│ │              "app",
+│ │              in_roles=['read']
+│ │          ),
+│ │      )
+│ │ -    grants = Grants().are(
+│ │ +    grants = [
+│ │          DefaultGrant.on_tables_in_schema("public", 'example').grant("select", to="read"),
+│ │ -        DefaultGrant.on_tables_in_schema("public").grant("insert", "update", "delete", to="write"),
+│ │ -        DefaultGrant.on_sequences_in_schema("public").grant("usage", to="write"),
+│ │ -    )
+│ │ -    rows = Rows().are(
+│ │ +        DefaultGrant.on_sequences_in_schema("public").grant("usage", to="read"),
+│ │ +        Grant.new("usage", to="read").on_schemas("example")
+│ │ +    ]
+│ │ +    rows = [
+│ │          Row('foo', id=1),
+│ │ -    )
+│ │ -    views = Views().are(View("low_foo", "select * from foo where i < 10"))
+│ │ +    ]
+│ │ +    views = [
+│ │ +        View("low_foo", "select * from foo where i < 10"),
+│ │ +    ]
+│ │ +    functions = [
+│ │ +        Function(
+│ │ +            "fancy_function",
+│ │ +            """
+│ │ +            BEGIN
+│ │ +            INSERT INTO foo (id) select NEW.id + 1;
+│ │ +            RETURN NULL;
+│ │ +            END
+│ │ +            """,
+│ │ +            language="plpgsql",
+│ │ +            returns="trigger",
+│ │ +        ),
+│ │ +    ]
+│ │ +    triggers = [
+│ │ +        Trigger.after("insert", on="foo", execute="fancy_function")
+│ │ +        .named("on_insert_foo")
+│ │ +        .when("pg_trigger_depth() < 1")
+│ │ +        .for_each_row(),
+│ │ +    ]
+│ │  
+│ │  
+│ │ +@audit()
+│ │  class Foo(Base):
+│ │      __tablename__ = 'foo'
+│ │  
+│ │      id = Column(types.Integer(), primary_key=True)
+│ │  
+│ │  
+│ │ +audit_table = Foo.__audit_table__
+│ │ +
+│ │ +
+│ │  @view(Base)
+│ │  class HighFoo:
+│ │      __tablename__ = "high_foo"
+│ │      __view__ = select(Foo.__table__).where(Foo.__table__.c.id >= 10)
+│ │  ```
+│ │  
+│ │  Note, there is also support for declaring objects directly through the `MetaData` for
+│ │ @@ -117,72 +153,105 @@
+│ │  object types in order to have alembic track them
+│ │  
+│ │  ## Database support
+│ │  
+│ │  In principle, this library **can** absolutely support any database supported by SqlAlchemy,
+│ │  and capable of being introspected enough to support detection of different kinds of objects.
+│ │  
+│ │ -In reality, the implementations are going to be purely driven by actual usage. The
+│ │ -current maintainer(s) primarily use PostgreSQL and as such individual features for
+│ │ +As you can see below, in reality the existence of implementations are going to be purely driven by actual
+│ │ +usage. The current maintainer(s) primarily use PostgreSQL and as such individual features for
+│ │  other databases will either suffer or lack implementation.
+│ │  
+│ │ -As much as possible, objects will be defined in a database-agnostic way, and the comparison
+│ │ -infrastructure should be the sole difference. However databases engines are not the same, and
+│ │ -certain kinds of objects, like GRANTs, are inherently database engine specific, and there's
+│ │ -not much common ground between a PostgreSQL grant and a MySQL one. As such, they will
+│ │ -include database specific objects.
+│ │ +| | Postgres | MySQL | SQLite |
+│ │ +| Schema | ✓ | | ✓ |
+│ │ +| View | ✓ | ✓ | ✓ |
+│ │ +| Role | ✓ | | |
+│ │ +| Grant | ✓ | | |
+│ │ +| Default Grant | ✓ | | |
+│ │ +| Function | ✓ | _ | |
+│ │ +| Trigger | ✓ | _ | |
+│ │ +| Row (data) | ✓ | ✓ | ✓ |
+│ │ +| "Audit Table" | ✓ | | |
+│ │ +
+│ │ +The astrisks above note pending or provisional support. The level of expertise in each dialects'
+│ │ +particular behaviors is not uniform, and deciding on the correct behavior for those dialects
+│ │ +will require users to submit issues/fixes!
+│ │ +
+│ │ +Supporting a new dialect **can** be as simple as providing the dialect-dispatched implementations
+│ │ +for detecting existing objects of the given type. Very much the intent is that once a given object
+│ │ +type is supported at all, the comparison infrastructure for that type should make it straightforward
+│ │ +to support other dialects. At the end of the day, this library is primarily producing SQL statements,
+│ │ +so in theory any dialect supporting a given object type should be able to be supported.
+│ │ +
+│ │ +In such cases (like Grants/Roles) that different dialects support wildly different
+│ │ +options/syntax, there are also patterns for defining dialect-specific objects, to mediate
+│ │ +any additional differences.
+│ │  
+│ │  ## Alembic-utils
+│ │  
+│ │ -Currently, the set of supported declarative objects is largely non-overlapping with
+│ │ -[Alembic-utils](https://github.com/olirice/alembic_utils). However in principle, there's
+│ │ -no reason that objects supported by this library couldn't begin to overlap (functions,
+│ │ -triggers); and one might begin to question when to use which library.
+│ │ +[Alembic Utils](https://github.com/olirice/alembic_utils) is the primary library against which
+│ │ +this library can be compared. At time of writing, **most** (but not all) object types supported
+│ │ +by alembic-utils are supported by this library. One might begin to question when to use which library.
+│ │  
+│ │ -Note that where possible this library tries to support alembic-utils native objects
+│ │ -as stand-ins for the objects defined in this library. For example, `alembic_utils.pg_view.PGView`
+│ │ -can be declared instead of a `sqlalchemy_declarative_extensions.View`, and we will internally
+│ │ -coerce it into the appropriate type. Hopefully this eases any transitional costs, or
+│ │ -issues using one or the other library.
+│ │ +Below is a list of points on which the two libraries diverge. But note that you **can** certainly
+│ │ +use both in tandem! It doesn't need to be one or the other, and certainly for any object types
+│ │ +which do not overlap, you might **need** to use both.
+│ │  
+│ │ -Alembic utils:
+│ │ +- Database Support
+│ │  
+│ │ -1. Is more directly tied to Alembic and specifically provides functionality for autogenerating
+│ │ -   DDL for alembic, as the name might imply. It does **not** register into sqlalchemy's event
+│ │ -   system.
+│ │ +  - Alembic Utils seems to explicitly only support PostgreSQL.
+│ │  
+│ │ -2. Requires one to explicitly find/include the objects one wants to track with alembic.
+│ │ +  - This library is designed to support any dialect (in theory). Certainly PostgreSQL
+│ │ +    is **best** supported, but there does exist support for specific kinds of objects
+│ │ +    to varying levels of support for SQLite and MySQL, so far.
+│ │  
+│ │ -3. Declares single, specific object instances (like a single, specific `PGGrantTable`). This
+│ │ -   has the side-effect that it can only track included objects. It cannot, for example,
+│ │ -   remove objects which should not exist due to their omission.
+│ │ +- Architecture
+│ │  
+│ │ -4. In most cases, it appears to define a very "literal" interface (for example, `PGView` accepts
+│ │ -   the whole view definition as a raw literal string), rather than attempting to either abstract
+│ │ -   the objects or accept abstracted (like a `select` object) definition.
+│ │ +  - Alembic Utils is directly tied to Alembic and does not support SQLAlchemy's `MetaData.create_all`.
+│ │ +    It's also the responsibility of the user to discover/register objects in alembic.
+│ │  
+│ │ -5. Appears to only be interested in supporting PostgreSQL.
+│ │ +  - This library **depends** only on SqlAlchemy, although it also supports alembic. Support for
+│ │ +    `MetaData.create_all` can be important for creating all object types in tests. It also
+│ │ +    is designed such that objects are registered on the `MetaData` itself, so there is no need for
+│ │ +    any specific discovery phase.
+│ │  
+│ │ -By contrast, this library:
+│ │ +- Scope
+│ │  
+│ │ -1. SqlAlchemy is the main dependency and registration point (Alembic is, in fact, an optional dependency).
+│ │ -   The primary function of the library is to declare the underlying objects. And then registration into
+│ │ -   sqlalchemy's event system, or registration into alembic's detection system are both optional features.
+│ │ +  - Alembic Utils declares specific, individual objects. I.e. you instantiate one specific `PGGrantTable`
+│ │ +    or `PGView` instance and Alembic know knows you want that object to be created. It cannot drop
+│ │ +    objects it is not already aware of.
+│ │  
+│ │ -2. Perhaps a technical detail, but this library registers the declaratively stated objects directly
+│ │ -   on the metadata/declarative-base. This allows the library to automatically know the intended
+│ │ -   state of the world, rather than needing to discover objects.
+│ │ +  - This library declares ths objects the system as a whole expects to exist. Similar to Alembic's
+│ │ +    behavior on tables, it will (by default) detect any **undeclared** objects that should not exist
+│ │ +    and drop them. That means, you can rely on this object to ensure the state of your migrations
+│ │ +    matches the state of your database exactly.
+│ │  
+│ │ -3. The intended purpose of the supported objects is to declare what the state of the world **should**
+│ │ -   look like. Therefore the function of this library includes the (optional) **removal** of objects
+│ │ -   detected to exist which are not declared (much like alembic does for tables).
+│ │ +- Migration history
+│ │  
+│ │ -4. As much as possible, this library provides more abstracted interfaces for defining objects.
+│ │ -   This is particularly important for objects like roles/grants where not every operation is a create
+│ │ -   or delete (in contrast to something like a view), where a raw SQL string makes it impossible to
+│ │ -   diff two different a-like objects.
+│ │ +  - Alembic Utils imports and references its own objects in your migrations history. This can be
+│ │ +    unfortunate, in that it deeply ties your migrations history to alembic-utils.
+│ │  
+│ │ -5. Tries to define functionality in cross-dialect terms and only where required farm details out to
+│ │ -   dialect-specific handlers. Not to claim that all dialects are treated equally (currently only
+│ │ -   PostgreSQL has first-class support), but technically, there should be no reason we wouldn't support
+│ │ -   any supportable dialect. Today SQLite (for whatever that's worth), and MySQL have **some** level
+│ │ -   of support.
+│ │ +    (In fact, this can be a sticking point, trying to convert **away** from `alembic_utils`, because it
+│ │ +    will attempt to drop all the (e.g `PGView`) instances previously created when we replaced it with
+│ │ +    this library.)
+│ │ +
+│ │ +  - This library, by contrast, prefers to emit the raw SQL of the operation into your migration.
+│ │ +    That means you know the exact commands that will execute in your migration, which can be helpful
+│ │ +    in debugging failure. It also means, if at any point you decide to stop use of the library
+│ │ +    (or pause a given type of object, due to a bug), you can! This library's behaviors are primarily
+│ │ +    very much `--autogenerate`-time only.
+│ │ +
+│ │ +- Abstraction Level
+│ │ +
+│ │ +  - Alembic Utils appears to define a very "literal" interface (for example, `PGView` accepts
+│ │ +    the whole view definition as a raw literal string).
+│ │ +
+│ │ +  - This library tries to, as much as possible, provide a more abstracted interface that enables
+│ │ +    more compatibility with SQLAlchemy (For example `View` accepts SQLAlchemy objects which can
+│ │ +    be coerced into a `SELECT`). It also tends towards "builder" interfaces which progressively produce
+│ │ +    a object (Take a look at the `DefaultGrant` above, for an example of where that's helpful).
+│ │ +
+│ │ +A separate note on conversion/compatibility. Where possible, this library tries to support alembic-utils
+│ │ +native objects as stand-ins for the objects defined in this library. For example, `alembic_utils.pg_view.PGView`
+│ │ +can be declared instead of a `sqlalchemy_declarative_extensions.View`, and we will internally
+│ │ +coerce it into the appropriate type. Hopefully this eases any transitional costs, or
+│ │ +issues using one or the other library.
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/pyproject.toml
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "sqlalchemy-declarative-extensions"
+│ │ -version = "0.5.4"
+│ │ +version = "0.6.0"
+│ │  description = "Library to declare additional kinds of objects not natively supported by SqlAlchemy/Alembic."
+│ │  
+│ │  authors = ["Dan Cardin <ddcardin@gmail.com>"]
+│ │  license = "Apache-2.0"
+│ │  repository = "https://github.com/dancardin/sqlalchemy-declarative-extensions"
+│ │  readme = 'README.md'
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/__init__.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/__init__.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,40 +1,56 @@
+│ │  from sqlalchemy_declarative_extensions import dialects
+│ │  from sqlalchemy_declarative_extensions.alembic import register_alembic_events
+│ │  from sqlalchemy_declarative_extensions.api import (
+│ │      declarative_database,
+│ │      declare_database,
+│ │      register_sqlalchemy_events,
+│ │  )
+│ │ +from sqlalchemy_declarative_extensions.function import (
+│ │ +    Function,
+│ │ +    Functions,
+│ │ +    register_function,
+│ │ +)
+│ │  from sqlalchemy_declarative_extensions.grant import Grants
+│ │  from sqlalchemy_declarative_extensions.role import Role
+│ │  from sqlalchemy_declarative_extensions.role.base import Roles
+│ │  from sqlalchemy_declarative_extensions.row import Row, Rows
+│ │  from sqlalchemy_declarative_extensions.schema import Schema, Schemas
+│ │ +from sqlalchemy_declarative_extensions.trigger import (
+│ │ +    Trigger,
+│ │ +    Triggers,
+│ │ +    register_trigger,
+│ │ +)
+│ │  from sqlalchemy_declarative_extensions.view import (
+│ │      View,
+│ │      ViewIndex,
+│ │      Views,
+│ │      register_view,
+│ │      view,
+│ │  )
+│ │  
+│ │  __all__ = [
+│ │      "declarative_database",
+│ │      "declare_database",
+│ │ -    "Grants",
+│ │ -    "Role",
+│ │ -    "Row",
+│ │ -    "Rows",
+│ │      "dialects",
+│ │ +    "Function",
+│ │ +    "Functions",
+│ │ +    "Grants",
+│ │      "register_alembic_events",
+│ │      "register_sqlalchemy_events",
+│ │ +    "register_function",
+│ │ +    "register_trigger",
+│ │      "register_view",
+│ │      "Role",
+│ │ +    "Role",
+│ │      "Roles",
+│ │ +    "Row",
+│ │ +    "Rows",
+│ │      "Schema",
+│ │      "Schemas",
+│ │ -    "view",
+│ │ +    "Trigger",
+│ │ +    "Triggers",
+│ │      "View",
+│ │ +    "view",
+│ │      "ViewIndex",
+│ │      "Views",
+│ │  ]
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/base.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,12 +1,14 @@
+│ │  def register_alembic_events(
+│ │      schemas: bool = True,
+│ │      views: bool = True,
+│ │      roles: bool = True,
+│ │      grants: bool = True,
+│ │ +    functions: bool = True,
+│ │ +    triggers: bool = True,
+│ │      rows: bool = True,
+│ │  ):
+│ │      """Register handlers into alembic's event system for the supported object types.
+│ │  
+│ │      By default all object types are enabled, but each can be individually disabled.
+│ │  
+│ │      Note this is the opposite of the defaults when registering against SQLAlchemy's
+│ │ @@ -20,9 +22,15 @@
+│ │  
+│ │      if roles:
+│ │          import sqlalchemy_declarative_extensions.alembic.role
+│ │  
+│ │      if grants:
+│ │          import sqlalchemy_declarative_extensions.alembic.grant
+│ │  
+│ │ +    if functions:
+│ │ +        import sqlalchemy_declarative_extensions.alembic.function
+│ │ +
+│ │ +    if triggers:
+│ │ +        import sqlalchemy_declarative_extensions.alembic.trigger
+│ │ +
+│ │      if rows:
+│ │          import sqlalchemy_declarative_extensions.alembic.row  # noqa
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/grant.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/grant.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/role.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/role.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/row.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/row.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/schema.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/schema.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/alembic/view.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/alembic/view.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/api.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/api.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,19 +1,21 @@
+│ │  from __future__ import annotations
+│ │  
+│ │  from typing import TYPE_CHECKING, Iterable, TypeVar
+│ │  
+│ │  from sqlalchemy import event
+│ │  from sqlalchemy.sql.schema import MetaData
+│ │  
+│ │ +from sqlalchemy_declarative_extensions.function.base import Function, Functions
+│ │  from sqlalchemy_declarative_extensions.grant.base import Grants
+│ │  from sqlalchemy_declarative_extensions.role.base import Roles
+│ │  from sqlalchemy_declarative_extensions.row.base import Row, Rows
+│ │  from sqlalchemy_declarative_extensions.schema.base import Schemas
+│ │  from sqlalchemy_declarative_extensions.sqlalchemy import DeclarativeMeta, HasMetaData
+│ │ +from sqlalchemy_declarative_extensions.trigger.base import Trigger, Triggers
+│ │  from sqlalchemy_declarative_extensions.view.base import View, Views
+│ │  
+│ │  if TYPE_CHECKING:
+│ │      from sqlalchemy_declarative_extensions.dialects import postgresql
+│ │      from sqlalchemy_declarative_extensions.grant.base import G
+│ │      from sqlalchemy_declarative_extensions.role import generic
+│ │      from sqlalchemy_declarative_extensions.schema.base import Schema
+│ │ @@ -55,34 +57,40 @@
+│ │          ...     )
+│ │  
+│ │      """
+│ │      raw_roles = getattr(base, "roles", None)
+│ │      raw_schemas = getattr(base, "schemas", None)
+│ │      raw_grants = getattr(base, "grants", None)
+│ │      raw_views = getattr(base, "views", None)
+│ │ +    raw_functions = getattr(base, "functions", None)
+│ │ +    raw_triggers = getattr(base, "triggers", None)
+│ │      raw_rows = getattr(base, "rows", None)
+│ │  
+│ │      declare_database(
+│ │          base.metadata,
+│ │          schemas=raw_schemas,
+│ │          roles=raw_roles,
+│ │          grants=raw_grants,
+│ │          views=raw_views,
+│ │ +        functions=raw_functions,
+│ │ +        triggers=raw_triggers,
+│ │          rows=raw_rows,
+│ │      )
+│ │      return base
+│ │  
+│ │  
+│ │  def declare_database(
+│ │      metadata: MetaData,
+│ │      *,
+│ │      schemas: None | Iterable[Schema | str] | Schemas = None,
+│ │      roles: None | Iterable[generic.Role | postgresql.Role | str] | Roles = None,
+│ │      grants: None | Iterable[G] | Grants = None,
+│ │      views: None | Iterable[View] | Views = None,
+│ │ +    functions: None | Iterable[Function] | Functions = None,
+│ │ +    triggers: None | Iterable[Trigger] | Triggers = None,
+│ │      rows: None | Iterable[Row] | Rows = None,
+│ │  ):
+│ │      """Register declaratively specified database extension handlers.
+│ │  
+│ │      See also :func:`declarative_database` for alternative API which decorates
+│ │      a decalarative base class definition.
+│ │  
+│ │ @@ -102,57 +110,67 @@
+│ │  
+│ │      Arguments:
+│ │          metadata: The metadata on which the given extensions are being registered.
+│ │          schemas: The set of schemas to ensure exist.
+│ │          roles: The set of roles to ensure exist.
+│ │          grants: The set of grants to ensure are applied to the roles/schemas/tables.
+│ │          views: The set of views to ensure exist.
+│ │ +        functions: The set of functions to ensure exist.
+│ │ +        triggers: The set of triggers to ensure exist.
+│ │          rows: The set of rows to ensure are applied to the roles/schemas/tables.
+│ │      """
+│ │      metadata.info["schemas"] = Schemas.coerce_from_unknown(schemas)
+│ │      metadata.info["roles"] = Roles.coerce_from_unknown(roles)
+│ │      metadata.info["grants"] = Grants.coerce_from_unknown(grants)
+│ │      metadata.info["views"] = Views.coerce_from_unknown(views)
+│ │ +    metadata.info["functions"] = Functions.coerce_from_unknown(functions)
+│ │ +    metadata.info["triggers"] = Triggers.coerce_from_unknown(triggers)
+│ │      metadata.info["rows"] = Rows.coerce_from_unknown(rows)
+│ │  
+│ │  
+│ │  def register_sqlalchemy_events(
+│ │      maybe_metadata: MetaData | HasMetaData,
+│ │      schemas=False,
+│ │      roles=False,
+│ │      grants=False,
+│ │ -    rows=False,
+│ │      views=False,
+│ │ +    functions=False,
+│ │ +    triggers=False,
+│ │ +    rows=False,
+│ │  ):
+│ │      """Register handlers for supported object types into SQLAlchemy's event system.
+│ │  
+│ │      By default all object types are disabled, but each can be individually enabled.
+│ │      We assume most execution environments where one is using `MetaData.create_all`
+│ │      will be in tests; where roles and grants, in particular, are database-wide
+│ │      objects which can cause issues.
+│ │  
+│ │      Note this is the opposite of the defaults when registering against SQLAlchemy's
+│ │      event system.
+│ │      """
+│ │ +    from sqlalchemy_declarative_extensions.function.ddl import function_ddl
+│ │      from sqlalchemy_declarative_extensions.grant.ddl import grant_ddl
+│ │      from sqlalchemy_declarative_extensions.role.ddl import role_ddl
+│ │      from sqlalchemy_declarative_extensions.row.query import rows_query
+│ │      from sqlalchemy_declarative_extensions.schema.ddl import schema_ddl
+│ │ +    from sqlalchemy_declarative_extensions.trigger.ddl import trigger_ddl
+│ │      from sqlalchemy_declarative_extensions.view.ddl import view_ddl
+│ │  
+│ │      if isinstance(maybe_metadata, MetaData):
+│ │          metadata = maybe_metadata
+│ │      else:
+│ │          metadata = maybe_metadata.metadata
+│ │  
+│ │      concrete_schemas = metadata.info.get("schemas")
+│ │      concrete_roles = metadata.info.get("roles")
+│ │      concrete_grants = metadata.info.get("grants")
+│ │ -    concrete_rows = metadata.info.get("rows")
+│ │      concrete_views = metadata.info.get("views")
+│ │ +    concrete_functions = metadata.info.get("functions")
+│ │ +    concrete_triggers = metadata.info.get("triggers")
+│ │ +    concrete_rows = metadata.info.get("rows")
+│ │  
+│ │      if concrete_schemas and schemas:
+│ │          for schema in concrete_schemas:
+│ │              event.listen(
+│ │                  metadata,
+│ │                  "before_create",
+│ │                  schema_ddl(schema),
+│ │ @@ -181,13 +199,27 @@
+│ │      if concrete_views and views:
+│ │          event.listen(
+│ │              metadata,
+│ │              "after_create",
+│ │              view_ddl(concrete_views),
+│ │          )
+│ │  
+│ │ +    if concrete_functions and functions:
+│ │ +        event.listen(
+│ │ +            metadata,
+│ │ +            "after_create",
+│ │ +            function_ddl(concrete_functions),
+│ │ +        )
+│ │ +
+│ │ +    if concrete_triggers and triggers:
+│ │ +        event.listen(
+│ │ +            metadata,
+│ │ +            "after_create",
+│ │ +            trigger_ddl(concrete_triggers),
+│ │ +        )
+│ │ +
+│ │      if concrete_rows and rows:
+│ │          event.listen(
+│ │              metadata,
+│ │              "after_create",
+│ │              rows_query(concrete_rows),
+│ │          )
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/from_string.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/from_string.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/mysql/query.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/mysql/query.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/mysql/schema.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/mysql/schema.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/__init__.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/__init__.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,7 +1,8 @@
+│ │ +from sqlalchemy_declarative_extensions.dialects.postgresql.function import Function
+│ │  from sqlalchemy_declarative_extensions.dialects.postgresql.grant import (
+│ │      DefaultGrant,
+│ │      DefaultGrantStatement,
+│ │      Grant,
+│ │      GrantStatement,
+│ │  )
+│ │  from sqlalchemy_declarative_extensions.dialects.postgresql.grant_type import (
+│ │ @@ -10,26 +11,37 @@
+│ │      GrantTypes,
+│ │      SchemaGrants,
+│ │      SequenceGrants,
+│ │      TableGrants,
+│ │      TypeGrants,
+│ │  )
+│ │  from sqlalchemy_declarative_extensions.dialects.postgresql.role import Role
+│ │ +from sqlalchemy_declarative_extensions.dialects.postgresql.trigger import (
+│ │ +    Trigger,
+│ │ +    TriggerEvents,
+│ │ +    TriggerForEach,
+│ │ +    TriggerTimes,
+│ │ +)
+│ │  
+│ │  __all__ = [
+│ │ -    "TableGrants",
+│ │ -    "SequenceGrants",
+│ │ -    "FunctionGrants",
+│ │ -    "SchemaGrants",
+│ │ -    "TypeGrants",
+│ │ -    "GrantTypes",
+│ │ -    "DefaultGrantTypes",
+│ │ -    "Grant",
+│ │      "DefaultGrant",
+│ │ -    "DefaultGrantStatement",
+│ │ -    "GrantStatement",
+│ │      "DefaultGrant",
+│ │      "DefaultGrantStatement",
+│ │ +    "DefaultGrantStatement",
+│ │ +    "DefaultGrantTypes",
+│ │ +    "Function",
+│ │ +    "FunctionGrants",
+│ │      "Grant",
+│ │ +    "Grant",
+│ │ +    "GrantStatement",
+│ │      "GrantStatement",
+│ │ +    "GrantTypes",
+│ │      "Role",
+│ │ +    "SchemaGrants",
+│ │ +    "SequenceGrants",
+│ │ +    "TableGrants",
+│ │ +    "Trigger",
+│ │ +    "TriggerEvents",
+│ │ +    "TriggerForEach",
+│ │ +    "TriggerTimes",
+│ │ +    "TypeGrants",
+│ │  ]
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/acl.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/acl.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant_type.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/grant_type.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/query.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/compare.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,151 +1,155 @@
+│ │  from __future__ import annotations
+│ │  
+│ │ -from typing import Container, List, cast
+│ │ +from dataclasses import dataclass
+│ │ +from itertools import groupby
+│ │ +from typing import Container, Union
+│ │  
+│ │  from sqlalchemy.engine import Connection
+│ │  
+│ │ -from sqlalchemy_declarative_extensions.dialects.postgresql.acl import (
+│ │ -    parse_acl,
+│ │ -    parse_default_acl,
+│ │ +from sqlalchemy_declarative_extensions.dialects import (
+│ │ +    get_default_grants,
+│ │ +    get_grants,
+│ │ +    get_objects,
+│ │  )
+│ │ -from sqlalchemy_declarative_extensions.dialects.postgresql.role import Role
+│ │ -from sqlalchemy_declarative_extensions.dialects.postgresql.schema import (
+│ │ -    default_acl_query,
+│ │ -    object_acl_query,
+│ │ -    objects_query,
+│ │ -    roles_query,
+│ │ -    schema_exists_query,
+│ │ -    schemas_query,
+│ │ -    table_exists_query,
+│ │ -    view_query,
+│ │ -    views_query,
+│ │ +from sqlalchemy_declarative_extensions.dialects.postgresql import (
+│ │ +    DefaultGrantStatement,
+│ │ +    GrantStatement,
+│ │ +    GrantTypes,
+│ │  )
+│ │ -from sqlalchemy_declarative_extensions.sql import qualify_name
+│ │ -from sqlalchemy_declarative_extensions.view.base import View, ViewIndex
+│ │ +from sqlalchemy_declarative_extensions.grant.base import Grants
+│ │ +from sqlalchemy_declarative_extensions.role.base import Roles
+│ │  
+│ │  
+│ │ -def get_schemas_postgresql(connection: Connection):
+│ │ -    from sqlalchemy_declarative_extensions.schema.base import Schema
+│ │ +@dataclass
+│ │ +class GrantPrivilegesOp:
+│ │ +    grant: DefaultGrantStatement | GrantStatement
+│ │  
+│ │ -    return {
+│ │ -        Schema(schema) for schema, *_ in connection.execute(schemas_query).fetchall()
+│ │ -    }
+│ │ +    def reverse(self):
+│ │ +        return RevokePrivilegesOp(self.grant)
+│ │  
+│ │ +    def to_sql(self):
+│ │ +        return self.grant.to_sql()
+│ │  
+│ │ -def check_schema_exists_postgresql(connection: Connection, name: str) -> bool:
+│ │ -    row = connection.execute(schema_exists_query, {"schema": name}).scalar()
+│ │ -    return not bool(row)
+│ │ -
+│ │ -
+│ │ -def check_table_exists_postgresql(
+│ │ -    connection: Connection, name: str, *, schema: str
+│ │ -) -> bool:
+│ │ -    row = connection.execute(
+│ │ -        table_exists_query, {"name": name, "schema": schema}
+│ │ -    ).scalar()
+│ │ -    return bool(row)
+│ │ -
+│ │ -
+│ │ -def get_objects_postgresql(connection: Connection):
+│ │ -    return sorted(
+│ │ -        [
+│ │ -            (r.schema, qualify_name(r.schema, r.object_name), r.relkind)
+│ │ -            for r in connection.execute(objects_query).fetchall()
+│ │ -        ]
+│ │ -    )
+│ │  
+│ │ +@dataclass
+│ │ +class RevokePrivilegesOp:
+│ │ +    grant: DefaultGrantStatement | GrantStatement
+│ │ +
+│ │ +    def reverse(self):
+│ │ +        return GrantPrivilegesOp(self.grant)
+│ │ +
+│ │ +    def to_sql(self):
+│ │ +        return self.grant.invert().to_sql()
+│ │ +
+│ │ +
+│ │ +Operation = Union[GrantPrivilegesOp, RevokePrivilegesOp]
+│ │ +
+│ │ +
+│ │ +def compare_grants(
+│ │ +    connection: Connection, grants: Grants, roles: Roles | None = None
+│ │ +) -> list[Operation]:
+│ │ +    result: list[Operation] = []
+│ │  
+│ │ -def get_default_grants_postgresql(
+│ │ -    connection: Connection,
+│ │ -    roles: Container[str] | None = None,
+│ │ -    expanded: bool = False,
+│ │ -):
+│ │ -    default_permissions = connection.execute(default_acl_query).fetchall()
+│ │      current_role: str = connection.engine.url.username  # type: ignore
+│ │  
+│ │ -    result = []
+│ │ -    for permission in default_permissions:
+│ │ -        for acl_item in permission.acl:
+│ │ -            default_grants = parse_default_acl(
+│ │ -                acl_item,
+│ │ -                permission.object_type,
+│ │ -                permission.schema_name,
+│ │ -                current_role=current_role,
+│ │ -                expanded=expanded,
+│ │ -            )
+│ │ -            for default_grant in default_grants:
+│ │ -                if roles is None or default_grant.grant.target_role in roles:
+│ │ -                    result.append(default_grant)
+│ │ +    filtered_roles: set[str] | None = None
+│ │ +    if grants.only_defined_roles:
+│ │ +        filtered_roles = {r.name for r in (roles or [])}
+│ │ +
+│ │ +    default_grant_ops = compare_default_grants(connection, grants, roles=filtered_roles)
+│ │ +    result.extend(default_grant_ops)
+│ │ +
+│ │ +    if grants.default_grants_imply_grants:
+│ │ +        grant_ops = compare_object_grants(
+│ │ +            connection, grants, username=current_role, roles=filtered_roles
+│ │ +        )
+│ │ +        result.extend(grant_ops)
+│ │  
+│ │      return result
+│ │  
+│ │  
+│ │ -def get_grants_postgresql(
+│ │ +def compare_default_grants(
+│ │      connection: Connection,
+│ │ +    grants: Grants,
+│ │      roles: Container[str] | None = None,
+│ │ -    expanded=False,
+│ │  ):
+│ │ -    existing_permissions = connection.execute(object_acl_query).fetchall()
+│ │ +    result: list[Operation] = []
+│ │  
+│ │ -    result = []
+│ │ -    for permission in existing_permissions:
+│ │ -        acl = permission.acl
+│ │ -        if acl is None:
+│ │ -            acl = [acl]
+│ │ -
+│ │ -        for acl_item in acl:
+│ │ -            grants = parse_acl(
+│ │ -                acl_item,
+│ │ -                permission.relkind,
+│ │ -                qualify_name(permission.schema, permission.name),
+│ │ -                owner=permission.owner,
+│ │ -                expanded=expanded,
+│ │ -            )
+│ │ -            for grant in grants:
+│ │ -                if roles is None or grant.grant.target_role in roles:
+│ │ -                    result.append(grant)
+│ │ +    existing_default_grants = get_default_grants(connection, roles=roles, expanded=True)
+│ │  
+│ │ -    return result
+│ │ +    expected_grants = []
+│ │ +    for grant in grants:
+│ │ +        if not isinstance(grant, DefaultGrantStatement):
+│ │ +            continue
+│ │ +
+│ │ +        expected_grants.extend(grant.explode())
+│ │ +
+│ │ +    missing_grants = set(expected_grants) - set(existing_default_grants)
+│ │ +    extra_grants = set(existing_default_grants) - set(expected_grants)
+│ │  
+│ │ +    if not grants.ignore_unspecified:
+│ │ +        for grant in DefaultGrantStatement.combine(list(extra_grants)):
+│ │ +            result.append(RevokePrivilegesOp(grant))
+│ │  
+│ │ -def get_roles_postgresql(connection: Connection, exclude=None):
+│ │ -    raw_roles = connection.execute(roles_query).fetchall()
+│ │ +    for grant in DefaultGrantStatement.combine(list(missing_grants)):
+│ │ +        result.append(GrantPrivilegesOp(grant))
+│ │  
+│ │ -    result = [Role.from_pg_role(r) for r in raw_roles]
+│ │ -    if exclude:
+│ │ -        return [role for role in result if role.name not in exclude]
+│ │      return result
+│ │  
+│ │  
+│ │ -def get_views_postgresql(connection: Connection):
+│ │ -    views = []
+│ │ -    for v in connection.execute(views_query).fetchall():
+│ │ -        schema = v.schema if v.schema != "public" else None
+│ │ -
+│ │ -        indexes = [
+│ │ -            ViewIndex(
+│ │ -                name=raw["name"],
+│ │ -                unique=raw["unique"],
+│ │ -                columns=cast(List[str], raw["column_names"]),
+│ │ -            )
+│ │ -            for raw in connection.dialect.get_indexes(connection, v.name, schema=schema)
+│ │ +def compare_object_grants(
+│ │ +    connection: Connection,
+│ │ +    grants: Grants,
+│ │ +    username: str,
+│ │ +    roles: Container[str] | None = None,
+│ │ +):
+│ │ +    result: list[Operation] = []
+│ │ +
+│ │ +    expected_grants = [
+│ │ +        sub_g
+│ │ +        for grant in grants
+│ │ +        for sub_g in grant.explode()
+│ │ +        if isinstance(sub_g, GrantStatement)
+│ │ +    ]
+│ │ +
+│ │ +    existing_tables = get_objects(connection)
+│ │ +    existing_tables_by_schema = {
+│ │ +        s: list(g) for s, g in groupby(existing_tables, lambda r: r[0])
+│ │ +    }
+│ │ +    for grant in grants:
+│ │ +        if not isinstance(grant, DefaultGrantStatement):
+│ │ +            continue
+│ │ +
+│ │ +        grant_type = grant.default_grant.grant_type.to_grant_type()
+│ │ +
+│ │ +        for schema in grant.default_grant.in_schemas:
+│ │ +            existing_tables_in_schema = existing_tables_by_schema.get(schema)
+│ │ +            if not existing_tables_in_schema:
+│ │ +                continue
+│ │ +
+│ │ +            for _, table, relkind in existing_tables_in_schema:
+│ │ +                object_type = GrantTypes.from_relkind(relkind)
+│ │ +
+│ │ +                if object_type == grant_type:
+│ │ +                    expected_grants.extend(
+│ │ +                        grant.grant.on_objects(table, object_type=object_type).explode()
+│ │ +                    )
+│ │ +
+│ │ +    existing_grants = get_grants(connection, roles=roles, expanded=True)
+│ │ +
+│ │ +    if grants.ignore_self_grants:
+│ │ +        existing_grants = [
+│ │ +            g for g in existing_grants if g.grant.target_role != username
+│ │          ]
+│ │ -        view = View(
+│ │ -            v.name,
+│ │ -            v.definition,
+│ │ -            schema=schema,
+│ │ -            materialized=v.materialized,
+│ │ -            constraints=indexes or None,  # type: ignore
+│ │ -        )
+│ │ -        views.append(view)
+│ │ -    return views
+│ │  
+│ │ +    missing_grants = set(expected_grants) - set(existing_grants)
+│ │ +    extra_grants = set(existing_grants) - set(expected_grants)
+│ │  
+│ │ -def get_view_postgresql(connection: Connection, name: str, schema: str = "public"):
+│ │ -    result = connection.execute(view_query, {"schema": schema, "name": name}).fetchone()
+│ │ -    assert result
+│ │ -    return View(
+│ │ -        result.name,
+│ │ -        result.definition,
+│ │ -        schema=result.schema if result.schema != "public" else None,
+│ │ -    )
+│ │ +    if not grants.ignore_unspecified:
+│ │ +        for grant in GrantStatement.combine(list(extra_grants)):
+│ │ +            result.append(RevokePrivilegesOp(grant))
+│ │ +
+│ │ +    for grant in GrantStatement.combine(list(missing_grants)):
+│ │ +        result.append(GrantPrivilegesOp(grant))
+│ │ +
+│ │ +    return result
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/role.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/role.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/postgresql/schema.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/postgresql/schema.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,8 +1,18 @@
+│ │ -from sqlalchemy import String, and_, bindparam, column, literal, table, text, union
+│ │ +from sqlalchemy import (
+│ │ +    String,
+│ │ +    and_,
+│ │ +    bindparam,
+│ │ +    column,
+│ │ +    func,
+│ │ +    literal,
+│ │ +    table,
+│ │ +    text,
+│ │ +    union,
+│ │ +)
+│ │  from sqlalchemy.dialects.postgresql import ARRAY, CHAR
+│ │  
+│ │  from sqlalchemy_declarative_extensions.sqlalchemy import select
+│ │  
+│ │  char = CHAR(1)
+│ │  
+│ │  
+│ │ @@ -55,14 +65,47 @@
+│ │  pg_matviews = table(
+│ │      "pg_matviews",
+│ │      column("schemaname"),
+│ │      column("matviewname"),
+│ │      column("definition"),
+│ │  )
+│ │  
+│ │ +pg_proc = table(
+│ │ +    "pg_proc",
+│ │ +    column("oid"),
+│ │ +    column("proname"),
+│ │ +    column("prosrc"),
+│ │ +    column("pronamespace"),
+│ │ +    column("prolang"),
+│ │ +    column("prorettype"),
+│ │ +)
+│ │ +
+│ │ +pg_language = table(
+│ │ +    "pg_language",
+│ │ +    column("oid"),
+│ │ +    column("lanname"),
+│ │ +)
+│ │ +
+│ │ +pg_trigger = table(
+│ │ +    "pg_trigger",
+│ │ +    column("oid"),
+│ │ +    column("tgname"),
+│ │ +    column("tgtype"),
+│ │ +    column("tgrelid"),
+│ │ +    column("tgfoid"),
+│ │ +    column("tgqual"),
+│ │ +    column("tgisinternal"),
+│ │ +)
+│ │ +
+│ │ +pg_type = table(
+│ │ +    "pg_type",
+│ │ +    column("oid"),
+│ │ +    column("typname"),
+│ │ +)
+│ │ +
+│ │  
+│ │  roles_query = text(
+│ │      """
+│ │      SELECT
+│ │        r.rolname,
+│ │        r.rolsuper,
+│ │        r.rolinherit,
+│ │ @@ -207,7 +250,49 @@
+│ │  
+│ │  views_subquery = views_query.cte()
+│ │  view_query = (
+│ │      select(views_subquery)
+│ │      .where(views_subquery.c.schema == bindparam("schema"))
+│ │      .where(views_subquery.c.name == bindparam("name"))
+│ │  )
+│ │ +
+│ │ +
+│ │ +functions_query = (
+│ │ +    select(
+│ │ +        pg_proc.c.proname.label("name"),
+│ │ +        pg_namespace.c.nspname.label("schema"),
+│ │ +        pg_language.c.lanname.label("language"),
+│ │ +        pg_type.c.typname.label("return_type"),
+│ │ +        pg_proc.c.prosrc.label("source"),
+│ │ +    )
+│ │ +    .select_from(
+│ │ +        pg_proc.join(pg_namespace, pg_proc.c.pronamespace == pg_namespace.c.oid)
+│ │ +        .join(pg_language, pg_proc.c.prolang == pg_language.c.oid)
+│ │ +        .join(pg_type, pg_proc.c.prorettype == pg_type.c.oid)
+│ │ +    )
+│ │ +    .where(pg_namespace.c.nspname.notin_(["pg_catalog", "information_schema"]))
+│ │ +)
+│ │ +
+│ │ +
+│ │ +rel_nsp = pg_namespace.alias("rel_nsp")
+│ │ +proc_nsp = pg_namespace.alias("proc_nsp")
+│ │ +triggers_query = (
+│ │ +    select(
+│ │ +        pg_trigger.c.tgname.label("name"),
+│ │ +        pg_trigger.c.tgtype.label("type"),
+│ │ +        func.pg_get_expr(
+│ │ +            pg_trigger.c.tgqual,
+│ │ +            pg_class.c.oid,
+│ │ +        ).label("when"),
+│ │ +        pg_class.c.relname.label("on_name"),
+│ │ +        rel_nsp.c.nspname.label("on_schema"),
+│ │ +        pg_proc.c.proname.label("execute_name"),
+│ │ +        proc_nsp.c.nspname.label("execute_schema"),
+│ │ +    )
+│ │ +    .select_from(
+│ │ +        pg_trigger.join(pg_class, pg_trigger.c.tgrelid == pg_class.c.oid)
+│ │ +        .join(rel_nsp, pg_class.c.relnamespace == rel_nsp.c.oid)
+│ │ +        .join(pg_proc, pg_trigger.c.tgfoid == pg_proc.c.oid)
+│ │ +        .join(proc_nsp, pg_proc.c.pronamespace == proc_nsp.c.oid)
+│ │ +    )
+│ │ +    .where(pg_trigger.c.tgisinternal.is_(False))
+│ │ +)
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/query.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/query.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -4,18 +4,20 @@
+│ │      check_table_exists_mysql,
+│ │      get_views_mysql,
+│ │  )
+│ │  from sqlalchemy_declarative_extensions.dialects.postgresql.query import (
+│ │      check_schema_exists_postgresql,
+│ │      check_table_exists_postgresql,
+│ │      get_default_grants_postgresql,
+│ │ +    get_functions_postgresql,
+│ │      get_grants_postgresql,
+│ │      get_objects_postgresql,
+│ │      get_roles_postgresql,
+│ │      get_schemas_postgresql,
+│ │ +    get_triggers_postgresql,
+│ │      get_view_postgresql,
+│ │      get_views_postgresql,
+│ │  )
+│ │  from sqlalchemy_declarative_extensions.dialects.sqlite.query import (
+│ │      check_schema_exists_sqlite,
+│ │      check_table_exists_sqlite,
+│ │      get_views_sqlite,
+│ │ @@ -67,7 +69,19 @@
+│ │      sqlite=get_views_sqlite,
+│ │      mysql=get_views_mysql,
+│ │  )
+│ │  
+│ │  get_view = dialect_dispatch(
+│ │      postgresql=get_view_postgresql,
+│ │  )
+│ │ +
+│ │ +get_functions = dialect_dispatch(
+│ │ +    postgresql=get_functions_postgresql,
+│ │ +)
+│ │ +
+│ │ +get_function_cls = dialect_dispatch(
+│ │ +    postgresql=lambda _: postgresql.Function,
+│ │ +)
+│ │ +
+│ │ +get_triggers = dialect_dispatch(
+│ │ +    postgresql=get_triggers_postgresql,
+│ │ +)
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/sqlite/query.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/sqlite/query.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/dialects/sqlite/schema.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/dialects/sqlite/schema.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/base.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/grant/ddl.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/grant/ddl.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/base.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/compare.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/compare.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/ddl.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/ddl.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/generic.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/generic.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/role/topological_sort.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/role/topological_sort.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/base.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/compare.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/compare.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/row/query.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/row/query.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/base.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/schema/compare.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/schema/compare.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/sqlalchemy.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/sqlalchemy.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,19 +1,23 @@
+│ │  import sqlalchemy
+│ │ -from sqlalchemy import MetaData
+│ │ +from sqlalchemy import MetaData, Table
+│ │  from sqlalchemy.engine import Connection
+│ │  from typing_extensions import Protocol
+│ │  
+│ │  version = getattr(sqlalchemy, "__version__", "1.3")
+│ │  
+│ │  
+│ │  class HasMetaData(Protocol):
+│ │      metadata: MetaData
+│ │  
+│ │  
+│ │ +class HasTable(Protocol):
+│ │ +    __table__: Table
+│ │ +
+│ │ +
+│ │  def dialect_dispatch(postgresql=None, sqlite=None, mysql=None):
+│ │      dispatchers = {
+│ │          "postgresql": postgresql,
+│ │          "sqlite": sqlite,
+│ │          "mysql": mysql,
+│ │      }
+│ │  
+│ │ @@ -30,15 +34,15 @@
+│ │  
+│ │          return dispatcher(connection, *args, **kwargs)
+│ │  
+│ │      return dispatch
+│ │  
+│ │  
+│ │  if version.startswith("1.3"):
+│ │ -    from sqlalchemy.ext.declarative import (
+│ │ +    from sqlalchemy.ext.declarative import (  # type: ignore
+│ │          DeclarativeMeta,
+│ │          declarative_base,
+│ │          instrument_declarative,
+│ │      )
+│ │  
+│ │      def select(*args):
+│ │          return sqlalchemy.select(list(args))
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/base.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/base.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/compare.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/compare.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/src/sqlalchemy_declarative_extensions/view/ddl.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/src/sqlalchemy_declarative_extensions/view/ddl.py
+│ │┄ Files identical despite different names
+│ │   --- sqlalchemy-declarative-extensions-0.5.4/setup.py
+│ ├── +++ sqlalchemy-declarative-extensions-0.6.0/setup.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -7,18 +7,20 @@
+│ │  packages = \
+│ │  ['sqlalchemy_declarative_extensions',
+│ │   'sqlalchemy_declarative_extensions.alembic',
+│ │   'sqlalchemy_declarative_extensions.dialects',
+│ │   'sqlalchemy_declarative_extensions.dialects.mysql',
+│ │   'sqlalchemy_declarative_extensions.dialects.postgresql',
+│ │   'sqlalchemy_declarative_extensions.dialects.sqlite',
+│ │ + 'sqlalchemy_declarative_extensions.function',
+│ │   'sqlalchemy_declarative_extensions.grant',
+│ │   'sqlalchemy_declarative_extensions.role',
+│ │   'sqlalchemy_declarative_extensions.row',
+│ │   'sqlalchemy_declarative_extensions.schema',
+│ │ + 'sqlalchemy_declarative_extensions.trigger',
+│ │   'sqlalchemy_declarative_extensions.view']
+│ │  
+│ │  package_data = \
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │  ['sqlalchemy>=1.3']
+│ │ @@ -26,17 +28,17 @@
+│ │  extras_require = \
+│ │  {':python_version < "3.11"': ['typing_extensions>=4.0'],
+│ │   'alembic': ['alembic>=1.0'],
+│ │   'parse': ['sqlglot']}
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'sqlalchemy-declarative-extensions',
+│ │ -    'version': '0.5.4',
+│ │ +    'version': '0.6.0',
+│ │      'description': 'Library to declare additional kinds of objects not natively supported by SqlAlchemy/Alembic.',
+│ │ -    'long_description': '# SqlAlchemy Declarative Extensions\n\n[![Actions Status](https://github.com/dancardin/sqlalchemy-declarative-extensions/workflows/test/badge.svg)](https://github.com/dancardin/sqlalchemy-declarative-extensions/actions) [![Coverage Status](https://coveralls.io/repos/github/DanCardin/sqlalchemy-declarative-extensions/badge.svg?branch=main)](https://coveralls.io/github/DanCardin/sqlalchemy-declarative-extensions?branch=main) [![Documentation Status](https://readthedocs.org/projects/sqlalchemy-declarative-extensions/badge/?version=latest)](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/?badge=latest)\n\nSee the full documentation [here](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/).\n\nAdds extensions to SqlAlchemy (and/or Alembic) which allows declaratively\nstating the existence of additional kinds of objects about your database\nnot natively supported by SqlAlchemy/Alembic.\n\nThis includes:\n\n- Schemas\n- Roles\n- Privileges\n- Rows (i.e. data)\n\nThe primary function(s) of this library include:\n\n- Registering onto the SqlAlchemy event system such that `metadata.create_all`\n  creates these objects.\n- (Optionally) Registers into Alembic such that `alembic revision --autogenerate`\n  automatically creates/updates/deletes declared objects.\n\n## Kitchen Sink Example Usage\n\n```python\nfrom sqlalchemy import Column, types, select\nfrom sqlalchemy.orm import as_declarative\nfrom sqlalchemy_declarative_extensions import (\n    declarative_database, Schemas, Roles, Grants, Rows, Row, Views, View, view\n)\nfrom sqlalchemy_declarative_extensions.dialects.postgresql import DefaultGrant, Role\n\n\n@declarative_database\n@as_declarative\nclass Base:\n    schemas = Schemas().are("example")\n    roles = Roles(ignore_unspecified=True).are(\n        Role("read", login=False),\n        Role(\n            "app",\n            in_roles=[\'read\']\n        ),\n    )\n    grants = Grants().are(\n        DefaultGrant.on_tables_in_schema("public", \'example\').grant("select", to="read"),\n        DefaultGrant.on_tables_in_schema("public").grant("insert", "update", "delete", to="write"),\n        DefaultGrant.on_sequences_in_schema("public").grant("usage", to="write"),\n    )\n    rows = Rows().are(\n        Row(\'foo\', id=1),\n    )\n    views = Views().are(View("low_foo", "select * from foo where i < 10"))\n\n\nclass Foo(Base):\n    __tablename__ = \'foo\'\n\n    id = Column(types.Integer(), primary_key=True)\n\n\n@view(Base)\nclass HighFoo:\n    __tablename__ = "high_foo"\n    __view__ = select(Foo.__table__).where(Foo.__table__.c.id >= 10)\n```\n\nNote, there is also support for declaring objects directly through the `MetaData` for\nusers not using sqlalchemy\'s declarative API.\n\n## Event Registration\n\nBy default, the above example does not automatically do anything. Depending on the context,\nyou can use one of two registration hooks: `register_sqlalchemy_events` or `register_alembic_events`.\n\n### `register_sqlalchemy_events`\n\nThis registers events in SqlAlchemy\'s event system such that a `metadata.create_all(...)` call\nwill create the declared database objects.\n\n```python\nfrom sqlalchemy_declarative_extensions import register_sqlalchemy_events\n\nmetadata = Base.metadata  # Given the example above.\nregister_sqlalchemy_events(metadata)\n# Which is equivalent to...\nregister_sqlalchemy_events(metadata, schemas=False, roles=False, grants=False, rows=False)\n```\n\nAll object types are opt in, and should be explicitly included in order to get registered.\n\nPractically, this is to avoid issues with testing. In **most** cases the `metadata.create_all` call\nwill be run in tests, a context where it\'s more likely that you dont **need** grants or grants,\nand where parallel test execution could lead to issues with role or schema creation, depending\non your setup.\n\n### `register_alembic_events`\n\nThis registers comparators in Alembic\'s registration system such that an `alembic revision --autogenerate`\ncommand will diff the existing database state against the declared database objects, and issue\nstatements to create/update/delete objects in order to match the declared state.\n\n```python\n# alembic\'s `env.py`\nfrom sqlalchemy_declarative_extensions import register_alembic_events\n\nregister_alembic_events()\n# Which is equivalent to...\nregister_sqlalchemy_events(schemas=True, roles=True, grants=True, rows=True)\n```\n\nAll object types are opt out but can be excluded.\n\nIn contrast to `register_sqlalchemy_events`, it\'s much more likely that you\'re declaring most of these\nobject types in order to have alembic track them\n\n## Database support\n\nIn principle, this library **can** absolutely support any database supported by SqlAlchemy,\nand capable of being introspected enough to support detection of different kinds of objects.\n\nIn reality, the implementations are going to be purely driven by actual usage. The\ncurrent maintainer(s) primarily use PostgreSQL and as such individual features for\nother databases will either suffer or lack implementation.\n\nAs much as possible, objects will be defined in a database-agnostic way, and the comparison\ninfrastructure should be the sole difference. However databases engines are not the same, and\ncertain kinds of objects, like GRANTs, are inherently database engine specific, and there\'s\nnot much common ground between a PostgreSQL grant and a MySQL one. As such, they will\ninclude database specific objects.\n\n## Alembic-utils\n\nCurrently, the set of supported declarative objects is largely non-overlapping with\n[Alembic-utils](https://github.com/olirice/alembic_utils). However in principle, there\'s\nno reason that objects supported by this library couldn\'t begin to overlap (functions,\ntriggers); and one might begin to question when to use which library.\n\nNote that where possible this library tries to support alembic-utils native objects\nas stand-ins for the objects defined in this library. For example, `alembic_utils.pg_view.PGView`\ncan be declared instead of a `sqlalchemy_declarative_extensions.View`, and we will internally\ncoerce it into the appropriate type. Hopefully this eases any transitional costs, or\nissues using one or the other library.\n\nAlembic utils:\n\n1. Is more directly tied to Alembic and specifically provides functionality for autogenerating\n   DDL for alembic, as the name might imply. It does **not** register into sqlalchemy\'s event\n   system.\n\n2. Requires one to explicitly find/include the objects one wants to track with alembic.\n\n3. Declares single, specific object instances (like a single, specific `PGGrantTable`). This\n   has the side-effect that it can only track included objects. It cannot, for example,\n   remove objects which should not exist due to their omission.\n\n4. In most cases, it appears to define a very "literal" interface (for example, `PGView` accepts\n   the whole view definition as a raw literal string), rather than attempting to either abstract\n   the objects or accept abstracted (like a `select` object) definition.\n\n5. Appears to only be interested in supporting PostgreSQL.\n\nBy contrast, this library:\n\n1. SqlAlchemy is the main dependency and registration point (Alembic is, in fact, an optional dependency).\n   The primary function of the library is to declare the underlying objects. And then registration into\n   sqlalchemy\'s event system, or registration into alembic\'s detection system are both optional features.\n\n2. Perhaps a technical detail, but this library registers the declaratively stated objects directly\n   on the metadata/declarative-base. This allows the library to automatically know the intended\n   state of the world, rather than needing to discover objects.\n\n3. The intended purpose of the supported objects is to declare what the state of the world **should**\n   look like. Therefore the function of this library includes the (optional) **removal** of objects\n   detected to exist which are not declared (much like alembic does for tables).\n\n4. As much as possible, this library provides more abstracted interfaces for defining objects.\n   This is particularly important for objects like roles/grants where not every operation is a create\n   or delete (in contrast to something like a view), where a raw SQL string makes it impossible to\n   diff two different a-like objects.\n\n5. Tries to define functionality in cross-dialect terms and only where required farm details out to\n   dialect-specific handlers. Not to claim that all dialects are treated equally (currently only\n   PostgreSQL has first-class support), but technically, there should be no reason we wouldn\'t support\n   any supportable dialect. Today SQLite (for whatever that\'s worth), and MySQL have **some** level\n   of support.\n',
+│ │ +    'long_description': '# SqlAlchemy Declarative Extensions\n\n[![Actions Status](https://github.com/dancardin/sqlalchemy-declarative-extensions/workflows/test/badge.svg)](https://github.com/dancardin/sqlalchemy-declarative-extensions/actions) [![Coverage Status](https://coveralls.io/repos/github/DanCardin/sqlalchemy-declarative-extensions/badge.svg?branch=main)](https://coveralls.io/github/DanCardin/sqlalchemy-declarative-extensions?branch=main) [![Documentation Status](https://readthedocs.org/projects/sqlalchemy-declarative-extensions/badge/?version=latest)](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/?badge=latest)\n\nSee the full documentation [here](https://sqlalchemy-declarative-extensions.readthedocs.io/en/latest/).\n\nAdds extensions to SQLAlchemy (and/or Alembic) which allows declaratively\nstating the existence of additional kinds of objects about your database\nnot natively supported by SqlAlchemy/Alembic.\n\nThis includes:\n\n- Schemas\n- Views\n- Roles\n- Privileges (Grants/Default Grants)\n- Functions\n- Triggers\n- Rows (i.e. data)\n- "audit tables" (i.e. triggers which record data changes to some source table)\n\nThe primary function(s) of this library include:\n\n- Registering onto the SqlAlchemy event system such that `metadata.create_all`\n  creates these objects.\n- (Optionally) Registers into Alembic such that `alembic revision --autogenerate`\n  automatically creates/updates/deletes declared objects.\n\n## Kitchen Sink Example (using all available features)\n\n```python\nfrom sqlalchemy import Column, types, select\nfrom sqlalchemy.orm import as_declarative\nfrom sqlalchemy_declarative_extensions import (\n    declarative_database, Schemas, Roles, Row, View, view,\n)\nfrom sqlalchemy_declarative_extensions.dialects.postgresql import (\n    DefaultGrant, Function, Trigger, Role\n)\nfrom sqlalchemy_declarative_extensions.audit import audit\n\n\n@declarative_database\n@as_declarative\nclass Base:\n    # Note: each object type also has a plural version (i.e. Schemas/Roles/etc) where you can specify\n    # collection-level options like `ignore_unspecified`).\n    #\n    # If you dont set any collection-level options, you can instead use raw list/iterable as the collection.\n    schemas = Schemas().are("example")\n    roles = Roles(ignore_unspecified=True).are(\n        Role("read", login=False),\n        Role(\n            "app",\n            in_roles=[\'read\']\n        ),\n    )\n    grants = [\n        DefaultGrant.on_tables_in_schema("public", \'example\').grant("select", to="read"),\n        DefaultGrant.on_sequences_in_schema("public").grant("usage", to="read"),\n        Grant.new("usage", to="read").on_schemas("example")\n    ]\n    rows = [\n        Row(\'foo\', id=1),\n    ]\n    views = [\n        View("low_foo", "select * from foo where i < 10"),\n    ]\n    functions = [\n        Function(\n            "fancy_function",\n            """\n            BEGIN\n            INSERT INTO foo (id) select NEW.id + 1;\n            RETURN NULL;\n            END\n            """,\n            language="plpgsql",\n            returns="trigger",\n        ),\n    ]\n    triggers = [\n        Trigger.after("insert", on="foo", execute="fancy_function")\n        .named("on_insert_foo")\n        .when("pg_trigger_depth() < 1")\n        .for_each_row(),\n    ]\n\n\n@audit()\nclass Foo(Base):\n    __tablename__ = \'foo\'\n\n    id = Column(types.Integer(), primary_key=True)\n\n\naudit_table = Foo.__audit_table__\n\n\n@view(Base)\nclass HighFoo:\n    __tablename__ = "high_foo"\n    __view__ = select(Foo.__table__).where(Foo.__table__.c.id >= 10)\n```\n\nNote, there is also support for declaring objects directly through the `MetaData` for\nusers not using sqlalchemy\'s declarative API.\n\n## Event Registration\n\nBy default, the above example does not automatically do anything. Depending on the context,\nyou can use one of two registration hooks: `register_sqlalchemy_events` or `register_alembic_events`.\n\n### `register_sqlalchemy_events`\n\nThis registers events in SqlAlchemy\'s event system such that a `metadata.create_all(...)` call\nwill create the declared database objects.\n\n```python\nfrom sqlalchemy_declarative_extensions import register_sqlalchemy_events\n\nmetadata = Base.metadata  # Given the example above.\nregister_sqlalchemy_events(metadata)\n# Which is equivalent to...\nregister_sqlalchemy_events(metadata, schemas=False, roles=False, grants=False, rows=False)\n```\n\nAll object types are opt in, and should be explicitly included in order to get registered.\n\nPractically, this is to avoid issues with testing. In **most** cases the `metadata.create_all` call\nwill be run in tests, a context where it\'s more likely that you dont **need** grants or grants,\nand where parallel test execution could lead to issues with role or schema creation, depending\non your setup.\n\n### `register_alembic_events`\n\nThis registers comparators in Alembic\'s registration system such that an `alembic revision --autogenerate`\ncommand will diff the existing database state against the declared database objects, and issue\nstatements to create/update/delete objects in order to match the declared state.\n\n```python\n# alembic\'s `env.py`\nfrom sqlalchemy_declarative_extensions import register_alembic_events\n\nregister_alembic_events()\n# Which is equivalent to...\nregister_sqlalchemy_events(schemas=True, roles=True, grants=True, rows=True)\n```\n\nAll object types are opt out but can be excluded.\n\nIn contrast to `register_sqlalchemy_events`, it\'s much more likely that you\'re declaring most of these\nobject types in order to have alembic track them\n\n## Database support\n\nIn principle, this library **can** absolutely support any database supported by SqlAlchemy,\nand capable of being introspected enough to support detection of different kinds of objects.\n\nAs you can see below, in reality the existence of implementations are going to be purely driven by actual\nusage. The current maintainer(s) primarily use PostgreSQL and as such individual features for\nother databases will either suffer or lack implementation.\n\n| | Postgres | MySQL | SQLite |\n| Schema | ✓ | | ✓ |\n| View | ✓ | ✓ | ✓ |\n| Role | ✓ | | |\n| Grant | ✓ | | |\n| Default Grant | ✓ | | |\n| Function | ✓ | _ | |\n| Trigger | ✓ | _ | |\n| Row (data) | ✓ | ✓ | ✓ |\n| "Audit Table" | ✓ | | |\n\nThe astrisks above note pending or provisional support. The level of expertise in each dialects\'\nparticular behaviors is not uniform, and deciding on the correct behavior for those dialects\nwill require users to submit issues/fixes!\n\nSupporting a new dialect **can** be as simple as providing the dialect-dispatched implementations\nfor detecting existing objects of the given type. Very much the intent is that once a given object\ntype is supported at all, the comparison infrastructure for that type should make it straightforward\nto support other dialects. At the end of the day, this library is primarily producing SQL statements,\nso in theory any dialect supporting a given object type should be able to be supported.\n\nIn such cases (like Grants/Roles) that different dialects support wildly different\noptions/syntax, there are also patterns for defining dialect-specific objects, to mediate\nany additional differences.\n\n## Alembic-utils\n\n[Alembic Utils](https://github.com/olirice/alembic_utils) is the primary library against which\nthis library can be compared. At time of writing, **most** (but not all) object types supported\nby alembic-utils are supported by this library. One might begin to question when to use which library.\n\nBelow is a list of points on which the two libraries diverge. But note that you **can** certainly\nuse both in tandem! It doesn\'t need to be one or the other, and certainly for any object types\nwhich do not overlap, you might **need** to use both.\n\n- Database Support\n\n  - Alembic Utils seems to explicitly only support PostgreSQL.\n\n  - This library is designed to support any dialect (in theory). Certainly PostgreSQL\n    is **best** supported, but there does exist support for specific kinds of objects\n    to varying levels of support for SQLite and MySQL, so far.\n\n- Architecture\n\n  - Alembic Utils is directly tied to Alembic and does not support SQLAlchemy\'s `MetaData.create_all`.\n    It\'s also the responsibility of the user to discover/register objects in alembic.\n\n  - This library **depends** only on SqlAlchemy, although it also supports alembic. Support for\n    `MetaData.create_all` can be important for creating all object types in tests. It also\n    is designed such that objects are registered on the `MetaData` itself, so there is no need for\n    any specific discovery phase.\n\n- Scope\n\n  - Alembic Utils declares specific, individual objects. I.e. you instantiate one specific `PGGrantTable`\n    or `PGView` instance and Alembic know knows you want that object to be created. It cannot drop\n    objects it is not already aware of.\n\n  - This library declares ths objects the system as a whole expects to exist. Similar to Alembic\'s\n    behavior on tables, it will (by default) detect any **undeclared** objects that should not exist\n    and drop them. That means, you can rely on this object to ensure the state of your migrations\n    matches the state of your database exactly.\n\n- Migration history\n\n  - Alembic Utils imports and references its own objects in your migrations history. This can be\n    unfortunate, in that it deeply ties your migrations history to alembic-utils.\n\n    (In fact, this can be a sticking point, trying to convert **away** from `alembic_utils`, because it\n    will attempt to drop all the (e.g `PGView`) instances previously created when we replaced it with\n    this library.)\n\n  - This library, by contrast, prefers to emit the raw SQL of the operation into your migration.\n    That means you know the exact commands that will execute in your migration, which can be helpful\n    in debugging failure. It also means, if at any point you decide to stop use of the library\n    (or pause a given type of object, due to a bug), you can! This library\'s behaviors are primarily\n    very much `--autogenerate`-time only.\n\n- Abstraction Level\n\n  - Alembic Utils appears to define a very "literal" interface (for example, `PGView` accepts\n    the whole view definition as a raw literal string).\n\n  - This library tries to, as much as possible, provide a more abstracted interface that enables\n    more compatibility with SQLAlchemy (For example `View` accepts SQLAlchemy objects which can\n    be coerced into a `SELECT`). It also tends towards "builder" interfaces which progressively produce\n    a object (Take a look at the `DefaultGrant` above, for an example of where that\'s helpful).\n\nA separate note on conversion/compatibility. Where possible, this library tries to support alembic-utils\nnative objects as stand-ins for the objects defined in this library. For example, `alembic_utils.pg_view.PGView`\ncan be declared instead of a `sqlalchemy_declarative_extensions.View`, and we will internally\ncoerce it into the appropriate type. Hopefully this eases any transitional costs, or\nissues using one or the other library.\n',
+│ │      'author': 'Dan Cardin',
+│ │      'author_email': 'ddcardin@gmail.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/dancardin/sqlalchemy-declarative-extensions',
+│ │      'package_dir': package_dir,
+│ │      'packages': packages,
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8

@@ -1,0 +1,103 @@
+--- tmp/pyexhange_r3ne-0.0.8.tar.gz
++++ tmp/pyexhange_r3ne-0.0.9.tar.gz
+│   --- pyexhange_r3ne-0.0.8.tar
+├── +++ pyexhange_r3ne-0.0.9.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ --rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/.gitattributes
+│ │ --rwxr-xr-x   0        0        0       17 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/Run.bat
+│ │ --rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/config.json.example
+│ │ --rw-r--r--   0        0        0     1907 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/pyexhange.py
+│ │ --rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/requirements.txt
+│ │ --rw-r--r--   0        0        0      370 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/test.py
+│ │ --rwxr-xr-x   0        0        0       56 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/upload.bat
+│ │ --rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/data/placeholder
+│ │ --rw-r--r--   0        0        0     1541 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/modules/send.py
+│ │ --rw-r--r--   0        0        0     2765 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/modules/trade.py
+│ │ --rw-r--r--   0        0        0      934 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/modules/wallet.py
+│ │ --rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/modules/utils/data.py
+│ │ --rw-r--r--   0        0        0     1490 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/modules/utils/finhub.py
+│ │ --rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/.gitignore
+│ │ --rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/LICENCE.rst
+│ │ --rw-r--r--   0        0        0      724 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/README.md
+│ │ --rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1299 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.8/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/.gitattributes
+│ │ +-rwxr-xr-x   0        0        0       32 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/Run.bat
+│ │ +-rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/config.json.example
+│ │ +-rw-r--r--   0        0        0     1907 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/pyexhange.py
+│ │ +-rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/requirements.txt
+│ │ +-rw-r--r--   0        0        0      370 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/test.py
+│ │ +-rwxr-xr-x   0        0        0       71 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/upload.bat
+│ │ +-rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/data/placeholder
+│ │ +-rw-r--r--   0        0        0     1541 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/send.py
+│ │ +-rw-r--r--   0        0        0     2765 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/trade.py
+│ │ +-rw-r--r--   0        0        0      934 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/wallet.py
+│ │ +-rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/utils/data.py
+│ │ +-rw-r--r--   0        0        0     1490 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/utils/finhub.py
+│ │ +-rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/.gitignore
+│ │ +-rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/LICENCE.rst
+│ │ +-rw-r--r--   0        0        0      724 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/README.md
+│ │ +-rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1299 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/PKG-INFO
+│ │   --- pyexhange_r3ne-0.0.8/pyexhange.py
+│ ├── +++ pyexhange_r3ne-0.0.9/pyexhange.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/modules/send.py
+│ ├── +++ pyexhange_r3ne-0.0.9/modules/send.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/modules/trade.py
+│ ├── +++ pyexhange_r3ne-0.0.9/modules/trade.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/modules/wallet.py
+│ ├── +++ pyexhange_r3ne-0.0.9/modules/wallet.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/modules/utils/data.py
+│ ├── +++ pyexhange_r3ne-0.0.9/modules/utils/data.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/modules/utils/finhub.py
+│ ├── +++ pyexhange_r3ne-0.0.9/modules/utils/finhub.py
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/.gitignore
+│ ├── +++ pyexhange_r3ne-0.0.9/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/LICENCE.rst
+│ ├── +++ pyexhange_r3ne-0.0.9/LICENCE.rst
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/README.md
+│ ├── +++ pyexhange_r3ne-0.0.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- pyexhange_r3ne-0.0.8/pyproject.toml
+│ ├── +++ pyexhange_r3ne-0.0.9/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["hatchling", "finnhub-python"]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "pyexhange_r3ne"
+│ │ -version = "0.0.8"
+│ │ +version = "0.0.9"
+│ │  authors = [
+│ │    { name="R3ne.net", email="mail@r3ne.net" },
+│ │  ]
+│ │  description = "Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money."
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- pyexhange_r3ne-0.0.8/PKG-INFO
+│ ├── +++ pyexhange_r3ne-0.0.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pyexhange_r3ne
+│ │ -Version: 0.0.8
+│ │ +Version: 0.0.9
+│ │  Summary: Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money.
+│ │  Project-URL: Homepage, https://github.com/JAAKKQ/pyexhange
+│ │  Project-URL: Bug Tracker, https://github.com/JAAKKQ/pyexhange/issues
+│ │  Author-email: "R3ne.net" <mail@r3ne.net>
+│ │  License-File: LICENCE.rst
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent

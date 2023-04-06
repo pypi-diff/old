@@ -1,0 +1,774 @@
+# Comparing `tmp/lama-cleaner-1.0.4.tar.gz` & `tmp/lama-cleaner-1.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "lama-cleaner-1.0.4.tar", last modified: Mon Apr  3 15:05:32 2023, max compression
++gzip compressed data, was "lama-cleaner-1.1.0.tar", last modified: Thu Apr  6 14:13:20 2023, max compression
+```
+
+## Comparing `lama-cleaner-1.0.4.tar` & `lama-cleaner-1.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,88 +1,102 @@
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.831830 lama-cleaner-1.0.4/
+--rw-r--r--   0 cwq        (501) staff       (20)    11357 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/LICENSE
+--rw-r--r--   0 cwq        (501) staff       (20)     4640 2023-04-03 15:05:32.831710 lama-cleaner-1.0.4/PKG-INFO
+--rw-r--r--   0 cwq        (501) staff       (20)     3213 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/README.md
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.816078 lama-cleaner-1.0.4/lama_cleaner/
+--rw-r--r--   0 cwq        (501) staff       (20)      488 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/__init__.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.813287 lama-cleaner-1.0.4/lama_cleaner/app/
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.817180 lama-cleaner-1.0.4/lama_cleaner/app/build/
+--rw-r--r--   0 cwq        (501) staff       (20)      742 2023-04-02 08:11:55.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/asset-manifest.json
+--rw-r--r--   0 cwq        (501) staff       (20)      681 2023-04-02 08:11:55.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/index.html
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.813537 lama-cleaner-1.0.4/lama_cleaner/app/build/static/
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.817331 lama-cleaner-1.0.4/lama_cleaner/app/build/static/css/
+--rw-r--r--   0 cwq        (501) staff       (20)    33113 2023-04-02 08:11:55.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/css/main.6ca672e8.css
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.818652 lama-cleaner-1.0.4/lama_cleaner/app/build/static/js/
+--rw-r--r--   0 cwq        (501) staff       (20)   765660 2023-04-02 08:11:55.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/js/main.44aac645.js
+--rw-r--r--   0 cwq        (501) staff       (20)     1971 2023-04-02 08:11:55.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/js/main.44aac645.js.LICENSE.txt
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.821018 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/
+--rw-r--r--   0 cwq        (501) staff       (20)   192104 2023-04-02 08:11:31.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Black.67c2c5a144333953880b.ttf
+--rw-r--r--   0 cwq        (501) staff       (20)   192548 2023-04-02 08:11:31.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Bold.2bea7a7f7d052c74da25.ttf
+--rw-r--r--   0 cwq        (501) staff       (20)   192140 2023-04-02 08:11:31.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Regular.bb287b894b27372d8ea7.ttf
+--rw-r--r--   0 cwq        (501) staff       (20)   192596 2023-04-02 08:11:31.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-SemiBold.1e98db4eb705b586728e.ttf
+--rw-r--r--   0 cwq        (501) staff       (20)   431724 2023-04-02 08:11:31.000000 lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/coffee-machine-lineal.ee32631219cc3986f861.gif
+--rw-r--r--   0 cwq        (501) staff       (20)     3244 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/benchmark.py
+--rw-r--r--   0 cwq        (501) staff       (20)     4381 2023-04-03 15:00:12.000000 lama-cleaner-1.0.4/lama_cleaner/const.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.821975 lama-cleaner-1.0.4/lama_cleaner/file_manager/
+--rw-r--r--   0 cwq        (501) staff       (20)       38 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/file_manager/__init__.py
+--rw-r--r--   0 cwq        (501) staff       (20)     8685 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/file_manager/file_manager.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1293 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/file_manager/storage_backends.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1758 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/file_manager/utils.py
+--rw-r--r--   0 cwq        (501) staff       (20)     8296 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/helper.py
+--rw-r--r--   0 cwq        (501) staff       (20)      232 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/installer.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.828452 lama-cleaner-1.0.4/lama_cleaner/model/
+--rw-r--r--   0 cwq        (501) staff       (20)        0 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/model/__init__.py
+--rw-r--r--   0 cwq        (501) staff       (20)     9488 2023-02-19 13:09:51.000000 lama-cleaner-1.0.4/lama_cleaner/model/base.py
+--rw-r--r--   0 cwq        (501) staff       (20)     6980 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/controlnet.py
+--rw-r--r--   0 cwq        (501) staff       (20)     6881 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/model/ddim_sampler.py
+--rw-r--r--   0 cwq        (501) staff       (20)    57098 2023-02-27 13:02:16.000000 lama-cleaner-1.0.4/lama_cleaner/model/fcf.py
+--rw-r--r--   0 cwq        (501) staff       (20)     3175 2023-03-01 13:56:56.000000 lama-cleaner-1.0.4/lama_cleaner/model/instruct_pix2pix.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1480 2023-02-27 13:02:16.000000 lama-cleaner-1.0.4/lama_cleaner/model/lama.py
+--rw-r--r--   0 cwq        (501) staff       (20)    11275 2023-02-27 13:02:16.000000 lama-cleaner-1.0.4/lama_cleaner/model/ldm.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2884 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/manga.py
+--rw-r--r--   0 cwq        (501) staff       (20)    62625 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/mat.py
+--rw-r--r--   0 cwq        (501) staff       (20)      716 2023-02-19 13:09:51.000000 lama-cleaner-1.0.4/lama_cleaner/model/opencv2.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2934 2023-03-01 13:56:56.000000 lama-cleaner-1.0.4/lama_cleaner/model/paint_by_example.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.828706 lama-cleaner-1.0.4/lama_cleaner/model/pipeline/
+--rw-r--r--   0 cwq        (501) staff       (20)      108 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/pipeline/__init__.py
+--rw-r--r--   0 cwq        (501) staff       (20)    28149 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/pipeline/pipeline_stable_diffusion_controlnet_inpaint.py
+--rw-r--r--   0 cwq        (501) staff       (20)    11851 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/model/plms_sampler.py
+--rw-r--r--   0 cwq        (501) staff       (20)     6642 2023-04-03 14:39:48.000000 lama-cleaner-1.0.4/lama_cleaner/model/sd.py
+--rw-r--r--   0 cwq        (501) staff       (20)    33811 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model/utils.py
+--rw-r--r--   0 cwq        (501) staff       (20)    15395 2023-02-27 13:02:16.000000 lama-cleaner-1.0.4/lama_cleaner/model/zits.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2497 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/model_manager.py
+--rw-r--r--   0 cwq        (501) staff       (20)     8312 2023-04-03 15:00:32.000000 lama-cleaner-1.0.4/lama_cleaner/parse_args.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.830047 lama-cleaner-1.0.4/lama_cleaner/plugins/
+--rw-r--r--   0 cwq        (501) staff       (20)      238 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/__init__.py
+--rw-r--r--   0 cwq        (501) staff       (20)      280 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/base_plugin.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2400 2023-04-03 05:14:59.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/gfpgan_plugin.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2750 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/gfpganer.py
+--rw-r--r--   0 cwq        (501) staff       (20)     4156 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/gif.py
+--rw-r--r--   0 cwq        (501) staff       (20)     8517 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/interactive_seg.py
+--rw-r--r--   0 cwq        (501) staff       (20)     3573 2023-04-03 05:31:35.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/realesrgan.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1018 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/remove_bg.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1747 2023-04-03 05:15:02.000000 lama-cleaner-1.0.4/lama_cleaner/plugins/restoreformer.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1309 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/runtime.py
+--rw-r--r--   0 cwq        (501) staff       (20)     3306 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/schema.py
+--rw-r--r--   0 cwq        (501) staff       (20)    17047 2023-04-03 05:23:39.000000 lama-cleaner-1.0.4/lama_cleaner/server.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.831497 lama-cleaner-1.0.4/lama_cleaner/tests/
+--rw-r--r--   0 cwq        (501) staff       (20)        0 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/tests/__init__.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2951 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_controlnet.py
+--rw-r--r--   0 cwq        (501) staff       (20)     2320 2023-02-14 05:56:20.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_instruct_pix2pix.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1398 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_interactive_seg.py
+--rw-r--r--   0 cwq        (501) staff       (20)      596 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_load_img.py
+--rw-r--r--   0 cwq        (501) staff       (20)     5826 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_model.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1491 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_model_md5.py
+--rw-r--r--   0 cwq        (501) staff       (20)     3985 2023-02-05 13:09:10.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_paint_by_example.py
+--rw-r--r--   0 cwq        (501) staff       (20)     1833 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_plugins.py
+--rw-r--r--   0 cwq        (501) staff       (20)      875 2023-02-08 03:34:52.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_save_exif.py
+--rw-r--r--   0 cwq        (501) staff       (20)     7647 2023-04-02 07:46:39.000000 lama-cleaner-1.0.4/lama_cleaner/tests/test_sd_model.py
+--rw-r--r--   0 cwq        (501) staff       (20)     7330 2023-04-03 15:00:04.000000 lama-cleaner-1.0.4/lama_cleaner/web_config.py
+-drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-03 15:05:32.816884 lama-cleaner-1.0.4/lama_cleaner.egg-info/
+--rw-r--r--   0 cwq        (501) staff       (20)     4640 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/PKG-INFO
+--rw-r--r--   0 cwq        (501) staff       (20)     2640 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/SOURCES.txt
+--rw-r--r--   0 cwq        (501) staff       (20)        1 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/dependency_links.txt
+--rw-r--r--   0 cwq        (501) staff       (20)       59 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/entry_points.txt
+--rw-r--r--   0 cwq        (501) staff       (20)      251 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/requires.txt
+--rw-r--r--   0 cwq        (501) staff       (20)       13 2023-04-03 15:05:32.000000 lama-cleaner-1.0.4/lama_cleaner.egg-info/top_level.txt
+--rw-r--r--   0 cwq        (501) staff       (20)       38 2023-04-03 15:05:32.831873 lama-cleaner-1.0.4/setup.cfg
+--rw-r--r--   0 cwq        (501) staff       (20)     1616 2023-04-03 15:05:08.000000 lama-cleaner-1.0.4/setup.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.173211 lama-cleaner-1.1.0/
++-rw-r--r--   0 cwq        (501) staff       (20)    11357 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/LICENSE
++-rw-r--r--   0 cwq        (501) staff       (20)     4640 2023-04-06 14:13:20.173106 lama-cleaner-1.1.0/PKG-INFO
++-rw-r--r--   0 cwq        (501) staff       (20)     3213 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/README.md
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.160224 lama-cleaner-1.1.0/lama_cleaner/
++-rw-r--r--   0 cwq        (501) staff       (20)      488 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/__init__.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.157409 lama-cleaner-1.1.0/lama_cleaner/app/
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.161423 lama-cleaner-1.1.0/lama_cleaner/app/build/
++-rw-r--r--   0 cwq        (501) staff       (20)      742 2023-04-02 08:11:55.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/asset-manifest.json
++-rw-r--r--   0 cwq        (501) staff       (20)      681 2023-04-02 08:11:55.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/index.html
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.157646 lama-cleaner-1.1.0/lama_cleaner/app/build/static/
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.161656 lama-cleaner-1.1.0/lama_cleaner/app/build/static/css/
++-rw-r--r--   0 cwq        (501) staff       (20)    33113 2023-04-02 08:11:55.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/css/main.6ca672e8.css
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.162815 lama-cleaner-1.1.0/lama_cleaner/app/build/static/js/
++-rw-r--r--   0 cwq        (501) staff       (20)   765660 2023-04-02 08:11:55.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/js/main.44aac645.js
++-rw-r--r--   0 cwq        (501) staff       (20)     1971 2023-04-02 08:11:55.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/js/main.44aac645.js.LICENSE.txt
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.165205 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/
++-rw-r--r--   0 cwq        (501) staff       (20)   192104 2023-04-02 08:11:31.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Black.67c2c5a144333953880b.ttf
++-rw-r--r--   0 cwq        (501) staff       (20)   192548 2023-04-02 08:11:31.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Bold.2bea7a7f7d052c74da25.ttf
++-rw-r--r--   0 cwq        (501) staff       (20)   192140 2023-04-02 08:11:31.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Regular.bb287b894b27372d8ea7.ttf
++-rw-r--r--   0 cwq        (501) staff       (20)   192596 2023-04-02 08:11:31.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-SemiBold.1e98db4eb705b586728e.ttf
++-rw-r--r--   0 cwq        (501) staff       (20)   431724 2023-04-02 08:11:31.000000 lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/coffee-machine-lineal.ee32631219cc3986f861.gif
++-rw-r--r--   0 cwq        (501) staff       (20)     3244 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/benchmark.py
++-rw-r--r--   0 cwq        (501) staff       (20)     4509 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/const.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.166020 lama-cleaner-1.1.0/lama_cleaner/file_manager/
++-rw-r--r--   0 cwq        (501) staff       (20)       38 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/file_manager/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     8685 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/file_manager/file_manager.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1293 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/file_manager/storage_backends.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1758 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/file_manager/utils.py
++-rw-r--r--   0 cwq        (501) staff       (20)     8296 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/helper.py
++-rw-r--r--   0 cwq        (501) staff       (20)      232 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/installer.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.167911 lama-cleaner-1.1.0/lama_cleaner/model/
++-rw-r--r--   0 cwq        (501) staff       (20)        0 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/model/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     9488 2023-02-19 13:09:51.000000 lama-cleaner-1.1.0/lama_cleaner/model/base.py
++-rw-r--r--   0 cwq        (501) staff       (20)     6980 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/controlnet.py
++-rw-r--r--   0 cwq        (501) staff       (20)     6881 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/model/ddim_sampler.py
++-rw-r--r--   0 cwq        (501) staff       (20)    57098 2023-02-27 13:02:16.000000 lama-cleaner-1.1.0/lama_cleaner/model/fcf.py
++-rw-r--r--   0 cwq        (501) staff       (20)     3175 2023-03-01 13:56:56.000000 lama-cleaner-1.1.0/lama_cleaner/model/instruct_pix2pix.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1480 2023-02-27 13:02:16.000000 lama-cleaner-1.1.0/lama_cleaner/model/lama.py
++-rw-r--r--   0 cwq        (501) staff       (20)    11275 2023-02-27 13:02:16.000000 lama-cleaner-1.1.0/lama_cleaner/model/ldm.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2884 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/manga.py
++-rw-r--r--   0 cwq        (501) staff       (20)    62625 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/mat.py
++-rw-r--r--   0 cwq        (501) staff       (20)      716 2023-02-19 13:09:51.000000 lama-cleaner-1.1.0/lama_cleaner/model/opencv2.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2934 2023-03-01 13:56:56.000000 lama-cleaner-1.1.0/lama_cleaner/model/paint_by_example.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.168334 lama-cleaner-1.1.0/lama_cleaner/model/pipeline/
++-rw-r--r--   0 cwq        (501) staff       (20)      108 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/pipeline/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)    28149 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/pipeline/pipeline_stable_diffusion_controlnet_inpaint.py
++-rw-r--r--   0 cwq        (501) staff       (20)    11851 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/model/plms_sampler.py
++-rw-r--r--   0 cwq        (501) staff       (20)     6642 2023-04-03 14:39:48.000000 lama-cleaner-1.1.0/lama_cleaner/model/sd.py
++-rw-r--r--   0 cwq        (501) staff       (20)    33811 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model/utils.py
++-rw-r--r--   0 cwq        (501) staff       (20)    15395 2023-02-27 13:02:16.000000 lama-cleaner-1.1.0/lama_cleaner/model/zits.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2497 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/model_manager.py
++-rw-r--r--   0 cwq        (501) staff       (20)     8313 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/parse_args.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.169839 lama-cleaner-1.1.0/lama_cleaner/plugins/
++-rw-r--r--   0 cwq        (501) staff       (20)      231 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)      280 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/base_plugin.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2400 2023-04-03 05:14:59.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/gfpgan_plugin.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2750 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/gfpganer.py
++-rw-r--r--   0 cwq        (501) staff       (20)     4156 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/gif.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2555 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/interactive_seg.py
++-rw-r--r--   0 cwq        (501) staff       (20)     3573 2023-04-03 05:31:35.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/realesrgan.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1018 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/remove_bg.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1747 2023-04-03 05:15:02.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/restoreformer.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.170180 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/
++-rw-r--r--   0 cwq        (501) staff       (20)      363 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2929 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/build_sam.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.171020 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/
++-rw-r--r--   0 cwq        (501) staff       (20)      385 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1479 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/common.py
++-rw-r--r--   0 cwq        (501) staff       (20)    14407 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/image_encoder.py
++-rw-r--r--   0 cwq        (501) staff       (20)     6614 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/mask_decoder.py
++-rw-r--r--   0 cwq        (501) staff       (20)     8594 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/prompt_encoder.py
++-rw-r--r--   0 cwq        (501) staff       (20)     7225 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/sam.py
++-rw-r--r--   0 cwq        (501) staff       (20)     8396 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/modeling/transformer.py
++-rw-r--r--   0 cwq        (501) staff       (20)    11837 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/predictor.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.171259 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/utils/
++-rw-r--r--   0 cwq        (501) staff       (20)      197 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/utils/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     4054 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/plugins/segment_anything/utils/transforms.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1309 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/runtime.py
++-rw-r--r--   0 cwq        (501) staff       (20)     3306 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/schema.py
++-rw-r--r--   0 cwq        (501) staff       (20)    17556 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/server.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.172905 lama-cleaner-1.1.0/lama_cleaner/tests/
++-rw-r--r--   0 cwq        (501) staff       (20)        0 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/tests/__init__.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2951 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_controlnet.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2320 2023-02-14 05:56:20.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_instruct_pix2pix.py
++-rw-r--r--   0 cwq        (501) staff       (20)      596 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_load_img.py
++-rw-r--r--   0 cwq        (501) staff       (20)     5826 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_model.py
++-rw-r--r--   0 cwq        (501) staff       (20)     1491 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_model_md5.py
++-rw-r--r--   0 cwq        (501) staff       (20)     3985 2023-02-05 13:09:10.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_paint_by_example.py
++-rw-r--r--   0 cwq        (501) staff       (20)     2631 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_plugins.py
++-rw-r--r--   0 cwq        (501) staff       (20)      875 2023-02-08 03:34:52.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_save_exif.py
++-rw-r--r--   0 cwq        (501) staff       (20)     7647 2023-04-02 07:46:39.000000 lama-cleaner-1.1.0/lama_cleaner/tests/test_sd_model.py
++-rw-r--r--   0 cwq        (501) staff       (20)     7330 2023-04-03 15:00:04.000000 lama-cleaner-1.1.0/lama_cleaner/web_config.py
++drwxr-xr-x   0 cwq        (501) staff       (20)        0 2023-04-06 14:13:20.161038 lama-cleaner-1.1.0/lama_cleaner.egg-info/
++-rw-r--r--   0 cwq        (501) staff       (20)     4640 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/PKG-INFO
++-rw-r--r--   0 cwq        (501) staff       (20)     3287 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/SOURCES.txt
++-rw-r--r--   0 cwq        (501) staff       (20)        1 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/dependency_links.txt
++-rw-r--r--   0 cwq        (501) staff       (20)       59 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/entry_points.txt
++-rw-r--r--   0 cwq        (501) staff       (20)      251 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/requires.txt
++-rw-r--r--   0 cwq        (501) staff       (20)       13 2023-04-06 14:13:20.000000 lama-cleaner-1.1.0/lama_cleaner.egg-info/top_level.txt
++-rw-r--r--   0 cwq        (501) staff       (20)       38 2023-04-06 14:13:20.173247 lama-cleaner-1.1.0/setup.cfg
++-rw-r--r--   0 cwq        (501) staff       (20)     1616 2023-04-06 14:12:49.000000 lama-cleaner-1.1.0/setup.py
+```
+
+### Comparing `lama-cleaner-1.0.4/LICENSE` & `lama-cleaner-1.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/PKG-INFO` & `lama-cleaner-1.1.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: lama-cleaner
+-Version: 1.0.4
++Version: 1.1.0
+ Summary: Image inpainting tool powered by SOTA AI Model
+ Home-page: https://github.com/Sanster/lama-cleaner
+ Author: PanicByte
+ Author-email: cwq1913@gmail.com
+ License: UNKNOWN
+ Description: <h1 align="center">Lama Cleaner</h1>
+         <p align="center">A free and open-source inpainting tool powered by SOTA AI model.</p>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: lama-cleaner Version: 1.0.4 Summary: Image
++Metadata-Version: 2.1 Name: lama-cleaner Version: 1.1.0 Summary: Image
+ inpainting tool powered by SOTA AI Model Home-page: https://github.com/Sanster/
+ lama-cleaner Author: PanicByte Author-email: cwq1913@gmail.com License: UNKNOWN
+ Description:
+                           ****** Lama Cleaner ******
+        A free and open-source inpainting tool powered by SOTA AI model.
+    [total_download] [version] [Open_in_Colab] [Hugging_Face_Spaces] [python
+                               version] [version]
+```
+
+### Comparing `lama-cleaner-1.0.4/README.md` & `lama-cleaner-1.1.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/asset-manifest.json` & `lama-cleaner-1.1.0/lama_cleaner/app/build/asset-manifest.json`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/index.html` & `lama-cleaner-1.1.0/lama_cleaner/app/build/index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/css/main.6ca672e8.css` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/css/main.6ca672e8.css`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/js/main.44aac645.js` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/js/main.44aac645.js`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/js/main.44aac645.js.LICENSE.txt` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/js/main.44aac645.js.LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Black.67c2c5a144333953880b.ttf` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Black.67c2c5a144333953880b.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Bold.2bea7a7f7d052c74da25.ttf` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Bold.2bea7a7f7d052c74da25.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-Regular.bb287b894b27372d8ea7.ttf` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-Regular.bb287b894b27372d8ea7.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/WorkSans-SemiBold.1e98db4eb705b586728e.ttf` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/WorkSans-SemiBold.1e98db4eb705b586728e.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/app/build/static/media/coffee-machine-lineal.ee32631219cc3986f861.gif` & `lama-cleaner-1.1.0/lama_cleaner/app/build/static/media/coffee-machine-lineal.ee32631219cc3986f861.gif`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/benchmark.py` & `lama-cleaner-1.1.0/lama_cleaner/benchmark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/const.py` & `lama-cleaner-1.1.0/lama_cleaner/const.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ MPS_SUPPORT_MODELS = [
+     "instruct_pix2pix",
+     "sd1.5",
+     "anything4",
+     "realisticVision1.4",
+     "sd2",
+     "paint_by_example",
+-    "controlnet"
++    "controlnet",
+ ]
+ 
+ DEFAULT_MODEL = "lama"
+ AVAILABLE_MODELS = [
+     "lama",
+     "ldm",
+     "zits",
+@@ -101,15 +101,17 @@
+     realesr_general_x4v3 = "realesr-general-x4v3"
+     RealESRGAN_x4plus = "RealESRGAN_x4plus"
+     RealESRGAN_x4plus_anime_6B = "RealESRGAN_x4plus_anime_6B"
+ 
+ 
+ RealESRGANModelNameList = [e.value for e in RealESRGANModelName]
+ 
+-INTERACTIVE_SEG_HELP = "Enable interactive segmentation. Always run on CPU"
++INTERACTIVE_SEG_HELP = "Enable interactive segmentation using Segment Anything."
++AVAILABLE_INTERACTIVE_SEG_MODELS = ["vit_b", "vit_l", "vit_h"]
++AVAILABLE_INTERACTIVE_SEG_DEVICES = ["cuda", "cpu", "mps"]
+ REMOVE_BG_HELP = "Enable remove background. Always run on CPU"
+ REALESRGAN_HELP = "Enable realesrgan super resolution"
+ REALESRGAN_AVAILABLE_DEVICES = ["cpu", "cuda", "mps"]
+ GFPGAN_HELP = (
+     "Enable GFPGAN face restore. To enhance background, use with --enable-realesrgan"
+ )
+ GFPGAN_AVAILABLE_DEVICES = ["cpu", "cuda", "mps"]
+```
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/file_manager/file_manager.py` & `lama-cleaner-1.1.0/lama_cleaner/file_manager/file_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/file_manager/storage_backends.py` & `lama-cleaner-1.1.0/lama_cleaner/file_manager/storage_backends.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/file_manager/utils.py` & `lama-cleaner-1.1.0/lama_cleaner/file_manager/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/helper.py` & `lama-cleaner-1.1.0/lama_cleaner/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/base.py` & `lama-cleaner-1.1.0/lama_cleaner/model/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/controlnet.py` & `lama-cleaner-1.1.0/lama_cleaner/model/controlnet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/ddim_sampler.py` & `lama-cleaner-1.1.0/lama_cleaner/model/ddim_sampler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/fcf.py` & `lama-cleaner-1.1.0/lama_cleaner/model/fcf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/instruct_pix2pix.py` & `lama-cleaner-1.1.0/lama_cleaner/model/instruct_pix2pix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/lama.py` & `lama-cleaner-1.1.0/lama_cleaner/model/lama.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/ldm.py` & `lama-cleaner-1.1.0/lama_cleaner/model/ldm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/manga.py` & `lama-cleaner-1.1.0/lama_cleaner/model/manga.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/mat.py` & `lama-cleaner-1.1.0/lama_cleaner/model/mat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/opencv2.py` & `lama-cleaner-1.1.0/lama_cleaner/model/opencv2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/paint_by_example.py` & `lama-cleaner-1.1.0/lama_cleaner/model/paint_by_example.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/pipeline/pipeline_stable_diffusion_controlnet_inpaint.py` & `lama-cleaner-1.1.0/lama_cleaner/model/pipeline/pipeline_stable_diffusion_controlnet_inpaint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/plms_sampler.py` & `lama-cleaner-1.1.0/lama_cleaner/model/plms_sampler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/sd.py` & `lama-cleaner-1.1.0/lama_cleaner/model/sd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/utils.py` & `lama-cleaner-1.1.0/lama_cleaner/model/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model/zits.py` & `lama-cleaner-1.1.0/lama_cleaner/model/zits.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/model_manager.py` & `lama-cleaner-1.1.0/lama_cleaner/model_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/parse_args.py` & `lama-cleaner-1.1.0/lama_cleaner/parse_args.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -79,14 +79,24 @@
+     # Plugins
+     parser.add_argument(
+         "--enable-interactive-seg",
+         action="store_true",
+         help=INTERACTIVE_SEG_HELP,
+     )
+     parser.add_argument(
++        "--interactive-seg-model",
++        default="vit_l",
++        help=AVAILABLE_INTERACTIVE_SEG_MODELS,
++    )
++    parser.add_argument(
++        "--interactive-seg-device",
++        default="cpu",
++        help=AVAILABLE_INTERACTIVE_SEG_DEVICES,
++    )
++    parser.add_argument(
+         "--enable-remove-bg",
+         action="store_true",
+         help=REMOVE_BG_HELP,
+     )
+     parser.add_argument(
+         "--enable-realesrgan",
+         action="store_true",
+@@ -226,16 +236,8 @@
+         if not output_dir.exists():
+             logger.info(f"Creating output directory: {output_dir}")
+             output_dir.mkdir(parents=True)
+         else:
+             if not output_dir.is_dir():
+                 parser.error(f"invalid --output-dir: {output_dir} is not a directory")
+ 
+-    if args.enable_gfpgan:
+-        if args.enable_realesrgan:
+-            logger.info("Use realesrgan as GFPGAN background upscaler")
+-        else:
+-            logger.info(
+-                f"GFPGAN no background upscaler, use --enable-realesrgan to enable it"
+-            )
+-
+     return args
+```
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/gfpgan_plugin.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/gfpgan_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/gfpganer.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/gfpganer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/gif.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/gif.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/realesrgan.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/realesrgan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/remove_bg.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/remove_bg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/plugins/restoreformer.py` & `lama-cleaner-1.1.0/lama_cleaner/plugins/restoreformer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/runtime.py` & `lama-cleaner-1.1.0/lama_cleaner/runtime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/schema.py` & `lama-cleaner-1.1.0/lama_cleaner/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/server.py` & `lama-cleaner-1.1.0/lama_cleaner/server.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ #!/usr/bin/env python3
++import hashlib
+ import os
+ 
+ os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+ 
+ import imghdr
+ import io
+ import logging
+@@ -311,14 +312,18 @@
+         return "Plugin not found", 500
+ 
+     origin_image_bytes = files["image"].read()  # RGB
+     rgb_np_img, alpha_channel, exif = load_img(origin_image_bytes, return_exif=True)
+ 
+     start = time.time()
+     try:
++        form = dict(form)
++        if name == InteractiveSeg.name:
++            img_md5 = hashlib.md5(origin_image_bytes).hexdigest()
++            form["img_md5"] = img_md5
+         bgr_res = plugins[name](rgb_np_img, files, form)
+     except RuntimeError as e:
+         torch.cuda.empty_cache()
+         if "CUDA out of memory. " in str(e):
+             # NOTE: the string may change?
+             return "CUDA out of memory", 500
+         else:
+@@ -433,29 +438,37 @@
+         return "No Input Image"
+ 
+ 
+ def build_plugins(args):
+     global plugins
+     if args.enable_interactive_seg:
+         logger.info(f"Initialize {InteractiveSeg.name} plugin")
+-        plugins[InteractiveSeg.name] = InteractiveSeg()
++        plugins[InteractiveSeg.name] = InteractiveSeg(
++            args.interactive_seg_model, args.interactive_seg_device
++        )
+     if args.enable_remove_bg:
+         logger.info(f"Initialize {RemoveBG.name} plugin")
+         plugins[RemoveBG.name] = RemoveBG()
+     if args.enable_realesrgan:
+         logger.info(
+             f"Initialize {RealESRGANUpscaler.name} plugin: {args.realesrgan_model}, {args.realesrgan_device}"
+         )
+         plugins[RealESRGANUpscaler.name] = RealESRGANUpscaler(
+             args.realesrgan_model,
+             args.realesrgan_device,
+             no_half=args.realesrgan_no_half,
+         )
+     if args.enable_gfpgan:
+         logger.info(f"Initialize {GFPGANPlugin.name} plugin")
++        if args.enable_realesrgan:
++            logger.info("Use realesrgan as GFPGAN background upscaler")
++        else:
++            logger.info(
++                f"GFPGAN no background upscaler, use --enable-realesrgan to enable it"
++            )
+         plugins[GFPGANPlugin.name] = GFPGANPlugin(
+             args.gfpgan_device, upscaler=plugins.get(RealESRGANUpscaler.name, None)
+         )
+     if args.enable_restoreformer:
+         logger.info(f"Initialize {RestoreFormerPlugin.name} plugin")
+         plugins[RestoreFormerPlugin.name] = RestoreFormerPlugin(
+             args.restoreformer_device,
+```
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_controlnet.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_controlnet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_instruct_pix2pix.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_instruct_pix2pix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_load_img.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_load_img.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_model.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_model_md5.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_model_md5.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_paint_by_example.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_paint_by_example.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_plugins.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_plugins.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,24 +1,31 @@
++import hashlib
++import os
++import time
++
++os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+ from pathlib import Path
+ 
+ import cv2
+ import pytest
+ import torch.cuda
+ 
+ from lama_cleaner.plugins import (
+     RemoveBG,
+     RealESRGANUpscaler,
+     GFPGANPlugin,
+     RestoreFormerPlugin,
++    InteractiveSeg,
+ )
+ 
+ current_dir = Path(__file__).parent.absolute().resolve()
+ save_dir = current_dir / "result"
+ save_dir.mkdir(exist_ok=True, parents=True)
+ img_p = current_dir / "bunny.jpeg"
++img_bytes = open(img_p, "rb").read()
+ bgr_img = cv2.imread(str(img_p))
+ rgb_img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
+ 
+ 
+ def _save(img, name):
+     cv2.imwrite(str(save_dir / name), img)
+ 
+@@ -60,7 +67,25 @@
+     if device == "cuda" and not torch.cuda.is_available():
+         return
+     if device == "mps" and not torch.backends.mps.is_available():
+         return
+     model = RestoreFormerPlugin(device)
+     res = model(rgb_img, None, None)
+     _save(res, f"test_restoreformer_{device}.png")
++
++
++@pytest.mark.parametrize("device", ["cuda", "cpu", "mps"])
++def test_segment_anything(device):
++    if device == "cuda" and not torch.cuda.is_available():
++        return
++    if device == "mps" and not torch.backends.mps.is_available():
++        return
++    img_md5 = hashlib.md5(img_bytes).hexdigest()
++    model = InteractiveSeg("vit_l", device)
++    new_mask = model.forward(rgb_img, [[448 // 2, 394 // 2, 1]], img_md5)
++
++    save_name = f"test_segment_anything_{device}.png"
++    _save(new_mask, save_name)
++
++    start = time.time()
++    model.forward(rgb_img, [[448 // 2, 394 // 2, 1]], img_md5)
++    print(f"Time for {save_name}: {time.time() - start:.2f}s")
+```
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_save_exif.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_save_exif.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/tests/test_sd_model.py` & `lama-cleaner-1.1.0/lama_cleaner/tests/test_sd_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner/web_config.py` & `lama-cleaner-1.1.0/lama_cleaner/web_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner.egg-info/PKG-INFO` & `lama-cleaner-1.1.0/lama_cleaner.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: lama-cleaner
+-Version: 1.0.4
++Version: 1.1.0
+ Summary: Image inpainting tool powered by SOTA AI Model
+ Home-page: https://github.com/Sanster/lama-cleaner
+ Author: PanicByte
+ Author-email: cwq1913@gmail.com
+ License: UNKNOWN
+ Description: <h1 align="center">Lama Cleaner</h1>
+         <p align="center">A free and open-source inpainting tool powered by SOTA AI model.</p>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: lama-cleaner Version: 1.0.4 Summary: Image
++Metadata-Version: 2.1 Name: lama-cleaner Version: 1.1.0 Summary: Image
+ inpainting tool powered by SOTA AI Model Home-page: https://github.com/Sanster/
+ lama-cleaner Author: PanicByte Author-email: cwq1913@gmail.com License: UNKNOWN
+ Description:
+                           ****** Lama Cleaner ******
+        A free and open-source inpainting tool powered by SOTA AI model.
+    [total_download] [version] [Open_in_Colab] [Hugging_Face_Spaces] [python
+                               version] [version]
+```
+
+### Comparing `lama-cleaner-1.0.4/lama_cleaner.egg-info/SOURCES.txt` & `lama-cleaner-1.1.0/lama_cleaner.egg-info/SOURCES.txt`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -55,18 +55,29 @@
+ lama_cleaner/plugins/gfpgan_plugin.py
+ lama_cleaner/plugins/gfpganer.py
+ lama_cleaner/plugins/gif.py
+ lama_cleaner/plugins/interactive_seg.py
+ lama_cleaner/plugins/realesrgan.py
+ lama_cleaner/plugins/remove_bg.py
+ lama_cleaner/plugins/restoreformer.py
++lama_cleaner/plugins/segment_anything/__init__.py
++lama_cleaner/plugins/segment_anything/build_sam.py
++lama_cleaner/plugins/segment_anything/predictor.py
++lama_cleaner/plugins/segment_anything/modeling/__init__.py
++lama_cleaner/plugins/segment_anything/modeling/common.py
++lama_cleaner/plugins/segment_anything/modeling/image_encoder.py
++lama_cleaner/plugins/segment_anything/modeling/mask_decoder.py
++lama_cleaner/plugins/segment_anything/modeling/prompt_encoder.py
++lama_cleaner/plugins/segment_anything/modeling/sam.py
++lama_cleaner/plugins/segment_anything/modeling/transformer.py
++lama_cleaner/plugins/segment_anything/utils/__init__.py
++lama_cleaner/plugins/segment_anything/utils/transforms.py
+ lama_cleaner/tests/__init__.py
+ lama_cleaner/tests/test_controlnet.py
+ lama_cleaner/tests/test_instruct_pix2pix.py
+-lama_cleaner/tests/test_interactive_seg.py
+ lama_cleaner/tests/test_load_img.py
+ lama_cleaner/tests/test_model.py
+ lama_cleaner/tests/test_model_md5.py
+ lama_cleaner/tests/test_paint_by_example.py
+ lama_cleaner/tests/test_plugins.py
+ lama_cleaner/tests/test_save_exif.py
+ lama_cleaner/tests/test_sd_model.py
+```
+
+### Comparing `lama-cleaner-1.0.4/setup.py` & `lama-cleaner-1.1.0/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -17,15 +17,15 @@
+                 requires.append(line.strip())
+     return requires
+ 
+ 
+ # https://setuptools.readthedocs.io/en/latest/setuptools.html#including-data-files
+ setuptools.setup(
+     name="lama-cleaner",
+-    version="1.0.4",
++    version="1.1.0",
+     author="PanicByte",
+     author_email="cwq1913@gmail.com",
+     description="Image inpainting tool powered by SOTA AI Model",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/Sanster/lama-cleaner",
+     packages=setuptools.find_packages("./"),
+```
+

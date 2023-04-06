@@ -1,0 +1,897 @@
+# Comparing `tmp/ol-concourse-0.2.0.tar.gz` & `tmp/ol-concourse-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ol-concourse-0.2.0.tar", last modified: Tue Sep 13 15:15:10 2022, max compression
++gzip compressed data, was "ol-concourse-0.3.0.tar", last modified: Thu Apr  6 14:11:01 2023, max compression
+```
+
+## Comparing `ol-concourse-0.2.0.tar` & `ol-concourse-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,30 @@
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       12 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/MANIFEST.in
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       79 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/PKG-INFO
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)      625 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/backend_shim.py
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.474832 ol-concourse-0.2.0/concourse/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/__init__.py
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/concourse/lib/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/__init__.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)      109 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/constants.py
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/concourse/lib/jobs/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)     9511 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/jobs/infrastructure.py
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/concourse/lib/models/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/models/__init__.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)     3160 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/models/fragment.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)   105010 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/models/pipeline.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)      303 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/models/resource.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)     1676 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/resource_types.py
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)     3067 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/concourse/lib/resources.py
+-drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/ol_concourse.egg-info/
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       79 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/PKG-INFO
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)      563 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/SOURCES.txt
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)        1 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/dependency_links.txt
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)        1 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/namespace_packages.txt
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       19 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/requires.txt
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       10 2022-09-13 15:15:10.000000 ol-concourse-0.2.0/ol_concourse.egg-info/top_level.txt
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)       38 2022-09-13 15:15:10.478166 ol-concourse-0.2.0/setup.cfg
+--rw-r--r--   0 tmacey    (1000) tmacey    (1000)      476 2022-09-13 15:15:09.000000 ol-concourse-0.2.0/setup.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       12 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/MANIFEST.in
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       80 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/PKG-INFO
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)      749 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/backend_shim.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/concourse/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/__init__.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/concourse/lib/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/__init__.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)      252 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/constants.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     1032 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/containers.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/concourse/lib/jobs/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)    11698 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/jobs/infrastructure.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/concourse/lib/models/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/models/__init__.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     3675 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/models/fragment.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)   105224 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/models/pipeline.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)      303 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/models/resource.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     1185 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/notifications.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     2089 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/resource_types.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     4067 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/resources.py
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)     3193 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/concourse/lib/tasks.py
++drwxr-xr-x   0 tmacey    (1000) tmacey    (1000)        0 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/ol_concourse.egg-info/
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       80 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/PKG-INFO
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)      645 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/SOURCES.txt
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)        1 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/dependency_links.txt
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)        1 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/namespace_packages.txt
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       19 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/requires.txt
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       10 2023-04-06 14:11:01.000000 ol-concourse-0.3.0/ol_concourse.egg-info/top_level.txt
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)       38 2023-04-06 14:11:01.105085 ol-concourse-0.3.0/setup.cfg
++-rw-r--r--   0 tmacey    (1000) tmacey    (1000)      477 2023-04-06 14:11:00.000000 ol-concourse-0.3.0/setup.py
+```
+
+### Comparing `ol-concourse-0.2.0/backend_shim.py` & `ol-concourse-0.3.0/backend_shim.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -2,23 +2,29 @@
+ # DO NOT EDIT THIS FILE -- AUTOGENERATED BY PANTS
+ 
+ import os
+ import setuptools.build_meta
+ 
+ backend = setuptools.build_meta.__legacy__
+ 
+-dist_dir = "dist"
++dist_dir = "dist/"
+ build_wheel = True
+ build_sdist = True
+ wheel_config_settings = {
+ }
+ sdist_config_settings = {
+ }
+ 
+-os.makedirs(dist_dir, exist_ok=True)
++# Python 2.7 doesn't have the exist_ok arg on os.makedirs().
++try:
++    os.makedirs(dist_dir)
++except OSError as e:
++    if e.errno != errno.EEXIST:
++        raise
++
+ wheel_path = backend.build_wheel(dist_dir, wheel_config_settings) if build_wheel else None
+ sdist_path = backend.build_sdist(dist_dir, sdist_config_settings) if build_sdist else None
+ 
+ if wheel_path:
+     print("wheel: {wheel_path}".format(wheel_path=wheel_path))
+ if sdist_path:
+     print("sdist: {sdist_path}".format(sdist_path=sdist_path))
+```
+
+### Comparing `ol-concourse-0.2.0/concourse/lib/jobs/infrastructure.py` & `ol-concourse-0.3.0/concourse/lib/jobs/infrastructure.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,8 +1,10 @@
++#  noqa: WPS232
+ from collections.abc import Iterable
++from copy import deepcopy
+ from pathlib import Path
+ from typing import Optional
+ 
+ from concourse.lib.constants import REGISTRY_IMAGE
+ from concourse.lib.models.fragment import PipelineFragment
+ from concourse.lib.models.pipeline import (
+     AnonymousResource,
+@@ -24,22 +26,23 @@
+     packer_build,
+     packer_validate,
+     pulumi_provisioner_resource,
+ )
+ from concourse.lib.resources import pulumi_provisioner
+ 
+ 
+-def packer_jobs(
++def packer_jobs(  # noqa: PLR0913
+     dependencies: list[GetStep],
+     image_code: Resource,
+     packer_template_path: str = "src/bilder/images/.",
+     node_types: Optional[Iterable[str]] = None,
+     packer_vars: Optional[dict[str, str]] = None,
+     env_vars_from_files: Optional[dict[str, str]] = None,
+     extra_packer_params: Optional[dict[str, str]] = None,
++    job_name_suffix: str = "",
+ ) -> PipelineFragment:
+     """Generate a pipeline fragment for building EC2 AMIs with Packer.
+ 
+     :param dependencies: The list of `Get` steps that should be run at the start of the
+         pipeline.  This is used for setting up inputs to the build, as well as for
+         triggering on upstream changes (e.g. GitHub releases).
+     :param image_code: The Git resource definition that specifies the repository that
+@@ -48,131 +51,162 @@
+         Packer template that you would like to build.
+     :param node_types: The node types that should be built for the template and passed
+         as vars during the build (e.g. web and worker)
+     :param packer_vars: A dictionary of var inputs for the Packer template.
+     :param env_vars_from_files: The list of environment variables that should be set
+         during the build and the files to load for populating the values (e.g. the
+         `version` file from a GitHub resource)
++    :param extra_packer_params: A dictionary of parameters to pass to the `packer`
++        command line (e.g. `-only` or `-except` when you want to specify a particular
++        build target)
++    :param job_name_suffix: A string to append to the name of the validate and build
++        jobs to allow for ensuring unique names when multiple Packer builds happen in a
++        single pipeline.
+ 
+     :returns: A `PipelineFragment` object that can be composed with other fragments to
+               build a complete pipeline definition.
+     """
+     packer_validate_type = packer_validate()
+     packer_build_type = packer_build()
+     packer_build_resource = Resource(name="packer-build", type=packer_build_type.name)
+     packer_validate_resource = Resource(
+         name="packer-validate", type=packer_validate_type.name
+     )
+     validate_job = Job(
+-        name=Identifier("validate-packer-template"),
+-        plan=dependencies
+-        + [
+-            GetStep(
+-                get=image_code.name,
+-                trigger=True,
+-            ),
++        name=Identifier(f"validate-packer-template-{job_name_suffix}".strip("-")),
++        plan=[
++            *dependencies,
++            GetStep(get=image_code.name, trigger=True),
+             InParallelStep(
+                 in_parallel=[
+                     PutStep(
+                         put=packer_validate_resource.name,
+                         params={
+                             "template": f"{image_code.name}/{packer_template_path}",
+                             "objective": "validate",
+-                            "vars": {**(packer_vars or {}), **{"node_type": node_type}},
++                            "vars": {
++                                **(packer_vars or {}),
++                                **{"node_type": node_type},  # noqa: PIE800
++                            },
+                             **(extra_packer_params or {}),
+                         },
+                     )
+-                    for node_type in (node_types or ["server"])
++                    for node_type in node_types or ["server"]
+                 ]
+             ),
+         ],
+     )
++    # Make sure that all of the dependencies have passed the validate step before
++    # triggering the image build.
++    build_deps = [deepcopy(dep) for dep in dependencies]
++    for dep in build_deps:
++        dep.passed = [validate_job.name]
+     build_job = Job(
+-        name=Identifier("build-packer-template"),
+-        plan=dependencies
+-        + [
+-            GetStep(
+-                get=image_code.name,
+-                trigger=True,
+-                passed=[validate_job.name],
+-            ),
++        name=Identifier(f"build-packer-template-{job_name_suffix}".strip("-")),
++        plan=[
++            *build_deps,
++            GetStep(get=image_code.name, trigger=True, passed=[validate_job.name]),
+             InParallelStep(
+                 in_parallel=[
+                     PutStep(
+                         put=packer_build_resource.name,
+                         params={
+                             "template": f"{image_code.name}/{packer_template_path}",
+                             "objective": "build",
+-                            "vars": {**(packer_vars or {}), **{"node_type": node_type}},
++                            "vars": {
++                                **(packer_vars or {}),
++                                **{"node_type": node_type},  # noqa: PIE800
++                            },
+                             "env_vars": {
+                                 "AWS_REGION": "us-east-1",
+                                 "PYTHONPATH": f"${{PYTHONPATH}}:{image_code.name}/src",
+                             },
+                             "env_vars_from_files": env_vars_from_files or {},
+                             **(extra_packer_params or {}),
+                         },
+                     )
+-                    for node_type in (node_types or ["server"])
++                    for node_type in node_types or ["server"]
+                 ]
+             ),
+         ],
+     )
+     return PipelineFragment(
+         resource_types=[packer_validate_type, packer_build_type],
+         resources=[packer_validate_resource, packer_build_resource],
+         jobs=[validate_job, build_job],
+     )
+ 
+ 
+-def pulumi_jobs_chain(
++def pulumi_jobs_chain(  # noqa: PLR0913
+     pulumi_code: Resource,
+     stack_names: list[str],
+     project_name: str,
+     project_source_path: Path,
++    custom_dependencies: Optional[dict[int, list[GetStep]]] = None,
+     dependencies: Optional[list[GetStep]] = None,
+ ) -> PipelineFragment:
+     """Create a chained sequence of jobs for running Pulumi tasks.
+ 
+     :param pulumi_code: A git resource that represents the repository for the code being
+         executed
+     :param stack_names: The list of stack names in sequence that should be chained
+         together
+     :param project_name: The name of the Pulumi project being executed
+     :param project_source_path: The path within the `pulumi_code` resource where the
+         code being executed is located
+     :param dependencies: A list of `Get` step definitions that are used as inputs or
+         triggers for the jobs in the chain
++    :param custom_dependencies: A dict of indices and `Get` step definitions that are
++        used as inputs or triggers for the jobs in the chain.
++    :type custom_dependencies: Dict[int, list[GetStep]]
+ 
+     :returns: A `PipelineFragment` object that can be composed with other fragments to
+               build a full pipeline.
+     """
+     chain_fragment = PipelineFragment()
+     previous_job = None
+     for index, stack_name in enumerate(stack_names):
++        production_stack = stack_name.lower().endswith("production")
++        passed_param = None
+         if index != 0:
+             previous_job = chain_fragment.jobs[-1]
+-            for dependency in dependencies or []:
+-                dependency.trigger = False
++            passed_param = [previous_job.name]
++        for dependency in dependencies or []:
++            # These mutations apply globally if the dependencies aren't copied below
++            dependency.trigger = not bool(previous_job or production_stack)
++            dependency.passed = passed_param or dependency.passed  # type: ignore
++
++        # Need to copy the dependencies because otherwise they are globally mutated
++        local_dependencies = [
++            dependency_step.copy() for dependency_step in (dependencies or [])
++        ]
++        if custom_dependency := (custom_dependencies or {}).get(index):
++            local_custom_dependencies = [
++                custom_dependency_step.copy()
++                for custom_dependency_step in custom_dependency
++            ]
++            local_dependencies.extend(local_custom_dependencies)
++
+         step_fragment = pulumi_job(
+             pulumi_code,
+             stack_name,
+             project_name,
+             project_source_path,
+-            dependencies,
++            local_dependencies,
+             previous_job,
+         )
+         chain_fragment.resource_types = (
+             chain_fragment.resource_types + step_fragment.resource_types
+         )
+         chain_fragment.resources = chain_fragment.resources + step_fragment.resources
+         chain_fragment.jobs.extend(step_fragment.jobs)
+     return chain_fragment
+ 
+ 
+-def pulumi_job(
++def pulumi_job(  # noqa: PLR0913
+     pulumi_code: Resource,
+     stack_name: str,
+     project_name: str,
+     project_source_path: Path,
+     dependencies: Optional[list[GetStep]] = None,
+     previous_job: Optional[Job] = None,
+ ) -> PipelineFragment:
+@@ -194,26 +228,25 @@
+     """
+     pulumi_provisioner_resource_type = pulumi_provisioner_resource()
+     pulumi_resource = pulumi_provisioner(
+         name=Identifier("pulumi-project"),
+         project_name=project_name,
+         project_path=f"{pulumi_code.name}/{project_source_path}",
+     )
+-    if previous_job:
+-        passed_job = [previous_job.name]
+-    else:
+-        passed_job = None
++    passed_job = [previous_job.name] if previous_job else None
+     aws_creds_path = Output(name=Identifier("aws_creds"))
+     pulumi_job_object = Job(
+         name=Identifier(f"deploy-{project_name}-{stack_name.lower()}"),
++        max_in_flight=1,  # Only allow 1 Pulumi task at a time since they lock anyway.
+         plan=(dependencies or [])
+         + [
+             GetStep(
+                 get=pulumi_code.name,
+-                trigger=passed_job is None,
++                trigger=passed_job is None
++                and not stack_name.lower().endswith("production"),
+                 passed=passed_job,
+             ),
+             TaskStep(
+                 task=Identifier("set-aws-creds"),
+                 config=TaskConfig(
+                     platform=Platform.linux,
+                     image_resource=AnonymousResource(
+@@ -229,15 +262,15 @@
+             ),
+             PutStep(
+                 put=pulumi_resource.name,
+                 get_params={"skip_implicit_get": True},
+                 params={
+                     "env_os": {
+                         "AWS_DEFAULT_REGION": "us-east-1",
+-                        "PYTHONPATH": f"/usr/lib/:/tmp/build/put/{pulumi_code.name}/src/",
++                        "PYTHONPATH": f"/usr/lib/:/tmp/build/put/{pulumi_code.name}/src/",  # noqa: E501
+                     },
+                     "stack_name": stack_name,
+                 },
+             ),
+         ],
+     )
+     return PipelineFragment(
+```
+
+### Comparing `ol-concourse-0.2.0/concourse/lib/models/fragment.py` & `ol-concourse-0.3.0/concourse/lib/models/fragment.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -6,45 +6,45 @@
+ class PipelineFragment(BaseModel):
+     resource_types: list[ResourceType] = Field(default_factory=list)
+     resources: list[Resource] = Field(default_factory=list)
+     jobs: list[Job] = Field(default_factory=list)
+ 
+     @validator("resource_types")
+     def deduplicate_resource_types(
+-        cls: "PipelineFragment", resource_types: list[ResourceType]
++        cls, resource_types: list[ResourceType]  # noqa: N805
+     ) -> list[ResourceType]:
+         """Ensure that there are no duplicate resource type definitions.
+ 
+         Concourse pipelines don't support duplicate definitions of resource types, where
+         the `name` identifier is used to determine uniqueness.  This ensurs that
+         `PipelineFragment` objects can be composed together without violating that
+         requirement.
+ 
+         NOTE: This validator is only triggered on new assignments to the attribute, not
+         mutations of existing instances of the attribute.  In other words, if you
+         `.append` or `.extend` this list the validator will *not* trigger.  See
+         `Pydantic #496 <https://github.com/pydantic/pydantic/issues/496>`_ for more
+         details
+ 
+-        :param cls: The class object
++        :param cls: The class object  # noqa: DAR102
+         :param resource_types: The list of resource types defined in the class instance.
+ 
+         :returns: A list of resource types that have been deduplicated
+         """
+         unique_resource_types: list[ResourceType] = []
+         resource_type_identifiers: set[str] = set()
+         for resource_type in resource_types or []:
+             if resource_type.name not in resource_type_identifiers:
+                 resource_type_identifiers.add(resource_type.name)
+                 unique_resource_types.append(resource_type)
+         return unique_resource_types
+ 
+     @validator("resources")
+     def deduplicate_resources(
+-        cls: "PipelineFragment", resources: list[Resource]
++        cls, resources: list[Resource]  # noqa: N805
+     ) -> list[Resource]:
+         """Ensure that there are no duplicate resource definitions.
+ 
+         Concourse pipelines don't support duplicate definitions of resources, where the
+         `name` identifier is used to determine uniqueness.  This ensurs that
+         `PipelineFragment` objects can be composed together without violating that
+         requirement.
+@@ -63,7 +63,21 @@
+         unique_resources: list[Resource] = []
+         resource_identifiers: set[str] = set()
+         for resource in resources or []:
+             if resource.name not in resource_identifiers:
+                 resource_identifiers.add(resource.name)
+                 unique_resources.append(resource)
+         return unique_resources
++
++    @classmethod
++    def combine_fragments(cls, *fragments: "PipelineFragment") -> "PipelineFragment":
++        return cls(
++            resource_types=[
++                resource_type
++                for fragment in fragments
++                for resource_type in fragment.resource_types
++            ],
++            resources=[
++                resource for fragment in fragments for resource in fragment.resources
++            ],
++            jobs=[job for fragment in fragments for job in fragment.jobs],
++        )
+```
+
+### Comparing `ol-concourse-0.2.0/concourse/lib/models/pipeline.py` & `ol-concourse-0.3.0/concourse/lib/models/pipeline.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -60,50 +60,74 @@
+             "The path to a directory to be cached.    Paths are relative to the working"
+             " directory of the task. Absolute paths  are not respected."
+         ),
+     )
+ 
+ 
+ class Format(str, Enum):
+-    """
+-        The format of the file's content.    If unset, Concourse will try to detect the format from the file  extension. If the file format cannot be determined, Concourse will  fallback to `trim` .    If set to `json` , `yaml` , or `yml` , the file content  will be parsed accordingly and the resulting structure will be the  value of the var.    If set to `trim` , the var will be set to the content of the file  with any trailing and leading whitespace removed.    If set to `raw` , the var will be set to the content of the file  without modification (i.e. with any existing whitespace).
++    """The format of the file's content.
++
++    If unset, Concourse will try to detect the format from the file  extension. If the
++    file format cannot be determined, Concourse will  fallback to ``trim`` .
++
++    If set to ``json`` , ``yaml`` , or ``yml`` , the file content  will be parsed
++    accordingly and the resulting structure will be the  value of the var.
++
++    If set to ``trim`` , the var will be set to the content of the file  with any
++    trailing and leading whitespace removed.
++
++    If set to ``raw`` , the var will be set to the content of the file  without
++    modification (i.e. with any existing whitespace).
++
+     @example  Loading a var with multiple fields
+-       Let's say we have a file with multiple fields, like this yaml file:      yaml  https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml      We could pass these values to subsequent steps by loading it  into a var with `load_var` , which will detect that it is in YAML  format based on the file extension:     ```yaml
+-    jobs:
+-    - name: loading-vars
+-      plan:
+-      - get: examples
+-      - load_var: version
+-        file: examples/pipelines/vars-file.yml
+-      - put: img
+-        params:
+-          version: "((.:version.hello))-((.:version.number))"
+-
+-
+-    resources:
+-    - name: examples
+-      type: git
+-      icon: github
+-      source:
+-        uri: https://github.com/concourse/examples.git
+-    - name: img
+-      type: mock
+-    ```     If the file `vars-file.yml` was generated in a task and printed  these values, they would be automatically redacted unless    schema.load-var.reveal `reveal: true` is set.
++    Let's say we have a file with multiple fields, like this yaml file:
++    https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml
++
++    We could pass these values to subsequent steps by loading it  into a var with
++    ``load_var`` , which will detect that it is in YAML  format based on the file
++    extension::
++
++        jobs:
++        - name: loading-vars
++          plan:
++          - get: examples
++          - load_var: version
++            file: examples/pipelines/vars-file.yml
++          - put: img
++            params:
++              version: "((.:version.hello))-((.:version.number))"
++
++
++        resources:
++        - name: examples
++          type: git
++          icon: github
++          source:
++            uri: https://github.com/concourse/examples.git
++        - name: img
++          type: mock
++
++    If the file `vars-file.yml` was generated in a task and printed  these values,
++    they would be automatically redacted unless schema.load-var.reveal `reveal: true`
++    is set.
+     """
+ 
+     json = "json"
+     yaml = "yaml"
+     yml = "yml"
+     trim = "trim"
+     raw = "raw"
+ 
+ 
+ class Platform(str, Enum):
+     """
+-    The platform the task should run on. This determines the pool of workers  that the task can run against.    Technically any string value is allowed so long as a worker advertises the  same platform, but in practice only `linux` , `darwin` , and   `windows` are in use.
++    The platform the task should run on. This determines the pool of workers
++    that the task can run against. Technically any string value is allowed so
++    long as a worker advertises the  same platform, but in practice only `linux`,
++    `darwin`, and `windows` are in use.
+     """
+ 
+     linux = "linux"
+     darwin = "darwin"
+     windows = "windows"
+ 
+ 
+@@ -634,15 +658,15 @@
+             "A list of paths to `.yml` files that will be passed to the  pipeline"
+             " config in the same manner as the `--load-vars-from` flag  to "
+             " fly-set-pipeline  . This means that if a variable appears  in multiple"
+             " files, the value from a file that is passed later in the  list will"
+             " override the values from files earlier in the list.     \n@example "
+             " Configuring static vars with a vars file \n   Where the vars file looks"
+             " like:    yaml "
+-            " https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml"
++            " https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml"  # noqa: E501
+             "      And the pipeline config is:     ```yaml\njobs:\n- name:"
+             " set-pipeline-vars-only\n  plan:\n  - get: examples\n  - set_pipeline:"
+             " pipeline-set-with-vars\n    file: examples/pipelines/pipeline-vars.yml\n "
+             "   var_files:\n      - examples/pipelines/vars-file.yml\n\nresources:\n-"
+             " name: examples\n  type: git\n  icon: github\n  source:\n    uri:"
+             " https://github.com/concourse/examples.git\n```"
+         ),
+@@ -758,15 +782,15 @@
+             " resulting structure will be the  value of the var.    If set to `trim` ,"
+             " the var will be set to the content of the file  with any trailing and"
+             " leading whitespace removed.    If set to `raw` , the var will be set to"
+             " the content of the file  without modification (i.e. with any existing"
+             " whitespace).     \n@example  Loading a var with multiple fields \n  "
+             " Let's say we have a file with multiple fields, like this yaml file:     "
+             " yaml "
+-            " https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml"
++            " https://raw.githubusercontent.com/concourse/examples/master/pipelines/vars-file.yml"  # noqa: E501
+             "      We could pass these values to subsequent steps by loading it  into a"
+             " var with `load_var` , which will detect that it is in YAML  format based"
+             " on the file extension:     ```yaml\njobs:\n- name: loading-vars\n "
+             " plan:\n  - get: examples\n  - load_var: version\n    file:"
+             " examples/pipelines/vars-file.yml\n  - put: img\n    params:\n     "
+             ' version: "((.:version.hello))-((.:version.number))"\n\n\nresources:\n-'
+             " name: examples\n  type: git\n  icon: github\n  source:\n    uri:"
+@@ -785,15 +809,15 @@
+             " contents are  used as a version number to  put-step `put` .    "
+             " ```yaml\njobs:\n- name: loading-vars\n  plan:\n  - get: examples\n  -"
+             " load_var: version\n    file: examples/misc/simple-value.txt\n  - put:"
+             " img\n    params:\n      version: ((.:version))\n\n\nresources:\n- name:"
+             " examples\n  type: git\n  icon: github\n  source:\n    uri:"
+             " https://github.com/concourse/examples.git\n- name: img\n  type: mock\n```"
+             "      `simple-value.txt` looks like this:   "
+-            " https://raw.githubusercontent.com/concourse/examples/master/misc/simple-value.txt"
++            " https://raw.githubusercontent.com/concourse/examples/master/misc/simple-value.txt"  # noqa: E501
+         ),
+     )
+     reveal: Optional[bool] = Field(
+         None,
+         description=(
+             "Default `false` .  If set to `true` , allow the var's  content to be"
+             " printed in the build output even with secret redaction  enabled."
+@@ -915,23 +939,23 @@
+         None,
+         description=(
+             "If specified, web hooks can be sent to trigger an immediate  check    of"
+             " the resource, specifying this value as a primitive form of "
+             " authentication via query params.    After configuring this value, you"
+             " would then configure your hook sender with  the following painfully long"
+             " path appended to your external URL:     `\n     "
+-            " /api/v1/teams/TEAM_NAME/pipelines/PIPELINE_NAME/resources/RESOURCE_NAME/check/webhook?webhook_token=WEBHOOK_TOKEN\n"
++            " /api/v1/teams/TEAM_NAME/pipelines/PIPELINE_NAME/resources/RESOURCE_NAME/check/webhook?webhook_token=WEBHOOK_TOKEN\n"  # noqa: E501
+             "    `     For  managing-instanced-pipelines  instance pipelines  you will "
+             " need to include the pipeline vars for a single pipeline instance."
+             " Currently  you can not have webhooks for all instances of a pipeline.   "
+             " The pipeline vars should be added to the webhook URL as  URL  parameters "
+-            " https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters"
++            " https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters"  # noqa: E501
+             '    with the format `vars.MY-VAR="SOME-VALUE"` . A webhook URL for a '
+             " pipeline instance may look like this:     `\n     "
+-            ' /api/v1/teams/TEAM_NAME/pipelines/PIPELINE_NAME/resources/RESOURCE_NAME/check/webhook?webhook_token=WEBHOOK_TOKEN&vars.my-var="some-value"&vars.second-var="two"\n'
++            ' /api/v1/teams/TEAM_NAME/pipelines/PIPELINE_NAME/resources/RESOURCE_NAME/check/webhook?webhook_token=WEBHOOK_TOKEN&vars.my-var="some-value"&vars.second-var="two"\n'  # noqa: E501
+             "    `     Note that the request payload sent to this API endpoint is"
+             " entirely  ignored.  You should configure the resource as if you're not"
+             " using web  hooks, as the resource  schema.resource.source  config  is"
+             ' still  the "source of truth."'
+         ),
+     )
+     icon: Optional[str] = Field(
+@@ -1449,15 +1473,15 @@
+             " schema.task.params `params`   and  schema.task.vars `vars` is that   "
+             " schema.task.vars `vars` allows you to interpolate any  template variable"
+             " in an external task file, while    schema.task.params `params` can be"
+             " used to overwrite  task parameters specifically. Also,   "
+             " schema.task.params `params` can have default values  declared in the"
+             " task.     \n@example  Running a task with env var params \n   Let's say"
+             " we have a  schema.task-config  task config  like  so:      yaml "
+-            " https://raw.githubusercontent.com/concourse/examples/master/tasks/print-param.yml"
++            " https://raw.githubusercontent.com/concourse/examples/master/tasks/print-param.yml"  # noqa: E501
+             "      This indicates that there are two params which can be set:  "
+             " `ECHO_ME` , which has a default, and `ALSO_ME` which has no  default set."
+             "    A pipeline could run the task with values passed in like so:    "
+             " ```yaml\njobs:\n- name: task-params\n  plan:\n  - get: ci\n  - task:"
+             " constrained-task\n    file: ci/tasks/print-param.yml\n    params:\n     "
+             ' ECHO_ME: "Eat your fruits"\n      ALSO_ME: "veggies"\n\nresources:\n-'
+             " name: ci\n  type: git\n  source:\n    uri:"
+@@ -1520,15 +1544,15 @@
+             " file with vars \n   A var may be statically passed like so:    "
+             " ```yaml\njobs:\n- name: task-vars\n  plan:\n  - get: ci\n  - task:"
+             " override-task-vars\n    file: ci/tasks/print-var.yml\n    vars: #"
+             ' statically defined vars\n      my-var: "Cookies are the best"\n     '
+             ' second-var: "chips are a close second"\n\nresources:\n- name: ci\n  type:'
+             " git\n  source:\n    uri: https://github.com/concourse/examples.git\n```  "
+             "   When run with the following  tasks  task config  :      yaml "
+-            " https://raw.githubusercontent.com/concourse/examples/master/tasks/print-var.yml"
++            " https://raw.githubusercontent.com/concourse/examples/master/tasks/print-var.yml"  # noqa: E501
+             '      The `"((my-var))"` will be resolved to `"Cookies are the\n         '
+             ' best"` and `((second-var))` will be resolved to `"chips are\n          a'
+             ' close second"` .    This can also be used in combination with  vars  from'
+             " a    creds  credential manager  (i.e. Vault) as a way to re-map  variable"
+             " names to match what the task is expecting:     ```yaml\njobs:\n- name:"
+             " task-vars\n  plan:\n  - get: ci\n  - task: override-task-vars\n    file:"
+             " ci/tasks/print-var.yml\n    vars: # re-mapped vars\n      my-var:"
+@@ -1541,15 +1565,15 @@
+         None,
+         description=(
+             "A map from task output names to concrete names to register in the build "
+             " plan. This allows a task with generic output names to be used multiple "
+             " times in the same plan.     \n@example  Using with `input_mapping`\n  "
+             " This is often used together with    schema.task.input_mapping  :    Given"
+             " this task config:    yaml "
+-            " https://raw.githubusercontent.com/concourse/examples/master/tasks/generic-outputs.yml"
++            " https://raw.githubusercontent.com/concourse/examples/master/tasks/generic-outputs.yml"  # noqa: E501
+             "      This pipeline will map the inputs and outputs of the task to match "
+             " the name of the resources in the pipeline.   ```yaml\njobs:\n- name:"
+             " task-output-mapping\n  plan:\n  - in_parallel:\n    - get: repo\n    -"
+             " get: repo-dev\n    - get: ci\n  - task: create-outputs\n   "
+             " input_mapping:\n      main: repo\n      dev: repo-dev\n   "
+             " output_mapping:\n      main: repo\n      dev: repo-dev\n    file:"
+             " ci/tasks/generic-outputs.yml\n  - in_parallel:\n    - put: repo\n     "
+```
+
+### Comparing `ol-concourse-0.2.0/concourse/lib/resource_types.py` & `ol-concourse-0.3.0/concourse/lib/resource_types.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -52,7 +52,19 @@
+ 
+ def pulumi_provisioner_resource() -> ResourceType:
+     return ResourceType(
+         name=Identifier("pulumi-provisioner"),
+         type=REGISTRY_IMAGE,
+         source=RegistryImage(repository="mitodl/concourse-pulumi-resource-provisioner"),
+     )
++
++
++# https://github.com/arbourd/concourse-slack-alert-resource
++# We use only a very basic implementation of this notification framework
++def slack_notification_resource() -> ResourceType:
++    return ResourceType(
++        name=Identifier("slack-notification"),
++        type=REGISTRY_IMAGE,
++        source=RegistryImage(
++            repository="arbourd/concourse-slack-alert-resource", tag="v0.15.0"
++        ),
++    )
+```
+
+### Comparing `ol-concourse-0.2.0/concourse/lib/resources.py` & `ol-concourse-0.3.0/concourse/lib/resources.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,43 +1,51 @@
+-from typing import Union
++from typing import Optional, Union
+ 
+-from concourse.lib.models.pipeline import Identifier, Resource
++from concourse.lib.models.pipeline import Identifier, RegistryImage, Resource
+ from concourse.lib.models.resource import Git
+ 
+ 
+ def git_repo(
+-    name: Identifier, uri: str, branch: str = "main", paths: list[str] = None
++    name: Identifier,
++    uri: str,
++    branch: str = "main",
++    check_every: str = "60s",
++    paths: Optional[list[str]] = None,
++    **kwargs,
+ ) -> Resource:
+     return Resource(
+         name=name,
+         type="git",
+         icon="git",
++        check_every=check_every,
+         source=Git(uri=uri, branch=branch, paths=paths),
++        **kwargs,
+     )
+ 
+ 
+ def ssh_git_repo(
+     name: Identifier,
+     uri: str,
+     private_key: str,
+     branch: str = "main",
+-    paths: list[str] = None,
++    paths: Optional[list[str]] = None,
+ ) -> Resource:
+     return Resource(
+         name=name,
+         type="git",
+         icon="git",
+         source=Git(uri=uri, branch=branch, paths=paths, private_key=private_key),
+     )
+ 
+ 
+ def github_release(name: Identifier, owner: str, repository: str) -> Resource:
+     """Generate a github-release resource for the given owner/repository.
+ 
+-    :param name: The name of the resource. This will get used across subsequent pipeline steps that reference this resource.
++    :param name: The name of the resource. This will get used across subsequent
++        pipeline steps that reference this resource.
+     :type name: Identifier
+     :param owner: The owner of the repository (e.g. the GitHub user or organization)
+     :type owner: str
+     :param repository: The name of the repository as it appears in GitHub
+     :type repository: str
+     :returns: A configured Concourse resource object that can be used in a pipeline.
+     :rtype: Resource
+@@ -48,32 +56,35 @@
+         icon="github",
+         check_every="24h",
+         source={"repository": repository, "owner": owner, "release": True},
+     )
+ 
+ 
+ def hashicorp_release(name: Identifier, project: str) -> Resource:
+-    """Generate a hashicorp-release resource for the given application.
++    """Generate a hashicorp-release resource for the given application.  # noqa: DAR201
+ 
+-    :param name: The name of the resourc. This will get used across subsequent pipeline steps taht reference this resource.
++    :param name: The name of the resourc. This will get used across subsequent
++        pipeline steps taht reference this resource.
+     :type name: Identifier
+     :param project: The name of the hashicorp project to check for a release of.
+     :type project: str
+     """
+     return Resource(
+         name=name,
+         type="hashicorp-release",
+         icon="lock-check",
+         check_every="24h",
+         source={"project": project},
+     )
+ 
+ 
+ def amazon_ami(
+-    name: Identifier, filters: dict[str, Union[str, bool]], region: str = "us-east-1"
++    name: Identifier,
++    filters: dict[str, Union[str, bool]],
++    region: str = "us-east-1",
+ ) -> Resource:
+     return Resource(
+         name=name,
+         type="amazon-ami",
+         icon="server",
+         check_every="30m",
+         source={
+@@ -102,7 +113,35 @@
+ def schedule(name: Identifier, interval: str) -> Resource:
+     return Resource(
+         name=name,
+         type="time",
+         icon="clock",
+         source={"interval": interval},
+     )
++
++
++def registry_image(
++    name: Identifier,
++    image_repository: str,
++    image_tag: Optional[str] = None,
++    username=None,
++    password=None,
++) -> Resource:
++    image_source = RegistryImage(
++        repository=image_repository, tag=image_tag or "latest"
++    ).dict()
++    if username and password:
++        image_source["username"] = username
++        image_source["password"] = password
++    return Resource(
++        name=name,
++        type="registry-image",
++        source=image_source,
++    )
++
++
++# https://github.com/arbourd/concourse-slack-alert-resource
++# We use only a very basic implementation of this notification framework
++def slack_notification(name: Identifier, url: str) -> Resource:
++    return Resource(
++        name=name, type="slack-notification", source={"url": url, "disabled": False}
++    )
+```
+
+### Comparing `ol-concourse-0.2.0/ol_concourse.egg-info/SOURCES.txt` & `ol-concourse-0.3.0/ol_concourse.egg-info/SOURCES.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,15 +1,18 @@
+ MANIFEST.in
+ backend_shim.py
+ setup.py
+ concourse/__init__.py
+ concourse/lib/__init__.py
+ concourse/lib/constants.py
++concourse/lib/containers.py
++concourse/lib/notifications.py
+ concourse/lib/resource_types.py
+ concourse/lib/resources.py
++concourse/lib/tasks.py
+ concourse/lib/jobs/infrastructure.py
+ concourse/lib/models/__init__.py
+ concourse/lib/models/fragment.py
+ concourse/lib/models/pipeline.py
+ concourse/lib/models/resource.py
+ ol_concourse.egg-info/PKG-INFO
+ ol_concourse.egg-info/SOURCES.txt
+```
+

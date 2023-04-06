@@ -1,0 +1,331 @@
+--- tmp/odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9-py3-none-any.whl.zip
++++ tmp/odoo14_addon_project_task_add_very_high-14.0.1.1.0-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,60 +1,61 @@
+│ -Zip file size: 78864 bytes, number of entries: 58
+│ --rw-r--r--  2.0 unx     4460 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/README.rst
+│ --rw-r--r--  2.0 unx       55 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/__init__.py
+│ --rw-r--r--  2.0 unx      647 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/__manifest__.py
+│ --rw-r--r--  2.0 unx      425 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/hooks.py
+│ --rw-r--r--  2.0 unx     1401 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/ar.po
+│ --rw-r--r--  2.0 unx     1421 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/ca.po
+│ --rw-r--r--  2.0 unx     1360 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/cs_CZ.po
+│ --rw-r--r--  2.0 unx     1425 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/de.po
+│ --rw-r--r--  2.0 unx     1320 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/el.po
+│ --rw-r--r--  2.0 unx     1431 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es.po
+│ --rw-r--r--  2.0 unx     1735 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es_AR.po
+│ --rw-r--r--  2.0 unx     1378 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es_CO.po
+│ --rw-r--r--  2.0 unx     1335 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es_CR.po
+│ --rw-r--r--  2.0 unx     1331 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es_MX.po
+│ --rw-r--r--  2.0 unx     1334 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/es_VE.po
+│ --rw-r--r--  2.0 unx     1317 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/fi.po
+│ --rw-r--r--  2.0 unx     1350 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/fr.po
+│ --rw-r--r--  2.0 unx     1697 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/fr_FR.po
+│ --rw-r--r--  2.0 unx     1435 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/gl.po
+│ --rw-r--r--  2.0 unx     1391 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/hr.po
+│ --rw-r--r--  2.0 unx     1410 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/hr_HR.po
+│ --rw-r--r--  2.0 unx     1317 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/hu.po
+│ --rw-r--r--  2.0 unx     1368 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/it.po
+│ --rw-r--r--  2.0 unx     1311 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/ja.po
+│ --rw-r--r--  2.0 unx     1386 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/lt.po
+│ --rw-r--r--  2.0 unx     1354 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/lv.po
+│ --rw-r--r--  2.0 unx     1353 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/mk.po
+│ --rw-r--r--  2.0 unx     1328 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/mn.po
+│ --rw-r--r--  2.0 unx     1316 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/nb.po
+│ --rw-r--r--  2.0 unx     1310 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/nl.po
+│ --rw-r--r--  2.0 unx     1319 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/nl_NL.po
+│ --rw-r--r--  2.0 unx     1467 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/pl.po
+│ --rw-r--r--  2.0 unx     1510 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/project_task_add_very_high.pot
+│ --rw-r--r--  2.0 unx     1317 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/pt.po
+│ --rw-r--r--  2.0 unx     1388 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/pt_BR.po
+│ --rw-r--r--  2.0 unx     1337 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/pt_PT.po
+│ --rw-r--r--  2.0 unx     1360 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/ro.po
+│ --rw-r--r--  2.0 unx     1373 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/sl.po
+│ --rw-r--r--  2.0 unx     1315 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/sv.po
+│ --rw-r--r--  2.0 unx     1313 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/tr.po
+│ --rw-r--r--  2.0 unx     1403 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/uk.po
+│ --rw-r--r--  2.0 unx     1324 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/i18n/zh_CN.po
+│ --rw-r--r--  2.0 unx       27 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/models/__init__.py
+│ --rw-r--r--  2.0 unx      306 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/models/project_task.py
+│ --rw-r--r--  2.0 unx       39 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/readme/CONTRIBUTORS.rst
+│ --rw-r--r--  2.0 unx     1300 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/readme/DESCRIPTION.rst
+│ --rw-r--r--  2.0 unx      295 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/readme/USAGE.rst
+│ --rw-r--r--  2.0 unx     9455 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/icon.png
+│ --rw-r--r--  2.0 unx    10539 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/image.png
+│ --rw-r--r--  2.0 unx     2983 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/image2.png
+│ --rw-r--r--  2.0 unx     2999 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/image2_a.png
+│ --rw-r--r--  2.0 unx    10514 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/image_a.png
+│ --rw-r--r--  2.0 unx    14034 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/static/description/index.html
+│ --rw-r--r--  2.0 unx      579 b- defN 22-May-13 04:03 odoo/addons/project_task_add_very_high/views/project_task_view.xml
+│ --rw-r--r--  2.0 unx     5089 b- defN 22-May-13 04:03 odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 22-May-13 04:03 odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 22-May-13 04:03 odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     6428 b- defN 22-May-13 04:03 odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/RECORD
+│ -58 files, 122811 bytes uncompressed, 68056 bytes compressed:  44.6%
+│ +Zip file size: 117364 bytes, number of entries: 59
+│ +-rw-r--r--  2.0 unx     4745 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/README.rst
+│ +-rw-r--r--  2.0 unx       55 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/__init__.py
+│ +-rw-r--r--  2.0 unx      647 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/__manifest__.py
+│ +-rw-r--r--  2.0 unx      425 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/hooks.py
+│ +-rw-r--r--  2.0 unx     1401 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/ar.po
+│ +-rw-r--r--  2.0 unx     1421 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/ca.po
+│ +-rw-r--r--  2.0 unx     1360 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/cs_CZ.po
+│ +-rw-r--r--  2.0 unx     1425 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/de.po
+│ +-rw-r--r--  2.0 unx     1320 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/el.po
+│ +-rw-r--r--  2.0 unx     1431 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es.po
+│ +-rw-r--r--  2.0 unx     1735 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es_AR.po
+│ +-rw-r--r--  2.0 unx     1378 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es_CO.po
+│ +-rw-r--r--  2.0 unx     1335 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es_CR.po
+│ +-rw-r--r--  2.0 unx     1331 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es_MX.po
+│ +-rw-r--r--  2.0 unx     1334 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/es_VE.po
+│ +-rw-r--r--  2.0 unx     1317 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/fi.po
+│ +-rw-r--r--  2.0 unx     1350 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/fr.po
+│ +-rw-r--r--  2.0 unx     1697 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/fr_FR.po
+│ +-rw-r--r--  2.0 unx     1435 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/gl.po
+│ +-rw-r--r--  2.0 unx     1391 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/hr.po
+│ +-rw-r--r--  2.0 unx     1410 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/hr_HR.po
+│ +-rw-r--r--  2.0 unx     1317 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/hu.po
+│ +-rw-r--r--  2.0 unx     1368 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/it.po
+│ +-rw-r--r--  2.0 unx     1311 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/ja.po
+│ +-rw-r--r--  2.0 unx     1386 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/lt.po
+│ +-rw-r--r--  2.0 unx     1354 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/lv.po
+│ +-rw-r--r--  2.0 unx     1353 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/mk.po
+│ +-rw-r--r--  2.0 unx     1328 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/mn.po
+│ +-rw-r--r--  2.0 unx     1316 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/nb.po
+│ +-rw-r--r--  2.0 unx     1310 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/nl.po
+│ +-rw-r--r--  2.0 unx     1319 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/nl_NL.po
+│ +-rw-r--r--  2.0 unx     1467 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/pl.po
+│ +-rw-r--r--  2.0 unx     1510 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/project_task_add_very_high.pot
+│ +-rw-r--r--  2.0 unx     1317 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/pt.po
+│ +-rw-r--r--  2.0 unx     1388 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/pt_BR.po
+│ +-rw-r--r--  2.0 unx     1337 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/pt_PT.po
+│ +-rw-r--r--  2.0 unx     1360 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/ro.po
+│ +-rw-r--r--  2.0 unx     1373 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/sl.po
+│ +-rw-r--r--  2.0 unx     1315 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/sv.po
+│ +-rw-r--r--  2.0 unx     1313 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/tr.po
+│ +-rw-r--r--  2.0 unx     1403 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/uk.po
+│ +-rw-r--r--  2.0 unx     1324 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/i18n/zh_CN.po
+│ +-rw-r--r--  2.0 unx       27 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/models/__init__.py
+│ +-rw-r--r--  2.0 unx      335 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/models/project_task.py
+│ +-rw-r--r--  2.0 unx       39 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/readme/CONTRIBUTORS.rst
+│ +-rw-r--r--  2.0 unx     1510 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/readme/DESCRIPTION.rst
+│ +-rw-r--r--  2.0 unx      295 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/readme/USAGE.rst
+│ +-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/icon.png
+│ +-rw-r--r--  2.0 unx    10539 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/image.png
+│ +-rw-r--r--  2.0 unx     2983 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/image2.png
+│ +-rw-r--r--  2.0 unx     2999 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/image2_a.png
+│ +-rw-r--r--  2.0 unx    10514 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/image_a.png
+│ +-rw-r--r--  2.0 unx    42525 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/image_add_chatter.png
+│ +-rw-r--r--  2.0 unx    14357 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/static/description/index.html
+│ +-rw-r--r--  2.0 unx      579 b- defN 23-Apr-06 14:12 odoo/addons/project_task_add_very_high/views/project_task_view.xml
+│ +-rw-r--r--  2.0 unx     5369 b- defN 23-Apr-06 14:12 odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 14:12 odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 14:12 odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     6545 b- defN 23-Apr-06 14:12 odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/RECORD
+│ +59 files, 166580 bytes uncompressed, 106362 bytes compressed:  36.1%
+├── zipnote {}
+│ @@ -150,26 +150,29 @@
+│  
+│  Filename: odoo/addons/project_task_add_very_high/static/description/image2_a.png
+│  Comment: 
+│  
+│  Filename: odoo/addons/project_task_add_very_high/static/description/image_a.png
+│  Comment: 
+│  
+│ +Filename: odoo/addons/project_task_add_very_high/static/description/image_add_chatter.png
+│ +Comment: 
+│ +
+│  Filename: odoo/addons/project_task_add_very_high/static/description/index.html
+│  Comment: 
+│  
+│  Filename: odoo/addons/project_task_add_very_high/views/project_task_view.xml
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/METADATA
+│ +Filename: odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/WHEEL
+│ +Filename: odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/top_level.txt
+│ +Filename: odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/RECORD
+│ +Filename: odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── odoo/addons/project_task_add_very_high/README.rst
+│ @@ -50,14 +50,20 @@
+│  
+│  .. figure:: https://raw.githubusercontent.com/OCA/project/12.0/project_task_add_very_high/static/description/image2_a.png
+│     :alt: On kanban, priority widget shows one star
+│  
+│  In case this module is uninstalled, all the tasks that were previously set as `High` or `Very High` priority will be
+│  converted to `Normal` priority.
+│  
+│ +
+│ +When the priority of the task changes, the message "priority:[old_priority] -> [new_priority]" is added to the chatter
+│ +
+│ +.. figure:: https://raw.githubusercontent.com/OCA/project/14.0/project_task_add_very_high/static/description/image_add_chatter.png
+│ +   :alt: Add message to chatter
+│ +
+│  **Table of contents**
+│  
+│  .. contents::
+│     :local:
+│  
+│  Usage
+│  =====
+├── odoo/addons/project_task_add_very_high/__manifest__.py
+│ @@ -1,14 +1,14 @@
+│  # Copyright 2016-2020 Onestein (<https://www.onestein.eu>)
+│  # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+│  
+│  {
+│      "name": "Project Task Add Very High",
+│      "summary": "Adds extra options 'High' and 'Very High' on tasks",
+│ -    "version": "14.0.1.0.0",
+│ +    "version": "14.0.1.1.0",
+│      "development_status": "Production/Stable",
+│      "author": "Onestein, Odoo Community Association (OCA)",
+│      "maintainers": ["astirpe"],
+│      "license": "AGPL-3",
+│      "category": "Project",
+│      "website": "https://github.com/OCA/project",
+│      "depends": ["project"],
+├── odoo/addons/project_task_add_very_high/models/project_task.py
+│ @@ -3,8 +3,10 @@
+│  
+│  from odoo import fields, models
+│  
+│  
+│  class ProjectTask(models.Model):
+│      _inherit = "project.task"
+│  
+│ -    priority = fields.Selection(selection_add=[("2", "High"), ("3", "Very High")])
+│ +    priority = fields.Selection(
+│ +        selection_add=[("2", "High"), ("3", "Very High")], tracking=True
+│ +    )
+├── odoo/addons/project_task_add_very_high/readme/DESCRIPTION.rst
+│ @@ -22,7 +22,13 @@
+│  and on Kanban:
+│  
+│  .. figure:: https://raw.githubusercontent.com/OCA/project/12.0/project_task_add_very_high/static/description/image2_a.png
+│     :alt: On kanban, priority widget shows one star
+│  
+│  In case this module is uninstalled, all the tasks that were previously set as `High` or `Very High` priority will be
+│  converted to `Normal` priority.
+│ +
+│ +
+│ +When the priority of the task changes, the message "priority:[old_priority] -> [new_priority]" is added to the chatter
+│ +
+│ +.. figure:: ../static/description/image_add_chatter.png
+│ +   :alt: Add message to chatter
+├── odoo/addons/project_task_add_very_high/static/description/index.html
+│ ├── odoo/addons/project_task_add_very_high/static/description/index.html
+│ │ @@ -413,14 +413,18 @@
+│ │          or
+│ │          <cite>Very High</cite>
+│ │          priority will be
+│ │  converted to
+│ │          <cite>Normal</cite>
+│ │          priority.
+│ │        </p>
+│ │ +      <p>When the priority of the task changes, the message “priority:[old_priority] -&gt; [new_priority]” is added to the chatter</p>
+│ │ +      <div class="figure">
+│ │ +        <img alt="Add message to chatter" src="https://raw.githubusercontent.com/OCA/project/14.0/project_task_add_very_high/static/description/image_add_chatter.png"/>
+│ │ +      </div>
+│ │        <p>
+│ │          <strong>Table of contents</strong>
+│ │        </p>
+│ │        <div class="contents local topic" id="contents">
+│ │          <ul class="simple">
+│ │            <li>
+│ │              <a class="reference internal" href="#usage" id="id1">Usage</a>
+│   --- odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/METADATA
+├── +++ odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/METADATA
+│┄ Files 4% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: odoo14-addon-project-task-add-very-high
+│ -Version: 14.0.1.0.1.dev9
+│ +Version: 14.0.1.1.0
+│  Summary: Adds extra options 'High' and 'Very High' on tasks
+│  Home-page: https://github.com/OCA/project
+│  Author: Onestein, Odoo Community Association (OCA)
+│  Author-email: support@odoo-community.org
+│  License: AGPL-3
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python
+│ @@ -67,14 +67,20 @@
+│  
+│  .. figure:: https://raw.githubusercontent.com/OCA/project/12.0/project_task_add_very_high/static/description/image2_a.png
+│     :alt: On kanban, priority widget shows one star
+│  
+│  In case this module is uninstalled, all the tasks that were previously set as `High` or `Very High` priority will be
+│  converted to `Normal` priority.
+│  
+│ +
+│ +When the priority of the task changes, the message "priority:[old_priority] -> [new_priority]" is added to the chatter
+│ +
+│ +.. figure:: https://raw.githubusercontent.com/OCA/project/14.0/project_task_add_very_high/static/description/image_add_chatter.png
+│ +   :alt: Add message to chatter
+│ +
+│  **Table of contents**
+│  
+│  .. contents::
+│     :local:
+│  
+│  Usage
+│  =====
+│   --- odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/RECORD
+├── +++ odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/RECORD
+│┄ Files 9% similar despite different names
+│ @@ -1,10 +1,10 @@
+│ -odoo/addons/project_task_add_very_high/README.rst,sha256=0--Af6XoDHWw-FFQ0jHE1-Z0GVBt3BbZkXMR-3sezAs,4460
+│ +odoo/addons/project_task_add_very_high/README.rst,sha256=S3Co1U1sQp3b7fiKVcgRTgp6YxjZMxdM8YyIGEQ8aVk,4745
+│  odoo/addons/project_task_add_very_high/__init__.py,sha256=lHbcD_3Jhk02gKyANjQ1Bif8uknO8qLtRSK4lJNPeeQ,55
+│ -odoo/addons/project_task_add_very_high/__manifest__.py,sha256=7PAYaTVmiGABS1m5cSW0MwqGeab2yOz8D1RyGGafl5I,647
+│ +odoo/addons/project_task_add_very_high/__manifest__.py,sha256=5DQrfQ-2mxH5yYN5iYozrTDBPskrnMIfkl-7j00dwJA,647
+│  odoo/addons/project_task_add_very_high/hooks.py,sha256=f5ZG2ckCXAbuuAwAfLYgyotZju5Sb0yLFD-5D-IAu6g,425
+│  odoo/addons/project_task_add_very_high/i18n/ar.po,sha256=C7-coaMfo0e3MiRsxNp--g81ojyk9ZPUIqGbReYqBEc,1401
+│  odoo/addons/project_task_add_very_high/i18n/ca.po,sha256=ev9A2EG6j40cZ0nL1ekzDj58ICw-5UdjBMFqA9wZPbU,1421
+│  odoo/addons/project_task_add_very_high/i18n/cs_CZ.po,sha256=fHS66NvpeGkgtuBnEKMF-ixm4Kveafk4bjwn15g4z5g,1360
+│  odoo/addons/project_task_add_very_high/i18n/de.po,sha256=L5TRjGzghr1_JYFQFoUvFzT6unwWG0US2feHIrh4qlw,1425
+│  odoo/addons/project_task_add_very_high/i18n/el.po,sha256=vc6fRCAFVKBg-pILlMOKWRuDx6jjvftIiyiO_dq4r_o,1320
+│  odoo/addons/project_task_add_very_high/i18n/es.po,sha256=uolTJBwmJ_1hhBPzMuOkCwcGF7p6cU0IAKB2__-GnP0,1431
+│ @@ -37,22 +37,23 @@
+│  odoo/addons/project_task_add_very_high/i18n/ro.po,sha256=DXW7_ulqHAbAxf6hgh6PrkMkHEUfBJFGHklgDhJjjRs,1360
+│  odoo/addons/project_task_add_very_high/i18n/sl.po,sha256=LtcJ4d0VP0KHVXMqKtMSUz6AMzRYncJ_LAdf4vdfR1g,1373
+│  odoo/addons/project_task_add_very_high/i18n/sv.po,sha256=h2-3UztYqUpSHSxzacSHG9dZt6pRYRieJxnTw9hD66M,1315
+│  odoo/addons/project_task_add_very_high/i18n/tr.po,sha256=y2HW029dFdqjZzZEsha9CfTIrfHSZB4Hl8Obc4CLYJ4,1313
+│  odoo/addons/project_task_add_very_high/i18n/uk.po,sha256=_vh0nEtUAIPmWojTnGWc1X8VEz-mZOO9iCq7cbM4-ng,1403
+│  odoo/addons/project_task_add_very_high/i18n/zh_CN.po,sha256=d5YCU_w3GhnAdHu3_beabtOY-wK-xrs6NwxxfyO7Sp8,1324
+│  odoo/addons/project_task_add_very_high/models/__init__.py,sha256=LOAASqfG7RbE7TOGKSSvrR7lpFkwckVX0JjE27Ejb-A,27
+│ -odoo/addons/project_task_add_very_high/models/project_task.py,sha256=11i1gx127Z9g0-7bP8UDjJKBPp7VCGwGFE7QJSLfStM,306
+│ +odoo/addons/project_task_add_very_high/models/project_task.py,sha256=MGJfCDIca3RlKdXccuzcREeVgG8l4A9JPevjIVZMTNQ,335
+│  odoo/addons/project_task_add_very_high/readme/CONTRIBUTORS.rst,sha256=w3dRE8rUgHbHbGcR2Atm6O4J-IrSmsbkgA7F7lNXVbc,39
+│ -odoo/addons/project_task_add_very_high/readme/DESCRIPTION.rst,sha256=zUUzAhbdPPAkh0gggdB3CRM-6N_wFi-e3gQZMhPb7xk,1300
+│ +odoo/addons/project_task_add_very_high/readme/DESCRIPTION.rst,sha256=KWQQC95I6SXTLby5KwglfIrnGWhSIExujj8ztI-y2HY,1510
+│  odoo/addons/project_task_add_very_high/readme/USAGE.rst,sha256=CcY06FyCItMWbmB6QFGh_1UZbWtK08QqX35aIO83iB4,295
+│  odoo/addons/project_task_add_very_high/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+│  odoo/addons/project_task_add_very_high/static/description/image.png,sha256=OVx2VKuw6A6cUIYU63ZinDDE-hVQ1r7murMdSfGKuNQ,10539
+│  odoo/addons/project_task_add_very_high/static/description/image2.png,sha256=AmgiqmeW2H5y4HWAfuxvtcil8UV05N-Iotg2TJ7-FpA,2983
+│  odoo/addons/project_task_add_very_high/static/description/image2_a.png,sha256=vJmbxScBJaASfmrbD0iFIFcCZCfigTyH-E9-qC06h0c,2999
+│  odoo/addons/project_task_add_very_high/static/description/image_a.png,sha256=cAl6W7qNNK9H5ZCvfpMKIq-s8FGL4gmkoN3HGslpLPE,10514
+│ -odoo/addons/project_task_add_very_high/static/description/index.html,sha256=OG1K5ZFNR6R-m0xoBXEP8XtRBwJaiYAjaTRdlxSMNyk,14034
+│ +odoo/addons/project_task_add_very_high/static/description/image_add_chatter.png,sha256=mx6tlvn_qknDMUiAtfO1TZYNo6uIH9t20S-OEBWCuA0,42525
+│ +odoo/addons/project_task_add_very_high/static/description/index.html,sha256=xET8CwMXjQVYHdoPEzGnU0ElsXrIMW3BnRFK_7Xsku4,14357
+│  odoo/addons/project_task_add_very_high/views/project_task_view.xml,sha256=VvuUr_aoMlAGXo3Q7B_zvPrsH_rbvNDRL1HNhqLkWqk,579
+│ -odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/METADATA,sha256=9BkzY9WzJy2vu03D3CKFGx_1qCbRgUIOMhmp-PItj-Y,5089
+│ -odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ -odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ -odoo14_addon_project_task_add_very_high-14.0.1.0.1.dev9.dist-info/RECORD,,
+│ +odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/METADATA,sha256=5loAwsyHqrSWTLN5maUEiN_DL1m3uVoKSum1pTDakRw,5369
+│ +odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ +odoo14_addon_project_task_add_very_high-14.0.1.1.0.dist-info/RECORD,,
