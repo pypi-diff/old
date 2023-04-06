@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/preservation-database-0.0.93.tar.gz tmp/preservation-database-0.0.94.tar.gz --html versions/p/preservation-database/0.0.93-0.0.94/index.html --text versions/p/preservation-database/0.0.93-0.0.94/diff.txt --markdown versions/p/preservation-database/0.0.93-0.0.94/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">14.0 KB</span></div>
+  <div><span class="source">tmp/preservation-database-0.0.93.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/preservation-database-0.0.94.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">294 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;preservation-database-0.0.9<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>15:5<del>2</del>:4<del>9</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;preservation-database-0.0.9<ins>4</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">13.7 KB</span></div>
+    <div><span class="source">preservation-database-0.0.93.tar</span> vs.</div>
+    <div id="preservation-database--.-.--.tar"><span class="source">preservation-database-0.0.94.tar</span>
+      <a class="anchor" href="#preservation-database--.-.--.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">7.69 KB</span></div>
+      <div id="preservation-database--.-.--.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 27 lines modified</td><td colspan="2">Offset 1, 27 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129<span class="dp">·</span>2023-02-06<span class="dp">·</span>17:29:02.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/MANIFEST.in</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129<span class="dp">·</span>2023-02-06<span class="dp">·</span>17:29:02.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5481<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5481<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4701<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>5</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4701<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>4</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/</td><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5481<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/PKG-INFO</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5481<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>691<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>691<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/dependency_links.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>208<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/requires.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>208<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservation_database.egg-info/top_level.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservation_database.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-06<span class="dp">·</span>09:14:23.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-06<span class="dp">·</span>09:14:23.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15336<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:46:52.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/cli.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15336<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:46:52.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>660<span class="dp">·</span>2023-03-01<span class="dp">·</span>11:09:55.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/constants.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>660<span class="dp">·</span>2023-03-01<span class="dp">·</span>11:09:55.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1597<span class="dp">·</span>2023-03-05<span class="dp">·</span>12:44:30.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/environment.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1597<span class="dp">·</span>2023-03-05<span class="dp">·</span>12:44:30.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/environment.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3450<span class="dp">·</span>2023-02-19<span class="dp">·</span>18:38:37.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/example_settings.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3450<span class="dp">·</span>2023-02-19<span class="dp">·</span>18:38:37.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/example_settings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>341<del>3</del>4<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:3<del>9</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/exporter.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>341<ins>5</ins>4<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:3<ins>2</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/exporter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42928<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:20:58.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/models.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42928<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:20:58.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/models.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/test_data/</td><td class="diffline">19 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/test_data/</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>888<span class="dp">·</span>2023-02-06<span class="dp">·</span>10:17:59.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/test_data/tests.jsonl</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>888<span class="dp">·</span>2023-02-06<span class="dp">·</span>10:17:59.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/test_data/tests.jsonl</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/tests/</td><td class="diffline">21 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-06<span class="dp">·</span>09:20:11.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/tests/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-06<span class="dp">·</span>09:20:11.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-02-06<span class="dp">·</span>10:15:46.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/tests/test_archives.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-02-06<span class="dp">·</span>10:15:46.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/tests/test_archives.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>767<span class="dp">·</span>2023-02-19<span class="dp">·</span>18:38:37.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/urls.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>767<span class="dp">·</span>2023-02-19<span class="dp">·</span>18:38:37.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/urls.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20636<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:59:40.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/preservationdatabase/utils.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20636<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:59:40.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/preservationdatabase/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1238<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:<del>00</del>.000000<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/pyproject.toml</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1238<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:<ins>41</ins>.000000<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1143<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<del>2</del>:4<del>9</del>.<del>97745</del>4<span class="dp">·</span>preservation-database-0.0.9<del>3</del>/setup.cfg</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>martin<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1143<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:5<ins>4</ins>:4<ins>8</ins>.<ins>74299</ins>4<span class="dp">·</span>preservation-database-0.0.9<ins>4</ins>/setup.cfg</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.26 KB</span></div>
+      <div><span class="source">preservation-database-0.0.93/PKG-INFO</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---PKG-INFO"><span class="source">preservation-database-0.0.94/PKG-INFO</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>preservation-database</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>preservation-database</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.9<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.9<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meve@crossref.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meve@crossref.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>&lt;meve@crossref.org&gt;</td><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>&lt;meve@crossref.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://labs.crossref.org</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://labs.crossref.org</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">723 B</span></div>
+        <div id="preservation-database--.-.--.tar---preservation-database--.-.---PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>preservation-database<span class="dp">·</span>Version:<span class="dp">·</span>0.0.9<del>3</del><span class="dp">·</span>Summary:<span class="dp">·</span>A</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>preservation-database<span class="dp">·</span>Version:<span class="dp">·</span>0.0.9<ins>4</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://</td><td class="diffline">2 </td><td class="diffpresent">database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>Author-</td><td class="diffline">3 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>Author-</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">email:<span class="dp">·</span>meve@crossref.org<span class="dp">·</span>Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td><td class="diffline">4 </td><td class="diffpresent">email:<span class="dp">·</span>meve@crossref.org<span class="dp">·</span>Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">crossref.org&gt;<span class="dp">·</span>Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:</td><td class="diffline">5 </td><td class="diffpresent">crossref.org&gt;<span class="dp">·</span>Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">documentation,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://</td><td class="diffline">6 </td><td class="diffpresent">documentation,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://</td><td class="diffline">7 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md<span class="dp">·</span>Keywords:</td><td class="diffline">8 </td><td class="diffpresent">gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md<span class="dp">·</span>Keywords:</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/README.md</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---README.md"><span class="source">preservation-database-0.0.94/README.md</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.32 KB</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservation_database.egg-info/PKG-INFO</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-PKG-INFO"><span class="source">preservation-database-0.0.94/preservation_database.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>preservation-database</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>preservation-database</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.9<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.9<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meve@crossref.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meve@crossref.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>&lt;meve@crossref.org&gt;</td><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>&lt;meve@crossref.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://labs.crossref.org</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>documentation,<span class="dp">·</span>https://labs.crossref.org</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">723 B</span></div>
+        <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>preservation-database<span class="dp">·</span>Version:<span class="dp">·</span>0.0.9<del>3</del><span class="dp">·</span>Summary:<span class="dp">·</span>A</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>preservation-database<span class="dp">·</span>Version:<span class="dp">·</span>0.0.9<ins>4</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://</td><td class="diffline">2 </td><td class="diffpresent">database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>Author-</td><td class="diffline">3 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Author:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve<span class="dp">·</span>Author-</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">email:<span class="dp">·</span>meve@crossref.org<span class="dp">·</span>Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td><td class="diffline">4 </td><td class="diffpresent">email:<span class="dp">·</span>meve@crossref.org<span class="dp">·</span>Maintainer-email:<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">crossref.org&gt;<span class="dp">·</span>Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:</td><td class="diffline">5 </td><td class="diffpresent">crossref.org&gt;<span class="dp">·</span>Project-URL:<span class="dp">·</span>homepage,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">documentation,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://</td><td class="diffline">6 </td><td class="diffpresent">documentation,<span class="dp">·</span>https://labs.crossref.org<span class="dp">·</span>Project-URL:<span class="dp">·</span>repository,<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://</td><td class="diffline">7 </td><td class="diffpresent">gitlab.com/crossref/labs/preservationDatabase<span class="dp">·</span>Project-URL:<span class="dp">·</span>changelog,<span class="dp">·</span>https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md<span class="dp">·</span>Keywords:</td><td class="diffline">8 </td><td class="diffpresent">gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md<span class="dp">·</span>Keywords:</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservation_database.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-SOURCES.txt"><span class="source">preservation-database-0.0.94/preservation_database.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservation_database.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/cli.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-cli.py"><span class="source">preservation-database-0.0.94/preservationdatabase/cli.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/constants.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-constants.py"><span class="source">preservation-database-0.0.94/preservationdatabase/constants.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/environment.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-environment.py"><span class="source">preservation-database-0.0.94/preservationdatabase/environment.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-environment.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/example_settings.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-example_settings.py"><span class="source">preservation-database-0.0.94/preservationdatabase/example_settings.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-example_settings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">666 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/exporter.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-exporter.py"><span class="source">preservation-database-0.0.94/preservationdatabase/exporter.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-exporter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 632, 14 lines modified</td><td colspan="2">Offset 632, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">632 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>preserved:</td><td class="diffline">632 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>preserved:</td></tr>
+<tr class="diffunmodified"><td class="diffline">633 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>unpreserved_samples.append(annotation)</td><td class="diffline">633 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>unpreserved_samples.append(annotation)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">634 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>overall_samples.append(annotation)</td><td class="diffline">634 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>overall_samples.append(annotation)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">635 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">635 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">636 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>...</td></tr>
+<tr class="diffunmodified"><td class="diffline">636 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(e)</td><td class="diffline">637 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(e)</td></tr>
+<tr class="diffunmodified"><td class="diffline">637 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(f&quot;This<span class="dp">·</span>DOI<span class="dp">·</span>was<span class="dp">·</span>excluded:<span class="dp">·</span>{sample[&#x27;DOI&#x27;]}&quot;)</td><td class="diffline">638 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(f&quot;This<span class="dp">·</span>DOI<span class="dp">·</span>was<span class="dp">·</span>excluded:<span class="dp">·</span>{sample[&#x27;DOI&#x27;]}&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">638 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>f&quot;{REPORT_PATH}/members/{member_id}/preservation-report.json&quot;</td><td class="diffline">639 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>f&quot;{REPORT_PATH}/members/{member_id}/preservation-report.json&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">639 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>unpreserved_key<span class="dp">·</span>=<span class="dp">·</span>f&quot;{REPORT_PATH}/members/{member_id}/unpreserved.json&quot;</td><td class="diffline">640 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>unpreserved_key<span class="dp">·</span>=<span class="dp">·</span>f&quot;{REPORT_PATH}/members/{member_id}/unpreserved.json&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">640 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>push_json_to_s3(</td><td class="diffline">641 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>push_json_to_s3(</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/models.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-models.py"><span class="source">preservation-database-0.0.94/preservationdatabase/models.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-models.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/test_data/tests.jsonl</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-test_data-tests.jsonl"><span class="source">preservation-database-0.0.94/preservationdatabase/test_data/tests.jsonl</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-test_data-tests.jsonl">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">183 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/tests/test_archives.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-tests-test_archives.py"><span class="source">preservation-database-0.0.94/preservationdatabase/tests/test_archives.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-tests-test_archives.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/urls.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-urls.py"><span class="source">preservation-database-0.0.94/preservationdatabase/urls.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-urls.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/preservationdatabase/utils.py</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-utils.py"><span class="source">preservation-database-0.0.94/preservationdatabase/utils.py</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---preservationdatabase-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">479 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/pyproject.toml</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---pyproject.toml"><span class="source">preservation-database-0.0.94/pyproject.toml</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[project]</td><td class="diffline">1 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;preservation-database&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;preservation-database&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.9<del>3</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.9<ins>4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">5 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td><td class="diffline">6 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>{file<span class="dp">·</span>=<span class="dp">·</span>&quot;LICENSE.md&quot;}</td><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>{file<span class="dp">·</span>=<span class="dp">·</span>&quot;LICENSE.md&quot;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;digital<span class="dp">·</span>preservation&quot;,<span class="dp">·</span>&quot;academic&quot;]</td><td class="diffline">8 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;digital<span class="dp">·</span>preservation&quot;,<span class="dp">·</span>&quot;academic&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{email<span class="dp">·</span>=<span class="dp">·</span>&quot;meve@crossref.org&quot;},</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{email<span class="dp">·</span>=<span class="dp">·</span>&quot;meve@crossref.org&quot;},</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">465 B</span></div>
+      <div><span class="source">preservation-database-0.0.93/setup.cfg</span> vs.</div>
+      <div id="preservation-database--.-.--.tar---preservation-database--.-.---setup.cfg"><span class="source">preservation-database-0.0.94/setup.cfg</span>
+        <a class="anchor" href="#preservation-database--.-.--.tar---preservation-database--.-.---setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[metadata]</td><td class="diffline">1 </td><td class="diffpresent">[metadata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>preservation-database</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>preservation-database</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.0.9<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.0.9<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>A<span class="dp">·</span>database<span class="dp">·</span>builder<span class="dp">·</span>for<span class="dp">·</span>digital<span class="dp">·</span>preservation<span class="dp">·</span>information.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td><td class="diffline">5 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://gitlab.com/crossref/labs/preservationDatabase</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td><td class="diffline">6 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>Martin<span class="dp">·</span>Paul<span class="dp">·</span>Eve</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>martin@eve.gd</td><td class="diffline">7 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>martin@eve.gd</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       Environment<span class="dp">·</span>::<span class="dp">·</span>Web<span class="dp">·</span>Environment</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       Environment<span class="dp">·</span>::<span class="dp">·</span>Web<span class="dp">·</span>Environment</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

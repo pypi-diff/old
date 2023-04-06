@@ -1,0 +1,60 @@
+# Comparing `tmp/SmartsheetFunctions-0.0.1.tar.gz` & `tmp/SmartsheetFunctions-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "SmartsheetFunctions-0.0.1.tar", last modified: Thu Apr  6 15:11:17 2023, max compression
++gzip compressed data, was "SmartsheetFunctions-0.0.2.tar", last modified: Thu Apr  6 15:40:02 2023, max compression
+```
+
+## Comparing `SmartsheetFunctions-0.0.1.tar` & `SmartsheetFunctions-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:11:17.570065 SmartsheetFunctions-0.0.1/
+--rw-rw-rw-   0        0        0     1092 2023-04-06 14:51:56.000000 SmartsheetFunctions-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0      360 2023-04-06 15:11:17.569065 SmartsheetFunctions-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0     4584 2023-04-06 15:10:01.000000 SmartsheetFunctions-0.0.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:11:17.551066 SmartsheetFunctions-0.0.1/SmartsheetFunctions/
+--rw-rw-rw-   0        0        0        0 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions/__init__.py
+--rw-rw-rw-   0        0        0     8945 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions/smartsheet.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 15:11:17.566064 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/
+--rw-rw-rw-   0        0        0      360 2023-04-06 15:11:17.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      306 2023-04-06 15:11:17.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 15:11:17.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        9 2023-04-06 15:11:17.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       20 2023-04-06 15:11:17.000000 SmartsheetFunctions-0.0.1/SmartsheetFunctions.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 15:11:17.570065 SmartsheetFunctions-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0      497 2023-04-06 15:10:50.000000 SmartsheetFunctions-0.0.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 15:40:02.569871 SmartsheetFunctions-0.0.2/
++-rw-rw-rw-   0        0        0     1092 2023-04-06 14:51:56.000000 SmartsheetFunctions-0.0.2/LICENSE
++-rw-rw-rw-   0        0        0      360 2023-04-06 15:40:02.568871 SmartsheetFunctions-0.0.2/PKG-INFO
++-rw-rw-rw-   0        0        0     4584 2023-04-06 15:10:01.000000 SmartsheetFunctions-0.0.2/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 15:40:02.546870 SmartsheetFunctions-0.0.2/SmartsheetFunctions/
++-rw-rw-rw-   0        0        0        0 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions/__init__.py
++-rw-rw-rw-   0        0        0     8945 2023-03-08 20:38:06.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions/smartsheet.py
++drwxrwxrwx   0        0        0        0 2023-04-06 15:40:02.564889 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/
++-rw-rw-rw-   0        0        0      360 2023-04-06 15:40:02.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      306 2023-04-06 15:40:02.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 15:40:02.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 15:40:02.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       20 2023-04-06 15:40:02.000000 SmartsheetFunctions-0.0.2/SmartsheetFunctions.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 15:40:02.570871 SmartsheetFunctions-0.0.2/setup.cfg
++-rw-rw-rw-   0        0        0      669 2023-04-06 15:39:44.000000 SmartsheetFunctions-0.0.2/setup.py
+```
+
+### Comparing `SmartsheetFunctions-0.0.1/LICENSE` & `SmartsheetFunctions-0.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `SmartsheetFunctions-0.0.1/README.md` & `SmartsheetFunctions-0.0.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `SmartsheetFunctions-0.0.1/SmartsheetFunctions/smartsheet.py` & `SmartsheetFunctions-0.0.2/SmartsheetFunctions/smartsheet.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,1152 @@
+--- tmp/seamm_ff_util-2023.4.5.tar.gz
++++ tmp/seamm_ff_util-2023.4.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "seamm_ff_util-2023.4.5.tar", last modified: Mon Mar  6 11:23:11 2023, max compression
+│ +gzip compressed data, was "seamm_ff_util-2023.4.6.tar", last modified: Thu Apr  6 15:50:40 2023, max compression
+│   --- seamm_ff_util-2023.4.5.tar
+├── +++ seamm_ff_util-2023.4.6.tar
+│ ├── file list
+│ │ @@ -1,66 +1,67 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      151 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/AUTHORS.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3290 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/CONTRIBUTING.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      800 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/HISTORY.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      306 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3201 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1709 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/README.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.071751 seamm_ff_util-2023.4.5/docs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6790 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/Makefile
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/docs/_static/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20790 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/SEAMM inverted.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17802 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/SEAMM logo.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    79373 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/molssi_main_logo.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    68255 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/molssi_main_logo_inverted_white.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    63967 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/molssi_square.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32355 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/_static/nsf.png
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/docs/api/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      182 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/api/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/authors.rst
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     9660 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/conf.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/docs/developer_guide/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       36 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/developer_guide/contributing.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      153 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/developer_guide/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1113 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/developer_guide/installation.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       98 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/developer_guide/usage.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/docs/getting_started/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1023 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/getting_started/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/history.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1290 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6473 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/make.bat
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/docs/user_guide/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      240 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/docs/user_guide/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       31 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       81 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/requirements_dev.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/seamm_ff_util/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      442 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/seamm_ff_util/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      500 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/seamm_ff_util/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2823 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/seamm_ff_util/ff_assigner.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   125972 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/seamm_ff_util/forcefield.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.075751 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3201 2023-03-06 11:23:11.000000 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1474 2023-03-06 11:23:11.000000 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-06 11:23:11.000000 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       31 2023-03-06 11:23:11.000000 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       14 2023-03-06 11:23:11.000000 seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      369 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2554 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-06 11:23:11.079751 seamm_ff_util-2023.4.5/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       85 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1005 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/conftest.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1815 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_alkanes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1535 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_angle-angle_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1698 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_angle_angle_torsion_1_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1780 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_angle_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2045 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_angle_torsion_3_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1447 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_bond-bond_1_3_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1300 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_bond-bond_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1519 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_bond_angle_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1672 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_bond_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2032 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_end_bond_torsion_3_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1726 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_middle_bond_torsion_3_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      810 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_nonbond_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1766 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_oop_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/tests/test_torsion_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-03-06 11:22:50.000000 seamm_ff_util-2023.4.5/versioneer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      151 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/AUTHORS.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3290 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/CONTRIBUTING.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      924 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/HISTORY.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      306 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3325 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1709 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/README.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.847587 seamm_ff_util-2023.4.6/docs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6790 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/Makefile
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/docs/_static/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20790 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/SEAMM inverted.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17802 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/SEAMM logo.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    79373 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/molssi_main_logo.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    68255 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/molssi_main_logo_inverted_white.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    63967 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/molssi_square.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32355 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/_static/nsf.png
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/docs/api/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      182 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/api/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/authors.rst
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     9660 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/conf.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/docs/developer_guide/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       36 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/developer_guide/contributing.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      153 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/developer_guide/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1113 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/developer_guide/installation.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       98 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/developer_guide/usage.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/docs/getting_started/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1023 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/getting_started/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/history.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1290 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6473 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/make.bat
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/docs/user_guide/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      240 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/docs/user_guide/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       31 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/requirements_dev.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/seamm_ff_util/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      442 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/seamm_ff_util/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      500 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/seamm_ff_util/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2823 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/seamm_ff_util/ff_assigner.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   112390 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/seamm_ff_util/forcefield.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11240 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/seamm_ff_util/metadata.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.851587 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3325 2023-04-06 15:50:40.000000 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1500 2023-04-06 15:50:40.000000 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:50:40.000000 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       31 2023-04-06 15:50:40.000000 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-06 15:50:40.000000 seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      369 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2554 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:50:40.855587 seamm_ff_util-2023.4.6/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1005 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/conftest.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1815 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_alkanes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1535 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_angle-angle_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1698 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_angle_angle_torsion_1_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1780 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_angle_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2045 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_angle_torsion_3_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1447 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_bond-bond_1_3_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1300 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_bond-bond_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1519 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_bond_angle_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1672 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_bond_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2032 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_end_bond_torsion_3_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1726 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_middle_bond_torsion_3_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      810 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_nonbond_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1766 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_oop_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/tests/test_torsion_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-04-06 15:50:22.000000 seamm_ff_util-2023.4.6/versioneer.py
+│ │   --- seamm_ff_util-2023.4.5/CONTRIBUTING.rst
+│ ├── +++ seamm_ff_util-2023.4.6/CONTRIBUTING.rst
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/HISTORY.rst
+│ ├── +++ seamm_ff_util-2023.4.6/HISTORY.rst
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,11 +1,14 @@
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Added support for Buckingham potentials
+│ │ +   * Also improved unit handling across all terms in forcefields.
+│ │ +     
+│ │  2023.3.5 -- Added molecule numbers for LAMMPS input
+│ │     * Added the molecule number for each atom for when using LAMMPS
+│ │       
+│ │  2023.2.6 -- Added handling of OPLS-AA forcefield
+│ │     * Added handling of the OPLS-AA forcefield
+│ │     * Moved documentation to new MolSSI theme and diátaxis layout
+│ │     * Cleaned up internal dependencies and workflows for GitHub
+│ │   --- seamm_ff_util-2023.4.5/LICENSE
+│ ├── +++ seamm_ff_util-2023.4.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/PKG-INFO
+│ ├── +++ seamm_ff_util-2023.4.6/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: seamm_ff_util
+│ │ -Version: 2023.4.5
+│ │ +Version: 2023.4.6
+│ │  Summary: seamm_ff_util
+│ │  Home-page: https://github.com/molssi-seam/seamm_ff_util
+│ │  Author: Paul Saxe
+│ │  Author-email: psaxe@molssi.org
+│ │  License: BSD-3-Clause
+│ │  Keywords: seamm_ff_util
+│ │  Platform: Linux
+│ │ @@ -73,14 +73,17 @@
+│ │  .. _`National Science Foundation`: https://www.nsf.gov
+│ │  
+│ │  
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Added support for Buckingham potentials
+│ │ +   * Also improved unit handling across all terms in forcefields.
+│ │ +     
+│ │  2023.3.5 -- Added molecule numbers for LAMMPS input
+│ │     * Added the molecule number for each atom for when using LAMMPS
+│ │       
+│ │  2023.2.6 -- Added handling of OPLS-AA forcefield
+│ │     * Added handling of the OPLS-AA forcefield
+│ │     * Moved documentation to new MolSSI theme and diátaxis layout
+│ │     * Cleaned up internal dependencies and workflows for GitHub
+│ │   --- seamm_ff_util-2023.4.5/README.rst
+│ ├── +++ seamm_ff_util-2023.4.6/README.rst
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/Makefile
+│ ├── +++ seamm_ff_util-2023.4.6/docs/Makefile
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/SEAMM inverted.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/SEAMM inverted.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/SEAMM logo.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/SEAMM logo.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/molssi_main_logo.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/molssi_main_logo.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/molssi_main_logo_inverted_white.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/molssi_main_logo_inverted_white.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/molssi_square.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/molssi_square.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/_static/nsf.png
+│ ├── +++ seamm_ff_util-2023.4.6/docs/_static/nsf.png
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/conf.py
+│ ├── +++ seamm_ff_util-2023.4.6/docs/conf.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/developer_guide/installation.rst
+│ ├── +++ seamm_ff_util-2023.4.6/docs/developer_guide/installation.rst
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/getting_started/index.rst
+│ ├── +++ seamm_ff_util-2023.4.6/docs/getting_started/index.rst
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/index.rst
+│ ├── +++ seamm_ff_util-2023.4.6/docs/index.rst
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/docs/make.bat
+│ ├── +++ seamm_ff_util-2023.4.6/docs/make.bat
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/seamm_ff_util/ff_assigner.py
+│ ├── +++ seamm_ff_util-2023.4.6/seamm_ff_util/ff_assigner.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/seamm_ff_util/forcefield.py
+│ ├── +++ seamm_ff_util-2023.4.6/seamm_ff_util/forcefield.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -12,512 +12,29 @@
+│ │  import packaging.version
+│ │  import pprint  # noqa: F401
+│ │  
+│ │  import seamm_util
+│ │  from seamm_util import Q_
+│ │  
+│ │  from .ff_assigner import FFAssigner
+│ │ +from .metadata import metadata
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  # logger.setLevel("DEBUG")
+│ │  
+│ │  
+│ │  class NonbondForms(Enum):
+│ │      SIGMA_EPS = "sigma-eps"
+│ │      RMIN_EPS = "rmin-eps"
+│ │      A_B = "A-B"
+│ │      AR_BR = "A/r-B/r"
+│ │  
+│ │  
+│ │  two_raised_to_one_sixth = 2 ** (1 / 6)
+│ │  
+│ │ -# yapf: disable
+│ │ -metadata = {
+│ │ -    'charges':
+│ │ -        {
+│ │ -            'equation': ['I'],
+│ │ -            'constants': [
+│ │ -                ('Q', 'e'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'atomic charge',
+│ │ -                    'n_atoms': 1,
+│ │ -                    'symmetry': 'none',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'bond_increments':
+│ │ -        {
+│ │ -            'equation': ['delta'],
+│ │ -            'constants': [
+│ │ -                ('deltaij', 'e'),
+│ │ -                ('deltaji', 'e'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'bond charge increment',
+│ │ -                    'n_atoms': 2,
+│ │ -                    'symmetry': 'like_bond',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 1
+│ │ -                }
+│ │ -        },
+│ │ -    'quadratic_bond':
+│ │ -        {
+│ │ -            'equation': ['K2*(R-R0)^2'],
+│ │ -            'constants': [
+│ │ -                ('R0', 'angstrom'),
+│ │ -                ('K2', 'kcal/mol/angstrom^2'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'bond',
+│ │ -                    'n_atoms': 2,
+│ │ -                    'symmetry': 'like_bond',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'quartic_bond':
+│ │ -        {
+│ │ -            'equation': ['K2*(R-R0)^2 + K3*(R-R0)^3 + K4*(R-R0)^4'],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('R0', 'angstrom'),
+│ │ -                    ('K2', 'kcal/mol/angstrom^2'),
+│ │ -                    ('K3', 'kcal/mol/angstrom^3'),
+│ │ -                    ('K4', 'kcal/mol/angstrom^4'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'bond',
+│ │ -                    'n_atoms': 2,
+│ │ -                    'symmetry': 'like_bond',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'quadratic_angle':
+│ │ -        {
+│ │ -            'equation': ['K2*(Theta-Theta0)^2'],
+│ │ -            'constants': [
+│ │ -                ('Theta0', 'degree'),
+│ │ -                ('K2', 'kcal/mol/radian^2'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'angle',
+│ │ -                    'n_atoms': 3,
+│ │ -                    'symmetry': 'like_angle',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'quartic_angle':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        'K2*(Theta-Theta0)^2 + K3*(Theta-Theta0)^3'
+│ │ -                        '+ K4*(Theta-Theta0)^4'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('Theta0', 'degree'),
+│ │ -                    ('K2', 'kcal/mol/radian^2'),
+│ │ -                    ('K3', 'kcal/mol/radian^3'),
+│ │ -                    ('K4', 'kcal/mol/radian^4'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'angle',
+│ │ -                    'n_atoms': 3,
+│ │ -                    'symmetry': 'like_angle',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'simple_fourier_angle':
+│ │ -        {
+│ │ -            'equation': ['K*[1-cos(n*Theta)]'],
+│ │ -            'constants': [
+│ │ -                ('K', 'kcal/mol'),
+│ │ -                ('n', ''),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'angle',
+│ │ -                    'n_atoms': 3,
+│ │ -                    'symmetry': 'like_angle',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'torsion_1':
+│ │ -        {
+│ │ -            'equation': ['KPhi * [1 + cos(n*Phi - Phi0)]'],
+│ │ -            'constants': [
+│ │ -                ('KPhi', 'kcal/mol'),
+│ │ -                ('n', ''),
+│ │ -                ('Phi0', 'degree'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'torsion_3':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        'V1 * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2 * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3 * [1 + cos(3*Phi - Phi0_3)]'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('V1', 'kcal/mol'),
+│ │ -                    ('Phi0_1', 'degree'),
+│ │ -                    ('V2', 'kcal/mol'),
+│ │ -                    ('Phi0_2', 'degree'),
+│ │ -                    ('V3', 'kcal/mol'),
+│ │ -                    ('Phi0_3', 'degree'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'torsion_opls':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        '  1/2 * V1 * [1 + cos(Phi)]'
+│ │ -                        '+ 1/2 * V2 * [1 - cos(Phi)]'
+│ │ -                        '+ 1/2 * V3 * [1 + cos(Phi)]'
+│ │ -                        '+ 1/2 * V4 * [1 - cos(Phi)]'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('V1', 'kcal/mol'),
+│ │ -                    ('V2', 'kcal/mol'),
+│ │ -                    ('V3', 'kcal/mol'),
+│ │ -                    ('V4', 'kcal/mol'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'wilson_out_of_plane':
+│ │ -        {
+│ │ -            'equation': ['K*(Chi - Chi0)^2'],
+│ │ -            'constants': [
+│ │ -                ('K', 'kcal/mol/radian^2'),
+│ │ -                ('Chi0', 'degree'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'out-of-plane',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_oop',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'improper_opls':
+│ │ -        {
+│ │ -            'equation': ['1/2 * V2 * [1 - cos(Phi)]'],
+│ │ -            'constants': [
+│ │ -                ('V2', 'kcal/mol'),
+│ │ -            ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'out-of-plane',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_improper',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'nonbond(9-6)':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    'eps(ij) [2(r(ij)*/r(ij))**9 - 3(r(ij)*/r(ij))**6]',
+│ │ -                    'r(ij) = [(r(i)**6 + r(j)**6))/2]**(1/6)',
+│ │ -                    (
+│ │ -                        'eps(ij) = 2 * sqrt(eps(i) * eps(j)) * '
+│ │ -                        'r(i)^3 * r(j)^3/[r(i)^6 + r(j)^6]'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants': [('rmin', 'angstrom'), ('eps', 'kcal/mol')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'form': 'rmin-eps',
+│ │ -                    'type': 'pair',
+│ │ -                    'subtype': 'LJ 6-9',
+│ │ -                    'n_atoms': 1,
+│ │ -                    'symmetry': 'none',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'nonbond(12-6)':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    'E = 4 * eps * [(sigma/r)**12 - (sigma/r)**6]',
+│ │ -                    'E = eps * [(rmin/r)**12 - (rmin/r)**6]',
+│ │ -                    'E = A/r**12 - B/r**6',
+│ │ -                    'rmin = 2**1/6 * sigma ',
+│ │ -                    'sigma = rmin / 2**1/6',
+│ │ -                    'A = 4 * eps * sigma**12',
+│ │ -                    'B = 4 * eps * sigma**6',
+│ │ -                    'sigma = (A/B)**1/6',
+│ │ -                    'eps = B**2/(4*A)'
+│ │ -                ],
+│ │ -            'constants': [('sigma', 'angstrom'), ('eps', 'kcal/mol')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'form': 'sigma-eps',
+│ │ -                    'type': 'pair',
+│ │ -                    'subtype': 'LJ 12-6',
+│ │ -                    'n_atoms': 1,
+│ │ -                    'symmetry': 'none',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'buckingham':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    'E = A*exp(r/rho) - C/r**6'
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('A', 'kcal/mol'),
+│ │ -                    ('rho', 'Å'),
+│ │ -                    ('C', 'kcal/mol*Å**6'),
+│ │ -                    ('cutoff', 'Å'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'pair',
+│ │ -                    'subtype': 'LJ exp-6',
+│ │ -                    'n_atoms': 2,
+│ │ -                    'symmetry': 'like_bond',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'bond-bond':
+│ │ -        {
+│ │ -            'equation': ["K*(R-R0)*(R'-R0')"],
+│ │ -            'constants': [('K', 'kcal/mol/angstrom^2')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'bond-bond',
+│ │ -                    'n_atoms': 3,
+│ │ -                    'symmetry': 'like_angle',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'bond-bond_1_3':
+│ │ -        {
+│ │ -            'equation': ["K*(R-R0)*(R'-R0')"],
+│ │ -            'constants': [('K', 'kcal/mol/angstrom^2')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': '1,3 bond-bond',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'bond-angle':
+│ │ -        {
+│ │ -            'equation': ["K*(R-R0)*(Theta-Theta0)"],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('K12', 'kcal/mol/angstrom/radian'),
+│ │ -                    ('K23', 'kcal/mol/angstrom/radian'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'bond-angle',
+│ │ -                    'n_atoms': 3,
+│ │ -                    'symmetry': 'like_angle',
+│ │ -                    'fill': 1,
+│ │ -                    'flip': 1
+│ │ -                }
+│ │ -        },
+│ │ -    'angle-angle':
+│ │ -        {
+│ │ -            'equation': ["K*(Theta-Theta0)*(Theta'-Theta0')"],
+│ │ -            'constants': [('K', 'kcal/mol/angstrom/radian')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'angle-angle',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_angle-angle',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'end_bond-torsion_3':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        '(R_L - R0_L) * (V1_L * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2_L * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3_L * [1 + cos(3*Phi - Phi0_3)])'
+│ │ -                    ),
+│ │ -                    (
+│ │ -                        '(R_R - R0_R) * (V1_R * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2_R * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3_R * [1 + cos(3*Phi - Phi0_3)])'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('V1_L', 'kcal/mol'),
+│ │ -                    ('V2_L', 'kcal/mol'),
+│ │ -                    ('V3_L', 'kcal/mol'),
+│ │ -                    ('V1_R', 'kcal/mol'),
+│ │ -                    ('V2_R', 'kcal/mol'),
+│ │ -                    ('V3_R', 'kcal/mol'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion-end bond',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 3,
+│ │ -                    'flip': 3
+│ │ -                }
+│ │ -        },
+│ │ -    'middle_bond-torsion_3':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        '(R_M - R0_M) * (V1 * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2 * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3 * [1 + cos(3*Phi - Phi0_3)])'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('V1', 'kcal/mol'),
+│ │ -                    ('V2', 'kcal/mol'),
+│ │ -                    ('V3', 'kcal/mol'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion-middle bond',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'angle-torsion_3':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        '(Theta_L - Theta0_L)'
+│ │ -                        '* (V1_L * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2_L * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3_L * [1 + cos(3*Phi - Phi0_3)])'
+│ │ -                    ),
+│ │ -                    (
+│ │ -                        '(Theta_R - Theta0_R)'
+│ │ -                        ' * (V1_R * [1 + cos(Phi - Phi0_1)]'
+│ │ -                        ' + V2_R * [1 + cos(2*Phi - Phi0_2)]'
+│ │ -                        ' + V3_R * [1 + cos(3*Phi - Phi0_3)])'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants':
+│ │ -                [
+│ │ -                    ('V1_L', 'kcal/mol'),
+│ │ -                    ('V2_L', 'kcal/mol'),
+│ │ -                    ('V3_L', 'kcal/mol'),
+│ │ -                    ('V1_R', 'kcal/mol'),
+│ │ -                    ('V2_R', 'kcal/mol'),
+│ │ -                    ('V3_R', 'kcal/mol'),
+│ │ -                ],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion-angle',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 3,
+│ │ -                    'flip': 3
+│ │ -                }
+│ │ -        },
+│ │ -    'angle-angle-torsion_1':
+│ │ -        {
+│ │ -            'equation':
+│ │ -                [
+│ │ -                    (
+│ │ -                        'K * (Theta_L - Theta0_L) * (Theta_R - Theta0_R) * '
+│ │ -                        '(Phi - Phi0_1)'
+│ │ -                    )
+│ │ -                ],
+│ │ -            'constants': [('K', 'kcal/mol/degree^2/degree')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'angle-torsion-angle',
+│ │ -                    'n_atoms': 4,
+│ │ -                    'symmetry': 'like_torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -    'torsion-torsion_1':
+│ │ -        {
+│ │ -            'equation': ['K * cos(Phi_L) * cos(Phi_R)'],
+│ │ -            'constants': [('K', 'kcal/mol')],
+│ │ -            'topology':
+│ │ -                {
+│ │ -                    'type': 'torsion-torsion',
+│ │ -                    'n_atoms': 5,
+│ │ -                    'symmetry': 'like_torsion-torsion',
+│ │ -                    'fill': 0,
+│ │ -                    'flip': 0
+│ │ -                }
+│ │ -        },
+│ │ -}
+│ │ -# yapf: enable
+│ │ -
+│ │  
+│ │  class Forcefield(object):
+│ │      def __init__(self, filename=None, fftype=None):
+│ │          """
+│ │          Read, write, and use a forcefield
+│ │  
+│ │          The Forcefield object is the main interface for working with
+│ │ @@ -647,15 +164,15 @@
+│ │  
+│ │      @staticmethod
+│ │      def nonbond_transformation(
+│ │          in_form=NonbondForms.SIGMA_EPS,
+│ │          in1_units=None,
+│ │          in2_units=None,
+│ │          out_form=NonbondForms.SIGMA_EPS,
+│ │ -        out1_units="angstrom",
+│ │ +        out1_units="Å",
+│ │          out2_units="kcal/mol",
+│ │      ):
+│ │          """Return the transform method and unit conversions for the nonbonds.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          in_form : enum (NonbondForms)
+│ │ @@ -1368,15 +885,15 @@
+│ │  
+│ │              >   E = eps * [(rmin/r)^12 - (rmin/r)^6]
+│ │              >
+│ │              > where    r is the distance between atoms i and j
+│ │  
+│ │              @type eps-rmin
+│ │              @units eps kcal/mol
+│ │ -            @units rmin angstrom
+│ │ +            @units rmin Å
+│ │              @combination geometric
+│ │  
+│ │              !   Ver    Ref    I           Rmin        Epsilon
+│ │              !--------- ---  -------   -------------  -----------
+│ │              2020.05.13   4  na+         2.7275         0.0469
+│ │              2020.05.13   4  k+          3.5275         0.0870
+│ │              2020.05.13   5  cl-         4.5400         0.1500
+│ │ @@ -1402,24 +919,24 @@
+│ │  
+│ │          # Copy in the metadata about this functional form
+│ │          data.update(metadata[section])
+│ │  
+│ │          topology = data["topology"]
+│ │  
+│ │          out1, out2 = data["constants"]
+│ │ -        out1_units = out1[1]  # angstrom, nm
+│ │ +        out1_units = out1[1]  # Å, nm
+│ │          out2_units = out2[1]  # kcal/mol, kJ/mol
+│ │          parameter_1 = out1[0]
+│ │          parameter_2 = out2[0]
+│ │  
+│ │          out_form = NonbondForms(topology["form"])
+│ │  
+│ │          # Default for parameters read in
+│ │          in_form = out_form
+│ │ -        in1_units = "angstrom"
+│ │ +        in1_units = "Å"
+│ │          in2_units = "kcal/mol"
+│ │  
+│ │          # And see if there are modifiers
+│ │          for item in data["modifiers"]:
+│ │              modifier = item.split()
+│ │              what = modifier[0]
+│ │              if what == "type":
+│ │ @@ -1507,14 +1024,37 @@
+│ │              raise RuntimeError(msg)
+│ │  
+│ │          self.data[section][label] = data
+│ │  
+│ │          # Copy in the metadata about this functional form
+│ │          data.update(metadata[section])
+│ │  
+│ │ +        units = {i: {"default": j, "input": j} for i, j in data["constants"]}
+│ │ +
+│ │ +        # And see if there are modifiers
+│ │ +        for item in data["modifiers"]:
+│ │ +            modifier = item.split()
+│ │ +            what = modifier[0]
+│ │ +            if what == "units":
+│ │ +                which = modifier[1]
+│ │ +                if which in units:
+│ │ +                    units[which]["input"] = modifier[2]
+│ │ +                else:
+│ │ +                    raise ValueError(
+│ │ +                        f"Unrecognized parameter '{which}' in section "
+│ │ +                        f"'{section} {label}'"
+│ │ +                    )
+│ │ +
+│ │ +        factors = []
+│ │ +        for param, tmp in units.items():
+│ │ +            if tmp["default"] == tmp["input"]:
+│ │ +                factors.append(1)
+│ │ +            else:
+│ │ +                factors.append(Q_(tmp["input"]).m_as(tmp["default"]))
+│ │ +
+│ │          parameters = data["parameters"] = {}
+│ │  
+│ │          for line in data["lines"]:
+│ │              words = line.split()
+│ │              version, reference = words[0:2]
+│ │              symmetry = data["topology"]["symmetry"]
+│ │              n_atoms = data["topology"]["n_atoms"]
+│ │ @@ -1547,16 +1087,19 @@
+│ │                          values.extend(values[0:n])
+│ │              if flipped and "flip" in data["topology"]:
+│ │                  n = data["topology"]["flip"]
+│ │                  if n > 0:
+│ │                      first = values[0:n]
+│ │                      values = values[n : 2 * n]
+│ │                      values.extend(first)
+│ │ -            for constant, value in zip(data["constants"], values):
+│ │ -                params[constant[0]] = value
+│ │ +            for constant, value, factor in zip(data["constants"], values, factors):
+│ │ +                if factor == 1:
+│ │ +                    params[constant[0]] = value
+│ │ +                else:
+│ │ +                    params[constant[0]] = float(value) * factor
+│ │  
+│ │          if not self.keep_lines:
+│ │              del data["lines"]
+│ │  
+│ │      def initialize_biosym_forcefield(self, forcefield=None, version=None):
+│ │          """
+│ │          Initialize the given version of the Biosym-style forcefield
+│ │ @@ -2119,62 +1662,34 @@
+│ │                  key = (iauto,)
+│ │              else:
+│ │                  jauto = self.ff["auto_equivalence"][j]["nonbond"]
+│ │                  key, flipped = self.make_canonical("like_bond", (iauto, jauto))
+│ │              if key in self.ff[form]:
+│ │                  return ("automatic", key, form, self.ff[form][key])
+│ │  
+│ │ +        # try wildcards
+│ │          if j is None:
+│ │ -            raise RuntimeError("No nonbond parameters for {}".format(i))
+│ │ -        else:
+│ │ -            raise RuntimeError("No nonbond parameters for {}-{}".format(i, j))
+│ │ -
+│ │ -    def buckingham_parameters(self, i, j=None, form="buckingham(exp-6)", noerror=True):
+│ │ -        """Return the nondbond parameters given one or two atoms types i and j
+│ │ -
+│ │ -        Handle equivalences
+│ │ -        """
+│ │ -
+│ │ -        # parameter directly available
+│ │ -        if j is None:
+│ │ -            key = (i,)
+│ │ +            key = ("*",)
+│ │ +            if key in self.ff[form]:
+│ │ +                return ("wildcard", key, form, self.ff[form][key])
+│ │          else:
+│ │ -            key, flipped = self.make_canonical("like_bond", (i, j))
+│ │ -        if key in self.ff[form]:
+│ │ -            return ("explicit", key, form, self.ff[form][key])
+│ │ -
+│ │ -        # try equivalences
+│ │ -        if "equivalence" in self.ff:
+│ │ -            ieq = self.ff["equivalence"][i]["nonbond"]
+│ │ -            if j is None:
+│ │ -                key = (ieq,)
+│ │ -            else:
+│ │ -                jeq = self.ff["equivalence"][j]["nonbond"]
+│ │ -                key, flipped = self.make_canonical("like_bond", (ieq, jeq))
+│ │ +            key = (i, "*")
+│ │              if key in self.ff[form]:
+│ │ -                return ("equivalent", key, form, self.ff[form][key])
+│ │ -
+│ │ -        # try automatic equivalences
+│ │ -        if "auto_equivalence" in self.ff:
+│ │ -            iauto = self.ff["auto_equivalence"][i]["nonbond"]
+│ │ -            if j is None:
+│ │ -                key = (iauto,)
+│ │ -            else:
+│ │ -                jauto = self.ff["auto_equivalence"][j]["nonbond"]
+│ │ -                key, flipped = self.make_canonical("like_bond", (iauto, jauto))
+│ │ +                return ("wildcard", key, form, self.ff[form][key])
+│ │ +            key = ("*", j)
+│ │              if key in self.ff[form]:
+│ │ -                return ("automatic", key, form, self.ff[form][key])
+│ │ -
+│ │ -        if noerror:
+│ │ -            return None
+│ │ +                return ("wildcard", key, form, self.ff[form][key])
+│ │ +            key = ("*", "*")
+│ │ +            if key in self.ff[form]:
+│ │ +                return ("wildcard", key, form, self.ff[form][key])
+│ │  
+│ │          if j is None:
+│ │ -            raise RuntimeError("No buckingham parameters for {}".format(i))
+│ │ +            raise RuntimeError("No nonbond parameters for {}".format(i))
+│ │          else:
+│ │ -            raise RuntimeError("No buckingham parameters for {}-{}".format(i, j))
+│ │ +            raise RuntimeError("No nonbond parameters for {}-{}".format(i, j))
+│ │  
+│ │      def bond_bond_parameters(self, i, j, k, zero=False):
+│ │          """Return the bond-bond parameters given three atoms types
+│ │  
+│ │          Handle equivalences, and if zero=True, return zero valued
+│ │          parameters rather than raise an error
+│ │          """
+│ │ @@ -2863,40 +2378,74 @@
+│ │                  molecule[atom] = molecule_id
+│ │  
+│ │      def eex_pair(self, eex, configuration):
+│ │          """Create the pair (non-bond) portion of the energy expression"""
+│ │          logger.debug("In eex_pair")
+│ │          types = self.topology["types"]
+│ │  
+│ │ -        for pair_type in ("nonbond(12-6)", "nonbond(9-6)"):
+│ │ +        found = False
+│ │ +        for pair_type in ("nonbond(12-6)", "nonbond(9-6)", "buckingham"):
+│ │              if pair_type in self.ff["functional_forms"]:
+│ │                  found = True
+│ │                  break
+│ │          if not found:
+│ │              raise RuntimeError("Error finding pair_type in eex_pair")
+│ │  
+│ │          result = eex["nonbonds"] = []
+│ │          parameters = eex["nonbond parameters"] = []
+│ │ -        for itype in types[1:]:
+│ │ -            (
+│ │ -                parameters_type,
+│ │ -                real_types,
+│ │ -                form,
+│ │ -                parameter_values,
+│ │ -            ) = self.nonbond_parameters(itype, form=pair_type)
+│ │ -            new_value = (form, parameter_values, (itype,), parameters_type, real_types)
+│ │ -            index = None
+│ │ -            for value, count in zip(parameters, range(1, len(parameters) + 1)):
+│ │ -                if new_value == value:
+│ │ -                    index = count
+│ │ -                    break
+│ │ -            if index is None:
+│ │ -                parameters.append(new_value)
+│ │ -                index = len(parameters)
+│ │ -            result.append(index)
+│ │ +        if pair_type == "buckingham":
+│ │ +            types = eex["atom types"]
+│ │ +            for i, itype in enumerate(types):
+│ │ +                for jtype in types[0 : i + 1]:
+│ │ +                    (
+│ │ +                        parameters_type,
+│ │ +                        real_types,
+│ │ +                        form,
+│ │ +                        parameter_values,
+│ │ +                    ) = self.nonbond_parameters(itype, jtype, form=pair_type)
+│ │ +                    new_value = (
+│ │ +                        form,
+│ │ +                        parameter_values,
+│ │ +                        (itype, jtype),
+│ │ +                        parameters_type,
+│ │ +                        real_types,
+│ │ +                    )
+│ │ +                    index = None
+│ │ +                    for value, count in zip(parameters, range(1, len(parameters) + 1)):
+│ │ +                        if new_value == value:
+│ │ +                            index = count
+│ │ +                            break
+│ │ +                    if index is None:
+│ │ +                        parameters.append(new_value)
+│ │ +                        index = len(parameters)
+│ │ +                    result.append(index)
+│ │ +        else:
+│ │ +            for itype in types[1:]:
+│ │ +                (
+│ │ +                    parameters_type,
+│ │ +                    real_types,
+│ │ +                    form,
+│ │ +                    parameter_values,
+│ │ +                ) = self.nonbond_parameters(itype, form=pair_type)
+│ │ +                new_value = (
+│ │ +                    form,
+│ │ +                    parameter_values,
+│ │ +                    (itype,),
+│ │ +                    parameters_type,
+│ │ +                    real_types,
+│ │ +                )
+│ │ +                index = None
+│ │ +                for value, count in zip(parameters, range(1, len(parameters) + 1)):
+│ │ +                    if new_value == value:
+│ │ +                        index = count
+│ │ +                        break
+│ │ +                if index is None:
+│ │ +                    parameters.append(new_value)
+│ │ +                    index = len(parameters)
+│ │ +                result.append(index)
+│ │          eex["n_nonbonds"] = len(result)
+│ │          eex["n_nonbond_types"] = len(parameters)
+│ │  
+│ │      def eex_bond(self, eex, configuration):
+│ │          """Create the bond portion of the energy expression"""
+│ │          types = self.topology["types"]
+│ │          bonds = self.topology["bonds"]
+│ │   --- seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/PKG-INFO
+│ ├── +++ seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: seamm-ff-util
+│ │ -Version: 2023.4.5
+│ │ +Version: 2023.4.6
+│ │  Summary: seamm_ff_util
+│ │  Home-page: https://github.com/molssi-seam/seamm_ff_util
+│ │  Author: Paul Saxe
+│ │  Author-email: psaxe@molssi.org
+│ │  License: BSD-3-Clause
+│ │  Keywords: seamm_ff_util
+│ │  Platform: Linux
+│ │ @@ -73,14 +73,17 @@
+│ │  .. _`National Science Foundation`: https://www.nsf.gov
+│ │  
+│ │  
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Added support for Buckingham potentials
+│ │ +   * Also improved unit handling across all terms in forcefields.
+│ │ +     
+│ │  2023.3.5 -- Added molecule numbers for LAMMPS input
+│ │     * Added the molecule number for each atom for when using LAMMPS
+│ │       
+│ │  2023.2.6 -- Added handling of OPLS-AA forcefield
+│ │     * Added handling of the OPLS-AA forcefield
+│ │     * Moved documentation to new MolSSI theme and diátaxis layout
+│ │     * Cleaned up internal dependencies and workflows for GitHub
+│ │   --- seamm_ff_util-2023.4.5/seamm_ff_util.egg-info/SOURCES.txt
+│ ├── +++ seamm_ff_util-2023.4.6/seamm_ff_util.egg-info/SOURCES.txt
+│ │┄ Files 2% similar despite different names
+│ │ @@ -28,14 +28,15 @@
+│ │  docs/developer_guide/usage.rst
+│ │  docs/getting_started/index.rst
+│ │  docs/user_guide/index.rst
+│ │  seamm_ff_util/__init__.py
+│ │  seamm_ff_util/_version.py
+│ │  seamm_ff_util/ff_assigner.py
+│ │  seamm_ff_util/forcefield.py
+│ │ +seamm_ff_util/metadata.py
+│ │  seamm_ff_util.egg-info/PKG-INFO
+│ │  seamm_ff_util.egg-info/SOURCES.txt
+│ │  seamm_ff_util.egg-info/dependency_links.txt
+│ │  seamm_ff_util.egg-info/requires.txt
+│ │  seamm_ff_util.egg-info/top_level.txt
+│ │  tests/__init__.py
+│ │  tests/conftest.py
+│ │   --- seamm_ff_util-2023.4.5/setup.py
+│ ├── +++ seamm_ff_util-2023.4.6/setup.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/conftest.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_alkanes.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_alkanes.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_angle-angle_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_angle-angle_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_angle_angle_torsion_1_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_angle_angle_torsion_1_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_angle_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_angle_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_angle_torsion_3_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_angle_torsion_3_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_bond-bond_1_3_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_bond-bond_1_3_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_bond-bond_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_bond-bond_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_bond_angle_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_bond_angle_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_bond_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_bond_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_end_bond_torsion_3_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_end_bond_torsion_3_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_middle_bond_torsion_3_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_middle_bond_torsion_3_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_nonbond_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_nonbond_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_oop_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_oop_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/tests/test_torsion_parameters.py
+│ ├── +++ seamm_ff_util-2023.4.6/tests/test_torsion_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- seamm_ff_util-2023.4.5/versioneer.py
+│ ├── +++ seamm_ff_util-2023.4.6/versioneer.py
+│ │┄ Files identical despite different names

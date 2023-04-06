@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/gym_saturation-0.9.0.tar.gz tmp/gym_saturation-0.9.1.tar.gz --html versions/g/gym-saturation/0.9.0-0.9.1/index.html --text versions/g/gym-saturation/0.9.0-0.9.1/diff.txt --markdown versions/g/gym-saturation/0.9.0-0.9.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">16.4 KB</span></div>
+  <div><span class="source">tmp/gym_saturation-0.9.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/gym_saturation-0.9.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">196 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gym_saturation-0.9.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gym_saturation-0.9.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">16.2 KB</span></div>
+    <div><span class="source">gym_saturation-0.9.0.tar</span> vs.</div>
+    <div id="gym_saturation--.-.-.tar"><span class="source">gym_saturation-0.9.1.tar</span>
+      <a class="anchor" href="#gym_saturation--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.25 KB</span></div>
+      <div id="gym_saturation--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11360<span class="dp">·</span>2022-09-19<span class="dp">·</span>19:58:15.552724<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11360<span class="dp">·</span>2022-09-19<span class="dp">·</span>19:58:15.552724<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<del>24</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>48</del>.<del>727269</del><span class="dp">·</span>gym_saturation-0.9.<del>0</del>/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<ins>58</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>939733</ins><span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>991<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>01921</del>4<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>991<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>95573</ins>4<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8632<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.019214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/agent_testing.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8632<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.019214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/agent_testing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1242<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.023214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/conftest.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1242<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.023214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/conftest.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>770<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:52:02.959734<span class="dp">·</span>gym_saturation-0.9.1/gym_saturation/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1168<span class="dp">·</span>2023-03-24<span class="dp">·</span>12:49:21.170500<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/dummy_http_handler.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1168<span class="dp">·</span>2023-03-24<span class="dp">·</span>12:49:21.170500<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/dummy_http_handler.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>789<span class="dp">·</span>2023-01-08<span class="dp">·</span>12:44:28.449376<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/envs/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>789<span class="dp">·</span>2023-01-08<span class="dp">·</span>12:44:28.449376<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/envs/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<del>82</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>02321</del>4<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/envs/iprover_env.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<ins>97</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>95973</ins>4<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/envs/iprover_env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<del>79</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>02321</del>4<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/envs/saturation_env.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<ins>88</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>95973</ins>4<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/envs/saturation_env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5548<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.023214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/envs/vampire_env.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5548<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.023214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/envs/vampire_env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2244<span class="dp">·</span>2023-03-01<span class="dp">·</span>16:21:18.184137<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/proof_state.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2244<span class="dp">·</span>2023-03-01<span class="dp">·</span>16:21:18.184137<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/proof_state.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-07-22<span class="dp">·</span>09:53:47.848012<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/py.typed</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-07-22<span class="dp">·</span>09:53:47.848012<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>2023-02-25<span class="dp">·</span>20:38:38.888596<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/relay_server.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>2023-02-25<span class="dp">·</span>20:38:38.888596<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/relay_server.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>267<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.027214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/resources/TPTP-mock/Problems/TST/TST001-1.p</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>267<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.027214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/resources/TPTP-mock/Problems/TST/TST001-1.p</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.027214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/resources/TPTP-mock/Problems/TST/TST002-1.p</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.027214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/resources/TPTP-mock/Problems/TST/TST002-1.p</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62<span class="dp">·</span>2022-11-07<span class="dp">·</span>08:44:37.735015<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/resources/vampire-mock</td><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62<span class="dp">·</span>2022-11-07<span class="dp">·</span>08:44:37.735015<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/resources/vampire-mock</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4099<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>0</del>3<del>1214</del><span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/utils.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4099<span class="dp">·</span>2023-04-0<ins>5</ins><span class="dp">·</span>1<ins>4</ins>:<ins>12</ins>:<ins>19</ins>.<ins>6</ins>3<ins>8325</ins><span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4068<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.031214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/vampire_wrapper.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4068<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.031214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/vampire_wrapper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2570<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.031214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/wrappers/age_weight_bandit.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2570<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.031214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/wrappers/age_weight_bandit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2641<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.035214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/wrappers/ast2vec_wrapper.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2641<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.035214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/wrappers/ast2vec_wrapper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<del>21</del><span class="dp">·</span>2023-0<del>3</del>-<del>24</del><span class="dp">·</span>1<del>2</del>:<del>49</del>:<del>21</del>.<del>174500</del><span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/wrappers/constant_parametric_actions.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<ins>95</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>959734</ins><span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/wrappers/constant_parametric_actions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2221<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.035214<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/wrappers/duplicate_key_obs.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2221<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:04:37.035214<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/wrappers/duplicate_key_obs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>543<del>4</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>03521</del>4<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/gym_saturation/wrappers/parametric_actions_wrapper.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>543<ins>5</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>96373</ins>4<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/gym_saturation/wrappers/parametric_actions_wrapper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34<del>13</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>04</del>:<del>37</del>.<del>04</del>3<del>21</del>4<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/pyproject.toml</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34<ins>57</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>5</ins>:<ins>52</ins>:<ins>02</ins>.<ins>96</ins>3<ins>73</ins>4<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<del>290</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>gym_saturation-0.9.<del>0</del>/PKG-INFO</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<ins>324</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>gym_saturation-0.9.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/LICENSE</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--LICENSE"><span class="source">gym_saturation-0.9.1/LICENSE</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.14 KB</span></div>
+      <div><span class="source">gym_saturation-0.9.0/README.rst</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--README.rst"><span class="source">gym_saturation-0.9.1/README.rst</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 89, 19 lines modified</td><td colspan="2">Offset 89, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>terminated,<span class="dp">·</span>truncated<span class="dp">·</span>=<span class="dp">·</span>False,<span class="dp">·</span>False</td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>terminated,<span class="dp">·</span>truncated<span class="dp">·</span>=<span class="dp">·</span>False,<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>not<span class="dp">·</span>(terminated<span class="dp">·</span>or<span class="dp">·</span>truncated):</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>not<span class="dp">·</span>(terminated<span class="dp">·</span>or<span class="dp">·</span>truncated):</td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>apply<span class="dp">·</span>policy<span class="dp">·</span>(a<span class="dp">·</span>valid<span class="dp">·</span>random<span class="dp">·</span>action<span class="dp">·</span>here)</td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>apply<span class="dp">·</span>policy<span class="dp">·</span>(a<span class="dp">·</span>valid<span class="dp">·</span>random<span class="dp">·</span>action<span class="dp">·</span>here)</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>action<span class="dp">·</span>=<span class="dp">·</span>env.action_space.sample(mask=observation[&quot;action_mask&quot;])</td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>action<span class="dp">·</span>=<span class="dp">·</span>env.action_space.sample(mask=observation[&quot;action_mask&quot;])</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>reward,<span class="dp">·</span>terminated,<span class="dp">·</span>truncated,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.step(action)</td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>reward,<span class="dp">·</span>terminated,<span class="dp">·</span>truncated,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.step(action)</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>env.close()</td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>env.close()</td></tr>
+<tr class="diffdeleted"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">97 </td><td class="diffpresent">See<span class="dp">·</span>`the</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">98 </td><td class="diffpresent">notebook<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/blob/master/examples/example.ipynb&gt;`__<span class="dp">·</span>for<span class="dp">·</span>more<span class="dp">·</span>information.</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">96 </td><td class="diffpresent">Or<span class="dp">·</span>have<span class="dp">·</span>a<span class="dp">·</span>look<span class="dp">·</span>at<span class="dp">·</span>the<span class="dp">·</span>basic<span class="dp">·</span>`tutorial<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/latest/tutorials/auto_examples/plot_age_agent.html&gt;`__.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">99 </td><td class="diffpresent">For<span class="dp">·</span>more<span class="dp">·</span>comprehensive<span class="dp">·</span>experiments,<span class="dp">·</span>please<span class="dp">·</span><del>se</del>e<span class="dp">·</span>the<span class="dp">·</span>documentation<span class="dp">·</span>`page<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/latest/experiments.html&gt;`__.</td><td class="diffline">98 </td><td class="diffpresent">For<span class="dp">·</span><ins>a<span class="dp">·</span>bit<span class="dp">·</span></ins>more<span class="dp">·</span>comprehensive<span class="dp">·</span>experiments,<span class="dp">·</span>please<span class="dp">·</span><ins>navig</ins><ins>at</ins>e<span class="dp">·</span>the<span class="dp">·</span>documentation<span class="dp">·</span>`page<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/lates<ins>t/tu</ins>t<ins>orials</ins>/experiments.html&gt;`__.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">100 </td><td class="diffpresent">How<span class="dp">·</span>to<span class="dp">·</span>Contribute</td><td class="diffline">99 </td><td class="diffpresent">How<span class="dp">·</span>to<span class="dp">·</span>Contribute</td></tr>
+<tr class="diffunmodified"><td class="diffline">101 </td><td class="diffpresent">=================</td><td class="diffline">100 </td><td class="diffpresent">=================</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent">`Pull<span class="dp">·</span>requests<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/pulls&gt;`__<span class="dp">·</span>are</td><td class="diffline">101 </td><td class="diffpresent">`Pull<span class="dp">·</span>requests<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/pulls&gt;`__<span class="dp">·</span>are</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent">welcome.<span class="dp">·</span>To<span class="dp">·</span>start:</td><td class="diffline">102 </td><td class="diffpresent">welcome.<span class="dp">·</span>To<span class="dp">·</span>start:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">543 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/__init__.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-__init__.py"><span class="source">gym_saturation-0.9.1/gym_saturation/__init__.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 17, 8 lines modified</td><td colspan="2">Offset 17, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">They<span class="dp">·</span>are<span class="dp">·</span>registered<span class="dp">·</span>using<span class="dp">·</span>a<span class="dp">·</span>limit<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>steps<span class="dp">·</span>in<span class="dp">·</span>an<span class="dp">·</span>episode<span class="dp">·</span>and<span class="dp">·</span>the</td><td class="diffline">17 </td><td class="diffpresent">They<span class="dp">·</span>are<span class="dp">·</span>registered<span class="dp">·</span>using<span class="dp">·</span>a<span class="dp">·</span>limit<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>steps<span class="dp">·</span>in<span class="dp">·</span>an<span class="dp">·</span>episode<span class="dp">·</span>and<span class="dp">·</span>the</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">maximal<span class="dp">·</span>possible<span class="dp">·</span>reward<span class="dp">·</span>is<span class="dp">·</span>set<span class="dp">·</span>to<span class="dp">·</span>``1.0``<span class="dp">·</span>(proof<span class="dp">·</span>is<span class="dp">·</span>found).</td><td class="diffline">18 </td><td class="diffpresent">maximal<span class="dp">·</span>possible<span class="dp">·</span>reward<span class="dp">·</span>is<span class="dp">·</span>set<span class="dp">·</span>to<span class="dp">·</span>``1.0``<span class="dp">·</span>(proof<span class="dp">·</span>is<span class="dp">·</span>found).</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.envs.registration<span class="dp">·</span>import<span class="dp">·</span>register</td><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.envs.registration<span class="dp">·</span>import<span class="dp">·</span>register</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">register(id=&quot;Vampire-v0&quot;,<span class="dp">·</span>entry_point=&quot;gym_saturation.envs:VampireEnv&quot;)</td><td class="diffline">21 </td><td class="diffpresent">register(id=&quot;Vampire-v0&quot;,<span class="dp">·</span>entry_point=&quot;gym_saturation.envs:VampireEnv&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">register(id=&quot;iProver-v0&quot;,<span class="dp">·</span>entry_point=&quot;gym_saturation.envs:IProverEnv&quot;)</td><td class="diffline">22 </td><td class="diffpresent">register(id=&quot;iProver-v0&quot;,<span class="dp">·</span>entry_point=&quot;gym_saturation.envs:IProverEnv&quot;)</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>0</del>&quot;</td><td class="diffline">23 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>1</ins>&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/agent_testing.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-agent_testing.py"><span class="source">gym_saturation-0.9.1/gym_saturation/agent_testing.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-agent_testing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/conftest.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-conftest.py"><span class="source">gym_saturation-0.9.1/gym_saturation/conftest.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-conftest.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/dummy_http_handler.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-dummy_http_handler.py"><span class="source">gym_saturation-0.9.1/gym_saturation/dummy_http_handler.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-dummy_http_handler.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/envs/__init__.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-__init__.py"><span class="source">gym_saturation-0.9.1/gym_saturation/envs/__init__.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">854 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/envs/iprover_env.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-iprover_env.py"><span class="source">gym_saturation-0.9.1/gym_saturation/envs/iprover_env.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-iprover_env.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 26, 20 lines modified</td><td colspan="2">Offset 26, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">import<span class="dp">·</span>subprocess</td><td class="diffline">26 </td><td class="diffpresent">import<span class="dp">·</span>subprocess</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">import<span class="dp">·</span>time</td><td class="diffline">27 </td><td class="diffpresent">import<span class="dp">·</span>time</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">from<span class="dp">·</span>threading<span class="dp">·</span>import<span class="dp">·</span>Thread</td><td class="diffline">28 </td><td class="diffpresent">from<span class="dp">·</span>threading<span class="dp">·</span>import<span class="dp">·</span>Thread</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>List,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td><td class="diffline">29 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>List,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">30 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.constants<span class="dp">·</span>import<span class="dp">·</span>ACTION_MASK,<span class="dp">·</span>REAL_OBS</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.envs.saturation_env<span class="dp">·</span>import<span class="dp">·</span><del>(</del></td><td class="diffline">32 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.envs.saturation_env<span class="dp">·</span>import<span class="dp">·</span><ins>MAX_CLAUSES,<span class="dp">·</span>SaturationEn</ins><ins>v</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ACTION_MASK,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>MAX_CLAUSES,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>REAL_OBS,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SaturationEnv,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">36 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.relay_server<span class="dp">·</span>import<span class="dp">·</span>RelayServer,<span class="dp">·</span>RelayTCPHandler</td><td class="diffline">33 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.relay_server<span class="dp">·</span>import<span class="dp">·</span>RelayServer,<span class="dp">·</span>RelayTCPHandler</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>_iprover_start(</td><td class="diffline">34 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>_iprover_start(</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>iprover_port:<span class="dp">·</span>int,<span class="dp">·</span>problem_filename:<span class="dp">·</span>str,<span class="dp">·</span>iprover_binary_path:<span class="dp">·</span>str</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>iprover_port:<span class="dp">·</span>int,<span class="dp">·</span>problem_filename:<span class="dp">·</span>str,<span class="dp">·</span>iprover_binary_path:<span class="dp">·</span>str</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">)<span class="dp">·</span>-&gt;<span class="dp">·</span>asyncio.subprocess.Process:</td><td class="diffline">36 </td><td class="diffpresent">)<span class="dp">·</span>-&gt;<span class="dp">·</span>asyncio.subprocess.Process:</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tptp_folder<span class="dp">·</span>=<span class="dp">·</span>os.path.join(os.path.dirname(problem_filename),<span class="dp">·</span>&quot;..&quot;,<span class="dp">·</span>&quot;..&quot;)</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tptp_folder<span class="dp">·</span>=<span class="dp">·</span>os.path.join(os.path.dirname(problem_filename),<span class="dp">·</span>&quot;..&quot;,<span class="dp">·</span>&quot;..&quot;)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">894 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/envs/saturation_env.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-saturation_env.py"><span class="source">gym_saturation-0.9.1/gym_saturation/envs/saturation_env.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-saturation_env.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 25 lines modified</td><td colspan="2">Offset 21, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">from<span class="dp">·</span>abc<span class="dp">·</span>import<span class="dp">·</span>abstractmethod</td><td class="diffline">21 </td><td class="diffpresent">from<span class="dp">·</span>abc<span class="dp">·</span>import<span class="dp">·</span>abstractmethod</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">23 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium<span class="dp">·</span>import<span class="dp">·</span>Env,<span class="dp">·</span>spaces</td><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium<span class="dp">·</span>import<span class="dp">·</span>Env,<span class="dp">·</span>spaces</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.spaces.text<span class="dp">·</span>import<span class="dp">·</span>alphanumeric</td><td class="diffline">25 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.spaces.text<span class="dp">·</span>import<span class="dp">·</span>alphanumeric</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.constants<span class="dp">·</span>import<span class="dp">·</span>ACTION_MASK,<span class="dp">·</span>REAL_OBS</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.proof_state<span class="dp">·</span>import<span class="dp">·</span>ProofState</td><td class="diffline">27 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.proof_state<span class="dp">·</span>import<span class="dp">·</span>ProofState</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.utils<span class="dp">·</span>import<span class="dp">·</span>(</td><td class="diffline">28 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.utils<span class="dp">·</span>import<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FALSEHOOD_SYMBOL,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FALSEHOOD_SYMBOL,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>MOCK_TPTP_PROBLEM,</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>MOCK_TPTP_PROBLEM,</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pretty_print,</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pretty_print,</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">)</td><td class="diffline">32 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">MAX_CLAUSES<span class="dp">·</span>=<span class="dp">·</span>1000</td><td class="diffline">33 </td><td class="diffpresent">MAX_CLAUSES<span class="dp">·</span>=<span class="dp">·</span>1000</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">ALPHANUMERIC_WITH_UNDERSCORE<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;.join(alphanumeric)<span class="dp">·</span>+<span class="dp">·</span>&quot;_&quot;</td><td class="diffline">34 </td><td class="diffpresent">ALPHANUMERIC_WITH_UNDERSCORE<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;.join(alphanumeric)<span class="dp">·</span>+<span class="dp">·</span>&quot;_&quot;</td></tr>
+<tr class="diffdeleted"><td class="diffline">34 </td><td class="diffpresent">REAL_OBS<span class="dp">·</span>=<span class="dp">·</span>&quot;real_obs&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">35 </td><td class="diffpresent">ACTION_MASK<span class="dp">·</span>=<span class="dp">·</span>&quot;action_mask&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">SHORT_TEXT_SPACE<span class="dp">·</span>=<span class="dp">·</span>spaces.Text(256,<span class="dp">·</span>charset=ALPHANUMERIC_WITH_UNDERSCORE)</td><td class="diffline">35 </td><td class="diffpresent">SHORT_TEXT_SPACE<span class="dp">·</span>=<span class="dp">·</span>spaces.Text(256,<span class="dp">·</span>charset=ALPHANUMERIC_WITH_UNDERSCORE)</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">LONG_TEXT_SPACE<span class="dp">·</span>=<span class="dp">·</span>spaces.Text(</td><td class="diffline">36 </td><td class="diffpresent">LONG_TEXT_SPACE<span class="dp">·</span>=<span class="dp">·</span>spaces.Text(</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4000,</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4000,</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>charset=ALPHANUMERIC_WITH_UNDERSCORE<span class="dp">·</span>+<span class="dp">·</span>&quot;(),<span class="dp">·</span>|~=!$&quot;,</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>charset=ALPHANUMERIC_WITH_UNDERSCORE<span class="dp">·</span>+<span class="dp">·</span>&quot;(),<span class="dp">·</span>|~=!$&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">)</td><td class="diffline">39 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/envs/vampire_env.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-vampire_env.py"><span class="source">gym_saturation-0.9.1/gym_saturation/envs/vampire_env.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-envs-vampire_env.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/proof_state.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-proof_state.py"><span class="source">gym_saturation-0.9.1/gym_saturation/proof_state.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-proof_state.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/relay_server.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-relay_server.py"><span class="source">gym_saturation-0.9.1/gym_saturation/relay_server.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-relay_server.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/utils.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-utils.py"><span class="source">gym_saturation-0.9.1/gym_saturation/utils.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/vampire_wrapper.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-vampire_wrapper.py"><span class="source">gym_saturation-0.9.1/gym_saturation/vampire_wrapper.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-vampire_wrapper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/wrappers/age_weight_bandit.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-age_weight_bandit.py"><span class="source">gym_saturation-0.9.1/gym_saturation/wrappers/age_weight_bandit.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-age_weight_bandit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/wrappers/ast2vec_wrapper.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-ast-vec_wrapper.py"><span class="source">gym_saturation-0.9.1/gym_saturation/wrappers/ast2vec_wrapper.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-ast-vec_wrapper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.23 KB</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/wrappers/constant_parametric_actions.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-constant_parametric_actions.py"><span class="source">gym_saturation-0.9.1/gym_saturation/wrappers/constant_parametric_actions.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-constant_parametric_actions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 19, 29 lines modified</td><td colspan="2">Offset 19, 33 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Dict</td><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Dict</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">import<span class="dp">·</span>gymnasium<span class="dp">·</span>as<span class="dp">·</span>gym</td><td class="diffline">21 </td><td class="diffpresent">import<span class="dp">·</span>gymnasium<span class="dp">·</span>as<span class="dp">·</span>gym</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">22 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.core<span class="dp">·</span>import<span class="dp">·</span>ObsType</td><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>gymnasium.core<span class="dp">·</span>import<span class="dp">·</span>ObsType</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.constants<span class="dp">·</span>import<span class="dp">·</span>PARAMETRIC_ACTIONS</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">class<span class="dp">·</span>ConstantParametricActionsWrapper(gym.ObservationWrapper):</td><td class="diffline">25 </td><td class="diffpresent">class<span class="dp">·</span>ConstantParametricActionsWrapper(gym.ObservationWrapper):</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>which<span class="dp">·</span>make<span class="dp">·</span>the<span class="dp">·</span>observation<span class="dp">·</span>to<span class="dp">·</span>contain<span class="dp">·</span>constant<span class="dp">·</span>action<span class="dp">·</span>embeddings.</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>which<span class="dp">·</span>make<span class="dp">·</span>the<span class="dp">·</span>observation<span class="dp">·</span>to<span class="dp">·</span>contain<span class="dp">·</span>constant<span class="dp">·</span>action<span class="dp">·</span>embeddings.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>..<span class="dp">·</span>_constant_parametric_actions:</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>..<span class="dp">·</span>_constant_parametric_actions:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>env<span class="dp">·</span>=<span class="dp">·</span>ConstantParametricActionsWrapper(gym.make(&quot;CartPole-v1&quot;))</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>env<span class="dp">·</span>=<span class="dp">·</span>ConstantParametricActionsWrapper(gym.make(&quot;CartPole-v1&quot;))</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>observation</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&gt;&gt;&gt;<span class="dp">·</span>observation</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{&#x27;avail_actions&#x27;:<span class="dp">·</span>array([[1.,<span class="dp">·</span>0.],</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{&#x27;avail_actions&#x27;:<span class="dp">·</span>array([[1.,<span class="dp">·</span>0.],</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[0.,<span class="dp">·</span>1.]])}</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[0.,<span class="dp">·</span>1.]])}</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(<del>self,<span class="dp">·</span>env:<span class="dp">·</span>gym.Env,<span class="dp">·</span>avail_actions_key:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;avail_actions&quot;):</del></td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self,<span class="dp">·</span>env:<span class="dp">·</span>gym.Env,<span class="dp">·</span>avail_actions_key:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>PARAMETRIC_ACTIONS</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>):</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Initialise<span class="dp">·</span>the<span class="dp">·</span>observation<span class="dp">·</span>wrapper.&quot;&quot;&quot;</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Initialise<span class="dp">·</span>the<span class="dp">·</span>observation<span class="dp">·</span>wrapper.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(env)</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(env)</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.avail_actions_key<span class="dp">·</span>=<span class="dp">·</span>avail_actions_key</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.avail_actions_key<span class="dp">·</span>=<span class="dp">·</span>avail_actions_key</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.env.observation_space<span class="dp">·</span>=<span class="dp">·</span>gym.spaces.Dict(</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.env.observation_space<span class="dp">·</span>=<span class="dp">·</span>gym.spaces.Dict(</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.avail_actions_key:<span class="dp">·</span>gym.spaces.Box(</td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.avail_actions_key:<span class="dp">·</span>gym.spaces.Box(</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0,</td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/wrappers/duplicate_key_obs.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-duplicate_key_obs.py"><span class="source">gym_saturation-0.9.1/gym_saturation/wrappers/duplicate_key_obs.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-duplicate_key_obs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">764 B</span></div>
+      <div><span class="source">gym_saturation-0.9.0/gym_saturation/wrappers/parametric_actions_wrapper.py</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-parametric_actions_wrapper.py"><span class="source">gym_saturation-0.9.1/gym_saturation/wrappers/parametric_actions_wrapper.py</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--gym_saturation-wrappers-parametric_actions_wrapper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 18, 21 lines modified</td><td colspan="2">Offset 18, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">from<span class="dp">·</span>abc<span class="dp">·</span>import<span class="dp">·</span>ABC,<span class="dp">·</span>abstractmethod</td><td class="diffline">19 </td><td class="diffpresent">from<span class="dp">·</span>abc<span class="dp">·</span>import<span class="dp">·</span>ABC,<span class="dp">·</span>abstractmethod</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">import<span class="dp">·</span>gymnasium<span class="dp">·</span>as<span class="dp">·</span>gym</td><td class="diffline">21 </td><td class="diffpresent">import<span class="dp">·</span>gymnasium<span class="dp">·</span>as<span class="dp">·</span>gym</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">22 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.constants<span class="dp">·</span>import<span class="dp">·</span>ACTION_MASK,<span class="dp">·</span>PARAMETRIC_ACTIONS,<span class="dp">·</span>REAL_OBS</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.envs.saturation_env<span class="dp">·</span>import<span class="dp">·</span><del>(</del></td><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>gym_saturation.envs.saturation_env<span class="dp">·</span>import<span class="dp">·</span><ins>SaturationEn</ins><ins>v</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ACTION_MASK,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>REAL_OBS,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SaturationEnv,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">27 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">28 </td><td class="diffpresent">PARAMETRIC_ACTIONS<span class="dp">·</span>=<span class="dp">·</span>&quot;avail_actions&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">class<span class="dp">·</span>ParamtericActionsWrapper(gym.Wrapper,<span class="dp">·</span>ABC):</td><td class="diffline">25 </td><td class="diffpresent">class<span class="dp">·</span>ParamtericActionsWrapper(gym.Wrapper,<span class="dp">·</span>ABC):</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>parametric<span class="dp">·</span>actions<span class="dp">·</span>wrapper.</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>parametric<span class="dp">·</span>actions<span class="dp">·</span>wrapper.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>..<span class="dp">·</span>_parametric_actions:</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>..<span class="dp">·</span>_parametric_actions:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.2 KB</span></div>
+      <div><span class="source">gym_saturation-0.9.0/pyproject.toml</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--pyproject.toml"><span class="source">gym_saturation-0.9.1/pyproject.toml</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gym-saturation&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gym-saturation&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>0</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Gymnasium<span class="dp">·</span>environments<span class="dp">·</span>for<span class="dp">·</span>saturation<span class="dp">·</span>provers&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Gymnasium<span class="dp">·</span>environments<span class="dp">·</span>for<span class="dp">·</span>saturation<span class="dp">·</span>provers&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Boris<span class="dp">·</span>Shminke<span class="dp">·</span>&lt;boris@shminke.ml&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Boris<span class="dp">·</span>Shminke<span class="dp">·</span>&lt;boris@shminke.ml&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/inpefess/gym-saturation&quot;</td><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/inpefess/gym-saturation&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">classifiers=[</td><td class="diffline">9 </td><td class="diffpresent">classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       &quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       &quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8&quot;,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 39, 14 lines modified</td><td colspan="2">Offset 39, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">sphinx-autodoc-typehints<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">39 </td><td class="diffpresent">sphinx-autodoc-typehints<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">pydocstyle<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">40 </td><td class="diffpresent">pydocstyle<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">tbump<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">41 </td><td class="diffpresent">tbump<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">pyenchant<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">42 </td><td class="diffpresent">pyenchant<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">flake8<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">43 </td><td class="diffpresent">flake8<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">toml<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">44 </td><td class="diffpresent">toml<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">furo<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td><td class="diffline">45 </td><td class="diffpresent">furo<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">46 </td><td class="diffpresent">sphinx-gallery<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">47 </td><td class="diffpresent">pillow<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent">matplotlib<span class="dp">·</span>=<span class="dp">·</span>&quot;*&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">[tool.black]</td><td class="diffline">49 </td><td class="diffpresent">[tool.black]</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">line-length=79</td><td class="diffline">50 </td><td class="diffpresent">line-length=79</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">[tool.isort]</td><td class="diffline">51 </td><td class="diffpresent">[tool.isort]</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">profile<span class="dp">·</span>=<span class="dp">·</span>&quot;black&quot;</td><td class="diffline">52 </td><td class="diffpresent">profile<span class="dp">·</span>=<span class="dp">·</span>&quot;black&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">src_paths<span class="dp">·</span>=<span class="dp">·</span>[&quot;gym_saturation&quot;]</td><td class="diffline">53 </td><td class="diffpresent">src_paths<span class="dp">·</span>=<span class="dp">·</span>[&quot;gym_saturation&quot;]</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 129, 15 lines modified</td><td colspan="2">Offset 132, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">129 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pytest</td><td class="diffline">132 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pytest</td></tr>
+<tr class="diffunmodified"><td class="diffline">130 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">133 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">131 </td><td class="diffpresent">[tool.tbump]</td><td class="diffline">134 </td><td class="diffpresent">[tool.tbump]</td></tr>
+<tr class="diffunmodified"><td class="diffline">132 </td><td class="diffpresent">github_url<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/inpfess/gym-saturation/&quot;</td><td class="diffline">135 </td><td class="diffpresent">github_url<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/inpfess/gym-saturation/&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">133 </td><td class="diffpresent">[tool.tbump.version]</td><td class="diffline">136 </td><td class="diffpresent">[tool.tbump.version]</td></tr>
+<tr class="diffchanged"><td class="diffline">134 </td><td class="diffpresent">current<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>0</del>&quot;</td><td class="diffline">137 </td><td class="diffpresent">current<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">135 </td><td class="diffpresent">regex<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;&#x27;</td><td class="diffline">138 </td><td class="diffpresent">regex<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;major&gt;\d+)</td><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;major&gt;\d+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>\.</td><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>\.</td></tr>
+<tr class="diffunmodified"><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;minor&gt;\d+)</td><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;minor&gt;\d+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>\.</td><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>\.</td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;patch&gt;\d+)</td><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;patch&gt;\d+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 149, 8 lines modified</td><td colspan="2">Offset 152, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">[[tool.tbump.file]]</td><td class="diffline">152 </td><td class="diffpresent">[[tool.tbump.file]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;gym_saturation/__init__.py&quot;</td><td class="diffline">153 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;gym_saturation/__init__.py&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent">[[tool.tbump.file]]</td><td class="diffline">154 </td><td class="diffpresent">[[tool.tbump.file]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;pyproject.toml&quot;</td><td class="diffline">155 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;pyproject.toml&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent">[[tool.tbump.file]]</td><td class="diffline">156 </td><td class="diffpresent">[[tool.tbump.file]]</td></tr>
+<tr class="diffchanged"><td class="diffline">154 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;doc/<del>source/</del>conf.py&quot;</td><td class="diffline">157 </td><td class="diffpresent">src<span class="dp">·</span>=<span class="dp">·</span>&quot;doc/conf.py&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.49 KB</span></div>
+      <div><span class="source">gym_saturation-0.9.0/PKG-INFO</span> vs.</div>
+      <div id="gym_saturation--.-.-.tar---gym_saturation--.-.--PKG-INFO"><span class="source">gym_saturation-0.9.1/PKG-INFO</span>
+        <a class="anchor" href="#gym_saturation--.-.-.tar---gym_saturation--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gym-saturation</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gym-saturation</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Gymnasium<span class="dp">·</span>environments<span class="dp">·</span>for<span class="dp">·</span>saturation<span class="dp">·</span>provers</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Gymnasium<span class="dp">·</span>environments<span class="dp">·</span>for<span class="dp">·</span>saturation<span class="dp">·</span>provers</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inpefess/gym-saturation</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inpefess/gym-saturation</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Boris<span class="dp">·</span>Shminke</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Boris<span class="dp">·</span>Shminke</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>boris@shminke.ml</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>boris@shminke.ml</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.1,&lt;3.12</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.1,&lt;3.12</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 120, 19 lines modified</td><td colspan="2">Offset 120, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">120 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td><td class="diffline">120 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.reset()</td></tr>
+<tr class="diffunmodified"><td class="diffline">121 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>terminated,<span class="dp">·</span>truncated<span class="dp">·</span>=<span class="dp">·</span>False,<span class="dp">·</span>False</td><td class="diffline">121 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>terminated,<span class="dp">·</span>truncated<span class="dp">·</span>=<span class="dp">·</span>False,<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td class="diffline">122 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>not<span class="dp">·</span>(terminated<span class="dp">·</span>or<span class="dp">·</span>truncated):</td><td class="diffline">122 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>not<span class="dp">·</span>(terminated<span class="dp">·</span>or<span class="dp">·</span>truncated):</td></tr>
+<tr class="diffunmodified"><td class="diffline">123 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>apply<span class="dp">·</span>policy<span class="dp">·</span>(a<span class="dp">·</span>valid<span class="dp">·</span>random<span class="dp">·</span>action<span class="dp">·</span>here)</td><td class="diffline">123 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>apply<span class="dp">·</span>policy<span class="dp">·</span>(a<span class="dp">·</span>valid<span class="dp">·</span>random<span class="dp">·</span>action<span class="dp">·</span>here)</td></tr>
+<tr class="diffunmodified"><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>action<span class="dp">·</span>=<span class="dp">·</span>env.action_space.sample(mask=observation[&quot;action_mask&quot;])</td><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>action<span class="dp">·</span>=<span class="dp">·</span>env.action_space.sample(mask=observation[&quot;action_mask&quot;])</td></tr>
+<tr class="diffunmodified"><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>reward,<span class="dp">·</span>terminated,<span class="dp">·</span>truncated,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.step(action)</td><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>observation,<span class="dp">·</span>reward,<span class="dp">·</span>terminated,<span class="dp">·</span>truncated,<span class="dp">·</span>info<span class="dp">·</span>=<span class="dp">·</span>env.step(action)</td></tr>
+<tr class="diffunmodified"><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>env.close()</td><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>env.close()</td></tr>
+<tr class="diffdeleted"><td class="diffline">127 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">128 </td><td class="diffpresent">See<span class="dp">·</span>`the</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">129 </td><td class="diffpresent">notebook<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/blob/master/examples/example.ipynb&gt;`__<span class="dp">·</span>for<span class="dp">·</span>more<span class="dp">·</span>information.</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">127 </td><td class="diffpresent">Or<span class="dp">·</span>have<span class="dp">·</span>a<span class="dp">·</span>look<span class="dp">·</span>at<span class="dp">·</span>the<span class="dp">·</span>basic<span class="dp">·</span>`tutorial<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/latest/tutorials/auto_examples/plot_age_agent.html&gt;`__.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">128 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">130 </td><td class="diffpresent">For<span class="dp">·</span>more<span class="dp">·</span>comprehensive<span class="dp">·</span>experiments,<span class="dp">·</span>please<span class="dp">·</span><del>se</del>e<span class="dp">·</span>the<span class="dp">·</span>documentation<span class="dp">·</span>`page<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/latest/experiments.html&gt;`__.</td><td class="diffline">129 </td><td class="diffpresent">For<span class="dp">·</span><ins>a<span class="dp">·</span>bit<span class="dp">·</span></ins>more<span class="dp">·</span>comprehensive<span class="dp">·</span>experiments,<span class="dp">·</span>please<span class="dp">·</span><ins>navig</ins><ins>at</ins>e<span class="dp">·</span>the<span class="dp">·</span>documentation<span class="dp">·</span>`page<span class="dp">·</span>&lt;https://gym-saturation.readthedocs.io/en/lates<ins>t/tu</ins>t<ins>orials</ins>/experiments.html&gt;`__.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">131 </td><td class="diffpresent">How<span class="dp">·</span>to<span class="dp">·</span>Contribute</td><td class="diffline">130 </td><td class="diffpresent">How<span class="dp">·</span>to<span class="dp">·</span>Contribute</td></tr>
+<tr class="diffunmodified"><td class="diffline">132 </td><td class="diffpresent">=================</td><td class="diffline">131 </td><td class="diffpresent">=================</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">133 </td><td class="diffpresent">`Pull<span class="dp">·</span>requests<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/pulls&gt;`__<span class="dp">·</span>are</td><td class="diffline">132 </td><td class="diffpresent">`Pull<span class="dp">·</span>requests<span class="dp">·</span>&lt;https://github.com/inpefess/gym-saturation/pulls&gt;`__<span class="dp">·</span>are</td></tr>
+<tr class="diffunmodified"><td class="diffline">134 </td><td class="diffpresent">welcome.<span class="dp">·</span>To<span class="dp">·</span>start:</td><td class="diffline">133 </td><td class="diffpresent">welcome.<span class="dp">·</span>To<span class="dp">·</span>start:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

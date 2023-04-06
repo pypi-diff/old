@@ -1,0 +1,245 @@
+# Comparing `tmp/preservation-database-0.0.93.tar.gz` & `tmp/preservation-database-0.0.94.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "preservation-database-0.0.93.tar", last modified: Thu Apr  6 15:52:49 2023, max compression
++gzip compressed data, was "preservation-database-0.0.94.tar", last modified: Thu Apr  6 15:54:48 2023, max compression
+```
+
+## Comparing `preservation-database-0.0.93.tar` & `preservation-database-0.0.94.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+-drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:52:49.977454 preservation-database-0.0.93/
+--rw-rw-r--   0 martin    (1000) martin    (1000)      129 2023-02-06 17:29:02.000000 preservation-database-0.0.93/MANIFEST.in
+--rw-rw-r--   0 martin    (1000) martin    (1000)     5481 2023-04-06 15:52:49.977454 preservation-database-0.0.93/PKG-INFO
+--rw-rw-r--   0 martin    (1000) martin    (1000)     4701 2023-04-06 15:52:45.000000 preservation-database-0.0.93/README.md
+-drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:52:49.977454 preservation-database-0.0.93/preservation_database.egg-info/
+--rw-rw-r--   0 martin    (1000) martin    (1000)     5481 2023-04-06 15:52:49.000000 preservation-database-0.0.93/preservation_database.egg-info/PKG-INFO
+--rw-rw-r--   0 martin    (1000) martin    (1000)      691 2023-04-06 15:52:49.000000 preservation-database-0.0.93/preservation_database.egg-info/SOURCES.txt
+--rw-rw-r--   0 martin    (1000) martin    (1000)        1 2023-04-06 15:52:49.000000 preservation-database-0.0.93/preservation_database.egg-info/dependency_links.txt
+--rw-rw-r--   0 martin    (1000) martin    (1000)      208 2023-04-06 15:52:49.000000 preservation-database-0.0.93/preservation_database.egg-info/requires.txt
+--rw-rw-r--   0 martin    (1000) martin    (1000)       21 2023-04-06 15:52:49.000000 preservation-database-0.0.93/preservation_database.egg-info/top_level.txt
+-drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:52:49.977454 preservation-database-0.0.93/preservationdatabase/
+--rw-rw-r--   0 martin    (1000) martin    (1000)        0 2023-02-06 09:14:23.000000 preservation-database-0.0.93/preservationdatabase/__init__.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)    15336 2023-04-06 15:46:52.000000 preservation-database-0.0.93/preservationdatabase/cli.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)      660 2023-03-01 11:09:55.000000 preservation-database-0.0.93/preservationdatabase/constants.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)     1597 2023-03-05 12:44:30.000000 preservation-database-0.0.93/preservationdatabase/environment.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)     3450 2023-02-19 18:38:37.000000 preservation-database-0.0.93/preservationdatabase/example_settings.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)    34134 2023-04-06 15:52:39.000000 preservation-database-0.0.93/preservationdatabase/exporter.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)    42928 2023-04-06 14:20:58.000000 preservation-database-0.0.93/preservationdatabase/models.py
+-drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:52:49.977454 preservation-database-0.0.93/preservationdatabase/test_data/
+--rw-rw-r--   0 martin    (1000) martin    (1000)      888 2023-02-06 10:17:59.000000 preservation-database-0.0.93/preservationdatabase/test_data/tests.jsonl
+-drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:52:49.977454 preservation-database-0.0.93/preservationdatabase/tests/
+--rw-rw-r--   0 martin    (1000) martin    (1000)        0 2023-02-06 09:20:11.000000 preservation-database-0.0.93/preservationdatabase/tests/__init__.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)     2072 2023-02-06 10:15:46.000000 preservation-database-0.0.93/preservationdatabase/tests/test_archives.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)      767 2023-02-19 18:38:37.000000 preservation-database-0.0.93/preservationdatabase/urls.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)    20636 2023-04-06 13:59:40.000000 preservation-database-0.0.93/preservationdatabase/utils.py
+--rw-rw-r--   0 martin    (1000) martin    (1000)     1238 2023-04-06 15:52:00.000000 preservation-database-0.0.93/pyproject.toml
+--rw-rw-r--   0 martin    (1000) martin    (1000)     1143 2023-04-06 15:52:49.977454 preservation-database-0.0.93/setup.cfg
++drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:54:48.742994 preservation-database-0.0.94/
++-rw-rw-r--   0 martin    (1000) martin    (1000)      129 2023-02-06 17:29:02.000000 preservation-database-0.0.94/MANIFEST.in
++-rw-rw-r--   0 martin    (1000) martin    (1000)     5481 2023-04-06 15:54:48.742994 preservation-database-0.0.94/PKG-INFO
++-rw-rw-r--   0 martin    (1000) martin    (1000)     4701 2023-04-06 15:54:44.000000 preservation-database-0.0.94/README.md
++drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:54:48.742994 preservation-database-0.0.94/preservation_database.egg-info/
++-rw-rw-r--   0 martin    (1000) martin    (1000)     5481 2023-04-06 15:54:48.000000 preservation-database-0.0.94/preservation_database.egg-info/PKG-INFO
++-rw-rw-r--   0 martin    (1000) martin    (1000)      691 2023-04-06 15:54:48.000000 preservation-database-0.0.94/preservation_database.egg-info/SOURCES.txt
++-rw-rw-r--   0 martin    (1000) martin    (1000)        1 2023-04-06 15:54:48.000000 preservation-database-0.0.94/preservation_database.egg-info/dependency_links.txt
++-rw-rw-r--   0 martin    (1000) martin    (1000)      208 2023-04-06 15:54:48.000000 preservation-database-0.0.94/preservation_database.egg-info/requires.txt
++-rw-rw-r--   0 martin    (1000) martin    (1000)       21 2023-04-06 15:54:48.000000 preservation-database-0.0.94/preservation_database.egg-info/top_level.txt
++drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:54:48.742994 preservation-database-0.0.94/preservationdatabase/
++-rw-rw-r--   0 martin    (1000) martin    (1000)        0 2023-02-06 09:14:23.000000 preservation-database-0.0.94/preservationdatabase/__init__.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)    15336 2023-04-06 15:46:52.000000 preservation-database-0.0.94/preservationdatabase/cli.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)      660 2023-03-01 11:09:55.000000 preservation-database-0.0.94/preservationdatabase/constants.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)     1597 2023-03-05 12:44:30.000000 preservation-database-0.0.94/preservationdatabase/environment.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)     3450 2023-02-19 18:38:37.000000 preservation-database-0.0.94/preservationdatabase/example_settings.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)    34154 2023-04-06 15:54:32.000000 preservation-database-0.0.94/preservationdatabase/exporter.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)    42928 2023-04-06 14:20:58.000000 preservation-database-0.0.94/preservationdatabase/models.py
++drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:54:48.742994 preservation-database-0.0.94/preservationdatabase/test_data/
++-rw-rw-r--   0 martin    (1000) martin    (1000)      888 2023-02-06 10:17:59.000000 preservation-database-0.0.94/preservationdatabase/test_data/tests.jsonl
++drwxrwxr-x   0 martin    (1000) martin    (1000)        0 2023-04-06 15:54:48.742994 preservation-database-0.0.94/preservationdatabase/tests/
++-rw-rw-r--   0 martin    (1000) martin    (1000)        0 2023-02-06 09:20:11.000000 preservation-database-0.0.94/preservationdatabase/tests/__init__.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)     2072 2023-02-06 10:15:46.000000 preservation-database-0.0.94/preservationdatabase/tests/test_archives.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)      767 2023-02-19 18:38:37.000000 preservation-database-0.0.94/preservationdatabase/urls.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)    20636 2023-04-06 13:59:40.000000 preservation-database-0.0.94/preservationdatabase/utils.py
++-rw-rw-r--   0 martin    (1000) martin    (1000)     1238 2023-04-06 15:54:41.000000 preservation-database-0.0.94/pyproject.toml
++-rw-rw-r--   0 martin    (1000) martin    (1000)     1143 2023-04-06 15:54:48.742994 preservation-database-0.0.94/setup.cfg
+```
+
+### Comparing `preservation-database-0.0.93/PKG-INFO` & `preservation-database-0.0.94/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: preservation-database
+-Version: 0.0.93
++Version: 0.0.94
+ Summary: A database builder for digital preservation information.
+ Home-page: https://gitlab.com/crossref/labs/preservationDatabase
+ Author: Martin Paul Eve
+ Author-email: meve@crossref.org
+ Maintainer-email: Martin Paul Eve <meve@crossref.org>
+ Project-URL: homepage, https://labs.crossref.org
+ Project-URL: documentation, https://labs.crossref.org
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: preservation-database Version: 0.0.93 Summary: A
++Metadata-Version: 2.1 Name: preservation-database Version: 0.0.94 Summary: A
+ database builder for digital preservation information. Home-page: https://
+ gitlab.com/crossref/labs/preservationDatabase Author: Martin Paul Eve Author-
+ email: meve@crossref.org Maintainer-email: Martin Paul Eve
+ crossref.org> Project-URL: homepage, https://labs.crossref.org Project-URL:
+ documentation, https://labs.crossref.org Project-URL: repository, https://
+ gitlab.com/crossref/labs/preservationDatabase Project-URL: changelog, https://
+ gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md Keywords:
+```
+
+### Comparing `preservation-database-0.0.93/README.md` & `preservation-database-0.0.94/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservation_database.egg-info/PKG-INFO` & `preservation-database-0.0.94/preservation_database.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: preservation-database
+-Version: 0.0.93
++Version: 0.0.94
+ Summary: A database builder for digital preservation information.
+ Home-page: https://gitlab.com/crossref/labs/preservationDatabase
+ Author: Martin Paul Eve
+ Author-email: meve@crossref.org
+ Maintainer-email: Martin Paul Eve <meve@crossref.org>
+ Project-URL: homepage, https://labs.crossref.org
+ Project-URL: documentation, https://labs.crossref.org
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: preservation-database Version: 0.0.93 Summary: A
++Metadata-Version: 2.1 Name: preservation-database Version: 0.0.94 Summary: A
+ database builder for digital preservation information. Home-page: https://
+ gitlab.com/crossref/labs/preservationDatabase Author: Martin Paul Eve Author-
+ email: meve@crossref.org Maintainer-email: Martin Paul Eve
+ crossref.org> Project-URL: homepage, https://labs.crossref.org Project-URL:
+ documentation, https://labs.crossref.org Project-URL: repository, https://
+ gitlab.com/crossref/labs/preservationDatabase Project-URL: changelog, https://
+ gitlab.com/crossref/labs/preservation-data/-/blob/main/CHANGELOG.md Keywords:
+```
+
+### Comparing `preservation-database-0.0.93/preservation_database.egg-info/SOURCES.txt` & `preservation-database-0.0.94/preservation_database.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/cli.py` & `preservation-database-0.0.94/preservationdatabase/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/constants.py` & `preservation-database-0.0.94/preservationdatabase/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/environment.py` & `preservation-database-0.0.94/preservationdatabase/environment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/example_settings.py` & `preservation-database-0.0.94/preservationdatabase/example_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/exporter.py` & `preservation-database-0.0.94/preservationdatabase/exporter.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -632,14 +632,15 @@
+ 
+                 if not preserved:
+                     unpreserved_samples.append(annotation)
+ 
+                 overall_samples.append(annotation)
+ 
+             except Exception as e:
++                ...
+                 # print(e)
+                 # print(f"This DOI was excluded: {sample['DOI']}")
+ 
+     key = f"{REPORT_PATH}/members/{member_id}/preservation-report.json"
+     unpreserved_key = f"{REPORT_PATH}/members/{member_id}/unpreserved.json"
+ 
+     push_json_to_s3(
+```
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/models.py` & `preservation-database-0.0.94/preservationdatabase/models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/test_data/tests.jsonl` & `preservation-database-0.0.94/preservationdatabase/test_data/tests.jsonl`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/tests/test_archives.py` & `preservation-database-0.0.94/preservationdatabase/tests/test_archives.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/urls.py` & `preservation-database-0.0.94/preservationdatabase/urls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/preservationdatabase/utils.py` & `preservation-database-0.0.94/preservationdatabase/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `preservation-database-0.0.93/pyproject.toml` & `preservation-database-0.0.94/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [project]
+ name = "preservation-database"
+-version = "0.0.93"
++version = "0.0.94"
+ description = "A database builder for digital preservation information."
+ readme = "README.md"
+ requires-python = ">=3.8"
+ license = {file = "LICENSE.md"}
+ keywords = ["digital preservation", "academic"]
+ authors = [
+   {email = "meve@crossref.org"},
+```
+
+### Comparing `preservation-database-0.0.93/setup.cfg` & `preservation-database-0.0.94/setup.cfg`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = preservation-database
+-version = 0.0.93
++version = 0.0.94
+ description = A database builder for digital preservation information.
+ url = https://gitlab.com/crossref/labs/preservationDatabase
+ author = Martin Paul Eve
+ author_email = martin@eve.gd
+ license = MIT
+ classifiers = 
+ 	Environment :: Web Environment
+```
+

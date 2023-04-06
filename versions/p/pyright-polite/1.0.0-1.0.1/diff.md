@@ -1,0 +1,274 @@
+# Comparing `tmp/pyright_polite-1.0.0.tar.gz` & `tmp/pyright_polite-1.0.1.tar.gz`
+
+## Comparing `pyright_polite-1.0.0.tar` & `pyright_polite-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+--rw-r--r--   0        0        0      998 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.justfile
+--rw-r--r--   0        0        0     1151 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.pre-commit-config.yaml
+--rw-r--r--   0        0        0       96 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.pylintrc
+--rw-r--r--   0        0        0       85 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/CHANGELOG.md
+--rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/setup.cfg
+--rw-r--r--   0        0        0      119 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.github/dependabot.yml
+--rw-r--r--   0        0        0     3792 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.github/workflows/ci.yml
+--rw-r--r--   0        0        0     2189 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.github/workflows/publish.yml
+--rw-r--r--   0        0        0      154 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/__about__.py
+--rw-r--r--   0        0        0      175 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/__init__.py
+--rw-r--r--   0        0        0     8832 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/cli.py
+--rw-r--r--   0        0        0      858 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/main.py
+--rw-r--r--   0        0        0     1525 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/platform.py
+--rw-r--r--   0        0        0     9766 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/polite.py
+--rw-r--r--   0        0        0     8914 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/src/pyright_polite/pyright.py
+--rw-r--r--   0        0        0    22498 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/conftest.py
+--rw-r--r--   0        0        0     4106 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/test_cli.py
+--rw-r--r--   0        0        0     1360 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/test_main.py
+--rw-r--r--   0        0        0     5130 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/test_polite.py
+--rw-r--r--   0        0        0     2035 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/test_processlookuperror.py
+--rw-r--r--   0        0        0     1982 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/tests/test_traceback.py
+--rw-r--r--   0        0        0     3097 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/.gitignore
+--rw-r--r--   0        0        0     1074 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/LICENSE
+--rw-r--r--   0        0        0     5966 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/README.md
+--rw-r--r--   0        0        0     1245 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/hatch.toml
+--rw-r--r--   0        0        0     2730 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/pyproject.toml
+--rw-r--r--   0        0        0     7134 2020-02-02 00:00:00.000000 pyright_polite-1.0.0/PKG-INFO
++-rw-r--r--   0        0        0      998 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.justfile
++-rw-r--r--   0        0        0     1151 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.pre-commit-config.yaml
++-rw-r--r--   0        0        0       96 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.pylintrc
++-rw-r--r--   0        0        0      176 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/CHANGELOG.md
++-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/setup.cfg
++-rw-r--r--   0        0        0      119 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.github/dependabot.yml
++-rw-r--r--   0        0        0     3792 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.github/workflows/ci.yml
++-rw-r--r--   0        0        0     2189 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.github/workflows/publish.yml
++-rw-r--r--   0        0        0      154 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/__about__.py
++-rw-r--r--   0        0        0      190 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/__init__.py
++-rw-r--r--   0        0        0     8832 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/cli.py
++-rw-r--r--   0        0        0      858 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/main.py
++-rw-r--r--   0        0        0     1525 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/platform.py
++-rw-r--r--   0        0        0     9766 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/polite.py
++-rw-r--r--   0        0        0     8914 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/src/pyright_polite/pyright.py
++-rw-r--r--   0        0        0    22498 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/conftest.py
++-rw-r--r--   0        0        0     4106 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/test_cli.py
++-rw-r--r--   0        0        0     1360 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/test_main.py
++-rw-r--r--   0        0        0     5130 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/test_polite.py
++-rw-r--r--   0        0        0     2035 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/test_processlookuperror.py
++-rw-r--r--   0        0        0     1982 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/tests/test_traceback.py
++-rw-r--r--   0        0        0     3097 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/.gitignore
++-rw-r--r--   0        0        0     1074 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/LICENSE
++-rw-r--r--   0        0        0     6026 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/README.md
++-rw-r--r--   0        0        0     1245 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/hatch.toml
++-rw-r--r--   0        0        0     2745 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/pyproject.toml
++-rw-r--r--   0        0        0     7209 2020-02-02 00:00:00.000000 pyright_polite-1.0.1/PKG-INFO
+```
+
+### Comparing `pyright_polite-1.0.0/.justfile` & `pyright_polite-1.0.1/.justfile`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/.pre-commit-config.yaml` & `pyright_polite-1.0.1/.pre-commit-config.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/.github/workflows/ci.yml` & `pyright_polite-1.0.1/.github/workflows/ci.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/.github/workflows/publish.yml` & `pyright_polite-1.0.1/.github/workflows/publish.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/src/pyright_polite/cli.py` & `pyright_polite-1.0.1/src/pyright_polite/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/src/pyright_polite/main.py` & `pyright_polite-1.0.1/src/pyright_polite/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/src/pyright_polite/platform.py` & `pyright_polite-1.0.1/src/pyright_polite/platform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/src/pyright_polite/polite.py` & `pyright_polite-1.0.1/src/pyright_polite/polite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/src/pyright_polite/pyright.py` & `pyright_polite-1.0.1/src/pyright_polite/pyright.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/conftest.py` & `pyright_polite-1.0.1/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/test_cli.py` & `pyright_polite-1.0.1/tests/test_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/test_main.py` & `pyright_polite-1.0.1/tests/test_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/test_polite.py` & `pyright_polite-1.0.1/tests/test_polite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/test_processlookuperror.py` & `pyright_polite-1.0.1/tests/test_processlookuperror.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/tests/test_traceback.py` & `pyright_polite-1.0.1/tests/test_traceback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/.gitignore` & `pyright_polite-1.0.1/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/LICENSE` & `pyright_polite-1.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/README.md` & `pyright_polite-1.0.1/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,22 +8,23 @@
+ 
+ [pypi-img]: https://img.shields.io/pypi/v/pyright-polite.svg
+ [pypi-url]: https://pypi.org/project/pyright-polite
+ [license-img]:  https://img.shields.io/github/license/jamielinux/pyright-polite.svg
+ [license-url]: https://github.com/jamielinux/pyright-polite/blob/main/LICENSE
+ [ci-img]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml/badge.svg
+ [ci-url]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml
+-[coverage-img]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jamielinux/f3b70fb7174f1a8a87f2185e80cbb2ef/raw/pyright-polite.covbadge.json
++[coverage-img]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jamielinux/ed2d4df7c2b137ac89778db60ef8894f/raw/pyright-polite.covbadge.json
+ [coverage-url]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml
+ [python-img]: https://img.shields.io/pypi/pyversions/pyright-polite.svg
+ [python-url]: https://pypi.org/project/pyright-polite
+ 
+ ---
+ 
+-**pyright-polite** is an intelligent wrapper for [pyright][0] that makes it less noisy.
++**pyright-polite** is an intelligent cross-platform wrapper for [pyright][0] that makes
++it less noisy.
+ 
+ Force pyright to be more respectful with your attention :rotating_light:
+ 
+ [0]: https://github.com/microsoft/pyright
+ 
+ ## What does it do?
+ 
+@@ -81,14 +82,16 @@
+ either the [pyright npm][pkg_npm] or the [pyright PyPI][pkg_pypi] package.
+ 
+ ```console
+ $ npm install pyright  # alternatively: pip install pyright
+ $ pip install pyright-polite
+ ```
+ 
++Linux, macOS and Windows are all supported.
++
+ [pkg_pypi]: https://pypi.org/project/pyright/
+ [pkg_npm]: https://www.npmjs.com/package/pyright
+ [installation]: https://microsoft.github.io/pyright/#/installation
+ 
+ ## Usage
+ 
+ **pyright-polite** takes the same arguments as pyright.
+```
+
+### Comparing `pyright_polite-1.0.0/hatch.toml` & `pyright_polite-1.0.1/hatch.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `pyright_polite-1.0.0/pyproject.toml` & `pyright_polite-1.0.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ 
+ [build-system]
+ requires = ["hatchling"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+ name = "pyright-polite"
+-description = "An intelligent wrapper for pyright that makes it less noisy."
++description = "An intelligent cross-platform wrapper for pyright that makes it less noisy."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ license = "MIT"
+ keywords = ["pyright", "quiet"]
+ authors = [
+   { name = "Jamie Nguyen", email = "j@jamielinux.com" },
+ ]
+```
+
+### Comparing `pyright_polite-1.0.0/PKG-INFO` & `pyright_polite-1.0.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: pyright-polite
+-Version: 1.0.0
+-Summary: An intelligent wrapper for pyright that makes it less noisy.
++Version: 1.0.1
++Summary: An intelligent cross-platform wrapper for pyright that makes it less noisy.
+ Project-URL: Homepage, https://github.com/jamielinux/pyright-polite
+ Project-URL: Issues, https://github.com/jamielinux/pyright-polite/issues
+ Project-URL: Source, https://github.com/jamielinux/pyright-polite
+ Author-email: Jamie Nguyen <j@jamielinux.com>
+ License-Expression: MIT
+ License-File: LICENSE
+ Keywords: pyright,quiet
+@@ -35,22 +35,23 @@
+ 
+ [pypi-img]: https://img.shields.io/pypi/v/pyright-polite.svg
+ [pypi-url]: https://pypi.org/project/pyright-polite
+ [license-img]:  https://img.shields.io/github/license/jamielinux/pyright-polite.svg
+ [license-url]: https://github.com/jamielinux/pyright-polite/blob/main/LICENSE
+ [ci-img]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml/badge.svg
+ [ci-url]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml
+-[coverage-img]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jamielinux/f3b70fb7174f1a8a87f2185e80cbb2ef/raw/pyright-polite.covbadge.json
++[coverage-img]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jamielinux/ed2d4df7c2b137ac89778db60ef8894f/raw/pyright-polite.covbadge.json
+ [coverage-url]: https://github.com/jamielinux/pyright-polite/actions/workflows/ci.yml
+ [python-img]: https://img.shields.io/pypi/pyversions/pyright-polite.svg
+ [python-url]: https://pypi.org/project/pyright-polite
+ 
+ ---
+ 
+-**pyright-polite** is an intelligent wrapper for [pyright][0] that makes it less noisy.
++**pyright-polite** is an intelligent cross-platform wrapper for [pyright][0] that makes
++it less noisy.
+ 
+ Force pyright to be more respectful with your attention :rotating_light:
+ 
+ [0]: https://github.com/microsoft/pyright
+ 
+ ## What does it do?
+ 
+@@ -108,14 +109,16 @@
+ either the [pyright npm][pkg_npm] or the [pyright PyPI][pkg_pypi] package.
+ 
+ ```console
+ $ npm install pyright  # alternatively: pip install pyright
+ $ pip install pyright-polite
+ ```
+ 
++Linux, macOS and Windows are all supported.
++
+ [pkg_pypi]: https://pypi.org/project/pyright/
+ [pkg_npm]: https://www.npmjs.com/package/pyright
+ [installation]: https://microsoft.github.io/pyright/#/installation
+ 
+ ## Usage
+ 
+ **pyright-polite** takes the same arguments as pyright.
+```
+

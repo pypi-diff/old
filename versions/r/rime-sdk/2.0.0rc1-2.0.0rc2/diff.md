@@ -1,0 +1,12980 @@
+# Comparing `tmp/rime_sdk-2.0.0rc1.tar.gz` & `tmp/rime_sdk-2.0.0rc2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rime_sdk-2.0.0rc1.tar", last modified: Fri Mar 17 07:08:09 2023, max compression
++gzip compressed data, was "rime_sdk-2.0.0rc2.tar", last modified: Thu Apr  6 15:53:07 2023, max compression
+```
+
+## Comparing `rime_sdk-2.0.0rc1.tar` & `rime_sdk-2.0.0rc2.tar`
+
+### file list
+
+```diff
+@@ -1,412 +1,483 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.882800 rime_sdk-2.0.0rc1/
+--rw-r--r--   0 runner    (1001) docker     (123)      566 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)    27362 2023-03-17 07:08:09.882800 rime_sdk-2.0.0rc1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    27071 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.838800 rime_sdk-2.0.0rc1/rime_sdk/
+--rw-r--r--   0 runner    (1001) docker     (123)      980 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    62828 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/client.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12058 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_collector.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.838800 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3468 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/cli.py
+--rw-r--r--   0 runner    (1001) docker     (123)      965 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/data_format_checker.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8402 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/nlp_checker.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7743 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/data_format_check/tabular_checker.py
+--rw-r--r--   0 runner    (1001) docker     (123)      883 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/detection_event.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20919 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/firewall.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4908 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/image_builder.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.842800 rime_sdk-2.0.0rc1/rime_sdk/internal/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28283 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/config_parser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1001 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)      667 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/decorators.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9368 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/file_upload.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1976 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/rest_error_handler.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1762 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/security_config_parser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8222 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/swagger_parser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5111 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/swagger_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1050 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/test_helpers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2690 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/throttle_queue.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1834 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/internal/utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16647 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/job.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5026 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/monitor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    47517 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/project.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22170 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/registry.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.842800 rime_sdk-2.0.0rc1/rime_sdk/swagger/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.842800 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/
+--rw-r--r--   0 runner    (1001) docker     (123)    38287 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.846800 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/
+--rw-r--r--   0 runner    (1001) docker     (123)     1412 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22785 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/agent_manager_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    25240 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/data_collector_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11167 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/detection_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9413 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/feature_flag_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13177 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/file_scanning_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17711 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/file_upload_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21541 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/firewall_service_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20390 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/image_registry_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27300 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/job_reader_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22888 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/model_testing_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    29552 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/monitor_service_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19759 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/notification_setting_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    56124 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/project_service_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    71224 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/registry_service_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    50274 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/results_reader_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4053 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/rime_info_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)    25142 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api_client.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8249 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/configuration.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.882800 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/
+--rw-r--r--   0 runner    (1001) docker     (123)    36776 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4291 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_category_test_identifier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6632 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_subset_test_metric_identifier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5446 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_test_case_metric_identifier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3515 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_aws_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3545 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_gcp_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2514 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_local_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5800 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_firewall_request_scheduled_ct_parameters.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3325 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/custom_image_pull_secret.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7353 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/custommonitors_name_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4359 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_data_stream_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3287 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_info_params_feature_intersection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6318 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_info_params_ranking_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13279 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_profiling_column_type_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7983 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_profiling_feature_relationship_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4888 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datacollector_datapoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5711 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datacollector_datapoint_row.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4877 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_ct_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9818 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7150 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_project_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3373 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datastream_project_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16223 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_detection_event.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4236 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_event_detail.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2691 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_event_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4393 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_metric_degradation_event_details.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4168 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_resolution.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7708 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_security_event_details.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2707 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/difference_from_target_difference.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2682 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/difference_from_target_target.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2633 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/digest_config_digest_frequency.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5237 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_file_scan_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3280 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_huggingface_model_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4314 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_model_file_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3248 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_pytorch_model_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4207 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_security_report.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5708 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_security_report_import_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4907 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_custom_loader_location.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3370 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_data_collector_location.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5023 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_data_location.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_delta_lake_location.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9945 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_firewall.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5038 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_firewall_firewall_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3112 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_latest_run_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5417 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_location_args.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4110 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_location_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9145 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_scheduled_ct_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5121 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_test_category_severity.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4385 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/googlerpc_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2784 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/image_reference_reference_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4757 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_agents_request_list_agents_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4480 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_datasets_request_datasets_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3996 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_images_request_pip_library_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5970 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_aggregated_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5065 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metric_without_subsets.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5013 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metrics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4533 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3596 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metrics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_models_request_model_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6512 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_monitors_request_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4805 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_notifications_request_list_notifications_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4300 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_predictions_request_prediction_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3685 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_summary_tests_request_list_summary_tests_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5691 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_test_cases_request_list_test_cases_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5027 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_package_requirement.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2648 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_package_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3956 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_pip_library.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4471 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_pip_requirement.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2637 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_role_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4355 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_hugging_face_model_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6523 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6547 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body1.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8907 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4011 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3069 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model_path_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6312 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_project_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4105 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_aggregation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2708 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_aggregation_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2478 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_anomaly_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6225 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_artifact_identifier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4088 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_difference_from_target.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3481 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_excluded_transforms.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4926 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_metric_degradation_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13353 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_monitor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2628 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_monitor_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4474 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_threshold.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2630 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_threshold_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3483 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_transform.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2691 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitoring_config_alert_level.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3950 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitors_monitor_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5565 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_digest_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_job_action_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3238 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_monitoring_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9362 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_notification.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2737 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_notification_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2607 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_object_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3557 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_webhook_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5023 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notifsettings_notification_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13574 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/object_containing_the_updates_only_the_fields_specified_in_the_mask_will_be_used_by_the_backend_note_the_id_field_is_necessary_to_find_the_given_notification_setting_.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4304 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/predictions_model_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_add_users_to_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10117 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_create_project_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3242 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_create_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2510 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_delete_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3153 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_project_url_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4307 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_workspace_roles_for_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7150 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_id_uuid_dataset_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6312 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_id_uuid_model_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_projects_request_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5284 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_projects_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5701 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_users_of_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3702 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_owner_details.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15287 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_project.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4134 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_project_with_owner_details.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2542 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_remove_user_from_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3242 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2534 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_user_of_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4343 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_workspace_roles_for_project_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4728 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/projects_project_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2678 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/protobuf_any.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2537 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/protobuf_null_value.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7602 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_feature_cause.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5071 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_rca_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2665 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_rca_role.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6639 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_test_case_cause.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4262 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_test_case_id.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9502 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/registryprediction_prediction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3181 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rename_test_run_id_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2716 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_actor_role.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6168 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_agent.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2708 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_agent_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3920 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_archived_job_logs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2482 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_cancel_job_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6122 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_category_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13329 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_category_test_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3352 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_continuous_test_job_progress.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4960 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_continuous_test_run_progress.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5675 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_agent_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4040 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_agent_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_custom_monitor_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7022 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_firewall_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3287 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_firewall_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6561 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_image_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3805 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_image_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7105 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_notification_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3140 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_notification_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_deactivate_agent_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_agent_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_custom_monitor_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2498 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_dataset_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2502 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_firewall_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_image_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_model_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_prediction_set_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_uploaded_file_url_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ensure_image_existence_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_fail_job_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4563 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_failing_row.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6295 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_failing_rows_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9196 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_feature_flags.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3307 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_feature_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3197 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_finalize_cancellation_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_float_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3123 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_agent_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3320 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_datapoints_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6026 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_dataset_file_upload_url_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3194 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_dataset_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4078 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_enabled_feature_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3594 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_feature_flag_jwt_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3359 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_feature_flags_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3228 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_firewall_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3144 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_image_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3085 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_job_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3357 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_latest_logs_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3328 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_limit_status_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6238 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_model_directory_upload_urls_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3171 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_model_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6680 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_monitor_result_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3344 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_prediction_set_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3369 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_predictions_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3251 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_project_id_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8444 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_rime_info_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3255 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_test_run_id_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3073 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_url_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2482 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_heartbeat_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4331 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_image_reference.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_int_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4659 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5091 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data_continuous_incremental_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4737 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data_stress_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13897 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_metadata.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2716 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2580 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_view.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2857 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_license_feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2689 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_license_limit.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5402 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_limit_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2635 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_limit_status_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4931 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_agents_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4798 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_datasets_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10142 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_request_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5327 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4543 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_enabled_features_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4926 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_file_scan_results_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5758 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_images_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4033 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_images_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6133 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_jobs_request_query.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4867 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_jobs_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4645 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_metric_identifiers_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4759 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_models_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4974 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_monitors_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5518 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_notifications_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4948 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_predictions_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3298 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_uploaded_file_urls_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3818 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_long_description_tab.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13065 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_managed_image.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2747 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_managed_image_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2978 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_model_task.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4022 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_model_with_owner_details.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4097 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_monitor_data_point.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3660 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_named_double.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_order.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_parent_role_subject_role_pair.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3378 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_data_stream_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3260 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_dataset_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3283 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_internal_agent_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3219 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_model_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_prediction_set_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2651 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ri_email_recipient.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2625 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ri_plan.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3089 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_safe_url.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_send_ri_email_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2617 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_severity.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5025 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_severity_counts.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3794 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_sort_spec.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6945 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3189 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4941 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3141 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3157 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_stress_test_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3353 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_datapoints_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4401 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_predictions_request_prediction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2510 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_predictions_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_str_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3252 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_stress_test_job_progress.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3097 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_suggestion.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3817 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_sync_image_tag_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4411 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_table_column.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2731 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_table_column_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2837 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_termination_reason.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5817 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_case_monitor_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2681 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_case_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9623 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3386 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_metric_category.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4774 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_run_progress.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2771 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_task_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2615 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3874 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_time_interval.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_build_info_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3252 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_firewall_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3218 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_monitor_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3388 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_notification_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_upsert_feature_flags_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3109 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_upsert_job_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4838 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_user_detail_with_role.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3849 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_user_with_role.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3095 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_uuid.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2798 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/riskscore_risk_category_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4470 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/riskscore_risk_score.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4059 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/role_users_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4194 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/role_workspace_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4061 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4364 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4760 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_resource_request.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6902 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_run_time_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6653 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemadatacollector_prediction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4014 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemamonitor_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5273 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemanotification_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4259 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemaregistry_metadata.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4119 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/security_event_details_flagged_datapoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2753 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/security_event_details_security_event_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/statedb_job_status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_datapoints_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_latest_logs_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4099 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_predictions_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5709 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5725 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body1.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5968 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_metrics_category_summary_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4334 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_metrics_model_perf_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4099 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_progress_test_batch_progress.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4150 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_annotated_test_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6568 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_connection_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5146 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_collector_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3258 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_file_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4302 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20224 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_info_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5355 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_loading_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6353 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_profiling.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6132 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_delta_lake_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5568 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_hugging_face_data_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11700 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_model_profiling.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4106 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_pred_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3290 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_prediction_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4241 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_profiling_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4172 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_single_data_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4743 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_category.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3285 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_category_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7376 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_run_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4407 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_run_incremental_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_sensitivity.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6530 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_suite_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3399 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_batch_result_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3501 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_feature_result_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3604 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_config_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3321 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_run_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5643 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_batch_results_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5753 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_feature_results_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5798 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_summary_tests_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5516 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_cases_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5493 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_runs_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3345 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_rename_test_run_response.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6466 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_result_summary_counts.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15407 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6896 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result_display.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_case.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5267 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_case_display.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13618 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4626 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result_display.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15131 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_detail.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11706 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_metrics.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13955 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/the_updates_to_the_monitor_.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6335 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4500 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_continuous_incremental_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_stress_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4040 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_favorite_projects.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3373 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_private_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2597 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_role.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7727 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_user_detail.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4103 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11143 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/v1firewallfirewall_firewall_id_uuid_firewall.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4495 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13026 2023-03-17 07:08:05.000000 rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/rest.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5209 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/test_batch.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14716 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/rime_sdk/test_run.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-17 07:08:09.838800 rime_sdk-2.0.0rc1/rime_sdk.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    27362 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    26706 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       80 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      154 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-03-17 07:08:09.000000 rime_sdk-2.0.0rc1/rime_sdk.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-17 07:08:09.882800 rime_sdk-2.0.0rc1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-03-17 07:07:42.000000 rime_sdk-2.0.0rc1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.909914 rime_sdk-2.0.0rc2/
++-rw-r--r--   0 runner    (1001) docker     (123)      566 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)    27362 2023-04-06 15:53:07.909914 rime_sdk-2.0.0rc2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    27071 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.861914 rime_sdk-2.0.0rc2/rime_sdk/
++-rw-r--r--   0 runner    (1001) docker     (123)     1162 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    57754 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/client.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12058 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_collector.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.865913 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3468 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)      965 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/data_format_checker.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8402 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/nlp_checker.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7743 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/data_format_check/tabular_checker.py
++-rw-r--r--   0 runner    (1001) docker     (123)      883 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/detection_event.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20899 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/firewall.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4908 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/image_builder.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.865913 rime_sdk-2.0.0rc2/rime_sdk/internal/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28283 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/config_parser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1001 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)      667 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/decorators.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9368 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/file_upload.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1976 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/rest_error_handler.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1762 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/security_config_parser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8222 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/swagger_parser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5111 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/swagger_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1050 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/test_helpers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2690 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/throttle_queue.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2689 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/internal/utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16763 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/job.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5026 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/monitor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    55004 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/project.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23677 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/registry.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.865913 rime_sdk-2.0.0rc2/rime_sdk/swagger/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.865913 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/
++-rw-r--r--   0 runner    (1001) docker     (123)    45999 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.869914 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/
++-rw-r--r--   0 runner    (1001) docker     (123)     1752 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22707 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/agent_manager_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25158 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/data_collector_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11141 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/detection_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9413 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/feature_flag_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8961 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/file_scanning_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18073 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/file_upload_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21473 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/firewall_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20482 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/image_registry_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26851 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/integration_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37092 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/job_reader_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17641 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/model_card_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13568 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/model_testing_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    29422 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/monitor_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19707 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/notification_setting_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    55786 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/project_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    57282 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/registry_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    50274 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/results_reader_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4053 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/rime_info_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    40148 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/user_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    41732 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/workspace_service_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25142 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api_client.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8249 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/configuration.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.909914 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/
++-rw-r--r--   0 runner    (1001) docker     (123)    44148 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4291 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_category_test_identifier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6632 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_subset_test_metric_identifier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5446 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_test_case_metric_identifier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3515 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_aws_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3545 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_gcp_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2514 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_local_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5800 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_firewall_request_scheduled_ct_parameters.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3325 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/custom_image_pull_secret.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7353 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/custommonitors_name_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4359 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_data_stream_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3287 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_info_params_feature_intersection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6318 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_info_params_ranking_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13463 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_profiling_column_type_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8043 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_profiling_feature_relationship_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4888 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datacollector_datapoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5711 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datacollector_datapoint_row.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4877 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_ct_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10661 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6481 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_id_prediction_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3373 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datastream_project_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16223 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_detection_event.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4236 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_event_detail.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2691 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_event_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4393 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_metric_degradation_event_details.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4168 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_resolution.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7708 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_security_event_details.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2707 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/difference_from_target_difference.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2682 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/difference_from_target_target.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2633 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/digest_config_digest_frequency.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5237 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_file_scan_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3414 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_huggingface_model_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4314 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_model_file_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3356 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_pytorch_model_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4207 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_security_report.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5708 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_security_report_import_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4907 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_custom_loader_location.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3370 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_data_collector_location.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5023 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_data_location.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_delta_lake_location.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9945 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_firewall.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5038 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_firewall_firewall_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3112 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_latest_run_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5417 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_location_args.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4110 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_location_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9145 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_scheduled_ct_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5121 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_test_category_severity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4385 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/googlerpc_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2784 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/image_reference_reference_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6713 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/integration_integration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3366 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/integration_integration_schema.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2742 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/integration_integration_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2771 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/integration_variable_sensitivity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4425 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/integrations_integration_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4757 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_agents_request_list_agents_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4389 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_datasets_request_datasets_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3996 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_images_request_pip_library_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5970 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_aggregated_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5065 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metric_without_subsets.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5013 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metrics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4533 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3596 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metrics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_models_request_model_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6512 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_monitors_request_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4805 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_notifications_request_list_notifications_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4336 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_prediction_sets_request_prediction_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3685 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_summary_tests_request_list_summary_tests_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5691 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_test_cases_request_list_test_cases_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5027 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_package_requirement.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2648 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_package_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3956 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_pip_library.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4471 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_pip_requirement.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2637 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_role_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4355 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_hugging_face_model_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9734 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4011 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3069 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model_path_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3486 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/modelcards_model_card_model_card_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4105 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_aggregation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2708 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_aggregation_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2478 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_anomaly_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6225 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_artifact_identifier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4088 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_difference_from_target.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3481 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_excluded_transforms.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4926 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_metric_degradation_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13353 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_monitor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2628 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_monitor_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4474 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_threshold.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2630 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_threshold_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3483 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_transform.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2691 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitoring_config_alert_level.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3950 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitors_monitor_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5565 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_digest_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_job_action_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3238 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_monitoring_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9362 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_notification.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2737 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_notification_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2607 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_object_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3557 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_webhook_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5023 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notifsettings_notification_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13574 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/object_containing_the_updates_only_the_fields_specified_in_the_mask_will_be_used_by_the_backend_note_the_id_field_is_necessary_to_find_the_given_notification_setting_.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4304 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/predictions_model_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_add_users_to_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10989 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_create_project_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3242 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_create_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2510 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_delete_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3153 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_project_url_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4307 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_workspace_roles_for_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7232 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_id_uuid_dataset_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6538 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_id_uuid_model_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_projects_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5284 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_projects_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5701 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_users_of_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3702 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_owner_details.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15287 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_project.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4134 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_project_with_owner_details.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2542 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_remove_user_from_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3242 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2534 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_user_of_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4343 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_workspace_roles_for_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4728 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/projects_project_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2678 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/protobuf_any.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2537 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/protobuf_null_value.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7602 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_feature_cause.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5071 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_rca_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2665 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_rca_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6639 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_test_case_cause.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4262 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_test_case_id.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4187 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/registry_metadata.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2651 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/registry_validity_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10401 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/registryprediction_prediction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3181 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rename_test_run_id_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4909 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/resetpassword_user_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2716 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_actor_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_add_users_to_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6182 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_agent.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2708 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_agent_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8431 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_api_token_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3920 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_archived_job_logs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2482 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_cancel_job_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6122 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_category_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13329 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_category_test_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2681 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_config_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4300 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_configure_integration_request_integration_variable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3468 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_configure_integration_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3352 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_continuous_test_job_progress.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4960 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_continuous_test_run_progress.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5675 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_agent_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4040 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_agent_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4796 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_api_token_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3939 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_api_token_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_custom_monitor_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7022 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_firewall_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3287 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_firewall_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6713 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_image_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3805 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_image_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3346 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_integration_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3444 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_integration_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3334 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_model_card_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7105 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_notification_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3140 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_notification_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5640 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_user_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3175 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_user_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5974 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_workspace_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3315 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3157 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_workspace_tag_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_deactivate_agent_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_agent_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_custom_monitor_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2498 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_dataset_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2502 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_firewall_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_image_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2514 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_integration_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3334 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_model_card_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_model_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2522 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_prediction_set_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_uploaded_file_url_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_workspace_tag_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ensure_image_existence_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_fail_job_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4563 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_failing_row.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6295 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_failing_rows_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9196 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_feature_flags.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3307 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_feature_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3197 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_finalize_cancellation_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_float_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3123 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_agent_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3320 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_datapoints_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6026 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_dataset_file_upload_url_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3194 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_dataset_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4078 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_enabled_feature_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3594 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_feature_flag_jwt_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3359 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_feature_flags_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3228 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_firewall_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3144 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_image_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3420 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_integration_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3085 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_job_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3357 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_latest_logs_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3328 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_limit_status_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_model_card_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6238 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_model_directory_upload_urls_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3171 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_model_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6680 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_monitor_result_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3344 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_prediction_set_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3369 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_predictions_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3251 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_project_id_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8444 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_rime_info_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3255 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_test_run_id_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3073 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_url_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3110 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_user_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3247 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2482 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_heartbeat_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4331 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_image_reference.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_int_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4002 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_integration_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4659 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5091 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data_continuous_incremental_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4737 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data_stress_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14707 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_metadata.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2716 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2580 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_view.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2857 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_license_feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2689 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_license_limit.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5402 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_limit_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2635 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_limit_status_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4931 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_agents_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4958 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_api_tokens_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3246 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_current_user_roles_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4798 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_datasets_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10142 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5327 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4543 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_enabled_features_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4926 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_file_scan_results_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5810 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_images_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4033 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_images_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5145 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_for_project_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5027 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_for_project_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6133 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4867 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4645 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_metric_identifiers_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3394 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_model_cards_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4759 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_models_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4974 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_monitors_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5518 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_notifications_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4996 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_prediction_sets_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3298 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_uploaded_file_urls_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5721 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_users_of_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2498 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_users_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4690 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_users_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3546 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_workspace_integrations_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4006 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_workspace_tags_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_workspaces_request_query.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4867 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_workspaces_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3818 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_long_description_tab.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13065 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_managed_image.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2747 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_managed_image_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3863 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_model_card.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2978 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_model_task.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4022 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_model_with_owner_details.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4097 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_monitor_data_point.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3660 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_named_double.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_order.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_parent_role_subject_role_pair.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3378 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_data_stream_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3490 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_dataset_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3283 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_internal_agent_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3219 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_model_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_prediction_set_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2538 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_remove_user_from_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2498 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_reset_password_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_resolve_detection_event_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2651 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ri_email_recipient.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2625 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ri_plan.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3089 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_safe_url.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2490 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_send_ri_email_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2617 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_severity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5025 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_severity_counts.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3794 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_sort_spec.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6945 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3189 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4941 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3141 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3157 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_stress_test_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3353 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_datapoints_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4401 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_predictions_request_prediction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2510 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_predictions_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_str_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3252 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_stress_test_job_progress.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2669 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_subject_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3097 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_suggestion.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3817 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_sync_image_tag_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4411 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_table_column.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2731 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_table_column_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4861 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_tag.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2837 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_termination_reason.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5817 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_case_monitor_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2681 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_case_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9623 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3386 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_metric_category.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4774 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_run_progress.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2771 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_task_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2615 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3874 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_time_interval.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2594 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_token_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_build_info_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3252 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_firewall_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3444 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_integration_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3290 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_model_card_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3218 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_monitor_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3388 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_notification_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2530 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_user_of_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2486 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_user_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_workspace_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_workspace_tag_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_upsert_feature_flags_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3109 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_upsert_job_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4838 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_detail_with_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5298 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3849 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_with_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6778 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_write_mask.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3069 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_uuid.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_validate_test_config_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6396 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_workspace.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5953 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_workspace_write_mask.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2798 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/riskscore_risk_category_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4704 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/riskscore_risk_score.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4059 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/role_users_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4194 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/role_workspace_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4061 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4364 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4760 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_resource_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7052 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_run_time_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6653 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemadatacollector_prediction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5016 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemaintegration_integration_variable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4014 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemamonitor_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5273 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemanotification_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4119 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/security_event_details_flagged_datapoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2753 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/security_event_details_security_event_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2766 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/statedb_job_status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_datapoints_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_latest_logs_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4099 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_predictions_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5709 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5968 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_metrics_category_summary_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4334 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_metrics_model_perf_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4099 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_progress_test_batch_progress.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4150 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_annotated_test_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6568 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_connection_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4005 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_custom_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5146 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_collector_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3258 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_file_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4489 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20224 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_info_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5355 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_loading_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6379 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_profiling.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6132 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_delta_lake_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5568 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_hugging_face_data_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12772 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_model_profiling.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4106 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_pred_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3290 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_prediction_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4241 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_profiling_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4172 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_single_data_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4743 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_category.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3326 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_category_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7551 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_run_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4407 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_run_incremental_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_sensitivity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6530 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_suite_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3399 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_batch_result_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3501 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_feature_result_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3604 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_config_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3321 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_run_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5643 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_batch_results_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5753 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_feature_results_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5798 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_summary_tests_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5516 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_cases_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5493 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_runs_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3345 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_rename_test_run_response.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6466 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_result_summary_counts.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15407 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6896 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result_display.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_case.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5267 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_case_display.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13618 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4626 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result_display.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15131 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_detail.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11706 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_metrics.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13955 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/the_updates_to_the_monitor_.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6335 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4356 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4500 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_continuous_incremental_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_stress_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4040 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_favorite_projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3373 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_private_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2597 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_role.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7807 2023-04-06 15:53:03.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_user_detail.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3778 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/users_user_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4103 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4159 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body1.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7487 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1betaintegrationsintegration_id_uuid_integration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4289 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1betamodelcardsmodel_card_model_card_id_uuid_model_card.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11007 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1firewallfirewall_firewall_id_uuid_firewall.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4359 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8161 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1usersuser_id_uuid_user.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7242 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1workspaceworkspace_workspace_id_uuid_workspace.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4217 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/workspace_id_uuid_users_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4496 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/workspace_workspace_workspace_id_uuid_body.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13026 2023-04-06 15:53:04.000000 rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/rest.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5209 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/test_batch.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14716 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/rime_sdk/test_run.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:53:07.865913 rime_sdk-2.0.0rc2/rime_sdk.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    27362 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    31846 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-06 15:53:07.000000 rime_sdk-2.0.0rc2/rime_sdk.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 15:53:07.909914 rime_sdk-2.0.0rc2/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-04-06 15:52:27.000000 rime_sdk-2.0.0rc2/setup.py
+```
+
+### Comparing `rime_sdk-2.0.0rc1/LICENSE` & `rime_sdk-2.0.0rc2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/PKG-INFO` & `rime_sdk-2.0.0rc2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rime_sdk
+-Version: 2.0.0rc1
++Version: 2.0.0rc2
+ Summary: Package to programmatically access a RIME deployment
+ Home-page: UNKNOWN
+ License: OSI Approved :: Apache Software License
+ Platform: UNKNOWN
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `rime_sdk-2.0.0rc1/README.md` & `rime_sdk-2.0.0rc2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/__init__.py` & `rime_sdk-2.0.0rc2/rime_sdk/__init__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,22 +1,26 @@
+ """Python package providing access to RIME's backend services.
+ 
+ The main entry point should be through the Client. The other
+ classes provide more modular functionality.
++
+ """
+ from rime_sdk.client import (
+     Client,
+     ManagedImagePackageRequirement,
+     ManagedImagePipRequirement,
+ )
+ from rime_sdk.data_collector import DataCollector
++from rime_sdk.detection_event import DetectionEvent
+ from rime_sdk.firewall import Firewall
+ from rime_sdk.image_builder import ImageBuilder
+ from rime_sdk.job import ContinuousTestJob, Job
++from rime_sdk.monitor import Monitor
+ from rime_sdk.project import Project
++from rime_sdk.registry import Registry
+ from rime_sdk.swagger.swagger_client.models import RuntimeinfoCustomImage as CustomImage
+ from rime_sdk.test_batch import TestBatch
+ from rime_sdk.test_run import ContinuousTestRun, TestRun
+ 
+ __all__ = [
+     "Client",
+     "ManagedImagePackageRequirement",
+@@ -27,8 +31,11 @@
+     "TestRun",
+     "ContinuousTestRun",
+     "TestBatch",
+     "Firewall",
+     "ImageBuilder",
+     "CustomImage",
+     "DataCollector",
++    "Registry",
++    "DetectionEvent",
++    "Monitor",
+ ]
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/client.py` & `rime_sdk-2.0.0rc2/rime_sdk/client.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -50,54 +50,37 @@
+     RimeModelTask,
+     RimeParentRoleSubjectRolePair,
+     RimeStartFileScanRequest,
+     RoleWorkspaceBody,
+     RuntimeinfoCustomImage,
+     RuntimeinfoCustomImageType,
+     RuntimeinfoRunTimeInfo,
+-    StatedbJobStatus,
+-    StresstestsProjectIdUuidBody1,
++    StresstestsProjectIdUuidBody,
+ )
+ from rime_sdk.swagger.swagger_client.rest import ApiException
+ from rime_sdk.test_run import TestRun
+ 
+ logger = logging.getLogger()
+ 
+ 
+-def get_job_status_enum(job_status: str) -> str:
+-    """Get job status enum value from string."""
+-    if job_status == "pending":
+-        return StatedbJobStatus.PENDING
+-    elif job_status == "running":
+-        return StatedbJobStatus.RUNNING
+-    elif job_status == "failed":
+-        return StatedbJobStatus.FAILED
+-    elif job_status == "succeeded":
+-        return StatedbJobStatus.SUCCEEDED
+-    else:
+-        raise ValueError(
+-            f"Got unknown job status ({job_status}), "
+-            f"should be one of: `pending`, `running`, `failed`, `succeeded`"
+-        )
+-
+-
+ VALID_MODEL_TASKS = [
+     model_task
+     for _, model_task in getmembers(RimeModelTask)
+     if isinstance(model_task, str) and "MODEL_TASK_" in model_task
+ ]
+ 
+ 
+ class Client:
+     """A Client object provides an interface to RIME's \
+         services for creating Projects, starting Stress Test Jobs,\
+         and querying the backend for current Stress Test Jobs.
+ 
+     To initialize the Client, provide the address of your RIME instance.
+ 
++
+     Args:
+         domain: str
+             The base domain/address of the RIME service.
+         api_key: str
+             The API key used to authenticate to RIME services.
+         channel_timeout: Optional[float]
+             The amount of time in seconds to wait for responses from the cluster.
+@@ -866,41 +849,25 @@
+             # we've reached the last page of Test Cases.
+             if not res.has_more:
+                 break
+             # Advance to the next page of Test Cases.
+             page_token = res.next_page_token
+ 
+     def start_stress_test(
+-        self,
+-        test_run_config: dict,
+-        project_id: str,
+-        rime_managed_image: Optional[str] = None,
+-        custom_image: Optional[RuntimeinfoCustomImage] = None,
+-        **exp_fields: Dict[str, object],
++        self, test_run_config: dict, project_id: str, **exp_fields: Dict[str, object]
+     ) -> Job:
+         """Start a Stress Testing run.
+ 
+         Args:
+             test_run_config: dict
+                 Configuration for the test to be run, which specifies unique ids to
+                 locate the model and datasets to be used for the test.
+             project_id: str
+                 Identifier for the Project where the resulting test run will be stored.
+                 When not specified, stores the results in the default Project.
+-            rime_managed_image: Optional[str]
+-                Name of a Managed Image to use when running the model test.
+-                The image must have all dependencies required by your model. To create
+-                new Managed Images with your desired dependencies, use the client's
+-                `create_managed_image()` method.
+-            custom_image: Optional[RuntimeinfoCustomImage]
+-                Specification of a customized container image to use running the model
+-                test. The image must have all dependencies required by your model.
+-                The image must specify a name for the image and optionally a pull secret
+-                (of type RuntimeinfoCustomImagePullSecret) with the name of the
+-                kubernetes pull secret used to access the given image.
+             exp_fields: Dict[str, object]
+                 [BETA] Fields for experimental features.
+ 
+         Returns:
+             Job:
+                 A Job that provides information about the model Stress Test job.
+ 
+@@ -933,30 +900,22 @@
+               test_run_config=config, project_id="123-456-789"
+            )
+         """
+         self._check_stress_test_limit()
+         # TODO(blaine): Add config validation service.
+         if not isinstance(test_run_config, dict):
+             raise ValueError("The configuration must be a dictionary")
+-        # TODO (GCV-316): do proper runtime validation of all of the types in the config
++        # TODO (VAL-316): do proper runtime validation of all of the types in the config
+         if project_id and not self._project_exists(project_id):
+             raise ValueError("Project id {} does not exist".format(project_id))
+         swagger_test_run_config = convert_test_run_config_to_swagger(test_run_config)
+-        req = StresstestsProjectIdUuidBody1(
++        req = StresstestsProjectIdUuidBody(
+             test_run_config=swagger_test_run_config,
+             experimental_fields=exp_fields if exp_fields else None,
+         )
+-        if custom_image:
+-            req.test_run_config.run_time_info.custom_image = RuntimeinfoCustomImageType(  # pylint: disable=line-too-long
+-                custom_image=custom_image
+-            )
+-        if rime_managed_image:
+-            req.test_run_config.run_time_info.custom_image = RuntimeinfoCustomImageType(  # pylint: disable=line-too-long
+-                managed_image_name=rime_managed_image
+-            )
+         with RESTErrorHandler():
+             Client._throttler.throttle(
+                 throttling_msg="Your request is throttled to limit # of model tests."
+             )
+             api = swagger_client.ModelTestingApi(self._api_client)
+             job: RimeJobMetadata = api.model_testing_start_stress_test(
+                 body=req, project_id_uuid=project_id,
+@@ -981,85 +940,14 @@
+             api.results_reader_get_test_run(test_run_id=test_run_id)
+             return TestRun(self._api_client, test_run_id)
+         except ApiException as e:
+             if e.status == HTTPStatus.NOT_FOUND:
+                 raise ValueError(f"test run id {test_run_id} does not exist")
+             raise ValueError(e.reason) from None
+ 
+-    def list_stress_testing_jobs(
+-        self,
+-        project_id: Optional[str] = None,
+-        status_filters: Optional[List[str]] = None,
+-    ) -> Iterator[Job]:
+-        """Get list of Stress Testing Jobs for a Project filtered by status.
+-
+-        Note that this only returns jobs from the last two days, because the
+-        time-to-live of job objects in the cluster is set at two days.
+-
+-        Args:
+-            project_id: Optional[str] = ""
+-                Filter for selecting jobs from a specified Project.
+-                If omitted, all jobs will be listed.
+-            status_filters: Optional[List[str]] = None
+-                Filter for selecting jobs by a union of statuses.
+-                The following list enumerates all acceptable values.
+-                ['pending', 'running', 'failed', 'succeeded']
+-                If omitted, jobs will not be filtered by status.
+-
+-        Returns:
+-            Iterator[Job]:
+-                An iterator of ``Job`` objects.
+-                These are not guaranteed to be in any sorted order.
+-
+-        Raises:
+-            ValueError
+-                This error is generated when the request to the ModelTesting
+-                service fails or when the provided status_filters array has
+-                invalid values.
+-
+-        Example:
+-            .. code-block:: python
+-
+-                # Get all running and succeeded jobs for Project 'foo'
+-                jobs = rime_client.list_stress_testing_jobs(
+-                    status_filters=['pending', 'succeeded'],
+-                )
+-                # To get the names of all jobs.
+-                [job["name"] for job in jobs]
+-        """
+-        with RESTErrorHandler():
+-            # Filter only for Stress Testing jobs.
+-            selected_types = [RimeJobType.MODEL_STRESS_TEST]
+-            selected_statuses = []
+-            if status_filters:
+-                # This throws a ValueError if status is invalid.
+-                selected_statuses = [
+-                    get_job_status_enum(status) for status in status_filters
+-                ]
+-            # Since this lists only Stress Test jobs, we know object_id must
+-            # be a project_id. If not specified, list all jobs in workspace.
+-            first_page_query_object_id = project_id if project_id else ""
+-            page_token = None
+-            while True:
+-                api = swagger_client.JobReaderApi(self._api_client)
+-                if page_token is None:
+-                    res = api.job_reader_list_jobs(
+-                        first_page_query_object_id=first_page_query_object_id,
+-                        first_page_query_selected_statuses=selected_statuses,
+-                        first_page_query_selected_types=selected_types,
+-                        page_size=20,
+-                    )
+-                else:
+-                    res = api.job_reader_list_jobs(page_token=page_token, page_size=20)
+-                for job in res.jobs:
+-                    yield Job(self._api_client, job.job_id)
+-                if not res.has_more:
+-                    break
+-                page_token = res.next_page_token
+-
+     def get_firewall_for_project(self, project_id: str) -> Firewall:
+         """Get the active fw for a Project if it exists.
+ 
+         Query the backend for an active `Firewall` in a specified Project which
+         can be used to perform Firewall operations. If there is no active
+         Firewall for the Project, this call will error.
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/data_collector.py` & `rime_sdk-2.0.0rc2/rime_sdk/data_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/data_format_check/cli.py` & `rime_sdk-2.0.0rc2/rime_sdk/data_format_check/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/data_format_check/data_format_checker.py` & `rime_sdk-2.0.0rc2/rime_sdk/data_format_check/data_format_checker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/data_format_check/nlp_checker.py` & `rime_sdk-2.0.0rc2/rime_sdk/data_format_check/nlp_checker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/data_format_check/tabular_checker.py` & `rime_sdk-2.0.0rc2/rime_sdk/data_format_check/tabular_checker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/detection_event.py` & `rime_sdk-2.0.0rc2/rime_sdk/detection_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/firewall.py` & `rime_sdk-2.0.0rc2/rime_sdk/firewall.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -313,17 +313,16 @@
+                 Modifies query to return the set of built-in monitors or
+                 user-created custom monitors.
+                 Accepted values: ["Default", "Custom"]
+             risk_category_types: Optional[List[str]]
+                 Modifies query to return monitors pertaining to certain categories
+                 of AI Risk. For instance, monitors that track model performance help
+                 you track down Operational Risk.
+-                Accepted values: [
+-                    "Operational", "Bias_and_Fairness", "Security", "Custom"
+-                ]
++                Accepted values: \
++                ["Operational", "Bias_and_Fairness", "Security", "Custom"]
+ 
+         Returns:
+             Iterator[Monitor]:
+                 A generator of Monitor objects.
+ 
+         Raises:
+             ValueError
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/image_builder.py` & `rime_sdk-2.0.0rc2/rime_sdk/image_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/config_parser.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/config_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/constants.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/decorators.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/file_upload.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/file_upload.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/rest_error_handler.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/rest_error_handler.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -27,15 +27,15 @@
+         if exc_type is not None:
+             # For ApiException errors, we only raise the details.
+             if isinstance(exc, ApiException):
+                 if exc.body:
+                     # Authentication (401) errors need to be handled separately as they are nginx messages
+                     if exc.status == HTTPStatus.UNAUTHORIZED:
+                         raise ValueError(
+-                            f"{exc.reason}: Your api token is either invalid or expired. Please generate a new API token from the API Access Tokens page under Workspace Settings."  # pylint: disable=line-too-long
++                            f"{exc.reason}: Your API token is either invalid or expired. Please generate a new API token from the API Access Tokens page under Workspace Settings."  # pylint: disable=line-too-long
+                         ) from None
+                     else:
+                         body_string = exc.body.decode("UTF-8")
+                         # Safely interpret string as a python dict to pull out message
+                         body_dict = ast.literal_eval(body_string)
+                         raise ValueError(
+                             f"{exc.reason}: {body_dict['message']}"
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/security_config_parser.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/security_config_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/swagger_parser.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/swagger_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/swagger_utils.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/swagger_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/test_helpers.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/test_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/throttle_queue.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/throttle_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/internal/utils.py` & `rime_sdk-2.0.0rc2/rime_sdk/internal/utils.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,13 @@
+ """General Utilities."""
+ from html import escape
+-from typing import Any, Dict, Optional, Sequence
++from typing import Any, Dict, List, Optional, Sequence
++
++from google.protobuf.field_mask_pb2 import FieldMask
++from google.protobuf.json_format import MessageToDict
+ 
+ HEADER_TMPL = "<th>{0}</th>"
+ DATA_TMPL = "<td>{0}</td>"
+ ROW_TMPL = "<tr>{0}</tr>"
+ TABLE_TMPL = '<table style="width:100%">{0}</table>'
+ 
+ 
+@@ -54,7 +57,27 @@
+     """
+     if all(arg is None for arg in args):
+         return False
+     elif all(arg is not None for arg in args):
+         return True
+     else:
+         raise ValueError(f"All arguments {args} must be None or all must be not None.")
++
++
++def _get_field_mask_paths(v: Any, path_elements: List[str]) -> List[str]:
++    """Get the field mask paths for a swagger object where the values are non-null."""
++    if v is None:
++        return []
++    if not isinstance(v, dict):
++        return [".".join(path_elements)]
++    mask_paths = []
++    for key, val in v.items():
++        mask_paths += _get_field_mask_paths(val, path_elements + [key])
++    return mask_paths
++
++
++def get_swagger_field_mask(swagger_object: Any) -> dict:
++    """Get a field mask for a swagger object that recursively masks non-null fields."""
++    mask_paths = _get_field_mask_paths(swagger_object.to_dict(), [])
++    mask = FieldMask(paths=mask_paths)
++    serialized_mask = MessageToDict(mask)
++    return serialized_mask
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/job.py` & `rime_sdk-2.0.0rc2/rime_sdk/job.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -203,14 +203,17 @@
+         if verbose and printed_poll_string:
+             print()
+ 
+         # Only get the logs if the job has failed, as the
+         # primary purpose is debuggability during development.
+         model_testing_api = swagger_client.ModelTestingApi(self._api_client)
+         if job.status == StatedbJobStatus.FAILED:
++            if job.error_msg is not None:
++                print(f"Error message from failed job: {job.error_msg}")
++
+             try:
+                 response = model_testing_api.model_testing_get_latest_logs(
+                     job_id=self._job_id
+                 )
+                 if response.result.chunk:
+                     print(
+                         "\nLogs from failed job:\n"
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/monitor.py` & `rime_sdk-2.0.0rc2/rime_sdk/monitor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/project.py` & `rime_sdk-2.0.0rc2/rime_sdk/project.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,21 +1,31 @@
+ """Library defining the interface to a Project."""
+ from datetime import timedelta
+ from http import HTTPStatus
+-from typing import Dict, Iterator, List, NamedTuple, Optional
++from typing import Any, Dict, Iterator, List, NamedTuple, Optional
+ 
+ from google.protobuf.field_mask_pb2 import FieldMask
+ from google.protobuf.json_format import MessageToDict
+ 
+ from rime_sdk.data_collector import DataCollector
+ from rime_sdk.firewall import Firewall
++from rime_sdk.internal.config_parser import (
++    _get_data_profiling_swagger,
++    _get_model_profiling_swagger,
++    _get_test_suite_config_swagger,
++)
+ from rime_sdk.internal.decorators import prompt_confirmation
+ from rime_sdk.internal.rest_error_handler import RESTErrorHandler
+ from rime_sdk.internal.swagger_utils import get_data_location_swagger, timedelta_to_rest
+-from rime_sdk.internal.utils import convert_dict_to_html, make_link
++from rime_sdk.internal.utils import (
++    convert_dict_to_html,
++    get_swagger_field_mask,
++    make_link,
++)
++from rime_sdk.job import Job
+ from rime_sdk.registry import Registry
+ from rime_sdk.swagger import swagger_client
+ from rime_sdk.swagger.swagger_client import (
+     ApiClient,
+     CreateFirewallRequestScheduledCTParameters,
+     RimeCreateFirewallRequest,
+     RimeUUID,
+@@ -25,20 +35,26 @@
+     NotificationDigestConfig,
+     NotificationJobActionConfig,
+     NotificationMonitoringConfig,
+     NotificationNotificationType,
+     NotificationObjectType,
+     NotificationWebhookConfig,
+     ProjectProject,
++    ProjectsProjectIdUuidBody,
+     RimeActorRole,
+     RimeCreateNotificationRequest,
++    RimeJobType,
+     RimeLicenseLimit,
+     RimeLimitStatusStatus,
+     RimeListNotificationsResponse,
+     SchemanotificationConfig,
++    StatedbJobStatus,
++)
++from rime_sdk.swagger.swagger_client.models.testrun_profiling_config import (
++    TestrunProfilingConfig,
+ )
+ from rime_sdk.swagger.swagger_client.rest import ApiException
+ from rime_sdk.test_run import TestRun
+ 
+ NOTIFICATION_TYPE_JOB_ACTION_STR: str = "Job_Action"
+ NOTIFICATION_TYPE_MONITORING_STR: str = "Monitoring"
+ NOTIFICATION_TYPE_DIGEST_STR: str = "Daily_Digest"
+@@ -46,14 +62,31 @@
+ NOTIFICATION_TYPES_STR_LIST: List[str] = [
+     NOTIFICATION_TYPE_JOB_ACTION_STR,
+     NOTIFICATION_TYPE_MONITORING_STR,
+     NOTIFICATION_TYPE_DIGEST_STR,
+ ]
+ 
+ 
++def get_job_status_enum(job_status: str) -> str:
++    """Get job status enum value from string."""
++    if job_status == "pending":
++        return StatedbJobStatus.PENDING
++    elif job_status == "running":
++        return StatedbJobStatus.RUNNING
++    elif job_status == "failed":
++        return StatedbJobStatus.FAILED
++    elif job_status == "succeeded":
++        return StatedbJobStatus.SUCCEEDED
++    else:
++        raise ValueError(
++            f"Got unknown job status ({job_status}), "
++            f"should be one of: `pending`, `running`, `failed`, `succeeded`"
++        )
++
++
+ class ProjectInfo(NamedTuple):
+     """ProjectInfo contains static information that describes a Project."""
+ 
+     project_id: str
+     """The unique ID of the Project."""
+     name: str
+     """Name of the Project."""
+@@ -190,14 +223,77 @@
+         return self.info.name
+ 
+     @property
+     def description(self) -> str:
+         """Return the description of this Project."""
+         return self.info.description
+ 
++    def list_stress_testing_jobs(
++        self, status_filters: Optional[List[str]] = None,
++    ) -> Iterator[Job]:
++        """Get list of Stress Testing Jobs for the Project filtered by status.
++
++        Note that this only returns jobs from the last two days, because the
++        time-to-live of job objects in the cluster is set at two days.
++
++        Args:
++            status_filters: Optional[List[str]] = None
++                Filter for selecting jobs by a union of statuses.
++                The following list enumerates all acceptable values.
++                ['pending', 'running', 'failed', 'succeeded']
++                If omitted, jobs will not be filtered by status.
++
++        Returns:
++            Iterator[Job]:
++                An iterator of ``Job`` objects.
++                These are not guaranteed to be in any sorted order.
++
++        Raises:
++            ValueError
++                This error is generated when the request to the JobReader
++                service fails or when the provided status_filters array has
++                invalid values.
++
++        Example:
++            .. code-block:: python
++
++                # Get all running and succeeded jobs for a Project.
++                jobs = project.list_stress_testing_jobs(
++                    status_filters=['pending', 'succeeded'],
++                )
++                # To get the names of all jobs.
++                [job["name"] for job in jobs]
++        """
++        with RESTErrorHandler():
++            # Filter only for Stress Testing jobs.
++            selected_types = [RimeJobType.MODEL_STRESS_TEST]
++            selected_statuses = []
++            if status_filters:
++                # This throws a ValueError if status is invalid.
++                selected_statuses = [
++                    get_job_status_enum(status) for status in status_filters
++                ]
++            page_token = None
++            while True:
++                api = swagger_client.JobReaderApi(self._api_client)
++                kwargs: Dict[str, Any] = {}
++                if page_token is None:
++                    kwargs["first_page_query_selected_statuses"] = selected_statuses
++                    kwargs["first_page_query_selected_types"] = selected_types
++                else:
++                    kwargs["page_token"] = page_token
++                res = api.job_reader_list_jobs_for_project(
++                    project_id_uuid=self.project_id, page_size=20, **kwargs,
++                )
++                for job in res.jobs:
++                    yield Job(self._api_client, job.job_id)
++                if not res.has_more:
++                    break
++                page_token = res.next_page_token
++
+     def list_test_runs(self) -> Iterator[TestRun]:
+         """List the Stress Test Runs associated with this Project.
+ 
+         Returns:
+             Iterator[TestRun]:
+                 An iterator of ``TestRun`` objects.
+ 
+@@ -1139,14 +1235,38 @@
+                 This error is generated when the request to the Registry
+                 service fails.
+         """
+         return self._registry.get_dataset(
+             dataset_id=dataset_id, dataset_name=dataset_name
+         )
+ 
++    def has_dataset(
++        self, dataset_id: Optional[str] = None, dataset_name: Optional[str] = None
++    ) -> bool:
++        """Return a boolean on whether the dataset is present.
++
++        Args:
++            dataset_id: Optional[str] = None
++                The ID of the dataset to check for.
++            dataset_name: Optional[str] = None
++                The name of the dataset to check for.
++
++        Returns:
++            bool:
++                A boolean on whether the dataset is present.
++
++        Raises:
++            ValueError
++                This error is generated any error other than HTTPStatus.NOT_FOUND
++                is returned from the Registry service.
++        """
++        return self._registry.has_dataset(
++            dataset_id=dataset_id, dataset_name=dataset_name
++        )
++
+     def get_model(
+         self, model_id: Optional[str] = None, model_name: Optional[str] = None
+     ) -> Dict:
+         """Return a registered model.
+ 
+         Args:
+             model_id: Optional[str] = None,
+@@ -1201,20 +1321,17 @@
+                 service fails.
+         """
+         self._registry.delete_dataset(dataset_id=dataset_id)
+ 
+     def delete_model(self, model_id: str) -> None:
+         """Delete a model.
+ 
+-        The arguments are mutually exclusive: only one of them can be specified.
+         Args:
+             model_id: str,
+                 The ID of the model to delete.
+-            model_name: str,
+-                The name of the model to delete.
+ 
+         Returns:
+             None
+ 
+         Raises:
+             ValueError:
+                 This error is generated when the request to the Registry
+@@ -1236,7 +1353,96 @@
+ 
+         Raises:
+             ValueError:
+                 This error is generated when the request to the Registry
+                 service fails.
+         """
+         self._registry.delete_predictions(model_id, dataset_id)
++
++    def update_model_profiling_config(self, model_profiling_config: dict) -> None:
++        """Update the project's model profiling configuration.
++
++        Args:
++            model_profiling_config: dict
++                Model profiling configuration with which to update the project.
++
++        Returns:
++            None
++
++        Raises:
++            ValueError
++                This error is generated when the request to the Project service fails.
++        """
++        swagger_model_profiling = _get_model_profiling_swagger(model_profiling_config)
++        project = ProjectProject(
++            profiling_config=TestrunProfilingConfig(
++                model_profiling=swagger_model_profiling
++            )
++        )
++        body = ProjectsProjectIdUuidBody(
++            project_id=RimeUUID(uuid=self._project_id),
++            project=project,
++            mask=get_swagger_field_mask(project),
++        )
++        api = swagger_client.ProjectServiceApi(self._api_client)
++        with RESTErrorHandler():
++            api.project_service_update_project(
++                body=body, project_id_uuid=self._project_id
++            )
++
++    def update_data_profiling_config(self, data_profiling_config: dict) -> None:
++        """Update the project's data profiling configuration.
++
++        Args:
++            data_profiling_config: dict
++                Data profiling configuration with which to update the project.
++
++        Returns:
++            None
++
++        Raises:
++            ValueError
++                This error is generated when the request to the Project service fails.
++        """
++        swagger_data_profiling = _get_data_profiling_swagger(data_profiling_config)
++        project = ProjectProject(
++            profiling_config=TestrunProfilingConfig(
++                data_profiling=swagger_data_profiling
++            )
++        )
++        body = ProjectsProjectIdUuidBody(
++            project_id=RimeUUID(uuid=self._project_id),
++            project=project,
++            mask=get_swagger_field_mask(project),
++        )
++        api = swagger_client.ProjectServiceApi(self._api_client)
++        with RESTErrorHandler():
++            api.project_service_update_project(
++                body=body, project_id_uuid=self._project_id
++            )
++
++    def update_test_suite_config(self, test_suite_config: dict) -> None:
++        """Update the project's test suite config.
++
++        Args:
++            test_suite_config: dict
++                Test suite configuration with which to update the project.
++
++        Returns:
++            None
++
++        Raises:
++            ValueError
++                This error is generated when the request to the Project service fails.
++        """
++        swagger_test_suite_config = _get_test_suite_config_swagger(test_suite_config)
++        project = ProjectProject(project_test_suite_config=swagger_test_suite_config)
++        body = ProjectsProjectIdUuidBody(
++            project_id=RimeUUID(uuid=self._project_id),
++            project=project,
++            mask=get_swagger_field_mask(project),
++        )
++        api = swagger_client.ProjectServiceApi(self._api_client)
++        with RESTErrorHandler():
++            api.project_service_update_project(
++                body=body, project_id_uuid=self._project_id
++            )
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/registry.py` & `rime_sdk-2.0.0rc2/rime_sdk/registry.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,35 +1,37 @@
+ """Library that defines the interface to the Registry."""
+ import json
+ import logging
++from http import HTTPStatus
+ from typing import Dict, Iterator, List, Optional, cast
+ 
+ from rime_sdk.internal.config_parser import (
+     convert_model_info_to_swagger,
+     convert_single_data_info_to_swagger,
+     convert_single_pred_info_to_swagger,
+ )
+ from rime_sdk.internal.rest_error_handler import RESTErrorHandler
+ from rime_sdk.swagger import swagger_client
+ from rime_sdk.swagger.swagger_client import ApiClient
+ from rime_sdk.swagger.swagger_client.models import (
+-    DatasetProjectIdUuidBody,
+-    ModelIdUuidDatasetIdBody,
+-    ModelProjectIdUuidBody,
++    DatasetIdPredictionBody,
++    ProjectIdUuidDatasetBody,
++    ProjectIdUuidModelBody,
++    RegistryMetadata,
+     RimeGetDatasetResponse,
+     RimeGetModelResponse,
+     RimeGetPredictionSetResponse,
+     RimeListDatasetsResponse,
+     RimeListModelsResponse,
+-    RimeListPredictionsResponse,
++    RimeListPredictionSetsResponse,
+     RimeRegisterDatasetResponse,
+     RimeRegisterModelResponse,
+     RimeUUID,
+-    SchemaregistryMetadata,
+ )
++from rime_sdk.swagger.swagger_client.rest import ApiException
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class Registry:
+     """An interface to a RIME Registry."""
+ 
+@@ -87,23 +89,23 @@
+                         "connection_info": {"data_file": {"path": FILE_PATH}},
+                         "data_params": {"label_col": LABEL_COL},
+                     },
+                     integration_id=INTEGRATION_ID,
+                 )
+         """
+         data_info_swagger = convert_single_data_info_to_swagger(data_config)
+-        req = DatasetProjectIdUuidBody(
++        req = ProjectIdUuidDatasetBody(
+             project_id=RimeUUID(uuid=project_id), name=name, data_info=data_info_swagger
+         )
+ 
+         metadata_str: Optional[str] = None
+         if metadata is not None:
+             metadata_str = json.dumps(metadata)
+         if tags is not None or metadata_str is not None:
+-            req.metadata = SchemaregistryMetadata(tags=tags, extra_info=metadata_str)
++            req.metadata = RegistryMetadata(tags=tags, extra_info=metadata_str)
+ 
+         if integration_id is not None:
+             req.integration_id = RimeUUID(uuid=integration_id)
+ 
+         with RESTErrorHandler():
+             api = swagger_client.RegistryServiceApi(self._api_client)
+             res = api.registry_service_register_dataset(
+@@ -167,15 +169,15 @@
+                         }
+                     },
+                     tags=[MODEL_TAG],
+                     metadata={KEY: VALUE},
+                     external_id=EXTERNAL_ID,
+                 )
+         """
+-        req = ModelProjectIdUuidBody(project_id=RimeUUID(uuid=project_id), name=name,)
++        req = ProjectIdUuidModelBody(project_id=RimeUUID(uuid=project_id), name=name,)
+ 
+         if model_config is not None:
+             # When the `model_path` key is provided to the dictionary, the value
+             # must be a dictionary whose `path` value points to a python
+             # file that holds a `predict_dict` or `predict_df` function.
+             # When the `model_loading` key is provided to the dictionary, the value
+             # must be a dictionary whose `path` value points to a python
+@@ -189,15 +191,15 @@
+             model_info = convert_model_info_to_swagger(model_config)
+             req.model_info = model_info
+ 
+         metadata_str: Optional[str] = None
+         if metadata:
+             metadata_str = json.dumps(metadata)
+         if tags or metadata_str:
+-            req.metadata = SchemaregistryMetadata(tags=tags, extra_info=metadata_str)
++            req.metadata = RegistryMetadata(tags=tags, extra_info=metadata_str)
+         if external_id:
+             req.external_id = external_id
+ 
+         with RESTErrorHandler():
+             api = swagger_client.RegistryServiceApi(self._api_client)
+             res = api.registry_service_register_model(
+                 body=req, project_id_uuid=project_id,
+@@ -267,25 +269,25 @@
+                     },
+                     tags=[TAG],
+                     metadata={KEY: VALUE},
+                 )
+         """
+         pred_info_swagger = convert_single_pred_info_to_swagger(pred_config)
+ 
+-        req = ModelIdUuidDatasetIdBody(
++        req = DatasetIdPredictionBody(
+             project_id=RimeUUID(uuid=project_id),
+             model_id=RimeUUID(uuid=model_id),
+             pred_info=pred_info_swagger,
+         )
+ 
+         metadata_str: Optional[str] = None
+         if metadata is not None:
+             metadata_str = json.dumps(metadata)
+         if tags is not None or metadata_str is not None:
+-            req.metadata = SchemaregistryMetadata(tags=tags, extra_info=metadata_str)
++            req.metadata = RegistryMetadata(tags=tags, extra_info=metadata_str)
+ 
+         if integration_id is not None:
+             req.integration_id = RimeUUID(uuid=integration_id)
+ 
+         with RESTErrorHandler():
+             api = swagger_client.RegistryServiceApi(self._api_client)
+             _ = api.registry_service_register_prediction_set(
+@@ -398,36 +400,36 @@
+             ValueError
+                 This error is generated when the request to the Registry
+                 service fails.
+         """
+         if model_id is not None and dataset_id is not None:
+             raise ValueError("Only one of model_id or dataset_id can be set.")
+         if model_id is None and dataset_id is None:
+-            raise ValueError("Must specify wither a model_id or dataset_id.")
++            raise ValueError("Must specify either a model_id or dataset_id.")
+         else:
+             pass
+         api = swagger_client.RegistryServiceApi(self._api_client)
+         # Iterate through the pages of datasets and break at the last page.
+         page_token = ""
+         # pylint: disable=line-too-long
+         with RESTErrorHandler():
+             while True:
+                 if page_token == "":
+                     if model_id is not None:
+-                        res: RimeListPredictionsResponse = api.registry_service_list_prediction_set(
++                        res: RimeListPredictionSetsResponse = api.registry_service_list_prediction_sets(
+                             project_id_uuid=project_id,
+                             first_page_req_model_id=model_id,
+                         )
+                     else:
+-                        res = api.registry_service_list_prediction_set(
++                        res = api.registry_service_list_prediction_sets(
+                             project_id_uuid=project_id,
+                             first_page_req_dataset_id=dataset_id,
+                         )
+                 else:
+-                    res = api.registry_service_list_prediction_set(
++                    res = api.registry_service_list_prediction_sets(
+                         project_id_uuid=project_id, page_token=page_token,
+                     )
+                 if res.predictions is not None:
+                     for prediction in res.predictions:
+                         yield prediction.to_dict()
+                 # Advance to the next page of predictions.
+                 page_token = res.next_page_token
+@@ -451,32 +453,71 @@
+                 A dictionary representing the dataset.
+ 
+         Raises:
+             ValueError
+                 This error is generated when the request to the Registry
+                 service fails.
+         """
++        if dataset_id is not None and dataset_name is not None:
++            raise ValueError(
++                "Arguments dataset_id and dataset_name"
++                " are mutually exclusive.\n"
++                f"Received dataset_id={dataset_id}"
++                f" and dataset_name={dataset_name}."
++            )
++        elif dataset_name is None and dataset_id is None:
++            raise ValueError("Must provide either dataset_id or dataset_name")
+         api = swagger_client.RegistryServiceApi(self._api_client)
+         with RESTErrorHandler():
+-            if dataset_id is not None:
+-                if dataset_name is not None:
+-                    raise ValueError(
+-                        "Arguments dataset_id and dataset_name"
+-                        " are mutually exclusive.\n"
+-                        f"Received dataset_id={dataset_id}"
+-                        f" and dataset_name={dataset_name}."
+-                    )
+-                res: RimeGetDatasetResponse = api.registry_service_get_dataset(
+-                    dataset_id=dataset_id
++            res: RimeGetDatasetResponse = api.registry_service_get_dataset(
++                dataset_id=dataset_id, dataset_name=dataset_name
++            )
++        return res.dataset.to_dict()
++
++    def has_dataset(
++        self, dataset_id: Optional[str] = None, dataset_name: Optional[str] = None
++    ) -> bool:
++        """Return a boolean on whether the dataset is present.
++
++        Args:
++            dataset_id: Optional[str] = None
++                The ID of the dataset to check for.
++            dataset_name: Optional[str] = None
++                The name of the dataset to check for.
++
++        Returns:
++            bool:
++                A boolean on whether the dataset is present.
++
++        Raises:
++            ValueError
++                This error is generated any error other than HTTPStatus.NOT_FOUND
++                is returned from the Registry service.
++        """
++        if dataset_id is not None and dataset_name is not None:
++            raise ValueError(
++                "Arguments dataset_id and dataset_name"
++                " are mutually exclusive.\n"
++                f"Received dataset_id={dataset_id}"
++                f" and dataset_name={dataset_name}."
++            )
++        elif dataset_name is None and dataset_id is None:
++            raise ValueError("Must provide either dataset_id or dataset_name")
++        api = swagger_client.RegistryServiceApi(self._api_client)
++        with RESTErrorHandler():
++            try:
++                api.registry_service_get_dataset(
++                    dataset_id=dataset_id, dataset_name=dataset_name
+                 )
+-            elif dataset_name is not None:
+-                res = api.registry_service_get_dataset(dataset_name=dataset_name)
+-            else:
+-                raise ValueError("Must provide either dataset_id or dataset_name")
+-            return res.dataset.to_dict()
++            except ApiException as e:
++                if e.status == HTTPStatus.NOT_FOUND:
++                    return False
++                else:
++                    raise e
++        return True
+ 
+     def get_model(
+         self, model_id: Optional[str] = None, model_name: Optional[str] = None
+     ) -> Dict:
+         """Return a model.
+ 
+         Args:
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/__init__.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/__init__.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,44 +1,23 @@
+ # coding: utf-8
+ 
+ # flake8: noqa
+-
+ """
+     RIME Rest API
+ 
+     API methods for RIME. Must be authenticated with `rime-api-key` header.  # noqa: E501
+ 
+     OpenAPI spec version: 1.0
+     Contact: dev@robustintelligence.com
+     Generated by: https://github.com/swagger-api/swagger-codegen.git
+ """
+ 
+ from __future__ import absolute_import
+ 
+-# import apis into sdk package
+-from rime_sdk.swagger.swagger_client.api.agent_manager_api import AgentManagerApi
+-from rime_sdk.swagger.swagger_client.api.data_collector_api import DataCollectorApi
+-from rime_sdk.swagger.swagger_client.api.detection_api import DetectionApi
+-from rime_sdk.swagger.swagger_client.api.feature_flag_api import FeatureFlagApi
+-from rime_sdk.swagger.swagger_client.api.file_scanning_api import FileScanningApi
+-from rime_sdk.swagger.swagger_client.api.file_upload_api import FileUploadApi
+-from rime_sdk.swagger.swagger_client.api.firewall_service_api import FirewallServiceApi
+-from rime_sdk.swagger.swagger_client.api.image_registry_api import ImageRegistryApi
+-from rime_sdk.swagger.swagger_client.api.job_reader_api import JobReaderApi
+-from rime_sdk.swagger.swagger_client.api.model_testing_api import ModelTestingApi
+-from rime_sdk.swagger.swagger_client.api.monitor_service_api import MonitorServiceApi
+-from rime_sdk.swagger.swagger_client.api.notification_setting_api import NotificationSettingApi
+-from rime_sdk.swagger.swagger_client.api.project_service_api import ProjectServiceApi
+-from rime_sdk.swagger.swagger_client.api.rime_info_api import RIMEInfoApi
+-from rime_sdk.swagger.swagger_client.api.registry_service_api import RegistryServiceApi
+-from rime_sdk.swagger.swagger_client.api.results_reader_api import ResultsReaderApi
+-# import ApiClient
+-from rime_sdk.swagger.swagger_client.api_client import ApiClient
+-from rime_sdk.swagger.swagger_client.configuration import Configuration
+-# import models into sdk package
++# import models into model package
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_category_test_identifier import ArtifactIdentifierCategoryTestIdentifier
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_subset_test_metric_identifier import ArtifactIdentifierSubsetTestMetricIdentifier
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_test_case_metric_identifier import ArtifactIdentifierTestCaseMetricIdentifier
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_aws_config import CreateAgentRequestAWSConfig
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_gcp_config import CreateAgentRequestGCPConfig
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_local_config import CreateAgentRequestLocalConfig
+ from rime_sdk.swagger.swagger_client.models.create_firewall_request_scheduled_ct_parameters import CreateFirewallRequestScheduledCTParameters
+@@ -49,15 +28,15 @@
+ from rime_sdk.swagger.swagger_client.models.data_info_params_ranking_info import DataInfoParamsRankingInfo
+ from rime_sdk.swagger.swagger_client.models.data_profiling_column_type_info import DataProfilingColumnTypeInfo
+ from rime_sdk.swagger.swagger_client.models.data_profiling_feature_relationship_info import DataProfilingFeatureRelationshipInfo
+ from rime_sdk.swagger.swagger_client.models.datacollector_datapoint import DatacollectorDatapoint
+ from rime_sdk.swagger.swagger_client.models.datacollector_datapoint_row import DatacollectorDatapointRow
+ from rime_sdk.swagger.swagger_client.models.dataset_ct_info import DatasetCTInfo
+ from rime_sdk.swagger.swagger_client.models.dataset_dataset import DatasetDataset
+-from rime_sdk.swagger.swagger_client.models.dataset_project_id_uuid_body import DatasetProjectIdUuidBody
++from rime_sdk.swagger.swagger_client.models.dataset_id_prediction_body import DatasetIdPredictionBody
+ from rime_sdk.swagger.swagger_client.models.datastream_project_id_uuid_body import DatastreamProjectIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.detection_detection_event import DetectionDetectionEvent
+ from rime_sdk.swagger.swagger_client.models.detection_event_detail import DetectionEventDetail
+ from rime_sdk.swagger.swagger_client.models.detection_event_type import DetectionEventType
+ from rime_sdk.swagger.swagger_client.models.detection_metric_degradation_event_details import DetectionMetricDegradationEventDetails
+ from rime_sdk.swagger.swagger_client.models.detection_resolution import DetectionResolution
+ from rime_sdk.swagger.swagger_client.models.detection_security_event_details import DetectionSecurityEventDetails
+@@ -79,40 +58,43 @@
+ from rime_sdk.swagger.swagger_client.models.firewall_latest_run_info import FirewallLatestRunInfo
+ from rime_sdk.swagger.swagger_client.models.firewall_location_args import FirewallLocationArgs
+ from rime_sdk.swagger.swagger_client.models.firewall_location_params import FirewallLocationParams
+ from rime_sdk.swagger.swagger_client.models.firewall_scheduled_ct_info import FirewallScheduledCTInfo
+ from rime_sdk.swagger.swagger_client.models.firewall_test_category_severity import FirewallTestCategorySeverity
+ from rime_sdk.swagger.swagger_client.models.googlerpc_status import GooglerpcStatus
+ from rime_sdk.swagger.swagger_client.models.image_reference_reference_type import ImageReferenceReferenceType
++from rime_sdk.swagger.swagger_client.models.integration_integration import IntegrationIntegration
++from rime_sdk.swagger.swagger_client.models.integration_integration_schema import IntegrationIntegrationSchema
++from rime_sdk.swagger.swagger_client.models.integration_integration_type import IntegrationIntegrationType
++from rime_sdk.swagger.swagger_client.models.integration_variable_sensitivity import IntegrationVariableSensitivity
++from rime_sdk.swagger.swagger_client.models.integrations_integration_id_uuid_body import IntegrationsIntegrationIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.list_agents_request_list_agents_query import ListAgentsRequestListAgentsQuery
+ from rime_sdk.swagger.swagger_client.models.list_datasets_request_datasets_query import ListDatasetsRequestDatasetsQuery
+ from rime_sdk.swagger.swagger_client.models.list_images_request_pip_library_filter import ListImagesRequestPipLibraryFilter
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_aggregated_metric import ListMetricIdentifiersResponseAggregatedMetric
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_feature_metric_without_subsets import ListMetricIdentifiersResponseFeatureMetricWithoutSubsets
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_feature_metrics import ListMetricIdentifiersResponseFeatureMetrics
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_subset_metric import ListMetricIdentifiersResponseSubsetMetric
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_subset_metrics import ListMetricIdentifiersResponseSubsetMetrics
+ from rime_sdk.swagger.swagger_client.models.list_models_request_model_query import ListModelsRequestModelQuery
+ from rime_sdk.swagger.swagger_client.models.list_monitors_request_filter import ListMonitorsRequestFilter
+ from rime_sdk.swagger.swagger_client.models.list_notifications_request_list_notifications_query import ListNotificationsRequestListNotificationsQuery
+-from rime_sdk.swagger.swagger_client.models.list_predictions_request_prediction_query import ListPredictionsRequestPredictionQuery
++from rime_sdk.swagger.swagger_client.models.list_prediction_sets_request_prediction_query import ListPredictionSetsRequestPredictionQuery
+ from rime_sdk.swagger.swagger_client.models.list_summary_tests_request_list_summary_tests_query import ListSummaryTestsRequestListSummaryTestsQuery
+ from rime_sdk.swagger.swagger_client.models.list_test_cases_request_list_test_cases_query import ListTestCasesRequestListTestCasesQuery
+ from rime_sdk.swagger.swagger_client.models.managed_image_package_requirement import ManagedImagePackageRequirement
+ from rime_sdk.swagger.swagger_client.models.managed_image_package_type import ManagedImagePackageType
+ from rime_sdk.swagger.swagger_client.models.managed_image_pip_library import ManagedImagePipLibrary
+ from rime_sdk.swagger.swagger_client.models.managed_image_pip_requirement import ManagedImagePipRequirement
+ from rime_sdk.swagger.swagger_client.models.managed_image_role_type import ManagedImageRoleType
+ from rime_sdk.swagger.swagger_client.models.model_hugging_face_model_info import ModelHuggingFaceModelInfo
+-from rime_sdk.swagger.swagger_client.models.model_id_uuid_dataset_id_body import ModelIdUuidDatasetIdBody
+-from rime_sdk.swagger.swagger_client.models.model_id_uuid_dataset_id_body1 import ModelIdUuidDatasetIdBody1
+ from rime_sdk.swagger.swagger_client.models.model_model import ModelModel
+ from rime_sdk.swagger.swagger_client.models.model_model_info import ModelModelInfo
+ from rime_sdk.swagger.swagger_client.models.model_model_path_info import ModelModelPathInfo
+-from rime_sdk.swagger.swagger_client.models.model_project_id_uuid_body import ModelProjectIdUuidBody
++from rime_sdk.swagger.swagger_client.models.modelcards_model_card_model_card_id_uuid_body import ModelcardsModelCardModelCardIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.monitor_aggregation import MonitorAggregation
+ from rime_sdk.swagger.swagger_client.models.monitor_aggregation_type import MonitorAggregationType
+ from rime_sdk.swagger.swagger_client.models.monitor_anomaly_config import MonitorAnomalyConfig
+ from rime_sdk.swagger.swagger_client.models.monitor_artifact_identifier import MonitorArtifactIdentifier
+ from rime_sdk.swagger.swagger_client.models.monitor_difference_from_target import MonitorDifferenceFromTarget
+ from rime_sdk.swagger.swagger_client.models.monitor_excluded_transforms import MonitorExcludedTransforms
+ from rime_sdk.swagger.swagger_client.models.monitor_metric_degradation_config import MonitorMetricDegradationConfig
+@@ -156,43 +138,64 @@
+ from rime_sdk.swagger.swagger_client.models.protobuf_any import ProtobufAny
+ from rime_sdk.swagger.swagger_client.models.protobuf_null_value import ProtobufNullValue
+ from rime_sdk.swagger.swagger_client.models.rca_feature_cause import RcaFeatureCause
+ from rime_sdk.swagger.swagger_client.models.rca_rca_result import RcaRCAResult
+ from rime_sdk.swagger.swagger_client.models.rca_rca_role import RcaRCARole
+ from rime_sdk.swagger.swagger_client.models.rca_test_case_cause import RcaTestCaseCause
+ from rime_sdk.swagger.swagger_client.models.rca_test_case_id import RcaTestCaseID
++from rime_sdk.swagger.swagger_client.models.registry_metadata import RegistryMetadata
++from rime_sdk.swagger.swagger_client.models.registry_validity_status import RegistryValidityStatus
+ from rime_sdk.swagger.swagger_client.models.registryprediction_prediction import RegistrypredictionPrediction
+ from rime_sdk.swagger.swagger_client.models.rename_test_run_id_body import RenameTestRunIdBody
++from rime_sdk.swagger.swagger_client.models.resetpassword_user_id_uuid_body import ResetpasswordUserIdUuidBody
++from rime_sdk.swagger.swagger_client.models.rime_api_token_info import RimeAPITokenInfo
+ from rime_sdk.swagger.swagger_client.models.rime_actor_role import RimeActorRole
++from rime_sdk.swagger.swagger_client.models.rime_add_users_to_workspace_response import RimeAddUsersToWorkspaceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_agent import RimeAgent
+ from rime_sdk.swagger.swagger_client.models.rime_agent_status import RimeAgentStatus
+ from rime_sdk.swagger.swagger_client.models.rime_archived_job_logs import RimeArchivedJobLogs
+ from rime_sdk.swagger.swagger_client.models.rime_cancel_job_response import RimeCancelJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_category_metric import RimeCategoryMetric
+ from rime_sdk.swagger.swagger_client.models.rime_category_test_result import RimeCategoryTestResult
++from rime_sdk.swagger.swagger_client.models.rime_config_type import RimeConfigType
++from rime_sdk.swagger.swagger_client.models.rime_configure_integration_request_integration_variable import RimeConfigureIntegrationRequestIntegrationVariable
++from rime_sdk.swagger.swagger_client.models.rime_configure_integration_response import RimeConfigureIntegrationResponse
+ from rime_sdk.swagger.swagger_client.models.rime_continuous_test_job_progress import RimeContinuousTestJobProgress
+ from rime_sdk.swagger.swagger_client.models.rime_continuous_test_run_progress import RimeContinuousTestRunProgress
++from rime_sdk.swagger.swagger_client.models.rime_create_api_token_request import RimeCreateAPITokenRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_api_token_response import RimeCreateAPITokenResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_agent_request import RimeCreateAgentRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_agent_response import RimeCreateAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_custom_monitor_response import RimeCreateCustomMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_firewall_request import RimeCreateFirewallRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_firewall_response import RimeCreateFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_image_request import RimeCreateImageRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_image_response import RimeCreateImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_integration_request import RimeCreateIntegrationRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_integration_response import RimeCreateIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_model_card_response import RimeCreateModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_notification_request import RimeCreateNotificationRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_notification_response import RimeCreateNotificationResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_user_request import RimeCreateUserRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_user_response import RimeCreateUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_request import RimeCreateWorkspaceRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_response import RimeCreateWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_tag_response import RimeCreateWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_deactivate_agent_response import RimeDeactivateAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_agent_response import RimeDeleteAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_custom_monitor_response import RimeDeleteCustomMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_dataset_response import RimeDeleteDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_firewall_response import RimeDeleteFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_image_response import RimeDeleteImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_integration_response import RimeDeleteIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_model_card_response import RimeDeleteModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_model_response import RimeDeleteModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_prediction_set_response import RimeDeletePredictionSetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_uploaded_file_url_response import RimeDeleteUploadedFileURLResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_workspace_tag_response import RimeDeleteWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_ensure_image_existence_response import RimeEnsureImageExistenceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_fail_job_response import RimeFailJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_failing_row import RimeFailingRow
+ from rime_sdk.swagger.swagger_client.models.rime_failing_rows_result import RimeFailingRowsResult
+ from rime_sdk.swagger.swagger_client.models.rime_feature_flags import RimeFeatureFlags
+ from rime_sdk.swagger.swagger_client.models.rime_feature_type import RimeFeatureType
+ from rime_sdk.swagger.swagger_client.models.rime_finalize_cancellation_response import RimeFinalizeCancellationResponse
+@@ -202,71 +205,92 @@
+ from rime_sdk.swagger.swagger_client.models.rime_get_dataset_file_upload_url_response import RimeGetDatasetFileUploadURLResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_dataset_response import RimeGetDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_enabled_feature_response import RimeGetEnabledFeatureResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_feature_flag_jwt_response import RimeGetFeatureFlagJwtResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_feature_flags_response import RimeGetFeatureFlagsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_firewall_response import RimeGetFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_image_response import RimeGetImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_integration_response import RimeGetIntegrationResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_job_response import RimeGetJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_latest_logs_response import RimeGetLatestLogsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_limit_status_response import RimeGetLimitStatusResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_model_card_response import RimeGetModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_model_directory_upload_urls_response import RimeGetModelDirectoryUploadURLsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_model_response import RimeGetModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_monitor_result_response import RimeGetMonitorResultResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_prediction_set_response import RimeGetPredictionSetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_predictions_response import RimeGetPredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_project_id_response import RimeGetProjectIDResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_rime_info_response import RimeGetRIMEInfoResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_test_run_id_response import RimeGetTestRunIDResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_url_response import RimeGetURLResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_user_response import RimeGetUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_workspace_response import RimeGetWorkspaceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_heartbeat_response import RimeHeartbeatResponse
+ from rime_sdk.swagger.swagger_client.models.rime_image_reference import RimeImageReference
+ from rime_sdk.swagger.swagger_client.models.rime_int_list import RimeIntList
++from rime_sdk.swagger.swagger_client.models.rime_integration_info import RimeIntegrationInfo
+ from rime_sdk.swagger.swagger_client.models.rime_job_data import RimeJobData
+ from rime_sdk.swagger.swagger_client.models.rime_job_data_continuous_incremental_test import RimeJobDataContinuousIncrementalTest
+ from rime_sdk.swagger.swagger_client.models.rime_job_data_stress_test import RimeJobDataStressTest
+ from rime_sdk.swagger.swagger_client.models.rime_job_metadata import RimeJobMetadata
+ from rime_sdk.swagger.swagger_client.models.rime_job_type import RimeJobType
+ from rime_sdk.swagger.swagger_client.models.rime_job_view import RimeJobView
+ from rime_sdk.swagger.swagger_client.models.rime_license_feature import RimeLicenseFeature
+ from rime_sdk.swagger.swagger_client.models.rime_license_limit import RimeLicenseLimit
+ from rime_sdk.swagger.swagger_client.models.rime_limit_status import RimeLimitStatus
+ from rime_sdk.swagger.swagger_client.models.rime_limit_status_status import RimeLimitStatusStatus
++from rime_sdk.swagger.swagger_client.models.rime_list_api_tokens_response import RimeListAPITokensResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_agents_response import RimeListAgentsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_current_user_roles_response import RimeListCurrentUserRolesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_datasets_response import RimeListDatasetsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_detection_events_request_query import RimeListDetectionEventsRequestQuery
+ from rime_sdk.swagger.swagger_client.models.rime_list_detection_events_response import RimeListDetectionEventsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_enabled_features_response import RimeListEnabledFeaturesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_file_scan_results_response import RimeListFileScanResultsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_images_request import RimeListImagesRequest
+ from rime_sdk.swagger.swagger_client.models.rime_list_images_response import RimeListImagesResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_jobs_for_project_request_query import RimeListJobsForProjectRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_jobs_for_project_response import RimeListJobsForProjectResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_jobs_request_query import RimeListJobsRequestQuery
+ from rime_sdk.swagger.swagger_client.models.rime_list_jobs_response import RimeListJobsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_metric_identifiers_response import RimeListMetricIdentifiersResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_model_cards_response import RimeListModelCardsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_models_response import RimeListModelsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_monitors_response import RimeListMonitorsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_notifications_response import RimeListNotificationsResponse
+-from rime_sdk.swagger.swagger_client.models.rime_list_predictions_response import RimeListPredictionsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_prediction_sets_response import RimeListPredictionSetsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_uploaded_file_urls_response import RimeListUploadedFileURLsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_users_of_workspace_response import RimeListUsersOfWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_users_request_query import RimeListUsersRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_users_response import RimeListUsersResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspace_integrations_response import RimeListWorkspaceIntegrationsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspace_tags_response import RimeListWorkspaceTagsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspaces_request_query import RimeListWorkspacesRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_workspaces_response import RimeListWorkspacesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_long_description_tab import RimeLongDescriptionTab
+ from rime_sdk.swagger.swagger_client.models.rime_managed_image import RimeManagedImage
+ from rime_sdk.swagger.swagger_client.models.rime_managed_image_status import RimeManagedImageStatus
++from rime_sdk.swagger.swagger_client.models.rime_model_card import RimeModelCard
+ from rime_sdk.swagger.swagger_client.models.rime_model_task import RimeModelTask
+ from rime_sdk.swagger.swagger_client.models.rime_model_with_owner_details import RimeModelWithOwnerDetails
+ from rime_sdk.swagger.swagger_client.models.rime_monitor_data_point import RimeMonitorDataPoint
+ from rime_sdk.swagger.swagger_client.models.rime_named_double import RimeNamedDouble
+ from rime_sdk.swagger.swagger_client.models.rime_order import RimeOrder
+ from rime_sdk.swagger.swagger_client.models.rime_parent_role_subject_role_pair import RimeParentRoleSubjectRolePair
+ from rime_sdk.swagger.swagger_client.models.rime_ri_email_recipient import RimeRIEmailRecipient
+ from rime_sdk.swagger.swagger_client.models.rime_ri_plan import RimeRIPlan
+ from rime_sdk.swagger.swagger_client.models.rime_register_data_stream_response import RimeRegisterDataStreamResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_dataset_response import RimeRegisterDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_internal_agent_response import RimeRegisterInternalAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_model_response import RimeRegisterModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_prediction_set_response import RimeRegisterPredictionSetResponse
++from rime_sdk.swagger.swagger_client.models.rime_remove_user_from_workspace_response import RimeRemoveUserFromWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_reset_password_response import RimeResetPasswordResponse
++from rime_sdk.swagger.swagger_client.models.rime_resolve_detection_event_response import RimeResolveDetectionEventResponse
+ from rime_sdk.swagger.swagger_client.models.rime_safe_url import RimeSafeURL
+ from rime_sdk.swagger.swagger_client.models.rime_send_ri_email_response import RimeSendRIEmailResponse
+ from rime_sdk.swagger.swagger_client.models.rime_severity import RimeSeverity
+ from rime_sdk.swagger.swagger_client.models.rime_severity_counts import RimeSeverityCounts
+ from rime_sdk.swagger.swagger_client.models.rime_sort_spec import RimeSortSpec
+ from rime_sdk.swagger.swagger_client.models.rime_start_continuous_test_request import RimeStartContinuousTestRequest
+ from rime_sdk.swagger.swagger_client.models.rime_start_continuous_test_response import RimeStartContinuousTestResponse
+@@ -274,61 +298,75 @@
+ from rime_sdk.swagger.swagger_client.models.rime_start_file_scan_response import RimeStartFileScanResponse
+ from rime_sdk.swagger.swagger_client.models.rime_start_stress_test_response import RimeStartStressTestResponse
+ from rime_sdk.swagger.swagger_client.models.rime_store_datapoints_response import RimeStoreDatapointsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_store_predictions_request_prediction import RimeStorePredictionsRequestPrediction
+ from rime_sdk.swagger.swagger_client.models.rime_store_predictions_response import RimeStorePredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_str_list import RimeStrList
+ from rime_sdk.swagger.swagger_client.models.rime_stress_test_job_progress import RimeStressTestJobProgress
++from rime_sdk.swagger.swagger_client.models.rime_subject_type import RimeSubjectType
+ from rime_sdk.swagger.swagger_client.models.rime_suggestion import RimeSuggestion
+ from rime_sdk.swagger.swagger_client.models.rime_sync_image_tag_response import RimeSyncImageTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_table_column import RimeTableColumn
+ from rime_sdk.swagger.swagger_client.models.rime_table_column_type import RimeTableColumnType
++from rime_sdk.swagger.swagger_client.models.rime_tag import RimeTag
+ from rime_sdk.swagger.swagger_client.models.rime_termination_reason import RimeTerminationReason
+ from rime_sdk.swagger.swagger_client.models.rime_test_case_monitor_info import RimeTestCaseMonitorInfo
+ from rime_sdk.swagger.swagger_client.models.rime_test_case_status import RimeTestCaseStatus
+ from rime_sdk.swagger.swagger_client.models.rime_test_metric import RimeTestMetric
+ from rime_sdk.swagger.swagger_client.models.rime_test_metric_category import RimeTestMetricCategory
+ from rime_sdk.swagger.swagger_client.models.rime_test_run_progress import RimeTestRunProgress
+ from rime_sdk.swagger.swagger_client.models.rime_test_task_status import RimeTestTaskStatus
+ from rime_sdk.swagger.swagger_client.models.rime_test_type import RimeTestType
+ from rime_sdk.swagger.swagger_client.models.rime_time_interval import RimeTimeInterval
++from rime_sdk.swagger.swagger_client.models.rime_token_type import RimeTokenType
+ from rime_sdk.swagger.swagger_client.models.rime_uuid import RimeUUID
+ from rime_sdk.swagger.swagger_client.models.rime_update_build_info_response import RimeUpdateBuildInfoResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_firewall_response import RimeUpdateFirewallResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_integration_response import RimeUpdateIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_model_card_response import RimeUpdateModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_monitor_response import RimeUpdateMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_notification_response import RimeUpdateNotificationResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_user_of_workspace_response import RimeUpdateUserOfWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_user_response import RimeUpdateUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_workspace_response import RimeUpdateWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_workspace_tag_response import RimeUpdateWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_upsert_feature_flags_response import RimeUpsertFeatureFlagsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_upsert_job_response import RimeUpsertJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_user_detail_with_role import RimeUserDetailWithRole
++from rime_sdk.swagger.swagger_client.models.rime_user_role import RimeUserRole
+ from rime_sdk.swagger.swagger_client.models.rime_user_with_role import RimeUserWithRole
++from rime_sdk.swagger.swagger_client.models.rime_user_write_mask import RimeUserWriteMask
++from rime_sdk.swagger.swagger_client.models.rime_validate_test_config_response import RimeValidateTestConfigResponse
++from rime_sdk.swagger.swagger_client.models.rime_workspace import RimeWorkspace
++from rime_sdk.swagger.swagger_client.models.rime_workspace_write_mask import RimeWorkspaceWriteMask
+ from rime_sdk.swagger.swagger_client.models.riskscore_risk_category_type import RiskscoreRiskCategoryType
+ from rime_sdk.swagger.swagger_client.models.riskscore_risk_score import RiskscoreRiskScore
+ from rime_sdk.swagger.swagger_client.models.role_users_body import RoleUsersBody
+ from rime_sdk.swagger.swagger_client.models.role_workspace_body import RoleWorkspaceBody
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_custom_image import RuntimeinfoCustomImage
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_custom_image_type import RuntimeinfoCustomImageType
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_resource_request import RuntimeinfoResourceRequest
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_run_time_info import RuntimeinfoRunTimeInfo
+ from rime_sdk.swagger.swagger_client.models.schemadatacollector_prediction import SchemadatacollectorPrediction
++from rime_sdk.swagger.swagger_client.models.schemaintegration_integration_variable import SchemaintegrationIntegrationVariable
+ from rime_sdk.swagger.swagger_client.models.schemamonitor_config import SchemamonitorConfig
+ from rime_sdk.swagger.swagger_client.models.schemanotification_config import SchemanotificationConfig
+-from rime_sdk.swagger.swagger_client.models.schemaregistry_metadata import SchemaregistryMetadata
+ from rime_sdk.swagger.swagger_client.models.security_event_details_flagged_datapoint import SecurityEventDetailsFlaggedDatapoint
+ from rime_sdk.swagger.swagger_client.models.security_event_details_security_event_type import SecurityEventDetailsSecurityEventType
+ from rime_sdk.swagger.swagger_client.models.statedb_job_status import StatedbJobStatus
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_datapoints_response import StreamResultOfRimeGetDatapointsResponse
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_latest_logs_response import StreamResultOfRimeGetLatestLogsResponse
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_predictions_response import StreamResultOfRimeGetPredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.stresstests_project_id_uuid_body import StresstestsProjectIdUuidBody
+-from rime_sdk.swagger.swagger_client.models.stresstests_project_id_uuid_body1 import StresstestsProjectIdUuidBody1
+ from rime_sdk.swagger.swagger_client.models.test_run_metrics_category_summary_metric import TestRunMetricsCategorySummaryMetric
+ from rime_sdk.swagger.swagger_client.models.test_run_metrics_model_perf_metric import TestRunMetricsModelPerfMetric
+ from rime_sdk.swagger.swagger_client.models.test_run_progress_test_batch_progress import TestRunProgressTestBatchProgress
+ from rime_sdk.swagger.swagger_client.models.testrun_annotated_test_config import TestrunAnnotatedTestConfig
+ from rime_sdk.swagger.swagger_client.models.testrun_connection_info import TestrunConnectionInfo
++from rime_sdk.swagger.swagger_client.models.testrun_custom_metric import TestrunCustomMetric
+ from rime_sdk.swagger.swagger_client.models.testrun_data_collector_info import TestrunDataCollectorInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_file_info import TestrunDataFileInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_info import TestrunDataInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_info_params import TestrunDataInfoParams
+ from rime_sdk.swagger.swagger_client.models.testrun_data_loading_info import TestrunDataLoadingInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_profiling import TestrunDataProfiling
+ from rime_sdk.swagger.swagger_client.models.testrun_delta_lake_info import TestrunDeltaLakeInfo
+@@ -368,10 +406,18 @@
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data import UpsertJobRequestWriteMaskJobData
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data_continuous_incremental_test import UpsertJobRequestWriteMaskJobDataContinuousIncrementalTest
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data_stress_test import UpsertJobRequestWriteMaskJobDataStressTest
+ from rime_sdk.swagger.swagger_client.models.user_favorite_projects import UserFavoriteProjects
+ from rime_sdk.swagger.swagger_client.models.user_private_info import UserPrivateInfo
+ from rime_sdk.swagger.swagger_client.models.user_role import UserRole
+ from rime_sdk.swagger.swagger_client.models.user_user_detail import UserUserDetail
++from rime_sdk.swagger.swagger_client.models.users_user_id_uuid_body import UsersUserIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.users_user_user_id_uuid_body import UsersUserUserIdUuidBody
++from rime_sdk.swagger.swagger_client.models.users_user_user_id_uuid_body1 import UsersUserUserIdUuidBody1
++from rime_sdk.swagger.swagger_client.models.v1betaintegrationsintegration_id_uuid_integration import V1betaintegrationsintegrationIdUuidIntegration
++from rime_sdk.swagger.swagger_client.models.v1betamodelcardsmodel_card_model_card_id_uuid_model_card import V1betamodelcardsmodelCardModelCardIdUuidModelCard
+ from rime_sdk.swagger.swagger_client.models.v1firewallfirewall_firewall_id_uuid_firewall import V1firewallfirewallFirewallIdUuidFirewall
+ from rime_sdk.swagger.swagger_client.models.v1projectsproject_id_uuidroleusersuser_user_id_uuid_user import V1projectsprojectIdUuidroleusersuserUserIdUuidUser
++from rime_sdk.swagger.swagger_client.models.v1usersuser_id_uuid_user import V1usersuserIdUuidUser
++from rime_sdk.swagger.swagger_client.models.v1workspaceworkspace_workspace_id_uuid_workspace import V1workspaceworkspaceWorkspaceIdUuidWorkspace
++from rime_sdk.swagger.swagger_client.models.workspace_id_uuid_users_body import WorkspaceIdUuidUsersBody
++from rime_sdk.swagger.swagger_client.models.workspace_workspace_workspace_id_uuid_body import WorkspaceWorkspaceWorkspaceIdUuidBody
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/__init__.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/__init__.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -7,15 +7,19 @@
+ from rime_sdk.swagger.swagger_client.api.data_collector_api import DataCollectorApi
+ from rime_sdk.swagger.swagger_client.api.detection_api import DetectionApi
+ from rime_sdk.swagger.swagger_client.api.feature_flag_api import FeatureFlagApi
+ from rime_sdk.swagger.swagger_client.api.file_scanning_api import FileScanningApi
+ from rime_sdk.swagger.swagger_client.api.file_upload_api import FileUploadApi
+ from rime_sdk.swagger.swagger_client.api.firewall_service_api import FirewallServiceApi
+ from rime_sdk.swagger.swagger_client.api.image_registry_api import ImageRegistryApi
++from rime_sdk.swagger.swagger_client.api.integration_service_api import IntegrationServiceApi
+ from rime_sdk.swagger.swagger_client.api.job_reader_api import JobReaderApi
++from rime_sdk.swagger.swagger_client.api.model_card_service_api import ModelCardServiceApi
+ from rime_sdk.swagger.swagger_client.api.model_testing_api import ModelTestingApi
+ from rime_sdk.swagger.swagger_client.api.monitor_service_api import MonitorServiceApi
+ from rime_sdk.swagger.swagger_client.api.notification_setting_api import NotificationSettingApi
+ from rime_sdk.swagger.swagger_client.api.project_service_api import ProjectServiceApi
+ from rime_sdk.swagger.swagger_client.api.rime_info_api import RIMEInfoApi
+ from rime_sdk.swagger.swagger_client.api.registry_service_api import RegistryServiceApi
+ from rime_sdk.swagger.swagger_client.api.results_reader_api import ResultsReaderApi
++from rime_sdk.swagger.swagger_client.api.user_api import UserApi
++from rime_sdk.swagger.swagger_client.api.workspace_service_api import WorkspaceServiceApi
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/agent_manager_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/agent_manager_api.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -137,15 +137,15 @@
+         Deactivates the agent by setting its status to deactivated and revoking the agent's API Token. An error is returned if the deactivation fails.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_deactivate_agent(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeDeactivateAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.agent_manager_deactivate_agent_with_http_info(agent_id_uuid, **kwargs)  # noqa: E501
+@@ -159,15 +159,15 @@
+         Deactivates the agent by setting its status to deactivated and revoking the agent's API Token. An error is returned if the deactivation fails.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_deactivate_agent_with_http_info(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeDeactivateAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['agent_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -232,15 +232,15 @@
+         Deletes a specified agent. Must be called on an already deactivated agent. An error is returned if the deletion fails or if the agent is not in a deletable state.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_delete_agent(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.agent_manager_delete_agent_with_http_info(agent_id_uuid, **kwargs)  # noqa: E501
+@@ -254,15 +254,15 @@
+         Deletes a specified agent. Must be called on an already deactivated agent. An error is returned if the deletion fails or if the agent is not in a deletable state.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_delete_agent_with_http_info(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['agent_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -327,15 +327,15 @@
+         Returns the agent that matches the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_get_agent(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeGetAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.agent_manager_get_agent_with_http_info(agent_id_uuid, **kwargs)  # noqa: E501
+@@ -349,15 +349,15 @@
+         Returns the agent that matches the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.agent_manager_get_agent_with_http_info(agent_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str agent_id_uuid: String value of the object ID. (required)
++        :param str agent_id_uuid: Unique object ID. (required)
+         :return: RimeGetAgentResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['agent_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/data_collector_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/data_collector_api.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -38,15 +38,15 @@
+         GetDatapoints returns all datapoints from a time period.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_get_datapoints(data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: StreamResultOfRimeGetDatapointsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+@@ -62,15 +62,15 @@
+         GetDatapoints returns all datapoints from a time period.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_get_datapoints_with_http_info(data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: StreamResultOfRimeGetDatapointsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -132,48 +132,50 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def data_collector_get_predictions(self, model_id_uuid, data_stream_id_uuid, **kwargs):  # noqa: E501
+-        """GetPredictions returns all predictions from a time period  # noqa: E501
++        """GetPredictions  # noqa: E501
+ 
++        GetPredictions returns all predictions from a time period  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_get_predictions(model_id_uuid, data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: StreamResultOfRimeGetPredictionsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.data_collector_get_predictions_with_http_info(model_id_uuid, data_stream_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.data_collector_get_predictions_with_http_info(model_id_uuid, data_stream_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def data_collector_get_predictions_with_http_info(self, model_id_uuid, data_stream_id_uuid, **kwargs):  # noqa: E501
+-        """GetPredictions returns all predictions from a time period  # noqa: E501
++        """GetPredictions  # noqa: E501
+ 
++        GetPredictions returns all predictions from a time period  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_get_predictions_with_http_info(model_id_uuid, data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: StreamResultOfRimeGetPredictionsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -251,15 +253,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_register_data_stream(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param DatastreamProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterDataStreamResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.data_collector_register_data_stream_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+@@ -274,15 +276,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_register_data_stream_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param DatastreamProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterDataStreamResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -358,15 +360,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_store_datapoints(body, data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param DataDataStreamIdUuidBody body: (required)
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :return: RimeStoreDatapointsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.data_collector_store_datapoints_with_http_info(body, data_stream_id_uuid, **kwargs)  # noqa: E501
+@@ -381,15 +383,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_store_datapoints_with_http_info(body, data_stream_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param DataDataStreamIdUuidBody body: (required)
+-        :param str data_stream_id_uuid: String value of the object ID. (required)
++        :param str data_stream_id_uuid: Unique object ID. (required)
+         :return: RimeStoreDatapointsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'data_stream_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -465,15 +467,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_store_predictions(body, model_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param PredictionsModelIdUuidBody body: (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :return: RimeStorePredictionsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.data_collector_store_predictions_with_http_info(body, model_id_uuid, **kwargs)  # noqa: E501
+@@ -488,15 +490,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.data_collector_store_predictions_with_http_info(body, model_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param PredictionsModelIdUuidBody body: (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :return: RimeStorePredictionsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'model_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/detection_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/detection_api.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -38,15 +38,15 @@
+         List out events for a given project. Detection events represent problems RIME detects in different risk categories, such as performance degradation or security risk. This is a paginated method.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.detection_list_detection_events(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str first_page_req_event_object_id: Optional: return a series of detection events for a single object.
+         :param datetime first_page_req_event_time_range_start_time:
+         :param datetime first_page_req_event_time_range_end_time:
+         :param str first_page_req_severity: Optional: When unspecified, returns all.   - SEVERITY_PASS: Indicates that the specified metric is lower than the low threshold in the case where the Monitor is configured to trigger on an increase of a metric.  - SEVERITY_WARNING: Indicates that the specified metric is higher than the low threshold but still lower than the high threshold, in the case that a Monitor is configured to trigger on an increase of a metric. Warning and Alert severity levels will trigger a Degradation event.  - SEVERITY_ALERT: Indicates that the specified metric is higher than the high threshold in the case that the Monitor is configured to trigger on an increase of a metric. Warning and Alert severity level will trigger a Degradation event.
+         :param list[str] first_page_req_event_types: Optional: When the list is empty, returns all.
+         :param list[str] first_page_req_risk_category_types: Optional: When the list is empty, returns all.
+         :param list[str] first_page_req_test_categories: Optional: When the list is empty, return all.
+@@ -71,15 +71,15 @@
+         List out events for a given project. Detection events represent problems RIME detects in different risk categories, such as performance degradation or security risk. This is a paginated method.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.detection_list_detection_events_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str first_page_req_event_object_id: Optional: return a series of detection events for a single object.
+         :param datetime first_page_req_event_time_range_start_time:
+         :param datetime first_page_req_event_time_range_end_time:
+         :param str first_page_req_severity: Optional: When unspecified, returns all.   - SEVERITY_PASS: Indicates that the specified metric is lower than the low threshold in the case where the Monitor is configured to trigger on an increase of a metric.  - SEVERITY_WARNING: Indicates that the specified metric is higher than the low threshold but still lower than the high threshold, in the case that a Monitor is configured to trigger on an increase of a metric. Warning and Alert severity levels will trigger a Degradation event.  - SEVERITY_ALERT: Indicates that the specified metric is higher than the high threshold in the case that the Monitor is configured to trigger on an increase of a metric. Warning and Alert severity level will trigger a Degradation event.
+         :param list[str] first_page_req_event_types: Optional: When the list is empty, returns all.
+         :param list[str] first_page_req_risk_category_types: Optional: When the list is empty, returns all.
+         :param list[str] first_page_req_test_categories: Optional: When the list is empty, return all.
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/feature_flag_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/feature_flag_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/file_scanning_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/file_scanning_api.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -31,15 +31,15 @@
+         if api_client is None:
+             api_client = ApiClient()
+         self.api_client = api_client
+ 
+     def file_scanning_list_file_scan_results(self, **kwargs):  # noqa: E501
+         """ListFileScanResults  # noqa: E501
+ 
+-        Returns a paginated list of all file scan results.  # noqa: E501
++        Returns a paginated list of all File Scan results.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_scanning_list_file_scan_results(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str page_size: The maximum number of File Scan Result objects to return in a single page.
+@@ -54,15 +54,15 @@
+         else:
+             (data) = self.file_scanning_list_file_scan_results_with_http_info(**kwargs)  # noqa: E501
+             return data
+ 
+     def file_scanning_list_file_scan_results_with_http_info(self, **kwargs):  # noqa: E501
+         """ListFileScanResults  # noqa: E501
+ 
+-        Returns a paginated list of all file scan results.  # noqa: E501
++        Returns a paginated list of all File Scan results.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_scanning_list_file_scan_results_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str page_size: The maximum number of File Scan Result objects to return in a single page.
+@@ -126,15 +126,15 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def file_scanning_start_file_scan(self, body, **kwargs):  # noqa: E501
+         """StartFileScan  # noqa: E501
+ 
+-        Starts a file scanning job for the specified file.  # noqa: E501
++        Starts a File Scanning Job for the specified file.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_scanning_start_file_scan(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeStartFileScanRequest body: (required)
+@@ -148,15 +148,15 @@
+         else:
+             (data) = self.file_scanning_start_file_scan_with_http_info(body, **kwargs)  # noqa: E501
+             return data
+ 
+     def file_scanning_start_file_scan_with_http_info(self, body, **kwargs):  # noqa: E501
+         """StartFileScan  # noqa: E501
+ 
+-        Starts a file scanning job for the specified file.  # noqa: E501
++        Starts a File Scanning Job for the specified file.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_scanning_start_file_scan_with_http_info(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeStartFileScanRequest body: (required)
+@@ -215,110 +215,13 @@
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+             response_type='RimeStartFileScanResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+-    def file_scanning_start_file_scan_declarative(self, body, **kwargs):  # noqa: E501
+-        """Current StartFileScan will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1. The request and response messages will be the same as StartFileScan.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.file_scanning_start_file_scan_declarative(body, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param RimeStartFileScanRequest body: (required)
+-        :return: RimeStartFileScanResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.file_scanning_start_file_scan_declarative_with_http_info(body, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.file_scanning_start_file_scan_declarative_with_http_info(body, **kwargs)  # noqa: E501
+-            return data
+-
+-    def file_scanning_start_file_scan_declarative_with_http_info(self, body, **kwargs):  # noqa: E501
+-        """Current StartFileScan will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1. The request and response messages will be the same as StartFileScan.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.file_scanning_start_file_scan_declarative_with_http_info(body, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param RimeStartFileScanRequest body: (required)
+-        :return: RimeStartFileScanResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method file_scanning_start_file_scan_declarative" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `file_scanning_start_file_scan_declarative`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+-            '/v1-beta/file-scans-declarative', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeStartFileScanResponse',  # noqa: E501
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/file_upload_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/file_upload_api.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -31,44 +31,44 @@
+         if api_client is None:
+             api_client = ApiClient()
+         self.api_client = api_client
+ 
+     def file_upload_delete_uploaded_file_url(self, uploaded_url, **kwargs):  # noqa: E501
+         """DeleteUploadedFileURL  # noqa: E501
+ 
+-        Returns a pre-signed upload URL for a dataset.  # noqa: E501
++        Deletes the uploaded dataset at the specified URL from the blob store.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_delete_uploaded_file_url(uploaded_url, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str uploaded_url: Name of uploaded file. (required)
++        :param str uploaded_url: URL of the uploaded file to delete. (required)
+         :return: RimeDeleteUploadedFileURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.file_upload_delete_uploaded_file_url_with_http_info(uploaded_url, **kwargs)  # noqa: E501
+         else:
+             (data) = self.file_upload_delete_uploaded_file_url_with_http_info(uploaded_url, **kwargs)  # noqa: E501
+             return data
+ 
+     def file_upload_delete_uploaded_file_url_with_http_info(self, uploaded_url, **kwargs):  # noqa: E501
+         """DeleteUploadedFileURL  # noqa: E501
+ 
+-        Returns a pre-signed upload URL for a dataset.  # noqa: E501
++        Deletes the uploaded dataset at the specified URL from the blob store.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_delete_uploaded_file_url_with_http_info(uploaded_url, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str uploaded_url: Name of uploaded file. (required)
++        :param str uploaded_url: URL of the uploaded file to delete. (required)
+         :return: RimeDeleteUploadedFileURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['uploaded_url']  # noqa: E501
+         all_params.append('async_req')
+@@ -133,16 +133,16 @@
+         Returns a pre-signed upload URL for a dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_get_dataset_file_upload_url(file_name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str file_name: Name of dataset file. (required)
+-        :param str upload_path: Path to uploaded data.
++        :param str file_name: Path of dataset file on the local file system. (required)
++        :param str upload_path: Specify a path in the blob store to use for data uploads.
+         :return: RimeGetDatasetFileUploadURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.file_upload_get_dataset_file_upload_url_with_http_info(file_name, **kwargs)  # noqa: E501
+@@ -156,16 +156,16 @@
+         Returns a pre-signed upload URL for a dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_get_dataset_file_upload_url_with_http_info(file_name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str file_name: Name of dataset file. (required)
+-        :param str upload_path: Path to uploaded data.
++        :param str file_name: Path of dataset file on the local file system. (required)
++        :param str upload_path: Specify a path in the blob store to use for data uploads.
+         :return: RimeGetDatasetFileUploadURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['file_name', 'upload_path']  # noqa: E501
+         all_params.append('async_req')
+@@ -232,17 +232,17 @@
+         Returns a pre-signed upload URL for a model directory.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_get_model_directory_upload_urls(directory_name, relative_file_paths, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str directory_name: Name of model directory. (required)
+-        :param list[str] relative_file_paths: Array of relative paths from model directory to model files. (required)
+-        :param str upload_path: Path to uploaded data.
++        :param str directory_name: Path of model directory on local file system. (required)
++        :param list[str] relative_file_paths: Array of relative paths from the model directory to model files. (required)
++        :param str upload_path: Specify a path in the blob store to which the model will be uploaded.
+         :return: RimeGetModelDirectoryUploadURLsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.file_upload_get_model_directory_upload_urls_with_http_info(directory_name, relative_file_paths, **kwargs)  # noqa: E501
+@@ -256,17 +256,17 @@
+         Returns a pre-signed upload URL for a model directory.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_get_model_directory_upload_urls_with_http_info(directory_name, relative_file_paths, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str directory_name: Name of model directory. (required)
+-        :param list[str] relative_file_paths: Array of relative paths from model directory to model files. (required)
+-        :param str upload_path: Path to uploaded data.
++        :param str directory_name: Path of model directory on local file system. (required)
++        :param list[str] relative_file_paths: Array of relative paths from the model directory to model files. (required)
++        :param str upload_path: Specify a path in the blob store to which the model will be uploaded.
+         :return: RimeGetModelDirectoryUploadURLsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['directory_name', 'relative_file_paths', 'upload_path']  # noqa: E501
+         all_params.append('async_req')
+@@ -333,15 +333,15 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def file_upload_list_uploaded_file_urls(self, **kwargs):  # noqa: E501
+         """ListUploadedFileURLs  # noqa: E501
+ 
+-        List URLs for all uploaded files  # noqa: E501
++        List all blob store URLs for uploaded files.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_list_uploaded_file_urls(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :return: RimeListUploadedFileURLsResponse
+@@ -354,15 +354,15 @@
+         else:
+             (data) = self.file_upload_list_uploaded_file_urls_with_http_info(**kwargs)  # noqa: E501
+             return data
+ 
+     def file_upload_list_uploaded_file_urls_with_http_info(self, **kwargs):  # noqa: E501
+         """ListUploadedFileURLs  # noqa: E501
+ 
+-        List URLs for all uploaded files  # noqa: E501
++        List all blob store URLs for uploaded files.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.file_upload_list_uploaded_file_urls_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :return: RimeListUploadedFileURLsResponse
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/firewall_service_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/firewall_service_api.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -137,15 +137,15 @@
+         Deletes the firewall with the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_delete_firewall(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.firewall_service_delete_firewall_with_http_info(firewall_id_uuid, **kwargs)  # noqa: E501
+@@ -159,15 +159,15 @@
+         Deletes the firewall with the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_delete_firewall_with_http_info(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['firewall_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -232,15 +232,15 @@
+         Gets the firewall that matches the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_get_firewall(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeGetFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.firewall_service_get_firewall_with_http_info(firewall_id_uuid, **kwargs)  # noqa: E501
+@@ -254,15 +254,15 @@
+         Gets the firewall that matches the specified ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_get_firewall_with_http_info(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeGetFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['firewall_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -320,44 +320,44 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def firewall_service_get_url(self, firewall_id_uuid, **kwargs):  # noqa: E501
+         """GetURL  # noqa: E501
+ 
+-        This endpoint is intended to only be used by the SDK.  # noqa: E501
++        Returns the URL for the specified Firewall in the RIME web application.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_get_url(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeGetURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.firewall_service_get_url_with_http_info(firewall_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.firewall_service_get_url_with_http_info(firewall_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def firewall_service_get_url_with_http_info(self, firewall_id_uuid, **kwargs):  # noqa: E501
+         """GetURL  # noqa: E501
+ 
+-        This endpoint is intended to only be used by the SDK.  # noqa: E501
++        Returns the URL for the specified Firewall in the RIME web application.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_get_url_with_http_info(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeGetURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['firewall_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -423,15 +423,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_update_firewall(body, firewall_firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param FirewallFirewallFirewallIdUuidBody body: (required)
+-        :param str firewall_firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_firewall_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.firewall_service_update_firewall_with_http_info(body, firewall_firewall_id_uuid, **kwargs)  # noqa: E501
+@@ -446,15 +446,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.firewall_service_update_firewall_with_http_info(body, firewall_firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param FirewallFirewallFirewallIdUuidBody body: (required)
+-        :param str firewall_firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_firewall_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateFirewallResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'firewall_firewall_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/image_registry_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/image_registry_api.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -31,15 +31,15 @@
+         if api_client is None:
+             api_client = ApiClient()
+         self.api_client = api_client
+ 
+     def image_registry_create_image(self, body, **kwargs):  # noqa: E501
+         """CreateImage  # noqa: E501
+ 
+-        Creates a new managed image with a unique name.  # noqa: E501
++        Creates a new Managed Image with a unique name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_create_image(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeCreateImageRequest body: (required)
+@@ -53,15 +53,15 @@
+         else:
+             (data) = self.image_registry_create_image_with_http_info(body, **kwargs)  # noqa: E501
+             return data
+ 
+     def image_registry_create_image_with_http_info(self, body, **kwargs):  # noqa: E501
+         """CreateImage  # noqa: E501
+ 
+-        Creates a new managed image with a unique name.  # noqa: E501
++        Creates a new Managed Image with a unique name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_create_image_with_http_info(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeCreateImageRequest body: (required)
+@@ -130,44 +130,44 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def image_registry_delete_image(self, name, **kwargs):  # noqa: E501
+         """DeleteImage  # noqa: E501
+ 
+-        Deletes a specified managed image.  # noqa: E501
++        Deletes a specified Managed Image.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_delete_image(name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str name: Name of existing image. (required)
++        :param str name: Name of existing Managed Image to delete. (required)
+         :return: RimeDeleteImageResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.image_registry_delete_image_with_http_info(name, **kwargs)  # noqa: E501
+         else:
+             (data) = self.image_registry_delete_image_with_http_info(name, **kwargs)  # noqa: E501
+             return data
+ 
+     def image_registry_delete_image_with_http_info(self, name, **kwargs):  # noqa: E501
+         """DeleteImage  # noqa: E501
+ 
+-        Deletes a specified managed image.  # noqa: E501
++        Deletes a specified Managed Image.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_delete_image_with_http_info(name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str name: Name of existing image. (required)
++        :param str name: Name of existing Managed Image to delete. (required)
+         :return: RimeDeleteImageResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['name']  # noqa: E501
+         all_params.append('async_req')
+@@ -225,44 +225,44 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def image_registry_get_image(self, name, **kwargs):  # noqa: E501
+         """GetImage  # noqa: E501
+ 
+-        Returns the definition of a specified managed image.  # noqa: E501
++        Returns the definition of a specified Managed Image.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_get_image(name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str name: Name of existing image. (required)
++        :param str name: Name of the existing Managed Image. (required)
+         :return: RimeGetImageResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.image_registry_get_image_with_http_info(name, **kwargs)  # noqa: E501
+         else:
+             (data) = self.image_registry_get_image_with_http_info(name, **kwargs)  # noqa: E501
+             return data
+ 
+     def image_registry_get_image_with_http_info(self, name, **kwargs):  # noqa: E501
+         """GetImage  # noqa: E501
+ 
+-        Returns the definition of a specified managed image.  # noqa: E501
++        Returns the definition of a specified Managed Image.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_get_image_with_http_info(name, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str name: Name of existing image. (required)
++        :param str name: Name of the existing Managed Image. (required)
+         :return: RimeGetImageResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['name']  # noqa: E501
+         all_params.append('async_req')
+@@ -320,15 +320,15 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def image_registry_list_images(self, **kwargs):  # noqa: E501
+         """ListImages  # noqa: E501
+ 
+-        List all images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
++        List all Managed Images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_list_images(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str page_token: Specifies a page of the list returned by a ListImages query. The ListImages query returns a pageToken when there is more than one page of results.
+@@ -343,15 +343,15 @@
+         else:
+             (data) = self.image_registry_list_images_with_http_info(**kwargs)  # noqa: E501
+             return data
+ 
+     def image_registry_list_images_with_http_info(self, **kwargs):  # noqa: E501
+         """ListImages  # noqa: E501
+ 
+-        List all images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
++        List all Managed Images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_list_images_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str page_token: Specifies a page of the list returned by a ListImages query. The ListImages query returns a pageToken when there is more than one page of results.
+@@ -415,15 +415,15 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def image_registry_list_images2(self, body, **kwargs):  # noqa: E501
+         """ListImages  # noqa: E501
+ 
+-        List all images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
++        List all Managed Images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_list_images2(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeListImagesRequest body: (required)
+@@ -437,15 +437,15 @@
+         else:
+             (data) = self.image_registry_list_images2_with_http_info(body, **kwargs)  # noqa: E501
+             return data
+ 
+     def image_registry_list_images2_with_http_info(self, body, **kwargs):  # noqa: E501
+         """ListImages  # noqa: E501
+ 
+-        List all images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
++        List all Managed Images that match a specified set of constraints.  [Python pagination example](#tag/JobReader/operation/JobReader_ListJobs)  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.image_registry_list_images2_with_http_info(body, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RimeListImagesRequest body: (required)
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/job_reader_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/job_reader_api.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -134,15 +134,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_get_job(job_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str job_id: Unique job ID (required)
+-        :param str view: Specifies how much information about the job to retrieve.   - JOB_VIEW_UNSPECIFIED: The default behavior is the Basic view.  - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :param str view: Specifies how much information about the job to retrieve. The default behavior is the Basic view.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
+         :return: RimeGetJobResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.job_reader_get_job_with_http_info(job_id, **kwargs)  # noqa: E501
+@@ -157,15 +157,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_get_job_with_http_info(job_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str job_id: Unique job ID (required)
+-        :param str view: Specifies how much information about the job to retrieve.   - JOB_VIEW_UNSPECIFIED: The default behavior is the Basic view.  - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :param str view: Specifies how much information about the job to retrieve. The default behavior is the Basic view.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
+         :return: RimeGetJobResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['job_id', 'view']  # noqa: E501
+         all_params.append('async_req')
+@@ -225,15 +225,15 @@
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def job_reader_get_project_id(self, job_id, **kwargs):  # noqa: E501
+         """GetProjectID  # noqa: E501
+ 
+-        Returns the tireproject ID of the project running the job with the specified job ID.  # noqa: E501
++        Returns the project ID of the project running the job with the specified job ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_get_project_id(job_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str job_id: Unique job ID belonging to the project. (required)
+@@ -247,15 +247,15 @@
+         else:
+             (data) = self.job_reader_get_project_id_with_http_info(job_id, **kwargs)  # noqa: E501
+             return data
+ 
+     def job_reader_get_project_id_with_http_info(self, job_id, **kwargs):  # noqa: E501
+         """GetProjectID  # noqa: E501
+ 
+-        Returns the tireproject ID of the project running the job with the specified job ID.  # noqa: E501
++        Returns the project ID of the project running the job with the specified job ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_get_project_id_with_http_info(job_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str job_id: Unique job ID belonging to the project. (required)
+@@ -422,20 +422,20 @@
+         Returns a paginated list of all jobs. The list can be filtered by job type and status.  #### Python pagination example:  ```python all_objects = [] # Required for authentication to all methods in the API. headers = {\"rime-api-key\": \"INSERT_API_TOKEN\"} page_token = \"\" # Initialize query parameters in a dictionary params = {\"INSERT_QUERY_PARAMETER\": \"INSERT_QUERY_VALUE\"} # Make requests until all results have been returned. while True:     # If the page_token from a previous response is not empty, we need to specify this      # token as a parameter to the next request in order to return the next page.     if page_token != \"\":         params = {\"page_token\": page_token}     res = requests.get(\"INSERT_METHOD_URI\", params=params, headers=headers)     if res.status_code != 200 :         raise ValueError(res)     res_json = res.json()     all_objects.extend(res_json['jobs'])     page_token = res_json['nextPageToken']     # If all results have been returned, res_json['hasMore'] is false.     if not res_json[\"hasMore\"]:         break ```  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_list_jobs(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.  - JOB_STATUS_RECONCILING: Job is being reconciled by the operator.
++        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.
+         :param list[str] first_page_query_selected_types: Specifies a set of types. The query only returns jobs with types in the specified set. Specify no types to return all results.
+         :param str first_page_query_object_id: Specifies an object ID. The query only returns results matching the specified object ID. Object IDs vary by job type. For example, stress test jobs have a project ID and continuous incremental test jobs have a firewall ID.
+         :param str page_token: Specifies a page of the list returned by a ListJobs query. The ListJobs query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageQuery field.
+         :param str page_size: The maximum number of Job objects to return in a single page.
+-        :param str view: Specifies how much information about each job to retrieve.   - JOB_VIEW_UNSPECIFIED: The default behavior is the Basic view.  - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :param str view: Specifies how much information about each job to retrieve. The default behavior is the Basic view.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
+         :return: RimeListJobsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.job_reader_list_jobs_with_http_info(**kwargs)  # noqa: E501
+@@ -449,20 +449,20 @@
+         Returns a paginated list of all jobs. The list can be filtered by job type and status.  #### Python pagination example:  ```python all_objects = [] # Required for authentication to all methods in the API. headers = {\"rime-api-key\": \"INSERT_API_TOKEN\"} page_token = \"\" # Initialize query parameters in a dictionary params = {\"INSERT_QUERY_PARAMETER\": \"INSERT_QUERY_VALUE\"} # Make requests until all results have been returned. while True:     # If the page_token from a previous response is not empty, we need to specify this      # token as a parameter to the next request in order to return the next page.     if page_token != \"\":         params = {\"page_token\": page_token}     res = requests.get(\"INSERT_METHOD_URI\", params=params, headers=headers)     if res.status_code != 200 :         raise ValueError(res)     res_json = res.json()     all_objects.extend(res_json['jobs'])     page_token = res_json['nextPageToken']     # If all results have been returned, res_json['hasMore'] is false.     if not res_json[\"hasMore\"]:         break ```  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.job_reader_list_jobs_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.  - JOB_STATUS_RECONCILING: Job is being reconciled by the operator.
++        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.
+         :param list[str] first_page_query_selected_types: Specifies a set of types. The query only returns jobs with types in the specified set. Specify no types to return all results.
+         :param str first_page_query_object_id: Specifies an object ID. The query only returns results matching the specified object ID. Object IDs vary by job type. For example, stress test jobs have a project ID and continuous incremental test jobs have a firewall ID.
+         :param str page_token: Specifies a page of the list returned by a ListJobs query. The ListJobs query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageQuery field.
+         :param str page_size: The maximum number of Job objects to return in a single page.
+-        :param str view: Specifies how much information about each job to retrieve.   - JOB_VIEW_UNSPECIFIED: The default behavior is the Basic view.  - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :param str view: Specifies how much information about each job to retrieve. The default behavior is the Basic view.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
+         :return: RimeListJobsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['first_page_query_selected_statuses', 'first_page_query_selected_types', 'first_page_query_object_id', 'page_token', 'page_size', 'view']  # noqa: E501
+         all_params.append('async_req')
+@@ -524,7 +524,124 @@
+             response_type='RimeListJobsResponse',  # noqa: E501
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
++
++    def job_reader_list_jobs_for_project(self, project_id_uuid, **kwargs):  # noqa: E501
++        """ListJobsForProject  # noqa: E501
++
++        Returns a paginated list of jobs for a given project. The list can be filtered by job type and status.  #### Python pagination example:  ```python all_objects = [] # Required for authentication to all methods in the API. headers = {\"rime-api-key\": \"INSERT_API_TOKEN\"} page_token = \"\" # Initialize query parameters in a dictionary params = {\"INSERT_QUERY_PARAMETER\": \"INSERT_QUERY_VALUE\"} # Make requests until all results have been returned. while True:     # If the page_token from a previous response is not empty, we need to specify this      # token as a parameter to the next request in order to return the next page.     if page_token != \"\":         params = {\"page_token\": page_token}     res = requests.get(\"INSERT_METHOD_URI\", params=params, headers=headers)     if res.status_code != 200 :         raise ValueError(res)     res_json = res.json()     all_objects.extend(res_json['jobs'])     page_token = res_json['nextPageToken']     # If all results have been returned, res_json['hasMore'] is false.     if not res_json[\"hasMore\"]:         break ```  # noqa: E501
++        This method makes a synchronous HTTP request by default. To make an
++        asynchronous HTTP request, please pass async_req=True
++        >>> thread = api.job_reader_list_jobs_for_project(project_id_uuid, async_req=True)
++        >>> result = thread.get()
++
++        :param async_req bool
++        :param str project_id_uuid: Unique object ID. (required)
++        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.
++        :param list[str] first_page_query_selected_types: Specifies a set of types. The query only returns jobs with types in the specified set. Specify no types to return all results. Job types not tied to projects will not be returned.
++        :param str page_token: The ListJobs query returns a pageToken after the first request.
++        :param str page_size: The maximum number of Job objects to return in a single page.
++        :param str view: Specifies how much information about each job to retrieve.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :return: RimeListJobsForProjectResponse
++                 If the method is called asynchronously,
++                 returns the request thread.
++        """
++        kwargs['_return_http_data_only'] = True
++        if kwargs.get('async_req'):
++            return self.job_reader_list_jobs_for_project_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
++        else:
++            (data) = self.job_reader_list_jobs_for_project_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
++            return data
++
++    def job_reader_list_jobs_for_project_with_http_info(self, project_id_uuid, **kwargs):  # noqa: E501
++        """ListJobsForProject  # noqa: E501
++
++        Returns a paginated list of jobs for a given project. The list can be filtered by job type and status.  #### Python pagination example:  ```python all_objects = [] # Required for authentication to all methods in the API. headers = {\"rime-api-key\": \"INSERT_API_TOKEN\"} page_token = \"\" # Initialize query parameters in a dictionary params = {\"INSERT_QUERY_PARAMETER\": \"INSERT_QUERY_VALUE\"} # Make requests until all results have been returned. while True:     # If the page_token from a previous response is not empty, we need to specify this      # token as a parameter to the next request in order to return the next page.     if page_token != \"\":         params = {\"page_token\": page_token}     res = requests.get(\"INSERT_METHOD_URI\", params=params, headers=headers)     if res.status_code != 200 :         raise ValueError(res)     res_json = res.json()     all_objects.extend(res_json['jobs'])     page_token = res_json['nextPageToken']     # If all results have been returned, res_json['hasMore'] is false.     if not res_json[\"hasMore\"]:         break ```  # noqa: E501
++        This method makes a synchronous HTTP request by default. To make an
++        asynchronous HTTP request, please pass async_req=True
++        >>> thread = api.job_reader_list_jobs_for_project_with_http_info(project_id_uuid, async_req=True)
++        >>> result = thread.get()
++
++        :param async_req bool
++        :param str project_id_uuid: Unique object ID. (required)
++        :param list[str] first_page_query_selected_statuses: Specifies a set of statuses. The query only returns results with a status in the specified set. Specify no statuses to return all results.   - JOB_STATUS_PENDING: Resources have been created for the job but the job has not started yet.  - JOB_STATUS_FAILED: Blanket status for user or system-related job failure. Check the Termination Reason for details.  - JOB_STATUS_REQUESTED: The job descriptor exists but has no resources allocated. Jobs that remain in this status without moving to the PENDING status are at risk of entering the FAILED status.  - JOB_STATUS_CANCELLED: Job has been cancelled. Cancelled jobs cannot be recovered.
++        :param list[str] first_page_query_selected_types: Specifies a set of types. The query only returns jobs with types in the specified set. Specify no types to return all results. Job types not tied to projects will not be returned.
++        :param str page_token: The ListJobs query returns a pageToken after the first request.
++        :param str page_size: The maximum number of Job objects to return in a single page.
++        :param str view: Specifies how much information about each job to retrieve.   - JOB_VIEW_BASIC: Server responses only include basic information about the job, including type, status, and some job data.  - JOB_VIEW_FULL: Server responses include all available information about the job, including progress. Has greater performance requirements than the Basic view.
++        :return: RimeListJobsForProjectResponse
++                 If the method is called asynchronously,
++                 returns the request thread.
++        """
++
++        all_params = ['project_id_uuid', 'first_page_query_selected_statuses', 'first_page_query_selected_types', 'page_token', 'page_size', 'view']  # noqa: E501
++        all_params.append('async_req')
++        all_params.append('_return_http_data_only')
++        all_params.append('_preload_content')
++        all_params.append('_request_timeout')
++
++        params = locals()
++        for key, val in six.iteritems(params['kwargs']):
++            if key not in all_params:
++                raise TypeError(
++                    "Got an unexpected keyword argument '%s'"
++                    " to method job_reader_list_jobs_for_project" % key
++                )
++            params[key] = val
++        del params['kwargs']
++        # verify the required parameter 'project_id_uuid' is set
++        if ('project_id_uuid' not in params or
++                params['project_id_uuid'] is None):
++            raise ValueError("Missing the required parameter `project_id_uuid` when calling `job_reader_list_jobs_for_project`")  # noqa: E501
++
++        collection_formats = {}
++
++        path_params = {}
++        if 'project_id_uuid' in params:
++            path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
++
++        query_params = []
++        if 'first_page_query_selected_statuses' in params:
++            query_params.append(('firstPageQuery.selectedStatuses', params['first_page_query_selected_statuses']))  # noqa: E501
++            collection_formats['firstPageQuery.selectedStatuses'] = 'multi'  # noqa: E501
++        if 'first_page_query_selected_types' in params:
++            query_params.append(('firstPageQuery.selectedTypes', params['first_page_query_selected_types']))  # noqa: E501
++            collection_formats['firstPageQuery.selectedTypes'] = 'multi'  # noqa: E501
++        if 'page_token' in params:
++            query_params.append(('pageToken', params['page_token']))  # noqa: E501
++        if 'page_size' in params:
++            query_params.append(('pageSize', params['page_size']))  # noqa: E501
++        if 'view' in params:
++            query_params.append(('view', params['view']))  # noqa: E501
++
++        header_params = {}
++
++        form_params = []
++        local_var_files = {}
++
++        body_params = None
++        # HTTP header `Accept`
++        header_params['Accept'] = self.api_client.select_header_accept(
++            ['application/json'])  # noqa: E501
++
++        # Authentication setting
++        auth_settings = ['rime-api-key']  # noqa: E501
++
++        return self.api_client.call_api(
++            '/v1-beta/jobs/project/{projectId.uuid}', 'GET',
++            path_params,
++            query_params,
++            header_params,
++            body=body_params,
++            post_params=form_params,
++            files=local_var_files,
++            response_type='RimeListJobsForProjectResponse',  # noqa: E501
++            auth_settings=auth_settings,
++            async_req=params.get('async_req'),
++            _return_http_data_only=params.get('_return_http_data_only'),
++            _preload_content=params.get('_preload_content', True),
++            _request_timeout=params.get('_request_timeout'),
++            collection_formats=collection_formats)
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/model_testing_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/model_testing_api.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -222,123 +222,26 @@
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+-    def model_testing_start_continuous_test_declarative(self, body, **kwargs):  # noqa: E501
+-        """Current StartContinuousTest will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1 The request and response messages will be the same as  StartContinuousTest.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.model_testing_start_continuous_test_declarative(body, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param RimeStartContinuousTestRequest body: (required)
+-        :return: RimeStartContinuousTestResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.model_testing_start_continuous_test_declarative_with_http_info(body, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.model_testing_start_continuous_test_declarative_with_http_info(body, **kwargs)  # noqa: E501
+-            return data
+-
+-    def model_testing_start_continuous_test_declarative_with_http_info(self, body, **kwargs):  # noqa: E501
+-        """Current StartContinuousTest will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1 The request and response messages will be the same as  StartContinuousTest.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.model_testing_start_continuous_test_declarative_with_http_info(body, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param RimeStartContinuousTestRequest body: (required)
+-        :return: RimeStartContinuousTestResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method model_testing_start_continuous_test_declarative" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `model_testing_start_continuous_test_declarative`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+-            '/v1-beta/continuous-tests', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeStartContinuousTestResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+     def model_testing_start_stress_test(self, body, project_id_uuid, **kwargs):  # noqa: E501
+         """StartStressTest  # noqa: E501
+ 
+         Starts a Stress Test and returns a Job object containing metadata for the Test Run.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.model_testing_start_stress_test(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param StresstestsProjectIdUuidBody1 body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param StresstestsProjectIdUuidBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeStartStressTestResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.model_testing_start_stress_test_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+@@ -352,16 +255,16 @@
+         Starts a Stress Test and returns a Job object containing metadata for the Test Run.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.model_testing_start_stress_test_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param StresstestsProjectIdUuidBody1 body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param StresstestsProjectIdUuidBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeStartStressTestResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -419,118 +322,13 @@
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+             response_type='RimeStartStressTestResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+-    def model_testing_start_stress_test_declarative(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Current StartStressTest will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1. The request and response messages will be the same as StartStressTest.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.model_testing_start_stress_test_declarative(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param StresstestsProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeStartStressTestResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.model_testing_start_stress_test_declarative_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.model_testing_start_stress_test_declarative_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-            return data
+-
+-    def model_testing_start_stress_test_declarative_with_http_info(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Current StartStressTest will be replaced by this endpoint in 2.0, this endpoint will be changed to new v1. The request and response messages will be the same as StartStressTest.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.model_testing_start_stress_test_declarative_with_http_info(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param StresstestsProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeStartStressTestResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body', 'project_id_uuid']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method model_testing_start_stress_test_declarative" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `model_testing_start_stress_test_declarative`")  # noqa: E501
+-        # verify the required parameter 'project_id_uuid' is set
+-        if ('project_id_uuid' not in params or
+-                params['project_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `project_id_uuid` when calling `model_testing_start_stress_test_declarative`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-        if 'project_id_uuid' in params:
+-            path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+-            '/v1-beta/stress-tests/{projectId.uuid}', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeStartStressTestResponse',  # noqa: E501
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/monitor_service_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/monitor_service_api.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -145,15 +145,15 @@
+         Delete a custom monitor  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_delete_custom_monitor(monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteCustomMonitorResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.monitor_service_delete_custom_monitor_with_http_info(monitor_id_uuid, **kwargs)  # noqa: E501
+@@ -167,15 +167,15 @@
+         Delete a custom monitor  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_delete_custom_monitor_with_http_info(monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteCustomMonitorResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['monitor_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -240,15 +240,15 @@
+         Graph a monitor within a time range  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_get_monitor_result(monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: RimeGetMonitorResultResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+@@ -264,15 +264,15 @@
+         Graph a monitor within a time range  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_get_monitor_result_with_http_info(monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :param datetime time_interval_start_time:
+         :param datetime time_interval_end_time:
+         :return: RimeGetMonitorResultResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -343,15 +343,15 @@
+         List all possible Custom Monitor Metric Identifiers  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_list_metric_identifiers(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeListMetricIdentifiersResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.monitor_service_list_metric_identifiers_with_http_info(firewall_id_uuid, **kwargs)  # noqa: E501
+@@ -365,15 +365,15 @@
+         List all possible Custom Monitor Metric Identifiers  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_list_metric_identifiers_with_http_info(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :return: RimeListMetricIdentifiersResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['firewall_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -438,15 +438,15 @@
+         lists monitors by firewall ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_list_monitors(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :param list[str] first_page_req_included_monitor_types: Specifies a list of monitor types. Filters results to match the specified monitor types.
+         :param list[str] first_page_req_included_risk_category_types: Specifies a list of risk category types. Filters results to match the specified risk category types.
+         :param bool first_page_req_pinned_monitors_only: When the value of this Boolean is True, this endpoint returns a list of pinned Monitors. Otherwise, this endpoint does not filter Monitors by pinned status.
+         :param str page_token: Specifies a page of the list returned by a ListMonitors query. The ListMonitors query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Monitor objects to return in a single page.
+         :return: RimeListMonitorsResponse
+                  If the method is called asynchronously,
+@@ -465,15 +465,15 @@
+         lists monitors by firewall ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_list_monitors_with_http_info(firewall_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str firewall_id_uuid: String value of the object ID. (required)
++        :param str firewall_id_uuid: Unique object ID. (required)
+         :param list[str] first_page_req_included_monitor_types: Specifies a list of monitor types. Filters results to match the specified monitor types.
+         :param list[str] first_page_req_included_risk_category_types: Specifies a list of risk category types. Filters results to match the specified risk category types.
+         :param bool first_page_req_pinned_monitors_only: When the value of this Boolean is True, this endpoint returns a list of pinned Monitors. Otherwise, this endpoint does not filter Monitors by pinned status.
+         :param str page_token: Specifies a page of the list returned by a ListMonitors query. The ListMonitors query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Monitor objects to return in a single page.
+         :return: RimeListMonitorsResponse
+                  If the method is called asynchronously,
+@@ -556,15 +556,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_update_monitor(body, monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param MonitorsMonitorIdUuidBody body: (required)
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateMonitorResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.monitor_service_update_monitor_with_http_info(body, monitor_id_uuid, **kwargs)  # noqa: E501
+@@ -579,15 +579,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.monitor_service_update_monitor_with_http_info(body, monitor_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param MonitorsMonitorIdUuidBody body: (required)
+-        :param str monitor_id_uuid: String value of the object ID. (required)
++        :param str monitor_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateMonitorResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'monitor_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/notification_setting_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/notification_setting_api.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -137,15 +137,15 @@
+         Hard-delete a notification setting.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.notification_setting_delete_notification(id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str id_uuid: String value of the object ID. (required)
++        :param str id_uuid: Unique object ID. (required)
+         :return: object
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.notification_setting_delete_notification_with_http_info(id_uuid, **kwargs)  # noqa: E501
+@@ -159,15 +159,15 @@
+         Hard-delete a notification setting.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.notification_setting_delete_notification_with_http_info(id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str id_uuid: String value of the object ID. (required)
++        :param str id_uuid: Unique object ID. (required)
+         :return: object
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -338,15 +338,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.notification_setting_update_notification(body, notification_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param NotifsettingsNotificationIdUuidBody body: (required)
+-        :param str notification_id_uuid: String value of the object ID. (required)
++        :param str notification_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateNotificationResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.notification_setting_update_notification_with_http_info(body, notification_id_uuid, **kwargs)  # noqa: E501
+@@ -361,15 +361,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.notification_setting_update_notification_with_http_info(body, notification_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param NotifsettingsNotificationIdUuidBody body: (required)
+-        :param str notification_id_uuid: String value of the object ID. (required)
++        :param str notification_id_uuid: Unique object ID. (required)
+         :return: RimeUpdateNotificationResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'notification_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/project_service_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/project_service_api.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -39,15 +39,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_add_users_to_project(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RoleUsersBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectAddUsersToProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_add_users_to_project_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+@@ -62,15 +62,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_add_users_to_project_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RoleUsersBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectAddUsersToProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -244,15 +244,15 @@
+         Deletes a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_delete_project(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectDeleteProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_delete_project_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+@@ -266,15 +266,15 @@
+         Deletes a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_delete_project_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectDeleteProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -339,15 +339,15 @@
+         Returns a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_project(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_get_project_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+@@ -361,15 +361,15 @@
+         Returns a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_project_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -434,15 +434,15 @@
+         Return the URL of a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_project_url(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetProjectURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_get_project_url_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+@@ -456,15 +456,15 @@
+         Return the URL of a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_project_url_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetProjectURLResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -529,15 +529,15 @@
+         Returns the permissions of the Workspace members for a Project given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_workspace_roles_for_project(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetWorkspaceRolesForProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_get_workspace_roles_for_project_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+@@ -551,15 +551,15 @@
+         Returns the permissions of the Workspace members for a Project given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_get_workspace_roles_for_project_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectGetWorkspaceRolesForProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -624,15 +624,15 @@
+         Returns a paginated list of Projects for a given Workspace ID.  Filters out Projects that the user does not have access to. The list is sorted by the last test run time field of each Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_list_projects(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str workspace_id_uuid: String value of the object ID.
++        :param str workspace_id_uuid: Unique object ID.
+         :param str page_token: Specifies a page of the list returned by a ListProjects query. The ListProjects query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageQuery field.
+         :param str page_size: The maximum number of Project objects to return in a single page.
+         :return: ProjectListProjectsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+@@ -648,15 +648,15 @@
+         Returns a paginated list of Projects for a given Workspace ID.  Filters out Projects that the user does not have access to. The list is sorted by the last test run time field of each Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_list_projects_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str workspace_id_uuid: String value of the object ID.
++        :param str workspace_id_uuid: Unique object ID.
+         :param str page_token: Specifies a page of the list returned by a ListProjects query. The ListProjects query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageQuery field.
+         :param str page_size: The maximum number of Project objects to return in a single page.
+         :return: ProjectListProjectsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -723,15 +723,15 @@
+         Lists the users and their roles of a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_list_users_of_project(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str page_token: Specifies a page of the list returned by a ListUsersOfProject query. The ListUsersOfProject query returns a pageToken when there is more than one page of results.
+         :param str page_size: The maximum number of User objects to return in a single page.
+         :return: ProjectListUsersOfProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+@@ -747,15 +747,15 @@
+         Lists the users and their roles of a Project for a given Project ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_list_users_of_project_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str page_token: Specifies a page of the list returned by a ListUsersOfProject query. The ListUsersOfProject query returns a pageToken when there is more than one page of results.
+         :param str page_size: The maximum number of User objects to return in a single page.
+         :return: ProjectListUsersOfProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -826,16 +826,16 @@
+         Removes all existing permissions of a user from a Project given Project ID and User ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_remove_user_from_project(project_id_uuid, user_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str user_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str user_id_uuid: Unique object ID. (required)
+         :return: ProjectRemoveUserFromProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_remove_user_from_project_with_http_info(project_id_uuid, user_id_uuid, **kwargs)  # noqa: E501
+@@ -849,16 +849,16 @@
+         Removes all existing permissions of a user from a Project given Project ID and User ID.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_remove_user_from_project_with_http_info(project_id_uuid, user_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str user_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str user_id_uuid: Unique object ID. (required)
+         :return: ProjectRemoveUserFromProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid', 'user_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -930,15 +930,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_project(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param ProjectsProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_update_project_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+@@ -953,15 +953,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_project_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param ProjectsProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -1037,16 +1037,16 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_user_of_project(body, project_id_uuid, user_user_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param UsersUserUserIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str user_user_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str user_user_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateUserOfProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_update_user_of_project_with_http_info(body, project_id_uuid, user_user_id_uuid, **kwargs)  # noqa: E501
+@@ -1061,16 +1061,16 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_user_of_project_with_http_info(body, project_id_uuid, user_user_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param UsersUserUserIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str user_user_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str user_user_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateUserOfProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid', 'user_user_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -1152,15 +1152,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_workspace_roles_for_project(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RoleWorkspaceBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateWorkspaceRolesForProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.project_service_update_workspace_roles_for_project_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+@@ -1175,15 +1175,15 @@
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.project_service_update_workspace_roles_for_project_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param RoleWorkspaceBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: ProjectUpdateWorkspaceRolesForProjectResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/registry_service_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/registry_service_api.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -29,16 +29,17 @@
+ 
+     def __init__(self, api_client=None):
+         if api_client is None:
+             api_client = ApiClient()
+         self.api_client = api_client
+ 
+     def registry_service_delete_dataset(self, dataset_id, **kwargs):  # noqa: E501
+-        """Delete a dataset.  # noqa: E501
++        """DeleteDataset  # noqa: E501
+ 
++        Delete a Dataset from the Registry.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_dataset(dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+@@ -50,16 +51,17 @@
+         if kwargs.get('async_req'):
+             return self.registry_service_delete_dataset_with_http_info(dataset_id, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_delete_dataset_with_http_info(dataset_id, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_delete_dataset_with_http_info(self, dataset_id, **kwargs):  # noqa: E501
+-        """Delete a dataset.  # noqa: E501
++        """DeleteDataset  # noqa: E501
+ 
++        Delete a Dataset from the Registry.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_dataset_with_http_info(dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+@@ -122,44 +124,46 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_delete_model(self, model_id_uuid, **kwargs):  # noqa: E501
+-        """Delete a model.  # noqa: E501
++        """DeleteModel  # noqa: E501
+ 
++        Delete a Model from the Registry.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_model(model_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_delete_model_with_http_info(model_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_delete_model_with_http_info(model_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_delete_model_with_http_info(self, model_id_uuid, **kwargs):  # noqa: E501
+-        """Delete a model.  # noqa: E501
++        """DeleteModel  # noqa: E501
+ 
++        Delete a Model from the Registry.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_model_with_http_info(model_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :return: RimeDeleteModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['model_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -215,45 +219,47 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_delete_prediction_set(self, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Delete a prediction set.  # noqa: E501
++        """DeletePredictionSet  # noqa: E501
+ 
++        Delete the Prediction set corresponding to a specified Model and Dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_prediction_set(model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeDeletePredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_delete_prediction_set_with_http_info(model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_delete_prediction_set_with_http_info(model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_delete_prediction_set_with_http_info(self, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Delete a prediction set.  # noqa: E501
++        """DeletePredictionSet  # noqa: E501
+ 
++        Delete the Prediction set corresponding to a specified Model and Dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_delete_prediction_set_with_http_info(model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeDeletePredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['model_id_uuid', 'dataset_id']  # noqa: E501
+@@ -316,46 +322,48 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_get_dataset(self, **kwargs):  # noqa: E501
+-        """Get dataset.  # noqa: E501
++        """GetDataset  # noqa: E501
+ 
++        Returns information about a registered Dataset. Allows for searching by ID or name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_dataset(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str dataset_id: Uniquely specifies a Dataset.
+-        :param str dataset_name:
++        :param str dataset_name: Unique name of a Dataset.
+         :return: RimeGetDatasetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_get_dataset_with_http_info(**kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_get_dataset_with_http_info(**kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_get_dataset_with_http_info(self, **kwargs):  # noqa: E501
+-        """Get dataset.  # noqa: E501
++        """GetDataset  # noqa: E501
+ 
++        Returns information about a registered Dataset. Allows for searching by ID or name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_dataset_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+         :param str dataset_id: Uniquely specifies a Dataset.
+-        :param str dataset_name:
++        :param str dataset_name: Unique name of a Dataset.
+         :return: RimeGetDatasetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['dataset_id', 'dataset_name']  # noqa: E501
+         all_params.append('async_req')
+@@ -409,46 +417,48 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_get_model(self, **kwargs):  # noqa: E501
+-        """Get model.  # noqa: E501
++        """GetModel  # noqa: E501
+ 
++        Returns information about a registered Model. Allows for searching by ID or name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_model(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID.
+-        :param str model_name:
++        :param str model_id_uuid: Unique object ID.
++        :param str model_name: Unique name of a Model.
+         :return: RimeGetModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_get_model_with_http_info(**kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_get_model_with_http_info(**kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_get_model_with_http_info(self, **kwargs):  # noqa: E501
+-        """Get model.  # noqa: E501
++        """GetModel  # noqa: E501
+ 
++        Returns information about a registered Model. Allows for searching by ID or name.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_model_with_http_info(async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID.
+-        :param str model_name:
++        :param str model_id_uuid: Unique object ID.
++        :param str model_name: Unique name of a Model.
+         :return: RimeGetModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['model_id_uuid', 'model_name']  # noqa: E501
+         all_params.append('async_req')
+@@ -502,45 +512,47 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_get_prediction_set(self, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Get prediction set.  # noqa: E501
++        """GetPredictionSet  # noqa: E501
+ 
++        Returns information about a registered Prediction set.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_prediction_set(model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeGetPredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_get_prediction_set_with_http_info(model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_get_prediction_set_with_http_info(model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_get_prediction_set_with_http_info(self, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Get prediction set.  # noqa: E501
++        """GetPredictionSet  # noqa: E501
+ 
++        Returns information about a registered Prediction set.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_get_prediction_set_with_http_info(model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeGetPredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['model_id_uuid', 'dataset_id']  # noqa: E501
+@@ -603,24 +615,24 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_list_datasets(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all datasets with a field mask.  # noqa: E501
++        """ListDatasets  # noqa: E501
+ 
++        List all Datasets in the Registry with optional filters.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_list_datasets(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str first_page_req_firewall_id: Uniquely specifies a Firewall.
++        :param str project_id_uuid: Unique object ID. (required)
+         :param datetime first_page_req_scheduled_ct_intervals_start_time:
+         :param datetime first_page_req_scheduled_ct_intervals_end_time:
+         :param str page_token: Specifies a page of the list returned by a ListDatasets query. The ListDatasets query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Dataset objects to return in a single page.
+         :return: RimeListDatasetsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+@@ -629,34 +641,34 @@
+         if kwargs.get('async_req'):
+             return self.registry_service_list_datasets_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_list_datasets_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_list_datasets_with_http_info(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all datasets with a field mask.  # noqa: E501
++        """ListDatasets  # noqa: E501
+ 
++        List all Datasets in the Registry with optional filters.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_list_datasets_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str first_page_req_firewall_id: Uniquely specifies a Firewall.
++        :param str project_id_uuid: Unique object ID. (required)
+         :param datetime first_page_req_scheduled_ct_intervals_start_time:
+         :param datetime first_page_req_scheduled_ct_intervals_end_time:
+         :param str page_token: Specifies a page of the list returned by a ListDatasets query. The ListDatasets query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Dataset objects to return in a single page.
+         :return: RimeListDatasetsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+-        all_params = ['project_id_uuid', 'first_page_req_firewall_id', 'first_page_req_scheduled_ct_intervals_start_time', 'first_page_req_scheduled_ct_intervals_end_time', 'page_token', 'page_size']  # noqa: E501
++        all_params = ['project_id_uuid', 'first_page_req_scheduled_ct_intervals_start_time', 'first_page_req_scheduled_ct_intervals_end_time', 'page_token', 'page_size']  # noqa: E501
+         all_params.append('async_req')
+         all_params.append('_return_http_data_only')
+         all_params.append('_preload_content')
+         all_params.append('_request_timeout')
+ 
+         params = locals()
+         for key, val in six.iteritems(params['kwargs']):
+@@ -675,16 +687,14 @@
+         collection_formats = {}
+ 
+         path_params = {}
+         if 'project_id_uuid' in params:
+             path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+ 
+         query_params = []
+-        if 'first_page_req_firewall_id' in params:
+-            query_params.append(('firstPageReq.firewallId', params['first_page_req_firewall_id']))  # noqa: E501
+         if 'first_page_req_scheduled_ct_intervals_start_time' in params:
+             query_params.append(('firstPageReq.scheduledCtIntervals.startTime', params['first_page_req_scheduled_ct_intervals_start_time']))  # noqa: E501
+         if 'first_page_req_scheduled_ct_intervals_end_time' in params:
+             query_params.append(('firstPageReq.scheduledCtIntervals.endTime', params['first_page_req_scheduled_ct_intervals_end_time']))  # noqa: E501
+         if 'page_token' in params:
+             query_params.append(('pageToken', params['page_token']))  # noqa: E501
+         if 'page_size' in params:
+@@ -716,46 +726,48 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_list_models(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all models with a field mask.  # noqa: E501
++        """ListModels  # noqa: E501
+ 
++        List all Models in the Registry of the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_list_models(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str page_token: Specifies a page of the list returned by a ListModels query. The ListModels query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Model objects to return in a single page.
+         :return: RimeListModelsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_list_models_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_list_models_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_list_models_with_http_info(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all models with a field mask.  # noqa: E501
++        """ListModels  # noqa: E501
+ 
++        List all Models in the Registry of the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_list_models_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str page_token: Specifies a page of the list returned by a ListModels query. The ListModels query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Model objects to return in a single page.
+         :return: RimeListModelsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+@@ -816,54 +828,56 @@
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+-    def registry_service_list_prediction_set(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all prediction sets with a field mask.  # noqa: E501
++    def registry_service_list_prediction_sets(self, project_id_uuid, **kwargs):  # noqa: E501
++        """ListPredictionSets  # noqa: E501
+ 
++        List all Prediction sets in the Registry with optional filters.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_list_prediction_set(project_id_uuid, async_req=True)
++        >>> thread = api.registry_service_list_prediction_sets(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str first_page_req_model_id: Uniquely specifies a Model.
+         :param str first_page_req_dataset_id: Uniquely specifies a Dataset.
+         :param str page_token: Specifies a page of the list returned by a ListPredictions query. The ListPredictions query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Prediction objects to return in a single page.
+-        :return: RimeListPredictionsResponse
++        :return: RimeListPredictionSetsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+-            return self.registry_service_list_prediction_set_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
++            return self.registry_service_list_prediction_sets_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+         else:
+-            (data) = self.registry_service_list_prediction_set_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
++            (data) = self.registry_service_list_prediction_sets_with_http_info(project_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+-    def registry_service_list_prediction_set_with_http_info(self, project_id_uuid, **kwargs):  # noqa: E501
+-        """List all prediction sets with a field mask.  # noqa: E501
++    def registry_service_list_prediction_sets_with_http_info(self, project_id_uuid, **kwargs):  # noqa: E501
++        """ListPredictionSets  # noqa: E501
+ 
++        List all Prediction sets in the Registry with optional filters.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_list_prediction_set_with_http_info(project_id_uuid, async_req=True)
++        >>> thread = api.registry_service_list_prediction_sets_with_http_info(project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :param str first_page_req_model_id: Uniquely specifies a Model.
+         :param str first_page_req_dataset_id: Uniquely specifies a Dataset.
+         :param str page_token: Specifies a page of the list returned by a ListPredictions query. The ListPredictions query returns a pageToken when there is more than one page of results. Specify either this field or the firstPageReq field.
+         :param str page_size: The maximum number of Prediction objects to return in a single page.
+-        :return: RimeListPredictionsResponse
++        :return: RimeListPredictionSetsResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['project_id_uuid', 'first_page_req_model_id', 'first_page_req_dataset_id', 'page_token', 'page_size']  # noqa: E501
+         all_params.append('async_req')
+         all_params.append('_return_http_data_only')
+@@ -871,22 +885,22 @@
+         all_params.append('_request_timeout')
+ 
+         params = locals()
+         for key, val in six.iteritems(params['kwargs']):
+             if key not in all_params:
+                 raise TypeError(
+                     "Got an unexpected keyword argument '%s'"
+-                    " to method registry_service_list_prediction_set" % key
++                    " to method registry_service_list_prediction_sets" % key
+                 )
+             params[key] = val
+         del params['kwargs']
+         # verify the required parameter 'project_id_uuid' is set
+         if ('project_id_uuid' not in params or
+                 params['project_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `project_id_uuid` when calling `registry_service_list_prediction_set`")  # noqa: E501
++            raise ValueError("Missing the required parameter `project_id_uuid` when calling `registry_service_list_prediction_sets`")  # noqa: E501
+ 
+         collection_formats = {}
+ 
+         path_params = {}
+         if 'project_id_uuid' in params:
+             path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+ 
+@@ -917,55 +931,57 @@
+             '/v1/registry/{projectId.uuid}/prediction', 'GET',
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+-            response_type='RimeListPredictionsResponse',  # noqa: E501
++            response_type='RimeListPredictionSetsResponse',  # noqa: E501
+             auth_settings=auth_settings,
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_register_dataset(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new dataset.  # noqa: E501
++        """RegisterDataset  # noqa: E501
+ 
++        Register a new Dataset for the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_dataset(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param DatasetProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param ProjectIdUuidDatasetBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterDatasetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_register_dataset_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_register_dataset_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_register_dataset_with_http_info(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new dataset.  # noqa: E501
++        """RegisterDataset  # noqa: E501
+ 
++        Register a new Dataset for the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_dataset_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param DatasetProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param ProjectIdUuidDatasetBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterDatasetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -1015,119 +1031,14 @@
+         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+             ['application/json'])  # noqa: E501
+ 
+         # Authentication setting
+         auth_settings = ['rime-api-key']  # noqa: E501
+ 
+         return self.api_client.call_api(
+-            '/v1/registry/dataset/{projectId.uuid}', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeRegisterDatasetResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+-    def registry_service_register_dataset2(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new dataset.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_dataset2(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ProjectIdUuidDatasetBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeRegisterDatasetResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.registry_service_register_dataset2_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.registry_service_register_dataset2_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-            return data
+-
+-    def registry_service_register_dataset2_with_http_info(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new dataset.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_dataset2_with_http_info(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ProjectIdUuidDatasetBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeRegisterDatasetResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body', 'project_id_uuid']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method registry_service_register_dataset2" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `registry_service_register_dataset2`")  # noqa: E501
+-        # verify the required parameter 'project_id_uuid' is set
+-        if ('project_id_uuid' not in params or
+-                params['project_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `project_id_uuid` when calling `registry_service_register_dataset2`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-        if 'project_id_uuid' in params:
+-            path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+             '/v1/registry/{projectId.uuid}/dataset', 'POST',
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+@@ -1136,46 +1047,48 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_register_model(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new model.  # noqa: E501
++        """RegisterModel  # noqa: E501
+ 
++        Register a new Model for the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_model(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param ModelProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param ProjectIdUuidModelBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_register_model_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_register_model_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_register_model_with_http_info(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new model.  # noqa: E501
++        """RegisterModel  # noqa: E501
+ 
++        Register a new Model for the specified Project.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_model_with_http_info(body, project_id_uuid, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param ModelProjectIdUuidBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
++        :param ProjectIdUuidModelBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
+         :return: RimeRegisterModelResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid']  # noqa: E501
+         all_params.append('async_req')
+@@ -1225,119 +1138,14 @@
+         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+             ['application/json'])  # noqa: E501
+ 
+         # Authentication setting
+         auth_settings = ['rime-api-key']  # noqa: E501
+ 
+         return self.api_client.call_api(
+-            '/v1/registry/model/{projectId.uuid}', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeRegisterModelResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+-    def registry_service_register_model2(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new model.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_model2(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ProjectIdUuidModelBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeRegisterModelResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.registry_service_register_model2_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.registry_service_register_model2_with_http_info(body, project_id_uuid, **kwargs)  # noqa: E501
+-            return data
+-
+-    def registry_service_register_model2_with_http_info(self, body, project_id_uuid, **kwargs):  # noqa: E501
+-        """Register a new model.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_model2_with_http_info(body, project_id_uuid, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ProjectIdUuidModelBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :return: RimeRegisterModelResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body', 'project_id_uuid']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method registry_service_register_model2" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `registry_service_register_model2`")  # noqa: E501
+-        # verify the required parameter 'project_id_uuid' is set
+-        if ('project_id_uuid' not in params or
+-                params['project_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `project_id_uuid` when calling `registry_service_register_model2`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-        if 'project_id_uuid' in params:
+-            path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+             '/v1/registry/{projectId.uuid}/model', 'POST',
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+@@ -1346,49 +1154,51 @@
+             async_req=params.get('async_req'),
+             _return_http_data_only=params.get('_return_http_data_only'),
+             _preload_content=params.get('_preload_content', True),
+             _request_timeout=params.get('_request_timeout'),
+             collection_formats=collection_formats)
+ 
+     def registry_service_register_prediction_set(self, body, project_id_uuid, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Register a new prediction set.  # noqa: E501
++        """RegisterPredictionSet  # noqa: E501
+ 
++        Register a Prediction set corresponding to a specified Model and Dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_prediction_set(body, project_id_uuid, model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param ModelIdUuidDatasetIdBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param DatasetIdPredictionBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeRegisterPredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+         kwargs['_return_http_data_only'] = True
+         if kwargs.get('async_req'):
+             return self.registry_service_register_prediction_set_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+         else:
+             (data) = self.registry_service_register_prediction_set_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+             return data
+ 
+     def registry_service_register_prediction_set_with_http_info(self, body, project_id_uuid, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Register a new prediction set.  # noqa: E501
++        """RegisterPredictionSet  # noqa: E501
+ 
++        Register a Prediction set corresponding to a specified Model and Dataset.  # noqa: E501
+         This method makes a synchronous HTTP request by default. To make an
+         asynchronous HTTP request, please pass async_req=True
+         >>> thread = api.registry_service_register_prediction_set_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, async_req=True)
+         >>> result = thread.get()
+ 
+         :param async_req bool
+-        :param ModelIdUuidDatasetIdBody body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
++        :param DatasetIdPredictionBody body: (required)
++        :param str project_id_uuid: Unique object ID. (required)
++        :param str model_id_uuid: Unique object ID. (required)
+         :param str dataset_id: Uniquely specifies a Dataset. (required)
+         :return: RimeRegisterPredictionSetResponse
+                  If the method is called asynchronously,
+                  returns the request thread.
+         """
+ 
+         all_params = ['body', 'project_id_uuid', 'model_id_uuid', 'dataset_id']  # noqa: E501
+@@ -1451,136 +1261,15 @@
+         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+             ['application/json'])  # noqa: E501
+ 
+         # Authentication setting
+         auth_settings = ['rime-api-key']  # noqa: E501
+ 
+         return self.api_client.call_api(
+-            '/v1/registry/prediction/{projectId.uuid}/{modelId.uuid}/{datasetId}', 'POST',
+-            path_params,
+-            query_params,
+-            header_params,
+-            body=body_params,
+-            post_params=form_params,
+-            files=local_var_files,
+-            response_type='RimeRegisterPredictionSetResponse',  # noqa: E501
+-            auth_settings=auth_settings,
+-            async_req=params.get('async_req'),
+-            _return_http_data_only=params.get('_return_http_data_only'),
+-            _preload_content=params.get('_preload_content', True),
+-            _request_timeout=params.get('_request_timeout'),
+-            collection_formats=collection_formats)
+-
+-    def registry_service_register_prediction_set2(self, body, project_id_uuid, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Register a new prediction set.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_prediction_set2(body, project_id_uuid, model_id_uuid, dataset_id, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ModelIdUuidDatasetIdBody1 body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
+-        :param str dataset_id: Uniquely specifies a Dataset. (required)
+-        :return: RimeRegisterPredictionSetResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-        kwargs['_return_http_data_only'] = True
+-        if kwargs.get('async_req'):
+-            return self.registry_service_register_prediction_set2_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+-        else:
+-            (data) = self.registry_service_register_prediction_set2_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, **kwargs)  # noqa: E501
+-            return data
+-
+-    def registry_service_register_prediction_set2_with_http_info(self, body, project_id_uuid, model_id_uuid, dataset_id, **kwargs):  # noqa: E501
+-        """Register a new prediction set.  # noqa: E501
+-
+-        This method makes a synchronous HTTP request by default. To make an
+-        asynchronous HTTP request, please pass async_req=True
+-        >>> thread = api.registry_service_register_prediction_set2_with_http_info(body, project_id_uuid, model_id_uuid, dataset_id, async_req=True)
+-        >>> result = thread.get()
+-
+-        :param async_req bool
+-        :param ModelIdUuidDatasetIdBody1 body: (required)
+-        :param str project_id_uuid: String value of the object ID. (required)
+-        :param str model_id_uuid: String value of the object ID. (required)
+-        :param str dataset_id: Uniquely specifies a Dataset. (required)
+-        :return: RimeRegisterPredictionSetResponse
+-                 If the method is called asynchronously,
+-                 returns the request thread.
+-        """
+-
+-        all_params = ['body', 'project_id_uuid', 'model_id_uuid', 'dataset_id']  # noqa: E501
+-        all_params.append('async_req')
+-        all_params.append('_return_http_data_only')
+-        all_params.append('_preload_content')
+-        all_params.append('_request_timeout')
+-
+-        params = locals()
+-        for key, val in six.iteritems(params['kwargs']):
+-            if key not in all_params:
+-                raise TypeError(
+-                    "Got an unexpected keyword argument '%s'"
+-                    " to method registry_service_register_prediction_set2" % key
+-                )
+-            params[key] = val
+-        del params['kwargs']
+-        # verify the required parameter 'body' is set
+-        if ('body' not in params or
+-                params['body'] is None):
+-            raise ValueError("Missing the required parameter `body` when calling `registry_service_register_prediction_set2`")  # noqa: E501
+-        # verify the required parameter 'project_id_uuid' is set
+-        if ('project_id_uuid' not in params or
+-                params['project_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `project_id_uuid` when calling `registry_service_register_prediction_set2`")  # noqa: E501
+-        # verify the required parameter 'model_id_uuid' is set
+-        if ('model_id_uuid' not in params or
+-                params['model_id_uuid'] is None):
+-            raise ValueError("Missing the required parameter `model_id_uuid` when calling `registry_service_register_prediction_set2`")  # noqa: E501
+-        # verify the required parameter 'dataset_id' is set
+-        if ('dataset_id' not in params or
+-                params['dataset_id'] is None):
+-            raise ValueError("Missing the required parameter `dataset_id` when calling `registry_service_register_prediction_set2`")  # noqa: E501
+-
+-        collection_formats = {}
+-
+-        path_params = {}
+-        if 'project_id_uuid' in params:
+-            path_params['projectId.uuid'] = params['project_id_uuid']  # noqa: E501
+-        if 'model_id_uuid' in params:
+-            path_params['modelId.uuid'] = params['model_id_uuid']  # noqa: E501
+-        if 'dataset_id' in params:
+-            path_params['datasetId'] = params['dataset_id']  # noqa: E501
+-
+-        query_params = []
+-
+-        header_params = {}
+-
+-        form_params = []
+-        local_var_files = {}
+-
+-        body_params = None
+-        if 'body' in params:
+-            body_params = params['body']
+-        # HTTP header `Accept`
+-        header_params['Accept'] = self.api_client.select_header_accept(
+-            ['application/json'])  # noqa: E501
+-
+-        # HTTP header `Content-Type`
+-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+-            ['application/json'])  # noqa: E501
+-
+-        # Authentication setting
+-        auth_settings = ['rime-api-key']  # noqa: E501
+-
+-        return self.api_client.call_api(
+-            '/v1/registry/{projectId.uuid}/prediction/{modelId.uuid}/{datasetId}', 'POST',
++            '/v1/registry/{projectId.uuid}/model/{modelId.uuid}/dataset/{datasetId}/prediction', 'POST',
+             path_params,
+             query_params,
+             header_params,
+             body=body_params,
+             post_params=form_params,
+             files=local_var_files,
+             response_type='RimeRegisterPredictionSetResponse',  # noqa: E501
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/results_reader_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/results_reader_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api/rime_info_api.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api/rime_info_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/api_client.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/api_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/configuration.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/__init__.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,23 +1,48 @@
+ # coding: utf-8
+ 
+ # flake8: noqa
++
+ """
+     RIME Rest API
+ 
+     API methods for RIME. Must be authenticated with `rime-api-key` header.  # noqa: E501
+ 
+     OpenAPI spec version: 1.0
+     Contact: dev@robustintelligence.com
+     Generated by: https://github.com/swagger-api/swagger-codegen.git
+ """
+ 
+ from __future__ import absolute_import
+ 
+-# import models into model package
++# import apis into sdk package
++from rime_sdk.swagger.swagger_client.api.agent_manager_api import AgentManagerApi
++from rime_sdk.swagger.swagger_client.api.data_collector_api import DataCollectorApi
++from rime_sdk.swagger.swagger_client.api.detection_api import DetectionApi
++from rime_sdk.swagger.swagger_client.api.feature_flag_api import FeatureFlagApi
++from rime_sdk.swagger.swagger_client.api.file_scanning_api import FileScanningApi
++from rime_sdk.swagger.swagger_client.api.file_upload_api import FileUploadApi
++from rime_sdk.swagger.swagger_client.api.firewall_service_api import FirewallServiceApi
++from rime_sdk.swagger.swagger_client.api.image_registry_api import ImageRegistryApi
++from rime_sdk.swagger.swagger_client.api.integration_service_api import IntegrationServiceApi
++from rime_sdk.swagger.swagger_client.api.job_reader_api import JobReaderApi
++from rime_sdk.swagger.swagger_client.api.model_card_service_api import ModelCardServiceApi
++from rime_sdk.swagger.swagger_client.api.model_testing_api import ModelTestingApi
++from rime_sdk.swagger.swagger_client.api.monitor_service_api import MonitorServiceApi
++from rime_sdk.swagger.swagger_client.api.notification_setting_api import NotificationSettingApi
++from rime_sdk.swagger.swagger_client.api.project_service_api import ProjectServiceApi
++from rime_sdk.swagger.swagger_client.api.rime_info_api import RIMEInfoApi
++from rime_sdk.swagger.swagger_client.api.registry_service_api import RegistryServiceApi
++from rime_sdk.swagger.swagger_client.api.results_reader_api import ResultsReaderApi
++from rime_sdk.swagger.swagger_client.api.user_api import UserApi
++from rime_sdk.swagger.swagger_client.api.workspace_service_api import WorkspaceServiceApi
++# import ApiClient
++from rime_sdk.swagger.swagger_client.api_client import ApiClient
++from rime_sdk.swagger.swagger_client.configuration import Configuration
++# import models into sdk package
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_category_test_identifier import ArtifactIdentifierCategoryTestIdentifier
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_subset_test_metric_identifier import ArtifactIdentifierSubsetTestMetricIdentifier
+ from rime_sdk.swagger.swagger_client.models.artifact_identifier_test_case_metric_identifier import ArtifactIdentifierTestCaseMetricIdentifier
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_aws_config import CreateAgentRequestAWSConfig
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_gcp_config import CreateAgentRequestGCPConfig
+ from rime_sdk.swagger.swagger_client.models.create_agent_request_local_config import CreateAgentRequestLocalConfig
+ from rime_sdk.swagger.swagger_client.models.create_firewall_request_scheduled_ct_parameters import CreateFirewallRequestScheduledCTParameters
+@@ -28,15 +53,15 @@
+ from rime_sdk.swagger.swagger_client.models.data_info_params_ranking_info import DataInfoParamsRankingInfo
+ from rime_sdk.swagger.swagger_client.models.data_profiling_column_type_info import DataProfilingColumnTypeInfo
+ from rime_sdk.swagger.swagger_client.models.data_profiling_feature_relationship_info import DataProfilingFeatureRelationshipInfo
+ from rime_sdk.swagger.swagger_client.models.datacollector_datapoint import DatacollectorDatapoint
+ from rime_sdk.swagger.swagger_client.models.datacollector_datapoint_row import DatacollectorDatapointRow
+ from rime_sdk.swagger.swagger_client.models.dataset_ct_info import DatasetCTInfo
+ from rime_sdk.swagger.swagger_client.models.dataset_dataset import DatasetDataset
+-from rime_sdk.swagger.swagger_client.models.dataset_project_id_uuid_body import DatasetProjectIdUuidBody
++from rime_sdk.swagger.swagger_client.models.dataset_id_prediction_body import DatasetIdPredictionBody
+ from rime_sdk.swagger.swagger_client.models.datastream_project_id_uuid_body import DatastreamProjectIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.detection_detection_event import DetectionDetectionEvent
+ from rime_sdk.swagger.swagger_client.models.detection_event_detail import DetectionEventDetail
+ from rime_sdk.swagger.swagger_client.models.detection_event_type import DetectionEventType
+ from rime_sdk.swagger.swagger_client.models.detection_metric_degradation_event_details import DetectionMetricDegradationEventDetails
+ from rime_sdk.swagger.swagger_client.models.detection_resolution import DetectionResolution
+ from rime_sdk.swagger.swagger_client.models.detection_security_event_details import DetectionSecurityEventDetails
+@@ -58,40 +83,43 @@
+ from rime_sdk.swagger.swagger_client.models.firewall_latest_run_info import FirewallLatestRunInfo
+ from rime_sdk.swagger.swagger_client.models.firewall_location_args import FirewallLocationArgs
+ from rime_sdk.swagger.swagger_client.models.firewall_location_params import FirewallLocationParams
+ from rime_sdk.swagger.swagger_client.models.firewall_scheduled_ct_info import FirewallScheduledCTInfo
+ from rime_sdk.swagger.swagger_client.models.firewall_test_category_severity import FirewallTestCategorySeverity
+ from rime_sdk.swagger.swagger_client.models.googlerpc_status import GooglerpcStatus
+ from rime_sdk.swagger.swagger_client.models.image_reference_reference_type import ImageReferenceReferenceType
++from rime_sdk.swagger.swagger_client.models.integration_integration import IntegrationIntegration
++from rime_sdk.swagger.swagger_client.models.integration_integration_schema import IntegrationIntegrationSchema
++from rime_sdk.swagger.swagger_client.models.integration_integration_type import IntegrationIntegrationType
++from rime_sdk.swagger.swagger_client.models.integration_variable_sensitivity import IntegrationVariableSensitivity
++from rime_sdk.swagger.swagger_client.models.integrations_integration_id_uuid_body import IntegrationsIntegrationIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.list_agents_request_list_agents_query import ListAgentsRequestListAgentsQuery
+ from rime_sdk.swagger.swagger_client.models.list_datasets_request_datasets_query import ListDatasetsRequestDatasetsQuery
+ from rime_sdk.swagger.swagger_client.models.list_images_request_pip_library_filter import ListImagesRequestPipLibraryFilter
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_aggregated_metric import ListMetricIdentifiersResponseAggregatedMetric
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_feature_metric_without_subsets import ListMetricIdentifiersResponseFeatureMetricWithoutSubsets
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_feature_metrics import ListMetricIdentifiersResponseFeatureMetrics
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_subset_metric import ListMetricIdentifiersResponseSubsetMetric
+ from rime_sdk.swagger.swagger_client.models.list_metric_identifiers_response_subset_metrics import ListMetricIdentifiersResponseSubsetMetrics
+ from rime_sdk.swagger.swagger_client.models.list_models_request_model_query import ListModelsRequestModelQuery
+ from rime_sdk.swagger.swagger_client.models.list_monitors_request_filter import ListMonitorsRequestFilter
+ from rime_sdk.swagger.swagger_client.models.list_notifications_request_list_notifications_query import ListNotificationsRequestListNotificationsQuery
+-from rime_sdk.swagger.swagger_client.models.list_predictions_request_prediction_query import ListPredictionsRequestPredictionQuery
++from rime_sdk.swagger.swagger_client.models.list_prediction_sets_request_prediction_query import ListPredictionSetsRequestPredictionQuery
+ from rime_sdk.swagger.swagger_client.models.list_summary_tests_request_list_summary_tests_query import ListSummaryTestsRequestListSummaryTestsQuery
+ from rime_sdk.swagger.swagger_client.models.list_test_cases_request_list_test_cases_query import ListTestCasesRequestListTestCasesQuery
+ from rime_sdk.swagger.swagger_client.models.managed_image_package_requirement import ManagedImagePackageRequirement
+ from rime_sdk.swagger.swagger_client.models.managed_image_package_type import ManagedImagePackageType
+ from rime_sdk.swagger.swagger_client.models.managed_image_pip_library import ManagedImagePipLibrary
+ from rime_sdk.swagger.swagger_client.models.managed_image_pip_requirement import ManagedImagePipRequirement
+ from rime_sdk.swagger.swagger_client.models.managed_image_role_type import ManagedImageRoleType
+ from rime_sdk.swagger.swagger_client.models.model_hugging_face_model_info import ModelHuggingFaceModelInfo
+-from rime_sdk.swagger.swagger_client.models.model_id_uuid_dataset_id_body import ModelIdUuidDatasetIdBody
+-from rime_sdk.swagger.swagger_client.models.model_id_uuid_dataset_id_body1 import ModelIdUuidDatasetIdBody1
+ from rime_sdk.swagger.swagger_client.models.model_model import ModelModel
+ from rime_sdk.swagger.swagger_client.models.model_model_info import ModelModelInfo
+ from rime_sdk.swagger.swagger_client.models.model_model_path_info import ModelModelPathInfo
+-from rime_sdk.swagger.swagger_client.models.model_project_id_uuid_body import ModelProjectIdUuidBody
++from rime_sdk.swagger.swagger_client.models.modelcards_model_card_model_card_id_uuid_body import ModelcardsModelCardModelCardIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.monitor_aggregation import MonitorAggregation
+ from rime_sdk.swagger.swagger_client.models.monitor_aggregation_type import MonitorAggregationType
+ from rime_sdk.swagger.swagger_client.models.monitor_anomaly_config import MonitorAnomalyConfig
+ from rime_sdk.swagger.swagger_client.models.monitor_artifact_identifier import MonitorArtifactIdentifier
+ from rime_sdk.swagger.swagger_client.models.monitor_difference_from_target import MonitorDifferenceFromTarget
+ from rime_sdk.swagger.swagger_client.models.monitor_excluded_transforms import MonitorExcludedTransforms
+ from rime_sdk.swagger.swagger_client.models.monitor_metric_degradation_config import MonitorMetricDegradationConfig
+@@ -135,43 +163,64 @@
+ from rime_sdk.swagger.swagger_client.models.protobuf_any import ProtobufAny
+ from rime_sdk.swagger.swagger_client.models.protobuf_null_value import ProtobufNullValue
+ from rime_sdk.swagger.swagger_client.models.rca_feature_cause import RcaFeatureCause
+ from rime_sdk.swagger.swagger_client.models.rca_rca_result import RcaRCAResult
+ from rime_sdk.swagger.swagger_client.models.rca_rca_role import RcaRCARole
+ from rime_sdk.swagger.swagger_client.models.rca_test_case_cause import RcaTestCaseCause
+ from rime_sdk.swagger.swagger_client.models.rca_test_case_id import RcaTestCaseID
++from rime_sdk.swagger.swagger_client.models.registry_metadata import RegistryMetadata
++from rime_sdk.swagger.swagger_client.models.registry_validity_status import RegistryValidityStatus
+ from rime_sdk.swagger.swagger_client.models.registryprediction_prediction import RegistrypredictionPrediction
+ from rime_sdk.swagger.swagger_client.models.rename_test_run_id_body import RenameTestRunIdBody
++from rime_sdk.swagger.swagger_client.models.resetpassword_user_id_uuid_body import ResetpasswordUserIdUuidBody
++from rime_sdk.swagger.swagger_client.models.rime_api_token_info import RimeAPITokenInfo
+ from rime_sdk.swagger.swagger_client.models.rime_actor_role import RimeActorRole
++from rime_sdk.swagger.swagger_client.models.rime_add_users_to_workspace_response import RimeAddUsersToWorkspaceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_agent import RimeAgent
+ from rime_sdk.swagger.swagger_client.models.rime_agent_status import RimeAgentStatus
+ from rime_sdk.swagger.swagger_client.models.rime_archived_job_logs import RimeArchivedJobLogs
+ from rime_sdk.swagger.swagger_client.models.rime_cancel_job_response import RimeCancelJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_category_metric import RimeCategoryMetric
+ from rime_sdk.swagger.swagger_client.models.rime_category_test_result import RimeCategoryTestResult
++from rime_sdk.swagger.swagger_client.models.rime_config_type import RimeConfigType
++from rime_sdk.swagger.swagger_client.models.rime_configure_integration_request_integration_variable import RimeConfigureIntegrationRequestIntegrationVariable
++from rime_sdk.swagger.swagger_client.models.rime_configure_integration_response import RimeConfigureIntegrationResponse
+ from rime_sdk.swagger.swagger_client.models.rime_continuous_test_job_progress import RimeContinuousTestJobProgress
+ from rime_sdk.swagger.swagger_client.models.rime_continuous_test_run_progress import RimeContinuousTestRunProgress
++from rime_sdk.swagger.swagger_client.models.rime_create_api_token_request import RimeCreateAPITokenRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_api_token_response import RimeCreateAPITokenResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_agent_request import RimeCreateAgentRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_agent_response import RimeCreateAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_custom_monitor_response import RimeCreateCustomMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_firewall_request import RimeCreateFirewallRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_firewall_response import RimeCreateFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_image_request import RimeCreateImageRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_image_response import RimeCreateImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_integration_request import RimeCreateIntegrationRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_integration_response import RimeCreateIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_model_card_response import RimeCreateModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_create_notification_request import RimeCreateNotificationRequest
+ from rime_sdk.swagger.swagger_client.models.rime_create_notification_response import RimeCreateNotificationResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_user_request import RimeCreateUserRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_user_response import RimeCreateUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_request import RimeCreateWorkspaceRequest
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_response import RimeCreateWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_create_workspace_tag_response import RimeCreateWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_deactivate_agent_response import RimeDeactivateAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_agent_response import RimeDeleteAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_custom_monitor_response import RimeDeleteCustomMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_dataset_response import RimeDeleteDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_firewall_response import RimeDeleteFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_image_response import RimeDeleteImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_integration_response import RimeDeleteIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_model_card_response import RimeDeleteModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_model_response import RimeDeleteModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_prediction_set_response import RimeDeletePredictionSetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_delete_uploaded_file_url_response import RimeDeleteUploadedFileURLResponse
++from rime_sdk.swagger.swagger_client.models.rime_delete_workspace_tag_response import RimeDeleteWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_ensure_image_existence_response import RimeEnsureImageExistenceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_fail_job_response import RimeFailJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_failing_row import RimeFailingRow
+ from rime_sdk.swagger.swagger_client.models.rime_failing_rows_result import RimeFailingRowsResult
+ from rime_sdk.swagger.swagger_client.models.rime_feature_flags import RimeFeatureFlags
+ from rime_sdk.swagger.swagger_client.models.rime_feature_type import RimeFeatureType
+ from rime_sdk.swagger.swagger_client.models.rime_finalize_cancellation_response import RimeFinalizeCancellationResponse
+@@ -181,71 +230,92 @@
+ from rime_sdk.swagger.swagger_client.models.rime_get_dataset_file_upload_url_response import RimeGetDatasetFileUploadURLResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_dataset_response import RimeGetDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_enabled_feature_response import RimeGetEnabledFeatureResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_feature_flag_jwt_response import RimeGetFeatureFlagJwtResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_feature_flags_response import RimeGetFeatureFlagsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_firewall_response import RimeGetFirewallResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_image_response import RimeGetImageResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_integration_response import RimeGetIntegrationResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_job_response import RimeGetJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_latest_logs_response import RimeGetLatestLogsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_limit_status_response import RimeGetLimitStatusResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_model_card_response import RimeGetModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_model_directory_upload_urls_response import RimeGetModelDirectoryUploadURLsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_model_response import RimeGetModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_monitor_result_response import RimeGetMonitorResultResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_prediction_set_response import RimeGetPredictionSetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_predictions_response import RimeGetPredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_project_id_response import RimeGetProjectIDResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_rime_info_response import RimeGetRIMEInfoResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_test_run_id_response import RimeGetTestRunIDResponse
+ from rime_sdk.swagger.swagger_client.models.rime_get_url_response import RimeGetURLResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_user_response import RimeGetUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_get_workspace_response import RimeGetWorkspaceResponse
+ from rime_sdk.swagger.swagger_client.models.rime_heartbeat_response import RimeHeartbeatResponse
+ from rime_sdk.swagger.swagger_client.models.rime_image_reference import RimeImageReference
+ from rime_sdk.swagger.swagger_client.models.rime_int_list import RimeIntList
++from rime_sdk.swagger.swagger_client.models.rime_integration_info import RimeIntegrationInfo
+ from rime_sdk.swagger.swagger_client.models.rime_job_data import RimeJobData
+ from rime_sdk.swagger.swagger_client.models.rime_job_data_continuous_incremental_test import RimeJobDataContinuousIncrementalTest
+ from rime_sdk.swagger.swagger_client.models.rime_job_data_stress_test import RimeJobDataStressTest
+ from rime_sdk.swagger.swagger_client.models.rime_job_metadata import RimeJobMetadata
+ from rime_sdk.swagger.swagger_client.models.rime_job_type import RimeJobType
+ from rime_sdk.swagger.swagger_client.models.rime_job_view import RimeJobView
+ from rime_sdk.swagger.swagger_client.models.rime_license_feature import RimeLicenseFeature
+ from rime_sdk.swagger.swagger_client.models.rime_license_limit import RimeLicenseLimit
+ from rime_sdk.swagger.swagger_client.models.rime_limit_status import RimeLimitStatus
+ from rime_sdk.swagger.swagger_client.models.rime_limit_status_status import RimeLimitStatusStatus
++from rime_sdk.swagger.swagger_client.models.rime_list_api_tokens_response import RimeListAPITokensResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_agents_response import RimeListAgentsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_current_user_roles_response import RimeListCurrentUserRolesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_datasets_response import RimeListDatasetsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_detection_events_request_query import RimeListDetectionEventsRequestQuery
+ from rime_sdk.swagger.swagger_client.models.rime_list_detection_events_response import RimeListDetectionEventsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_enabled_features_response import RimeListEnabledFeaturesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_file_scan_results_response import RimeListFileScanResultsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_images_request import RimeListImagesRequest
+ from rime_sdk.swagger.swagger_client.models.rime_list_images_response import RimeListImagesResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_jobs_for_project_request_query import RimeListJobsForProjectRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_jobs_for_project_response import RimeListJobsForProjectResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_jobs_request_query import RimeListJobsRequestQuery
+ from rime_sdk.swagger.swagger_client.models.rime_list_jobs_response import RimeListJobsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_metric_identifiers_response import RimeListMetricIdentifiersResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_model_cards_response import RimeListModelCardsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_models_response import RimeListModelsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_monitors_response import RimeListMonitorsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_notifications_response import RimeListNotificationsResponse
+-from rime_sdk.swagger.swagger_client.models.rime_list_predictions_response import RimeListPredictionsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_prediction_sets_response import RimeListPredictionSetsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_list_uploaded_file_urls_response import RimeListUploadedFileURLsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_users_of_workspace_response import RimeListUsersOfWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_users_request_query import RimeListUsersRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_users_response import RimeListUsersResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspace_integrations_response import RimeListWorkspaceIntegrationsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspace_tags_response import RimeListWorkspaceTagsResponse
++from rime_sdk.swagger.swagger_client.models.rime_list_workspaces_request_query import RimeListWorkspacesRequestQuery
++from rime_sdk.swagger.swagger_client.models.rime_list_workspaces_response import RimeListWorkspacesResponse
+ from rime_sdk.swagger.swagger_client.models.rime_long_description_tab import RimeLongDescriptionTab
+ from rime_sdk.swagger.swagger_client.models.rime_managed_image import RimeManagedImage
+ from rime_sdk.swagger.swagger_client.models.rime_managed_image_status import RimeManagedImageStatus
++from rime_sdk.swagger.swagger_client.models.rime_model_card import RimeModelCard
+ from rime_sdk.swagger.swagger_client.models.rime_model_task import RimeModelTask
+ from rime_sdk.swagger.swagger_client.models.rime_model_with_owner_details import RimeModelWithOwnerDetails
+ from rime_sdk.swagger.swagger_client.models.rime_monitor_data_point import RimeMonitorDataPoint
+ from rime_sdk.swagger.swagger_client.models.rime_named_double import RimeNamedDouble
+ from rime_sdk.swagger.swagger_client.models.rime_order import RimeOrder
+ from rime_sdk.swagger.swagger_client.models.rime_parent_role_subject_role_pair import RimeParentRoleSubjectRolePair
+ from rime_sdk.swagger.swagger_client.models.rime_ri_email_recipient import RimeRIEmailRecipient
+ from rime_sdk.swagger.swagger_client.models.rime_ri_plan import RimeRIPlan
+ from rime_sdk.swagger.swagger_client.models.rime_register_data_stream_response import RimeRegisterDataStreamResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_dataset_response import RimeRegisterDatasetResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_internal_agent_response import RimeRegisterInternalAgentResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_model_response import RimeRegisterModelResponse
+ from rime_sdk.swagger.swagger_client.models.rime_register_prediction_set_response import RimeRegisterPredictionSetResponse
++from rime_sdk.swagger.swagger_client.models.rime_remove_user_from_workspace_response import RimeRemoveUserFromWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_reset_password_response import RimeResetPasswordResponse
++from rime_sdk.swagger.swagger_client.models.rime_resolve_detection_event_response import RimeResolveDetectionEventResponse
+ from rime_sdk.swagger.swagger_client.models.rime_safe_url import RimeSafeURL
+ from rime_sdk.swagger.swagger_client.models.rime_send_ri_email_response import RimeSendRIEmailResponse
+ from rime_sdk.swagger.swagger_client.models.rime_severity import RimeSeverity
+ from rime_sdk.swagger.swagger_client.models.rime_severity_counts import RimeSeverityCounts
+ from rime_sdk.swagger.swagger_client.models.rime_sort_spec import RimeSortSpec
+ from rime_sdk.swagger.swagger_client.models.rime_start_continuous_test_request import RimeStartContinuousTestRequest
+ from rime_sdk.swagger.swagger_client.models.rime_start_continuous_test_response import RimeStartContinuousTestResponse
+@@ -253,61 +323,75 @@
+ from rime_sdk.swagger.swagger_client.models.rime_start_file_scan_response import RimeStartFileScanResponse
+ from rime_sdk.swagger.swagger_client.models.rime_start_stress_test_response import RimeStartStressTestResponse
+ from rime_sdk.swagger.swagger_client.models.rime_store_datapoints_response import RimeStoreDatapointsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_store_predictions_request_prediction import RimeStorePredictionsRequestPrediction
+ from rime_sdk.swagger.swagger_client.models.rime_store_predictions_response import RimeStorePredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_str_list import RimeStrList
+ from rime_sdk.swagger.swagger_client.models.rime_stress_test_job_progress import RimeStressTestJobProgress
++from rime_sdk.swagger.swagger_client.models.rime_subject_type import RimeSubjectType
+ from rime_sdk.swagger.swagger_client.models.rime_suggestion import RimeSuggestion
+ from rime_sdk.swagger.swagger_client.models.rime_sync_image_tag_response import RimeSyncImageTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_table_column import RimeTableColumn
+ from rime_sdk.swagger.swagger_client.models.rime_table_column_type import RimeTableColumnType
++from rime_sdk.swagger.swagger_client.models.rime_tag import RimeTag
+ from rime_sdk.swagger.swagger_client.models.rime_termination_reason import RimeTerminationReason
+ from rime_sdk.swagger.swagger_client.models.rime_test_case_monitor_info import RimeTestCaseMonitorInfo
+ from rime_sdk.swagger.swagger_client.models.rime_test_case_status import RimeTestCaseStatus
+ from rime_sdk.swagger.swagger_client.models.rime_test_metric import RimeTestMetric
+ from rime_sdk.swagger.swagger_client.models.rime_test_metric_category import RimeTestMetricCategory
+ from rime_sdk.swagger.swagger_client.models.rime_test_run_progress import RimeTestRunProgress
+ from rime_sdk.swagger.swagger_client.models.rime_test_task_status import RimeTestTaskStatus
+ from rime_sdk.swagger.swagger_client.models.rime_test_type import RimeTestType
+ from rime_sdk.swagger.swagger_client.models.rime_time_interval import RimeTimeInterval
++from rime_sdk.swagger.swagger_client.models.rime_token_type import RimeTokenType
+ from rime_sdk.swagger.swagger_client.models.rime_uuid import RimeUUID
+ from rime_sdk.swagger.swagger_client.models.rime_update_build_info_response import RimeUpdateBuildInfoResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_firewall_response import RimeUpdateFirewallResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_integration_response import RimeUpdateIntegrationResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_model_card_response import RimeUpdateModelCardResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_monitor_response import RimeUpdateMonitorResponse
+ from rime_sdk.swagger.swagger_client.models.rime_update_notification_response import RimeUpdateNotificationResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_user_of_workspace_response import RimeUpdateUserOfWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_user_response import RimeUpdateUserResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_workspace_response import RimeUpdateWorkspaceResponse
++from rime_sdk.swagger.swagger_client.models.rime_update_workspace_tag_response import RimeUpdateWorkspaceTagResponse
+ from rime_sdk.swagger.swagger_client.models.rime_upsert_feature_flags_response import RimeUpsertFeatureFlagsResponse
+ from rime_sdk.swagger.swagger_client.models.rime_upsert_job_response import RimeUpsertJobResponse
+ from rime_sdk.swagger.swagger_client.models.rime_user_detail_with_role import RimeUserDetailWithRole
++from rime_sdk.swagger.swagger_client.models.rime_user_role import RimeUserRole
+ from rime_sdk.swagger.swagger_client.models.rime_user_with_role import RimeUserWithRole
++from rime_sdk.swagger.swagger_client.models.rime_user_write_mask import RimeUserWriteMask
++from rime_sdk.swagger.swagger_client.models.rime_validate_test_config_response import RimeValidateTestConfigResponse
++from rime_sdk.swagger.swagger_client.models.rime_workspace import RimeWorkspace
++from rime_sdk.swagger.swagger_client.models.rime_workspace_write_mask import RimeWorkspaceWriteMask
+ from rime_sdk.swagger.swagger_client.models.riskscore_risk_category_type import RiskscoreRiskCategoryType
+ from rime_sdk.swagger.swagger_client.models.riskscore_risk_score import RiskscoreRiskScore
+ from rime_sdk.swagger.swagger_client.models.role_users_body import RoleUsersBody
+ from rime_sdk.swagger.swagger_client.models.role_workspace_body import RoleWorkspaceBody
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_custom_image import RuntimeinfoCustomImage
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_custom_image_type import RuntimeinfoCustomImageType
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_resource_request import RuntimeinfoResourceRequest
+ from rime_sdk.swagger.swagger_client.models.runtimeinfo_run_time_info import RuntimeinfoRunTimeInfo
+ from rime_sdk.swagger.swagger_client.models.schemadatacollector_prediction import SchemadatacollectorPrediction
++from rime_sdk.swagger.swagger_client.models.schemaintegration_integration_variable import SchemaintegrationIntegrationVariable
+ from rime_sdk.swagger.swagger_client.models.schemamonitor_config import SchemamonitorConfig
+ from rime_sdk.swagger.swagger_client.models.schemanotification_config import SchemanotificationConfig
+-from rime_sdk.swagger.swagger_client.models.schemaregistry_metadata import SchemaregistryMetadata
+ from rime_sdk.swagger.swagger_client.models.security_event_details_flagged_datapoint import SecurityEventDetailsFlaggedDatapoint
+ from rime_sdk.swagger.swagger_client.models.security_event_details_security_event_type import SecurityEventDetailsSecurityEventType
+ from rime_sdk.swagger.swagger_client.models.statedb_job_status import StatedbJobStatus
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_datapoints_response import StreamResultOfRimeGetDatapointsResponse
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_latest_logs_response import StreamResultOfRimeGetLatestLogsResponse
+ from rime_sdk.swagger.swagger_client.models.stream_result_of_rime_get_predictions_response import StreamResultOfRimeGetPredictionsResponse
+ from rime_sdk.swagger.swagger_client.models.stresstests_project_id_uuid_body import StresstestsProjectIdUuidBody
+-from rime_sdk.swagger.swagger_client.models.stresstests_project_id_uuid_body1 import StresstestsProjectIdUuidBody1
+ from rime_sdk.swagger.swagger_client.models.test_run_metrics_category_summary_metric import TestRunMetricsCategorySummaryMetric
+ from rime_sdk.swagger.swagger_client.models.test_run_metrics_model_perf_metric import TestRunMetricsModelPerfMetric
+ from rime_sdk.swagger.swagger_client.models.test_run_progress_test_batch_progress import TestRunProgressTestBatchProgress
+ from rime_sdk.swagger.swagger_client.models.testrun_annotated_test_config import TestrunAnnotatedTestConfig
+ from rime_sdk.swagger.swagger_client.models.testrun_connection_info import TestrunConnectionInfo
++from rime_sdk.swagger.swagger_client.models.testrun_custom_metric import TestrunCustomMetric
+ from rime_sdk.swagger.swagger_client.models.testrun_data_collector_info import TestrunDataCollectorInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_file_info import TestrunDataFileInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_info import TestrunDataInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_info_params import TestrunDataInfoParams
+ from rime_sdk.swagger.swagger_client.models.testrun_data_loading_info import TestrunDataLoadingInfo
+ from rime_sdk.swagger.swagger_client.models.testrun_data_profiling import TestrunDataProfiling
+ from rime_sdk.swagger.swagger_client.models.testrun_delta_lake_info import TestrunDeltaLakeInfo
+@@ -347,10 +431,18 @@
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data import UpsertJobRequestWriteMaskJobData
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data_continuous_incremental_test import UpsertJobRequestWriteMaskJobDataContinuousIncrementalTest
+ from rime_sdk.swagger.swagger_client.models.upsert_job_request_write_mask_job_data_stress_test import UpsertJobRequestWriteMaskJobDataStressTest
+ from rime_sdk.swagger.swagger_client.models.user_favorite_projects import UserFavoriteProjects
+ from rime_sdk.swagger.swagger_client.models.user_private_info import UserPrivateInfo
+ from rime_sdk.swagger.swagger_client.models.user_role import UserRole
+ from rime_sdk.swagger.swagger_client.models.user_user_detail import UserUserDetail
++from rime_sdk.swagger.swagger_client.models.users_user_id_uuid_body import UsersUserIdUuidBody
+ from rime_sdk.swagger.swagger_client.models.users_user_user_id_uuid_body import UsersUserUserIdUuidBody
++from rime_sdk.swagger.swagger_client.models.users_user_user_id_uuid_body1 import UsersUserUserIdUuidBody1
++from rime_sdk.swagger.swagger_client.models.v1betaintegrationsintegration_id_uuid_integration import V1betaintegrationsintegrationIdUuidIntegration
++from rime_sdk.swagger.swagger_client.models.v1betamodelcardsmodel_card_model_card_id_uuid_model_card import V1betamodelcardsmodelCardModelCardIdUuidModelCard
+ from rime_sdk.swagger.swagger_client.models.v1firewallfirewall_firewall_id_uuid_firewall import V1firewallfirewallFirewallIdUuidFirewall
+ from rime_sdk.swagger.swagger_client.models.v1projectsproject_id_uuidroleusersuser_user_id_uuid_user import V1projectsprojectIdUuidroleusersuserUserIdUuidUser
++from rime_sdk.swagger.swagger_client.models.v1usersuser_id_uuid_user import V1usersuserIdUuidUser
++from rime_sdk.swagger.swagger_client.models.v1workspaceworkspace_workspace_id_uuid_workspace import V1workspaceworkspaceWorkspaceIdUuidWorkspace
++from rime_sdk.swagger.swagger_client.models.workspace_id_uuid_users_body import WorkspaceIdUuidUsersBody
++from rime_sdk.swagger.swagger_client.models.workspace_workspace_workspace_id_uuid_body import WorkspaceWorkspaceWorkspaceIdUuidBody
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_category_test_identifier.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_category_test_identifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_subset_test_metric_identifier.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_subset_test_metric_identifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/artifact_identifier_test_case_metric_identifier.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/artifact_identifier_test_case_metric_identifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_aws_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_aws_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_gcp_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_gcp_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_agent_request_local_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_agent_request_local_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/create_firewall_request_scheduled_ct_parameters.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/create_firewall_request_scheduled_ct_parameters.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/custom_image_pull_secret.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/custom_image_pull_secret.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/custommonitors_name_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/custommonitors_name_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_data_stream_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_data_stream_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_info_params_feature_intersection.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_info_params_feature_intersection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_info_params_ranking_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_info_params_ranking_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_profiling_column_type_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_profiling_column_type_info.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -72,26 +72,26 @@
+         if unseen_values_allowed_criteria is not None:
+             self.unseen_values_allowed_criteria = unseen_values_allowed_criteria
+ 
+     @property
+     def min_nunique_for_numeric(self):
+         """Gets the min_nunique_for_numeric of this DataProfilingColumnTypeInfo.  # noqa: E501
+ 
+-        Minimum number of unique values in column for it to be considered a numeric column, otherwise considered categorical.  # noqa: E501
++        Specifies a minimum number of unique values in a column. Columns with at least the specified number of unique values are considered numeric columns. Columns with fewer unique values are considered categorical.  # noqa: E501
+ 
+         :return: The min_nunique_for_numeric of this DataProfilingColumnTypeInfo.  # noqa: E501
+         :rtype: str
+         """
+         return self._min_nunique_for_numeric
+ 
+     @min_nunique_for_numeric.setter
+     def min_nunique_for_numeric(self, min_nunique_for_numeric):
+         """Sets the min_nunique_for_numeric of this DataProfilingColumnTypeInfo.
+ 
+-        Minimum number of unique values in column for it to be considered a numeric column, otherwise considered categorical.  # noqa: E501
++        Specifies a minimum number of unique values in a column. Columns with at least the specified number of unique values are considered numeric columns. Columns with fewer unique values are considered categorical.  # noqa: E501
+ 
+         :param min_nunique_for_numeric: The min_nunique_for_numeric of this DataProfilingColumnTypeInfo.  # noqa: E501
+         :type: str
+         """
+ 
+         self._min_nunique_for_numeric = min_nunique_for_numeric
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/data_profiling_feature_relationship_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/data_profiling_feature_relationship_info.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -80,72 +80,72 @@
+ 
+         self._num_feats_to_profile = num_feats_to_profile
+ 
+     @property
+     def compute_feature_relationships(self):
+         """Gets the compute_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+ 
+-        Whether to compute feature relationships.  # noqa: E501
++        Specifies whether to compute feature relationships.  # noqa: E501
+ 
+         :return: The compute_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :rtype: bool
+         """
+         return self._compute_feature_relationships
+ 
+     @compute_feature_relationships.setter
+     def compute_feature_relationships(self, compute_feature_relationships):
+         """Sets the compute_feature_relationships of this DataProfilingFeatureRelationshipInfo.
+ 
+-        Whether to compute feature relationships.  # noqa: E501
++        Specifies whether to compute feature relationships.  # noqa: E501
+ 
+         :param compute_feature_relationships: The compute_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._compute_feature_relationships = compute_feature_relationships
+ 
+     @property
+     def compute_numeric_feature_relationships(self):
+         """Gets the compute_numeric_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+ 
+-        Whether to compute feature relationships for numeric columns.  # noqa: E501
++        Specifies whether to compute feature relationships for numeric columns.  # noqa: E501
+ 
+         :return: The compute_numeric_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :rtype: bool
+         """
+         return self._compute_numeric_feature_relationships
+ 
+     @compute_numeric_feature_relationships.setter
+     def compute_numeric_feature_relationships(self, compute_numeric_feature_relationships):
+         """Sets the compute_numeric_feature_relationships of this DataProfilingFeatureRelationshipInfo.
+ 
+-        Whether to compute feature relationships for numeric columns.  # noqa: E501
++        Specifies whether to compute feature relationships for numeric columns.  # noqa: E501
+ 
+         :param compute_numeric_feature_relationships: The compute_numeric_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._compute_numeric_feature_relationships = compute_numeric_feature_relationships
+ 
+     @property
+     def ignore_nan_for_feature_relationships(self):
+         """Gets the ignore_nan_for_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+ 
+-        Whether to ignore nan values when computing feature relationships.  # noqa: E501
++        Specifies whether to ignore NaN values when computing feature relationships.  # noqa: E501
+ 
+         :return: The ignore_nan_for_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :rtype: bool
+         """
+         return self._ignore_nan_for_feature_relationships
+ 
+     @ignore_nan_for_feature_relationships.setter
+     def ignore_nan_for_feature_relationships(self, ignore_nan_for_feature_relationships):
+         """Sets the ignore_nan_for_feature_relationships of this DataProfilingFeatureRelationshipInfo.
+ 
+-        Whether to ignore nan values when computing feature relationships.  # noqa: E501
++        Specifies whether to ignore NaN values when computing feature relationships.  # noqa: E501
+ 
+         :param ignore_nan_for_feature_relationships: The ignore_nan_for_feature_relationships of this DataProfilingFeatureRelationshipInfo.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._ignore_nan_for_feature_relationships = ignore_nan_for_feature_relationships
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datacollector_datapoint.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datacollector_datapoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datacollector_datapoint_row.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datacollector_datapoint_row.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_ct_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_ct_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_dataset.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_dataset.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -29,43 +29,46 @@
+     """
+     swagger_types = {
+         'name': 'str',
+         'dataset_id': 'str',
+         'project_ids': 'list[RimeUUID]',
+         'creator_id': 'RimeUUID',
+         'creation_time': 'datetime',
+-        'user_metadata': 'SchemaregistryMetadata',
++        'user_metadata': 'RegistryMetadata',
+         'integration_id': 'RimeUUID',
+         'data_info': 'TestrunSingleDataInfo',
+-        'ct_info': 'DatasetCTInfo'
++        'ct_info': 'DatasetCTInfo',
++        'validity_status': 'RegistryValidityStatus'
+     }
+ 
+     attribute_map = {
+         'name': 'name',
+         'dataset_id': 'datasetId',
+         'project_ids': 'projectIds',
+         'creator_id': 'creatorId',
+         'creation_time': 'creationTime',
+         'user_metadata': 'userMetadata',
+         'integration_id': 'integrationId',
+         'data_info': 'dataInfo',
+-        'ct_info': 'ctInfo'
++        'ct_info': 'ctInfo',
++        'validity_status': 'validityStatus'
+     }
+ 
+-    def __init__(self, name=None, dataset_id=None, project_ids=None, creator_id=None, creation_time=None, user_metadata=None, integration_id=None, data_info=None, ct_info=None):  # noqa: E501
++    def __init__(self, name=None, dataset_id=None, project_ids=None, creator_id=None, creation_time=None, user_metadata=None, integration_id=None, data_info=None, ct_info=None, validity_status=None):  # noqa: E501
+         """DatasetDataset - a model defined in Swagger"""  # noqa: E501
+         self._name = None
+         self._dataset_id = None
+         self._project_ids = None
+         self._creator_id = None
+         self._creation_time = None
+         self._user_metadata = None
+         self._integration_id = None
+         self._data_info = None
+         self._ct_info = None
++        self._validity_status = None
+         self.discriminator = None
+         if name is not None:
+             self.name = name
+         if dataset_id is not None:
+             self.dataset_id = dataset_id
+         if project_ids is not None:
+             self.project_ids = project_ids
+@@ -77,14 +80,16 @@
+             self.user_metadata = user_metadata
+         if integration_id is not None:
+             self.integration_id = integration_id
+         if data_info is not None:
+             self.data_info = data_info
+         if ct_info is not None:
+             self.ct_info = ct_info
++        if validity_status is not None:
++            self.validity_status = validity_status
+ 
+     @property
+     def name(self):
+         """Gets the name of this DatasetDataset.  # noqa: E501
+ 
+         Name and dataset_id are both enforced to be unique. Name is user specified. dataset_id is internally generated. It is semantically determined as firewall_id#start_time#end_time in the case the CTInfo is provided.  # noqa: E501
+ 
+@@ -193,25 +198,25 @@
+ 
+     @property
+     def user_metadata(self):
+         """Gets the user_metadata of this DatasetDataset.  # noqa: E501
+ 
+ 
+         :return: The user_metadata of this DatasetDataset.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :rtype: RegistryMetadata
+         """
+         return self._user_metadata
+ 
+     @user_metadata.setter
+     def user_metadata(self, user_metadata):
+         """Sets the user_metadata of this DatasetDataset.
+ 
+ 
+         :param user_metadata: The user_metadata of this DatasetDataset.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :type: RegistryMetadata
+         """
+ 
+         self._user_metadata = user_metadata
+ 
+     @property
+     def integration_id(self):
+         """Gets the integration_id of this DatasetDataset.  # noqa: E501
+@@ -271,14 +276,35 @@
+ 
+         :param ct_info: The ct_info of this DatasetDataset.  # noqa: E501
+         :type: DatasetCTInfo
+         """
+ 
+         self._ct_info = ct_info
+ 
++    @property
++    def validity_status(self):
++        """Gets the validity_status of this DatasetDataset.  # noqa: E501
++
++
++        :return: The validity_status of this DatasetDataset.  # noqa: E501
++        :rtype: RegistryValidityStatus
++        """
++        return self._validity_status
++
++    @validity_status.setter
++    def validity_status(self, validity_status):
++        """Sets the validity_status of this DatasetDataset.
++
++
++        :param validity_status: The validity_status of this DatasetDataset.  # noqa: E501
++        :type: RegistryValidityStatus
++        """
++
++        self._validity_status = validity_status
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/dataset_project_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_id_uuid_dataset_body.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -11,30 +11,30 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class DatasetProjectIdUuidBody(object):
++class ProjectIdUuidDatasetBody(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+         'project_id': 'object',
+         'name': 'str',
+-        'metadata': 'SchemaregistryMetadata',
++        'metadata': 'RegistryMetadata',
+         'integration_id': 'RimeUUID',
+         'data_info': 'TestrunSingleDataInfo',
+         'ct_info': 'DatasetCTInfo'
+     }
+ 
+     attribute_map = {
+         'project_id': 'projectId',
+@@ -42,15 +42,15 @@
+         'metadata': 'metadata',
+         'integration_id': 'integrationId',
+         'data_info': 'dataInfo',
+         'ct_info': 'ctInfo'
+     }
+ 
+     def __init__(self, project_id=None, name=None, metadata=None, integration_id=None, data_info=None, ct_info=None):  # noqa: E501
+-        """DatasetProjectIdUuidBody - a model defined in Swagger"""  # noqa: E501
++        """ProjectIdUuidDatasetBody - a model defined in Swagger"""  # noqa: E501
+         self._project_id = None
+         self._name = None
+         self._metadata = None
+         self._integration_id = None
+         self._data_info = None
+         self._ct_info = None
+         self.discriminator = None
+@@ -64,137 +64,139 @@
+         if data_info is not None:
+             self.data_info = data_info
+         if ct_info is not None:
+             self.ct_info = ct_info
+ 
+     @property
+     def project_id(self):
+-        """Gets the project_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :return: The project_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        :return: The project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :rtype: object
+         """
+         return self._project_id
+ 
+     @project_id.setter
+     def project_id(self, project_id):
+-        """Sets the project_id of this DatasetProjectIdUuidBody.
++        """Sets the project_id of this ProjectIdUuidDatasetBody.
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :param project_id: The project_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        :param project_id: The project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :type: object
+         """
+ 
+         self._project_id = project_id
+ 
+     @property
+     def name(self):
+-        """Gets the name of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the name of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
++        Unique name of the Dataset.  # noqa: E501
+ 
+-        :return: The name of this DatasetProjectIdUuidBody.  # noqa: E501
++        :return: The name of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :rtype: str
+         """
+         return self._name
+ 
+     @name.setter
+     def name(self, name):
+-        """Sets the name of this DatasetProjectIdUuidBody.
++        """Sets the name of this ProjectIdUuidDatasetBody.
+ 
++        Unique name of the Dataset.  # noqa: E501
+ 
+-        :param name: The name of this DatasetProjectIdUuidBody.  # noqa: E501
++        :param name: The name of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :type: str
+         """
+         if name is None:
+             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+ 
+         self._name = name
+ 
+     @property
+     def metadata(self):
+-        """Gets the metadata of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
+ 
+-        :return: The metadata of this DatasetProjectIdUuidBody.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
++        :rtype: RegistryMetadata
+         """
+         return self._metadata
+ 
+     @metadata.setter
+     def metadata(self, metadata):
+-        """Sets the metadata of this DatasetProjectIdUuidBody.
++        """Sets the metadata of this ProjectIdUuidDatasetBody.
+ 
+ 
+-        :param metadata: The metadata of this DatasetProjectIdUuidBody.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param metadata: The metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
++        :type: RegistryMetadata
+         """
+ 
+         self._metadata = metadata
+ 
+     @property
+     def integration_id(self):
+-        """Gets the integration_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
+ 
+-        :return: The integration_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        :return: The integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :rtype: RimeUUID
+         """
+         return self._integration_id
+ 
+     @integration_id.setter
+     def integration_id(self, integration_id):
+-        """Sets the integration_id of this DatasetProjectIdUuidBody.
++        """Sets the integration_id of this ProjectIdUuidDatasetBody.
+ 
+ 
+-        :param integration_id: The integration_id of this DatasetProjectIdUuidBody.  # noqa: E501
++        :param integration_id: The integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :type: RimeUUID
+         """
+ 
+         self._integration_id = integration_id
+ 
+     @property
+     def data_info(self):
+-        """Gets the data_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
+ 
+-        :return: The data_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        :return: The data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :rtype: TestrunSingleDataInfo
+         """
+         return self._data_info
+ 
+     @data_info.setter
+     def data_info(self, data_info):
+-        """Sets the data_info of this DatasetProjectIdUuidBody.
++        """Sets the data_info of this ProjectIdUuidDatasetBody.
+ 
+ 
+-        :param data_info: The data_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        :param data_info: The data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :type: TestrunSingleDataInfo
+         """
+ 
+         self._data_info = data_info
+ 
+     @property
+     def ct_info(self):
+-        """Gets the ct_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        """Gets the ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+ 
+ 
+-        :return: The ct_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        :return: The ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :rtype: DatasetCTInfo
+         """
+         return self._ct_info
+ 
+     @ct_info.setter
+     def ct_info(self, ct_info):
+-        """Sets the ct_info of this DatasetProjectIdUuidBody.
++        """Sets the ct_info of this ProjectIdUuidDatasetBody.
+ 
+ 
+-        :param ct_info: The ct_info of this DatasetProjectIdUuidBody.  # noqa: E501
++        :param ct_info: The ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+         :type: DatasetCTInfo
+         """
+ 
+         self._ct_info = ct_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -213,15 +215,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(DatasetProjectIdUuidBody, dict):
++        if issubclass(ProjectIdUuidDatasetBody, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -229,15 +231,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, DatasetProjectIdUuidBody):
++        if not isinstance(other, ProjectIdUuidDatasetBody):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/datastream_project_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/datastream_project_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_detection_event.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_detection_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_event_detail.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_event_detail.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_event_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_event_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_metric_degradation_event_details.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_metric_degradation_event_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_resolution.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_resolution.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/detection_security_event_details.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/detection_security_event_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/difference_from_target_difference.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/difference_from_target_difference.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/difference_from_target_target.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/difference_from_target_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/digest_config_digest_frequency.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/digest_config_digest_frequency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_file_scan_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_file_scan_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_huggingface_model_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_huggingface_model_info.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -42,24 +42,26 @@
+         if scan_path is not None:
+             self.scan_path = scan_path
+ 
+     @property
+     def scan_path(self):
+         """Gets the scan_path of this FilescanningHuggingfaceModelInfo.  # noqa: E501
+ 
++        HuggingFace repository ID of the model file.  # noqa: E501
+ 
+         :return: The scan_path of this FilescanningHuggingfaceModelInfo.  # noqa: E501
+         :rtype: str
+         """
+         return self._scan_path
+ 
+     @scan_path.setter
+     def scan_path(self, scan_path):
+         """Sets the scan_path of this FilescanningHuggingfaceModelInfo.
+ 
++        HuggingFace repository ID of the model file.  # noqa: E501
+ 
+         :param scan_path: The scan_path of this FilescanningHuggingfaceModelInfo.  # noqa: E501
+         :type: str
+         """
+ 
+         self._scan_path = scan_path
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_model_file_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_model_file_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_pytorch_model_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_pytorch_model_info.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -42,24 +42,26 @@
+         if scan_path is not None:
+             self.scan_path = scan_path
+ 
+     @property
+     def scan_path(self):
+         """Gets the scan_path of this FilescanningPytorchModelInfo.  # noqa: E501
+ 
++        Path to the Pytorch model file.  # noqa: E501
+ 
+         :return: The scan_path of this FilescanningPytorchModelInfo.  # noqa: E501
+         :rtype: str
+         """
+         return self._scan_path
+ 
+     @scan_path.setter
+     def scan_path(self, scan_path):
+         """Sets the scan_path of this FilescanningPytorchModelInfo.
+ 
++        Path to the Pytorch model file.  # noqa: E501
+ 
+         :param scan_path: The scan_path of this FilescanningPytorchModelInfo.  # noqa: E501
+         :type: str
+         """
+ 
+         self._scan_path = scan_path
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_security_report.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_security_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/filescanning_security_report_import_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/filescanning_security_report_import_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_custom_loader_location.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_custom_loader_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_data_collector_location.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_data_collector_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_data_location.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_data_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_delta_lake_location.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_delta_lake_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_firewall.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_firewall.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_firewall_firewall_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_firewall_firewall_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_latest_run_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_latest_run_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_location_args.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_location_args.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_location_params.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_location_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_scheduled_ct_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_scheduled_ct_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/firewall_test_category_severity.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/firewall_test_category_severity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/googlerpc_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/googlerpc_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/image_reference_reference_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/image_reference_reference_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_agents_request_list_agents_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_agents_request_list_agents_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_datasets_request_datasets_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_datasets_request_datasets_query.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'firewall_id': 'str',
++        'firewall_id': 'RimeUUID',
+         'scheduled_ct_intervals': 'RimeTimeInterval'
+     }
+ 
+     attribute_map = {
+         'firewall_id': 'firewallId',
+         'scheduled_ct_intervals': 'scheduledCtIntervals'
+     }
+@@ -47,29 +47,27 @@
+         if scheduled_ct_intervals is not None:
+             self.scheduled_ct_intervals = scheduled_ct_intervals
+ 
+     @property
+     def firewall_id(self):
+         """Gets the firewall_id of this ListDatasetsRequestDatasetsQuery.  # noqa: E501
+ 
+-        Uniquely specifies a Firewall.  # noqa: E501
+ 
+         :return: The firewall_id of this ListDatasetsRequestDatasetsQuery.  # noqa: E501
+-        :rtype: str
++        :rtype: RimeUUID
+         """
+         return self._firewall_id
+ 
+     @firewall_id.setter
+     def firewall_id(self, firewall_id):
+         """Sets the firewall_id of this ListDatasetsRequestDatasetsQuery.
+ 
+-        Uniquely specifies a Firewall.  # noqa: E501
+ 
+         :param firewall_id: The firewall_id of this ListDatasetsRequestDatasetsQuery.  # noqa: E501
+-        :type: str
++        :type: RimeUUID
+         """
+ 
+         self._firewall_id = firewall_id
+ 
+     @property
+     def scheduled_ct_intervals(self):
+         """Gets the scheduled_ct_intervals of this ListDatasetsRequestDatasetsQuery.  # noqa: E501
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_images_request_pip_library_filter.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_images_request_pip_library_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_aggregated_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_aggregated_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metric_without_subsets.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metric_without_subsets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metrics.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metrics.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_models_request_model_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_models_request_model_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_monitors_request_filter.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_monitors_request_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_notifications_request_list_notifications_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_notifications_request_list_notifications_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_predictions_request_prediction_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_prediction_sets_request_prediction_query.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ListPredictionsRequestPredictionQuery(object):
++class ListPredictionSetsRequestPredictionQuery(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+@@ -34,64 +34,64 @@
+ 
+     attribute_map = {
+         'model_id': 'modelId',
+         'dataset_id': 'datasetId'
+     }
+ 
+     def __init__(self, model_id=None, dataset_id=None):  # noqa: E501
+-        """ListPredictionsRequestPredictionQuery - a model defined in Swagger"""  # noqa: E501
++        """ListPredictionSetsRequestPredictionQuery - a model defined in Swagger"""  # noqa: E501
+         self._model_id = None
+         self._dataset_id = None
+         self.discriminator = None
+         if model_id is not None:
+             self.model_id = model_id
+         if dataset_id is not None:
+             self.dataset_id = dataset_id
+ 
+     @property
+     def model_id(self):
+-        """Gets the model_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        """Gets the model_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+ 
+         Uniquely specifies a Model.  # noqa: E501
+ 
+-        :return: The model_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        :return: The model_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+         :rtype: str
+         """
+         return self._model_id
+ 
+     @model_id.setter
+     def model_id(self, model_id):
+-        """Sets the model_id of this ListPredictionsRequestPredictionQuery.
++        """Sets the model_id of this ListPredictionSetsRequestPredictionQuery.
+ 
+         Uniquely specifies a Model.  # noqa: E501
+ 
+-        :param model_id: The model_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        :param model_id: The model_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+         :type: str
+         """
+ 
+         self._model_id = model_id
+ 
+     @property
+     def dataset_id(self):
+-        """Gets the dataset_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        """Gets the dataset_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+ 
+         Uniquely specifies a Dataset.  # noqa: E501
+ 
+-        :return: The dataset_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        :return: The dataset_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+         :rtype: str
+         """
+         return self._dataset_id
+ 
+     @dataset_id.setter
+     def dataset_id(self, dataset_id):
+-        """Sets the dataset_id of this ListPredictionsRequestPredictionQuery.
++        """Sets the dataset_id of this ListPredictionSetsRequestPredictionQuery.
+ 
+         Uniquely specifies a Dataset.  # noqa: E501
+ 
+-        :param dataset_id: The dataset_id of this ListPredictionsRequestPredictionQuery.  # noqa: E501
++        :param dataset_id: The dataset_id of this ListPredictionSetsRequestPredictionQuery.  # noqa: E501
+         :type: str
+         """
+ 
+         self._dataset_id = dataset_id
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -110,15 +110,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ListPredictionsRequestPredictionQuery, dict):
++        if issubclass(ListPredictionSetsRequestPredictionQuery, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -126,15 +126,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ListPredictionsRequestPredictionQuery):
++        if not isinstance(other, ListPredictionSetsRequestPredictionQuery):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_summary_tests_request_list_summary_tests_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_summary_tests_request_list_summary_tests_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/list_test_cases_request_list_test_cases_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/list_test_cases_request_list_test_cases_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_package_requirement.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_package_requirement.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_package_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_package_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_pip_library.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_pip_library.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_pip_requirement.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_pip_requirement.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/managed_image_role_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/managed_image_role_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_hugging_face_model_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_hugging_face_model_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_id_uuid_model_body.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -11,169 +11,172 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ModelIdUuidDatasetIdBody(object):
++class ProjectIdUuidModelBody(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+         'project_id': 'object',
+-        'model_id': 'object',
+-        'metadata': 'SchemaregistryMetadata',
+-        'integration_id': 'RimeUUID',
+-        'pred_info': 'TestrunPredInfo'
++        'name': 'str',
++        'metadata': 'RegistryMetadata',
++        'external_id': 'str',
++        'model_info': 'ModelModelInfo'
+     }
+ 
+     attribute_map = {
+         'project_id': 'projectId',
+-        'model_id': 'modelId',
++        'name': 'name',
+         'metadata': 'metadata',
+-        'integration_id': 'integrationId',
+-        'pred_info': 'predInfo'
++        'external_id': 'externalId',
++        'model_info': 'modelInfo'
+     }
+ 
+-    def __init__(self, project_id=None, model_id=None, metadata=None, integration_id=None, pred_info=None):  # noqa: E501
+-        """ModelIdUuidDatasetIdBody - a model defined in Swagger"""  # noqa: E501
++    def __init__(self, project_id=None, name=None, metadata=None, external_id=None, model_info=None):  # noqa: E501
++        """ProjectIdUuidModelBody - a model defined in Swagger"""  # noqa: E501
+         self._project_id = None
+-        self._model_id = None
++        self._name = None
+         self._metadata = None
+-        self._integration_id = None
+-        self._pred_info = None
++        self._external_id = None
++        self._model_info = None
+         self.discriminator = None
+         if project_id is not None:
+             self.project_id = project_id
+-        if model_id is not None:
+-            self.model_id = model_id
++        self.name = name
+         if metadata is not None:
+             self.metadata = metadata
+-        if integration_id is not None:
+-            self.integration_id = integration_id
+-        if pred_info is not None:
+-            self.pred_info = pred_info
++        if external_id is not None:
++            self.external_id = external_id
++        if model_info is not None:
++            self.model_info = model_info
+ 
+     @property
+     def project_id(self):
+-        """Gets the project_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
++        """Gets the project_id of this ProjectIdUuidModelBody.  # noqa: E501
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :return: The project_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
++        :return: The project_id of this ProjectIdUuidModelBody.  # noqa: E501
+         :rtype: object
+         """
+         return self._project_id
+ 
+     @project_id.setter
+     def project_id(self, project_id):
+-        """Sets the project_id of this ModelIdUuidDatasetIdBody.
++        """Sets the project_id of this ProjectIdUuidModelBody.
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
++        :param project_id: The project_id of this ProjectIdUuidModelBody.  # noqa: E501
+         :type: object
+         """
+ 
+         self._project_id = project_id
+ 
+     @property
+-    def model_id(self):
+-        """Gets the model_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
++    def name(self):
++        """Gets the name of this ProjectIdUuidModelBody.  # noqa: E501
+ 
+-        Uniquely specifies a Model.  # noqa: E501
++        Unique name of the Model.  # noqa: E501
+ 
+-        :return: The model_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :rtype: object
++        :return: The name of this ProjectIdUuidModelBody.  # noqa: E501
++        :rtype: str
+         """
+-        return self._model_id
++        return self._name
+ 
+-    @model_id.setter
+-    def model_id(self, model_id):
+-        """Sets the model_id of this ModelIdUuidDatasetIdBody.
++    @name.setter
++    def name(self, name):
++        """Sets the name of this ProjectIdUuidModelBody.
+ 
+-        Uniquely specifies a Model.  # noqa: E501
++        Unique name of the Model.  # noqa: E501
+ 
+-        :param model_id: The model_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :type: object
++        :param name: The name of this ProjectIdUuidModelBody.  # noqa: E501
++        :type: str
+         """
++        if name is None:
++            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+ 
+-        self._model_id = model_id
++        self._name = name
+ 
+     @property
+     def metadata(self):
+-        """Gets the metadata of this ModelIdUuidDatasetIdBody.  # noqa: E501
++        """Gets the metadata of this ProjectIdUuidModelBody.  # noqa: E501
+ 
+ 
+-        :return: The metadata of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The metadata of this ProjectIdUuidModelBody.  # noqa: E501
++        :rtype: RegistryMetadata
+         """
+         return self._metadata
+ 
+     @metadata.setter
+     def metadata(self, metadata):
+-        """Sets the metadata of this ModelIdUuidDatasetIdBody.
++        """Sets the metadata of this ProjectIdUuidModelBody.
+ 
+ 
+-        :param metadata: The metadata of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param metadata: The metadata of this ProjectIdUuidModelBody.  # noqa: E501
++        :type: RegistryMetadata
+         """
+ 
+         self._metadata = metadata
+ 
+     @property
+-    def integration_id(self):
+-        """Gets the integration_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
++    def external_id(self):
++        """Gets the external_id of this ProjectIdUuidModelBody.  # noqa: E501
+ 
++        External ID that can be used to identify the model.  # noqa: E501
+ 
+-        :return: The integration_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :rtype: RimeUUID
++        :return: The external_id of this ProjectIdUuidModelBody.  # noqa: E501
++        :rtype: str
+         """
+-        return self._integration_id
++        return self._external_id
+ 
+-    @integration_id.setter
+-    def integration_id(self, integration_id):
+-        """Sets the integration_id of this ModelIdUuidDatasetIdBody.
++    @external_id.setter
++    def external_id(self, external_id):
++        """Sets the external_id of this ProjectIdUuidModelBody.
+ 
++        External ID that can be used to identify the model.  # noqa: E501
+ 
+-        :param integration_id: The integration_id of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :type: RimeUUID
++        :param external_id: The external_id of this ProjectIdUuidModelBody.  # noqa: E501
++        :type: str
+         """
+ 
+-        self._integration_id = integration_id
++        self._external_id = external_id
+ 
+     @property
+-    def pred_info(self):
+-        """Gets the pred_info of this ModelIdUuidDatasetIdBody.  # noqa: E501
++    def model_info(self):
++        """Gets the model_info of this ProjectIdUuidModelBody.  # noqa: E501
+ 
+ 
+-        :return: The pred_info of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :rtype: TestrunPredInfo
++        :return: The model_info of this ProjectIdUuidModelBody.  # noqa: E501
++        :rtype: ModelModelInfo
+         """
+-        return self._pred_info
++        return self._model_info
+ 
+-    @pred_info.setter
+-    def pred_info(self, pred_info):
+-        """Sets the pred_info of this ModelIdUuidDatasetIdBody.
++    @model_info.setter
++    def model_info(self, model_info):
++        """Sets the model_info of this ProjectIdUuidModelBody.
+ 
+ 
+-        :param pred_info: The pred_info of this ModelIdUuidDatasetIdBody.  # noqa: E501
+-        :type: TestrunPredInfo
++        :param model_info: The model_info of this ProjectIdUuidModelBody.  # noqa: E501
++        :type: ModelModelInfo
+         """
+ 
+-        self._pred_info = pred_info
++        self._model_info = model_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -188,15 +191,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ModelIdUuidDatasetIdBody, dict):
++        if issubclass(ProjectIdUuidModelBody, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -204,15 +207,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ModelIdUuidDatasetIdBody):
++        if not isinstance(other, ProjectIdUuidModelBody):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body1.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/dataset_id_prediction_body.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -11,44 +11,44 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ModelIdUuidDatasetIdBody1(object):
++class DatasetIdPredictionBody(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+         'project_id': 'object',
+         'model_id': 'object',
+-        'metadata': 'SchemaregistryMetadata',
++        'metadata': 'RegistryMetadata',
+         'integration_id': 'RimeUUID',
+         'pred_info': 'TestrunPredInfo'
+     }
+ 
+     attribute_map = {
+         'project_id': 'projectId',
+         'model_id': 'modelId',
+         'metadata': 'metadata',
+         'integration_id': 'integrationId',
+         'pred_info': 'predInfo'
+     }
+ 
+     def __init__(self, project_id=None, model_id=None, metadata=None, integration_id=None, pred_info=None):  # noqa: E501
+-        """ModelIdUuidDatasetIdBody1 - a model defined in Swagger"""  # noqa: E501
++        """DatasetIdPredictionBody - a model defined in Swagger"""  # noqa: E501
+         self._project_id = None
+         self._model_id = None
+         self._metadata = None
+         self._integration_id = None
+         self._pred_info = None
+         self.discriminator = None
+         if project_id is not None:
+@@ -60,116 +60,116 @@
+         if integration_id is not None:
+             self.integration_id = integration_id
+         if pred_info is not None:
+             self.pred_info = pred_info
+ 
+     @property
+     def project_id(self):
+-        """Gets the project_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        """Gets the project_id of this DatasetIdPredictionBody.  # noqa: E501
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :return: The project_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :return: The project_id of this DatasetIdPredictionBody.  # noqa: E501
+         :rtype: object
+         """
+         return self._project_id
+ 
+     @project_id.setter
+     def project_id(self, project_id):
+-        """Sets the project_id of this ModelIdUuidDatasetIdBody1.
++        """Sets the project_id of this DatasetIdPredictionBody.
+ 
+         Uniquely specifies a Project.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :param project_id: The project_id of this DatasetIdPredictionBody.  # noqa: E501
+         :type: object
+         """
+ 
+         self._project_id = project_id
+ 
+     @property
+     def model_id(self):
+-        """Gets the model_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        """Gets the model_id of this DatasetIdPredictionBody.  # noqa: E501
+ 
+         Uniquely specifies a Model.  # noqa: E501
+ 
+-        :return: The model_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :return: The model_id of this DatasetIdPredictionBody.  # noqa: E501
+         :rtype: object
+         """
+         return self._model_id
+ 
+     @model_id.setter
+     def model_id(self, model_id):
+-        """Sets the model_id of this ModelIdUuidDatasetIdBody1.
++        """Sets the model_id of this DatasetIdPredictionBody.
+ 
+         Uniquely specifies a Model.  # noqa: E501
+ 
+-        :param model_id: The model_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :param model_id: The model_id of this DatasetIdPredictionBody.  # noqa: E501
+         :type: object
+         """
+ 
+         self._model_id = model_id
+ 
+     @property
+     def metadata(self):
+-        """Gets the metadata of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        """Gets the metadata of this DatasetIdPredictionBody.  # noqa: E501
+ 
+ 
+-        :return: The metadata of this ModelIdUuidDatasetIdBody1.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The metadata of this DatasetIdPredictionBody.  # noqa: E501
++        :rtype: RegistryMetadata
+         """
+         return self._metadata
+ 
+     @metadata.setter
+     def metadata(self, metadata):
+-        """Sets the metadata of this ModelIdUuidDatasetIdBody1.
++        """Sets the metadata of this DatasetIdPredictionBody.
+ 
+ 
+-        :param metadata: The metadata of this ModelIdUuidDatasetIdBody1.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param metadata: The metadata of this DatasetIdPredictionBody.  # noqa: E501
++        :type: RegistryMetadata
+         """
+ 
+         self._metadata = metadata
+ 
+     @property
+     def integration_id(self):
+-        """Gets the integration_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        """Gets the integration_id of this DatasetIdPredictionBody.  # noqa: E501
+ 
+ 
+-        :return: The integration_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :return: The integration_id of this DatasetIdPredictionBody.  # noqa: E501
+         :rtype: RimeUUID
+         """
+         return self._integration_id
+ 
+     @integration_id.setter
+     def integration_id(self, integration_id):
+-        """Sets the integration_id of this ModelIdUuidDatasetIdBody1.
++        """Sets the integration_id of this DatasetIdPredictionBody.
+ 
+ 
+-        :param integration_id: The integration_id of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :param integration_id: The integration_id of this DatasetIdPredictionBody.  # noqa: E501
+         :type: RimeUUID
+         """
+ 
+         self._integration_id = integration_id
+ 
+     @property
+     def pred_info(self):
+-        """Gets the pred_info of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        """Gets the pred_info of this DatasetIdPredictionBody.  # noqa: E501
+ 
+ 
+-        :return: The pred_info of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :return: The pred_info of this DatasetIdPredictionBody.  # noqa: E501
+         :rtype: TestrunPredInfo
+         """
+         return self._pred_info
+ 
+     @pred_info.setter
+     def pred_info(self, pred_info):
+-        """Sets the pred_info of this ModelIdUuidDatasetIdBody1.
++        """Sets the pred_info of this DatasetIdPredictionBody.
+ 
+ 
+-        :param pred_info: The pred_info of this ModelIdUuidDatasetIdBody1.  # noqa: E501
++        :param pred_info: The pred_info of this DatasetIdPredictionBody.  # noqa: E501
+         :type: TestrunPredInfo
+         """
+ 
+         self._pred_info = pred_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -188,15 +188,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ModelIdUuidDatasetIdBody1, dict):
++        if issubclass(DatasetIdPredictionBody, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -204,15 +204,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ModelIdUuidDatasetIdBody1):
++        if not isinstance(other, DatasetIdPredictionBody):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -30,39 +30,42 @@
+     swagger_types = {
+         'name': 'str',
+         'model_id': 'RimeUUID',
+         'project_ids': 'list[RimeUUID]',
+         'creator_id': 'RimeUUID',
+         'creation_time': 'datetime',
+         'external_id': 'str',
+-        'user_metadata': 'SchemaregistryMetadata',
+-        'model_info': 'ModelModelInfo'
++        'user_metadata': 'RegistryMetadata',
++        'model_info': 'ModelModelInfo',
++        'validity_status': 'RegistryValidityStatus'
+     }
+ 
+     attribute_map = {
+         'name': 'name',
+         'model_id': 'modelId',
+         'project_ids': 'projectIds',
+         'creator_id': 'creatorId',
+         'creation_time': 'creationTime',
+         'external_id': 'externalId',
+         'user_metadata': 'userMetadata',
+-        'model_info': 'modelInfo'
++        'model_info': 'modelInfo',
++        'validity_status': 'validityStatus'
+     }
+ 
+-    def __init__(self, name=None, model_id=None, project_ids=None, creator_id=None, creation_time=None, external_id=None, user_metadata=None, model_info=None):  # noqa: E501
++    def __init__(self, name=None, model_id=None, project_ids=None, creator_id=None, creation_time=None, external_id=None, user_metadata=None, model_info=None, validity_status=None):  # noqa: E501
+         """ModelModel - a model defined in Swagger"""  # noqa: E501
+         self._name = None
+         self._model_id = None
+         self._project_ids = None
+         self._creator_id = None
+         self._creation_time = None
+         self._external_id = None
+         self._user_metadata = None
+         self._model_info = None
++        self._validity_status = None
+         self.discriminator = None
+         if name is not None:
+             self.name = name
+         if model_id is not None:
+             self.model_id = model_id
+         if project_ids is not None:
+             self.project_ids = project_ids
+@@ -72,14 +75,16 @@
+             self.creation_time = creation_time
+         if external_id is not None:
+             self.external_id = external_id
+         if user_metadata is not None:
+             self.user_metadata = user_metadata
+         if model_info is not None:
+             self.model_info = model_info
++        if validity_status is not None:
++            self.validity_status = validity_status
+ 
+     @property
+     def name(self):
+         """Gets the name of this ModelModel.  # noqa: E501
+ 
+         Name and model_id are both enforced to be unique. Name is user specified. Model_id is internally generated.  # noqa: E501
+ 
+@@ -211,25 +216,25 @@
+ 
+     @property
+     def user_metadata(self):
+         """Gets the user_metadata of this ModelModel.  # noqa: E501
+ 
+ 
+         :return: The user_metadata of this ModelModel.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :rtype: RegistryMetadata
+         """
+         return self._user_metadata
+ 
+     @user_metadata.setter
+     def user_metadata(self, user_metadata):
+         """Sets the user_metadata of this ModelModel.
+ 
+ 
+         :param user_metadata: The user_metadata of this ModelModel.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :type: RegistryMetadata
+         """
+ 
+         self._user_metadata = user_metadata
+ 
+     @property
+     def model_info(self):
+         """Gets the model_info of this ModelModel.  # noqa: E501
+@@ -247,14 +252,35 @@
+ 
+         :param model_info: The model_info of this ModelModel.  # noqa: E501
+         :type: ModelModelInfo
+         """
+ 
+         self._model_info = model_info
+ 
++    @property
++    def validity_status(self):
++        """Gets the validity_status of this ModelModel.  # noqa: E501
++
++
++        :return: The validity_status of this ModelModel.  # noqa: E501
++        :rtype: RegistryValidityStatus
++        """
++        return self._validity_status
++
++    @validity_status.setter
++    def validity_status(self, validity_status):
++        """Sets the validity_status of this ModelModel.
++
++
++        :param validity_status: The validity_status of this ModelModel.  # noqa: E501
++        :type: RegistryValidityStatus
++        """
++
++        self._validity_status = validity_status
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_model_path_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/model_model_path_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/model_project_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/projects_project_id_uuid_body.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -11,168 +11,115 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ModelProjectIdUuidBody(object):
++class ProjectsProjectIdUuidBody(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+         'project_id': 'object',
+-        'name': 'str',
+-        'metadata': 'SchemaregistryMetadata',
+-        'external_id': 'str',
+-        'model_info': 'ModelModelInfo'
++        'project': 'ProjectProject',
++        'mask': 'str'
+     }
+ 
+     attribute_map = {
+         'project_id': 'projectId',
+-        'name': 'name',
+-        'metadata': 'metadata',
+-        'external_id': 'externalId',
+-        'model_info': 'modelInfo'
++        'project': 'project',
++        'mask': 'mask'
+     }
+ 
+-    def __init__(self, project_id=None, name=None, metadata=None, external_id=None, model_info=None):  # noqa: E501
+-        """ModelProjectIdUuidBody - a model defined in Swagger"""  # noqa: E501
++    def __init__(self, project_id=None, project=None, mask=None):  # noqa: E501
++        """ProjectsProjectIdUuidBody - a model defined in Swagger"""  # noqa: E501
+         self._project_id = None
+-        self._name = None
+-        self._metadata = None
+-        self._external_id = None
+-        self._model_info = None
++        self._project = None
++        self._mask = None
+         self.discriminator = None
+         if project_id is not None:
+             self.project_id = project_id
+-        self.name = name
+-        if metadata is not None:
+-            self.metadata = metadata
+-        if external_id is not None:
+-            self.external_id = external_id
+-        if model_info is not None:
+-            self.model_info = model_info
++        if project is not None:
++            self.project = project
++        if mask is not None:
++            self.mask = mask
+ 
+     @property
+     def project_id(self):
+-        """Gets the project_id of this ModelProjectIdUuidBody.  # noqa: E501
++        """Gets the project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
+ 
+-        Uniquely specifies a Project.  # noqa: E501
++        Uniquely specifies a Project to update.  # noqa: E501
+ 
+-        :return: The project_id of this ModelProjectIdUuidBody.  # noqa: E501
++        :return: The project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
+         :rtype: object
+         """
+         return self._project_id
+ 
+     @project_id.setter
+     def project_id(self, project_id):
+-        """Sets the project_id of this ModelProjectIdUuidBody.
++        """Sets the project_id of this ProjectsProjectIdUuidBody.
+ 
+-        Uniquely specifies a Project.  # noqa: E501
++        Uniquely specifies a Project to update.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ModelProjectIdUuidBody.  # noqa: E501
++        :param project_id: The project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
+         :type: object
+         """
+ 
+         self._project_id = project_id
+ 
+     @property
+-    def name(self):
+-        """Gets the name of this ModelProjectIdUuidBody.  # noqa: E501
++    def project(self):
++        """Gets the project of this ProjectsProjectIdUuidBody.  # noqa: E501
+ 
+ 
+-        :return: The name of this ModelProjectIdUuidBody.  # noqa: E501
+-        :rtype: str
+-        """
+-        return self._name
+-
+-    @name.setter
+-    def name(self, name):
+-        """Sets the name of this ModelProjectIdUuidBody.
+-
+-
+-        :param name: The name of this ModelProjectIdUuidBody.  # noqa: E501
+-        :type: str
+-        """
+-        if name is None:
+-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+-
+-        self._name = name
+-
+-    @property
+-    def metadata(self):
+-        """Gets the metadata of this ModelProjectIdUuidBody.  # noqa: E501
+-
+-
+-        :return: The metadata of this ModelProjectIdUuidBody.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The project of this ProjectsProjectIdUuidBody.  # noqa: E501
++        :rtype: ProjectProject
+         """
+-        return self._metadata
++        return self._project
+ 
+-    @metadata.setter
+-    def metadata(self, metadata):
+-        """Sets the metadata of this ModelProjectIdUuidBody.
++    @project.setter
++    def project(self, project):
++        """Sets the project of this ProjectsProjectIdUuidBody.
+ 
+ 
+-        :param metadata: The metadata of this ModelProjectIdUuidBody.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param project: The project of this ProjectsProjectIdUuidBody.  # noqa: E501
++        :type: ProjectProject
+         """
+ 
+-        self._metadata = metadata
++        self._project = project
+ 
+     @property
+-    def external_id(self):
+-        """Gets the external_id of this ModelProjectIdUuidBody.  # noqa: E501
++    def mask(self):
++        """Gets the mask of this ProjectsProjectIdUuidBody.  # noqa: E501
+ 
+ 
+-        :return: The external_id of this ModelProjectIdUuidBody.  # noqa: E501
++        :return: The mask of this ProjectsProjectIdUuidBody.  # noqa: E501
+         :rtype: str
+         """
+-        return self._external_id
++        return self._mask
+ 
+-    @external_id.setter
+-    def external_id(self, external_id):
+-        """Sets the external_id of this ModelProjectIdUuidBody.
++    @mask.setter
++    def mask(self, mask):
++        """Sets the mask of this ProjectsProjectIdUuidBody.
+ 
+ 
+-        :param external_id: The external_id of this ModelProjectIdUuidBody.  # noqa: E501
++        :param mask: The mask of this ProjectsProjectIdUuidBody.  # noqa: E501
+         :type: str
+         """
+ 
+-        self._external_id = external_id
+-
+-    @property
+-    def model_info(self):
+-        """Gets the model_info of this ModelProjectIdUuidBody.  # noqa: E501
+-
+-
+-        :return: The model_info of this ModelProjectIdUuidBody.  # noqa: E501
+-        :rtype: ModelModelInfo
+-        """
+-        return self._model_info
+-
+-    @model_info.setter
+-    def model_info(self, model_info):
+-        """Sets the model_info of this ModelProjectIdUuidBody.
+-
+-
+-        :param model_info: The model_info of this ModelProjectIdUuidBody.  # noqa: E501
+-        :type: ModelModelInfo
+-        """
+-
+-        self._model_info = model_info
++        self._mask = mask
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -187,15 +134,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ModelProjectIdUuidBody, dict):
++        if issubclass(ProjectsProjectIdUuidBody, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -203,15 +150,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ModelProjectIdUuidBody):
++        if not isinstance(other, ProjectsProjectIdUuidBody):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_aggregation.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_aggregation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_aggregation_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_aggregation_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_anomaly_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_anomaly_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_artifact_identifier.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_artifact_identifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_difference_from_target.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_difference_from_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_excluded_transforms.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_excluded_transforms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_metric_degradation_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_metric_degradation_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_monitor.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_monitor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_monitor_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_monitor_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_threshold.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_threshold.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_threshold_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_threshold_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitor_transform.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitor_transform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitoring_config_alert_level.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitoring_config_alert_level.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/monitors_monitor_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/monitors_monitor_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_digest_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_digest_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_job_action_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_job_action_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_monitoring_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_monitoring_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_notification.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_notification.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_notification_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_notification_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_object_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_object_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notification_webhook_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notification_webhook_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/notifsettings_notification_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/notifsettings_notification_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/object_containing_the_updates_only_the_fields_specified_in_the_mask_will_be_used_by_the_backend_note_the_id_field_is_necessary_to_find_the_given_notification_setting_.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/object_containing_the_updates_only_the_fields_specified_in_the_mask_will_be_used_by_the_backend_note_the_id_field_is_necessary_to_find_the_given_notification_setting_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/predictions_model_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/predictions_model_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_add_users_to_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_add_users_to_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_create_project_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_create_project_request.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -32,40 +32,43 @@
+         'description': 'str',
+         'use_case': 'str',
+         'ethical_consideration': 'str',
+         'workspace_id': 'RimeUUID',
+         'model_task': 'RimeModelTask',
+         'tags': 'list[str]',
+         'profiling_config': 'TestrunProfilingConfig',
+-        'is_published': 'bool'
++        'is_published': 'bool',
++        'run_time_info': 'RuntimeinfoRunTimeInfo'
+     }
+ 
+     attribute_map = {
+         'name': 'name',
+         'description': 'description',
+         'use_case': 'useCase',
+         'ethical_consideration': 'ethicalConsideration',
+         'workspace_id': 'workspaceId',
+         'model_task': 'modelTask',
+         'tags': 'tags',
+         'profiling_config': 'profilingConfig',
+-        'is_published': 'isPublished'
++        'is_published': 'isPublished',
++        'run_time_info': 'runTimeInfo'
+     }
+ 
+-    def __init__(self, name=None, description=None, use_case=None, ethical_consideration=None, workspace_id=None, model_task=None, tags=None, profiling_config=None, is_published=None):  # noqa: E501
++    def __init__(self, name=None, description=None, use_case=None, ethical_consideration=None, workspace_id=None, model_task=None, tags=None, profiling_config=None, is_published=None, run_time_info=None):  # noqa: E501
+         """ProjectCreateProjectRequest - a model defined in Swagger"""  # noqa: E501
+         self._name = None
+         self._description = None
+         self._use_case = None
+         self._ethical_consideration = None
+         self._workspace_id = None
+         self._model_task = None
+         self._tags = None
+         self._profiling_config = None
+         self._is_published = None
++        self._run_time_info = None
+         self.discriminator = None
+         self.name = name
+         self.description = description
+         if use_case is not None:
+             self.use_case = use_case
+         if ethical_consideration is not None:
+             self.ethical_consideration = ethical_consideration
+@@ -75,14 +78,16 @@
+             self.model_task = model_task
+         if tags is not None:
+             self.tags = tags
+         if profiling_config is not None:
+             self.profiling_config = profiling_config
+         if is_published is not None:
+             self.is_published = is_published
++        if run_time_info is not None:
++            self.run_time_info = run_time_info
+ 
+     @property
+     def name(self):
+         """Gets the name of this ProjectCreateProjectRequest.  # noqa: E501
+ 
+ 
+         :return: The name of this ProjectCreateProjectRequest.  # noqa: E501
+@@ -273,14 +278,35 @@
+ 
+         :param is_published: The is_published of this ProjectCreateProjectRequest.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._is_published = is_published
+ 
++    @property
++    def run_time_info(self):
++        """Gets the run_time_info of this ProjectCreateProjectRequest.  # noqa: E501
++
++
++        :return: The run_time_info of this ProjectCreateProjectRequest.  # noqa: E501
++        :rtype: RuntimeinfoRunTimeInfo
++        """
++        return self._run_time_info
++
++    @run_time_info.setter
++    def run_time_info(self, run_time_info):
++        """Sets the run_time_info of this ProjectCreateProjectRequest.
++
++
++        :param run_time_info: The run_time_info of this ProjectCreateProjectRequest.  # noqa: E501
++        :type: RuntimeinfoRunTimeInfo
++        """
++
++        self._run_time_info = run_time_info
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_create_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_create_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_delete_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_delete_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_project_url_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_project_url_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_get_workspace_roles_for_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_get_workspace_roles_for_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_id_uuid_dataset_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_notification_request.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -11,194 +11,171 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ProjectIdUuidDatasetBody(object):
++class RimeCreateNotificationRequest(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'project_id': 'object',
+-        'name': 'str',
+-        'metadata': 'SchemaregistryMetadata',
+-        'integration_id': 'RimeUUID',
+-        'data_info': 'TestrunSingleDataInfo',
+-        'ct_info': 'DatasetCTInfo'
++        'object_type': 'NotificationObjectType',
++        'object_id': 'str',
++        'emails': 'list[str]',
++        'config': 'SchemanotificationConfig',
++        'webhooks': 'list[NotificationWebhookConfig]'
+     }
+ 
+     attribute_map = {
+-        'project_id': 'projectId',
+-        'name': 'name',
+-        'metadata': 'metadata',
+-        'integration_id': 'integrationId',
+-        'data_info': 'dataInfo',
+-        'ct_info': 'ctInfo'
++        'object_type': 'objectType',
++        'object_id': 'objectId',
++        'emails': 'emails',
++        'config': 'config',
++        'webhooks': 'webhooks'
+     }
+ 
+-    def __init__(self, project_id=None, name=None, metadata=None, integration_id=None, data_info=None, ct_info=None):  # noqa: E501
+-        """ProjectIdUuidDatasetBody - a model defined in Swagger"""  # noqa: E501
+-        self._project_id = None
+-        self._name = None
+-        self._metadata = None
+-        self._integration_id = None
+-        self._data_info = None
+-        self._ct_info = None
++    def __init__(self, object_type=None, object_id=None, emails=None, config=None, webhooks=None):  # noqa: E501
++        """RimeCreateNotificationRequest - a model defined in Swagger"""  # noqa: E501
++        self._object_type = None
++        self._object_id = None
++        self._emails = None
++        self._config = None
++        self._webhooks = None
+         self.discriminator = None
+-        if project_id is not None:
+-            self.project_id = project_id
+-        self.name = name
+-        if metadata is not None:
+-            self.metadata = metadata
+-        if integration_id is not None:
+-            self.integration_id = integration_id
+-        if data_info is not None:
+-            self.data_info = data_info
+-        if ct_info is not None:
+-            self.ct_info = ct_info
++        if object_type is not None:
++            self.object_type = object_type
++        if object_id is not None:
++            self.object_id = object_id
++        if emails is not None:
++            self.emails = emails
++        if config is not None:
++            self.config = config
++        if webhooks is not None:
++            self.webhooks = webhooks
+ 
+     @property
+-    def project_id(self):
+-        """Gets the project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
++    def object_type(self):
++        """Gets the object_type of this RimeCreateNotificationRequest.  # noqa: E501
+ 
+-        Uniquely specifies a Project.  # noqa: E501
+ 
+-        :return: The project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :rtype: object
++        :return: The object_type of this RimeCreateNotificationRequest.  # noqa: E501
++        :rtype: NotificationObjectType
+         """
+-        return self._project_id
++        return self._object_type
+ 
+-    @project_id.setter
+-    def project_id(self, project_id):
+-        """Sets the project_id of this ProjectIdUuidDatasetBody.
++    @object_type.setter
++    def object_type(self, object_type):
++        """Sets the object_type of this RimeCreateNotificationRequest.
+ 
+-        Uniquely specifies a Project.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :type: object
++        :param object_type: The object_type of this RimeCreateNotificationRequest.  # noqa: E501
++        :type: NotificationObjectType
+         """
+ 
+-        self._project_id = project_id
++        self._object_type = object_type
+ 
+     @property
+-    def name(self):
+-        """Gets the name of this ProjectIdUuidDatasetBody.  # noqa: E501
++    def object_id(self):
++        """Gets the object_id of this RimeCreateNotificationRequest.  # noqa: E501
+ 
++        Uniquely specifies an object for the notification. This varies depending on the object type; for Projects, this should be the unique identifier of the project.  # noqa: E501
+ 
+-        :return: The name of this ProjectIdUuidDatasetBody.  # noqa: E501
++        :return: The object_id of this RimeCreateNotificationRequest.  # noqa: E501
+         :rtype: str
+         """
+-        return self._name
++        return self._object_id
+ 
+-    @name.setter
+-    def name(self, name):
+-        """Sets the name of this ProjectIdUuidDatasetBody.
++    @object_id.setter
++    def object_id(self, object_id):
++        """Sets the object_id of this RimeCreateNotificationRequest.
+ 
++        Uniquely specifies an object for the notification. This varies depending on the object type; for Projects, this should be the unique identifier of the project.  # noqa: E501
+ 
+-        :param name: The name of this ProjectIdUuidDatasetBody.  # noqa: E501
++        :param object_id: The object_id of this RimeCreateNotificationRequest.  # noqa: E501
+         :type: str
+         """
+-        if name is None:
+-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+ 
+-        self._name = name
++        self._object_id = object_id
+ 
+     @property
+-    def metadata(self):
+-        """Gets the metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
++    def emails(self):
++        """Gets the emails of this RimeCreateNotificationRequest.  # noqa: E501
+ 
++        List of emails that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :return: The metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The emails of this RimeCreateNotificationRequest.  # noqa: E501
++        :rtype: list[str]
+         """
+-        return self._metadata
++        return self._emails
+ 
+-    @metadata.setter
+-    def metadata(self, metadata):
+-        """Sets the metadata of this ProjectIdUuidDatasetBody.
++    @emails.setter
++    def emails(self, emails):
++        """Sets the emails of this RimeCreateNotificationRequest.
+ 
++        List of emails that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :param metadata: The metadata of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param emails: The emails of this RimeCreateNotificationRequest.  # noqa: E501
++        :type: list[str]
+         """
+ 
+-        self._metadata = metadata
++        self._emails = emails
+ 
+     @property
+-    def integration_id(self):
+-        """Gets the integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
++    def config(self):
++        """Gets the config of this RimeCreateNotificationRequest.  # noqa: E501
+ 
+ 
+-        :return: The integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :rtype: RimeUUID
++        :return: The config of this RimeCreateNotificationRequest.  # noqa: E501
++        :rtype: SchemanotificationConfig
+         """
+-        return self._integration_id
++        return self._config
+ 
+-    @integration_id.setter
+-    def integration_id(self, integration_id):
+-        """Sets the integration_id of this ProjectIdUuidDatasetBody.
++    @config.setter
++    def config(self, config):
++        """Sets the config of this RimeCreateNotificationRequest.
+ 
+ 
+-        :param integration_id: The integration_id of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :type: RimeUUID
++        :param config: The config of this RimeCreateNotificationRequest.  # noqa: E501
++        :type: SchemanotificationConfig
+         """
+ 
+-        self._integration_id = integration_id
++        self._config = config
+ 
+     @property
+-    def data_info(self):
+-        """Gets the data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
++    def webhooks(self):
++        """Gets the webhooks of this RimeCreateNotificationRequest.  # noqa: E501
+ 
++        List of webhooks that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :return: The data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :rtype: TestrunSingleDataInfo
++        :return: The webhooks of this RimeCreateNotificationRequest.  # noqa: E501
++        :rtype: list[NotificationWebhookConfig]
+         """
+-        return self._data_info
++        return self._webhooks
+ 
+-    @data_info.setter
+-    def data_info(self, data_info):
+-        """Sets the data_info of this ProjectIdUuidDatasetBody.
++    @webhooks.setter
++    def webhooks(self, webhooks):
++        """Sets the webhooks of this RimeCreateNotificationRequest.
+ 
++        List of webhooks that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :param data_info: The data_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :type: TestrunSingleDataInfo
++        :param webhooks: The webhooks of this RimeCreateNotificationRequest.  # noqa: E501
++        :type: list[NotificationWebhookConfig]
+         """
+ 
+-        self._data_info = data_info
+-
+-    @property
+-    def ct_info(self):
+-        """Gets the ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+-
+-
+-        :return: The ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :rtype: DatasetCTInfo
+-        """
+-        return self._ct_info
+-
+-    @ct_info.setter
+-    def ct_info(self, ct_info):
+-        """Sets the ct_info of this ProjectIdUuidDatasetBody.
+-
+-
+-        :param ct_info: The ct_info of this ProjectIdUuidDatasetBody.  # noqa: E501
+-        :type: DatasetCTInfo
+-        """
+-
+-        self._ct_info = ct_info
++        self._webhooks = webhooks
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -213,15 +190,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ProjectIdUuidDatasetBody, dict):
++        if issubclass(RimeCreateNotificationRequest, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -229,15 +206,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ProjectIdUuidDatasetBody):
++        if not isinstance(other, RimeCreateNotificationRequest):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_id_uuid_model_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_case_monitor_info.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -11,168 +11,139 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ProjectIdUuidModelBody(object):
++class RimeTestCaseMonitorInfo(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'project_id': 'object',
+-        'name': 'str',
+-        'metadata': 'SchemaregistryMetadata',
+-        'external_id': 'str',
+-        'model_info': 'ModelModelInfo'
++        'threshold': 'MonitorThreshold',
++        'is_subset_metric': 'bool',
++        'rca_role': 'RcaRCARole',
++        'excluded_transforms': 'MonitorExcludedTransforms'
+     }
+ 
+     attribute_map = {
+-        'project_id': 'projectId',
+-        'name': 'name',
+-        'metadata': 'metadata',
+-        'external_id': 'externalId',
+-        'model_info': 'modelInfo'
++        'threshold': 'threshold',
++        'is_subset_metric': 'isSubsetMetric',
++        'rca_role': 'rcaRole',
++        'excluded_transforms': 'excludedTransforms'
+     }
+ 
+-    def __init__(self, project_id=None, name=None, metadata=None, external_id=None, model_info=None):  # noqa: E501
+-        """ProjectIdUuidModelBody - a model defined in Swagger"""  # noqa: E501
+-        self._project_id = None
+-        self._name = None
+-        self._metadata = None
+-        self._external_id = None
+-        self._model_info = None
++    def __init__(self, threshold=None, is_subset_metric=None, rca_role=None, excluded_transforms=None):  # noqa: E501
++        """RimeTestCaseMonitorInfo - a model defined in Swagger"""  # noqa: E501
++        self._threshold = None
++        self._is_subset_metric = None
++        self._rca_role = None
++        self._excluded_transforms = None
+         self.discriminator = None
+-        if project_id is not None:
+-            self.project_id = project_id
+-        self.name = name
+-        if metadata is not None:
+-            self.metadata = metadata
+-        if external_id is not None:
+-            self.external_id = external_id
+-        if model_info is not None:
+-            self.model_info = model_info
++        if threshold is not None:
++            self.threshold = threshold
++        if is_subset_metric is not None:
++            self.is_subset_metric = is_subset_metric
++        if rca_role is not None:
++            self.rca_role = rca_role
++        if excluded_transforms is not None:
++            self.excluded_transforms = excluded_transforms
+ 
+     @property
+-    def project_id(self):
+-        """Gets the project_id of this ProjectIdUuidModelBody.  # noqa: E501
++    def threshold(self):
++        """Gets the threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
+ 
+-        Uniquely specifies a Project.  # noqa: E501
+ 
+-        :return: The project_id of this ProjectIdUuidModelBody.  # noqa: E501
+-        :rtype: object
++        :return: The threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :rtype: MonitorThreshold
+         """
+-        return self._project_id
++        return self._threshold
+ 
+-    @project_id.setter
+-    def project_id(self, project_id):
+-        """Sets the project_id of this ProjectIdUuidModelBody.
++    @threshold.setter
++    def threshold(self, threshold):
++        """Sets the threshold of this RimeTestCaseMonitorInfo.
+ 
+-        Uniquely specifies a Project.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ProjectIdUuidModelBody.  # noqa: E501
+-        :type: object
++        :param threshold: The threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :type: MonitorThreshold
+         """
+ 
+-        self._project_id = project_id
++        self._threshold = threshold
+ 
+     @property
+-    def name(self):
+-        """Gets the name of this ProjectIdUuidModelBody.  # noqa: E501
++    def is_subset_metric(self):
++        """Gets the is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
+ 
+ 
+-        :return: The name of this ProjectIdUuidModelBody.  # noqa: E501
+-        :rtype: str
++        :return: The is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :rtype: bool
+         """
+-        return self._name
++        return self._is_subset_metric
+ 
+-    @name.setter
+-    def name(self, name):
+-        """Sets the name of this ProjectIdUuidModelBody.
++    @is_subset_metric.setter
++    def is_subset_metric(self, is_subset_metric):
++        """Sets the is_subset_metric of this RimeTestCaseMonitorInfo.
+ 
+ 
+-        :param name: The name of this ProjectIdUuidModelBody.  # noqa: E501
+-        :type: str
++        :param is_subset_metric: The is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :type: bool
+         """
+-        if name is None:
+-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+ 
+-        self._name = name
++        self._is_subset_metric = is_subset_metric
+ 
+     @property
+-    def metadata(self):
+-        """Gets the metadata of this ProjectIdUuidModelBody.  # noqa: E501
++    def rca_role(self):
++        """Gets the rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
+ 
+ 
+-        :return: The metadata of this ProjectIdUuidModelBody.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :return: The rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :rtype: RcaRCARole
+         """
+-        return self._metadata
++        return self._rca_role
+ 
+-    @metadata.setter
+-    def metadata(self, metadata):
+-        """Sets the metadata of this ProjectIdUuidModelBody.
++    @rca_role.setter
++    def rca_role(self, rca_role):
++        """Sets the rca_role of this RimeTestCaseMonitorInfo.
+ 
+ 
+-        :param metadata: The metadata of this ProjectIdUuidModelBody.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :param rca_role: The rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :type: RcaRCARole
+         """
+ 
+-        self._metadata = metadata
++        self._rca_role = rca_role
+ 
+     @property
+-    def external_id(self):
+-        """Gets the external_id of this ProjectIdUuidModelBody.  # noqa: E501
++    def excluded_transforms(self):
++        """Gets the excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
+ 
+ 
+-        :return: The external_id of this ProjectIdUuidModelBody.  # noqa: E501
+-        :rtype: str
++        :return: The excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :rtype: MonitorExcludedTransforms
+         """
+-        return self._external_id
++        return self._excluded_transforms
+ 
+-    @external_id.setter
+-    def external_id(self, external_id):
+-        """Sets the external_id of this ProjectIdUuidModelBody.
++    @excluded_transforms.setter
++    def excluded_transforms(self, excluded_transforms):
++        """Sets the excluded_transforms of this RimeTestCaseMonitorInfo.
+ 
+ 
+-        :param external_id: The external_id of this ProjectIdUuidModelBody.  # noqa: E501
+-        :type: str
++        :param excluded_transforms: The excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
++        :type: MonitorExcludedTransforms
+         """
+ 
+-        self._external_id = external_id
+-
+-    @property
+-    def model_info(self):
+-        """Gets the model_info of this ProjectIdUuidModelBody.  # noqa: E501
+-
+-
+-        :return: The model_info of this ProjectIdUuidModelBody.  # noqa: E501
+-        :rtype: ModelModelInfo
+-        """
+-        return self._model_info
+-
+-    @model_info.setter
+-    def model_info(self, model_info):
+-        """Sets the model_info of this ProjectIdUuidModelBody.
+-
+-
+-        :param model_info: The model_info of this ProjectIdUuidModelBody.  # noqa: E501
+-        :type: ModelModelInfo
+-        """
+-
+-        self._model_info = model_info
++        self._excluded_transforms = excluded_transforms
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -187,15 +158,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ProjectIdUuidModelBody, dict):
++        if issubclass(RimeTestCaseMonitorInfo, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -203,15 +174,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ProjectIdUuidModelBody):
++        if not isinstance(other, RimeTestCaseMonitorInfo):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_projects_request_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_projects_request_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_projects_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_projects_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_list_users_of_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_list_users_of_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_owner_details.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_owner_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_project.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_project_with_owner_details.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_project_with_owner_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_remove_user_from_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_remove_user_from_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_user_of_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_user_of_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/project_update_workspace_roles_for_project_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/project_update_workspace_roles_for_project_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/projects_project_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data_stress_test.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -11,115 +11,113 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class ProjectsProjectIdUuidBody(object):
++class RimeJobDataStressTest(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'project_id': 'object',
+-        'project': 'ProjectProject',
+-        'mask': 'str'
++        'project_id': 'RimeUUID',
++        'test_run_id': 'str',
++        'progress': 'RimeStressTestJobProgress'
+     }
+ 
+     attribute_map = {
+         'project_id': 'projectId',
+-        'project': 'project',
+-        'mask': 'mask'
++        'test_run_id': 'testRunId',
++        'progress': 'progress'
+     }
+ 
+-    def __init__(self, project_id=None, project=None, mask=None):  # noqa: E501
+-        """ProjectsProjectIdUuidBody - a model defined in Swagger"""  # noqa: E501
++    def __init__(self, project_id=None, test_run_id=None, progress=None):  # noqa: E501
++        """RimeJobDataStressTest - a model defined in Swagger"""  # noqa: E501
+         self._project_id = None
+-        self._project = None
+-        self._mask = None
++        self._test_run_id = None
++        self._progress = None
+         self.discriminator = None
+         if project_id is not None:
+             self.project_id = project_id
+-        if project is not None:
+-            self.project = project
+-        if mask is not None:
+-            self.mask = mask
++        if test_run_id is not None:
++            self.test_run_id = test_run_id
++        if progress is not None:
++            self.progress = progress
+ 
+     @property
+     def project_id(self):
+-        """Gets the project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
++        """Gets the project_id of this RimeJobDataStressTest.  # noqa: E501
+ 
+-        Uniquely specifies a Project to update.  # noqa: E501
+ 
+-        :return: The project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :rtype: object
++        :return: The project_id of this RimeJobDataStressTest.  # noqa: E501
++        :rtype: RimeUUID
+         """
+         return self._project_id
+ 
+     @project_id.setter
+     def project_id(self, project_id):
+-        """Sets the project_id of this ProjectsProjectIdUuidBody.
++        """Sets the project_id of this RimeJobDataStressTest.
+ 
+-        Uniquely specifies a Project to update.  # noqa: E501
+ 
+-        :param project_id: The project_id of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :type: object
++        :param project_id: The project_id of this RimeJobDataStressTest.  # noqa: E501
++        :type: RimeUUID
+         """
+ 
+         self._project_id = project_id
+ 
+     @property
+-    def project(self):
+-        """Gets the project of this ProjectsProjectIdUuidBody.  # noqa: E501
++    def test_run_id(self):
++        """Gets the test_run_id of this RimeJobDataStressTest.  # noqa: E501
+ 
+ 
+-        :return: The project of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :rtype: ProjectProject
++        :return: The test_run_id of this RimeJobDataStressTest.  # noqa: E501
++        :rtype: str
+         """
+-        return self._project
++        return self._test_run_id
+ 
+-    @project.setter
+-    def project(self, project):
+-        """Sets the project of this ProjectsProjectIdUuidBody.
++    @test_run_id.setter
++    def test_run_id(self, test_run_id):
++        """Sets the test_run_id of this RimeJobDataStressTest.
+ 
+ 
+-        :param project: The project of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :type: ProjectProject
++        :param test_run_id: The test_run_id of this RimeJobDataStressTest.  # noqa: E501
++        :type: str
+         """
+ 
+-        self._project = project
++        self._test_run_id = test_run_id
+ 
+     @property
+-    def mask(self):
+-        """Gets the mask of this ProjectsProjectIdUuidBody.  # noqa: E501
++    def progress(self):
++        """Gets the progress of this RimeJobDataStressTest.  # noqa: E501
+ 
+ 
+-        :return: The mask of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :rtype: str
++        :return: The progress of this RimeJobDataStressTest.  # noqa: E501
++        :rtype: RimeStressTestJobProgress
+         """
+-        return self._mask
++        return self._progress
+ 
+-    @mask.setter
+-    def mask(self, mask):
+-        """Sets the mask of this ProjectsProjectIdUuidBody.
++    @progress.setter
++    def progress(self, progress):
++        """Sets the progress of this RimeJobDataStressTest.
+ 
+ 
+-        :param mask: The mask of this ProjectsProjectIdUuidBody.  # noqa: E501
+-        :type: str
++        :param progress: The progress of this RimeJobDataStressTest.  # noqa: E501
++        :type: RimeStressTestJobProgress
+         """
+ 
+-        self._mask = mask
++        self._progress = progress
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -134,15 +132,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(ProjectsProjectIdUuidBody, dict):
++        if issubclass(RimeJobDataStressTest, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -150,15 +148,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, ProjectsProjectIdUuidBody):
++        if not isinstance(other, RimeJobDataStressTest):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/protobuf_any.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/protobuf_any.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/protobuf_null_value.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/protobuf_null_value.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_feature_cause.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_feature_cause.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_rca_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_rca_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_rca_role.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_rca_role.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_test_case_cause.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_test_case_cause.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rca_test_case_id.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rca_test_case_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/registryprediction_prediction.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/registryprediction_prediction.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -29,40 +29,43 @@
+     """
+     swagger_types = {
+         'dataset_id': 'str',
+         'model_id': 'RimeUUID',
+         'project_ids': 'list[RimeUUID]',
+         'creator_id': 'RimeUUID',
+         'creation_time': 'datetime',
+-        'user_metadata': 'SchemaregistryMetadata',
++        'user_metadata': 'RegistryMetadata',
+         'integration_id': 'RimeUUID',
+-        'pred_info': 'TestrunPredInfo'
++        'pred_info': 'TestrunPredInfo',
++        'validity_status': 'RegistryValidityStatus'
+     }
+ 
+     attribute_map = {
+         'dataset_id': 'datasetId',
+         'model_id': 'modelId',
+         'project_ids': 'projectIds',
+         'creator_id': 'creatorId',
+         'creation_time': 'creationTime',
+         'user_metadata': 'userMetadata',
+         'integration_id': 'integrationId',
+-        'pred_info': 'predInfo'
++        'pred_info': 'predInfo',
++        'validity_status': 'validityStatus'
+     }
+ 
+-    def __init__(self, dataset_id=None, model_id=None, project_ids=None, creator_id=None, creation_time=None, user_metadata=None, integration_id=None, pred_info=None):  # noqa: E501
++    def __init__(self, dataset_id=None, model_id=None, project_ids=None, creator_id=None, creation_time=None, user_metadata=None, integration_id=None, pred_info=None, validity_status=None):  # noqa: E501
+         """RegistrypredictionPrediction - a model defined in Swagger"""  # noqa: E501
+         self._dataset_id = None
+         self._model_id = None
+         self._project_ids = None
+         self._creator_id = None
+         self._creation_time = None
+         self._user_metadata = None
+         self._integration_id = None
+         self._pred_info = None
++        self._validity_status = None
+         self.discriminator = None
+         if dataset_id is not None:
+             self.dataset_id = dataset_id
+         if model_id is not None:
+             self.model_id = model_id
+         if project_ids is not None:
+             self.project_ids = project_ids
+@@ -72,14 +75,16 @@
+             self.creation_time = creation_time
+         if user_metadata is not None:
+             self.user_metadata = user_metadata
+         if integration_id is not None:
+             self.integration_id = integration_id
+         if pred_info is not None:
+             self.pred_info = pred_info
++        if validity_status is not None:
++            self.validity_status = validity_status
+ 
+     @property
+     def dataset_id(self):
+         """Gets the dataset_id of this RegistrypredictionPrediction.  # noqa: E501
+ 
+         The dataset_id and model_id are used to uniquely identify a prediction. These must be provided by the user.  # noqa: E501
+ 
+@@ -188,25 +193,25 @@
+ 
+     @property
+     def user_metadata(self):
+         """Gets the user_metadata of this RegistrypredictionPrediction.  # noqa: E501
+ 
+ 
+         :return: The user_metadata of this RegistrypredictionPrediction.  # noqa: E501
+-        :rtype: SchemaregistryMetadata
++        :rtype: RegistryMetadata
+         """
+         return self._user_metadata
+ 
+     @user_metadata.setter
+     def user_metadata(self, user_metadata):
+         """Sets the user_metadata of this RegistrypredictionPrediction.
+ 
+ 
+         :param user_metadata: The user_metadata of this RegistrypredictionPrediction.  # noqa: E501
+-        :type: SchemaregistryMetadata
++        :type: RegistryMetadata
+         """
+ 
+         self._user_metadata = user_metadata
+ 
+     @property
+     def integration_id(self):
+         """Gets the integration_id of this RegistrypredictionPrediction.  # noqa: E501
+@@ -245,14 +250,35 @@
+ 
+         :param pred_info: The pred_info of this RegistrypredictionPrediction.  # noqa: E501
+         :type: TestrunPredInfo
+         """
+ 
+         self._pred_info = pred_info
+ 
++    @property
++    def validity_status(self):
++        """Gets the validity_status of this RegistrypredictionPrediction.  # noqa: E501
++
++
++        :return: The validity_status of this RegistrypredictionPrediction.  # noqa: E501
++        :rtype: RegistryValidityStatus
++        """
++        return self._validity_status
++
++    @validity_status.setter
++    def validity_status(self, validity_status):
++        """Sets the validity_status of this RegistrypredictionPrediction.
++
++
++        :param validity_status: The validity_status of this RegistrypredictionPrediction.  # noqa: E501
++        :type: RegistryValidityStatus
++        """
++
++        self._validity_status = validity_status
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rename_test_run_id_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rename_test_run_id_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_actor_role.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_actor_role.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_agent.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_agent.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -83,26 +83,26 @@
+ 
+         self._agent_id = agent_id
+ 
+     @property
+     def name(self):
+         """Gets the name of this RimeAgent.  # noqa: E501
+ 
+-        The user given name of the agent.  # noqa: E501
++        The user specified name of the agent.  # noqa: E501
+ 
+         :return: The name of this RimeAgent.  # noqa: E501
+         :rtype: str
+         """
+         return self._name
+ 
+     @name.setter
+     def name(self, name):
+         """Sets the name of this RimeAgent.
+ 
+-        The user given name of the agent.  # noqa: E501
++        The user specified name of the agent.  # noqa: E501
+ 
+         :param name: The name of this RimeAgent.  # noqa: E501
+         :type: str
+         """
+ 
+         self._name = name
+ 
+@@ -150,26 +150,26 @@
+ 
+         self._status = status
+ 
+     @property
+     def internal(self):
+         """Gets the internal of this RimeAgent.  # noqa: E501
+ 
+-        Whether the agent is an internal agent or not. Internal agents come bundled with the deployment.  # noqa: E501
++        Specifies whether the agent is an internal agent. Internal agents come bundled with the deployment.  # noqa: E501
+ 
+         :return: The internal of this RimeAgent.  # noqa: E501
+         :rtype: bool
+         """
+         return self._internal
+ 
+     @internal.setter
+     def internal(self, internal):
+         """Sets the internal of this RimeAgent.
+ 
+-        Whether the agent is an internal agent or not. Internal agents come bundled with the deployment.  # noqa: E501
++        Specifies whether the agent is an internal agent. Internal agents come bundled with the deployment.  # noqa: E501
+ 
+         :param internal: The internal of this RimeAgent.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._internal = internal
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_agent_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_agent_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_archived_job_logs.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_archived_job_logs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_cancel_job_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_cancel_job_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_category_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_category_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_category_test_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_category_test_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_continuous_test_job_progress.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_continuous_test_job_progress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_continuous_test_run_progress.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_continuous_test_run_progress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_agent_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_agent_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_agent_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_agent_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_custom_monitor_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_custom_monitor_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_firewall_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_firewall_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_firewall_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_firewall_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_image_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_image_request.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -55,97 +55,99 @@
+         if python_version is not None:
+             self.python_version = python_version
+ 
+     @property
+     def name(self):
+         """Gets the name of this RimeCreateImageRequest.  # noqa: E501
+ 
+-        Name of the image.  # noqa: E501
++        Name of the Managed Image.  # noqa: E501
+ 
+         :return: The name of this RimeCreateImageRequest.  # noqa: E501
+         :rtype: str
+         """
+         return self._name
+ 
+     @name.setter
+     def name(self, name):
+         """Sets the name of this RimeCreateImageRequest.
+ 
+-        Name of the image.  # noqa: E501
++        Name of the Managed Image.  # noqa: E501
+ 
+         :param name: The name of this RimeCreateImageRequest.  # noqa: E501
+         :type: str
+         """
+         if name is None:
+             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+ 
+         self._name = name
+ 
+     @property
+     def pip_requirements(self):
+         """Gets the pip_requirements of this RimeCreateImageRequest.  # noqa: E501
+ 
+-        List of `pip` requirements that specify the customization used for this image.  # noqa: E501
++        List of `pip` requirements that specify the customization used for this Image.  # noqa: E501
+ 
+         :return: The pip_requirements of this RimeCreateImageRequest.  # noqa: E501
+         :rtype: list[ManagedImagePipRequirement]
+         """
+         return self._pip_requirements
+ 
+     @pip_requirements.setter
+     def pip_requirements(self, pip_requirements):
+         """Sets the pip_requirements of this RimeCreateImageRequest.
+ 
+-        List of `pip` requirements that specify the customization used for this image.  # noqa: E501
++        List of `pip` requirements that specify the customization used for this Image.  # noqa: E501
+ 
+         :param pip_requirements: The pip_requirements of this RimeCreateImageRequest.  # noqa: E501
+         :type: list[ManagedImagePipRequirement]
+         """
+         if pip_requirements is None:
+             raise ValueError("Invalid value for `pip_requirements`, must not be `None`")  # noqa: E501
+ 
+         self._pip_requirements = pip_requirements
+ 
+     @property
+     def package_requirements(self):
+         """Gets the package_requirements of this RimeCreateImageRequest.  # noqa: E501
+ 
+-        List of system requirements that specify the customization used for this image.  # noqa: E501
++        List of system requirements that specify the customization used for this Image.  # noqa: E501
+ 
+         :return: The package_requirements of this RimeCreateImageRequest.  # noqa: E501
+         :rtype: list[ManagedImagePackageRequirement]
+         """
+         return self._package_requirements
+ 
+     @package_requirements.setter
+     def package_requirements(self, package_requirements):
+         """Sets the package_requirements of this RimeCreateImageRequest.
+ 
+-        List of system requirements that specify the customization used for this image.  # noqa: E501
++        List of system requirements that specify the customization used for this Image.  # noqa: E501
+ 
+         :param package_requirements: The package_requirements of this RimeCreateImageRequest.  # noqa: E501
+         :type: list[ManagedImagePackageRequirement]
+         """
+ 
+         self._package_requirements = package_requirements
+ 
+     @property
+     def python_version(self):
+         """Gets the python_version of this RimeCreateImageRequest.  # noqa: E501
+ 
++        The version of the Python interpreter to use.  # noqa: E501
+ 
+         :return: The python_version of this RimeCreateImageRequest.  # noqa: E501
+         :rtype: str
+         """
+         return self._python_version
+ 
+     @python_version.setter
+     def python_version(self, python_version):
+         """Sets the python_version of this RimeCreateImageRequest.
+ 
++        The version of the Python interpreter to use.  # noqa: E501
+ 
+         :param python_version: The python_version of this RimeCreateImageRequest.  # noqa: E501
+         :type: str
+         """
+ 
+         self._python_version = python_version
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_image_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_image_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_notification_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_user_detail.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -11,171 +11,245 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class RimeCreateNotificationRequest(object):
++class UserUserDetail(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'object_type': 'NotificationObjectType',
+-        'object_id': 'str',
+-        'emails': 'list[str]',
+-        'config': 'SchemanotificationConfig',
+-        'webhooks': 'list[NotificationWebhookConfig]'
++        'id': 'RimeUUID',
++        'name': 'str',
++        'role': 'UserRole',
++        'email': 'str',
++        'full_name': 'str',
++        'show_tutorial': 'bool',
++        'org_role': 'RimeActorRole',
++        'private_info': 'UserPrivateInfo'
+     }
+ 
+     attribute_map = {
+-        'object_type': 'objectType',
+-        'object_id': 'objectId',
+-        'emails': 'emails',
+-        'config': 'config',
+-        'webhooks': 'webhooks'
++        'id': 'id',
++        'name': 'name',
++        'role': 'role',
++        'email': 'email',
++        'full_name': 'fullName',
++        'show_tutorial': 'showTutorial',
++        'org_role': 'orgRole',
++        'private_info': 'privateInfo'
+     }
+ 
+-    def __init__(self, object_type=None, object_id=None, emails=None, config=None, webhooks=None):  # noqa: E501
+-        """RimeCreateNotificationRequest - a model defined in Swagger"""  # noqa: E501
+-        self._object_type = None
+-        self._object_id = None
+-        self._emails = None
+-        self._config = None
+-        self._webhooks = None
++    def __init__(self, id=None, name=None, role=None, email=None, full_name=None, show_tutorial=None, org_role=None, private_info=None):  # noqa: E501
++        """UserUserDetail - a model defined in Swagger"""  # noqa: E501
++        self._id = None
++        self._name = None
++        self._role = None
++        self._email = None
++        self._full_name = None
++        self._show_tutorial = None
++        self._org_role = None
++        self._private_info = None
+         self.discriminator = None
+-        if object_type is not None:
+-            self.object_type = object_type
+-        if object_id is not None:
+-            self.object_id = object_id
+-        if emails is not None:
+-            self.emails = emails
+-        if config is not None:
+-            self.config = config
+-        if webhooks is not None:
+-            self.webhooks = webhooks
++        if id is not None:
++            self.id = id
++        if name is not None:
++            self.name = name
++        if role is not None:
++            self.role = role
++        if email is not None:
++            self.email = email
++        if full_name is not None:
++            self.full_name = full_name
++        if show_tutorial is not None:
++            self.show_tutorial = show_tutorial
++        if org_role is not None:
++            self.org_role = org_role
++        if private_info is not None:
++            self.private_info = private_info
+ 
+     @property
+-    def object_type(self):
+-        """Gets the object_type of this RimeCreateNotificationRequest.  # noqa: E501
++    def id(self):
++        """Gets the id of this UserUserDetail.  # noqa: E501
+ 
+ 
+-        :return: The object_type of this RimeCreateNotificationRequest.  # noqa: E501
+-        :rtype: NotificationObjectType
++        :return: The id of this UserUserDetail.  # noqa: E501
++        :rtype: RimeUUID
+         """
+-        return self._object_type
++        return self._id
+ 
+-    @object_type.setter
+-    def object_type(self, object_type):
+-        """Sets the object_type of this RimeCreateNotificationRequest.
++    @id.setter
++    def id(self, id):
++        """Sets the id of this UserUserDetail.
+ 
+ 
+-        :param object_type: The object_type of this RimeCreateNotificationRequest.  # noqa: E501
+-        :type: NotificationObjectType
++        :param id: The id of this UserUserDetail.  # noqa: E501
++        :type: RimeUUID
+         """
+ 
+-        self._object_type = object_type
++        self._id = id
+ 
+     @property
+-    def object_id(self):
+-        """Gets the object_id of this RimeCreateNotificationRequest.  # noqa: E501
++    def name(self):
++        """Gets the name of this UserUserDetail.  # noqa: E501
+ 
+-        Uniquely specifies an object for the notification. This varies depending on the object type; for Projects, this should be the unique identifier of the project.  # noqa: E501
++        Name of the user.  # noqa: E501
+ 
+-        :return: The object_id of this RimeCreateNotificationRequest.  # noqa: E501
++        :return: The name of this UserUserDetail.  # noqa: E501
+         :rtype: str
+         """
+-        return self._object_id
++        return self._name
+ 
+-    @object_id.setter
+-    def object_id(self, object_id):
+-        """Sets the object_id of this RimeCreateNotificationRequest.
++    @name.setter
++    def name(self, name):
++        """Sets the name of this UserUserDetail.
+ 
+-        Uniquely specifies an object for the notification. This varies depending on the object type; for Projects, this should be the unique identifier of the project.  # noqa: E501
++        Name of the user.  # noqa: E501
+ 
+-        :param object_id: The object_id of this RimeCreateNotificationRequest.  # noqa: E501
++        :param name: The name of this UserUserDetail.  # noqa: E501
+         :type: str
+         """
+ 
+-        self._object_id = object_id
++        self._name = name
+ 
+     @property
+-    def emails(self):
+-        """Gets the emails of this RimeCreateNotificationRequest.  # noqa: E501
++    def role(self):
++        """Gets the role of this UserUserDetail.  # noqa: E501
+ 
+-        List of emails that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :return: The emails of this RimeCreateNotificationRequest.  # noqa: E501
+-        :rtype: list[str]
++        :return: The role of this UserUserDetail.  # noqa: E501
++        :rtype: UserRole
+         """
+-        return self._emails
++        return self._role
+ 
+-    @emails.setter
+-    def emails(self, emails):
+-        """Sets the emails of this RimeCreateNotificationRequest.
++    @role.setter
++    def role(self, role):
++        """Sets the role of this UserUserDetail.
+ 
+-        List of emails that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :param emails: The emails of this RimeCreateNotificationRequest.  # noqa: E501
+-        :type: list[str]
++        :param role: The role of this UserUserDetail.  # noqa: E501
++        :type: UserRole
+         """
+ 
+-        self._emails = emails
++        self._role = role
+ 
+     @property
+-    def config(self):
+-        """Gets the config of this RimeCreateNotificationRequest.  # noqa: E501
++    def email(self):
++        """Gets the email of this UserUserDetail.  # noqa: E501
+ 
+ 
+-        :return: The config of this RimeCreateNotificationRequest.  # noqa: E501
+-        :rtype: SchemanotificationConfig
++        :return: The email of this UserUserDetail.  # noqa: E501
++        :rtype: str
++        """
++        return self._email
++
++    @email.setter
++    def email(self, email):
++        """Sets the email of this UserUserDetail.
++
++
++        :param email: The email of this UserUserDetail.  # noqa: E501
++        :type: str
++        """
++
++        self._email = email
++
++    @property
++    def full_name(self):
++        """Gets the full_name of this UserUserDetail.  # noqa: E501
++
++
++        :return: The full_name of this UserUserDetail.  # noqa: E501
++        :rtype: str
++        """
++        return self._full_name
++
++    @full_name.setter
++    def full_name(self, full_name):
++        """Sets the full_name of this UserUserDetail.
++
++
++        :param full_name: The full_name of this UserUserDetail.  # noqa: E501
++        :type: str
++        """
++
++        self._full_name = full_name
++
++    @property
++    def show_tutorial(self):
++        """Gets the show_tutorial of this UserUserDetail.  # noqa: E501
++
++
++        :return: The show_tutorial of this UserUserDetail.  # noqa: E501
++        :rtype: bool
++        """
++        return self._show_tutorial
++
++    @show_tutorial.setter
++    def show_tutorial(self, show_tutorial):
++        """Sets the show_tutorial of this UserUserDetail.
++
++
++        :param show_tutorial: The show_tutorial of this UserUserDetail.  # noqa: E501
++        :type: bool
++        """
++
++        self._show_tutorial = show_tutorial
++
++    @property
++    def org_role(self):
++        """Gets the org_role of this UserUserDetail.  # noqa: E501
++
++
++        :return: The org_role of this UserUserDetail.  # noqa: E501
++        :rtype: RimeActorRole
+         """
+-        return self._config
++        return self._org_role
+ 
+-    @config.setter
+-    def config(self, config):
+-        """Sets the config of this RimeCreateNotificationRequest.
++    @org_role.setter
++    def org_role(self, org_role):
++        """Sets the org_role of this UserUserDetail.
+ 
+ 
+-        :param config: The config of this RimeCreateNotificationRequest.  # noqa: E501
+-        :type: SchemanotificationConfig
++        :param org_role: The org_role of this UserUserDetail.  # noqa: E501
++        :type: RimeActorRole
+         """
+ 
+-        self._config = config
++        self._org_role = org_role
+ 
+     @property
+-    def webhooks(self):
+-        """Gets the webhooks of this RimeCreateNotificationRequest.  # noqa: E501
++    def private_info(self):
++        """Gets the private_info of this UserUserDetail.  # noqa: E501
+ 
+-        List of webhooks that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :return: The webhooks of this RimeCreateNotificationRequest.  # noqa: E501
+-        :rtype: list[NotificationWebhookConfig]
++        :return: The private_info of this UserUserDetail.  # noqa: E501
++        :rtype: UserPrivateInfo
+         """
+-        return self._webhooks
++        return self._private_info
+ 
+-    @webhooks.setter
+-    def webhooks(self, webhooks):
+-        """Sets the webhooks of this RimeCreateNotificationRequest.
++    @private_info.setter
++    def private_info(self, private_info):
++        """Sets the private_info of this UserUserDetail.
+ 
+-        List of webhooks that notifications should be sent to - this can be empty.  # noqa: E501
+ 
+-        :param webhooks: The webhooks of this RimeCreateNotificationRequest.  # noqa: E501
+-        :type: list[NotificationWebhookConfig]
++        :param private_info: The private_info of this UserUserDetail.  # noqa: E501
++        :type: UserPrivateInfo
+         """
+ 
+-        self._webhooks = webhooks
++        self._private_info = private_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -190,15 +264,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(RimeCreateNotificationRequest, dict):
++        if issubclass(UserUserDetail, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -206,15 +280,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, RimeCreateNotificationRequest):
++        if not isinstance(other, UserUserDetail):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_create_notification_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_create_notification_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_deactivate_agent_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_deactivate_agent_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_agent_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_agent_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_custom_monitor_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_custom_monitor_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_dataset_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_dataset_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_firewall_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_firewall_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_image_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_image_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_model_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_model_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_prediction_set_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_prediction_set_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_delete_uploaded_file_url_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_delete_uploaded_file_url_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ensure_image_existence_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ensure_image_existence_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_fail_job_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_fail_job_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_failing_row.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_failing_row.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_failing_rows_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_failing_rows_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_feature_flags.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_feature_flags.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_feature_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_feature_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_finalize_cancellation_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_finalize_cancellation_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_float_list.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_float_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_agent_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_agent_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_datapoints_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_datapoints_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_dataset_file_upload_url_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_dataset_file_upload_url_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_dataset_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_dataset_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_enabled_feature_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_enabled_feature_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_feature_flag_jwt_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_feature_flag_jwt_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_feature_flags_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_feature_flags_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_firewall_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_firewall_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_image_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_image_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_job_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_job_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_latest_logs_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_latest_logs_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_limit_status_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_limit_status_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_model_directory_upload_urls_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_model_directory_upload_urls_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_model_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_model_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_monitor_result_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_monitor_result_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_prediction_set_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_prediction_set_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_predictions_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_predictions_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_project_id_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_project_id_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_rime_info_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_rime_info_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_test_run_id_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_test_run_id_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_get_url_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_get_url_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_heartbeat_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_heartbeat_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_image_reference.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_image_reference.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_int_list.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_int_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data_continuous_incremental_test.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_data_continuous_incremental_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_data_stress_test.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_models_response.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -11,113 +11,113 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class RimeJobDataStressTest(object):
++class RimeListModelsResponse(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'project_id': 'RimeUUID',
+-        'test_run_id': 'str',
+-        'progress': 'RimeStressTestJobProgress'
++        'models': 'list[RimeModelWithOwnerDetails]',
++        'next_page_token': 'str',
++        'has_more': 'bool'
+     }
+ 
+     attribute_map = {
+-        'project_id': 'projectId',
+-        'test_run_id': 'testRunId',
+-        'progress': 'progress'
++        'models': 'models',
++        'next_page_token': 'nextPageToken',
++        'has_more': 'hasMore'
+     }
+ 
+-    def __init__(self, project_id=None, test_run_id=None, progress=None):  # noqa: E501
+-        """RimeJobDataStressTest - a model defined in Swagger"""  # noqa: E501
+-        self._project_id = None
+-        self._test_run_id = None
+-        self._progress = None
++    def __init__(self, models=None, next_page_token=None, has_more=None):  # noqa: E501
++        """RimeListModelsResponse - a model defined in Swagger"""  # noqa: E501
++        self._models = None
++        self._next_page_token = None
++        self._has_more = None
+         self.discriminator = None
+-        if project_id is not None:
+-            self.project_id = project_id
+-        if test_run_id is not None:
+-            self.test_run_id = test_run_id
+-        if progress is not None:
+-            self.progress = progress
++        if models is not None:
++            self.models = models
++        if next_page_token is not None:
++            self.next_page_token = next_page_token
++        if has_more is not None:
++            self.has_more = has_more
+ 
+     @property
+-    def project_id(self):
+-        """Gets the project_id of this RimeJobDataStressTest.  # noqa: E501
++    def models(self):
++        """Gets the models of this RimeListModelsResponse.  # noqa: E501
+ 
+ 
+-        :return: The project_id of this RimeJobDataStressTest.  # noqa: E501
+-        :rtype: RimeUUID
++        :return: The models of this RimeListModelsResponse.  # noqa: E501
++        :rtype: list[RimeModelWithOwnerDetails]
+         """
+-        return self._project_id
++        return self._models
+ 
+-    @project_id.setter
+-    def project_id(self, project_id):
+-        """Sets the project_id of this RimeJobDataStressTest.
++    @models.setter
++    def models(self, models):
++        """Sets the models of this RimeListModelsResponse.
+ 
+ 
+-        :param project_id: The project_id of this RimeJobDataStressTest.  # noqa: E501
+-        :type: RimeUUID
++        :param models: The models of this RimeListModelsResponse.  # noqa: E501
++        :type: list[RimeModelWithOwnerDetails]
+         """
+ 
+-        self._project_id = project_id
++        self._models = models
+ 
+     @property
+-    def test_run_id(self):
+-        """Gets the test_run_id of this RimeJobDataStressTest.  # noqa: E501
++    def next_page_token(self):
++        """Gets the next_page_token of this RimeListModelsResponse.  # noqa: E501
+ 
+ 
+-        :return: The test_run_id of this RimeJobDataStressTest.  # noqa: E501
++        :return: The next_page_token of this RimeListModelsResponse.  # noqa: E501
+         :rtype: str
+         """
+-        return self._test_run_id
++        return self._next_page_token
+ 
+-    @test_run_id.setter
+-    def test_run_id(self, test_run_id):
+-        """Sets the test_run_id of this RimeJobDataStressTest.
++    @next_page_token.setter
++    def next_page_token(self, next_page_token):
++        """Sets the next_page_token of this RimeListModelsResponse.
+ 
+ 
+-        :param test_run_id: The test_run_id of this RimeJobDataStressTest.  # noqa: E501
++        :param next_page_token: The next_page_token of this RimeListModelsResponse.  # noqa: E501
+         :type: str
+         """
+ 
+-        self._test_run_id = test_run_id
++        self._next_page_token = next_page_token
+ 
+     @property
+-    def progress(self):
+-        """Gets the progress of this RimeJobDataStressTest.  # noqa: E501
++    def has_more(self):
++        """Gets the has_more of this RimeListModelsResponse.  # noqa: E501
+ 
+ 
+-        :return: The progress of this RimeJobDataStressTest.  # noqa: E501
+-        :rtype: RimeStressTestJobProgress
++        :return: The has_more of this RimeListModelsResponse.  # noqa: E501
++        :rtype: bool
+         """
+-        return self._progress
++        return self._has_more
+ 
+-    @progress.setter
+-    def progress(self, progress):
+-        """Sets the progress of this RimeJobDataStressTest.
++    @has_more.setter
++    def has_more(self, has_more):
++        """Sets the has_more of this RimeListModelsResponse.
+ 
+ 
+-        :param progress: The progress of this RimeJobDataStressTest.  # noqa: E501
+-        :type: RimeStressTestJobProgress
++        :param has_more: The has_more of this RimeListModelsResponse.  # noqa: E501
++        :type: bool
+         """
+ 
+-        self._progress = progress
++        self._has_more = has_more
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -132,15 +132,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(RimeJobDataStressTest, dict):
++        if issubclass(RimeListModelsResponse, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -148,15 +148,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, RimeJobDataStressTest):
++        if not isinstance(other, RimeListModelsResponse):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_metadata.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_metadata.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -35,46 +35,49 @@
+         'start_time': 'datetime',
+         'creation_time': 'datetime',
+         'running_time_secs': 'float',
+         'job_data': 'RimeJobData',
+         'job_progress_str': 'str',
+         'cancellation_requested': 'bool',
+         'agent_id': 'RimeUUID',
+-        'archived_job_logs': 'RimeArchivedJobLogs'
++        'archived_job_logs': 'RimeArchivedJobLogs',
++        'error_msg': 'str'
+     }
+ 
+     attribute_map = {
+         'job_id': 'jobId',
+         'termination_reason': 'terminationReason',
+         'job_type': 'jobType',
+         'status': 'status',
+         'start_time': 'startTime',
+         'creation_time': 'creationTime',
+         'running_time_secs': 'runningTimeSecs',
+         'job_data': 'jobData',
+         'job_progress_str': 'jobProgressStr',
+         'cancellation_requested': 'cancellationRequested',
+         'agent_id': 'agentId',
+-        'archived_job_logs': 'archivedJobLogs'
++        'archived_job_logs': 'archivedJobLogs',
++        'error_msg': 'errorMsg'
+     }
+ 
+-    def __init__(self, job_id=None, termination_reason=None, job_type=None, status=None, start_time=None, creation_time=None, running_time_secs=None, job_data=None, job_progress_str=None, cancellation_requested=None, agent_id=None, archived_job_logs=None):  # noqa: E501
++    def __init__(self, job_id=None, termination_reason=None, job_type=None, status=None, start_time=None, creation_time=None, running_time_secs=None, job_data=None, job_progress_str=None, cancellation_requested=None, agent_id=None, archived_job_logs=None, error_msg=None):  # noqa: E501
+         """RimeJobMetadata - a model defined in Swagger"""  # noqa: E501
+         self._job_id = None
+         self._termination_reason = None
+         self._job_type = None
+         self._status = None
+         self._start_time = None
+         self._creation_time = None
+         self._running_time_secs = None
+         self._job_data = None
+         self._job_progress_str = None
+         self._cancellation_requested = None
+         self._agent_id = None
+         self._archived_job_logs = None
++        self._error_msg = None
+         self.discriminator = None
+         if job_id is not None:
+             self.job_id = job_id
+         if termination_reason is not None:
+             self.termination_reason = termination_reason
+         if job_type is not None:
+             self.job_type = job_type
+@@ -92,14 +95,16 @@
+             self.job_progress_str = job_progress_str
+         if cancellation_requested is not None:
+             self.cancellation_requested = cancellation_requested
+         if agent_id is not None:
+             self.agent_id = agent_id
+         if archived_job_logs is not None:
+             self.archived_job_logs = archived_job_logs
++        if error_msg is not None:
++            self.error_msg = error_msg
+ 
+     @property
+     def job_id(self):
+         """Gets the job_id of this RimeJobMetadata.  # noqa: E501
+ 
+         The identifier within our job tracking system.  # noqa: E501
+ 
+@@ -357,14 +362,37 @@
+ 
+         :param archived_job_logs: The archived_job_logs of this RimeJobMetadata.  # noqa: E501
+         :type: RimeArchivedJobLogs
+         """
+ 
+         self._archived_job_logs = archived_job_logs
+ 
++    @property
++    def error_msg(self):
++        """Gets the error_msg of this RimeJobMetadata.  # noqa: E501
++
++        User-facing error message for the job.  # noqa: E501
++
++        :return: The error_msg of this RimeJobMetadata.  # noqa: E501
++        :rtype: str
++        """
++        return self._error_msg
++
++    @error_msg.setter
++    def error_msg(self, error_msg):
++        """Sets the error_msg of this RimeJobMetadata.
++
++        User-facing error message for the job.  # noqa: E501
++
++        :param error_msg: The error_msg of this RimeJobMetadata.  # noqa: E501
++        :type: str
++        """
++
++        self._error_msg = error_msg
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_job_view.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_job_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_license_feature.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_license_feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_license_limit.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_license_limit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_limit_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_limit_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_limit_status_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_limit_status_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_agents_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_agents_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_datasets_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_datasets_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_request_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_request_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_detection_events_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_enabled_features_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_enabled_features_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_file_scan_results_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_file_scan_results_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_images_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_images_request.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -98,26 +98,26 @@
+ 
+         self._page_size = page_size
+ 
+     @property
+     def pip_libraries(self):
+         """Gets the pip_libraries of this RimeListImagesRequest.  # noqa: E501
+ 
+-        Optional. Constrains which `pip` libraries are installed on the image. The filter will only be active if the list is nonempty. If specified, do not include a pageToken field in the request.  # noqa: E501
++        Optional. Filters the list for libraries that are installed on the Managed Image. The filter is only active when the list is not empty. When this filter is specified, do not include a pageToken field in the request.  # noqa: E501
+ 
+         :return: The pip_libraries of this RimeListImagesRequest.  # noqa: E501
+         :rtype: list[ListImagesRequestPipLibraryFilter]
+         """
+         return self._pip_libraries
+ 
+     @pip_libraries.setter
+     def pip_libraries(self, pip_libraries):
+         """Sets the pip_libraries of this RimeListImagesRequest.
+ 
+-        Optional. Constrains which `pip` libraries are installed on the image. The filter will only be active if the list is nonempty. If specified, do not include a pageToken field in the request.  # noqa: E501
++        Optional. Filters the list for libraries that are installed on the Managed Image. The filter is only active when the list is not empty. When this filter is specified, do not include a pageToken field in the request.  # noqa: E501
+ 
+         :param pip_libraries: The pip_libraries of this RimeListImagesRequest.  # noqa: E501
+         :type: list[ListImagesRequestPipLibraryFilter]
+         """
+ 
+         self._pip_libraries = pip_libraries
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_images_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_images_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_jobs_request_query.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_request_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_jobs_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_metric_identifiers_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_metric_identifiers_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_models_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_jobs_for_project_response.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -11,109 +11,111 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class RimeListModelsResponse(object):
++class RimeListJobsForProjectResponse(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'models': 'list[RimeModelWithOwnerDetails]',
++        'jobs': 'list[RimeJobMetadata]',
+         'next_page_token': 'str',
+         'has_more': 'bool'
+     }
+ 
+     attribute_map = {
+-        'models': 'models',
++        'jobs': 'jobs',
+         'next_page_token': 'nextPageToken',
+         'has_more': 'hasMore'
+     }
+ 
+-    def __init__(self, models=None, next_page_token=None, has_more=None):  # noqa: E501
+-        """RimeListModelsResponse - a model defined in Swagger"""  # noqa: E501
+-        self._models = None
++    def __init__(self, jobs=None, next_page_token=None, has_more=None):  # noqa: E501
++        """RimeListJobsForProjectResponse - a model defined in Swagger"""  # noqa: E501
++        self._jobs = None
+         self._next_page_token = None
+         self._has_more = None
+         self.discriminator = None
+-        if models is not None:
+-            self.models = models
++        if jobs is not None:
++            self.jobs = jobs
+         if next_page_token is not None:
+             self.next_page_token = next_page_token
+         if has_more is not None:
+             self.has_more = has_more
+ 
+     @property
+-    def models(self):
+-        """Gets the models of this RimeListModelsResponse.  # noqa: E501
++    def jobs(self):
++        """Gets the jobs of this RimeListJobsForProjectResponse.  # noqa: E501
+ 
+ 
+-        :return: The models of this RimeListModelsResponse.  # noqa: E501
+-        :rtype: list[RimeModelWithOwnerDetails]
++        :return: The jobs of this RimeListJobsForProjectResponse.  # noqa: E501
++        :rtype: list[RimeJobMetadata]
+         """
+-        return self._models
++        return self._jobs
+ 
+-    @models.setter
+-    def models(self, models):
+-        """Sets the models of this RimeListModelsResponse.
++    @jobs.setter
++    def jobs(self, jobs):
++        """Sets the jobs of this RimeListJobsForProjectResponse.
+ 
+ 
+-        :param models: The models of this RimeListModelsResponse.  # noqa: E501
+-        :type: list[RimeModelWithOwnerDetails]
++        :param jobs: The jobs of this RimeListJobsForProjectResponse.  # noqa: E501
++        :type: list[RimeJobMetadata]
+         """
+ 
+-        self._models = models
++        self._jobs = jobs
+ 
+     @property
+     def next_page_token(self):
+-        """Gets the next_page_token of this RimeListModelsResponse.  # noqa: E501
++        """Gets the next_page_token of this RimeListJobsForProjectResponse.  # noqa: E501
+ 
++        Use this page token in your next ListJobs call to access the next page of results.  # noqa: E501
+ 
+-        :return: The next_page_token of this RimeListModelsResponse.  # noqa: E501
++        :return: The next_page_token of this RimeListJobsForProjectResponse.  # noqa: E501
+         :rtype: str
+         """
+         return self._next_page_token
+ 
+     @next_page_token.setter
+     def next_page_token(self, next_page_token):
+-        """Sets the next_page_token of this RimeListModelsResponse.
++        """Sets the next_page_token of this RimeListJobsForProjectResponse.
+ 
++        Use this page token in your next ListJobs call to access the next page of results.  # noqa: E501
+ 
+-        :param next_page_token: The next_page_token of this RimeListModelsResponse.  # noqa: E501
++        :param next_page_token: The next_page_token of this RimeListJobsForProjectResponse.  # noqa: E501
+         :type: str
+         """
+ 
+         self._next_page_token = next_page_token
+ 
+     @property
+     def has_more(self):
+-        """Gets the has_more of this RimeListModelsResponse.  # noqa: E501
++        """Gets the has_more of this RimeListJobsForProjectResponse.  # noqa: E501
+ 
+ 
+-        :return: The has_more of this RimeListModelsResponse.  # noqa: E501
++        :return: The has_more of this RimeListJobsForProjectResponse.  # noqa: E501
+         :rtype: bool
+         """
+         return self._has_more
+ 
+     @has_more.setter
+     def has_more(self, has_more):
+-        """Sets the has_more of this RimeListModelsResponse.
++        """Sets the has_more of this RimeListJobsForProjectResponse.
+ 
+ 
+-        :param has_more: The has_more of this RimeListModelsResponse.  # noqa: E501
++        :param has_more: The has_more of this RimeListJobsForProjectResponse.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._has_more = has_more
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -132,15 +134,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(RimeListModelsResponse, dict):
++        if issubclass(RimeListJobsForProjectResponse, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -148,15 +150,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, RimeListModelsResponse):
++        if not isinstance(other, RimeListJobsForProjectResponse):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_monitors_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_monitors_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_notifications_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_notifications_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_predictions_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_prediction_sets_response.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class RimeListPredictionsResponse(object):
++class RimeListPredictionSetsResponse(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+@@ -36,84 +36,84 @@
+     attribute_map = {
+         'predictions': 'predictions',
+         'next_page_token': 'nextPageToken',
+         'has_more': 'hasMore'
+     }
+ 
+     def __init__(self, predictions=None, next_page_token=None, has_more=None):  # noqa: E501
+-        """RimeListPredictionsResponse - a model defined in Swagger"""  # noqa: E501
++        """RimeListPredictionSetsResponse - a model defined in Swagger"""  # noqa: E501
+         self._predictions = None
+         self._next_page_token = None
+         self._has_more = None
+         self.discriminator = None
+         if predictions is not None:
+             self.predictions = predictions
+         if next_page_token is not None:
+             self.next_page_token = next_page_token
+         if has_more is not None:
+             self.has_more = has_more
+ 
+     @property
+     def predictions(self):
+-        """Gets the predictions of this RimeListPredictionsResponse.  # noqa: E501
++        """Gets the predictions of this RimeListPredictionSetsResponse.  # noqa: E501
+ 
+ 
+-        :return: The predictions of this RimeListPredictionsResponse.  # noqa: E501
++        :return: The predictions of this RimeListPredictionSetsResponse.  # noqa: E501
+         :rtype: list[RegistrypredictionPrediction]
+         """
+         return self._predictions
+ 
+     @predictions.setter
+     def predictions(self, predictions):
+-        """Sets the predictions of this RimeListPredictionsResponse.
++        """Sets the predictions of this RimeListPredictionSetsResponse.
+ 
+ 
+-        :param predictions: The predictions of this RimeListPredictionsResponse.  # noqa: E501
++        :param predictions: The predictions of this RimeListPredictionSetsResponse.  # noqa: E501
+         :type: list[RegistrypredictionPrediction]
+         """
+ 
+         self._predictions = predictions
+ 
+     @property
+     def next_page_token(self):
+-        """Gets the next_page_token of this RimeListPredictionsResponse.  # noqa: E501
++        """Gets the next_page_token of this RimeListPredictionSetsResponse.  # noqa: E501
+ 
+ 
+-        :return: The next_page_token of this RimeListPredictionsResponse.  # noqa: E501
++        :return: The next_page_token of this RimeListPredictionSetsResponse.  # noqa: E501
+         :rtype: str
+         """
+         return self._next_page_token
+ 
+     @next_page_token.setter
+     def next_page_token(self, next_page_token):
+-        """Sets the next_page_token of this RimeListPredictionsResponse.
++        """Sets the next_page_token of this RimeListPredictionSetsResponse.
+ 
+ 
+-        :param next_page_token: The next_page_token of this RimeListPredictionsResponse.  # noqa: E501
++        :param next_page_token: The next_page_token of this RimeListPredictionSetsResponse.  # noqa: E501
+         :type: str
+         """
+ 
+         self._next_page_token = next_page_token
+ 
+     @property
+     def has_more(self):
+-        """Gets the has_more of this RimeListPredictionsResponse.  # noqa: E501
++        """Gets the has_more of this RimeListPredictionSetsResponse.  # noqa: E501
+ 
+ 
+-        :return: The has_more of this RimeListPredictionsResponse.  # noqa: E501
++        :return: The has_more of this RimeListPredictionSetsResponse.  # noqa: E501
+         :rtype: bool
+         """
+         return self._has_more
+ 
+     @has_more.setter
+     def has_more(self, has_more):
+-        """Sets the has_more of this RimeListPredictionsResponse.
++        """Sets the has_more of this RimeListPredictionSetsResponse.
+ 
+ 
+-        :param has_more: The has_more of this RimeListPredictionsResponse.  # noqa: E501
++        :param has_more: The has_more of this RimeListPredictionSetsResponse.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._has_more = has_more
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -132,15 +132,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(RimeListPredictionsResponse, dict):
++        if issubclass(RimeListPredictionSetsResponse, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -148,15 +148,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, RimeListPredictionsResponse):
++        if not isinstance(other, RimeListPredictionSetsResponse):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_list_uploaded_file_urls_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_uploaded_file_urls_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_long_description_tab.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_long_description_tab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_managed_image.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_managed_image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_managed_image_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_managed_image_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_model_task.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_model_task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_model_with_owner_details.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_model_with_owner_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_monitor_data_point.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_monitor_data_point.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_named_double.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_named_double.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_order.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_order.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_parent_role_subject_role_pair.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_parent_role_subject_role_pair.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_data_stream_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_data_stream_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_dataset_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_dataset_response.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -42,24 +42,26 @@
+         if dataset_id is not None:
+             self.dataset_id = dataset_id
+ 
+     @property
+     def dataset_id(self):
+         """Gets the dataset_id of this RimeRegisterDatasetResponse.  # noqa: E501
+ 
++        dataset_id is a string as it contains semantic meaning and does not adhere to UUID standard.  # noqa: E501
+ 
+         :return: The dataset_id of this RimeRegisterDatasetResponse.  # noqa: E501
+         :rtype: str
+         """
+         return self._dataset_id
+ 
+     @dataset_id.setter
+     def dataset_id(self, dataset_id):
+         """Sets the dataset_id of this RimeRegisterDatasetResponse.
+ 
++        dataset_id is a string as it contains semantic meaning and does not adhere to UUID standard.  # noqa: E501
+ 
+         :param dataset_id: The dataset_id of this RimeRegisterDatasetResponse.  # noqa: E501
+         :type: str
+         """
+ 
+         self._dataset_id = dataset_id
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_internal_agent_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_internal_agent_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_model_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_model_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_register_prediction_set_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_register_prediction_set_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ri_email_recipient.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ri_email_recipient.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_ri_plan.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_ri_plan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_safe_url.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_safe_url.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_send_ri_email_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_send_ri_email_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_severity.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_severity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_severity_counts.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_severity_counts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_sort_spec.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_sort_spec.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_continuous_test_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_file_scan_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_start_stress_test_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_start_stress_test_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_datapoints_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_datapoints_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_predictions_request_prediction.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_predictions_request_prediction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_store_predictions_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_store_predictions_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_str_list.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_str_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_stress_test_job_progress.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_stress_test_job_progress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_suggestion.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_suggestion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_sync_image_tag_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_sync_image_tag_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_table_column.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_table_column.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_table_column_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_table_column_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_termination_reason.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_termination_reason.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_case_monitor_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_list_users_response.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -11,139 +11,113 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class RimeTestCaseMonitorInfo(object):
++class RimeListUsersResponse(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'threshold': 'MonitorThreshold',
+-        'is_subset_metric': 'bool',
+-        'rca_role': 'RcaRCARole',
+-        'excluded_transforms': 'MonitorExcludedTransforms'
++        'users': 'list[UserUserDetail]',
++        'next_page_token': 'str',
++        'has_more': 'bool'
+     }
+ 
+     attribute_map = {
+-        'threshold': 'threshold',
+-        'is_subset_metric': 'isSubsetMetric',
+-        'rca_role': 'rcaRole',
+-        'excluded_transforms': 'excludedTransforms'
++        'users': 'users',
++        'next_page_token': 'nextPageToken',
++        'has_more': 'hasMore'
+     }
+ 
+-    def __init__(self, threshold=None, is_subset_metric=None, rca_role=None, excluded_transforms=None):  # noqa: E501
+-        """RimeTestCaseMonitorInfo - a model defined in Swagger"""  # noqa: E501
+-        self._threshold = None
+-        self._is_subset_metric = None
+-        self._rca_role = None
+-        self._excluded_transforms = None
++    def __init__(self, users=None, next_page_token=None, has_more=None):  # noqa: E501
++        """RimeListUsersResponse - a model defined in Swagger"""  # noqa: E501
++        self._users = None
++        self._next_page_token = None
++        self._has_more = None
+         self.discriminator = None
+-        if threshold is not None:
+-            self.threshold = threshold
+-        if is_subset_metric is not None:
+-            self.is_subset_metric = is_subset_metric
+-        if rca_role is not None:
+-            self.rca_role = rca_role
+-        if excluded_transforms is not None:
+-            self.excluded_transforms = excluded_transforms
++        if users is not None:
++            self.users = users
++        if next_page_token is not None:
++            self.next_page_token = next_page_token
++        if has_more is not None:
++            self.has_more = has_more
+ 
+     @property
+-    def threshold(self):
+-        """Gets the threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
++    def users(self):
++        """Gets the users of this RimeListUsersResponse.  # noqa: E501
+ 
+ 
+-        :return: The threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :rtype: MonitorThreshold
++        :return: The users of this RimeListUsersResponse.  # noqa: E501
++        :rtype: list[UserUserDetail]
+         """
+-        return self._threshold
++        return self._users
+ 
+-    @threshold.setter
+-    def threshold(self, threshold):
+-        """Sets the threshold of this RimeTestCaseMonitorInfo.
++    @users.setter
++    def users(self, users):
++        """Sets the users of this RimeListUsersResponse.
+ 
+ 
+-        :param threshold: The threshold of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :type: MonitorThreshold
++        :param users: The users of this RimeListUsersResponse.  # noqa: E501
++        :type: list[UserUserDetail]
+         """
+ 
+-        self._threshold = threshold
++        self._users = users
+ 
+     @property
+-    def is_subset_metric(self):
+-        """Gets the is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
++    def next_page_token(self):
++        """Gets the next_page_token of this RimeListUsersResponse.  # noqa: E501
+ 
+ 
+-        :return: The is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :rtype: bool
+-        """
+-        return self._is_subset_metric
+-
+-    @is_subset_metric.setter
+-    def is_subset_metric(self, is_subset_metric):
+-        """Sets the is_subset_metric of this RimeTestCaseMonitorInfo.
+-
+-
+-        :param is_subset_metric: The is_subset_metric of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :type: bool
+-        """
+-
+-        self._is_subset_metric = is_subset_metric
+-
+-    @property
+-    def rca_role(self):
+-        """Gets the rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
+-
+-
+-        :return: The rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :rtype: RcaRCARole
++        :return: The next_page_token of this RimeListUsersResponse.  # noqa: E501
++        :rtype: str
+         """
+-        return self._rca_role
++        return self._next_page_token
+ 
+-    @rca_role.setter
+-    def rca_role(self, rca_role):
+-        """Sets the rca_role of this RimeTestCaseMonitorInfo.
++    @next_page_token.setter
++    def next_page_token(self, next_page_token):
++        """Sets the next_page_token of this RimeListUsersResponse.
+ 
+ 
+-        :param rca_role: The rca_role of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :type: RcaRCARole
++        :param next_page_token: The next_page_token of this RimeListUsersResponse.  # noqa: E501
++        :type: str
+         """
+ 
+-        self._rca_role = rca_role
++        self._next_page_token = next_page_token
+ 
+     @property
+-    def excluded_transforms(self):
+-        """Gets the excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
++    def has_more(self):
++        """Gets the has_more of this RimeListUsersResponse.  # noqa: E501
+ 
+ 
+-        :return: The excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :rtype: MonitorExcludedTransforms
++        :return: The has_more of this RimeListUsersResponse.  # noqa: E501
++        :rtype: bool
+         """
+-        return self._excluded_transforms
++        return self._has_more
+ 
+-    @excluded_transforms.setter
+-    def excluded_transforms(self, excluded_transforms):
+-        """Sets the excluded_transforms of this RimeTestCaseMonitorInfo.
++    @has_more.setter
++    def has_more(self, has_more):
++        """Sets the has_more of this RimeListUsersResponse.
+ 
+ 
+-        :param excluded_transforms: The excluded_transforms of this RimeTestCaseMonitorInfo.  # noqa: E501
+-        :type: MonitorExcludedTransforms
++        :param has_more: The has_more of this RimeListUsersResponse.  # noqa: E501
++        :type: bool
+         """
+ 
+-        self._excluded_transforms = excluded_transforms
++        self._has_more = has_more
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+@@ -158,15 +132,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(RimeTestCaseMonitorInfo, dict):
++        if issubclass(RimeListUsersResponse, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -174,15 +148,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, RimeTestCaseMonitorInfo):
++        if not isinstance(other, RimeListUsersResponse):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_case_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_case_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_metric_category.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_metric_category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_run_progress.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_run_progress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_task_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_task_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_test_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_test_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_time_interval.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_time_interval.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_build_info_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_build_info_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_firewall_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_firewall_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_monitor_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_monitor_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_update_notification_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_update_notification_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_upsert_feature_flags_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_upsert_feature_flags_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_upsert_job_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_upsert_job_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_user_detail_with_role.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_detail_with_role.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_user_with_role.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_user_with_role.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/rime_uuid.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/rime_uuid.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -42,26 +42,26 @@
+         if uuid is not None:
+             self.uuid = uuid
+ 
+     @property
+     def uuid(self):
+         """Gets the uuid of this RimeUUID.  # noqa: E501
+ 
+-        String value of the object ID.  # noqa: E501
++        Unique object ID.  # noqa: E501
+ 
+         :return: The uuid of this RimeUUID.  # noqa: E501
+         :rtype: str
+         """
+         return self._uuid
+ 
+     @uuid.setter
+     def uuid(self, uuid):
+         """Sets the uuid of this RimeUUID.
+ 
+-        String value of the object ID.  # noqa: E501
++        Unique object ID.  # noqa: E501
+ 
+         :param uuid: The uuid of this RimeUUID.  # noqa: E501
+         :type: str
+         """
+ 
+         self._uuid = uuid
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/riskscore_risk_category_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/riskscore_risk_category_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/riskscore_risk_score.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/riskscore_risk_score.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -94,24 +94,26 @@
+ 
+         self._severity = severity
+ 
+     @property
+     def score(self):
+         """Gets the score of this RiskscoreRiskScore.  # noqa: E501
+ 
++        A risk score is a value between 0 and 1, where 0 is the lowest risk and 1 is the highest risk.  # noqa: E501
+ 
+         :return: The score of this RiskscoreRiskScore.  # noqa: E501
+         :rtype: float
+         """
+         return self._score
+ 
+     @score.setter
+     def score(self, score):
+         """Sets the score of this RiskscoreRiskScore.
+ 
++        A risk score is a value between 0 and 1, where 0 is the lowest risk and 1 is the highest risk.  # noqa: E501
+ 
+         :param score: The score of this RiskscoreRiskScore.  # noqa: E501
+         :type: float
+         """
+ 
+         self._score = score
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/role_users_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/role_users_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/role_workspace_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/role_workspace_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_resource_request.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_resource_request.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -47,49 +47,49 @@
+         if cpu_request_millicores is not None:
+             self.cpu_request_millicores = cpu_request_millicores
+ 
+     @property
+     def ram_request_megabytes(self):
+         """Gets the ram_request_megabytes of this RuntimeinfoResourceRequest.  # noqa: E501
+ 
+-        Megabytes of RAM requested for the stress test job.  # noqa: E501
++        Megabytes of RAM requested for the Stress Test Job.  # noqa: E501
+ 
+         :return: The ram_request_megabytes of this RuntimeinfoResourceRequest.  # noqa: E501
+         :rtype: str
+         """
+         return self._ram_request_megabytes
+ 
+     @ram_request_megabytes.setter
+     def ram_request_megabytes(self, ram_request_megabytes):
+         """Sets the ram_request_megabytes of this RuntimeinfoResourceRequest.
+ 
+-        Megabytes of RAM requested for the stress test job.  # noqa: E501
++        Megabytes of RAM requested for the Stress Test Job.  # noqa: E501
+ 
+         :param ram_request_megabytes: The ram_request_megabytes of this RuntimeinfoResourceRequest.  # noqa: E501
+         :type: str
+         """
+ 
+         self._ram_request_megabytes = ram_request_megabytes
+ 
+     @property
+     def cpu_request_millicores(self):
+         """Gets the cpu_request_millicores of this RuntimeinfoResourceRequest.  # noqa: E501
+ 
+-        Millicores of CPU requested for the stress test job.  # noqa: E501
++        Millicores of CPU requested for the Stress Test Job.  # noqa: E501
+ 
+         :return: The cpu_request_millicores of this RuntimeinfoResourceRequest.  # noqa: E501
+         :rtype: str
+         """
+         return self._cpu_request_millicores
+ 
+     @cpu_request_millicores.setter
+     def cpu_request_millicores(self, cpu_request_millicores):
+         """Sets the cpu_request_millicores of this RuntimeinfoResourceRequest.
+ 
+-        Millicores of CPU requested for the stress test job.  # noqa: E501
++        Millicores of CPU requested for the Stress Test Job.  # noqa: E501
+ 
+         :param cpu_request_millicores: The cpu_request_millicores of this RuntimeinfoResourceRequest.  # noqa: E501
+         :type: str
+         """
+ 
+         self._cpu_request_millicores = cpu_request_millicores
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/runtimeinfo_run_time_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/runtimeinfo_run_time_info.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -125,49 +125,49 @@
+ 
+         self._resource_request = resource_request
+ 
+     @property
+     def explicit_errors(self):
+         """Gets the explicit_errors of this RuntimeinfoRunTimeInfo.  # noqa: E501
+ 
+-        If true, the job will not ignore silent errors.  # noqa: E501
++        Specifies whether the job will return silent errors. By default, this is set to false, and silent errors are not returned.  # noqa: E501
+ 
+         :return: The explicit_errors of this RuntimeinfoRunTimeInfo.  # noqa: E501
+         :rtype: bool
+         """
+         return self._explicit_errors
+ 
+     @explicit_errors.setter
+     def explicit_errors(self, explicit_errors):
+         """Sets the explicit_errors of this RuntimeinfoRunTimeInfo.
+ 
+-        If true, the job will not ignore silent errors.  # noqa: E501
++        Specifies whether the job will return silent errors. By default, this is set to false, and silent errors are not returned.  # noqa: E501
+ 
+         :param explicit_errors: The explicit_errors of this RuntimeinfoRunTimeInfo.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._explicit_errors = explicit_errors
+ 
+     @property
+     def random_seed(self):
+         """Gets the random_seed of this RuntimeinfoRunTimeInfo.  # noqa: E501
+ 
+-        Random seed to use for the job, so that test job result will be deterministic.  # noqa: E501
++        Random seed to use for the Job, so that Test Job result will be deterministic.  # noqa: E501
+ 
+         :return: The random_seed of this RuntimeinfoRunTimeInfo.  # noqa: E501
+         :rtype: str
+         """
+         return self._random_seed
+ 
+     @random_seed.setter
+     def random_seed(self, random_seed):
+         """Sets the random_seed of this RuntimeinfoRunTimeInfo.
+ 
+-        Random seed to use for the job, so that test job result will be deterministic.  # noqa: E501
++        Random seed to use for the Job, so that Test Job result will be deterministic.  # noqa: E501
+ 
+         :param random_seed: The random_seed of this RuntimeinfoRunTimeInfo.  # noqa: E501
+         :type: str
+         """
+ 
+         self._random_seed = random_seed
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemadatacollector_prediction.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemadatacollector_prediction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemamonitor_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemamonitor_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemanotification_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/schemanotification_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/schemaregistry_metadata.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/registry_metadata.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class SchemaregistryMetadata(object):
++class RegistryMetadata(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+@@ -34,64 +34,64 @@
+ 
+     attribute_map = {
+         'tags': 'tags',
+         'extra_info': 'extraInfo'
+     }
+ 
+     def __init__(self, tags=None, extra_info=None):  # noqa: E501
+-        """SchemaregistryMetadata - a model defined in Swagger"""  # noqa: E501
++        """RegistryMetadata - a model defined in Swagger"""  # noqa: E501
+         self._tags = None
+         self._extra_info = None
+         self.discriminator = None
+         if tags is not None:
+             self.tags = tags
+         if extra_info is not None:
+             self.extra_info = extra_info
+ 
+     @property
+     def tags(self):
+-        """Gets the tags of this SchemaregistryMetadata.  # noqa: E501
++        """Gets the tags of this RegistryMetadata.  # noqa: E501
+ 
+         Tags are optional single strings used to identify and organize across a project.  # noqa: E501
+ 
+-        :return: The tags of this SchemaregistryMetadata.  # noqa: E501
++        :return: The tags of this RegistryMetadata.  # noqa: E501
+         :rtype: list[str]
+         """
+         return self._tags
+ 
+     @tags.setter
+     def tags(self, tags):
+-        """Sets the tags of this SchemaregistryMetadata.
++        """Sets the tags of this RegistryMetadata.
+ 
+         Tags are optional single strings used to identify and organize across a project.  # noqa: E501
+ 
+-        :param tags: The tags of this SchemaregistryMetadata.  # noqa: E501
++        :param tags: The tags of this RegistryMetadata.  # noqa: E501
+         :type: list[str]
+         """
+ 
+         self._tags = tags
+ 
+     @property
+     def extra_info(self):
+-        """Gets the extra_info of this SchemaregistryMetadata.  # noqa: E501
++        """Gets the extra_info of this RegistryMetadata.  # noqa: E501
+ 
+         Metadata are optional json encoded information that users wish to associate.  # noqa: E501
+ 
+-        :return: The extra_info of this SchemaregistryMetadata.  # noqa: E501
++        :return: The extra_info of this RegistryMetadata.  # noqa: E501
+         :rtype: str
+         """
+         return self._extra_info
+ 
+     @extra_info.setter
+     def extra_info(self, extra_info):
+-        """Sets the extra_info of this SchemaregistryMetadata.
++        """Sets the extra_info of this RegistryMetadata.
+ 
+         Metadata are optional json encoded information that users wish to associate.  # noqa: E501
+ 
+-        :param extra_info: The extra_info of this SchemaregistryMetadata.  # noqa: E501
++        :param extra_info: The extra_info of this RegistryMetadata.  # noqa: E501
+         :type: str
+         """
+ 
+         self._extra_info = extra_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -110,15 +110,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(SchemaregistryMetadata, dict):
++        if issubclass(RegistryMetadata, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -126,15 +126,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, SchemaregistryMetadata):
++        if not isinstance(other, RegistryMetadata):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/security_event_details_flagged_datapoint.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/security_event_details_flagged_datapoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/security_event_details_security_event_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/security_event_details_security_event_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/statedb_job_status.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/statedb_job_status.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -27,15 +27,14 @@
+     UNSPECIFIED = "JOB_STATUS_UNSPECIFIED"
+     PENDING = "JOB_STATUS_PENDING"
+     RUNNING = "JOB_STATUS_RUNNING"
+     FAILED = "JOB_STATUS_FAILED"
+     SUCCEEDED = "JOB_STATUS_SUCCEEDED"
+     REQUESTED = "JOB_STATUS_REQUESTED"
+     CANCELLED = "JOB_STATUS_CANCELLED"
+-    RECONCILING = "JOB_STATUS_RECONCILING"
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_datapoints_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_datapoints_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_latest_logs_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_latest_logs_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_predictions_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_predictions_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_metrics_category_summary_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_metrics_category_summary_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_metrics_model_perf_metric.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_metrics_model_perf_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/test_run_progress_test_batch_progress.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/test_run_progress_test_batch_progress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_annotated_test_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_annotated_test_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_connection_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_connection_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_collector_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_collector_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_file_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_file_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_info.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -38,18 +38,16 @@
+     }
+ 
+     def __init__(self, ref_dataset_id=None, eval_dataset_id=None):  # noqa: E501
+         """TestrunDataInfo - a model defined in Swagger"""  # noqa: E501
+         self._ref_dataset_id = None
+         self._eval_dataset_id = None
+         self.discriminator = None
+-        if ref_dataset_id is not None:
+-            self.ref_dataset_id = ref_dataset_id
+-        if eval_dataset_id is not None:
+-            self.eval_dataset_id = eval_dataset_id
++        self.ref_dataset_id = ref_dataset_id
++        self.eval_dataset_id = eval_dataset_id
+ 
+     @property
+     def ref_dataset_id(self):
+         """Gets the ref_dataset_id of this TestrunDataInfo.  # noqa: E501
+ 
+         Uniquely specifies a reference Dataset.  # noqa: E501
+ 
+@@ -63,14 +61,16 @@
+         """Sets the ref_dataset_id of this TestrunDataInfo.
+ 
+         Uniquely specifies a reference Dataset.  # noqa: E501
+ 
+         :param ref_dataset_id: The ref_dataset_id of this TestrunDataInfo.  # noqa: E501
+         :type: str
+         """
++        if ref_dataset_id is None:
++            raise ValueError("Invalid value for `ref_dataset_id`, must not be `None`")  # noqa: E501
+ 
+         self._ref_dataset_id = ref_dataset_id
+ 
+     @property
+     def eval_dataset_id(self):
+         """Gets the eval_dataset_id of this TestrunDataInfo.  # noqa: E501
+ 
+@@ -86,14 +86,16 @@
+         """Sets the eval_dataset_id of this TestrunDataInfo.
+ 
+         Uniquely specifies an evaluation Dataset.  # noqa: E501
+ 
+         :param eval_dataset_id: The eval_dataset_id of this TestrunDataInfo.  # noqa: E501
+         :type: str
+         """
++        if eval_dataset_id is None:
++            raise ValueError("Invalid value for `eval_dataset_id`, must not be `None`")  # noqa: E501
+ 
+         self._eval_dataset_id = eval_dataset_id
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_info_params.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_info_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_loading_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_loading_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_data_profiling.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_data_profiling.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -80,26 +80,26 @@
+ 
+         self._num_quantiles = num_quantiles
+ 
+     @property
+     def num_subsets(self):
+         """Gets the num_subsets of this TestrunDataProfiling.  # noqa: E501
+ 
+-        The number of subsets to test (sorted by count).  # noqa: E501
++        The number of subsets to test. This field is sorted by count.  # noqa: E501
+ 
+         :return: The num_subsets of this TestrunDataProfiling.  # noqa: E501
+         :rtype: str
+         """
+         return self._num_subsets
+ 
+     @num_subsets.setter
+     def num_subsets(self, num_subsets):
+         """Sets the num_subsets of this TestrunDataProfiling.
+ 
+-        The number of subsets to test (sorted by count).  # noqa: E501
++        The number of subsets to test. This field is sorted by count.  # noqa: E501
+ 
+         :param num_subsets: The num_subsets of this TestrunDataProfiling.  # noqa: E501
+         :type: str
+         """
+ 
+         self._num_subsets = num_subsets
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_delta_lake_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_delta_lake_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_hugging_face_data_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_hugging_face_data_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_model_profiling.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_model_profiling.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -31,38 +31,41 @@
+         'nrows_for_summary': 'str',
+         'nrows_for_feature_importance': 'str',
+         'metric_configs_json': 'str',
+         'impact_metric': 'str',
+         'impact_label_threshold': 'float',
+         'drift_impact_metric': 'str',
+         'subset_summary_metric': 'str',
+-        'num_feats_for_subset_summary': 'str'
++        'num_feats_for_subset_summary': 'str',
++        'custom_metrics': 'list[TestrunCustomMetric]'
+     }
+ 
+     attribute_map = {
+         'nrows_for_summary': 'nrowsForSummary',
+         'nrows_for_feature_importance': 'nrowsForFeatureImportance',
+         'metric_configs_json': 'metricConfigsJson',
+         'impact_metric': 'impactMetric',
+         'impact_label_threshold': 'impactLabelThreshold',
+         'drift_impact_metric': 'driftImpactMetric',
+         'subset_summary_metric': 'subsetSummaryMetric',
+-        'num_feats_for_subset_summary': 'numFeatsForSubsetSummary'
++        'num_feats_for_subset_summary': 'numFeatsForSubsetSummary',
++        'custom_metrics': 'customMetrics'
+     }
+ 
+-    def __init__(self, nrows_for_summary=None, nrows_for_feature_importance=None, metric_configs_json=None, impact_metric=None, impact_label_threshold=None, drift_impact_metric=None, subset_summary_metric=None, num_feats_for_subset_summary=None):  # noqa: E501
++    def __init__(self, nrows_for_summary=None, nrows_for_feature_importance=None, metric_configs_json=None, impact_metric=None, impact_label_threshold=None, drift_impact_metric=None, subset_summary_metric=None, num_feats_for_subset_summary=None, custom_metrics=None):  # noqa: E501
+         """TestrunModelProfiling - a model defined in Swagger"""  # noqa: E501
+         self._nrows_for_summary = None
+         self._nrows_for_feature_importance = None
+         self._metric_configs_json = None
+         self._impact_metric = None
+         self._impact_label_threshold = None
+         self._drift_impact_metric = None
+         self._subset_summary_metric = None
+         self._num_feats_for_subset_summary = None
++        self._custom_metrics = None
+         self.discriminator = None
+         if nrows_for_summary is not None:
+             self.nrows_for_summary = nrows_for_summary
+         if nrows_for_feature_importance is not None:
+             self.nrows_for_feature_importance = nrows_for_feature_importance
+         if metric_configs_json is not None:
+             self.metric_configs_json = metric_configs_json
+@@ -72,14 +75,16 @@
+             self.impact_label_threshold = impact_label_threshold
+         if drift_impact_metric is not None:
+             self.drift_impact_metric = drift_impact_metric
+         if subset_summary_metric is not None:
+             self.subset_summary_metric = subset_summary_metric
+         if num_feats_for_subset_summary is not None:
+             self.num_feats_for_subset_summary = num_feats_for_subset_summary
++        if custom_metrics is not None:
++            self.custom_metrics = custom_metrics
+ 
+     @property
+     def nrows_for_summary(self):
+         """Gets the nrows_for_summary of this TestrunModelProfiling.  # noqa: E501
+ 
+         Number of rows to perform inference on the model if no predictions.  # noqa: E501
+ 
+@@ -123,26 +128,26 @@
+ 
+         self._nrows_for_feature_importance = nrows_for_feature_importance
+ 
+     @property
+     def metric_configs_json(self):
+         """Gets the metric_configs_json of this TestrunModelProfiling.  # noqa: E501
+ 
+-        Json map of metric api name to kwargs allowing configuratbility of any metric.  # noqa: E501
++        JSON map of metric API names to keyword arguments, which allows configuration of arbitrary metrics.  # noqa: E501
+ 
+         :return: The metric_configs_json of this TestrunModelProfiling.  # noqa: E501
+         :rtype: str
+         """
+         return self._metric_configs_json
+ 
+     @metric_configs_json.setter
+     def metric_configs_json(self, metric_configs_json):
+         """Sets the metric_configs_json of this TestrunModelProfiling.
+ 
+-        Json map of metric api name to kwargs allowing configuratbility of any metric.  # noqa: E501
++        JSON map of metric API names to keyword arguments, which allows configuration of arbitrary metrics.  # noqa: E501
+ 
+         :param metric_configs_json: The metric_configs_json of this TestrunModelProfiling.  # noqa: E501
+         :type: str
+         """
+ 
+         self._metric_configs_json = metric_configs_json
+ 
+@@ -169,26 +174,26 @@
+ 
+         self._impact_metric = impact_metric
+ 
+     @property
+     def impact_label_threshold(self):
+         """Gets the impact_label_threshold of this TestrunModelProfiling.  # noqa: E501
+ 
+-        Threshold for using labeled performance metrics vs prediction metrics for model impact (given partial labels).  # noqa: E501
++        Specifies the threshold for measuring model impact using labeled performance metrics instead of prediction metrics, assuming partial labels.  # noqa: E501
+ 
+         :return: The impact_label_threshold of this TestrunModelProfiling.  # noqa: E501
+         :rtype: float
+         """
+         return self._impact_label_threshold
+ 
+     @impact_label_threshold.setter
+     def impact_label_threshold(self, impact_label_threshold):
+         """Sets the impact_label_threshold of this TestrunModelProfiling.
+ 
+-        Threshold for using labeled performance metrics vs prediction metrics for model impact (given partial labels).  # noqa: E501
++        Specifies the threshold for measuring model impact using labeled performance metrics instead of prediction metrics, assuming partial labels.  # noqa: E501
+ 
+         :param impact_label_threshold: The impact_label_threshold of this TestrunModelProfiling.  # noqa: E501
+         :type: float
+         """
+ 
+         self._impact_label_threshold = impact_label_threshold
+ 
+@@ -257,14 +262,37 @@
+ 
+         :param num_feats_for_subset_summary: The num_feats_for_subset_summary of this TestrunModelProfiling.  # noqa: E501
+         :type: str
+         """
+ 
+         self._num_feats_for_subset_summary = num_feats_for_subset_summary
+ 
++    @property
++    def custom_metrics(self):
++        """Gets the custom_metrics of this TestrunModelProfiling.  # noqa: E501
++
++        List of custom metrics.  # noqa: E501
++
++        :return: The custom_metrics of this TestrunModelProfiling.  # noqa: E501
++        :rtype: list[TestrunCustomMetric]
++        """
++        return self._custom_metrics
++
++    @custom_metrics.setter
++    def custom_metrics(self, custom_metrics):
++        """Sets the custom_metrics of this TestrunModelProfiling.
++
++        List of custom metrics.  # noqa: E501
++
++        :param custom_metrics: The custom_metrics of this TestrunModelProfiling.  # noqa: E501
++        :type: list[TestrunCustomMetric]
++        """
++
++        self._custom_metrics = custom_metrics
++
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+         result = {}
+ 
+         for attr, _ in six.iteritems(self.swagger_types):
+             value = getattr(self, attr)
+             if isinstance(value, list):
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_pred_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_pred_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_prediction_params.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_prediction_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_profiling_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_profiling_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_single_data_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_single_data_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_category.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_category_type.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_category_type.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -32,14 +32,15 @@
+     DRIFT = "TEST_CATEGORY_TYPE_DRIFT"
+     MODEL_PERFORMANCE = "TEST_CATEGORY_TYPE_MODEL_PERFORMANCE"
+     DATA_POISONING_DETECTION = "TEST_CATEGORY_TYPE_DATA_POISONING_DETECTION"
+     SUBSET_PERFORMANCE = "TEST_CATEGORY_TYPE_SUBSET_PERFORMANCE"
+     SUBSET_PERFORMANCE_DEGRADATION = "TEST_CATEGORY_TYPE_SUBSET_PERFORMANCE_DEGRADATION"
+     TRANSFORMATIONS = "TEST_CATEGORY_TYPE_TRANSFORMATIONS"
+     EVASION_ATTACK_DETECTION = "TEST_CATEGORY_TYPE_EVASION_ATTACK_DETECTION"
++    CUSTOM = "TEST_CATEGORY_TYPE_CUSTOM"
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_run_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_run_config.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -52,18 +52,16 @@
+         self._data_info = None
+         self._run_time_info = None
+         self._profiling_config = None
+         self._test_suite_config = None
+         self.discriminator = None
+         if run_name is not None:
+             self.run_name = run_name
+-        if model_id is not None:
+-            self.model_id = model_id
+-        if data_info is not None:
+-            self.data_info = data_info
++        self.model_id = model_id
++        self.data_info = data_info
+         if run_time_info is not None:
+             self.run_time_info = run_time_info
+         if profiling_config is not None:
+             self.profiling_config = profiling_config
+         if test_suite_config is not None:
+             self.test_suite_config = test_suite_config
+ 
+@@ -104,14 +102,16 @@
+     def model_id(self, model_id):
+         """Sets the model_id of this TestrunTestRunConfig.
+ 
+ 
+         :param model_id: The model_id of this TestrunTestRunConfig.  # noqa: E501
+         :type: RimeUUID
+         """
++        if model_id is None:
++            raise ValueError("Invalid value for `model_id`, must not be `None`")  # noqa: E501
+ 
+         self._model_id = model_id
+ 
+     @property
+     def data_info(self):
+         """Gets the data_info of this TestrunTestRunConfig.  # noqa: E501
+ 
+@@ -125,14 +125,16 @@
+     def data_info(self, data_info):
+         """Sets the data_info of this TestrunTestRunConfig.
+ 
+ 
+         :param data_info: The data_info of this TestrunTestRunConfig.  # noqa: E501
+         :type: TestrunDataInfo
+         """
++        if data_info is None:
++            raise ValueError("Invalid value for `data_info`, must not be `None`")  # noqa: E501
+ 
+         self._data_info = data_info
+ 
+     @property
+     def run_time_info(self):
+         """Gets the run_time_info of this TestrunTestRunConfig.  # noqa: E501
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_run_incremental_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_run_incremental_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_sensitivity.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_sensitivity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrun_test_suite_config.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrun_test_suite_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_batch_result_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_batch_result_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_feature_result_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_feature_result_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_config_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_config_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_run_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_get_test_run_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_batch_results_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_batch_results_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_feature_results_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_feature_results_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_summary_tests_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_summary_tests_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_cases_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_cases_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_runs_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_list_test_runs_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_rename_test_run_response.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_rename_test_run_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_result_summary_counts.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_result_summary_counts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result_display.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_batch_result_display.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_case.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_case.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_case_display.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_case_display.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result_display.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_feature_result_display.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_detail.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_detail.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_metrics.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/testrunresult_test_run_metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/the_updates_to_the_monitor_.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/the_updates_to_the_monitor_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_continuous_incremental_test.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_continuous_incremental_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_stress_test.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_stress_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_favorite_projects.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_favorite_projects.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_private_info.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_private_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_role.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/user_role.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/user_user_detail.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1usersuser_id_uuid_user.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -11,28 +11,28 @@
+ """
+ 
+ import pprint
+ import re  # noqa: F401
+ 
+ import six
+ 
+-class UserUserDetail(object):
++class V1usersuserIdUuidUser(object):
+     """NOTE: This class is auto generated by the swagger code generator program.
+ 
+     Do not edit the class manually.
+     """
+     """
+     Attributes:
+       swagger_types (dict): The key is attribute name
+                             and the value is attribute type.
+       attribute_map (dict): The key is attribute name
+                             and the value is json key in definition.
+     """
+     swagger_types = {
+-        'id': 'RimeUUID',
++        'id': 'object',
+         'name': 'str',
+         'role': 'UserRole',
+         'email': 'str',
+         'full_name': 'str',
+         'show_tutorial': 'bool',
+         'org_role': 'RimeActorRole',
+         'private_info': 'UserPrivateInfo'
+@@ -46,15 +46,15 @@
+         'full_name': 'fullName',
+         'show_tutorial': 'showTutorial',
+         'org_role': 'orgRole',
+         'private_info': 'privateInfo'
+     }
+ 
+     def __init__(self, id=None, name=None, role=None, email=None, full_name=None, show_tutorial=None, org_role=None, private_info=None):  # noqa: E501
+-        """UserUserDetail - a model defined in Swagger"""  # noqa: E501
++        """V1usersuserIdUuidUser - a model defined in Swagger"""  # noqa: E501
+         self._id = None
+         self._name = None
+         self._role = None
+         self._email = None
+         self._full_name = None
+         self._show_tutorial = None
+         self._org_role = None
+@@ -75,175 +75,179 @@
+         if org_role is not None:
+             self.org_role = org_role
+         if private_info is not None:
+             self.private_info = private_info
+ 
+     @property
+     def id(self):
+-        """Gets the id of this UserUserDetail.  # noqa: E501
++        """Gets the id of this V1usersuserIdUuidUser.  # noqa: E501
+ 
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+-        :return: The id of this UserUserDetail.  # noqa: E501
+-        :rtype: RimeUUID
++        :return: The id of this V1usersuserIdUuidUser.  # noqa: E501
++        :rtype: object
+         """
+         return self._id
+ 
+     @id.setter
+     def id(self, id):
+-        """Sets the id of this UserUserDetail.
++        """Sets the id of this V1usersuserIdUuidUser.
+ 
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+-        :param id: The id of this UserUserDetail.  # noqa: E501
+-        :type: RimeUUID
++        :param id: The id of this V1usersuserIdUuidUser.  # noqa: E501
++        :type: object
+         """
+ 
+         self._id = id
+ 
+     @property
+     def name(self):
+-        """Gets the name of this UserUserDetail.  # noqa: E501
++        """Gets the name of this V1usersuserIdUuidUser.  # noqa: E501
+ 
++        Name of the user.  # noqa: E501
+ 
+-        :return: The name of this UserUserDetail.  # noqa: E501
++        :return: The name of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: str
+         """
+         return self._name
+ 
+     @name.setter
+     def name(self, name):
+-        """Sets the name of this UserUserDetail.
++        """Sets the name of this V1usersuserIdUuidUser.
+ 
++        Name of the user.  # noqa: E501
+ 
+-        :param name: The name of this UserUserDetail.  # noqa: E501
++        :param name: The name of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: str
+         """
+ 
+         self._name = name
+ 
+     @property
+     def role(self):
+-        """Gets the role of this UserUserDetail.  # noqa: E501
++        """Gets the role of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The role of this UserUserDetail.  # noqa: E501
++        :return: The role of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: UserRole
+         """
+         return self._role
+ 
+     @role.setter
+     def role(self, role):
+-        """Sets the role of this UserUserDetail.
++        """Sets the role of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param role: The role of this UserUserDetail.  # noqa: E501
++        :param role: The role of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: UserRole
+         """
+ 
+         self._role = role
+ 
+     @property
+     def email(self):
+-        """Gets the email of this UserUserDetail.  # noqa: E501
++        """Gets the email of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The email of this UserUserDetail.  # noqa: E501
++        :return: The email of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: str
+         """
+         return self._email
+ 
+     @email.setter
+     def email(self, email):
+-        """Sets the email of this UserUserDetail.
++        """Sets the email of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param email: The email of this UserUserDetail.  # noqa: E501
++        :param email: The email of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: str
+         """
+ 
+         self._email = email
+ 
+     @property
+     def full_name(self):
+-        """Gets the full_name of this UserUserDetail.  # noqa: E501
++        """Gets the full_name of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The full_name of this UserUserDetail.  # noqa: E501
++        :return: The full_name of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: str
+         """
+         return self._full_name
+ 
+     @full_name.setter
+     def full_name(self, full_name):
+-        """Sets the full_name of this UserUserDetail.
++        """Sets the full_name of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param full_name: The full_name of this UserUserDetail.  # noqa: E501
++        :param full_name: The full_name of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: str
+         """
+ 
+         self._full_name = full_name
+ 
+     @property
+     def show_tutorial(self):
+-        """Gets the show_tutorial of this UserUserDetail.  # noqa: E501
++        """Gets the show_tutorial of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The show_tutorial of this UserUserDetail.  # noqa: E501
++        :return: The show_tutorial of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: bool
+         """
+         return self._show_tutorial
+ 
+     @show_tutorial.setter
+     def show_tutorial(self, show_tutorial):
+-        """Sets the show_tutorial of this UserUserDetail.
++        """Sets the show_tutorial of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param show_tutorial: The show_tutorial of this UserUserDetail.  # noqa: E501
++        :param show_tutorial: The show_tutorial of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: bool
+         """
+ 
+         self._show_tutorial = show_tutorial
+ 
+     @property
+     def org_role(self):
+-        """Gets the org_role of this UserUserDetail.  # noqa: E501
++        """Gets the org_role of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The org_role of this UserUserDetail.  # noqa: E501
++        :return: The org_role of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: RimeActorRole
+         """
+         return self._org_role
+ 
+     @org_role.setter
+     def org_role(self, org_role):
+-        """Sets the org_role of this UserUserDetail.
++        """Sets the org_role of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param org_role: The org_role of this UserUserDetail.  # noqa: E501
++        :param org_role: The org_role of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: RimeActorRole
+         """
+ 
+         self._org_role = org_role
+ 
+     @property
+     def private_info(self):
+-        """Gets the private_info of this UserUserDetail.  # noqa: E501
++        """Gets the private_info of this V1usersuserIdUuidUser.  # noqa: E501
+ 
+ 
+-        :return: The private_info of this UserUserDetail.  # noqa: E501
++        :return: The private_info of this V1usersuserIdUuidUser.  # noqa: E501
+         :rtype: UserPrivateInfo
+         """
+         return self._private_info
+ 
+     @private_info.setter
+     def private_info(self, private_info):
+-        """Sets the private_info of this UserUserDetail.
++        """Sets the private_info of this V1usersuserIdUuidUser.
+ 
+ 
+-        :param private_info: The private_info of this UserUserDetail.  # noqa: E501
++        :param private_info: The private_info of this V1usersuserIdUuidUser.  # noqa: E501
+         :type: UserPrivateInfo
+         """
+ 
+         self._private_info = private_info
+ 
+     def to_dict(self):
+         """Returns the model properties as a dict"""
+@@ -262,15 +266,15 @@
+                 result[attr] = dict(map(
+                     lambda item: (item[0], item[1].to_dict())
+                     if hasattr(item[1], "to_dict") else item,
+                     value.items()
+                 ))
+             else:
+                 result[attr] = value
+-        if issubclass(UserUserDetail, dict):
++        if issubclass(V1usersuserIdUuidUser, dict):
+             for key, value in self.items():
+                 result[key] = value
+ 
+         return result
+ 
+     def to_str(self):
+         """Returns the string representation of the model"""
+@@ -278,15 +282,15 @@
+ 
+     def __repr__(self):
+         """For `print` and `pprint`"""
+         return self.to_str()
+ 
+     def __eq__(self, other):
+         """Returns true if both objects are equal"""
+-        if not isinstance(other, UserUserDetail):
++        if not isinstance(other, V1usersuserIdUuidUser):
+             return False
+ 
+         return self.__dict__ == other.__dict__
+ 
+     def __ne__(self, other):
+         """Returns true if both objects are not equal"""
+         return not self == other
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/v1firewallfirewall_firewall_id_uuid_firewall.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1firewallfirewall_firewall_id_uuid_firewall.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -82,26 +82,26 @@
+         if latest_run_info is not None:
+             self.latest_run_info = latest_run_info
+ 
+     @property
+     def firewall_id(self):
+         """Gets the firewall_id of this V1firewallfirewallFirewallIdUuidFirewall.  # noqa: E501
+ 
+-        Wrapper message for UUID, validation will be done on gRPC interceptor and DB encoder/decoder layer.  # noqa: E501
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+         :return: The firewall_id of this V1firewallfirewallFirewallIdUuidFirewall.  # noqa: E501
+         :rtype: object
+         """
+         return self._firewall_id
+ 
+     @firewall_id.setter
+     def firewall_id(self, firewall_id):
+         """Sets the firewall_id of this V1firewallfirewallFirewallIdUuidFirewall.
+ 
+-        Wrapper message for UUID, validation will be done on gRPC interceptor and DB encoder/decoder layer.  # noqa: E501
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+         :param firewall_id: The firewall_id of this V1firewallfirewallFirewallIdUuidFirewall.  # noqa: E501
+         :type: object
+         """
+ 
+         self._firewall_id = firewall_id
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -47,26 +47,26 @@
+         if user_role is not None:
+             self.user_role = user_role
+ 
+     @property
+     def user_id(self):
+         """Gets the user_id of this V1projectsprojectIdUuidroleusersuserUserIdUuidUser.  # noqa: E501
+ 
+-        Wrapper message for UUID, validation will be done on gRPC interceptor and DB encoder/decoder layer.  # noqa: E501
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+         :return: The user_id of this V1projectsprojectIdUuidroleusersuserUserIdUuidUser.  # noqa: E501
+         :rtype: object
+         """
+         return self._user_id
+ 
+     @user_id.setter
+     def user_id(self, user_id):
+         """Sets the user_id of this V1projectsprojectIdUuidroleusersuserUserIdUuidUser.
+ 
+-        Wrapper message for UUID, validation will be done on gRPC interceptor and DB encoder/decoder layer.  # noqa: E501
++        Unique ID of an object in RIME.  # noqa: E501
+ 
+         :param user_id: The user_id of this V1projectsprojectIdUuidroleusersuserUserIdUuidUser.  # noqa: E501
+         :type: object
+         """
+ 
+         self._user_id = user_id
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/swagger/swagger_client/rest.py` & `rime_sdk-2.0.0rc2/rime_sdk/swagger/swagger_client/rest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/test_batch.py` & `rime_sdk-2.0.0rc2/rime_sdk/test_batch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk/test_run.py` & `rime_sdk-2.0.0rc2/rime_sdk/test_run.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk.egg-info/PKG-INFO` & `rime_sdk-2.0.0rc2/rime_sdk.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rime-sdk
+-Version: 2.0.0rc1
++Version: 2.0.0rc2
+ Summary: Package to programmatically access a RIME deployment
+ Home-page: UNKNOWN
+ License: OSI Approved :: Apache Software License
+ Platform: UNKNOWN
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `rime_sdk-2.0.0rc1/rime_sdk.egg-info/SOURCES.txt` & `rime_sdk-2.0.0rc2/rime_sdk.egg-info/SOURCES.txt`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -46,22 +46,26 @@
+ rime_sdk/swagger/swagger_client/api/data_collector_api.py
+ rime_sdk/swagger/swagger_client/api/detection_api.py
+ rime_sdk/swagger/swagger_client/api/feature_flag_api.py
+ rime_sdk/swagger/swagger_client/api/file_scanning_api.py
+ rime_sdk/swagger/swagger_client/api/file_upload_api.py
+ rime_sdk/swagger/swagger_client/api/firewall_service_api.py
+ rime_sdk/swagger/swagger_client/api/image_registry_api.py
++rime_sdk/swagger/swagger_client/api/integration_service_api.py
+ rime_sdk/swagger/swagger_client/api/job_reader_api.py
++rime_sdk/swagger/swagger_client/api/model_card_service_api.py
+ rime_sdk/swagger/swagger_client/api/model_testing_api.py
+ rime_sdk/swagger/swagger_client/api/monitor_service_api.py
+ rime_sdk/swagger/swagger_client/api/notification_setting_api.py
+ rime_sdk/swagger/swagger_client/api/project_service_api.py
+ rime_sdk/swagger/swagger_client/api/registry_service_api.py
+ rime_sdk/swagger/swagger_client/api/results_reader_api.py
+ rime_sdk/swagger/swagger_client/api/rime_info_api.py
++rime_sdk/swagger/swagger_client/api/user_api.py
++rime_sdk/swagger/swagger_client/api/workspace_service_api.py
+ rime_sdk/swagger/swagger_client/models/__init__.py
+ rime_sdk/swagger/swagger_client/models/artifact_identifier_category_test_identifier.py
+ rime_sdk/swagger/swagger_client/models/artifact_identifier_subset_test_metric_identifier.py
+ rime_sdk/swagger/swagger_client/models/artifact_identifier_test_case_metric_identifier.py
+ rime_sdk/swagger/swagger_client/models/create_agent_request_aws_config.py
+ rime_sdk/swagger/swagger_client/models/create_agent_request_gcp_config.py
+ rime_sdk/swagger/swagger_client/models/create_agent_request_local_config.py
+@@ -73,15 +77,15 @@
+ rime_sdk/swagger/swagger_client/models/data_info_params_ranking_info.py
+ rime_sdk/swagger/swagger_client/models/data_profiling_column_type_info.py
+ rime_sdk/swagger/swagger_client/models/data_profiling_feature_relationship_info.py
+ rime_sdk/swagger/swagger_client/models/datacollector_datapoint.py
+ rime_sdk/swagger/swagger_client/models/datacollector_datapoint_row.py
+ rime_sdk/swagger/swagger_client/models/dataset_ct_info.py
+ rime_sdk/swagger/swagger_client/models/dataset_dataset.py
+-rime_sdk/swagger/swagger_client/models/dataset_project_id_uuid_body.py
++rime_sdk/swagger/swagger_client/models/dataset_id_prediction_body.py
+ rime_sdk/swagger/swagger_client/models/datastream_project_id_uuid_body.py
+ rime_sdk/swagger/swagger_client/models/detection_detection_event.py
+ rime_sdk/swagger/swagger_client/models/detection_event_detail.py
+ rime_sdk/swagger/swagger_client/models/detection_event_type.py
+ rime_sdk/swagger/swagger_client/models/detection_metric_degradation_event_details.py
+ rime_sdk/swagger/swagger_client/models/detection_resolution.py
+ rime_sdk/swagger/swagger_client/models/detection_security_event_details.py
+@@ -103,40 +107,43 @@
+ rime_sdk/swagger/swagger_client/models/firewall_latest_run_info.py
+ rime_sdk/swagger/swagger_client/models/firewall_location_args.py
+ rime_sdk/swagger/swagger_client/models/firewall_location_params.py
+ rime_sdk/swagger/swagger_client/models/firewall_scheduled_ct_info.py
+ rime_sdk/swagger/swagger_client/models/firewall_test_category_severity.py
+ rime_sdk/swagger/swagger_client/models/googlerpc_status.py
+ rime_sdk/swagger/swagger_client/models/image_reference_reference_type.py
++rime_sdk/swagger/swagger_client/models/integration_integration.py
++rime_sdk/swagger/swagger_client/models/integration_integration_schema.py
++rime_sdk/swagger/swagger_client/models/integration_integration_type.py
++rime_sdk/swagger/swagger_client/models/integration_variable_sensitivity.py
++rime_sdk/swagger/swagger_client/models/integrations_integration_id_uuid_body.py
+ rime_sdk/swagger/swagger_client/models/list_agents_request_list_agents_query.py
+ rime_sdk/swagger/swagger_client/models/list_datasets_request_datasets_query.py
+ rime_sdk/swagger/swagger_client/models/list_images_request_pip_library_filter.py
+ rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_aggregated_metric.py
+ rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metric_without_subsets.py
+ rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_feature_metrics.py
+ rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metric.py
+ rime_sdk/swagger/swagger_client/models/list_metric_identifiers_response_subset_metrics.py
+ rime_sdk/swagger/swagger_client/models/list_models_request_model_query.py
+ rime_sdk/swagger/swagger_client/models/list_monitors_request_filter.py
+ rime_sdk/swagger/swagger_client/models/list_notifications_request_list_notifications_query.py
+-rime_sdk/swagger/swagger_client/models/list_predictions_request_prediction_query.py
++rime_sdk/swagger/swagger_client/models/list_prediction_sets_request_prediction_query.py
+ rime_sdk/swagger/swagger_client/models/list_summary_tests_request_list_summary_tests_query.py
+ rime_sdk/swagger/swagger_client/models/list_test_cases_request_list_test_cases_query.py
+ rime_sdk/swagger/swagger_client/models/managed_image_package_requirement.py
+ rime_sdk/swagger/swagger_client/models/managed_image_package_type.py
+ rime_sdk/swagger/swagger_client/models/managed_image_pip_library.py
+ rime_sdk/swagger/swagger_client/models/managed_image_pip_requirement.py
+ rime_sdk/swagger/swagger_client/models/managed_image_role_type.py
+ rime_sdk/swagger/swagger_client/models/model_hugging_face_model_info.py
+-rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body.py
+-rime_sdk/swagger/swagger_client/models/model_id_uuid_dataset_id_body1.py
+ rime_sdk/swagger/swagger_client/models/model_model.py
+ rime_sdk/swagger/swagger_client/models/model_model_info.py
+ rime_sdk/swagger/swagger_client/models/model_model_path_info.py
+-rime_sdk/swagger/swagger_client/models/model_project_id_uuid_body.py
++rime_sdk/swagger/swagger_client/models/modelcards_model_card_model_card_id_uuid_body.py
+ rime_sdk/swagger/swagger_client/models/monitor_aggregation.py
+ rime_sdk/swagger/swagger_client/models/monitor_aggregation_type.py
+ rime_sdk/swagger/swagger_client/models/monitor_anomaly_config.py
+ rime_sdk/swagger/swagger_client/models/monitor_artifact_identifier.py
+ rime_sdk/swagger/swagger_client/models/monitor_difference_from_target.py
+ rime_sdk/swagger/swagger_client/models/monitor_excluded_transforms.py
+ rime_sdk/swagger/swagger_client/models/monitor_metric_degradation_config.py
+@@ -180,43 +187,64 @@
+ rime_sdk/swagger/swagger_client/models/protobuf_any.py
+ rime_sdk/swagger/swagger_client/models/protobuf_null_value.py
+ rime_sdk/swagger/swagger_client/models/rca_feature_cause.py
+ rime_sdk/swagger/swagger_client/models/rca_rca_result.py
+ rime_sdk/swagger/swagger_client/models/rca_rca_role.py
+ rime_sdk/swagger/swagger_client/models/rca_test_case_cause.py
+ rime_sdk/swagger/swagger_client/models/rca_test_case_id.py
++rime_sdk/swagger/swagger_client/models/registry_metadata.py
++rime_sdk/swagger/swagger_client/models/registry_validity_status.py
+ rime_sdk/swagger/swagger_client/models/registryprediction_prediction.py
+ rime_sdk/swagger/swagger_client/models/rename_test_run_id_body.py
++rime_sdk/swagger/swagger_client/models/resetpassword_user_id_uuid_body.py
+ rime_sdk/swagger/swagger_client/models/rime_actor_role.py
++rime_sdk/swagger/swagger_client/models/rime_add_users_to_workspace_response.py
+ rime_sdk/swagger/swagger_client/models/rime_agent.py
+ rime_sdk/swagger/swagger_client/models/rime_agent_status.py
++rime_sdk/swagger/swagger_client/models/rime_api_token_info.py
+ rime_sdk/swagger/swagger_client/models/rime_archived_job_logs.py
+ rime_sdk/swagger/swagger_client/models/rime_cancel_job_response.py
+ rime_sdk/swagger/swagger_client/models/rime_category_metric.py
+ rime_sdk/swagger/swagger_client/models/rime_category_test_result.py
++rime_sdk/swagger/swagger_client/models/rime_config_type.py
++rime_sdk/swagger/swagger_client/models/rime_configure_integration_request_integration_variable.py
++rime_sdk/swagger/swagger_client/models/rime_configure_integration_response.py
+ rime_sdk/swagger/swagger_client/models/rime_continuous_test_job_progress.py
+ rime_sdk/swagger/swagger_client/models/rime_continuous_test_run_progress.py
+ rime_sdk/swagger/swagger_client/models/rime_create_agent_request.py
+ rime_sdk/swagger/swagger_client/models/rime_create_agent_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_api_token_request.py
++rime_sdk/swagger/swagger_client/models/rime_create_api_token_response.py
+ rime_sdk/swagger/swagger_client/models/rime_create_custom_monitor_response.py
+ rime_sdk/swagger/swagger_client/models/rime_create_firewall_request.py
+ rime_sdk/swagger/swagger_client/models/rime_create_firewall_response.py
+ rime_sdk/swagger/swagger_client/models/rime_create_image_request.py
+ rime_sdk/swagger/swagger_client/models/rime_create_image_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_integration_request.py
++rime_sdk/swagger/swagger_client/models/rime_create_integration_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_model_card_response.py
+ rime_sdk/swagger/swagger_client/models/rime_create_notification_request.py
+ rime_sdk/swagger/swagger_client/models/rime_create_notification_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_user_request.py
++rime_sdk/swagger/swagger_client/models/rime_create_user_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_workspace_request.py
++rime_sdk/swagger/swagger_client/models/rime_create_workspace_response.py
++rime_sdk/swagger/swagger_client/models/rime_create_workspace_tag_response.py
+ rime_sdk/swagger/swagger_client/models/rime_deactivate_agent_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_agent_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_custom_monitor_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_dataset_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_firewall_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_image_response.py
++rime_sdk/swagger/swagger_client/models/rime_delete_integration_response.py
++rime_sdk/swagger/swagger_client/models/rime_delete_model_card_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_model_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_prediction_set_response.py
+ rime_sdk/swagger/swagger_client/models/rime_delete_uploaded_file_url_response.py
++rime_sdk/swagger/swagger_client/models/rime_delete_workspace_tag_response.py
+ rime_sdk/swagger/swagger_client/models/rime_ensure_image_existence_response.py
+ rime_sdk/swagger/swagger_client/models/rime_fail_job_response.py
+ rime_sdk/swagger/swagger_client/models/rime_failing_row.py
+ rime_sdk/swagger/swagger_client/models/rime_failing_rows_result.py
+ rime_sdk/swagger/swagger_client/models/rime_feature_flags.py
+ rime_sdk/swagger/swagger_client/models/rime_feature_type.py
+ rime_sdk/swagger/swagger_client/models/rime_finalize_cancellation_response.py
+@@ -226,69 +254,90 @@
+ rime_sdk/swagger/swagger_client/models/rime_get_dataset_file_upload_url_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_dataset_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_enabled_feature_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_feature_flag_jwt_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_feature_flags_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_firewall_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_image_response.py
++rime_sdk/swagger/swagger_client/models/rime_get_integration_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_job_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_latest_logs_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_limit_status_response.py
++rime_sdk/swagger/swagger_client/models/rime_get_model_card_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_model_directory_upload_urls_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_model_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_monitor_result_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_prediction_set_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_predictions_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_project_id_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_rime_info_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_test_run_id_response.py
+ rime_sdk/swagger/swagger_client/models/rime_get_url_response.py
++rime_sdk/swagger/swagger_client/models/rime_get_user_response.py
++rime_sdk/swagger/swagger_client/models/rime_get_workspace_response.py
+ rime_sdk/swagger/swagger_client/models/rime_heartbeat_response.py
+ rime_sdk/swagger/swagger_client/models/rime_image_reference.py
+ rime_sdk/swagger/swagger_client/models/rime_int_list.py
++rime_sdk/swagger/swagger_client/models/rime_integration_info.py
+ rime_sdk/swagger/swagger_client/models/rime_job_data.py
+ rime_sdk/swagger/swagger_client/models/rime_job_data_continuous_incremental_test.py
+ rime_sdk/swagger/swagger_client/models/rime_job_data_stress_test.py
+ rime_sdk/swagger/swagger_client/models/rime_job_metadata.py
+ rime_sdk/swagger/swagger_client/models/rime_job_type.py
+ rime_sdk/swagger/swagger_client/models/rime_job_view.py
+ rime_sdk/swagger/swagger_client/models/rime_license_feature.py
+ rime_sdk/swagger/swagger_client/models/rime_license_limit.py
+ rime_sdk/swagger/swagger_client/models/rime_limit_status.py
+ rime_sdk/swagger/swagger_client/models/rime_limit_status_status.py
+ rime_sdk/swagger/swagger_client/models/rime_list_agents_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_api_tokens_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_current_user_roles_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_datasets_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_detection_events_request_query.py
+ rime_sdk/swagger/swagger_client/models/rime_list_detection_events_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_enabled_features_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_file_scan_results_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_images_request.py
+ rime_sdk/swagger/swagger_client/models/rime_list_images_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_jobs_for_project_request_query.py
++rime_sdk/swagger/swagger_client/models/rime_list_jobs_for_project_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_jobs_request_query.py
+ rime_sdk/swagger/swagger_client/models/rime_list_jobs_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_metric_identifiers_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_model_cards_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_models_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_monitors_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_notifications_response.py
+-rime_sdk/swagger/swagger_client/models/rime_list_predictions_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_prediction_sets_response.py
+ rime_sdk/swagger/swagger_client/models/rime_list_uploaded_file_urls_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_users_of_workspace_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_users_request_query.py
++rime_sdk/swagger/swagger_client/models/rime_list_users_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_workspace_integrations_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_workspace_tags_response.py
++rime_sdk/swagger/swagger_client/models/rime_list_workspaces_request_query.py
++rime_sdk/swagger/swagger_client/models/rime_list_workspaces_response.py
+ rime_sdk/swagger/swagger_client/models/rime_long_description_tab.py
+ rime_sdk/swagger/swagger_client/models/rime_managed_image.py
+ rime_sdk/swagger/swagger_client/models/rime_managed_image_status.py
++rime_sdk/swagger/swagger_client/models/rime_model_card.py
+ rime_sdk/swagger/swagger_client/models/rime_model_task.py
+ rime_sdk/swagger/swagger_client/models/rime_model_with_owner_details.py
+ rime_sdk/swagger/swagger_client/models/rime_monitor_data_point.py
+ rime_sdk/swagger/swagger_client/models/rime_named_double.py
+ rime_sdk/swagger/swagger_client/models/rime_order.py
+ rime_sdk/swagger/swagger_client/models/rime_parent_role_subject_role_pair.py
+ rime_sdk/swagger/swagger_client/models/rime_register_data_stream_response.py
+ rime_sdk/swagger/swagger_client/models/rime_register_dataset_response.py
+ rime_sdk/swagger/swagger_client/models/rime_register_internal_agent_response.py
+ rime_sdk/swagger/swagger_client/models/rime_register_model_response.py
+ rime_sdk/swagger/swagger_client/models/rime_register_prediction_set_response.py
++rime_sdk/swagger/swagger_client/models/rime_remove_user_from_workspace_response.py
++rime_sdk/swagger/swagger_client/models/rime_reset_password_response.py
++rime_sdk/swagger/swagger_client/models/rime_resolve_detection_event_response.py
+ rime_sdk/swagger/swagger_client/models/rime_ri_email_recipient.py
+ rime_sdk/swagger/swagger_client/models/rime_ri_plan.py
+ rime_sdk/swagger/swagger_client/models/rime_safe_url.py
+ rime_sdk/swagger/swagger_client/models/rime_send_ri_email_response.py
+ rime_sdk/swagger/swagger_client/models/rime_severity.py
+ rime_sdk/swagger/swagger_client/models/rime_severity_counts.py
+ rime_sdk/swagger/swagger_client/models/rime_sort_spec.py
+@@ -298,61 +347,75 @@
+ rime_sdk/swagger/swagger_client/models/rime_start_file_scan_response.py
+ rime_sdk/swagger/swagger_client/models/rime_start_stress_test_response.py
+ rime_sdk/swagger/swagger_client/models/rime_store_datapoints_response.py
+ rime_sdk/swagger/swagger_client/models/rime_store_predictions_request_prediction.py
+ rime_sdk/swagger/swagger_client/models/rime_store_predictions_response.py
+ rime_sdk/swagger/swagger_client/models/rime_str_list.py
+ rime_sdk/swagger/swagger_client/models/rime_stress_test_job_progress.py
++rime_sdk/swagger/swagger_client/models/rime_subject_type.py
+ rime_sdk/swagger/swagger_client/models/rime_suggestion.py
+ rime_sdk/swagger/swagger_client/models/rime_sync_image_tag_response.py
+ rime_sdk/swagger/swagger_client/models/rime_table_column.py
+ rime_sdk/swagger/swagger_client/models/rime_table_column_type.py
++rime_sdk/swagger/swagger_client/models/rime_tag.py
+ rime_sdk/swagger/swagger_client/models/rime_termination_reason.py
+ rime_sdk/swagger/swagger_client/models/rime_test_case_monitor_info.py
+ rime_sdk/swagger/swagger_client/models/rime_test_case_status.py
+ rime_sdk/swagger/swagger_client/models/rime_test_metric.py
+ rime_sdk/swagger/swagger_client/models/rime_test_metric_category.py
+ rime_sdk/swagger/swagger_client/models/rime_test_run_progress.py
+ rime_sdk/swagger/swagger_client/models/rime_test_task_status.py
+ rime_sdk/swagger/swagger_client/models/rime_test_type.py
+ rime_sdk/swagger/swagger_client/models/rime_time_interval.py
++rime_sdk/swagger/swagger_client/models/rime_token_type.py
+ rime_sdk/swagger/swagger_client/models/rime_update_build_info_response.py
+ rime_sdk/swagger/swagger_client/models/rime_update_firewall_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_integration_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_model_card_response.py
+ rime_sdk/swagger/swagger_client/models/rime_update_monitor_response.py
+ rime_sdk/swagger/swagger_client/models/rime_update_notification_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_user_of_workspace_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_user_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_workspace_response.py
++rime_sdk/swagger/swagger_client/models/rime_update_workspace_tag_response.py
+ rime_sdk/swagger/swagger_client/models/rime_upsert_feature_flags_response.py
+ rime_sdk/swagger/swagger_client/models/rime_upsert_job_response.py
+ rime_sdk/swagger/swagger_client/models/rime_user_detail_with_role.py
++rime_sdk/swagger/swagger_client/models/rime_user_role.py
+ rime_sdk/swagger/swagger_client/models/rime_user_with_role.py
++rime_sdk/swagger/swagger_client/models/rime_user_write_mask.py
+ rime_sdk/swagger/swagger_client/models/rime_uuid.py
++rime_sdk/swagger/swagger_client/models/rime_validate_test_config_response.py
++rime_sdk/swagger/swagger_client/models/rime_workspace.py
++rime_sdk/swagger/swagger_client/models/rime_workspace_write_mask.py
+ rime_sdk/swagger/swagger_client/models/riskscore_risk_category_type.py
+ rime_sdk/swagger/swagger_client/models/riskscore_risk_score.py
+ rime_sdk/swagger/swagger_client/models/role_users_body.py
+ rime_sdk/swagger/swagger_client/models/role_workspace_body.py
+ rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image.py
+ rime_sdk/swagger/swagger_client/models/runtimeinfo_custom_image_type.py
+ rime_sdk/swagger/swagger_client/models/runtimeinfo_resource_request.py
+ rime_sdk/swagger/swagger_client/models/runtimeinfo_run_time_info.py
+ rime_sdk/swagger/swagger_client/models/schemadatacollector_prediction.py
++rime_sdk/swagger/swagger_client/models/schemaintegration_integration_variable.py
+ rime_sdk/swagger/swagger_client/models/schemamonitor_config.py
+ rime_sdk/swagger/swagger_client/models/schemanotification_config.py
+-rime_sdk/swagger/swagger_client/models/schemaregistry_metadata.py
+ rime_sdk/swagger/swagger_client/models/security_event_details_flagged_datapoint.py
+ rime_sdk/swagger/swagger_client/models/security_event_details_security_event_type.py
+ rime_sdk/swagger/swagger_client/models/statedb_job_status.py
+ rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_datapoints_response.py
+ rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_latest_logs_response.py
+ rime_sdk/swagger/swagger_client/models/stream_result_of_rime_get_predictions_response.py
+ rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body.py
+-rime_sdk/swagger/swagger_client/models/stresstests_project_id_uuid_body1.py
+ rime_sdk/swagger/swagger_client/models/test_run_metrics_category_summary_metric.py
+ rime_sdk/swagger/swagger_client/models/test_run_metrics_model_perf_metric.py
+ rime_sdk/swagger/swagger_client/models/test_run_progress_test_batch_progress.py
+ rime_sdk/swagger/swagger_client/models/testrun_annotated_test_config.py
+ rime_sdk/swagger/swagger_client/models/testrun_connection_info.py
++rime_sdk/swagger/swagger_client/models/testrun_custom_metric.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_collector_info.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_file_info.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_info.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_info_params.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_loading_info.py
+ rime_sdk/swagger/swagger_client/models/testrun_data_profiling.py
+ rime_sdk/swagger/swagger_client/models/testrun_delta_lake_info.py
+@@ -392,10 +455,18 @@
+ rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data.py
+ rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_continuous_incremental_test.py
+ rime_sdk/swagger/swagger_client/models/upsert_job_request_write_mask_job_data_stress_test.py
+ rime_sdk/swagger/swagger_client/models/user_favorite_projects.py
+ rime_sdk/swagger/swagger_client/models/user_private_info.py
+ rime_sdk/swagger/swagger_client/models/user_role.py
+ rime_sdk/swagger/swagger_client/models/user_user_detail.py
++rime_sdk/swagger/swagger_client/models/users_user_id_uuid_body.py
+ rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body.py
++rime_sdk/swagger/swagger_client/models/users_user_user_id_uuid_body1.py
++rime_sdk/swagger/swagger_client/models/v1betaintegrationsintegration_id_uuid_integration.py
++rime_sdk/swagger/swagger_client/models/v1betamodelcardsmodel_card_model_card_id_uuid_model_card.py
+ rime_sdk/swagger/swagger_client/models/v1firewallfirewall_firewall_id_uuid_firewall.py
+-rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py
++rime_sdk/swagger/swagger_client/models/v1projectsproject_id_uuidroleusersuser_user_id_uuid_user.py
++rime_sdk/swagger/swagger_client/models/v1usersuser_id_uuid_user.py
++rime_sdk/swagger/swagger_client/models/v1workspaceworkspace_workspace_id_uuid_workspace.py
++rime_sdk/swagger/swagger_client/models/workspace_id_uuid_users_body.py
++rime_sdk/swagger/swagger_client/models/workspace_workspace_workspace_id_uuid_body.py
+```
+
+### Comparing `rime_sdk-2.0.0rc1/setup.py` & `rime_sdk-2.0.0rc2/setup.py`
+
+ * *Files identical despite different names*
+

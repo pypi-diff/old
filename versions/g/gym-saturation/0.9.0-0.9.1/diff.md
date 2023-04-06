@@ -1,0 +1,407 @@
+# Comparing `tmp/gym_saturation-0.9.0.tar.gz` & `tmp/gym_saturation-0.9.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gym_saturation-0.9.0.tar", max compression
++gzip compressed data, was "gym_saturation-0.9.1.tar", max compression
+```
+
+## Comparing `gym_saturation-0.9.0.tar` & `gym_saturation-0.9.1.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,26 @@
+--rw-r--r--   0        0        0    11360 2022-09-19 19:58:15.552724 gym_saturation-0.9.0/LICENSE
+--rw-r--r--   0        0        0     6024 2023-04-04 11:04:48.727269 gym_saturation-0.9.0/README.rst
+--rw-r--r--   0        0        0      991 2023-04-04 11:04:37.019214 gym_saturation-0.9.0/gym_saturation/__init__.py
+--rw-r--r--   0        0        0     8632 2023-04-04 11:04:37.019214 gym_saturation-0.9.0/gym_saturation/agent_testing.py
+--rw-r--r--   0        0        0     1242 2023-04-04 11:04:37.023214 gym_saturation-0.9.0/gym_saturation/conftest.py
+--rw-r--r--   0        0        0     1168 2023-03-24 12:49:21.170500 gym_saturation-0.9.0/gym_saturation/dummy_http_handler.py
+--rw-r--r--   0        0        0      789 2023-01-08 12:44:28.449376 gym_saturation-0.9.0/gym_saturation/envs/__init__.py
+--rw-r--r--   0        0        0     8082 2023-04-04 11:04:37.023214 gym_saturation-0.9.0/gym_saturation/envs/iprover_env.py
+--rw-r--r--   0        0        0     7479 2023-04-04 11:04:37.023214 gym_saturation-0.9.0/gym_saturation/envs/saturation_env.py
+--rw-r--r--   0        0        0     5548 2023-04-04 11:04:37.023214 gym_saturation-0.9.0/gym_saturation/envs/vampire_env.py
+--rw-r--r--   0        0        0     2244 2023-03-01 16:21:18.184137 gym_saturation-0.9.0/gym_saturation/proof_state.py
+--rw-r--r--   0        0        0        0 2021-07-22 09:53:47.848012 gym_saturation-0.9.0/gym_saturation/py.typed
+--rw-r--r--   0        0        0     3570 2023-02-25 20:38:38.888596 gym_saturation-0.9.0/gym_saturation/relay_server.py
+--rw-r--r--   0        0        0      267 2023-04-04 11:04:37.027214 gym_saturation-0.9.0/gym_saturation/resources/TPTP-mock/Problems/TST/TST001-1.p
+--rw-r--r--   0        0        0       77 2023-04-04 11:04:37.027214 gym_saturation-0.9.0/gym_saturation/resources/TPTP-mock/Problems/TST/TST002-1.p
+--rwxr-xr-x   0        0        0       62 2022-11-07 08:44:37.735015 gym_saturation-0.9.0/gym_saturation/resources/vampire-mock
+--rw-r--r--   0        0        0     4099 2023-04-04 11:04:37.031214 gym_saturation-0.9.0/gym_saturation/utils.py
+--rw-r--r--   0        0        0     4068 2023-04-04 11:04:37.031214 gym_saturation-0.9.0/gym_saturation/vampire_wrapper.py
+--rw-r--r--   0        0        0     2570 2023-04-04 11:04:37.031214 gym_saturation-0.9.0/gym_saturation/wrappers/age_weight_bandit.py
+--rw-r--r--   0        0        0     2641 2023-04-04 11:04:37.035214 gym_saturation-0.9.0/gym_saturation/wrappers/ast2vec_wrapper.py
+--rw-r--r--   0        0        0     2321 2023-03-24 12:49:21.174500 gym_saturation-0.9.0/gym_saturation/wrappers/constant_parametric_actions.py
+--rw-r--r--   0        0        0     2221 2023-04-04 11:04:37.035214 gym_saturation-0.9.0/gym_saturation/wrappers/duplicate_key_obs.py
+--rw-r--r--   0        0        0     5434 2023-04-04 11:04:37.035214 gym_saturation-0.9.0/gym_saturation/wrappers/parametric_actions_wrapper.py
+--rw-r--r--   0        0        0     3413 2023-04-04 11:04:37.043214 gym_saturation-0.9.0/pyproject.toml
+--rw-r--r--   0        0        0     7290 1970-01-01 00:00:00.000000 gym_saturation-0.9.0/PKG-INFO
++-rw-r--r--   0        0        0    11360 2022-09-19 19:58:15.552724 gym_saturation-0.9.1/LICENSE
++-rw-r--r--   0        0        0     6058 2023-04-06 15:52:02.939733 gym_saturation-0.9.1/README.rst
++-rw-r--r--   0        0        0      991 2023-04-06 15:52:02.955734 gym_saturation-0.9.1/gym_saturation/__init__.py
++-rw-r--r--   0        0        0     8632 2023-04-04 11:04:37.019214 gym_saturation-0.9.1/gym_saturation/agent_testing.py
++-rw-r--r--   0        0        0     1242 2023-04-04 11:04:37.023214 gym_saturation-0.9.1/gym_saturation/conftest.py
++-rw-r--r--   0        0        0      770 2023-04-06 15:52:02.959734 gym_saturation-0.9.1/gym_saturation/constants.py
++-rw-r--r--   0        0        0     1168 2023-03-24 12:49:21.170500 gym_saturation-0.9.1/gym_saturation/dummy_http_handler.py
++-rw-r--r--   0        0        0      789 2023-01-08 12:44:28.449376 gym_saturation-0.9.1/gym_saturation/envs/__init__.py
++-rw-r--r--   0        0        0     8097 2023-04-06 15:52:02.959734 gym_saturation-0.9.1/gym_saturation/envs/iprover_env.py
++-rw-r--r--   0        0        0     7488 2023-04-06 15:52:02.959734 gym_saturation-0.9.1/gym_saturation/envs/saturation_env.py
++-rw-r--r--   0        0        0     5548 2023-04-04 11:04:37.023214 gym_saturation-0.9.1/gym_saturation/envs/vampire_env.py
++-rw-r--r--   0        0        0     2244 2023-03-01 16:21:18.184137 gym_saturation-0.9.1/gym_saturation/proof_state.py
++-rw-r--r--   0        0        0        0 2021-07-22 09:53:47.848012 gym_saturation-0.9.1/gym_saturation/py.typed
++-rw-r--r--   0        0        0     3570 2023-02-25 20:38:38.888596 gym_saturation-0.9.1/gym_saturation/relay_server.py
++-rw-r--r--   0        0        0      267 2023-04-04 11:04:37.027214 gym_saturation-0.9.1/gym_saturation/resources/TPTP-mock/Problems/TST/TST001-1.p
++-rw-r--r--   0        0        0       77 2023-04-04 11:04:37.027214 gym_saturation-0.9.1/gym_saturation/resources/TPTP-mock/Problems/TST/TST002-1.p
++-rwxr-xr-x   0        0        0       62 2022-11-07 08:44:37.735015 gym_saturation-0.9.1/gym_saturation/resources/vampire-mock
++-rw-r--r--   0        0        0     4099 2023-04-05 14:12:19.638325 gym_saturation-0.9.1/gym_saturation/utils.py
++-rw-r--r--   0        0        0     4068 2023-04-04 11:04:37.031214 gym_saturation-0.9.1/gym_saturation/vampire_wrapper.py
++-rw-r--r--   0        0        0     2570 2023-04-04 11:04:37.031214 gym_saturation-0.9.1/gym_saturation/wrappers/age_weight_bandit.py
++-rw-r--r--   0        0        0     2641 2023-04-04 11:04:37.035214 gym_saturation-0.9.1/gym_saturation/wrappers/ast2vec_wrapper.py
++-rw-r--r--   0        0        0     2395 2023-04-06 15:52:02.959734 gym_saturation-0.9.1/gym_saturation/wrappers/constant_parametric_actions.py
++-rw-r--r--   0        0        0     2221 2023-04-04 11:04:37.035214 gym_saturation-0.9.1/gym_saturation/wrappers/duplicate_key_obs.py
++-rw-r--r--   0        0        0     5435 2023-04-06 15:52:02.963734 gym_saturation-0.9.1/gym_saturation/wrappers/parametric_actions_wrapper.py
++-rw-r--r--   0        0        0     3457 2023-04-06 15:52:02.963734 gym_saturation-0.9.1/pyproject.toml
++-rw-r--r--   0        0        0     7324 1970-01-01 00:00:00.000000 gym_saturation-0.9.1/PKG-INFO
+```
+
+### Comparing `gym_saturation-0.9.0/LICENSE` & `gym_saturation-0.9.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/README.rst` & `gym_saturation-0.9.1/README.rst`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -89,19 +89,18 @@
+   observation, info = env.reset()
+   terminated, truncated = False, False
+   while not (terminated or truncated):
+       # apply policy (a valid random action here)
+       action = env.action_space.sample(mask=observation["action_mask"])
+       observation, reward, terminated, truncated, info = env.step(action)
+   env.close()
+-  
+-See `the
+-notebook <https://github.com/inpefess/gym-saturation/blob/master/examples/example.ipynb>`__ for more information.
+ 
+-For more comprehensive experiments, please see the documentation `page <https://gym-saturation.readthedocs.io/en/latest/experiments.html>`__.
++Or have a look at the basic `tutorial <https://gym-saturation.readthedocs.io/en/latest/tutorials/auto_examples/plot_age_agent.html>`__.
++  
++For a bit more comprehensive experiments, please navigate the documentation `page <https://gym-saturation.readthedocs.io/en/latest/tutorials/experiments.html>`__.
+ 
+ How to Contribute
+ =================
+ 
+ `Pull requests <https://github.com/inpefess/gym-saturation/pulls>`__ are
+ welcome. To start:
+```
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/__init__.py` & `gym_saturation-0.9.1/gym_saturation/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -17,8 +17,8 @@
+ They are registered using a limit for the number of steps in an episode and the
+ maximal possible reward is set to ``1.0`` (proof is found).
+ """
+ from gymnasium.envs.registration import register
+ 
+ register(id="Vampire-v0", entry_point="gym_saturation.envs:VampireEnv")
+ register(id="iProver-v0", entry_point="gym_saturation.envs:IProverEnv")
+-__version__ = "0.9.0"
++__version__ = "0.9.1"
+```
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/agent_testing.py` & `gym_saturation-0.9.1/gym_saturation/agent_testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/conftest.py` & `gym_saturation-0.9.1/gym_saturation/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/dummy_http_handler.py` & `gym_saturation-0.9.1/gym_saturation/dummy_http_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/envs/__init__.py` & `gym_saturation-0.9.1/gym_saturation/envs/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/envs/iprover_env.py` & `gym_saturation-0.9.1/gym_saturation/envs/iprover_env.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -26,20 +26,16 @@
+ import subprocess
+ import time
+ from threading import Thread
+ from typing import Any, Dict, List, Optional, Tuple
+ 
+ import numpy as np
+ 
+-from gym_saturation.envs.saturation_env import (
+-    ACTION_MASK,
+-    MAX_CLAUSES,
+-    REAL_OBS,
+-    SaturationEnv,
+-)
++from gym_saturation.constants import ACTION_MASK, REAL_OBS
++from gym_saturation.envs.saturation_env import MAX_CLAUSES, SaturationEnv
+ from gym_saturation.relay_server import RelayServer, RelayTCPHandler
+ 
+ 
+ async def _iprover_start(
+     iprover_port: int, problem_filename: str, iprover_binary_path: str
+ ) -> asyncio.subprocess.Process:
+     tptp_folder = os.path.join(os.path.dirname(problem_filename), "..", "..")
+```
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/envs/saturation_env.py` & `gym_saturation-0.9.1/gym_saturation/envs/saturation_env.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -21,25 +21,24 @@
+ from abc import abstractmethod
+ from typing import Any, Dict, Optional, Tuple
+ 
+ import numpy as np
+ from gymnasium import Env, spaces
+ from gymnasium.spaces.text import alphanumeric
+ 
++from gym_saturation.constants import ACTION_MASK, REAL_OBS
+ from gym_saturation.proof_state import ProofState
+ from gym_saturation.utils import (
+     FALSEHOOD_SYMBOL,
+     MOCK_TPTP_PROBLEM,
+     pretty_print,
+ )
+ 
+ MAX_CLAUSES = 1000
+ ALPHANUMERIC_WITH_UNDERSCORE = "".join(alphanumeric) + "_"
+-REAL_OBS = "real_obs"
+-ACTION_MASK = "action_mask"
+ SHORT_TEXT_SPACE = spaces.Text(256, charset=ALPHANUMERIC_WITH_UNDERSCORE)
+ LONG_TEXT_SPACE = spaces.Text(
+     4000,
+     charset=ALPHANUMERIC_WITH_UNDERSCORE + "(), |~=!$",
+ )
+```
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/envs/vampire_env.py` & `gym_saturation-0.9.1/gym_saturation/envs/vampire_env.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/proof_state.py` & `gym_saturation-0.9.1/gym_saturation/proof_state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/relay_server.py` & `gym_saturation-0.9.1/gym_saturation/relay_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/utils.py` & `gym_saturation-0.9.1/gym_saturation/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/vampire_wrapper.py` & `gym_saturation-0.9.1/gym_saturation/vampire_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/wrappers/age_weight_bandit.py` & `gym_saturation-0.9.1/gym_saturation/wrappers/age_weight_bandit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/wrappers/ast2vec_wrapper.py` & `gym_saturation-0.9.1/gym_saturation/wrappers/ast2vec_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/wrappers/constant_parametric_actions.py` & `gym_saturation-0.9.1/gym_saturation/wrappers/constant_parametric_actions.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -19,29 +19,33 @@
+ """
+ from typing import Dict
+ 
+ import gymnasium as gym
+ import numpy as np
+ from gymnasium.core import ObsType
+ 
++from gym_saturation.constants import PARAMETRIC_ACTIONS
++
+ 
+ class ConstantParametricActionsWrapper(gym.ObservationWrapper):
+     """
+     A wrapper which make the observation to contain constant action embeddings.
+ 
+     .. _constant_parametric_actions:
+ 
+     >>> env = ConstantParametricActionsWrapper(gym.make("CartPole-v1"))
+     >>> observation, info = env.reset()
+     >>> observation
+     {'avail_actions': array([[1., 0.],
+            [0., 1.]])}
+     """
+ 
+-    def __init__(self, env: gym.Env, avail_actions_key: str = "avail_actions"):
++    def __init__(
++        self, env: gym.Env, avail_actions_key: str = PARAMETRIC_ACTIONS
++    ):
+         """Initialise the observation wrapper."""
+         super().__init__(env)
+         self.avail_actions_key = avail_actions_key
+         self.env.observation_space = gym.spaces.Dict(
+             {
+                 self.avail_actions_key: gym.spaces.Box(
+                     0,
+```
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/wrappers/duplicate_key_obs.py` & `gym_saturation-0.9.1/gym_saturation/wrappers/duplicate_key_obs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gym_saturation-0.9.0/gym_saturation/wrappers/parametric_actions_wrapper.py` & `gym_saturation-0.9.1/gym_saturation/wrappers/parametric_actions_wrapper.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,21 +18,16 @@
+ """
+ from abc import ABC, abstractmethod
+ from typing import Any, Dict, Optional, Tuple
+ 
+ import gymnasium as gym
+ import numpy as np
+ 
+-from gym_saturation.envs.saturation_env import (
+-    ACTION_MASK,
+-    REAL_OBS,
+-    SaturationEnv,
+-)
+-
+-PARAMETRIC_ACTIONS = "avail_actions"
++from gym_saturation.constants import ACTION_MASK, PARAMETRIC_ACTIONS, REAL_OBS
++from gym_saturation.envs.saturation_env import SaturationEnv
+ 
+ 
+ class ParamtericActionsWrapper(gym.Wrapper, ABC):
+     """
+     A parametric actions wrapper.
+ 
+     .. _parametric_actions:
+```
+
+### Comparing `gym_saturation-0.9.0/pyproject.toml` & `gym_saturation-0.9.1/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "gym-saturation"
+-version = "0.9.0"
++version = "0.9.1"
+ description = "Gymnasium environments for saturation provers"
+ authors = ["Boris Shminke <boris@shminke.ml>"]
+ license = "Apache-2.0"
+ repository = "https://github.com/inpefess/gym-saturation"
+ readme = "README.rst"
+ classifiers=[
+ 	"Programming Language :: Python :: 3.8",
+@@ -39,14 +39,17 @@
+ sphinx-autodoc-typehints = "*"
+ pydocstyle = "*"
+ tbump = "*"
+ pyenchant = "*"
+ flake8 = "*"
+ toml = "*"
+ furo = "*"
++sphinx-gallery = "*"
++pillow = "*"
++matplotlib = "*"
+ 
+ [tool.black]
+ line-length=79
+ 
+ [tool.isort]
+ profile = "black"
+ src_paths = ["gym_saturation"]
+@@ -129,15 +132,15 @@
+     pytest
+ """
+ 
+ [tool.tbump]
+ github_url = "https://github.com/inpfess/gym-saturation/"
+ 
+ [tool.tbump.version]
+-current = "0.9.0"
++current = "0.9.1"
+ regex = '''
+   (?P<major>\d+)
+   \.
+   (?P<minor>\d+)
+   \.
+   (?P<patch>\d+)
+   '''
+@@ -149,8 +152,8 @@
+ [[tool.tbump.file]]
+ src = "gym_saturation/__init__.py"
+ 
+ [[tool.tbump.file]]
+ src = "pyproject.toml"
+ 
+ [[tool.tbump.file]]
+-src = "doc/source/conf.py"
++src = "doc/conf.py"
+```
+
+### Comparing `gym_saturation-0.9.0/PKG-INFO` & `gym_saturation-0.9.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gym-saturation
+-Version: 0.9.0
++Version: 0.9.1
+ Summary: Gymnasium environments for saturation provers
+ Home-page: https://github.com/inpefess/gym-saturation
+ License: Apache-2.0
+ Author: Boris Shminke
+ Author-email: boris@shminke.ml
+ Requires-Python: >=3.8.1,<3.12
+ Classifier: Development Status :: 3 - Alpha
+@@ -120,19 +120,18 @@
+   observation, info = env.reset()
+   terminated, truncated = False, False
+   while not (terminated or truncated):
+       # apply policy (a valid random action here)
+       action = env.action_space.sample(mask=observation["action_mask"])
+       observation, reward, terminated, truncated, info = env.step(action)
+   env.close()
+-  
+-See `the
+-notebook <https://github.com/inpefess/gym-saturation/blob/master/examples/example.ipynb>`__ for more information.
+ 
+-For more comprehensive experiments, please see the documentation `page <https://gym-saturation.readthedocs.io/en/latest/experiments.html>`__.
++Or have a look at the basic `tutorial <https://gym-saturation.readthedocs.io/en/latest/tutorials/auto_examples/plot_age_agent.html>`__.
++  
++For a bit more comprehensive experiments, please navigate the documentation `page <https://gym-saturation.readthedocs.io/en/latest/tutorials/experiments.html>`__.
+ 
+ How to Contribute
+ =================
+ 
+ `Pull requests <https://github.com/inpefess/gym-saturation/pulls>`__ are
+ welcome. To start:
+```
+
