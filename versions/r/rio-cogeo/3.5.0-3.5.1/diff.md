@@ -1,0 +1,451 @@
+# Comparing `tmp/rio-cogeo-3.5.0.tar.gz` & `tmp/rio-cogeo-3.5.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rio-cogeo-3.5.0.tar", last modified: Wed Oct 26 12:51:40 2022, max compression
++gzip compressed data, was "rio-cogeo-3.5.1.tar", last modified: Thu Apr  6 15:17:47 2023, max compression
+```
+
+## Comparing `rio-cogeo-3.5.0.tar` & `rio-cogeo-3.5.1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,15 @@
+--rw-r--r--   0        0        0      213 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/.bumpversion.cfg
+--rw-r--r--   0        0        0      136 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/.flake8
+--rw-r--r--   0        0        0     1172 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/.gitignore
+--rw-r--r--   0        0        0      674 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/.pre-commit-config.yaml
+--rw-r--r--   0        0        0     1517 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/LICENSE
+--rw-r--r--   0        0        0     3373 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/README.md
+--rw-r--r--   0        0        0     1794 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/pyproject.toml
+--rw-r--r--   0        0        0      218 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/__init__.py
+--rw-r--r--   0        0        0    28397 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/cogeo.py
+--rw-r--r--   0        0        0      406 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/errors.py
+--rw-r--r--   0        0        0     1950 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/models.py
+--rw-r--r--   0        0        0     4521 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/profiles.py
+--rw-r--r--   0        0        0       21 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/scripts/__init__.py
+--rw-r--r--   0        0        0    13579 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/scripts/cli.py
+--rw-r--r--   0        0        0     4587 2022-10-26 12:51:21.945001 rio-cogeo-3.5.0/rio_cogeo/utils.py
+--rw-r--r--   0        0        0     4671 1970-01-01 00:00:00.000000 rio-cogeo-3.5.0/PKG-INFO
++-rw-r--r--   0        0        0      213 2023-04-06 15:17:33.591065 rio-cogeo-3.5.1/.bumpversion.cfg
++-rw-r--r--   0        0        0     1172 2023-04-06 15:17:33.591065 rio-cogeo-3.5.1/.gitignore
++-rw-r--r--   0        0        0      740 2023-04-06 15:17:33.591065 rio-cogeo-3.5.1/.pre-commit-config.yaml
++-rw-r--r--   0        0        0     1517 2023-04-06 15:17:33.591065 rio-cogeo-3.5.1/LICENSE
++-rw-r--r--   0        0        0     3373 2023-04-06 15:17:33.591065 rio-cogeo-3.5.1/README.md
++-rw-r--r--   0        0        0     2305 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/pyproject.toml
++-rw-r--r--   0        0        0      218 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/__init__.py
++-rw-r--r--   0        0        0    28428 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/cogeo.py
++-rw-r--r--   0        0        0      406 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/errors.py
++-rw-r--r--   0        0        0     1950 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/models.py
++-rw-r--r--   0        0        0     4521 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/profiles.py
++-rw-r--r--   0        0        0       21 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/scripts/__init__.py
++-rw-r--r--   0        0        0    13693 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/scripts/cli.py
++-rw-r--r--   0        0        0     4595 2023-04-06 15:17:33.595065 rio-cogeo-3.5.1/rio_cogeo/utils.py
++-rw-r--r--   0        0        0     4671 1970-01-01 00:00:00.000000 rio-cogeo-3.5.1/PKG-INFO
+```
+
+### Comparing `rio-cogeo-3.5.0/.gitignore` & `rio-cogeo-3.5.1/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `rio-cogeo-3.5.0/LICENSE` & `rio-cogeo-3.5.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `rio-cogeo-3.5.0/README.md` & `rio-cogeo-3.5.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `rio-cogeo-3.5.0/pyproject.toml` & `rio-cogeo-3.5.1/pyproject.toml`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ [project]
+ name = "rio-cogeo"
+ description = "Cloud Optimized GeoTIFF (COGEO) creation plugin for rasterio"
+ readme = "README.md"
+-requires-python = ">=3.7"
++requires-python = ">=3.8"
+ license = {file = "LICENSE"}
+ authors = [
+     {name = "Vincent Sarago", email = "vincent@developmentseed.com"},
+ ]
+ keywords = ["COGEO", "CloudOptimized Geotiff", "rasterio"]
+ classifiers = [
+     "Intended Audience :: Information Technology",
+@@ -62,20 +62,41 @@
+     ".github/",
+     "CHANGES.md",
+     "codecov.yml",
+     "CONTRIBUTING.md",
+     "mkdocs.yml",
+ ]
+ 
++[tool.coverage.run]
++branch = true
++parallel = true
++
++[tool.coverage.report]
++exclude_lines = [
++  "no cov",
++  "if __name__ == .__main__.:",
++  "if TYPE_CHECKING:",
++]
++
+ [tool.isort]
+ profile = "black"
+ known_first_party = ["rio_cogeo"]
+ known_third_party = ["rasterio", "morecantile", "click"]
+ default_section = "THIRDPARTY"
+ 
+ [tool.mypy]
+ no_strict_optional = "True"
+ ignore_missing_imports = "True"
+ 
+-[tool.pydocstyle]
+-select = "D1"
+-match = "(?!test).*.py"
++[tool.ruff]
++select = [
++    "D1",  # pydocstyle errors
++    "E",  # pycodestyle errors
++    "W",  # pycodestyle warnings
++    "C",  # flake8-comprehensions
++    "B",  # flake8-bugbear
++]
++ignore = [
++    "E501",  # line too long, handled by black
++    "B008",  # do not perform function calls in argument defaults
++    "B905",  # ignore zip() without an explicit strict= parameter, only support with python >3.10
++]
+```
+
+### Comparing `rio-cogeo-3.5.0/rio_cogeo/cogeo.py` & `rio-cogeo-3.5.1/rio_cogeo/cogeo.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -26,15 +26,17 @@
+ 
+ 
+ @contextmanager
+ def TemporaryRasterFile(dst_path: Union[str, pathlib.PurePath], suffix: str = ".tif"):
+     """Create temporary file."""
+     # For local file we should create temporary file in the same directory
+     tmpdir = (
+-        None if not pathlib.Path(dst_path).is_file() else pathlib.Path(dst_path).parent
++        pathlib.Path(dst_path).parent
++        if pathlib.Path(dst_path).parent.is_dir()
++        else None
+     )
+     fileobj = tempfile.NamedTemporaryFile(dir=tmpdir, suffix=suffix, delete=False)
+     fileobj.close()
+     try:
+         yield fileobj
+     finally:
+         os.remove(fileobj.name)
+@@ -183,19 +185,19 @@
+                 "width": src_dst.width,
+                 "height": src_dst.height,
+                 "resampling": ResamplingEnums[resampling],
+             }
+ 
+             if nodata is not None:
+                 vrt_params.update(
+-                    dict(nodata=nodata, add_alpha=False, src_nodata=nodata)
++                    {"nodata": nodata, "add_alpha": False, "src_nodata": nodata}
+                 )
+ 
+             if alpha:
+-                vrt_params.update(dict(add_alpha=False))
++                vrt_params.update({"add_alpha": False})
+ 
+             if web_optimized and not use_cog_driver:
+                 params = utils.get_web_optimized_params(
+                     src_dst,
+                     zoom_level_strategy=zoom_level_strategy,
+                     zoom_level=zoom_level,
+                     aligned_levels=aligned_levels,
+@@ -298,19 +300,19 @@
+                 for i, b in enumerate(indexes):
+                     tmp_dst.set_band_description(i + 1, src_dst.descriptions[b - 1])
+                     if forward_band_tags:
+                         tmp_dst.update_tags(bidx=i + 1, **src_dst.tags(b))
+ 
+                 tags = src_dst.tags()
+                 tags.update(
+-                    dict(
+-                        OVR_RESAMPLING_ALG=ResamplingEnums[
++                    {
++                        "OVR_RESAMPLING_ALG": ResamplingEnums[
+                             overview_resampling
+                         ].name.upper()
+-                    )
++                    }
+                 )
+                 if additional_cog_metadata:
+                     tags.update(**additional_cog_metadata)
+ 
+                 if forward_ns_tags:
+                     namespaces = src_dst.tag_namespaces()
+                     for ns in namespaces:
+@@ -441,15 +443,15 @@
+                 if not quiet:
+                     click.secho("The following errors were found:", fg="red", err=True)
+                     for e in errors:
+                         click.echo("- " + e, err=True)
+ 
+                 return False, errors, warnings
+ 
+-            if any(pathlib.Path(x).suffix == ".ovr" for x in src.files):
++            if any(pathlib.Path(x).suffix.lower() == ".ovr" for x in src.files):
+                 errors.append(
+                     "Overviews found in external .ovr file. They should be internal"
+                 )
+ 
+             overviews = src.overviews(1)
+             if src.width > 512 and src.height > 512:
+                 if not src.is_tiled:
+@@ -525,15 +527,15 @@
+             block_offset = src.get_tag_item("BLOCK_OFFSET_0_0", "TIFF", bidx=1)
+ 
+             data_offset = int(block_offset) if block_offset else 0
+             data_offsets = [data_offset]
+             details["data_offsets"] = {}
+             details["data_offsets"]["main"] = data_offset
+ 
+-            for ix, dec in enumerate(overviews):
++            for ix, _dec in enumerate(overviews):
+                 block_offset = src.get_tag_item(
+                     "BLOCK_OFFSET_0_0", "TIFF", bidx=1, ovr=ix
+                 )
+                 data_offset = int(block_offset) if block_offset else 0
+                 data_offsets.append(data_offset)
+                 details["data_offsets"]["overview_{}".format(ix)] = data_offset
+ 
+@@ -560,15 +562,15 @@
+                 errors.append(
+                     "The offset of the first block of the main resolution image "
+                     "should be after the one of the overview of index {}".format(
+                         len(overviews) - 1
+                     )
+                 )
+ 
+-        for ix, dec in enumerate(overviews):
++        for ix, _dec in enumerate(overviews):
+             with rasterio.open(src_path, OVERVIEW_LEVEL=ix) as ovr_dst:
+                 if ovr_dst.width > 512 and ovr_dst.height > 512:
+                     if not ovr_dst.is_tiled:
+                         errors.append("Overview of index {} is not tiled".format(ix))
+ 
+     if warnings and not quiet:
+         click.secho("The following warnings were found:", fg="yellow", err=True)
+```
+
+### Comparing `rio-cogeo-3.5.0/rio_cogeo/models.py` & `rio-cogeo-3.5.1/rio_cogeo/models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rio-cogeo-3.5.0/rio_cogeo/profiles.py` & `rio-cogeo-3.5.1/rio_cogeo/profiles.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rio-cogeo-3.5.0/rio_cogeo/scripts/cli.py` & `rio-cogeo-3.5.1/rio_cogeo/scripts/cli.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -28,19 +28,19 @@
+     def convert(self, value, param, ctx):
+         """Validate and parse band index."""
+         try:
+             bands = [int(x) for x in value.split(",")]
+             assert all(b > 0 for b in bands)
+             return bands
+ 
+-        except (ValueError, AttributeError, AssertionError):
++        except (ValueError, AttributeError, AssertionError) as e:
+             raise click.ClickException(
+                 "bidx must be a string of comma-separated integers (> 0), "
+                 "representing the band indexes."
+-            )
++            ) from e
+ 
+ 
+ class NodataParamType(click.ParamType):
+     """Nodata type."""
+ 
+     name = "nodata"
+ 
+@@ -49,32 +49,36 @@
+         try:
+             if value.lower() == "nan":
+                 return numpy.nan
+             elif value.lower() in ["nil", "none", "nada"]:
+                 return None
+             else:
+                 return float(value)
+-        except (TypeError, ValueError):
+-            raise click.ClickException("{} is not a valid nodata value.".format(value))
++        except (TypeError, ValueError) as e:
++            raise click.ClickException(
++                "{} is not a valid nodata value.".format(value)
++            ) from e
+ 
+ 
+ class ThreadsParamType(click.ParamType):
+     """num_threads index type."""
+ 
+     name = "threads"
+ 
+     def convert(self, value, param, ctx):
+         """Validate and parse thread number."""
+         try:
+             if value.lower() == "all_cpus":
+                 return "ALL_CPUS"
+             else:
+                 return int(value)
+-        except (TypeError, ValueError):
+-            raise click.ClickException("{} is not a valid thread value.".format(value))
++        except (TypeError, ValueError) as e:
++            raise click.ClickException(
++                "{} is not a valid thread value.".format(value)
++            ) from e
+ 
+ 
+ @click.group(short_help="Create and Validate COGEO")
+ @click.version_option(version=cogeo_version, message="%(version)s")
+ def cogeo():
+     """Rasterio cogeo subcommands."""
+     pass
+@@ -234,31 +238,31 @@
+     use_cog_driver,
+     creation_options,
+     config,
+     quiet,
+ ):
+     """Create Cloud Optimized Geotiff."""
+     output_profile = cog_profiles.get(cogeo_profile)
+-    output_profile.update(dict(BIGTIFF=os.environ.get("BIGTIFF", "IF_SAFER")))
++    output_profile.update({"BIGTIFF": os.environ.get("BIGTIFF", "IF_SAFER")})
+     if creation_options:
+         output_profile.update(creation_options)
+ 
+     if blocksize:
+         output_profile["blockxsize"] = blocksize
+         output_profile["blockysize"] = blocksize
+ 
+     if web_optimized:
+         overview_blocksize = blocksize or 512
+ 
+     config.update(
+-        dict(
+-            GDAL_NUM_THREADS=threads,
+-            GDAL_TIFF_INTERNAL_MASK=os.environ.get("GDAL_TIFF_INTERNAL_MASK", True),
+-            GDAL_TIFF_OVR_BLOCKSIZE=str(overview_blocksize),
+-        )
++        {
++            "GDAL_NUM_THREADS": threads,
++            "GDAL_TIFF_INTERNAL_MASK": os.environ.get("GDAL_TIFF_INTERNAL_MASK", True),
++            "GDAL_TIFF_OVR_BLOCKSIZE": str(overview_blocksize),
++        }
+     )
+ 
+     cog_translate(
+         input,
+         output,
+         output_profile,
+         indexes=bidx,
+@@ -322,15 +326,15 @@
+     "--config",
+     "config",
+     metavar="NAME=VALUE",
+     multiple=True,
+     callback=options._cb_key_val,
+     help="GDAL configuration options.",
+ )
+-def info(input, to_json, config):
++def info(input, to_json, config):  # noqa: C901
+     """Dataset info."""
+     metadata = cog_info(input, config=config)
+ 
+     if to_json:
+         click.echo(metadata.json(exclude_none=True, by_alias=True))
+     else:
+```
+
+### Comparing `rio-cogeo-3.5.0/rio_cogeo/utils.py` & `rio-cogeo-3.5.1/rio_cogeo/utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -130,13 +130,13 @@
+     e, _, _, s = tms.xy_bounds(
+         morecantile.Tile(lr_tile.x + 1, lr_tile.y + 1, lr_tile.z)
+     )
+ 
+     vrt_width = max(1, round((e - w) / vrt_transform.a))
+     vrt_height = max(1, round((s - n) / vrt_transform.e))
+ 
+-    return dict(
+-        crs=tms.rasterio_crs,
+-        transform=vrt_transform,
+-        width=vrt_width,
+-        height=vrt_height,
+-    )
++    return {
++        "crs": tms.rasterio_crs,
++        "transform": vrt_transform,
++        "width": vrt_width,
++        "height": vrt_height,
++    }
+```
+
+### Comparing `rio-cogeo-3.5.0/PKG-INFO` & `rio-cogeo-3.5.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ Metadata-Version: 2.1
+ Name: rio-cogeo
+-Version: 3.5.0
++Version: 3.5.1
+ Summary: Cloud Optimized GeoTIFF (COGEO) creation plugin for rasterio
+ Keywords: COGEO,CloudOptimized Geotiff,rasterio
+ Author-email: Vincent Sarago <vincent@developmentseed.com>
+-Requires-Python: >=3.7
++Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ Classifier: Intended Audience :: Information Technology
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+```
+
+#### html2text {}
+
+```diff
+@@ -1,11 +1,11 @@
+-Metadata-Version: 2.1 Name: rio-cogeo Version: 3.5.0 Summary: Cloud Optimized
++Metadata-Version: 2.1 Name: rio-cogeo Version: 3.5.1 Summary: Cloud Optimized
+ GeoTIFF (COGEO) creation plugin for rasterio Keywords: COGEO,CloudOptimized
+ Geotiff,rasterio Author-email: Vincent Sarago
+-developmentseed.com> Requires-Python: >=3.7 Description-Content-Type: text/
++developmentseed.com> Requires-Python: >=3.8 Description-Content-Type: text/
+ markdown Classifier: Intended Audience :: Information Technology Classifier:
+ Intended Audience :: Science/Research Classifier: License :: OSI Approved ::
+ BSD License Classifier: Programming Language :: Python :: 3.8 Classifier:
+ Programming Language :: Python :: 3.9 Classifier: Programming Language ::
+ Python :: 3.10 Classifier: Programming Language :: Python :: 3.11 Classifier:
+ Topic :: Scientific/Engineering :: GIS Requires-Dist: click>=7.0 Requires-Dist:
+ rasterio>=1.3.3 Requires-Dist: numpy~=1.15 Requires-Dist: morecantile>=3.1,<4.0
+```
+

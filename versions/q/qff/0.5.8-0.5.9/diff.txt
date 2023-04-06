@@ -1,0 +1,737 @@
+--- tmp/qff-0.5.8.tar.gz
++++ tmp/qff-0.5.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "qff-0.5.8.tar", last modified: Mon Mar 20 14:42:32 2023, max compression
+│ +gzip compressed data, was "qff-0.5.9.tar", last modified: Wed Mar 22 15:00:06 2023, max compression
+│   --- qff-0.5.8.tar
+├── +++ qff-0.5.9.tar
+│ ├── file list
+│ │ @@ -1,72 +1,72 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.665223 qff-0.5.8/
+│ │ --rw-rw-rw-   0        0        0     1166 2023-03-11 11:37:01.000000 qff-0.5.8/LICENSE
+│ │ --rw-rw-rw-   0        0        0       51 2023-03-11 11:37:01.000000 qff-0.5.8/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     3925 2023-03-20 14:42:32.664254 qff-0.5.8/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3104 2023-03-11 11:37:01.000000 qff-0.5.8/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.594106 qff-0.5.8/qff/
+│ │ --rw-rw-rw-   0        0        0     3918 2023-03-20 14:41:46.000000 qff-0.5.8/qff/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3757 2023-03-11 12:17:48.000000 qff-0.5.8/qff/__main__.py
+│ │ --rw-rw-rw-   0        0        0     4717 2023-03-11 11:37:01.000000 qff-0.5.8/qff/config.ts.json
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.623608 qff-0.5.8/qff/frame/
+│ │ --rw-rw-rw-   0        0        0     1164 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/__init__.py
+│ │ --rw-rw-rw-   0        0        0    13713 2023-03-20 14:20:44.000000 qff-0.5.8/qff/frame/api.py
+│ │ --rw-rw-rw-   0        0        0     6715 2023-03-13 12:24:45.000000 qff-0.5.8/qff/frame/backtest.py
+│ │ --rw-rw-rw-   0        0        0     3378 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/backup.py
+│ │ --rw-rw-rw-   0        0        0    20065 2023-03-15 15:39:41.000000 qff-0.5.8/qff/frame/cli.py
+│ │ --rw-rw-rw-   0        0        0     2543 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/const.py
+│ │ --rw-rw-rw-   0        0        0    11542 2023-03-20 14:20:44.000000 qff-0.5.8/qff/frame/context.py
+│ │ --rw-rw-rw-   0        0        0    23975 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/evaluation.py
+│ │ --rw-rw-rw-   0        0        0    23958 2023-03-19 09:36:32.000000 qff-0.5.8/qff/frame/order.py
+│ │ --rw-rw-rw-   0        0        0    15708 2023-03-11 12:17:48.000000 qff-0.5.8/qff/frame/perf.py
+│ │ --rw-rw-rw-   0        0        0     6633 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/portfolio.py
+│ │ --rw-rw-rw-   0        0        0     6567 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/position.py
+│ │ --rw-rw-rw-   0        0        0     5711 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/settle.py
+│ │ --rw-rw-rw-   0        0        0     6031 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/simtrade.py
+│ │ --rw-rw-rw-   0        0        0    17876 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/stats.py
+│ │ --rw-rw-rw-   0        0        0    22743 2023-03-11 12:17:48.000000 qff-0.5.8/qff/frame/template.html
+│ │ --rw-rw-rw-   0        0        0    19090 2023-03-11 11:37:01.000000 qff-0.5.8/qff/frame/trace.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.629918 qff-0.5.8/qff/helper/
+│ │ --rw-rw-rw-   0        0        0     2159 2023-03-11 11:37:01.000000 qff-0.5.8/qff/helper/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6096 2023-03-11 12:17:48.000000 qff-0.5.8/qff/helper/common.py
+│ │ --rw-rw-rw-   0        0        0     9028 2023-03-11 11:37:01.000000 qff-0.5.8/qff/helper/formula.py
+│ │ --rw-rw-rw-   0        0        0     5497 2023-03-11 11:37:01.000000 qff-0.5.8/qff/helper/indicator.py
+│ │ --rw-rw-rw-   0        0        0    24263 2023-03-11 11:37:01.000000 qff-0.5.8/qff/helper/ts.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.637899 qff-0.5.8/qff/price/
+│ │ --rw-rw-rw-   0        0        0     2010 2023-03-11 11:37:01.000000 qff-0.5.8/qff/price/__init__.py
+│ │ --rw-rw-rw-   0        0        0    16572 2023-03-11 11:37:01.000000 qff-0.5.8/qff/price/cache.py
+│ │ --rw-rw-rw-   0        0        0     7398 2023-03-11 11:37:01.000000 qff-0.5.8/qff/price/crawl.py
+│ │ --rw-rw-rw-   0        0        0    17060 2023-03-11 12:17:48.000000 qff-0.5.8/qff/price/fetch.py
+│ │ --rw-rw-rw-   0        0        0    78232 2023-03-12 08:27:10.000000 qff-0.5.8/qff/price/finance.py
+│ │ --rw-rw-rw-   0        0        0    39268 2023-03-19 09:27:44.000000 qff-0.5.8/qff/price/query.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.646875 qff-0.5.8/qff/store/
+│ │ --rw-rw-rw-   0        0        0     1630 2023-03-11 11:37:01.000000 qff-0.5.8/qff/store/__init__.py
+│ │ --rw-rw-rw-   0        0        0    17284 2023-03-11 11:37:01.000000 qff-0.5.8/qff/store/save_info.py
+│ │ --rw-rw-rw-   0        0        0     6966 2023-03-11 11:37:01.000000 qff-0.5.8/qff/store/save_mtss.py
+│ │ --rw-rw-rw-   0        0        0    16761 2023-03-11 12:17:48.000000 qff-0.5.8/qff/store/save_price.py
+│ │ --rw-rw-rw-   0        0        0     5765 2023-03-11 12:17:48.000000 qff-0.5.8/qff/store/save_report.py
+│ │ --rw-rw-rw-   0        0        0     9591 2023-03-11 12:17:48.000000 qff-0.5.8/qff/store/save_valuation.py
+│ │ --rw-rw-rw-   0        0        0     6342 2023-03-20 12:43:29.000000 qff-0.5.8/qff/store/update_all.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.659540 qff-0.5.8/qff/tools/
+│ │ --rw-rw-rw-   0        0        0     1860 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4275 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/config.py
+│ │ --rw-rw-rw-   0        0        0    20824 2023-03-15 12:23:30.000000 qff-0.5.8/qff/tools/date.py
+│ │ --rw-rw-rw-   0        0        0    12078 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/kshow.py
+│ │ --rw-rw-rw-   0        0        0     2469 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/local.py
+│ │ --rw-rw-rw-   0        0        0     4612 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/logs.py
+│ │ --rw-rw-rw-   0        0        0     1719 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/mongo.py
+│ │ --rw-rw-rw-   0        0        0     8215 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/tdx.py
+│ │ --rw-rw-rw-   0        0        0     4672 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/utils.py
+│ │ --rw-rw-rw-   0        0        0     5925 2023-03-11 11:37:01.000000 qff-0.5.8/qff/tools/word.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.602461 qff-0.5.8/qff.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3925 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1245 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0      286 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        4 2023-03-20 14:42:32.000000 qff-0.5.8/qff.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0        2 2023-03-19 15:50:07.000000 qff-0.5.8/qff.egg-info/zip-safe
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-20 14:42:32.665223 qff-0.5.8/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     3757 2023-03-11 11:37:01.000000 qff-0.5.8/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-20 14:42:32.662243 qff-0.5.8/test/
+│ │ --rw-rw-rw-   0        0        0     1735 2023-03-11 11:37:01.000000 qff-0.5.8/test/test.py
+│ │ --rw-rw-rw-   0        0        0     5044 2023-03-11 11:37:01.000000 qff-0.5.8/test/test_word_writer.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.167811 qff-0.5.9/
+│ │ +-rw-rw-rw-   0        0        0     1166 2023-03-11 11:37:01.000000 qff-0.5.9/LICENSE
+│ │ +-rw-rw-rw-   0        0        0       51 2023-03-11 11:37:01.000000 qff-0.5.9/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     3925 2023-03-22 15:00:06.166812 qff-0.5.9/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3104 2023-03-11 11:37:01.000000 qff-0.5.9/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.095280 qff-0.5.9/qff/
+│ │ +-rw-rw-rw-   0        0        0     3918 2023-03-22 14:59:39.000000 qff-0.5.9/qff/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3757 2023-03-11 12:17:48.000000 qff-0.5.9/qff/__main__.py
+│ │ +-rw-rw-rw-   0        0        0     4717 2023-03-11 11:37:01.000000 qff-0.5.9/qff/config.ts.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.128548 qff-0.5.9/qff/frame/
+│ │ +-rw-rw-rw-   0        0        0     1164 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    13759 2023-03-22 14:28:45.000000 qff-0.5.9/qff/frame/api.py
+│ │ +-rw-rw-rw-   0        0        0     6768 2023-03-22 14:51:15.000000 qff-0.5.9/qff/frame/backtest.py
+│ │ +-rw-rw-rw-   0        0        0     3378 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/backup.py
+│ │ +-rw-rw-rw-   0        0        0    20103 2023-03-21 15:23:42.000000 qff-0.5.9/qff/frame/cli.py
+│ │ +-rw-rw-rw-   0        0        0     2543 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/const.py
+│ │ +-rw-rw-rw-   0        0        0    11508 2023-03-22 14:18:37.000000 qff-0.5.9/qff/frame/context.py
+│ │ +-rw-rw-rw-   0        0        0    23975 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/evaluation.py
+│ │ +-rw-rw-rw-   0        0        0    23958 2023-03-19 09:36:32.000000 qff-0.5.9/qff/frame/order.py
+│ │ +-rw-rw-rw-   0        0        0    15708 2023-03-11 12:17:48.000000 qff-0.5.9/qff/frame/perf.py
+│ │ +-rw-rw-rw-   0        0        0     6633 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/portfolio.py
+│ │ +-rw-rw-rw-   0        0        0     6567 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/position.py
+│ │ +-rw-rw-rw-   0        0        0     5775 2023-03-22 14:40:37.000000 qff-0.5.9/qff/frame/settle.py
+│ │ +-rw-rw-rw-   0        0        0     5722 2023-03-22 14:50:57.000000 qff-0.5.9/qff/frame/simtrade.py
+│ │ +-rw-rw-rw-   0        0        0    17876 2023-03-11 11:37:01.000000 qff-0.5.9/qff/frame/stats.py
+│ │ +-rw-rw-rw-   0        0        0    22743 2023-03-11 12:17:48.000000 qff-0.5.9/qff/frame/template.html
+│ │ +-rw-rw-rw-   0        0        0    19645 2023-03-22 14:50:28.000000 qff-0.5.9/qff/frame/trace.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.135574 qff-0.5.9/qff/helper/
+│ │ +-rw-rw-rw-   0        0        0     2159 2023-03-11 11:37:01.000000 qff-0.5.9/qff/helper/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6096 2023-03-11 12:17:48.000000 qff-0.5.9/qff/helper/common.py
+│ │ +-rw-rw-rw-   0        0        0     9028 2023-03-11 11:37:01.000000 qff-0.5.9/qff/helper/formula.py
+│ │ +-rw-rw-rw-   0        0        0     5497 2023-03-11 11:37:01.000000 qff-0.5.9/qff/helper/indicator.py
+│ │ +-rw-rw-rw-   0        0        0    24263 2023-03-11 11:37:01.000000 qff-0.5.9/qff/helper/ts.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.142582 qff-0.5.9/qff/price/
+│ │ +-rw-rw-rw-   0        0        0     2010 2023-03-11 11:37:01.000000 qff-0.5.9/qff/price/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    16591 2023-03-22 13:09:28.000000 qff-0.5.9/qff/price/cache.py
+│ │ +-rw-rw-rw-   0        0        0     7398 2023-03-11 11:37:01.000000 qff-0.5.9/qff/price/crawl.py
+│ │ +-rw-rw-rw-   0        0        0    17060 2023-03-11 12:17:48.000000 qff-0.5.9/qff/price/fetch.py
+│ │ +-rw-rw-rw-   0        0        0    78233 2023-03-22 13:31:35.000000 qff-0.5.9/qff/price/finance.py
+│ │ +-rw-rw-rw-   0        0        0    39268 2023-03-19 09:27:44.000000 qff-0.5.9/qff/price/query.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.151326 qff-0.5.9/qff/store/
+│ │ +-rw-rw-rw-   0        0        0     1630 2023-03-11 11:37:01.000000 qff-0.5.9/qff/store/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    17284 2023-03-11 11:37:01.000000 qff-0.5.9/qff/store/save_info.py
+│ │ +-rw-rw-rw-   0        0        0     6966 2023-03-11 11:37:01.000000 qff-0.5.9/qff/store/save_mtss.py
+│ │ +-rw-rw-rw-   0        0        0    16761 2023-03-11 12:17:48.000000 qff-0.5.9/qff/store/save_price.py
+│ │ +-rw-rw-rw-   0        0        0     5765 2023-03-11 12:17:48.000000 qff-0.5.9/qff/store/save_report.py
+│ │ +-rw-rw-rw-   0        0        0     9591 2023-03-11 12:17:48.000000 qff-0.5.9/qff/store/save_valuation.py
+│ │ +-rw-rw-rw-   0        0        0     6342 2023-03-20 15:06:48.000000 qff-0.5.9/qff/store/update_all.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.164306 qff-0.5.9/qff/tools/
+│ │ +-rw-rw-rw-   0        0        0     1860 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4275 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/config.py
+│ │ +-rw-rw-rw-   0        0        0    20824 2023-03-15 12:23:30.000000 qff-0.5.9/qff/tools/date.py
+│ │ +-rw-rw-rw-   0        0        0    12078 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/kshow.py
+│ │ +-rw-rw-rw-   0        0        0     2469 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/local.py
+│ │ +-rw-rw-rw-   0        0        0     4632 2023-03-21 12:58:25.000000 qff-0.5.9/qff/tools/logs.py
+│ │ +-rw-rw-rw-   0        0        0     1719 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/mongo.py
+│ │ +-rw-rw-rw-   0        0        0     8215 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/tdx.py
+│ │ +-rw-rw-rw-   0        0        0     4672 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/utils.py
+│ │ +-rw-rw-rw-   0        0        0     5925 2023-03-11 11:37:01.000000 qff-0.5.9/qff/tools/word.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.105253 qff-0.5.9/qff.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3925 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1245 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0      286 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        4 2023-03-22 15:00:06.000000 qff-0.5.9/qff.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-03-19 15:50:07.000000 qff-0.5.9/qff.egg-info/zip-safe
+│ │ +-rw-rw-rw-   0        0        0       42 2023-03-22 15:00:06.167811 qff-0.5.9/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     3757 2023-03-11 11:37:01.000000 qff-0.5.9/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-03-22 15:00:06.165779 qff-0.5.9/test/
+│ │ +-rw-rw-rw-   0        0        0     1735 2023-03-11 11:37:01.000000 qff-0.5.9/test/test.py
+│ │ +-rw-rw-rw-   0        0        0     5044 2023-03-11 11:37:01.000000 qff-0.5.9/test/test_word_writer.py
+│ │   --- qff-0.5.8/LICENSE
+│ ├── +++ qff-0.5.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/PKG-INFO
+│ ├── +++ qff-0.5.9/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: qff
+│ │ -Version: 0.5.8
+│ │ +Version: 0.5.9
+│ │  Summary: qff: quantize finance framework
+│ │  Home-page: https://github.com/haijiangxu/qff
+│ │  Author: xuhaijiang
+│ │  Author-email: haijiangxu@hotmail.com
+│ │  License: MIT
+│ │  Keywords: QFF,stock,quant,quantize,finance,backtest,trading,investment,JoinQuant
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- qff-0.5.8/README.md
+│ ├── +++ qff-0.5.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/__init__.py
+│ ├── +++ qff-0.5.9/qff/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -18,15 +18,15 @@
+│ │  # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │  # FITNESS FOR A PARTICULAR PURPOSE AND NONINFINGEMENT. IN NO EVENT SHALL THE
+│ │  # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │  # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │  # SOFTWARE.
+│ │  
+│ │ -__version__ = "0.5.8"
+│ │ +__version__ = "0.5.9"
+│ │  
+│ │  import sys
+│ │  
+│ │  if sys.version_info < (3, 7):
+│ │      print(f'qff {__version__} require Python 3.7+ and 64 bit OS')
+│ │      sys.exit(1)
+│ │  del sys
+│ │   --- qff-0.5.8/qff/__main__.py
+│ ├── +++ qff-0.5.9/qff/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/config.ts.json
+│ ├── +++ qff-0.5.9/qff/config.ts.json
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/__init__.py
+│ ├── +++ qff-0.5.9/qff/frame/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/api.py
+│ ├── +++ qff-0.5.9/qff/frame/api.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -348,14 +348,16 @@
+│ │          if output_dir is not None:
+│ │              if os.path.exists(output_dir):
+│ │                  context.output_dir = output_dir
+│ │              else:
+│ │                  print("output_dir参数指定的目录不存在！")
+│ │                  return
+│ │  
+│ │ +        context.run_start = datetime.now()
+│ │ +
+│ │          if run_type == 'bt':
+│ │              _set_backtest_period(start, end)
+│ │              back_test_run(trace)
+│ │          elif run_type == 'sim':
+│ │              sim_trade_run()
+│ │          else:
+│ │              log.error('输入的参数run_type错误！')
+│ │   --- qff-0.5.8/qff/frame/backtest.py
+│ ├── +++ qff-0.5.9/qff/frame/backtest.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -66,17 +66,17 @@
+│ │                                  end=context.end_date,
+│ │                                  market='index')
+│ │      if context.bm_data is None:
+│ │          log.error(f"基准{context.benchmark}指数数据未成功获取，可能数据未下载!")
+│ │          return
+│ │  
+│ │      context.bm_start = context.bm_data.iloc[0].close
+│ │ -    context.run_start = datetime.datetime.now()
+│ │      if trace:
+│ │          bt_thread = threading.Thread(target=_back_test_run)
+│ │ +        context.thread_id = bt_thread
+│ │          bt_thread.setDaemon(True)
+│ │          # 运行命令行环境...
+│ │          trace = Trace()
+│ │          bt_thread.start()
+│ │          trace.cmdloop()
+│ │          log.warning("命令行交互环境退出...")
+│ │          bt_thread.join()
+│ │ @@ -139,23 +139,25 @@
+│ │  
+│ │          log.info("##################### 一天结束 ######################")
+│ │          log.info("")
+│ │  
+│ │      if context.status == RUN_STATUS.PAUSED:
+│ │          # log.warning("_back_test_run回测运行暂停，保存过程数据...!")
+│ │  
+│ │ -        default_name = context.strategy_name+'_bt.pkl'
+│ │ +        default_name = context.strategy_name+'.pkl'
+│ │          if ' ' in default_name:
+│ │              default_name = '_'.join(default_name.split(' '))
+│ │          bf_input = input(f"输入备份文件名称[{default_name}]:")
+│ │          if bf_input == '':
+│ │              bf_input = default_name
+│ │          backup_file = '{}{}{}'.format(cache_path, os.sep, bf_input)
+│ │          print(f"策略备份文件：{backup_file}")
+│ │          save_context(backup_file)
+│ │ +        if bf_input != default_name:
+│ │ +            save_context()
+│ │      elif context.status == RUN_STATUS.CANCELED:
+│ │          log.warning("_back_test_run回测执行取消...!")
+│ │      else:
+│ │          context.status = RUN_STATUS.DONE
+│ │          if strategy.on_strategy_end is not None:
+│ │              strategy.on_strategy_end()
+│ │   --- qff-0.5.8/qff/frame/backup.py
+│ ├── +++ qff-0.5.9/qff/frame/backup.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/cli.py
+│ ├── +++ qff-0.5.9/qff/frame/cli.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -111,14 +111,15 @@
+│ │              return
+│ │  
+│ │          if args['resume']:
+│ │              file_name = os.path.basename(strategy_file).split('.')[0]
+│ │              backup_file = '{}{}{}'.format(cache_path, os.sep, file_name + '.pkl')
+│ │              try:
+│ │                  load_context(backup_file)
+│ │ +                args['trace'] = True
+│ │              except Exception as e:
+│ │                  print("导入context备份文件失败:{}".format(e))
+│ │                  return
+│ │          run_file(strategy_file, **args)
+│ │  
+│ │  
+│ │  class SimTradeCommand(Command):
+│ │   --- qff-0.5.8/qff/frame/const.py
+│ ├── +++ qff-0.5.9/qff/frame/const.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/context.py
+│ ├── +++ qff-0.5.9/qff/frame/context.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -160,20 +160,18 @@
+│ │              crt = get_trade_gap(self.start_date, self.current_dt[:10])
+│ │              return round(crt / total, 4)
+│ │          else:
+│ │              return 1
+│ │  
+│ │      @property
+│ │      def spend_time(self):
+│ │ -        if self.status == RUN_STATUS.DONE:
+│ │ +        if self.run_type == RUN_TYPE.BACK_TEST and self.status == RUN_STATUS.DONE:
+│ │              end = self.run_end
+│ │ -        elif self.status == RUN_STATUS.RUNNING:
+│ │ -            end = datetime.now()
+│ │          else:
+│ │ -            return None
+│ │ +            end = datetime.now()
+│ │  
+│ │          delta = end - self.run_start
+│ │          hour = int(delta.seconds / 3600)
+│ │          minute = int((delta.seconds % 3600) / 60)
+│ │          second = delta.seconds % 60
+│ │          return "{}天 {}时 {}分 {}秒".format(delta.days, hour, minute, second)
+│ │   --- qff-0.5.8/qff/frame/evaluation.py
+│ ├── +++ qff-0.5.9/qff/frame/evaluation.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/order.py
+│ ├── +++ qff-0.5.9/qff/frame/order.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/perf.py
+│ ├── +++ qff-0.5.9/qff/frame/perf.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/portfolio.py
+│ ├── +++ qff-0.5.9/qff/frame/portfolio.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/position.py
+│ ├── +++ qff-0.5.9/qff/frame/position.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/settle.py
+│ ├── +++ qff-0.5.9/qff/frame/settle.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -133,16 +133,17 @@
+│ │      收益分析
+│ │      """
+│ │      if context.output_dir is None:
+│ │          out_path = back_test_path if context.run_type == RUN_TYPE.BACK_TEST else sim_trade_path
+│ │      else:
+│ │          out_path = context.output_dir
+│ │  
+│ │ -    pkl_file = '{}{}{}.pkl'.format(out_path, os.sep, context.strategy_name)
+│ │ -    pkl_file = auto_file_name(pkl_file)
+│ │ +    if context.run_type == RUN_TYPE.BACK_TEST:
+│ │ +        pkl_file = '{}{}{}.pkl'.format(out_path, os.sep, context.strategy_name)
+│ │ +        pkl_file = auto_file_name(pkl_file)
+│ │  
+│ │ -    with open(pkl_file, 'wb') as pk_file:
+│ │ -        pickle.dump(context, pk_file)
+│ │ +        with open(pkl_file, 'wb') as pk_file:
+│ │ +            pickle.dump(context, pk_file)
+│ │  
+│ │      report_file = os.path.join(out_path, '策略运行报告({}).html'.format(context.strategy_name))
+│ │      report_file = auto_file_name(report_file)
+│ │      stats_report(context, report_file)
+│ │   --- qff-0.5.8/qff/frame/simtrade.py
+│ ├── +++ qff-0.5.9/qff/frame/simtrade.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -59,20 +59,21 @@
+│ │  
+│ │      # 恢复运行时不能设置
+│ │      if context.bm_start is None:
+│ │          context.start_date = pd.Timestamp.now().strftime('%Y-%m-%d')
+│ │          context.bm_start = fetch_current_ticks(context.benchmark, market='index')['price']
+│ │  
+│ │      sim_thread = threading.Thread(target=_sim_trade_run)
+│ │ +    context.thread_id = sim_thread
+│ │      sim_thread.setDaemon(True)   # 主线程A一旦执行结束，不管子线程B是否执行完成，会全部被终止。
+│ │      sim_thread.start()
+│ │      # 运行命令行环境...
+│ │      trace = Trace()
+│ │      trace.cmdloop()
+│ │ -    # sim_thread.join()  # 主线程等待子线程执行完成
+│ │ +    # sim_thread.join()  # 主线程等待子线程执行完成，屏蔽原因：执行quit命令后，结束不了进程
+│ │      log.warning("实盘模拟框架运行结束！")
+│ │  
+│ │  
+│ │  def _sim_trade_run():
+│ │      while context.status == RUN_STATUS.RUNNING:
+│ │          _time = pd.Timestamp.now()
+│ │          stime = _time.strftime('%Y-%m-%d %H:%M:%S')
+│ │ @@ -81,55 +82,54 @@
+│ │              # 移到此处（1）能够保证sleep后能够匹配到；（2）可以设置任意时间点运行的函数
+│ │              if stime[11:] in strategy.run_daily.keys():
+│ │                  run_strategy_funcs(strategy.run_daily[stime[11:]])
+│ │  
+│ │              if stime[11:16] == '09:00':
+│ │                  if strategy.before_trading_start is not None:
+│ │                      run_strategy_funcs(strategy.before_trading_start)
+│ │ -                sleep((_time.ceil(freq="1min") - pd.Timestamp.now()).total_seconds())
+│ │ +
+│ │              elif '09:30' <= stime[11:16] <= '11:30' or '13:00' <= stime[11:16] <= '15:00':
+│ │                  # 按策略频率运行的策略函数
+│ │                  if context.run_freq == 'day':
+│ │                      if stime[11:16] == '09:30' and strategy.handle_data is not None:
+│ │                          run_strategy_funcs(strategy.handle_data)
+│ │ -                        sleep((_time.ceil(freq="1min") - pd.Timestamp.now()).total_seconds())
+│ │ +
+│ │                  else:
+│ │                      if strategy.handle_data is not None:
+│ │                          run_strategy_funcs(strategy.handle_data)
+│ │  
+│ │                  # 订单撮合 order_broker
+│ │                  order_broker()
+│ │  
+│ │ -                _freq = "3s" if context.run_freq == 'tick' else '1min'     # 3s是为了tick频率运行
+│ │ -                _t = pd.Timestamp.now()
+│ │ -                sleep((_t.ceil(freq=_freq) - _t).total_seconds())         # 考虑前面运行超过_freq，造成sleep负数
+│ │ -                # sleep((pd.Timestamp.now().ceil(freq='3s') - pd.Timestamp.now()).total_seconds())
+│ │ -
+│ │              elif stime[11:16] == '15:30':
+│ │                  settle_by_day()
+│ │                  if strategy.after_trading_end is not None:
+│ │                      run_strategy_funcs(strategy.after_trading_end)
+│ │  
+│ │                  profit_analyse()
+│ │                  save_context()
+│ │                  log.info("##################### 一天结束 ######################")
+│ │                  log.info("")
+│ │  
+│ │ -                sleep((_time.ceil(freq="1min") - pd.Timestamp.now()).total_seconds())
+│ │              else:
+│ │ -                sleep((_time.ceil(freq="1min") - pd.Timestamp.now()).total_seconds())
+│ │ +                pass
+│ │ +
+│ │ +            _freq = "3s" if context.run_freq == 'tick' else '1min'     # 3s是为了tick频率运行
+│ │ +            _t = pd.Timestamp.now()
+│ │ +            sleep((_t.ceil(freq=_freq) - _t).total_seconds())         # 考虑前面运行超过_freq，造成sleep负数
+│ │          else:
+│ │              sleep(60)
+│ │      if context.status == RUN_STATUS.PAUSED:
+│ │          log.warning("回测运行暂停，保存过程数据...!")
+│ │ -        default_name = context.strategy_name+'_bt.pkl'
+│ │ +        default_name = context.strategy_name+'.pkl'
+│ │          if ' ' in default_name:
+│ │              default_name = '_'.join(default_name.split(' '))
+│ │          bf_input = input(f"输入备份文件名称[{default_name}]:")
+│ │          if bf_input == '':
+│ │              bf_input = default_name
+│ │          backup_file = '{}{}{}'.format(cache_path, os.sep, bf_input)
+│ │          print(f"策略备份文件：{backup_file}")
+│ │          save_context(backup_file)
+│ │ -        save_context()
+│ │ +        if bf_input != default_name:
+│ │ +            save_context()
+│ │      elif context.status == RUN_STATUS.CANCELED:
+│ │          log.warning("回测执行取消...!")
+│ │   --- qff-0.5.8/qff/frame/stats.py
+│ ├── +++ qff-0.5.9/qff/frame/stats.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/template.html
+│ ├── +++ qff-0.5.9/qff/frame/template.html
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/frame/trace.py
+│ ├── +++ qff-0.5.9/qff/frame/trace.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -263,31 +263,42 @@
+│ │          """ 开关日志显示及设置日志级别 """
+│ │          if arg is None or arg == '':
+│ │              log.toggle()
+│ │          else:
+│ │              log.set_level(arg)
+│ │  
+│ │      def do_pause(self, arg):
+│ │ +        print("正在暂停策略运行，请耐心等待运行环境备份...")
+│ │          context.status = RUN_STATUS.PAUSED
+│ │          time.sleep(1)
+│ │ -        print("暂停回测任务，执行quit命令退出交互环境！")
+│ │ +        context.thread_id.join()
+│ │ +        return True
+│ │ +
+│ │  
+│ │      def do_resume(self, arg):
+│ │          print("恢复策略运行需通过退出本交互环境\n")
+│ │ -        print("在终端环境下运行 python qff 策略文件名 -r")
+│ │ +        print("在终端环境下运行 python qff run 策略文件名 -r")
+│ │  
+│ │      def do_cancel(self, arg):
+│ │ +        print("正在取消策略运行，请耐心等待策略正常结束...")
+│ │          context.status = RUN_STATUS.CANCELED
+│ │ +        context.thread_id.join()
+│ │          return True
+│ │  
+│ │      def do_quit(self, arg):  # 定义quit命令所执行的操作
+│ │ -        return True
+│ │ +        print("注意：回测时策略将继续运行，但无法再进行交互。实盘下将退出策略运行！")
+│ │ +        ack = input(f"请确认是否真的要退出当前交互环境(Y/N)?:")
+│ │ +        if ack.strip().lower() == 'y':
+│ │ +            return True
+│ │  
+│ │      def do_exit(self, arg):  # 定义quit命令所执行的操作
+│ │ -        sys.exit(1)
+│ │ +        ack = input(f"请确认是否真的要退出当前策略运行(Y/N)?:")
+│ │ +        if ack.strip().lower() == 'y':
+│ │ +            sys.exit(1)
+│ │ +
+│ │  
+│ │      def do_ls(self, arg):
+│ │          print(os.path.dirname(os.path.abspath(__file__)))
+│ │  
+│ │      def do_ks(self, arg):
+│ │          if arg == "":
+│ │              print("当前日期:{}".format(context.current_dt))
+│ │   --- qff-0.5.8/qff/helper/__init__.py
+│ ├── +++ qff-0.5.9/qff/helper/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/helper/common.py
+│ ├── +++ qff-0.5.9/qff/helper/common.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/helper/formula.py
+│ ├── +++ qff-0.5.9/qff/helper/formula.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/helper/indicator.py
+│ ├── +++ qff-0.5.9/qff/helper/indicator.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/helper/ts.py
+│ ├── +++ qff-0.5.9/qff/helper/ts.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/price/__init__.py
+│ ├── +++ qff-0.5.9/qff/price/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/price/cache.py
+│ ├── +++ qff-0.5.9/qff/price/cache.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -372,27 +372,27 @@
+│ │              self._ticks = fetch_current_ticks(self.code, self.market)
+│ │          return self._ticks['open']
+│ │  
+│ │      @property
+│ │      def pre_close(self):
+│ │          if self._ticks is None:
+│ │              self._ticks = fetch_current_ticks(self.code, self.market)
+│ │ -        return self._ticks['pre_close']
+│ │ +        return self._ticks['last_close']
+│ │  
+│ │      @property
+│ │      def last_price(self):
+│ │          if context.run_freq == 'tick' or context.current_dt[11:16] == '09:30':
+│ │              self._ticks = fetch_current_ticks(self.code, self.market)
+│ │              return self._ticks['price']
+│ │          elif self._bar_time == context.current_dt[11:16]:
+│ │ -            return self._bar['close']
+│ │ +            return self._bar['close'][0]
+│ │          else:
+│ │              self._bar = fetch_price(self.code, 1, '1m', self.market)
+│ │              self._bar_time = context.current_dt[11:16]
+│ │ -            return self._bar['close']
+│ │ +            return self._bar['close'][0]
+│ │  
+│ │      @property
+│ │      def high_all_day(self):
+│ │          self._ticks = fetch_current_ticks(self.code, self.market)
+│ │          return self._ticks['high']
+│ │  
+│ │      @property
+│ │ @@ -411,31 +411,31 @@
+│ │  
+│ │      @property
+│ │      def last_high(self):
+│ │          if context.run_freq == 'tick' or context.current_dt[11:16] == '09:30':
+│ │              self._ticks = fetch_current_ticks(self.code, self.market)
+│ │              return self._ticks['price']
+│ │          elif self._bar_time == context.current_dt[11:16]:
+│ │ -            return self._bar['high']
+│ │ +            return self._bar['high'][0]
+│ │          else:
+│ │              self._bar = fetch_price(self.code, 1, '1m', self.market)
+│ │              self._bar_time = context.current_dt[11:16]
+│ │ -            return self._bar['high']
+│ │ +            return self._bar['high'][0]
+│ │  
+│ │      @property
+│ │      def last_low(self):
+│ │          if context.run_freq == 'tick' or context.current_dt[11:16] == '09:30':
+│ │              self._ticks = fetch_current_ticks(self.code, self.market)
+│ │              return self._ticks['price']
+│ │          elif self._bar_time == context.current_dt[11:16]:
+│ │ -            return self._bar['low']
+│ │ +            return self._bar['low'][0]
+│ │          else:
+│ │              self._bar = fetch_price(self.code, 1, '1m', self.market)
+│ │              self._bar_time = context.current_dt[11:16]
+│ │ -            return self._bar['low']
+│ │ +            return self._bar['low'][0]
+│ │  
+│ │      def paused(self):
+│ │          self._ticks = fetch_current_ticks(self.code, self.market)
+│ │          return self._ticks['vol'] == 0
+│ │  
+│ │      @property
+│ │      def high_limit_time(self):
+│ │   --- qff-0.5.8/qff/price/crawl.py
+│ ├── +++ qff-0.5.9/qff/price/crawl.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/price/fetch.py
+│ ├── +++ qff-0.5.9/qff/price/fetch.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/price/finance.py
+│ ├── +++ qff-0.5.9/qff/price/finance.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -123,15 +123,15 @@
+│ │              log.error("参数date不合法！")
+│ │              return None
+│ │          # 三季报一般在10月中下旬，年报一般在4月下旬，则最长财报间隔在6-7个月。
+│ │          start = (datetime.datetime.strptime(end, '%Y-%m-%d') - relativedelta(months=8)).strftime('%Y-%m-%d')
+│ │          if start < '2000-01-01':
+│ │              start = '2000-01-01'
+│ │          filter['f314'] = {
+│ │ -            "$lt": date_to_int(end[2:]),
+│ │ +            "$lte": date_to_int(end[2:]),
+│ │              "$gte": date_to_int(start[2:])
+│ │          }
+│ │  
+│ │      coll = DATABASE.report
+│ │      cursor = coll.find(filter=filter, projection=projection)
+│ │  
+│ │      db_data = pd.DataFrame([item for item in cursor])
+│ │   --- qff-0.5.8/qff/price/query.py
+│ ├── +++ qff-0.5.9/qff/price/query.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/__init__.py
+│ ├── +++ qff-0.5.9/qff/store/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/save_info.py
+│ ├── +++ qff-0.5.9/qff/store/save_info.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/save_mtss.py
+│ ├── +++ qff-0.5.9/qff/store/save_mtss.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/save_price.py
+│ ├── +++ qff-0.5.9/qff/store/save_price.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/save_report.py
+│ ├── +++ qff-0.5.9/qff/store/save_report.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/save_valuation.py
+│ ├── +++ qff-0.5.9/qff/store/save_valuation.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/store/update_all.py
+│ ├── +++ qff-0.5.9/qff/store/update_all.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/__init__.py
+│ ├── +++ qff-0.5.9/qff/tools/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/config.py
+│ ├── +++ qff-0.5.9/qff/tools/config.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/date.py
+│ ├── +++ qff-0.5.9/qff/tools/date.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/kshow.py
+│ ├── +++ qff-0.5.9/qff/tools/kshow.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/local.py
+│ ├── +++ qff-0.5.9/qff/tools/local.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/logs.py
+│ ├── +++ qff-0.5.9/qff/tools/logs.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -73,27 +73,27 @@
+│ │      def pre_time(self):
+│ │          if context.current_dt:
+│ │              return context.current_dt
+│ │          else:
+│ │              return "-------------------"
+│ │  
+│ │      def info(self, msg, *args, **kwargs):
+│ │ -        msg = self.pre_time + ' - INFO - ' + msg
+│ │ +        msg = self.pre_time + ' - INFO - ' + str(msg)
+│ │          logging.info(msg, *args, **kwargs)
+│ │  
+│ │      def warning(self, msg, *args, **kwargs):
+│ │ -        msg = self.pre_time + ' - WARNING - ' + msg
+│ │ +        msg = self.pre_time + ' - WARNING - ' + str(msg)
+│ │          logging.warning(msg, *args, **kwargs)
+│ │  
+│ │      def debug(self, msg, *args, **kwargs):
+│ │ -        msg = self.pre_time + ' - DEBUG - ' + msg
+│ │ +        msg = self.pre_time + ' - DEBUG - ' + str(msg)
+│ │          logging.debug(msg, *args, **kwargs)
+│ │  
+│ │      def error(self, msg, *args, **kwargs):
+│ │ -        msg = self.pre_time + ' - ERROR - ' + msg
+│ │ +        msg = self.pre_time + ' - ERROR - ' + str(msg)
+│ │          logging.error(msg, *args, **kwargs)
+│ │  
+│ │      def set_level(self, level):
+│ │          """
+│ │          设置不同种类的log的级别, 低于这个级别的log不会输出. 所有log的默认级别是info
+│ │  
+│ │          :param level: 字符串, 必须是'debug', 'info', 'warning', 'error'中的一个, 级别: debug < info < warning < error
+│ │   --- qff-0.5.8/qff/tools/mongo.py
+│ ├── +++ qff-0.5.9/qff/tools/mongo.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/tdx.py
+│ ├── +++ qff-0.5.9/qff/tools/tdx.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/utils.py
+│ ├── +++ qff-0.5.9/qff/tools/utils.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff/tools/word.py
+│ ├── +++ qff-0.5.9/qff/tools/word.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/qff.egg-info/PKG-INFO
+│ ├── +++ qff-0.5.9/qff.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: qff
+│ │ -Version: 0.5.8
+│ │ +Version: 0.5.9
+│ │  Summary: qff: quantize finance framework
+│ │  Home-page: https://github.com/haijiangxu/qff
+│ │  Author: xuhaijiang
+│ │  Author-email: haijiangxu@hotmail.com
+│ │  License: MIT
+│ │  Keywords: QFF,stock,quant,quantize,finance,backtest,trading,investment,JoinQuant
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │   --- qff-0.5.8/qff.egg-info/SOURCES.txt
+│ ├── +++ qff-0.5.9/qff.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/setup.py
+│ ├── +++ qff-0.5.9/setup.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/test/test.py
+│ ├── +++ qff-0.5.9/test/test.py
+│ │┄ Files identical despite different names
+│ │   --- qff-0.5.8/test/test_word_writer.py
+│ ├── +++ qff-0.5.9/test/test_word_writer.py
+│ │┄ Files identical despite different names

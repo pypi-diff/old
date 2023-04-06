@@ -1,0 +1,2031 @@
+--- tmp/rigatoni-0.1.1.tar.gz
++++ tmp/rigatoni-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "rigatoni-0.1.1.tar", last modified: Tue Aug 23 19:53:06 2022, max compression
+│ +gzip compressed data, was "rigatoni-0.1.2.tar", last modified: Thu Apr  6 15:24:08 2023, max compression
+│   --- rigatoni-0.1.1.tar
+├── +++ rigatoni-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,18 +1,26 @@
+│ │ --rw-r--r--   0        0        0     3101 2022-08-12 15:03:40.714397 rigatoni-0.1.1/.gitignore
+│ │ --rw-r--r--   0        0        0     1101 2022-08-12 15:03:40.714647 rigatoni-0.1.1/LICENSE
+│ │ --rw-r--r--   0        0        0     4933 2022-08-12 15:03:40.714921 rigatoni-0.1.1/README.md
+│ │ --rw-r--r--   0        0        0      694 2022-08-12 15:03:40.715216 rigatoni-0.1.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      832 2022-08-23 19:52:19.088846 rigatoni-0.1.1/rigatoni/__init__.py
+│ │ --rw-r--r--   0        0        0    19119 2022-08-23 18:49:35.532139 rigatoni-0.1.1/rigatoni/core.py
+│ │ --rw-r--r--   0        0        0      445 2022-08-12 16:08:38.940959 rigatoni-0.1.1/rigatoni/geometry/__init__.py
+│ │ --rw-r--r--   0        0        0     9875 2022-08-12 15:03:40.717883 rigatoni-0.1.1/rigatoni/geometry/geometry_creation.py
+│ │ --rw-r--r--   0        0        0      761 2022-08-12 15:03:40.718062 rigatoni-0.1.1/rigatoni/geometry/geometry_objects.py
+│ │ --rw-r--r--   0        0        0     1249 2022-08-12 16:13:02.891601 rigatoni-0.1.1/rigatoni/interface.py
+│ │ --rw-r--r--   0        0        0    13722 2022-08-12 15:03:40.718754 rigatoni-0.1.1/rigatoni/noodle_objects.py
+│ │ --rw-r--r--   0        0        0     2859 2022-08-12 16:10:18.003636 rigatoni-0.1.1/rigatoni/server.py
+│ │ --rw-r--r--   0        0        0        0 2022-08-12 15:27:39.036143 rigatoni-0.1.1/tests/__init__.py
+│ │ --rw-r--r--   0        0        0      169 2022-08-12 16:05:47.963070 rigatoni-0.1.1/tests/context.py
+│ │ --rw-r--r--   0        0        0   205922 2022-08-12 15:03:40.717564 rigatoni-0.1.1/tests/data.csv
+│ │ --rw-r--r--   0        0        0     7996 2022-08-12 16:11:30.183147 rigatoni-0.1.1/tests/test_geometry.py
+│ │ --rw-r--r--   0        0        0     6510 2022-08-12 16:12:40.917751 rigatoni-0.1.1/tests/test_server.py
+│ │ --rw-r--r--   0        0        0     5540 1970-01-01 00:00:00.000000 rigatoni-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     3122 2023-02-23 17:35:55.392771 rigatoni-0.1.2/.gitignore
+│ │ +-rw-r--r--   0        0        0     1101 2022-08-12 15:03:40.714647 rigatoni-0.1.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     4933 2022-08-12 15:03:40.714921 rigatoni-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0      694 2022-08-12 15:03:40.715216 rigatoni-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      832 2023-04-06 15:23:52.789636 rigatoni-0.1.2/rigatoni/__init__.py
+│ │ +-rw-r--r--   0        0        0    25616 2023-03-30 17:51:56.742163 rigatoni-0.1.2/rigatoni/core.py
+│ │ +-rw-r--r--   0        0        0     1197 2023-02-23 18:21:24.385200 rigatoni-0.1.2/rigatoni/delegates.py
+│ │ +-rw-r--r--   0        0        0      515 2022-09-23 17:14:56.850046 rigatoni-0.1.2/rigatoni/geometry/__init__.py
+│ │ +-rw-r--r--   0        0        0     4285 2023-03-30 20:58:14.769466 rigatoni-0.1.2/rigatoni/geometry/byte_server.py
+│ │ +-rw-r--r--   0        0        0    23858 2023-02-24 18:15:57.457470 rigatoni-0.1.2/rigatoni/geometry/geometry_creation.py
+│ │ +-rw-r--r--   0        0        0      836 2023-02-23 22:30:37.845876 rigatoni-0.1.2/rigatoni/geometry/geometry_objects.py
+│ │ +-rw-r--r--   0        0        0    13260 2023-03-30 17:45:26.439403 rigatoni-0.1.2/rigatoni/noodle_objects.py
+│ │ +-rw-r--r--   0        0        0     3107 2023-03-30 17:54:22.973141 rigatoni-0.1.2/rigatoni/server.py
+│ │ +-rw-r--r--   0        0        0  3645817 2023-02-14 17:18:28.887972 rigatoni-0.1.2/test_mesh.obj
+│ │ +-rw-r--r--   0        0        0     3106 2023-02-16 15:50:49.392930 rigatoni-0.1.2/test_sphere.obj
+│ │ +-rw-r--r--   0        0        0        0 2022-08-12 15:27:39.036143 rigatoni-0.1.2/tests/__init__.py
+│ │ +-rw-r--r--   0        0        0  2309522 2022-09-29 16:51:21.905356 rigatoni-0.1.2/tests/boot.obj
+│ │ +-rw-r--r--   0        0        0      169 2022-08-12 16:05:47.963070 rigatoni-0.1.2/tests/context.py
+│ │ +-rw-r--r--   0        0        0   205922 2022-08-12 15:03:40.717564 rigatoni-0.1.2/tests/data.csv
+│ │ +-rw-r--r--   0        0        0  4522119 2023-04-06 14:15:19.023285 rigatoni-0.1.2/tests/sample_messages.json
+│ │ +-rw-r--r--   0        0        0  2408417 2022-09-23 17:16:16.782861 rigatoni-0.1.2/tests/stanford-bunny.obj
+│ │ +-rw-r--r--   0        0        0    11108 2023-03-30 16:01:02.627777 rigatoni-0.1.2/tests/test_geometry.py
+│ │ +-rw-r--r--   0        0        0  3645817 2023-03-30 17:53:02.980166 rigatoni-0.1.2/tests/test_mesh.obj
+│ │ +-rw-r--r--   0        0        0     6510 2023-02-23 18:18:50.718401 rigatoni-0.1.2/tests/test_server.py
+│ │ +-rw-r--r--   0        0        0     3106 2023-04-06 14:14:39.436370 rigatoni-0.1.2/tests/test_sphere.obj
+│ │ +-rw-r--r--   0        0        0     5540 1970-01-01 00:00:00.000000 rigatoni-0.1.2/PKG-INFO
+│ │   --- rigatoni-0.1.1/.gitignore
+│ ├── +++ rigatoni-0.1.2/.gitignore
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,7 +1,11 @@
+│ │ +# Added
+│ │ +*.x3d
+│ │ +.idea
+│ │ +
+│ │  # Standard from Github
+│ │  # Byte-compiled / optimized / DLL files
+│ │  __pycache__/
+│ │  *.py[cod]
+│ │  *$py.class
+│ │  
+│ │  # C extensions
+│ │   --- rigatoni-0.1.1/LICENSE
+│ ├── +++ rigatoni-0.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- rigatoni-0.1.1/README.md
+│ ├── +++ rigatoni-0.1.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- rigatoni-0.1.1/pyproject.toml
+│ ├── +++ rigatoni-0.1.2/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- rigatoni-0.1.1/rigatoni/__init__.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/__init__.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,27 +1,26 @@
+│ │  """Python Server Library for NOODLES Protocol
+│ │  
+│ │  This server library implements the NOODLES messaging protocol and provides objects for 
+│ │  maintaining a scene in state. The server uses a websocket connection to send CBOR encoded 
+│ │  messages. To customize its implementation, the library provides convenient interface 
+│ │  methods to assist the user in writing their own methods for the server. The user can also 
+│ │ -add custom delegates to add additionaly functionality to any of the standard components.
+│ │ +add custom delegates to add additionally functionality to any of the standard components.
+│ │  
+│ │  Modules:
+│ │      core.py
+│ │      geometry/
+│ │          geometry_creation.py
+│ │          geometry_objects.py
+│ │ -    interface.py
+│ │ +    delegates.py
+│ │      noodle_objects.py
+│ │      server.py
+│ │  """
+│ │  
+│ │  
+│ │ -__version__ = "0.1.1"
+│ │ +__version__ = "0.1.2"
+│ │  
+│ │  from .server import start_server
+│ │ -from .interface import ServerTableDelegate, Delegate
+│ │ +from .delegates import ServerTableDelegate, Delegate
+│ │  from .core import Server
+│ │  from . import geometry
+│ │  from .noodle_objects import *
+│ │ -
+│ │   --- rigatoni-0.1.1/rigatoni/core.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/core.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,19 +1,26 @@
+│ │  """Module with core implementation of Server Object"""
+│ │  
+│ │  from __future__ import annotations
+│ │  from types import NoneType
+│ │ -from typing import TYPE_CHECKING, Type, Union
+│ │ +from typing import TYPE_CHECKING, Type
+│ │ +
+│ │  if TYPE_CHECKING:
+│ │ -    from . import interface
+│ │ +    from . import delegates
+│ │  
+│ │  import websockets
+│ │  from cbor2 import dumps
+│ │ +import json
+│ │ +
+│ │ +from .noodle_objects import *
+│ │ +
+│ │ +
+│ │ +def default_json_encoder(value):
+│ │ +    return str(value)
+│ │  
+│ │ -from . import noodle_objects as nooobs
+│ │  
+│ │  class Server(object):
+│ │      """NOODLES Server
+│ │      
+│ │      Attributes;
+│ │          clients (set): client connections
+│ │          custom_delegates (dict): 
+│ │ @@ -29,396 +36,398 @@
+│ │              maps component ID to all the component ID's that reference it
+│ │          delete_queue (set):
+│ │              components that are referenced but have been requested to be deleted
+│ │          message_map (dict):
+│ │              maps action and type to message ID
+│ │      """
+│ │  
+│ │ -    def __init__(self, starting_state: list[nooobs.StartingComponent], 
+│ │ -        delegates: dict[Type[nooobs.Component], Type[interface.Delegate]]):
+│ │ +    def __init__(self, starting_state: list[StartingComponent],
+│ │ +                 delegate_map: dict[Type[Component], Type[delegates.Delegate]]):
+│ │          """Constructor
+│ │          
+│ │ -        Args: 
+│ │ -            methods (dict): 
+│ │ -                maps method names to the functions to be injected
+│ │ -            starting_state (list[nooobs.StartingComponent]):
+│ │ +        Args:
+│ │ +            starting_state (list[StartingComponent]):
+│ │                  list of objects containing the info to create components on initialization
+│ │ -            delegates (dict):
+│ │ +            delegate_map (dict):
+│ │                  maps noodles component type to instance of delegate class
+│ │  
+│ │          Raises:
+│ │              Exception: Invalid Arguments or Method Not Specified when filling in starting state
+│ │          """
+│ │  
+│ │          self.clients = set()
+│ │ -        self.custom_delegates = delegates
+│ │ +        self.custom_delegates = delegate_map
+│ │          self.delegates = {}
+│ │          self.ids = {}
+│ │          self.components = {}
+│ │          self.references = {}
+│ │          self.delete_queue = set()
+│ │ -        
+│ │ +
+│ │          self.message_map = {
+│ │ -            ("create", nooobs.Method): 0,
+│ │ -            ("delete", nooobs.Method): 1,
+│ │ -            ("create", nooobs.Signal): 2,
+│ │ -            ("delete", nooobs.Signal): 3,
+│ │ -            ("create", nooobs.Entity): 4,
+│ │ -            ("update", nooobs.Entity): 5,
+│ │ -            ("delete", nooobs.Entity): 6,
+│ │ -            ("create", nooobs.Plot): 7,
+│ │ -            ("update", nooobs.Plot): 8,
+│ │ -            ("delete", nooobs.Plot): 9,
+│ │ -            ("create", nooobs.Buffer): 10,
+│ │ -            ("delete", nooobs.Buffer): 11,
+│ │ -            ("create", nooobs.BufferView): 12,
+│ │ -            ("delete", nooobs.BufferView): 13,
+│ │ -            ("create", nooobs.Material): 14,
+│ │ -            ("update", nooobs.Material): 15,
+│ │ -            ("delete", nooobs.Material): 16,
+│ │ -            ("create", nooobs.Image): 17,
+│ │ -            ("delete", nooobs.Image): 18,
+│ │ -            ("create", nooobs.Texture): 19,
+│ │ -            ("delete", nooobs.Texture): 20,
+│ │ -            ("create", nooobs.Sampler): 21,
+│ │ -            ("delete", nooobs.Sampler): 22,
+│ │ -            ("create", nooobs.Light): 23,
+│ │ -            ("update", nooobs.Light): 24,
+│ │ -            ("delete", nooobs.Light): 25,
+│ │ -            ("create", nooobs.Geometry): 26,
+│ │ -            ("delete", nooobs.Geometry): 27,
+│ │ -            ("create", nooobs.Table): 28,
+│ │ -            ("update", nooobs.Table): 29,
+│ │ -            ("delete", nooobs.Table): 30,
+│ │ +            ("create", Method): 0,
+│ │ +            ("delete", Method): 1,
+│ │ +            ("create", Signal): 2,
+│ │ +            ("delete", Signal): 3,
+│ │ +            ("create", Entity): 4,
+│ │ +            ("update", Entity): 5,
+│ │ +            ("delete", Entity): 6,
+│ │ +            ("create", Plot): 7,
+│ │ +            ("update", Plot): 8,
+│ │ +            ("delete", Plot): 9,
+│ │ +            ("create", Buffer): 10,
+│ │ +            ("delete", Buffer): 11,
+│ │ +            ("create", BufferView): 12,
+│ │ +            ("delete", BufferView): 13,
+│ │ +            ("create", Material): 14,
+│ │ +            ("update", Material): 15,
+│ │ +            ("delete", Material): 16,
+│ │ +            ("create", Image): 17,
+│ │ +            ("delete", Image): 18,
+│ │ +            ("create", Texture): 19,
+│ │ +            ("delete", Texture): 20,
+│ │ +            ("create", Sampler): 21,
+│ │ +            ("delete", Sampler): 22,
+│ │ +            ("create", Light): 23,
+│ │ +            ("update", Light): 24,
+│ │ +            ("delete", Light): 25,
+│ │ +            ("create", Geometry): 26,
+│ │ +            ("delete", Geometry): 27,
+│ │ +            ("create", Table): 28,
+│ │ +            ("update", Table): 29,
+│ │ +            ("delete", Table): 30,
+│ │              ("update", NoneType): 31,
+│ │              ("reset", NoneType): 32,
+│ │ -            ("invoke", nooobs.Invoke): 33,
+│ │ -            ("reply", nooobs.Reply): 34,
+│ │ +            ("invoke", Invoke): 33,
+│ │ +            ("reply", Reply): 34,
+│ │              ("initialized", NoneType): 35
+│ │          }
+│ │  
+│ │          # Set up starting state
+│ │          for starting_component in starting_state:
+│ │              comp_type = starting_component.type
+│ │              comp_method = starting_component.method
+│ │              try:
+│ │                  comp = self.create_component(comp_type, **starting_component.component_attrs)
+│ │              except:
+│ │                  raise Exception(f"Invalid arguments to create {comp_type}")
+│ │  
+│ │ -            if comp_type == nooobs.Method:
+│ │ -                if comp_method == None:
+│ │ -                    raise Exception("Method not specified for starting method")
+│ │ -                else:
+│ │ -                    injected = nooobs.InjectedMethod(self, comp_method)
+│ │ +            if comp_type == Method:
+│ │ +                if comp_method:
+│ │ +                    injected = InjectedMethod(self, comp_method)
+│ │                      setattr(self, comp.name, injected)
+│ │ +                else:
+│ │ +                    raise Exception("Method not specified for starting method")
+│ │  
+│ │ -
+│ │ -    def get_ids_by_type(self, component: Type[nooobs.Component]) -> list:
+│ │ +    def get_ids_by_type(self, component: Type[Component]) -> list:
+│ │          """Helper to get all ids for certain component type
+│ │          
+│ │          Args:
+│ │ -            comp (type): type of component to get ID's for
+│ │ +            component (type): type of component to get ID's for
+│ │          """
+│ │  
+│ │          return [key for key, val in self.components.items() if isinstance(val, component)]
+│ │  
+│ │ -
+│ │ -    def get_component_id(self, type: Type[nooobs.Component], name: str):
+│ │ +    def get_component_id(self, kind: Type[Component], name: str):
+│ │          """Helper to get a component with a type and name"""
+│ │  
+│ │ -        for id, comp in self.components.items():
+│ │ -            if isinstance(comp, type) and hasattr(comp, "name") and comp.name == name:
+│ │ -                return id
+│ │ +        for comp_id, comp in self.components.items():
+│ │ +            if isinstance(comp, kind) and comp.name == name:
+│ │ +                return comp_id
+│ │          raise Exception("No Component Found")
+│ │  
+│ │ -
+│ │ -    def get_component(self, id: nooobs.ID):
+│ │ -        """Getter for users to acces components in state"""
+│ │ +    def get_component(self, comp_id: ID):
+│ │ +        """Getter for users to access components in state"""
+│ │  
+│ │          try:
+│ │ -            return self.components[id].copy(deep=True)
+│ │ -        except:
+│ │ +            return self.components[comp_id].copy(deep=True)
+│ │ +        except ValueError:
+│ │              raise Exception("No Component Found")
+│ │  
+│ │ -
+│ │ -    def get_message_contents(self, action: str, 
+│ │ -        object: nooobs.NoodleObject=None, delta: set[str]={}):
+│ │ +    def get_message_contents(self, action: str, noodle_object: NoodleObject, delta: set[str]):
+│ │          """Helper to handle construction of message dict
+│ │          
+│ │          Args:
+│ │              action (str): action taken with message
+│ │ -            object (NoodleObject): Component, Reply, or Invoke object
+│ │ +            noodle_object (NoodleObject): Component, Reply, or Invoke object
+│ │              delta (set): field names to be included in update
+│ │          """
+│ │  
+│ │          contents = {}
+│ │          if action in {"create", "invoke", "reply"}:
+│ │ -            contents = object.dict(exclude_none=True)
+│ │ +            contents = noodle_object.dict(exclude_none=True)
+│ │  
+│ │          elif action == "update":
+│ │ -            if object == None: # Document case
+│ │ -                contents["methods_list"] = self.get_ids_by_type(nooobs.Method)
+│ │ -                contents["signals_list"] = self.get_ids_by_type(nooobs.Signal)
+│ │ -            else: # Normal update, include id, and any field in delta
+│ │ +            if not noodle_object:  # Document case
+│ │ +                contents["methods_list"] = self.get_ids_by_type(Method)
+│ │ +                contents["signals_list"] = self.get_ids_by_type(Signal)
+│ │ +            else:  # Normal update, include id, and any field in delta
+│ │ +                delta = {} if not delta else delta
+│ │                  delta.add("id")
+│ │ -                contents = object.dict(exclude_none=True, include=delta)
+│ │ +                contents = noodle_object.dict(exclude_none=True, include=delta)
+│ │  
+│ │          elif action == "delete":
+│ │ -            contents["id"] = object.id
+│ │ +            try:
+│ │ +                contents["id"] = noodle_object.id
+│ │ +            except AttributeError:
+│ │ +                raise Exception(f"Cannot delete a {noodle_object}")
+│ │  
+│ │          return contents
+│ │  
+│ │ -
+│ │ -    def prepare_message(self, action: str, 
+│ │ -        object: nooobs.NoodleObject=None, delta: set[str]={}):
+│ │ +    def prepare_message(self, action: str, noodle_object: NoodleObject = None, delta: set[str] = None):
+│ │          """Given object and action, get id and message contents as dict
+│ │  
+│ │          Args:
+│ │              action (str): action taken with message
+│ │ -            object (NoodleObject): Component, Reply, or Invoke object
+│ │ +            noodle_object (NoodleObject): Component, Reply, or Invoke object
+│ │              delta (set): field names to be included in update
+│ │          """
+│ │  
+│ │ -        id = self.message_map[(action, type(object))]
+│ │ -        contents = self.get_message_contents(action, object, delta)
+│ │ -
+│ │ -        return id, contents
+│ │ +        message_id = self.message_map[(action, type(noodle_object))]
+│ │ +        contents = self.get_message_contents(action, noodle_object, delta)
+│ │  
+│ │ +        return message_id, contents
+│ │  
+│ │ -    def broadcast(self, message: list):
+│ │ +    def broadcast(self, message: tuple):
+│ │          """Broadcast message to all connected clients
+│ │          
+│ │          Args:
+│ │ -            message [list]: fully constructed message in list form
+│ │ +            message [tuple]: fully constructed message in form (tag/id, contents)
+│ │          """
+│ │ -        
+│ │ +
+│ │          print(f"Broadcasting Message: ID's {message[::2]}")
+│ │ +        json_message = json.dumps(message, default=default_json_encoder)
+│ │ +        with open("sample_messages.json", "a") as outfile:
+│ │ +            outfile.write(json_message)
+│ │          encoded = dumps(message)
+│ │          websockets.broadcast(self.clients, encoded)
+│ │  
+│ │ -
+│ │      def handle_intro(self):
+│ │          """Formulate response for new client"""
+│ │  
+│ │          # Add create message for every object in state
+│ │          message = []
+│ │          ordered_components = order_components(self.components, self.references)
+│ │ -        for object in ordered_components:
+│ │ -            msg_id, content = self.prepare_message("create", object)
+│ │ +        for component in ordered_components:
+│ │ +            msg_id, content = self.prepare_message("create", component)
+│ │              message.extend([msg_id, content])
+│ │  
+│ │          # Add document update
+│ │          message.extend(self.prepare_message("update", None))
+│ │ -        
+│ │ +
+│ │          # Finish with initialization message
+│ │ -        message.extend(self.prepare_message("initialized"))    
+│ │ +        message.extend(self.prepare_message("initialized"))
+│ │          return message
+│ │  
+│ │ -
+│ │      def handle_invoke(self, message: dict):
+│ │          """Handle all invokes coming from the client
+│ │          
+│ │ -        Take message and formulate response for clients. Tryies to invoke and 
+│ │ +        Take message and formulate response for clients. Tries to invoke and
+│ │          raises appropriate error codes if unsuccessful. Note that the method 
+│ │          technically doesn't raise any exceptions, instead the exception is 
+│ │          captured in a message and sent to the client.
+│ │          
+│ │          Args:
+│ │              message (dict): dict form of message from client
+│ │          """
+│ │  
+│ │          # Create generic reply with invalid invoke ID and attempt invoke
+│ │ -        reply_obj = nooobs.Reply(invoke_id="-1")
+│ │ +        reply_obj = Reply(invoke_id="-1")
+│ │          try:
+│ │              self.invoke_method(message, reply_obj)
+│ │  
+│ │          except Exception as e:
+│ │ -            if type(e) is nooobs.MethodException:
+│ │ +            if type(e) is MethodException:
+│ │                  reply_obj.method_exception = e
+│ │              else:
+│ │                  print(f"\033[91mServerside Error: {e}\033[0m")
+│ │ -                reply_obj.method_exception = nooobs.MethodException(code=-32603, message="Internal Error")
+│ │ +                reply_obj.method_exception = MethodException(code=-32603, message="Internal Error")
+│ │  
+│ │          return self.prepare_message("reply", reply_obj)
+│ │  
+│ │ -
+│ │ -    def invoke_method(self, message: dict, reply: nooobs.Reply):
+│ │ +    def invoke_method(self, message: dict, reply: Reply):
+│ │          """Invoke method and build out reply object
+│ │          
+│ │          Mostly a helper for handle_invoke to raise proper method exceptions
+│ │  
+│ │          Args:
+│ │              message (dict): Invoke message in dict form
+│ │              reply (Reply): Practically empty reply object to be updated 
+│ │          """
+│ │ -        
+│ │ +
+│ │          # Parse message
+│ │          try:
+│ │ -            method_id = nooobs.MethodID(slot=message["method"][0], gen=message["method"][1])
+│ │ +            method_id = MethodID(slot=message["method"][0], gen=message["method"][1])
+│ │              context = message.get("context")
+│ │              invoke_id = message["invoke_id"]
+│ │              args: list = message["args"]
+│ │              reply.invoke_id = invoke_id
+│ │ -        except:
+│ │ -            raise Exception(nooobs.MethodException(code=-32700, message="Parse Error"))
+│ │ +        except Exception:
+│ │ +            raise Exception(MethodException(code=-32700, message="Parse Error"))
+│ │  
+│ │          # Locate method
+│ │          try:
+│ │ -            method_name = self.components[method_id].name                
+│ │ +            method_name = self.components[method_id].name
+│ │              method = getattr(self, method_name)
+│ │ -        except:
+│ │ -            raise Exception(nooobs.MethodException(code=-32601, message="Method Not Found"))
+│ │ -        
+│ │ +        except Exception:
+│ │ +            raise Exception(MethodException(code=-32601, message="Method Not Found"))
+│ │ +
+│ │          # Invoke
+│ │          reply.result = method(context, *args)
+│ │ -    
+│ │  
+│ │ -    def update_references(self, comp: nooobs.Component, current: nooobs.NoodleObject, removing=False):
+│ │ -        """Update indegree for all objects referenced by this one
+│ │ +    def update_references(self, comp: Component, current: NoodleObject, removing=False):
+│ │ +        """Update in-degree for all objects referenced by this one
+│ │  
+│ │          Recursively updates references for all components under a parent one. Here,
+│ │          the current object changes through the recursion while comp keeps track of 
+│ │          the parent 
+│ │          
+│ │          Args:
+│ │              comp (Component): parent component with new references to be tracked
+│ │ -            current (NooodleObject): current object being examined
+│ │ +            current (NoodleObject): current object being examined
+│ │              removing (bool): flag so function can be used to both add and remove references
+│ │          """
+│ │  
+│ │          for key in current.__fields__.keys():
+│ │              val = getattr(current, key)
+│ │  
+│ │              # Found a reference
+│ │ -            if key != "id" and isinstance(val, nooobs.ID):
+│ │ +            if key != "id" and isinstance(val, ID):
+│ │                  if removing:
+│ │                      self.references[val].remove(comp.id)
+│ │                  else:
+│ │                      self.references.setdefault(val, set()).add(comp.id)
+│ │  
+│ │              # Found another object to recurse on
+│ │ -            elif isinstance(val, nooobs.NoodleObject):
+│ │ +            elif isinstance(val, NoodleObject):
+│ │                  self.update_references(comp, val, removing)
+│ │  
+│ │ -            # found list of objects to recurse on 
+│ │ -            elif val and isinstance(val, list) and isinstance(val[0], nooobs.NoodleObject):
+│ │ -                for obj in val:
+│ │ -                    self.update_references(comp, obj, removing)
+│ │ +            # Found list of objects or id's to recurse on 
+│ │ +            elif val and isinstance(val, list):
+│ │  
+│ │ +                # Objects
+│ │ +                if isinstance(val[0], NoodleObject):
+│ │ +                    for obj in val:
+│ │ +                        self.update_references(comp, obj, removing)
+│ │ +
+│ │ +                # ID's
+│ │ +                elif isinstance(val[0], ID):
+│ │ +                    for id in val:
+│ │ +                        if removing:
+│ │ +                            self.references[id].remove(comp.id)
+│ │ +                        else:
+│ │ +                            self.references.setdefault(id, set()).add(comp.id)
+│ │  
+│ │ -    def get_id(self, comp_type: Type[nooobs.Component]) -> nooobs.IDGroup:
+│ │ +    def get_id(self, comp_type: Type[Component]) -> IDGroup:
+│ │          """Get next open ID
+│ │          
+│ │ -        Check for open slots then take closest available slot
+│ │ +        Check for open slots then take the closest available slot
+│ │  
+│ │          Args:
+│ │              comp_type (Component Type): type for desired ID
+│ │          """
+│ │  
+│ │          if comp_type in self.ids:
+│ │              slot_info = self.ids[comp_type]
+│ │          else:
+│ │ -            slot_info = nooobs.SlotTracker()
+│ │ +            slot_info = SlotTracker()
+│ │              self.ids[comp_type] = slot_info
+│ │  
+│ │          if slot_info.on_deck.empty():
+│ │ -            id_type = nooobs.id_map[comp_type]
+│ │ +            id_type = id_map[comp_type]
+│ │              id = id_type(slot=slot_info.next_slot, gen=0)
+│ │              slot_info.next_slot += 1
+│ │              return id
+│ │          else:
+│ │ -            return slot_info.on_deck.get() 
+│ │ -        
+│ │ +            return slot_info.on_deck.get()
+│ │  
+│ │      # Interface methods to build server methods ===============================================
+│ │ -    def create_component(self, comp_type: Type[nooobs.Component], **kwargs) -> nooobs.Component:
+│ │ +
+│ │ +    def create_component(self, comp_type: Type[Component], **kwargs):
+│ │          """Officially create new component in state
+│ │          
+│ │          This method updates state, updates references, and broadcasts msg to clients.
+│ │          It also handles the acquisition of a valid ID
+│ │          
+│ │          Args:
+│ │              comp_type (Component Type): type of component to be created
+│ │              **kwargs: the user should specify the attributes of the component using 
+│ │                  keyword arguments. Refer to the noodle objects to see which attributes
+│ │                  are required and optional. Any deviation from the spec will raise a 
+│ │                  validation exception. Note that since this method handles the ID, it 
+│ │ -                should not be specified as one of the keword arguments.
+│ │ +                should not be specified as one of the keyword arguments.
+│ │          """
+│ │  
+│ │          # Get ID and try to create component from args
+│ │ -        id = self.get_id(comp_type)
+│ │ +        comp_id = self.get_id(comp_type)
+│ │          try:
+│ │ -            new_component = comp_type(id=id, **kwargs)
+│ │ +            new_component = comp_type(id=comp_id, **kwargs)
+│ │          except:
+│ │              raise Exception(f"Args: {kwargs}, invalid for initializing a {comp_type}")
+│ │  
+│ │          # Update state
+│ │ -        self.components[id] = new_component
+│ │ +        self.components[comp_id] = new_component
+│ │  
+│ │          # Update references for each component referenced by this one
+│ │          self.update_references(new_component, new_component)
+│ │  
+│ │          # Create message and broadcast
+│ │          message = self.prepare_message("create", new_component)
+│ │          self.broadcast(message)
+│ │  
+│ │          # Return component or delegate instance if applicable
+│ │          if self.custom_delegates and comp_type in self.custom_delegates:
+│ │              delegate = self.custom_delegates[comp_type](self, new_component)
+│ │ -            self.delegates[id] = delegate 
+│ │ +            self.delegates[id] = delegate
+│ │              return delegate
+│ │          else:
+│ │              return new_component.copy(deep=True)
+│ │  
+│ │ -    def delete_component(self, obj: Union[nooobs.Component, interface.Delegate, nooobs.ID]):
+│ │ +    def delete_component(self, obj: Union[Component, delegates.Delegate, ID]):
+│ │          """Delete object in state and update clients
+│ │          
+│ │          This method excepts a delegate, component, or component ID, and will attempt
+│ │          to delete the component as long as it is not referenced by any other component.
+│ │ -        If this component is still being used by another, it will be added to a queue so
+│ │ -        it can be deleted later once that refernece is no longer being used.
+│ │ +        If this component is still being used by another, it will be added to a queue so that
+│ │ +        it can be deleted later once that reference is no longer being used.
+│ │  
+│ │          Args:
+│ │              obj (Component, Delegate, or ID): component / delegate to be deleted
+│ │          """
+│ │  
+│ │          # Handle cases so can except different input types
+│ │          if type(obj) in self.custom_delegates.values():
+│ │              id = obj.component.id
+│ │              del self.delegates[id]
+│ │ -        elif isinstance(obj, nooobs.Component):
+│ │ +        elif isinstance(obj, Component):
+│ │              id = obj.id
+│ │          else:
+│ │              id = obj
+│ │ -            
+│ │ +
+│ │          # Delete if no references, or else queue it up for later
+│ │          if not self.references.get(id):
+│ │              self.broadcast(self.prepare_message("delete", self.components[id]))
+│ │              del self.components[id]
+│ │  
+│ │              # Clean out references from this object
+│ │              for refs in self.references.values():
+│ │                  while id in refs: refs.remove(id)
+│ │ -                    
+│ │ +
+│ │              # Check if anything in the queue is now clear to be deleted
+│ │              for comp_id in list(self.delete_queue):
+│ │                  if not self.references.get(comp_id):
+│ │                      self.delete_queue.remove(comp_id)
+│ │                      self.delete_component(comp_id)
+│ │  
+│ │          else:
+│ │ -            if isinstance(obj, nooobs.ID):
+│ │ +            if isinstance(obj, ID):
+│ │                  print(f"Couldn't delete {self.components[obj]}, referenced by {self.references[id]}, added to queue")
+│ │              else:
+│ │                  print(f"Couldn't delete {obj}, referenced by {self.references[id]}, added to queue")
+│ │              self.delete_queue.add(id)
+│ │  
+│ │ -
+│ │      def find_delta(self, state, edited):
+│ │          """Helper to find differences between two objects
+│ │          
+│ │          Also checks to find recursive cases and cases where references
+│ │          should be updated, Does this get recursive deltas tho? should it?
+│ │          """
+│ │  
+│ │ @@ -428,25 +437,23 @@
+│ │              if value != state_val:
+│ │                  delta.add(field_name)
+│ │                  self.update_references(state, state_val, removing=True)
+│ │                  self.update_references(edited, value)
+│ │  
+│ │          return delta
+│ │  
+│ │ -    
+│ │ -    def update_component(self, obj: nooobs.Component):
+│ │ +    def update_component(self, obj: Component):
+│ │          """Update clients with changes to a component
+│ │          
+│ │          This method broadcasts changes to all clients including only fields
+│ │          specified in the set delta
+│ │  
+│ │          Args:
+│ │              obj (Component): component that has been updated, 
+│ │                  should be a component with an update message
+│ │ -            delta (Set): Field names that should be included in the update
+│ │          """
+│ │  
+│ │          # Update references and find delta
+│ │          state_obj = self.components[obj.id]
+│ │          delta = self.find_delta(state_obj, obj)
+│ │  
+│ │          # Update State
+│ │ @@ -455,59 +462,165 @@
+│ │          # Form message and broadcast
+│ │          try:
+│ │              message = self.prepare_message("update", obj, delta)
+│ │              self.broadcast(message)
+│ │          except:
+│ │              raise Exception("This obj can not be updated")
+│ │  
+│ │ -
+│ │ -    def invoke_signal(self, signal: nooobs.ID, on_component: nooobs.Component, signal_data: list):
+│ │ +    def invoke_signal(self, signal: ID, on_component: Component, signal_data: list):
+│ │          """Send signal to target component
+│ │          
+│ │          Args:
+│ │              signal (ID): signal to be invoked
+│ │              on_component (Component): component to receive the signal
+│ │              signal_data (dict): 
+│ │          Takes Signal ID, on_component, and the data
+│ │          """
+│ │  
+│ │          # Get context from on_component
+│ │ -        context = None
+│ │ -        if isinstance(on_component, nooobs.Entity):
+│ │ -            context = nooobs.InvokeIDType(entity=on_component.id)
+│ │ -        elif isinstance(on_component, nooobs.Table):
+│ │ -            context = nooobs.InvokeIDType(table=on_component.id)
+│ │ -        elif isinstance(on_component, nooobs.Plot):
+│ │ -            context = nooobs.InvokeIDType(plot=on_component.id)
+│ │ +        if isinstance(on_component, Entity):
+│ │ +            context = InvokeIDType(entity=on_component.id)
+│ │ +        elif isinstance(on_component, Table):
+│ │ +            context = InvokeIDType(table=on_component.id)
+│ │ +        elif isinstance(on_component, Plot):
+│ │ +            context = InvokeIDType(plot=on_component.id)
+│ │          else:
+│ │              raise Exception(f"Invalid on_component type: {type(on_component)}")
+│ │  
+│ │          # Create invoke object and broadcast message
+│ │ -        invoke = nooobs.Invoke(id=signal, context=context, signal_data=signal_data)
+│ │ +        invoke = Invoke(id=signal, context=context, signal_data=signal_data)
+│ │          message = self.prepare_message("invoke", invoke)
+│ │          self.broadcast(message)
+│ │  
+│ │ +    def create_method(self, name: str,
+│ │ +                      arg_doc: list[MethodArg],
+│ │ +                      doc: Optional[str] = None,
+│ │ +                      return_doc: Optional[str] = None) -> Method:
+│ │ +        return self.create_component(Method, name=name, doc=doc, return_doc=return_doc, arg_doc=arg_doc)
+│ │ +
+│ │ +    def create_signal(self, name: str,
+│ │ +                      doc: Optional[str] = None,
+│ │ +                      arg_doc: list[MethodArg] = None) -> Signal:
+│ │ +        return self.create_component(Signal, name=name, doc=doc, arg_doc=arg_doc)
+│ │ +
+│ │ +    def create_entity(self, name: Optional[str],
+│ │ +                      parent: Optional[EntityID] = None,
+│ │ +                      transform: Optional[Mat4] = None,
+│ │ +                      text_rep: Optional[TextRepresentation] = None,
+│ │ +                      web_rep: Optional[WebRepresentation] = None,
+│ │ +                      render_rep: Optional[RenderRepresentation] = None,
+│ │ +                      lights: Optional[list[LightID]] = None,
+│ │ +                      tables: Optional[list[TableID]] = None,
+│ │ +                      plots: Optional[list[PlotID]] = None,
+│ │ +                      tags: Optional[list[str]] = None,
+│ │ +                      methods_list: Optional[list[MethodID]] = None,
+│ │ +                      signals_list: Optional[list[SignalID]] = None,
+│ │ +                      influence: Optional[BoundingBox] = None) -> Entity:
+│ │ +
+│ │ +        return self.create_component(Method, name=name, parent=parent, transform=transform, text_rep=text_rep,
+│ │ +                                     web_rep=web_rep, render_rep=render_rep, lights=lights, tables=tables, plots=plots,
+│ │ +                                     tags=tags, methods_list=methods_list, signals_list=signals_list,
+│ │ +                                     influence=influence)
+│ │ +
+│ │ +    def create_plot(self, name: Optional[str] = None,
+│ │ +                    table: Optional[TableID] = None,
+│ │ +                    simple_plot: Optional[str] = None,
+│ │ +                    url_plot: Optional[str] = None,
+│ │ +                    methods_list: Optional[list[MethodID]] = None,
+│ │ +                    signals_list: Optional[list[SignalID]] = None) -> Plot:
+│ │ +
+│ │ +        return self.create_component(Signal, name=name, table=table, simple_plot=simple_plot, url_plot=url_plot,
+│ │ +                                     methods_list=methods_list, signals_list=signals_list)
+│ │ +
+│ │ +    def create_buffer(self, name: Optional[str] = None,
+│ │ +                      size: int = None,
+│ │ +                      inline_bytes: bytes = None,
+│ │ +                      uri_bytes: str = None) -> Buffer:
+│ │ +        return self.create_component(Buffer, name=name, size=size, inline_bytes=inline_bytes, uri_bytes=uri_bytes)
+│ │ +
+│ │ +    def create_bufferview(self,
+│ │ +                          source_buffer: BufferID,
+│ │ +                          offset: int,
+│ │ +                          length: int,
+│ │ +                          name: Optional[str] = None,
+│ │ +                          type: Literal["UNK", "GEOMETRY", "IMAGE"] = "UNK") -> BufferView:
+│ │ +        return self.create_component(BufferView, name=name, source_buffer=source_buffer,
+│ │ +                                     offset=offset, length=length, type=type)
+│ │ +
+│ │ +    def create_material(self, name: Optional[str] = None,
+│ │ +                        pbr_info: Optional[PBRInfo] = PBRInfo(),
+│ │ +                        normal_texture: Optional[TextureRef] = None,
+│ │ +                        occlusion_texture: Optional[TextureRef] = None,
+│ │ +                        occlusion_texture_factor: Optional[float] = 1.0,
+│ │ +                        emissive_texture: Optional[TextureRef] = None,
+│ │ +                        emissive_factor: Optional[Vec3] = (1.0, 1.0, 1.0),
+│ │ +                        use_alpha: Optional[bool] = False,
+│ │ +                        alpha_cutoff: Optional[float] = .5,
+│ │ +                        double_sided: Optional[bool] = False) -> Material:
+│ │ +        return self.create_component(Material, name=name, pbr_info=pbr_info, normal_texture=normal_texture,
+│ │ +                                     occlusion_texture=occlusion_texture, occlusion_texture_factor=occlusion_texture_factor,
+│ │ +                                     emissive_texture=emissive_texture, emissive_factor=emissive_factor,
+│ │ +                                     use_alpha=use_alpha, alpha_cutoff=alpha_cutoff, double_sided=double_sided)
+│ │ +
+│ │ +    def create_image(self, name: Optional[str] = None,
+│ │ +                     buffer_source: BufferID = None,
+│ │ +                     uri_source: str = None) -> Image:
+│ │ +        return self.create_component(Image, name=name, buffer_source=buffer_source, uri_source=uri_source)
+│ │ +
+│ │ +    def create_texture(self, image: ImageID,
+│ │ +                       name: Optional[str] = None,
+│ │ +                       sampler: Optional[SamplerID] = None) -> Texture:
+│ │ +        return self.create_component(Texture, name=name, image=image, sampler=sampler)
+│ │ +
+│ │ +    def create_sampler(self, name: Optional[str] = None,
+│ │ +                       mag_filter: Optional[Literal["NEAREST", "LINEAR"]] = "LINEAR",
+│ │ +                       min_filter: Optional[
+│ │ +                           Literal["NEAREST", "LINEAR", "LINEAR_MIPMAP_LINEAR"]] = "LINEAR_MIPMAP_LINEAR",
+│ │ +                       wrap_s: Optional[SamplerMode] = "REPEAT",
+│ │ +                       wrap_t: Optional[SamplerMode] = "REPEAT") -> Sampler:
+│ │ +        return self.create_component(Sampler, name=name, mag_filter=mag_filter, min_filter=min_filter,
+│ │ +                                     wrap_s=wrap_s, wrap_t=wrap_t)
+│ │ +
+│ │ +    def create_light(self, name: Optional[str] = None,
+│ │ +                     color: Optional[RGB] = (1.0, 1.0, 1.0),
+│ │ +                     intensity: Optional[float] = 1.0,
+│ │ +                     point: PointLight = None,
+│ │ +                     spot: SpotLight = None,
+│ │ +                     directional: DirectionalLight = None) -> Light:
+│ │ +        return self.create_component(Light, name=name, color=color, intensity=intensity,
+│ │ +                                     point=point, spot=spot, directional=directional)
+│ │ +
+│ │ +    def create_geometry(self, patches: list[GeometryPatch], name: Optional[str] = None) -> Geometry:
+│ │ +        return self.create_component(name=name, patches=patches)
+│ │ +
+│ │ +    def create_table(self, name: Optional[str] = None,
+│ │ +                     meta: Optional[str] = None,
+│ │ +                     methods_list: Optional[list[MethodID]] = None,
+│ │ +                     signals_list: Optional[list[SignalID]] = None) -> Table:
+│ │ +        return self.create_component(Table, name=name, meta=meta, methods_list=methods_list, signals_list=signals_list)
+│ │ +
+│ │  
+│ │ +# Helpers for ordering messages
+│ │  def top_sort_recurse(id, refs, visited, components, stack):
+│ │      """Helper for order_components to recurse"""
+│ │  
+│ │      visited[id] = True
+│ │      if id in refs:
+│ │          for ref in refs[id]:
+│ │              if not visited[ref]:
+│ │                  top_sort_recurse(ref, refs, visited, components, stack)
+│ │  
+│ │      stack.append(components[id])
+│ │  
+│ │  
+│ │ -def order_components(components: dict[nooobs.ID, nooobs.Component], 
+│ │ -    refs: dict[nooobs.ID, list[nooobs.ID]]):
+│ │ +def order_components(components: dict[ID, Component],
+│ │ +                     refs: dict[ID, list[ID]]):
+│ │      """Helper for creating topological sort of components"""
+│ │  
+│ │      visited = {key: False for key in components}
+│ │      stack = []
+│ │  
+│ │      for id in components:
+│ │          if not visited[id]:
+│ │              top_sort_recurse(id, refs, visited, components, stack)
+│ │ -    
+│ │ +
+│ │      return stack[::-1]
+│ │   --- rigatoni-0.1.1/rigatoni/geometry/geometry_objects.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/geometry/geometry_objects.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,32 +1,35 @@
+│ │  """Module with additional objects to help with geometry creation
+│ │  
+│ │ -These are based on the noodle_objects.py module and impliment validation
+│ │ +These are based on the noodle_objects.py module and implement validation
+│ │  """
+│ │  
+│ │ -from ..noodle_objects import *
+│ │ +from typing import Optional
+│ │  
+│ │ +from .. import noodle_objects as nooobs
+│ │  
+│ │ -class AttributeInput(NoodleObject):
+│ │ +class AttributeInput(nooobs.NoodleObject):
+│ │      """Input for setting attributes of a buffer 
+│ │      
+│ │      User should not have to concern themselves with this input
+│ │      """
+│ │  
+│ │ -    semantic: AttributeSemantic
+│ │ -    format: Format
+│ │ +    semantic: nooobs.AttributeSemantic
+│ │ +    format: nooobs.Format
+│ │      normalized: bool
+│ │      offset: Optional[int]
+│ │      stride: Optional[int]
+│ │  
+│ │  
+│ │ -class GeometryPatchInput(NoodleObject):
+│ │ +class GeometryPatchInput(nooobs.NoodleObject):
+│ │      """User input object for creating a geometry patch"""
+│ │  
+│ │      vertices: list
+│ │      indices: list
+│ │      index_type: str 
+│ │ -    material: MaterialID
+│ │ +    material: nooobs.MaterialID
+│ │      normals: Optional[list] 
+│ │      tangents: Optional[list]
+│ │ -    textures:Optional[list] 
+│ │ +    textures: Optional[list] 
+│ │      colors: Optional[list]
+│ │ +
+│ │ +
+│ │   --- rigatoni-0.1.1/rigatoni/interface.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/delegates.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,12 +1,9 @@
+│ │  """Interface Methods for Specific Components"""
+│ │  
+│ │ -from typing import Optional
+│ │ -import weakref
+│ │ -
+│ │  from .core import Server
+│ │  from . import noodle_objects as nooobs
+│ │  
+│ │  
+│ │  class Delegate(object):
+│ │  
+│ │      def __init__(self, server: Server, component: nooobs.Component):
+│ │ @@ -31,25 +28,20 @@
+│ │  
+│ │      def handle_clear(self):
+│ │          pass
+│ │  
+│ │      def handle_set_selection(self, selection: nooobs.Selection):
+│ │          pass
+│ │  
+│ │ -
+│ │      # Signals ---------------------------------------------------
+│ │      def table_reset(self, tbl_init: nooobs.TableInitData):
+│ │          """Invoke table reset signal"""
+│ │          pass
+│ │ -    
+│ │  
+│ │ -    def table_updated(self, keys: list[int], rows:list[list[int]]):
+│ │ +    def table_updated(self, keys: list[int], rows: list[list[int]]):
+│ │          pass
+│ │  
+│ │ -
+│ │      def table_rows_removed(self, keys: list[int]):
+│ │          pass
+│ │  
+│ │ -
+│ │      def table_selection_updated(self, selection: nooobs.Selection):
+│ │          pass
+│ │ -
+│ │   --- rigatoni-0.1.1/rigatoni/noodle_objects.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/noodle_objects.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -8,259 +8,297 @@
+│ │  from enum import Enum
+│ │  from math import pi
+│ │  from queue import Queue
+│ │  from typing import Callable, Literal, Optional, Any, Union
+│ │  
+│ │  from pydantic import BaseModel, root_validator
+│ │  
+│ │ -
+│ │  """ =============================== ID's ============================= """
+│ │  
+│ │  IDGroup = namedtuple("IDGroup", ["slot", "gen"])
+│ │  
+│ │ -class ID(IDGroup):
+│ │  
+│ │ +class ID(IDGroup):
+│ │      __slots__ = ()
+│ │ +
+│ │      def __repr__(self):
+│ │          return f"{self.__class__}|{self.slot}/{self.gen}|"
+│ │  
+│ │      def __key(self):
+│ │ -        return (type(self), self.slot, self.gen)
+│ │ +        return type(self), self.slot, self.gen
+│ │  
+│ │      def __eq__(self, __o: object) -> bool:
+│ │          if isinstance(__o, ID):
+│ │              return self.__key() == __o.__key()
+│ │          else:
+│ │              return False
+│ │  
+│ │      def __hash__(self):
+│ │          return hash(self.__key())
+│ │  
+│ │ +
+│ │  class MethodID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class SignalID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class EntityID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class PlotID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class BufferID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class BufferViewID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class MaterialID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class ImageID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class TextureID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class SamplerID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class LightID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class GeometryID(ID):
+│ │      pass
+│ │  
+│ │ +
+│ │  class TableID(ID):
+│ │      pass
+│ │  
+│ │  
+│ │  """ ====================== Generic Parent Class ====================== """
+│ │  
+│ │ +
+│ │  class NoodleObject(BaseModel):
+│ │      """Parent Class for all noodle objects"""
+│ │  
+│ │      class Config:
+│ │          """Configuration for Validation"""
+│ │  
+│ │          arbitrary_types_allowed = True
+│ │          use_enum_values = True
+│ │  
+│ │      def __repr__(self) -> str:
+│ │          return f"{type(self)}"
+│ │  
+│ │ +
+│ │  class Component(NoodleObject):
+│ │      """Parent class for all components"""
+│ │  
+│ │      id: ID = None
+│ │  
+│ │      def __repr__(self):
+│ │          return f"{type(self)} | {self.id}"
+│ │  
+│ │  
+│ │  """ ====================== Common Definitions ====================== """
+│ │  
+│ │  Vec3 = tuple[float, float, float]
+│ │  Vec4 = tuple[float, float, float, float]
+│ │ -Mat3 = tuple[float, float, float, 
+│ │ -             float, float, float, 
+│ │ +Mat3 = tuple[float, float, float,
+│ │ +             float, float, float,
+│ │               float, float, float]
+│ │  Mat4 = tuple[float, float, float, float,
+│ │               float, float, float, float,
+│ │               float, float, float, float,
+│ │               float, float, float, float]
+│ │  
+│ │  RGB = Vec3
+│ │  RGBA = Vec4
+│ │  
+│ │ +
+│ │  class AttributeSemantic(Enum):
+│ │      position = "POSITION"
+│ │      normal = "NORMAL"
+│ │      tangent = "TANGENT"
+│ │      texture = "TEXTURE"
+│ │      color = "COLOR"
+│ │  
+│ │ +
+│ │  class Format(Enum):
+│ │      u8 = "U8"
+│ │      u16 = "U16"
+│ │      u32 = "U32"
+│ │      u8vec4 = "U8VEC4"
+│ │      u16vec2 = "U16VEC2"
+│ │      vec2 = "VEC2"
+│ │      vec3 = "VEC3"
+│ │      vec4 = "VEC4"
+│ │      mat3 = "MAT3"
+│ │      mat4 = "MAT4"
+│ │  
+│ │ +
+│ │  class PrimitiveType(Enum):
+│ │      points = "POINTS"
+│ │      lines = "LINES"
+│ │      line_loop = "LINE_LOOP"
+│ │      line_strip = "LINE_STRIP"
+│ │      triangles = "TRIANGLES"
+│ │      triangle_strip = "TRIANGLE_STRIP"
+│ │  
+│ │ +
+│ │  class SamplerMode(Enum):
+│ │      clamp_to_edge = "CLAMP_TO_EDGE"
+│ │      mirrored_repeat = "MIRRORED_REPEAT"
+│ │      repeat = "REPEAT"
+│ │  
+│ │ -class SelectionRange(BaseModel):
+│ │ +
+│ │ +class SelectionRange(NoodleObject):
+│ │      key_from_inclusive: int
+│ │      key_to_exclusive: int
+│ │  
+│ │ +
+│ │  class Selection(NoodleObject):
+│ │      name: str
+│ │      rows: Optional[list[int]] = None
+│ │      row_ranges: Optional[list[SelectionRange]] = None
+│ │  
+│ │ -class MethodArg(NoodleObject): 
+│ │ +
+│ │ +class MethodArg(NoodleObject):
+│ │      name: str
+│ │ -    doc: Optional[str] = None 
+│ │ +    doc: Optional[str] = None
+│ │      editor_hint: Optional[str] = None
+│ │  
+│ │ +
+│ │  class BoundingBox(NoodleObject):
+│ │      min: Vec3
+│ │      max: Vec3
+│ │  
+│ │ +
+│ │  class TextRepresentation(NoodleObject):
+│ │      txt: str
+│ │      font: Optional[str] = "Arial"
+│ │      height: Optional[float] = .25
+│ │      width: Optional[float] = -1.0
+│ │  
+│ │ +
+│ │  class WebRepresentation(NoodleObject):
+│ │      source: str
+│ │      height: Optional[float] = .5
+│ │      width: Optional[float] = .5
+│ │  
+│ │ +
+│ │  class InstanceSource(NoodleObject):
+│ │ -    view: BufferViewID # view of mat4
+│ │ -    stride: int 
+│ │ +    view: BufferViewID  # view of mat4
+│ │ +    stride: int
+│ │      bb: Optional[BoundingBox] = None
+│ │  
+│ │ +
+│ │  class RenderRepresentation(NoodleObject):
+│ │      mesh: GeometryID
+│ │      instances: Optional[InstanceSource] = None
+│ │  
+│ │ +
+│ │  class TextureRef(NoodleObject):
+│ │      texture: TextureID
+│ │      transform: Optional[Mat3] = [1.0, 0.0, 0.0,
+│ │ -                       0.0, 1.0, 0.0,
+│ │ -                       0.0, 0.0, 1.0,]
+│ │ +                                 0.0, 1.0, 0.0,
+│ │ +                                 0.0, 0.0, 1.0, ]
+│ │      texture_coord_slot: Optional[int] = 0.0
+│ │  
+│ │ +
+│ │  class PBRInfo(NoodleObject):
+│ │      base_color: RGBA = [1.0, 1.0, 1.0, 1.0]
+│ │ -    base_color_texture: Optional[TextureRef] = None # assume SRGB, no premult alpha
+│ │ +    base_color_texture: Optional[TextureRef] = None  # assume SRGB, no premult alpha
+│ │  
+│ │      metallic: Optional[float] = 1.0
+│ │      roughness: Optional[float] = 1.0
+│ │ -    metal_rough_texture: Optional[TextureRef] = None # assume linear, ONLY RG used
+│ │ +    metal_rough_texture: Optional[TextureRef] = None  # assume linear, ONLY RG used
+│ │ +
+│ │  
+│ │  class PointLight(NoodleObject):
+│ │      range: float = -1.0
+│ │  
+│ │ +
+│ │  class SpotLight(NoodleObject):
+│ │      range: float = -1.0
+│ │      inner_cone_angle_rad: float = 0.0
+│ │ -    outer_cone_angle_rad: float = pi/4
+│ │ +    outer_cone_angle_rad: float = pi / 4
+│ │ +
+│ │  
+│ │  class DirectionalLight(NoodleObject):
+│ │      range: float = -1.0
+│ │  
+│ │ +
+│ │  class Attribute(NoodleObject):
+│ │      view: BufferViewID
+│ │      semantic: AttributeSemantic
+│ │      channel: Optional[int] = None
+│ │      offset: Optional[int] = 0
+│ │      stride: Optional[int] = 0
+│ │      format: Format
+│ │      minimum_value: Optional[list[float]] = None
+│ │      maximum_value: Optional[list[float]] = None
+│ │      normalized: Optional[bool] = False
+│ │  
+│ │ +
+│ │  class Index(NoodleObject):
+│ │ -    view: BufferViewID 
+│ │ +    view: BufferViewID
+│ │      count: int
+│ │      offset: Optional[int] = 0
+│ │      stride: Optional[int] = 0
+│ │      format: Literal["U8", "U16", "U32"]
+│ │  
+│ │ +
+│ │  class GeometryPatch(NoodleObject):
+│ │      attributes: list[Attribute]
+│ │      vertex_count: int
+│ │      indices: Optional[Index] = None
+│ │      type: PrimitiveType
+│ │ -    material: MaterialID # Material ID
+│ │ +    material: MaterialID  # Material ID
+│ │ +
+│ │  
+│ │  class InvokeIDType(NoodleObject):
+│ │      entity: Optional[EntityID] = None
+│ │      table: Optional[TableID] = None
+│ │      plot: Optional[PlotID] = None
+│ │  
+│ │      @root_validator
+│ │      def one_of_three(cls, values):
+│ │ -        already_found  = False
+│ │ +        already_found = False
+│ │          for field in values:
+│ │              if values[field] and already_found:
+│ │                  raise ValueError("More than one field entered")
+│ │              elif values[field]:
+│ │                  already_found = True
+│ │ -        
+│ │ +
+│ │          if not already_found:
+│ │              raise ValueError("No field provided")
+│ │          else:
+│ │              return values
+│ │  
+│ │ +
+│ │  class TableColumnInfo(NoodleObject):
+│ │      name: str
+│ │      type: Literal["TEXT", "REAL", "INTEGER"]
+│ │  
+│ │ +
+│ │  class TableInitData(NoodleObject):
+│ │      columns: list[TableColumnInfo]
+│ │      keys: list[int]
+│ │      data: list[list[Union[float, int, str]]]
+│ │      selections: Optional[list[Selection]] = None
+│ │  
+│ │      # too much overhead? - strict mode
+│ │ @@ -270,26 +308,25 @@
+│ │              for col, i in zip(values['columns'], range(len(row))):
+│ │                  text_mismatch = isinstance(row[i], str) and col.type != "TEXT"
+│ │                  real_mismatch = isinstance(row[i], float) and col.type != "REAL"
+│ │                  int_mismatch = isinstance(row[i], int) and col.type != "INTEGER"
+│ │                  if text_mismatch or real_mismatch or int_mismatch:
+│ │                      raise ValueError(f"Column Info doesn't match type in data: {col, row[i]}")
+│ │          return values
+│ │ -        
+│ │  
+│ │  
+│ │ -""" ====================== NOOODLE COMPONENTS ====================== """
+│ │ +""" ====================== NOODLE COMPONENTS ====================== """
+│ │  
+│ │  
+│ │  class Method(Component):
+│ │      id: MethodID
+│ │      name: str
+│ │      doc: Optional[str] = None
+│ │      return_doc: Optional[str] = None
+│ │ -    arg_doc: list[MethodArg] = None
+│ │ +    arg_doc: list[MethodArg] = []
+│ │  
+│ │  
+│ │  class Signal(Component):
+│ │      id: SignalID
+│ │      name: str
+│ │      doc: Optional[str] = None
+│ │      arg_doc: list[MethodArg] = None
+│ │ @@ -298,42 +335,27 @@
+│ │  class Entity(Component):
+│ │      id: EntityID
+│ │      name: Optional[str] = None
+│ │  
+│ │      parent: Optional[EntityID] = None
+│ │      transform: Optional[Mat4] = None
+│ │  
+│ │ -    null_rep: Optional[Any] = None
+│ │      text_rep: Optional[TextRepresentation] = None
+│ │      web_rep: Optional[WebRepresentation] = None
+│ │      render_rep: Optional[RenderRepresentation] = None
+│ │  
+│ │      lights: Optional[list[LightID]] = None
+│ │      tables: Optional[list[TableID]] = None
+│ │      plots: Optional[list[PlotID]] = None
+│ │      tags: Optional[list[str]] = None
+│ │      methods_list: Optional[list[MethodID]] = None
+│ │      signals_list: Optional[list[SignalID]] = None
+│ │  
+│ │      influence: Optional[BoundingBox] = None
+│ │  
+│ │ -    @root_validator
+│ │ -    def one_of(cls, values):
+│ │ -        already_found  = False
+│ │ -        for field in ['null_rep', 'text_rep', 'web_rep', 'render_rep']:
+│ │ -            if values[field] and already_found:
+│ │ -                raise ValueError("More than one field entered")
+│ │ -            elif values[field]:
+│ │ -                already_found = True
+│ │ -        
+│ │ -        if not already_found:
+│ │ -            raise ValueError("No field provided")
+│ │ -        else:
+│ │ -            return values
+│ │ -
+│ │  
+│ │  class Plot(Component):
+│ │      id: PlotID
+│ │      name: Optional[str] = None
+│ │  
+│ │      table: Optional[TableID] = None
+│ │  
+│ │ @@ -365,33 +387,33 @@
+│ │              return values
+│ │          else:
+│ │              raise ValueError("One plot type must be specified")
+│ │  
+│ │  
+│ │  class BufferView(Component):
+│ │      id: BufferViewID
+│ │ -    name: Optional[str] = None    
+│ │ +    name: Optional[str] = None
+│ │      source_buffer: BufferID
+│ │  
+│ │      type: Literal["UNK", "GEOMETRY", "IMAGE"]
+│ │      offset: int
+│ │      length: int
+│ │  
+│ │ -    
+│ │ +
+│ │  class Material(Component):
+│ │      id: MaterialID
+│ │      name: Optional[str] = None
+│ │  
+│ │      pbr_info: Optional[PBRInfo] = PBRInfo()
+│ │      normal_texture: Optional[TextureRef] = None
+│ │  
+│ │ -    occlusion_texture: Optional[TextureRef] = None # assumed to be linear, ONLY R used
+│ │ +    occlusion_texture: Optional[TextureRef] = None  # assumed to be linear, ONLY R used
+│ │      occlusion_texture_factor: Optional[float] = 1.0
+│ │  
+│ │ -    emissive_texture: Optional[TextureRef] = None # assumed to be SRGB, ignore A
+│ │ +    emissive_texture: Optional[TextureRef] = None  # assumed to be SRGB, ignore A
+│ │      emissive_factor: Optional[Vec3] = [1.0, 1.0, 1.0]
+│ │  
+│ │      use_alpha: Optional[bool] = False
+│ │      alpha_cutoff: Optional[float] = .5
+│ │  
+│ │      double_sided: Optional[bool] = False
+│ │  
+│ │ @@ -410,49 +432,49 @@
+│ │          else:
+│ │              raise ValueError("One plot type must be specified")
+│ │  
+│ │  
+│ │  class Texture(Component):
+│ │      id: TextureID
+│ │      name: Optional[str] = None
+│ │ -    image: ImageID # Image ID
+│ │ +    image: ImageID  # Image ID
+│ │      sampler: Optional[SamplerID] = None
+│ │  
+│ │  
+│ │  class Sampler(Component):
+│ │      id: SamplerID
+│ │      name: Optional[str] = None
+│ │  
+│ │      mag_filter: Optional[Literal["NEAREST", "LINEAR"]] = "LINEAR"
+│ │      min_filter: Optional[Literal["NEAREST", "LINEAR", "LINEAR_MIPMAP_LINEAR"]] = "LINEAR_MIPMAP_LINEAR"
+│ │  
+│ │ -    wrap_s: Optional[SamplerMode] = "REPEAT" 
+│ │ -    wrap_t: Optional[SamplerMode] = "REPEAT" 
+│ │ +    wrap_s: Optional[SamplerMode] = "REPEAT"
+│ │ +    wrap_t: Optional[SamplerMode] = "REPEAT"
+│ │  
+│ │  
+│ │  class Light(Component):
+│ │      id: LightID
+│ │      name: Optional[str] = None
+│ │  
+│ │ -    color: Optional[RGB] = [255, 255, 255]
+│ │ -    intensity: Optional[float] = 1
+│ │ +    color: Optional[RGB] = [1.0, 1.0, 1.0]
+│ │ +    intensity: Optional[float] = 1.0
+│ │  
+│ │      point: PointLight = None
+│ │      spot: SpotLight = None
+│ │      directional: DirectionalLight = None
+│ │  
+│ │      @root_validator
+│ │      def one_of(cls, values):
+│ │ -        already_found  = False
+│ │ +        already_found = False
+│ │          for field in ['point', 'spot', 'directional']:
+│ │              if values[field] and already_found:
+│ │                  raise ValueError("More than one field entered")
+│ │              elif values[field]:
+│ │                  already_found = True
+│ │ -        
+│ │ +
+│ │          if not already_found:
+│ │              raise ValueError("No field provided")
+│ │          else:
+│ │              return values
+│ │  
+│ │  
+│ │  class Geometry(Component):
+│ │ @@ -463,33 +485,34 @@
+│ │  
+│ │  class Table(Component):
+│ │      id: TableID
+│ │      name: Optional[str] = None
+│ │  
+│ │      meta: Optional[str] = None
+│ │      methods_list: Optional[list[MethodID]] = None
+│ │ -    signals_list: Optional[list[SignalID]] = None 
+│ │ - 
+│ │ +    signals_list: Optional[list[SignalID]] = None
+│ │ +
+│ │  
+│ │  """ ====================== Communication Objects ====================== """
+│ │  
+│ │  
+│ │  class Invoke(NoodleObject):
+│ │      id: SignalID
+│ │ -    context: Optional[InvokeIDType] = None # if empty - document
+│ │ +    context: Optional[InvokeIDType] = None  # if empty - document
+│ │      signal_data: list[Any]
+│ │  
+│ │  
+│ │  # Note: this isn't technically an exception
+│ │  # for now this uses a model so that it can be validated / sent as message easier
+│ │  class MethodException(NoodleObject):
+│ │      code: int
+│ │      message: Optional[str] = None
+│ │      data: Optional[Any] = None
+│ │  
+│ │ +
+│ │  class Reply(NoodleObject):
+│ │      invoke_id: str
+│ │      result: Optional[Any] = None
+│ │      method_exception: Optional[MethodException] = None
+│ │  
+│ │  
+│ │  """ ====================== Miscellaneous Objects ====================== """
+│ │ @@ -506,39 +529,42 @@
+│ │      Image: ImageID,
+│ │      Texture: TextureID,
+│ │      Sampler: SamplerID,
+│ │      Buffer: BufferID,
+│ │      BufferView: BufferViewID
+│ │  }
+│ │  
+│ │ +
+│ │  class InjectedMethod(object):
+│ │ -    """Representation of user Injecte Method
+│ │ +    """Representation of user Injected Method
+│ │      
+│ │      Note that the call method automatically inserts a server
+│ │ -    reference as an argument to all user defined fuctions
+│ │ +    reference as an argument to all user defined functions
+│ │      """
+│ │  
+│ │      def __init__(self, server, method) -> None:
+│ │          self.server = server
+│ │          self.method = method
+│ │  
+│ │ -    def __call__(self, *args, **kwds):
+│ │ -        return self.method(self.server, *args, **kwds)
+│ │ +    def __call__(self, *args, **kwargs):
+│ │ +        return self.method(self.server, *args, **kwargs)
+│ │ +
+│ │  
+│ │  class SlotTracker(object):
+│ │      """Object to keep track of next available slot
+│ │      
+│ │      Next slot is next unused slot while on_deck
+│ │      keeps track of slots that have opened up
+│ │      """
+│ │  
+│ │      def __init__(self):
+│ │          self.next_slot = 0
+│ │          self.on_deck = Queue()
+│ │  
+│ │ +
+│ │  class StartingComponent(object):
+│ │      """User input object for setting starting components on server"""
+│ │  
+│ │ -    def __init__(self, type, component_attrs: dict[str, Any], method: Optional[Callable]=None):
+│ │ -        self.type = type
+│ │ +    def __init__(self, kind, component_attrs: dict[str, Any], method: Optional[Callable] = None):
+│ │ +        self.type = kind
+│ │          self.component_attrs = component_attrs
+│ │          self.method = method
+│ │   --- rigatoni-0.1.1/rigatoni/server.py
+│ ├── +++ rigatoni-0.1.2/rigatoni/server.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -2,33 +2,40 @@
+│ │  
+│ │  Handles new clients and delegates most work to the server object
+│ │  """
+│ │  
+│ │  import asyncio
+│ │  import functools
+│ │  from typing import Type
+│ │ +import json
+│ │  
+│ │  import websockets
+│ │  from cbor2 import loads, dumps
+│ │  
+│ │ -from rigatoni.core import Server
+│ │ -from rigatoni.noodle_objects import Component
+│ │ -from rigatoni.interface import Delegate
+│ │ +from rigatoni.core import Server, default_json_encoder
+│ │ +from rigatoni.noodle_objects import Component, StartingComponent
+│ │ +from rigatoni.delegates import Delegate
+│ │ +
+│ │  
+│ │  async def send(websocket, message: list):
+│ │      """Send CBOR message using websocket
+│ │      
+│ │      Args:
+│ │          websocket (WebSocketClientProtocol):
+│ │ -            recipient of this message
+│ │ +            recipient of this data
+│ │          message (list):
+│ │              message to be sent, in list format
+│ │              [id, content, id, content...]
+│ │      """
+│ │ -    
+│ │ +    # Log message in json file
+│ │ +    json_message = json.dumps(message, default=default_json_encoder)
+│ │ +    with open("sample_messages.json", "a") as outfile:
+│ │ +        outfile.write(json_message)
+│ │ +
+│ │ +    # Print message and send
+│ │      print(f"Sending Message: ID's {message[::2]}")
+│ │      await websocket.send(dumps(message))
+│ │  
+│ │  
+│ │  async def handle_client(websocket, server: Server):
+│ │      """Coroutine for handling a client's connection
+│ │      
+│ │ @@ -67,30 +74,27 @@
+│ │          await send(websocket, reply)
+│ │  
+│ │      # Remove client if disconnected
+│ │      print(f"Client 'client_name' disconnected")
+│ │      server.clients.remove(websocket)
+│ │  
+│ │  
+│ │ -async def start_server(port: int, starting_state: dict, 
+│ │ -    delegates: dict[Type[Component], Type[Delegate]] = {}):
+│ │ +async def start_server(port: int, starting_state: list[StartingComponent],
+│ │ +                       delegates: dict[Type[Component], Type[Delegate]] = None):
+│ │      """Main method for maintaining websocket connection and handling new clients
+│ │  
+│ │      Args:
+│ │          port (int): port to be used by this server
+│ │ -        methods (dict): map containing methods to be injected onto the server
+│ │          starting_state (dict): hardcoded starting state for the server
+│ │          delegates (dict): mapping of noodles component to delegate object
+│ │      """
+│ │ -
+│ │ +    if not delegates:
+│ │ +        delegates = {}
+│ │      server = Server(starting_state, delegates)
+│ │      print(f"Server initialized with objects: {server.components}")
+│ │  
+│ │      # Create partial to pass server to handler
+│ │ -    handler = functools.partial(
+│ │ -        handle_client,
+│ │ -        server = server
+│ │ -    )
+│ │ +    handler = functools.partial(handle_client, server=server)
+│ │  
+│ │      print("Starting up Server...")
+│ │      async with websockets.serve(handler, "", port):
+│ │          await asyncio.Future()  # run forever
+│ │   --- rigatoni-0.1.1/tests/data.csv
+│ ├── +++ rigatoni-0.1.2/tests/data.csv
+│ │┄ Files identical despite different names
+│ │   --- rigatoni-0.1.1/tests/test_geometry.py
+│ ├── +++ rigatoni-0.1.2/tests/test_geometry.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -5,175 +5,265 @@
+│ │  
+│ │  import asyncio
+│ │  
+│ │  import pandas as pd
+│ │  import matplotlib
+│ │  
+│ │  from context import rigatoni
+│ │ -from rigatoni.server import start_server
+│ │ -import rigatoni.noodle_objects as nooobs
+│ │ -import rigatoni.geometry.geometry_objects as geoobs
+│ │ +from rigatoni import geometry as geo
+│ │  
+│ │  # 42 vertices for sphere
+│ │  vertices = [[-0.000000, -0.500000, -0.000000], [0.361804, -0.223610, 0.262863],
+│ │ -            [-0.138194, -0.223610, 0.425325],  [-0.447213, -0.223608, -0.000000],
+│ │ +            [-0.138194, -0.223610, 0.425325], [-0.447213, -0.223608, -0.000000],
+│ │              [-0.138194, -0.223610, -0.425325], [0.361804, -0.223610, -0.262863],
+│ │ -            [0.138194, 0.223610, 0.425325],    [-0.361804, 0.223610, 0.262863],
+│ │ -            [-0.361804, 0.223610, -0.262863],  [0.138194, 0.223610, -0.425325],
+│ │ -            [0.447213, 0.223608, -0.000000],   [-0.000000, 0.500000, -0.000000],
+│ │ -            [-0.081228, -0.425327, 0.249998],  [0.212661, -0.425327, 0.154506],
+│ │ -            [0.131434, -0.262869, 0.404506],   [0.425324, -0.262868, -0.000000],
+│ │ -            [0.212661, -0.425327, -0.154506],  [-0.262865, -0.425326, -0.000000],
+│ │ -            [-0.344095, -0.262868, 0.249998],  [-0.081228, -0.425327, -0.249998],
+│ │ +            [0.138194, 0.223610, 0.425325], [-0.361804, 0.223610, 0.262863],
+│ │ +            [-0.361804, 0.223610, -0.262863], [0.138194, 0.223610, -0.425325],
+│ │ +            [0.447213, 0.223608, -0.000000], [-0.000000, 0.500000, -0.000000],
+│ │ +            [-0.081228, -0.425327, 0.249998], [0.212661, -0.425327, 0.154506],
+│ │ +            [0.131434, -0.262869, 0.404506], [0.425324, -0.262868, -0.000000],
+│ │ +            [0.212661, -0.425327, -0.154506], [-0.262865, -0.425326, -0.000000],
+│ │ +            [-0.344095, -0.262868, 0.249998], [-0.081228, -0.425327, -0.249998],
+│ │              [-0.344095, -0.262868, -0.249998], [0.131434, -0.262869, -0.404506],
+│ │ -            [0.475529, 0.000000, 0.154506],    [0.475529, 0.000000, -0.154506],
+│ │ -            [-0.000000, 0.000000, 0.500000],   [0.293893, 0.000000, 0.404508],
+│ │ -            [-0.475529, 0.000000, 0.154506],   [-0.293893, 0.000000, 0.404508],
+│ │ -            [-0.293893, 0.000000, -0.404508],  [-0.475529, 0.000000, -0.154506],
+│ │ -            [0.293893, 0.000000, -0.404508],   [-0.000000, 0.000000, -0.500000],
+│ │ -            [0.344095, 0.262868, 0.249998],    [-0.131434, 0.262869, 0.404506],
+│ │ -            [-0.425324, 0.262868, -0.000000],  [-0.131434, 0.262869, -0.404506],
+│ │ -            [0.344095, 0.262868, -0.249998],   [0.081228, 0.425327, 0.249998],
+│ │ -            [0.262865, 0.425326, -0.000000],   [-0.212661, 0.425327, 0.154506],
+│ │ -            [-0.212661, 0.425327, -0.154506],  [0.081228, 0.425327, -0.249998]]
+│ │ +            [0.475529, 0.000000, 0.154506], [0.475529, 0.000000, -0.154506],
+│ │ +            [-0.000000, 0.000000, 0.500000], [0.293893, 0.000000, 0.404508],
+│ │ +            [-0.475529, 0.000000, 0.154506], [-0.293893, 0.000000, 0.404508],
+│ │ +            [-0.293893, 0.000000, -0.404508], [-0.475529, 0.000000, -0.154506],
+│ │ +            [0.293893, 0.000000, -0.404508], [-0.000000, 0.000000, -0.500000],
+│ │ +            [0.344095, 0.262868, 0.249998], [-0.131434, 0.262869, 0.404506],
+│ │ +            [-0.425324, 0.262868, -0.000000], [-0.131434, 0.262869, -0.404506],
+│ │ +            [0.344095, 0.262868, -0.249998], [0.081228, 0.425327, 0.249998],
+│ │ +            [0.262865, 0.425326, -0.000000], [-0.212661, 0.425327, 0.154506],
+│ │ +            [-0.212661, 0.425327, -0.154506], [0.081228, 0.425327, -0.249998]]
+│ │  
+│ │  # 80 triangles
+│ │ -indices =  [[0, 13, 12],  [1, 13, 15],  [0, 12, 17],  [0, 17, 19],
+│ │ -            [0, 19, 16],  [1, 15, 22],  [2, 14, 24],  [3, 18, 26],
+│ │ -            [4, 20, 28],  [5, 21, 30],  [1, 22, 25],  [2, 24, 27],
+│ │ -            [3, 26, 29],  [4, 28, 31],  [5, 30, 23],  [6, 32, 37],
+│ │ -            [7, 33, 39],  [8, 34, 40],  [9, 35, 41],  [10, 36, 38],
+│ │ -            [38, 41, 11], [38, 36, 41], [36, 9, 41],  [41, 40, 11],
+│ │ -            [41, 35, 40], [35, 8, 40],  [40, 39, 11], [40, 34, 39],
+│ │ -            [34, 7, 39],  [39, 37, 11], [39, 33, 37], [33, 6, 37],
+│ │ -            [37, 38, 11], [37, 32, 38], [32, 10, 38], [23, 36, 10],
+│ │ -            [23, 30, 36], [30, 9, 36],  [31, 35, 9],  [31, 28, 35],
+│ │ -            [28, 8, 35],  [29, 34, 8],  [29, 26, 34], [26, 7, 34],
+│ │ -            [27, 33, 7],  [27, 24, 33], [24, 6, 33],  [25, 32, 6],
+│ │ -            [25, 22, 32], [22, 10, 32], [30, 31, 9],  [30, 21, 31],
+│ │ -            [21, 4, 31],  [28, 29, 8],  [28, 20, 29], [20, 3, 29],
+│ │ -            [26, 27, 7],  [26, 18, 27], [18, 2, 27],  [24, 25, 6],
+│ │ -            [24, 14, 25], [14, 1, 25],  [22, 23, 10], [22, 15, 23],
+│ │ -            [15, 5, 23],  [16, 21, 5],  [16, 19, 21], [19, 4, 21],
+│ │ -            [19, 20, 4],  [19, 17, 20], [17, 3, 20],  [17, 18, 3],
+│ │ -            [17, 12, 18], [12, 2, 18],  [15, 16, 5],  [15, 13, 16],
+│ │ -            [13, 0, 16],  [12, 14, 2],  [12, 13, 14], [13, 1, 14]]
+│ │ +indices = [[0, 13, 12], [1, 13, 15], [0, 12, 17], [0, 17, 19],
+│ │ +           [0, 19, 16], [1, 15, 22], [2, 14, 24], [3, 18, 26],
+│ │ +           [4, 20, 28], [5, 21, 30], [1, 22, 25], [2, 24, 27],
+│ │ +           [3, 26, 29], [4, 28, 31], [5, 30, 23], [6, 32, 37],
+│ │ +           [7, 33, 39], [8, 34, 40], [9, 35, 41], [10, 36, 38],
+│ │ +           [38, 41, 11], [38, 36, 41], [36, 9, 41], [41, 40, 11],
+│ │ +           [41, 35, 40], [35, 8, 40], [40, 39, 11], [40, 34, 39],
+│ │ +           [34, 7, 39], [39, 37, 11], [39, 33, 37], [33, 6, 37],
+│ │ +           [37, 38, 11], [37, 32, 38], [32, 10, 38], [23, 36, 10],
+│ │ +           [23, 30, 36], [30, 9, 36], [31, 35, 9], [31, 28, 35],
+│ │ +           [28, 8, 35], [29, 34, 8], [29, 26, 34], [26, 7, 34],
+│ │ +           [27, 33, 7], [27, 24, 33], [24, 6, 33], [25, 32, 6],
+│ │ +           [25, 22, 32], [22, 10, 32], [30, 31, 9], [30, 21, 31],
+│ │ +           [21, 4, 31], [28, 29, 8], [28, 20, 29], [20, 3, 29],
+│ │ +           [26, 27, 7], [26, 18, 27], [18, 2, 27], [24, 25, 6],
+│ │ +           [24, 14, 25], [14, 1, 25], [22, 23, 10], [22, 15, 23],
+│ │ +           [15, 5, 23], [16, 21, 5], [16, 19, 21], [19, 4, 21],
+│ │ +           [19, 20, 4], [19, 17, 20], [17, 3, 20], [17, 18, 3],
+│ │ +           [17, 12, 18], [12, 2, 18], [15, 16, 5], [15, 13, 16],
+│ │ +           [13, 0, 16], [12, 14, 2], [12, 13, 14], [13, 1, 14]]
+│ │  
+│ │ -colors = [[255, 255, 255, 255]] * 42
+│ │ +
+│ │ +# colors = [[0.0, 1, 0.0, 1]] * 42
+│ │  
+│ │  
+│ │  def create_spheres(server: rigatoni.Server, context, *args):
+│ │      """Test method to create two spheres"""
+│ │ -    
+│ │ +
+│ │      name = "Test Sphere"
+│ │ -    material = server.create_component(nooobs.Material, name="Test Material")
+│ │ +    # uri_server = geo.ByteServer(port=40000)
+│ │ +    material = server.create_component(rigatoni.Material, name="Test Material")
+│ │  
+│ │      # Create Patch
+│ │      patches = []
+│ │ -    patch_info = geoobs.GeometryPatchInput(
+│ │ -        vertices = vertices, 
+│ │ -        indices = indices, 
+│ │ -        index_type = "TRIANGLES",
+│ │ -        material = material.id,
+│ │ -        colors = colors
+│ │ +    patch_info = geo.GeometryPatchInput(
+│ │ +        vertices=vertices,
+│ │ +        indices=indices,
+│ │ +        index_type="TRIANGLES",
+│ │ +        material=material.id
+│ │      )
+│ │ -    patches.append(rigatoni.geometry.build_geometry_patch(server, name, patch_info))
+│ │ +    patches.append(geo.build_geometry_patch(server, name, patch_info))
+│ │  
+│ │      # Create geometry using patches
+│ │ -    sphere = server.create_component(nooobs.Geometry, name=name, patches=patches)
+│ │ +    sphere = server.create_component(rigatoni.Geometry, name=name, patches=patches)
+│ │  
+│ │      # Set instances and create an entity
+│ │ -    instances = rigatoni.geometry.create_instances(
+│ │ -        positions=[(1,1,1,1),(2,2,2,2)],
+│ │ -        colors=[(1,.5,.5,1)],
+│ │ -        rotations=[(45, 20, 0, 0)]
+│ │ +    instances = geo.create_instances(
+│ │ +        positions=[(1, 1, 1, 1), (2, 2, 2, 2)],
+│ │ +        colors=[(1.0, .5, .5, 1.0)],
+│ │      )
+│ │ -    entity = rigatoni.geometry.build_entity(server, geometry=sphere, instances=instances)
+│ │ +    entity = geo.build_entity(server, geometry=sphere, instances=instances)
+│ │ +    geo.export_mesh(server, sphere, "test_sphere.obj")
+│ │ +
+│ │ +    # Add Lighting
+│ │ +    point_info = rigatoni.PointLight(range=-1)
+│ │ +    mat = [
+│ │ +        1, 0, 0, 0,
+│ │ +        0, 1, 0, 0,
+│ │ +        0, 0, 1, 0,
+│ │ +        3, 3, 3, 1
+│ │ +    ]
+│ │ +    light = server.create_component(rigatoni.Light, name="Test Point Light", point=point_info)
+│ │ +    # light2 = server.create_component(rigatoni.Light, name="Sun", intensity=5, directional=rigatoni.DirectionalLight())
+│ │ +    #server.create_component(rigatoni.Entity, transform=mat, lights=[light.id])
+│ │ +
+│ │ +    spot_info = rigatoni.SpotLight()
+│ │ +    mat = [
+│ │ +        1, 0, 0, 0,
+│ │ +        0, 1, 0, 0,
+│ │ +        0, 0, 1, 0,
+│ │ +        0, 0, 3, 1
+│ │ +    ]
+│ │ +    spot = server.create_component(rigatoni.Light, name="Test Spot Light", spot=spot_info)
+│ │ +    #server.create_component(rigatoni.Entity, transform=mat, lights=[spot.id])
+│ │ +
+│ │ +    direction_info = rigatoni.DirectionalLight()
+│ │ +    mat = [
+│ │ +        1, 0, 0, 0,
+│ │ +        0, 1, 0, 0,
+│ │ +        0, 0, 1, 0,
+│ │ +        0, 5, 0, 1
+│ │ +    ]
+│ │ +    directional = server.create_component(rigatoni.Light, name="Test Spot Light", directional=direction_info)
+│ │ +    #server.create_component(rigatoni.Entity, transform=mat, lights=[directional.id])
+│ │ +
+│ │      return 1
+│ │  
+│ │  
+│ │ -def create_new_instance(server: rigatoni.Server, context, entity_slot, entity_gen, position=None, color=None, rotation=None, scale=None):
+│ │ +def create_new_instance(server: rigatoni.Server, context, entity_id: list[int], position=None, color=None,
+│ │ +                        rotation=None, scale=None):
+│ │      """Method to test instance updating"""
+│ │ -    
+│ │ -    entity = server.components[nooobs.EntityID(entity_slot, entity_gen)]
+│ │ -    new_instance = rigatoni.geometry.create_instances(position, color, rotation, scale)
+│ │ -    rigatoni.geometry.add_instances(server, entity, new_instance)
+│ │ +
+│ │ +    entity = server.get_component(rigatoni.EntityID(*entity_id))
+│ │ +    new_instance = geo.create_instances(position, color, rotation, scale)
+│ │ +    geo.add_instances(server, entity, new_instance)
+│ │  
+│ │  
+│ │  def normalize_df(df: pd.DataFrame):
+│ │      """Helper to normalize values in a dataframe"""
+│ │  
+│ │      normalized_df = df.copy()
+│ │      for column in normalized_df:
+│ │ -            normalized_df[column] = (df[column] - df[column].min()) / (df[column].max() - df[column].min())    
+│ │ +        normalized_df[column] = (df[column] - df[column].min()) / (df[column].max() - df[column].min())
+│ │  
+│ │      return normalized_df
+│ │  
+│ │ +
+│ │  def make_point_plot(server: rigatoni.Server, context, *args):
+│ │      """Test Method to generate plot-like render from data.csv"""
+│ │  
+│ │      name = "Test Plot"
+│ │ -    material = server.create_component(nooobs.Material, name="Test Material")
+│ │ +    material = server.create_component(rigatoni.Material, name="Test Material")
+│ │ +
+│ │ +    # Add Lighting
+│ │ +    point_info = rigatoni.PointLight(range=-1)
+│ │ +    mat = [
+│ │ +        1, 0, 0, 0,
+│ │ +        0, 1, 0, 0,
+│ │ +        0, 0, 1, 0,
+│ │ +        3, 3, 3, 1
+│ │ +    ]
+│ │ +    light = server.create_component(rigatoni.Light, name="Test Point Light", point=point_info)
+│ │ +    sun = server.create_component(rigatoni.Light, name="Sun", intensity=1, directional=rigatoni.DirectionalLight())
+│ │ +    server.create_component(rigatoni.Entity, transform=mat, lights=[light.id])
+│ │ +
+│ │ +    spot_info = rigatoni.SpotLight()
+│ │ +    mat = [
+│ │ +        1, 0, 0, 0,
+│ │ +        0, 1, 0, 0,
+│ │ +        0, 0, 1, 0,
+│ │ +        0, 3, 0, 1
+│ │ +    ]
+│ │ +    spot = server.create_component(rigatoni.Light, name="Test Spot Light", spot=spot_info)
+│ │ +    server.create_component(rigatoni.Entity, transform=mat, lights=[spot.id])
+│ │  
+│ │      # Create patch / geometry for point geometry
+│ │      patches = []
+│ │ -    patch_info = geoobs.GeometryPatchInput(
+│ │ -        vertices = vertices, 
+│ │ -        indices = indices, 
+│ │ -        index_type = "TRIANGLES",
+│ │ -        material = material.id,
+│ │ -        colors = colors)
+│ │ -    patches.append(rigatoni.geometry.build_geometry_patch(server, name, patch_info))
+│ │ -    sphere = server.create_component(nooobs.Geometry, name=name, patches=patches)
+│ │ +    patch_info = geo.GeometryPatchInput(
+│ │ +        vertices=vertices,
+│ │ +        indices=indices,
+│ │ +        index_type="TRIANGLES",
+│ │ +        material=material.id
+│ │ +    )
+│ │ +    patches.append(geo.build_geometry_patch(server, name, patch_info))
+│ │ +    sphere = server.create_component(rigatoni.Geometry, name=name, patches=patches)
+│ │  
+│ │      # Read data from data.csv and normalize
+│ │      df = pd.read_csv("/Users/aracape/development/rigatoni/tests/data.csv")
+│ │      df_scaled = normalize_df(df)
+│ │ -    
+│ │ +
+│ │      # Positions
+│ │ -    x = list(df_scaled['Total_CNG'].apply(lambda x: x*5-2.5))
+│ │ -    y = list(df_scaled['Total_Elec'].apply(lambda x: x*5))
+│ │ -    z = list(df_scaled['Elec_price_incentive'].apply(lambda x: x*5-2.5))
+│ │ +    x = list(df_scaled['Total_CNG'].apply(lambda x: x * 5 - 2.5))
+│ │ +    y = list(df_scaled['Total_Elec'].apply(lambda x: x * 5))
+│ │ +    z = list(df_scaled['Elec_price_incentive'].apply(lambda x: x * 5 - 2.5))
+│ │  
+│ │      # Colors
+│ │      cmap = matplotlib.cm.get_cmap("plasma")
+│ │      cols = df_scaled['CNG_price_incentive']
+│ │      cols = [cmap(i) for i in cols]
+│ │  
+│ │      # Scales
+│ │      s = .1
+│ │ -    scls = [(i*s, i*s, i*s, i*s) for i in list(df_scaled['FCI_incentive_amount[CNG]'])]
+│ │ +    scls = [(i * s, i * s, i * s, i * s) for i in list(df_scaled['FCI_incentive_amount[CNG]'])]
+│ │  
+│ │      # Create instances of sphere to represent csv data in an entity
+│ │ -    instances = rigatoni.geometry.create_instances(
+│ │ +    instances = geo.create_instances(
+│ │          positions=[*zip(x, y, z)],
+│ │          colors=cols,
+│ │          scales=scls
+│ │      )
+│ │ -    entity = rigatoni.geometry.build_entity(server, geometry=sphere, instances=instances)
+│ │ -    new_instance = rigatoni.geometry.create_instances([[1,1,1]])
+│ │ -    rigatoni.geometry.add_instances(server, entity, new_instance)
+│ │ -    return 1
+│ │ +    entity = geo.build_entity(server, geometry=sphere, instances=instances)
+│ │ +    # new_instance = geo.create_instances([[1,1,1]])
+│ │ +    # geo.add_instances(server, entity, new_instance)
+│ │ +    return 0
+│ │ +
+│ │ +
+│ │ +def create_from_mesh(server: rigatoni.Server, context, *args):
+│ │ +    """Test Method to generate render from mesh"""
+│ │ +
+│ │ +    name = "Test Mesh"
+│ │ +    material = server.create_component(rigatoni.Material, name="Test Material")
+│ │ +
+│ │ +    # use libraries from mesh option    
+│ │ +    uri_server = geo.ByteServer(port=60000)
+│ │ +    mesh = geo.geometry_from_mesh(server, "/Users/aracape/development/rigatoni/tests/stanford-bunny.obj", material,
+│ │ +                                  name, uri_server)
+│ │ +    # mesh = geo.geometry_from_mesh(server, "/Users/aracape/development/test_sphere.vtk", material)
+│ │ +    # mesh = geo.geometry_from_mesh(server, "/Users/aracape/development/rigatoni/tests/magvort.x3d", material, name, uri_server, generate_normals=False)
+│ │ +    # mesh = geo.geometry_from_mesh(server, "/Users/aracape/development/rigatoni/tests/boot.obj", material, name, uri_server)
+│ │ +
+│ │ +    # Create instances of sphere to represent csv data in an entity
+│ │ +    instances = geo.create_instances()
+│ │ +    entity = geo.build_entity(server, geometry=mesh, instances=instances)
+│ │ +
+│ │ +    # Test export
+│ │ +    geo.export_mesh(server, mesh, "test_mesh.obj", uri_server)
+│ │ +    return 0
+│ │ +
+│ │ +
+│ │ +def delete_sphere(server: rigatoni.Server, context, *args):
+│ │ +    sphere = server.get_component_id(rigatoni.Entity, "Test Sphere")
+│ │ +    server.delete_component(sphere)
+│ │ +
+│ │ +    return 0
+│ │  
+│ │  
+│ │  # define arg documentation for injected method
+│ │  instance_args = [
+│ │ -    nooobs.MethodArg(name="entity_slot", doc="What're you creating an instance of?", editor_hint="ID"),
+│ │ -    nooobs.MethodArg(name="entity_gen", doc="What're you creating an instance of?", editor_hint="ID"),
+│ │ -    nooobs.MethodArg(name="position", doc="Where are you putting this instance", editor_hint="Vector"),
+│ │ -    nooobs.MethodArg(name="color", doc="What color is this instance?", editor_hint="RGBA Vector"),
+│ │ -    nooobs.MethodArg(name="rotation", doc="How is this instance rotated?", editor_hint="Vector"),
+│ │ -    nooobs.MethodArg(name="scale", doc="How is this instance scaled?", editor_hint="Vector")
+│ │ +    rigatoni.MethodArg(name="entity id", doc="What're you creating an instance of?", editor_hint="noo::entity_id"),
+│ │ +    rigatoni.MethodArg(name="position", doc="Where are you putting this instance? vec3", editor_hint="noo::array"),
+│ │ +    rigatoni.MethodArg(name="color", doc="What color is this instance? RGBA Vector", editor_hint="noo::array"),
+│ │ +    rigatoni.MethodArg(name="rotation", doc="How is this instance rotated? Vec4", editor_hint="noo::array"),
+│ │ +    rigatoni.MethodArg(name="scale", doc="How is this instance scaled? Vec3", editor_hint="noo::array")
+│ │  ]
+│ │  
+│ │  # Define starting state
+│ │  starting_state = [
+│ │ -    nooobs.StartingComponent(nooobs.Method, {"name": "new_point_plot", "arg_doc": []}, make_point_plot),
+│ │ -    nooobs.StartingComponent(nooobs.Method, {"name": "create_new_instance", "arg_doc": [*instance_args]}, create_new_instance),
+│ │ -    nooobs.StartingComponent(nooobs.Method, {"name": "create_sphere", "arg_doc": []}, create_spheres)
+│ │ +    rigatoni.StartingComponent(rigatoni.Method, {"name": "new_point_plot", "arg_doc": []}, make_point_plot),
+│ │ +    rigatoni.StartingComponent(rigatoni.Method, {"name": "create_new_instance", "arg_doc": [*instance_args]},
+│ │ +                               create_new_instance),
+│ │ +    rigatoni.StartingComponent(rigatoni.Method, {"name": "create_sphere", "arg_doc": []}, create_spheres),
+│ │ +    rigatoni.StartingComponent(rigatoni.Method, {"name": "create_from_mesh", "arg_doc": []}, create_from_mesh),
+│ │ +    rigatoni.StartingComponent(rigatoni.Method, {"name": "delete_sphere", "arg_doc": []}, delete_sphere)
+│ │  ]
+│ │  
+│ │ +
+│ │  def main():
+│ │ -    asyncio.run(start_server(50000, starting_state))
+│ │ +    asyncio.run(rigatoni.start_server(50000, starting_state))
+│ │ +
+│ │  
+│ │  if __name__ == "__main__":
+│ │      main()
+│ │   --- rigatoni-0.1.1/tests/test_server.py
+│ ├── +++ rigatoni-0.1.2/tests/test_server.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -9,15 +9,15 @@
+│ │  
+│ │  import pandas as pd
+│ │  
+│ │  from context import rigatoni
+│ │  from rigatoni.server import start_server
+│ │  from rigatoni.core import Server
+│ │  import rigatoni.noodle_objects as nooobs
+│ │ -import rigatoni.interface as interface
+│ │ +import rigatoni.delegates as interface
+│ │  
+│ │  def new_point_plot(server: Server, context: dict, xs, ys, zs, colors=None, sizes=None):
+│ │  
+│ │      # Create component and state and get delegate reference
+│ │      tbl_delegate: CustomTableDelegate = server.create_component(
+│ │          nooobs.Table, 
+│ │          name="Custom Table",
+│ │   --- rigatoni-0.1.1/PKG-INFO
+│ ├── +++ rigatoni-0.1.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: rigatoni
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Python Server Library for NOODLES Protocol
+│ │  Keywords: noodles,cbor,Websockets,server,NOODLES
+│ │  Author: Alex Racapé
+│ │  Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Programming Language :: Python :: 3

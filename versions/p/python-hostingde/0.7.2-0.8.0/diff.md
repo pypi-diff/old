@@ -1,0 +1,437 @@
+# Comparing `tmp/python-hostingde-0.7.2.tar.gz` & `tmp/python-hostingde-0.8.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "python-hostingde-0.7.2.tar", last modified: Tue Jan  3 15:50:28 2023, max compression
++gzip compressed data, was "python-hostingde-0.8.0.tar", last modified: Thu Apr  6 15:26:18 2023, max compression
+```
+
+## Comparing `python-hostingde-0.7.2.tar` & `python-hostingde-0.8.0.tar`
+
+### file list
+
+```diff
+@@ -1,55 +1,56 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.763074 python-hostingde-0.7.2/
+--rw-r--r--   0 root         (0) root         (0)     1064 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/LICENSE
+--rw-r--r--   0 root         (0) root         (0)     8368 2023-01-03 15:50:28.763074 python-hostingde-0.7.2/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     7347 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/README.md
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/
+--rw-r--r--   0 root         (0) root         (0)      131 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      135 2023-01-03 15:50:25.000000 python-hostingde-0.7.2/hostingde/__version__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/account/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/account/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     1755 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/account/account.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/account/requests/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/account/requests/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      563 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/api.py
+--rw-r--r--   0 root         (0) root         (0)      566 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/client.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/dns/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/__init__.py
+--rw-r--r--   0 root         (0) root         (0)    20194 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/dns.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/dns/requests/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/requests/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      416 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/requests/create_new_zone.py
+--rw-r--r--   0 root         (0) root         (0)      206 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/requests/delete_zone.py
+--rw-r--r--   0 root         (0) root         (0)      574 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/dns/requests/update_zone_request.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/domain/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/domain/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     5563 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/domain/domain.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.759074 python-hostingde-0.7.2/hostingde/domain/requests/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/domain/requests/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      920 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/domain/requests/check_availability.py
+--rw-r--r--   0 root         (0) root         (0)      179 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/domain/requests/register_domain.py
+--rw-r--r--   0 root         (0) root         (0)      531 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/exceptions.py
+--rw-r--r--   0 root         (0) root         (0)     5555 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/hostingde.py
+--rw-r--r--   0 root         (0) root         (0)     1803 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/job_waiter.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.763074 python-hostingde-0.7.2/hostingde/model/
+--rw-r--r--   0 root         (0) root         (0)     2854 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     1054 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/account.py
+--rw-r--r--   0 root         (0) root         (0)     4994 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/domain.py
+--rw-r--r--   0 root         (0) root         (0)     2213 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/domain_contact.py
+--rw-r--r--   0 root         (0) root         (0)    12691 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/filter.py
+--rw-r--r--   0 root         (0) root         (0)     2311 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/job.py
+--rw-r--r--   0 root         (0) root         (0)     4779 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/record.py
+--rw-r--r--   0 root         (0) root         (0)     1475 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/soa_values.py
+--rw-r--r--   0 root         (0) root         (0)      732 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/sort.py
+--rw-r--r--   0 root         (0) root         (0)      620 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/zone.py
+--rw-r--r--   0 root         (0) root         (0)     6620 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/model/zone_config.py
+--rw-r--r--   0 root         (0) root         (0)     4779 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/paginator.py
+--rw-r--r--   0 root         (0) root         (0)     3095 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/hostingde/session.py
+--rw-r--r--   0 root         (0) root         (0)      393 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/pyproject.toml
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-01-03 15:50:28.763074 python-hostingde-0.7.2/python_hostingde.egg-info/
+--rw-r--r--   0 root         (0) root         (0)     8368 2023-01-03 15:50:28.000000 python-hostingde-0.7.2/python_hostingde.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     1241 2023-01-03 15:50:28.000000 python-hostingde-0.7.2/python_hostingde.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-01-03 15:50:28.000000 python-hostingde-0.7.2/python_hostingde.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)      124 2023-01-03 15:50:28.000000 python-hostingde-0.7.2/python_hostingde.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       10 2023-01-03 15:50:28.000000 python-hostingde-0.7.2/python_hostingde.egg-info/top_level.txt
+--rw-r--r--   0 root         (0) root         (0)       90 2023-01-03 15:50:28.763074 python-hostingde-0.7.2/setup.cfg
+--rw-r--r--   0 root         (0) root         (0)     1748 2023-01-03 15:50:24.000000 python-hostingde-0.7.2/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.601296 python-hostingde-0.8.0/
++-rw-r--r--   0 root         (0) root         (0)     1064 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/LICENSE
++-rw-r--r--   0 root         (0) root         (0)     8368 2023-04-06 15:26:18.601296 python-hostingde-0.8.0/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     7347 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/README.md
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/
++-rw-r--r--   0 root         (0) root         (0)      131 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      135 2023-04-06 15:26:15.000000 python-hostingde-0.8.0/hostingde/__version__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/account/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/account/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     1755 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/account/account.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/account/requests/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/account/requests/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      563 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/api.py
++-rw-r--r--   0 root         (0) root         (0)      566 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/client.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/dns/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/__init__.py
++-rw-r--r--   0 root         (0) root         (0)    22828 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/dns.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/dns/requests/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/requests/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      416 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/requests/create_new_zone.py
++-rw-r--r--   0 root         (0) root         (0)      206 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/requests/delete_zone.py
++-rw-r--r--   0 root         (0) root         (0)      568 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/requests/update_records_request.py
++-rw-r--r--   0 root         (0) root         (0)      574 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/dns/requests/update_zone_request.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/domain/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/domain/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     5563 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/domain/domain.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.593296 python-hostingde-0.8.0/hostingde/domain/requests/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/domain/requests/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      920 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/domain/requests/check_availability.py
++-rw-r--r--   0 root         (0) root         (0)      179 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/domain/requests/register_domain.py
++-rw-r--r--   0 root         (0) root         (0)      531 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/exceptions.py
++-rw-r--r--   0 root         (0) root         (0)     5555 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/hostingde.py
++-rw-r--r--   0 root         (0) root         (0)     1803 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/job_waiter.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.597296 python-hostingde-0.8.0/hostingde/model/
++-rw-r--r--   0 root         (0) root         (0)     2854 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     1054 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/account.py
++-rw-r--r--   0 root         (0) root         (0)     4994 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/domain.py
++-rw-r--r--   0 root         (0) root         (0)     2213 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/domain_contact.py
++-rw-r--r--   0 root         (0) root         (0)    12691 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/filter.py
++-rw-r--r--   0 root         (0) root         (0)     2311 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/job.py
++-rw-r--r--   0 root         (0) root         (0)     4779 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/record.py
++-rw-r--r--   0 root         (0) root         (0)     1475 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/soa_values.py
++-rw-r--r--   0 root         (0) root         (0)      732 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/sort.py
++-rw-r--r--   0 root         (0) root         (0)      620 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/zone.py
++-rw-r--r--   0 root         (0) root         (0)     6620 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/model/zone_config.py
++-rw-r--r--   0 root         (0) root         (0)     4779 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/paginator.py
++-rw-r--r--   0 root         (0) root         (0)     3095 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/hostingde/session.py
++-rw-r--r--   0 root         (0) root         (0)      393 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/pyproject.toml
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:26:18.601296 python-hostingde-0.8.0/python_hostingde.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     8368 2023-04-06 15:26:18.000000 python-hostingde-0.8.0/python_hostingde.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     1290 2023-04-06 15:26:18.000000 python-hostingde-0.8.0/python_hostingde.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 15:26:18.000000 python-hostingde-0.8.0/python_hostingde.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)      124 2023-04-06 15:26:18.000000 python-hostingde-0.8.0/python_hostingde.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       10 2023-04-06 15:26:18.000000 python-hostingde-0.8.0/python_hostingde.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)       90 2023-04-06 15:26:18.601296 python-hostingde-0.8.0/setup.cfg
++-rw-r--r--   0 root         (0) root         (0)     1748 2023-04-06 15:26:14.000000 python-hostingde-0.8.0/setup.py
+```
+
+### Comparing `python-hostingde-0.7.2/LICENSE` & `python-hostingde-0.8.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/PKG-INFO` & `python-hostingde-0.8.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: python-hostingde
+-Version: 0.7.2
++Version: 0.8.0
+ Summary: Interact with HostingDe API
+ Home-page: https://github.com/cancom/python-hostingde
+ Author: CANCOM OpenSource
+ Author-email: opensource@cancom.de
+ License: MIT
+ Project-URL: Source, https://github.com/cancom/python-hostingde
+ Project-URL: Bug Reports, https://github.com/cancom/python-hostingde/issues
+```
+
+### Comparing `python-hostingde-0.7.2/README.md` & `python-hostingde-0.8.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/account/account.py` & `python-hostingde-0.8.0/hostingde/account/account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/api.py` & `python-hostingde-0.8.0/hostingde/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/client.py` & `python-hostingde-0.8.0/hostingde/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/dns/dns.py` & `python-hostingde-0.8.0/hostingde/dns/dns.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ from typing import List, Optional
+ 
+ from hostingde.dns.requests.create_new_zone import CreateZoneRequest
+ from hostingde.dns.requests.delete_zone import DeleteZoneRequest
++from hostingde.dns.requests.update_records_request import UpdateRecordsRequest
+ from hostingde.dns.requests.update_zone_request import UpdateZoneRequest
+ from hostingde.exceptions import ClientException
+ from hostingde.hostingde import HostingDeCore
+ from hostingde.job_waiter import AsynchronousClient, JobWaiter
+ from hostingde.model.filter import FilterElement
+ from hostingde.model.job import Job
+ from hostingde.model.record import Record
+@@ -279,15 +280,15 @@
+ 
+     def update_zone(
+         self,
+         zone_config: ZoneConfig,
+         records_to_add: Optional[List[Record]] = None,
+         records_to_delete: Optional[List[Record]] = None,
+         records_to_modify: Optional[List[Record]] = None,
+-        asynchronous: Optional[bool] = None,
++        asynchronous: Optional[bool] = None
+     ) -> Zone:
+         """
+         You can use zoneUpdate to make adjustments to the zone's zoneConfig, to remove records, to add new records or
+         to modify existing records.
+ 
+         All records in recordsToAdd will be added to the zone, while all records in recordsToDelete will be deleted.
+         All records in recordsToModify will be modified. If you insert a record that does not exist into recordsToDelete
+@@ -317,51 +318,108 @@
+         zone = self._instance(Zone, response.json().get('response', {}))
+ 
+         if not asynchronous and zone.zone_config.id is not None:
+             JobWaiter(self, zone.zone_config.id).wait()
+ 
+         return zone
+ 
++    def records_update(
++        self,
++        zone_config_id: Optional[str] = None,
++        zone_config_name: Optional[str] = None,
++        records_to_add: Optional[List[Record]] = None,
++        records_to_delete: Optional[List[Record]] = None,
++        records_to_modify: Optional[List[Record]] = None,
++        asynchronous: Optional[bool] = None,
++        dry_run: Optional[bool] = False
++    ) -> Zone:
++        """
++        You can use zoneUpdate to make adjustments to the zone's zoneConfig, to remove records, to add new records or
++        to modify existing records.
++
++        All records in recordsToAdd will be added to the zone, while all records in recordsToDelete will be deleted.
++        All records in recordsToModify will be modified. If you insert a record that does not exist into recordsToDelete
++        or recordsToModify, an error will occur.
++
++        Existing records that are not contained in either list will not be changed.
++
++        :param zone_config_id: id of the zone to update. Optional, but at least one of zone_config_id and
++                               zone_config_name is required
++        :param zone_config_name: name of the zone to update. Optional, but at least one of zone_config_id and
++                               zone_config_name is required
++        :param records_to_add: Records to be added
++        :param records_to_delete: Records to be modified
++        :param records_to_modify: Records to be deleted
++        :param asynchronous: Update the zone asynchronously. If not provided, defaults to synchronous mode.
++        :param dry_run: Don't perform the zone update, but only check if it might succeed.
++        :return:
++        """
++        url = self.build_uri('recordsUpdate')
++        if dry_run:
++            url += "Check"
++
++        response = self._request(
++            url,
++            UpdateRecordsRequest(
++                zone_config_id=zone_config_id,
++                zone_config_name=zone_config_name,
++                records_to_add=records_to_add,
++                records_to_delete=records_to_delete,
++                records_to_modify=records_to_modify,
++            ),
++        )
++
++        zone = self._instance(Zone, response.json().get('response', {}))
++
++        if not dry_run and not asynchronous and zone.zone_config.id is not None:
++            JobWaiter(self, zone.zone_config.id).wait()
++
++        return zone
++
+     def create_zone(
+         self,
+         zone_config: ZoneConfig,
+         records: List = None,
+         nameserver_set_id: Optional[str] = None,
+         use_default_nameserver_set: Optional[bool] = None,
+         asynchronous: Optional[bool] = None,
++        dry_run: Optional[bool] = False
+     ) -> Zone:
+         """
+         To create a zone, you need at least a zoneConfig.
+ 
+         A zone may be created manually or from a template. If you want to use a template, you have to at least provide
+         a template ID in the zoneConfig's template values property. See template object for more details.
+ 
+         See NameserverSet object for more details on using nameserver sets.
+ 
+         :param zone_config: zoneConfig of the zone
+         :param records: Records of the zone
+         :param nameserver_set_id: NameserverSet to use for automatic creation of NS records. Default: 0
+         :param use_default_nameserver_set: Use your account's default nameserver set. Default: false
+         :param asynchronous: Create the zone asynchronously. If not provided, defaults to False (synchronous mode).
++        :param dry_run: Don't perform the zone creation, but only check if it might succeed.
+         :return:
+         """
+         if records is None:
+             records = []
+ 
+         url = self.build_uri('zoneCreate')
++        if dry_run:
++            url += "Check"
+ 
+         response = self._request(
+             url,
+             CreateZoneRequest(
+                 zone_config=zone_config,
+                 records=records,
+                 nameserver_set_id=nameserver_set_id,
+                 use_default_nameserver_set=use_default_nameserver_set,
+             ),
+         )
+ 
+         zone: Zone = self._instance(Zone, response.json().get('response', {}))
+ 
+-        if not asynchronous and zone.zone_config.id is not None:
++        if not dry_run and not asynchronous and zone.zone_config.id is not None:
+             JobWaiter(self, zone.zone_config.id).wait()
+ 
+         return zone
+```
+
+### Comparing `python-hostingde-0.7.2/hostingde/dns/requests/update_zone_request.py` & `python-hostingde-0.8.0/hostingde/dns/requests/update_zone_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/domain/domain.py` & `python-hostingde-0.8.0/hostingde/domain/domain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/domain/requests/check_availability.py` & `python-hostingde-0.8.0/hostingde/domain/requests/check_availability.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/exceptions.py` & `python-hostingde-0.8.0/hostingde/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/hostingde.py` & `python-hostingde-0.8.0/hostingde/hostingde.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/job_waiter.py` & `python-hostingde-0.8.0/hostingde/job_waiter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/__init__.py` & `python-hostingde-0.8.0/hostingde/model/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/account.py` & `python-hostingde-0.8.0/hostingde/model/account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/domain.py` & `python-hostingde-0.8.0/hostingde/model/domain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/domain_contact.py` & `python-hostingde-0.8.0/hostingde/model/domain_contact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/filter.py` & `python-hostingde-0.8.0/hostingde/model/filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/job.py` & `python-hostingde-0.8.0/hostingde/model/job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/record.py` & `python-hostingde-0.8.0/hostingde/model/record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/soa_values.py` & `python-hostingde-0.8.0/hostingde/model/soa_values.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/sort.py` & `python-hostingde-0.8.0/hostingde/model/sort.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/zone.py` & `python-hostingde-0.8.0/hostingde/model/zone.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/model/zone_config.py` & `python-hostingde-0.8.0/hostingde/model/zone_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/paginator.py` & `python-hostingde-0.8.0/hostingde/paginator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/hostingde/session.py` & `python-hostingde-0.8.0/hostingde/session.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python-hostingde-0.7.2/python_hostingde.egg-info/PKG-INFO` & `python-hostingde-0.8.0/python_hostingde.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: python-hostingde
+-Version: 0.7.2
++Version: 0.8.0
+ Summary: Interact with HostingDe API
+ Home-page: https://github.com/cancom/python-hostingde
+ Author: CANCOM OpenSource
+ Author-email: opensource@cancom.de
+ License: MIT
+ Project-URL: Source, https://github.com/cancom/python-hostingde
+ Project-URL: Bug Reports, https://github.com/cancom/python-hostingde/issues
+```
+
+### Comparing `python-hostingde-0.7.2/python_hostingde.egg-info/SOURCES.txt` & `python-hostingde-0.8.0/python_hostingde.egg-info/SOURCES.txt`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -16,14 +16,15 @@
+ hostingde/account/account.py
+ hostingde/account/requests/__init__.py
+ hostingde/dns/__init__.py
+ hostingde/dns/dns.py
+ hostingde/dns/requests/__init__.py
+ hostingde/dns/requests/create_new_zone.py
+ hostingde/dns/requests/delete_zone.py
++hostingde/dns/requests/update_records_request.py
+ hostingde/dns/requests/update_zone_request.py
+ hostingde/domain/__init__.py
+ hostingde/domain/domain.py
+ hostingde/domain/requests/__init__.py
+ hostingde/domain/requests/check_availability.py
+ hostingde/domain/requests/register_domain.py
+ hostingde/model/__init__.py
+```
+
+### Comparing `python-hostingde-0.7.2/setup.py` & `python-hostingde-0.8.0/setup.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,656 @@
+# Comparing `tmp/clipped-0.0.1.tar.gz` & `tmp/clipped-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "clipped-0.0.1.tar", last modified: Wed Apr  5 22:41:27 2023, max compression
++gzip compressed data, was "clipped-0.0.2.tar", last modified: Thu Apr  6 15:18:06 2023, max compression
+```
+
+## Comparing `clipped-0.0.1.tar` & `clipped-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,53 +1,53 @@
+-drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-05 22:41:27.277498 clipped-0.0.1/
+--rw-r--r--   0 mourad     (501) staff       (20)      174 2023-04-05 22:14:18.000000 clipped-0.0.1/MANIFEST.in
+--rw-r--r--   0 mourad     (501) staff       (20)     2012 2023-04-05 22:41:27.277565 clipped-0.0.1/PKG-INFO
+-drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-05 22:41:27.276870 clipped-0.0.1/clipped/
+--rw-r--r--   0 mourad     (501) staff       (20)        0 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/__init__.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1004 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/bool_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      646 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/cached_property.py
+--rw-r--r--   0 mourad     (501) staff       (20)      143 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/click_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      664 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/cmd.py
+--rw-r--r--   0 mourad     (501) staff       (20)      569 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/coroutine.py
+--rw-r--r--   0 mourad     (501) staff       (20)      754 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/csv_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     7567 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/date_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     4348 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/deprecated_decorators.py
+--rw-r--r--   0 mourad     (501) staff       (20)     3354 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/dict_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      496 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/encoding.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1093 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/enums_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1910 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/env.py
+--rw-r--r--   0 mourad     (501) staff       (20)     8720 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/formatting.py
+--rw-r--r--   0 mourad     (501) staff       (20)     4730 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/git_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1825 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/hashing.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1175 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/http_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     3322 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/humanize.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1327 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/imports.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1694 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/indentation.py
+--rw-r--r--   0 mourad     (501) staff       (20)      893 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/list_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      113 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/logging_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      824 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/manager_interface.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1923 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/memoize_decorators.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1279 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/np_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     8481 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/path_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      203 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/pkg.py
+--rw-r--r--   0 mourad     (501) staff       (20)        0 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/py.typed
+--rw-r--r--   0 mourad     (501) staff       (20)      674 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/query_params.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1134 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/requests_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1040 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/response_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      558 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/sanitizers.py
+--rw-r--r--   0 mourad     (501) staff       (20)      676 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/serialization.py
+--rw-r--r--   0 mourad     (501) staff       (20)     2686 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/signal_decorators.py
+--rw-r--r--   0 mourad     (501) staff       (20)     2338 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/string_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1114 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/tz_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)     4040 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/units_processors.py
+--rw-r--r--   0 mourad     (501) staff       (20)      269 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/urls_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      613 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/validation.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1128 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/versions.py
+--rw-r--r--   0 mourad     (501) staff       (20)     1067 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/workers_utils.py
+--rw-r--r--   0 mourad     (501) staff       (20)      546 2023-04-05 22:14:18.000000 clipped-0.0.1/clipped/yaml_utils.py
+-drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-05 22:41:27.277362 clipped-0.0.1/clipped.egg-info/
+--rw-r--r--   0 mourad     (501) staff       (20)     2012 2023-04-05 22:41:27.000000 clipped-0.0.1/clipped.egg-info/PKG-INFO
+--rw-r--r--   0 mourad     (501) staff       (20)     1142 2023-04-05 22:41:27.000000 clipped-0.0.1/clipped.egg-info/SOURCES.txt
+--rw-r--r--   0 mourad     (501) staff       (20)        1 2023-04-05 22:41:27.000000 clipped-0.0.1/clipped.egg-info/dependency_links.txt
+--rw-r--r--   0 mourad     (501) staff       (20)        8 2023-04-05 22:41:27.000000 clipped-0.0.1/clipped.egg-info/top_level.txt
+--rw-r--r--   0 mourad     (501) staff       (20)     1032 2023-04-05 22:41:27.277939 clipped-0.0.1/setup.cfg
+--rw-r--r--   0 mourad     (501) staff       (20)     2345 2023-04-05 22:14:18.000000 clipped-0.0.1/setup.py
++drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-06 15:18:06.021237 clipped-0.0.2/
++-rw-r--r--   0 mourad     (501) staff       (20)      174 2023-04-06 15:16:50.000000 clipped-0.0.2/MANIFEST.in
++-rw-r--r--   0 mourad     (501) staff       (20)     2012 2023-04-06 15:18:06.021334 clipped-0.0.2/PKG-INFO
++drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-06 15:18:06.020470 clipped-0.0.2/clipped/
++-rw-r--r--   0 mourad     (501) staff       (20)        0 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/__init__.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1004 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/bool_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      646 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/cached_property.py
++-rw-r--r--   0 mourad     (501) staff       (20)      143 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/click_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      665 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/cmd.py
++-rw-r--r--   0 mourad     (501) staff       (20)      570 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/coroutine.py
++-rw-r--r--   0 mourad     (501) staff       (20)      755 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/csv_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     7568 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/date_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     4349 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/deprecated_decorators.py
++-rw-r--r--   0 mourad     (501) staff       (20)     3354 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/dict_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      496 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/encoding.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1093 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/enums_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1995 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/env.py
++-rw-r--r--   0 mourad     (501) staff       (20)     6222 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/formatting.py
++-rw-r--r--   0 mourad     (501) staff       (20)     4731 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/git_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1825 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/hashing.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1175 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/http_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     3323 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/humanize.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1327 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/imports.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1695 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/indentation.py
++-rw-r--r--   0 mourad     (501) staff       (20)      894 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/list_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      113 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/logging_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      824 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/manager_interface.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1923 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/memoize_decorators.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1280 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/np_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     8482 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/path_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      203 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/pkg.py
++-rw-r--r--   0 mourad     (501) staff       (20)        0 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/py.typed
++-rw-r--r--   0 mourad     (501) staff       (20)      674 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/query_params.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1134 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/requests_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1041 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/response_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      559 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/sanitizers.py
++-rw-r--r--   0 mourad     (501) staff       (20)      676 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/serialization.py
++-rw-r--r--   0 mourad     (501) staff       (20)     2686 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/signal_decorators.py
++-rw-r--r--   0 mourad     (501) staff       (20)     2339 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/string_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1115 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/tz_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)     4040 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/units_processors.py
++-rw-r--r--   0 mourad     (501) staff       (20)      269 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/urls_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      613 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/validation.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1128 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/versions.py
++-rw-r--r--   0 mourad     (501) staff       (20)     1068 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/workers_utils.py
++-rw-r--r--   0 mourad     (501) staff       (20)      546 2023-04-06 15:16:50.000000 clipped-0.0.2/clipped/yaml_utils.py
++drwxr-xr-x   0 mourad     (501) staff       (20)        0 2023-04-06 15:18:06.021095 clipped-0.0.2/clipped.egg-info/
++-rw-r--r--   0 mourad     (501) staff       (20)     2012 2023-04-06 15:18:05.000000 clipped-0.0.2/clipped.egg-info/PKG-INFO
++-rw-r--r--   0 mourad     (501) staff       (20)     1142 2023-04-06 15:18:05.000000 clipped-0.0.2/clipped.egg-info/SOURCES.txt
++-rw-r--r--   0 mourad     (501) staff       (20)        1 2023-04-06 15:18:05.000000 clipped-0.0.2/clipped.egg-info/dependency_links.txt
++-rw-r--r--   0 mourad     (501) staff       (20)        8 2023-04-06 15:18:05.000000 clipped-0.0.2/clipped.egg-info/top_level.txt
++-rw-r--r--   0 mourad     (501) staff       (20)     1032 2023-04-06 15:18:06.021846 clipped-0.0.2/setup.cfg
++-rw-r--r--   0 mourad     (501) staff       (20)     2345 2023-04-06 15:16:50.000000 clipped-0.0.2/setup.py
+```
+
+### Comparing `clipped-0.0.1/PKG-INFO` & `clipped-0.0.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: clipped
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: Common shortcuts and utils.
+ Home-page: https://github.com/mmourafiq/clipped
+ Author: Mourad Mourafiq
+ Author-email: mourad.mourafiq@gmail.com
+ Maintainer: Mourad Mourafiq
+ Maintainer-email: mourad.mourafiq@gmail.com
+ License: Apache 2.0
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: clipped Version: 0.0.1 Summary: Common shortcuts
++Metadata-Version: 2.1 Name: clipped Version: 0.0.2 Summary: Common shortcuts
+ and utils. Home-page: https://github.com/mmourafiq/clipped Author: Mourad
+ Mourafiq Author-email: mourad.mourafiq@gmail.com Maintainer: Mourad Mourafiq
+ Maintainer-email: mourad.mourafiq@gmail.com License: Apache 2.0 Keywords:
+ cli,configuration,utils,setup Platform: any Classifier: Intended Audience ::
+ Information Technology Classifier: Intended Audience :: System Administrators
+ Classifier: Intended Audience :: Developers Classifier: Intended Audience ::
+ Science/Research Classifier: Operating System :: OS Independent Classifier:
+```
+
+### Comparing `clipped-0.0.1/clipped/bool_utils.py` & `clipped-0.0.2/clipped/bool_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/cached_property.py` & `clipped-0.0.2/clipped/cached_property.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/cmd.py` & `clipped-0.0.2/clipped/cmd.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,9 +1,10 @@
+ import os
+ import shlex
++
+ from subprocess import PIPE
+ 
+ from psutil import Popen
+ 
+ 
+ def run_command(cmd, data, location, chw, env=None):
+     cmd_env = None
+```
+
+### Comparing `clipped-0.0.1/clipped/coroutine.py` & `clipped-0.0.2/clipped/coroutine.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import asyncio
++
+ from functools import partial, wraps
+ from typing import Callable
+ 
+ 
+ def coroutine(f: Callable):
+     """https://github.com/pallets/click/issues/85#issuecomment-503464628"""
+```
+
+### Comparing `clipped-0.0.1/clipped/csv_utils.py` & `clipped-0.0.2/clipped/csv_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,10 @@
+ import os
+ import sys
++
+ from io import StringIO
+ from typing import Dict
+ 
+ 
+ def validate_csv(csv: str):
+     if csv and not os.path.exists(csv):
+         csv = StringIO(csv)
+```
+
+### Comparing `clipped-0.0.1/clipped/date_utils.py` & `clipped-0.0.2/clipped/date_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ import os
++import pytz
++
+ from datetime import date, datetime, timedelta
+ from typing import Union
+ 
+-import pytz
+ from dateutil import parser as dt_parser
+ 
+ epoch = datetime(1970, 1, 1, tzinfo=pytz.utc)
+ 
+ 
+ def parse_datetime(value: Union[str, datetime]) -> datetime:
+     if isinstance(value, str):
+```
+
+### Comparing `clipped-0.0.1/clipped/deprecated_decorators.py` & `clipped-0.0.2/clipped/deprecated_decorators.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,10 @@
+ import functools
+ import warnings
++
+ from typing import Optional, Tuple
+ 
+ from clipped.versions import compare_versions
+ 
+ 
+ class DeprecatedWarning(DeprecationWarning):
+     def __init__(self, message, details: Optional[str] = None):
+```
+
+### Comparing `clipped-0.0.1/clipped/dict_utils.py` & `clipped-0.0.2/clipped/dict_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/enums_utils.py` & `clipped-0.0.2/clipped/enums_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/env.py` & `clipped-0.0.2/clipped/env.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,14 +1,16 @@
+ import getpass
+ import logging
+ import os
+ import platform
+ import socket
+ import sys
+ 
++from typing import List
++
+ _logger = logging.getLogger("clipped.env")
+ 
+ 
+ def is_notebook():
+     return "ipykernel" in sys.modules
+ 
+ 
+@@ -34,39 +36,42 @@
+     try:
+         return getpass.getuser()
+     except Exception as e:
+         _logger.debug("Could not detect installed packages, %s", e)
+         return "unknown"
+ 
+ 
+-def get_run_env(package: str = "polyaxon"):
++def get_run_env(packages: List[str]):
+     import pkg_resources
+ 
+     def get_packages():
+         try:
+             installed_packages = [d for d in pkg_resources.working_set]  # noqa
+             return sorted(
+                 ["{}=={}".format(pkg.key, pkg.version) for pkg in installed_packages]
+             )
+         except Exception as e:
+             _logger.debug("Could not detect installed packages, %s", e)
+             return []
+ 
+-    try:
+-        version = pkg_resources.get_distribution(package).version
+-    except pkg_resources.DistributionNotFound:
+-        version = ""
+-    return {
++    data = {
+         "pid": os.getpid(),
+         "hostname": socket.gethostname(),
+         "os": platform.platform(aliased=True),
+         "system": platform.system(),
+         "python_version_verbose": sys.version,
+         "python_version": platform.python_version(),
+         "user": get_user(),
+-        "client_version": version,
+         "sys.argv": sys.argv,
+         "is_notebook": is_notebook(),
+         "filename": get_filename(),
+         "module_path": get_module_path(),
+         "packages": get_packages(),
+     }
++
++    for package in packages:
++        try:
++            data[f"{package}_version"] = pkg_resources.get_distribution(package).version
++        except pkg_resources.DistributionNotFound:
++            data[f"{package}_version"] = ""
++
++    return data
+```
+
+### Comparing `clipped-0.0.1/clipped/git_utils.py` & `clipped-0.0.2/clipped/git_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import os
++
+ from typing import Dict, List, Optional
+ 
+ from clipped.cmd import run_command
+ 
+ 
+ def git_init(repo_path: str):
+     run_command(
+```
+
+### Comparing `clipped-0.0.1/clipped/hashing.py` & `clipped-0.0.2/clipped/hashing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/http_utils.py` & `clipped-0.0.2/clipped/http_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/humanize.py` & `clipped-0.0.2/clipped/humanize.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ from datetime import datetime
+ from typing import Any, Union
+ 
+ import ujson
++
+ from clipped.date_utils import DateTimeFormatter, parse_datetime
+ from clipped.tz_utils import now
+ from clipped.units_processors import to_percentage, to_unit_memory
+ 
+ 
+ def humanize_timestamp(
+     timestamp: Union[str, datetime],
+```
+
+### Comparing `clipped-0.0.1/clipped/imports.py` & `clipped-0.0.2/clipped/imports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/indentation.py` & `clipped-0.0.2/clipped/indentation.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import sys
++
+ from contextlib import contextmanager
+ from typing import Callable, List, Tuple
+ 
+ NEWLINES = ("\n", "\r", "\r\n")
+ INDENT_CHAR = " "
+ INDENT_STRINGS = []
+ STDOUT = sys.stdout.write
+```
+
+### Comparing `clipped-0.0.1/clipped/list_utils.py` & `clipped-0.0.2/clipped/list_utils.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import logging
++
+ from collections.abc import Mapping
+ from typing import Any, List
+ 
+ try:
+     import numpy as np
+ except ImportError:
+     np = None
+```
+
+### Comparing `clipped-0.0.1/clipped/manager_interface.py` & `clipped-0.0.2/clipped/manager_interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/memoize_decorators.py` & `clipped-0.0.2/clipped/memoize_decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/np_utils.py` & `clipped-0.0.2/clipped/np_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import math
++
+ from typing import Any, Dict
+ 
+ try:
+     import numpy as np
+ except ImportError:
+     np = None
+```
+
+### Comparing `clipped-0.0.1/clipped/path_utils.py` & `clipped-0.0.2/clipped/path_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ import logging
+ import os
+ import shutil
+ import tarfile
+ import tempfile
++
+ from contextlib import contextmanager
+ from typing import Any, List, Optional, Pattern, Tuple, Union
+ 
+ from clipped.list_utils import to_list
+ 
+ _logger = logging.getLogger("clipped.path_utils")
+```
+
+### Comparing `clipped-0.0.1/clipped/query_params.py` & `clipped-0.0.2/clipped/query_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/requests_utils.py` & `clipped-0.0.2/clipped/requests_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/response_utils.py` & `clipped-0.0.2/clipped/response_utils.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import urllib.parse as urlparse
++
+ from typing import Any, Dict
+ from urllib.parse import parse_qs
+ 
+ 
+ def get_meta_response(response: Any):
+     def get_pagination(url: str):
+         parsed = urlparse.urlparse(url)
+```
+
+### Comparing `clipped-0.0.1/clipped/sanitizers.py` & `clipped-0.0.2/clipped/sanitizers.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import json
++
+ from collections.abc import Mapping
+ from typing import Dict
+ 
+ 
+ def sanitize_value(d: Dict, handle_dict: bool = False):
+     if isinstance(d, str):
+         return d
+```
+
+### Comparing `clipped-0.0.1/clipped/serialization.py` & `clipped-0.0.2/clipped/serialization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/signal_decorators.py` & `clipped-0.0.2/clipped/signal_decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/string_utils.py` & `clipped-0.0.2/clipped/string_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ import datetime
+ import re
+ import unicodedata
++
+ from decimal import Decimal
+ from typing import Any, Callable
+ 
+ 
+ def strip_spaces(value: str, sep=None, join=True):
+     """Cleans trailing whitespaces and replaces also multiple whitespaces with a single space."""
+     value = value.strip()
+```
+
+### Comparing `clipped-0.0.1/clipped/tz_utils.py` & `clipped-0.0.2/clipped/tz_utils.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
++import pytz
++
+ from datetime import datetime, timedelta
+ from typing import Optional
+ 
+-import pytz
+ from dateutil.tz import tzlocal
+ 
+ try:
+     from django.utils.timezone import now as dj_now  # pylint:disable=import-error
+ except ImportError:
+     dj_now = None
+```
+
+### Comparing `clipped-0.0.1/clipped/units_processors.py` & `clipped-0.0.2/clipped/units_processors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/validation.py` & `clipped-0.0.2/clipped/validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/versions.py` & `clipped-0.0.2/clipped/versions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/clipped/workers_utils.py` & `clipped-0.0.2/clipped/workers_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ import logging
+ import os
+ import signal
+ import threading
++
+ from contextlib import contextmanager
+ from typing import Generator, Optional
+ 
+ _logger = logging.getLogger("clipped.workers")
+ 
+ 
+ def get_pool_workers() -> int:
+```
+
+### Comparing `clipped-0.0.1/clipped/yaml_utils.py` & `clipped-0.0.2/clipped/yaml_utils.py`
+
+ * *Ordering differences only*
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+-from typing import TextIO, Union
+-
+ import yaml
+ 
++from typing import TextIO, Union
++
+ try:
+     from yaml import CSafeDumper as _SafeDumper
+     from yaml import CSafeLoader as _SafeLoader
+ except ImportError:
+     from yaml import SafeDumper as _SafeDumper
+     from yaml import SafeLoader as _SafeLoader
+```
+
+### Comparing `clipped-0.0.1/clipped.egg-info/PKG-INFO` & `clipped-0.0.2/clipped.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: clipped
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: Common shortcuts and utils.
+ Home-page: https://github.com/mmourafiq/clipped
+ Author: Mourad Mourafiq
+ Author-email: mourad.mourafiq@gmail.com
+ Maintainer: Mourad Mourafiq
+ Maintainer-email: mourad.mourafiq@gmail.com
+ License: Apache 2.0
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: clipped Version: 0.0.1 Summary: Common shortcuts
++Metadata-Version: 2.1 Name: clipped Version: 0.0.2 Summary: Common shortcuts
+ and utils. Home-page: https://github.com/mmourafiq/clipped Author: Mourad
+ Mourafiq Author-email: mourad.mourafiq@gmail.com Maintainer: Mourad Mourafiq
+ Maintainer-email: mourad.mourafiq@gmail.com License: Apache 2.0 Keywords:
+ cli,configuration,utils,setup Platform: any Classifier: Intended Audience ::
+ Information Technology Classifier: Intended Audience :: System Administrators
+ Classifier: Intended Audience :: Developers Classifier: Intended Audience ::
+ Science/Research Classifier: Operating System :: OS Independent Classifier:
+```
+
+### Comparing `clipped-0.0.1/clipped.egg-info/SOURCES.txt` & `clipped-0.0.2/clipped.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/setup.cfg` & `clipped-0.0.2/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `clipped-0.0.1/setup.py` & `clipped-0.0.2/setup.py`
+
+ * *Files identical despite different names*
+

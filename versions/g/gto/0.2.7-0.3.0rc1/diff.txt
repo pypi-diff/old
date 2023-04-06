@@ -1,0 +1,583 @@
+--- tmp/gto-0.2.7.tar.gz
++++ tmp/gto-0.3.0rc1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gto-0.2.7.tar", last modified: Thu Dec 22 11:40:48 2022, max compression
+│ +gzip compressed data, was "gto-0.3.0rc1.tar", last modified: Thu Apr  6 15:16:22 2023, max compression
+│   --- gto-0.2.7.tar
+├── +++ gto-0.3.0rc1.tar
+│ ├── file list
+│ │ @@ -1,64 +1,66 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.766286 gto-0.2.7/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      164 2022-12-22 11:40:38.000000 gto-0.2.7/.coveragerc
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.758286 gto-0.2.7/.github/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.762286 gto-0.2.7/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3821 2022-12-22 11:40:38.000000 gto-0.2.7/.github/workflows/check-test-release.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2071 2022-12-22 11:40:38.000000 gto-0.2.7/.gitignore
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1457 2022-12-22 11:40:38.000000 gto-0.2.7/.pre-commit-config.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20057 2022-12-22 11:40:38.000000 gto-0.2.7/.pylintrc
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11345 2022-12-22 11:40:38.000000 gto-0.2.7/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3512 2022-12-22 11:40:48.766286 gto-0.2.7/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2778 2022-12-22 11:40:38.000000 gto-0.2.7/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.762286 gto-0.2.7/gto/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      265 2022-12-22 11:40:38.000000 gto-0.2.7/gto/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      160 2022-12-22 11:40:48.000000 gto-0.2.7/gto/_gto_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      404 2022-12-22 11:40:38.000000 gto-0.2.7/gto/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17289 2022-12-22 11:40:38.000000 gto-0.2.7/gto/api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19695 2022-12-22 11:40:38.000000 gto-0.2.7/gto/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29313 2022-12-22 11:40:38.000000 gto-0.2.7/gto/cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      501 2022-12-22 11:40:38.000000 gto-0.2.7/gto/commit_message_generator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4102 2022-12-22 11:40:38.000000 gto-0.2.7/gto/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2754 2022-12-22 11:40:38.000000 gto-0.2.7/gto/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5762 2022-12-22 11:40:38.000000 gto-0.2.7/gto/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3266 2022-12-22 11:40:38.000000 gto-0.2.7/gto/ext.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      833 2022-12-22 11:40:38.000000 gto-0.2.7/gto/ext_dvc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1368 2022-12-22 11:40:38.000000 gto-0.2.7/gto/ext_mlem.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7367 2022-12-22 11:40:38.000000 gto-0.2.7/gto/git_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18038 2022-12-22 11:40:38.000000 gto-0.2.7/gto/index.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      763 2022-12-22 11:40:38.000000 gto-0.2.7/gto/log.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20849 2022-12-22 11:40:38.000000 gto-0.2.7/gto/registry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11136 2022-12-22 11:40:38.000000 gto-0.2.7/gto/tag.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1720 2022-12-22 11:40:38.000000 gto-0.2.7/gto/ui.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2990 2022-12-22 11:40:38.000000 gto-0.2.7/gto/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3123 2022-12-22 11:40:38.000000 gto-0.2.7/gto/versions.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.762286 gto-0.2.7/gto.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3512 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1103 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       84 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      241 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       10 2022-12-22 11:40:48.000000 gto-0.2.7/gto.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      207 2022-12-22 11:40:38.000000 gto-0.2.7/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       41 2022-12-22 11:40:38.000000 gto-0.2.7/renovate.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1152 2022-12-22 11:40:48.766286 gto-0.2.7/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2142 2022-12-22 11:40:38.000000 gto-0.2.7/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.766286 gto-0.2.7/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:38.000000 gto-0.2.7/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3220 2022-12-22 11:40:38.000000 gto-0.2.7/tests/conftest.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-22 11:40:48.766286 gto-0.2.7/tests/resources/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      759 2022-12-22 11:40:38.000000 gto-0.2.7/tests/resources/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2782 2022-12-22 11:40:38.000000 gto-0.2.7/tests/resources/sample_remote_repo_expected_history_churn.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      703 2022-12-22 11:40:38.000000 gto-0.2.7/tests/resources/sample_remote_repo_expected_registry.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      563 2022-12-22 11:40:38.000000 gto-0.2.7/tests/skip_presets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    28593 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12554 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3874 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      676 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13338 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_git_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3241 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_index.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19732 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_registry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5427 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_showcase.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3965 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_tag.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      816 2022-12-22 11:40:38.000000 gto-0.2.7/tests/test_versions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1605 2022-12-22 11:40:38.000000 gto-0.2.7/tests/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.886763 gto-0.3.0rc1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      164 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.coveragerc
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.874763 gto-0.3.0rc1/.github/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.878763 gto-0.3.0rc1/.github/ISSUE_TEMPLATE/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1358 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.github/ISSUE_TEMPLATE/epic-or-story.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.878763 gto-0.3.0rc1/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3442 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.github/workflows/check-test-release.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2071 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.gitignore
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1457 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20057 2023-04-06 15:16:11.000000 gto-0.3.0rc1/.pylintrc
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11345 2023-04-06 15:16:11.000000 gto-0.3.0rc1/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3502 2023-04-06 15:16:22.886763 gto-0.3.0rc1/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2765 2023-04-06 15:16:11.000000 gto-0.3.0rc1/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.882763 gto-0.3.0rc1/gto/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      265 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      163 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto/_gto_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17289 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19695 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29313 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      501 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/commit_message_generator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4102 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3724 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5762 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3266 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/ext.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      833 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/ext_dvc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/ext_mlem.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7367 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/git_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18038 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/index.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      763 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/log.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20840 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/registry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11166 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/tag.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1720 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/ui.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2990 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3123 2023-04-06 15:16:11.000000 gto-0.3.0rc1/gto/versions.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.882763 gto-0.3.0rc1/gto.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3502 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       84 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      236 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 15:16:22.000000 gto-0.3.0rc1/gto.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      207 2023-04-06 15:16:11.000000 gto-0.3.0rc1/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-06 15:16:11.000000 gto-0.3.0rc1/renovate.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1152 2023-04-06 15:16:22.886763 gto-0.3.0rc1/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2137 2023-04-06 15:16:11.000000 gto-0.3.0rc1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.882763 gto-0.3.0rc1/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3220 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/conftest.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:16:22.886763 gto-0.3.0rc1/tests/resources/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      759 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/resources/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2782 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_history_churn.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      703 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_registry.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      563 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/skip_presets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    28593 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12554 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3874 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1202 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13338 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_git_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3241 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_index.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19732 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_registry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5427 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_showcase.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3965 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_tag.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      816 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/test_versions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1605 2023-04-06 15:16:11.000000 gto-0.3.0rc1/tests/utils.py
+│ │   --- gto-0.2.7/.github/workflows/check-test-release.yml
+│ ├── +++ gto-0.3.0rc1/.github/workflows/check-test-release.yml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -43,28 +43,17 @@
+│ │      steps:
+│ │      - uses: actions/checkout@v3
+│ │        with:
+│ │          fetch-depth: 0
+│ │      - uses: actions/setup-python@v4
+│ │        with:
+│ │          python-version: ${{ matrix.python }}
+│ │ -    - name: get pip cache dir
+│ │ -      id: pip-cache-dir
+│ │ -      run: |
+│ │ -        echo "::set-output name=dir::$(pip cache dir)"
+│ │ -    - name: set pip cache
+│ │ -      id: pip-cache
+│ │ -      uses: actions/cache@v3.2.0
+│ │ -      with:
+│ │ -        path: ${{ steps.pip-cache-dir.outputs.dir }}
+│ │ -        key: ${{ runner.os }}-pip-${{ hashFiles('setup.cfg') }}
+│ │ -        restore-keys: |
+│ │ -          ${{ runner.os }}-pip-
+│ │ +        cache: 'pip'
+│ │ +        cache-dependency-path: 'setup.py'
+│ │      - name: Install
+│ │ -      if: steps.cache.pip-cache-dir.cache-hit != 'true'
+│ │        run: |
+│ │          pip install --upgrade pip setuptools wheel
+│ │          pip install pre-commit .[tests]
+│ │      - run: pre-commit run pylint -a -v --show-diff-on-failure
+│ │        if: matrix.python != '3.7'
+│ │      - name: Run tests
+│ │        run: |
+│ │   --- gto-0.2.7/.gitignore
+│ ├── +++ gto-0.3.0rc1/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/.pre-commit-config.yaml
+│ ├── +++ gto-0.3.0rc1/.pre-commit-config.yaml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -29,15 +29,15 @@
+│ │            - flake8-debugger
+│ │            - flake8-string-format
+│ │    - repo: 'https://github.com/psf/black'
+│ │      rev: 22.3.0
+│ │      hooks:
+│ │        - id: black
+│ │    - repo: 'https://github.com/PyCQA/isort'
+│ │ -    rev: 5.10.1
+│ │ +    rev: 5.12.0
+│ │      hooks:
+│ │        - id: isort
+│ │          args: ["--profile", "black"]
+│ │    - repo: 'https://github.com/pre-commit/mirrors-mypy'
+│ │      rev: v0.942
+│ │      hooks:
+│ │        - id: mypy
+│ │   --- gto-0.2.7/.pylintrc
+│ ├── +++ gto-0.3.0rc1/.pylintrc
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/LICENSE
+│ ├── +++ gto-0.3.0rc1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/PKG-INFO
+│ ├── +++ gto-0.3.0rc1/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gto
+│ │ -Version: 0.2.7
+│ │ +Version: 0.3.0rc1
+│ │  Summary: Version and deploy your models following GitOps principles
+│ │  Download-URL: https://github.com/iterative/gto
+│ │  Author: Alexander Guschin
+│ │  Author-email: aguschin@iterative.ai
+│ │  License: Apache License 2.0
+│ │  Keywords: git repo repository artifact registry developer-tools collaboration
+│ │  Classifier: Development Status :: 2 - Pre-Alpha
+│ │ @@ -54,15 +54,15 @@
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Contributions are welcome! Please see our
+│ │  [Contributing Guide](https://mlem.ai/doc/contributing/core) for more details.
+│ │  
+│ │  Check out the
+│ │ -[MLEM+GTO weekly board](https://github.com/orgs/iterative/projects/322/views/4)
+│ │ +[DVC weekly board](https://github.com/orgs/iterative/projects/189)
+│ │  to learn about what we do, and about the exciting new functionality that is
+│ │  going to be added soon.
+│ │  
+│ │  Thanks to all our contributors!
+│ │  
+│ │  <details>
+│ │   --- gto-0.2.7/README.md
+│ ├── +++ gto-0.3.0rc1/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -34,15 +34,15 @@
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Contributions are welcome! Please see our
+│ │  [Contributing Guide](https://mlem.ai/doc/contributing/core) for more details.
+│ │  
+│ │  Check out the
+│ │ -[MLEM+GTO weekly board](https://github.com/orgs/iterative/projects/322/views/4)
+│ │ +[DVC weekly board](https://github.com/orgs/iterative/projects/189)
+│ │  to learn about what we do, and about the exciting new functionality that is
+│ │  going to be added soon.
+│ │  
+│ │  Thanks to all our contributors!
+│ │  
+│ │  <details>
+│ │   --- gto-0.2.7/gto/api.py
+│ ├── +++ gto-0.3.0rc1/gto/api.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/base.py
+│ ├── +++ gto-0.3.0rc1/gto/base.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/cli.py
+│ ├── +++ gto-0.3.0rc1/gto/cli.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/config.py
+│ ├── +++ gto-0.3.0rc1/gto/config.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/constants.py
+│ ├── +++ gto-0.3.0rc1/gto/constants.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -25,37 +25,64 @@
+│ │      DEPRECATE = "deprecate"
+│ │      DEREGISTER = "deregister"
+│ │      REGISTER = "register"
+│ │      ASSIGN = "assign"
+│ │      UNASSIGN = "unassign"
+│ │  
+│ │  
+│ │ -name = "[a-z][a-z0-9-/]*[a-z0-9]"
+│ │ +SEPARATOR_IN_NAME = ":"
+│ │ +SEPARATOR_IN_TAG = "="
+│ │ +
+│ │ +
+│ │ +def name_to_tag(value):
+│ │ +    return value.replace(SEPARATOR_IN_NAME, SEPARATOR_IN_TAG)
+│ │ +
+│ │ +
+│ │ +def tag_to_name(value):
+│ │ +    return value.replace(SEPARATOR_IN_TAG, SEPARATOR_IN_NAME)
+│ │ +
+│ │ +
+│ │ +dirname = "[a-z0-9-_./]+"  # improve?
+│ │ +name = r"[a-z]([a-z0-9-/]*[a-z0-9])?"  # just like in DVC now + "/"
+│ │  semver = r"(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?"
+│ │  counter = "?P<counter>[0-9]+"
+│ │  name_re = re.compile(f"^{name}$")
+│ │ +fullname = f"(?P<dirname>{dirname}{SEPARATOR_IN_NAME})?{name}"  # add test to check ":" is here only once?
+│ │ +fullname_in_tag = name_to_tag(fullname)
+│ │ +fullname_re = re.compile(f"^{fullname}$")
+│ │ +fullname_in_tag_re = re.compile(f"^{fullname_in_tag}$")
+│ │ +
+│ │  tag_re = re.compile(
+│ │ -    f"^(?P<artifact>{name})(((#(?P<stage>{name})|@(?P<version>v{semver}))(?P<cancel>!?))|@((?P<deprecated>deprecated)|(?P<created>created)))(#({counter}))?$"
+│ │ +    f"^(?P<artifact>{fullname_in_tag})(((#(?P<stage>{name})|@(?P<version>v{semver}))(?P<cancel>!?))|@((?P<deprecated>deprecated)|(?P<created>created)))(#({counter}))?$"
+│ │  )
+│ │  shortcut_re = re.compile(
+│ │ -    f"^(?P<artifact>{name})(#(?P<stage>{name})|@(?P<version>latest|greatest|v{semver}))$"
+│ │ +    f"^(?P<artifact>{fullname})(#(?P<stage>{name})|@(?P<version>latest|greatest|v{semver}))$"
+│ │  )
+│ │  git_hexsha_re = re.compile(r"^[0-9a-fA-F]{40}$")
+│ │  
+│ │  
+│ │  def is_hexsha(value):
+│ │      return bool(git_hexsha_re.search(value))
+│ │  
+│ │  
+│ │ -def check_name_is_valid(value):
+│ │ -    return bool(name_re.search(value))
+│ │ +def check_string_is_valid(value, regex=name_re):
+│ │ +    return bool(regex.search(value))
+│ │  
+│ │  
+│ │  def assert_name_is_valid(value):
+│ │ -    if not check_name_is_valid(value):
+│ │ +    if not check_string_is_valid(value, regex=name_re):
+│ │ +        raise ValidationError(
+│ │ +            f"Invalid value '{value}'. Only lowercase english letters, , '-', '/' are allowed."
+│ │ +            "Value must be of len >= 2, must with a letter and end with a letter or a number."
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +def assert_fullname_is_valid(value):
+│ │ +    if not check_string_is_valid(value, regex=fullname_re):
+│ │ +        # fix error message to be regex-specific
+│ │          raise ValidationError(
+│ │              f"Invalid value '{value}'. Only lowercase english letters, , '-', '/' are allowed."
+│ │              "Value must be of len >= 2, must with a letter and end with a letter or a number."
+│ │          )
+│ │  
+│ │  
+│ │  class Shortcut(BaseModel):
+│ │   --- gto-0.2.7/gto/exceptions.py
+│ ├── +++ gto-0.3.0rc1/gto/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/ext.py
+│ ├── +++ gto-0.3.0rc1/gto/ext.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/ext_dvc.py
+│ ├── +++ gto-0.3.0rc1/gto/ext_dvc.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/ext_mlem.py
+│ ├── +++ gto-0.3.0rc1/gto/ext_mlem.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/git_utils.py
+│ ├── +++ gto-0.3.0rc1/gto/git_utils.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/index.py
+│ ├── +++ gto-0.3.0rc1/gto/index.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/log.py
+│ ├── +++ gto-0.3.0rc1/gto/log.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/registry.py
+│ ├── +++ gto-0.3.0rc1/gto/registry.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -12,21 +12,16 @@
+│ │      BaseEvent,
+│ │      BaseRegistryState,
+│ │      Deprecation,
+│ │      Deregistration,
+│ │      Registration,
+│ │      Unassignment,
+│ │  )
+│ │ -from gto.config import (
+│ │ -    CONFIG_FILE_NAME,
+│ │ -    RegistryConfig,
+│ │ -    assert_name_is_valid,
+│ │ -    read_registry_config,
+│ │ -)
+│ │ -from gto.constants import NAME
+│ │ +from gto.config import CONFIG_FILE_NAME, RegistryConfig, read_registry_config
+│ │ +from gto.constants import NAME, assert_fullname_is_valid
+│ │  from gto.exceptions import (
+│ │      NotImplementedInGTO,
+│ │      VersionAlreadyRegistered,
+│ │      VersionExistsForCommit,
+│ │      WrongArgs,
+│ │  )
+│ │  from gto.git_utils import RemoteRepoMixin, git_push_tag, read_repo
+│ │ @@ -134,15 +129,15 @@
+│ │          bump_patch=False,
+│ │          push=False,
+│ │          stdout=False,
+│ │          author: Optional[str] = None,
+│ │          author_email: Optional[str] = None,
+│ │      ) -> Registration:
+│ │          """Register artifact version"""
+│ │ -        assert_name_is_valid(name)
+│ │ +        assert_fullname_is_valid(name)
+│ │          version_args = sum(
+│ │              bool(i) for i in (version, bump_major, bump_minor, bump_patch)
+│ │          )
+│ │          if version_args > 1:
+│ │              raise WrongArgs("Need to specify either version or single bump argument")
+│ │          ref = self.repo.commit(ref).hexsha
+│ │          found_artifact = self.find_artifact(name, create_new=True)
+│ │ @@ -455,15 +450,15 @@
+│ │              echo(f"Created git tag '{tag}' that deprecates artifact")
+│ │          self._push_tag_or_echo_reminder(
+│ │              tag_name=tag, push=push, stdout=stdout, delete=delete
+│ │          )
+│ │          return self._return_event(tag)
+│ │  
+│ │      def _check_args(self, name, version, ref, stage=None):
+│ │ -        assert_name_is_valid(name)
+│ │ +        assert_fullname_is_valid(name)
+│ │          if stage is not None:
+│ │              self.config.assert_stage(stage)
+│ │          if version:
+│ │              self._check_version(version)
+│ │          if not (version is None) ^ (ref is None):
+│ │              raise WrongArgs("One and only one of (version, ref) must be specified.")
+│ │   --- gto-0.2.7/gto/tag.py
+│ ├── +++ gto-0.3.0rc1/gto/tag.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -21,14 +21,15 @@
+│ │      COUNTER,
+│ │      NAME,
+│ │      STAGE,
+│ │      TAG,
+│ │      VERSION,
+│ │      Action,
+│ │      tag_re,
+│ │ +    tag_to_name,
+│ │  )
+│ │  from .exceptions import (
+│ │      InvalidTagName,
+│ │      MissingArg,
+│ │      NotImplementedInGTO,
+│ │      RefNotFound,
+│ │      TagExists,
+│ │ @@ -79,15 +80,15 @@
+│ │  
+│ │  def parse_name(name: str, raise_on_fail: bool = True):
+│ │  
+│ │      match = re.search(tag_re, name)
+│ │      if raise_on_fail and not match:
+│ │          raise InvalidTagName(name)
+│ │      if match:
+│ │ -        parsed = {NAME: match["artifact"]}
+│ │ +        parsed = {tag_to_name(NAME): match["artifact"]}
+│ │          if match["deprecated"]:
+│ │              parsed[ACTION] = Action.DEPRECATE
+│ │          if match[VERSION]:
+│ │              parsed[VERSION] = match[VERSION]
+│ │              parsed[ACTION] = (
+│ │                  Action.DEREGISTER if match["cancel"] == "!" else Action.REGISTER
+│ │              )
+│ │   --- gto-0.2.7/gto/ui.py
+│ ├── +++ gto-0.3.0rc1/gto/ui.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/utils.py
+│ ├── +++ gto-0.3.0rc1/gto/utils.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto/versions.py
+│ ├── +++ gto-0.3.0rc1/gto/versions.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/gto.egg-info/PKG-INFO
+│ ├── +++ gto-0.3.0rc1/gto.egg-info/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gto
+│ │ -Version: 0.2.7
+│ │ +Version: 0.3.0rc1
+│ │  Summary: Version and deploy your models following GitOps principles
+│ │  Download-URL: https://github.com/iterative/gto
+│ │  Author: Alexander Guschin
+│ │  Author-email: aguschin@iterative.ai
+│ │  License: Apache License 2.0
+│ │  Keywords: git repo repository artifact registry developer-tools collaboration
+│ │  Classifier: Development Status :: 2 - Pre-Alpha
+│ │ @@ -54,15 +54,15 @@
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Contributions are welcome! Please see our
+│ │  [Contributing Guide](https://mlem.ai/doc/contributing/core) for more details.
+│ │  
+│ │  Check out the
+│ │ -[MLEM+GTO weekly board](https://github.com/orgs/iterative/projects/322/views/4)
+│ │ +[DVC weekly board](https://github.com/orgs/iterative/projects/189)
+│ │  to learn about what we do, and about the exciting new functionality that is
+│ │  going to be added soon.
+│ │  
+│ │  Thanks to all our contributors!
+│ │  
+│ │  <details>
+│ │   --- gto-0.2.7/gto.egg-info/SOURCES.txt
+│ ├── +++ gto-0.3.0rc1/gto.egg-info/SOURCES.txt
+│ │┄ Files 15% similar despite different names
+│ │ @@ -4,14 +4,15 @@
+│ │  .pylintrc
+│ │  LICENSE
+│ │  README.md
+│ │  pyproject.toml
+│ │  renovate.json
+│ │  setup.cfg
+│ │  setup.py
+│ │ +.github/ISSUE_TEMPLATE/epic-or-story.md
+│ │  .github/workflows/check-test-release.yml
+│ │  gto/__init__.py
+│ │  gto/_gto_version.py
+│ │  gto/_version.py
+│ │  gto/api.py
+│ │  gto/base.py
+│ │  gto/cli.py
+│ │   --- gto-0.2.7/setup.cfg
+│ ├── +++ gto-0.3.0rc1/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/setup.py
+│ ├── +++ gto-0.3.0rc1/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  
+│ │  install_requires = [
+│ │      "gitpython",
+│ │      "typer>=0.4.1",
+│ │      "rich",
+│ │      "pydantic",
+│ │      "ruamel.yaml",
+│ │ -    "semver==3.0.0.dev4",
+│ │ +    "semver>=3.0.0",
+│ │      "entrypoints",
+│ │      "tabulate>=0.8.10",
+│ │      "funcy",
+│ │  ]
+│ │  
+│ │  
+│ │  tests = [
+│ │   --- gto-0.2.7/tests/conftest.py
+│ ├── +++ gto-0.3.0rc1/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/resources/__init__.py
+│ ├── +++ gto-0.3.0rc1/tests/resources/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/resources/sample_remote_repo_expected_history_churn.json
+│ ├── +++ gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_history_churn.json
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/resources/sample_remote_repo_expected_registry.json
+│ ├── +++ gto-0.3.0rc1/tests/resources/sample_remote_repo_expected_registry.json
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/skip_presets.py
+│ ├── +++ gto-0.3.0rc1/tests/skip_presets.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_api.py
+│ ├── +++ gto-0.3.0rc1/tests/test_api.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_cli.py
+│ ├── +++ gto-0.3.0rc1/tests/test_cli.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_config.py
+│ ├── +++ gto-0.3.0rc1/tests/test_config.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_git_utils.py
+│ ├── +++ gto-0.3.0rc1/tests/test_git_utils.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_index.py
+│ ├── +++ gto-0.3.0rc1/tests/test_index.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_registry.py
+│ ├── +++ gto-0.3.0rc1/tests/test_registry.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_showcase.py
+│ ├── +++ gto-0.3.0rc1/tests/test_showcase.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_tag.py
+│ ├── +++ gto-0.3.0rc1/tests/test_tag.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/test_versions.py
+│ ├── +++ gto-0.3.0rc1/tests/test_versions.py
+│ │┄ Files identical despite different names
+│ │   --- gto-0.2.7/tests/utils.py
+│ ├── +++ gto-0.3.0rc1/tests/utils.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,600 @@
+--- tmp/pmm_cfg_gen-0.2.1.tar.gz
++++ tmp/pmm_cfg_gen-0.2.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pmm_cfg_gen-0.2.1.tar", max compression
+│ +gzip compressed data, was "pmm_cfg_gen-0.2.2.tar", max compression
+│   --- pmm_cfg_gen-0.2.1.tar
+├── +++ pmm_cfg_gen-0.2.2.tar
+│ ├── file list
+│ │ @@ -1,26 +1,29 @@
+│ │ --rw-r--r--   0        0        0    35149 2023-04-01 09:59:32.119583 pmm_cfg_gen-0.2.1/LICENSE
+│ │ --rw-r--r--   0        0        0     1167 2023-04-04 21:44:17.290489 pmm_cfg_gen-0.2.1/README.md
+│ │ --rw-r--r--   0        0        0     1179 2023-04-05 01:39:23.661332 pmm_cfg_gen-0.2.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0       29 2023-04-04 21:44:17.290489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/.gitignore
+│ │ --rw-r--r--   0        0        0      770 2023-04-05 12:05:42.972491 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/__init__.py
+│ │ --rw-r--r--   0        0        0      816 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/config_default.yaml
+│ │ --rw-r--r--   0        0        0     1375 2023-04-05 12:16:46.728346 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/logging.yaml
+│ │ --rw-r--r--   0        0        0       40 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/library.json.j2
+│ │ --rw-r--r--   0        0        0       37 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.collection.json.j2
+│ │ --rw-r--r--   0        0        0      622 2023-04-04 23:11:00.595590 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.collection.yml.j2
+│ │ --rw-r--r--   0        0        0      124 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.metadata.json.j2
+│ │ --rw-r--r--   0        0        0      724 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.metadata.yml.j2
+│ │ --rw-r--r--   0        0        0       37 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.collection.json.j2
+│ │ --rw-r--r--   0        0        0      577 2023-04-04 23:10:39.119521 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.collection.yml.j2
+│ │ --rw-r--r--   0        0        0      124 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.metadata.json.j2
+│ │ --rw-r--r--   0        0        0      777 2023-04-03 22:53:32.103146 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.metadata.yml.j2
+│ │ --rw-r--r--   0        0        0        0 2023-04-03 13:48:27.869541 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     1223 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/cli_args.py
+│ │ --rw-r--r--   0        0        0     1194 2023-04-05 11:47:03.681025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/fileutils.py
+│ │ --rw-r--r--   0        0        0     1522 2023-04-05 12:05:13.728309 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/logging.py
+│ │ --rw-r--r--   0        0        0     9219 2023-04-05 11:47:03.653025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/plex.py
+│ │ --rw-r--r--   0        0        0     1950 2023-04-05 11:47:03.677025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/plexutils.py
+│ │ --rw-r--r--   0        0        0     2734 2023-04-05 11:47:03.685025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/pmm_cfg_manager.py
+│ │ --rw-r--r--   0        0        0     9548 2023-04-05 11:47:03.673025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/settings_yml.py
+│ │ --rw-r--r--   0        0        0     4222 2023-04-05 11:47:03.673025 pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/template_manager.py
+│ │ --rw-r--r--   0        0        0     2342 1970-01-01 00:00:00.000000 pmm_cfg_gen-0.2.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    35149 2023-04-01 09:59:32.119583 pmm_cfg_gen-0.2.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     1167 2023-04-04 21:44:17.290489 pmm_cfg_gen-0.2.2/README.md
+│ │ +-rw-r--r--   0        0        0     1179 2023-04-06 15:20:00.388829 pmm_cfg_gen-0.2.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       29 2023-04-04 21:44:17.290489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/.gitignore
+│ │ +-rw-r--r--   0        0        0      726 2023-04-05 16:55:25.750443 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/__init__.py
+│ │ +-rw-r--r--   0        0        0      964 2023-04-05 14:36:56.540712 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/config_default.yaml
+│ │ +-rw-r--r--   0        0        0     1375 2023-04-05 12:16:46.728346 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/logging.yaml
+│ │ +-rw-r--r--   0        0        0       40 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/library.json.j2
+│ │ +-rw-r--r--   0        0        0       37 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.collection.json.j2
+│ │ +-rw-r--r--   0        0        0      622 2023-04-04 23:11:00.595590 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.collection.yml.j2
+│ │ +-rw-r--r--   0        0        0      124 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.metadata.json.j2
+│ │ +-rw-r--r--   0        0        0      724 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.metadata.yml.j2
+│ │ +-rw-r--r--   0        0        0     1392 2023-04-06 13:30:45.584955 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/thePosterDatabase.html.j2
+│ │ +-rw-r--r--   0        0        0       44 2023-04-06 13:30:45.584955 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/thePosterDatabase.json.j2
+│ │ +-rw-r--r--   0        0        0       37 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.collection.json.j2
+│ │ +-rw-r--r--   0        0        0      577 2023-04-04 23:10:39.119521 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.collection.yml.j2
+│ │ +-rw-r--r--   0        0        0      124 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.metadata.json.j2
+│ │ +-rw-r--r--   0        0        0      777 2023-04-03 22:53:32.103146 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.metadata.yml.j2
+│ │ +-rw-r--r--   0        0        0        0 2023-04-03 13:48:27.869541 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     1223 2023-04-04 21:44:17.294489 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/cli_args.py
+│ │ +-rw-r--r--   0        0        0     1194 2023-04-05 11:47:03.681025 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/fileutils.py
+│ │ +-rw-r--r--   0        0        0     1578 2023-04-05 23:36:11.177668 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/logging.py
+│ │ +-rw-r--r--   0        0        0    15312 2023-04-06 15:19:24.396656 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/plex.py
+│ │ +-rw-r--r--   0        0        0     2256 2023-04-06 13:30:10.400820 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/plex_stats.py
+│ │ +-rw-r--r--   0        0        0     1950 2023-04-05 11:47:03.677025 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/plex_utils.py
+│ │ +-rw-r--r--   0        0        0     2735 2023-04-06 13:30:45.588955 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/pmm_cfg_manager.py
+│ │ +-rw-r--r--   0        0        0    11214 2023-04-05 23:36:11.177668 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/settings_yml.py
+│ │ +-rw-r--r--   0        0        0     4666 2023-04-06 13:30:45.588955 pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/template_manager.py
+│ │ +-rw-r--r--   0        0        0     2342 1970-01-01 00:00:00.000000 pmm_cfg_gen-0.2.2/PKG-INFO
+│ │   --- pmm_cfg_gen-0.2.1/LICENSE
+│ ├── +++ pmm_cfg_gen-0.2.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/README.md
+│ ├── +++ pmm_cfg_gen-0.2.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/pyproject.toml
+│ ├── +++ pmm_cfg_gen-0.2.2/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "pmm-cfg-gen"
+│ │ -version = "0.2.1"
+│ │ +version = "0.2.2"
+│ │  description = "A script to help automatically generate Plex Meta Manager configuration files for your libraries"
+│ │  license = "GPL-3.0-or-later"
+│ │  authors = ["Shawn Anderson <sanderson@eye-catcher.com>"]
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/ravensorb/Plex-Meta-Manager-Config-Generator"
+│ │  repository = "https://github.com/ravensorb/Plex-Meta-Manager-Config-Generator"
+│ │  keywords = [ "pmm", "plex-meta-manager", "plex" ]
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/__init__.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/__init__.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -6,20 +6,24 @@
+│ │  import os
+│ │  
+│ │  from pmm_cfg_gen.utils.cli_args import globalArgs
+│ │  from pmm_cfg_gen.utils.logging import setup_logging
+│ │  from pmm_cfg_gen.utils.plex import PlexLibraryProcessor
+│ │  from pmm_cfg_gen.utils.settings_yml import globalSettingsMgr
+│ │  
+│ │ -globalSettingsMgr.loadFromFile("config.yaml", globalArgs)
+│ │ +setup_logging(
+│ │ +    str(globalSettingsMgr.modulePath.joinpath("logging.yaml")),
+│ │ +)
+│ │  
+│ │ -setup_logging(str(globalSettingsMgr.modulePath.joinpath("logging.yaml")), default_level=getattr(logging, globalArgs.logLevel))
+│ │ +globalSettingsMgr.loadFromFile("config.yaml", globalArgs)
+│ │  
+│ │  logger = logging.getLogger("pmm_cfg_gen")
+│ │  logger.setLevel(getattr(logging, globalArgs.logLevel))
+│ │  
+│ │ +
+│ │  def cli():
+│ │      plexMoveLibraryProcessor = PlexLibraryProcessor()
+│ │      plexMoveLibraryProcessor.process()
+│ │  
+│ │ +
+│ │  if __name__ == "__main__":
+│ │      cli()
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/logging.yaml
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/logging.yaml
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.collection.yml.j2
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.collection.yml.j2
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/movies.metadata.yml.j2
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/movies.metadata.yml.j2
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.collection.yml.j2
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.collection.yml.j2
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/templates/tvshows.metadata.yml.j2
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/templates/tvshows.metadata.yml.j2
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/cli_args.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/cli_args.py
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/fileutils.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/fileutils.py
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/logging.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/logging.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,40 +1,53 @@
+│ │  #!/usr/bin/env python3
+│ │  ###################################################################################################
+│ │  
+│ │ -import os
+│ │ -import yaml
+│ │ -import logging.config
+│ │  import logging
+│ │ +import logging.config
+│ │  import logging.handlers
+│ │ +import os
+│ │ +
+│ │  import coloredlogs
+│ │ +import yaml
+│ │  
+│ │ -class RollingFileHanderEx(logging.handlers.RotatingFileHandler):
+│ │ -    def __init__(self, filename, mode: str = "a", maxBytes: int = 0, backupCount: int = 0, encoding: str | None = None, delay: bool = False, errors: str | None = None) -> None:
+│ │  
+│ │ +class RollingFileHanderEx(logging.handlers.RotatingFileHandler):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        filename,
+│ │ +        mode: str = "a",
+│ │ +        maxBytes: int = 0,
+│ │ +        backupCount: int = 0,
+│ │ +        encoding: str | None = None,
+│ │ +        delay: bool = False,
+│ │ +        errors: str | None = None,
+│ │ +    ) -> None:
+│ │          os.makedirs(os.path.dirname(filename), exist_ok=True)
+│ │ -        
+│ │ +
+│ │          super().__init__(filename, mode, maxBytes, backupCount, encoding, delay, errors)
+│ │  
+│ │ -def setup_logging(default_path='logging.yaml', default_level=logging.INFO, env_key='LOG_CFG'):
+│ │ +
+│ │ +def setup_logging(
+│ │ +    default_path="logging.yaml", default_level=logging.INFO, env_key="LOG_CFG"
+│ │ +):
+│ │      """
+│ │      | **@author:** Prathyush SP
+│ │      | Logging Setup
+│ │      """
+│ │      path = default_path
+│ │      value = os.getenv(env_key, None)
+│ │      if value:
+│ │          path = value
+│ │      if os.path.exists(path):
+│ │ -        with open(path, 'rt') as f:
+│ │ +        with open(path, "rt") as f:
+│ │              try:
+│ │                  config = yaml.safe_load(f.read())
+│ │ -                logging.config.dictConfig(config)                
+│ │ +                logging.config.dictConfig(config)
+│ │              except Exception as e:
+│ │                  print(e)
+│ │ -                print('Error in Logging Configuration. Using default configs')
+│ │ +                print("Error in Logging Configuration. Using default configs")
+│ │                  logging.basicConfig(level=default_level)
+│ │                  coloredlogs.install(level=default_level)
+│ │      else:
+│ │          logging.basicConfig(level=default_level)
+│ │          coloredlogs.install(level=default_level)
+│ │ -        print('Failed to load configuration file. Using default configs')
+│ │ +        print("Failed to load configuration file. Using default configs")
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/plexutils.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/plex_utils.py
+│ │┄ Files identical despite different names
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/pmm_cfg_manager.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/pmm_cfg_manager.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  import logging
+│ │  import os
+│ │  from pathlib import Path
+│ │  
+│ │  import ruamel.yaml
+│ │  
+│ │  from pmm_cfg_gen.utils.fileutils import formatLibraryItemPath, writeFile
+│ │ -from pmm_cfg_gen.utils.plexutils import _cleanTitle, isPMMItem
+│ │ +from pmm_cfg_gen.utils.plex_utils import _cleanTitle, isPMMItem
+│ │  from pmm_cfg_gen.utils.settings_yml import globalSettingsMgr
+│ │  from pmm_cfg_gen.utils.template_manager import TemplateManager, generateTpDbUrl
+│ │  
+│ │  
+│ │  ###################################################################################################
+│ │  class PlexMetaManager:
+│ │      _logger: logging.Logger
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/settings_yml.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/settings_yml.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -32,20 +32,27 @@
+│ │      def __init__(self, serverUrl: str, token: str, libraries: List[str]) -> None:
+│ │          self.serverUrl = serverUrl
+│ │          self.token = token
+│ │          self.libraries = libraries
+│ │  
+│ │  
+│ │  class SettingsTemplateFiles:
+│ │ -    pmmFileName: str | None
+│ │ +    yamlFileName: str | None
+│ │      jsonFileName: str | None
+│ │ +    htmlFileName: str | None
+│ │  
+│ │ -    def __init__(self, pmmFileName: str | None, jsonFileName: str | None) -> None:
+│ │ -        self.pmmFileName = pmmFileName
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        yamlFileName: str | None,
+│ │ +        jsonFileName: str | None,
+│ │ +        htmlFileName: str | None = None,
+│ │ +    ) -> None:
+│ │ +        self.yamlFileName = yamlFileName
+│ │          self.jsonFileName = jsonFileName
+│ │ +        self.htmlFileName = htmlFileName
+│ │  
+│ │  
+│ │  class SettingsTemplateFileGroup:
+│ │      movies: SettingsTemplateFiles | None
+│ │      shows: SettingsTemplateFiles | None
+│ │      library: SettingsTemplateFiles | None
+│ │  
+│ │ @@ -72,50 +79,57 @@
+│ │          )
+│ │  
+│ │  
+│ │  class SettingsTemplates:
+│ │      templatePath: str | None
+│ │      collections: SettingsTemplateFileGroup
+│ │      metadata: SettingsTemplateFileGroup
+│ │ +    thePosterDatabase: SettingsTemplateFiles | None
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          collections: SettingsTemplateFileGroup,
+│ │          metadata: SettingsTemplateFileGroup,
+│ │          templatePath: str | None = None,
+│ │ +        thePosterDatabase: SettingsTemplateFiles | None = None,
+│ │      ) -> None:
+│ │          self.templatePath = templatePath
+│ │          self.collections = collections
+│ │          self.metadata = metadata
+│ │ +        self.thePosterDatabase = thePosterDatabase
+│ │  
+│ │      def getTemplateRootPath(self) -> Path:
+│ │          if self.templatePath is None or self.templatePath == "pmm_cfg_gen.tempaltes":
+│ │              self.templatePath = str(
+│ │                  importlib_resources.files("pmm_cfg_gen").joinpath("templates")
+│ │              )
+│ │  
+│ │          return Path(self.templatePath).resolve()
+│ │  
+│ │  
+│ │  class SettingsThePosterDatabase:
+│ │ +    dataFile: str
+│ │      searchUrl: str
+│ │      dbAssetUrl: str
+│ │  
+│ │ -    def __init__(self, searchUrl: str, dbAssetUrl: str) -> None:
+│ │ +    def __init__(self, searchUrl: str, dbAssetUrl: str, dataFile: str) -> None:
+│ │          self.searchUrl = searchUrl
+│ │          self.dbAssetUrl = dbAssetUrl
+│ │ +        self.dataFile = dataFile
+│ │  
+│ │  
+│ │  class SettingsGenerate:
+│ │      enableJson: bool
+│ │ -    enablePmm: bool
+│ │ +    enableYaml: bool
+│ │ +    enableHtml: bool
+│ │  
+│ │ -    def __init__(self, enableJson: bool, enablePmm: bool) -> None:
+│ │ +    def __init__(self, enableJson: bool, enableYaml: bool, enableHtml: bool) -> None:
+│ │          self.enableJson = enableJson
+│ │ -        self.enablePmm = enablePmm
+│ │ +        self.enableYaml = enableYaml
+│ │ +        self.enableHtml = enableHtml
+│ │  
+│ │  
+│ │  class Settings:
+│ │      plex: SettingsPlex
+│ │      thePosterDatabase: SettingsThePosterDatabase
+│ │      templates: SettingsTemplates
+│ │      output: SettingsOutput
+│ │ @@ -153,17 +167,15 @@
+│ │  
+│ │          self._config = confuse.Configuration("pmm_cfg_gen", "pmm_cfg_gen")
+│ │  
+│ │          self._logger.debug("Loading Configuration from Default Configuration")
+│ │          self._config._add_default_source()
+│ │          self._config._add_user_source()
+│ │  
+│ │ -        self._config.set_file(
+│ │ -            self.modulePath.joinpath("config_default.yaml")
+│ │ -        )
+│ │ +        self._config.set_file(self.modulePath.joinpath("config_default.yaml"))
+│ │  
+│ │          if os.path.exists(fileName):
+│ │              self._logger.debug("Loading Configuration from User Configuration")
+│ │              self._config.set_file(fileName)
+│ │  
+│ │          self._logger.debug("Loading Configuration from Environment")
+│ │          load_dotenv()
+│ │ @@ -192,88 +204,114 @@
+│ │              thePosterDatabase=SettingsThePosterDatabase(
+│ │                  searchUrl=expandvars(
+│ │                      self._config["thePosterDatabase"]["searchUrl"].as_str()
+│ │                  ),
+│ │                  dbAssetUrl=expandvars(
+│ │                      self._config["thePosterDatabase"]["dbAssetUrl"].as_str()
+│ │                  ),
+│ │ +                dataFile=str(self._config["thePosterDatabase"]["dataFile"].as_str()),
+│ │ +                # templates=SettingsTemplateFiles(
+│ │ +                #     yamlFileName=,
+│ │ +                #     jsonFileName=,
+│ │ +                #     htmlFileName=
+│ │ +                # )
+│ │              ),
+│ │              templates=SettingsTemplates(
+│ │                  collections=SettingsTemplateFileGroup(
+│ │                      movies=SettingsTemplateFiles(
+│ │ -                        pmmFileName=str(
+│ │ +                        yamlFileName=str(
+│ │                              self._config["templates"]["collections"]["movies"][
+│ │ -                                "pmmFileName"
+│ │ +                                "yamlFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                          jsonFileName=str(
+│ │                              self._config["templates"]["collections"]["movies"][
+│ │                                  "jsonFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                      ),
+│ │                      shows=SettingsTemplateFiles(
+│ │ -                        pmmFileName=str(
+│ │ +                        yamlFileName=str(
+│ │                              self._config["templates"]["collections"]["shows"][
+│ │ -                                "pmmFileName"
+│ │ +                                "yamlFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                          jsonFileName=str(
+│ │                              self._config["templates"]["collections"]["shows"][
+│ │                                  "jsonFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                      ),
+│ │                  ),
+│ │                  metadata=SettingsTemplateFileGroup(
+│ │                      movies=SettingsTemplateFiles(
+│ │ -                        pmmFileName=str(
+│ │ +                        yamlFileName=str(
+│ │                              self._config["templates"]["metadata"]["movies"][
+│ │ -                                "pmmFileName"
+│ │ +                                "yamlFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                          jsonFileName=str(
+│ │                              self._config["templates"]["metadata"]["movies"][
+│ │                                  "jsonFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                      ),
+│ │                      shows=SettingsTemplateFiles(
+│ │ -                        pmmFileName=str(
+│ │ +                        yamlFileName=str(
+│ │                              self._config["templates"]["metadata"]["shows"][
+│ │ -                                "pmmFileName"
+│ │ +                                "yamlFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                          jsonFileName=str(
+│ │                              self._config["templates"]["metadata"]["shows"][
+│ │                                  "jsonFileName"
+│ │                              ].as_str()
+│ │                          ),
+│ │                      ),
+│ │                      library=SettingsTemplateFiles(
+│ │ -                        pmmFileName=str(
+│ │ +                        yamlFileName=str(
+│ │                              self._config["templates"]["metadata"]["library"][
+│ │ -                                "pmmFileName"
+│ │ +                                "yamlFileName"
+│ │                              ].get(confuse.Optional(None))
+│ │                          ),
+│ │                          jsonFileName=str(
+│ │                              self._config["templates"]["metadata"]["library"][
+│ │                                  "jsonFileName"
+│ │                              ].get(confuse.Optional(None))
+│ │                          ),
+│ │                      ),
+│ │                  ),
+│ │ +                thePosterDatabase=SettingsTemplateFiles(
+│ │ +                    yamlFileName=str(
+│ │ +                        self._config["templates"]["thePosterDatabase"][
+│ │ +                            "yamlFileName"
+│ │ +                        ].get(confuse.Optional(None))
+│ │ +                    ),
+│ │ +                    jsonFileName=str(
+│ │ +                        self._config["templates"]["thePosterDatabase"][
+│ │ +                            "jsonFileName"
+│ │ +                        ].get(confuse.Optional(None))
+│ │ +                    ),
+│ │ +                    htmlFileName=str(
+│ │ +                        self._config["templates"]["thePosterDatabase"][
+│ │ +                            "htmlFileName"
+│ │ +                        ].get(confuse.Optional(None))
+│ │ +                    ),
+│ │ +                ),
+│ │              ),
+│ │              output=SettingsOutput(
+│ │                  path=str(self._config["output"]["path"].as_str()),
+│ │                  pathFormat=str(self._config["output"]["pathFormat"].as_str()),
+│ │              ),
+│ │              generate=SettingsGenerate(
+│ │ +                enableHtml=self._config["generate"]["enableHtml"].get(confuse.Optional(False)),  # type: ignore
+│ │                  enableJson=self._config["generate"]["enableJson"].get(confuse.Optional(False)),  # type: ignore
+│ │ -                enablePmm=self._config["generate"]["enableJson"].get(confuse.Optional(True)),  # type: ignore
+│ │ +                enableYaml=self._config["generate"]["enableYaml"].get(confuse.Optional(True)),  # type: ignore
+│ │              ),
+│ │          )
+│ │  
+│ │ +        # self._logger.debug(jsonpickle.dumps(self.settings, indent=4))
+│ │ +
+│ │  
+│ │  #######################################################################
+│ │  
+│ │  globalSettingsMgr = SettingsManager()
+│ │   --- pmm_cfg_gen-0.2.1/src/pmm_cfg_gen/utils/template_manager.py
+│ ├── +++ pmm_cfg_gen-0.2.2/src/pmm_cfg_gen/utils/template_manager.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -7,29 +7,29 @@
+│ │  from pathlib import Path
+│ │  
+│ │  import jinja2
+│ │  import jsonpickle
+│ │  import requests
+│ │  
+│ │  from pmm_cfg_gen.utils.fileutils import writeFile
+│ │ -from pmm_cfg_gen.utils.plexutils import isPMMItem
+│ │ +from pmm_cfg_gen.utils.plex_utils import isPMMItem
+│ │  from pmm_cfg_gen.utils.settings_yml import globalSettingsMgr
+│ │  
+│ │  #######################################################################
+│ │  # Jinja2 filters and utilitiy methods
+│ │  
+│ │  
+│ │ -def plexToJson(item):
+│ │ +def itemToJson(item):
+│ │      str = jsonpickle.encode(item, unpicklable=False)
+│ │  
+│ │      return str
+│ │  
+│ │  
+│ │ -def formatJson(str):
+│ │ -    return json.dumps(json.loads(str), indent=4)
+│ │ +def formatJson(data):
+│ │ +    return jsonpickle.dumps(data, indent=4)
+│ │  
+│ │  
+│ │  def generateTpDbUrl(item, baseUrl=None) -> str:
+│ │      if baseUrl is None:
+│ │          baseUrl = globalSettingsMgr.settings.thePosterDatabase.searchUrl
+│ │  
+│ │      urlParms = {}
+│ │ @@ -80,56 +80,72 @@
+│ │          self._logger = logging.getLogger("pmm_cfg_gen")
+│ │  
+│ │          self._logger.debug(
+│ │              "Initializing Template Environment.  Template Path: '{}'".format(
+│ │                  templatePath
+│ │              )
+│ │          )
+│ │ +
+│ │          self.__tplEnv = jinja2.Environment(loader=jinja2.FileSystemLoader(templatePath))
+│ │  
+│ │          self.__cachedTemplates = {}
+│ │          self.__registerFilters()
+│ │  
+│ │ -    def render(self, templateName: str | Path, tplArgs: dict) -> str:
+│ │ +    def render(self, templateName: str | Path, tplArgs: dict) -> str | None:
+│ │          self._logger.debug("Render data using template '{}'".format(templateName))
+│ │  
+│ │          tpl = self.__getTemplate(templateName)
+│ │  
+│ │ +        if tpl is None:
+│ │ +            self._logger.warn("Template Does not exist: '{}'".format(templateName))
+│ │ +
+│ │ +            return None
+│ │ +
+│ │          if "settings" not in tplArgs.keys():
+│ │              tplArgs.update({"settings": globalSettingsMgr.settings})
+│ │  
+│ │          # self._logger.info("tplArgs: {}".format(tplArgs))
+│ │          return tpl.render(tplArgs)
+│ │  
+│ │      def renderAndSave(
+│ │          self, templateName: str | Path, fileName: str | Path, tplArgs: dict
+│ │      ):
+│ │ +        if templateName is None or templateName == "None":
+│ │ +            return
+│ │ +
+│ │          self._logger.debug(
+│ │              "Render data using template '{}' and save to '{}'".format(
+│ │                  templateName, fileName
+│ │              )
+│ │          )
+│ │  
+│ │          tplResult = self.render(templateName, tplArgs)
+│ │  
+│ │ -        writeFile(fileName, tplResult)
+│ │ +        if tplResult is not None:
+│ │ +            writeFile(fileName, tplResult)
+│ │  
+│ │      #######################################################################
+│ │ -    def __getTemplate(self, templateName: str | Path):
+│ │ +    def __getTemplate(self, templateName: str | Path) -> jinja2.Template | None:
+│ │          if not templateName in self.__cachedTemplates.keys():
+│ │              self._logger.debug("Loading template into cache: {}".format(templateName))
+│ │  
+│ │ -            tpl = self.__tplEnv.get_template(str(templateName))
+│ │ +            try:
+│ │ +                tpl = self.__tplEnv.get_template(str(templateName))
+│ │ +
+│ │ +                self.__cachedTemplates[templateName] = tpl
+│ │ +            except:
+│ │ +                self._logger.debug("Failed to load template: {}".format(templateName))
+│ │ +
+│ │ +                return None
+│ │  
+│ │ -            self.__cachedTemplates[templateName] = tpl
+│ │          else:
+│ │              self._logger.debug(
+│ │                  "Retrieving template from cache: {}".format(templateName)
+│ │              )
+│ │  
+│ │          return self.__cachedTemplates[templateName]
+│ │  
+│ │      def __registerFilters(self):
+│ │ -        self.__tplEnv.filters["plexToJson"] = plexToJson
+│ │ +        self.__tplEnv.filters["plexToJson"] = itemToJson
+│ │          self.__tplEnv.filters["isPMMItem"] = isPMMItem
+│ │          self.__tplEnv.filters["formatJson"] = formatJson
+│ │          self.__tplEnv.filters["generateTpDbUrl"] = generateTpDbUrl
+│ │   --- pmm_cfg_gen-0.2.1/PKG-INFO
+│ ├── +++ pmm_cfg_gen-0.2.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pmm-cfg-gen
+│ │ -Version: 0.2.1
+│ │ +Version: 0.2.2
+│ │  Summary: A script to help automatically generate Plex Meta Manager configuration files for your libraries
+│ │  Home-page: https://github.com/ravensorb/Plex-Meta-Manager-Config-Generator
+│ │  License: GPL-3.0-or-later
+│ │  Keywords: pmm,plex-meta-manager,plex
+│ │  Author: Shawn Anderson
+│ │  Author-email: sanderson@eye-catcher.com
+│ │  Requires-Python: >=3.10,<4.0
