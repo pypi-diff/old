@@ -1,0 +1,571 @@
+--- tmp/NREL-reVX-0.3.8.tar.gz
++++ tmp/NREL-reVX-0.3.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/NREL-reVX-0.3.8.tar", last modified: Thu Dec 10 19:19:48 2020, max compression
+│ +gzip compressed data, was "dist/NREL-reVX-0.3.9.tar", last modified: Fri Dec 11 21:31:28 2020, max compression
+│   --- NREL-reVX-0.3.8.tar
+├── +++ NREL-reVX-0.3.9.tar
+│ ├── file list
+│ │ @@ -1,68 +1,68 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.205832 NREL-reVX-0.3.8/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.197832 NREL-reVX-0.3.8/NREL_reVX.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     6575 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1466 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        1 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      316 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        1 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      259 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        5 2020-12-10 19:19:48.000000 NREL-reVX-0.3.8/NREL_reVX.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     6575 2020-12-10 19:19:48.205832 NREL-reVX-0.3.8/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     4825 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/README.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.197832 NREL-reVX-0.3.8/reVX/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      470 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     7387 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/config/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       51 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/config/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     6294 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/config/reeds.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3645 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/config/rpm.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1934 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/config/wind_dirs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2444 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/config/wind_setbacks.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/handlers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       56 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/handlers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3282 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/handlers/database.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    10766 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/handlers/geotiff.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      444 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/handlers/outputs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    19158 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/handlers/sc_points.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/plexos/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       80 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    13218 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/dpv_plexos.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    40427 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/plexos_plants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     8117 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/plexos_plants_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    44974 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/rev_reeds_plexos.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     6394 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/rev_reeds_plexos_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    17520 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/plexos/utilities.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/red_e/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       54 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/red_e/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     4931 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/red_e/tech_potential.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/reeds/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      192 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/reeds/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    21181 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/reeds/reeds_classification.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    17955 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/reeds/reeds_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    14726 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/reeds/reeds_profiles.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    36947 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/reeds/reeds_timeslices.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/rpm/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      129 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/rpm/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    12446 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/rpm/rpm_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    20984 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/rpm/rpm_clusters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    14750 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/rpm/rpm_manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    47281 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/rpm/rpm_output.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/utilities/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      219 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1933 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/cluster_methods.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      949 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    18994 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/exclusions_converter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    12694 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/forecasts.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2182 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/output_extractor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    10113 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/utilities/region.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       75 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/wind_dirs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      119 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_dirs/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     9517 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_dirs/wind_dirs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     8559 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_dirs/wind_dirs_cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-10 19:19:48.201832 NREL-reVX-0.3.8/reVX/wind_setbacks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      196 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_setbacks/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    49053 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_setbacks/wind_setbacks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    15459 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/reVX/wind_setbacks/wind_setbacks_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       38 2020-12-10 19:19:48.205832 NREL-reVX-0.3.8/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2742 2020-12-10 19:19:37.000000 NREL-reVX-0.3.8/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.590773 NREL-reVX-0.3.9/NREL_reVX.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     6575 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     1466 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)        1 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      316 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)        1 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      244 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)        5 2020-12-11 21:31:28.000000 NREL-reVX-0.3.9/NREL_reVX.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     6575 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     4825 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/README.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.590773 NREL-reVX-0.3.9/reVX/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      564 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     7511 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.590773 NREL-reVX-0.3.9/reVX/config/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       51 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/config/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     6294 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/config/reeds.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     3645 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/config/rpm.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     1934 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/config/wind_dirs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     2444 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/config/wind_setbacks.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.590773 NREL-reVX-0.3.9/reVX/handlers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       56 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/handlers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     3282 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/handlers/database.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    10766 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/handlers/geotiff.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      444 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/handlers/outputs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    19158 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/handlers/sc_points.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.594774 NREL-reVX-0.3.9/reVX/plexos/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       80 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    13218 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/dpv_plexos.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    40427 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/plexos_plants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     8117 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/plexos_plants_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    44974 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/rev_reeds_plexos.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     6394 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/rev_reeds_plexos_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    17520 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/plexos/utilities.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.594774 NREL-reVX-0.3.9/reVX/red_e/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       54 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/red_e/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     4931 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/red_e/tech_potential.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.594774 NREL-reVX-0.3.9/reVX/reeds/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      192 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/reeds/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    21181 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/reeds/reeds_classification.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    18078 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/reeds/reeds_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    14726 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/reeds/reeds_profiles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    36947 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/reeds/reeds_timeslices.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.594774 NREL-reVX-0.3.9/reVX/rpm/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      129 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/rpm/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    12570 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/rpm/rpm_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    20984 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/rpm/rpm_clusters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    14750 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/rpm/rpm_manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    47281 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/rpm/rpm_output.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/reVX/utilities/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      219 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     1933 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/cluster_methods.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      949 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    18994 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/exclusions_converter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    12694 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/forecasts.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     2182 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/output_extractor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    10113 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/utilities/region.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       75 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/reVX/wind_dirs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      119 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_dirs/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     9517 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_dirs/wind_dirs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     8683 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_dirs/wind_dirs_cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (116)        0 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/reVX/wind_setbacks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)      196 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_setbacks/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    48715 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_setbacks/wind_setbacks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)    15583 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/reVX/wind_setbacks/wind_setbacks_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)       38 2020-12-11 21:31:28.598774 NREL-reVX-0.3.9/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (116)     2742 2020-12-11 21:31:15.000000 NREL-reVX-0.3.9/setup.py
+│ │   --- NREL-reVX-0.3.8/NREL_reVX.egg-info/PKG-INFO
+│ ├── +++ NREL-reVX-0.3.9/NREL_reVX.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: NREL-reVX
+│ │ -Version: 0.3.8
+│ │ +Version: 0.3.9
+│ │  Summary: National Renewable Energy Laboratory's (NREL's) Renewable Energy Potential(V) eXchange Tool: reVX
+│ │  Home-page: https://nrel.github.io/reVX/
+│ │  Author: Michael Rossol
+│ │  Author-email: michael.rossol@nrel.gov
+│ │  License: BSD 3-Clause
+│ │  Description: ****
+│ │          reVX
+│ │   --- NREL-reVX-0.3.8/NREL_reVX.egg-info/SOURCES.txt
+│ ├── +++ NREL-reVX-0.3.9/NREL_reVX.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/PKG-INFO
+│ ├── +++ NREL-reVX-0.3.9/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: NREL-reVX
+│ │ -Version: 0.3.8
+│ │ +Version: 0.3.9
+│ │  Summary: National Renewable Energy Laboratory's (NREL's) Renewable Energy Potential(V) eXchange Tool: reVX
+│ │  Home-page: https://nrel.github.io/reVX/
+│ │  Author: Michael Rossol
+│ │  Author-email: michael.rossol@nrel.gov
+│ │  License: BSD 3-Clause
+│ │  Description: ****
+│ │          reVX
+│ │   --- NREL-reVX-0.3.8/README.rst
+│ ├── +++ NREL-reVX-0.3.9/README.rst
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/cli.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -10,14 +10,15 @@
+│ │  from rex.utilities.loggers import init_logger
+│ │  from rex.utilities.utilities import safe_json_load
+│ │  
+│ │  from reVX.utilities.exclusions_converter import ExclusionsConverter
+│ │  from reVX.utilities.forecasts import Forecasts
+│ │  from reVX.utilities.output_extractor import output_extractor
+│ │  from reVX.utilities.region import RegionClassifier
+│ │ +from reVX import __version__
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @click.group()
+│ │  @click.option('-v', '--verbose', is_flag=True,
+│ │                help='Flag to turn on debug logging. Default is not verbose.')
+│ │ @@ -30,14 +31,22 @@
+│ │      else:
+│ │          log_level = 'INFO'
+│ │  
+│ │      init_logger('reVX', log_level=log_level)
+│ │  
+│ │  
+│ │  @main.command()
+│ │ +def version():
+│ │ +    """
+│ │ +    print version
+│ │ +    """
+│ │ +    click.echo(__version__)
+│ │ +
+│ │ +
+│ │ +@main.command()
+│ │  @click.option('--meta_path', '-mp', required=True,
+│ │                prompt='Path to meta CSV file, resource .h5 file',
+│ │                type=click.Path(exists=True),
+│ │                help=('Path to meta CSV file, resource .h5 file containing '
+│ │                      'lat/lon points'))
+│ │  @click.option('--regions_path', '-rp', required=True,
+│ │                prompt='Path to regions shapefile',
+│ │   --- NREL-reVX-0.3.8/reVX/config/reeds.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/config/reeds.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/config/rpm.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/config/rpm.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/config/wind_dirs.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/config/wind_dirs.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/config/wind_setbacks.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/config/wind_setbacks.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/handlers/database.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/handlers/database.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/handlers/geotiff.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/handlers/geotiff.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/handlers/sc_points.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/handlers/sc_points.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/dpv_plexos.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/dpv_plexos.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/plexos_plants.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/plexos_plants.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/plexos_plants_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/plexos_plants_cli.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/rev_reeds_plexos.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/rev_reeds_plexos.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/rev_reeds_plexos_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/rev_reeds_plexos_cli.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/plexos/utilities.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/plexos/utilities.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/red_e/tech_potential.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/red_e/tech_potential.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/reeds/reeds_classification.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/reeds/reeds_classification.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/reeds/reeds_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/reeds/reeds_cli.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -13,15 +13,15 @@
+│ │  
+│ │  from reVX.config.reeds import (ReedsConfig, ClassifyConfigGroup,
+│ │                                 ProfilesConfigGroup, TimeslicesConfigGroup)
+│ │  from reVX.reeds.reeds_classification import ReedsClassifier
+│ │  from reVX.reeds.reeds_profiles import ReedsProfiles
+│ │  from reVX.reeds.reeds_timeslices import ReedsTimeslices
+│ │  from reVX.utilities.exceptions import ReedsRuntimeError
+│ │ -
+│ │ +from reVX import __version__
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @click.group()
+│ │  @click.option('--name', '-n', default='ReEDS', type=STR,
+│ │                help='Job name. Default is "ReEDS".')
+│ │ @@ -34,14 +34,22 @@
+│ │      """
+│ │      ctx.ensure_object(dict)
+│ │      ctx.obj['NAME'] = name
+│ │      ctx.obj['VERBOSE'] = verbose
+│ │  
+│ │  
+│ │  @main.command()
+│ │ +def version():
+│ │ +    """
+│ │ +    print version
+│ │ +    """
+│ │ +    click.echo(__version__)
+│ │ +
+│ │ +
+│ │ +@main.command()
+│ │  def valid_config_keys():
+│ │      """
+│ │      Echo the valid ReEDS config keys
+│ │      """
+│ │      config_classes = [ReedsConfig, ClassifyConfigGroup,
+│ │                        ProfilesConfigGroup, TimeslicesConfigGroup]
+│ │      for cls in config_classes:
+│ │   --- NREL-reVX-0.3.8/reVX/reeds/reeds_profiles.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/reeds/reeds_profiles.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/reeds/reeds_timeslices.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/reeds/reeds_timeslices.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/rpm/rpm_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/rpm/rpm_cli.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -11,14 +11,15 @@
+│ │  from rex.utilities.utilities import dict_str_load, get_class_properties
+│ │  
+│ │  from reVX.config.rpm import (RPMConfig, ClusterConfigGroup,
+│ │                               RepProfilesConfigGroup)
+│ │  from reVX.rpm.rpm_manager import RPMClusterManager as rpm_cm
+│ │  from reVX.rpm.rpm_output import RPMOutput as rpm_o
+│ │  from reVX.utilities.exceptions import RPMRuntimeError
+│ │ +from reVX import __version__
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @click.group()
+│ │  @click.option('--name', '-n', default='ReEDS', type=STR,
+│ │                help='Job name. Default is "ReEDS".')
+│ │ @@ -31,14 +32,22 @@
+│ │      """
+│ │      ctx.ensure_object(dict)
+│ │      ctx.obj['VERBOSE'] = verbose
+│ │      ctx.obj['NAME'] = name
+│ │  
+│ │  
+│ │  @main.command()
+│ │ +def version():
+│ │ +    """
+│ │ +    print version
+│ │ +    """
+│ │ +    click.echo(__version__)
+│ │ +
+│ │ +
+│ │ +@main.command()
+│ │  def valid_config_keys():
+│ │      """
+│ │      Echo the valid RPM config keys
+│ │      """
+│ │      config_classes = [RPMConfig, ClusterConfigGroup, RepProfilesConfigGroup]
+│ │      for cls in config_classes:
+│ │          cls_name = str(cls).split('.')[-1].strip("'>")
+│ │   --- NREL-reVX-0.3.8/reVX/rpm/rpm_clusters.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/rpm/rpm_clusters.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/rpm/rpm_manager.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/rpm/rpm_manager.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/rpm/rpm_output.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/rpm/rpm_output.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/cluster_methods.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/cluster_methods.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/exceptions.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/exclusions_converter.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/exclusions_converter.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/forecasts.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/forecasts.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/output_extractor.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/output_extractor.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/utilities/region.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/utilities/region.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/wind_dirs/wind_dirs.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/wind_dirs/wind_dirs.py
+│ │┄ Files identical despite different names
+│ │   --- NREL-reVX-0.3.8/reVX/wind_dirs/wind_dirs_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/wind_dirs/wind_dirs_cli.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -9,14 +9,15 @@
+│ │  from rex.utilities.loggers import init_mult
+│ │  from rex.utilities.cli_dtypes import STR, INT
+│ │  from rex.utilities.hpc import SLURM
+│ │  from rex.utilities.utilities import get_class_properties
+│ │  
+│ │  from reVX.config.wind_dirs import WindDirsConfig
+│ │  from reVX.wind_dirs.wind_dirs import WindDirections
+│ │ +from reVX import __version__
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @click.group()
+│ │  @click.option('--name', '-n', default='WindDirs', type=STR,
+│ │                help='Job name. Default is "WindDirs".')
+│ │ @@ -29,14 +30,22 @@
+│ │      """
+│ │      ctx.ensure_object(dict)
+│ │      ctx.obj['NAME'] = name
+│ │      ctx.obj['VERBOSE'] = verbose
+│ │  
+│ │  
+│ │  @main.command()
+│ │ +def version():
+│ │ +    """
+│ │ +    print version
+│ │ +    """
+│ │ +    click.echo(__version__)
+│ │ +
+│ │ +
+│ │ +@main.command()
+│ │  def valid_config_keys():
+│ │      """
+│ │      Echo the valid Wind Dirs config keys
+│ │      """
+│ │      click.echo(', '.join(get_class_properties(WindDirsConfig)))
+│ │   --- NREL-reVX-0.3.8/reVX/wind_setbacks/wind_setbacks.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/wind_setbacks/wind_setbacks.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,13 @@
+│ │  # -*- coding: utf-8 -*-
+│ │  """
+│ │  Handler to convert exclusion to/from .h5 and .geotiff
+│ │  """
+│ │ -from abc import ABC, abstractstaticmethod, abstractclassmethod
+│ │ +from abc import ABC, abstractstaticmethod
+│ │  from concurrent.futures import as_completed
+│ │ -from earthpy import clip as cl
+│ │  import fiona
+│ │  import geopandas as gpd
+│ │  import h5py
+│ │  import json
+│ │  import logging
+│ │  import numpy as np
+│ │  import os
+│ │ @@ -295,15 +294,15 @@
+│ │          Returns
+│ │          -------
+│ │          features : geopandas.GeoDataFrame
+│ │              Geometries of features to setback from in exclusion coordinate
+│ │              system
+│ │          """
+│ │  
+│ │ -    @abstractclassmethod
+│ │ +    @classmethod
+│ │      def _map_features_dir(cls, features_dir):
+│ │          """
+│ │          Map features files to state based on file name
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          features_dir : str
+│ │ @@ -1073,17 +1072,14 @@
+│ │          Returns
+│ │          -------
+│ │          trans : geopandas.GeoDataFrame.sindex
+│ │              Geometries for transmission features, in exclusion coordinate
+│ │              system
+│ │          """
+│ │          trans = gpd.read_file(transmission_fpath)
+│ │ -        mask = ((trans['Proposed'] != 'Proposed')
+│ │ -                & (trans['Undergroun'] != 'T'))
+│ │ -        trans = trans.loc[mask]
+│ │  
+│ │          return trans.to_crs(crs)
+│ │  
+│ │      @classmethod
+│ │      def _compute_local_setbacks(cls, features_fpath, crs, cnty,
+│ │                                  tip_height, rotor_diameter):
+│ │          """
+│ │ @@ -1110,15 +1106,15 @@
+│ │          features = cls._parse_features(features_fpath, crs)
+│ │  
+│ │          setbacks = []
+│ │          setback = cls._get_setback(cnty.iloc[0], tip_height, rotor_diameter)
+│ │          if setback is not None:
+│ │              # clip the transmission lines to county geometry
+│ │              # pylint: disable=assignment-from-no-return
+│ │ -            tmp = cl.clip_shp(features, cnty)
+│ │ +            tmp = gpd.clip(features, cnty)
+│ │              tmp = tmp[~tmp.is_empty]
+│ │  
+│ │              # Buffer setback
+│ │              tmp['geometry'] = tmp.buffer(setback)
+│ │  
+│ │              setbacks.extend((geom, 1) for geom in tmp['geometry'])
+│ │  
+│ │ @@ -1295,24 +1291,21 @@
+│ │      @staticmethod
+│ │      def _parse_features(rail_fpath, crs):
+│ │          """
+│ │          Load rail shape file, convert to exclusions coordinate system
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │ -        transmission_fpath : str
+│ │ -            Path to transmission shape file
+│ │ +        rail_fpath : str
+│ │ +            Path to rail shape file
+│ │          crs : str
+│ │              Coordinate reference system to convert structures geometries into
+│ │  
+│ │          Returns
+│ │          -------
+│ │          rail : geopandas.GeoDataFrame.sindex
+│ │              Geometries for rail features, in exclusion coordinate
+│ │              system
+│ │          """
+│ │          rail = gpd.read_file(rail_fpath)
+│ │ -        # remove out of service and abandoned
+│ │ -        mask = ~rail['STATUS'].isin(['X', 'A', 'R'])
+│ │ -        rail = rail.loc[mask]
+│ │  
+│ │          return rail.to_crs(crs)
+│ │   --- NREL-reVX-0.3.8/reVX/wind_setbacks/wind_setbacks_cli.py
+│ ├── +++ NREL-reVX-0.3.9/reVX/wind_setbacks/wind_setbacks_cli.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -14,14 +14,15 @@
+│ │  from rex.utilities.utilities import get_class_properties
+│ │  
+│ │  from reVX.config.wind_setbacks import WindSetbacksConfig
+│ │  from reVX.wind_setbacks.wind_setbacks import (StructureWindSetbacks,
+│ │                                                RoadWindSetbacks,
+│ │                                                RailWindSetbacks,
+│ │                                                TransmissionWindSetbacks)
+│ │ +from reVX import __version__
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @click.group()
+│ │  @click.option('--name', '-n', default='WindSetbacks', type=STR,
+│ │                help='Job name. Default is "WindSetbaks".')
+│ │ @@ -48,14 +49,22 @@
+│ │          log_level = 'INFO'
+│ │  
+│ │      ctx.obj["LOGGER"] = init_logger('reVX', log_file=log_file,
+│ │                                      log_level=log_level)
+│ │  
+│ │  
+│ │  @main.command()
+│ │ +def version():
+│ │ +    """
+│ │ +    print version
+│ │ +    """
+│ │ +    click.echo(__version__)
+│ │ +
+│ │ +
+│ │ +@main.command()
+│ │  def valid_config_keys():
+│ │      """
+│ │      Echo the valid Wind Setbacks config keys
+│ │      """
+│ │      click.echo(', '.join(get_class_properties(WindSetbacksConfig)))
+│ │   --- NREL-reVX-0.3.8/setup.py
+│ ├── +++ NREL-reVX-0.3.9/setup.py
+│ │┄ Files identical despite different names

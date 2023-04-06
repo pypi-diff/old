@@ -1,0 +1,626 @@
+# Comparing `tmp/pymediawikidocker-0.8.3.tar.gz` & `tmp/pymediawikidocker-0.8.4.tar.gz`
+
+## Comparing `pymediawikidocker-0.8.3.tar` & `pymediawikidocker-0.8.4.tar`
+
+### file list
+
+```diff
+@@ -1,52 +1,52 @@
+--rw-r--r--   0        0        0      371 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/.project
+--rw-r--r--   0        0        0      455 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/.pydevproject
+--rw-r--r--   0        0        0      903 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/.github/workflows/build.yml
+--rw-r--r--   0        0        0      629 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/.github/workflows/upload-to-pypi.yml
+--rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/.DS_Store
+--rw-r--r--   0        0        0       21 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/__init__.py
+--rw-r--r--   0        0        0    20437 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/docker.py
+--rw-r--r--   0        0        0     1949 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/html_table.py
+--rw-r--r--   0        0        0      728 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/logger.py
+--rw-r--r--   0        0        0      673 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/mariadb.py
+--rw-r--r--   0        0        0     7225 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/mw.py
+--rw-r--r--   0        0        0    13838 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/mwcluster.py
+--rw-r--r--   0        0        0     1125 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/webscrape.py
+--rw-r--r--   0        0        0    11593 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/extensions.json
+--rw-r--r--   0        0        0      319 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/addCronTabEntry.sh
+--rw-r--r--   0        0        0      350 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/addSysopUser.sh
+--rw-r--r--   0        0        0      318 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/initdb.sh
+--rw-r--r--   0        0        0      221 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/installExtensions.sh
+--rw-r--r--   0        0        0     1542 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwCompose.yml
+--rw-r--r--   0        0        0     2219 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwDockerfile
+--rw-r--r--   0        0        0      788 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings.php
+--rw-r--r--   0        0        0     4196 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings127.php
+--rw-r--r--   0        0        0     4344 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings131.php
+--rw-r--r--   0        0        0     4677 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings135.php
+--rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings136.php
+--rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings137.php
+--rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings138.php
+--rw-r--r--   0        0        0     4256 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings139.php
+--rw-r--r--   0        0        0    56849 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki127.sql
+--rw-r--r--   0        0        0    66990 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki131.sql
+--rw-r--r--   0        0        0    64022 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki135.sql
+--rw-r--r--   0        0        0    63586 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki136.sql
+--rw-r--r--   0        0        0    63586 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki137.sql
+--rw-r--r--   0        0        0    66990 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki138.sql
+--rw-r--r--   0        0        0    64483 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki139.sql
+--rw-r--r--   0        0        0      230 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/phpinfo.php
+--rw-r--r--   0        0        0     2339 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/plantuml.sh
+--rw-r--r--   0        0        0      241 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/startRunJobs.sh
+--rw-r--r--   0        0        0      472 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/update.sh
+--rw-r--r--   0        0        0      206 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/mwdocker/resources/templates/upload.ini
+--rwxr-xr-x   0        0        0      264 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/scripts/install
+--rwxr-xr-x   0        0        0       82 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/scripts/test
+--rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/tests/__init__.py
+--rw-r--r--   0        0        0     1506 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/tests/basetest.py
+--rw-r--r--   0        0        0     3821 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/tests/test_extensions.py
+--rw-r--r--   0        0        0      649 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/tests/test_html_tables.py
+--rw-r--r--   0        0        0     6303 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/tests/test_install.py
+--rw-r--r--   0        0        0     1800 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/.gitignore
+--rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/LICENSE
+--rw-r--r--   0        0        0     1167 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/README.md
+--rw-r--r--   0        0        0     2014 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/pyproject.toml
+--rw-r--r--   0        0        0     2676 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.3/PKG-INFO
++-rw-r--r--   0        0        0      371 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/.project
++-rw-r--r--   0        0        0      455 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/.pydevproject
++-rw-r--r--   0        0        0      903 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/.github/workflows/build.yml
++-rw-r--r--   0        0        0      629 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/.github/workflows/upload-to-pypi.yml
++-rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/.DS_Store
++-rw-r--r--   0        0        0       21 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/__init__.py
++-rw-r--r--   0        0        0    21378 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/docker.py
++-rw-r--r--   0        0        0     1949 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/html_table.py
++-rw-r--r--   0        0        0      728 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/logger.py
++-rw-r--r--   0        0        0      673 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/mariadb.py
++-rw-r--r--   0        0        0     7225 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/mw.py
++-rw-r--r--   0        0        0    14750 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/mwcluster.py
++-rw-r--r--   0        0        0     1125 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/webscrape.py
++-rw-r--r--   0        0        0    11593 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/extensions.json
++-rw-r--r--   0        0        0      319 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/addCronTabEntry.sh
++-rw-r--r--   0        0        0      350 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/addSysopUser.sh
++-rw-r--r--   0        0        0      318 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/initdb.sh
++-rw-r--r--   0        0        0      221 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/installExtensions.sh
++-rw-r--r--   0        0        0     1524 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwCompose.yml
++-rw-r--r--   0        0        0     2219 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwDockerfile
++-rw-r--r--   0        0        0      788 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings.php
++-rw-r--r--   0        0        0     4196 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings127.php
++-rw-r--r--   0        0        0     4344 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings131.php
++-rw-r--r--   0        0        0     4677 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings135.php
++-rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings136.php
++-rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings137.php
++-rw-r--r--   0        0        0     4679 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings138.php
++-rw-r--r--   0        0        0     4256 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings139.php
++-rw-r--r--   0        0        0    56849 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki127.sql
++-rw-r--r--   0        0        0    66990 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki131.sql
++-rw-r--r--   0        0        0    64022 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki135.sql
++-rw-r--r--   0        0        0    63586 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki136.sql
++-rw-r--r--   0        0        0    63586 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki137.sql
++-rw-r--r--   0        0        0    66990 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki138.sql
++-rw-r--r--   0        0        0    64483 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki139.sql
++-rw-r--r--   0        0        0      230 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/phpinfo.php
++-rw-r--r--   0        0        0     2339 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/plantuml.sh
++-rw-r--r--   0        0        0      241 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/startRunJobs.sh
++-rw-r--r--   0        0        0      472 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/update.sh
++-rw-r--r--   0        0        0      206 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/mwdocker/resources/templates/upload.ini
++-rwxr-xr-x   0        0        0      264 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/scripts/install
++-rwxr-xr-x   0        0        0       82 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/scripts/test
++-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/tests/__init__.py
++-rw-r--r--   0        0        0     1506 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/tests/basetest.py
++-rw-r--r--   0        0        0     3821 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/tests/test_extensions.py
++-rw-r--r--   0        0        0      649 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/tests/test_html_tables.py
++-rw-r--r--   0        0        0     6303 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/tests/test_install.py
++-rw-r--r--   0        0        0     1800 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/.gitignore
++-rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/LICENSE
++-rw-r--r--   0        0        0     1167 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/README.md
++-rw-r--r--   0        0        0     2014 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/pyproject.toml
++-rw-r--r--   0        0        0     2676 2020-02-02 00:00:00.000000 pymediawikidocker-0.8.4/PKG-INFO
+```
+
+### Comparing `pymediawikidocker-0.8.3/.github/workflows/build.yml` & `pymediawikidocker-0.8.4/.github/workflows/build.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/.github/workflows/upload-to-pypi.yml` & `pymediawikidocker-0.8.4/.github/workflows/upload-to-pypi.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/.DS_Store` & `pymediawikidocker-0.8.4/mwdocker/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/docker.py` & `pymediawikidocker-0.8.4/mwdocker/docker.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -77,32 +77,68 @@
+     """
+     attempts: int
+     max_tries: int
+     ok: bool
+     msg:str
+     ex:typing.Optional[Exception]=None
+     
++class Host():
++    @classmethod
++    def get_default_host(self) -> str:
++        """
++        get the default host as the fully qualifying hostname
++        of the computer the server runs on
++        
++        Returns:
++            str: the hostname
++        """
++        host = socket.getfqdn()
++        # work around https://github.com/python/cpython/issues/79345
++        if host == "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa":
++            host = "localhost"  # host="127.0.0.1"
++        return host
++    
+ class DockerApplication(object):
+     '''
+     MediaWiki Docker image
+     '''
+ 
+-    def __init__(self,user:str,password:str,name="mediawiki",version="1.35.7",container_name:str=None,extensionMap:dict={},wikiId:str=None,mariaDBVersion="10.9",smwVersion=None,logo=None,port=9080,sqlPort=9306,mySQLRootPassword=None,debug=False,verbose=True):
++    def __init__(self,
++                 user:str,
++                 password:str,
++                 name="mediawiki",
++                 version="1.39.3",
++                 container_name:str=None,
++                 extensionMap:dict={},
++                 wikiId:str=None,
++                 mariaDBVersion="10.11",
++                 smwVersion=None,logo=None,
++                 prot="http",
++                 host=None,
++                 script_path="",
++                 port=9080,
++                 sqlPort=9306,
++                 mySQLRootPassword=None,
++                 debug=False,
++                 verbose=True):
+         '''
+         Constructor
+         
+         Args:
+             user(str): the initial sysop user to create
+             password(str): the initial sysop password to user
+             version(str): the  MediaWiki version to create docker applications for
+             container_name(str): the name of the container to be used
+             extensionMap(dict): a map of extensions to be installed
+             wikiId(str): the wikiId to create a py-3rdparty-mediawiki user for (if any)
+             sqlPort(int): the base port to be used for  publishing the SQL port (3306) for the docker applications
+             port(int): the port to be used for publishing the HTML port (80) for the docker applications
++            prot(str): the protocol to use (http or https)
++            host(str): the hostname to use
++            script_path(str): the script_path to use
+             networkName(str): the name to use for the docker network to be shared by the cluster participants
+             mariaDBVersion(str): the Maria DB version to install as the SQL database provider for the docker applications
+             smwVersion(str): Semantic MediaWiki Version to be used (if any)
+             mySQLRootPassword(str): the mySQL root password to use for the database containers - if None a random password is generated
+             logo(str): URL of the logo to be used
+             debug(bool): if True debugging is enabled
+             verbose(bool): if True output is verbose
+@@ -127,20 +163,20 @@
+             self.container_name=container_name
+         # branch as need for git clone e.g. https://gerrit.wikimedia.org/g/mediawiki/extensions/MagicNoCache
+         self.branch=f"REL{self.getShortVersion('_')}"
+         self.mariaDBVersion=mariaDBVersion
+         self.composerVersion=1
+         if self.shortVersion>="139":
+             self.composerVersion=2
+-        # hostname and ports
+-        self.hostname=socket.getfqdn()
+-        if self.hostname=="1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa":
+-            self.hostname="localhost"
++        self.host=host
++        self.hostname=host
+         self.port=port
+-        self.url=f"http://{self.hostname}:{self.port}"
++        self.script_path=script_path
++        self.base_url=f"{prot}://{self.hostname}"
++        self.url=f"{self.base_url}{script_path}:{self.port}"
+         self.sqlPort=sqlPort
+         self.logo=logo
+         # debug and verbosity
+         self.debug=debug
+         self.verbose=verbose
+         # passwords
+         password_length = 13
+@@ -150,15 +186,14 @@
+             self.mySQLRootPassword=mySQLRootPassword
+         self.mySQLPassword=secrets.token_urlsafe(password_length)
+         # jinja and docker prerequisites
+         self.env=self.getJinjaEnv()
+         self.getContainers()
+         self.dbConn=None
+         self.database="wiki"
+-        self.host="localhost"
+         self.dbUser="wikiuser"
+         self.wikiUser=None
+        
+     @staticmethod 
+     def check()->str:
+         errMsg=None
+         if not docker.compose.is_installed():
+@@ -272,16 +307,16 @@
+         Args:
+            store(bool): if True save my user data to the relevant ini File
+         '''
+         if self.wikiId is None:
+             raise Exception("createWikiUser needs wikiId to be set but it is None")
+         userDict={
+             "wikiId":f"{self.wikiId}",
+-            "url": f"{self.url}",
+-            "scriptPath": "",
++            "url": f"{self.base_url}",
++            "scriptPath": f"{self.script_path}",
+             "user": f"{self.user}",
+             "email":"noreply@nouser.com",
+             "version": f"{self.fullVersion}",
+             "password": f"{self.password}"
+         }
+         wikiUser=WikiUser.ofDict(userDict,encrypted=False)
+         if store:
+@@ -513,9 +548,8 @@
+         os.chdir(self.dockerPath)
+         #project_config = docker.compose.config()
+         if forceRebuild:
+             docker.compose.build()
+         # run docker compose up
+         # this might take a while e.g. downloading
+         docker.compose.up(detach=True)    
+-        self.getContainers()
+-            
++        self.getContainers()
+```
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/html_table.py` & `pymediawikidocker-0.8.4/mwdocker/html_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/logger.py` & `pymediawikidocker-0.8.4/mwdocker/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/mariadb.py` & `pymediawikidocker-0.8.4/mwdocker/mariadb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/mw.py` & `pymediawikidocker-0.8.4/mwdocker/mw.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/mwcluster.py` & `pymediawikidocker-0.8.4/mwdocker/mwcluster.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ '''
+ Created on 2021-08-06
+ @author: wf
+ '''
+-from mwdocker.docker import DockerApplication
++from mwdocker.docker import DockerApplication, Host
+ from mwdocker.mw import ExtensionList
+ import sys
+ from argparse import ArgumentParser
+ from argparse import ArgumentDefaultsHelpFormatter
+ from mwdocker.logger import Logger
+ 
+ class MediaWikiCluster(object):
+@@ -20,29 +20,36 @@
+     # 2023-04-04 1.39.3 upgrade
+     defaultVersions=["1.27.7","1.31.16","1.35.10","1.37.6","1.38.6","1.39.3"]
+     defaultExtensionNameList=["Admin Links","Header Tabs","SyntaxHighlight","Variables"]
+     defaultUser="Sysop"
+     defaultPassword="sysop-1234!"
+     defaultLogo="$wgResourceBasePath/resources/assets/wiki.png"
+ 
+-    def __init__(self,versions:list,user:str=None,password:str=None,container_name:str=None,extensionNameList:list=None,extensionJsonFile:str=None,wikiIdList:list=None,sqlPort:int=9306,basePort:int=9080,networkName="mwNetwork",mariaDBVersion="10.11",smwVersion=None,mySQLRootPassword=None,logo=None,debug=False,verbose=True):
++    def __init__(self,versions:list,user:str=None,password:str=None,container_name:str=None,extensionNameList:list=None,extensionJsonFile:str=None,wikiIdList:list=None,sqlPort:int=9306,basePort:int=9080,
++        prot="http",
++        host=None,
++        script_path="",         
++        networkName="mwNetwork",mariaDBVersion="10.11",smwVersion=None,mySQLRootPassword=None,logo=None,debug=False,verbose=True):
+         '''
+         Constructor
+         
+         Args:
+             versions(list): the list of MediaWiki versions to create docker applications for
+             user(str): the initial sysop user to create
+             password(str): the initial sysop password to user
+             container_name(str): the container name to be used (for a single version)
+             extensionNameList(list): a list of names of extensions to be installed
+             extensonJsonFile(str): name of an additional jsonFile to load extensions from
+             wikiIdList(list): a list of wikiIds to be used to create corresponding wikiUsers for simplified access to the wiki
+             sqlPort(int): the base port to be used for  publishing the SQL port (3306) for the docker applications
+             basePort(int): the base port to be used for publishing the HTML port (80) for the docker applications
+             networkName(str): the name to use for the docker network to be shared by the cluster participants
++            prot(str): the protocol to use (http or https)
++            host(str): the hostname to use
++            script_path(str): the script_path to use
+             mariaDBVersion(str): the Maria DB version to install as the SQL database provider for the docker applications
+             smwVersion(str): Semantic MediaWiki Version to be used (if any)
+             mySQLRootPassword(str): the mySQL root password to use for the database containers - if None a random password is generated
+             logo(str): URL of the logo to be used
+             debug(bool): if True debugging is enabled
+         '''
+         self.debug=debug
+@@ -58,14 +65,17 @@
+         self.extensionJsonFile=extensionJsonFile
+         self.wikiIdList=wikiIdList
+         if wikiIdList is not None and len(versions)!=len(wikiIdList):
+             raise Exception(f"versionList and wikiIdList must have the same length but versions={versions} and wikiIdList={wikiIdList}")
+         self.password=password
+         self.baseSqlPort=sqlPort
+         self.basePort=basePort
++        self.prot=prot
++        self.host=host
++        self.script_path=script_path
+         self.versions=versions
+         if container_name is not None and len(self.versions)>1:
+             print(f"container name {container_name} supplied with multiple versions - ignoring", file=sys.stderr)
+             container_name=None
+         self.container_name=container_name
+         self.mariaDBVersion=mariaDBVersion
+         self.smwVersion=smwVersion
+@@ -205,20 +215,21 @@
+             DockerApplication: the docker application
+         '''
+         port=self.basePort+i
+         sqlPort=self.baseSqlPort+i
+         wikiId=None
+         if self.wikiIdList is not None:
+             wikiId=self.wikiIdList[i]                        
+-        mwApp=DockerApplication(user=self.user,password=self.password,version=version,container_name=self.container_name,extensionMap=self.extensionMap,wikiId=wikiId,mariaDBVersion=self.mariaDBVersion,smwVersion=self.smwVersion,port=port,sqlPort=sqlPort,mySQLRootPassword=self.mySQLRootPassword,logo=self.logo,debug=self.debug)
++        mwApp=DockerApplication(user=self.user,password=self.password,version=version,container_name=self.container_name,extensionMap=self.extensionMap,wikiId=wikiId,mariaDBVersion=self.mariaDBVersion,smwVersion=self.smwVersion,port=port,
++                                prot=self.prot,host=self.host,script_path=self.script_path,sqlPort=sqlPort,mySQLRootPassword=self.mySQLRootPassword,logo=self.logo,debug=self.debug)
+         return mwApp
+ 
+-__version__ = "0.7.0"
++__version__ = "0.8.4"
+ __date__ = '2021-06-21'
+-__updated__ = '2023-01-25'
++__updated__ = '2023-04-06'
+ DEBUG=False
+ 
+ def main(argv=None): # IGNORE:C0111
+     '''main program.'''
+ 
+     if argv is None:
+         argv = sys.argv[1:]
+@@ -229,15 +240,15 @@
+     program_version_message = '%%(prog)s %s (%s)' % (program_version, program_build_date)
+     program_shortdesc = "mwcluster"
+     user_name="Wolfgang Fahl"
+ 
+     program_license = '''%s
+ 
+   Created by %s on %s.
+-  Copyright 2021-2022 Wolfgang Fahl. All rights reserved.
++  Copyright 2021-2023 Wolfgang Fahl. All rights reserved.
+ 
+   Licensed under the Apache License 2.0
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+   Distributed on an "AS IS" basis without warranties
+   or conditions of any kind, either express or implied.
+ 
+@@ -248,28 +259,38 @@
+         parser.add_argument('-bp', '--basePort',dest='basePort',type=int,default=9080,help="set how base html port 80 to be exposed - incrementing by one for each version [default: %(default)s]")
+         parser.add_argument('-c','--check',action="store_true",default=False,help="check the wikis [default: %(default)s]")
+         parser.add_argument('-cn','--container_name',default=None,help="set container name (only valid and recommended for single version call)")
+         parser.add_argument("-d", "--debug", dest="debug",   action="store_true", help="set debug level [default: %(default)s]")
+         parser.add_argument('-el', '--extensionList', dest='extensionNameList', nargs="*",default=MediaWikiCluster.defaultExtensionNameList,help="list of extensions to be installed [default: %(default)s]")
+         parser.add_argument('-ej', '--extensionJson',dest='extensionJsonFile',default=None,help="additional extension descriptions default: None")
+         parser.add_argument("-f", "--forceRebuild", dest="forceRebuild",   action="store_true", help="shall the applications rebuild be forced (with stop and remove of existing containers)")
++        parser.add_argument("--prot",default="http",help="change to https in case")
++        parser.add_argument("--script_path",default="",help="change to any script_path you might need to set")
++        parser.add_argument("--host", default=Host.get_default_host(),
++                            help="the host to serve / listen from [default: %(default)s]")
+         parser.add_argument("--logo", default=MediaWikiCluster.defaultLogo, help="set Logo [default: %(default)s]")
+         parser.add_argument('-mv', '--mariaDBVersion', dest='mariaDBVersion',default="10.9",help="mariaDB Version to be installed [default: %(default)s]")
+         parser.add_argument('-p','--password',dest='password',default=MediaWikiCluster.defaultPassword, help="set password for initial user [default: %(default)s] ")
+         parser.add_argument('-sp', '--sqlBasePort',dest='sqlPort',type=int,default=9306,help="set base mySql port 3306 to be exposed - incrementing by one for each version [default: %(default)s]")
+         parser.add_argument('-smw','--smwVersion',dest='smwVersion',default=None,help="set SemanticMediaWiki Version to be installed default is None - no installation of SMW")
+         parser.add_argument('-u','--user',dest='user',default=MediaWikiCluster.defaultUser, help="set username of initial user with sysop rights [default: %(default)s] ")
+         parser.add_argument('-V', '--version', action='version', version=program_version_message)
+         parser.add_argument('-vl', '--versionList', dest='versions', nargs="*",default=MediaWikiCluster.defaultVersions,help="mediawiki versions to create docker applications for [default: %(default)s] ")
+         parser.add_argument('-wl', '--wikiIdList', dest='wikiIdList', nargs="*",default=None,help="list of wikiIDs to be used for for py-3rdparty-mediawiki wikiuser quick access")   
+         args = parser.parse_args(argv)
+         action="checking docker access" if args.check else "creating docker compose applications"
+         print(f"{action} for mediawiki versions {args.versions}")
+         # create a MediaWiki Cluster
+-        mwCluster=MediaWikiCluster(args.versions,user=args.user,password=args.password,container_name=args.container_name,extensionJsonFile=args.extensionJsonFile,extensionNameList=args.extensionNameList,wikiIdList=args.wikiIdList,basePort=args.basePort,sqlPort=args.sqlPort,mariaDBVersion=args.mariaDBVersion,smwVersion=args.smwVersion,logo=args.logo,debug=args.debug)
++        mwCluster=MediaWikiCluster(args.versions,user=args.user,password=args.password,container_name=args.container_name,extensionJsonFile=args.extensionJsonFile,extensionNameList=args.extensionNameList,wikiIdList=args.wikiIdList,
++            host=args.host,
++            prot=args.prot,
++            script_path=args.script_path,
++            basePort=args.basePort,
++            sqlPort=args.sqlPort,
++            mariaDBVersion=args.mariaDBVersion,smwVersion=args.smwVersion,logo=args.logo,debug=args.debug)
+         mwCluster.createApps()
+         if args.check:
+             return mwCluster.check()
+         else:
+             return mwCluster.start(forceRebuild=args.forceRebuild)
+     except KeyboardInterrupt:
+         ### handle keyboard interrupt ###
+```
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/webscrape.py` & `pymediawikidocker-0.8.4/mwdocker/webscrape.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/extensions.json` & `pymediawikidocker-0.8.4/mwdocker/resources/extensions.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwCompose.yml` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwCompose.yml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -27,15 +27,14 @@
+       MYSQL_PASSWORD: "{{mySQLPassword}}"
+       MYSQL_ROOT_PASSWORD: "{{mySQLRootPassword}}"
+     
+     ports:
+       - {{sqlPort}}:3306
+     
+     volumes:
+-       - mysql-etc:/etc
+        - mysql-data:/var/lib/mysql
+       
+ # mediawiki
+   mw:
+     container_name: {{container_name}}-mw
+ 
+     # the image is specified in the dockerfile
+@@ -51,20 +50,21 @@
+     links:
+       - db
+       
+     depends_on:
+       - db
+     
+     volumes:
+-      - wikiimages:/var/www/html/images
++      - wiki-www:/var/www/
++      - wiki-etc:/etc
+     # After initial setup, download LocalSettings.php to the same directory as
+     # this yaml and uncomment the following line and use compose to restart
+     # the mediawiki service
+     # - ./LocalSettings.php:/var/www/html/LocalSettings.php
+     
+ volumes:
+-  mysql-etc:
+-    driver: local
+   mysql-data:
+     driver: local
+-  wikiimages:
++  wiki-etc:
++    driver: local
++  wiki-www:
+     driver: local
+```
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwDockerfile` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwDockerfile`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings127.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings127.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings131.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings131.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings135.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings135.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings136.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings136.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings137.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings137.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings138.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings138.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwLocalSettings139.php` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwLocalSettings139.php`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki127.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki127.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki131.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki131.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki135.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki135.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki136.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki136.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki137.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki137.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki138.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki138.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/mwWiki139.sql` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/mwWiki139.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/mwdocker/resources/templates/plantuml.sh` & `pymediawikidocker-0.8.4/mwdocker/resources/templates/plantuml.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/tests/basetest.py` & `pymediawikidocker-0.8.4/tests/basetest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/tests/test_extensions.py` & `pymediawikidocker-0.8.4/tests/test_extensions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/tests/test_html_tables.py` & `pymediawikidocker-0.8.4/tests/test_html_tables.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/tests/test_install.py` & `pymediawikidocker-0.8.4/tests/test_install.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/.gitignore` & `pymediawikidocker-0.8.4/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/LICENSE` & `pymediawikidocker-0.8.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/README.md` & `pymediawikidocker-0.8.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/pyproject.toml` & `pymediawikidocker-0.8.4/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `pymediawikidocker-0.8.3/PKG-INFO` & `pymediawikidocker-0.8.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pymediawikidocker
+-Version: 0.8.3
++Version: 0.8.4
+ Summary: Python controlled (semantic) mediawiki docker application cluster installation
+ Project-URL: Home, https://github.com/WolfgangFahl/pymediawikidocker
+ Project-URL: Documentation, https://wiki.bitplan.com/index.php/pymediawikidocker
+ Project-URL: Source, https://github.com/WolfgangFahl/pymediawikidocker
+ Author-email: Wolfgang Fahl <wf@bitplan.com>
+ Maintainer-email: Wolfgang Fahl <wf@bitplan.com>
+ License: Apache-2.0
+```
+

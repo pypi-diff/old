@@ -1,0 +1,112 @@
+--- tmp/nonebot_api_paddle-1.0.0.tar.gz
++++ tmp/nonebot_api_paddle-1.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nonebot_api_paddle-1.0.0.tar", last modified: Thu Apr  6 14:55:36 2023, max compression
+│ +gzip compressed data, was "nonebot_api_paddle-1.0.1.tar", last modified: Thu Apr  6 15:09:52 2023, max compression
+│   --- nonebot_api_paddle-1.0.0.tar
+├── +++ nonebot_api_paddle-1.0.1.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 14:55:36.031304 nonebot_api_paddle-1.0.0/
+│ │ --rw-rw-rw-   0        0        0    12533 2023-04-02 14:35:33.000000 nonebot_api_paddle-1.0.0/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0       17 2023-04-06 14:54:45.000000 nonebot_api_paddle-1.0.0/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0      858 2023-04-06 14:55:36.030307 nonebot_api_paddle-1.0.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      356 2023-04-06 14:52:18.000000 nonebot_api_paddle-1.0.0/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 14:55:36.025324 nonebot_api_paddle-1.0.0/nonebot_api_paddle/
+│ │ --rw-rw-rw-   0        0        0     5228 2023-04-06 14:20:19.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3143 2023-04-06 12:04:09.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_excel.py
+│ │ --rw-rw-rw-   0        0        0     2410 2023-04-06 07:39:32.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_ocr.py
+│ │ --rw-rw-rw-   0        0        0     2461 2023-04-04 12:52:45.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_voice.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 14:55:36.029310 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/
+│ │ --rw-rw-rw-   0        0        0      858 2023-04-06 14:55:35.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      376 2023-04-06 14:55:35.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 14:55:35.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      141 2023-04-06 14:55:35.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       19 2023-04-06 14:55:35.000000 nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 14:55:36.031304 nonebot_api_paddle-1.0.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1245 2023-04-06 14:55:28.000000 nonebot_api_paddle-1.0.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:09:52.579657 nonebot_api_paddle-1.0.1/
+│ │ +-rw-rw-rw-   0        0        0    12533 2023-04-02 14:35:33.000000 nonebot_api_paddle-1.0.1/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0       18 2023-04-06 15:09:22.000000 nonebot_api_paddle-1.0.1/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0      858 2023-04-06 15:09:52.578660 nonebot_api_paddle-1.0.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      356 2023-04-06 14:52:18.000000 nonebot_api_paddle-1.0.1/README.rst
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:09:52.573677 nonebot_api_paddle-1.0.1/nonebot_api_paddle/
+│ │ +-rw-rw-rw-   0        0        0     5228 2023-04-06 14:20:19.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3143 2023-04-06 12:04:09.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_excel.py
+│ │ +-rw-rw-rw-   0        0        0     2410 2023-04-06 07:39:32.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_ocr.py
+│ │ +-rw-rw-rw-   0        0        0     2461 2023-04-04 12:52:45.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_voice.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:09:52.578660 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      858 2023-04-06 15:09:52.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      377 2023-04-06 15:09:52.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 15:09:52.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      141 2023-04-06 15:09:52.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       19 2023-04-06 15:09:52.000000 nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 15:09:52.579657 nonebot_api_paddle-1.0.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1246 2023-04-06 15:09:34.000000 nonebot_api_paddle-1.0.1/setup.py
+│ │   --- nonebot_api_paddle-1.0.0/LICENSE.txt
+│ ├── +++ nonebot_api_paddle-1.0.1/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- nonebot_api_paddle-1.0.0/PKG-INFO
+│ ├── +++ nonebot_api_paddle-1.0.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nonebot_api_paddle
+│ │ -Version: 1.0.0
+│ │ +Version: 1.0.1
+│ │  Summary: nonbot_api_paddle
+│ │  Home-page: https://github.com/canxin121/nonebot_api_paddle
+│ │  Author: canxin
+│ │  Author-email: 1969730106@qq.com
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│ │   --- nonebot_api_paddle-1.0.0/nonebot_api_paddle/__init__.py
+│ ├── +++ nonebot_api_paddle-1.0.1/nonebot_api_paddle/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_excel.py
+│ ├── +++ nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_excel.py
+│ │┄ Files identical despite different names
+│ │   --- nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_ocr.py
+│ ├── +++ nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_ocr.py
+│ │┄ Files identical despite different names
+│ │   --- nonebot_api_paddle-1.0.0/nonebot_api_paddle/api_voice.py
+│ ├── +++ nonebot_api_paddle-1.0.1/nonebot_api_paddle/api_voice.py
+│ │┄ Files identical despite different names
+│ │   --- nonebot_api_paddle-1.0.0/nonebot_api_paddle.egg-info/PKG-INFO
+│ ├── +++ nonebot_api_paddle-1.0.1/nonebot_api_paddle.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nonebot-api-paddle
+│ │ -Version: 1.0.0
+│ │ +Version: 1.0.1
+│ │  Summary: nonbot_api_paddle
+│ │  Home-page: https://github.com/canxin121/nonebot_api_paddle
+│ │  Author: canxin
+│ │  Author-email: 1969730106@qq.com
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│ │   --- nonebot_api_paddle-1.0.0/setup.py
+│ ├── +++ nonebot_api_paddle-1.0.1/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │ -with open("readme.md", "r", encoding="utf-8") as f:
+│ │ +with open("README.rst", "r", encoding="utf-8") as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="nonebot_api_paddle",  # 项目名称，保证它的唯一性，不要跟已存在的包名冲突即可
+│ │ -    version="1.0.0",  # 程序版本
+│ │ +    version="1.0.1",  # 程序版本
+│ │      author="canxin",  # 项目作者
+│ │      author_email="1969730106@qq.com",  # 作者邮件
+│ │      description="nonbot_api_paddle",  # 项目的一句话描述
+│ │      long_description=long_description,  # 加长版描述
+│ │      long_description_content_type="text/markdown",  # 描述使用Markdown
+│ │      url="https://github.com/canxin121/nonebot_api_paddle",  # 项目地址
+│ │      packages=setuptools.find_packages(),  # 无需修改

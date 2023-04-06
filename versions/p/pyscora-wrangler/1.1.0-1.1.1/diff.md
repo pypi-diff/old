@@ -1,0 +1,217 @@
+# Comparing `tmp/pyscora_wrangler-1.1.0.tar.gz` & `tmp/pyscora_wrangler-1.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pyscora_wrangler-1.1.0.tar", max compression
++gzip compressed data, was "pyscora_wrangler-1.1.1.tar", max compression
+```
+
+## Comparing `pyscora_wrangler-1.1.0.tar` & `pyscora_wrangler-1.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+--rw-r--r--   0        0        0     1049 2023-04-06 14:46:56.531290 pyscora_wrangler-1.1.0/LICENSE
+--rw-r--r--   0        0        0      659 2023-04-06 14:46:56.531290 pyscora_wrangler-1.1.0/README.md
+--rw-r--r--   0        0        0     1061 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyproject.toml
+--rw-r--r--   0        0        0       37 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/__init__.py
+--rw-r--r--   0        0        0    14135 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/README.md
+--rw-r--r--   0        0        0       85 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/__init__.py
+--rw-r--r--   0        0        0     7112 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/athena/__init__.py
+--rw-r--r--   0        0        0    15796 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/cognito/__init__.py
+--rw-r--r--   0        0        0       88 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/constants.py
+--rw-r--r--   0        0        0     6683 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/dynamodb/__init__.py
+--rw-r--r--   0        0        0      671 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/aws/utils.py
+--rw-r--r--   0        0        0      165 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/constants.py
+--rw-r--r--   0        0        0     2692 2023-04-06 14:46:56.535290 pyscora_wrangler-1.1.0/pyscora_wrangler/utils.py
+--rw-r--r--   0        0        0     1901 1970-01-01 00:00:00.000000 pyscora_wrangler-1.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1049 2023-04-06 15:03:13.032676 pyscora_wrangler-1.1.1/LICENSE
++-rw-r--r--   0        0        0      659 2023-04-06 15:03:13.032676 pyscora_wrangler-1.1.1/README.md
++-rw-r--r--   0        0        0     1061 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyproject.toml
++-rw-r--r--   0        0        0       37 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/__init__.py
++-rw-r--r--   0        0        0    14135 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/README.md
++-rw-r--r--   0        0        0       85 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/__init__.py
++-rw-r--r--   0        0        0     7114 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/athena/__init__.py
++-rw-r--r--   0        0        0    15796 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/cognito/__init__.py
++-rw-r--r--   0        0        0       88 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/constants.py
++-rw-r--r--   0        0        0     6683 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/dynamodb/__init__.py
++-rw-r--r--   0        0        0      671 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/aws/utils.py
++-rw-r--r--   0        0        0      165 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/constants.py
++-rw-r--r--   0        0        0     2692 2023-04-06 15:03:13.036676 pyscora_wrangler-1.1.1/pyscora_wrangler/utils.py
++-rw-r--r--   0        0        0     1901 1970-01-01 00:00:00.000000 pyscora_wrangler-1.1.1/PKG-INFO
+```
+
+### Comparing `pyscora_wrangler-1.1.0/LICENSE` & `pyscora_wrangler-1.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/README.md` & `pyscora_wrangler-1.1.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/pyproject.toml` & `pyscora_wrangler-1.1.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pyscora-wrangler"
+-version = "1.1.0"
++version = "1.1.1"
+ description = ""
+ authors = ["Oncase <suporte@oncase.com.br>"]
+ maintainers = ["Guilherme Morone <guilherme.morone@oncase.com.br>"]
+ license = "MIT"
+ readme = "README.md"
+ homepage = "https://github.com/oncase/pyscora-wrangler"
+ repository = "https://github.com/oncase/pyscora-wrangler"
+```
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/aws/README.md` & `pyscora_wrangler-1.1.1/pyscora_wrangler/aws/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/aws/athena/__init__.py` & `pyscora_wrangler-1.1.1/pyscora_wrangler/aws/athena/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -58,14 +58,15 @@
+         verbose (bool, optional): More logs. Defaults to True.
+         boto3_session (Session | None, optional): Custom boto3 session. Defaults to None.
+ 
+ 
+     Returns:
+         bool: True if the process had no errors, False, otherwise.
+     """
++
+     session = get_boto3_session(boto3_session)
+ 
+     if table_name is None:
+         table_name = os.path.split(parquet_path)[1]
+ 
+     athena_metadata = wr.s3.read_parquet_metadata(path=parquet_path, boto3_session=session)[0]
+     try:
+@@ -94,26 +95,26 @@
+ 
+     return True
+ 
+ 
+ @measure_time
+ def athena_refresh(
+     database: str,
+-    tables_metadatas_from_yaml: List[Dict[str, Any]] | None = None,
++    tables_metadatas: List[Dict[str, Any]] | None = None,
+     yaml_metadatas_file_path: str | None = None,
+     boto3_session: Session | None = None,
+ ) -> None:
+     """Refreshes athena tables
+ 
+     Args:
+-        database (str): AWS Database name. If the database does not exist, create a new one.
++        database (str): AWS Athena database name. If the database does not exist, create a new one.
+ 
+         YOU MUST SPECIFY ONE OF THOSE:
+-            tables_metadatas_from_yaml (List[Dict[str, Any]] | None, optional): Yaml file with athena table metadatas. Defaults to None.
+-            yaml_metadatas_file_path (str | None, optional): Dictionary with athena table metadatas. Defaults to None.
++            tables_metadatas (List[Dict[str, Any]] | None, optional): List of dictionaries with athena tables metadatas. Defaults to None.
++            yaml_metadatas_file_path (str | None, optional): Yaml file with athena tables metadatas. Defaults to None.
+ 
+             YOU MUST SPECIFY (FOR EACH TABLE):
+ 
+                 - `name`;
+ 
+                 - `schema`;
+ 
+@@ -128,32 +129,32 @@
+         None
+     """
+ 
+     if not database:
+         logger.warning('[athena_refresh] No database was given.')
+         return
+ 
+-    if not tables_metadatas_from_yaml and not yaml_metadatas_file_path:
++    if not tables_metadatas and not yaml_metadatas_file_path:
+         logger.warning(
+             '[athena_refresh] Please, specify on of those parameters: `TABLES_METADAS_FROM_YAML` or `YAML_METADATAS_FILE_PATH`.'
+         )
+         return
+ 
+     session = get_boto3_session(boto3_session)
+ 
+     if database not in wr.catalog.databases(boto3_session=session).values:
+-        logger.warning(f'[athena_refresh] Database {database} does not exist.')
++        logger.warning(f'[athena_refresh] Database {database} does not exist. Creating a new one...')
+         try:
+             wr.catalog.create_database(database, boto3_session=session)
+             logger.info(f'[athena_refresh] Database {database} created.')
+         except Exception as err:
+             logger.error(f'[athena_refresh] {err}')
+             return
+ 
+-    tables = get_copy_metadata(yaml_metadatas_file_path) if yaml_metadatas_file_path else tables_metadatas_from_yaml
++    tables = get_copy_metadata(yaml_metadatas_file_path) if yaml_metadatas_file_path else tables_metadatas
+ 
+     if not tables:
+         logger.error('[athena_refresh] No table metadata was found.')
+         return
+ 
+     def _process(table_meta: Dict[str, Any]) -> Dict[str, str]:
+         nonlocal database, session
+```
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/aws/cognito/__init__.py` & `pyscora_wrangler-1.1.1/pyscora_wrangler/aws/cognito/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/aws/dynamodb/__init__.py` & `pyscora_wrangler-1.1.1/pyscora_wrangler/aws/dynamodb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/aws/utils.py` & `pyscora_wrangler-1.1.1/pyscora_wrangler/aws/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/pyscora_wrangler/utils.py` & `pyscora_wrangler-1.1.1/pyscora_wrangler/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.0/PKG-INFO` & `pyscora_wrangler-1.1.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyscora-wrangler
+-Version: 1.1.0
++Version: 1.1.1
+ Summary: 
+ Home-page: https://github.com/oncase/pyscora-wrangler
+ License: MIT
+ Keywords: wrapper,scora,python,data_engineering
+ Author: Oncase
+ Author-email: suporte@oncase.com.br
+ Maintainer: Guilherme Morone
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: pyscora-wrangler Version: 1.1.0 Summary: Home-page:
++Metadata-Version: 2.1 Name: pyscora-wrangler Version: 1.1.1 Summary: Home-page:
+ https://github.com/oncase/pyscora-wrangler License: MIT Keywords:
+ wrapper,scora,python,data_engineering Author: Oncase Author-email:
+ suporte@oncase.com.br Maintainer: Guilherme Morone Maintainer-email:
+ guilherme.morone@oncase.com.br Requires-Python: >=3.8,<4.0 Classifier: Intended
+ Audience :: Developers Classifier: License :: OSI Approved :: MIT License
+ Classifier: Natural Language :: English Classifier: Programming Language ::
+ Python :: 3 Classifier: Programming Language :: Python :: 3.8 Classifier:
+```
+

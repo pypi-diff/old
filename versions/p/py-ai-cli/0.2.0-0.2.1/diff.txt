@@ -1,0 +1,226 @@
+--- tmp/py-ai-cli-0.2.0.tar.gz
++++ tmp/py-ai-cli-0.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "py-ai-cli-0.2.0.tar", last modified: Sat Apr  1 13:24:05 2023, max compression
+│ +gzip compressed data, was "py-ai-cli-0.2.1.tar", last modified: Thu Apr  6 15:07:53 2023, max compression
+│   --- py-ai-cli-0.2.0.tar
+├── +++ py-ai-cli-0.2.1.tar
+│ ├── file list
+│ │ @@ -1,11 +1,11 @@
+│ │ --rw-r--r--   0        0        0     1538 2023-04-01 13:23:42.379969 py-ai-cli-0.2.0/CHANGELOG.md
+│ │ --rw-r--r--   0        0        0     3155 2023-04-01 13:23:42.379969 py-ai-cli-0.2.0/README.md
+│ │ --rw-r--r--   0        0        0     3940 2023-04-01 13:23:42.379969 py-ai-cli-0.2.0/README_ja.md
+│ │ --rw-r--r--   0        0        0     2922 2023-04-01 13:23:42.379969 py-ai-cli-0.2.0/README_zh.md
+│ │ --rw-r--r--   0        0        0     1996 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0      679 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/src/ai_cli/__init__.py
+│ │ --rw-r--r--   0        0        0     5512 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/src/ai_cli/bot/__init__.py
+│ │ --rwxr-xr-x   0        0        0    13642 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/src/ai_cli/cli.py
+│ │ --rw-r--r--   0        0        0     4468 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/src/ai_cli/git.py
+│ │ --rw-r--r--   0        0        0     2800 2023-04-01 13:23:42.779973 py-ai-cli-0.2.0/src/ai_cli/setting.py
+│ │ --rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1538 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/CHANGELOG.md
+│ │ +-rw-r--r--   0        0        0     3155 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README.md
+│ │ +-rw-r--r--   0        0        0     3940 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README_ja.md
+│ │ +-rw-r--r--   0        0        0     2922 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README_zh.md
+│ │ +-rw-r--r--   0        0        0     1996 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      690 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/__init__.py
+│ │ +-rw-r--r--   0        0        0     5626 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/bot/__init__.py
+│ │ +-rwxr-xr-x   0        0        0    13579 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/cli.py
+│ │ +-rw-r--r--   0        0        0     4468 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/git.py
+│ │ +-rw-r--r--   0        0        0     2800 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/setting.py
+│ │ +-rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.2.1/PKG-INFO
+│ │   --- py-ai-cli-0.2.0/CHANGELOG.md
+│ ├── +++ py-ai-cli-0.2.1/CHANGELOG.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/README.md
+│ ├── +++ py-ai-cli-0.2.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/README_ja.md
+│ ├── +++ py-ai-cli-0.2.1/README_ja.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/README_zh.md
+│ ├── +++ py-ai-cli-0.2.1/README_zh.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/pyproject.toml
+│ ├── +++ py-ai-cli-0.2.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -99,15 +99,15 @@
+│ │      "openai>=0.27.0",
+│ │      "pysocks>=1.7.1",
+│ │      "pyperclip>=1.8.2",
+│ │      "EdgeGPT>=0.1.13",
+│ │  ]
+│ │  requires-python = ">=3.8"
+│ │  readme = "README.md"
+│ │ -version = "0.2.0"
+│ │ +version = "0.2.1"
+│ │  
+│ │  [project.license]
+│ │  text = "MIT"
+│ │  
+│ │  [project.urls]
+│ │  Repository = "https://github.com/yufeikang/ai-cli"
+│ │  Documentation = "https://github.com/yufeikang/ai-cli/blob/main/README.md"
+│ │   --- py-ai-cli-0.2.0/src/ai_cli/__init__.py
+│ ├── +++ py-ai-cli-0.2.1/src/ai_cli/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,21 +1,21 @@
+│ │ -__version__ = "0.2.0"
+│ │ +__version__ = "0.2.1"
+│ │  
+│ │  import logging
+│ │  import os
+│ │  from logging.handlers import RotatingFileHandler
+│ │  from pathlib import Path
+│ │  
+│ │  HOME = Path.home()
+│ │  
+│ │  CONFIG_DIR = Path.home() / ".config/ai_cli"
+│ │  LOG_DIR = CONFIG_DIR / "logs"
+│ │  LOG_DIR.mkdir(parents=True, exist_ok=True)
+│ │  
+│ │  
+│ │  def init_logging(log_level: int = logging.INFO):
+│ │ -    log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+│ │ +    log_format = "%(asctime)s - %(name)s:%(lineno)d - %(levelname)s - %(message)s"
+│ │      log_file = LOG_DIR / "ai_cli.log"
+│ │      fh = RotatingFileHandler(log_file, maxBytes=1024 * 1024 * 10, backupCount=7)
+│ │      logging.basicConfig(level=logging.WARNING, handlers=[fh], format=log_format)
+│ │      # set ai_cli logger level to INFO
+│ │      logging.getLogger("ai_cli").setLevel(level=log_level)
+│ │   --- py-ai-cli-0.2.0/src/ai_cli/bot/__init__.py
+│ ├── +++ py-ai-cli-0.2.1/src/ai_cli/bot/__init__.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -71,25 +71,29 @@
+│ │      def __init__(self, setting: Setting):
+│ │          self.setting = setting
+│ │          self.history = ChatHistoryContainer()
+│ │          self.stream = not setting.no_stream
+│ │  
+│ │      @abstractmethod
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │ -        ...
+│ │ +        pass
+│ │  
+│ │      def ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          stream = self.stream if stream is None else stream
+│ │ +        logger.info(f"Ask: {question} stream: {stream}")
+│ │          question_id = self.history.add_question(question)
+│ │ -        if not self.stream:
+│ │ -            answer = self._ask(question, stream=self.stream)
+│ │ +        if not stream:
+│ │ +            answer = self._ask(question, stream=stream)
+│ │ +            if isinstance(answer, Generator):
+│ │ +                answer = list(answer)[0]
+│ │ +            logger.info(f"Answer: {answer}")
+│ │              self.history.add_answer(question_id, answer)
+│ │              return answer
+│ │          else:
+│ │ -            return (self.history.add_answer(question_id, a) for a in self._ask(question, stream=self.stream))
+│ │ +            return (self.history.add_answer(question_id, a) for a in self._ask(question, stream=stream))
+│ │  
+│ │  
+│ │  class GPTBot(Bot):
+│ │      def __init__(self, setting: Setting):
+│ │          super().__init__(setting)
+│ │          self.model = setting.model
+│ │  
+│ │ @@ -101,15 +105,15 @@
+│ │  
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          messages = list(self.get_messages())
+│ │          try:
+│ │              response = openai.ChatCompletion.create(model=self.setting.model, messages=messages, stream=stream)
+│ │              if not stream:
+│ │                  logger.debug(f"Answer: {json.dumps(response, ensure_ascii=False)}")
+│ │ -                return response.choices[0].message.content
+│ │ +                yield response.choices[0].message.content
+│ │              else:
+│ │                  for v in response:
+│ │                      logger.debug(f"Answer stream: {json.dumps(v, ensure_ascii=False)}")
+│ │                      if "content" in v.choices[0].delta:
+│ │                          yield v.choices[0].delta.content
+│ │          except openai.error.RateLimitError:
+│ │              logger.warning("[bold red]Rate limit exceeded, sleep for 10 seconds, then retry")
+│ │ @@ -122,20 +126,19 @@
+│ │          super().__init__(setting)
+│ │          self.style = ConversationStyle.creative
+│ │          self.history.answer_append = False
+│ │          self.bot = Chatbot(cookiePath=setting.bing_cookie)
+│ │          logger.info(f"BingBot init, cookie path: {setting.bing_cookie}")
+│ │  
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │ -        stream = self.stream if stream is None else stream
+│ │          if not stream:
+│ │              result = asyncio.run(self.bot.ask(question, conversation_style=self.style))
+│ │              logger.debug(f"Answer: {json.dumps(result, ensure_ascii=False)}")
+│ │              messages = result.get("item").get("messages")
+│ │ -            return messages[len(messages) - 1].get("text")
+│ │ +            yield messages[len(messages) - 1].get("text")
+│ │          else:
+│ │              gen = self.bot.chat_hub.ask_stream(
+│ │                  question, conversation_style=self.style, wss_link="wss://sydney.bing.com/sydney/ChatHub"
+│ │              )
+│ │              for result in self.sync_adapter(gen):
+│ │                  logger.debug(f"Answer stream: {json.dumps(result, ensure_ascii=False)}")
+│ │                  if not result[0]:
+│ │   --- py-ai-cli-0.2.0/src/ai_cli/cli.py
+│ ├── +++ py-ai-cli-0.2.1/src/ai_cli/cli.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -282,15 +282,15 @@
+│ │          with Live("[bold green]Asking...", refresh_per_second=3) as live:
+│ │              logger.debug("asking question: %s", question)
+│ │              response = _ask(question, stream=stream)
+│ │              for content in response:
+│ │                  _print(content, live.update)
+│ │      else:
+│ │          with console.status("[bold green]Asking...", spinner="point") as status:
+│ │ -            content = _ask(question)
+│ │ +            content = _ask(question, stream=stream)
+│ │              _print(content, console.print)
+│ │              status.update("[bold green]Done!")
+│ │      return content
+│ │  
+│ │  
+│ │  def chat():
+│ │      stream = not args.no_stream
+│ │ @@ -404,16 +404,15 @@
+│ │          exit(0)
+│ │      diff_files = git.get_change_files("HEAD")
+│ │      if not diff_files or len(diff_files) == 0:
+│ │          console.print("[bold red]No diff files found")
+│ │          exit(0)
+│ │      console.print(f"[bold blue]Found {len(diff_files)} files changed[/bold blue]")
+│ │      diff = git.get_file_diff(diff_files, "HEAD")
+│ │ -    message = [{"role": "system", "content": f"{setting.commit_prompt}"}]
+│ │ -    message.append({"role": "user", "content": f"{diff}"})
+│ │ +    message = f"{setting.commit_prompt} \m\n\n {diff}"
+│ │      result = ask(message, stream=False).strip()
+│ │      if args.message:
+│ │          result = result + "\n\n" + args.message
+│ │      action = Prompt.ask(
+│ │          "[bold blue]Do you want to commit these changes?[/bold blue] [(Yes)y/(No)n/(Edit)e]",
+│ │          choices=["y", "n", "e"],
+│ │          show_choices=False,
+│ │   --- py-ai-cli-0.2.0/src/ai_cli/git.py
+│ ├── +++ py-ai-cli-0.2.1/src/ai_cli/git.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/src/ai_cli/setting.py
+│ ├── +++ py-ai-cli-0.2.1/src/ai_cli/setting.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.0/PKG-INFO
+│ ├── +++ py-ai-cli-0.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: py_ai_cli
+│ │ -Version: 0.2.0
+│ │ +Version: 0.2.1
+│ │  Summary: This CLI tool allows you to easily chat with chatGPT in the command line. You can chat with it, ask questions, and even translate text. It also
+│ │  License: MIT
+│ │  Author-email: Yufei Kang <kou.uhi.x@gmail.com>
+│ │  Requires-Python: >=3.8
+│ │  Project-URL: Documentation, https://github.com/yufeikang/ai-cli/blob/main/README.md
+│ │  Project-URL: Repository, https://github.com/yufeikang/ai-cli
+│ │  Description-Content-Type: text/markdown

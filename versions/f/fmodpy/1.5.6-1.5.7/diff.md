@@ -1,0 +1,571 @@
+# Comparing `tmp/fmodpy-1.5.6.tar.gz` & `tmp/fmodpy-1.5.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fmodpy-1.5.6.tar", last modified: Tue Mar 28 04:51:25 2023, max compression
++gzip compressed data, was "fmodpy-1.5.7.tar", last modified: Thu Apr  6 15:07:53 2023, max compression
+```
+
+## Comparing `fmodpy-1.5.6.tar` & `fmodpy-1.5.7.tar`
+
+### file list
+
+```diff
+@@ -1,107 +1,107 @@
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.882016 fmodpy-1.5.6/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1072 2022-03-18 19:21:33.000000 fmodpy-1.5.6/LICENSE.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)       27 2022-07-26 13:43:21.000000 fmodpy-1.5.6/MANIFEST.in
+--rw-r--r--   0 thomaslux   (501) staff       (20)      753 2023-03-28 04:51:25.882076 fmodpy-1.5.6/PKG-INFO
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.872170 fmodpy-1.5.6/fmodpy/
+--rw-r--r--   0 thomaslux   (501) staff       (20)      658 2022-07-18 14:21:02.000000 fmodpy-1.5.6/fmodpy/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1148 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/__main__.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.873995 fmodpy-1.5.6/fmodpy/about/
+--rw-r--r--   0 thomaslux   (501) staff       (20)       47 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/author.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)      607 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/classifiers.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)       72 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/description.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)       31 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/keywords.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)        5 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/on_pypi.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)       12 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/about/requirements.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)        6 2023-03-27 02:05:28.000000 fmodpy-1.5.6/fmodpy/about/version.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)     4466 2023-03-28 04:51:23.000000 fmodpy-1.5.6/fmodpy/about/version_history.md
+--rw-r--r--   0 thomaslux   (501) staff       (20)    12285 2023-03-28 04:47:43.000000 fmodpy-1.5.6/fmodpy/config.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.874376 fmodpy-1.5.6/fmodpy/development/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1136 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/development/strange_type_example.f90
+--rw-r--r--   0 thomaslux   (501) staff       (20)     5060 2022-04-09 14:56:15.000000 fmodpy-1.5.6/fmodpy/development/todo.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      874 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/development/type.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      522 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/exceptions.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)    34638 2023-03-28 04:40:43.000000 fmodpy-1.5.6/fmodpy/fmodpy.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.876867 fmodpy-1.5.6/fmodpy/parsing/
+--rw-r--r--   0 thomaslux   (501) staff       (20)    10880 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2926 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/_old_code.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)    39247 2023-03-15 15:59:53.000000 fmodpy-1.5.6/fmodpy/parsing/argument.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      817 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/character.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)    13228 2023-03-28 04:21:48.000000 fmodpy-1.5.6/fmodpy/parsing/code.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1600 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/complex.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     5153 2022-07-20 06:18:28.000000 fmodpy-1.5.6/fmodpy/parsing/file.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2853 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/function.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)        0 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/implicit_none.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      162 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/integer.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1563 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/interface.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      745 2022-03-27 17:53:45.000000 fmodpy-1.5.6/fmodpy/parsing/logical.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     7602 2023-03-15 16:08:22.000000 fmodpy-1.5.6/fmodpy/parsing/module.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      118 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/procedure.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      160 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/real.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)    20947 2023-03-27 01:44:22.000000 fmodpy-1.5.6/fmodpy/parsing/subroutine.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     6315 2022-05-10 02:34:01.000000 fmodpy-1.5.6/fmodpy/parsing/type.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)        0 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/parsing/use.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     6810 2023-03-27 01:31:38.000000 fmodpy-1.5.6/fmodpy/parsing/util.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.877158 fmodpy-1.5.6/fmodpy/test/
+--rw-r--r--   0 thomaslux   (501) staff       (20)    53248 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/.coverage
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.877409 fmodpy-1.5.6/fmodpy/test/character/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1410 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/character/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      607 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/character/test_character.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.877654 fmodpy-1.5.6/fmodpy/test/complex128/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2311 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex128/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3655 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex128/test_complex128.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.877903 fmodpy-1.5.6/fmodpy/test/complex256/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2377 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex256/__init__.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.878159 fmodpy-1.5.6/fmodpy/test/complex256/test_complex256/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     7751 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex256/test_complex256/test_complex256_c_wrapper.f90
+--rw-r--r--   0 thomaslux   (501) staff       (20)    13250 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex256/test_complex256/test_complex256_python_wrapper.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3978 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex256/test_complex256.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.878423 fmodpy-1.5.6/fmodpy/test/complex64/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2309 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex64/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3655 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/complex64/test_complex64.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.878676 fmodpy-1.5.6/fmodpy/test/double_precision/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2252 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/double_precision/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3626 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/double_precision/test_double_precision.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.878965 fmodpy-1.5.6/fmodpy/test/int32/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2256 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/int32/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3411 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/int32/test_int32.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.879217 fmodpy-1.5.6/fmodpy/test/int64/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2427 2022-08-27 16:58:36.000000 fmodpy-1.5.6/fmodpy/test/int64/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     4008 2022-08-27 16:57:13.000000 fmodpy-1.5.6/fmodpy/test/int64/test_int64.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.879510 fmodpy-1.5.6/fmodpy/test/logical/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1435 2022-03-27 18:02:26.000000 fmodpy-1.5.6/fmodpy/test/logical/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      663 2022-03-27 17:59:28.000000 fmodpy-1.5.6/fmodpy/test/logical/test_logical.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.879997 fmodpy-1.5.6/fmodpy/test/misc/
+--rw-r--r--   0 thomaslux   (501) staff       (20)      932 2022-05-10 02:37:20.000000 fmodpy-1.5.6/fmodpy/test/misc/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      212 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/misc/implicit_shape.f90
+--rw-r--r--   0 thomaslux   (501) staff       (20)      271 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/misc/simple.f03
+--rw-r--r--   0 thomaslux   (501) staff       (20)      307 2022-05-10 02:24:48.000000 fmodpy-1.5.6/fmodpy/test/misc/subroutine_with_type.f90
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.880360 fmodpy-1.5.6/fmodpy/test/module/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3173 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/module/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)      173 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/module/extra_module.f03
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1364 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/module/test_module.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.880611 fmodpy-1.5.6/fmodpy/test/procedure/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1134 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/procedure/__init__.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.880989 fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1253 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure.f03
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1624 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure.pyx
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2078 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure_c_to_f.f90
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1253 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/procedure/procedure.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.881246 fmodpy-1.5.6/fmodpy/test/real32/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2261 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/real32/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3368 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/real32/test_real32.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.881503 fmodpy-1.5.6/fmodpy/test/real64/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2252 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/real64/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3574 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/real64/test_real64.f03
+--rw-r--r--   0 thomaslux   (501) staff       (20)     3690 2022-05-10 02:36:49.000000 fmodpy-1.5.6/fmodpy/test/test.py
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.881890 fmodpy-1.5.6/fmodpy/test/type/
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2934 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/type/__init__.py
+--rw-r--r--   0 thomaslux   (501) staff       (20)     1373 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/type/derived_type_error.f03
+--rw-r--r--   0 thomaslux   (501) staff       (20)     4376 2022-03-18 19:21:33.000000 fmodpy-1.5.6/fmodpy/test/type/test_type.f03
+-drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-03-28 04:51:25.873009 fmodpy-1.5.6/fmodpy.egg-info/
+--rw-r--r--   0 thomaslux   (501) staff       (20)      753 2023-03-28 04:51:25.000000 fmodpy-1.5.6/fmodpy.egg-info/PKG-INFO
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2571 2023-03-28 04:51:25.000000 fmodpy-1.5.6/fmodpy.egg-info/SOURCES.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)        1 2023-03-28 04:51:25.000000 fmodpy-1.5.6/fmodpy.egg-info/dependency_links.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)       12 2023-03-28 04:51:25.000000 fmodpy-1.5.6/fmodpy.egg-info/requires.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)        7 2023-03-28 04:51:25.000000 fmodpy-1.5.6/fmodpy.egg-info/top_level.txt
+--rw-r--r--   0 thomaslux   (501) staff       (20)      108 2023-03-28 04:51:25.882298 fmodpy-1.5.6/setup.cfg
+--rw-r--r--   0 thomaslux   (501) staff       (20)     2652 2022-03-18 19:21:33.000000 fmodpy-1.5.6/setup.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.180402 fmodpy-1.5.7/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1072 2022-03-18 19:21:33.000000 fmodpy-1.5.7/LICENSE.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)       27 2022-07-26 13:43:21.000000 fmodpy-1.5.7/MANIFEST.in
++-rw-r--r--   0 thomaslux   (501) staff       (20)      753 2023-04-06 15:07:53.180470 fmodpy-1.5.7/PKG-INFO
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.166226 fmodpy-1.5.7/fmodpy/
++-rw-r--r--   0 thomaslux   (501) staff       (20)      658 2022-07-18 14:21:02.000000 fmodpy-1.5.7/fmodpy/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1148 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/__main__.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.168401 fmodpy-1.5.7/fmodpy/about/
++-rw-r--r--   0 thomaslux   (501) staff       (20)       47 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/author.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)      607 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/classifiers.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)       72 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/description.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)       31 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/keywords.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)        5 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/on_pypi.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)       12 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/about/requirements.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)        6 2023-03-28 04:51:29.000000 fmodpy-1.5.7/fmodpy/about/version.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)     4697 2023-04-06 15:07:50.000000 fmodpy-1.5.7/fmodpy/about/version_history.md
++-rw-r--r--   0 thomaslux   (501) staff       (20)    12285 2023-03-28 04:47:43.000000 fmodpy-1.5.7/fmodpy/config.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.168955 fmodpy-1.5.7/fmodpy/development/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1136 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/development/strange_type_example.f90
++-rw-r--r--   0 thomaslux   (501) staff       (20)     5060 2022-04-09 14:56:15.000000 fmodpy-1.5.7/fmodpy/development/todo.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      874 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/development/type.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      522 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/exceptions.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)    34638 2023-03-28 04:40:43.000000 fmodpy-1.5.7/fmodpy/fmodpy.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.172901 fmodpy-1.5.7/fmodpy/parsing/
++-rw-r--r--   0 thomaslux   (501) staff       (20)    10880 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2926 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/_old_code.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)    39247 2023-04-06 04:56:58.000000 fmodpy-1.5.7/fmodpy/parsing/argument.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      817 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/character.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)    13228 2023-03-28 04:21:48.000000 fmodpy-1.5.7/fmodpy/parsing/code.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1600 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/complex.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     5153 2022-07-20 06:18:28.000000 fmodpy-1.5.7/fmodpy/parsing/file.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2853 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/function.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)        0 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/implicit_none.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      162 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/integer.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1563 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/interface.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      950 2023-04-06 04:56:34.000000 fmodpy-1.5.7/fmodpy/parsing/logical.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     7602 2023-03-15 16:08:22.000000 fmodpy-1.5.7/fmodpy/parsing/module.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      118 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/procedure.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      160 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/real.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)    20947 2023-03-27 01:44:22.000000 fmodpy-1.5.7/fmodpy/parsing/subroutine.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     6315 2022-05-10 02:34:01.000000 fmodpy-1.5.7/fmodpy/parsing/type.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)        0 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/parsing/use.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     6810 2023-03-27 01:31:38.000000 fmodpy-1.5.7/fmodpy/parsing/util.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.173423 fmodpy-1.5.7/fmodpy/test/
++-rw-r--r--   0 thomaslux   (501) staff       (20)    53248 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/.coverage
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.173852 fmodpy-1.5.7/fmodpy/test/character/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1410 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/character/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      607 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/character/test_character.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.174252 fmodpy-1.5.7/fmodpy/test/complex128/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2311 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex128/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3655 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex128/test_complex128.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.174575 fmodpy-1.5.7/fmodpy/test/complex256/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2377 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex256/__init__.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.174908 fmodpy-1.5.7/fmodpy/test/complex256/test_complex256/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     7751 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex256/test_complex256/test_complex256_c_wrapper.f90
++-rw-r--r--   0 thomaslux   (501) staff       (20)    13250 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex256/test_complex256/test_complex256_python_wrapper.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3978 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex256/test_complex256.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.175214 fmodpy-1.5.7/fmodpy/test/complex64/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2309 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex64/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3655 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/complex64/test_complex64.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.175522 fmodpy-1.5.7/fmodpy/test/double_precision/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2252 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/double_precision/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3626 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/double_precision/test_double_precision.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.175841 fmodpy-1.5.7/fmodpy/test/int32/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2256 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/int32/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3411 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/int32/test_int32.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.176273 fmodpy-1.5.7/fmodpy/test/int64/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2427 2022-08-27 16:58:36.000000 fmodpy-1.5.7/fmodpy/test/int64/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     4008 2022-08-27 16:57:13.000000 fmodpy-1.5.7/fmodpy/test/int64/test_int64.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.176850 fmodpy-1.5.7/fmodpy/test/logical/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1435 2022-03-27 18:02:26.000000 fmodpy-1.5.7/fmodpy/test/logical/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      663 2022-03-27 17:59:28.000000 fmodpy-1.5.7/fmodpy/test/logical/test_logical.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.177615 fmodpy-1.5.7/fmodpy/test/misc/
++-rw-r--r--   0 thomaslux   (501) staff       (20)      932 2022-05-10 02:37:20.000000 fmodpy-1.5.7/fmodpy/test/misc/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      212 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/misc/implicit_shape.f90
++-rw-r--r--   0 thomaslux   (501) staff       (20)      271 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/misc/simple.f03
++-rw-r--r--   0 thomaslux   (501) staff       (20)      307 2022-05-10 02:24:48.000000 fmodpy-1.5.7/fmodpy/test/misc/subroutine_with_type.f90
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.178189 fmodpy-1.5.7/fmodpy/test/module/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3173 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/module/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)      173 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/module/extra_module.f03
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1364 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/module/test_module.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.178507 fmodpy-1.5.7/fmodpy/test/procedure/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1134 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/procedure/__init__.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.179001 fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1253 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure.f03
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1624 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure.pyx
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2078 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure_c_to_f.f90
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1253 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/procedure/procedure.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.179335 fmodpy-1.5.7/fmodpy/test/real32/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2261 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/real32/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3368 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/real32/test_real32.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.179658 fmodpy-1.5.7/fmodpy/test/real64/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2252 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/real64/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3574 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/real64/test_real64.f03
++-rw-r--r--   0 thomaslux   (501) staff       (20)     3690 2022-05-10 02:36:49.000000 fmodpy-1.5.7/fmodpy/test/test.py
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.180251 fmodpy-1.5.7/fmodpy/test/type/
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2934 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/type/__init__.py
++-rw-r--r--   0 thomaslux   (501) staff       (20)     1373 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/type/derived_type_error.f03
++-rw-r--r--   0 thomaslux   (501) staff       (20)     4376 2022-03-18 19:21:33.000000 fmodpy-1.5.7/fmodpy/test/type/test_type.f03
++drwxr-xr-x   0 thomaslux   (501) staff       (20)        0 2023-04-06 15:07:53.167335 fmodpy-1.5.7/fmodpy.egg-info/
++-rw-r--r--   0 thomaslux   (501) staff       (20)      753 2023-04-06 15:07:53.000000 fmodpy-1.5.7/fmodpy.egg-info/PKG-INFO
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2571 2023-04-06 15:07:53.000000 fmodpy-1.5.7/fmodpy.egg-info/SOURCES.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)        1 2023-04-06 15:07:53.000000 fmodpy-1.5.7/fmodpy.egg-info/dependency_links.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)       12 2023-04-06 15:07:53.000000 fmodpy-1.5.7/fmodpy.egg-info/requires.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)        7 2023-04-06 15:07:53.000000 fmodpy-1.5.7/fmodpy.egg-info/top_level.txt
++-rw-r--r--   0 thomaslux   (501) staff       (20)      108 2023-04-06 15:07:53.180712 fmodpy-1.5.7/setup.cfg
++-rw-r--r--   0 thomaslux   (501) staff       (20)     2652 2022-03-18 19:21:33.000000 fmodpy-1.5.7/setup.py
+```
+
+### Comparing `fmodpy-1.5.6/LICENSE.txt` & `fmodpy-1.5.7/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/PKG-INFO` & `fmodpy-1.5.7/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: fmodpy
+-Version: 1.5.6
++Version: 1.5.7
+ Summary: A lightweight, efficient, highly automated, fortran wrapper for python.
+ Home-page: https://github.com/tchlux/fmodpy
+-Download-URL: https://github.com/tchlux/fmodpy/archive/1.5.6.tar.gz
++Download-URL: https://github.com/tchlux/fmodpy/archive/1.5.7.tar.gz
+ Author: Thomas C.H. Lux
+ Author-email: thomas.ch.lux@gmail.com
+ License: MIT
+ Keywords: python,python3,fortran,wrapper
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: Topic :: Software Development :: Build Tools
+```
+
+### Comparing `fmodpy-1.5.6/fmodpy/__init__.py` & `fmodpy-1.5.7/fmodpy/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/__main__.py` & `fmodpy-1.5.7/fmodpy/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/about/classifiers.txt` & `fmodpy-1.5.7/fmodpy/about/classifiers.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/about/version_history.md` & `fmodpy-1.5.7/fmodpy/about/version_history.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -21,7 +21,8 @@
+ | 1.5.1<br>July 2022 | Minor modifications to fix some compilation and <br> import bugs when supporting generic search for <br> symbols. Symbol dependencies are now loaded within <br> the generated wrapper, to ensure correct operation <br> after the initial build. |
+ | 1.5.2<br>July 2022 | Added some additional standard library search paths <br> and renamed 'delete_destination' as 'overwrite'. <br> Also changed default configurations that were <br> strings being split into proper Python lists. |
+ | 1.5.3<br>March 2023 | Minor update. Changed some logic in fimport to more <br> correctly support different system configurations. <br> Added comments drescribing most configurable <br> settings. Added support for TARGET and POINTER <br> types. |
+ | 1.5.4<br>March 2023 | Added support for '$' as a line continuation <br> character in the fifth column of fixed format files. <br> Switched 'LOGICAL' types to be 'C_BOOL' |
+ | 1.5.5<br>March 2023 | Updated error message for unnamed END statements to <br> include configuration suggestion. Made fixed format <br> Fortran files set 'end_is_named=False' by default. |
+ | 1.5.6<br>March 2023 | Making some 'os.remove' operations safer by checking <br> for path existence. Refactored 'f_compiler_args' <br> into two more parts, 'optimization_level' and <br> 'shared_object_args', so that the typical '-fPIC <br> -shared' do not need to be included when adding <br> custom compilation arguments. |
+ | 1.5.6<br>March 2023 | Making some 'os.remove' operations safer by checking <br> for path existence. Refactored 'f_compiler_args' <br> into two more parts, 'optimization_level' and <br> 'shared_object_args', so that the typical '-fPIC <br> -shared' do not need to be included when adding <br> custom compilation arguments. |
++| 1.5.7<br>April 2023 | Delayed warning message about LOGICAL arrays until <br> those arguments actually have a python interface <br> generated. This is to prevent parsed-but-unused <br> subroutine arguments from creating noise. |
+```
+
+### Comparing `fmodpy-1.5.6/fmodpy/config.py` & `fmodpy-1.5.7/fmodpy/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/development/strange_type_example.f90` & `fmodpy-1.5.7/fmodpy/development/strange_type_example.f90`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/development/todo.py` & `fmodpy-1.5.7/fmodpy/development/todo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/development/type.py` & `fmodpy-1.5.7/fmodpy/development/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/exceptions.py` & `fmodpy-1.5.7/fmodpy/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/fmodpy.py` & `fmodpy-1.5.7/fmodpy/fmodpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/__init__.py` & `fmodpy-1.5.7/fmodpy/parsing/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/_old_code.txt` & `fmodpy-1.5.7/fmodpy/parsing/_old_code.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/argument.py` & `fmodpy-1.5.7/fmodpy/parsing/argument.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/character.py` & `fmodpy-1.5.7/fmodpy/parsing/character.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/code.py` & `fmodpy-1.5.7/fmodpy/parsing/code.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/complex.py` & `fmodpy-1.5.7/fmodpy/parsing/complex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/file.py` & `fmodpy-1.5.7/fmodpy/parsing/file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/function.py` & `fmodpy-1.5.7/fmodpy/parsing/function.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/interface.py` & `fmodpy-1.5.7/fmodpy/parsing/interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/logical.py` & `fmodpy-1.5.7/fmodpy/parsing/logical.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,20 +1,25 @@
+ from .argument import Argument
+ 
+ class Logical(Argument):
+     type = "LOGICAL"
+     c_types = {"4":"ctypes.c_int", "1":"ctypes.c_bool"}
+     default_singleton = "0"
+ 
+-    # Add a warning about logical arrays.
++    # For array inputs of logicals, change the C-type to be an "int".
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         if (self.dimension is not None):
+-            # Change the C-type of this Logical to be an "int" for arrays.
+             self.c_types = self.c_types.copy()
+             self.c_types["4"] = "ctypes.c_int"
+-            # Show a warning to the user.
++
++    # Add a warning about logical arrays.
++    def py_declare(self):
++        # Show a warning to the user for passing in logical array types.
++        if ((self.dimension is not None) and (self._allowed_input())):
+             from fmodpy.config import show_warnings
+             if show_warnings:
+                 import warnings
+                 warnings.warn("Fortran LOGICAL arrays must be given as 32-bit integers.")
+-
++        # Return the usual function.
++        return super().py_declare()
++
+```
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/module.py` & `fmodpy-1.5.7/fmodpy/parsing/module.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/subroutine.py` & `fmodpy-1.5.7/fmodpy/parsing/subroutine.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/type.py` & `fmodpy-1.5.7/fmodpy/parsing/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/parsing/util.py` & `fmodpy-1.5.7/fmodpy/parsing/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/.coverage` & `fmodpy-1.5.7/fmodpy/test/.coverage`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/character/__init__.py` & `fmodpy-1.5.7/fmodpy/test/character/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/character/test_character.f03` & `fmodpy-1.5.7/fmodpy/test/character/test_character.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex128/__init__.py` & `fmodpy-1.5.7/fmodpy/test/complex128/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex128/test_complex128.f03` & `fmodpy-1.5.7/fmodpy/test/complex128/test_complex128.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex256/__init__.py` & `fmodpy-1.5.7/fmodpy/test/complex256/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex256/test_complex256/test_complex256_c_wrapper.f90` & `fmodpy-1.5.7/fmodpy/test/complex256/test_complex256/test_complex256_c_wrapper.f90`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex256/test_complex256/test_complex256_python_wrapper.py` & `fmodpy-1.5.7/fmodpy/test/complex256/test_complex256/test_complex256_python_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex256/test_complex256.f03` & `fmodpy-1.5.7/fmodpy/test/complex256/test_complex256.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex64/__init__.py` & `fmodpy-1.5.7/fmodpy/test/complex64/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/complex64/test_complex64.f03` & `fmodpy-1.5.7/fmodpy/test/complex64/test_complex64.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/double_precision/__init__.py` & `fmodpy-1.5.7/fmodpy/test/double_precision/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/double_precision/test_double_precision.f03` & `fmodpy-1.5.7/fmodpy/test/double_precision/test_double_precision.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/int32/__init__.py` & `fmodpy-1.5.7/fmodpy/test/int32/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/int32/test_int32.f03` & `fmodpy-1.5.7/fmodpy/test/int32/test_int32.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/int64/__init__.py` & `fmodpy-1.5.7/fmodpy/test/int64/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/int64/test_int64.f03` & `fmodpy-1.5.7/fmodpy/test/int64/test_int64.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/logical/__init__.py` & `fmodpy-1.5.7/fmodpy/test/logical/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/logical/test_logical.f03` & `fmodpy-1.5.7/fmodpy/test/logical/test_logical.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/misc/__init__.py` & `fmodpy-1.5.7/fmodpy/test/misc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/module/__init__.py` & `fmodpy-1.5.7/fmodpy/test/module/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/module/test_module.f03` & `fmodpy-1.5.7/fmodpy/test/module/test_module.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/procedure/__init__.py` & `fmodpy-1.5.7/fmodpy/test/procedure/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure.f03` & `fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure.pyx` & `fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure.pyx`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/procedure/og_procedure/procedure_c_to_f.f90` & `fmodpy-1.5.7/fmodpy/test/procedure/og_procedure/procedure_c_to_f.f90`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/procedure/procedure.f03` & `fmodpy-1.5.7/fmodpy/test/procedure/procedure.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/real32/__init__.py` & `fmodpy-1.5.7/fmodpy/test/real32/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/real32/test_real32.f03` & `fmodpy-1.5.7/fmodpy/test/real32/test_real32.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/real64/__init__.py` & `fmodpy-1.5.7/fmodpy/test/real64/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/real64/test_real64.f03` & `fmodpy-1.5.7/fmodpy/test/real64/test_real64.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/test.py` & `fmodpy-1.5.7/fmodpy/test/test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/type/__init__.py` & `fmodpy-1.5.7/fmodpy/test/type/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/type/derived_type_error.f03` & `fmodpy-1.5.7/fmodpy/test/type/derived_type_error.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy/test/type/test_type.f03` & `fmodpy-1.5.7/fmodpy/test/type/test_type.f03`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/fmodpy.egg-info/PKG-INFO` & `fmodpy-1.5.7/fmodpy.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: fmodpy
+-Version: 1.5.6
++Version: 1.5.7
+ Summary: A lightweight, efficient, highly automated, fortran wrapper for python.
+ Home-page: https://github.com/tchlux/fmodpy
+-Download-URL: https://github.com/tchlux/fmodpy/archive/1.5.6.tar.gz
++Download-URL: https://github.com/tchlux/fmodpy/archive/1.5.7.tar.gz
+ Author: Thomas C.H. Lux
+ Author-email: thomas.ch.lux@gmail.com
+ License: MIT
+ Keywords: python,python3,fortran,wrapper
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: Topic :: Software Development :: Build Tools
+```
+
+### Comparing `fmodpy-1.5.6/fmodpy.egg-info/SOURCES.txt` & `fmodpy-1.5.7/fmodpy.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fmodpy-1.5.6/setup.py` & `fmodpy-1.5.7/setup.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,275 @@
+# Comparing `tmp/mpai_cae_arp-0.1.0.tar.gz` & `tmp/mpai_cae_arp-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mpai_cae_arp-0.1.0.tar", max compression
++gzip compressed data, was "mpai_cae_arp-0.2.0.tar", max compression
+```
+
+## Comparing `mpai_cae_arp-0.1.0.tar` & `mpai_cae_arp-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+--rw-r--r--   0        0        0    35149 2023-04-03 21:35:54.975907 mpai_cae_arp-0.1.0/LICENSE
+--rw-r--r--   0        0        0      491 2023-04-03 21:22:02.773309 mpai_cae_arp-0.1.0/README.md
+--rw-r--r--   0        0        0      276 2023-04-04 08:31:02.533352 mpai_cae_arp-0.1.0/mpai_cae_arp/__init__.py
+--rw-r--r--   0        0        0      176 2023-04-04 07:37:21.160932 mpai_cae_arp-0.1.0/mpai_cae_arp/audio/__init__.py
+--rw-r--r--   0        0        0    17907 2023-04-04 07:36:33.129202 mpai_cae_arp-0.1.0/mpai_cae_arp/audio/_audio.py
+--rw-r--r--   0        0        0     2516 2023-04-04 07:38:52.008419 mpai_cae_arp-0.1.0/mpai_cae_arp/audio/_noise.py
+--rw-r--r--   0        0        0      219 2023-04-03 21:48:20.943719 mpai_cae_arp-0.1.0/mpai_cae_arp/audio/standards.py
+--rw-r--r--   0        0        0     4211 2023-04-04 07:22:07.372604 mpai_cae_arp-0.1.0/mpai_cae_arp/audio/utils.py
+--rw-r--r--   0        0        0      701 2023-04-04 07:43:37.478614 mpai_cae_arp-0.1.0/mpai_cae_arp/files.py
+--rw-r--r--   0        0        0      935 2023-04-04 08:17:40.497893 mpai_cae_arp-0.1.0/mpai_cae_arp/io.py
+--rw-r--r--   0        0        0     3100 2023-04-03 21:32:30.045143 mpai_cae_arp-0.1.0/mpai_cae_arp/time.py
+--rw-r--r--   0        0        0        0 2023-04-03 21:25:06.272009 mpai_cae_arp-0.1.0/mpai_cae_arp/types/__init__.py
+--rw-r--r--   0        0        0     7121 2023-04-04 08:29:05.566015 mpai_cae_arp-0.1.0/mpai_cae_arp/types/irregularity.py
+--rw-r--r--   0        0        0     1668 2023-04-03 21:48:21.015718 mpai_cae_arp-0.1.0/mpai_cae_arp/types/schema.py
+--rw-r--r--   0        0        0     1215 2023-04-04 08:00:11.931869 mpai_cae_arp-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0     1280 1970-01-01 00:00:00.000000 mpai_cae_arp-0.1.0/setup.py
+--rw-r--r--   0        0        0     1064 1970-01-01 00:00:00.000000 mpai_cae_arp-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0    35149 2023-04-03 21:35:54.975907 mpai_cae_arp-0.2.0/LICENSE
++-rw-r--r--   0        0        0      491 2023-04-03 21:22:02.773309 mpai_cae_arp-0.2.0/README.md
++-rw-r--r--   0        0        0      276 2023-04-04 08:31:02.533352 mpai_cae_arp-0.2.0/mpai_cae_arp/__init__.py
++-rw-r--r--   0        0        0      176 2023-04-04 07:37:21.160932 mpai_cae_arp-0.2.0/mpai_cae_arp/audio/__init__.py
++-rw-r--r--   0        0        0    17904 2023-04-06 15:03:52.274016 mpai_cae_arp-0.2.0/mpai_cae_arp/audio/_audio.py
++-rw-r--r--   0        0        0     2516 2023-04-04 07:38:52.008419 mpai_cae_arp-0.2.0/mpai_cae_arp/audio/_noise.py
++-rw-r--r--   0        0        0      219 2023-04-03 21:48:20.943719 mpai_cae_arp-0.2.0/mpai_cae_arp/audio/standards.py
++-rw-r--r--   0        0        0     4211 2023-04-04 07:22:07.372604 mpai_cae_arp-0.2.0/mpai_cae_arp/audio/utils.py
++-rw-r--r--   0        0        0     2045 2023-04-06 14:59:46.415794 mpai_cae_arp-0.2.0/mpai_cae_arp/files.py
++-rw-r--r--   0        0        0     1304 2023-04-06 14:57:19.804922 mpai_cae_arp-0.2.0/mpai_cae_arp/io.py
++-rw-r--r--   0        0        0     3100 2023-04-03 21:32:30.045143 mpai_cae_arp-0.2.0/mpai_cae_arp/time.py
++-rw-r--r--   0        0        0        0 2023-04-03 21:25:06.272009 mpai_cae_arp-0.2.0/mpai_cae_arp/types/__init__.py
++-rw-r--r--   0        0        0     7150 2023-04-06 15:04:48.541665 mpai_cae_arp-0.2.0/mpai_cae_arp/types/irregularity.py
++-rw-r--r--   0        0        0     1668 2023-04-03 21:48:21.015718 mpai_cae_arp-0.2.0/mpai_cae_arp/types/schema.py
++-rw-r--r--   0        0        0     1215 2023-04-06 14:56:01.513526 mpai_cae_arp-0.2.0/pyproject.toml
++-rw-r--r--   0        0        0     1280 1970-01-01 00:00:00.000000 mpai_cae_arp-0.2.0/setup.py
++-rw-r--r--   0        0        0     1064 1970-01-01 00:00:00.000000 mpai_cae_arp-0.2.0/PKG-INFO
+```
+
+### Comparing `mpai_cae_arp-0.1.0/LICENSE` & `mpai_cae_arp-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/audio/_audio.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/audio/_audio.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import wave
+ import os
+ from os import path
+ import numpy as np
+ import librosa
+ 
+ from mpai_cae_arp.audio._noise import Noise
+-import mpai_cae_arp.audio.utils as utils
++from mpai_cae_arp.audio import utils
+ 
+ 
+ class AudioWave:
+     """
+     A class to represent an audio wave.
+ 
+     Parameters
+@@ -482,8 +482,8 @@
+                         idxs[noise.label].append((i, i + window_frames))
+                         break
+                 # if the signal power is under the minimum, assign it to the quieter noise
+                 if chunk.db_rms() < lower_noise_limit:
+                     idxs[min(noise_list).label].append((i, i + window_frames))
+                 i += window_frames
+ 
+-        return idxs
++        return idxs
+```
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/audio/_noise.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/audio/_noise.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/audio/utils.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/audio/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/io.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/io.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -48,7 +48,24 @@
+     if color:
+         prepend += color.value
+     if styles:
+         for style in styles:
+             prepend += style.value
+ 
+     return prepend + text + END
++
++
++def pprint(text: str, color: Color = None, styles: list[Style] = None) -> None:
++    """
++    Formats a string with some styles and prints it
++
++    Parameters
++    ----------
++    text : str
++        string to format
++    color : Color, optional
++        color to use
++    styles : list[Style], optional
++        styles to use
++    """
++
++    print(prettify(text, color, styles))
+```
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/time.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/time.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/types/irregularity.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/types/irregularity.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ import uuid
+ from enum import Enum
+-from pydantic import BaseModel, Field
+ from typing import Annotated
++from pydantic import BaseModel, Field
+ 
+ from mpai_cae_arp.audio.standards import EqualizationStandard, SpeedStandard
+ 
+ 
+ class IrregularityType(Enum):
+     BRANDS_ON_TAPE = "b"
+     SPLICE = "sp"
+@@ -121,34 +121,37 @@
+     # TODO: the offset calculation is not implemented yet, so it is set to None
+     irregularities: list[Irregularity]
+     offset: Annotated[int, Field(gt=0)] | None
+ 
+     class Config:
+         schema_extra = {
+             "example": {
+-                "offset": 0,
+-                "irregularities": [
+-                    {
+-                        "irregularity_ID": "a0a0a0a0-a0a0-a0a0-a0a0-a0a0a0a0a0a0",
+-                        "source": "a",
+-                        "time_label": "00:00:00:00",
+-                        "irregularity_type": "b",
+-                        "irregularity_properties": {
+-                            "reading_speed": "n",
+-                            "reading_equalisation": "n",
+-                            "writing_speed": "n",
+-                            "writing_equalisation": "n"
+-                        },
+-                        "audio_block_URI": "https://example.com/audio.wav",
+-                    }
+-                ]
++                "offset":
++                0,
++                "irregularities": [{
++                    "irregularity_ID":
++                    "a0a0a0a0-a0a0-a0a0-a0a0-a0a0a0a0a0a0",
++                    "source":
++                    "a",
++                    "time_label":
++                    "00:00:00:00",
++                    "irregularity_type":
++                    "b",
++                    "irregularity_properties": {
++                        "reading_speed": "n",
++                        "reading_equalisation": "n",
++                        "writing_speed": "n",
++                        "writing_equalisation": "n"
++                    },
++                    "audio_block_URI":
++                    "https://example.com/audio.wav",
++                }]
+             }
+         }
+ 
+-
+     def __init__(self,
+                  irregularities: list[Irregularity] = [],
+                  offset: int | None = None):
+         self.irregularities = irregularities
+         self.offset = offset
+ 
+     def __eq__(self, __o: object) -> bool:
+```
+
+### Comparing `mpai_cae_arp-0.1.0/mpai_cae_arp/types/schema.py` & `mpai_cae_arp-0.2.0/mpai_cae_arp/types/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mpai_cae_arp-0.1.0/pyproject.toml` & `mpai_cae_arp-0.2.0/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "mpai-cae-arp"
+-version = "0.1.0"
++version = "0.2.0"
+ description = "The MPAI CAE-ARP software API"
+ authors = ["Matteo Spanio <dev2@audioinnova.com>"]
+ readme = "README.md"
+ packages = [{include = "mpai_cae_arp"}]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.10"
+```
+
+### Comparing `mpai_cae_arp-0.1.0/setup.py` & `mpai_cae_arp-0.2.0/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -12,15 +12,15 @@
+  'llvmlite>=0.39.1,<0.40.0',
+  'numpy==1.23.3',
+  'pydantic>=1.10.7,<2.0.0',
+  'pyyaml>=6.0,<7.0']
+ 
+ setup_kwargs = {
+     'name': 'mpai-cae-arp',
+-    'version': '0.1.0',
++    'version': '0.2.0',
+     'description': 'The MPAI CAE-ARP software API',
+     'long_description': '# MPAI CAE-ARP API\n\n[![LICENSE](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://img.shields.io/badge/license-GPLv3-blue.svg)\n\n## Description\n\nThis package provides a set of tools for common task in MPAI CAE-ARP standard. It is usend in the official implementation of the standard and can be used as well to develop your own.\n\n## License\n\nThis software is licensed under the GPLv3 license. See the [official site](http://www.gnu.org/licenses/gpl-3.0.html) for more information.\n',
+     'author': 'Matteo Spanio',
+     'author_email': 'dev2@audioinnova.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `mpai_cae_arp-0.1.0/PKG-INFO` & `mpai_cae_arp-0.2.0/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mpai-cae-arp
+-Version: 0.1.0
++Version: 0.2.0
+ Summary: The MPAI CAE-ARP software API
+ Author: Matteo Spanio
+ Author-email: dev2@audioinnova.com
+ Requires-Python: >=3.10,<4.0
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+```
+
