@@ -1,0 +1,1566 @@
+--- tmp/nucliadb-2.6.0.post136-py3-none-any.whl.zip
++++ tmp/nucliadb-2.7.0.post138-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,260 +1,260 @@
+│ -Zip file size: 448017 bytes, number of entries: 258
+│ --rw-r--r--  2.0 unx      891 b- defN 23-Apr-06 11:12 nucliadb/__init__.py
+│ --rw-r--r--  2.0 unx     1027 b- defN 23-Apr-06 11:12 nucliadb/app.py
+│ --rw-r--r--  2.0 unx     4556 b- defN 23-Apr-06 11:12 nucliadb/config.py
+│ --rw-r--r--  2.0 unx     2785 b- defN 23-Apr-06 11:12 nucliadb/logging.py
+│ --rw-r--r--  2.0 unx     1393 b- defN 23-Apr-06 11:12 nucliadb/purge.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:12 nucliadb/py.typed
+│ --rw-r--r--  2.0 unx     3268 b- defN 23-Apr-06 11:12 nucliadb/run.py
+│ --rw-r--r--  2.0 unx     1945 b- defN 23-Apr-06 11:12 nucliadb/settings.py
+│ --rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 11:12 nucliadb/ingest/__init__.py
+│ --rw-r--r--  2.0 unx     6831 b- defN 23-Apr-06 11:12 nucliadb/ingest/app.py
+│ --rw-r--r--  2.0 unx      995 b- defN 23-Apr-06 11:12 nucliadb/ingest/cache.py
+│ --rw-r--r--  2.0 unx     6874 b- defN 23-Apr-06 11:12 nucliadb/ingest/chitchat.py
+│ --rw-r--r--  2.0 unx     2425 b- defN 23-Apr-06 11:12 nucliadb/ingest/partitions.py
+│ --rw-r--r--  2.0 unx    14757 b- defN 23-Apr-06 11:12 nucliadb/ingest/processing.py
+│ --rw-r--r--  2.0 unx     5463 b- defN 23-Apr-06 11:12 nucliadb/ingest/purge.py
+│ --rw-r--r--  2.0 unx    17721 b- defN 23-Apr-06 11:12 nucliadb/ingest/serialize.py
+│ --rw-r--r--  2.0 unx     3021 b- defN 23-Apr-06 11:12 nucliadb/ingest/settings.py
+│ --rw-r--r--  2.0 unx     4583 b- defN 23-Apr-06 11:12 nucliadb/ingest/utils.py
+│ --rw-r--r--  2.0 unx     1087 b- defN 23-Apr-06 11:12 nucliadb/ingest/consumer/__init__.py
+│ --rw-r--r--  2.0 unx    16928 b- defN 23-Apr-06 11:12 nucliadb/ingest/consumer/pull.py
+│ --rw-r--r--  2.0 unx     6425 b- defN 23-Apr-06 11:12 nucliadb/ingest/consumer/service.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/__init__.py
+│ --rw-r--r--  2.0 unx    20415 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/base.py
+│ --rw-r--r--  2.0 unx     6823 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/conversation.py
+│ --rw-r--r--  2.0 unx     1223 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/date.py
+│ --rw-r--r--  2.0 unx     1205 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/exceptions.py
+│ --rw-r--r--  2.0 unx     5159 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/file.py
+│ --rw-r--r--  2.0 unx     1523 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/generic.py
+│ --rw-r--r--  2.0 unx     1235 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/keywordset.py
+│ --rw-r--r--  2.0 unx     2250 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/layout.py
+│ --rw-r--r--  2.0 unx     4084 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/link.py
+│ --rw-r--r--  2.0 unx     1319 b- defN 23-Apr-06 11:12 nucliadb/ingest/fields/text.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/__init__.py
+│ --rw-r--r--  2.0 unx     3088 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/driver.py
+│ --rw-r--r--  2.0 unx      877 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/exceptions.py
+│ --rw-r--r--  2.0 unx      980 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/keys.py
+│ --rw-r--r--  2.0 unx     7607 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/local.py
+│ --rw-r--r--  2.0 unx     6115 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/pg.py
+│ --rw-r--r--  2.0 unx     6807 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/redis.py
+│ --rw-r--r--  2.0 unx     6974 b- defN 23-Apr-06 11:12 nucliadb/ingest/maindb/tikv.py
+│ --rw-r--r--  2.0 unx     3628 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/__init__.py
+│ --rw-r--r--  2.0 unx     7137 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/abc.py
+│ --rw-r--r--  2.0 unx    20650 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/brain.py
+│ --rw-r--r--  2.0 unx    15071 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/entities.py
+│ --rw-r--r--  2.0 unx     1362 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/exceptions.py
+│ --rw-r--r--  2.0 unx    12586 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/grpc_node_binding.py
+│ --rw-r--r--  2.0 unx     5009 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/grpc_node_dummy.py
+│ --rw-r--r--  2.0 unx    21289 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/knowledgebox.py
+│ --rw-r--r--  2.0 unx     1730 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/labels.py
+│ --rw-r--r--  2.0 unx     4291 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/local_node.py
+│ --rw-r--r--  2.0 unx     2864 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/local_shard.py
+│ --rw-r--r--  2.0 unx    21215 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/node.py
+│ --rw-r--r--  2.0 unx     4293 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/nodes_manager.py
+│ --rw-r--r--  2.0 unx    26056 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/processor.py
+│ --rw-r--r--  2.0 unx    49605 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/resource.py
+│ --rw-r--r--  2.0 unx     5087 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/shard.py
+│ --rw-r--r--  2.0 unx     1739 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/synonyms.py
+│ --rw-r--r--  2.0 unx     3340 b- defN 23-Apr-06 11:12 nucliadb/ingest/orm/utils.py
+│ --rw-r--r--  2.0 unx     3134 b- defN 23-Apr-06 11:12 nucliadb/ingest/service/__init__.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/ingest/service/exceptions.py
+│ --rw-r--r--  2.0 unx    35999 b- defN 23-Apr-06 11:12 nucliadb/ingest/service/writer.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/ingest/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1096 b- defN 23-Apr-06 11:12 nucliadb/ingest/tests/conftest.py
+│ --rw-r--r--  2.0 unx    24774 b- defN 23-Apr-06 11:12 nucliadb/ingest/tests/fixtures.py
+│ --rw-r--r--  2.0 unx     7549 b- defN 23-Apr-06 11:12 nucliadb/ingest/tests/tikv.py
+│ --rw-r--r--  2.0 unx    42967 b- defN 23-Apr-06 11:12 nucliadb/ingest/tests/vectors.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/models/__init__.py
+│ --rw-r--r--  2.0 unx     1587 b- defN 23-Apr-06 11:12 nucliadb/models/responses.py
+│ --rw-r--r--  2.0 unx      914 b- defN 23-Apr-06 11:12 nucliadb/one/__init__.py
+│ --rw-r--r--  2.0 unx     3595 b- defN 23-Apr-06 11:12 nucliadb/one/app.py
+│ --rw-r--r--  2.0 unx     2130 b- defN 23-Apr-06 11:12 nucliadb/one/lifecycle.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/one/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1164 b- defN 23-Apr-06 11:12 nucliadb/one/tests/conftest.py
+│ --rw-r--r--  2.0 unx     3591 b- defN 23-Apr-06 11:12 nucliadb/one/tests/fixtures.py
+│ --rw-r--r--  2.0 unx     2561 b- defN 23-Apr-06 11:12 nucliadb/one/tests/test_basic.py
+│ --rw-r--r--  2.0 unx     2492 b- defN 23-Apr-06 11:12 nucliadb/one/tests/test_delete_field.py
+│ --rw-r--r--  2.0 unx     6087 b- defN 23-Apr-06 11:12 nucliadb/one/tests/test_fieldmetadata.py
+│ --rw-r--r--  2.0 unx     4594 b- defN 23-Apr-06 11:12 nucliadb/one/tests/test_services.py
+│ --rw-r--r--  2.0 unx     4067 b- defN 23-Apr-06 11:12 nucliadb/one/tests/test_upload_download.py
+│ --rw-r--r--  2.0 unx     1328 b- defN 23-Apr-06 11:12 nucliadb/reader/__init__.py
+│ --rw-r--r--  2.0 unx     4120 b- defN 23-Apr-06 11:12 nucliadb/reader/app.py
+│ --rw-r--r--  2.0 unx     1835 b- defN 23-Apr-06 11:12 nucliadb/reader/lifecycle.py
+│ --rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 11:12 nucliadb/reader/openapi.py
+│ --rw-r--r--  2.0 unx     1010 b- defN 23-Apr-06 11:12 nucliadb/reader/run.py
+│ --rw-r--r--  2.0 unx      872 b- defN 23-Apr-06 11:12 nucliadb/reader/api/__init__.py
+│ --rw-r--r--  2.0 unx     2433 b- defN 23-Apr-06 11:12 nucliadb/reader/api/models.py
+│ --rw-r--r--  2.0 unx      995 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/__init__.py
+│ --rw-r--r--  2.0 unx     9671 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/download.py
+│ --rw-r--r--  2.0 unx     3570 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/knowledgebox.py
+│ --rw-r--r--  2.0 unx    10697 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/resource.py
+│ --rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/router.py
+│ --rw-r--r--  2.0 unx    10552 b- defN 23-Apr-06 11:12 nucliadb/reader/api/v1/services.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1101 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/conftest.py
+│ --rw-r--r--  2.0 unx     4564 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/fixtures.py
+│ --rw-r--r--  2.0 unx     2749 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/test_list_resources.py
+│ --rw-r--r--  2.0 unx     9139 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/test_reader_file_download.py
+│ --rw-r--r--  2.0 unx    11359 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/test_reader_resource.py
+│ --rw-r--r--  2.0 unx     6535 b- defN 23-Apr-06 11:12 nucliadb/reader/tests/test_reader_resource_field.py
+│ --rw-r--r--  2.0 unx     1535 b- defN 23-Apr-06 11:12 nucliadb/search/__init__.py
+│ --rw-r--r--  2.0 unx     5326 b- defN 23-Apr-06 11:12 nucliadb/search/app.py
+│ --rw-r--r--  2.0 unx     1848 b- defN 23-Apr-06 11:12 nucliadb/search/chitchat.py
+│ --rw-r--r--  2.0 unx     3180 b- defN 23-Apr-06 11:12 nucliadb/search/lifecycle.py
+│ --rw-r--r--  2.0 unx     2206 b- defN 23-Apr-06 11:12 nucliadb/search/openapi.py
+│ --rw-r--r--  2.0 unx     8240 b- defN 23-Apr-06 11:12 nucliadb/search/predict.py
+│ --rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 11:12 nucliadb/search/run.py
+│ --rw-r--r--  2.0 unx     1162 b- defN 23-Apr-06 11:12 nucliadb/search/settings.py
+│ --rw-r--r--  2.0 unx     1238 b- defN 23-Apr-06 11:12 nucliadb/search/utilities.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/search/api/__init__.py
+│ --rw-r--r--  2.0 unx     1077 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/__init__.py
+│ --rw-r--r--  2.0 unx     7419 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/chat.py
+│ --rw-r--r--  2.0 unx     1831 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/feedback.py
+│ --rw-r--r--  2.0 unx     9831 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/find.py
+│ --rw-r--r--  2.0 unx     6957 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/knowledgebox.py
+│ --rw-r--r--  2.0 unx     4640 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/resource.py
+│ --rw-r--r--  2.0 unx      980 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/router.py
+│ --rw-r--r--  2.0 unx    11574 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/search.py
+│ --rw-r--r--  2.0 unx     4231 b- defN 23-Apr-06 11:12 nucliadb/search/api/v1/suggest.py
+│ --rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 11:12 nucliadb/search/requesters/__init__.py
+│ --rw-r--r--  2.0 unx     5892 b- defN 23-Apr-06 11:12 nucliadb/search/requesters/utils.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/search/search/__init__.py
+│ --rw-r--r--  2.0 unx    11833 b- defN 23-Apr-06 11:12 nucliadb/search/search/fetch.py
+│ --rw-r--r--  2.0 unx    14238 b- defN 23-Apr-06 11:12 nucliadb/search/search/find_merge.py
+│ --rw-r--r--  2.0 unx    18361 b- defN 23-Apr-06 11:12 nucliadb/search/search/merge.py
+│ --rw-r--r--  2.0 unx      947 b- defN 23-Apr-06 11:12 nucliadb/search/search/metrics.py
+│ --rw-r--r--  2.0 unx     9896 b- defN 23-Apr-06 11:12 nucliadb/search/search/query.py
+│ --rw-r--r--  2.0 unx     2647 b- defN 23-Apr-06 11:12 nucliadb/search/search/shards.py
+│ --rw-r--r--  2.0 unx     2055 b- defN 23-Apr-06 11:12 nucliadb/search/search/synonyms.py
+│ --rw-r--r--  2.0 unx     2479 b- defN 23-Apr-06 11:12 nucliadb/search/search/utils.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/search/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1172 b- defN 23-Apr-06 11:12 nucliadb/search/tests/conftest.py
+│ --rw-r--r--  2.0 unx     7846 b- defN 23-Apr-06 11:12 nucliadb/search/tests/fixtures.py
+│ --rw-r--r--  2.0 unx    16225 b- defN 23-Apr-06 11:12 nucliadb/search/tests/node.py
+│ --rw-r--r--  2.0 unx     2285 b- defN 23-Apr-06 11:12 nucliadb/static/favicon.ico
+│ --rw-r--r--  2.0 unx     3833 b- defN 23-Apr-06 11:12 nucliadb/static/index.html
+│ --rw-r--r--  2.0 unx     2639 b- defN 23-Apr-06 11:12 nucliadb/static/logo.svg
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1000 b- defN 23-Apr-06 11:12 nucliadb/tests/conftest.py
+│ --rw-r--r--  2.0 unx    11528 b- defN 23-Apr-06 11:12 nucliadb/tests/fixtures.py
+│ --rw-r--r--  2.0 unx     7370 b- defN 23-Apr-06 11:12 nucliadb/tests/test_advanced_search.py
+│ --rw-r--r--  2.0 unx    13937 b- defN 23-Apr-06 11:12 nucliadb/tests/test_api.py
+│ --rw-r--r--  2.0 unx     2052 b- defN 23-Apr-06 11:12 nucliadb/tests/test_counters.py
+│ --rw-r--r--  2.0 unx    10703 b- defN 23-Apr-06 11:12 nucliadb/tests/test_entities.py
+│ --rw-r--r--  2.0 unx    13274 b- defN 23-Apr-06 11:12 nucliadb/tests/test_entities_deprecated.py
+│ --rw-r--r--  2.0 unx     3654 b- defN 23-Apr-06 11:12 nucliadb/tests/test_field_external_file.py
+│ --rw-r--r--  2.0 unx     1487 b- defN 23-Apr-06 11:12 nucliadb/tests/test_field_ids.py
+│ --rw-r--r--  2.0 unx     1524 b- defN 23-Apr-06 11:12 nucliadb/tests/test_kb_slugs.py
+│ --rw-r--r--  2.0 unx    11431 b- defN 23-Apr-06 11:12 nucliadb/tests/test_labels.py
+│ --rw-r--r--  2.0 unx     6071 b- defN 23-Apr-06 11:12 nucliadb/tests/test_reindex.py
+│ --rw-r--r--  2.0 unx     6586 b- defN 23-Apr-06 11:12 nucliadb/tests/test_relations.py
+│ --rw-r--r--  2.0 unx     7072 b- defN 23-Apr-06 11:12 nucliadb/tests/test_resources.py
+│ --rw-r--r--  2.0 unx     1220 b- defN 23-Apr-06 11:12 nucliadb/tests/test_run.py
+│ --rw-r--r--  2.0 unx    41877 b- defN 23-Apr-06 11:12 nucliadb/tests/test_search.py
+│ --rw-r--r--  2.0 unx     9708 b- defN 23-Apr-06 11:12 nucliadb/tests/test_search_sorting.py
+│ --rw-r--r--  2.0 unx     8918 b- defN 23-Apr-06 11:12 nucliadb/tests/test_suggest.py
+│ --rw-r--r--  2.0 unx     6819 b- defN 23-Apr-06 11:12 nucliadb/tests/test_synonyms.py
+│ --rw-r--r--  2.0 unx     2637 b- defN 23-Apr-06 11:12 nucliadb/tests/test_tokens.py
+│ --rw-r--r--  2.0 unx     2096 b- defN 23-Apr-06 11:12 nucliadb/tests/test_upload.py
+│ --rw-r--r--  2.0 unx     2585 b- defN 23-Apr-06 11:12 nucliadb/tests/test_usermetadata.py
+│ --rw-r--r--  2.0 unx     8758 b- defN 23-Apr-06 11:12 nucliadb/tests/test_vectorset.py
+│ --rw-r--r--  2.0 unx      919 b- defN 23-Apr-06 11:12 nucliadb/tests/knowledgeboxes/__init__.py
+│ --rw-r--r--  2.0 unx     7049 b- defN 23-Apr-06 11:12 nucliadb/tests/knowledgeboxes/philosophy_books.py
+│ --rw-r--r--  2.0 unx     3131 b- defN 23-Apr-06 11:12 nucliadb/tests/knowledgeboxes/ten_dummy_resources.py
+│ --rw-r--r--  2.0 unx     2492 b- defN 23-Apr-06 11:12 nucliadb/tests/utils/__init__.py
+│ --rw-r--r--  2.0 unx     2533 b- defN 23-Apr-06 11:12 nucliadb/tests/utils/entities.py
+│ --rw-r--r--  2.0 unx     1325 b- defN 23-Apr-06 11:12 nucliadb/train/__init__.py
+│ --rw-r--r--  2.0 unx     4104 b- defN 23-Apr-06 11:12 nucliadb/train/app.py
+│ --rw-r--r--  2.0 unx     1846 b- defN 23-Apr-06 11:12 nucliadb/train/chitchat.py
+│ --rw-r--r--  2.0 unx     3836 b- defN 23-Apr-06 11:12 nucliadb/train/generator.py
+│ --rw-r--r--  2.0 unx     2261 b- defN 23-Apr-06 11:12 nucliadb/train/lifecycle.py
+│ --rw-r--r--  2.0 unx     1198 b- defN 23-Apr-06 11:12 nucliadb/train/models.py
+│ --rw-r--r--  2.0 unx     8043 b- defN 23-Apr-06 11:12 nucliadb/train/nodes.py
+│ --rw-r--r--  2.0 unx     1009 b- defN 23-Apr-06 11:12 nucliadb/train/run.py
+│ --rw-r--r--  2.0 unx     5755 b- defN 23-Apr-06 11:12 nucliadb/train/servicer.py
+│ --rw-r--r--  2.0 unx     1612 b- defN 23-Apr-06 11:12 nucliadb/train/settings.py
+│ --rw-r--r--  2.0 unx     3600 b- defN 23-Apr-06 11:12 nucliadb/train/upload.py
+│ --rw-r--r--  2.0 unx     6531 b- defN 23-Apr-06 11:12 nucliadb/train/uploader.py
+│ --rw-r--r--  2.0 unx     3285 b- defN 23-Apr-06 11:12 nucliadb/train/utils.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/train/api/__init__.py
+│ --rw-r--r--  2.0 unx      958 b- defN 23-Apr-06 11:12 nucliadb/train/api/models.py
+│ --rw-r--r--  2.0 unx     1479 b- defN 23-Apr-06 11:12 nucliadb/train/api/utils.py
+│ --rw-r--r--  2.0 unx      928 b- defN 23-Apr-06 11:12 nucliadb/train/api/v1/__init__.py
+│ --rw-r--r--  2.0 unx     2066 b- defN 23-Apr-06 11:12 nucliadb/train/api/v1/check.py
+│ --rw-r--r--  2.0 unx      910 b- defN 23-Apr-06 11:12 nucliadb/train/api/v1/router.py
+│ --rw-r--r--  2.0 unx     1905 b- defN 23-Apr-06 11:12 nucliadb/train/api/v1/shards.py
+│ --rw-r--r--  2.0 unx     1825 b- defN 23-Apr-06 11:12 nucliadb/train/api/v1/trainset.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/train/generators/__init__.py
+│ --rw-r--r--  2.0 unx     3289 b- defN 23-Apr-06 11:12 nucliadb/train/generators/field_classifier.py
+│ --rw-r--r--  2.0 unx     3594 b- defN 23-Apr-06 11:12 nucliadb/train/generators/paragraph_classifier.py
+│ --rw-r--r--  2.0 unx     4767 b- defN 23-Apr-06 11:12 nucliadb/train/generators/sentence_classifier.py
+│ --rw-r--r--  2.0 unx    10176 b- defN 23-Apr-06 11:12 nucliadb/train/generators/token_classifier.py
+│ --rw-r--r--  2.0 unx     2519 b- defN 23-Apr-06 11:12 nucliadb/train/generators/utils.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/train/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1088 b- defN 23-Apr-06 11:12 nucliadb/train/tests/conftest.py
+│ --rw-r--r--  2.0 unx     8975 b- defN 23-Apr-06 11:12 nucliadb/train/tests/fixtures.py
+│ --rw-r--r--  2.0 unx     8132 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_field_classification.py
+│ --rw-r--r--  2.0 unx     2729 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_get_entities.py
+│ --rw-r--r--  2.0 unx     1660 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_get_info.py
+│ --rw-r--r--  2.0 unx     1382 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_get_ontology.py
+│ --rw-r--r--  2.0 unx     2201 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_get_ontology_count.py
+│ --rw-r--r--  2.0 unx     1416 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_list_fields.py
+│ --rw-r--r--  2.0 unx     2944 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_list_paragraphs.py
+│ --rw-r--r--  2.0 unx     1423 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_list_resources.py
+│ --rw-r--r--  2.0 unx     2863 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_list_sentences.py
+│ --rw-r--r--  2.0 unx     8129 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_paragraph_classification.py
+│ --rw-r--r--  2.0 unx     8349 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_sentence_classification.py
+│ --rw-r--r--  2.0 unx    10122 b- defN 23-Apr-06 11:12 nucliadb/train/tests/test_token_classification.py
+│ --rw-r--r--  2.0 unx     1328 b- defN 23-Apr-06 11:12 nucliadb/writer/__init__.py
+│ --rw-r--r--  2.0 unx     4095 b- defN 23-Apr-06 11:12 nucliadb/writer/app.py
+│ --rw-r--r--  2.0 unx      972 b- defN 23-Apr-06 11:12 nucliadb/writer/exceptions.py
+│ --rw-r--r--  2.0 unx     3959 b- defN 23-Apr-06 11:12 nucliadb/writer/lifecycle.py
+│ --rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 11:12 nucliadb/writer/openapi.py
+│ --rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 11:12 nucliadb/writer/run.py
+│ --rw-r--r--  2.0 unx     1062 b- defN 23-Apr-06 11:12 nucliadb/writer/settings.py
+│ --rw-r--r--  2.0 unx     1036 b- defN 23-Apr-06 11:12 nucliadb/writer/utilities.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/writer/api/__init__.py
+│ --rw-r--r--  2.0 unx     1021 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/__init__.py
+│ --rw-r--r--  2.0 unx    22265 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/field.py
+│ --rw-r--r--  2.0 unx     5395 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/knowledgebox.py
+│ --rw-r--r--  2.0 unx    15213 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/resource.py
+│ --rw-r--r--  2.0 unx     1034 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/router.py
+│ --rw-r--r--  2.0 unx    14132 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/services.py
+│ --rw-r--r--  2.0 unx    25454 b- defN 23-Apr-06 11:12 nucliadb/writer/api/v1/upload.py
+│ --rw-r--r--  2.0 unx     1618 b- defN 23-Apr-06 11:12 nucliadb/writer/layouts/__init__.py
+│ --rw-r--r--  2.0 unx     2115 b- defN 23-Apr-06 11:12 nucliadb/writer/layouts/v1.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/__init__.py
+│ --rw-r--r--  2.0 unx     1425 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/audit.py
+│ --rw-r--r--  2.0 unx     8554 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/basic.py
+│ --rw-r--r--  2.0 unx    15695 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/field.py
+│ --rw-r--r--  2.0 unx     1708 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/origin.py
+│ --rw-r--r--  2.0 unx     1151 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/slug.py
+│ --rw-r--r--  2.0 unx     4991 b- defN 23-Apr-06 11:12 nucliadb/writer/resource/vectors.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1144 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/conftest.py
+│ --rw-r--r--  2.0 unx     4275 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/fixtures.py
+│ --rw-r--r--  2.0 unx    16585 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_fields.py
+│ --rw-r--r--  2.0 unx    21581 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_files.py
+│ --rw-r--r--  2.0 unx     1932 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_knowledgebox.py
+│ --rw-r--r--  2.0 unx     4747 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_reprocess_file_field.py
+│ --rw-r--r--  2.0 unx    19059 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_resources.py
+│ --rw-r--r--  2.0 unx     5345 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_service.py
+│ --rw-r--r--  2.0 unx     3596 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/test_tus.py
+│ --rw-r--r--  2.0 unx     2028 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/tus.py
+│ --rw-r--r--  2.0 unx     1287 b- defN 23-Apr-06 11:12 nucliadb/writer/tests/utils.py
+│ --rw-r--r--  2.0 unx     4095 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/__init__.py
+│ --rw-r--r--  2.0 unx     4396 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/dm.py
+│ --rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/exceptions.py
+│ --rw-r--r--  2.0 unx    13818 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/gcs.py
+│ --rw-r--r--  2.0 unx     5811 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/local.py
+│ --rw-r--r--  2.0 unx     8571 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/s3.py
+│ --rw-r--r--  2.0 unx     4682 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/storage.py
+│ --rw-r--r--  2.0 unx     2580 b- defN 23-Apr-06 11:12 nucliadb/writer/tus/utils.py
+│ --rw-r--r--  2.0 unx     3189 b- defN 23-Apr-06 11:14 nucliadb-2.6.0.post136.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 11:14 nucliadb-2.6.0.post136.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx      735 b- defN 23-Apr-06 11:14 nucliadb-2.6.0.post136.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx        9 b- defN 23-Apr-06 11:14 nucliadb-2.6.0.post136.dist-info/top_level.txt
+│ --rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 11:13 nucliadb-2.6.0.post136.dist-info/zip-safe
+│ --rw-rw-r--  2.0 unx    22910 b- defN 23-Apr-06 11:14 nucliadb-2.6.0.post136.dist-info/RECORD
+│ -258 files, 1445051 bytes uncompressed, 411861 bytes compressed:  71.5%
+│ +Zip file size: 446557 bytes, number of entries: 258
+│ +-rw-r--r--  2.0 unx      891 b- defN 23-Apr-06 19:29 nucliadb/__init__.py
+│ +-rw-r--r--  2.0 unx     1027 b- defN 23-Apr-06 19:29 nucliadb/app.py
+│ +-rw-r--r--  2.0 unx     4556 b- defN 23-Apr-06 19:29 nucliadb/config.py
+│ +-rw-r--r--  2.0 unx     2785 b- defN 23-Apr-06 19:29 nucliadb/logging.py
+│ +-rw-r--r--  2.0 unx     1393 b- defN 23-Apr-06 19:29 nucliadb/purge.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 19:29 nucliadb/py.typed
+│ +-rw-r--r--  2.0 unx     3268 b- defN 23-Apr-06 19:29 nucliadb/run.py
+│ +-rw-r--r--  2.0 unx     1945 b- defN 23-Apr-06 19:29 nucliadb/settings.py
+│ +-rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 19:29 nucliadb/ingest/__init__.py
+│ +-rw-r--r--  2.0 unx     6338 b- defN 23-Apr-06 19:29 nucliadb/ingest/app.py
+│ +-rw-r--r--  2.0 unx      995 b- defN 23-Apr-06 19:29 nucliadb/ingest/cache.py
+│ +-rw-r--r--  2.0 unx     6874 b- defN 23-Apr-06 19:29 nucliadb/ingest/chitchat.py
+│ +-rw-r--r--  2.0 unx     2425 b- defN 23-Apr-06 19:29 nucliadb/ingest/partitions.py
+│ +-rw-r--r--  2.0 unx    14757 b- defN 23-Apr-06 19:29 nucliadb/ingest/processing.py
+│ +-rw-r--r--  2.0 unx     5463 b- defN 23-Apr-06 19:29 nucliadb/ingest/purge.py
+│ +-rw-r--r--  2.0 unx    17721 b- defN 23-Apr-06 19:29 nucliadb/ingest/serialize.py
+│ +-rw-r--r--  2.0 unx     3021 b- defN 23-Apr-06 19:29 nucliadb/ingest/settings.py
+│ +-rw-r--r--  2.0 unx     4255 b- defN 23-Apr-06 19:29 nucliadb/ingest/utils.py
+│ +-rw-r--r--  2.0 unx     1087 b- defN 23-Apr-06 19:29 nucliadb/ingest/consumer/__init__.py
+│ +-rw-r--r--  2.0 unx    16928 b- defN 23-Apr-06 19:29 nucliadb/ingest/consumer/pull.py
+│ +-rw-r--r--  2.0 unx     6425 b- defN 23-Apr-06 19:29 nucliadb/ingest/consumer/service.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/__init__.py
+│ +-rw-r--r--  2.0 unx    20415 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/base.py
+│ +-rw-r--r--  2.0 unx     6823 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/conversation.py
+│ +-rw-r--r--  2.0 unx     1223 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/date.py
+│ +-rw-r--r--  2.0 unx     1205 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/exceptions.py
+│ +-rw-r--r--  2.0 unx     5159 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/file.py
+│ +-rw-r--r--  2.0 unx     1523 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/generic.py
+│ +-rw-r--r--  2.0 unx     1235 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/keywordset.py
+│ +-rw-r--r--  2.0 unx     2250 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/layout.py
+│ +-rw-r--r--  2.0 unx     4084 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/link.py
+│ +-rw-r--r--  2.0 unx     1319 b- defN 23-Apr-06 19:29 nucliadb/ingest/fields/text.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/__init__.py
+│ +-rw-r--r--  2.0 unx     3088 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/driver.py
+│ +-rw-r--r--  2.0 unx      877 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/exceptions.py
+│ +-rw-r--r--  2.0 unx      980 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/keys.py
+│ +-rw-r--r--  2.0 unx     7607 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/local.py
+│ +-rw-r--r--  2.0 unx     6115 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/pg.py
+│ +-rw-r--r--  2.0 unx     6807 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/redis.py
+│ +-rw-r--r--  2.0 unx     6974 b- defN 23-Apr-06 19:29 nucliadb/ingest/maindb/tikv.py
+│ +-rw-r--r--  2.0 unx     3628 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/__init__.py
+│ +-rw-r--r--  2.0 unx     7137 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/abc.py
+│ +-rw-r--r--  2.0 unx    20650 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/brain.py
+│ +-rw-r--r--  2.0 unx    15071 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/entities.py
+│ +-rw-r--r--  2.0 unx     1362 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/exceptions.py
+│ +-rw-r--r--  2.0 unx    12586 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/grpc_node_binding.py
+│ +-rw-r--r--  2.0 unx     5009 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/grpc_node_dummy.py
+│ +-rw-r--r--  2.0 unx    21289 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/knowledgebox.py
+│ +-rw-r--r--  2.0 unx     1730 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/labels.py
+│ +-rw-r--r--  2.0 unx     4291 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/local_node.py
+│ +-rw-r--r--  2.0 unx     2864 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/local_shard.py
+│ +-rw-r--r--  2.0 unx    19815 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/node.py
+│ +-rw-r--r--  2.0 unx     4293 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/nodes_manager.py
+│ +-rw-r--r--  2.0 unx    26056 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/processor.py
+│ +-rw-r--r--  2.0 unx    49605 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/resource.py
+│ +-rw-r--r--  2.0 unx     5087 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/shard.py
+│ +-rw-r--r--  2.0 unx     1739 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/synonyms.py
+│ +-rw-r--r--  2.0 unx     3340 b- defN 23-Apr-06 19:29 nucliadb/ingest/orm/utils.py
+│ +-rw-r--r--  2.0 unx     2817 b- defN 23-Apr-06 19:29 nucliadb/ingest/service/__init__.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/ingest/service/exceptions.py
+│ +-rw-r--r--  2.0 unx    35999 b- defN 23-Apr-06 19:29 nucliadb/ingest/service/writer.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/ingest/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1096 b- defN 23-Apr-06 19:29 nucliadb/ingest/tests/conftest.py
+│ +-rw-r--r--  2.0 unx    24774 b- defN 23-Apr-06 19:29 nucliadb/ingest/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx     7549 b- defN 23-Apr-06 19:29 nucliadb/ingest/tests/tikv.py
+│ +-rw-r--r--  2.0 unx    42967 b- defN 23-Apr-06 19:29 nucliadb/ingest/tests/vectors.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/models/__init__.py
+│ +-rw-r--r--  2.0 unx     1587 b- defN 23-Apr-06 19:29 nucliadb/models/responses.py
+│ +-rw-r--r--  2.0 unx      914 b- defN 23-Apr-06 19:29 nucliadb/one/__init__.py
+│ +-rw-r--r--  2.0 unx     3257 b- defN 23-Apr-06 19:29 nucliadb/one/app.py
+│ +-rw-r--r--  2.0 unx     2130 b- defN 23-Apr-06 19:29 nucliadb/one/lifecycle.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/one/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1164 b- defN 23-Apr-06 19:29 nucliadb/one/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     3591 b- defN 23-Apr-06 19:29 nucliadb/one/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx     2561 b- defN 23-Apr-06 19:29 nucliadb/one/tests/test_basic.py
+│ +-rw-r--r--  2.0 unx     2492 b- defN 23-Apr-06 19:29 nucliadb/one/tests/test_delete_field.py
+│ +-rw-r--r--  2.0 unx     6087 b- defN 23-Apr-06 19:29 nucliadb/one/tests/test_fieldmetadata.py
+│ +-rw-r--r--  2.0 unx     4594 b- defN 23-Apr-06 19:29 nucliadb/one/tests/test_services.py
+│ +-rw-r--r--  2.0 unx     4067 b- defN 23-Apr-06 19:29 nucliadb/one/tests/test_upload_download.py
+│ +-rw-r--r--  2.0 unx     1328 b- defN 23-Apr-06 19:29 nucliadb/reader/__init__.py
+│ +-rw-r--r--  2.0 unx     3603 b- defN 23-Apr-06 19:29 nucliadb/reader/app.py
+│ +-rw-r--r--  2.0 unx     1741 b- defN 23-Apr-06 19:29 nucliadb/reader/lifecycle.py
+│ +-rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 19:29 nucliadb/reader/openapi.py
+│ +-rw-r--r--  2.0 unx     1010 b- defN 23-Apr-06 19:29 nucliadb/reader/run.py
+│ +-rw-r--r--  2.0 unx      872 b- defN 23-Apr-06 19:29 nucliadb/reader/api/__init__.py
+│ +-rw-r--r--  2.0 unx     2433 b- defN 23-Apr-06 19:29 nucliadb/reader/api/models.py
+│ +-rw-r--r--  2.0 unx      995 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/__init__.py
+│ +-rw-r--r--  2.0 unx     9671 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/download.py
+│ +-rw-r--r--  2.0 unx     3570 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/knowledgebox.py
+│ +-rw-r--r--  2.0 unx    10697 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/resource.py
+│ +-rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/router.py
+│ +-rw-r--r--  2.0 unx    10552 b- defN 23-Apr-06 19:29 nucliadb/reader/api/v1/services.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1101 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     4564 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx     2749 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/test_list_resources.py
+│ +-rw-r--r--  2.0 unx     9139 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/test_reader_file_download.py
+│ +-rw-r--r--  2.0 unx    11359 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/test_reader_resource.py
+│ +-rw-r--r--  2.0 unx     6535 b- defN 23-Apr-06 19:29 nucliadb/reader/tests/test_reader_resource_field.py
+│ +-rw-r--r--  2.0 unx     1535 b- defN 23-Apr-06 19:29 nucliadb/search/__init__.py
+│ +-rw-r--r--  2.0 unx     4809 b- defN 23-Apr-06 19:29 nucliadb/search/app.py
+│ +-rw-r--r--  2.0 unx     1848 b- defN 23-Apr-06 19:29 nucliadb/search/chitchat.py
+│ +-rw-r--r--  2.0 unx     3087 b- defN 23-Apr-06 19:29 nucliadb/search/lifecycle.py
+│ +-rw-r--r--  2.0 unx     2206 b- defN 23-Apr-06 19:29 nucliadb/search/openapi.py
+│ +-rw-r--r--  2.0 unx     8240 b- defN 23-Apr-06 19:29 nucliadb/search/predict.py
+│ +-rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 19:29 nucliadb/search/run.py
+│ +-rw-r--r--  2.0 unx     1162 b- defN 23-Apr-06 19:29 nucliadb/search/settings.py
+│ +-rw-r--r--  2.0 unx     1238 b- defN 23-Apr-06 19:29 nucliadb/search/utilities.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/search/api/__init__.py
+│ +-rw-r--r--  2.0 unx     1077 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/__init__.py
+│ +-rw-r--r--  2.0 unx     7419 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/chat.py
+│ +-rw-r--r--  2.0 unx     1831 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/feedback.py
+│ +-rw-r--r--  2.0 unx     9831 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/find.py
+│ +-rw-r--r--  2.0 unx     6957 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/knowledgebox.py
+│ +-rw-r--r--  2.0 unx     4640 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/resource.py
+│ +-rw-r--r--  2.0 unx      980 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/router.py
+│ +-rw-r--r--  2.0 unx    11574 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/search.py
+│ +-rw-r--r--  2.0 unx     4231 b- defN 23-Apr-06 19:29 nucliadb/search/api/v1/suggest.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 19:29 nucliadb/search/requesters/__init__.py
+│ +-rw-r--r--  2.0 unx     5892 b- defN 23-Apr-06 19:29 nucliadb/search/requesters/utils.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/search/search/__init__.py
+│ +-rw-r--r--  2.0 unx    11833 b- defN 23-Apr-06 19:29 nucliadb/search/search/fetch.py
+│ +-rw-r--r--  2.0 unx    14238 b- defN 23-Apr-06 19:29 nucliadb/search/search/find_merge.py
+│ +-rw-r--r--  2.0 unx    18361 b- defN 23-Apr-06 19:29 nucliadb/search/search/merge.py
+│ +-rw-r--r--  2.0 unx      947 b- defN 23-Apr-06 19:29 nucliadb/search/search/metrics.py
+│ +-rw-r--r--  2.0 unx     9896 b- defN 23-Apr-06 19:29 nucliadb/search/search/query.py
+│ +-rw-r--r--  2.0 unx     2647 b- defN 23-Apr-06 19:29 nucliadb/search/search/shards.py
+│ +-rw-r--r--  2.0 unx     2055 b- defN 23-Apr-06 19:29 nucliadb/search/search/synonyms.py
+│ +-rw-r--r--  2.0 unx     2479 b- defN 23-Apr-06 19:29 nucliadb/search/search/utils.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/search/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1172 b- defN 23-Apr-06 19:29 nucliadb/search/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     7846 b- defN 23-Apr-06 19:29 nucliadb/search/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx    16225 b- defN 23-Apr-06 19:29 nucliadb/search/tests/node.py
+│ +-rw-r--r--  2.0 unx     2285 b- defN 23-Apr-06 19:29 nucliadb/static/favicon.ico
+│ +-rw-r--r--  2.0 unx     3833 b- defN 23-Apr-06 19:29 nucliadb/static/index.html
+│ +-rw-r--r--  2.0 unx     2639 b- defN 23-Apr-06 19:29 nucliadb/static/logo.svg
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1000 b- defN 23-Apr-06 19:29 nucliadb/tests/conftest.py
+│ +-rw-r--r--  2.0 unx    11528 b- defN 23-Apr-06 19:29 nucliadb/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx     7370 b- defN 23-Apr-06 19:29 nucliadb/tests/test_advanced_search.py
+│ +-rw-r--r--  2.0 unx    13937 b- defN 23-Apr-06 19:29 nucliadb/tests/test_api.py
+│ +-rw-r--r--  2.0 unx     2052 b- defN 23-Apr-06 19:29 nucliadb/tests/test_counters.py
+│ +-rw-r--r--  2.0 unx    10703 b- defN 23-Apr-06 19:29 nucliadb/tests/test_entities.py
+│ +-rw-r--r--  2.0 unx    13274 b- defN 23-Apr-06 19:29 nucliadb/tests/test_entities_deprecated.py
+│ +-rw-r--r--  2.0 unx     3654 b- defN 23-Apr-06 19:29 nucliadb/tests/test_field_external_file.py
+│ +-rw-r--r--  2.0 unx     1487 b- defN 23-Apr-06 19:29 nucliadb/tests/test_field_ids.py
+│ +-rw-r--r--  2.0 unx     1524 b- defN 23-Apr-06 19:29 nucliadb/tests/test_kb_slugs.py
+│ +-rw-r--r--  2.0 unx    11431 b- defN 23-Apr-06 19:29 nucliadb/tests/test_labels.py
+│ +-rw-r--r--  2.0 unx     6071 b- defN 23-Apr-06 19:29 nucliadb/tests/test_reindex.py
+│ +-rw-r--r--  2.0 unx     6586 b- defN 23-Apr-06 19:29 nucliadb/tests/test_relations.py
+│ +-rw-r--r--  2.0 unx     7072 b- defN 23-Apr-06 19:29 nucliadb/tests/test_resources.py
+│ +-rw-r--r--  2.0 unx     1220 b- defN 23-Apr-06 19:29 nucliadb/tests/test_run.py
+│ +-rw-r--r--  2.0 unx    41877 b- defN 23-Apr-06 19:29 nucliadb/tests/test_search.py
+│ +-rw-r--r--  2.0 unx     9708 b- defN 23-Apr-06 19:29 nucliadb/tests/test_search_sorting.py
+│ +-rw-r--r--  2.0 unx     8918 b- defN 23-Apr-06 19:29 nucliadb/tests/test_suggest.py
+│ +-rw-r--r--  2.0 unx     6819 b- defN 23-Apr-06 19:29 nucliadb/tests/test_synonyms.py
+│ +-rw-r--r--  2.0 unx     2637 b- defN 23-Apr-06 19:29 nucliadb/tests/test_tokens.py
+│ +-rw-r--r--  2.0 unx     2096 b- defN 23-Apr-06 19:29 nucliadb/tests/test_upload.py
+│ +-rw-r--r--  2.0 unx     2585 b- defN 23-Apr-06 19:29 nucliadb/tests/test_usermetadata.py
+│ +-rw-r--r--  2.0 unx     8758 b- defN 23-Apr-06 19:29 nucliadb/tests/test_vectorset.py
+│ +-rw-r--r--  2.0 unx      919 b- defN 23-Apr-06 19:29 nucliadb/tests/knowledgeboxes/__init__.py
+│ +-rw-r--r--  2.0 unx     7049 b- defN 23-Apr-06 19:29 nucliadb/tests/knowledgeboxes/philosophy_books.py
+│ +-rw-r--r--  2.0 unx     3131 b- defN 23-Apr-06 19:29 nucliadb/tests/knowledgeboxes/ten_dummy_resources.py
+│ +-rw-r--r--  2.0 unx     2492 b- defN 23-Apr-06 19:29 nucliadb/tests/utils/__init__.py
+│ +-rw-r--r--  2.0 unx     2533 b- defN 23-Apr-06 19:29 nucliadb/tests/utils/entities.py
+│ +-rw-r--r--  2.0 unx     1325 b- defN 23-Apr-06 19:29 nucliadb/train/__init__.py
+│ +-rw-r--r--  2.0 unx     3587 b- defN 23-Apr-06 19:29 nucliadb/train/app.py
+│ +-rw-r--r--  2.0 unx     1846 b- defN 23-Apr-06 19:29 nucliadb/train/chitchat.py
+│ +-rw-r--r--  2.0 unx     3836 b- defN 23-Apr-06 19:29 nucliadb/train/generator.py
+│ +-rw-r--r--  2.0 unx     2012 b- defN 23-Apr-06 19:29 nucliadb/train/lifecycle.py
+│ +-rw-r--r--  2.0 unx     1198 b- defN 23-Apr-06 19:29 nucliadb/train/models.py
+│ +-rw-r--r--  2.0 unx     8043 b- defN 23-Apr-06 19:29 nucliadb/train/nodes.py
+│ +-rw-r--r--  2.0 unx     1009 b- defN 23-Apr-06 19:29 nucliadb/train/run.py
+│ +-rw-r--r--  2.0 unx     5755 b- defN 23-Apr-06 19:29 nucliadb/train/servicer.py
+│ +-rw-r--r--  2.0 unx     1612 b- defN 23-Apr-06 19:29 nucliadb/train/settings.py
+│ +-rw-r--r--  2.0 unx     3600 b- defN 23-Apr-06 19:29 nucliadb/train/upload.py
+│ +-rw-r--r--  2.0 unx     6531 b- defN 23-Apr-06 19:29 nucliadb/train/uploader.py
+│ +-rw-r--r--  2.0 unx     3077 b- defN 23-Apr-06 19:29 nucliadb/train/utils.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/train/api/__init__.py
+│ +-rw-r--r--  2.0 unx      958 b- defN 23-Apr-06 19:29 nucliadb/train/api/models.py
+│ +-rw-r--r--  2.0 unx     1479 b- defN 23-Apr-06 19:29 nucliadb/train/api/utils.py
+│ +-rw-r--r--  2.0 unx      928 b- defN 23-Apr-06 19:29 nucliadb/train/api/v1/__init__.py
+│ +-rw-r--r--  2.0 unx     2066 b- defN 23-Apr-06 19:29 nucliadb/train/api/v1/check.py
+│ +-rw-r--r--  2.0 unx      910 b- defN 23-Apr-06 19:29 nucliadb/train/api/v1/router.py
+│ +-rw-r--r--  2.0 unx     1905 b- defN 23-Apr-06 19:29 nucliadb/train/api/v1/shards.py
+│ +-rw-r--r--  2.0 unx     1825 b- defN 23-Apr-06 19:29 nucliadb/train/api/v1/trainset.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/train/generators/__init__.py
+│ +-rw-r--r--  2.0 unx     3289 b- defN 23-Apr-06 19:29 nucliadb/train/generators/field_classifier.py
+│ +-rw-r--r--  2.0 unx     3594 b- defN 23-Apr-06 19:29 nucliadb/train/generators/paragraph_classifier.py
+│ +-rw-r--r--  2.0 unx     4767 b- defN 23-Apr-06 19:29 nucliadb/train/generators/sentence_classifier.py
+│ +-rw-r--r--  2.0 unx    10176 b- defN 23-Apr-06 19:29 nucliadb/train/generators/token_classifier.py
+│ +-rw-r--r--  2.0 unx     2519 b- defN 23-Apr-06 19:29 nucliadb/train/generators/utils.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/train/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1088 b- defN 23-Apr-06 19:29 nucliadb/train/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     8975 b- defN 23-Apr-06 19:29 nucliadb/train/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx     8132 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_field_classification.py
+│ +-rw-r--r--  2.0 unx     2729 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_get_entities.py
+│ +-rw-r--r--  2.0 unx     1660 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_get_info.py
+│ +-rw-r--r--  2.0 unx     1382 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_get_ontology.py
+│ +-rw-r--r--  2.0 unx     2201 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_get_ontology_count.py
+│ +-rw-r--r--  2.0 unx     1416 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_list_fields.py
+│ +-rw-r--r--  2.0 unx     2944 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_list_paragraphs.py
+│ +-rw-r--r--  2.0 unx     1423 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_list_resources.py
+│ +-rw-r--r--  2.0 unx     2863 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_list_sentences.py
+│ +-rw-r--r--  2.0 unx     8129 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_paragraph_classification.py
+│ +-rw-r--r--  2.0 unx     8349 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_sentence_classification.py
+│ +-rw-r--r--  2.0 unx    10122 b- defN 23-Apr-06 19:29 nucliadb/train/tests/test_token_classification.py
+│ +-rw-r--r--  2.0 unx     1328 b- defN 23-Apr-06 19:29 nucliadb/writer/__init__.py
+│ +-rw-r--r--  2.0 unx     3578 b- defN 23-Apr-06 19:29 nucliadb/writer/app.py
+│ +-rw-r--r--  2.0 unx      972 b- defN 23-Apr-06 19:29 nucliadb/writer/exceptions.py
+│ +-rw-r--r--  2.0 unx     3865 b- defN 23-Apr-06 19:29 nucliadb/writer/lifecycle.py
+│ +-rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 19:29 nucliadb/writer/openapi.py
+│ +-rw-r--r--  2.0 unx     1011 b- defN 23-Apr-06 19:29 nucliadb/writer/run.py
+│ +-rw-r--r--  2.0 unx     1062 b- defN 23-Apr-06 19:29 nucliadb/writer/settings.py
+│ +-rw-r--r--  2.0 unx     1036 b- defN 23-Apr-06 19:29 nucliadb/writer/utilities.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/writer/api/__init__.py
+│ +-rw-r--r--  2.0 unx     1021 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/__init__.py
+│ +-rw-r--r--  2.0 unx    22265 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/field.py
+│ +-rw-r--r--  2.0 unx     5395 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/knowledgebox.py
+│ +-rw-r--r--  2.0 unx    15213 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/resource.py
+│ +-rw-r--r--  2.0 unx     1034 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/router.py
+│ +-rw-r--r--  2.0 unx    14132 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/services.py
+│ +-rw-r--r--  2.0 unx    25454 b- defN 23-Apr-06 19:29 nucliadb/writer/api/v1/upload.py
+│ +-rw-r--r--  2.0 unx     1618 b- defN 23-Apr-06 19:29 nucliadb/writer/layouts/__init__.py
+│ +-rw-r--r--  2.0 unx     2115 b- defN 23-Apr-06 19:29 nucliadb/writer/layouts/v1.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/__init__.py
+│ +-rw-r--r--  2.0 unx     1425 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/audit.py
+│ +-rw-r--r--  2.0 unx     8554 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/basic.py
+│ +-rw-r--r--  2.0 unx    15695 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/field.py
+│ +-rw-r--r--  2.0 unx     1708 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/origin.py
+│ +-rw-r--r--  2.0 unx     1151 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/slug.py
+│ +-rw-r--r--  2.0 unx     4991 b- defN 23-Apr-06 19:29 nucliadb/writer/resource/vectors.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1144 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     4275 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/fixtures.py
+│ +-rw-r--r--  2.0 unx    16585 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_fields.py
+│ +-rw-r--r--  2.0 unx    21581 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_files.py
+│ +-rw-r--r--  2.0 unx     1932 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_knowledgebox.py
+│ +-rw-r--r--  2.0 unx     4747 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_reprocess_file_field.py
+│ +-rw-r--r--  2.0 unx    19059 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_resources.py
+│ +-rw-r--r--  2.0 unx     5345 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_service.py
+│ +-rw-r--r--  2.0 unx     3596 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/test_tus.py
+│ +-rw-r--r--  2.0 unx     2028 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/tus.py
+│ +-rw-r--r--  2.0 unx     1287 b- defN 23-Apr-06 19:29 nucliadb/writer/tests/utils.py
+│ +-rw-r--r--  2.0 unx     4095 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/__init__.py
+│ +-rw-r--r--  2.0 unx     4396 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/dm.py
+│ +-rw-r--r--  2.0 unx     2186 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/exceptions.py
+│ +-rw-r--r--  2.0 unx    13818 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/gcs.py
+│ +-rw-r--r--  2.0 unx     5811 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/local.py
+│ +-rw-r--r--  2.0 unx     8571 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/s3.py
+│ +-rw-r--r--  2.0 unx     4682 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/storage.py
+│ +-rw-r--r--  2.0 unx     2580 b- defN 23-Apr-06 19:29 nucliadb/writer/tus/utils.py
+│ +-rw-r--r--  2.0 unx     3189 b- defN 23-Apr-06 19:31 nucliadb-2.7.0.post138.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 19:31 nucliadb-2.7.0.post138.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx      735 b- defN 23-Apr-06 19:31 nucliadb-2.7.0.post138.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx        9 b- defN 23-Apr-06 19:31 nucliadb-2.7.0.post138.dist-info/top_level.txt
+│ +-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 19:30 nucliadb-2.7.0.post138.dist-info/zip-safe
+│ +-rw-rw-r--  2.0 unx    22910 b- defN 23-Apr-06 19:31 nucliadb-2.7.0.post138.dist-info/RECORD
+│ +258 files, 1439369 bytes uncompressed, 410401 bytes compressed:  71.5%
+├── zipnote {}
+│ @@ -750,26 +750,26 @@
+│  
+│  Filename: nucliadb/writer/tus/storage.py
+│  Comment: 
+│  
+│  Filename: nucliadb/writer/tus/utils.py
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/METADATA
+│ +Filename: nucliadb-2.7.0.post138.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/WHEEL
+│ +Filename: nucliadb-2.7.0.post138.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/entry_points.txt
+│ +Filename: nucliadb-2.7.0.post138.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/top_level.txt
+│ +Filename: nucliadb-2.7.0.post138.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/zip-safe
+│ +Filename: nucliadb-2.7.0.post138.dist-info/zip-safe
+│  Comment: 
+│  
+│ -Filename: nucliadb-2.6.0.post136.dist-info/RECORD
+│ +Filename: nucliadb-2.7.0.post138.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── nucliadb/ingest/app.py
+│ @@ -19,28 +19,23 @@
+│  #
+│  import asyncio
+│  import logging
+│  import sys
+│  from typing import Awaitable, Callable, Optional, Union
+│  
+│  import pkg_resources
+│ -from opentelemetry.instrumentation.aiohttp_client import (  # type: ignore
+│ -    AioHttpClientInstrumentor,
+│ -)
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  
+│  from nucliadb.ingest import SERVICE_NAME, logger, logger_activity
+│  from nucliadb.ingest.chitchat import start_chitchat
+│  from nucliadb.ingest.consumer import start_consumer
+│  from nucliadb.ingest.partitions import assign_partitions
+│  from nucliadb.ingest.service import start_grpc
+│  from nucliadb.ingest.settings import settings
+│  from nucliadb_telemetry import errors
+│ -from nucliadb_telemetry.utils import get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import setup_telemetry
+│  from nucliadb_utils.fastapi.run import serve_metrics
+│  from nucliadb_utils.indexing import IndexingUtility
+│  from nucliadb_utils.run import run_until_exit
+│  from nucliadb_utils.settings import (
+│      indexing_settings,
+│      running_settings,
+│      transaction_settings,
+│ @@ -102,19 +97,15 @@
+│      indexing_utility = get_indexing()
+│      if indexing_utility:
+│          await indexing_utility.finalize()
+│          clean_utility(Utility.INDEXING)
+│  
+│  
+│  async def initialize() -> list[Callable[[], Awaitable[None]]]:
+│ -    tracer_provider = get_telemetry(SERVICE_NAME)
+│ -    if tracer_provider is not None:  # pragma: no cover
+│ -        set_global_textmap(B3MultiFormat())
+│ -        await init_telemetry(tracer_provider)  # To start asyncio task
+│ -        AioHttpClientInstrumentor().instrument(tracer_provider=tracer_provider)
+│ +    await setup_telemetry(SERVICE_NAME)
+│  
+│      chitchat = await start_chitchat(SERVICE_NAME)
+│  
+│      await start_transaction_utility(SERVICE_NAME)
+│      await start_indexing_utility(SERVICE_NAME)
+│      await start_audit_utility(SERVICE_NAME)
+│      metrics_server = await serve_metrics()
+├── nucliadb/ingest/utils.py
+│ @@ -15,22 +15,20 @@
+│  # GNU Affero General Public License for more details.
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  from typing import Optional
+│  
+│ -from grpc import aio
+│  from nucliadb_protos.writer_pb2_grpc import WriterStub
+│  
+│  from nucliadb.ingest.chitchat import ChitchatNucliaDB  # type: ignore
+│  from nucliadb.ingest.maindb.driver import Driver
+│  from nucliadb.ingest.settings import settings
+│ -from nucliadb_telemetry.grpc import OpenTelemetryGRPC
+│ -from nucliadb_telemetry.utils import get_telemetry, init_telemetry
+│ +from nucliadb_utils.grpc import get_traced_grpc_channel
+│  from nucliadb_utils.settings import nucliadb_settings
+│  from nucliadb_utils.store import MAIN
+│  from nucliadb_utils.utilities import Utility, clean_utility, get_utility, set_utility
+│  
+│  try:
+│      from nucliadb.ingest.maindb.redis import RedisDriver
+│  
+│ @@ -106,22 +104,17 @@
+│      actual_service = get_utility(Utility.INGEST)
+│      if actual_service is not None:
+│          return
+│  
+│      if nucliadb_settings.nucliadb_ingest is not None:
+│          # Its distributed lets create a GRPC client
+│          # We want Jaeger telemetry enabled
+│ -        provider = get_telemetry(service_name)
+│ -
+│ -        if provider is not None:
+│ -            await init_telemetry(provider)
+│ -            otgrpc = OpenTelemetryGRPC(f"{service_name}_ingest", provider)
+│ -            channel = otgrpc.init_client(nucliadb_settings.nucliadb_ingest)
+│ -        else:
+│ -            channel = aio.insecure_channel(nucliadb_settings.nucliadb_ingest)
+│ +        channel = get_traced_grpc_channel(
+│ +            nucliadb_settings.nucliadb_ingest, service_name or "ingest"
+│ +        )
+│          set_utility(Utility.CHANNEL, channel)
+│          set_utility(Utility.INGEST, WriterStub(channel))
+│      else:
+│          # Its not distributed create a ingest
+│          from nucliadb.ingest.service.writer import WriterServicer
+│  
+│          service = WriterServicer()
+├── nucliadb/ingest/orm/node.py
+│ @@ -47,16 +47,15 @@
+│      DummyReaderStub,
+│      DummySidecarStub,
+│      DummyWriterStub,
+│  )
+│  from nucliadb.ingest.orm.shard import Shard
+│  from nucliadb.ingest.settings import settings
+│  from nucliadb_telemetry import errors
+│ -from nucliadb_telemetry.grpc import OpenTelemetryGRPC
+│ -from nucliadb_telemetry.utils import get_telemetry
+│ +from nucliadb_utils.grpc import get_traced_grpc_channel
+│  from nucliadb_utils.keys import KB_SHARDS
+│  
+│  READ_CONNECTIONS = LRU(50)
+│  WRITE_CONNECTIONS = LRU(50)
+│  SIDECAR_CONNECTIONS = LRU(50)
+│  
+│  
+│ @@ -388,38 +387,35 @@
+│                  load_score=node.load_score,
+│                  shard_count=node.shard_count,
+│                  dummy=node.dummy,
+│              )
+│              members.append(member)
+│          return members
+│  
+│ +    def _get_service_address(self, port_map: Dict[int, int]) -> str:
+│ +        hostname = self.address.split(":")[0]
+│ +        if settings.node_sidecar_port is None:
+│ +            # For testing proposes we need to be able to have a writing port
+│ +            sidecar_port = port_map[hostname]
+│ +            grpc_address = f"localhost:{sidecar_port}"
+│ +        else:
+│ +            grpc_address = f"{hostname}:{settings.node_sidecar_port}"
+│ +        return grpc_address
+│ +
+│      @property
+│      def sidecar(self) -> NodeSidecarStub:
+│          if (
+│              self._sidecar is None
+│              and self.address not in SIDECAR_CONNECTIONS
+│              and self.dummy is False
+│          ):
+│ -            hostname = self.address.split(":")[0]
+│ -            if settings.node_sidecar_port is None:
+│ -                # For testing proposes we need to be able to have a writing port
+│ -                sidecar_port = settings.sidecar_port_map[hostname]
+│ -                grpc_address = f"localhost:{sidecar_port}"
+│ -            else:
+│ -                grpc_address = f"{hostname}:{settings.node_sidecar_port}"
+│ -
+│ -            tracer_provider = get_telemetry(SERVICE_NAME)
+│ -            if tracer_provider is not None:  # pragma: no cover
+│ -                telemetry_grpc = OpenTelemetryGRPC(
+│ -                    f"{SERVICE_NAME}_grpc_sidecar", tracer_provider
+│ -                )
+│ -                channel = telemetry_grpc.init_client(grpc_address)
+│ -            else:
+│ -                channel = aio.insecure_channel(grpc_address)
+│ -
+│ +            grpc_address = self._get_service_address(settings.sidecar_port_map)
+│ +            channel = get_traced_grpc_channel(
+│ +                grpc_address, SERVICE_NAME, variant="_sidecar"
+│ +            )
+│              SIDECAR_CONNECTIONS[self.address] = NodeSidecarStub(channel)
+│          if (
+│              self._sidecar is None
+│              and self.address not in SIDECAR_CONNECTIONS
+│              and self.dummy is True
+│          ):
+│              SIDECAR_CONNECTIONS[self.address] = DummySidecarStub()
+│ @@ -430,31 +426,18 @@
+│      @property
+│      def writer(self) -> NodeWriterStub:
+│          if (
+│              self._writer is None
+│              and self.address not in WRITE_CONNECTIONS
+│              and self.dummy is False
+│          ):
+│ -            hostname = self.address.split(":")[0]
+│ -            if settings.node_writer_port is None:
+│ -                # For testing proposes we need to be able to have a writing port
+│ -                writer_port = settings.writer_port_map[hostname]
+│ -                grpc_address = f"localhost:{writer_port}"
+│ -            else:
+│ -                grpc_address = f"{hostname}:{settings.node_writer_port}"
+│ -
+│ -            tracer_provider = get_telemetry(SERVICE_NAME)
+│ -            if tracer_provider is not None:  # pragma: no cover
+│ -                telemetry_grpc = OpenTelemetryGRPC(
+│ -                    f"{SERVICE_NAME}_grpc_writer", tracer_provider
+│ -                )
+│ -                channel = telemetry_grpc.init_client(grpc_address)
+│ -            else:
+│ -                channel = aio.insecure_channel(grpc_address)
+│ -
+│ +            grpc_address = self._get_service_address(settings.writer_port_map)
+│ +            channel = get_traced_grpc_channel(
+│ +                grpc_address, SERVICE_NAME, variant="_writer"
+│ +            )
+│              WRITE_CONNECTIONS[self.address] = NodeWriterStub(channel)
+│          if (
+│              self._writer is None
+│              and self.address not in WRITE_CONNECTIONS
+│              and self.dummy is True
+│          ):
+│              WRITE_CONNECTIONS[self.address] = DummyWriterStub()
+│ @@ -465,31 +448,18 @@
+│      @property
+│      def reader(self) -> NodeReaderStub:
+│          if (
+│              self._reader is None
+│              and self.address not in READ_CONNECTIONS
+│              and self.dummy is False
+│          ):
+│ -            hostname = self.address.split(":")[0]
+│ -            if settings.node_reader_port is None:
+│ -                # For testing proposes we need to be able to have a writing port
+│ -                reader_port = settings.reader_port_map[hostname]
+│ -                grpc_address = f"localhost:{reader_port}"
+│ -            else:
+│ -                grpc_address = f"{hostname}:{settings.node_reader_port}"
+│ -
+│ -            tracer_provider = get_telemetry(SERVICE_NAME)
+│ -            if tracer_provider is not None:  # pragma: no cover
+│ -                telemetry_grpc = OpenTelemetryGRPC(
+│ -                    f"{SERVICE_NAME}_grpc_reader", tracer_provider
+│ -                )
+│ -                channel = telemetry_grpc.init_client(grpc_address)
+│ -            else:
+│ -                channel = aio.insecure_channel(grpc_address)
+│ -
+│ +            grpc_address = self._get_service_address(settings.reader_port_map)
+│ +            channel = get_traced_grpc_channel(
+│ +                grpc_address, SERVICE_NAME, variant="_reader"
+│ +            )
+│              READ_CONNECTIONS[self.address] = NodeReaderStub(channel)
+│          if (
+│              self._reader is None
+│              and self.address not in READ_CONNECTIONS
+│              and self.dummy is True
+│          ):
+│              READ_CONNECTIONS[self.address] = DummyReaderStub()
+├── nucliadb/ingest/service/__init__.py
+│ @@ -24,16 +24,16 @@
+│  from grpc_health.v1 import health, health_pb2, health_pb2_grpc  # type: ignore
+│  
+│  from nucliadb.ingest import logger
+│  from nucliadb.ingest.orm import NODES
+│  from nucliadb.ingest.service.writer import WriterServicer
+│  from nucliadb.ingest.settings import DriverConfig, settings
+│  from nucliadb_protos import writer_pb2_grpc
+│ -from nucliadb_telemetry.grpc import OpenTelemetryGRPC
+│ -from nucliadb_telemetry.utils import get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import setup_telemetry
+│ +from nucliadb_utils.grpc import get_traced_grpc_server
+│  
+│  
+│  async def health_check(health_servicer):
+│      while True:
+│          if len(NODES) == 0 and settings.driver != DriverConfig.local:
+│              await health_servicer.set("", health_pb2.HealthCheckResponse.NOT_SERVING)
+│          else:
+│ @@ -47,27 +47,19 @@
+│          ):
+│              return
+│  
+│  
+│  async def start_grpc(service_name: Optional[str] = None):
+│      aio.init_grpc_aio()
+│  
+│ -    tracer_provider = get_telemetry(service_name)
+│ -    if tracer_provider is not None:  # pragma: no cover
+│ -        await init_telemetry(tracer_provider)
+│ -        otgrpc = OpenTelemetryGRPC(f"{service_name}_grpc", tracer_provider)
+│ -        server = otgrpc.init_server()
+│ -    else:
+│ -        options = [
+│ -            (
+│ -                "grpc.max_receive_message_length",
+│ -                settings.max_receive_message_length * 1024 * 1024,
+│ -            ),
+│ -        ]
+│ -        server = aio.server(options=options)
+│ +    await setup_telemetry(service_name or "ingest")
+│ +    server = get_traced_grpc_server(
+│ +        service_name or "ingest",
+│ +        max_receive_message=settings.max_receive_message_length,
+│ +    )
+│  
+│      servicer = WriterServicer()
+│      await servicer.initialize()
+│      health_servicer = health.aio.HealthServicer()  # type: ignore
+│      server.add_insecure_port(f"0.0.0.0:{settings.grpc_port}")
+│  
+│      writer_pb2_grpc.add_WriterServicer_to_server(servicer, server)
+├── nucliadb/one/app.py
+│ @@ -15,45 +15,41 @@
+│  # GNU Affero General Public License for more details.
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import pkg_resources
+│  from fastapi import FastAPI
+│ -from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  from starlette.middleware import Middleware
+│  from starlette.middleware.authentication import AuthenticationMiddleware
+│  from starlette.middleware.cors import CORSMiddleware
+│  from starlette.responses import HTMLResponse
+│  from starlette.routing import Mount
+│ -from starlette_prometheus import PrometheusMiddleware
+│  
+│  from nucliadb.one.lifecycle import finalize, initialize
+│  from nucliadb.reader import API_PREFIX
+│  from nucliadb.reader.api.v1.router import api as api_reader_v1
+│  from nucliadb.search.api.v1.router import api as api_search_v1
+│  from nucliadb.train.api.v1.router import api as api_train_v1
+│  from nucliadb.writer.api.v1.router import api as api_writer_v1
+│  from nucliadb_telemetry import errors
+│ +from nucliadb_telemetry.fastapi import instrument_app
+│  from nucliadb_utils.authentication import STFAuthenticationBackend
+│  from nucliadb_utils.fastapi import metrics
+│  from nucliadb_utils.fastapi.openapi import extend_openapi
+│  from nucliadb_utils.fastapi.versioning import VersionedFastAPI
+│  from nucliadb_utils.settings import http_settings, running_settings
+│  
+│  middleware = [
+│      Middleware(
+│          CORSMiddleware,
+│          allow_origins=http_settings.cors_origins,
+│          allow_methods=["*"],
+│          allow_headers=["*"],
+│      ),
+│ -    Middleware(PrometheusMiddleware),
+│      Middleware(
+│          AuthenticationMiddleware,
+│          backend=STFAuthenticationBackend(),
+│      ),
+│  ]
+│  
+│  
+│ @@ -97,12 +93,8 @@
+│      return HTMLResponse("NucliaDB One Service")
+│  
+│  
+│  # Use raw starlette routes to avoid unnecessary overhead
+│  application.add_route("/", homepage)
+│  application.add_route("/metrics", metrics.metrics)
+│  
+│ -
+│ -# Enable forwarding of B3 headers to responses and external requests
+│ -# to both inner applications
+│ -set_global_textmap(B3MultiFormat())
+│ -FastAPIInstrumentor.instrument_app(application)
+│ +instrument_app(application, excluded_urls=["/"], metrics=True)
+├── nucliadb/reader/app.py
+│ @@ -16,25 +16,19 @@
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import pkg_resources
+│  from fastapi import FastAPI
+│  from fastapi.responses import JSONResponse
+│ -from opentelemetry.instrumentation.aiohttp_client import (  # type: ignore
+│ -    AioHttpClientInstrumentor,
+│ -)
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  from starlette.middleware import Middleware
+│  from starlette.middleware.authentication import AuthenticationMiddleware
+│  from starlette.middleware.cors import CORSMiddleware
+│  from starlette.requests import ClientDisconnect, Request
+│  from starlette.responses import HTMLResponse
+│ -from starlette_prometheus import PrometheusMiddleware
+│  
+│  from nucliadb.reader import API_PREFIX, SERVICE_NAME
+│  from nucliadb.reader.api.v1.router import api as api_v1
+│  from nucliadb.reader.lifecycle import finalize, initialize
+│  from nucliadb_telemetry import errors
+│  from nucliadb_telemetry.fastapi import instrument_app
+│  from nucliadb_telemetry.utils import get_telemetry
+│ @@ -46,15 +40,14 @@
+│  middleware = [
+│      Middleware(
+│          CORSMiddleware,
+│          allow_origins=http_settings.cors_origins,
+│          allow_methods=["*"],
+│          allow_headers=["*"],
+│      ),
+│ -    Middleware(PrometheusMiddleware),
+│      Middleware(
+│          AuthenticationMiddleware,
+│          backend=STFAuthenticationBackend(),
+│      ),
+│  ]
+│  
+│  errors.setup_error_handling(pkg_resources.get_distribution("nucliadb").version)
+│ @@ -109,13 +102,13 @@
+│  async def homepage(request: Request) -> HTMLResponse:
+│      return HTMLResponse("NucliaDB Reader Service")
+│  
+│  
+│  # Use raw starlette routes to avoid unnecessary overhead
+│  application.add_route("/", homepage)
+│  
+│ -# Enable forwarding of B3 headers to responses and external requests
+│ -# to both inner applications
+│ -tracer_provider = get_telemetry(SERVICE_NAME)
+│ -set_global_textmap(B3MultiFormat())
+│ -instrument_app(application, tracer_provider=tracer_provider, excluded_urls=["/"])
+│ -AioHttpClientInstrumentor().instrument(tracer_provider=tracer_provider)
+│ +instrument_app(
+│ +    application,
+│ +    tracer_provider=get_telemetry(SERVICE_NAME),
+│ +    excluded_urls=["/"],
+│ +    metrics=True,
+│ +)
+├── nucliadb/reader/lifecycle.py
+│ @@ -18,23 +18,21 @@
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import logging
+│  import sys
+│  
+│  from nucliadb.ingest.utils import start_ingest, stop_ingest
+│  from nucliadb.reader import SERVICE_NAME, logger
+│ -from nucliadb_telemetry.utils import clean_telemetry, get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import clean_telemetry, setup_telemetry
+│  from nucliadb_utils.settings import running_settings
+│  from nucliadb_utils.utilities import start_audit_utility, stop_audit_utility
+│  
+│  
+│  async def initialize() -> None:
+│ -    tracer_provider = get_telemetry(SERVICE_NAME)
+│ -    if tracer_provider:
+│ -        await init_telemetry(tracer_provider)
+│ +    await setup_telemetry(SERVICE_NAME)
+│  
+│      await start_ingest(SERVICE_NAME)
+│      await start_audit_utility(SERVICE_NAME)
+│      logging.basicConfig(
+│          level=logging.INFO,
+│          format="[%(asctime)s.%(msecs)02d] [%(levelname)s] - %(name)s - %(message)s",
+│          datefmt="%Y-%m-%d %H:%M:%S",
+├── nucliadb/search/app.py
+│ @@ -18,25 +18,19 @@
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import logging
+│  
+│  import pkg_resources
+│  from fastapi import FastAPI
+│  from fastapi.responses import JSONResponse
+│ -from opentelemetry.instrumentation.aiohttp_client import (  # type: ignore
+│ -    AioHttpClientInstrumentor,
+│ -)
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  from starlette.middleware import Middleware
+│  from starlette.middleware.authentication import AuthenticationMiddleware
+│  from starlette.middleware.cors import CORSMiddleware
+│  from starlette.requests import ClientDisconnect, Request
+│  from starlette.responses import HTMLResponse
+│ -from starlette_prometheus import PrometheusMiddleware
+│  
+│  from nucliadb.ingest.orm import NODES
+│  from nucliadb.search import API_PREFIX, SERVICE_NAME
+│  from nucliadb.search.api.v1.router import api as api_v1
+│  from nucliadb.search.lifecycle import finalize, initialize
+│  from nucliadb.search.settings import settings
+│  from nucliadb_telemetry import errors
+│ @@ -54,15 +48,14 @@
+│  middleware = [
+│      Middleware(
+│          CORSMiddleware,
+│          allow_origins=http_settings.cors_origins,
+│          allow_methods=["*"],
+│          allow_headers=["*"],
+│      ),
+│ -    Middleware(PrometheusMiddleware),
+│      Middleware(
+│          AuthenticationMiddleware,
+│          backend=STFAuthenticationBackend(),
+│      ),
+│  ]
+│  
+│  
+│ @@ -152,13 +145,13 @@
+│  
+│  # Use raw starlette routes to avoid unnecessary overhead
+│  application.add_route("/", homepage)
+│  application.add_route("/chitchat/members", chitchat_members)
+│  application.add_route("/health/alive", alive)
+│  application.add_route("/health/ready", ready)
+│  
+│ -# Enable forwarding of B3 headers to responses and external requests
+│ -# to both inner applications
+│ -tracer_provider = get_telemetry(SERVICE_NAME)
+│ -set_global_textmap(B3MultiFormat())
+│ -instrument_app(application, tracer_provider=tracer_provider, excluded_urls=["/"])
+│ -AioHttpClientInstrumentor().instrument(tracer_provider=tracer_provider)
+│ +instrument_app(
+│ +    application,
+│ +    tracer_provider=get_telemetry(SERVICE_NAME),
+│ +    excluded_urls=["/"],
+│ +    metrics=True,
+│ +)
+├── nucliadb/search/lifecycle.py
+│ @@ -23,15 +23,15 @@
+│  from nucliadb.ingest import logger as ingest_logger
+│  from nucliadb.ingest.orm.nodes_manager import NodesManager
+│  from nucliadb.ingest.utils import get_driver  # type: ignore
+│  from nucliadb.ingest.utils import start_ingest, stop_ingest
+│  from nucliadb.search import SERVICE_NAME, logger
+│  from nucliadb.search.chitchat import start_chitchat, stop_chitchat
+│  from nucliadb.search.predict import PredictEngine
+│ -from nucliadb_telemetry.utils import clean_telemetry, get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import clean_telemetry, setup_telemetry
+│  from nucliadb_utils.settings import nuclia_settings, running_settings
+│  from nucliadb_utils.utilities import (
+│      Utility,
+│      clean_utility,
+│      finalize_utilities,
+│      get_cache,
+│      get_utility,
+│ @@ -39,17 +39,16 @@
+│      start_audit_utility,
+│      stop_audit_utility,
+│  )
+│  
+│  
+│  async def initialize() -> None:
+│      ingest_logger.setLevel(logging.getLevelName(running_settings.log_level.upper()))
+│ -    tracer_provider = get_telemetry(SERVICE_NAME)
+│ -    if tracer_provider:
+│ -        await init_telemetry(tracer_provider)
+│ +
+│ +    await setup_telemetry(SERVICE_NAME)
+│  
+│      await start_ingest(SERVICE_NAME)
+│      predict_util = PredictEngine(
+│          nuclia_settings.nuclia_inner_predict_url,
+│          nuclia_settings.nuclia_public_url,
+│          nuclia_settings.nuclia_service_account,
+│          nuclia_settings.nuclia_zone,
+├── nucliadb/train/app.py
+│ @@ -16,25 +16,19 @@
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import pkg_resources
+│  from fastapi import FastAPI
+│  from fastapi.responses import JSONResponse
+│ -from opentelemetry.instrumentation.aiohttp_client import (  # type: ignore
+│ -    AioHttpClientInstrumentor,
+│ -)
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  from starlette.middleware import Middleware
+│  from starlette.middleware.authentication import AuthenticationMiddleware
+│  from starlette.middleware.cors import CORSMiddleware
+│  from starlette.requests import ClientDisconnect, Request
+│  from starlette.responses import HTMLResponse
+│ -from starlette_prometheus import PrometheusMiddleware
+│  
+│  from nucliadb.train import API_PREFIX, SERVICE_NAME
+│  from nucliadb.train.api.v1.router import api
+│  from nucliadb.train.lifecycle import finalize, initialize
+│  from nucliadb_telemetry import errors
+│  from nucliadb_telemetry.fastapi import instrument_app
+│  from nucliadb_telemetry.utils import get_telemetry
+│ @@ -46,15 +40,14 @@
+│  middleware = [
+│      Middleware(
+│          CORSMiddleware,
+│          allow_origins=http_settings.cors_origins,
+│          allow_methods=["*"],
+│          allow_headers=["*"],
+│      ),
+│ -    Middleware(PrometheusMiddleware),
+│      Middleware(
+│          AuthenticationMiddleware,
+│          backend=STFAuthenticationBackend(),
+│      ),
+│  ]
+│  
+│  
+│ @@ -111,13 +104,13 @@
+│  async def homepage(request: Request) -> HTMLResponse:
+│      return HTMLResponse("NucliaDB Train Service")
+│  
+│  
+│  # Use raw starlette routes to avoid unnecessary overhead
+│  application.add_route("/", homepage)
+│  
+│ -# Enable forwarding of B3 headers to responses and external requests
+│ -# to both inner applications
+│ -tracer_provider = get_telemetry(SERVICE_NAME)
+│ -set_global_textmap(B3MultiFormat())
+│ -instrument_app(application, tracer_provider=tracer_provider, excluded_urls=["/"])
+│ -AioHttpClientInstrumentor().instrument(tracer_provider=tracer_provider)
+│ +instrument_app(
+│ +    application,
+│ +    tracer_provider=get_telemetry(SERVICE_NAME),
+│ +    excluded_urls=["/"],
+│ +    metrics=True,
+│ +)
+├── nucliadb/train/lifecycle.py
+│ @@ -16,35 +16,29 @@
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import logging
+│  import sys
+│  
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│ -
+│  from nucliadb.train import SERVICE_NAME, logger
+│  from nucliadb.train.chitchat import start_chitchat, stop_chitchat
+│  from nucliadb.train.utils import (
+│      start_nodes_manager,
+│      start_train_grpc,
+│      stop_nodes_manager,
+│      stop_train_grpc,
+│  )
+│ -from nucliadb_telemetry.utils import clean_telemetry, get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import clean_telemetry, setup_telemetry
+│  from nucliadb_utils.settings import running_settings
+│  from nucliadb_utils.utilities import start_audit_utility, stop_audit_utility
+│  
+│  
+│  async def initialize() -> None:
+│ -    tracer_provider = get_telemetry(SERVICE_NAME)
+│ -    if tracer_provider:
+│ -        set_global_textmap(B3MultiFormat())
+│ -        await init_telemetry(tracer_provider)
+│ +    await setup_telemetry(SERVICE_NAME)
+│  
+│      await start_chitchat(SERVICE_NAME)
+│      await start_nodes_manager()
+│      await start_train_grpc(SERVICE_NAME)
+│      await start_audit_utility(SERVICE_NAME)
+│  
+│      logging.basicConfig(
+├── nucliadb/train/utils.py
+│ @@ -22,16 +22,16 @@
+│  from grpc import aio  # type: ignore
+│  from grpc_health.v1 import health, health_pb2_grpc
+│  
+│  from nucliadb.ingest.utils import get_driver
+│  from nucliadb.train.nodes import TrainNodesManager  # type: ignore
+│  from nucliadb.train.settings import settings
+│  from nucliadb_protos import train_pb2_grpc
+│ -from nucliadb_telemetry.grpc import OpenTelemetryGRPC
+│ -from nucliadb_telemetry.utils import get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import setup_telemetry
+│ +from nucliadb_utils.grpc import get_traced_grpc_server
+│  from nucliadb_utils.utilities import (
+│      Utility,
+│      clean_utility,
+│      get_cache,
+│      get_storage,
+│      get_utility,
+│      set_utility,
+│ @@ -41,22 +41,16 @@
+│  async def start_train_grpc(service_name: Optional[str] = None):
+│      actual_service = get_utility(Utility.TRAIN)
+│      if actual_service is not None:
+│          return
+│  
+│      aio.init_grpc_aio()
+│  
+│ -    tracer_provider = get_telemetry(service_name)
+│ -
+│ -    if tracer_provider is not None:  # pragma: no cover
+│ -        await init_telemetry(tracer_provider)
+│ -        otgrpc = OpenTelemetryGRPC(f"{service_name}_grpc", tracer_provider)
+│ -        server = otgrpc.init_server()
+│ -    else:
+│ -        server = aio.server()
+│ +    await setup_telemetry(service_name or "train")
+│ +    server = get_traced_grpc_server(service_name or "train")
+│  
+│      from nucliadb.train.servicer import TrainServicer
+│  
+│      servicer = TrainServicer()
+│      await servicer.initialize()
+│      health_servicer = health.aio.HealthServicer()  # type: ignore
+│      server.add_insecure_port(f"0.0.0.0:{settings.grpc_port}")
+├── nucliadb/writer/app.py
+│ @@ -16,25 +16,19 @@
+│  #
+│  # You should have received a copy of the GNU Affero General Public License
+│  # along with this program. If not, see <http://www.gnu.org/licenses/>.
+│  #
+│  import pkg_resources
+│  from fastapi import FastAPI
+│  from fastapi.responses import JSONResponse
+│ -from opentelemetry.instrumentation.aiohttp_client import (  # type: ignore
+│ -    AioHttpClientInstrumentor,
+│ -)
+│ -from opentelemetry.propagate import set_global_textmap
+│ -from opentelemetry.propagators.b3 import B3MultiFormat
+│  from starlette.middleware import Middleware
+│  from starlette.middleware.authentication import AuthenticationMiddleware
+│  from starlette.middleware.cors import CORSMiddleware
+│  from starlette.requests import ClientDisconnect, Request
+│  from starlette.responses import HTMLResponse
+│ -from starlette_prometheus import PrometheusMiddleware
+│  
+│  from nucliadb.writer import API_PREFIX, SERVICE_NAME
+│  from nucliadb.writer.api.v1.router import api as api_v1
+│  from nucliadb.writer.lifecycle import finalize, initialize
+│  from nucliadb_telemetry import errors
+│  from nucliadb_telemetry.fastapi import instrument_app
+│  from nucliadb_telemetry.utils import get_telemetry
+│ @@ -46,15 +40,14 @@
+│  middleware = [
+│      Middleware(
+│          CORSMiddleware,
+│          allow_origins=http_settings.cors_origins,
+│          allow_methods=["*"],
+│          allow_headers=["*"],
+│      ),
+│ -    Middleware(PrometheusMiddleware),
+│      Middleware(
+│          AuthenticationMiddleware,
+│          backend=STFAuthenticationBackend(),
+│      ),
+│  ]
+│  
+│  
+│ @@ -109,13 +102,13 @@
+│  async def homepage(request):
+│      return HTMLResponse("NucliaDB Writer Service")
+│  
+│  
+│  # Use raw starlette routes to avoid unnecessary overhead
+│  application.add_route("/", homepage)
+│  
+│ -# Enable forwarding of B3 headers to responses and external requests
+│ -# to both inner applications
+│ -tracer_provider = get_telemetry(SERVICE_NAME)
+│ -set_global_textmap(B3MultiFormat())
+│ -instrument_app(application, tracer_provider=tracer_provider, excluded_urls=["/"])
+│ -AioHttpClientInstrumentor().instrument(tracer_provider=tracer_provider)
+│ +instrument_app(
+│ +    application,
+│ +    tracer_provider=get_telemetry(SERVICE_NAME),
+│ +    excluded_urls=["/"],
+│ +    metrics=True,
+│ +)
+├── nucliadb/writer/lifecycle.py
+│ @@ -22,30 +22,28 @@
+│  
+│  from nucliadb.ingest.processing import ProcessingEngine
+│  from nucliadb.ingest.utils import start_ingest, stop_ingest
+│  from nucliadb.writer import SERVICE_NAME, logger
+│  from nucliadb.writer.tus import finalize as storage_finalize
+│  from nucliadb.writer.tus import initialize as storage_initialize
+│  from nucliadb.writer.utilities import get_processing
+│ -from nucliadb_telemetry.utils import clean_telemetry, get_telemetry, init_telemetry
+│ +from nucliadb_telemetry.utils import clean_telemetry, setup_telemetry
+│  from nucliadb_utils.partition import PartitionUtility
+│  from nucliadb_utils.settings import (
+│      nuclia_settings,
+│      running_settings,
+│      storage_settings,
+│      transaction_settings,
+│  )
+│  from nucliadb_utils.transaction import LocalTransactionUtility, TransactionUtility
+│  from nucliadb_utils.utilities import Utility, get_transaction, set_utility
+│  
+│  
+│  async def initialize():
+│ -    tracer_provider = get_telemetry(SERVICE_NAME)
+│ -    if tracer_provider:
+│ -        await init_telemetry(tracer_provider)
+│ +    await setup_telemetry(SERVICE_NAME)
+│  
+│      await start_ingest(SERVICE_NAME)
+│  
+│      processing_engine = ProcessingEngine(
+│          nuclia_service_account=nuclia_settings.nuclia_service_account,
+│          nuclia_zone=nuclia_settings.nuclia_zone,
+│          onprem=nuclia_settings.onprem,
+│   --- nucliadb-2.6.0.post136.dist-info/METADATA
+├── +++ nucliadb-2.7.0.post138.dist-info/METADATA
+│┄ Files 2% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: nucliadb
+│ -Version: 2.6.0.post136
+│ +Version: 2.7.0.post138
+│  Summary: UNKNOWN
+│  Home-page: https://nucliadb.com
+│  Author: NucliaDB Community
+│  Author-email: nucliadb@nuclia.com
+│  License: BSD
+│  Project-URL: Nuclia, https://nuclia.com
+│  Project-URL: Github, https://github.com/nuclia/nucliadb
+│ @@ -53,18 +53,18 @@
+│  Requires-Dist: pyjwt (>=2.4.0)
+│  Requires-Dist: mmh3 (>=3.0.0)
+│  Requires-Dist: httpx (>=0.23.0)
+│  Requires-Dist: types-pkg-resources (>=0.1.3)
+│  Requires-Dist: grpc-stubs (>=1.24.7)
+│  Requires-Dist: aiodns (>=3.0.0)
+│  Requires-Dist: types-orjson
+│ -Requires-Dist: nucliadb-telemetry (>=1.5.0)
+│ -Requires-Dist: nucliadb-utils[cache,fastapi,storages] (==2.6.0-post136)
+│ -Requires-Dist: nucliadb-protos (==2.6.0-post136)
+│ -Requires-Dist: nucliadb-models (==2.6.0-post136)
+│ +Requires-Dist: nucliadb-telemetry (>=1.7.0)
+│ +Requires-Dist: nucliadb-utils[cache,fastapi,storages] (==2.7.0-post138)
+│ +Requires-Dist: nucliadb-protos (==2.7.0-post138)
+│ +Requires-Dist: nucliadb-models (==2.7.0-post138)
+│  Requires-Dist: tikv-client (>=0.0.3)
+│  Requires-Dist: starlette-prometheus (>=0.9.0)
+│  Requires-Dist: prometheus-client (>=0.12.0)
+│  Requires-Dist: opentelemetry-instrumentation-aiohttp-client (>=0.30b1)
+│  Requires-Dist: opentelemetry-semantic-conventions (>=0.30b1)
+│  Requires-Dist: opentelemetry-instrumentation-fastapi (>=0.30b1)
+│  Requires-Dist: opentelemetry-propagator-b3
+│   --- nucliadb-2.6.0.post136.dist-info/entry_points.txt
+├── +++ nucliadb-2.7.0.post138.dist-info/entry_points.txt
+│┄ Files identical despite different names
+│   --- nucliadb-2.6.0.post136.dist-info/RECORD
+├── +++ nucliadb-2.7.0.post138.dist-info/RECORD
+│┄ Files 2% similar despite different names
+│ @@ -3,23 +3,23 @@
+│  nucliadb/config.py,sha256=rGPZTX_Ni6BG4g4qAp-bbr7XmUaRBbmFaegOysFBbGs,4556
+│  nucliadb/logging.py,sha256=moPKHbTi0EIAREiScI-eyjo3hvGRt02eqi-IrrMdUv0,2785
+│  nucliadb/purge.py,sha256=y5uFOK3YQU9XgehSSjYiEZCiB0F8qukgI18Hgw2Dy-o,1393
+│  nucliadb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nucliadb/run.py,sha256=6mD0gMbBgl5VgVc8Ic3LxUHgzT9lkZRhql-xNC41J9w,3268
+│  nucliadb/settings.py,sha256=GP2hJAYSLXO3mUopKrH4rgwOgX4M1n-_gHLd6UvI-60,1945
+│  nucliadb/ingest/__init__.py,sha256=fsw3C38VP50km3R-nHL775LNGPpJ4JxqXJ2Ib1f5SqE,1011
+│ -nucliadb/ingest/app.py,sha256=GxNTIzSOEwxJslOh-zhu24_u96QoY3XAefwlxu-xx7k,6831
+│ +nucliadb/ingest/app.py,sha256=IVgLbLUMnM-2wTWdUg4BeI3htrY0ZFsDFVEn2wokvPw,6338
+│  nucliadb/ingest/cache.py,sha256=XPmNNa6KP7P5Mp0Iivl3vIFFMz9rOs9POpHkzj9wpwU,995
+│  nucliadb/ingest/chitchat.py,sha256=Nj9W6XwWwjjn3ufFo2D8-t2CLiz5AKwNERwvhCPcaMY,6874
+│  nucliadb/ingest/partitions.py,sha256=a3fXq3DwRiDjcQNBcUtDTra8prIf-r5_z0B69ll_pag,2425
+│  nucliadb/ingest/processing.py,sha256=FicanxeoCPeXyD4ohb7HqaR0r6jRQdy7w5e_GGRcD3k,14757
+│  nucliadb/ingest/purge.py,sha256=vCtIr2LZph6AcMpXaRxYhk2Dvmw_Sf7sXvUKDG46c40,5463
+│  nucliadb/ingest/serialize.py,sha256=IEWub60ECe9jBJxq561xxN3DlTYXfWGR9btTiwLRPL4,17721
+│  nucliadb/ingest/settings.py,sha256=f66dhC_ILiaAqwyhbphDdloiF2Ar7PsUWnRByqx2Nfs,3021
+│ -nucliadb/ingest/utils.py,sha256=_yvf6WmUfTBtzqbJNOwDcYzqLk-qwUrgdl2jqO39L74,4583
+│ +nucliadb/ingest/utils.py,sha256=KhRfOpRfjySzwGsa45Ey_usmCwD0kph6dg0HEbOAQR4,4255
+│  nucliadb/ingest/consumer/__init__.py,sha256=7Bi0uZMbpYNrqPpWGATaWYd5wn_k5cfVSS_FGYmJspc,1087
+│  nucliadb/ingest/consumer/pull.py,sha256=DNTrjbjwcTzZoYSMA-MGeetcVtz8yFMe3v9lh2WV6hQ,16928
+│  nucliadb/ingest/consumer/service.py,sha256=fEG7rwIuikUdZ3UkGnE3k35nqpzzud1r9J2LhCBHbmM,6425
+│  nucliadb/ingest/fields/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/ingest/fields/base.py,sha256=fEh3CSXkgWXkhsGBcUYx18a7iBD6xBXJq-4GSGWEnUU,20415
+│  nucliadb/ingest/fields/conversation.py,sha256=v5h5GrdvKW_hB2DYloyV0qlzIK1QF3CX4nI0GCp9M90,6823
+│  nucliadb/ingest/fields/date.py,sha256=jXMWfdCv87oVySDQORXhMZ1Zvpw_aOpcrYAfUSnL3uA,1223
+│ @@ -45,45 +45,45 @@
+│  nucliadb/ingest/orm/exceptions.py,sha256=f4ihB27Bi4l5LKXDpXJt4H4mQCD4r7npK_aA20e2W8Q,1362
+│  nucliadb/ingest/orm/grpc_node_binding.py,sha256=Fw16RI6Jr96WgudPGpI93j6EDBomwIm1l12z3Qt-W_w,12586
+│  nucliadb/ingest/orm/grpc_node_dummy.py,sha256=Pz6EB8fd2lw1pG447LrvSJQ8y_6XsiAJIvbc7jViHY4,5009
+│  nucliadb/ingest/orm/knowledgebox.py,sha256=IEAUkTEzi8xb0Des2QULZJnvV6iX-Q1s113bd_JKmPw,21289
+│  nucliadb/ingest/orm/labels.py,sha256=2caUR5M5L3_tw2Sp9XyevO-yXdNpGUUxrR0vpQnTsmo,1730
+│  nucliadb/ingest/orm/local_node.py,sha256=-YukxuAPEr8AsXJsGfqNl9E25wuHs4ljrwG1TXrizLU,4291
+│  nucliadb/ingest/orm/local_shard.py,sha256=VHykQW3U9brM_lo4kd96EIbeGESDPh0gKbpPdGtTVw0,2864
+│ -nucliadb/ingest/orm/node.py,sha256=jAl_wxqv7KJb3lQ1Fa9MeppVDMx5Bxbm-US0DU-DjhU,21215
+│ +nucliadb/ingest/orm/node.py,sha256=u8MmPGWLfMD9CBzgJB7fnabwUT9lB_vgLXwgv7Y1WZs,19815
+│  nucliadb/ingest/orm/nodes_manager.py,sha256=9z28W_U4KG86GzLIr2_FXCf-IG2uNCDulEV4WfNYt94,4293
+│  nucliadb/ingest/orm/processor.py,sha256=4IXNvwQlYoSeCTfOKkEpiJQGCU8P1YcrnfqH0dLyrBo,26056
+│  nucliadb/ingest/orm/resource.py,sha256=tSlgS2oU1_QQLr7Rz5baHUr1Pgb1wa9sPjQVqwbowBo,49605
+│  nucliadb/ingest/orm/shard.py,sha256=75Dnb0LjzUWUgG1HLWvAsNpBTUaHDEqK_LJw8mVKIR0,5087
+│  nucliadb/ingest/orm/synonyms.py,sha256=BuqS8XxLLVP124zPLGISgrmQg94LdalaTHeOVp_6dIY,1739
+│  nucliadb/ingest/orm/utils.py,sha256=9vTugcLweai69WWinatWm1RTyukJEDDte3qXNLqS7pI,3340
+│ -nucliadb/ingest/service/__init__.py,sha256=Ep7P6B4jAgVOnoFuTR2jfsNA_sgsCJ7R401jMsteX9Y,3134
+│ +nucliadb/ingest/service/__init__.py,sha256=79pKu4eNXDmflkf2qLhY5uxUUHl5UiyA3RBVBHmLDRI,2817
+│  nucliadb/ingest/service/exceptions.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/ingest/service/writer.py,sha256=MBlbdD_tHvQXM0IvsXnLwDePMTQoHc53yVAxDpVT58E,35999
+│  nucliadb/ingest/tests/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/ingest/tests/conftest.py,sha256=vu6f6UsfajjAZwBcbecc7xvRZpr7Yqj7qxalHYtgRtE,1096
+│  nucliadb/ingest/tests/fixtures.py,sha256=ECt9PGsg2UihZFJiXLMkmTOBY-J2vr-2U9hIsl3pojo,24774
+│  nucliadb/ingest/tests/tikv.py,sha256=MGwBL9ezcOOR8JwttouQ8Qj6534d742i2A3TAumdrM4,7549
+│  nucliadb/ingest/tests/vectors.py,sha256=C04U7O6d7UxBfS3GVGeaMsYjlKIQQze7-gaOFvvfeyM,42967
+│  nucliadb/models/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/models/responses.py,sha256=ySnO1-NLZoeK-ud3d1YcmmBeznsG7m2pyX2KdKzSTRQ,1587
+│  nucliadb/one/__init__.py,sha256=M4YAQYYehaKJpZUa__l6DGhK2VGRejMAn33tXZuVwA0,914
+│ -nucliadb/one/app.py,sha256=bNuN7sObaFgjocBlsMCsfHPZVUSWxxda195N5LN39No,3595
+│ +nucliadb/one/app.py,sha256=nfadTifdFPOQRJszgdd5OkACOMn3bK9jBGVvTlussIM,3257
+│  nucliadb/one/lifecycle.py,sha256=W8_2rR6R_Vi8PzXQaWyQPzD4Qfr6_J2odLxdUKMwtKU,2130
+│  nucliadb/one/tests/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/one/tests/conftest.py,sha256=qmJ2toIbFRAEyoHbv68-xl2XQjBuT0e3CuZ5ert21xs,1164
+│  nucliadb/one/tests/fixtures.py,sha256=6gxRa4_vJng0zK0tEJ8fpPzxdY1hbSWi6ew_6RGBtzY,3591
+│  nucliadb/one/tests/test_basic.py,sha256=tLBcofx01zABlnetZHD9QxZ7ysGmiT6QRJtYEOOjKBg,2561
+│  nucliadb/one/tests/test_delete_field.py,sha256=qXa2fgG-RYNBPneqQtX9HdroDSn2qR0ZULXQPQ9fClU,2492
+│  nucliadb/one/tests/test_fieldmetadata.py,sha256=-V5K3mJfBLcEAx4jLjskYIZlKChOL90eEM8WLFzPTeE,6087
+│  nucliadb/one/tests/test_services.py,sha256=XVXqcP62323FLNyJinemnmG5cGBWPNHX0FRJmX1G4mw,4594
+│  nucliadb/one/tests/test_upload_download.py,sha256=h8hRtbdGuUZuTB7dHTZsakzu7Y1C0dkTIAJpwEtQjHs,4067
+│  nucliadb/reader/__init__.py,sha256=TxsAOWhRnz9l8DuFy-Qfv0I5HrzrysaxtAzogg6FQB8,1328
+│ -nucliadb/reader/app.py,sha256=IwgA4C1HDIQkq3tX4fDydjSifEwvQkLSHlCmJRSRRuA,4120
+│ -nucliadb/reader/lifecycle.py,sha256=REUi_vDd_ZlbOf-DDsm45S4li2PGiTWcHz7XutfcoPs,1835
+│ +nucliadb/reader/app.py,sha256=YMCbnKvWQ8Y6eJ3fSuyNGng6HgCyqtBQsdqSK-yizuk,3603
+│ +nucliadb/reader/lifecycle.py,sha256=JG61NwYBuMG5g6TUkNFPwPCUfoTFZahrxI1FR--7BJU,1741
+│  nucliadb/reader/openapi.py,sha256=lb-QDOMxESUUjvtMEa6yHqqEng4zo21o9EM2uCVhl0g,2186
+│  nucliadb/reader/run.py,sha256=LrCe0y_aouGAV8rStM1-DfV7UGXHJ7iaHqH8CggtG5k,1010
+│  nucliadb/reader/api/__init__.py,sha256=c-UD29C0FVzQDGEvslebDCKtvnyEcAbiDd-3Q_QgGN4,872
+│  nucliadb/reader/api/models.py,sha256=gB9QIhKhVFIaGOj-F9XVVr_TDGtg3oiU3WBGVVAsecA,2433
+│  nucliadb/reader/api/v1/__init__.py,sha256=3NX3_gljl2HAMiTHMgHWwc-qIR9bYKr0ggl37mGUQjc,995
+│  nucliadb/reader/api/v1/download.py,sha256=hN79ozkYIlLAHKqu5yk4xsiAduiJq_ax82z3fFAdKek,9671
+│  nucliadb/reader/api/v1/knowledgebox.py,sha256=nDN0jxI85cisQx_7R6JJwrHamc9_2Lyzfck0ZPYVzy4,3570
+│ @@ -94,17 +94,17 @@
+│  nucliadb/reader/tests/conftest.py,sha256=j1YLBho3wV890KL-aH-WJ5MCh-fei6P2t7kYMPto5yo,1101
+│  nucliadb/reader/tests/fixtures.py,sha256=DT8F5Df9Jea80xM8oX74B1WPARoEslzmIA5lLuYBcPg,4564
+│  nucliadb/reader/tests/test_list_resources.py,sha256=zHJLCn3Pi8unt-NGBTftND-2ByVpLd2nDgpfG_qp1JU,2749
+│  nucliadb/reader/tests/test_reader_file_download.py,sha256=sDjBEXyZsa-EUlXHmJmBe6W8e-4OMVrDaQY_qlxzL7o,9139
+│  nucliadb/reader/tests/test_reader_resource.py,sha256=hFP7WZYBqisGKY4iqNGJx1QlTR3HLHUhCAxRXF95DzA,11359
+│  nucliadb/reader/tests/test_reader_resource_field.py,sha256=YQ-U2mEGhs_rPGxcWPZmWLSEoCxBo3AVDtLZCtZrGb8,6535
+│  nucliadb/search/__init__.py,sha256=fwzdF6p7p9uDCtE38gTUxrRVIdbEDVQTAXWUMVKgSBM,1535
+│ -nucliadb/search/app.py,sha256=3ntOoDysXSqCJJW6wC9UwlSdO6guRfypOt2_KtpcSF8,5326
+│ +nucliadb/search/app.py,sha256=Ncgw3Kn0Otmfbxd4vuyWDRdWpSh36dEc9irReH_kQQg,4809
+│  nucliadb/search/chitchat.py,sha256=K2emuucKhI5MP5tGlBJfT-F2ChiEXTEz85deUrjgZJM,1848
+│ -nucliadb/search/lifecycle.py,sha256=h3BOG3wQ5TMOeBovxygJca6_MRT2qmtJORJMgF6M5y4,3180
+│ +nucliadb/search/lifecycle.py,sha256=QLpDCs6IE1O1H57cwKjaRw27mIlyQpdQpvlQWWXuxfE,3087
+│  nucliadb/search/openapi.py,sha256=VI3-DrfuX38IwRTC62QMs5mYe5v7v5KQ1BsiNT2sPH8,2206
+│  nucliadb/search/predict.py,sha256=z3g8UYD9gg1AlYtSa7NaM6GQsjEjx5H_gWAls1avw2c,8240
+│  nucliadb/search/run.py,sha256=a687h4JWXwYOkNPFbBzJYMS16Z0Wiu2mkikbL9ujoiA,1011
+│  nucliadb/search/settings.py,sha256=Qk268YnWKOJxkTA0SM9BVw7aHHXdPPHv8WfzhE2VWIE,1162
+│  nucliadb/search/utilities.py,sha256=tlh048ZoFv-pUSjePiE-f_9J4nEqsJstQmhwS6Ke7Yw,1238
+│  nucliadb/search/api/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/search/api/v1/__init__.py,sha256=yljyGyrWNKsGuVewTnxB6CmDKGgdsu7dfkS67mZcUUA,1077
+│ @@ -160,26 +160,26 @@
+│  nucliadb/tests/test_vectorset.py,sha256=WrEAnCwN1LBF6_Hou-wpZPIa_xB20UGIxz6KyJzkmZI,8758
+│  nucliadb/tests/knowledgeboxes/__init__.py,sha256=u4paaCDL4YOUPUW5iZOzP72yMkdqTA_dMr6hRQEnf5k,919
+│  nucliadb/tests/knowledgeboxes/philosophy_books.py,sha256=vM9VT08CCCyVDKNS5-Rgx2ULnSdr7r1Z4Dk8sTIb0XE,7049
+│  nucliadb/tests/knowledgeboxes/ten_dummy_resources.py,sha256=yZwn6YVCm3EshQj2WoetWfuDEGDV3VMFXM9pTr443W4,3131
+│  nucliadb/tests/utils/__init__.py,sha256=GXLlp1h9RKQF8He0gEGdKGIwTgn6SE5ilkQhZz807JU,2492
+│  nucliadb/tests/utils/entities.py,sha256=IPTHEsYY6tryoxZhpz3dpkklw0AQm4_shk0Osj8Bnwk,2533
+│  nucliadb/train/__init__.py,sha256=qdZ6DeuwED8iIl32NVyDYWTy544FyHCZUQnQGnms604,1325
+│ -nucliadb/train/app.py,sha256=Zj4KEVqDsSxkncl_qKciRDXdqGRdqiVKEjq2ZJu7znw,4104
+│ +nucliadb/train/app.py,sha256=-IWzmfWxAXZ9VMRluYD2yG5cJa_gPeTkqphQCJ7d9Sc,3587
+│  nucliadb/train/chitchat.py,sha256=VzVwlASRjnbNSegoI22QrMlPjvKatq_Eg9W8vPqtoFs,1846
+│  nucliadb/train/generator.py,sha256=7zCKxjW5kqLN-YB_PWptGz6iz8tiR42ladpjEg1Sp7s,3836
+│ -nucliadb/train/lifecycle.py,sha256=8OGBKJM70hIQ4eeI16SevDt97d4SvI9KzmL894d9k_k,2261
+│ +nucliadb/train/lifecycle.py,sha256=moOC-8Fd2xaz6yLpTD2Lff2iS1wx9-Vh2YCrfOvNqmw,2012
+│  nucliadb/train/models.py,sha256=BmgmMjDsu_1Ih5JDAqo6whhume90q0ASJcDP9dkMQm8,1198
+│  nucliadb/train/nodes.py,sha256=IYGAbj6dmhOq49M4ozy5ztpxkbwMWKFDTY4IX_2nI9c,8043
+│  nucliadb/train/run.py,sha256=TQ1bXBjMgLHgc7wV7gN9p09HQQPT6oiO8jmsG3S2p38,1009
+│  nucliadb/train/servicer.py,sha256=eCWU3MBbdFzpevAvGmgVsWTU1eJ0jVmslkZeyn9tWzc,5755
+│  nucliadb/train/settings.py,sha256=JUcKRHpz1NumdMUS_z-c_2jOf0ro6xud9mV8L8-KiYU,1612
+│  nucliadb/train/upload.py,sha256=R5FGrwmle3QHX01LIw4kNnVmC2LhmDTY227P1boJj3Q,3600
+│  nucliadb/train/uploader.py,sha256=pipcnZ_b8GF-39j-Rgpk1Jy8W-XOPyKvdZk5iOLrs8I,6531
+│ -nucliadb/train/utils.py,sha256=_tKikxMiFKFdNJ1JoIPuYbphzr2jwTmvbT6--gfUHs4,3285
+│ +nucliadb/train/utils.py,sha256=xrqQr5BLHUf5rkNv2hKB7ebP1kkMnmxy296g1gETfH4,3077
+│  nucliadb/train/api/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/train/api/models.py,sha256=YFKrXktdiE6yAa4TSHSYXzUZjADjssi4VHVn0Vf0m_0,958
+│  nucliadb/train/api/utils.py,sha256=zYbDiKJSsPP8tC7O2T8bfKkb_RTCxrq9JIcnLOSZixQ,1479
+│  nucliadb/train/api/v1/__init__.py,sha256=P4vCIv93r_Cq1WFDDNjy_Wg7zBkzx0S4euXwfPy1LA4,928
+│  nucliadb/train/api/v1/check.py,sha256=r1r4r8KiF7CZs-cEiWZQ-ZlvV4hRmqySjMRjmW82wk0,2066
+│  nucliadb/train/api/v1/router.py,sha256=ukdxn5q1oMar6NSPobgJczWsSxLCHw6DYKlb3zwCiSo,910
+│  nucliadb/train/api/v1/shards.py,sha256=EDV7fJkF-Elzpt0MSm-KxagzpAYks64Fr9NGW1vFdpM,1905
+│ @@ -202,17 +202,17 @@
+│  nucliadb/train/tests/test_list_paragraphs.py,sha256=fvDh-vvgTj-XonTS8t9CDq0eDGgNl8iWw3E9OBmGK7c,2944
+│  nucliadb/train/tests/test_list_resources.py,sha256=QkrsRzRHAWHyJHEtSsrr0xOtrALtiUasSvoPHcjHsCc,1423
+│  nucliadb/train/tests/test_list_sentences.py,sha256=YqofeZgXeUX4KJVOJiaiU1mx2G5qhkAIMa_FXrSxJck,2863
+│  nucliadb/train/tests/test_paragraph_classification.py,sha256=uj5KSsZCYXlrTOT-gUpFypcsGpVR3cNiXhF2nyhiHX0,8129
+│  nucliadb/train/tests/test_sentence_classification.py,sha256=Pj5qW4orGk3x_D48S-DmWLsYSEaSOzq7uZexvfVxiFg,8349
+│  nucliadb/train/tests/test_token_classification.py,sha256=yGsIWuHxp49WynzKAeLTxkoG-Z0TEiReqoPlITQeCHU,10122
+│  nucliadb/writer/__init__.py,sha256=HkfMuQR3CbbPU3g-A85Ibt8iwSTTADhLc0-pi3F3hvk,1328
+│ -nucliadb/writer/app.py,sha256=FhiObmuq6D4Dx_0k9UW-Bs3MVz0TLVP5ZErM5me9avI,4095
+│ +nucliadb/writer/app.py,sha256=kmnWWVhfN_oe3lWRpDQhd4hkobeKm-bQxjyn6lG_NAk,3578
+│  nucliadb/writer/exceptions.py,sha256=2dMvuoF68v3BZuyzaBEsbG6gusQqwLFcn47qm1zNdTc,972
+│ -nucliadb/writer/lifecycle.py,sha256=9q-CGmgUaHaRZeR_YULt-va6mA1z_ZLMwaoSv4AUA2w,3959
+│ +nucliadb/writer/lifecycle.py,sha256=uoYf2XXAOpCTWHm5mWgc3tejXX-9i8NPRCR0WaeLA4M,3865
+│  nucliadb/writer/openapi.py,sha256=bpH-pzxdDRb9Dy0OcaB1U0ziuvIG416akVr-Dwz3ywM,2186
+│  nucliadb/writer/run.py,sha256=rwOc25ZDksaE2eaNSEZdwKB-pHDDgDSNi8a-BQrp3Ko,1011
+│  nucliadb/writer/settings.py,sha256=rphXdqI238b1bch0elcY3aY4qxQYe_wllnW7MPjmZyU,1062
+│  nucliadb/writer/utilities.py,sha256=AZ5qEny1Xm0IDsFtH13oJa2usvJZK8f0FdgF1LrnLCw,1036
+│  nucliadb/writer/api/__init__.py,sha256=cp15ZcFnHvpcu_5-aK2A4uUyvuZVV_MJn4bIXMa20ks,835
+│  nucliadb/writer/api/v1/__init__.py,sha256=50S5JnDp00NP8YKLlaWZ_ZDmJr7bioFteB400iKcel8,1021
+│  nucliadb/writer/api/v1/field.py,sha256=5O60L128wLNn8HCU02GtDS1yxbCp7kuA9X0VEY-Dnyw,22265
+│ @@ -246,13 +246,13 @@
+│  nucliadb/writer/tus/dm.py,sha256=SnRSZhN35XgGRWUdcxXQ-Iu7Ae182MfRQEKj467hrJc,4396
+│  nucliadb/writer/tus/exceptions.py,sha256=CmxYKnHXpXug25DYV4SpVAU47SGD-NVBd7pNTRbWHyk,2186
+│  nucliadb/writer/tus/gcs.py,sha256=DdnCTwtd3N87yaPUl-n3LJfUDdHVGav-w1LBOUnUNWg,13818
+│  nucliadb/writer/tus/local.py,sha256=BM2_uZwh3qd4CsGaIzNL4EBzv9lNjgtSP0cnLPdMJek,5811
+│  nucliadb/writer/tus/s3.py,sha256=5gpiYTGAJsLN2j55FBSq-E9kLbMn5tvNDZeNRzo3yj0,8571
+│  nucliadb/writer/tus/storage.py,sha256=Ba085-LkOjbHsYKh6u3NA40b1PSPzS20YHJqIa6kvG0,4682
+│  nucliadb/writer/tus/utils.py,sha256=40VRRKjKJgt-pYbWH9eX-jnQFze1_NkqI8ehe-wSZ8U,2580
+│ -nucliadb-2.6.0.post136.dist-info/METADATA,sha256=SbmOfw_-GCOj2u6VPLINrqK4bRLFIVl97sq3Mmjmpq4,3189
+│ -nucliadb-2.6.0.post136.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -nucliadb-2.6.0.post136.dist-info/entry_points.txt,sha256=1_OyDuPKy8lYGSiRs9zcTp25AkGS0AIAp9rbx_feFiI,735
+│ -nucliadb-2.6.0.post136.dist-info/top_level.txt,sha256=K5XbWCHfZ7wve-wIrOSTuE0y-jVJSKVS9ZTDJ4TKhKQ,9
+│ -nucliadb-2.6.0.post136.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+│ -nucliadb-2.6.0.post136.dist-info/RECORD,,
+│ +nucliadb-2.7.0.post138.dist-info/METADATA,sha256=eRma-L4LYu_T6-auHOcXU60V2pQQAYo2aSZli1_OqeM,3189
+│ +nucliadb-2.7.0.post138.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +nucliadb-2.7.0.post138.dist-info/entry_points.txt,sha256=1_OyDuPKy8lYGSiRs9zcTp25AkGS0AIAp9rbx_feFiI,735
+│ +nucliadb-2.7.0.post138.dist-info/top_level.txt,sha256=K5XbWCHfZ7wve-wIrOSTuE0y-jVJSKVS9ZTDJ4TKhKQ,9
+│ +nucliadb-2.7.0.post138.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+│ +nucliadb-2.7.0.post138.dist-info/RECORD,,

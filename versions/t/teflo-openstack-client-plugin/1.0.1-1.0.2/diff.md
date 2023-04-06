@@ -1,0 +1,243 @@
+# Comparing `tmp/teflo_openstack_client_plugin-1.0.1.tar.gz` & `tmp/teflo_openstack_client_plugin-1.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "teflo_openstack_client_plugin-1.0.1.tar", last modified: Fri Mar 26 19:37:43 2021, max compression
++gzip compressed data, was "teflo_openstack_client_plugin-1.0.2.tar", last modified: Thu Apr  6 19:29:53 2023, max compression
+```
+
+## Comparing `teflo_openstack_client_plugin-1.0.1.tar` & `teflo_openstack_client_plugin-1.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/
+--rw-r--r--   0 runner    (1001) docker     (121)       42 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/AUTHORS
+--rw-r--r--   0 runner    (1001) docker     (121)    32462 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)      211 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (121)      702 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      379 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/README.md
+--rw-r--r--   0 runner    (1001) docker     (121)       38 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (121)     1281 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/
+--rw-r--r--   0 runner    (1001) docker     (121)     1023 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/files/
+--rw-r--r--   0 runner    (1001) docker     (121)     1646 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/files/osp_schema_extensions.py
+--rw-r--r--   0 runner    (1001) docker     (121)      700 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/files/schema.yml
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/helpers/
+--rw-r--r--   0 runner    (1001) docker     (121)     1029 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/helpers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     6231 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/helpers/os_client_helper.py
+--rw-r--r--   0 runner    (1001) docker     (121)    19104 2021-03-26 19:37:29.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/os_client_provisioner.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-03-26 19:37:43.072970 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)      702 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      679 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      112 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       13 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       30 2021-03-26 19:37:42.000000 teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:29:53.546497 teflo_openstack_client_plugin-1.0.2/
++-rw-r--r--   0 runner    (1001) docker     (123)       42 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/AUTHORS
++-rw-r--r--   0 runner    (1001) docker     (123)    32462 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      211 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)      655 2023-04-06 19:29:53.546497 teflo_openstack_client_plugin-1.0.2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 19:29:53.546497 teflo_openstack_client_plugin-1.0.2/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1322 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:29:53.542497 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/
++-rw-r--r--   0 runner    (1001) docker     (123)     1023 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:29:53.546497 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/files/
++-rw-r--r--   0 runner    (1001) docker     (123)     1646 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/files/osp_schema_extensions.py
++-rw-r--r--   0 runner    (1001) docker     (123)      700 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/files/schema.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:29:53.546497 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/helpers/
++-rw-r--r--   0 runner    (1001) docker     (123)     1029 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/helpers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6299 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/helpers/os_client_helper.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19104 2023-04-06 19:29:43.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/os_client_provisioner.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:29:53.542497 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      655 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       43 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-06 19:29:53.000000 teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/top_level.txt
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/LICENSE` & `teflo_openstack_client_plugin-1.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/PKG-INFO` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/PKG-INFO`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ Metadata-Version: 2.1
+-Name: teflo_openstack_client_plugin
+-Version: 1.0.1
++Name: teflo-openstack-client-plugin
++Version: 1.0.2
+ Summary: openstack client provisioner plugin for Teflo
+-Home-page: UNKNOWN
+ Author: Red Hat Inc
+-License: UNKNOWN
+-Description: # teflo_openstack_client_plugin
+-        
+-        * A provisioner plugin for Teflo to provision resources using openstack client
+-        
+-Platform: UNKNOWN
+ Classifier: Development Status :: 2 - Pre-Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Natural Language :: English
+ Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.6
+ Description-Content-Type: text/markdown
++License-File: LICENSE
++License-File: AUTHORS
++
++# teflo_openstack_client_plugin
++
++* A provisioner plugin for Teflo to provision resources using openstack client
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/setup.py` & `teflo_openstack_client_plugin-1.0.2/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -17,14 +17,15 @@
+     description="openstack client provisioner plugin for Teflo",
+     long_description="""# teflo_openstack_client_plugin\n\n* A provisioner plugin for Teflo to provision resources using openstack client\n""",
+     long_description_content_type='text/markdown',
+     author="Red Hat Inc",
+     packages=find_packages(),
+     include_package_data=True,
+     install_requires=[
++        "python-openstackclient<=5.5.0",
+         'ospclientsdk'
+     ],
+     classifiers=[
+         'Development Status :: 2 - Pre-Alpha',
+         'Intended Audience :: Developers',
+         'Natural Language :: English',
+         'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/__init__.py` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -22,9 +22,9 @@
+ 
+     :copyright: (c) 2020 Red Hat, Inc.
+     :license: GPLv3, see LICENSE for more details.
+ """
+ 
+ from .os_client_provisioner import OpenstackClientProvisionerPlugin
+ 
+-__version__ = '1.0.1'
++__version__ = '1.0.2'
+ __author__ = 'Red Hat Inc.'
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/files/osp_schema_extensions.py` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/files/osp_schema_extensions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/files/schema.yml` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/files/schema.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/helpers/__init__.py` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/helpers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/helpers/os_client_helper.py` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/helpers/os_client_helper.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -109,15 +109,16 @@
+         ip_add = parse_network_addresses_to_dict(r, public_net_key)
+         if ip_add and len(res) > 1:
+             os_res.append(dict(asset_id=r.get('id'), ip=ip_add, name=r.get('name')))
+             continue
+         if ip_add and len(res) == 1:
+             os_res.append(dict(asset_id=r.get('id'), ip=ip_add, name=r.get('name')))
+             continue
+-        os_res.append(dict(asset_id=r.get('id'), name=r.get('name')))
++        if isinstance(r, dict):
++            os_res.append(dict(asset_id=r.get('id'), name=r.get('name')))
+ 
+     return os_res
+ 
+ 
+ def parse_network_addresses_to_dict(json_resp, public_net_key):
+     """
+     This will iterate over the dictionary extracting ip information and formatting
+@@ -125,15 +126,15 @@
+ 
+     :param json_resp: dictionary response from the provider
+     :param public_net_key: optionnal key to specifically designate the ip from said network as public
+            for later use when generating the inventory
+     :return:
+     """
+     ips = dict()
+-    if json_resp.get('addresses', {}):
++    if isinstance(json_resp, dict) and json_resp.get('addresses', {}):
+         addy_dict = json_resp.get('addresses')
+         LOG.info(addy_dict)
+         if len(addy_dict) == 1:
+             for key, val in addy_dict.items():
+                 if isinstance(val, list):
+                     for ele in val:
+                         if ele.find(':') != -1:
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin/os_client_provisioner.py` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin/os_client_provisioner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/PKG-INFO` & `teflo_openstack_client_plugin-1.0.2/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ Metadata-Version: 2.1
+-Name: teflo-openstack-client-plugin
+-Version: 1.0.1
++Name: teflo_openstack_client_plugin
++Version: 1.0.2
+ Summary: openstack client provisioner plugin for Teflo
+-Home-page: UNKNOWN
+ Author: Red Hat Inc
+-License: UNKNOWN
+-Description: # teflo_openstack_client_plugin
+-        
+-        * A provisioner plugin for Teflo to provision resources using openstack client
+-        
+-Platform: UNKNOWN
+ Classifier: Development Status :: 2 - Pre-Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Natural Language :: English
+ Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.6
+ Description-Content-Type: text/markdown
++License-File: LICENSE
++License-File: AUTHORS
++
++# teflo_openstack_client_plugin
++
++* A provisioner plugin for Teflo to provision resources using openstack client
+```
+
+### Comparing `teflo_openstack_client_plugin-1.0.1/teflo_openstack_client_plugin.egg-info/SOURCES.txt` & `teflo_openstack_client_plugin-1.0.2/teflo_openstack_client_plugin.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

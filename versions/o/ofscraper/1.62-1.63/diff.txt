@@ -1,0 +1,495 @@
+--- tmp/ofscraper-1.62.tar.gz
++++ tmp/ofscraper-1.63.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ofscraper-1.62.tar", max compression
+│ +gzip compressed data, was "ofscraper-1.63.tar", max compression
+│   --- ofscraper-1.62.tar
+├── +++ ofscraper-1.63.tar
+│ ├── file list
+│ │ @@ -1,37 +1,37 @@
+│ │ --rw-r--r--   0        0        0     1073 2023-04-06 15:33:38.736121 ofscraper-1.62/LICENSE
+│ │ --rw-r--r--   0        0        0     9234 2023-04-06 15:33:38.736121 ofscraper-1.62/README.md
+│ │ --rw-r--r--   0        0        0      801 2023-04-06 16:55:37.365826 ofscraper-1.62/pyproject.toml
+│ │ --rw-r--r--   0        0        0      620 2023-04-06 15:33:38.742121 ofscraper-1.62/src/__init__.py
+│ │ --rw-r--r--   0        0        0      751 2023-04-06 16:55:37.365826 ofscraper-1.62/src/__version__.py
+│ │ --rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/__init__.py
+│ │ --rw-r--r--   0        0        0     3388 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/highlights.py
+│ │ --rw-r--r--   0        0        0      755 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/init.py
+│ │ --rw-r--r--   0        0        0     1815 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/me.py
+│ │ --rw-r--r--   0        0        0     4236 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/messages.py
+│ │ --rw-r--r--   0        0        0     2401 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/paid.py
+│ │ --rw-r--r--   0        0        0     6025 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/posts.py
+│ │ --rw-r--r--   0        0        0     3166 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/profile.py
+│ │ --rw-r--r--   0        0        0     2040 2023-04-06 15:33:38.742121 ofscraper-1.62/src/api/subscriptions.py
+│ │ --rw-r--r--   0        0        0     4100 2023-04-06 16:40:58.038879 ofscraper-1.62/src/constants.py
+│ │ --rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.62/src/db/__init__.py
+│ │ --rw-r--r--   0        0        0    11255 2023-04-06 16:27:45.941953 ofscraper-1.62/src/db/operations.py
+│ │ --rw-r--r--   0        0        0     3198 2023-04-06 15:33:38.742121 ofscraper-1.62/src/db/queries.py
+│ │ --rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.62/src/interaction/__init__.py
+│ │ --rw-r--r--   0        0        0     3280 2023-04-06 15:33:38.742121 ofscraper-1.62/src/interaction/like.py
+│ │ --rwxr-xr-x   0        0        0    20417 2023-04-06 16:29:19.745896 ofscraper-1.62/src/scraper.py
+│ │ --rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.62/src/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     7950 2023-04-06 16:40:41.605715 ofscraper-1.62/src/utils/auth.py
+│ │ --rw-r--r--   0        0        0      694 2023-04-06 15:33:38.742121 ofscraper-1.62/src/utils/browser.py
+│ │ --rw-r--r--   0        0        0     3498 2023-04-06 16:55:20.060649 ofscraper-1.62/src/utils/config.py
+│ │ --rw-r--r--   0        0        0      877 2023-04-06 15:33:38.742121 ofscraper-1.62/src/utils/dates.py
+│ │ --rw-r--r--   0        0        0      372 2023-04-06 15:33:38.742121 ofscraper-1.62/src/utils/decorators.py
+│ │ --rw-r--r--   0        0        0    16759 2023-04-06 16:53:07.544293 ofscraper-1.62/src/utils/download.py
+│ │ --rw-r--r--   0        0        0      609 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/encoding.py
+│ │ --rw-r--r--   0        0        0       28 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/login.py
+│ │ --rw-r--r--   0        0        0      418 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/nap.py
+│ │ --rw-r--r--   0        0        0     3160 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/old_nap.py
+│ │ --rw-r--r--   0        0        0     1744 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/paths.py
+│ │ --rw-r--r--   0        0        0     3688 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/profiles.py
+│ │ --rw-r--r--   0        0        0    13466 2023-04-06 15:38:48.853128 ofscraper-1.62/src/utils/prompts.py
+│ │ --rw-r--r--   0        0        0      750 2023-04-06 15:33:38.743121 ofscraper-1.62/src/utils/separate.py
+│ │ --rw-r--r--   0        0        0    10334 1970-01-01 00:00:00.000000 ofscraper-1.62/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1073 2023-04-06 15:33:38.736121 ofscraper-1.63/LICENSE
+│ │ +-rw-r--r--   0        0        0     9234 2023-04-06 15:33:38.736121 ofscraper-1.63/README.md
+│ │ +-rw-r--r--   0        0        0      801 2023-04-06 19:25:04.345689 ofscraper-1.63/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      620 2023-04-06 15:33:38.742121 ofscraper-1.63/src/__init__.py
+│ │ +-rw-r--r--   0        0        0      751 2023-04-06 19:25:17.038813 ofscraper-1.63/src/__version__.py
+│ │ +-rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/__init__.py
+│ │ +-rw-r--r--   0        0        0     3388 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/highlights.py
+│ │ +-rw-r--r--   0        0        0      755 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/init.py
+│ │ +-rw-r--r--   0        0        0     1815 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/me.py
+│ │ +-rw-r--r--   0        0        0     4236 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/messages.py
+│ │ +-rw-r--r--   0        0        0     2330 2023-04-06 19:23:05.328526 ofscraper-1.63/src/api/paid.py
+│ │ +-rw-r--r--   0        0        0     6025 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/posts.py
+│ │ +-rw-r--r--   0        0        0     3166 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/profile.py
+│ │ +-rw-r--r--   0        0        0     2040 2023-04-06 15:33:38.742121 ofscraper-1.63/src/api/subscriptions.py
+│ │ +-rw-r--r--   0        0        0     4066 2023-04-06 17:48:54.664518 ofscraper-1.63/src/constants.py
+│ │ +-rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.63/src/db/__init__.py
+│ │ +-rw-r--r--   0        0        0    11524 2023-04-06 17:48:10.615082 ofscraper-1.63/src/db/operations.py
+│ │ +-rw-r--r--   0        0        0     3199 2023-04-06 17:48:03.239009 ofscraper-1.63/src/db/queries.py
+│ │ +-rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.63/src/interaction/__init__.py
+│ │ +-rw-r--r--   0        0        0     3280 2023-04-06 15:33:38.742121 ofscraper-1.63/src/interaction/like.py
+│ │ +-rwxr-xr-x   0        0        0    20408 2023-04-06 19:21:57.821867 ofscraper-1.63/src/scraper.py
+│ │ +-rw-r--r--   0        0        0        1 2023-04-06 15:33:38.742121 ofscraper-1.63/src/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     7950 2023-04-06 16:40:41.605715 ofscraper-1.63/src/utils/auth.py
+│ │ +-rw-r--r--   0        0        0      694 2023-04-06 15:33:38.742121 ofscraper-1.63/src/utils/browser.py
+│ │ +-rw-r--r--   0        0        0     3680 2023-04-06 18:06:42.637126 ofscraper-1.63/src/utils/config.py
+│ │ +-rw-r--r--   0        0        0      877 2023-04-06 15:33:38.742121 ofscraper-1.63/src/utils/dates.py
+│ │ +-rw-r--r--   0        0        0      372 2023-04-06 15:33:38.742121 ofscraper-1.63/src/utils/decorators.py
+│ │ +-rw-r--r--   0        0        0    16759 2023-04-06 16:53:07.544293 ofscraper-1.63/src/utils/download.py
+│ │ +-rw-r--r--   0        0        0      609 2023-04-06 15:33:38.743121 ofscraper-1.63/src/utils/encoding.py
+│ │ +-rw-r--r--   0        0        0       28 2023-04-06 15:33:38.743121 ofscraper-1.63/src/utils/login.py
+│ │ +-rw-r--r--   0        0        0      418 2023-04-06 15:33:38.743121 ofscraper-1.63/src/utils/nap.py
+│ │ +-rw-r--r--   0        0        0     3160 2023-04-06 15:33:38.743121 ofscraper-1.63/src/utils/old_nap.py
+│ │ +-rw-r--r--   0        0        0     1871 2023-04-06 19:23:29.300760 ofscraper-1.63/src/utils/paths.py
+│ │ +-rw-r--r--   0        0        0     3617 2023-04-06 19:23:05.328526 ofscraper-1.63/src/utils/profiles.py
+│ │ +-rw-r--r--   0        0        0    13473 2023-04-06 17:15:17.458722 ofscraper-1.63/src/utils/prompts.py
+│ │ +-rw-r--r--   0        0        0      750 2023-04-06 15:33:38.743121 ofscraper-1.63/src/utils/separate.py
+│ │ +-rw-r--r--   0        0        0    10334 1970-01-01 00:00:00.000000 ofscraper-1.63/PKG-INFO
+│ │   --- ofscraper-1.62/LICENSE
+│ ├── +++ ofscraper-1.63/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/README.md
+│ ├── +++ ofscraper-1.63/README.md
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/pyproject.toml
+│ ├── +++ ofscraper-1.63/pyproject.toml
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "ofscraper"
+│ │ -version = "1.62"
+│ │ +version = "1.63"
+│ │  description = "automatically scrape onlyfans"
+│ │  authors = ["excludedBittern8 <excludedBittern8@riseup.net>"]
+│ │  readme = "README.md"
+│ │  packages = [{include = "src"}]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.7.0,<4"
+│ │   --- ofscraper-1.62/src/__init__.py
+│ ├── +++ ofscraper-1.63/src/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/__version__.py
+│ ├── +++ ofscraper-1.63/src/__version__.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -4,14 +4,14 @@
+│ │   /  _ \   __\/  ___// ___\_  __ \__  \  /  _ \_/ __ \_  __ \
+│ │  (  <_> )  |  \___ \\  \___|  | \// __ \(  <_> )  ___/|  | \/
+│ │   \____/|__| /____  >\___  >__|  (____  /\____/ \___  >__|   
+│ │                   \/     \/           \/            \/       
+│ │  """
+│ │  
+│ │  __title__ = 'ofscraper'
+│ │ -__version__ = '1.62'
+│ │ +__version__ = '1.63'
+│ │  __author__ = 'excludedBittern8'
+│ │  __author_email__ = 'excludedBittern8@riseup.net'
+│ │  __description__ = 'A command-line program to quickly download,like or unlike posts, and more'
+│ │  __url__ = 'https://github.com/excludedBittern8/ofscraper'
+│ │  __license__ = 'GNU General Public License v3 or later (GPLv3+)'
+│ │  __copyright__ = 'Copyright 2023'
+│ │   --- ofscraper-1.62/src/api/highlights.py
+│ ├── +++ ofscraper-1.63/src/api/highlights.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/init.py
+│ ├── +++ ofscraper-1.63/src/api/init.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/me.py
+│ ├── +++ ofscraper-1.63/src/api/me.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/messages.py
+│ ├── +++ ofscraper-1.63/src/api/messages.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/paid.py
+│ ├── +++ ofscraper-1.63/src/api/paid.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,14 +1,15 @@
+│ │  r"""
+│ │ -               _          __
+│ │ -  ___   _ __  | | _   _  / _|  __ _  _ __   ___         ___   ___  _ __   __ _  _ __    ___  _ __
+│ │ - / _ \ | '_ \ | || | | || |_  / _` || '_ \ / __| _____ / __| / __|| '__| / _` || '_ \  / _ \| '__|
+│ │ -| (_) || | | || || |_| ||  _|| (_| || | | |\__ \|_____|\__ \| (__ | |   | (_| || |_) ||  __/| |
+│ │ - \___/ |_| |_||_| \__, ||_|   \__,_||_| |_||___/       |___/ \___||_|    \__,_|| .__/  \___||_|
+│ │ -                  |___/                                                        |_|
+│ │ +                                                             
+│ │ +        _____                                               
+│ │ +  _____/ ____\______ ________________    ____   ___________ 
+│ │ + /  _ \   __\/  ___// ___\_  __ \__  \  /  _ \_/ __ \_  __ \
+│ │ +(  <_> )  |  \___ \\  \___|  | \// __ \(  <_> )  ___/|  | \/
+│ │ + \____/|__| /____  >\___  >__|  (____  /\____/ \___  >__|   
+│ │ +                 \/     \/           \/            \/         
+│ │  """
+│ │  from urllib.request import urlopen
+│ │  
+│ │  from rich.console import Console
+│ │  console=Console()
+│ │  from ..constants import purchased_contentEP
+│ │  from ..utils import auth
+│ │   --- ofscraper-1.62/src/api/posts.py
+│ ├── +++ ofscraper-1.63/src/api/posts.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/profile.py
+│ ├── +++ ofscraper-1.63/src/api/profile.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/api/subscriptions.py
+│ ├── +++ ofscraper-1.63/src/api/subscriptions.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/constants.py
+│ ├── +++ ofscraper-1.63/src/constants.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -52,18 +52,17 @@
+│ │  
+│ │  purchased_contentEP = "https://onlyfans.com/api2/v2/posts/paid?limit=100&skip_users=all&format=infinite&offset={}&user_id={}"
+│ │  
+│ │  mainPromptChoices = {
+│ │      'Download content from a user': 0,
+│ │      'Like all of a user\'s posts': 1,
+│ │      'Unlike all of a user\'s posts': 2,
+│ │ -    'Migrate an old database': 3,
+│ │ -    'Edit `auth.json` file': 4,
+│ │ -    'Edit `config.json` file': 5,
+│ │ -    'Edit Profile': 6,
+│ │ +    'Edit `auth.json` file': 3,
+│ │ +    'Edit `config.json` file': 4,
+│ │ +    'Edit Profile': 5,
+│ │  
+│ │  }
+│ │  usernameOrListChoices = {
+│ │      'Select from accounts on profile': 0,
+│ │      'Enter a username': 1,
+│ │      'Scrape all users that I\'m subscribed to': 2
+│ │  }
+│ │   --- ofscraper-1.62/src/db/operations.py
+│ ├── +++ ofscraper-1.63/src/db/operations.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -191,14 +191,20 @@
+│ │  def create_profile_table(model_id,username):
+│ │      datebase_path =databasePathHelper(model_id,username)
+│ │      createDir(datebase_path.parent)
+│ │      with contextlib.closing(sqlite3.connect(datebase_path,check_same_thread=False)) as conn:
+│ │          with contextlib.closing(conn.cursor()) as cur:
+│ │              cur.execute(queries.profilesCreate)
+│ │              conn.commit()
+│ │ +def read_foreign_profile_table(datebase_path):
+│ │ +    with contextlib.closing(sqlite3.connect(datebase_path,check_same_thread=False)) as conn:
+│ │ +        with contextlib.closing(conn.cursor()) as cur:
+│ │ +            cur.execute(queries.profileData)
+│ │ +            conn.commit()
+│ │ +            return list(map(lambda x:x,cur.fetchall())) 
+│ │  
+│ │  def write_profile_table(model_id,username) -> list:
+│ │      datebase_path =databasePathHelper(model_id,username)
+│ │      with contextlib.closing(sqlite3.connect(datebase_path,check_same_thread=False)) as conn:
+│ │          with contextlib.closing(conn.cursor()) as cur:
+│ │              insertData=[model_id,username]
+│ │              if len(cur.execute(queries.profileDupeCheck,(model_id,)).fetchall())==0:
+│ │ @@ -218,16 +224,14 @@
+│ │                  read_sql = """SELECT media_id, filename FROM medias"""
+│ │                  cur.execute(read_sql)
+│ │                  for result in cur.fetchall():
+│ │                      database_results.append(result)
+│ │  
+│ │      return database_results
+│ │  
+│ │ -def user_db_migration():
+│ │ -    answers=user_db_prompt()
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  # def write_from_foreign_database(results: list, model_id):
+│ │  #     profile = profiles.get_current_profile()
+│ │   --- ofscraper-1.62/src/db/queries.py
+│ ├── +++ ofscraper-1.63/src/db/queries.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -170,7 +170,8 @@
+│ │              VALUES (?, ?);"""
+│ │  
+│ │  profileUpdate=\
+│ │  f"""Update 'profiles'
+│ │  SET
+│ │  user_id=?,username=?
+│ │  WHERE user_id=(?);"""
+│ │ +
+│ │   --- ofscraper-1.62/src/interaction/like.py
+│ ├── +++ ofscraper-1.63/src/interaction/like.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/scraper.py
+│ ├── +++ ofscraper-1.63/src/scraper.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -127,15 +127,14 @@
+│ │      highlights_dicts  = []
+│ │      messages_dicts  = []
+│ │      stories_dicts=[]
+│ │  
+│ │      username=ele['name']
+│ │      profile_dicts  = process_profile(headers,username)
+│ │  
+│ │ -
+│ │      if ('Timeline' in result_areas_prompt or 'All' in result_areas_prompt) and ele["active"]:
+│ │              timeline_posts_dicts = process_timeline_posts(headers, model_id,username)
+│ │              pinned_post_dict=process_pinned_posts(headers, model_id,username)
+│ │      if ('Archived' in result_areas_prompt or 'All' in result_areas_prompt) and ele["active"]:
+│ │              archived_posts_dicts = process_archived_posts(headers, model_id,username)
+│ │      if 'Messages' in result_areas_prompt or 'All' in result_areas_prompt:
+│ │              messages_dicts = process_messages(headers, model_id,username)
+│ │ @@ -153,15 +152,15 @@
+│ │              archived_posts_dicts , highlights_dicts , messages_dicts,stories_dicts]))
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ -def do_database_migration(path, model_id):
+│ │ +def do_database_migration():
+│ │      operations.user_db_migration()
+│ │  
+│ │  
+│ │  def get_usernames(parsed_subscriptions: list) -> list:
+│ │      usernames = [sub[0] for sub in parsed_subscriptions]
+│ │      return usernames
+│ │  
+│ │ @@ -212,36 +211,36 @@
+│ │      if result_main_prompt == 0:
+│ │          paid=prompts.download_paid_prompt()=="Yes"
+│ │          process_post()
+│ │          if paid:
+│ │              process_paid()
+│ │  
+│ │      # like a user's posts
+│ │ -    elif result_main_prompt == 2:
+│ │ +    elif result_main_prompt == 1:
+│ │          process_like()
+│ │      # Unlike a user's posts
+│ │ -    elif result_main_prompt == 3:
+│ │ +    elif result_main_prompt == 2:
+│ │          process_unlike()
+│ │  
+│ │ -    elif result_main_prompt == 4:
+│ │ -        # Migrate from old database
+│ │ -        do_database_migration()
+│ │ +    # elif result_main_prompt == 3:
+│ │ +    #     # Migrate from old database
+│ │ +    #     do_database_migration()
+│ │       
+│ │  
+│ │ -    elif result_main_prompt == 5:
+│ │ +    elif result_main_prompt == 3:
+│ │          # Edit `auth.json` file
+│ │          auth.edit_auth()
+│ │      
+│ │ -    elif result_main_prompt == 6:
+│ │ +    elif result_main_prompt == 4:
+│ │          # Edit `config.json` file
+│ │          config.edit_config()
+│ │  
+│ │        
+│ │   
+│ │ -    elif result_main_prompt == 7:
+│ │ +    elif result_main_prompt == 5:
+│ │          # Display  `Profiles` menu
+│ │          result_profiles_prompt = prompts.profiles_prompt()
+│ │  
+│ │          if result_profiles_prompt == 0:
+│ │              # Change profiles
+│ │              profiles.change_profile()
+│ │   --- ofscraper-1.62/src/utils/auth.py
+│ ├── +++ ofscraper-1.63/src/utils/auth.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/browser.py
+│ ├── +++ ofscraper-1.63/src/utils/browser.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/config.py
+│ ├── +++ ofscraper-1.63/src/utils/config.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -49,30 +49,33 @@
+│ │          'config': {
+│ │              mainProfile: config.get(mainProfile) or mainProfile,
+│ │              'save_location': config.get('save_location') or pathlib.Path.home() /'ofscraper/Data',
+│ │              'file_size_limit': config.get('file_size_limit') or '',
+│ │              'dir_format': config.get("dir_format") or '{model_username}/{responsetype}/{mediatype}/',
+│ │              'file_format': config.get('file_format') or '{filename}.{ext}',
+│ │              'textlength':config.get('textlength') or 0,
+│ │ -            'date': config.get('date') or  "MM-DD-YYYY"
+│ │ +            'date': config.get('date') or  "MM-DD-YYYY",
+│ │ +            "metadata": config.get('metadata') or "{configpath}/{profile}/.data/{username}_{model_id}"
+│ │ +
+│ │          }
+│ │      }
+│ │      return new_config
+│ │  
+│ │  
+│ │  def make_config(path, config):
+│ │      config = {
+│ │          'config': {
+│ │              mainProfile: mainProfile,
+│ │              'save_location': pathlib.Path.home() /'ofscraper/Data',
+│ │              'file_size_limit': '',
+│ │              'dir_format':'{model_username}/{responsetype}/{mediatype}/',
+│ │              'file_format': '{filename}.{ext}',
+│ │              'textlength':0,
+│ │ -            'date':"MM-DD-YYYY"
+│ │ +            'date':"MM-DD-YYYY",
+│ │ +            'metadata':"{configpath}/{profile}/.data/{username}_{model_id}"
+│ │          }
+│ │      }
+│ │  
+│ │      with open(path / configFile, 'w') as f:
+│ │          f.write(json.dumps(config, indent=4))
+│ │   --- ofscraper-1.62/src/utils/dates.py
+│ ├── +++ ofscraper-1.63/src/utils/dates.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/download.py
+│ ├── +++ ofscraper-1.63/src/utils/download.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/encoding.py
+│ ├── +++ ofscraper-1.63/src/utils/encoding.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/old_nap.py
+│ ├── +++ ofscraper-1.63/src/utils/old_nap.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/src/utils/paths.py
+│ ├── +++ ofscraper-1.63/src/utils/paths.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -4,17 +4,18 @@
+│ │  import os
+│ │  import sys
+│ │  from rich.console import Console
+│ │  console=Console()
+│ │  
+│ │  from ..constants import configPath
+│ │  from ..utils import profiles
+│ │ +from .config import read_config
+│ │  
+│ │  homeDir=pathlib.Path.home()
+│ │ -
+│ │ +config = read_config()['config']
+│ │  @contextmanager
+│ │  def set_directory(path: Path):
+│ │      """Sets the cwd within the context
+│ │  
+│ │          Args:``
+│ │              path (``Path): The path to the cwd
+│ │  
+│ │ @@ -33,16 +34,17 @@
+│ │  def createDir(path):
+│ │      try:
+│ │          path.mkdir(exist_ok=True,parents=True)
+│ │      except:
+│ │          console.print("Error creating directory, check the directory and make sure correct permissions have been issued.")
+│ │          sys.exit()
+│ │  def databasePathHelper(model_id,username):
+│ │ -    profile = profiles.get_current_profile()
+│ │ -    return homeDir / configPath / profile / ".data"/f"{username}_{model_id}"/"user_data.db"
+│ │ +    return config.get("metadata").format(configpath=homeDir / configPath,profile=profiles.get_current_profile(),username=username,model_id=model_id,sitename="Onlyfans",first_letter=username[0])
+│ │ +
+│ │ +    
+│ │  
+│ │  
+│ │  def messageResponsePathHelper(model_id,username):
+│ │      profile = profiles.get_current_profile()
+│ │      return homeDir / configPath / profile / ".data"/f"{username}_{model_id}"/"messages.json"
+│ │   --- ofscraper-1.62/src/utils/profiles.py
+│ ├── +++ ofscraper-1.63/src/utils/profiles.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,14 +1,15 @@
+│ │  r"""
+│ │ -               _          __
+│ │ -  ___   _ __  | | _   _  / _|  __ _  _ __   ___         ___   ___  _ __   __ _  _ __    ___  _ __
+│ │ - / _ \ | '_ \ | || | | || |_  / _` || '_ \ / __| _____ / __| / __|| '__| / _` || '_ \  / _ \| '__|
+│ │ -| (_) || | | || || |_| ||  _|| (_| || | | |\__ \|_____|\__ \| (__ | |   | (_| || |_) ||  __/| |
+│ │ - \___/ |_| |_||_| \__, ||_|   \__,_||_| |_||___/       |___/ \___||_|    \__,_|| .__/  \___||_|
+│ │ -                  |___/                                                        |_|
+│ │ +                                                             
+│ │ +        _____                                               
+│ │ +  _____/ ____\______ ________________    ____   ___________ 
+│ │ + /  _ \   __\/  ___// ___\_  __ \__  \  /  _ \_/ __ \_  __ \
+│ │ +(  <_> )  |  \___ \\  \___|  | \// __ \(  <_> )  ___/|  | \/
+│ │ + \____/|__| /____  >\___  >__|  (____  /\____/ \___  >__|   
+│ │ +                 \/     \/           \/            \/         
+│ │  """
+│ │  
+│ │  import pathlib
+│ │  import shutil
+│ │  from rich.console import Console
+│ │  from rich import print
+│ │  console=Console()
+│ │   --- ofscraper-1.62/src/utils/prompts.py
+│ ├── +++ ofscraper-1.63/src/utils/prompts.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -480,16 +480,16 @@
+│ │  def user_db_prompt():
+│ │      questions = [
+│ │          {
+│ │              'type': 'input',
+│ │              'message': "What is the path to your download directory",
+│ │          },
+│ │            {
+│ │ -            'type': 'select',
+│ │ -            'message': "If metadata files are found in ofscraper do you want to overwrite these",
+│ │ +            'type': 'list',
+│ │ +            'message': "If conflicting metadata files are found in ofscraper do you want to overwrite these",
+│ │              'choices':["Yes","No"]
+│ │          }
+│ │          
+│ │      ]
+│ │  
+│ │      answer = prompt(questions)
+│ │ -    return answer[0]
+│ │ +    return answer
+│ │   --- ofscraper-1.62/src/utils/separate.py
+│ ├── +++ ofscraper-1.63/src/utils/separate.py
+│ │┄ Files identical despite different names
+│ │   --- ofscraper-1.62/PKG-INFO
+│ ├── +++ ofscraper-1.63/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ofscraper
+│ │ -Version: 1.62
+│ │ +Version: 1.63
+│ │  Summary: automatically scrape onlyfans
+│ │  Author: excludedBittern8
+│ │  Author-email: excludedBittern8@riseup.net
+│ │  Requires-Python: >=3.7.0,<4
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8

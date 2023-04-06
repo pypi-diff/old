@@ -1,0 +1,1129 @@
+--- tmp/hledger_lots-0.1.1.tar.gz
++++ tmp/hledger_lots-0.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "hledger_lots-0.1.1.tar", last modified: Mon Apr  3 16:49:59 2023, max compression
+│ +gzip compressed data, was "hledger_lots-0.1.3.tar", last modified: Thu Apr  6 19:34:54 2023, max compression
+│   --- hledger_lots-0.1.1.tar
+├── +++ hledger_lots-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,51 +1,51 @@
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.636941 hledger_lots-0.1.1/
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4260 2023-04-03 16:49:59.636941 hledger_lots-0.1.1/PKG-INFO
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.630941 hledger_lots-0.1.1/docs/
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3920 2023-04-02 20:45:00.000000 hledger_lots-0.1.1/docs/README.md
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.632941 hledger_lots-0.1.1/hledger_lots/
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)        0 2023-03-22 00:08:13.000000 hledger_lots-0.1.1/hledger_lots/__init__.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)       85 2023-03-22 14:55:55.000000 hledger_lots-0.1.1/hledger_lots/__main__.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2214 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/avg.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2452 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/avg_info.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1393 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/checks.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     9464 2023-04-02 20:54:50.000000 hledger_lots-0.1.1/hledger_lots/cli.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3057 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/fifo.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2960 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/fifo_info.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)      969 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/files.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1709 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/hl.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4143 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/info.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1373 2023-04-01 21:00:20.000000 hledger_lots-0.1.1/hledger_lots/lib.py
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.633941 hledger_lots-0.1.1/hledger_lots.egg-info/
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4260 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)      974 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)        1 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)       60 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)       33 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/requires.txt
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)       53 2023-04-03 16:49:59.000000 hledger_lots-0.1.1/hledger_lots.egg-info/top_level.txt
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1090 2023-04-03 16:49:22.000000 hledger_lots-0.1.1/pyproject.toml
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)       38 2023-04-03 16:49:59.636941 hledger_lots-0.1.1/setup.cfg
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.634941 hledger_lots-0.1.1/tests/
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)        0 2023-03-30 00:36:22.000000 hledger_lots-0.1.1/tests/__init__.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     5566 2023-04-03 13:28:14.000000 hledger_lots-0.1.1/tests/lots_data.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)      192 2023-04-03 13:26:44.000000 hledger_lots-0.1.1/tests/test__main__.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4500 2023-04-03 13:26:41.000000 hledger_lots-0.1.1/tests/test_avg.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3205 2023-04-03 13:26:45.000000 hledger_lots-0.1.1/tests/test_checks.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2369 2023-04-03 13:26:46.000000 hledger_lots-0.1.1/tests/test_fifo.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2305 2023-04-03 13:26:45.000000 hledger_lots-0.1.1/tests/test_files.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3068 2023-04-03 13:26:47.000000 hledger_lots-0.1.1/tests/test_hl.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3075 2023-04-03 13:26:46.000000 hledger_lots-0.1.1/tests/test_info.py
+│ │ --rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2136 2023-04-03 13:26:43.000000 hledger_lots-0.1.1/tests/test_lib.py
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.629941 hledger_lots-0.1.1/venv/
+│ │ -drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:49:59.635941 hledger_lots-0.1.1/venv/bin/
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      627 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2html.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      749 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2html4.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)     1094 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2html5.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      826 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2latex.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      649 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2man.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      815 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2odt.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)     1753 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2odt_prepstyles.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      634 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2pseudoxml.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      670 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2s5.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      906 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2xetex.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      635 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rst2xml.py
+│ │ --rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      703 2023-03-29 00:01:39.000000 hledger_lots-0.1.1/venv/bin/rstpep2html.py
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.676165 hledger_lots-0.1.3/
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4823 2023-04-06 19:34:54.676165 hledger_lots-0.1.3/PKG-INFO
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.670165 hledger_lots-0.1.3/docs/
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4483 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/docs/README.md
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.672165 hledger_lots-0.1.3/hledger_lots/
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)        0 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/hledger_lots/__init__.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)       85 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/hledger_lots/__main__.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2833 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/hledger_lots/avg.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2525 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/hledger_lots/avg_info.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1393 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/hledger_lots/checks.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)    11421 2023-04-06 19:30:34.000000 hledger_lots-0.1.3/hledger_lots/cli.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3626 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/hledger_lots/fifo.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3040 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/hledger_lots/fifo_info.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)      969 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/hledger_lots/files.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1709 2023-04-06 18:16:59.000000 hledger_lots-0.1.3/hledger_lots/hl.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4143 2023-04-06 17:59:15.000000 hledger_lots-0.1.3/hledger_lots/info.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1856 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/hledger_lots/lib.py
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.673165 hledger_lots-0.1.3/hledger_lots.egg-info/
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4823 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)      974 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)        1 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)       60 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)       33 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/requires.txt
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)       53 2023-04-06 19:34:54.000000 hledger_lots-0.1.3/hledger_lots.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     1174 2023-04-06 19:32:12.000000 hledger_lots-0.1.3/pyproject.toml
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)       38 2023-04-06 19:34:54.676165 hledger_lots-0.1.3/setup.cfg
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.674165 hledger_lots-0.1.3/tests/
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)        0 2023-03-30 00:36:22.000000 hledger_lots-0.1.3/tests/__init__.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     5566 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/tests/lots_data.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)      192 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/tests/test__main__.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     4537 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/tests/test_avg.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3241 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/tests/test_checks.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2544 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/tests/test_fifo.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2305 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/tests/test_files.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3068 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/tests/test_hl.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     3068 2023-04-06 18:17:55.000000 hledger_lots-0.1.3/tests/test_info.py
+│ │ +-rw-r--r--   0 eduardo   (1000) eduardo   (1000)     2136 2023-04-03 16:53:21.000000 hledger_lots-0.1.3/tests/test_lib.py
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.670165 hledger_lots-0.1.3/venv/
+│ │ +drwxr-xr-x   0 eduardo   (1000) eduardo   (1000)        0 2023-04-06 19:34:54.676165 hledger_lots-0.1.3/venv/bin/
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      627 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2html.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      749 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2html4.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)     1094 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2html5.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      826 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2latex.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      649 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2man.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      815 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2odt.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)     1753 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2odt_prepstyles.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      634 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2pseudoxml.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      670 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2s5.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      906 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2xetex.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      635 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rst2xml.py
+│ │ +-rwxr-xr-x   0 eduardo   (1000) eduardo   (1000)      703 2023-03-29 00:01:39.000000 hledger_lots-0.1.3/venv/bin/rstpep2html.py
+│ │   --- hledger_lots-0.1.1/PKG-INFO
+│ ├── +++ hledger_lots-0.1.3/docs/README.md
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,17 +1,7 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: hledger_lots
+│ │ -Version: 0.1.1
+│ │ -License: MIT License
+│ │ -Project-URL: homepage, https://github.com/edkedk99/hledger-lots
+│ │ -Project-URL: documentation, https://edkedk99.github.io/hledger-lots/
+│ │ -Project-URL: repository, https://github.com/edkedk99/hledger-lots
+│ │ -Requires-Python: >=3.8
+│ │ -Description-Content-Type: text/markdown
+│ │ -
+│ │  # Introduction
+│ │  
+│ │  ![automatic lots](img/meme.jpg)
+│ │  
+│ │  This script aims to help hledger's users to add transactions involving buying and selling commodities, which can be FOREX or investments assets, for example
+│ │  
+│ │  When you sell a commodity, you should use the cost and quantity from the purchase date, which is buried deep down in your journal file so you have hledger accounting the correct _Capital Gain_.
+│ │ @@ -23,14 +13,16 @@
+│ │  
+│ │  This package create a sale transaction according to information provided by the user and traverse the journal file to determine what quantity and lot prices should be used and generate a valid hledger transaction to be appended to the journal with additional helpful calculations as comment tags.
+│ │  
+│ │  When using this package, you don't need to create lots as subaccounts or tag, just add a purchase transaction as usual and when there is a sale, *hledger-lots* will generate the correct postings adding the cost for you, so you don't need to bother looking for this information.
+│ │  
+│ │  It also generate lots reports so the user can understand his situation with a commodity and check the correctness of the generated sell transaction.
+│ │  
+│ │ +To verify your transaction, this package can also check if your past sale has the correct cost.
+│ │ +
+│ │  ## Documentation
+│ │  
+│ │  Documentation with usage information can be found [here](https://edkedk99.github.io/hledger-lots/)
+│ │  
+│ │  ## Requirements
+│ │  
+│ │  - python
+│ │ @@ -84,11 +76,17 @@
+│ │  
+│ │  ## XIRR
+│ │  
+│ │  The sale transaction gives you the calculated **xirr** as tag, which is the internal rate of return of an investment based on a specified series of irregularly spaced cash flows. This value is annual percentage rate following the 30/360US day count convention. It is a good metric to compare the investment return with a benchmark like the S&P or the T-Bill, for example.
+│ │  
+│ │  Note the benchmark can use another day count convention, so this comparison may not be 100% precise. This app may in the future offer others day count convention for **xirr** calculation.
+│ │  
+│ │ +## Checks
+│ │ +
+│ │ +It is recommended to use the option *--check* to ensure you past selling transaction has the correct cost according to the choosen cost method. It can be enabled by setting the environment variable **HLEDGER_LOTS_CHECK** to "true". It can be disabled with the option *--no-check* or setting the environment variable **HLEDGER_LOTS_CHECK** to "false".
+│ │ +
+│ │ +At the moment the dafault is set to "false", but expect it to be turned to "true" in future releases.
+│ │ +
+│ │  ## Limitations
+│ │  
+│ │  - No _short-selling_
+│ │  - Each commodity can have only one base currency. For example, it is not possible to buy AAPL with USD and later with EUR.
+│ │   --- hledger_lots-0.1.1/hledger_lots/avg.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/avg.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,26 +1,43 @@
+│ │  import subprocess
+│ │  from dataclasses import dataclass
+│ │  from datetime import date, datetime
+│ │ +from decimal import Decimal
+│ │  from typing import List, Optional
+│ │  
+│ │  from . import checks
+│ │ -from .lib import AdjustedTxn, get_xirr
+│ │ +from .lib import AdjustedTxn, CostMethodError, get_xirr
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class AvgCost:
+│ │      date: str
+│ │      total_qtty: float = 0
+│ │      total_amount: float = 0
+│ │      avg_cost: float = 0
+│ │  
+│ │  
+│ │ +def check_sell(sell: AdjustedTxn, avg_cost: float, check: bool):
+│ │ +    if not check:
+│ │ +        return
+│ │ +
+│ │ +    decimals_price = Decimal(str(sell.price)).as_tuple().exponent
+│ │ +    decimals_avg = Decimal(str(avg_cost)).as_tuple().exponent
+│ │ +    if type(decimals_price) == int and type(decimals_avg) == int:
+│ │ +        decimals = min(abs(decimals_price), abs(decimals_avg))
+│ │ +    else:
+│ │ +        raise ValueError("Not a decimal")
+│ │ +
+│ │ +    if abs(sell.price - avg_cost) > 10 ** (-decimals):
+│ │ +        raise CostMethodError(sell, avg_cost, sell.base_cur)
+│ │ +    pass
+│ │ +
+│ │ +
+│ │  def get_avg_cost(
+│ │ -    txns: List[AdjustedTxn], until: Optional[date] = None
+│ │ +    txns: List[AdjustedTxn], check: bool, until: Optional[date] = None
+│ │  ) -> List[AvgCost]:
+│ │      if until:
+│ │          included_txns = [
+│ │              txn
+│ │              for txn in txns
+│ │              if datetime.strptime(txn.date, "%Y-%m-%d").date() <= until
+│ │          ]
+│ │ @@ -37,14 +54,15 @@
+│ │  
+│ │      for txn in included_txns:
+│ │          total_qtty += txn.qtty
+│ │  
+│ │          if txn.qtty >= 0:
+│ │              total_amount += txn.qtty * txn.price
+│ │          else:
+│ │ +            check_sell(txn, avg_cost, check)
+│ │              total_amount += txn.qtty * avg_cost
+│ │  
+│ │          avg_cost = total_amount / total_qtty if total_qtty != 0 else 0
+│ │          avg_costs.append(AvgCost(txn.date, total_qtty, total_amount, avg_cost))
+│ │  
+│ │      return avg_costs
+│ │  
+│ │ @@ -54,23 +72,23 @@
+│ │      date: str,
+│ │      qtty: float,
+│ │      cur: str,
+│ │      cash_account: str,
+│ │      revenue_account: str,
+│ │      comm_account: str,
+│ │      value: float,
+│ │ +    check: bool,
+│ │  ):
+│ │      checks.check_short_sell_current(txns, qtty)
+│ │      checks.check_base_currency(txns)
+│ │      checks.check_available(txns, comm_account, qtty)
+│ │  
+│ │      sell_date = datetime.strptime(date, "%Y-%m-%d").date()
+│ │ -    avg_cost = get_avg_cost(txns, sell_date)
+│ │ +    avg_cost = get_avg_cost(txns, check)
+│ │      cost = avg_cost[-1].avg_cost
+│ │ -    last_avg_cost = avg_cost[-1]
+│ │  
+│ │      base_curr = txns[0].base_cur
+│ │      price = value / qtty
+│ │      xirr = get_xirr(price, sell_date, txns) or 0 * 100
+│ │  
+│ │      txn_hl = f"""{date} Sold {cur}
+│ │      ; commodity:{cur}, qtty:{qtty:,.2f}, price:{price:,.2f}
+│ │   --- hledger_lots-0.1.1/hledger_lots/avg_info.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/avg_info.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -2,26 +2,23 @@
+│ │  from typing import Tuple
+│ │  
+│ │  from .avg import get_avg_cost
+│ │  from .info import AllInfo, Info, LotsInfo
+│ │  
+│ │  
+│ │  class AvgInfo(Info):
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        journals: Tuple[str, ...],
+│ │ -        commodity: str,
+│ │ -    ):
+│ │ +    def __init__(self, journals: Tuple[str, ...], commodity: str, check: bool):
+│ │          super().__init__(journals, commodity)
+│ │ +        self.check = check
+│ │  
+│ │      @property
+│ │      def info(self):
+│ │          commodity = self.commodity
+│ │          cur = self.txns[0].base_cur
+│ │ -        avg_lots = get_avg_cost(self.txns)
+│ │ +        avg_lots = get_avg_cost(self.txns, self.check)
+│ │          qtty = avg_lots[-1].total_qtty
+│ │          amount = avg_lots[-1].total_amount
+│ │          avg_cost = avg_lots[-1].avg_cost
+│ │          last_buy_date = datetime.strptime(avg_lots[-1].date, "%Y-%m-%d").date()
+│ │          xirr = self.get_lots_xirr(last_buy_date)
+│ │  
+│ │          if self.market_price and self.market_date and xirr:
+│ │ @@ -54,19 +51,20 @@
+│ │  
+│ │      @property
+│ │      def info_txt(self):
+│ │          return self.get_info_txt(self.info)
+│ │  
+│ │  
+│ │  class AllAvgInfo(AllInfo):
+│ │ -    def __init__(self, journals: Tuple[str, ...], no_desc: str):
+│ │ +    def __init__(self, journals: Tuple[str, ...], no_desc: str, check: bool):
+│ │          super().__init__(journals, no_desc)
+│ │ +        self.check = check
+│ │  
+│ │      def get_info(self, commodity: str):
+│ │ -        avg_obj = AvgInfo(self.journals, commodity)
+│ │ +        avg_obj = AvgInfo(self.journals, commodity, self.check)
+│ │          if len(avg_obj.txns) == 0:
+│ │              return
+│ │          else:
+│ │              return avg_obj.info
+│ │  
+│ │      @property
+│ │      def infos(self):
+│ │   --- hledger_lots-0.1.1/hledger_lots/checks.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/checks.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/hledger_lots/cli.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/cli.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,19 +1,20 @@
+│ │ +import os
+│ │  from typing import Literal, Tuple
+│ │  
+│ │  import rich_click as click
+│ │  
+│ │  from .avg import avg_sell, get_avg_cost
+│ │  from .avg_info import AllAvgInfo, AvgInfo
+│ │  from .fifo import get_lots, get_sell_lots, txn2hl
+│ │  from .fifo_info import AllFifoInfo, FifoInfo
+│ │  from .files import get_default_file, get_file_path
+│ │  from .hl import hledger2txn
+│ │  from .info import AllInfo
+│ │ -from .lib import dt_list2table
+│ │ +from .lib import default_fn_bool, dt_list2table
+│ │  
+│ │  CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
+│ │  
+│ │  click.rich_click.USE_MARKDOWN = True
+│ │  click.rich_click.SHOW_ARGUMENTS = True
+│ │  click.rich_click.GROUP_ARGUMENTS_OPTIONS = True
+│ │  click.rich_click.MAX_WIDTH = 80
+│ │ @@ -55,85 +56,111 @@
+│ │      type=click.Path(),
+│ │      required=False,
+│ │      callback=get_file_path,
+│ │      multiple=True,
+│ │      help="Inform the journal file path. If \"-\", read from stdin. Without this flag read from $LEDGER_FILE or ~/.hledger.journal in this order  or '-f-'.",
+│ │  )
+│ │  @click.option(
+│ │ -    "-g", "--avg-cost", is_flag=True, help='Change cost method to "average cost"'
+│ │ +    "-g",
+│ │ +    "--avg-cost",
+│ │ +    is_flag=True,
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_AVG_COST", False),
+│ │ +    help='Change cost method to "average cost"". Can be set with env HLEDGER_LOTS_IS_AVG_COST=true|false. Default to false',
+│ │  )
+│ │  @click.option(
+│ │      "-c",
+│ │      "--commodity",
+│ │      type=click.STRING,
+│ │      prompt=True,
+│ │      help="Commodity to get fifo lots",
+│ │  )
+│ │  @click.option(
+│ │      "-n",
+│ │      "--no-desc",
+│ │      type=click.STRING,
+│ │ +    default=lambda: os.environ.get("HLEDGER_LOTS_NO_DESC", None),
+│ │      prompt=False,
+│ │ -    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'",
+│ │ +    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'. Can be set with env HLEDGER_LOTS_NO_DESC",
+│ │  )
+│ │ -def view(file: Tuple[str, ...], avg_cost: bool, commodity: str, no_desc: str):
+│ │ +@click.option(
+│ │ +    "--check/--no-check",
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_CHECK", False),
+│ │ +    help="Enable/Disable check on the commodities previous transactions to ensure it is following the choosen method. Can be set with env HLEDGER_LOTS_CHECK=tru|false. Default to false. Inthe future it will default to true",
+│ │ +)
+│ │ +def view(
+│ │ +    file: Tuple[str, ...],
+│ │ +    avg_cost: bool,
+│ │ +    commodity: str,
+│ │ +    no_desc: str,
+│ │ +    check: bool,
+│ │ +):
+│ │      """
+│ │      Report lots for a commodity.\r
+│ │  
+│ │      Show a report with lots for a commodity considering eventual past sale using FIFO or AVERAGE COST accounting principles.
+│ │  
+│ │      Also show some indicators about the lots and performance if there is prices in the journal after the last purchase. See the docs for details
+│ │  
+│ │      All flags, except '--file' will be interactively prompted if absent, much like 'hledger-add'.
+│ │      """
+│ │  
+│ │      journals = file or get_default_file()
+│ │      adj_txn = hledger2txn(journals, commodity, no_desc)
+│ │  
+│ │      if avg_cost:
+│ │ -        buy_lots = get_avg_cost(adj_txn)
+│ │ +        buy_lots = get_avg_cost(adj_txn, check)
+│ │          table = dt_list2table(buy_lots)
+│ │          click.echo(table)
+│ │ -        avg_info = AvgInfo(journals, commodity)
+│ │ +        avg_info = AvgInfo(journals, commodity, check)
+│ │          click.echo(avg_info.info_txt)
+│ │  
+│ │      else:
+│ │ -        buy_lots = get_lots(adj_txn)
+│ │ +        buy_lots = get_lots(adj_txn, check)
+│ │          table = dt_list2table(buy_lots)
+│ │          click.echo(table)
+│ │ -        fifo_info = FifoInfo(journals, commodity)
+│ │ +        fifo_info = FifoInfo(journals, commodity, check)
+│ │          click.echo(fifo_info.info_txt)
+│ │  
+│ │  
+│ │  @click.command()
+│ │  @click.option(
+│ │      "-f",
+│ │      "--file",
+│ │      type=click.Path(),
+│ │      required=False,
+│ │      callback=get_file_path,
+│ │      multiple=True,
+│ │      help="Inform the journal file path. If \"-\", read from stdin. Without this flag read from $LEDGER_FILE or ~/.hledger.journal in this order  or '-f-'.",
+│ │  )
+│ │  @click.option(
+│ │ -    "-g", "--avg-cost", is_flag=True, help='Change cost method to "average cost"'
+│ │ +    "-g",
+│ │ +    "--avg-cost",
+│ │ +    is_flag=True,
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_AVG_COST", False),
+│ │ +    help='Change cost method to "average cost"". Can be set with env HLEDGER_LOTS_IS_AVG_COST=true|false. Default to false',
+│ │  )
+│ │  @click.option(
+│ │      "-c",
+│ │      "--commodity",
+│ │      type=click.STRING,
+│ │      prompt=True,
+│ │      help="Commodity you are selling",
+│ │  )
+│ │  @click.option(
+│ │      "-n",
+│ │      "--no-desc",
+│ │      type=click.STRING,
+│ │ +    default=lambda: os.environ.get("HLEDGER_LOTS_NO_DESC", None),
+│ │      prompt=False,
+│ │ -    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'",
+│ │ +    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'. Can be set with env HLEDGER_LOTS_NO_DESC",
+│ │ +)
+│ │ +@click.option(
+│ │ +    "--check/--no-check",
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_CHECK", False),
+│ │ +    help="Enable/Disable check on the commodities previous transactions to ensure it is following the choosen method. Can be set with env HLEDGER_LOTS_CHECK=tru|false. Default to false. Inthe future it will default to true",
+│ │  )
+│ │  @click.option(
+│ │      "-s",
+│ │      "--commodity-account",
+│ │      type=click.STRING,
+│ │      prompt=False,
+│ │      required=False,
+│ │ @@ -183,14 +210,15 @@
+│ │      no_desc: str,
+│ │      commodity_account: str,
+│ │      cash_account: str,
+│ │      revenue_account: str,
+│ │      date: str,
+│ │      quantity: float,
+│ │      price: float,
+│ │ +    check: bool,
+│ │  ):
+│ │      """
+│ │      Create a transaction with automatic FIFO or AVERAGE COST for a commodity.\r
+│ │  
+│ │      Generate a transaction that represents a sale of a commodity with the following postings:
+│ │  
+│ │      - First posting: Positive amount on the 'base-currency' in the account that receives the product of the sale.
+│ │ @@ -205,30 +233,31 @@
+│ │      """
+│ │  
+│ │      journals = file or get_default_file()
+│ │      adj_txns = hledger2txn(journals, commodity, no_desc)
+│ │      value = quantity * price
+│ │  
+│ │      if avg_cost and not commodity_account:
+│ │ -        commodity_account = input("Commodity account")
+│ │ +        commodity_account = input("Commodity account: ")
+│ │  
+│ │      if avg_cost:
+│ │          sell_avg = avg_sell(
+│ │              txns=adj_txns,
+│ │              date=date,
+│ │              qtty=quantity,
+│ │              cur=commodity,
+│ │              cash_account=cash_account,
+│ │              revenue_account=revenue_account,
+│ │              comm_account=commodity_account,
+│ │              value=value,
+│ │ +            check=check,
+│ │          )
+│ │          click.echo(sell_avg)
+│ │      else:
+│ │ -        sell_fifo = get_sell_lots(adj_txns, date, quantity)
+│ │ +        sell_fifo = get_sell_lots(adj_txns, date, quantity, check)
+│ │          txn_print = txn2hl(
+│ │              txns=sell_fifo,
+│ │              date=date,
+│ │              cur=commodity,
+│ │              cash_account=cash_account,
+│ │              revenue_account=revenue_account,
+│ │              value=value,
+│ │ @@ -243,46 +272,61 @@
+│ │      type=click.Path(),
+│ │      required=False,
+│ │      callback=get_file_path,
+│ │      multiple=True,
+│ │      help="Inform the journal file path. If \"-\", read from stdin. Without this flag read from $LEDGER_FILE or ~/.hledger.journal in this order  or '-f-'.",
+│ │  )
+│ │  @click.option(
+│ │ -    "-g", "--avg-cost", is_flag=True, help='Change cost method to "average cost"'
+│ │ +    "-g",
+│ │ +    "--avg-cost",
+│ │ +    is_flag=True,
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_AVG_COST", False),
+│ │ +    help='Change cost method to "average cost"". Can be set with env HLEDGER_LOTS_IS_AVG_COST=true|false. Default to false',
+│ │  )
+│ │  @click.option(
+│ │      "-o",
+│ │      "--output-format",
+│ │      type=click.Choice(["plain", "pretty", "csv"]),
+│ │      default="plain",
+│ │      help="Format to output the report",
+│ │  )
+│ │  @click.option(
+│ │      "-n",
+│ │      "--no-desc",
+│ │      type=click.STRING,
+│ │ +    default=lambda: os.environ.get("HLEDGER_LOTS_NO_DESC", None),
+│ │      prompt=False,
+│ │ -    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'",
+│ │ +    help="Description to be filtered out from calculation. Needed when closing journal with '--show-costs' option. Works like: not:desc:<value>. Will not be prompted if absent. If closed with default description, the value of this option should be: 'opening|closing balances'. Can be set with env HLEDGER_LOTS_NO_DESC",
+│ │ +)
+│ │ +@click.option(
+│ │ +    "--check/--no-check",
+│ │ +    default=default_fn_bool("HLEDGER_LOTS_CHECK", False),
+│ │ +    help="Enable/Disable check on the commodities previous transactions to ensure it is following the choosen method. Can be set with env HLEDGER_LOTS_CHECK=tru|false. Default to false. Inthe future it will default to true",
+│ │  )
+│ │  def list_commodities(
+│ │      file: Tuple[str, ...],
+│ │      avg_cost: bool,
+│ │      output_format: str,
+│ │      no_desc: Literal["plain", "pretty", "csv"],
+│ │ +    check: bool,
+│ │  ):
+│ │      """
+│ │      List indicators for all your commodities in a tabular format sorted from higher to lower **XIRR**. It is advised to use full-screen of the terminal. See the docs for a list of indicators and output examples.
+│ │  
+│ │      It can output in three formats: *plain, pretty and csv*.
+│ │      """
+│ │  
+│ │      journals = file or get_default_file()
+│ │      lots_info = AllInfo(journals, no_desc)
+│ │  
+│ │ -    lots_info = AllAvgInfo(file, no_desc) if avg_cost else AllFifoInfo(file, no_desc)
+│ │ +    lots_info = (
+│ │ +        AllAvgInfo(file, no_desc, check)
+│ │ +        if avg_cost
+│ │ +        else AllFifoInfo(file, no_desc, check)
+│ │ +    )
+│ │  
+│ │      if output_format == "pretty":
+│ │          table = lots_info.infos_table("mixed_grid")
+│ │      elif output_format == "csv":
+│ │          infos_io = lots_info.infos_csv()
+│ │          table = infos_io.read()
+│ │      else:
+│ │   --- hledger_lots-0.1.1/hledger_lots/fifo.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/fifo.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,17 +1,32 @@
+│ │  import copy
+│ │  import subprocess
+│ │  from datetime import datetime
+│ │  from typing import List
+│ │  
+│ │  from . import checks
+│ │ -from .lib import AdjustedTxn, get_avg_fifo, get_xirr
+│ │ +from .lib import AdjustedTxn, CostMethodError, get_avg_fifo, get_xirr
+│ │  
+│ │  
+│ │ -def get_lots(txns: List[AdjustedTxn]) -> List[AdjustedTxn]:
+│ │ +def check_sell(sell: AdjustedTxn, previous_buys: List[AdjustedTxn], check: bool):
+│ │ +    if not check:
+│ │ +        return
+│ │ +
+│ │ +    diff_zero = [
+│ │ +        previous_buy for previous_buy in previous_buys if previous_buy.qtty != 0
+│ │ +    ]
+│ │ +    if len(diff_zero) == 0:
+│ │ +        return
+│ │ +
+│ │ +    previous_buy = diff_zero[0]
+│ │ +    if sell.price != previous_buy.price or sell.base_cur != previous_buy.base_cur:
+│ │ +        raise CostMethodError(sell, previous_buy.price, previous_buy.base_cur)
+│ │ +
+│ │ +
+│ │ +def get_lots(txns: List[AdjustedTxn], check: bool) -> List[AdjustedTxn]:
+│ │      local_txns = copy.deepcopy(txns)
+│ │      checks.check_base_currency(txns)
+│ │  
+│ │      buys = [txn for txn in local_txns if txn.qtty >= 0]
+│ │      sells = [txn for txn in local_txns if txn.qtty < 0]
+│ │  
+│ │      buys_lot: List[AdjustedTxn] = buys if len(sells) == 0 else []
+│ │ @@ -20,30 +35,34 @@
+│ │          checks.check_short_sell_past(previous_buys, sell)
+│ │          later_buys = [txn for txn in buys if txn.date > sell.date]
+│ │          sell_qtty = abs(sell.qtty)
+│ │  
+│ │          i = 0
+│ │          while i < len(previous_buys) and sell_qtty > 0:
+│ │              previous_buy = previous_buys[i]
+│ │ +            check_sell(sell, previous_buys, check)
+│ │              if sell_qtty >= previous_buy.qtty:
+│ │                  sell_qtty -= previous_buy.qtty
+│ │                  previous_buys[i].qtty = 0
+│ │              else:
+│ │                  previous_buys[i].qtty -= sell_qtty
+│ │                  sell_qtty = 0
+│ │ +
+│ │              i += 1
+│ │  
+│ │          buys_lot = [*previous_buys, *later_buys]
+│ │  
+│ │      return buys_lot
+│ │  
+│ │  
+│ │ -def get_sell_lots(lots: List[AdjustedTxn], sell_date: str, sell_qtty: float):
+│ │ +def get_sell_lots(
+│ │ +    lots: List[AdjustedTxn], sell_date: str, sell_qtty: float, check: bool
+│ │ +):
+│ │      checks.check_short_sell_current(lots, sell_qtty)
+│ │ -    buy_lots = get_lots(lots)
+│ │ +    buy_lots = get_lots(lots, check)
+│ │      previous_buys = [lot for lot in buy_lots.copy() if lot.date <= sell_date]
+│ │  
+│ │      fifo_lots: List[AdjustedTxn] = []
+│ │      sell_qtty_curr = sell_qtty
+│ │  
+│ │      i = 0
+│ │      while sell_qtty_curr > 0 and i < len(lots):
+│ │   --- hledger_lots-0.1.1/hledger_lots/fifo_info.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/fifo_info.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -5,22 +5,19 @@
+│ │  from .fifo import get_lots
+│ │  from .hl import hledger2txn
+│ │  from .info import AllInfo, Info, LotsInfo
+│ │  from .lib import get_avg_fifo
+│ │  
+│ │  
+│ │  class FifoInfo(Info):
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        journals: Tuple[str, ...],
+│ │ -        commodity: str,
+│ │ -    ):
+│ │ +    def __init__(self, journals: Tuple[str, ...], commodity: str, check: bool):
+│ │          super().__init__(journals, commodity)
+│ │ +        self.check = check
+│ │  
+│ │ -        self.lots = get_lots(self.txns)
+│ │ +        self.lots = get_lots(self.txns, check)
+│ │          self.last_buy_date = self.lots[-1].date if len(self.lots) > 0 else None
+│ │  
+│ │      @property
+│ │      def info(self):
+│ │          commodity = self.commodity
+│ │  
+│ │          cur = self.lots[0].base_cur
+│ │ @@ -66,26 +63,27 @@
+│ │  
+│ │      @property
+│ │      def info_txt(self):
+│ │          return self.get_info_txt(self.info)
+│ │  
+│ │  
+│ │  class AllFifoInfo(AllInfo):
+│ │ -    def __init__(self, journals: Tuple[str, ...], no_desc: str):
+│ │ +    def __init__(self, journals: Tuple[str, ...], no_desc: str, check: bool):
+│ │          super().__init__(journals, no_desc)
+│ │ +        self.check = check
+│ │  
+│ │      def get_info(self, commodity: str):
+│ │          txns = hledger2txn(self.journals, commodity, self.no_desc)
+│ │          try:
+│ │ -            lots = get_lots(txns)
+│ │ +            lots = get_lots(txns, self.check)
+│ │          except MultipleBaseCurrencies:
+│ │              return None
+│ │  
+│ │          if len(lots) > 0:
+│ │ -            lot_info = FifoInfo(self.journals, commodity).info
+│ │ +            lot_info = FifoInfo(self.journals, commodity, self.check).info
+│ │              return lot_info
+│ │  
+│ │      @property
+│ │      def infos(self):
+│ │          infos = [self.get_info(com) for com in self.commodities]
+│ │          infos = [info for info in infos if info is not None]
+│ │          return infos
+│ │   --- hledger_lots-0.1.1/hledger_lots/files.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/files.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/hledger_lots/hl.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/hl.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/hledger_lots/info.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/info.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/hledger_lots/lib.py
+│ ├── +++ hledger_lots-0.1.3/hledger_lots/lib.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,7 +1,8 @@
+│ │ +import os
+│ │  from dataclasses import asdict, dataclass
+│ │  from datetime import date
+│ │  from typing import List, Optional
+│ │  
+│ │  from pyxirr import DayCount, xirr
+│ │  from tabulate import tabulate
+│ │  
+│ │ @@ -16,14 +17,20 @@
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class Txn(AdjustedTxn):
+│ │      type: str
+│ │  
+│ │  
+│ │ +class CostMethodError(Exception):
+│ │ +    def __init__(self, sell: AdjustedTxn, price: float, base_cur: str) -> None:
+│ │ +        self.message = f"Error in sale {sell}. Correct price should be {price} in currency {base_cur}"
+│ │ +        super().__init__(self.message)
+│ │ +
+│ │ +
+│ │  def get_avg_fifo(txns: List[AdjustedTxn]):
+│ │      total_qtty = sum(txn.qtty for txn in txns)
+│ │      if total_qtty == 0:
+│ │          return 0
+│ │      mult = [txn.qtty * txn.price for txn in txns]
+│ │      total_mult = sum(mult)
+│ │      avg = total_mult / total_qtty
+│ │ @@ -53,7 +60,17 @@
+│ │          lots_dict,
+│ │          headers="keys",
+│ │          numalign="decimal",
+│ │          floatfmt=",.4f",
+│ │          tablefmt=tablefmt,
+│ │      )
+│ │      return table
+│ │ +
+│ │ +
+│ │ +def default_fn_bool(env_name: str, default: bool):
+│ │ +    env = os.environ.get(env_name, None)
+│ │ +    if env == "true":
+│ │ +        return True
+│ │ +    elif env == "False":
+│ │ +        return False
+│ │ +    else:
+│ │ +        return default
+│ │   --- hledger_lots-0.1.1/hledger_lots.egg-info/PKG-INFO
+│ ├── +++ hledger_lots-0.1.3/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: hledger-lots
+│ │ -Version: 0.1.1
+│ │ +Name: hledger_lots
+│ │ +Version: 0.1.3
+│ │  License: MIT License
+│ │  Project-URL: homepage, https://github.com/edkedk99/hledger-lots
+│ │  Project-URL: documentation, https://edkedk99.github.io/hledger-lots/
+│ │  Project-URL: repository, https://github.com/edkedk99/hledger-lots
+│ │  Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │ @@ -23,14 +23,16 @@
+│ │  
+│ │  This package create a sale transaction according to information provided by the user and traverse the journal file to determine what quantity and lot prices should be used and generate a valid hledger transaction to be appended to the journal with additional helpful calculations as comment tags.
+│ │  
+│ │  When using this package, you don't need to create lots as subaccounts or tag, just add a purchase transaction as usual and when there is a sale, *hledger-lots* will generate the correct postings adding the cost for you, so you don't need to bother looking for this information.
+│ │  
+│ │  It also generate lots reports so the user can understand his situation with a commodity and check the correctness of the generated sell transaction.
+│ │  
+│ │ +To verify your transaction, this package can also check if your past sale has the correct cost.
+│ │ +
+│ │  ## Documentation
+│ │  
+│ │  Documentation with usage information can be found [here](https://edkedk99.github.io/hledger-lots/)
+│ │  
+│ │  ## Requirements
+│ │  
+│ │  - python
+│ │ @@ -84,11 +86,17 @@
+│ │  
+│ │  ## XIRR
+│ │  
+│ │  The sale transaction gives you the calculated **xirr** as tag, which is the internal rate of return of an investment based on a specified series of irregularly spaced cash flows. This value is annual percentage rate following the 30/360US day count convention. It is a good metric to compare the investment return with a benchmark like the S&P or the T-Bill, for example.
+│ │  
+│ │  Note the benchmark can use another day count convention, so this comparison may not be 100% precise. This app may in the future offer others day count convention for **xirr** calculation.
+│ │  
+│ │ +## Checks
+│ │ +
+│ │ +It is recommended to use the option *--check* to ensure you past selling transaction has the correct cost according to the choosen cost method. It can be enabled by setting the environment variable **HLEDGER_LOTS_CHECK** to "true". It can be disabled with the option *--no-check* or setting the environment variable **HLEDGER_LOTS_CHECK** to "false".
+│ │ +
+│ │ +At the moment the dafault is set to "false", but expect it to be turned to "true" in future releases.
+│ │ +
+│ │  ## Limitations
+│ │  
+│ │  - No _short-selling_
+│ │  - Each commodity can have only one base currency. For example, it is not possible to buy AAPL with USD and later with EUR.
+│ │   --- hledger_lots-0.1.1/hledger_lots.egg-info/SOURCES.txt
+│ ├── +++ hledger_lots-0.1.3/hledger_lots.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/pyproject.toml
+│ ├── +++ hledger_lots-0.1.3/pyproject.toml
+│ │┄ Files 24% similar despite different names
+│ │ @@ -14,23 +14,23 @@
+│ │  requires = ["setuptools", "wheel"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [tool.setuptools.packages]
+│ │  find = {}  # Scan the project directory with the default parameters
+│ │  
+│ │  [metadata]
+│ │ -description = "..."
+│ │ +description = "Automatic lots using FIFO or AVERAGE COST for transactions using commodities in hledger"
+│ │  keyword = ["hledger","PTA", "investments", "accounting", "lots"]
+│ │  classifiers = [""]
+│ │  author = "Eduardo"
+│ │  author_email = "edkedk99@hotmail.com"
+│ │  
+│ │  [project]
+│ │  name = "hledger_lots"
+│ │ -version = "0.1.1"
+│ │ +version = "0.1.3"
+│ │  readme= "docs/README.md"
+│ │  requires-python = ">=3.8"
+│ │  license = {text = "MIT License"}
+│ │  dependencies = [
+│ │  	     "click",
+│ │  	     "rich_click",
+│ │  	     "tabulate",
+│ │   --- hledger_lots-0.1.1/tests/lots_data.py
+│ ├── +++ hledger_lots-0.1.3/tests/lots_data.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/tests/test_avg.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_avg.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  from hledger_lots.avg import get_avg_cost, avg_sell, AvgCost
+│ │  from datetime import date
+│ │  from . import lots_data
+│ │  
+│ │  
+│ │  class TestGetAvgCost:
+│ │      def test_empty(self):
+│ │ -        assert get_avg_cost([], date(2022, 1, 1)) == []
+│ │ +        assert get_avg_cost([], False, date(2022, 1, 1)) == []
+│ │  
+│ │      def test_only_buying_after_some(self):
+│ │          txns = lots_data.txns_only_buying
+│ │          expected = [
+│ │              AvgCost(
+│ │                  date="2022-01-01", total_qtty=10.0, total_amount=100.0, avg_cost=10.0
+│ │              ),
+│ │ @@ -29,15 +29,15 @@
+│ │                  date="2022-01-04",
+│ │                  total_qtty=65.0,
+│ │                  total_amount=1010.0,
+│ │                  avg_cost=15.538461538461538,
+│ │              ),
+│ │          ]
+│ │  
+│ │ -        assert get_avg_cost(txns, date(2022, 1, 4)) == expected
+│ │ +        assert get_avg_cost(txns, False,date(2022, 1, 4)) == expected
+│ │  
+│ │      def test_only_buying_after_all(self):
+│ │          txns = lots_data.txns_only_buying
+│ │          expected = [
+│ │              AvgCost(
+│ │                  date="2022-01-01", total_qtty=10.0, total_amount=100.0, avg_cost=10.0
+│ │              ),
+│ │ @@ -63,15 +63,15 @@
+│ │                  date="2022-01-05",
+│ │                  total_qtty=86.0,
+│ │                  total_amount=1535.0,
+│ │                  avg_cost=17.848837209302324,
+│ │              ),
+│ │          ]
+│ │  
+│ │ -        assert get_avg_cost(txns) == expected
+│ │ +        assert get_avg_cost(txns, False) == expected
+│ │  
+│ │      def test_with_sell(self):
+│ │          txns = lots_data.txns_qtty_never_zero
+│ │          expected = [
+│ │              AvgCost(
+│ │                  date="2022-01-01", total_qtty=5.0, total_amount=50.0, avg_cost=10.0
+│ │              ),
+│ │ @@ -115,29 +115,30 @@
+│ │                  date="2022-01-08",
+│ │                  total_qtty=15.0,
+│ │                  total_amount=372.73809523809524,
+│ │                  avg_cost=24.849206349206348,
+│ │              ),
+│ │          ]
+│ │  
+│ │ -        assert get_avg_cost(txns, date(2022, 1, 8)) == expected
+│ │ +        assert get_avg_cost(txns, False,date(2022, 1, 8)) == expected
+│ │  
+│ │  
+│ │  class TestAvgSell:
+│ │ -    def test_avg_sell(self, monkeypatch):
+│ │ +    def test_avg_sell(self):
+│ │          txns = lots_data.txns_only_buying
+│ │          test = avg_sell(
+│ │              txns=txns,
+│ │              date="2022-02-01",
+│ │              qtty=50,
+│ │              cur="AAPL",
+│ │              cash_account="Asset:Bank",
+│ │              revenue_account="Revenue:Capital Gain",
+│ │              comm_account="Acct1",
+│ │              value=1000,
+│ │ +            check=False
+│ │          )
+│ │  
+│ │          expected = """2022-02-01 Sold AAPL
+│ │      ; commodity:AAPL, qtty:50.00, price:20.00
+│ │      ; xirr:3.56% annual percent rate 30/360US
+│ │      Asset:Bank                                    1000.00 USD
+│ │      Acct1                   -50 AAPL @ 17.848837209302324 USD
+│ │   --- hledger_lots-0.1.1/tests/test_checks.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_checks.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from hledger_lots.lib import AdjustedTxn
+│ │  import pytest
+│ │  from hledger_lots import checks
+│ │  
+│ │ -
+│ │ +# TODO: Test --check-no-check option
+│ │  class TestCheckShortSellPast:
+│ │      previous_buys = [
+│ │          AdjustedTxn(
+│ │              date="2022-01-01", price=100.0, base_cur="USD", qtty=50.0, acct="ABC"
+│ │          ),
+│ │          AdjustedTxn(
+│ │              date="2022-01-15", price=110.0, base_cur="USD", qtty=50.0, acct="ABC"
+│ │   --- hledger_lots-0.1.1/tests/test_fifo.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_fifo.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,39 +1,48 @@
+│ │  from hledger_lots import fifo
+│ │  
+│ │  from . import lots_data
+│ │  
+│ │  
+│ │  class TestGetLots:
+│ │      def test_only_buying(self):
+│ │ -        assert fifo.get_lots(lots_data.txns_only_buying) == lots_data.txns_only_buying
+│ │ +        assert (
+│ │ +            fifo.get_lots(lots_data.txns_only_buying, check=False)
+│ │ +            == lots_data.txns_only_buying
+│ │ +        )
+│ │  
+│ │      def test_never_zero(self):
+│ │          assert (
+│ │ -            fifo.get_lots(lots_data.txns_qtty_never_zero)
+│ │ +            fifo.get_lots(lots_data.txns_qtty_never_zero, check=False)
+│ │              == lots_data.expected_qtty_never_zero
+│ │          )
+│ │  
+│ │      def test_qtty_reach_zero(self):
+│ │          assert (
+│ │ -            fifo.get_lots(lots_data.txns_qtty_reaches_zero)
+│ │ +            fifo.get_lots(lots_data.txns_qtty_reaches_zero, check=False)
+│ │              == lots_data.expected_qtty_reaches_zero
+│ │          )
+│ │  
+│ │  
+│ │  class TestGetSellLots:
+│ │      def test_sell_all(self):
+│ │          sell_lots = fifo.get_sell_lots(
+│ │ -            lots_data.txns_qtty_reaches_zero, sell_date="2022-02-01", sell_qtty=5
+│ │ +            lots_data.txns_qtty_reaches_zero,
+│ │ +            sell_date="2022-02-01",
+│ │ +            sell_qtty=5,
+│ │ +            check=False,
+│ │          )
+│ │          assert sell_lots == lots_data.expected_qtty_reaches_zero_sell_all
+│ │  
+│ │      def test_sell_some(self):
+│ │          sell_lots = fifo.get_sell_lots(
+│ │ -            lots_data.txns_qtty_never_zero, sell_date="2022-02-01", sell_qtty=11
+│ │ +            lots_data.txns_qtty_never_zero,
+│ │ +            sell_date="2022-02-01",
+│ │ +            sell_qtty=11,
+│ │ +            check=False,
+│ │          )
+│ │          assert sell_lots == lots_data.expected_qtty_never_zero_sell_some
+│ │  
+│ │  
+│ │  class TestTxn2Hl:
+│ │      txns = lots_data.expected_qtty_reaches_zero_sell_all
+│ │      date = "2022-02-01"
+│ │   --- hledger_lots-0.1.1/tests/test_files.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_files.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/tests/test_hl.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_hl.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/tests/test_info.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_info.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,17 +1,17 @@
+│ │  from datetime import date, datetime
+│ │  from pathlib import Path
+│ │ -from typing import Set, Tuple
+│ │ +from typing import Tuple
+│ │  
+│ │  import pytest
+│ │  
+│ │  from hledger_lots.fifo_info import FifoInfo
+│ │  from hledger_lots.avg_info import AvgInfo
+│ │  import sys
+│ │ -from io import StringIO
+│ │ +
+│ │  
+│ │  
+│ │  def price_journal(price: str):
+│ │      prices = f"""
+│ │  P 2023-01-05 AAPL 25 USD
+│ │  P 2023-01-20 AAPL 25 USD
+│ │  P 2023-02-01 AAPL {price}
+│ │ @@ -51,20 +51,20 @@
+│ │      file_tup = (str(file_path),)
+│ │      return file_tup
+│ │  
+│ │  
+│ │  @pytest.fixture()
+│ │  def fifo_info(journals: Tuple[str, ...], monkeypatch: pytest.MonkeyPatch):
+│ │      monkeypatch.setattr(sys, "stdin", None)
+│ │ -    return FifoInfo(journals, "AAPL")
+│ │ +    return FifoInfo(journals, "AAPL", False)
+│ │  
+│ │  @pytest.fixture()
+│ │  def avg_info(journals: Tuple[str, ...], monkeypatch: pytest.MonkeyPatch):
+│ │      monkeypatch.setattr(sys, "stdin", None)
+│ │ -    return AvgInfo(journals, "AAPL")
+│ │ +    return AvgInfo(journals, "AAPL", False)
+│ │  
+│ │  
+│ │  
+│ │  class TestInfo:
+│ │      @pytest.mark.parametrize("journal,expected", price_tests)
+│ │      def test_last_price(
+│ │          self,
+│ │ @@ -75,15 +75,15 @@
+│ │      ):
+│ │          file_path = tmp_path.joinpath("data.journal")
+│ │          file_path.touch()
+│ │          file_path.write_text(journal)
+│ │          file_tup = (str(file_path),)
+│ │  
+│ │          monkeypatch.setattr(sys, "stdin", None)
+│ │ -        fifo_info = FifoInfo(file_tup, "AAPL")
+│ │ +        fifo_info = FifoInfo(file_tup, "AAPL", False)
+│ │  
+│ │          assert fifo_info.last_price == (date(2023, 2, 1), expected)
+│ │  
+│ │      def test_lots_xirr(self, fifo_info: FifoInfo):
+│ │          last_buy_date_str = fifo_info.last_buy_date
+│ │          if not last_buy_date_str:
+│ │              raise ValueError("last_buy_date is None")
+│ │   --- hledger_lots-0.1.1/tests/test_lib.py
+│ ├── +++ hledger_lots-0.1.3/tests/test_lib.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2html.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2html.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2html4.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2html4.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2html5.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2html5.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2latex.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2latex.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2man.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2man.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2odt.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2odt.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2odt_prepstyles.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2odt_prepstyles.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2pseudoxml.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2pseudoxml.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2s5.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2s5.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2xetex.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2xetex.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rst2xml.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rst2xml.py
+│ │┄ Files identical despite different names
+│ │   --- hledger_lots-0.1.1/venv/bin/rstpep2html.py
+│ ├── +++ hledger_lots-0.1.3/venv/bin/rstpep2html.py
+│ │┄ Files identical despite different names
