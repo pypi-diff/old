@@ -1,0 +1,127 @@
+--- tmp/dassana-0.8.2.tar.gz
++++ tmp/dassana-0.8.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dassana-0.8.2.tar", last modified: Tue Mar 28 10:39:40 2023, max compression
+│ +gzip compressed data, was "dassana-0.8.3.tar", last modified: Thu Apr  6 12:54:08 2023, max compression
+│   --- dassana-0.8.2.tar
+├── +++ dassana-0.8.3.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 10:39:40.812282 dassana-0.8.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      259 2023-03-28 10:39:40.812282 dassana-0.8.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      105 2023-03-28 10:39:31.000000 dassana-0.8.2/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 10:39:40.812282 dassana-0.8.2/dassana/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      116 2023-03-28 10:39:31.000000 dassana-0.8.2/dassana/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2194 2023-03-28 10:39:31.000000 dassana-0.8.2/dassana/dassana_env.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16334 2023-03-28 10:39:31.000000 dassana-0.8.2/dassana/data_pipes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13836 2023-03-28 10:39:31.000000 dassana-0.8.2/dassana/rest.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 10:39:40.812282 dassana-0.8.2/dassana.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      259 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      283 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       45 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        8 2023-03-28 10:39:40.000000 dassana-0.8.2/dassana.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-28 10:39:40.812282 dassana-0.8.2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      464 2023-03-28 10:39:31.000000 dassana-0.8.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:54:08.100773 dassana-0.8.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-06 12:54:08.100773 dassana-0.8.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      105 2023-04-06 12:53:55.000000 dassana-0.8.3/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:54:08.096773 dassana-0.8.3/dassana/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      116 2023-04-06 12:53:55.000000 dassana-0.8.3/dassana/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2519 2023-04-06 12:53:55.000000 dassana-0.8.3/dassana/dassana_env.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16334 2023-04-06 12:53:55.000000 dassana-0.8.3/dassana/data_pipes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14425 2023-04-06 12:53:55.000000 dassana-0.8.3/dassana/rest.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:54:08.100773 dassana-0.8.3/dassana.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      283 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 12:54:08.000000 dassana-0.8.3/dassana.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 12:54:08.100773 dassana-0.8.3/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-06 12:53:55.000000 dassana-0.8.3/setup.py
+│ │   --- dassana-0.8.2/dassana/dassana_env.py
+│ ├── +++ dassana-0.8.3/dassana/dassana_env.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -67,7 +67,17 @@
+│ │          return None
+│ │      return os.environ["DASSANA_DEBUG_MAGIC_WORD"]
+│ │  
+│ │  def get_ingestion_config_id():
+│ │      if "DASSANA_INGESTION_CONFIG_ID" not in os.environ:
+│ │          return None
+│ │      return str(os.environ["DASSANA_INGESTION_CONFIG_ID"])
+│ │ +
+│ │ +def get_asset_snapshot_id():
+│ │ +    if "DASSANA_ASSET_SNAPSHOT_ID" not in os.environ:
+│ │ +        return None
+│ │ +    return str(os.environ["DASSANA_ASSET_SNAPSHOT_ID"])
+│ │ +
+│ │ +def get_finding_snapshot_id():
+│ │ +    if "DASSANA_FINDING_SNAPSHOT_ID" not in os.environ:
+│ │ +        return None
+│ │ +    return str(os.environ["DASSANA_FINDING_SNAPSHOT_ID"])
+│ │   --- dassana-0.8.2/dassana/data_pipes.py
+│ ├── +++ dassana-0.8.3/dassana/data_pipes.py
+│ │┄ Files identical despite different names
+│ │   --- dassana-0.8.2/dassana/rest.py
+│ ├── +++ dassana-0.8.3/dassana/rest.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -254,14 +254,25 @@
+│ │      if isinstance(val, datetime.datetime):
+│ │          return val.isoformat()
+│ │      return str(val)
+│ │  
+│ │  endpoint = get_endpoint()
+│ │  
+│ │  def create_snapshot(ingestion_type,metadata):
+│ │ +
+│ │ +    if ingestion_type == 'assets':
+│ │ +        snapshotId = get_asset_snapshot_id()
+│ │ +        if snapshotId is not None:
+│ │ +            return snapshotId
+│ │ +        
+│ │ +    elif ingestion_type == 'findings':
+│ │ +        snapshotId = get_finding_snapshot_id()
+│ │ +        if snapshotId is not None:
+│ │ +            return snapshotId
+│ │ +
+│ │      headers = {
+│ │          "x-dassana-app-id":f"{app_id}",
+│ │          "x-dassana-token":f"{dassana_token}",
+│ │          "x-dassana-ingestion-type":f"{ingestion_type}"
+│ │      }
+│ │      
+│ │      resp = requests.post(f"{endpoint}/snapshot", headers=headers,json=metadata)
+│ │ @@ -284,15 +295,28 @@
+│ │  def update_snapshot(ingestion_type,snapshot_id,payload):
+│ │      headers = {
+│ │          "x-dassana-app-id":f"{app_id}",
+│ │          "x-dassana-token":f"{dassana_token}",
+│ │          "x-dassana-ingestion-type":f"{ingestion_type}",
+│ │          "x-dassana-snapshot-id":f"{snapshot_id}"
+│ │      }
+│ │ -    resp = requests.put(f"{endpoint}/snapshot", headers=headers,json=payload)
+│ │ +
+│ │ +    retry = Retry(
+│ │ +    total=3,
+│ │ +    status_forcelist=[429, 500, 502, 503, 504],
+│ │ +    backoff_factor=2,
+│ │ +    method_whitelist=["PUT"]
+│ │ +    )
+│ │ +
+│ │ +    http = requests.Session()
+│ │ +    adapter = HTTPAdapter(max_retries=retry)
+│ │ +    http.mount("http://", adapter)
+│ │ +    http.mount("https://", adapter)
+│ │ +
+│ │ +    resp = http.put(f"{endpoint}/snapshot", headers=headers,json=payload)
+│ │      updated_snapshot = resp.json()
+│ │      return updated_snapshot
+│ │      
+│ │  def end_snapshot(ingestion_type,snapshot_id,status,is_recon):
+│ │      headers = {
+│ │          "x-dassana-app-id":f"{app_id}",
+│ │          "x-dassana-token":f"{dassana_token}",

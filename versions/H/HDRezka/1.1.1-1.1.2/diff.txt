@@ -1,0 +1,590 @@
+--- tmp/HDRezka-1.1.1.tar.gz
++++ tmp/HDRezka-1.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "HDRezka-1.1.1.tar", last modified: Mon Apr  3 14:52:23 2023, max compression
+│ +gzip compressed data, was "HDRezka-1.1.2.tar", last modified: Thu Apr  6 13:00:18 2023, max compression
+│   --- HDRezka-1.1.1.tar
+├── +++ HDRezka-1.1.2.tar
+│ ├── file list
+│ │ @@ -1,34 +1,36 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.576758 HDRezka-1.1.1/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.565759 HDRezka-1.1.1/HDRezka.egg-info/
+│ │ --rw-rw-rw-   0        0        0     8443 2023-04-03 14:52:23.000000 HDRezka-1.1.1/HDRezka.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      575 2023-04-03 14:52:23.000000 HDRezka-1.1.1/HDRezka.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-03 14:52:23.000000 HDRezka-1.1.1/HDRezka.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       43 2023-04-03 14:52:23.000000 HDRezka-1.1.1/HDRezka.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-04-03 14:52:23.000000 HDRezka-1.1.1/HDRezka.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     1084 2023-04-01 05:24:49.000000 HDRezka-1.1.1/LICENSE
+│ │ --rw-rw-rw-   0        0        0     8443 2023-04-03 14:52:23.576758 HDRezka-1.1.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     5630 2023-04-03 14:32:27.000000 HDRezka-1.1.1/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.568757 HDRezka-1.1.1/hdrezka/
+│ │ --rw-rw-rw-   0        0        0      161 2023-04-03 14:42:24.000000 HDRezka-1.1.1/hdrezka/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1053 2023-03-31 14:01:59.000000 HDRezka-1.1.1/hdrezka/_antiobfuscation.py
+│ │ --rw-rw-rw-   0        0        0      299 2023-04-02 04:58:39.000000 HDRezka-1.1.1/hdrezka/_bs4.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.570757 HDRezka-1.1.1/hdrezka/api/
+│ │ --rw-rw-rw-   0        0        0      351 2023-04-01 04:15:22.000000 HDRezka-1.1.1/hdrezka/api/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1395 2023-04-01 04:01:50.000000 HDRezka-1.1.1/hdrezka/api/ajax.py
+│ │ --rw-rw-rw-   0        0        0     1193 2023-04-03 14:37:29.000000 HDRezka-1.1.1/hdrezka/api/search.py
+│ │ --rw-rw-rw-   0        0        0      365 2023-04-03 09:50:05.000000 HDRezka-1.1.1/hdrezka/errors.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.572758 HDRezka-1.1.1/hdrezka/post/
+│ │ --rw-rw-rw-   0        0        0       40 2023-04-03 14:36:49.000000 HDRezka-1.1.1/hdrezka/post/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.573757 HDRezka-1.1.1/hdrezka/post/info/
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-02 10:26:20.000000 HDRezka-1.1.1/hdrezka/post/info/__init__.py
+│ │ --rw-rw-rw-   0        0        0      806 2023-04-02 14:04:11.000000 HDRezka-1.1.1/hdrezka/post/info/fields.py
+│ │ --rw-rw-rw-   0        0        0     5464 2023-04-03 14:39:20.000000 HDRezka-1.1.1/hdrezka/post/info/info.py
+│ │ --rw-rw-rw-   0        0        0     3180 2023-04-03 14:41:41.000000 HDRezka-1.1.1/hdrezka/post/page.py
+│ │ --rw-rw-rw-   0        0        0     2445 2023-04-02 13:15:12.000000 HDRezka-1.1.1/hdrezka/post/post.py
+│ │ --rw-rw-rw-   0        0        0     3254 2023-04-03 14:32:27.000000 HDRezka-1.1.1/hdrezka/post/urls.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-03 14:52:23.575758 HDRezka-1.1.1/hdrezka/stream/
+│ │ --rw-rw-rw-   0        0        0       22 2023-04-03 14:41:41.000000 HDRezka-1.1.1/hdrezka/stream/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2500 2023-04-03 14:12:13.000000 HDRezka-1.1.1/hdrezka/stream/player.py
+│ │ --rw-rw-rw-   0        0        0      452 2023-04-02 04:46:22.000000 HDRezka-1.1.1/hdrezka/translators.py
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-03 14:52:23.576758 HDRezka-1.1.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1838 2023-04-03 14:47:22.000000 HDRezka-1.1.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.730802 HDRezka-1.1.2/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.699552 HDRezka-1.1.2/HDRezka.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3258 2023-04-06 13:00:18.000000 HDRezka-1.1.2/HDRezka.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      622 2023-04-06 13:00:18.000000 HDRezka-1.1.2/HDRezka.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 13:00:18.000000 HDRezka-1.1.2/HDRezka.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       43 2023-04-06 13:00:18.000000 HDRezka-1.1.2/HDRezka.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-06 13:00:18.000000 HDRezka-1.1.2/HDRezka.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     1084 2023-04-01 05:24:49.000000 HDRezka-1.1.2/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3258 2023-04-06 13:00:18.730802 HDRezka-1.1.2/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      351 2023-04-06 12:55:58.000000 HDRezka-1.1.2/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.715211 HDRezka-1.1.2/hdrezka/
+│ │ +-rw-rw-rw-   0        0        0      371 2023-04-06 12:55:57.000000 HDRezka-1.1.2/hdrezka/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1017 2023-04-06 11:53:59.000000 HDRezka-1.1.2/hdrezka/_antiobfuscation.py
+│ │ +-rw-rw-rw-   0        0        0      299 2023-04-06 12:26:22.000000 HDRezka-1.1.2/hdrezka/_bs4.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.715211 HDRezka-1.1.2/hdrezka/api/
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 11:57:13.000000 HDRezka-1.1.2/hdrezka/api/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1408 2023-04-06 12:47:03.000000 HDRezka-1.1.2/hdrezka/api/ajax.py
+│ │ +-rw-rw-rw-   0        0        0      315 2023-04-06 11:55:17.000000 HDRezka-1.1.2/hdrezka/api/http.py
+│ │ +-rw-rw-rw-   0        0        0     1164 2023-04-06 11:53:59.000000 HDRezka-1.1.2/hdrezka/api/search.py
+│ │ +-rw-rw-rw-   0        0        0      365 2023-04-03 09:50:05.000000 HDRezka-1.1.2/hdrezka/errors.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.730802 HDRezka-1.1.2/hdrezka/post/
+│ │ +-rw-rw-rw-   0        0        0       40 2023-04-06 11:11:48.000000 HDRezka-1.1.2/hdrezka/post/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      110 2023-04-06 11:12:40.000000 HDRezka-1.1.2/hdrezka/post/_dataclass.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.730802 HDRezka-1.1.2/hdrezka/post/info/
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-02 10:26:20.000000 HDRezka-1.1.2/hdrezka/post/info/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      582 2023-04-06 11:53:58.000000 HDRezka-1.1.2/hdrezka/post/info/fields.py
+│ │ +-rw-rw-rw-   0        0        0     5363 2023-04-06 12:13:34.000000 HDRezka-1.1.2/hdrezka/post/info/info.py
+│ │ +-rw-rw-rw-   0        0        0     3154 2023-04-06 12:24:02.000000 HDRezka-1.1.2/hdrezka/post/page.py
+│ │ +-rw-rw-rw-   0        0        0     2444 2023-04-06 11:57:13.000000 HDRezka-1.1.2/hdrezka/post/post.py
+│ │ +-rw-rw-rw-   0        0        0     3218 2023-04-06 12:26:22.000000 HDRezka-1.1.2/hdrezka/post/urls.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:00:18.730802 HDRezka-1.1.2/hdrezka/stream/
+│ │ +-rw-rw-rw-   0        0        0       22 2023-04-03 14:41:41.000000 HDRezka-1.1.2/hdrezka/stream/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2548 2023-04-06 12:11:12.000000 HDRezka-1.1.2/hdrezka/stream/player.py
+│ │ +-rw-rw-rw-   0        0        0      387 2023-04-06 11:53:59.000000 HDRezka-1.1.2/hdrezka/translators.py
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 13:00:18.730802 HDRezka-1.1.2/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2007 2023-04-06 12:58:03.000000 HDRezka-1.1.2/setup.py
+│ │   --- HDRezka-1.1.1/HDRezka.egg-info/SOURCES.txt
+│ ├── +++ HDRezka-1.1.2/HDRezka.egg-info/SOURCES.txt
+│ │┄ Files 8% similar despite different names
+│ │ @@ -9,16 +9,18 @@
+│ │  hdrezka/__init__.py
+│ │  hdrezka/_antiobfuscation.py
+│ │  hdrezka/_bs4.py
+│ │  hdrezka/errors.py
+│ │  hdrezka/translators.py
+│ │  hdrezka/api/__init__.py
+│ │  hdrezka/api/ajax.py
+│ │ +hdrezka/api/http.py
+│ │  hdrezka/api/search.py
+│ │  hdrezka/post/__init__.py
+│ │ +hdrezka/post/_dataclass.py
+│ │  hdrezka/post/page.py
+│ │  hdrezka/post/post.py
+│ │  hdrezka/post/urls.py
+│ │  hdrezka/post/info/__init__.py
+│ │  hdrezka/post/info/fields.py
+│ │  hdrezka/post/info/info.py
+│ │  hdrezka/stream/__init__.py
+│ │   --- HDRezka-1.1.1/LICENSE
+│ ├── +++ HDRezka-1.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- HDRezka-1.1.1/hdrezka/_antiobfuscation.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/_antiobfuscation.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,9 +1,7 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  import re
+│ │  from base64 import b64decode
+│ │  
+│ │  __all__ = ('clear_trash',)
+│ │  
+│ │  _sub_trash = re.compile(
+│ │      '#h|//_//|I0A=|I0Ah|I0Aj|I0Ak|I0BA|I0Be|I14=|I14h|I14j|I14k|I15A|I15e|ISE=|ISEh|ISEj|ISEk|ISFA|ISFe|ISM=|ISMh'
+│ │   --- HDRezka-1.1.1/hdrezka/api/ajax.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/api/ajax.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,47 +1,49 @@
+│ │ -from __future__ import annotations
+│ │ +from typing import TypeVar
+│ │  
+│ │ -from . import get_response
+│ │ +from .http import get_response
+│ │  from ..errors import AjaxFail
+│ │  
+│ │ -__all__ = ('Ajax',)
+│ │ +__all__ = ('Ajax', 'AnyID')
+│ │ +
+│ │ +AnyID = TypeVar('AnyID', int, str)
+│ │  
+│ │  
+│ │  class Ajax:
+│ │      """HDRezka Ajax class"""
+│ │      __slots__ = ()
+│ │  
+│ │      @classmethod
+│ │ -    def _send_data(cls, action: str, data: dict[str]) -> dict:
+│ │ +    def _send_data(cls, action: str, data: dict[str]) -> dict[str]:
+│ │          answer: dict = get_response('POST', f'https://rezka.ag/ajax/{action}/', data=data).json()
+│ │          if not answer.get('success', True):
+│ │              raise AjaxFail(answer.get('message', answer))
+│ │          return answer
+│ │  
+│ │      @classmethod
+│ │      def get_cdn_series(cls, data: dict[str]):
+│ │          return cls._send_data('get_cdn_series', data)
+│ │  
+│ │      @classmethod
+│ │ -    def get_episodes(cls, id: int | str, translator_id: int | str):
+│ │ +    def get_episodes(cls, id: AnyID, translator_id: AnyID):
+│ │          return cls.get_cdn_series(
+│ │              {'action': 'get_episodes',
+│ │               'id': id,
+│ │               'translator_id': translator_id})
+│ │  
+│ │      @classmethod
+│ │ -    def get_stream(cls, id: int | str, translator_id: int | str, season: int | str, episode: int | str):
+│ │ +    def get_stream(cls, id: AnyID, translator_id: AnyID, season: AnyID, episode: AnyID):
+│ │          return cls.get_cdn_series(
+│ │              {'action': 'get_stream',
+│ │               'id': id,
+│ │               'translator_id': translator_id,
+│ │               'season': season,
+│ │               'episode': episode}
+│ │          )
+│ │  
+│ │      @classmethod
+│ │ -    def get_movie(cls, id: int | str, translator_id: int | str):
+│ │ +    def get_movie(cls, id: AnyID, translator_id: AnyID):
+│ │          return cls.get_cdn_series(
+│ │              {'action': 'get_movie',
+│ │               'id': id,
+│ │               'translator_id': translator_id}
+│ │          )
+│ │   --- HDRezka-1.1.1/hdrezka/api/search.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/api/search.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,9 +1,7 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  from typing import Iterator
+│ │  
+│ │  from ..errors import EmptyPage
+│ │  from ..post.page import *
+│ │  
+│ │  __all__ = ('Search',)
+│ │  
+│ │ @@ -24,15 +22,15 @@
+│ │  
+│ │      @query.setter
+│ │      def query(self, value):
+│ │          self._query = value if isinstance(value, str) else str(value)
+│ │          self.page = _SEARCH_TEMPLATE % self.query
+│ │  
+│ │      @staticmethod
+│ │ -    def _concat_paginator(url: str):
+│ │ +    def _concat_paginator(url: str) -> str:
+│ │          return f'{url}&page={{0}}'
+│ │  
+│ │      def __iter__(self) -> Iterator[InlineItem]:
+│ │          """
+│ │          Returns the generator of all found articles
+│ │          """
+│ │          page = 1
+│ │   --- HDRezka-1.1.1/hdrezka/post/info/info.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/post/info/info.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,39 +1,34 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  import re
+│ │  from inspect import getdoc
+│ │  from typing import Any
+│ │  
+│ │  from bs4 import Tag
+│ │  
+│ │  from .fields import AgeRating, Duration, Place, Poster, Rating, Release
+│ │  from ..urls import Quality
+│ │  from ..._bs4 import BeautifulSoup
+│ │  
+│ │ +__all__ = ('PostInfo',)
+│ │  _find_any_digit = re.compile(r'\d+').findall
+│ │  
+│ │  
+│ │ -def _dummy(_):
+│ │ -    return NotImplemented
+│ │ -
+│ │ -
+│ │ -def _force_int(value: Any, /, default: int = 0) -> int:
+│ │ +def _get_int(value: Any, /, default: int = 0) -> int:
+│ │      if not isinstance(value, str):
+│ │          value = str(value)
+│ │      if digits := _find_any_digit(value):
+│ │          return int(''.join(digits))
+│ │      return default
+│ │  
+│ │  
+│ │  class PostInfo:
+│ │      __slots__ = ('rating', 'places', 'slogan', 'release', 'country', 'director', 'genre',
+│ │                   'quality', 'translator', 'age_rating', 'duration', 'from_', 'characters',
+│ │                   '_view', 'fields', 'title', 'orig_title', 'poster', 'description')
+│ │ -    FILL_FIELDS = __slots__[:13]
+│ │ +    FILL_FIELDS: tuple[str] = __slots__[:13]
+│ │  
+│ │      def __init__(self, soup: BeautifulSoup):
+│ │          post_info = soup.find(class_='b-post__info')
+│ │          self.title = soup.find(class_='b-post__title').text.strip()
+│ │          orig_title = soup.find(class_='b-post__origtitle')
+│ │          self.orig_title = orig_title.text.strip() if orig_title else self.title
+│ │          poster = soup.select_one('.b-sidecover>a')
+│ │ @@ -44,16 +39,16 @@
+│ │          raw_fields = post_info.select('tr>td')
+│ │          if len(raw_fields) % 2:
+│ │              raw_fields.append(raw_fields[-1])
+│ │  
+│ │          fields = {raw_fields[i].find('h2').text.strip().removesuffix(':'): raw_fields[-~i]
+│ │                    for i in range(0, len(raw_fields), 2)}
+│ │          for field in self.FILL_FIELDS:
+│ │ -            meth = getattr(self, f'_get_field_{field}', _dummy)
+│ │ -            field_name = (getdoc(meth) or '').strip()
+│ │ +            meth = getattr(self, f'_get_field_{field}', None)
+│ │ +            field_name = '' if meth is None else (getdoc(meth) or '').strip()
+│ │              item = fields.get(field_name)
+│ │              if not item:
+│ │                  setattr(self, field, None)
+│ │                  continue
+│ │              processed = meth(item)
+│ │              fields[field_name] = processed
+│ │              setattr(self, field.removeprefix('_get_field_'), processed)
+│ │ @@ -63,35 +58,35 @@
+│ │      def _get_field_rating(tag: Tag) -> dict[str, Rating]:
+│ │          """Рейтинги"""
+│ │          result = {}
+│ │          for span in tag.find_all('span', class_='b-post__info_rates'):
+│ │              classes: list[str] = span.get('class')
+│ │              classes.remove('b-post__info_rates')
+│ │              service = span.find('a').text
+│ │ -            votes = span.find('text')
+│ │ +            votes = span.find('i')
+│ │              if votes:
+│ │ -                votes = int(votes.text.strip('()'))
+│ │ +                votes = _get_int(votes.text)
+│ │              result[classes[0] if classes else service] = Rating(
+│ │ -                service=service, rating=float(span.find('span').text), votes=_force_int(votes))
+│ │ +                service=service, rating=float(span.find('span').text), votes=votes)
+│ │          return result
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_places(tag: Tag) -> tuple[Place]:
+│ │          """Входит в списки"""
+│ │ -        return *(Place(a.text, _force_int(a.next_element.next_element)) for a in tag.find_all('a')),
+│ │ +        return *(Place(a.text, _get_int(a.next_element.next_element)) for a in tag.find_all('a')),
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_slogan(tag: Tag) -> str:
+│ │          """Слоган"""
+│ │          return tag.get_text(strip=True)
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_release(tag: Tag) -> Release:
+│ │          """Дата выхода"""
+│ │ -        return Release(day=tag.next_element.text.strip(), year=_force_int(tag.find('a').text))
+│ │ +        return Release(day=tag.next_element.text.strip(), year=_get_int(tag.find('a').text))
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_country(tag: Tag) -> tuple[str]:
+│ │          """Страна"""
+│ │          return *map(str.strip, tag.text.split(',')),
+│ │  
+│ │      @staticmethod
+│ │ @@ -113,21 +108,20 @@
+│ │      def _get_field_translator(tag: Tag) -> str:
+│ │          """В переводе"""
+│ │          return tag.get_text(strip=True)
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_age_rating(tag: Tag) -> AgeRating:
+│ │          """Возраст"""
+│ │ -        return AgeRating(_force_int(span := tag.find('span').next_element), span.next_element.get_text(strip=True))
+│ │ +        return AgeRating(_get_int(span := tag.find('span').next_element), span.next_element.get_text(strip=True))
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_duration(tag: Tag) -> Duration:
+│ │          """Время"""
+│ │ -        parts = tag.text.split(' ', 1) + [-1, '']
+│ │ -        return Duration(int(parts[0]), parts[1])
+│ │ +        return Duration(*tag.text.split(' ', 1))
+│ │  
+│ │      @staticmethod
+│ │      def _get_field_from_(tag: Tag) -> tuple[str]:
+│ │          """Из серии"""
+│ │          return *(a.text for a in tag.find_all('a')),
+│ │  
+│ │      @staticmethod
+│ │   --- HDRezka-1.1.1/hdrezka/post/page.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/post/page.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,40 +1,39 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │ -from dataclasses import dataclass
+│ │  from typing import Iterable, Iterator, Sequence, SupportsIndex, TypeVar
+│ │  
+│ │ +from ._dataclass import frozen_slots_dataclass
+│ │  from .._bs4 import BeautifulSoup
+│ │ -from ..api import get_response
+│ │ +from ..api.http import get_response
+│ │  from ..errors import EmptyPage
+│ │  from ..stream.player import *
+│ │  
+│ │  __all__ = ('Page', 'PageNumber', 'InlineItem')
+│ │  
+│ │ -PageNumber = TypeVar('PageNumber', Iterable[int], slice, int)
+│ │ +PageNumber = TypeVar('PageNumber', int, slice, Iterable[int])
+│ │  T = TypeVar('T')
+│ │  
+│ │  
+│ │  def _range_from_slice(obj: slice | T) -> range | T:
+│ │      if isinstance(obj, slice):
+│ │          return range(*[i for i in (obj.start, obj.stop, obj.step) if i is not None])
+│ │      return obj
+│ │  
+│ │  
+│ │ -@dataclass(frozen=True)
+│ │ +@frozen_slots_dataclass
+│ │  class InlineItem:
+│ │      """Content Inline Item view"""
+│ │ -    __slots__ = ('url', 'name', 'info', 'poster')
+│ │      url: str
+│ │      name: str
+│ │      info: str
+│ │ -    poster: str  # image url
+│ │ +    poster: str
+│ │ +    'Image url'
+│ │  
+│ │      @property
+│ │      def player(self) -> PlayerType:
+│ │ +        """Return a Player Instance"""
+│ │          return Player(self.url)
+│ │  
+│ │  
+│ │  class Page:
+│ │      """Ajax class for HDRezka search"""
+│ │      __slots__ = ('_page', '_page_format')
+│ │   --- HDRezka-1.1.1/hdrezka/post/post.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/post/post.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,13 +1,11 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  from .info import PostInfo
+│ │  from .urls import long_url, short_url
+│ │  from .._bs4 import BeautifulSoup
+│ │ -from ..api import get_response
+│ │ +from ..api.http import get_response
+│ │  from ..translators import Translators
+│ │  
+│ │  __all__ = ('Post',)
+│ │  
+│ │  
+│ │  class Post:
+│ │      """Stores information about the post"""
+│ │ @@ -30,27 +28,27 @@
+│ │          self.info = self._get_post_info()
+│ │          self.translators = self._get_translators()
+│ │  
+│ │          self.id = self._extract_id()
+│ │          self.name = self._get_name()
+│ │          self.other_parts_urls = self._parts_urls
+│ │  
+│ │ -    def _extract_id(self):
+│ │ +    def _extract_id(self) -> int:
+│ │          return int(self._soup_inst.find(id='post_id')['value'])
+│ │  
+│ │ -    def _get_name(self):
+│ │ -        return self._soup_inst.find(class_='b-post__title').get_text().strip()
+│ │ +    def _get_name(self) -> str:
+│ │ +        return self._soup_inst.find(class_='b-post__title').text.strip()
+│ │  
+│ │ -    def _get_type(self):
+│ │ +    def _get_type(self) -> str:
+│ │          return self._soup_inst.find('meta', property='og:type')['content'].removeprefix('video.')
+│ │  
+│ │      def _get_post_info(self) -> PostInfo:
+│ │          return PostInfo(self._soup_inst)
+│ │  
+│ │ -    def _get_translators(self):
+│ │ +    def _get_translators(self) -> Translators:
+│ │          translators_list = self._soup_inst.find(id='translators-list')
+│ │          arr = {child.text.strip(): int(child['data-translator_id']) for child in
+│ │                 translators_list.find_all(recursive=False) if child.text} if translators_list else {}
+│ │          if not arr:
+│ │              arr[self.info.translator] = self.translator_id
+│ │          return Translators(arr)
+│ │   --- HDRezka-1.1.1/hdrezka/post/urls.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/post/urls.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,20 +1,18 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  import re
+│ │  from functools import lru_cache
+│ │  from typing import Iterable, SupportsInt
+│ │  
+│ │  from .._antiobfuscation import clear_trash
+│ │  
+│ │  __all__ = ('short_url', 'long_url', 'URLs', 'Quality', 'URL')
+│ │  
+│ │  _findall_qualities = re.compile(r'\[([^]]+)](\S+)(?:\sor\s|$)').findall
+│ │  _match_quality_int = re.compile(r'(\d+)[pi]\s*($|\w+)').match
+│ │ -_shorten_url_match = re.compile(r'(?:(?:https?://)?rezka\.ag/)?\D*(\d+)\S*(?:\.html)?/?', re.I).match
+│ │ +_shorten_url_match = re.compile(r'(?:(?:https?://)?rezka\.ag/)?\D*(\d+)\S*(?:\.docs)?/?', re.I).match
+│ │  
+│ │  
+│ │  @lru_cache(1024)
+│ │  def short_url(url: str) -> str:
+│ │      """
+│ │      Returns string rezka.ag post with format "{id}-{id}" (valid path)
+│ │      """
+│ │ @@ -26,15 +24,15 @@
+│ │  
+│ │  
+│ │  @lru_cache(1024)
+│ │  def long_url(url: str) -> str:
+│ │      """
+│ │      Returns full url of rezka.ag post
+│ │      """
+│ │ -    return f'https://rezka.ag/{short_url(url)}.html'
+│ │ +    return f'https://rezka.ag/{short_url(url)}.docs'
+│ │  
+│ │  
+│ │  class Quality(str):
+│ │      __slots__ = ('_i', 'addon')
+│ │      addon: str  # can contain 'ultra'
+│ │  
+│ │      def __init__(self, *_, **__):
+│ │   --- HDRezka-1.1.1/hdrezka/stream/player.py
+│ ├── +++ HDRezka-1.1.2/hdrezka/stream/player.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,33 +1,31 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  from collections import defaultdict
+│ │  from functools import lru_cache
+│ │  from typing import Any, SupportsInt, TypeVar
+│ │  
+│ │  from .._bs4 import BeautifulSoup
+│ │  from ..api.ajax import Ajax
+│ │  from ..errors import UnknownContentType
+│ │  from ..post import *
+│ │  
+│ │ -__all__ = ('Player', 'PlayerType')
+│ │ +__all__ = ('Player', 'PlayerType', 'PlayerBase', 'PlayerMovie', 'PlayerSeries')
+│ │  
+│ │  
+│ │  class PlayerBase:
+│ │      __slots__ = ('post',)
+│ │  
+│ │      def __init__(self, url_or_cast: Any):
+│ │          if isinstance(url_or_cast, PlayerBase):
+│ │              self.post = url_or_cast.post
+│ │              return
+│ │          elif not isinstance(url_or_cast, str):
+│ │              url_or_cast = str(url_or_cast)
+│ │          self.post = Post(url_or_cast)
+│ │  
+│ │ -    def _translator(self, translator_id: SupportsInt = None):
+│ │ +    def _translator(self, translator_id: SupportsInt = None) -> int:
+│ │          if translator_id is None:
+│ │              return self.post.translator_id
+│ │          translator_id = int(translator_id)
+│ │          return self.post.translators.ids[abs(translator_id)] if translator_id <= 0 else translator_id
+│ │  
+│ │      def __repr__(self):
+│ │          return f"{self.__class__.__qualname__}({short_url(self.post.url)!r})"
+│ │ @@ -61,17 +59,18 @@
+│ │  
+│ │  
+│ │  @lru_cache(512)
+│ │  def player(url_or_path: Any) -> PlayerType:
+│ │      """
+│ │      Returns either Player Series if series, or PlayerMovie if movie, otherwise raises UnknownContentType
+│ │      """
+│ │ -    p = PlayerBase(url_or_path)
+│ │ -    type = p.post.type
+│ │ -    if type == 'tv_series':
+│ │ -        return PlayerSeries(p)
+│ │ -    if type == 'movie':
+│ │ -        return PlayerMovie(p)
+│ │ +    cast = PlayerBase(url_or_path)
+│ │ +    type = cast.post.type
+│ │ +    match type:
+│ │ +        case 'tv_series':
+│ │ +            return PlayerSeries(cast)
+│ │ +        case 'movie':
+│ │ +            return PlayerMovie(cast)
+│ │      raise UnknownContentType(type)
+│ │  
+│ │  
+│ │  Player = player
+│ │   --- HDRezka-1.1.1/setup.py
+│ ├── +++ HDRezka-1.1.2/setup.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -7,25 +7,28 @@
+│ │  with open('README.md', encoding='UTF-8') as f:
+│ │      long_description = f.read().strip()
+│ │  with open('CHANGELOG.md', encoding='UTF-8') as f:
+│ │      long_description += f'\n\n---\n\n{f.read().strip()}\n'
+│ │  
+│ │  setuptools.setup(
+│ │      name='HDRezka',
+│ │ -    version='1.1.1',
+│ │ +    version='1.1.2',
+│ │  
+│ │      author='Nikita (NIKDISSV)',
+│ │      author_email='nikdissv@proton.me',
+│ │  
+│ │      description='HDRezka (rezka.ag) Python API',
+│ │      long_description=long_description,
+│ │      long_description_content_type='text/markdown',
+│ │  
+│ │      url='https://github.com/NIKDISSV-Forever/HDRezka',
+│ │ -
+│ │ +    project_urls={
+│ │ +        'GitHub': 'https://github.com/NIKDISSV-Forever/HDRezka',
+│ │ +        'Documentation': 'https://nikdissv-forever.github.io/HDRezka/hdrezka'
+│ │ +    },
+│ │      packages=setuptools.find_packages(),
+│ │      install_requires=install_requires,
+│ │  
+│ │      license='MIT',
+│ │      classifiers=[
+│ │          'Development Status :: 4 - Beta',
+│ │          'Environment :: Console',
+│ │ @@ -46,10 +49,10 @@
+│ │          'Topic :: Internet',
+│ │          'Topic :: Internet :: WWW/HTTP',
+│ │          'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+│ │          'Topic :: Multimedia :: Video',
+│ │  
+│ │      ],
+│ │  
+│ │ -    python_requires='>=3.9',
+│ │ +    python_requires='>=3.10',
+│ │      keywords=['HDRezka', 'rezka.ag', 'watch online', 'api', 'stream']
+│ │  )
