@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/nowcasting_datamodel-1.2.2.tar.gz tmp/nowcasting_datamodel-1.2.3.tar.gz --html versions/n/nowcasting-datamodel/1.2.2-1.2.3/index.html --text versions/n/nowcasting-datamodel/1.2.2-1.2.3/diff.txt --markdown versions/n/nowcasting-datamodel/1.2.2-1.2.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">21.9 KB</span></div>
+  <div><span class="source">tmp/nowcasting_datamodel-1.2.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/nowcasting_datamodel-1.2.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">290 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nowcasting_datamodel-1.2.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nowcasting_datamodel-1.2.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">21.6 KB</span></div>
+    <div><span class="source">nowcasting_datamodel-1.2.2.tar</span> vs.</div>
+    <div id="nowcasting_datamodel--.-.-.tar"><span class="source">nowcasting_datamodel-1.2.3.tar</span>
+      <a class="anchor" href="#nowcasting_datamodel--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">14.4 KB</span></div>
+      <div id="nowcasting_datamodel--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 51 lines modified</td><td colspan="2">Offset 1, 52 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>6<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>6<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/MANIFEST.in</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>6<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>6<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5015<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5015<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>151651<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/diagram.png</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>151651<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/diagram.png</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49887<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/diagram_pv.png</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49887<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/diagram_pv.png</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>250<del>2</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.25<ins>8</ins>0<ins>1</ins><ins>6</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1989<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/connection.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1989<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/connection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9342<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/fake.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9342<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/fake.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>2<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/migrations/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>2<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/migrations/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/migrations/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/migrations/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/migrations/app.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/migrations/app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>2<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>2<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1052<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1052<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>163<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/base.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>163<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3597<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/convert.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3597<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/convert.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17821<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/forecast.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17821<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/forecast.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4480<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/gsp.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4480<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/gsp.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5923<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/metric.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5923<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/metric.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4471<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/models.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4471<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/models.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5035<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/pv.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5035<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/pv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>821<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/models/utils.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>821<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/models/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3401<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/national.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3401<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/national.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>2<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/</td><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>2<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/__init__.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11847<span class="dp">·</span>2023-04-06<span class="dp">·</span>10:51:09.000000<span class="dp">·</span>nowcasting_datamodel-1.2.3/nowcasting_datamodel/read/blend.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<del>734</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/read.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<ins>953</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/read.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7252<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/read_gsp.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7252<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/read_gsp.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3279<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/read_metric.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3279<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/read_metric.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6647<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/read/read_pv.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6647<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/read/read_pv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>6<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/save/</td><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>6<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/save/</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/save/__init__.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/save/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4517<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/save/adjust.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4517<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/save/adjust.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3434<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/save/save.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3434<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/save/save.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9070<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/save/update.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9070<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/save/update.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>631<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel/utils.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>631<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>2<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/</td><td class="diffline">38 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>2<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/PKG-INFO</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>22</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/SOURCES.txt</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>57</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/dependency_links.txt</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/requires.txt</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/nowcasting_datamodel.egg-info/top_level.txt</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/nowcasting_datamodel.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/requirements.txt</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>6<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/setup.cfg</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>6<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/setup.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>5</del>5.<del>81</del>6<del>502</del><span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/</td><td class="diffline">47 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>2</ins>5.<ins>26</ins>6<ins>016</ins><span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>626<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/test_databaseconnection.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>626<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/test_databaseconnection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3082<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/test_fake.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3082<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/test_fake.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>706<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/test_fake_pv.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>706<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/test_fake_pv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1330<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/test_national.py</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1330<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/test_national.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>863<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>1</del>:<del>49</del>:<del>42</del>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<del>2</del>/tests/test_utils.py</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>863<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>0</ins>:<ins>51</ins>:<ins>09</ins>.000000<span class="dp">·</span>nowcasting_datamodel-1.2.<ins>3</ins>/tests/test_utils.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">474 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/PKG-INFO</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--PKG-INFO"><span class="source">nowcasting_datamodel-1.2.3/PKG-INFO</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting_datamodel</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting_datamodel</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.2.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.2.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>Model<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>Model<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_datamodel</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_datamodel</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>SQL,Datamodel</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>SQL,Datamodel</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/README.md</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--README.md"><span class="source">nowcasting_datamodel-1.2.3/README.md</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/diagram.png</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--diagram.png"><span class="source">nowcasting_datamodel-1.2.3/diagram.png</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--diagram.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/diagram_pv.png</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--diagram_pv.png"><span class="source">nowcasting_datamodel-1.2.3/diagram_pv.png</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--diagram_pv.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/connection.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-connection.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/connection.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-connection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/fake.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-fake.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/fake.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-fake.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/migrations/app.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-migrations-app.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/migrations/app.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-migrations-app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/__init__.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-__init__.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/__init__.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/convert.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-convert.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/convert.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-convert.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/forecast.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-forecast.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/forecast.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-forecast.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/gsp.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-gsp.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/gsp.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-gsp.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/metric.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-metric.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/metric.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-metric.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/models.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-models.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/models.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-models.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/pv.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-pv.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/pv.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-pv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/models/utils.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-utils.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/models/utils.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-models-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/national.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-national.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/national.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-national.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.22 KB</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/read/read.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/read/read.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 472, 14 lines modified</td><td colspan="2">Offset 472, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">472 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>forecasts</td><td class="diffline">472 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>forecasts</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">473 </td><td class="diffpresent">def<span class="dp">·</span>get_forecast_values_latest(</td><td class="diffline">473 </td><td class="diffpresent">def<span class="dp">·</span>get_forecast_values_latest(</td></tr>
+<tr class="diffunmodified"><td class="diffline">474 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>session:<span class="dp">·</span>Session,</td><td class="diffline">474 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>session:<span class="dp">·</span>Session,</td></tr>
+<tr class="diffunmodified"><td class="diffline">475 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>gsp_id:<span class="dp">·</span>int,</td><td class="diffline">475 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>gsp_id:<span class="dp">·</span>int,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">476 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>model_name:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">476 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>start_datetime:<span class="dp">·</span>Optional[datetime]<span class="dp">·</span>=<span class="dp">·</span>None,</td><td class="diffline">477 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>start_datetime:<span class="dp">·</span>Optional[datetime]<span class="dp">·</span>=<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">477 </td><td class="diffpresent">)<span class="dp">·</span>-&gt;<span class="dp">·</span>List[ForecastValueLatestSQL]:</td><td class="diffline">478 </td><td class="diffpresent">)<span class="dp">·</span>-&gt;<span class="dp">·</span>List[ForecastValueLatestSQL]:</td></tr>
+<tr class="diffunmodified"><td class="diffline">478 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">479 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">479 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Get<span class="dp">·</span>forecast<span class="dp">·</span>values</td><td class="diffline">480 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Get<span class="dp">·</span>forecast<span class="dp">·</span>values</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">480 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>session:<span class="dp">·</span>database<span class="dp">·</span>session</td><td class="diffline">481 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>session:<span class="dp">·</span>database<span class="dp">·</span>session</td></tr>
+<tr class="diffunmodified"><td class="diffline">481 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>gsp_id:<span class="dp">·</span>gsp<span class="dp">·</span>id,<span class="dp">·</span>to<span class="dp">·</span>filter<span class="dp">·</span>query<span class="dp">·</span>on</td><td class="diffline">482 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>gsp_id:<span class="dp">·</span>gsp<span class="dp">·</span>id,<span class="dp">·</span>to<span class="dp">·</span>filter<span class="dp">·</span>query<span class="dp">·</span>on</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 500, 14 lines modified</td><td colspan="2">Offset 501, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">500 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>created_utc_filter<span class="dp">·</span>=<span class="dp">·</span>start_datetime<span class="dp">·</span>-<span class="dp">·</span>timedelta(days=1)</td><td class="diffline">501 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>created_utc_filter<span class="dp">·</span>=<span class="dp">·</span>start_datetime<span class="dp">·</span>-<span class="dp">·</span>timedelta(days=1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">501 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.filter(ForecastValueLatestSQL.created_utc<span class="dp">·</span>&gt;=<span class="dp">·</span>created_utc_filter)</td><td class="diffline">502 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.filter(ForecastValueLatestSQL.created_utc<span class="dp">·</span>&gt;=<span class="dp">·</span>created_utc_filter)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">502 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>filter<span class="dp">·</span>on<span class="dp">·</span>gsp_id</td><td class="diffline">503 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>filter<span class="dp">·</span>on<span class="dp">·</span>gsp_id</td></tr>
+<tr class="diffunmodified"><td class="diffline">503 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>gsp_id<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">504 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>gsp_id<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">504 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.filter(ForecastValueLatestSQL.gsp_id<span class="dp">·</span>==<span class="dp">·</span>gsp_id)</td><td class="diffline">505 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.filter(ForecastValueLatestSQL.gsp_id<span class="dp">·</span>==<span class="dp">·</span>gsp_id)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">506 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>model_name<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">507 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.join(MLModelSQL,<span class="dp">·</span>ForecastValueLatestSQL.model_id<span class="dp">·</span>==<span class="dp">·</span>MLModelSQL.id)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">508 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.filter(MLModelSQL.name<span class="dp">·</span>==<span class="dp">·</span>model_name)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">505 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>order<span class="dp">·</span>by<span class="dp">·</span>target<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>created<span class="dp">·</span>time<span class="dp">·</span>desc</td><td class="diffline">509 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>order<span class="dp">·</span>by<span class="dp">·</span>target<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>created<span class="dp">·</span>time<span class="dp">·</span>desc</td></tr>
+<tr class="diffunmodified"><td class="diffline">506 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.order_by(ForecastValueLatestSQL.target_time)</td><td class="diffline">510 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>query<span class="dp">·</span>=<span class="dp">·</span>query.order_by(ForecastValueLatestSQL.target_time)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">507 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>get<span class="dp">·</span>all<span class="dp">·</span>results</td><td class="diffline">511 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>get<span class="dp">·</span>all<span class="dp">·</span>results</td></tr>
+<tr class="diffunmodified"><td class="diffline">508 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>forecast_values_latest<span class="dp">·</span>=<span class="dp">·</span>query.all()</td><td class="diffline">512 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>forecast_values_latest<span class="dp">·</span>=<span class="dp">·</span>query.all()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">509 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>forecast_value<span class="dp">·</span>in<span class="dp">·</span>forecast_values_latest:</td><td class="diffline">513 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>forecast_value<span class="dp">·</span>in<span class="dp">·</span>forecast_values_latest:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/read/read_gsp.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_gsp.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/read/read_gsp.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_gsp.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/read/read_metric.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_metric.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/read/read_metric.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_metric.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/read/read_pv.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_pv.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/read/read_pv.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-read-read_pv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/save/adjust.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-adjust.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/save/adjust.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-adjust.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/save/save.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-save.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/save/save.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-save.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/save/update.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-update.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/save/update.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-save-update.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel/utils.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-utils.py"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel/utils.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">534 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel.egg-info/PKG-INFO</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel.egg-info-PKG-INFO"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting-datamodel</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting-datamodel</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.2.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.2.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>Model<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>Model<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_datamodel</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_datamodel</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>SQL,Datamodel</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>SQL,Datamodel</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">764 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/nowcasting_datamodel.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel.egg-info-SOURCES.txt"><span class="source">nowcasting_datamodel-1.2.3/nowcasting_datamodel.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--nowcasting_datamodel.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 22, 14 lines modified</td><td colspan="2">Offset 22, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">nowcasting_datamodel/models/forecast.py</td><td class="diffline">22 </td><td class="diffpresent">nowcasting_datamodel/models/forecast.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">nowcasting_datamodel/models/gsp.py</td><td class="diffline">23 </td><td class="diffpresent">nowcasting_datamodel/models/gsp.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">nowcasting_datamodel/models/metric.py</td><td class="diffline">24 </td><td class="diffpresent">nowcasting_datamodel/models/metric.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">nowcasting_datamodel/models/models.py</td><td class="diffline">25 </td><td class="diffpresent">nowcasting_datamodel/models/models.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">nowcasting_datamodel/models/pv.py</td><td class="diffline">26 </td><td class="diffpresent">nowcasting_datamodel/models/pv.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">nowcasting_datamodel/models/utils.py</td><td class="diffline">27 </td><td class="diffpresent">nowcasting_datamodel/models/utils.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">nowcasting_datamodel/read/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">nowcasting_datamodel/read/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">nowcasting_datamodel/read/blend.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">nowcasting_datamodel/read/read.py</td><td class="diffline">30 </td><td class="diffpresent">nowcasting_datamodel/read/read.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">nowcasting_datamodel/read/read_gsp.py</td><td class="diffline">31 </td><td class="diffpresent">nowcasting_datamodel/read/read_gsp.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">nowcasting_datamodel/read/read_metric.py</td><td class="diffline">32 </td><td class="diffpresent">nowcasting_datamodel/read/read_metric.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">nowcasting_datamodel/read/read_pv.py</td><td class="diffline">33 </td><td class="diffpresent">nowcasting_datamodel/read/read_pv.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">nowcasting_datamodel/save/__init__.py</td><td class="diffline">34 </td><td class="diffpresent">nowcasting_datamodel/save/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">nowcasting_datamodel/save/adjust.py</td><td class="diffline">35 </td><td class="diffpresent">nowcasting_datamodel/save/adjust.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">nowcasting_datamodel/save/save.py</td><td class="diffline">36 </td><td class="diffpresent">nowcasting_datamodel/save/save.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/setup.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--setup.py"><span class="source">nowcasting_datamodel-1.2.3/setup.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/tests/test_databaseconnection.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_databaseconnection.py"><span class="source">nowcasting_datamodel-1.2.3/tests/test_databaseconnection.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_databaseconnection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/tests/test_fake.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_fake.py"><span class="source">nowcasting_datamodel-1.2.3/tests/test_fake.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_fake.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/tests/test_fake_pv.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_fake_pv.py"><span class="source">nowcasting_datamodel-1.2.3/tests/test_fake_pv.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_fake_pv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/tests/test_national.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_national.py"><span class="source">nowcasting_datamodel-1.2.3/tests/test_national.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_national.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">nowcasting_datamodel-1.2.2/tests/test_utils.py</span> vs.</div>
+      <div id="nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_utils.py"><span class="source">nowcasting_datamodel-1.2.3/tests/test_utils.py</span>
+        <a class="anchor" href="#nowcasting_datamodel--.-.-.tar---nowcasting_datamodel--.-.--tests-test_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

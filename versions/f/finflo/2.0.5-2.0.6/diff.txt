@@ -1,0 +1,322 @@
+--- tmp/finflo-2.0.5.tar.gz
++++ tmp/finflo-2.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "finflo-2.0.5.tar", last modified: Fri Mar 24 05:21:08 2023, max compression
+│ +gzip compressed data, was "finflo-2.0.6.tar", last modified: Thu Apr  6 10:54:16 2023, max compression
+│   --- finflo-2.0.5.tar
+├── +++ finflo-2.0.6.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 05:21:08.712955 finflo-2.0.5/
+│ │ --rw-rw-rw-   0        0        0       19 2022-11-21 10:05:01.000000 finflo-2.0.5/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     5488 2023-03-24 05:21:08.713950 finflo-2.0.5/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 05:21:08.675954 finflo-2.0.5/finflo/
+│ │ --rw-rw-rw-   0        0        0        0 2022-11-21 10:05:02.000000 finflo-2.0.5/finflo/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1230 2022-12-21 07:25:04.000000 finflo-2.0.5/finflo/admin.py
+│ │ --rw-rw-rw-   0        0        0     8907 2023-03-12 17:35:11.000000 finflo-2.0.5/finflo/api.py
+│ │ --rw-rw-rw-   0        0        0      205 2023-02-27 08:45:47.000000 finflo-2.0.5/finflo/apps.py
+│ │ --rw-rw-rw-   0        0        0      386 2022-11-24 13:02:42.000000 finflo-2.0.5/finflo/base_enum.py
+│ │ --rw-rw-rw-   0        0        0      301 2022-12-15 05:39:52.000000 finflo-2.0.5/finflo/compatability.py
+│ │ --rw-rw-rw-   0        0        0     1035 2023-02-20 05:36:29.000000 finflo-2.0.5/finflo/exception.py
+│ │ --rw-rw-rw-   0        0        0     1185 2023-01-08 13:35:47.000000 finflo-2.0.5/finflo/middleware.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 05:21:08.709962 finflo-2.0.5/finflo/migrations/
+│ │ --rw-rw-rw-   0        0        0    11683 2023-02-28 10:13:58.000000 finflo-2.0.5/finflo/migrations/0001_initial.py
+│ │ --rw-rw-rw-   0        0        0     1489 2023-02-28 10:26:38.000000 finflo-2.0.5/finflo/migrations/0002_remigrate.py
+│ │ --rw-rw-rw-   0        0        0        0 2022-11-21 10:05:02.000000 finflo-2.0.5/finflo/migrations/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7941 2023-02-21 05:56:56.000000 finflo-2.0.5/finflo/models.py
+│ │ --rw-rw-rw-   0        0        0     4090 2023-02-21 05:58:43.000000 finflo-2.0.5/finflo/serializer.py
+│ │ --rw-rw-rw-   0        0        0     2782 2023-03-13 06:16:52.000000 finflo-2.0.5/finflo/signals.py
+│ │ --rw-rw-rw-   0        0        0        2 2023-03-06 12:26:54.000000 finflo-2.0.5/finflo/tests.py
+│ │ --rw-rw-rw-   0        0        0    12677 2023-03-24 05:20:01.000000 finflo-2.0.5/finflo/transition.py
+│ │ --rw-rw-rw-   0        0        0      907 2023-02-01 11:16:37.000000 finflo-2.0.5/finflo/urls.py
+│ │ --rw-rw-rw-   0        0        0      293 2022-11-21 10:05:02.000000 finflo-2.0.5/finflo/validators.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 05:21:08.697953 finflo-2.0.5/finflo.egg-info/
+│ │ --rw-rw-rw-   0        0        0     5488 2023-03-24 05:21:06.000000 finflo-2.0.5/finflo.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      538 2023-03-24 05:21:08.000000 finflo-2.0.5/finflo.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-24 05:21:07.000000 finflo-2.0.5/finflo.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-03-24 05:21:08.000000 finflo-2.0.5/finflo.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     5089 2022-12-19 10:56:18.000000 finflo-2.0.5/readme.md
+│ │ --rw-rw-rw-   0        0        0      421 2023-03-24 05:21:08.740950 finflo-2.0.5/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      288 2022-11-21 10:05:02.000000 finflo-2.0.5/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:54:16.128700 finflo-2.0.6/
+│ │ +-rw-rw-rw-   0        0        0       19 2022-11-21 10:05:01.000000 finflo-2.0.6/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     5488 2023-04-06 10:54:16.129702 finflo-2.0.6/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:54:16.057702 finflo-2.0.6/finflo/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-11-21 10:05:02.000000 finflo-2.0.6/finflo/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1230 2022-12-21 07:25:04.000000 finflo-2.0.6/finflo/admin.py
+│ │ +-rw-rw-rw-   0        0        0     8907 2023-03-12 17:35:11.000000 finflo-2.0.6/finflo/api.py
+│ │ +-rw-rw-rw-   0        0        0      205 2023-02-27 08:45:47.000000 finflo-2.0.6/finflo/apps.py
+│ │ +-rw-rw-rw-   0        0        0      386 2022-11-24 13:02:42.000000 finflo-2.0.6/finflo/base_enum.py
+│ │ +-rw-rw-rw-   0        0        0      301 2022-12-15 05:39:52.000000 finflo-2.0.6/finflo/compatability.py
+│ │ +-rw-rw-rw-   0        0        0     1035 2023-02-20 05:36:29.000000 finflo-2.0.6/finflo/exception.py
+│ │ +-rw-rw-rw-   0        0        0     1460 2023-03-31 06:16:55.000000 finflo-2.0.6/finflo/middleware.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:54:16.124702 finflo-2.0.6/finflo/migrations/
+│ │ +-rw-rw-rw-   0        0        0    11683 2023-02-28 10:13:58.000000 finflo-2.0.6/finflo/migrations/0001_initial.py
+│ │ +-rw-rw-rw-   0        0        0     1489 2023-02-28 10:26:38.000000 finflo-2.0.6/finflo/migrations/0002_remigrate.py
+│ │ +-rw-rw-rw-   0        0        0        0 2022-11-21 10:05:02.000000 finflo-2.0.6/finflo/migrations/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8167 2023-04-06 10:52:40.000000 finflo-2.0.6/finflo/models.py
+│ │ +-rw-rw-rw-   0        0        0     4090 2023-02-21 05:58:43.000000 finflo-2.0.6/finflo/serializer.py
+│ │ +-rw-rw-rw-   0        0        0     2785 2023-03-24 10:04:31.000000 finflo-2.0.6/finflo/signals.py
+│ │ +-rw-rw-rw-   0        0        0        2 2023-03-06 12:26:54.000000 finflo-2.0.6/finflo/tests.py
+│ │ +-rw-rw-rw-   0        0        0    13841 2023-04-06 10:53:25.000000 finflo-2.0.6/finflo/transition.py
+│ │ +-rw-rw-rw-   0        0        0      907 2023-02-01 11:16:37.000000 finflo-2.0.6/finflo/urls.py
+│ │ +-rw-rw-rw-   0        0        0      293 2022-11-21 10:05:02.000000 finflo-2.0.6/finflo/validators.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:54:16.106705 finflo-2.0.6/finflo.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     5488 2023-04-06 10:54:14.000000 finflo-2.0.6/finflo.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      538 2023-04-06 10:54:15.000000 finflo-2.0.6/finflo.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:54:14.000000 finflo-2.0.6/finflo.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-06 10:54:15.000000 finflo-2.0.6/finflo.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     5089 2022-12-19 10:56:18.000000 finflo-2.0.6/readme.md
+│ │ +-rw-rw-rw-   0        0        0      421 2023-04-06 10:54:16.136709 finflo-2.0.6/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      297 2023-03-26 08:52:21.000000 finflo-2.0.6/setup.py
+│ │   --- finflo-2.0.5/PKG-INFO
+│ ├── +++ finflo-2.0.6/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: finflo
+│ │ -Version: 2.0.5
+│ │ +Version: 2.0.6
+│ │  Author: AnandRaj
+│ │  Author-email: anandrajb@venzotechnologies.com
+│ │  License: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Education
+│ │  Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- finflo-2.0.5/finflo/admin.py
+│ ├── +++ finflo-2.0.6/finflo/admin.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/api.py
+│ ├── +++ finflo-2.0.6/finflo/api.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/exception.py
+│ ├── +++ finflo-2.0.6/finflo/exception.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/middleware.py
+│ ├── +++ finflo-2.0.6/finflo/middleware.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -39,7 +39,17 @@
+│ │  
+│ │  
+│ │  def get_current_user():
+│ │      current_user = getattr(_thread_locals, USER_ATTR_NAME, None)
+│ │      return current_user() if callable(current_user) else current_user
+│ │      
+│ │  
+│ │ +import inspect
+│ │ +
+│ │ +def gets_current_users(self):
+│ │ +    for frame_record in inspect.stack():
+│ │ +        if frame_record[3]=='get_response':
+│ │ +            request = frame_record[0].f_locals['request']
+│ │ +            break
+│ │ +        else:
+│ │ +            request = None
+│ │ +    return request
+│ │   --- finflo-2.0.5/finflo/migrations/0001_initial.py
+│ ├── +++ finflo-2.0.6/finflo/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/migrations/0002_remigrate.py
+│ ├── +++ finflo-2.0.6/finflo/migrations/0002_remigrate.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/models.py
+│ ├── +++ finflo-2.0.6/finflo/models.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -47,14 +47,21 @@
+│ │      in_progress = models.BooleanField(default = False)
+│ │      created_date = models.DateTimeField(auto_now_add=True)
+│ │      
+│ │      # default 1 for initial submit and NO_SIGN process
+│ │      
+│ │      def __str__(self):
+│ │          return "{0}_{1}".format(self.type.capitalize() , self.t_id)
+│ │ +
+│ │ +    @property
+│ │ +    def sign_reset(self):
+│ │ +        TransitionManager.objects.filter(t_id = self.t_id , type = self.type , id = self.id).update(
+│ │ +            sub_sign = 0 , in_progress = False
+│ │ +        )
+│ │ +        return None
+│ │      
+│ │      class Meta:
+│ │          ordering = ['id']
+│ │          verbose_name_plural = "4. TransitionManager"
+│ │  
+│ │  
+│ │  class SignList(models.Model):
+│ │   --- finflo-2.0.5/finflo/serializer.py
+│ ├── +++ finflo-2.0.6/finflo/serializer.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo/signals.py
+│ ├── +++ finflo-2.0.6/finflo/signals.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -52,23 +52,23 @@
+│ │      if created:
+│ │          model = sender._meta.label_lower
+│ │          states = States.objects.get(id=1)
+│ │          obj = TransitionManager.objects.create(type=model, t_id=instance.id)
+│ │          obj2 = workflowitems.objects.create(
+│ │              transitionmanager=obj,
+│ │              model_type=model,
+│ │ -            record_datas=DefaultModelValues(model_type = model , id = instance.id).get_record_Datas(),
+│ │ +            record_datas=DefaultModelValues(model_type = obj.type , id = obj.t_id).get_record_Datas(),
+│ │              initial_state=states.description,
+│ │              interim_state=states.description,
+│ │              final_state=states.description,
+│ │          )
+│ │          workevents.objects.create(
+│ │              workflowitems=obj2,
+│ │              model_type=model,
+│ │ -            record_datas=DefaultModelValues(model_type = model , id = instance.id).get_record_Datas(),
+│ │ +            record_datas = DefaultModelValues(model_type =  obj.type , id = obj.t_id).get_record_Datas(),
+│ │              initial_state=states.description,
+│ │              interim_state=states.description,
+│ │              final_state=states.description,
+│ │          )
+│ │  
+│ │  
+│ │  # POST DELETE
+│ │   --- finflo-2.0.5/finflo/transition.py
+│ ├── +++ finflo-2.0.6/finflo/transition.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -202,43 +202,70 @@
+│ │      def gets_default_model(self):
+│ │          obj , created = TransitionManager.objects.get_or_create(t_id =  self.t_id , type = self.model_type)
+│ │          return obj
+│ │  
+│ │  
+│ │      def manualtransitions(self):
+│ │          try:
+│ │ -            obj, created = workflowitems.objects.update_or_create(
+│ │ -                transitionmanager=self.gets_default_model(),
+│ │ -                defaults={
+│ │ -                    "initial_state": self.source,
+│ │ -                    "interim_state": self.interim,
+│ │ -                    "final_state": self.destination,
+│ │ -                    "next_available_transitions": None,
+│ │ -                    "record_datas": self.record_datas,
+│ │ -                    "model_type": self.model_type,
+│ │ -                    "event_user": get_current_user(),
+│ │ -                    "from_party": self.from_party,
+│ │ -                    "to_party": self.to_party,
+│ │ -                    "final_value": True,
+│ │ -                },
+│ │ +            workflowitems.objects.filter(
+│ │ +                transitionmanager = self.gets_default_model()).update(
+│ │ +                initial_state =  self.source,
+│ │ +                interim_state =  self.interim,
+│ │ +                final_state =  self.destination,
+│ │ +                next_available_transitions = None,
+│ │ +                record_datas = self.record_datas,
+│ │ +                model_type = self.model_type,
+│ │ +                event_user =  get_current_user(),
+│ │ +                from_party = self.from_party,
+│ │ +                to_party = self.to_party,
+│ │ +                final_value = True,
+│ │              )
+│ │              workevents.objects.create(
+│ │ -                workflowitems=obj,
+│ │ -                event_user=get_current_user(),
+│ │ -                initial_state=self.source,
+│ │ -                interim_state=self.interim,
+│ │ -                final_state=self.destination,
+│ │ -                model_type=self.model_type,
+│ │ -                record_datas=self.record_datas ,
+│ │ -                from_party=self.from_party,
+│ │ -                to_party=self.to_party,
+│ │ -                final_value=True,
+│ │ +            workflowitems = workflowitems.objects.get(transitionmanager = self.gets_default_model()),
+│ │ +            event_user=get_current_user(),
+│ │ +            initial_state=self.source,
+│ │ +            interim_state=self.interim,
+│ │ +            final_state=self.destination,
+│ │ +            model_type=self.model_type,
+│ │ +            record_datas=self.record_datas ,
+│ │ +            from_party=self.from_party,
+│ │ +            to_party=self.to_party,
+│ │ +            final_value=True,
+│ │              )
+│ │ -        except Exception as e:
+│ │ -            raise TransitionNotAllowed() from e
+│ │ +        except Exception:
+│ │ +            data = workflowitems.objects.create(
+│ │ +                transitionmanager = self.gets_default_model(),
+│ │ +                initial_state =  self.source,
+│ │ +                interim_state =  self.interim,
+│ │ +                final_state =  self.destination,
+│ │ +                next_available_transitions = None,
+│ │ +                record_datas = self.record_datas,
+│ │ +                model_type = self.model_type,
+│ │ +                event_user =  get_current_user(),
+│ │ +                from_party = self.from_party,
+│ │ +                to_party = self.to_party,
+│ │ +                final_value = True,
+│ │ +            )
+│ │ +            workevents.objects.create(
+│ │ +            workflowitems = data ,
+│ │ +            event_user=get_current_user(),
+│ │ +            initial_state=self.source,
+│ │ +            interim_state=self.interim,
+│ │ +            final_state=self.destination,
+│ │ +            model_type=self.model_type,
+│ │ +            record_datas=self.record_datas ,
+│ │ +            from_party=self.from_party,
+│ │ +            to_party=self.to_party,
+│ │ +            final_value=True,
+│ │ +            )
+│ │ +            # data = workflowitems.objects.get(transitionmanager = self.gets_default_model())
+│ │ +
+│ │ +            
+│ │ +        # except Exception as e:
+│ │ +        #     raise TransitionNotAllowed() from e
+│ │  
+│ │  
+│ │      ## CORE TRANSITION ###
+│ │  
+│ │      def transition(self):
+│ │  
+│ │          overall_model = self.gets_all_models()
+│ │ @@ -308,15 +335,16 @@
+│ │                  action=self.action,
+│ │                  subaction=self.action,
+│ │                  model_type=self.model_type,
+│ │                  from_party=overall_model[1].from_party or self.from_party,
+│ │                  to_party=overall_model[1].to_party or self.to_party,
+│ │                  final_value=True,
+│ │              )
+│ │ -            self.sign_reset(overall_model)
+│ │ +            # self.sign_reset(overall_model)
+│ │ +            overall_model[0].sign_reset
+│ │  
+│ │      
+│ │      
+│ │  
+│ │  
+│ │  
+│ │  @dataclass
+│ │   --- finflo-2.0.5/finflo/urls.py
+│ ├── +++ finflo-2.0.6/finflo/urls.py
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/finflo.egg-info/PKG-INFO
+│ ├── +++ finflo-2.0.6/finflo.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: finflo
+│ │ -Version: 2.0.5
+│ │ +Version: 2.0.6
+│ │  Author: AnandRaj
+│ │  Author-email: anandrajb@venzotechnologies.com
+│ │  License: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Education
+│ │  Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- finflo-2.0.5/finflo.egg-info/SOURCES.txt
+│ ├── +++ finflo-2.0.6/finflo.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- finflo-2.0.5/readme.md
+│ ├── +++ finflo-2.0.6/readme.md
+│ │┄ Files identical despite different names

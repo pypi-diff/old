@@ -1,0 +1,313 @@
+--- tmp/streamlit-cognito-auth-1.0.2.tar.gz
++++ tmp/streamlit-cognito-auth-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "streamlit-cognito-auth-1.0.2.tar", last modified: Fri Jan 20 19:18:17 2023, max compression
+│ +gzip compressed data, was "streamlit-cognito-auth-1.1.0.tar", last modified: Thu Apr  6 10:52:07 2023, max compression
+│   --- streamlit-cognito-auth-1.0.2.tar
+├── +++ streamlit-cognito-auth-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)    11357 2023-01-19 14:39:04.000000 streamlit-cognito-auth-1.0.2/LICENSE
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     4083 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/PKG-INFO
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     3602 2023-01-20 19:17:34.000000 streamlit-cognito-auth-1.0.2/README.md
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       38 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/setup.cfg
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      896 2023-01-20 19:18:14.000000 streamlit-cognito-auth-1.0.2/setup.py
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/src/
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       39 2023-01-19 15:04:49.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/__init__.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)    11229 2023-01-20 17:35:41.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/auth.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      153 2023-01-20 17:35:01.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/exceptions.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     2099 2023-01-20 16:21:33.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/utils.py
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-01-20 19:18:17.805107 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     4083 2023-01-20 19:18:17.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      426 2023-01-20 19:18:17.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)        1 2023-01-20 19:18:17.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      102 2023-01-20 19:18:17.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/requires.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       23 2023-01-20 19:18:17.000000 streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)    11357 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/LICENSE
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     4104 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/PKG-INFO
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     3623 2023-04-06 09:02:56.000000 streamlit-cognito-auth-1.1.0/README.md
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       38 2023-04-06 10:52:07.549336 streamlit-cognito-auth-1.1.0/setup.cfg
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      870 2023-04-06 10:51:11.000000 streamlit-cognito-auth-1.1.0/setup.py
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       39 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/__init__.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     9738 2023-04-06 10:25:21.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/auth.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      153 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/exceptions.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      540 2023-04-06 10:43:27.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/utils.py
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     4104 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      426 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)        1 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       89 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       23 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/top_level.txt
+│ │   --- streamlit-cognito-auth-1.0.2/LICENSE
+│ ├── +++ streamlit-cognito-auth-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- streamlit-cognito-auth-1.0.2/PKG-INFO
+│ ├── +++ streamlit-cognito-auth-1.1.0/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: streamlit-cognito-auth
+│ │ -Version: 1.0.2
+│ │ +Version: 1.1.0
+│ │  Summary: A Streamlit component for authenticating users with AWS Cognito
+│ │  Home-page: https://github.com/pop-srw/streamlit-cognito-auth
+│ │  Author: Sarawin Khemmachotikun
+│ │  Author-email: khemmachotikun.s@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -56,17 +56,17 @@
+│ │  ## Example
+│ │  
+│ │  You can find an example of how to use the package in the examples directory.
+│ │  
+│ │  To run the example file, you can use the following command, while replacing `your_pool_id`, `your_app_client_id` and `your_app_client_secret` with the actual values:
+│ │  
+│ │  ```sh
+│ │ -POOL_ID="your_pool_id"
+│ │ -APP_CLIENT_ID="your_app_client_id"
+│ │ -APP_CLIENT_SECRET="your_app_client_secret"
+│ │ +export POOL_ID="your_pool_id"
+│ │ +export APP_CLIENT_ID="your_app_client_id"
+│ │ +export APP_CLIENT_SECRET="your_app_client_secret"
+│ │  
+│ │  cd examples
+│ │  streamlit run example.py
+│ │  ```
+│ │  
+│ │  or in windows
+│ │   --- streamlit-cognito-auth-1.0.2/README.md
+│ ├── +++ streamlit-cognito-auth-1.1.0/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -43,17 +43,17 @@
+│ │  ## Example
+│ │  
+│ │  You can find an example of how to use the package in the examples directory.
+│ │  
+│ │  To run the example file, you can use the following command, while replacing `your_pool_id`, `your_app_client_id` and `your_app_client_secret` with the actual values:
+│ │  
+│ │  ```sh
+│ │ -POOL_ID="your_pool_id"
+│ │ -APP_CLIENT_ID="your_app_client_id"
+│ │ -APP_CLIENT_SECRET="your_app_client_secret"
+│ │ +export POOL_ID="your_pool_id"
+│ │ +export APP_CLIENT_ID="your_app_client_id"
+│ │ +export APP_CLIENT_SECRET="your_app_client_secret"
+│ │  
+│ │  cd examples
+│ │  streamlit run example.py
+│ │  ```
+│ │  
+│ │  or in windows
+│ │   --- streamlit-cognito-auth-1.0.2/setup.py
+│ ├── +++ streamlit-cognito-auth-1.1.0/setup.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,19 +1,18 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name="streamlit-cognito-auth",
+│ │ -    version="1.0.2",
+│ │ +    version="1.1.0",
+│ │      packages=find_packages("src"),
+│ │      package_dir={"": "src"},
+│ │      include_package_data=True,
+│ │      install_requires=[
+│ │          "boto3 >= 1.26.52",
+│ │ -        "python-jose >= 3.3.0",
+│ │ -        "warrant >= 0.6.1",
+│ │ +        "pycognito >= 2022.12.0",
+│ │          "streamlit >= 1.17.0",
+│ │          "extra_streamlit_components >= 0.1.56",
+│ │      ],
+│ │      author="Sarawin Khemmachotikun",
+│ │      author_email="khemmachotikun.s@gmail.com",
+│ │      description="A Streamlit component for authenticating users with AWS Cognito",
+│ │      long_description=open("README.md").read(),
+│ │   --- streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth/auth.py
+│ ├── +++ streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/auth.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,17 +1,19 @@
+│ │  import time
+│ │  import boto3
+│ │  
+│ │ -from warrant import AWSSRP
+│ │  import streamlit as st
+│ │  import extra_streamlit_components as stx
+│ │  
+│ │  from .exceptions import TokenVerificationException
+│ │  from .utils import verify_access_token
+│ │  
+│ │ +import pycognito
+│ │ +from pycognito import AWSSRP
+│ │ +
+│ │  
+│ │  class CognitoAuthenticator:
+│ │      def __init__(self, pool_id, app_client_id, app_client_secret, boto_client=None):
+│ │          self.client = boto_client or boto3.client("cognito-idp")
+│ │          self.pool_id = pool_id
+│ │          self.pool_region = pool_id.split("_")[0]
+│ │          self.app_client_id = app_client_id
+│ │ @@ -92,48 +94,33 @@
+│ │              "refresh_token",
+│ │              tokens["AuthenticationResult"]["RefreshToken"],
+│ │              key="set_refresh_token",
+│ │          )
+│ │  
+│ │      def _login(self, username, password):
+│ │          aws_srp = AWSSRP(
+│ │ -            client=self.client,
+│ │              pool_id=self.pool_id,
+│ │              client_id=self.app_client_id,
+│ │              client_secret=self.app_client_secret,
+│ │              username=username,
+│ │              password=password,
+│ │          )
+│ │ -        auth_params = aws_srp.get_auth_params()
+│ │ -        response = self.client.initiate_auth(
+│ │ -            AuthFlow="USER_SRP_AUTH",
+│ │ -            AuthParameters=auth_params,
+│ │ -            ClientId=aws_srp.client_id,
+│ │ -        )
+│ │ -        if response["ChallengeName"] != aws_srp.PASSWORD_VERIFIER_CHALLENGE:
+│ │ -            raise NotImplementedError(
+│ │ -                f"The {response['ChallengeName']} challenge is not supported"
+│ │ -            )
+│ │ -
+│ │ -        challenge_response = aws_srp.process_challenge(response["ChallengeParameters"])
+│ │          try:
+│ │ -            tokens = self.client.respond_to_auth_challenge(
+│ │ -                ClientId=aws_srp.client_id,
+│ │ -                ChallengeName=aws_srp.PASSWORD_VERIFIER_CHALLENGE,
+│ │ -                ChallengeResponses=challenge_response,
+│ │ -            )
+│ │ -
+│ │ -            # new password required
+│ │ -            if tokens.get("ChallengeName") == aws_srp.NEW_PASSWORD_REQUIRED_CHALLENGE:
+│ │ -                self._set_reset_password_temp(tokens["Session"], username, password)
+│ │ -                return False
+│ │ -
+│ │ +            tokens = aws_srp.authenticate_user()
+│ │              self._set_auth_cookies(tokens)
+│ │              return True
+│ │  
+│ │ +        except pycognito.exceptions.ForceChangePasswordException as e:
+│ │ +            self._set_reset_password_temp("x", username, password)
+│ │ +            return False
+│ │ +
+│ │ +        except self.client.exceptions.PasswordResetRequiredException as e:
+│ │ +            self._reset_session_state()
+│ │ +            return False
+│ │ +
+│ │          except self.client.exceptions.NotAuthorizedException as e:
+│ │              self._reset_session_state()
+│ │              return False
+│ │  
+│ │          except Exception as e:
+│ │              self._reset_session_state()
+│ │              raise e
+│ │ @@ -141,46 +128,22 @@
+│ │      def _reset_password(
+│ │          self,
+│ │          username,
+│ │          password,
+│ │          new_password,
+│ │      ):
+│ │          aws_srp = AWSSRP(
+│ │ -            client=self.client,
+│ │              pool_id=self.pool_id,
+│ │              client_id=self.app_client_id,
+│ │              client_secret=self.app_client_secret,
+│ │              username=username,
+│ │              password=password,
+│ │          )
+│ │ -        challenge_response = {
+│ │ -            "USERNAME": username,
+│ │ -            "NEW_PASSWORD": new_password,
+│ │ -        }
+│ │ -
+│ │ -        # warrant lib does not support reset password with client secret app client
+│ │ -        if aws_srp.client_secret is not None:
+│ │ -            challenge_response.update(
+│ │ -                {
+│ │ -                    "SECRET_HASH": aws_srp.get_secret_hash(
+│ │ -                        aws_srp.username,
+│ │ -                        aws_srp.client_id,
+│ │ -                        aws_srp.client_secret,
+│ │ -                    )
+│ │ -                }
+│ │ -            )
+│ │ -
+│ │ -        reset_password_session = st.session_state["auth_reset_password_session"]
+│ │          try:
+│ │ -            tokens = self.client.respond_to_auth_challenge(
+│ │ -                ClientId=aws_srp.client_id,
+│ │ -                ChallengeName=aws_srp.NEW_PASSWORD_REQUIRED_CHALLENGE,
+│ │ -                Session=reset_password_session,
+│ │ -                ChallengeResponses=challenge_response,
+│ │ -            )
+│ │ +            tokens = aws_srp.set_new_password_challenge(new_password=new_password)
+│ │              self._set_auth_cookies(tokens)
+│ │              self._clear_reset_password_temp()
+│ │              return True
+│ │  
+│ │          except self.client.exceptions.NotAuthorizedException as e:
+│ │              self._reset_session_state()
+│ │              return False
+│ │ @@ -199,14 +162,15 @@
+│ │                          "Username",
+│ │                          value=st.session_state["auth_reset_password_username"],
+│ │                      )
+│ │                      password = st.text_input(
+│ │                          "Password",
+│ │                          type="password",
+│ │                          value=st.session_state["auth_reset_password_password"],
+│ │ +                        disabled=True,
+│ │                      )
+│ │                      new_password = st.text_input("New Password", type="password")
+│ │                      confirm_new_password = st.text_input(
+│ │                          "Confirm Password", type="password"
+│ │                      )
+│ │                      password_reset_submitted = st.form_submit_button("Reset Password")
+│ │                      status_container = st.container()
+│ │   --- streamlit-cognito-auth-1.0.2/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ ├── +++ streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: streamlit-cognito-auth
+│ │ -Version: 1.0.2
+│ │ +Version: 1.1.0
+│ │  Summary: A Streamlit component for authenticating users with AWS Cognito
+│ │  Home-page: https://github.com/pop-srw/streamlit-cognito-auth
+│ │  Author: Sarawin Khemmachotikun
+│ │  Author-email: khemmachotikun.s@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -56,17 +56,17 @@
+│ │  ## Example
+│ │  
+│ │  You can find an example of how to use the package in the examples directory.
+│ │  
+│ │  To run the example file, you can use the following command, while replacing `your_pool_id`, `your_app_client_id` and `your_app_client_secret` with the actual values:
+│ │  
+│ │  ```sh
+│ │ -POOL_ID="your_pool_id"
+│ │ -APP_CLIENT_ID="your_app_client_id"
+│ │ -APP_CLIENT_SECRET="your_app_client_secret"
+│ │ +export POOL_ID="your_pool_id"
+│ │ +export APP_CLIENT_ID="your_app_client_id"
+│ │ +export APP_CLIENT_SECRET="your_app_client_secret"
+│ │  
+│ │  cd examples
+│ │  streamlit run example.py
+│ │  ```
+│ │  
+│ │  or in windows
