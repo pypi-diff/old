@@ -1,0 +1,79 @@
+# Comparing `tmp/bitcode-1.8.tar.gz` & `tmp/bitcode-1.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "bitcode-1.8.tar", max compression
++gzip compressed data, was "bitcode-1.9.tar", max compression
+```
+
+## Comparing `bitcode-1.8.tar` & `bitcode-1.9.tar`
+
+### file list
+
+```diff
+@@ -1,5 +1,5 @@
+--rw-r--r--   0        0        0      435 2023-04-06 09:56:26.573808 bitcode-1.8/README.md
+--rw-r--r--   0        0        0       29 2023-04-06 09:56:26.570474 bitcode-1.8/bitcode/__init__.py
+--rw-r--r--   0        0        0      848 2023-04-06 09:56:26.573808 bitcode-1.8/bitcode/console.py
+--rw-r--r--   0        0        0      351 2023-04-06 09:56:26.577141 bitcode-1.8/pyproject.toml
+--rw-r--r--   0        0        0     1151 1970-01-01 00:00:00.000000 bitcode-1.8/PKG-INFO
++-rw-r--r--   0        0        0      435 2023-04-06 10:01:05.642893 bitcode-1.9/README.md
++-rw-r--r--   0        0        0       29 2023-04-06 10:01:05.642893 bitcode-1.9/bitcode/__init__.py
++-rw-r--r--   0        0        0      999 2023-04-06 10:01:05.642893 bitcode-1.9/bitcode/console.py
++-rw-r--r--   0        0        0      351 2023-04-06 10:01:05.642893 bitcode-1.9/pyproject.toml
++-rw-r--r--   0        0        0     1151 1970-01-01 00:00:00.000000 bitcode-1.9/PKG-INFO
+```
+
+### Comparing `bitcode-1.8/bitcode/console.py` & `bitcode-1.9/bitcode/console.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -20,20 +20,24 @@
+ 	"""Clear the console"""
+ 	if os.name == "nt":
+ 		os.system("cls")
+ 	else:
+ 		os.system("clear")
+ 
+ def prompt(return_type=str):
++	"""Get user input"""
+ 	error = None
+ 	try:
+ 		return return_type(input())
+ 	except:
+ 		error = TypeError(f"console.prompt: cannot convert user input to {return_type}")
+ 	if error:
+ 		raise error
+ 
+ def get_width():
++	"""Get the width of the terminal"""
+ 	return os.get_terminal_size().columns
+ 
++#	"""Get the height of the terminal"""
+ def colour(ansi_colour):
++	"""Add an ansi-modifier / colour to the terminal"""
+ 	write(f"\u001b[{ansi_colour}m")
+```
+
+### Comparing `bitcode-1.8/PKG-INFO` & `bitcode-1.9/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: bitcode
+-Version: 1.8
++Version: 1.9
+ Summary: Bitcode - the ultimate library for everything Python
+ Home-page: http://123web.uk/bitpy
+ Author: Dylan Rogers
+ Author-email: opendylan@proton.me
+ Requires-Python: >=3,<4
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.4
+```
+

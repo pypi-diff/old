@@ -1,0 +1,290 @@
+# Comparing `tmp/slab-1.1.2.tar.gz` & `tmp/slab-1.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "slab-1.1.2.tar", last modified: Fri Feb 17 00:40:04 2023, max compression
++gzip compressed data, was "slab-1.1.3.tar", last modified: Thu Apr  6 09:58:08 2023, max compression
+```
+
+## Comparing `slab-1.1.2.tar` & `slab-1.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,28 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-17 00:40:04.049293 slab-1.1.2/
+--rw-r--r--   0 runner    (1001) docker     (123)     1075 2023-02-17 00:39:54.000000 slab-1.1.2/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      156 2023-02-17 00:39:54.000000 slab-1.1.2/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    14568 2023-02-17 00:40:04.049293 slab-1.1.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    14135 2023-02-17 00:39:54.000000 slab-1.1.2/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-17 00:40:04.049293 slab-1.1.2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1201 2023-02-17 00:39:54.000000 slab-1.1.2/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-17 00:40:04.045293 slab-1.1.2/slab/
+--rw-r--r--   0 runner    (1001) docker     (123)     1369 2023-02-17 00:39:54.000000 slab-1.1.2/slab/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28795 2023-02-17 00:39:54.000000 slab-1.1.2/slab/binaural.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-17 00:40:04.049293 slab-1.1.2/slab/data/
+--rw-r--r--   0 runner    (1001) docker     (123)   670746 2023-02-17 00:39:54.000000 slab-1.1.2/slab/data/mit_kemar_normal_pinna.bz2
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-17 00:40:04.049293 slab-1.1.2/slab/experiments/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-17 00:39:54.000000 slab-1.1.2/slab/experiments/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10724 2023-02-17 00:39:54.000000 slab-1.1.2/slab/experiments/motion_speed.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11346 2023-02-17 00:39:54.000000 slab-1.1.2/slab/experiments/room_voice_interference.py
+--rw-r--r--   0 runner    (1001) docker     (123)    29833 2023-02-17 00:39:54.000000 slab-1.1.2/slab/filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)    51148 2023-02-17 00:39:54.000000 slab-1.1.2/slab/hrtf.py
+--rw-r--r--   0 runner    (1001) docker     (123)    58181 2023-02-17 00:39:54.000000 slab-1.1.2/slab/psychoacoustics.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19767 2023-02-17 00:39:54.000000 slab-1.1.2/slab/signal.py
+--rw-r--r--   0 runner    (1001) docker     (123)    72600 2023-02-17 00:39:54.000000 slab-1.1.2/slab/sound.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-17 00:40:04.049293 slab-1.1.2/slab.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    14568 2023-02-17 00:40:03.000000 slab-1.1.2/slab.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      462 2023-02-17 00:40:04.000000 slab-1.1.2/slab.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-17 00:40:03.000000 slab-1.1.2/slab.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-17 00:40:03.000000 slab-1.1.2/slab.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)      190 2023-02-17 00:40:03.000000 slab-1.1.2/slab.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        5 2023-02-17 00:40:03.000000 slab-1.1.2/slab.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:58:08.539773 slab-1.1.3/
++-rw-r--r--   0 runner    (1001) docker     (123)     1075 2023-04-06 09:57:50.000000 slab-1.1.3/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      156 2023-04-06 09:57:50.000000 slab-1.1.3/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    14548 2023-04-06 09:58:08.535773 slab-1.1.3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    14135 2023-04-06 09:57:50.000000 slab-1.1.3/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 09:58:08.539773 slab-1.1.3/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1201 2023-04-06 09:57:50.000000 slab-1.1.3/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:58:08.531772 slab-1.1.3/slab/
++-rw-r--r--   0 runner    (1001) docker     (123)     1280 2023-04-06 09:57:50.000000 slab-1.1.3/slab/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28795 2023-04-06 09:57:50.000000 slab-1.1.3/slab/binaural.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:58:08.535773 slab-1.1.3/slab/data/
++-rw-r--r--   0 runner    (1001) docker     (123)   670746 2023-04-06 09:57:50.000000 slab-1.1.3/slab/data/mit_kemar_normal_pinna.bz2
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:58:08.535773 slab-1.1.3/slab/experiments/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 09:57:50.000000 slab-1.1.3/slab/experiments/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10724 2023-04-06 09:57:50.000000 slab-1.1.3/slab/experiments/motion_speed.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11346 2023-04-06 09:57:50.000000 slab-1.1.3/slab/experiments/room_voice_interference.py
++-rw-r--r--   0 runner    (1001) docker     (123)    29833 2023-04-06 09:57:50.000000 slab-1.1.3/slab/filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)    51148 2023-04-06 09:57:50.000000 slab-1.1.3/slab/hrtf.py
++-rw-r--r--   0 runner    (1001) docker     (123)    58181 2023-04-06 09:57:50.000000 slab-1.1.3/slab/psychoacoustics.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19767 2023-04-06 09:57:50.000000 slab-1.1.3/slab/signal.py
++-rw-r--r--   0 runner    (1001) docker     (123)    72711 2023-04-06 09:57:50.000000 slab-1.1.3/slab/sound.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:58:08.535773 slab-1.1.3/slab.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    14548 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      462 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 09:58:08.000000 slab-1.1.3/slab.egg-info/top_level.txt
+```
+
+### Comparing `slab-1.1.2/LICENSE` & `slab-1.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/PKG-INFO` & `slab-1.1.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ Metadata-Version: 2.1
+ Name: slab
+-Version: 1.1.2
++Version: 1.1.3
+ Summary: Tools for generating and manipulating digital signals, particularly sounds.
+ Home-page: http://github.com/DrMarc/slab.git
+ Author: Marc Schoenwiesner
+ Author-email: marc.schoenwiesner@gmail.com
+ License: MIT
+-Platform: UNKNOWN
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: testing
+ Provides-Extra: docs
+ Provides-Extra: hrtf
+ License-File: LICENSE
+ 
+@@ -229,9 +228,7 @@
+ 
+ License
+ -------
+ 
+ The project is licensed under the MIT license.
+ 
+ [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+-
+-
+```
+
+### Comparing `slab-1.1.2/README.md` & `slab-1.1.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/setup.py` & `slab-1.1.3/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/__init__.py` & `slab-1.1.3/slab/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,17 +1,12 @@
+ import sys
+ import os
+ import pathlib
+ 
+-__version__ = '1.1.2'
+-
+-if "JPY_PARENT_PID" in os.environ:
+-    in_notebook = True
+-else:
+-    in_notebook = False
++__version__ = '1.1.3'
+ 
+ sys.path.append('..\\')
+ 
+ from slab.hrtf import HRTF
+ from slab.psychoacoustics import *
+ from slab.binaural import Binaural
+ from slab.sound import Sound, set_default_level, set_calibration_intensity, get_calibration_intensity, calibrate
+```
+
+### Comparing `slab-1.1.2/slab/binaural.py` & `slab-1.1.3/slab/binaural.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/data/mit_kemar_normal_pinna.bz2` & `slab-1.1.3/slab/data/mit_kemar_normal_pinna.bz2`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/experiments/motion_speed.py` & `slab-1.1.3/slab/experiments/motion_speed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/experiments/room_voice_interference.py` & `slab-1.1.3/slab/experiments/room_voice_interference.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/filter.py` & `slab-1.1.3/slab/filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/hrtf.py` & `slab-1.1.3/slab/hrtf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/psychoacoustics.py` & `slab-1.1.3/slab/psychoacoustics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/signal.py` & `slab-1.1.3/slab/signal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `slab-1.1.2/slab/sound.py` & `slab-1.1.3/slab/sound.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -32,31 +32,28 @@
+ _system = platform.system()
+ if _system == 'Windows':
+     import winsound
+ 
+ import slab.signal
+ from slab.signal import Signal
+ from slab.filter import Filter
+-from slab import in_notebook
+-if in_notebook:
+-    from IPython.display import Audio, display
+ 
+ _tmpdir = pathlib.Path(tempfile.gettempdir())  # get a temporary directory for writing intermediate files
+ _calibration_intensity = 0  # difference between rms intensity and measured output intensity in dB
+ _default_level = 70  # the default level for generated Sounds in dB
++_in_notebook = False # are we in a Jupiter notebook (then use IPython object to play audio)
+ 
+ def set_default_level(level):
+     global _default_level
+     _default_level = level
+ 
+ def set_calibration_intensity(intensity):
+     global _calibration_intensity
+     _calibration_intensity = intensity
+ 
+-
+ def get_calibration_intensity():
+     global _calibration_intensity
+     return _calibration_intensity
+ 
+ 
+ class Sound(Signal):
+     """
+@@ -939,15 +936,16 @@
+ 
+     def play(self):
+         """
+         Plays the sound through the default device. If the soundcard module is installed it is used
+         to play the sound. Otherwise the sound is saved as .wav to a temporary directory and is played via the
+         `play_file` method.
+         """
+-        if in_notebook:
++        if _in_notebook:
++            from IPython.display import Audio, display
+             display(Audio(self.data.T, rate=self.samplerate, autoplay=True))
+         elif soundcard is not False:
+             soundcard.default_speaker().play(self.data, samplerate=self.samplerate)
+         else:
+             filename = hashlib.sha256(self.data).hexdigest() + '.wav'  # make unique name
+             filename = _tmpdir / filename
+             if not filename.is_file():
+@@ -960,15 +958,16 @@
+         Play a .wav file using the OS-specific mechanism for Windows, Linux or Mac.
+ 
+         Arguments:
+              filename (str | pathlib.Path): full path to the .wav file to be played.
+         """
+         if isinstance(filename, pathlib.Path):
+             filename = str(filename)
+-        if in_notebook:
++        if _in_notebook:
++            from IPython.display import Audio, display
+             display(Audio(filename, autoplay=True))
+         elif _system == 'Windows':
+             winsound.PlaySound(filename, winsound.SND_FILENAME)
+         elif _system == 'Darwin':  # MacOS
+             subprocess.call(['afplay', filename], stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+         else:  # Linux
+             try:
+```
+
+### Comparing `slab-1.1.2/slab.egg-info/PKG-INFO` & `slab-1.1.3/slab.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ Metadata-Version: 2.1
+ Name: slab
+-Version: 1.1.2
++Version: 1.1.3
+ Summary: Tools for generating and manipulating digital signals, particularly sounds.
+ Home-page: http://github.com/DrMarc/slab.git
+ Author: Marc Schoenwiesner
+ Author-email: marc.schoenwiesner@gmail.com
+ License: MIT
+-Platform: UNKNOWN
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: testing
+ Provides-Extra: docs
+ Provides-Extra: hrtf
+ License-File: LICENSE
+ 
+@@ -229,9 +228,7 @@
+ 
+ License
+ -------
+ 
+ The project is licensed under the MIT license.
+ 
+ [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+-
+-
+```
+

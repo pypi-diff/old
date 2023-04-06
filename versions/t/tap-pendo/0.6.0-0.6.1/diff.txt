@@ -1,0 +1,371 @@
+--- tmp/tap-pendo-0.6.0.tar.gz
++++ tmp/tap-pendo-0.6.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "tap-pendo-0.6.0.tar", last modified: Thu Mar 30 18:49:47 2023, max compression
+│ +gzip compressed data, was "tap-pendo-0.6.1.tar", last modified: Thu Apr  6 10:00:10 2023, max compression
+│   --- tap-pendo-0.6.0.tar
+├── +++ tap-pendo-0.6.1.tar
+│ ├── file list
+│ │ @@ -1,38 +1,38 @@
+│ │ -drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 18:49:47.823228 tap-pendo-0.6.0/
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    32387 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/LICENSE
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       89 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/MANIFEST.in
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      280 2023-03-30 18:49:47.823228 tap-pendo-0.6.0/PKG-INFO
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    15851 2023-03-30 17:56:26.000000 tap-pendo-0.6.0/README.md
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       79 2023-03-30 18:49:47.823228 tap-pendo-0.6.0/setup.cfg
+│ │ --rwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)      916 2023-03-30 17:56:26.000000 tap-pendo-0.6.0/setup.py
+│ │ -drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 18:49:47.819228 tap-pendo-0.6.0/tap_pendo/
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5901 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/__init__.py
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5091 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/discover.py
+│ │ -drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 18:49:47.823228 tap-pendo-0.6.0/tap_pendo/schemas/
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      922 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/accounts.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      987 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/events.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      838 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/feature_events.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4166 2023-03-29 11:36:05.000000 tap-pendo-0.6.0/tap_pendo/schemas/features.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1598 2023-03-29 11:36:27.000000 tap-pendo-0.6.0/tap_pendo/schemas/guide_events.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5944 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/guides.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      530 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/metadata_accounts.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1087 2023-03-29 11:36:05.000000 tap-pendo-0.6.0/tap_pendo/schemas/metadata_visitors.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      923 2023-03-29 11:36:27.000000 tap-pendo-0.6.0/tap_pendo/schemas/page_events.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/pages.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1330 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/poll_events.json
+│ │ -drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 18:49:47.823228 tap-pendo-0.6.0/tap_pendo/schemas/shared/
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      684 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/shared/metadata.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1258 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/track_events.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2327 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/track_types.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1262 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/visitor_history.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1931 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/schemas/visitors.json
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    57483 2023-03-30 17:56:26.000000 tap-pendo-0.6.0/tap_pendo/streams.py
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4201 2023-03-30 17:56:26.000000 tap-pendo-0.6.0/tap_pendo/sync.py
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2439 2023-03-29 06:49:02.000000 tap-pendo-0.6.0/tap_pendo/utils.py
+│ │ -drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 18:49:47.819228 tap-pendo-0.6.0/tap_pendo.egg-info/
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      280 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      910 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       45 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      119 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/requires.txt
+│ │ --rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       10 2023-03-30 18:49:47.000000 tap-pendo-0.6.0/tap_pendo.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 10:00:10.365226 tap-pendo-0.6.1/
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    32387 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/LICENSE
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       89 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/MANIFEST.in
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      314 2023-04-06 10:00:10.365226 tap-pendo-0.6.1/PKG-INFO
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    15851 2023-03-30 16:00:02.000000 tap-pendo-0.6.1/README.md
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       79 2023-04-06 10:00:10.365226 tap-pendo-0.6.1/setup.cfg
+│ │ +-rwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)      916 2023-04-06 09:57:08.000000 tap-pendo-0.6.1/setup.py
+│ │ +drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 10:00:10.361226 tap-pendo-0.6.1/tap_pendo/
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5901 2023-03-27 07:58:13.000000 tap-pendo-0.6.1/tap_pendo/__init__.py
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5091 2023-03-29 08:01:30.000000 tap-pendo-0.6.1/tap_pendo/discover.py
+│ │ +drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 10:00:10.365226 tap-pendo-0.6.1/tap_pendo/schemas/
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      922 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/accounts.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      987 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/events.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      838 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/feature_events.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4166 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/features.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1598 2023-03-30 15:54:59.000000 tap-pendo-0.6.1/tap_pendo/schemas/guide_events.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5944 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/guides.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      530 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/metadata_accounts.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1087 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/metadata_visitors.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      923 2023-03-30 15:54:59.000000 tap-pendo-0.6.1/tap_pendo/schemas/page_events.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/pages.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1330 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/poll_events.json
+│ │ +drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 10:00:10.365226 tap-pendo-0.6.1/tap_pendo/schemas/shared/
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      684 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/shared/metadata.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1258 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/track_events.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2327 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/track_types.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1262 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/visitor_history.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1931 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/schemas/visitors.json
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    58754 2023-04-06 09:57:08.000000 tap-pendo-0.6.1/tap_pendo/streams.py
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4201 2023-04-04 11:36:09.000000 tap-pendo-0.6.1/tap_pendo/sync.py
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2439 2022-12-05 18:24:04.000000 tap-pendo-0.6.1/tap_pendo/utils.py
+│ │ +drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 10:00:10.361226 tap-pendo-0.6.1/tap_pendo.egg-info/
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      314 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      910 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       56 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      119 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       10 2023-04-06 10:00:10.000000 tap-pendo-0.6.1/tap_pendo.egg-info/top_level.txt
+│ │   --- tap-pendo-0.6.0/LICENSE
+│ ├── +++ tap-pendo-0.6.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/README.md
+│ ├── +++ tap-pendo-0.6.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/setup.py
+│ ├── +++ tap-pendo-0.6.1/setup.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  #!/usr/bin/env python
+│ │  from setuptools import setup
+│ │  
+│ │  setup(
+│ │      name="tap-pendo",
+│ │ -    version="0.6.0",
+│ │ +    version="0.6.1",
+│ │      description="Singer.io tap for extracting data",
+│ │      author="Stitch",
+│ │      url="https://github.com/singer-io/tap-pendo",
+│ │      classifiers=["Programming Language :: Python :: 3 :: Only"],
+│ │      py_modules=["tap_pendo"],
+│ │      install_requires=[
+│ │          'singer-python==5.13.0',
+│ │   --- tap-pendo-0.6.0/tap_pendo/__init__.py
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/discover.py
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/discover.py
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/accounts.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/accounts.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/feature_events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/feature_events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/features.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/features.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/guide_events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/guide_events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/guides.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/guides.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/metadata_accounts.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/metadata_accounts.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/metadata_visitors.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/metadata_visitors.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/page_events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/page_events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/pages.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/pages.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/poll_events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/poll_events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/shared/metadata.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/shared/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/track_events.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/track_events.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/track_types.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/track_types.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/visitor_history.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/visitor_history.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/schemas/visitors.json
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/schemas/visitors.json
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/streams.py
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/streams.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -145,14 +145,15 @@
+│ │      # initialized the endpoint attribute which can be overriden by child streams based on
+│ │      # the different parameters used by the stream.
+│ │      endpoint = Endpoints("/api/v1/aggregation", "POST")
+│ │  
+│ │      def __init__(self, config=None):
+│ │          self.config = config
+│ │          self.record_limit = self.get_default_record_limit()
+│ │ +        self.empty_replication_key_records = []
+│ │  
+│ │          # If value is 0,"0", "" or None then it will set default to default to 300.0 seconds if not passed in config.
+│ │          config_request_timeout = self.config.get('request_timeout')
+│ │          if config_request_timeout and float(config_request_timeout) > 0:
+│ │              self.request_timeout = float(config_request_timeout)
+│ │          else:
+│ │              self.request_timeout = REQUEST_TIMEOUT
+│ │ @@ -545,37 +546,58 @@
+│ │  
+│ │          # non-event based streams don't have filter parameter applied
+│ │          if filter_index:
+│ │              body['request']['pipeline'][filter_index]['filter'] = f'{replication_key}>={replication_key_value or start_time}'
+│ │  
+│ │          return body
+│ │  
+│ │ +    def get_replication_key_value(self, record):
+│ │ +        """Returns the replication key value stored in the record"""
+│ │ +        if isinstance(self, Accounts):
+│ │ +            return record['metadata']['auto']['lastupdated']
+│ │ +
+│ │ +        decamelized_replication_key = humps.decamelize(self.replication_key)
+│ │ +        return record.get(decamelized_replication_key)
+│ │ +
+│ │ +    def remove_empty_replication_key_records(self, records):
+│ │ +        """Removes the none replication_value records to avoid duplicates records"""
+│ │ +        if len(records) > 0:
+│ │ +            for index in range(len(records)-1, -1, -1):
+│ │ +                if self.get_replication_key_value(records[index]):
+│ │ +                    continue
+│ │ +
+│ │ +                last_record = records.pop(index)
+│ │ +                if last_record not in self.empty_replication_key_records:
+│ │ +                    # add removed records to be synced at the end
+│ │ +                    self.empty_replication_key_records.append(last_record)
+│ │ +
+│ │      def remove_last_timestamp_records(self, records):
+│ │          """Removes the overlapping records with last timestamp value. This avoids possibilty of duplicates"""
+│ │          last_processed = []
+│ │ -        decamalized_replication_key = humps.decamelize(self.replication_key)
+│ │  
+│ │          if len(records) > 0:
+│ │ -            if isinstance(self, Accounts):
+│ │ -                timestamp = records[-1]['metadata']['auto']['lastupdated']
+│ │ -                while records and timestamp == records[-1]['metadata']['auto']['lastupdated']:
+│ │ -                    last_processed.append(records.pop())
+│ │ -            else:
+│ │ -                timestamp = records[-1].get(decamalized_replication_key)
+│ │ -                while records and timestamp == records[-1].get(decamalized_replication_key):
+│ │ -                    last_processed.append(records.pop())
+│ │ +            if records and self.last_processed:
+│ │ +                # Previously removed records get duplicated in subsequent api response which needs to be removed
+│ │ +                records = [record for record in records if self.get_replication_key_value(
+│ │ +                    record) >= self.get_replication_key_value(self.last_processed[0])]
+│ │ +
+│ │ +            if records:
+│ │ +                timestamp = self.get_replication_key_value(records[-1])
+│ │ +                while records and timestamp == self.get_replication_key_value(records[-1]):
+│ │ +                    last = records.pop()
+│ │ +                    last_processed.append(last)
+│ │  
+│ │          # This is a corner cases where all records in the set have same timestamp
+│ │          # This can occur if record limit is set very smaller compared to the max record limit
+│ │          # In this case we will try to set record limit to max limit to make it harder to run into this issue
+│ │          # But still can't completely dismiss the minor possibility of this issue occurring
+│ │          if len(records) == 0 or not last_processed:
+│ │              self.record_limit = API_RECORD_LIMIT
+│ │  
+│ │ -        return last_processed
+│ │ +        return records, last_processed
+│ │  
+│ │      def get_first_parameter_value(self, body):
+│ │          return body['request']['pipeline'][0]['source']['timeSeries'].get('first', 0)
+│ │  
+│ │      def set_time_series_first(self, body, records, first=None):
+│ │          """Sets the timeSeries 'first' parameter in request body"""
+│ │          if len(records) > 1:
+│ │ @@ -596,44 +618,36 @@
+│ │          if STREAMS.get(SUB_STREAMS.get(self.name)):
+│ │              sub_stream = STREAMS.get(SUB_STREAMS.get(self.name))(self.config)
+│ │          else:
+│ │              sub_stream = None
+│ │  
+│ │          # If last processed records exists, then set first to timestamp of first record
+│ │          if self.last_processed:
+│ │ -            first = self.last_processed[0][humps.decamelize(self.replication_key)]
+│ │ +            first = self.get_replication_key_value(self.last_processed[0])
+│ │          else:
+│ │              first = int(start_date.timestamp()) * 1000
+│ │  
+│ │          # Setup body for first request
+│ │          body = self.get_body()
+│ │          self.set_request_body_filters(body, first, [])
+│ │  
+│ │          stream_records = []
+│ │          loop_for_records = False
+│ │          while True:
+│ │              # Loop breaks when paged response returns lesser records than set record limit
+│ │              records = self.request(self.name, json=body).get('results') or []
+│ │  
+│ │ -            # Set first and filters for next request
+│ │ -            self.set_request_body_filters(
+│ │ -                body,
+│ │ -                first,
+│ │ -                records)
+│ │ -
+│ │              if len(records) > 1:
+│ │ -                # Previously removed records get duplicated in subsequent api response which needs to be removed
+│ │ -                if self.last_processed:
+│ │ -                    decamelized_replication_key = humps.decamelize(self.replication_key)
+│ │ -                    records = [record for record in records if record.get(
+│ │ -                        decamelized_replication_key) >= self.last_processed[0].get(decamelized_replication_key)]
+│ │ -
+│ │ -                removed_records = self.remove_last_timestamp_records(records)
+│ │ +                self.remove_empty_replication_key_records(records)
+│ │ +                records, removed_records = self.remove_last_timestamp_records(records)
+│ │                  stream_records += records
+│ │  
+│ │ +                # Set first and filters for next request
+│ │ +                self.set_request_body_filters(body, first, records)
+│ │ +
+│ │                  if self.last_processed == removed_records:
+│ │                      stream_records += removed_records
+│ │                      self.last_processed = None
+│ │                      break
+│ │  
+│ │                  self.last_processed = removed_records
+│ │  
+│ │ @@ -647,14 +661,20 @@
+│ │              if len(stream_records) >= self.record_limit:
+│ │                  loop_for_records = True
+│ │                  break
+│ │  
+│ │          # These is a corner cases where this limit may get changed so reseeting it before next iteration
+│ │          self.record_limit = self.get_default_record_limit()
+│ │  
+│ │ +        if not loop_for_records:
+│ │ +            # Add none replication_value records into records with valid replication_value
+│ │ +            # before syncing the sud-stream records
+│ │ +            stream_records.extend(self.empty_replication_key_records)
+│ │ +            self.empty_replication_key_records = []
+│ │ +
+│ │          # Sync substream if the current stream has sub-stream and selected in the catalog
+│ │          if stream_records and sub_stream and sub_stream.is_selected():
+│ │              self.sync_substream(state, self, sub_stream, stream_records)
+│ │  
+│ │          update_currently_syncing(state, None)
+│ │          return (self.stream, stream_records), loop_for_records
+│ │  
+│ │ @@ -803,15 +823,17 @@
+│ │              if len(records) > 1:
+│ │                  if len(records) < self.record_limit:
+│ │                      # If response returns less records than record limit means there are no more records to sync
+│ │                      events += records
+│ │                      self.last_processed = None
+│ │                      break
+│ │  
+│ │ -                removed_records = self.remove_last_timestamp_records(records)
+│ │ +                # Remove last processed and none replication_value records
+│ │ +                self.remove_empty_replication_key_records(records)
+│ │ +                records, removed_records = self.remove_last_timestamp_records(records)
+│ │                  if len(records) > 0:
+│ │                      events += records
+│ │  
+│ │                      if self.last_processed == removed_records:
+│ │                          events += removed_records
+│ │                          self.last_processed = None
+│ │                          break
+│ │ @@ -840,14 +862,18 @@
+│ │              # Set the last processed records to ressume the extraction
+│ │              if len(events) >= self.record_limit:
+│ │                  return (self.stream, events), True
+│ │  
+│ │          # These is a corner cases where this limit may get changed so reseeting it before next iteration
+│ │          self.record_limit = self.get_default_record_limit()
+│ │  
+│ │ +        # Add none replication_value records into records with valid replication_value
+│ │ +        events.extend(self.empty_replication_key_records)
+│ │ +        self.empty_replication_key_records = []
+│ │ +
+│ │          update_currently_syncing(state, None)
+│ │          return (self.stream, events), False
+│ │  
+│ │  
+│ │  class Accounts(Stream):
+│ │      name = "accounts"
+│ │      replication_method = "INCREMENTAL"
+│ │   --- tap-pendo-0.6.0/tap_pendo/sync.py
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/sync.py
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo/utils.py
+│ ├── +++ tap-pendo-0.6.1/tap_pendo/utils.py
+│ │┄ Files identical despite different names
+│ │   --- tap-pendo-0.6.0/tap_pendo.egg-info/SOURCES.txt
+│ ├── +++ tap-pendo-0.6.1/tap_pendo.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

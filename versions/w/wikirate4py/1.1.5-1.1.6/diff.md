@@ -1,0 +1,219 @@
+# Comparing `tmp/wikirate4py-1.1.5.tar.gz` & `tmp/wikirate4py-1.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "wikirate4py-1.1.5.tar", last modified: Thu Apr  6 09:45:24 2023, max compression
++gzip compressed data, was "wikirate4py-1.1.6.tar", last modified: Thu Apr  6 10:00:15 2023, max compression
+```
+
+## Comparing `wikirate4py-1.1.5.tar` & `wikirate4py-1.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:45:24.746026 wikirate4py-1.1.5/
+--rw-rw-rw-   0        0        0    35823 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/LICENSE
+--rw-rw-rw-   0        0        0     3721 2023-04-06 09:45:24.746026 wikirate4py-1.1.5/PKG-INFO
+--rw-rw-rw-   0        0        0     2485 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/README.rst
+--rw-rw-rw-   0        0        0       87 2023-04-06 09:45:24.747041 wikirate4py-1.1.5/setup.cfg
+--rw-rw-rw-   0        0        0     2190 2023-04-06 09:43:49.000000 wikirate4py-1.1.5/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:45:24.727647 wikirate4py-1.1.5/wikirate4py/
+--rw-rw-rw-   0        0        0     1124 2023-04-06 09:43:49.000000 wikirate4py-1.1.5/wikirate4py/__init__.py
+--rw-rw-rw-   0        0        0    62041 2023-04-06 09:41:08.000000 wikirate4py-1.1.5/wikirate4py/api.py
+--rw-rw-rw-   0        0        0      586 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/wikirate4py/cursor.py
+--rw-rw-rw-   0        0        0     1675 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/wikirate4py/exceptions.py
+--rw-rw-rw-   0        0        0      327 2023-04-06 09:40:13.000000 wikirate4py-1.1.5/wikirate4py/main.py
+--rw-rw-rw-   0        0        0      541 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/wikirate4py/mixins.py
+--rw-rw-rw-   0        0        0    18417 2023-04-05 10:25:18.000000 wikirate4py-1.1.5/wikirate4py/models.py
+--rw-rw-rw-   0        0        0     2154 2023-04-04 16:58:48.000000 wikirate4py-1.1.5/wikirate4py/new_metrics.py
+--rw-rw-rw-   0        0        0      859 2023-02-02 11:17:13.000000 wikirate4py-1.1.5/wikirate4py/utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:45:24.746026 wikirate4py-1.1.5/wikirate4py.egg-info/
+--rw-rw-rw-   0        0        0     3721 2023-04-06 09:45:24.000000 wikirate4py-1.1.5/wikirate4py.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      444 2023-04-06 09:45:24.000000 wikirate4py-1.1.5/wikirate4py.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 09:45:24.000000 wikirate4py-1.1.5/wikirate4py.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       74 2023-04-06 09:45:24.000000 wikirate4py-1.1.5/wikirate4py.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       12 2023-04-06 09:45:24.000000 wikirate4py-1.1.5/wikirate4py.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0        2 2023-02-03 19:11:20.000000 wikirate4py-1.1.5/wikirate4py.egg-info/zip-safe
++drwxrwxrwx   0        0        0        0 2023-04-06 10:00:15.160251 wikirate4py-1.1.6/
++-rw-rw-rw-   0        0        0    35823 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/LICENSE
++-rw-rw-rw-   0        0        0     3721 2023-04-06 10:00:15.160251 wikirate4py-1.1.6/PKG-INFO
++-rw-rw-rw-   0        0        0     2485 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/README.rst
++-rw-rw-rw-   0        0        0       87 2023-04-06 10:00:15.164273 wikirate4py-1.1.6/setup.cfg
++-rw-rw-rw-   0        0        0     2190 2023-04-06 09:58:29.000000 wikirate4py-1.1.6/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:00:15.143768 wikirate4py-1.1.6/wikirate4py/
++-rw-rw-rw-   0        0        0     1124 2023-04-06 09:58:29.000000 wikirate4py-1.1.6/wikirate4py/__init__.py
++-rw-rw-rw-   0        0        0    62018 2023-04-06 09:56:30.000000 wikirate4py-1.1.6/wikirate4py/api.py
++-rw-rw-rw-   0        0        0      586 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/wikirate4py/cursor.py
++-rw-rw-rw-   0        0        0     1675 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/wikirate4py/exceptions.py
++-rw-rw-rw-   0        0        0      327 2023-04-06 09:40:13.000000 wikirate4py-1.1.6/wikirate4py/main.py
++-rw-rw-rw-   0        0        0      541 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/wikirate4py/mixins.py
++-rw-rw-rw-   0        0        0    18417 2023-04-05 10:25:18.000000 wikirate4py-1.1.6/wikirate4py/models.py
++-rw-rw-rw-   0        0        0     2154 2023-04-04 16:58:48.000000 wikirate4py-1.1.6/wikirate4py/new_metrics.py
++-rw-rw-rw-   0        0        0      859 2023-02-02 11:17:13.000000 wikirate4py-1.1.6/wikirate4py/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:00:15.160251 wikirate4py-1.1.6/wikirate4py.egg-info/
++-rw-rw-rw-   0        0        0     3721 2023-04-06 10:00:15.000000 wikirate4py-1.1.6/wikirate4py.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      444 2023-04-06 10:00:15.000000 wikirate4py-1.1.6/wikirate4py.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 10:00:15.000000 wikirate4py-1.1.6/wikirate4py.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       74 2023-04-06 10:00:15.000000 wikirate4py-1.1.6/wikirate4py.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       12 2023-04-06 10:00:15.000000 wikirate4py-1.1.6/wikirate4py.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0        2 2023-02-03 19:11:20.000000 wikirate4py-1.1.6/wikirate4py.egg-info/zip-safe
+```
+
+### Comparing `wikirate4py-1.1.5/LICENSE` & `wikirate4py-1.1.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/PKG-INFO` & `wikirate4py-1.1.6/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ Metadata-Version: 2.1
+ Name: wikirate4py
+-Version: 1.1.5
++Version: 1.1.6
+ Summary: WikiRate for Python!
+ Home-page: https://github.com/wikirate/wikirate4py
+ Author: Vasiliki Gkatziaki
+ Author-email: vasso@wikirate.org
+ License: GPL-3.0
+-Download-URL: https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.5.tar.gz
++Download-URL: https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.6.tar.gz
+ Project-URL: Documentation, https://wikirate4py.readthedocs.io
+ Project-URL: Issue Tracker, https://github.com/wikirate4py/wikirate4py/issues
+ Project-URL: Source Code, https://github.com/wikirate4py/wikirate4py
+ Keywords: wikirate library
+ Platform: UNKNOWN
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Topic :: Software Development :: Libraries
+```
+
+### Comparing `wikirate4py-1.1.5/README.rst` & `wikirate4py-1.1.6/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/setup.py` & `wikirate4py-1.1.6/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+       version=version,
+       description='WikiRate for Python!',
+       long_description=readme,
+       url='https://github.com/wikirate/wikirate4py',
+       author='Vasiliki Gkatziaki',
+       author_email='vasso@wikirate.org',
+       license='GPL-3.0',
+-      download_url='https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.5.tar.gz',
++      download_url='https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.6.tar.gz',
+       packages=find_packages(exclude=["tests", "examples"]),
+       install_requires=[
+           "requests",
+           "html2text",
+           "pandas"
+       ],
+       project_urls={
+```
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/__init__.py` & `wikirate4py-1.1.6/wikirate4py/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ # wikirate4py
+ # Copyright 2021 Vasiliki Gkatziaki for WikiRate
+ # See LICENSE for details.
+ 
+ """
+ wikirate4py WikiRate API library
+ """
+-__version__ = '1.1.5'
++__version__ = '1.1.6'
+ __author__ = 'Vasiliki Gkatziaki'
+ __license__ = 'GPL-3.0'
+ 
+ from wikirate4py.api import API
+ from wikirate4py.cursor import Cursor
+ from wikirate4py.exceptions import (IllegalHttpMethod, WikiRate4PyException, HTTPException, BadRequestException,
+                                     UnauthorizedException, ForbiddenException, NotFoundException,
+```
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/api.py` & `wikirate4py-1.1.6/wikirate4py/api.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1074,15 +1074,14 @@
+             if arg is None:
+                 continue
+             if k not in optional_params:
+                 log.warning(f'Unexpected parameter: {k}')
+             else:
+                 params['card[subcards][+' + k + ']'] = str(arg)
+         log.debug("PARAMS: %r", params)
+-        print(params)
+ 
+         if isinstance(identifier, int):
+             return self.post("/update/~{0}".format(identifier), params)
+         else:
+             return self.post("/update/{0}".format(
+                 identifier.replace(',', ' ').replace('.', ' ').replace('/', ' ').replace('-', ' ').strip().replace(" ",
+                                                                                                                    "_")),
+```
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/cursor.py` & `wikirate4py-1.1.6/wikirate4py/cursor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/exceptions.py` & `wikirate4py-1.1.6/wikirate4py/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/mixins.py` & `wikirate4py-1.1.6/wikirate4py/mixins.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/models.py` & `wikirate4py-1.1.6/wikirate4py/models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/new_metrics.py` & `wikirate4py-1.1.6/wikirate4py/new_metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py/utils.py` & `wikirate4py-1.1.6/wikirate4py/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wikirate4py-1.1.5/wikirate4py.egg-info/PKG-INFO` & `wikirate4py-1.1.6/wikirate4py.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ Metadata-Version: 2.1
+ Name: wikirate4py
+-Version: 1.1.5
++Version: 1.1.6
+ Summary: WikiRate for Python!
+ Home-page: https://github.com/wikirate/wikirate4py
+ Author: Vasiliki Gkatziaki
+ Author-email: vasso@wikirate.org
+ License: GPL-3.0
+-Download-URL: https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.5.tar.gz
++Download-URL: https://github.com/wikirate/wikirate4py/archive/refs/tags/v1.1.6.tar.gz
+ Project-URL: Documentation, https://wikirate4py.readthedocs.io
+ Project-URL: Issue Tracker, https://github.com/wikirate4py/wikirate4py/issues
+ Project-URL: Source Code, https://github.com/wikirate4py/wikirate4py
+ Keywords: wikirate library
+ Platform: UNKNOWN
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Topic :: Software Development :: Libraries
+```
+
