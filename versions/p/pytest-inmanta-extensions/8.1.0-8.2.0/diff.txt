@@ -1,0 +1,162 @@
+--- tmp/pytest-inmanta-extensions-8.1.0.tar.gz
++++ tmp/pytest-inmanta-extensions-8.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pytest-inmanta-extensions-8.1.0.tar", last modified: Mon Feb  6 15:21:25 2023, max compression
+│ +gzip compressed data, was "pytest-inmanta-extensions-8.2.0.tar", last modified: Thu Feb  9 10:00:42 2023, max compression
+│   --- pytest-inmanta-extensions-8.1.0.tar
+├── +++ pytest-inmanta-extensions-8.2.0.tar
+│ ├── file list
+│ │ @@ -1,33 +1,33 @@
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.083616 pytest-inmanta-extensions-8.1.0/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      199 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/MANIFEST.in
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     1287 2023-02-06 15:21:25.083616 pytest-inmanta-extensions-8.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      467 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/README.md
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)       59 2023-02-06 15:21:25.084616 pytest-inmanta-extensions-8.1.0/setup.cfg
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     2481 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/setup.py
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.081616 pytest-inmanta-extensions-8.1.0/src/
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.082616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      627 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/__init__.py
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)    68061 2023-02-06 15:21:02.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/conftest.py
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.082616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.081616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.082616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     6223 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.chain
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     2069 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.crt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     3243 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     3243 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     1237 2023-02-06 15:21:02.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.crt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     1679 2023-02-06 15:21:02.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.open.key
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.082616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      980 2023-02-06 15:21:02.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/common.py
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.083616 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/simple_project/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      212 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/simple_project/main.cf
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      185 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/simple_project/project.yml
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      685 2023-02-06 15:19:08.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/plugin.py
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)    25435 2023-02-06 15:21:02.000000 pytest-inmanta-extensions-8.1.0/src/inmanta_tests/utils.py
+│ │ -drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-06 15:21:25.083616 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)     1287 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      882 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)        1 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)       55 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)      122 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/requires.txt
+│ │ --rw-rw-r--   0 jenkins    (989) jenkins    (987)       14 2023-02-06 15:21:25.000000 pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.246691 pytest-inmanta-extensions-8.2.0/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      199 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/MANIFEST.in
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     1287 2023-02-09 10:00:42.246691 pytest-inmanta-extensions-8.2.0/PKG-INFO
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      467 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/README.md
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)       59 2023-02-09 10:00:42.247691 pytest-inmanta-extensions-8.2.0/setup.cfg
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     2481 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/setup.py
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.244691 pytest-inmanta-extensions-8.2.0/src/
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.244691 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      627 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/__init__.py
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)    68061 2023-02-09 10:00:18.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/conftest.py
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.245690 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.243690 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.245690 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     6223 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.chain
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     2069 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.crt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     3243 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     3243 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     1237 2023-02-09 10:00:18.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.crt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     1679 2023-02-09 10:00:18.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.open.key
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.245690 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      980 2023-02-09 10:00:18.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/common.py
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.246691 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/simple_project/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      212 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/simple_project/main.cf
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      185 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/simple_project/project.yml
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      685 2023-02-09 09:57:10.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/plugin.py
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)    25435 2023-02-09 10:00:18.000000 pytest-inmanta-extensions-8.2.0/src/inmanta_tests/utils.py
+│ │ +drwxrwxr-x   0 jenkins    (989) jenkins    (987)        0 2023-02-09 10:00:42.246691 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)     1287 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      882 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)        1 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)       55 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)      122 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 jenkins    (989) jenkins    (987)       14 2023-02-09 10:00:42.000000 pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/top_level.txt
+│ │   --- pytest-inmanta-extensions-8.1.0/PKG-INFO
+│ ├── +++ pytest-inmanta-extensions-8.2.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pytest-inmanta-extensions
+│ │ -Version: 8.1.0
+│ │ +Version: 8.2.0
+│ │  Summary: Inmanta tests package
+│ │  Home-page: https://github.com/inmanta/inmanta
+│ │  Author: Inmanta
+│ │  Author-email: code@inmanta.com
+│ │  License: Apache Software License 2
+│ │  Project-URL: Bug Tracker, https://github.com/inmanta/inmanta-core/issues
+│ │  Keywords: pytest inmanta tests
+│ │   --- pytest-inmanta-extensions-8.1.0/setup.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/setup.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -15,15 +15,15 @@
+│ │  
+│ │      Contact: code@inmanta.com
+│ │  """
+│ │  from os import path
+│ │  
+│ │  from setuptools import find_namespace_packages, setup
+│ │  
+│ │ -version = "8.1.0"
+│ │ +version = "8.2.0"
+│ │  
+│ │  requires = [
+│ │      "asyncpg",
+│ │      "click",
+│ │      f"inmanta-core~={version}.dev",
+│ │      "pip2pi",
+│ │      "pyformance",
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/__init__.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/conftest.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.chain
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.chain
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.crt
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.crt
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.crt
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.crt
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.open.key
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.open.key
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/common.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/common.py
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/plugin.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/plugin.py
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/inmanta_tests/utils.py
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/inmanta_tests/utils.py
+│ │┄ Files identical despite different names
+│ │   --- pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pytest-inmanta-extensions
+│ │ -Version: 8.1.0
+│ │ +Version: 8.2.0
+│ │  Summary: Inmanta tests package
+│ │  Home-page: https://github.com/inmanta/inmanta
+│ │  Author: Inmanta
+│ │  Author-email: code@inmanta.com
+│ │  License: Apache Software License 2
+│ │  Project-URL: Bug Tracker, https://github.com/inmanta/inmanta-core/issues
+│ │  Keywords: pytest inmanta tests
+│ │   --- pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt
+│ ├── +++ pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

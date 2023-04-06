@@ -1,0 +1,3282 @@
+--- tmp/mango-agents-0.4.0.tar.gz
++++ tmp/mango-agents-1.0.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mango-agents-0.4.0.tar", last modified: Tue Nov 22 08:50:08 2022, max compression
+│ +gzip compressed data, was "mango-agents-1.0.0.tar", last modified: Thu Apr  6 08:12:11 2023, max compression
+│   --- mango-agents-0.4.0.tar
+├── +++ mango-agents-1.0.0.tar
+│ ├── file list
+│ │ @@ -1,39 +1,42 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.981757 mango-agents-0.4.0/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1067 2022-11-22 08:49:41.000000 mango-agents-0.4.0/LICENSE
+│ │ --rw-r--r--   0 root         (0) root         (0)      609 2022-11-22 08:50:08.981757 mango-agents-0.4.0/PKG-INFO
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.971757 mango-agents-0.4.0/mango/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       62 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.973757 mango-agents-0.4.0/mango/core/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/core/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    14979 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/core/agent.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    38537 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/core/container.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4603 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/core/container_protocols.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.974757 mango-agents-0.4.0/mango/messages/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/messages/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    11627 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/messages/acl_message_pb2.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    10751 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/messages/codecs.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     6006 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/messages/message.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2262 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/messages/other_proto_msgs_pb2.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.976757 mango-agents-0.4.0/mango/modules/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/modules/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2610 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/modules/base_module.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4166 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/modules/mqtt_module.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4093 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/modules/rabbit_module.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2829 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/modules/zero_module.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.977757 mango-agents-0.4.0/mango/role/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/role/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    13338 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/role/api.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    14248 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/role/core.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.979757 mango-agents-0.4.0/mango/util/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        0 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/util/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2331 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/util/clock.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    20421 2022-11-22 08:49:41.000000 mango-agents-0.4.0/mango/util/scheduling.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-22 08:50:08.981757 mango-agents-0.4.0/mango_agents.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)      609 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      782 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        6 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/namespace_packages.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       34 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        6 2022-11-22 08:50:08.000000 mango-agents-0.4.0/mango_agents.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2022-11-22 08:50:08.981757 mango-agents-0.4.0/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3885 2022-11-22 08:49:41.000000 mango-agents-0.4.0/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.353723 mango-agents-1.0.0/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1067 2023-04-06 08:11:42.000000 mango-agents-1.0.0/LICENSE
+│ │ +-rw-r--r--   0 root         (0) root         (0)     8272 2023-04-06 08:12:11.353723 mango-agents-1.0.0/PKG-INFO
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.340722 mango-agents-1.0.0/mango/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      141 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.341722 mango-agents-1.0.0/mango/agent/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/agent/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    17621 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/agent/core.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    15150 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/agent/role.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.344722 mango-agents-1.0.0/mango/container/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    10472 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/core.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     8977 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/factory.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     5557 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/mosaik.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    10900 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/mqtt.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4486 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/protocol.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4350 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/container/tcp.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.346722 mango-agents-1.0.0/mango/messages/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/messages/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    14633 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/messages/acl_message_pb2.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    10753 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/messages/codecs.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     6006 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/messages/message.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2686 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/messages/other_proto_msgs_pb2.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.348722 mango-agents-1.0.0/mango/modules/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/modules/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2590 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/modules/base_module.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4167 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/modules/mqtt_module.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4180 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/modules/rabbit_module.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2827 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/modules/zero_module.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.350722 mango-agents-1.0.0/mango/util/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/util/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2670 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/util/clock.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4199 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/util/distributed_clock.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    26401 2023-04-06 08:11:42.000000 mango-agents-1.0.0/mango/util/scheduling.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 08:12:11.352723 mango-agents-1.0.0/mango_agents.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     8272 2023-04-06 08:12:11.000000 mango-agents-1.0.0/mango_agents.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      852 2023-04-06 08:12:11.000000 mango-agents-1.0.0/mango_agents.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 08:12:11.000000 mango-agents-1.0.0/mango_agents.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       57 2023-04-06 08:12:11.000000 mango-agents-1.0.0/mango_agents.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        6 2023-04-06 08:12:11.000000 mango-agents-1.0.0/mango_agents.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 08:12:11.353723 mango-agents-1.0.0/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4079 2023-04-06 08:11:42.000000 mango-agents-1.0.0/setup.py
+│ │   --- mango-agents-0.4.0/LICENSE
+│ ├── +++ mango-agents-1.0.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mango-agents-0.4.0/mango/core/agent.py
+│ ├── +++ mango-agents-1.0.0/mango/agent/core.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -2,247 +2,393 @@
+│ │  This module implements the base class for agents (:class:`Agent`).
+│ │  
+│ │  Every agent must live in a container. Containers are responsible for making
+│ │   connections to other agents.
+│ │  """
+│ │  import asyncio
+│ │  import logging
+│ │ -import warnings
+│ │ -from abc import ABC, abstractmethod
+│ │ +from abc import ABC
+│ │  from datetime import datetime
+│ │  from typing import Any, Dict, Optional, Tuple, Union
+│ │ +
+│ │ +from ..container.core import Container
+│ │  from ..util.scheduling import ScheduledProcessTask, ScheduledTask, Scheduler
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │ -class Agent(ABC):
+│ │ -    """Base class for all agents."""
+│ │ -
+│ │ -    def __init__(self, container, suggested_aid: str = None):
+│ │ -        """Initialize an agent and register it with its container
+│ │ -        :param container: The container that the agent lives in. Must be a Container
+│ │ -        :param suggested_aid: (Optional) suggested aid, if the aid is already taken, a generated aid is used. 
+│ │ -                              Using the generated aid-style ("agentX") is not allowed.
+│ │ -        """
+│ │ -        # if not isinstance(container, mango.core.container.Container):
+│ │ -        #     raise TypeError('"container" must be a "Container" instance but '
+│ │ -        #                     'is {}'.format(container))
+│ │ -        aid = container._register_agent(self, suggested_aid=suggested_aid)
+│ │ -        self._container = container
+│ │ -        self._aid = aid
+│ │ -        self.inbox = asyncio.Queue()
+│ │ -        self._scheduler = Scheduler(clock=container.clock)
+│ │ -        self._check_inbox_task = asyncio.create_task(self._check_inbox())
+│ │ -        self._check_inbox_task.add_done_callback(self.raise_exceptions)
+│ │ -        self.stopped = asyncio.Future()
+│ │ -
+│ │ -        logger.info('Agent %s: start running in container %s', aid, container.addr)
+│ │ +class AgentContext:
+│ │ +    def __init__(self, container) -> None:
+│ │ +        self._container: Container = container
+│ │  
+│ │      @property
+│ │      def current_timestamp(self) -> float:
+│ │          """
+│ │          Method that returns the current unix timestamp given the clock within the container
+│ │          """
+│ │          return self._container.clock.time
+│ │  
+│ │ -    async def send_message(self,
+│ │ +    @property
+│ │ +    def addr(self):
+│ │ +        return self._container.addr
+│ │ +
+│ │ +    def register_agent(self, agent, suggested_aid):
+│ │ +        return self._container.register_agent(agent, suggested_aid=suggested_aid)
+│ │ +
+│ │ +    def deregister_agent(self, aid):
+│ │ +        if self._container.running:
+│ │ +            self._container.deregister_agent(aid)
+│ │ +
+│ │ +    async def send_message(
+│ │ +        self,
+│ │          content,
+│ │          receiver_addr: Union[str, Tuple[str, int]],
+│ │          receiver_id: Optional[str] = None,
+│ │ -        **kwargs):
+│ │ +        **kwargs,
+│ │ +    ):
+│ │          """
+│ │          See container.send_message(...)
+│ │          """
+│ │ -        return await self._container.send_message(content, receiver_addr=receiver_addr, receiver_id=receiver_id, **kwargs)
+│ │ +        return await self._container.send_message(
+│ │ +            content, receiver_addr=receiver_addr, receiver_id=receiver_id, **kwargs
+│ │ +        )
+│ │  
+│ │ -    async def send_acl_message(self,
+│ │ +    async def send_acl_message(
+│ │ +        self,
+│ │          content,
+│ │          receiver_addr: Union[str, Tuple[str, int]],
+│ │          receiver_id: Optional[str] = None,
+│ │          acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ -        **kwargs):
+│ │ +        **kwargs,
+│ │ +    ):
+│ │          """
+│ │          See container.send_acl_message(...)
+│ │          """
+│ │ -        return await self._container.send_acl_message(content, receiver_addr=receiver_addr, receiver_id=receiver_id, acl_metadata=acl_metadata, **kwargs)
+│ │ +        return await self._container.send_acl_message(
+│ │ +            content,
+│ │ +            receiver_addr=receiver_addr,
+│ │ +            receiver_id=receiver_id,
+│ │ +            acl_metadata=acl_metadata,
+│ │ +            **kwargs,
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +class AgentDelegates:
+│ │ +    def __init__(self, context, scheduler) -> None:
+│ │ +        self._context: AgentContext = context
+│ │ +        self._scheduler: Scheduler = scheduler
+│ │  
+│ │ -    def schedule_instant_message(self,
+│ │ +    async def send_message(
+│ │ +        self,
+│ │          content,
+│ │          receiver_addr: Union[str, Tuple[str, int]],
+│ │          receiver_id: Optional[str] = None,
+│ │ -        **kwargs):
+│ │ +        **kwargs,
+│ │ +    ):
+│ │ +        """
+│ │ +        See container.send_message(...)
+│ │ +        """
+│ │ +        return await self._context.send_message(
+│ │ +            content, receiver_addr=receiver_addr, receiver_id=receiver_id, **kwargs
+│ │ +        )
+│ │ +
+│ │ +    async def send_acl_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ +        **kwargs,
+│ │ +    ):
+│ │ +        """
+│ │ +        See container.send_acl_message(...)
+│ │ +        """
+│ │ +        return await self._context.send_acl_message(
+│ │ +            content,
+│ │ +            receiver_addr=receiver_addr,
+│ │ +            receiver_id=receiver_id,
+│ │ +            acl_metadata=acl_metadata,
+│ │ +            **kwargs,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_instant_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        **kwargs,
+│ │ +    ):
+│ │          """
+│ │          Schedules sending a message without any delay. This is equivalent to using the schedulers 'schedule_instant_task' with the coroutine created by
+│ │          'container.send_message'.
+│ │ -        
+│ │ +
+│ │          :param content: The content of the message
+│ │          :param receiver_addr: The address passed to the container
+│ │          :param receiver_id: The agent id of the receiver
+│ │ -        :param kwargs: Additional parameters to provide protocol specific settings 
+│ │ +        :param kwargs: Additional parameters to provide protocol specific settings
+│ │          :returns: asyncio.Task for the scheduled coroutine
+│ │          """
+│ │  
+│ │ -        return self.schedule_instant_task(self.send_message(content, receiver_addr=receiver_addr, receiver_id=receiver_id, **kwargs))
+│ │ -
+│ │ +        return self.schedule_instant_task(
+│ │ +            self.send_message(
+│ │ +                content, receiver_addr=receiver_addr, receiver_id=receiver_id, **kwargs
+│ │ +            )
+│ │ +        )
+│ │  
+│ │ -    def schedule_instant_acl_message(self,
+│ │ +    def schedule_instant_acl_message(
+│ │ +        self,
+│ │          content,
+│ │          receiver_addr: Union[str, Tuple[str, int]],
+│ │          receiver_id: Optional[str] = None,
+│ │          acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ -        **kwargs):
+│ │ +        **kwargs,
+│ │ +    ):
+│ │          """
+│ │          Schedules sending an acl message without any delay. This is equivalent to using the schedulers 'schedule_instant_task' with the coroutine created by
+│ │          'container.send_acl_message'.
+│ │ -        
+│ │ +
+│ │          :param content: The content of the message
+│ │          :param receiver_addr: The address passed to the container
+│ │          :param receiver_id: The agent id of the receiver
+│ │          :param acl_metadata: Metadata for the acl message
+│ │ -        :param kwargs: Additional parameters to provide protocol specific settings 
+│ │ +        :param kwargs: Additional parameters to provide protocol specific settings
+│ │          :returns: asyncio.Task for the scheduled coroutine
+│ │          """
+│ │  
+│ │ -        return self.schedule_instant_task(self.send_acl_message(content, receiver_addr=receiver_addr, receiver_id=receiver_id, acl_metadata=acl_metadata, **kwargs))
+│ │ -
+│ │ -    def schedule_conditional_process_task(self, coroutine_creator, condition_func, lookup_delay=0.1, src=None):
+│ │ +        return self.schedule_instant_task(
+│ │ +            self.send_acl_message(
+│ │ +                content,
+│ │ +                receiver_addr=receiver_addr,
+│ │ +                receiver_id=receiver_id,
+│ │ +                acl_metadata=acl_metadata,
+│ │ +                **kwargs,
+│ │ +            )
+│ │ +        )
+│ │ +
+│ │ +    def schedule_conditional_process_task(
+│ │ +        self,
+│ │ +        coroutine_creator,
+│ │ +        condition_func,
+│ │ +        lookup_delay=0.1,
+│ │ +        on_stop=None,
+│ │ +        src=None,
+│ │ +    ):
+│ │          """Schedule a process task when a specified condition is met.
+│ │  
+│ │          :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │          :type coroutine_creator: coroutine_creator
+│ │          :param condition_func: function for determining whether the confition is fullfiled
+│ │          :type condition_func: lambda () -> bool
+│ │          :param lookup_delay: delay between checking the condition
+│ │          :type lookup_delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │          return self._scheduler.schedule_conditional_process_task(
+│ │ -            coroutine_creator=coroutine_creator, condition_func=condition_func, lookup_delay=lookup_delay, src=src)
+│ │ -
+│ │ -    def schedule_conditional_task(self, coroutine, condition_func, lookup_delay=0.1, src=None):
+│ │ +            coroutine_creator=coroutine_creator,
+│ │ +            condition_func=condition_func,
+│ │ +            lookup_delay=lookup_delay,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_conditional_task(
+│ │ +        self, coroutine, condition_func, lookup_delay=0.1, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule a task when a specified condition is met.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param condition_func: function for determining whether the confition is fullfiled
+│ │          :type condition_func: lambda () -> bool
+│ │          :param lookup_delay: delay between checking the condition
+│ │          :type lookup_delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_conditional_task(coroutine=coroutine, condition_func=condition_func,
+│ │ -                                                         lookup_delay=lookup_delay, src=src)
+│ │ -
+│ │ -    def schedule_datetime_process_task(self, coroutine_creator, date_time: datetime, src=None):
+│ │ +        return self._scheduler.schedule_conditional_task(
+│ │ +            coroutine=coroutine,
+│ │ +            condition_func=condition_func,
+│ │ +            lookup_delay=lookup_delay,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_datetime_process_task(
+│ │ +        self, coroutine_creator, date_time: datetime, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule a task at specified datetime in another process.
+│ │  
+│ │          :param coroutine_creator: coroutine_creator creating couroutine to be scheduled
+│ │          :type coroutine_creator: Coroutine-creator
+│ │          :param date_time: datetime defining when the task should start
+│ │          :type date_time: datetime
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_datetime_process_task(coroutine_creator=coroutine_creator,
+│ │ -                                                              date_time=date_time, src=src)
+│ │ -
+│ │ -    def schedule_datetime_task(self, coroutine, date_time: datetime, src=None):
+│ │ +        return self._scheduler.schedule_datetime_process_task(
+│ │ +            coroutine_creator=coroutine_creator,
+│ │ +            date_time=date_time,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_datetime_task(
+│ │ +        self, coroutine, date_time: datetime, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule a task at specified datetime.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param date_time: datetime defining when the task should start
+│ │          :type date_time: datetime
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_datetime_task(coroutine=coroutine, date_time=date_time, src=src)
+│ │ -
+│ │ -    def schedule_timestamp_task(self, coroutine, timestamp: float, src=None):
+│ │ -        """Schedule a task at specified timestamp.
+│ │ +        return self._scheduler.schedule_datetime_task(
+│ │ +            coroutine=coroutine, date_time=date_time, on_stop=on_stop, src=src
+│ │ +        )
+│ │ +
+│ │ +    def schedule_timestamp_task(
+│ │ +        self, coroutine, timestamp: float, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task at specified  unix timestamp.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param timestamp: timestamp defining when the task should start
+│ │          :type timestamp: timestamp
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_timestamp_task(coroutine=coroutine, timestamp=timestamp, src=src)
+│ │ -
+│ │ -    def schedule_timestamp_process_task(self, coroutine_creator, timestamp: float, src=None):
+│ │ -        """Schedule a task at specified datetime dispatched to another process.
+│ │ +        return self._scheduler.schedule_timestamp_task(
+│ │ +            coroutine=coroutine, timestamp=timestamp, on_stop=on_stop, src=src
+│ │ +        )
+│ │ +
+│ │ +    def schedule_timestamp_process_task(
+│ │ +        self, coroutine_creator, timestamp: float, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task at specified unix timestamp dispatched to another process.
+│ │  
+│ │          :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │          :type coroutine_creator: coroutine_creator
+│ │          :param timestamp: unix timestamp defining when the task should start
+│ │          :type timestamp: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │          return self._scheduler.schedule_timestamp_process_task(
+│ │ -            coroutine_creator=coroutine_creator, timestamp=timestamp, src=src)
+│ │ -
+│ │ -    def schedule_periodic_process_task(self, coroutine_creator, delay, src = None):
+│ │ +            coroutine_creator=coroutine_creator,
+│ │ +            timestamp=timestamp,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_periodic_process_task(
+│ │ +        self, coroutine_creator, delay, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule an open end periodically executed task in another process.
+│ │  
+│ │          :param coroutine_creator: coroutine function creating coros to be scheduled
+│ │          :type coroutine_creator:  Coroutine Function
+│ │          :param delay: delay in between the cycles
+│ │ -        :type dealy: float
+│ │ +        :type delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_periodic_process_task(coroutine_creator=coroutine_creator, delay=delay, src=src)
+│ │ +        return self._scheduler.schedule_periodic_process_task(
+│ │ +            coroutine_creator=coroutine_creator, delay=delay, on_stop=on_stop, src=src
+│ │ +        )
+│ │  
+│ │ -    def schedule_periodic_task(self, coroutine_func, delay, src = None):
+│ │ +    def schedule_periodic_task(self, coroutine_func, delay, on_stop=None, src=None):
+│ │          """Schedule an open end peridocally executed task.
+│ │  
+│ │          :param coroutine_func: coroutine function creating coros to be scheduled
+│ │          :type coroutine_func:  Coroutine Function
+│ │          :param delay: delay in between the cycles
+│ │ -        :type dealy: float
+│ │ +        :type delay: float
+│ │ +        :param src: creator of the task
+│ │ +        :type src: Object
+│ │ +        """
+│ │ +        return self._scheduler.schedule_periodic_task(
+│ │ +            coroutine_func=coroutine_func, delay=delay, on_stop=on_stop, src=src
+│ │ +        )
+│ │ +
+│ │ +    def schedule_recurrent_process_task(
+│ │ +        self, coroutine_creator, recurrency, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task using a fine-grained recurrency rule in another process.
+│ │ +
+│ │ +        :param coroutine_creator: coroutine function creating coros to be scheduled
+│ │ +        :type coroutine_creator:  Coroutine Function
+│ │ +        :param recurrency: recurrency rule to calculate next event
+│ │ +        :type recurrency: dateutil.rrule.rrule
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_periodic_task(coroutine_func=coroutine_func, delay=delay, src=src)
+│ │ +        return self._scheduler.schedule_recurrent_process_task(
+│ │ +            coroutine_creator=coroutine_creator,
+│ │ +            recurrency=recurrency,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_recurrent_task(
+│ │ +        self, coroutine_func, recurrency, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task using a fine-grained recurrency rule in another process.
+│ │  
+│ │ -    def schedule_instant_process_task(self, coroutine_creator, src = None):
+│ │ +        :param coroutine_creator: coroutine function creating coros to be scheduled
+│ │ +        :type coroutine_creator:  Coroutine Function
+│ │ +        :param recurrency: recurrency rule to calculate next event
+│ │ +        :type recurrency: dateutil.rrule.rrule
+│ │ +        :param src: creator of the task
+│ │ +        :type src: Object
+│ │ +        """
+│ │ +        return self._scheduler.schedule_recurrent_task(
+│ │ +            coroutine_func=coroutine_func,
+│ │ +            recurrency=recurrency,
+│ │ +            on_stop=on_stop,
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_instant_process_task(self, coroutine_creator, on_stop=None, src=None):
+│ │          """Schedule an instantly executed task in another processes.
+│ │  
+│ │          :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │ -        :type coroutine_creator: 
+│ │ +        :type coroutine_creator:
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_instant_process_task(coroutine_creator=coroutine_creator, src=src)
+│ │ +        return self._scheduler.schedule_instant_process_task(
+│ │ +            coroutine_creator=coroutine_creator, on_stop=on_stop, src=src
+│ │ +        )
+│ │  
+│ │ -    def schedule_instant_task(self, coroutine, src=None):
+│ │ +    def schedule_instant_task(self, coroutine, on_stop=None, src=None):
+│ │          """Schedule an instantly executed task.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │ -        :type coroutine: 
+│ │ +        :type coroutine:
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self._scheduler.schedule_instant_task(coroutine=coroutine, src=src)
+│ │ +        return self._scheduler.schedule_instant_task(
+│ │ +            coroutine=coroutine, on_stop=on_stop, src=src
+│ │ +        )
+│ │  
+│ │ -    def schedule_process_task(self, task: ScheduledProcessTask, src = None):
+│ │ +    def schedule_process_task(self, task: ScheduledProcessTask, src=None):
+│ │          """Schedule a task with asyncio in another process. When the task is finished, if finite, its automatically
+│ │          removed afterwards. For scheduling options see the subclasses of ScheduledScheduledProcessTaskTask.
+│ │  
+│ │          :param task: task to be scheduled
+│ │          :param src: object, which represents the source of the task (for example the object in which the task got created)
+│ │          """
+│ │          return self._scheduler.schedule_process_task(task, src=src)
+│ │  
+│ │ -    def schedule_task(self, task: ScheduledTask, src = None):
+│ │ +    def schedule_task(self, task: ScheduledTask, src=None):
+│ │          """Schedule a task with asyncio. When the task is finished, if finite, its automatically
+│ │          removed afterwards. For scheduling options see the subclasses of ScheduledTask.
+│ │  
+│ │          :param task: task to be scheduled
+│ │          :param src: object, which represents the source of the task (for example the object in which the task got created)
+│ │          """
+│ │          return self._scheduler.schedule_task(task, src=src)
+│ │ @@ -250,46 +396,62 @@
+│ │      async def tasks_complete(self, timeout=1):
+│ │          """Wait for all scheduled tasks to complete using a timeout.
+│ │  
+│ │          :param timeout: waiting timeout. Defaults to 1.
+│ │          """
+│ │          await self._scheduler.tasks_complete(timeout=timeout)
+│ │  
+│ │ +
+│ │ +class Agent(ABC, AgentDelegates):
+│ │ +    """Base class for all agents."""
+│ │ +
+│ │ +    def __init__(self, container: Container, suggested_aid: str = None):
+│ │ +        """Initialize an agent and register it with its container
+│ │ +        :param container: The container that the agent lives in. Must be a Container
+│ │ +        :param suggested_aid: (Optional) suggested aid, if the aid is already taken, a generated aid is used.
+│ │ +                              Using the generated aid-style ("agentX") is not allowed.
+│ │ +        """
+│ │ +        scheduler = Scheduler(clock=container.clock)
+│ │ +        context = AgentContext(container)
+│ │ +        self.aid = context.register_agent(self, suggested_aid)
+│ │ +        self.inbox = asyncio.Queue()
+│ │ +
+│ │ +        super().__init__(context, scheduler)
+│ │ +
+│ │ +        self._check_inbox_task = asyncio.create_task(self._check_inbox())
+│ │ +        self._check_inbox_task.add_done_callback(self.raise_exceptions)
+│ │ +        self._stopped = asyncio.Future()
+│ │ +
+│ │ +        logger.info(f"Agent {self.aid}: start running in container {container.addr}")
+│ │ +
+│ │      def raise_exceptions(self, fut: asyncio.Future):
+│ │          """
+│ │          Inline function used as a callback to raise exceptions
+│ │          :param fut: The Future object of the task
+│ │          """
+│ │          if fut.exception() is not None:
+│ │ -            logger.error('Agent %s: Caught the following exception in _check_inbox: %s', self.aid, fut.exception())
+│ │ +            logger.error(
+│ │ +                f"Agent {self.aid}: Caught the following exception in _check_inbox: {fut.exception()}"
+│ │ +            )
+│ │              raise fut.exception()
+│ │  
+│ │ -    @property
+│ │ -    def aid(self):
+│ │ -        """Return the agents ID"""
+│ │ -        return self._aid
+│ │ -
+│ │      async def _check_inbox(self):
+│ │          """Task for waiting on new message in the inbox"""
+│ │  
+│ │ -        logger.debug('Agent %s: Start waiting for messages', self.aid)
+│ │ +        logger.debug(f"Agent {self.aid}: Start waiting for messages")
+│ │          while True:
+│ │              # run in infinite loop until it is cancelled from outside
+│ │              message = await self.inbox.get()
+│ │ -            logger.debug('Agent %s: Received message;%s}', self.aid, str(message))
+│ │ +            logger.debug(f"Agent {self.aid}: Received message;{message}")
+│ │  
+│ │              # message should be tuples of (priority, content, meta)
+│ │              priority, content, meta = message
+│ │ -            meta['priority'] = priority
+│ │ -            try:
+│ │ -                self.handle_message(content=content, meta=meta)
+│ │ -            except NotImplementedError:
+│ │ -                self.handle_msg(content=content, meta=meta)
+│ │ -                warnings.warn("The function handle_msg is renamed and is now called handle_message."
+│ │ -                              "The use of handle_msg will be removed in the next release.", DeprecationWarning)
+│ │ +            meta["priority"] = priority
+│ │ +            
+│ │ +            self.handle_message(content=content, meta=meta)
+│ │  
+│ │              # signal to the Queue that the message is handled
+│ │              self.inbox.task_done()
+│ │  
+│ │      def handle_message(self, content, meta: Dict[str, Any]):
+│ │          """
+│ │  
+│ │ @@ -297,42 +459,25 @@
+│ │          This method is called when a message is received at the agents inbox.
+│ │          :param content: The deserialized message object
+│ │          :param meta: Meta details of the message. In case of mqtt this dict
+│ │          includes at least the field 'topic'
+│ │          """
+│ │          raise NotImplementedError
+│ │  
+│ │ -    def handle_msg(self, content, meta: Dict[str, Any]):
+│ │ -        """
+│ │ -        .. deprecated:: 0.4.0
+│ │ -            Use 'agent.handle_message' instead. In the next version this method
+│ │ -            will be dropped entirely, and it will be mandatory to overwrite handle_message.
+│ │ -
+│ │ -        This method is called when a message is received.
+│ │ -        This is a blocking call, if non-blocking message handling is desired,
+│ │ -        one should call asyncio.create_task() in order to handle more than
+│ │ -        one message at a time
+│ │ -        :param content: The deserialized message object
+│ │ -        :param meta: Meta details of the message. In case of mqtt this dict
+│ │ -        includes at least the field 'topic'
+│ │ -        """
+│ │ -        raise NotImplementedError
+│ │ -
+│ │      async def shutdown(self):
+│ │          """Shutdown all tasks that are running
+│ │ -         and deregister from the container"""
+│ │ +        and deregister from the container"""
+│ │  
+│ │ -        if not self.stopped.done():
+│ │ -            self.stopped.set_result(True)
+│ │ -        if self._container.running:
+│ │ -            self._container.deregister_agent(self._aid)
+│ │ +        if not self._stopped.done():
+│ │ +            self._stopped.set_result(True)
+│ │ +        self._context.deregister_agent(self.aid)
+│ │          try:
+│ │              # Shutdown reactive inbox task
+│ │              self._check_inbox_task.remove_done_callback(self.raise_exceptions)
+│ │              self._check_inbox_task.cancel()
+│ │              await self._check_inbox_task
+│ │  
+│ │              await self._scheduler.stop()
+│ │          except asyncio.CancelledError:
+│ │              pass
+│ │          finally:
+│ │ -            logger.info('Agent %s: Shutdown successful', self.aid)
+│ │ +            logger.info(f"Agent {self.aid}: Shutdown successful")
+│ │   --- mango-agents-0.4.0/mango/core/container_protocols.py
+│ ├── +++ mango-agents-1.0.0/mango/container/protocol.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,15 +1,11 @@
+│ │  import asyncio
+│ │  import logging
+│ │  import struct
+│ │  
+│ │ -from ..messages.message import ACLMessage as JsonAcl
+│ │ -from ..messages.acl_message_pb2 import ACLMessage as ProtoAcl
+│ │ -
+│ │ -
+│ │  # The struct module performs conversions between python values and
+│ │  # C structs represented as Python bytes objects.
+│ │  # '!' refers to network byte order(= big-endian)
+│ │  # 'L' refers to the c type 'unsigned long' and is a python uint32
+│ │  # The header stores the number of bytes in the payload
+│ │  HEADER = struct.Struct("!L")
+│ │   --- mango-agents-0.4.0/mango/messages/acl_message_pb2.py
+│ ├── +++ mango-agents-1.0.0/mango/messages/acl_message_pb2.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,268 +1,431 @@
+│ │  # Generated by the protocol buffer compiler.  DO NOT EDIT!
+│ │  # source: acl_message.proto
+│ │  
+│ │  import sys
+│ │ -_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+│ │ +
+│ │ +_b = sys.version_info[0] < 3 and (lambda x: x) or (lambda x: x.encode("latin1"))
+│ │  from google.protobuf import descriptor as _descriptor
+│ │  from google.protobuf import message as _message
+│ │  from google.protobuf import reflection as _reflection
+│ │  from google.protobuf import symbol_database as _symbol_database
+│ │ +
+│ │  # @@protoc_insertion_point(imports)
+│ │  
+│ │  _sym_db = _symbol_database.Default()
+│ │  
+│ │  
+│ │ -
+│ │ -
+│ │  DESCRIPTOR = _descriptor.FileDescriptor(
+│ │ -  name='acl_message.proto',
+│ │ -  package='',
+│ │ -  syntax='proto3',
+│ │ -  serialized_options=None,
+│ │ -  serialized_pb=_b('\n\x11\x61\x63l_message.proto\"\xa9\x05\n\nACLMessage\x12\x11\n\tsender_id\x18\x01 \x01(\t\x12\x13\n\x0bsender_addr\x18\x02 \x01(\t\x12\x13\n\x0breceiver_id\x18\x03 \x01(\t\x12\x15\n\rreceiver_addr\x18\x04 \x01(\t\x12\x17\n\x0f\x63onversation_id\x18\x05 \x01(\t\x12.\n\x0cperformative\x18\x06 \x01(\x0e\x32\x18.ACLMessage.Performative\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\x0c\x12\x14\n\x0c\x63ontent_type\x18\x08 \x01(\x05\x12\x10\n\x08protocol\x18\t \x01(\t\x12\x10\n\x08language\x18\n \x01(\t\x12\x10\n\x08\x65ncoding\x18\x0b \x01(\t\x12\x10\n\x08ontology\x18\x0c \x01(\t\x12\x12\n\nreply_with\x18\r \x01(\t\x12\x10\n\x08reply_by\x18\x0e \x01(\t\x12\x13\n\x0bin_reply_to\x18\x0f \x01(\t\"\xd3\x02\n\x0cPerformative\x12\x13\n\x0f\x61\x63\x63\x65pt_proposal\x10\x00\x12\t\n\x05\x61gree\x10\x01\x12\n\n\x06\x63\x61ncel\x10\x02\x12\x15\n\x11\x63\x61ll_for_proposal\x10\x03\x12\x0b\n\x07\x63onfirm\x10\x04\x12\x0e\n\ndisconfirm\x10\x05\x12\x0b\n\x07\x66\x61ilure\x10\x06\x12\n\n\x06inform\x10\x07\x12\x12\n\x0enot_understood\x10\x08\x12\x0b\n\x07propose\x10\t\x12\x0c\n\x08query_if\x10\n\x12\r\n\tquery_ref\x10\x0b\x12\n\n\x06refuse\x10\x0c\x12\x13\n\x0freject_proposal\x10\r\x12\x0b\n\x07request\x10\x0e\x12\x10\n\x0crequest_when\x10\x0f\x12\x14\n\x10request_whenever\x10\x10\x12\r\n\tsubscribe\x10\x11\x12\r\n\tinform_if\x10\x12\x12\t\n\x05proxy\x10\x13\x12\r\n\tpropagate\x10\x14\x62\x06proto3')
+│ │ +    name="acl_message.proto",
+│ │ +    package="",
+│ │ +    syntax="proto3",
+│ │ +    serialized_options=None,
+│ │ +    serialized_pb=_b(
+│ │ +        '\n\x11\x61\x63l_message.proto"\xa9\x05\n\nACLMessage\x12\x11\n\tsender_id\x18\x01 \x01(\t\x12\x13\n\x0bsender_addr\x18\x02 \x01(\t\x12\x13\n\x0breceiver_id\x18\x03 \x01(\t\x12\x15\n\rreceiver_addr\x18\x04 \x01(\t\x12\x17\n\x0f\x63onversation_id\x18\x05 \x01(\t\x12.\n\x0cperformative\x18\x06 \x01(\x0e\x32\x18.ACLMessage.Performative\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\x0c\x12\x14\n\x0c\x63ontent_type\x18\x08 \x01(\x05\x12\x10\n\x08protocol\x18\t \x01(\t\x12\x10\n\x08language\x18\n \x01(\t\x12\x10\n\x08\x65ncoding\x18\x0b \x01(\t\x12\x10\n\x08ontology\x18\x0c \x01(\t\x12\x12\n\nreply_with\x18\r \x01(\t\x12\x10\n\x08reply_by\x18\x0e \x01(\t\x12\x13\n\x0bin_reply_to\x18\x0f \x01(\t"\xd3\x02\n\x0cPerformative\x12\x13\n\x0f\x61\x63\x63\x65pt_proposal\x10\x00\x12\t\n\x05\x61gree\x10\x01\x12\n\n\x06\x63\x61ncel\x10\x02\x12\x15\n\x11\x63\x61ll_for_proposal\x10\x03\x12\x0b\n\x07\x63onfirm\x10\x04\x12\x0e\n\ndisconfirm\x10\x05\x12\x0b\n\x07\x66\x61ilure\x10\x06\x12\n\n\x06inform\x10\x07\x12\x12\n\x0enot_understood\x10\x08\x12\x0b\n\x07propose\x10\t\x12\x0c\n\x08query_if\x10\n\x12\r\n\tquery_ref\x10\x0b\x12\n\n\x06refuse\x10\x0c\x12\x13\n\x0freject_proposal\x10\r\x12\x0b\n\x07request\x10\x0e\x12\x10\n\x0crequest_when\x10\x0f\x12\x14\n\x10request_whenever\x10\x10\x12\r\n\tsubscribe\x10\x11\x12\r\n\tinform_if\x10\x12\x12\t\n\x05proxy\x10\x13\x12\r\n\tpropagate\x10\x14\x62\x06proto3'
+│ │ +    ),
+│ │  )
+│ │  
+│ │  
+│ │ -
+│ │  _ACLMESSAGE_PERFORMATIVE = _descriptor.EnumDescriptor(
+│ │ -  name='Performative',
+│ │ -  full_name='ACLMessage.Performative',
+│ │ -  filename=None,
+│ │ -  file=DESCRIPTOR,
+│ │ -  values=[
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='accept_proposal', index=0, number=0,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='agree', index=1, number=1,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='cancel', index=2, number=2,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='call_for_proposal', index=3, number=3,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='confirm', index=4, number=4,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='disconfirm', index=5, number=5,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='failure', index=6, number=6,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='inform', index=7, number=7,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='not_understood', index=8, number=8,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='propose', index=9, number=9,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='query_if', index=10, number=10,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='query_ref', index=11, number=11,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='refuse', index=12, number=12,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='reject_proposal', index=13, number=13,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='request', index=14, number=14,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='request_when', index=15, number=15,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='request_whenever', index=16, number=16,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='subscribe', index=17, number=17,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='inform_if', index=18, number=18,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='proxy', index=19, number=19,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -    _descriptor.EnumValueDescriptor(
+│ │ -      name='propagate', index=20, number=20,
+│ │ -      serialized_options=None,
+│ │ -      type=None),
+│ │ -  ],
+│ │ -  containing_type=None,
+│ │ -  serialized_options=None,
+│ │ -  serialized_start=364,
+│ │ -  serialized_end=703,
+│ │ +    name="Performative",
+│ │ +    full_name="ACLMessage.Performative",
+│ │ +    filename=None,
+│ │ +    file=DESCRIPTOR,
+│ │ +    values=[
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="accept_proposal",
+│ │ +            index=0,
+│ │ +            number=0,
+│ │ +            serialized_options=None,
+│ │ +            type=None,
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="agree", index=1, number=1, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="cancel", index=2, number=2, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="call_for_proposal",
+│ │ +            index=3,
+│ │ +            number=3,
+│ │ +            serialized_options=None,
+│ │ +            type=None,
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="confirm", index=4, number=4, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="disconfirm", index=5, number=5, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="failure", index=6, number=6, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="inform", index=7, number=7, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="not_understood", index=8, number=8, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="propose", index=9, number=9, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="query_if", index=10, number=10, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="query_ref", index=11, number=11, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="refuse", index=12, number=12, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="reject_proposal",
+│ │ +            index=13,
+│ │ +            number=13,
+│ │ +            serialized_options=None,
+│ │ +            type=None,
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="request", index=14, number=14, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="request_when", index=15, number=15, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="request_whenever",
+│ │ +            index=16,
+│ │ +            number=16,
+│ │ +            serialized_options=None,
+│ │ +            type=None,
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="subscribe", index=17, number=17, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="inform_if", index=18, number=18, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="proxy", index=19, number=19, serialized_options=None, type=None
+│ │ +        ),
+│ │ +        _descriptor.EnumValueDescriptor(
+│ │ +            name="propagate", index=20, number=20, serialized_options=None, type=None
+│ │ +        ),
+│ │ +    ],
+│ │ +    containing_type=None,
+│ │ +    serialized_options=None,
+│ │ +    serialized_start=364,
+│ │ +    serialized_end=703,
+│ │  )
+│ │  _sym_db.RegisterEnumDescriptor(_ACLMESSAGE_PERFORMATIVE)
+│ │  
+│ │  
+│ │  _ACLMESSAGE = _descriptor.Descriptor(
+│ │ -  name='ACLMessage',
+│ │ -  full_name='ACLMessage',
+│ │ -  filename=None,
+│ │ -  file=DESCRIPTOR,
+│ │ -  containing_type=None,
+│ │ -  fields=[
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='sender_id', full_name='ACLMessage.sender_id', index=0,
+│ │ -      number=1, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='sender_addr', full_name='ACLMessage.sender_addr', index=1,
+│ │ -      number=2, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='receiver_id', full_name='ACLMessage.receiver_id', index=2,
+│ │ -      number=3, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='receiver_addr', full_name='ACLMessage.receiver_addr', index=3,
+│ │ -      number=4, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='conversation_id', full_name='ACLMessage.conversation_id', index=4,
+│ │ -      number=5, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='performative', full_name='ACLMessage.performative', index=5,
+│ │ -      number=6, type=14, cpp_type=8, label=1,
+│ │ -      has_default_value=False, default_value=0,
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='content', full_name='ACLMessage.content', index=6,
+│ │ -      number=7, type=12, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b(""),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='content_type', full_name='ACLMessage.content_type', index=7,
+│ │ -      number=8, type=5, cpp_type=1, label=1,
+│ │ -      has_default_value=False, default_value=0,
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='protocol', full_name='ACLMessage.protocol', index=8,
+│ │ -      number=9, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='language', full_name='ACLMessage.language', index=9,
+│ │ -      number=10, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='encoding', full_name='ACLMessage.encoding', index=10,
+│ │ -      number=11, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='ontology', full_name='ACLMessage.ontology', index=11,
+│ │ -      number=12, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='reply_with', full_name='ACLMessage.reply_with', index=12,
+│ │ -      number=13, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='reply_by', full_name='ACLMessage.reply_by', index=13,
+│ │ -      number=14, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -    _descriptor.FieldDescriptor(
+│ │ -      name='in_reply_to', full_name='ACLMessage.in_reply_to', index=14,
+│ │ -      number=15, type=9, cpp_type=9, label=1,
+│ │ -      has_default_value=False, default_value=_b("").decode('utf-8'),
+│ │ -      message_type=None, enum_type=None, containing_type=None,
+│ │ -      is_extension=False, extension_scope=None,
+│ │ -      serialized_options=None, file=DESCRIPTOR),
+│ │ -  ],
+│ │ -  extensions=[
+│ │ -  ],
+│ │ -  nested_types=[],
+│ │ -  enum_types=[
+│ │ -    _ACLMESSAGE_PERFORMATIVE,
+│ │ -  ],
+│ │ -  serialized_options=None,
+│ │ -  is_extendable=False,
+│ │ -  syntax='proto3',
+│ │ -  extension_ranges=[],
+│ │ -  oneofs=[
+│ │ -  ],
+│ │ -  serialized_start=22,
+│ │ -  serialized_end=703,
+│ │ +    name="ACLMessage",
+│ │ +    full_name="ACLMessage",
+│ │ +    filename=None,
+│ │ +    file=DESCRIPTOR,
+│ │ +    containing_type=None,
+│ │ +    fields=[
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="sender_id",
+│ │ +            full_name="ACLMessage.sender_id",
+│ │ +            index=0,
+│ │ +            number=1,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="sender_addr",
+│ │ +            full_name="ACLMessage.sender_addr",
+│ │ +            index=1,
+│ │ +            number=2,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="receiver_id",
+│ │ +            full_name="ACLMessage.receiver_id",
+│ │ +            index=2,
+│ │ +            number=3,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="receiver_addr",
+│ │ +            full_name="ACLMessage.receiver_addr",
+│ │ +            index=3,
+│ │ +            number=4,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="conversation_id",
+│ │ +            full_name="ACLMessage.conversation_id",
+│ │ +            index=4,
+│ │ +            number=5,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="performative",
+│ │ +            full_name="ACLMessage.performative",
+│ │ +            index=5,
+│ │ +            number=6,
+│ │ +            type=14,
+│ │ +            cpp_type=8,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=0,
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="content",
+│ │ +            full_name="ACLMessage.content",
+│ │ +            index=6,
+│ │ +            number=7,
+│ │ +            type=12,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b(""),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="content_type",
+│ │ +            full_name="ACLMessage.content_type",
+│ │ +            index=7,
+│ │ +            number=8,
+│ │ +            type=5,
+│ │ +            cpp_type=1,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=0,
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="protocol",
+│ │ +            full_name="ACLMessage.protocol",
+│ │ +            index=8,
+│ │ +            number=9,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="language",
+│ │ +            full_name="ACLMessage.language",
+│ │ +            index=9,
+│ │ +            number=10,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="encoding",
+│ │ +            full_name="ACLMessage.encoding",
+│ │ +            index=10,
+│ │ +            number=11,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="ontology",
+│ │ +            full_name="ACLMessage.ontology",
+│ │ +            index=11,
+│ │ +            number=12,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="reply_with",
+│ │ +            full_name="ACLMessage.reply_with",
+│ │ +            index=12,
+│ │ +            number=13,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="reply_by",
+│ │ +            full_name="ACLMessage.reply_by",
+│ │ +            index=13,
+│ │ +            number=14,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +        _descriptor.FieldDescriptor(
+│ │ +            name="in_reply_to",
+│ │ +            full_name="ACLMessage.in_reply_to",
+│ │ +            index=14,
+│ │ +            number=15,
+│ │ +            type=9,
+│ │ +            cpp_type=9,
+│ │ +            label=1,
+│ │ +            has_default_value=False,
+│ │ +            default_value=_b("").decode("utf-8"),
+│ │ +            message_type=None,
+│ │ +            enum_type=None,
+│ │ +            containing_type=None,
+│ │ +            is_extension=False,
+│ │ +            extension_scope=None,
+│ │ +            serialized_options=None,
+│ │ +            file=DESCRIPTOR,
+│ │ +        ),
+│ │ +    ],
+│ │ +    extensions=[],
+│ │ +    nested_types=[],
+│ │ +    enum_types=[
+│ │ +        _ACLMESSAGE_PERFORMATIVE,
+│ │ +    ],
+│ │ +    serialized_options=None,
+│ │ +    is_extendable=False,
+│ │ +    syntax="proto3",
+│ │ +    extension_ranges=[],
+│ │ +    oneofs=[],
+│ │ +    serialized_start=22,
+│ │ +    serialized_end=703,
+│ │  )
+│ │  
+│ │ -_ACLMESSAGE.fields_by_name['performative'].enum_type = _ACLMESSAGE_PERFORMATIVE
+│ │ +_ACLMESSAGE.fields_by_name["performative"].enum_type = _ACLMESSAGE_PERFORMATIVE
+│ │  _ACLMESSAGE_PERFORMATIVE.containing_type = _ACLMESSAGE
+│ │ -DESCRIPTOR.message_types_by_name['ACLMessage'] = _ACLMESSAGE
+│ │ +DESCRIPTOR.message_types_by_name["ACLMessage"] = _ACLMESSAGE
+│ │  _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+│ │  
+│ │ -ACLMessage = _reflection.GeneratedProtocolMessageType('ACLMessage', (_message.Message,), dict(
+│ │ -  DESCRIPTOR = _ACLMESSAGE,
+│ │ -  __module__ = 'acl_message_pb2'
+│ │ -  # @@protoc_insertion_point(class_scope:ACLMessage)
+│ │ -  ))
+│ │ +ACLMessage = _reflection.GeneratedProtocolMessageType(
+│ │ +    "ACLMessage",
+│ │ +    (_message.Message,),
+│ │ +    dict(
+│ │ +        DESCRIPTOR=_ACLMESSAGE,
+│ │ +        __module__="acl_message_pb2"
+│ │ +        # @@protoc_insertion_point(class_scope:ACLMessage)
+│ │ +    ),
+│ │ +)
+│ │  _sym_db.RegisterMessage(ACLMessage)
+│ │  
+│ │  
+│ │  # @@protoc_insertion_point(module_scope)
+│ │   --- mango-agents-0.4.0/mango/messages/codecs.py
+│ ├── +++ mango-agents-1.0.0/mango/messages/codecs.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7,19 +7,21 @@
+│ │  
+│ │  All codecs should implement the base class :class:`Codec`.
+│ │  
+│ │  Most of this code is taken and adapted from Stefan Scherfkes aiomas:
+│ │  https://gitlab.com/sscherfke/aiomas/
+│ │  """
+│ │  
+│ │ -import json
+│ │  import inspect
+│ │ -from mango.messages.message import ACLMessage, enum_serializer, Performatives
+│ │ -from ..messages.other_proto_msgs_pb2 import GenericMsg as GenericProtoMsg
+│ │ +import json
+│ │ +
+│ │ +from mango.messages.message import ACLMessage, Performatives, enum_serializer
+│ │ +
+│ │  from ..messages.acl_message_pb2 import ACLMessage as ACLProto
+│ │ +from ..messages.other_proto_msgs_pb2 import GenericMsg as GenericProtoMsg
+│ │  
+│ │  
+│ │  def json_serializable(cls=None, repr=True):
+│ │      """
+│ │      This is a direct copy from aiomas:
+│ │      https://gitlab.com/sscherfke/aiomas/-/blob/master/src/aiomas/codecs.py
+│ │   --- mango-agents-0.4.0/mango/messages/message.py
+│ ├── +++ mango-agents-1.0.0/mango/messages/message.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │   http://www.fipa.org/specs/fipa00061/SC00061G.html#_Toc26669715
+│ │  
+│ │   It also includes the enum classes for the message Performative and Type
+│ │  
+│ │  """
+│ │  import pickle
+│ │  from enum import Enum
+│ │ -from typing import Dict, Any
+│ │ +from typing import Any, Dict
+│ │  
+│ │  from ..messages.acl_message_pb2 import ACLMessage as ACLProto
+│ │  
+│ │  
+│ │  class ACLMessage:
+│ │      """
+│ │      The ACL Message is the standard header used for the communication between  mango agents.
+│ │   --- mango-agents-0.4.0/mango/modules/base_module.py
+│ ├── +++ mango-agents-1.0.0/mango/modules/base_module.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,29 +1,29 @@
+│ │  """This module contains the base class for basic modules that can be used
+│ │   inside agents to encapsulate complex functionality """
+│ │  
+│ │ +import traceback
+│ │ +
+│ │  from .mqtt_module import MQTTModule
+│ │  from .rabbit_module import RabbitModule
+│ │  from .zero_module import ZeroModule
+│ │ -import traceback
+│ │ +
+│ │  
+│ │  class BaseModule:
+│ │      """An agent can have multiple specialized modules which inherit
+│ │      from BaseModule. The all need to specify which messaging framework should
+│ │       be used for the internal message exchange between the modules.
+│ │       TODO write more
+│ │      """
+│ │ -    frameworks = {
+│ │ -        'mqtt': MQTTModule,
+│ │ -        'rabbit': RabbitModule,
+│ │ -        'zero': ZeroModule
+│ │ -    }
+│ │  
+│ │ -    def __init__(self, *, name: str, framework='mqtt', subscr_topics,
+│ │ -                 pub_topics, broker):
+│ │ +    frameworks = {"mqtt": MQTTModule, "rabbit": RabbitModule, "zero": ZeroModule}
+│ │ +
+│ │ +    def __init__(
+│ │ +        self, *, name: str, framework="mqtt", subscr_topics, pub_topics, broker
+│ │ +    ):
+│ │          """
+│ │          Initialization of the module
+│ │          :param name: name of the module (str)
+│ │          :param subscr_topics: List of string and integer tuples for subscribed
+│ │           topics:[ (topic, qos)] e.g.[("my/topic", 0), ("another/topic", 2)]
+│ │          :param pub_topics: List of string and integer tuples for publishing
+│ │           topics:[ (topic, qos)]
+│ │ @@ -37,15 +37,16 @@
+│ │          self.pub_topics = pub_topics
+│ │          self.broker = broker
+│ │  
+│ │          self.messenger = BaseModule.frameworks[framework](
+│ │              name=self.name,
+│ │              subscr_topics=self.subscr_topics,
+│ │              pub_topics=self.pub_topics,
+│ │ -            broker=self.broker)
+│ │ +            broker=self.broker,
+│ │ +        )
+│ │  
+│ │          self.add_message_callback = self.messenger.add_message_callback
+│ │          self.start_mq_thread = self.messenger.start_mq_thread
+│ │          self.end_mq_thread = self.messenger.end_mq_thread
+│ │          self.publish_mq_message = self.messenger.publish_mq_message
+│ │          self.bind_callback = self.messenger.bind_callback
+│ │  
+│ │ @@ -54,16 +55,16 @@
+│ │          Function used as a callback to raise exceptions
+│ │          :param result: result of the task
+│ │          """
+│ │          exception = result.exception()
+│ │          if exception is not None:
+│ │              tb = traceback.format_exc()
+│ │              print(tb)
+│ │ -            print(f'exception in {self.name}')
+│ │ -            print(f'exception: {exception}')
+│ │ +            print(f"exception in {self.name}")
+│ │ +            print(f"exception: {exception}")
+│ │              raise exception
+│ │  
+│ │      # def handle_exception(loop, context):
+│ │      #     # context["message"] will always be there; but context["exception"] may not
+│ │      #     msg = context.get("exception", context["message"])
+│ │      #     logging.error(f"Caught exception: {msg}")
+│ │      #     logging.info("Shutting down...")
+│ │   --- mango-agents-0.4.0/mango/modules/mqtt_module.py
+│ ├── +++ mango-agents-1.0.0/mango/modules/mqtt_module.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  """
+│ │  TODO
+│ │  """
+│ │ -from functools import partial
+│ │  import logging
+│ │ +from functools import partial
+│ │ +
+│ │  import paho.mqtt.client as paho
+│ │  
+│ │  
+│ │  class MQTTModule:
+│ │      """
+│ │      Module wrapper for a paho mqtt client used in the mango base module.
+│ │      """
+│ │   --- mango-agents-0.4.0/mango/modules/rabbit_module.py
+│ ├── +++ mango-agents-1.0.0/mango/modules/rabbit_module.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,19 +1,17 @@
+│ │ +import threading
+│ │ +import time
+│ │  from abc import ABC
+│ │  from functools import partial
+│ │  
+│ │ -
+│ │ -import time
+│ │ -import threading
+│ │  import pika
+│ │  
+│ │  
+│ │  class RabbitModule(ABC):
+│ │ -
+│ │ -    def __init__(self, *, name:str, subscr_topics, pub_topics, broker):
+│ │ +    def __init__(self, *, name: str, subscr_topics, pub_topics, broker):
+│ │          """
+│ │  
+│ │          :param name: name of the module (str)
+│ │          :param subscr_topics: List of string and integer tuples for subscribed topics:[ (topic, qos)]
+│ │          e.g.[("my/topic", 0), ("another/topic", 2)]
+│ │          :param pub_topics: List of string and integer tuples for publishing topics:[ (topic, qos)]
+│ │          :param broker: MQTT broker
+│ │ @@ -34,21 +32,23 @@
+│ │          self.sub_connection = None
+│ │  
+│ │          self.setup_done = False
+│ │  
+│ │          # set up publishing connection
+│ │          # we separate this because each thread needs its own connection and we want to be able to call
+│ │          # publish from outside
+│ │ -        self.pub_connection = pika.BlockingConnection(pika.ConnectionParameters(host=broker[0], port=broker[1]))
+│ │ +        self.pub_connection = pika.BlockingConnection(
+│ │ +            pika.ConnectionParameters(host=broker[0], port=broker[1])
+│ │ +        )
+│ │  
+│ │          self.pub_channel = self.pub_connection.channel()
+│ │  
+│ │          for topic in self.pub_topics:
+│ │ -            #self.pub_channel.queue_declare(queue=topic[0])
+│ │ -            self.pub_channel.exchange_declare(exchange=topic[0], exchange_type='fanout')
+│ │ +            # self.pub_channel.queue_declare(queue=topic[0])
+│ │ +            self.pub_channel.exchange_declare(exchange=topic[0], exchange_type="fanout")
+│ │  
+│ │          # run the sub thread
+│ │          self.mq_thread.start()
+│ │  
+│ │          # make sure all our connections etc. are set up before we attempt to access them from outside
+│ │          while not self.thread_active:
+│ │              continue
+│ │ @@ -60,41 +60,42 @@
+│ │      def start_mq_thread(self):
+│ │          self.thread_running = True
+│ │  
+│ │          # wait for all the exchanges and queues to be set up
+│ │          while not self.setup_done:
+│ │              continue
+│ │  
+│ │ -
+│ │      def run_mq(self):
+│ │          # set up stuff
+│ │ -        self.sub_connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+│ │ +        self.sub_connection = pika.BlockingConnection(
+│ │ +            pika.ConnectionParameters(host="localhost")
+│ │ +        )
+│ │          self.sub_channel = self.sub_connection.channel()
+│ │  
+│ │ -
+│ │ -
+│ │          for topic in self.subscr_topics:
+│ │ -            #self.sub_channel.queue_declare(queue=topic[0])
+│ │ -            self.sub_channel.exchange_declare(exchange=topic[0], exchange_type='fanout')
+│ │ +            # self.sub_channel.queue_declare(queue=topic[0])
+│ │ +            self.sub_channel.exchange_declare(exchange=topic[0], exchange_type="fanout")
+│ │  
+│ │          self.thread_active = True
+│ │  
+│ │          # run loop
+│ │          while self.thread_active:
+│ │              if self.thread_running:
+│ │  
+│ │                  # set up saved callback
+│ │                  for cb in self.known_registers:
+│ │                      queues = []
+│ │ -                    result = self.sub_channel.queue_declare(queue='', exclusive=True)
+│ │ +                    result = self.sub_channel.queue_declare(queue="", exclusive=True)
+│ │                      queues.append(result.method.queue)
+│ │                      self.sub_channel.queue_bind(exchange=cb[0], queue=queues[-1])
+│ │  
+│ │                      f = partial(self.bind_callback, cb[0], cb[1])
+│ │ -                    self.sub_channel.basic_consume(queue=queues[-1], on_message_callback=f, auto_ack=True)
+│ │ +                    self.sub_channel.basic_consume(
+│ │ +                        queue=queues[-1], on_message_callback=f, auto_ack=True
+│ │ +                    )
+│ │  
+│ │                  self.setup_done = True
+│ │  
+│ │                  # this loops until it is stopped from outside
+│ │                  # essentially what happens in start_consuming with extra flag check
+│ │                  while self.sub_channel._consumer_infos and self.thread_running:
+│ │                      self.sub_channel.connection.process_data_events(time_limit=1)
+│ │ @@ -108,13 +109,12 @@
+│ │  
+│ │      def end_mq_thread(self):
+│ │          # self.pub_connection.close()
+│ │          self.thread_active = False
+│ │          self.thread_running = False
+│ │  
+│ │      def publish_mq_message(self, topic, payload):
+│ │ -        self.pub_channel.basic_publish(exchange=topic, routing_key='', body=payload)
+│ │ +        self.pub_channel.basic_publish(exchange=topic, routing_key="", body=payload)
+│ │  
+│ │      # the actual binding to whatever signature the frameworks callbacks have happens here
+│ │      def bind_callback(self, topic, func, ch, method, properties, message):
+│ │          func(payload=message, topic=topic)
+│ │ -
+│ │   --- mango-agents-0.4.0/mango/modules/zero_module.py
+│ ├── +++ mango-agents-1.0.0/mango/modules/zero_module.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,18 +1,16 @@
+│ │ -from abc import ABC
+│ │ -
+│ │ -import zmq
+│ │ -import threading
+│ │  import pickle
+│ │ +import threading
+│ │  import time
+│ │ +from abc import ABC
+│ │  
+│ │ +import zmq
+│ │  
+│ │  
+│ │  class ZeroModule(ABC):
+│ │ -
+│ │      def __init__(self, *, name: str, subscr_topics, pub_topics, broker):
+│ │          """
+│ │  
+│ │          :param name: name of the module (str)
+│ │          :param subscr_topics: List of string and integer tuples for subscribed topics:[ (topic, qos)]
+│ │          e.g.[("my/topic", 0), ("another/topic", 2)]
+│ │          :param pub_topics: List of string and integer tuples for publishing topics:[ (topic, qos)]
+│ │ @@ -56,15 +54,15 @@
+│ │      def end_mq_thread(self):
+│ │          self.thread_active = False
+│ │          # self.sub_context.destroy()
+│ │          self.mq_thread.join()
+│ │  
+│ │      def publish_mq_message(self, topic, payload):
+│ │          pl = pickle.dumps(payload)
+│ │ -        self.pub_socket.send_multipart([topic.encode('utf-8'), pl])
+│ │ +        self.pub_socket.send_multipart([topic.encode("utf-8"), pl])
+│ │  
+│ │      # the actual binding to whatever signature the frameworks callbacks have happens here
+│ │      def bind_callback(self, func, client, userdata, message):
+│ │          pass
+│ │  
+│ │      def run_mq(self):
+│ │          got_message = False
+│ │   --- mango-agents-0.4.0/mango/role/core.py
+│ ├── +++ mango-agents-1.0.0/mango/agent/role.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,41 +1,120 @@
+│ │  """
+│ │ -Internal module, which implements the framework API of the role package. Provides an
+│ │ -implementation of the :class:`RoleContext`, the RoleAgent and some internal handlers
+│ │ -for the communication between roles.
+│ │ +API classes for using the role system. The role system is based on the idea, that
+│ │ +everything an agent can do, is described as role/responsibility and is implemented in
+│ │ +one separate class. For example participating in a coalition would be a separate role,
+│ │ +monitoring grid voltage another one.
+│ │ +
+│ │ +A role is part of a :class:`RoleAgent` which inherits from :class:`Agent`.
+│ │ +
+│ │ +There are essentially two APIs for acting resp reacting:
+│ │ +* [Reacting] :func:`RoleContext.subscribe_message`, which allows you to subscribe to
+│ │ +             certain message types and lets you handle the message
+│ │ +* [Acting] :func:`RoleContext.schedule_task`, this allows you to schedule a task with
+│ │ +            delay/repeating/...
+│ │ +
+│ │ +To interact with the environment an instance of the role context is provided. This context
+│ │ +provides methods to share data with other roles and to communicate with other agents.
+│ │ +
+│ │ +A message can be send using the method :func:`RoleContext.send_message`.
+│ │ +
+│ │ +There are often dependencies between different parts of an agent, there are options to
+│ │ +interact with other roles: Roles have the possibility to use shared models and to act on
+│ │ +changes of these models. A role can subscribe specific data that another role provides.
+│ │ +To set this up, a model has to be created via
+│ │ +:func:`RoleContext.get_or_create_model`. To notify other roles
+│ │ +:func:`RoleContext.update` has to be called. In order to let a Role subscribe to a model you can use
+│ │ +:func:`subscribe_model`.
+│ │ +If you prefer a lightweight variant you can use :func:`RoleContext.data` to assign/access shared data.
+│ │ +
+│ │ +Furthermore there are two lifecycle methods to know about:
+│ │ +* :func:`Role.setup` is called when the Role is added to the agent, so its the perfect place
+│ │ +                     for initialization and scheduling of tasks
+│ │ +* :func:`Role.on_stop` is called when the container the agent lives in, is shut down
+│ │  """
+│ │ -
+│ │  import asyncio
+│ │ +from abc import ABC
+│ │ +from typing import Any, Dict, List, Optional, Tuple, Union
+│ │  
+│ │ -from typing import Any, Dict, Optional, Union, Tuple, List
+│ │ -import datetime
+│ │ -
+│ │ -from mango.util.scheduling import ScheduledProcessTask, ScheduledTask, Scheduler
+│ │ -from mango.core.agent import Agent
+│ │ -from mango.role.api import Role, RoleContext
+│ │ +from mango.agent.core import Agent, AgentContext, AgentDelegates
+│ │ +from mango.util.scheduling import Scheduler
+│ │  
+│ │  
+│ │  class DataContainer:
+│ │ -
+│ │      def __getitem__(self, key):
+│ │          return self.__getattribute__(key)
+│ │  
+│ │  
+│ │ -class RoleHandler:
+│ │ -    """Contains all roles and their models. Implements the communication between roles.
+│ │ +class RoleContext:
+│ │ +    pass
+│ │ +
+│ │ +
+│ │ +class Role(ABC):
+│ │ +    """General role class, defining the API every role can use. A role implements one responsibility
+│ │ +    of an agent.
+│ │ +
+│ │ +    Every role
+│ │ +    must be added to a :class:`RoleAgent` and is defined by some lifecycle methods:
+│ │ +    * :func:`Role.setup` is called when the Role is added to the agent, so its the perfect place for
+│ │ +                         initialization and scheduling of tasks
+│ │ +    * :func:`Role.on_stop` is called when the container the agent lives in, is shut down
+│ │ +
+│ │ +    To interact with the environment you have to use the context, accessible via :func:Role.context.
+│ │      """
+│ │  
+│ │ -    def __init__(self, container, scheduler):
+│ │ +    def __init__(self) -> None:
+│ │ +        """Initialize the roles internals.
+│ │ +        !!Care!! the role context is unknown at this point!
+│ │ +        """
+│ │ +        self._context = None
+│ │ +
+│ │ +    def bind(self, context: RoleContext) -> None:
+│ │ +        """Method used internal to set the context, do not override!
+│ │ +
+│ │ +        :param context: the role context
+│ │ +        """
+│ │ +        self._context = context
+│ │ +
+│ │ +    @property
+│ │ +    def context(self) -> RoleContext:
+│ │ +        """Return the context of the role. This context can be send as bridge to the agent.
+│ │ +
+│ │ +        :return: the context of the role
+│ │ +        """
+│ │ +        return self._context
+│ │ +
+│ │ +    def setup(self) -> None:
+│ │ +        """Lifecycle hook in, which will be called on adding the role to agent. The role context
+│ │ +        is known from hereon.
+│ │ +        """
+│ │ +
+│ │ +    def on_change_model(self, model) -> None:
+│ │ +        """Will be invoked when a subscribed model changes via :func:`RoleContext.update`.
+│ │ +
+│ │ +        :param model: the model
+│ │ +        """
+│ │ +
+│ │ +    def on_deactivation(self, src) -> None:
+│ │ +        """Hook in, which will be called when another role deactivates this instance (temporarily)"""
+│ │ +
+│ │ +    async def on_stop(self) -> None:
+│ │ +        """Lifecycle hook in, which will be called when the container is shut down or if the role got removed."""
+│ │ +
+│ │ +
+│ │ +class RoleHandler:
+│ │ +    """Contains all roles and their models. Implements the communication between roles."""
+│ │ +
+│ │ +    def __init__(self, agent_context, scheduler):
+│ │          self._role_models = {}
+│ │          self._roles = []
+│ │          self._role_to_active = {}
+│ │          self._role_model_type_to_subs = {}
+│ │          self._message_subs = []
+│ │          self._send_msg_subs = {}
+│ │ -        self._container = container
+│ │ +        self._agent_context = agent_context
+│ │          self._scheduler = scheduler
+│ │          self._data = DataContainer()
+│ │  
+│ │      def get_or_create_model(self, cls):
+│ │          """Creates or return (when already created) a central role model.
+│ │  
+│ │          Returns:
+│ │ @@ -98,115 +177,141 @@
+│ │          :param role: the role to deactivate
+│ │          :type role: Role
+│ │          """
+│ │          self._role_to_active[role] = False
+│ │          self._scheduler.suspend(role)
+│ │  
+│ │      def activate(self, role) -> None:
+│ │ -        """Activates the given role. 
+│ │ +        """Activates the given role.
+│ │  
+│ │          :param role: the role to activate
+│ │          :type role: Role
+│ │          """
+│ │          self._role_to_active[role] = True
+│ │          self._scheduler.resume(role)
+│ │  
+│ │      def _is_role_active(self, role) -> bool:
+│ │          if role in self._role_to_active:
+│ │              return self._role_to_active[role]
+│ │          return True
+│ │  
+│ │      async def on_stop(self):
+│ │ -        """Notify all roles when the container is shutdown
+│ │ -        """
+│ │ +        """Notify all roles when the container is shutdown"""
+│ │          for role in self._roles:
+│ │              await role.on_stop()
+│ │  
+│ │ -    def handle_msg(self, content, meta: Dict[str, Any]):
+│ │ +    def handle_message(self, content, meta: Dict[str, Any]):
+│ │          """Handle an incoming message, delegating it to all applicable subscribers
+│ │ -        for role in self._role_handler.roles:
+│ │ -            if role.is_applicable(content, meta):
+│ │ -                role.handle_msg(content, meta, self)
+│ │ +        for role, message_condition, method, _ in self._message_subs:
+│ │ +            if self._is_role_active(role) and message_condition(content, meta):
+│ │ +                method(content, meta)
+│ │  
+│ │          :param content: content
+│ │          :param meta: meta
+│ │          """
+│ │          for role, message_condition, method, _ in self._message_subs:
+│ │ -            if self._is_role_active(role):
+│ │ -                if message_condition(content, meta):
+│ │ -                    method(content, meta)
+│ │ +            if self._is_role_active(role) and message_condition(content, meta):
+│ │ +                method(content, meta)
+│ │  
+│ │      def _notify_send_message_subs(self, content, receiver_addr, receiver_id, **kwargs):
+│ │          for role in self._send_msg_subs:
+│ │              for sub in self._send_msg_subs[role]:
+│ │                  if self._is_role_active(role):
+│ │ -                    sub(content=content, receiver_addr=receiver_addr,
+│ │ +                    sub(
+│ │ +                        content=content,
+│ │ +                        receiver_addr=receiver_addr,
+│ │                          receiver_id=receiver_id,
+│ │ -                        **kwargs)
+│ │ -
+│ │ +                        **kwargs
+│ │ +                    )
+│ │  
+│ │ -    async def send_message(self, content,
+│ │ -                           receiver_addr: Union[str, Tuple[str, int]], *,
+│ │ -                           receiver_id: Optional[str] = None,
+│ │ -                           **kwargs
+│ │ +    async def send_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        *,
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        **kwargs
+│ │      ):
+│ │          self._notify_send_message_subs(content, receiver_addr, receiver_id, **kwargs)
+│ │ -        return await self._container.send_message(
+│ │ +        return await self._agent_context.send_message(
+│ │              content=content,
+│ │              receiver_addr=receiver_addr,
+│ │              receiver_id=receiver_id,
+│ │ -            **kwargs)
+│ │ +            **kwargs
+│ │ +        )
+│ │  
+│ │ -    async def send_acl_message(self, content,
+│ │ -                           receiver_addr: Union[str, Tuple[str, int]], *,
+│ │ -                           receiver_id: Optional[str] = None,
+│ │ -                           acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ -                           **kwargs):
+│ │ +    async def send_acl_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        *,
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ +        **kwargs
+│ │ +    ):
+│ │          self._notify_send_message_subs(content, receiver_addr, receiver_id, **kwargs)
+│ │ -        return await self._container.send_acl_message(
+│ │ +        return await self._agent_context.send_acl_message(
+│ │              content=content,
+│ │              receiver_addr=receiver_addr,
+│ │              receiver_id=receiver_id,
+│ │              acl_metadata=acl_metadata,
+│ │ -            **kwargs)
+│ │ -        
+│ │ +            **kwargs
+│ │ +        )
+│ │ +
+│ │      def subscribe_message(self, role, method, message_condition, priority=0):
+│ │          if len(self._message_subs) == 0:
+│ │              self._message_subs.append((role, message_condition, method, priority))
+│ │              return
+│ │  
+│ │          for i in range(len(self._message_subs)):
+│ │              _, _, _, other_prio = self._message_subs[i]
+│ │              if priority < other_prio:
+│ │ -                self._message_subs.insert(i, (role, message_condition, method, priority))
+│ │ +                self._message_subs.insert(
+│ │ +                    i, (role, message_condition, method, priority)
+│ │ +                )
+│ │                  break
+│ │              elif i == len(self._message_subs) - 1:
+│ │                  self._message_subs.append((role, message_condition, method, priority))
+│ │  
+│ │      def subscribe_send(self, role, method):
+│ │          if role in self._send_msg_subs:
+│ │              self._send_msg_subs[role].append(method)
+│ │          else:
+│ │              self._send_msg_subs[role] = [method]
+│ │  
+│ │  
+│ │ -class RoleAgentContext(RoleContext):
+│ │ -    """Implementation of the RoleContext-API.
+│ │ -    """
+│ │ +class RoleContext(AgentDelegates):
+│ │ +    """Implementation of the RoleContext."""
+│ │  
+│ │ -    def __init__(self, container, role_handler: RoleHandler, aid: str, inbox, scheduler: Scheduler):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        agent_context: AgentContext,
+│ │ +        scheduler: Scheduler,
+│ │ +        role_handler: RoleHandler,
+│ │ +        aid: str,
+│ │ +        inbox,
+│ │ +    ):
+│ │ +        self._agent_context = agent_context
+│ │          self._role_handler = role_handler
+│ │ -        self._container = container
+│ │          self._aid = aid
+│ │          self._scheduler = scheduler
+│ │          self._inbox = inbox
+│ │  
+│ │      @property
+│ │ +    def data(self):
+│ │ +        """Return data container of the agent
+│ │ +
+│ │ +        :return: the data container
+│ │ +        :rtype: DataContainer
+│ │ +        """
+│ │ +        return self._get_container()
+│ │ +
+│ │ +    @property
+│ │      def current_timestamp(self) -> float:
+│ │ -        return self._container.clock.time
+│ │ +        return self._agent_context.current_timestamp
+│ │  
+│ │      def _get_container(self):
+│ │          return self._role_handler._data
+│ │  
+│ │      def inbox_length(self):
+│ │          return self._inbox.qsize()
+│ │  
+│ │ @@ -216,110 +321,74 @@
+│ │      def update(self, role_model):
+│ │          self._role_handler.update(role_model)
+│ │  
+│ │      def subscribe_model(self, role, role_model_type):
+│ │          self._role_handler.subscribe(role, role_model_type)
+│ │  
+│ │      def subscribe_message(self, role, method, message_condition, priority=0):
+│ │ -        self._role_handler.subscribe_message(role, method, message_condition, priority=priority)
+│ │ +        self._role_handler.subscribe_message(
+│ │ +            role, method, message_condition, priority=priority
+│ │ +        )
+│ │  
+│ │      def subscribe_send(self, role, method):
+│ │          self._role_handler.subscribe_send(role, method)
+│ │  
+│ │      def add_role(self, role: Role):
+│ │          """Add a role to the context.
+│ │  
+│ │          :param role: the Role
+│ │          """
+│ │          self._role_handler.add_role(role)
+│ │  
+│ │ -    def handle_msg(self, content, meta: Dict[str, Any]):
+│ │ +    def handle_message(self, content, meta: Dict[str, Any]):
+│ │          """Handle an incoming message, delegating it to all applicable subscribers
+│ │ -        for role in self._role_handler.roles:
+│ │ -            if role.is_applicable(content, meta):
+│ │ -                role.handle_msg(content, meta, self)
+│ │ +        for role, message_condition, method, _ in self._message_subs:
+│ │ +            if self._is_role_active(role) and message_condition(content, meta):
+│ │ +                method(content, meta)
+│ │  
+│ │          :param content: content
+│ │          :param meta: meta
+│ │          """
+│ │ -        self._role_handler.handle_msg(content, meta)
+│ │ +        self._role_handler.handle_message(content, meta)
+│ │  
+│ │ -    def schedule_conditional_process_task(self, coroutine_creator, condition_func, lookup_delay=0.1, src=None):
+│ │ -        return self._scheduler.schedule_conditional_process_task(coroutine_creator=coroutine_creator, 
+│ │ -                                                                 condition_func=condition_func, 
+│ │ -                                                                 lookup_delay=lookup_delay, 
+│ │ -                                                                 src=src)
+│ │ -
+│ │ -    def schedule_conditional_task(self, coroutine, condition_func, lookup_delay=0.1, src=None):
+│ │ -        return self._scheduler.schedule_conditional_task(coroutine=coroutine, condition_func=condition_func,
+│ │ -                                                         lookup_delay=lookup_delay, src=src)
+│ │ -
+│ │ -    def schedule_datetime_process_task(self, coroutine_creator, date_time: datetime.datetime, src=None):
+│ │ -        return self._scheduler.schedule_datetime_process_task(coroutine_creator=coroutine_creator, 
+│ │ -                                                              date_time=date_time, 
+│ │ -                                                              src=src)
+│ │ -
+│ │ -    def schedule_datetime_task(self, coroutine, date_time: datetime.datetime, src=None):
+│ │ -        return self._scheduler.schedule_datetime_task(coroutine=coroutine, date_time=date_time, src=src)
+│ │ -
+│ │ -    def schedule_timestamp_task(self, coroutine, timestamp: float, src=None):
+│ │ -        return self._scheduler.schedule_timestamp_task(coroutine=coroutine, timestamp=timestamp, src=src)
+│ │ -
+│ │ -    def schedule_timestamp_process_task(self, coroutine_creator, timestamp: float, src=None):
+│ │ -        return self._scheduler.schedule_timestamp_process_task(coroutine_creator=coroutine_creator,
+│ │ -                                                               timestamp=timestamp, src=src)
+│ │ -
+│ │ -    def schedule_periodic_process_task(self, coroutine_creator, delay, src=None):
+│ │ -        return self._scheduler.schedule_periodic_process_task(coroutine_creator=coroutine_creator, 
+│ │ -                                                              delay=delay, 
+│ │ -                                                              src=src)
+│ │ -
+│ │ -    def schedule_periodic_task(self, coroutine_func, delay, src=None):
+│ │ -        return self._scheduler.schedule_periodic_task(coroutine_func=coroutine_func, delay=delay, src=src)
+│ │ -
+│ │ -    def schedule_instant_process_task(self, coroutine_creator, src=None):
+│ │ -        return self._scheduler.schedule_instant_process_task(coroutine_creator=coroutine_creator, 
+│ │ -                                                             src=src)
+│ │ -
+│ │ -    def schedule_instant_task(self, coroutine, src=None):
+│ │ -        return self._scheduler.schedule_instant_task(coroutine=coroutine, src=src)
+│ │ -
+│ │ -    def schedule_process_task(self, task: ScheduledProcessTask):
+│ │ -        return self._scheduler.schedule_process_task(task)
+│ │ -
+│ │ -    def schedule_task(self, task: ScheduledTask, src=None):
+│ │ -        return self._scheduler.schedule_task(task, src=src)
+│ │ -
+│ │ -    async def send_message(self, content,
+│ │ -                           receiver_addr: Union[str, Tuple[str, int]], *,
+│ │ -                           receiver_id: Optional[str] = None,
+│ │ -                           **kwargs
+│ │ +    async def send_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        *,
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        **kwargs
+│ │      ):
+│ │          return await self._role_handler.send_message(
+│ │              content=content,
+│ │              receiver_addr=receiver_addr,
+│ │              receiver_id=receiver_id,
+│ │ -            **kwargs)
+│ │ +            **kwargs
+│ │ +        )
+│ │  
+│ │ -    async def send_acl_message(self, content,
+│ │ -                           receiver_addr: Union[str, Tuple[str, int]], *,
+│ │ -                           receiver_id: Optional[str] = None,
+│ │ -                           acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ -                           **kwargs
+│ │ +    async def send_acl_message(
+│ │ +        self,
+│ │ +        content,
+│ │ +        receiver_addr: Union[str, Tuple[str, int]],
+│ │ +        *,
+│ │ +        receiver_id: Optional[str] = None,
+│ │ +        acl_metadata: Optional[Dict[str, Any]] = None,
+│ │ +        **kwargs
+│ │      ):
+│ │          return await self._role_handler.send_acl_message(
+│ │              content=content,
+│ │              receiver_addr=receiver_addr,
+│ │              receiver_id=receiver_id,
+│ │              acl_metadata=acl_metadata,
+│ │ -            **kwargs)
+│ │ +            **kwargs
+│ │ +        )
+│ │  
+│ │      @property
+│ │      def addr(self):
+│ │ -        return self._container.addr
+│ │ +        return self._agent_context.addr
+│ │  
+│ │      @property
+│ │      def aid(self):
+│ │          return self._aid
+│ │  
+│ │      def deactivate(self, role) -> None:
+│ │          self._role_handler.deactivate(role)
+│ │ @@ -333,50 +402,51 @@
+│ │      a RoleAgent as base for your agents. A role can be added with :func:`RoleAgent.add_role`.
+│ │      """
+│ │  
+│ │      def __init__(self, container, suggested_aid: str = None):
+│ │          """Create a role-agent
+│ │  
+│ │          :param container: container the agent lives in
+│ │ -        :param suggested_aid: (Optional) suggested aid, if the aid is already taken, a generated aid is used. 
+│ │ +        :param suggested_aid: (Optional) suggested aid, if the aid is already taken, a generated aid is used.
+│ │                                Using the generated aid-style ("agentX") is not allowed.
+│ │          """
+│ │          super().__init__(container, suggested_aid=suggested_aid)
+│ │  
+│ │ -        self._role_handler = RoleHandler(container, self._scheduler)
+│ │ -        self._agent_context = RoleAgentContext(
+│ │ -            container, self._role_handler, self.aid, self.inbox, self._scheduler)
+│ │ +        self._role_handler = RoleHandler(self._context, self._scheduler)
+│ │ +        self._role_context = RoleContext(
+│ │ +            self._context, self._scheduler, self._role_handler, self.aid, self.inbox
+│ │ +        )
+│ │  
+│ │      def add_role(self, role: Role):
+│ │          """Add a role to the agent. This will lead to the call of :func:`Role.setup`.
+│ │  
+│ │          :param role: the role to add
+│ │          """
+│ │ -        role.bind(self._agent_context)
+│ │ -        self._agent_context.add_role(role)
+│ │ +        role.bind(self._role_context)
+│ │ +        self._role_context.add_role(role)
+│ │  
+│ │          # Setup role
+│ │          role.setup()
+│ │  
+│ │      def remove_role(self, role: Role):
+│ │          """Remove a role permanently from the agent.
+│ │  
+│ │          :param role: [description]
+│ │          :type role: Role
+│ │          """
+│ │ -        self._agent_context.remove_role(role)
+│ │ +        self._role_context.remove_role(role)
+│ │          asyncio.create_task(role.on_stop())
+│ │  
+│ │      @property
+│ │      def roles(self) -> List[Role]:
+│ │          """Returns list of roles
+│ │  
+│ │          :return: list of roles
+│ │          """
+│ │          return self._role_handler.roles
+│ │  
+│ │      def handle_message(self, content, meta: Dict[str, Any]):
+│ │ -        self._agent_context.handle_msg(content, meta)
+│ │ +        self._role_context.handle_message(content, meta)
+│ │  
+│ │      async def shutdown(self):
+│ │          await self._role_handler.on_stop()
+│ │          await super().shutdown()
+│ │   --- mango-agents-0.4.0/mango/util/clock.py
+│ ├── +++ mango-agents-1.0.0/mango/util/clock.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,91 +1,106 @@
+│ │ -import time
+│ │ -from typing import Tuple, List
+│ │  import asyncio
+│ │  import bisect
+│ │ +import time
+│ │  from abc import ABC, abstractmethod
+│ │ +from typing import List, Tuple
+│ │  
+│ │  
+│ │  class Clock(ABC):
+│ │      """
+│ │      Abstract class for clocks that can be used in mango
+│ │      """
+│ │ +
+│ │      @property
+│ │      def time(self) -> float:
+│ │          """
+│ │          Returns the current time of the clock
+│ │          """
+│ │          raise NotImplementedError
+│ │  
+│ │      @abstractmethod
+│ │ -    def sleep(self, t: float):
+│ │ +    def sleep(self, t: float) -> asyncio.Future:
+│ │          raise NotImplementedError
+│ │  
+│ │  
+│ │ -class AsyncioClock (Clock):
+│ │ +class AsyncioClock(Clock):
+│ │      """
+│ │      The AsyncioClock
+│ │      """
+│ │ +
+│ │      def __init__(self):
+│ │          pass
+│ │  
+│ │      @property
+│ │      def time(self) -> float:
+│ │          """
+│ │          Current time using the time module
+│ │          """
+│ │          return time.time()
+│ │  
+│ │ -    def sleep(self, t):
+│ │ +    def sleep(self, t) -> asyncio.Future:
+│ │          """
+│ │          Sleeping via asyncio sleep
+│ │          """
+│ │          return asyncio.sleep(t)
+│ │  
+│ │  
+│ │  class ExternalClock(Clock):
+│ │      """
+│ │      An external clock that proceeds only when set_time is called
+│ │      """
+│ │ +
+│ │      def __init__(self, start_time: float = 0):
+│ │          self._time: float = start_time
+│ │ -        self._futures: List[Tuple[float, asyncio.Future]] = []  # list of all futures to be triggered
+│ │ +        self._futures: List[
+│ │ +            Tuple[float, asyncio.Future]
+│ │ +        ] = []  # list of all futures to be triggered
+│ │  
+│ │      @property
+│ │ -    def time(self):
+│ │ +    def time(self) -> float:
+│ │          """
+│ │          Current time of the external clock
+│ │          """
+│ │          return self._time
+│ │  
+│ │      def set_time(self, t: float):
+│ │          """
+│ │          New time is set
+│ │          """
+│ │          if t < self._time:
+│ │ -            raise ValueError('Time must be > %s but is %s.', self._time, t)
+│ │ +            raise ValueError(f"Time must be > {self._time} but is {t}.")
+│ │          # set time
+│ │          self._time = t
+│ │          # search for all futures that have to be triggerd
+│ │          keys = [k[0] for k in self._futures]
+│ │          threshold = bisect.bisect_right(keys, t)
+│ │          # store
+│ │ -        current_futures, self._futures = self._futures[:threshold], self._futures[threshold:]
+│ │ +        current_futures, self._futures = (
+│ │ +            self._futures[:threshold],
+│ │ +            self._futures[threshold:],
+│ │ +        )
+│ │          # Tuple of time, future
+│ │          for _, future in current_futures:
+│ │ -            # set result of future
+│ │ -            future.set_result(None)
+│ │ +            # set result of future, if future is not already done
+│ │ +            if not future.done():
+│ │ +                future.set_result(True)
+│ │  
+│ │ -    def sleep(self, t: float):
+│ │ +    def sleep(self, t: float) -> asyncio.Future:
+│ │          """
+│ │          Sleeps for t based on the external clock
+│ │          """
+│ │          f = asyncio.Future()
+│ │          if t <= 0:
+│ │              # trigger directly if time is <= 0
+│ │              f.set_result(None)
+│ │              return f
+│ │          # insert future in sorted list of futures
+│ │          keys = [k[0] for k in self._futures]
+│ │ -        index = bisect.bisect_right(keys, self.time + t,)
+│ │ +        index = bisect.bisect_right(
+│ │ +            keys,
+│ │ +            self.time + t,
+│ │ +        )
+│ │          self._futures.insert(index, (self.time + t, f))
+│ │          return f
+│ │ +
+│ │ +    def get_next_activity(self) -> float:
+│ │ +        return None if len(self._futures) == 0 else self._futures[0][0]
+│ │   --- mango-agents-0.4.0/mango/util/scheduling.py
+│ ├── +++ mango-agents-1.0.0/mango/util/scheduling.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,19 +1,20 @@
+│ │  """
+│ │  Module for commonly used time based scheduled task executed inside one agent.
+│ │  """
+│ │ -from abc import abstractmethod
+│ │ -from typing import List, Tuple, Any
+│ │  import asyncio
+│ │ -import datetime
+│ │  import concurrent.futures
+│ │ -import warnings
+│ │ +import datetime
+│ │ +from abc import abstractmethod
+│ │  from multiprocessing import Manager
+│ │ +from typing import Any, List, Tuple
+│ │ +
+│ │ +from dateutil.rrule import rrule
+│ │  
+│ │ -from mango.util.clock import Clock, AsyncioClock, ExternalClock
+│ │ +from mango.util.clock import AsyncioClock, Clock, ExternalClock
+│ │  
+│ │  
+│ │  class Suspendable:
+│ │      """
+│ │      Wraps a coroutine, intercepting __await__ to add the functionality of suspending.
+│ │      """
+│ │  
+│ │ @@ -93,115 +94,173 @@
+│ │  class ScheduledTask:
+│ │      """
+│ │      Base class for scheduled tasks in mango. Within this class it is possible to
+│ │      define what to do on execution and on stop. In most cases the logic should get
+│ │      passed as lambda while the scheduling logic is inside of class inheriting from this one.
+│ │      """
+│ │  
+│ │ -    def __init__(self, clock: Clock = None) -> None:
+│ │ +    def __init__(self, clock: Clock = None, observable=True, on_stop=None) -> None:
+│ │          self.clock = clock if clock is not None else AsyncioClock()
+│ │ +        self._on_stop_hook_in = on_stop
+│ │ +        self._is_observable = observable
+│ │ +        if self._is_observable:
+│ │ +            self._is_sleeping = asyncio.Future()
+│ │ +            self._is_done = asyncio.Future()
+│ │ +
+│ │ +    def notify_sleeping(self):
+│ │ +        if self._is_observable:
+│ │ +            self._is_sleeping.set_result(True)
+│ │ +
+│ │ +    def notify_running(self):
+│ │ +        if self._is_observable:
+│ │ +            self._is_sleeping = asyncio.Future()
+│ │  
+│ │      @abstractmethod
+│ │      async def run(self):
+│ │          """Called via asyncio as asyncio.task.
+│ │  
+│ │          Raises:
+│ │              NotImplementedError: must be overwritten
+│ │          """
+│ │          raise NotImplementedError
+│ │  
+│ │      def on_stop(self, fut: asyncio.Future = None):
+│ │          """
+│ │ -        Called when the task is cancelled of finished.
+│ │ +        Called when the task is cancelled or finished.
+│ │          """
+│ │ +        if self._on_stop_hook_in is not None:
+│ │ +            self._on_stop_hook_in(fut)
+│ │ +        if self._is_observable:
+│ │ +            self._is_done.set_result(True)
+│ │  
+│ │  
+│ │  class TimestampScheduledTask(ScheduledTask):
+│ │      """
+│ │      Timestamp based one-shot task. This task will get executed when a given unix timestamp is reached.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine, timestamp: float, clock=None):
+│ │ -        super().__init__(clock)
+│ │ +    def __init__(self, coroutine, timestamp: float, clock=None, on_stop=None):
+│ │ +        super().__init__(clock, on_stop=on_stop)
+│ │          self._timestamp = timestamp
+│ │          self._coro = coroutine
+│ │  
+│ │      async def _wait(self, timestamp: float):
+│ │ -        await self.clock.sleep(timestamp - self.clock.time)
+│ │ +        sleep_future: asyncio.Future = self.clock.sleep(timestamp - self.clock.time)
+│ │ +        self.notify_sleeping()
+│ │ +        await sleep_future
+│ │ +        self.notify_running()
+│ │  
+│ │      async def run(self):
+│ │          await self._wait(self._timestamp)
+│ │          return await self._coro
+│ │  
+│ │  
+│ │ +class AwaitingTask(ScheduledTask):
+│ │ +    """
+│ │ +    Awaiting task. This task will execute a given coroutine after another given coroutine has been awaited.
+│ │ +    Can be useful if you want to execute something after a Future has finished.
+│ │ +    """
+│ │ +
+│ │ +    def __init__(self, coroutine, awaited_coroutine, clock=None, on_stop=None):
+│ │ +        super().__init__(clock, on_stop=on_stop)
+│ │ +        self._coroutine = coroutine
+│ │ +        self._awaited_coroutine = awaited_coroutine
+│ │ +
+│ │ +    async def run(self):
+│ │ +        self.notify_sleeping()
+│ │ +        await self._awaited_coroutine
+│ │ +        self.notify_running()
+│ │ +        return await self._coroutine
+│ │ +
+│ │ +
+│ │  class InstantScheduledTask(TimestampScheduledTask):
+│ │      """
+│ │      One-shot task, which will get executed instantly.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine, clock: Clock = None):
+│ │ +    def __init__(self, coroutine, clock: Clock = None, on_stop=None):
+│ │          if clock is None:
+│ │              clock = AsyncioClock()
+│ │ -        super().__init__(coroutine, clock.time, clock=clock)
+│ │ +        super().__init__(coroutine, clock.time, clock=clock, on_stop=on_stop)
+│ │  
+│ │  
+│ │  class PeriodicScheduledTask(ScheduledTask):
+│ │      """
+│ │      Class for periodic scheduled tasks. It enables to create a task for an agent
+│ │      which will get executed periodically with a specified delay.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine_func, delay, clock: Clock = None):
+│ │ -        super().__init__(clock)
+│ │ +    def __init__(self, coroutine_func, delay, clock: Clock = None, on_stop=None):
+│ │ +        super().__init__(clock, on_stop=on_stop)
+│ │  
+│ │          self._stopped = False
+│ │          self._coroutine_func = coroutine_func
+│ │          self._delay = delay
+│ │  
+│ │      async def run(self):
+│ │          while not self._stopped:
+│ │              await self._coroutine_func()
+│ │ -            await self.clock.sleep(self._delay)
+│ │ +            sleep_future: asyncio.Future = self.clock.sleep(self._delay)
+│ │ +            self.notify_sleeping()
+│ │ +            await sleep_future
+│ │ +            self.notify_running()
+│ │  
+│ │  
+│ │ -class ConditionalTask(ScheduledTask):
+│ │ -    """Task which will get executed as soon as the given condition is fulfilled.
+│ │ +class RecurrentScheduledTask(ScheduledTask):
+│ │ +    """
+│ │ +    Class for periodic scheduled tasks. It enables to create a task for an agent
+│ │ +    which will get executed periodically with a specified delay.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine, condition_func, lookup_delay=0.1, clock: Clock = None):
+│ │ -        super().__init__(clock=clock)
+│ │ -
+│ │ -        self._condition = condition_func
+│ │ -        self._coro = coroutine
+│ │ -        self._delay = lookup_delay
+│ │ +    def __init__(
+│ │ +        self, coroutine_func, recurrency: rrule, clock: Clock = None, on_stop=None
+│ │ +    ):
+│ │ +        super().__init__(clock, on_stop=on_stop)
+│ │ +        self._recurrency_rule = recurrency
+│ │ +        self._stopped = False
+│ │ +        self._coroutine_func = coroutine_func
+│ │  
+│ │      async def run(self):
+│ │ -        while not self._condition():
+│ │ -            await self.clock.sleep(self._delay)
+│ │ -        return await self._coro
+│ │ +        while not self._stopped:
+│ │ +            await self._coroutine_func()
+│ │ +            current_time = datetime.datetime.fromtimestamp(self.clock.time)
+│ │ +            after = self._recurrency_rule.after(current_time)
+│ │ +            # after can be None, if until or count was set on the rrule
+│ │ +            if after is None:
+│ │ +                self._stopped = True
+│ │ +            else:
+│ │ +                delay = (after - current_time).total_seconds()
+│ │ +                await self.clock.sleep(delay)
+│ │  
+│ │  
+│ │ -class DateTimeScheduledTask(ScheduledTask):
+│ │ -    """
+│ │ -    DateTime based one-shot task. This task will get executed using a given datetime-object.
+│ │ -    """
+│ │ +class ConditionalTask(ScheduledTask):
+│ │ +    """Task which will get executed as soon as the given condition is fulfilled."""
+│ │  
+│ │ -    def __init__(self, coroutine, date_time: datetime.datetime, clock=None):
+│ │ -        super().__init__(clock)
+│ │ -        warnings.warn('DateTimeScheduleTask is deprecated. Use TimestampScheduledTask instead.', DeprecationWarning)
+│ │ -        self._datetime = date_time
+│ │ -        self._coro = coroutine
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        coroutine,
+│ │ +        condition_func,
+│ │ +        lookup_delay=0.1,
+│ │ +        clock: Clock = None,
+│ │ +        on_stop=None,
+│ │ +    ):
+│ │ +        super().__init__(clock=clock, on_stop=on_stop)
+│ │  
+│ │ -    async def _wait(self, date_time: datetime.datetime):
+│ │ -        await self.clock.sleep(date_time.timestamp() - self.clock.time)
+│ │ +        self._condition = condition_func
+│ │ +        self._coro = coroutine
+│ │ +        self._delay = lookup_delay
+│ │  
+│ │      async def run(self):
+│ │ -        await self._wait(self._datetime)
+│ │ +        while not self._condition():
+│ │ +            sleep_future: asyncio.Future = self.clock.sleep(self._delay)
+│ │ +            self.notify_sleeping()
+│ │ +            await sleep_future
+│ │ +            self.notify_running()
+│ │          return await self._coro
+│ │ -
+│ │ +    
+│ │  
+│ │  # process tasks
+│ │  
+│ │  
+│ │  class ScheduledProcessTask(ScheduledTask):
+│ │      # Mark class as task for an external process
+│ │  
+│ │ @@ -210,188 +269,278 @@
+│ │      This is necessary due to the fact that not everything can be transferred to other processes i.e. coroutines are
+│ │      bound to the current event-loop resp the current thread, so they won't work in other processes.
+│ │      Furthermore, when using a ProcessTask you have to ensure, that the coroutine functions should not be bound to
+│ │      complex objects, meaning they should be static or bound to simple objects, which are transferable
+│ │      via pythons IPC implementation.
+│ │      """
+│ │  
+│ │ -    def __init__(self, clock: Clock):
+│ │ +    def __init__(self, clock: Clock, on_stop=None):
+│ │          if isinstance(clock, ExternalClock):
+│ │ -            raise ValueError('Process Tasks do currently not work with external clocks')
+│ │ -        super().__init__(clock=clock)
+│ │ +            raise ValueError("Process Tasks do currently not work with external clocks")
+│ │ +        super().__init__(clock=clock, observable=False, on_stop=on_stop)
+│ │  
+│ │  
+│ │  class TimestampScheduledProcessTask(TimestampScheduledTask, ScheduledProcessTask):
+│ │      """
+│ │      Timestamp based one-shot task.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine_creator, timestamp: float, clock=None):
+│ │ -        super().__init__(coroutine_creator, timestamp, clock)
+│ │ +    def __init__(self, coroutine_creator, timestamp: float, clock=None, on_stop=None):
+│ │ +        super().__init__(coroutine_creator, timestamp, clock, on_stop=on_stop)
+│ │  
+│ │      async def run(self):
+│ │          await self._wait(self._timestamp)
+│ │          return await self._coro()
+│ │  
+│ │  
+│ │ -class InstantScheduledProcessTask(TimestampScheduledProcessTask):
+│ │ -    """One-shot task, which will get executed instantly.
+│ │ +class AwaitingProcessTask(AwaitingTask, ScheduledProcessTask):
+│ │ +    """
+│ │ +    Await a coroutine, then execute another.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coroutine_creator, clock: Clock = None):
+│ │ +    def __init__(
+│ │ +        self, coroutine_creator, awaited_coroutine_creator, clock=None, on_stop=None
+│ │ +    ):
+│ │ +        super().__init__(
+│ │ +            coroutine_creator, awaited_coroutine_creator, clock, on_stop=on_stop
+│ │ +        )
+│ │ +
+│ │ +    async def run(self):
+│ │ +        await self._awaited_coroutine()
+│ │ +        return await self._coroutine()
+│ │ +
+│ │ +
+│ │ +class InstantScheduledProcessTask(TimestampScheduledProcessTask):
+│ │ +    """One-shot task, which will get executed instantly."""
+│ │ +
+│ │ +    def __init__(self, coroutine_creator, clock: Clock = None, on_stop=None):
+│ │          if clock is None:
+│ │              clock = AsyncioClock()
+│ │ -        super().__init__(coroutine_creator, timestamp=clock.time, clock=clock)
+│ │ +        super().__init__(
+│ │ +            coroutine_creator, timestamp=clock.time, clock=clock, on_stop=on_stop
+│ │ +        )
+│ │  
+│ │  
+│ │  class PeriodicScheduledProcessTask(PeriodicScheduledTask, ScheduledProcessTask):
+│ │ -    def __init__(self, coroutine_func, delay, clock: Clock = None):
+│ │ -        super().__init__(coroutine_func, delay, clock)
+│ │ +    def __init__(self, coroutine_func, delay, clock: Clock = None, on_stop=None):
+│ │ +        super().__init__(coroutine_func, delay, clock, on_stop=on_stop)
+│ │ +
+│ │ +
+│ │ +class RecurrentScheduledProcessTask(RecurrentScheduledTask, ScheduledProcessTask):
+│ │ +    def __init__(
+│ │ +        self, coroutine_func, recurrency: rrule, clock: Clock = None, on_stop=None
+│ │ +    ):
+│ │ +        super().__init__(coroutine_func, recurrency, clock, on_stop=on_stop)
+│ │  
+│ │  
+│ │  class ConditionalProcessTask(ConditionalTask, ScheduledProcessTask):
+│ │      """
+│ │      Task which will get executed as soon as the given condition is fulfilled.
+│ │      """
+│ │  
+│ │ -    def __init__(self, coro_func, condition_func, lookup_delay=0.1, clock: Clock = None):
+│ │ -        super().__init__(coro_func, condition_func, lookup_delay, clock=clock)
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        coro_func,
+│ │ +        condition_func,
+│ │ +        lookup_delay=0.1,
+│ │ +        clock: Clock = None,
+│ │ +        on_stop=None,
+│ │ +    ):
+│ │ +        super().__init__(
+│ │ +            coro_func, condition_func, lookup_delay, clock=clock, on_stop=on_stop
+│ │ +        )
+│ │  
+│ │      async def run(self):
+│ │          while not self._condition():
+│ │              await self.clock.sleep(self._delay)
+│ │          return await self._coro()
+│ │  
+│ │  
+│ │ -class DateTimeScheduledProcessTask(DateTimeScheduledTask, ScheduledProcessTask):
+│ │ -    """
+│ │ -    DateTime based one-shot task. This task will get executed using a given datetime-object.
+│ │ -    """
+│ │ -
+│ │ -    def __init__(self, coroutine_creator, date_time: datetime.datetime, clock=None):
+│ │ -        super().__init__(coroutine_creator, date_time, clock)
+│ │ -
+│ │ -    async def run(self):
+│ │ -        await self._wait(self._datetime)
+│ │ -        return await self._coro()
+│ │ -
+│ │ -
+│ │  def _create_asyncio_context():
+│ │      asyncio.set_event_loop(asyncio.new_event_loop())
+│ │  
+│ │  
+│ │  class Scheduler:
+│ │ -    """Scheduler for executing tasks.
+│ │ -    """
+│ │ +    """Scheduler for executing tasks."""
+│ │  
+│ │      def __init__(self, clock: Clock = None, num_process_parallel=16):
+│ │ -        # List of Tuples with asyncio.Future, Suspendable coro, Source
+│ │ -        self._scheduled_tasks: List[Tuple[asyncio.Future, Suspendable, Any]] = []
+│ │ +        # List of Tuples with asyncio.Future, ScheduledTask, Suspendable coro, Source
+│ │ +        self._scheduled_tasks: List[
+│ │ +            Tuple[ScheduledTask, asyncio.Future, Suspendable, Any]
+│ │ +        ] = []
+│ │          self.clock = clock if clock is not None else AsyncioClock()
+│ │          self._scheduled_process_tasks = []
+│ │ -        self._process_pool_exec = concurrent.futures.ProcessPoolExecutor(max_workers=num_process_parallel,
+│ │ -                                                                         initializer=_create_asyncio_context)
+│ │ +        self._process_pool_exec = concurrent.futures.ProcessPoolExecutor(
+│ │ +            max_workers=num_process_parallel, initializer=_create_asyncio_context
+│ │ +        )
+│ │  
+│ │      @staticmethod
+│ │      def _run_task_in_p_context(task, suspend_event):
+│ │          try:
+│ │              coro = Suspendable(task.run(), ext_contr_event=suspend_event)
+│ │  
+│ │              return asyncio.get_event_loop().run_until_complete(coro)
+│ │          finally:
+│ │ -            task.on_stop(coro)
+│ │ +            pass
+│ │  
+│ │      async def sleep(self, t: float):
+│ │          """
+│ │          :param t: The time to sleep [s]
+│ │          """
+│ │          return await self.clock.sleep(t)
+│ │  
+│ │      # conv methods for asyncio Tasks
+│ │  
+│ │      def schedule_task(self, task: ScheduledTask, src=None) -> asyncio.Task:
+│ │          """
+│ │ -        Schedule a task with asyncio. When the task is finished, if finite, its automatically
+│ │ -        removed afterwards. For scheduling options see the subclasses of ScheduledTask.
+│ │ +        Schedule a task with asyncio. When the task is finished, if finite, its automatically removed afterwards.
+│ │ +        For scheduling options see the subclasses of ScheduledTask.
+│ │  
+│ │          :param task: task to be scheduled
+│ │          :type task: ScheduledTask
+│ │          :param src: creator of the task
+│ │          :type: Object
+│ │          """
+│ │          susp_coro = Suspendable(task.run())
+│ │          l_task = asyncio.ensure_future(susp_coro)
+│ │          l_task.add_done_callback(task.on_stop)
+│ │          l_task.add_done_callback(self._remove_task)
+│ │ -        self._scheduled_tasks.append((l_task, susp_coro, src))
+│ │ +        self._scheduled_tasks.append((task, l_task, susp_coro, src))
+│ │          return l_task
+│ │  
+│ │ -    def schedule_timestamp_task(self, coroutine, timestamp: float, src=None):
+│ │ -        """Schedule a task at specified datetime.
+│ │ +    def schedule_timestamp_task(
+│ │ +        self, coroutine, timestamp: float, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task at specified unix timestamp.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param timestamp: timestamp defining when the task should start (unix timestamp)
+│ │          :type timestamp: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_task(TimestampScheduledTask(coroutine=coroutine, timestamp=timestamp, clock=self.clock),
+│ │ -                                  src=src)
+│ │ +        return self.schedule_task(
+│ │ +            TimestampScheduledTask(
+│ │ +                coroutine=coroutine,
+│ │ +                timestamp=timestamp,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │  
+│ │ -    def schedule_instant_task(self, coroutine, src=None):
+│ │ +    def schedule_instant_task(self, coroutine, on_stop=None, src=None):
+│ │          """Schedule an instantly executed task.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine:
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_task(InstantScheduledTask(coroutine=coroutine, clock=self.clock), src=src)
+│ │ +        return self.schedule_task(
+│ │ +            InstantScheduledTask(
+│ │ +                coroutine=coroutine, clock=self.clock, on_stop=on_stop
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │  
+│ │ -    def schedule_periodic_task(self, coroutine_func, delay, src=None):
+│ │ +    def schedule_periodic_task(self, coroutine_func, delay, on_stop=None, src=None):
+│ │          """
+│ │          Schedule an open end periodically executed task.
+│ │          :param coroutine_func: coroutine function creating coros to be scheduled
+│ │          :type coroutine_func:  Coroutine Function
+│ │          :param delay: delay in between the cycles
+│ │          :type delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_task(PeriodicScheduledTask(coroutine_func=coroutine_func, delay=delay, clock=self.clock),
+│ │ -                                  src=src)
+│ │ +        return self.schedule_task(
+│ │ +            PeriodicScheduledTask(
+│ │ +                coroutine_func=coroutine_func,
+│ │ +                delay=delay,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_recurrent_task(
+│ │ +        self, coroutine_func, recurrency, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task using a fine-grained recurrency rule.
+│ │  
+│ │ -    def schedule_conditional_task(self, coroutine, condition_func, lookup_delay: float = 0.1, src=None):
+│ │ +        :param coroutine_func: coroutine function creating coros to be scheduled
+│ │ +        :type coroutine_func:  Coroutine Function
+│ │ +        :param recurrency: recurrency rule to calculate next event
+│ │ +        :type recurrency: dateutil.rrule.rrule
+│ │ +        :param src: creator of the task
+│ │ +        :type src: Object
+│ │ +        """
+│ │ +        return self.schedule_task(
+│ │ +            RecurrentScheduledTask(
+│ │ +                coroutine_func=coroutine_func,
+│ │ +                recurrency=recurrency,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_conditional_task(
+│ │ +        self,
+│ │ +        coroutine,
+│ │ +        condition_func,
+│ │ +        lookup_delay: float = 0.1,
+│ │ +        on_stop=None,
+│ │ +        src=None,
+│ │ +    ):
+│ │          """
+│ │          Schedule a task when a specified condition is met.
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param condition_func: function for determining whether the condition is fulfilled
+│ │          :type condition_func: lambda () -> bool
+│ │          :param lookup_delay: delay between checking the condition [s]
+│ │          :type lookup_delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_task(ConditionalTask(coroutine=coroutine, condition_func=condition_func, clock=self.clock,
+│ │ -                                                  lookup_delay=lookup_delay), src=src)
+│ │ -
+│ │ -    def schedule_datetime_task(self, coroutine, date_time: datetime.datetime, src=None):
+│ │ +        return self.schedule_task(
+│ │ +            ConditionalTask(
+│ │ +                coroutine=coroutine,
+│ │ +                condition_func=condition_func,
+│ │ +                clock=self.clock,
+│ │ +                lookup_delay=lookup_delay,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_awaiting_task(
+│ │ +        self, coroutine, awaited_coroutine, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule a task at specified datetime.
+│ │  
+│ │          :param coroutine: coroutine to be scheduled
+│ │          :type coroutine: Coroutine
+│ │          :param date_time: datetime defining when the task should start
+│ │          :type date_time: datetime
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_task(DateTimeScheduledTask(coroutine=coroutine, date_time=date_time, clock=self.clock),
+│ │ -                                  src=src)
+│ │ +        return self.schedule_task(
+│ │ +            AwaitingTask(
+│ │ +                coroutine=coroutine,
+│ │ +                awaited_coroutine=awaited_coroutine,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │  
+│ │      # conv. methods for process tasks
+│ │  
+│ │      def schedule_process_task(self, task: ScheduledProcessTask, src=None):
+│ │          """
+│ │          Schedule as task with asyncio in a different process managed by a ProcessWorkerPool in this Scheduler-object.
+│ │          For scheduling options see the subclasses of ScheduledProcessTask.
+│ │ @@ -405,56 +554,109 @@
+│ │          """
+│ │  
+│ │          loop = asyncio.get_running_loop()
+│ │          manager = Manager()
+│ │          event = manager.Event()
+│ │          event.set()
+│ │          l_task = asyncio.ensure_future(
+│ │ -            loop.run_in_executor(self._process_pool_exec, Scheduler._run_task_in_p_context, task, event))
+│ │ +            loop.run_in_executor(
+│ │ +                self._process_pool_exec, Scheduler._run_task_in_p_context, task, event
+│ │ +            )
+│ │ +        )
+│ │          l_task.add_done_callback(self._remove_process_task)
+│ │ -        self._scheduled_process_tasks.append((l_task, event, src))
+│ │ +        l_task.add_done_callback(task.on_stop)
+│ │ +        self._scheduled_process_tasks.append((task, l_task, event, src))
+│ │          return l_task
+│ │  
+│ │ -    def schedule_timestamp_process_task(self, coroutine_creator, timestamp: float, src=None):
+│ │ -        """Schedule a task at specified datetime dispatched to another process.
+│ │ +    def schedule_timestamp_process_task(
+│ │ +        self, coroutine_creator, timestamp: float, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule a task at specified unix timestamp dispatched to another process.
+│ │  
+│ │          :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │          :type coroutine_creator: coroutine_creator
+│ │          :param timestamp: unix timestamp defining when the task should start
+│ │          :type timestamp: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_process_task(TimestampScheduledProcessTask(coroutine_creator=coroutine_creator,
+│ │ -                                                                        timestamp=timestamp, clock=self.clock), src=src)
+│ │ +        return self.schedule_process_task(
+│ │ +            TimestampScheduledProcessTask(
+│ │ +                coroutine_creator=coroutine_creator,
+│ │ +                timestamp=timestamp,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │  
+│ │ -    def schedule_instant_process_task(self, coroutine_creator, src=None):
+│ │ +    def schedule_instant_process_task(self, coroutine_creator, on_stop=None, src=None):
+│ │          """
+│ │          Schedule an instantly executed task dispatched to another process.
+│ │          :param coroutine_creator: coroutine_creator to be scheduled
+│ │          :type coroutine_creator:
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_process_task(InstantScheduledProcessTask(coroutine_creator=coroutine_creator), src=src)
+│ │ +        return self.schedule_process_task(
+│ │ +            InstantScheduledProcessTask(coroutine_creator=coroutine_creator), src=src
+│ │ +        )
+│ │  
+│ │ -    def schedule_periodic_process_task(self, coroutine_creator, delay, src=None):
+│ │ +    def schedule_periodic_process_task(
+│ │ +        self, coroutine_creator, delay, on_stop=None, src=None
+│ │ +    ):
+│ │          """Schedule an open end periodically executed task dispatched to another process.
+│ │  
+│ │          :param coroutine_creator: coroutine function creating coros to be scheduled
+│ │          :type coroutine_creator: Coroutine Function
+│ │          :param delay: delay in between the cycles
+│ │          :type delay: float
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │ -        return self.schedule_process_task(PeriodicScheduledProcessTask(coroutine_func=coroutine_creator,
+│ │ -                                                                       delay=delay, clock=self.clock), src=src)
+│ │ +        return self.schedule_process_task(
+│ │ +            PeriodicScheduledProcessTask(
+│ │ +                coroutine_func=coroutine_creator,
+│ │ +                delay=delay,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_recurrent_process_task(
+│ │ +        self, coroutine_creator, recurrency, on_stop=None, src=None
+│ │ +    ):
+│ │ +        """Schedule an open end periodically executed task dispatched to another process.
+│ │  
+│ │ -    def schedule_conditional_process_task(self, coroutine_creator, condition_func, lookup_delay: float = 0.1, src=None):
+│ │ +        :param coroutine_creator: coroutine function creating coros to be scheduled
+│ │ +        :type coroutine_creator: Coroutine Function
+│ │ +        :param recurrency: rrule object which gets executed
+│ │ +        :type recurrency: dateutil.rrule.rrule
+│ │ +        :param src: creator of the task
+│ │ +        :type src: Object
+│ │ +        """
+│ │ +        return self.schedule_process_task(
+│ │ +            RecurrentScheduledProcessTask(
+│ │ +                coroutine_func=coroutine_creator,
+│ │ +                recurrency=recurrency,
+│ │ +                clock=self.clock,
+│ │ +                on_stop=on_stop,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │ +
+│ │ +    def schedule_conditional_process_task(
+│ │ +        self,
+│ │ +        coroutine_creator,
+│ │ +        condition_func,
+│ │ +        lookup_delay: float = 0.1,
+│ │ +        on_stop=None,
+│ │ +        src=None,
+│ │ +    ):
+│ │          """
+│ │          Schedule a task when a specified condition is met.
+│ │          :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │          :type coroutine_creator: coroutine_creator
+│ │          :param condition_func: function for determining whether the condition is fulfilled
+│ │          :type condition_func: lambda () -> bool
+│ │          :param lookup_delay: delay between checking the condition [s]
+│ │ @@ -462,97 +664,115 @@
+│ │          :param src: creator of the task
+│ │          :type src: Object
+│ │          """
+│ │          return self.schedule_process_task(
+│ │              ConditionalProcessTask(
+│ │                  coro_func=coroutine_creator,
+│ │                  condition_func=condition_func,
+│ │ -                lookup_delay=lookup_delay, clock=self.clock),
+│ │ -            src=src)
+│ │ -
+│ │ -    def schedule_datetime_process_task(self, coroutine_creator, date_time: datetime.datetime, src=None):
+│ │ -        """Schedule a task at specified datetime dispatched to another process.
+│ │ -
+│ │ -        :param coroutine_creator: coroutine_creator creating coroutine to be scheduled
+│ │ -        :type coroutine_creator: coroutine_creator
+│ │ -        :param date_time: datetime defining when the task should start
+│ │ -        :type date_time: datetime
+│ │ -        :param src: creator of the task
+│ │ -        :type src: Object
+│ │ -        """
+│ │ -        return self.schedule_process_task(DateTimeScheduledProcessTask(coroutine_creator=coroutine_creator,
+│ │ -                                                                       date_time=date_time, clock=self.clock), src=src)
+│ │ +                lookup_delay=lookup_delay,
+│ │ +                on_stop=on_stop,
+│ │ +                clock=self.clock,
+│ │ +            ),
+│ │ +            src=src,
+│ │ +        )
+│ │  
+│ │      # methods to suspend or resume tasks
+│ │  
+│ │      def suspend(self, given_src):
+│ │          """Suspend a set of tasks triggered by the given src object.
+│ │  
+│ │          :param given_src: the src object
+│ │          :type given_src: object
+│ │          """
+│ │ -        for _, coro, src in self._scheduled_tasks:
+│ │ +        for _, _, coro, src in self._scheduled_tasks:
+│ │              if src == given_src and coro is not None:
+│ │                  coro.suspend()
+│ │ -        for _, event, src in self._scheduled_process_tasks:
+│ │ +        for _, _, event, src in self._scheduled_process_tasks:
+│ │              if src == given_src and event is not None:
+│ │                  event.clear()
+│ │  
+│ │      def resume(self, given_src):
+│ │          """Resume a set of tasks triggered by the given src object.
+│ │  
+│ │          :param given_src: the src object
+│ │          :type given_src: object
+│ │          """
+│ │ -        for _, coro, src in self._scheduled_tasks:
+│ │ +        for _, _, coro, src in self._scheduled_tasks:
+│ │              if src == given_src and coro is not None:
+│ │                  coro.resume()
+│ │ -        for _, event, src in self._scheduled_process_tasks:
+│ │ +        for _, _, event, src in self._scheduled_process_tasks:
+│ │              if src == given_src and event is not None:
+│ │                  event.set()
+│ │  
+│ │      def _remove_process_task(self, fut=asyncio.Future):
+│ │          for i in range(len(self._scheduled_process_tasks)):
+│ │ -            task, event, _ = self._scheduled_process_tasks[i]
+│ │ +            _, task, event, _ = self._scheduled_process_tasks[i]
+│ │              if task == fut:
+│ │                  del self._scheduled_process_tasks[i]
+│ │                  event.set()
+│ │                  break
+│ │  
+│ │      # methods for removing tasks, stopping or shutting down
+│ │  
+│ │      def _remove_task(self, fut=asyncio.Future):
+│ │          self._remove_generic_task(self._scheduled_tasks, fut=fut)
+│ │  
+│ │      def _remove_generic_task(self, target_list, fut=asyncio.Future):
+│ │          for i in range(len(target_list)):
+│ │ -            task, _, _ = target_list[i]
+│ │ +            _, task, _, _ = target_list[i]
+│ │              if task == fut:
+│ │                  del target_list[i]
+│ │                  break
+│ │  
+│ │      async def stop(self):
+│ │          """
+│ │          Cancel all not finished scheduled tasks
+│ │          """
+│ │ -        for task, _, _ in self._scheduled_tasks + self._scheduled_process_tasks:
+│ │ +        for _, task, _, _ in self._scheduled_tasks + self._scheduled_process_tasks:
+│ │              task.cancel()
+│ │              await task
+│ │  
+│ │ -    async def tasks_complete(self, timeout=1):
+│ │ +    async def tasks_complete(self, timeout=1, recursive=False):
+│ │          """Finish all pending tasks using a timeout.
+│ │  
+│ │          Args:
+│ │              timeout (int, optional): waiting timeout. Defaults to 1.
+│ │          """
+│ │ -        for task, _, _ in self._scheduled_tasks + self._scheduled_process_tasks:
+│ │ +        for _, task, _, _ in self._scheduled_tasks + self._scheduled_process_tasks:
+│ │              await asyncio.wait_for(task, timeout=timeout)
+│ │  
+│ │ +        # As it might happen that tasks spawn new tasks, one might want to finish these tasks
+│ │ +        # as well. Caution: this can result in an infinte loop, f.e. if a tasks spawns itself
+│ │ +        # after completion
+│ │ +        if recursive and len(self._scheduled_tasks + self._scheduled_process_tasks) > 0:
+│ │ +            await self.tasks_complete(timeout=timeout, recursive=recursive)
+│ │ +
+│ │ +    async def tasks_complete_or_sleeping(self):
+│ │ +        """ """
+│ │ +        sleeping_tasks = []
+│ │ +        # we need to use the while loop here, as new tasks may have been scheduled while waiting for other tasks
+│ │ +        while len(self._scheduled_tasks + self._scheduled_process_tasks) > len(
+│ │ +            sleeping_tasks
+│ │ +        ):
+│ │ +            for scheduled_task, task, _, _ in (
+│ │ +                self._scheduled_tasks + self._scheduled_process_tasks
+│ │ +            ):
+│ │ +                await asyncio.wait(
+│ │ +                    [scheduled_task._is_sleeping, scheduled_task._is_done],
+│ │ +                    return_when=asyncio.FIRST_COMPLETED,
+│ │ +                )
+│ │ +                if (
+│ │ +                    scheduled_task._is_sleeping.done()
+│ │ +                    and scheduled_task not in sleeping_tasks
+│ │ +                ):
+│ │ +                    # we need to recognize how many sleeping tasks we have in order to find out if all tasks are done
+│ │ +                    sleeping_tasks.append(scheduled_task)
+│ │ +
+│ │      def shutdown(self):
+│ │          """
+│ │          Shutdown internal process executor pool.
+│ │          """
+│ │          # resume all process so they can get shutdown
+│ │ -        for _, event, _ in self._scheduled_process_tasks:
+│ │ +        for _, _, event, _ in self._scheduled_process_tasks:
+│ │              if event is not None:
+│ │                  event.set()
+│ │          self._process_pool_exec.shutdown()
+│ │   --- mango-agents-0.4.0/mango_agents.egg-info/SOURCES.txt
+│ ├── +++ mango-agents-1.0.0/mango_agents.egg-info/SOURCES.txt
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,29 +1,32 @@
+│ │  LICENSE
+│ │  setup.py
+│ │  mango/__init__.py
+│ │ -mango/core/__init__.py
+│ │ -mango/core/agent.py
+│ │ -mango/core/container.py
+│ │ -mango/core/container_protocols.py
+│ │ +mango/agent/__init__.py
+│ │ +mango/agent/core.py
+│ │ +mango/agent/role.py
+│ │ +mango/container/__init__.py
+│ │ +mango/container/core.py
+│ │ +mango/container/factory.py
+│ │ +mango/container/mosaik.py
+│ │ +mango/container/mqtt.py
+│ │ +mango/container/protocol.py
+│ │ +mango/container/tcp.py
+│ │  mango/messages/__init__.py
+│ │  mango/messages/acl_message_pb2.py
+│ │  mango/messages/codecs.py
+│ │  mango/messages/message.py
+│ │  mango/messages/other_proto_msgs_pb2.py
+│ │  mango/modules/__init__.py
+│ │  mango/modules/base_module.py
+│ │  mango/modules/mqtt_module.py
+│ │  mango/modules/rabbit_module.py
+│ │  mango/modules/zero_module.py
+│ │ -mango/role/__init__.py
+│ │ -mango/role/api.py
+│ │ -mango/role/core.py
+│ │  mango/util/__init__.py
+│ │  mango/util/clock.py
+│ │ +mango/util/distributed_clock.py
+│ │  mango/util/scheduling.py
+│ │  mango_agents.egg-info/PKG-INFO
+│ │  mango_agents.egg-info/SOURCES.txt
+│ │  mango_agents.egg-info/dependency_links.txt
+│ │ -mango_agents.egg-info/namespace_packages.txt
+│ │  mango_agents.egg-info/requires.txt
+│ │  mango_agents.egg-info/top_level.txt
+│ │   --- mango-agents-0.4.0/setup.py
+│ ├── +++ mango-agents-1.0.0/setup.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -10,23 +10,23 @@
+│ │  from shutil import rmtree
+│ │  
+│ │  from setuptools import find_packages, setup, Command
+│ │  
+│ │  # Package meta-data.
+│ │  NAME = 'mango-agents'
+│ │  DESCRIPTION = 'Modular Python Agent Framework'
+│ │ -# URL = 'https://github.com/me/myproject'
+│ │ +URL = 'https://gitlab.com/mango-agents/mango'
+│ │  EMAIL = 'mango@offis.de'
+│ │  AUTHOR = 'mango Team'
+│ │  REQUIRES_PYTHON = '>=3.7.0'
+│ │ -VERSION = '0.4.0'
+│ │ +VERSION = '1.0.0'
+│ │  
+│ │  # What packages are required for this module to be executed?
+│ │  REQUIRED = [
+│ │ -    'paho-mqtt==1.5.1', 'protobuf==3.13.0'
+│ │ +    'paho-mqtt==1.5.1', 'protobuf==3.13.0', 'python-dateutil==2.8.2'
+│ │  ]
+│ │  
+│ │  # What packages are optional?
+│ │  EXTRAS = {
+│ │      # 'fancy feature': ['django'],
+│ │  }
+│ │  
+│ │ @@ -36,15 +36,15 @@
+│ │  # If you do change the License, remember to change the Trove Classifier for that!
+│ │  
+│ │  here = os.path.abspath(os.path.dirname(__file__))
+│ │  
+│ │  # Import the README and use it as the long-description.
+│ │  # Note: this will only work if 'README.md' is present in your MANIFEST.in file!
+│ │  try:
+│ │ -    with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+│ │ +    with io.open(os.path.join(here, 'readme.md'), encoding='utf-8') as f:
+│ │          long_description = '\n' + f.read()
+│ │  except FileNotFoundError:
+│ │      long_description = DESCRIPTION
+│ │  
+│ │  # Load the package's __version__.py module as a dictionary.
+│ │  about = {}
+│ │  if not VERSION:
+│ │ @@ -102,15 +102,14 @@
+│ │      long_description_content_type='text/markdown',
+│ │      author=AUTHOR,
+│ │      author_email=EMAIL,
+│ │      python_requires=REQUIRES_PYTHON,
+│ │      # url=URL,
+│ │      packages=find_packages(
+│ │          exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
+│ │ -    namespace_packages=['mango'],
+│ │      # If your package is a single module, use this instead of 'packages':
+│ │      # py_modules=['mypackage'],
+│ │  
+│ │      # entry_points={
+│ │      #     'console_scripts': ['mycli=mymodule:cli'],
+│ │      # },
+│ │      install_requires=REQUIRED,
+│ │ @@ -120,14 +119,18 @@
+│ │      classifiers=[
+│ │          # Trove classifiers
+│ │          # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+│ │          'License :: OSI Approved :: MIT License',
+│ │          'Programming Language :: Python',
+│ │          'Programming Language :: Python :: 3',
+│ │          'Programming Language :: Python :: 3.7',
+│ │ +        'Programming Language :: Python :: 3.8',
+│ │ +        'Programming Language :: Python :: 3.9',
+│ │ +        'Programming Language :: Python :: 3.10',
+│ │ +        'Programming Language :: Python :: 3.11',
+│ │          'Programming Language :: Python :: Implementation :: CPython',
+│ │          'Programming Language :: Python :: Implementation :: PyPy'
+│ │      ],
+│ │      # $ setup.py publish support.
+│ │      cmdclass={
+│ │          'upload': UploadCommand,
+│ │      },

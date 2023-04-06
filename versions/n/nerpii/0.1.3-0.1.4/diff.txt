@@ -1,0 +1,648 @@
+--- tmp/nerpii-0.1.3.tar.gz
++++ tmp/nerpii-0.1.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nerpii-0.1.3.tar", max compression
+│ +gzip compressed data, was "nerpii-0.1.4.tar", max compression
+│   --- nerpii-0.1.3.tar
+├── +++ nerpii-0.1.4.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ --rw-r--r--   0        0        0     3009 2023-04-03 14:44:10.451209 nerpii-0.1.3/README.md
+│ │ --rw-r--r--   0        0        0      209 2023-04-03 14:44:10.455209 nerpii-0.1.3/nerpii/__init__.py
+│ │ --rw-r--r--   0        0        0    19186 2023-04-03 14:44:10.455209 nerpii-0.1.3/nerpii/faker_generator.py
+│ │ --rw-r--r--   0        0        0    14042 2023-04-03 14:44:10.455209 nerpii-0.1.3/nerpii/named_entity_recognizer.py
+│ │ --rw-r--r--   0        0        0      841 2023-04-03 14:44:10.455209 nerpii-0.1.3/pyproject.toml
+│ │ --rw-r--r--   0        0        0     4011 1970-01-01 00:00:00.000000 nerpii-0.1.3/setup.py
+│ │ --rw-r--r--   0        0        0     3988 1970-01-01 00:00:00.000000 nerpii-0.1.3/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     3009 2023-04-06 08:13:25.054816 nerpii-0.1.4/README.md
+│ │ +-rw-r--r--   0        0        0      209 2023-04-06 08:13:25.058816 nerpii-0.1.4/nerpii/__init__.py
+│ │ +-rw-r--r--   0        0        0    19287 2023-04-06 08:13:25.058816 nerpii-0.1.4/nerpii/faker_generator.py
+│ │ +-rw-r--r--   0        0        0    15024 2023-04-06 08:13:25.058816 nerpii-0.1.4/nerpii/named_entity_recognizer.py
+│ │ +-rw-r--r--   0        0        0      841 2023-04-06 08:13:25.062816 nerpii-0.1.4/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     4011 1970-01-01 00:00:00.000000 nerpii-0.1.4/setup.py
+│ │ +-rw-r--r--   0        0        0     3988 1970-01-01 00:00:00.000000 nerpii-0.1.4/PKG-INFO
+│ │   --- nerpii-0.1.3/README.md
+│ ├── +++ nerpii-0.1.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- nerpii-0.1.3/nerpii/faker_generator.py
+│ ├── +++ nerpii-0.1.4/nerpii/faker_generator.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import re
+│ │  from typing import Any, Dict, List, Union, Optional
+│ │  
+│ │  from faker import Faker
+│ │ -import gender_guesser.detector as gender
+│ │ +
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  from simple_colors import green, red
+│ │  
+│ │  
+│ │  class FakerGenerator:
+│ │      """
+│ │ @@ -122,22 +122,23 @@
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.street_address()
+│ │                          if row == self.generation_mark
+│ │                          else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.street_address() if not pd.isnull(row) else np.NaN
+│ │                      )
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_phone_number(self) -> None:
+│ │          """
+│ │          Synthesize phone number columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -150,22 +151,23 @@
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.phone_number()
+│ │                          if row == self.generation_mark
+│ │                          else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.phone_number() if not pd.isnull(row) else np.NaN
+│ │                      )
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_email_address(self) -> None:
+│ │          """
+│ │          Synthesize email address columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -176,124 +178,94 @@
+│ │          for i in email_address:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.free_email() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.free_email() if not pd.isnull(row) else np.NaN
+│ │                      )
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_first_name(self) -> None:
+│ │          """
+│ │          Synthesize first name columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ -        detector = gender.Detector(case_sensitive=False)
+│ │ -        first_name_gender = []
+│ │ -
+│ │          first_name_person = [
+│ │              i[0]
+│ │              for i in self.columns_with_assigned_entity
+│ │              if i[1] == "PERSON"
+│ │              and (("first" in i[0].lower()) and ("name" in i[0].lower()))
+│ │          ]
+│ │  
+│ │ -        if len(first_name_person) > 0:
+│ │ -            for col in first_name_person:
+│ │ -                for name in self.dataset[col]:
+│ │ -                    if name is not np.NaN:
+│ │ -                        first_name_gender.append(detector.get_gender(name))
+│ │ -                    else:
+│ │ -                        first_name_gender.append("Nan value")
+│ │ -
+│ │ -            self.dataset["first_name_gender"] = pd.Series(first_name_gender)
+│ │ -
+│ │          for i in first_name_person:
+│ │              if self.generation_mark == "*":
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name_female()
+│ │ +                for row in range(0, len(self.dataset[i])):
+│ │ +                    if self.dataset[i][row] == self.generation_mark:
+│ │                          if (
+│ │ -                            row == self.generation_mark
+│ │ -                            and row["first_name_gender"] == "female"
+│ │ -                            or row["first_name_gender"] == "mostly_female"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name_male()
+│ │ -                        if (
+│ │ -                            row == self.generation_mark
+│ │ -                            and row["first_name_gender"] == "male"
+│ │ -                            or row["first_name_gender"] == "mostly_male"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name()
+│ │ -                        if (
+│ │ -                            row == self.generation_mark
+│ │ -                            and row["first_name_gender"] == "unknown"
+│ │ -                            or row["first_name_gender"] == "andy"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ +                            self.dataset["first_name_gender"][row] == "female"
+│ │ +                            or self.dataset["first_name_gender"][row] == "mostly_female"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name_female())
+│ │ +                            )
+│ │ +                        elif (
+│ │ +                            self.dataset["first_name_gender"][row] == "male"
+│ │ +                            or self.dataset["first_name_gender"][row] == "mostly_male"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name_male())
+│ │ +                            )
+│ │ +                        elif (
+│ │ +                            self.dataset["first_name_gender"][row] == "unknown"
+│ │ +                            or self.dataset["first_name_gender"][row] == "andy"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name())
+│ │ +                            )
+│ │ +                        else:
+│ │ +                            self.dataset[i][row]
+│ │  
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name_female()
+│ │ -                        if (
+│ │ -                            row["first_name_gender"] == "female"
+│ │ -                            or row["first_name_gender"] == "mostly_female"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name_male()
+│ │ +                for row in range(0, len(self.dataset[i])):
+│ │ +                    if not pd.isnull(self.dataset[i][row]):
+│ │                          if (
+│ │ -                            row["first_name_gender"] == "male"
+│ │ -                            or row["first_name_gender"] == "mostly_male"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ -                self.dataset[i] = self.dataset.apply(
+│ │ -                    lambda row: (
+│ │ -                        self.faker.first_name()
+│ │ -                        if (
+│ │ -                            row["first_name_gender"] == "unknown"
+│ │ -                            or row["first_name_gender"] == "andy"
+│ │ -                        )
+│ │ -                        else row[i]
+│ │ -                    ),
+│ │ -                    axis=1,
+│ │ -                )
+│ │ +                            self.dataset["first_name_gender"][row] == "female"
+│ │ +                            or self.dataset["first_name_gender"][row] == "mostly_female"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name_female())
+│ │ +                            )
+│ │ +                        elif (
+│ │ +                            self.dataset["first_name_gender"][row] == "male"
+│ │ +                            or self.dataset["first_name_gender"][row] == "mostly_male"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name_male())
+│ │ +                            )
+│ │ +                        elif (
+│ │ +                            self.dataset["first_name_gender"][row] == "unknown"
+│ │ +                            or self.dataset["first_name_gender"][row] == "andy"
+│ │ +                        ):
+│ │ +                            self.dataset[i] = self.dataset[i].apply(
+│ │ +                                lambda row: (self.faker.first_name())
+│ │ +                            )
+│ │ +                        else:
+│ │ +                            self.dataset[i][row] = np.NaN
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │          if "first_name_gender" in self.dataset.columns:
+│ │              del self.dataset["first_name_gender"]
+│ │  
+│ │      def get_last_name(self) -> None:
+│ │          """
+│ │          Synthesize last name columns in a pandas dataframe
+│ │ @@ -309,43 +281,45 @@
+│ │  
+│ │          if len(last_name_person) > 0:
+│ │              for i in last_name_person:
+│ │                  if self.generation_mark == "*":
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (self.faker.last_name() if row == "*" else row)
+│ │                      )
+│ │ +                    self.list_faker.append(i)
+│ │  
+│ │                  else:
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.last_name() if not pd.isnull(row) else np.NaN
+│ │                          )
+│ │                      )
+│ │  
+│ │ -                self.list_faker.append(i)
+│ │ +                    self.list_faker.append(i)
+│ │  
+│ │          else:
+│ │              last_name_person = [
+│ │                  i
+│ │                  for i in self.dataset.columns
+│ │                  if (("last" in i.lower()) and ("name" in i.lower()))
+│ │              ]
+│ │              for i in last_name_person:
+│ │                  if self.generation_mark == "*":
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (self.faker.last_name() if row == "*" else row)
+│ │                      )
+│ │ +                    self.list_faker.append(i)
+│ │                  else:
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.last_name() if not pd.isnull(row) else np.NaN
+│ │                          )
+│ │                      )
+│ │  
+│ │ -                self.list_faker.append(i)
+│ │ +                    self.list_faker.append(i)
+│ │  
+│ │      def get_city(self) -> None:
+│ │          """
+│ │          Synthesize city columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -359,20 +333,21 @@
+│ │          for i in city:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.city() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (self.faker.city() if not pd.isnull(row) else np.NaN)
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_state(self) -> None:
+│ │          """
+│ │          Synthesize state columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -388,37 +363,39 @@
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.state_abbr()
+│ │                              if row == self.generation_mark
+│ │                              else row
+│ │                          )
+│ │                      )
+│ │ +                    self.list_faker.append(i)
+│ │                  else:
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.state_abbr() if not pd.isnull(row) else np.NaN
+│ │                          )
+│ │                      )
+│ │  
+│ │ -                self.list_faker.append(i)
+│ │ +                    self.list_faker.append(i)
+│ │              else:
+│ │                  if self.generation_mark == "*":
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.state() if row == self.generation_mark else row
+│ │                          )
+│ │                      )
+│ │ +                    self.list_faker.append(i)
+│ │                  else:
+│ │                      self.dataset[i] = self.dataset[i].apply(
+│ │                          lambda row: (
+│ │                              self.faker.state() if not pd.isnull(row) else np.NaN
+│ │                          )
+│ │                      )
+│ │  
+│ │ -                self.list_faker.append(i)
+│ │ +                    self.list_faker.append(i)
+│ │  
+│ │      def get_url(self) -> None:
+│ │          """
+│ │          Synthesize url columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -427,20 +404,21 @@
+│ │          for i in url:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.url() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (self.faker.url() if not pd.isnull(row) else np.NaN)
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_zipcode(self) -> None:
+│ │          """
+│ │          Synthesize zipcode columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -449,20 +427,21 @@
+│ │          for i in zipcode:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.zipcode() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (self.faker.zipcode() if not pd.isnull(row) else np.NaN)
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_credit_card(self) -> None:
+│ │          """
+│ │          Synthesize credit card columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -477,24 +456,25 @@
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.credit_card_number()
+│ │                          if row == self.generation_mark
+│ │                          else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.credit_card_number()
+│ │                          if not pd.isnull(row)
+│ │                          else np.NaN
+│ │                      )
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_ssn(self) -> None:
+│ │          """
+│ │          Synthesize ssn columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -503,20 +483,21 @@
+│ │          for i in ssn:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.ssn() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (self.faker.ssn() if not pd.isnull(row) else np.NaN)
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_country(self) -> None:
+│ │          """
+│ │          Synthesize country columns in a pandas dataframe
+│ │  
+│ │          """
+│ │  
+│ │ @@ -529,20 +510,21 @@
+│ │          for i in country:
+│ │              if self.generation_mark == "*":
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (
+│ │                          self.faker.country() if row == self.generation_mark else row
+│ │                      )
+│ │                  )
+│ │ +                self.list_faker.append(i)
+│ │              else:
+│ │                  self.dataset[i] = self.dataset[i].apply(
+│ │                      lambda row: (self.faker.country() if not pd.isnull(row) else np.NaN)
+│ │                  )
+│ │  
+│ │ -            self.list_faker.append(i)
+│ │ +                self.list_faker.append(i)
+│ │  
+│ │      def get_columns_not_synthesized(self) -> None:
+│ │          """
+│ │          Get a list of all non-synthesized columns.
+│ │  
+│ │          """
+│ │   --- nerpii-0.1.3/nerpii/named_entity_recognizer.py
+│ ├── +++ nerpii-0.1.4/nerpii/named_entity_recognizer.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,14 @@
+│ │  from typing import Any, Dict, List, Optional, Union
+│ │  
+│ │ +import gender_guesser.detector as gender
+│ │ +import numpy as np
+│ │  import pandas as pd
+│ │ +
+│ │ +
+│ │  from presidio_analyzer import AnalyzerEngine, BatchAnalyzerEngine, PatternRecognizer
+│ │  import spacy
+│ │  from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
+│ │  
+│ │  
+│ │  # è importante eseguire prima assign_entities_with_presidio, poi
+│ │  # assign_entities_manually, infine assisgn_entities_with_model
+│ │ @@ -123,14 +127,45 @@
+│ │      addresses_recognizer = PatternRecognizer(
+│ │          supported_entity="ADDRESS", deny_list=addresses
+│ │      )
+│ │  
+│ │      return addresses_recognizer
+│ │  
+│ │  
+│ │ +def get_gender(df_input: pd.DataFrame) -> pd.DataFrame:
+│ │ +    """Assign gender to each name in dataset
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    df_input : pd.DataFrame
+│ │ +        A pandas dataframe
+│ │ +
+│ │ +
+│ │ +    Returns
+│ │ +    -------
+│ │ +    pd.DataFrame
+│ │ +        A pandas dataframe with first_name_gender column
+│ │ +    """
+│ │ +    detector = gender.Detector(case_sensitive=False)
+│ │ +    first_name_gender = []
+│ │ +
+│ │ +    for column in df_input.columns:
+│ │ +        if ("first" in column.lower()) and ("name" in column.lower()):
+│ │ +            for name in df_input[column]:
+│ │ +                if name is not np.NaN:
+│ │ +                    first_name_gender.append(detector.get_gender(name))
+│ │ +                else:
+│ │ +                    first_name_gender.append("Nan value")
+│ │ +
+│ │ +    if len(first_name_gender) > 0:
+│ │ +        df_input["first_name_gender"] = pd.Series(first_name_gender)
+│ │ +
+│ │ +    return df_input
+│ │ +
+│ │ +
+│ │  class NamedEntityRecognizer:
+│ │      """
+│ │      A class used to recognize named entities in a dataset.
+│ │  
+│ │      Attributes
+│ │      ----------
+│ │      dataset : pd.DataFrame
+│ │ @@ -157,14 +192,15 @@
+│ │  
+│ │      Returns
+│ │      -------
+│ │      _type_
+│ │          _description_
+│ │      """
+│ │  
+│ │ +    original_dataset: pd.DataFrame
+│ │      dataset: pd.DataFrame
+│ │      object_columns: List
+│ │      presidio_analyzer: BatchAnalyzerEngine
+│ │      assigned_entities_cols: List
+│ │      model: Any
+│ │      model_entities: Dict
+│ │      dict_global_entities: Dict
+│ │ @@ -193,14 +229,16 @@
+│ │          NamedEntityRecognizer
+│ │              A NamedEntityRecognizer instance.
+│ │          """
+│ │  
+│ │          if not isinstance(df_input, pd.DataFrame):
+│ │              df_input = pd.read_csv(df_input)
+│ │  
+│ │ +        df_input = get_gender(df_input)
+│ │ +
+│ │          self.dataset = df_input.sample(n=min(data_sample, df_input.shape[0]))
+│ │          self.object_columns = list(self.dataset.select_dtypes(["object"]).columns)
+│ │          # fill NaN values for object columns
+│ │          self.dataset.loc[:, self.object_columns] = self.dataset.loc[
+│ │              :, self.object_columns
+│ │          ].fillna(nan_filler)
+│ │   --- nerpii-0.1.3/pyproject.toml
+│ ├── +++ nerpii-0.1.4/pyproject.toml
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "nerpii"
+│ │ -version = "0.1.3"
+│ │ +version = "0.1.4"
+│ │  description = "A python library to perform NER on structured data and generate PII with Faker"
+│ │  authors = ["Clearbox AI <info@clearbox.ai>"]
+│ │  license = "GPL"
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/Clearbox-AI/nerpii"
+│ │  repository = "https://github.com/Clearbox-AI/nerpii"
+│ │  packages = [{include = "nerpii"}]
+│ │   --- nerpii-0.1.3/setup.py
+│ ├── +++ nerpii-0.1.4/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -15,15 +15,15 @@
+│ │   'simple-colors>=0.1.5,<0.2.0',
+│ │   'spacy>=3.5.0,<4.0.0',
+│ │   'torch>=1.13.1,<2.0.0',
+│ │   'transformers>=4.26.1,<5.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'nerpii',
+│ │ -    'version': '0.1.3',
+│ │ +    'version': '0.1.4',
+│ │      'description': 'A python library to perform NER on structured data and generate PII with Faker',
+│ │      'long_description': "# Nerpii \nNerpii is a Python library developed to perform Named Entity Recognition (NER) on structured datasets and synthesize Personal Identifiable Information (PII).\n\nNER is performed with [Presidio](https://github.com/microsoft/presidio) and with a [NLP model](https://huggingface.co/dslim/bert-base-NER) available on HuggingFace, while the PII generation is based on [Faker](https://faker.readthedocs.io/en/master/).\n\n## Installation\nYou can install Nerpii by using pip: \n\n```python\npip install nerpii\n```\n## Quickstart\n### Named Entity Recognition\nYou can import the NamedEntityRecognizer using\n```python\nfrom nerpii.named_entity_recognizer import NamedEntityRecognizer\n```\nYou can create a recognizer passing as parameter a path to a csv file or a Pandas Dataframe\n\n```python\nrecognizer = NamedEntityRecognizer('./csv_path.csv')\n```\nPlease note that if there are columns in the dataset containing names of people consisting of first and last names (e.g. John Smith), before creating a recognizer, it is necessary to split the name into two different columns called <strong>first_name</strong> and <strong>last_name</strong> using the function `split_name()`.\n\n```python\nfrom nerpii.named_entity_recognizer import split_name\n\ndf = split_name('./csv_path.csv', name_of_column_to_split)\n```\nThe NamedEntityRecognizer class contains three methods to perform NER on a dataset:\n\n```python\nrecognizer.assign_entities_with_presidio()\n```\nwhich assigns Presidio entities, listed [here](https://microsoft.github.io/presidio/supported_entities/)\n\n```python\nrecognizer.assign_entities_manually()\n```\nwhich assigns manually ZIPCODE and CREDIT_CARD_NUMBER entities \n\n```python\nrecognizer.assign_organization_entity_with_model()\n```\nwhich assigns ORGANIZATION entity using a [NLP model](https://huggingface.co/dslim/bert-base-NER) available on HuggingFace.\n\nTo perform NER, you have to run these three methods sequentially, as reported below:\n\n```python\nrecognizer.assign_entities_with_presidio()\nrecognizer.assign_entities_manually()\nrecognizer.assign_organization_entity_with_model()\n```\n\nThe final output is a dictionary in which column names are given as keys and assigned entities and a confidence score as values.\n\nThis dictionary can be accessed using\n\n```python\nrecognizer.dict_global_entities\n```\n\n### PII generation \n\nAfter performing NER on a dataset, you can generate new PII using Faker. \n\nYou can import the FakerGenerator using \n\n```python\nfrom nerpii.faker_generator import FakerGenerator\n```\n\nYou can create a generator using\n\n```python\ngenerator = FakerGenerator(dataset, recognizer.dict_global_entities)\n```\nTo generate new PII you can run\n\n```python\ngenerator.get_faker_generation()\n```\nThe method above can generate the following PII:\n* address\n* phone number\n* email naddress\n* first name\n* last name\n* city\n* state\n* url\n* zipcode\n* credit card\n* ssn\n* country\n\n## Examples\n\nYou can find a notebook example in the [notebook](https://github.com/Clearbox-AI/nerpii/tree/main/notebooks) folder. \n\n\n",
+│ │      'author': 'Clearbox AI',
+│ │      'author_email': 'info@clearbox.ai',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/Clearbox-AI/nerpii',
+│ │   --- nerpii-0.1.3/PKG-INFO
+│ ├── +++ nerpii-0.1.4/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nerpii
+│ │ -Version: 0.1.3
+│ │ +Version: 0.1.4
+│ │  Summary: A python library to perform NER on structured data and generate PII with Faker
+│ │  Home-page: https://github.com/Clearbox-AI/nerpii
+│ │  License: GPL
+│ │  Author: Clearbox AI
+│ │  Author-email: info@clearbox.ai
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: Other/Proprietary License

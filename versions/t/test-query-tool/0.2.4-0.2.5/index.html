@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/usr/bin/diffoscope --no-progress tmp/test_query_tool-0.2.4.tar.gz tmp/test_query_tool-0.2.5.tar.gz --html versions/t/test-query-tool/0.2.4-0.2.5/index.html --text versions/t/test-query-tool/0.2.4-0.2.5/diff.txt --markdown versions/t/test-query-tool/0.2.4-0.2.5/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.1 KB</span></div>
+  <div><span class="source">tmp/test_query_tool-0.2.4.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/test_query_tool-0.2.5.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">280 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;test_query_tool-0.2.<del>4</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;test_query_tool-0.2.<ins>5</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.8 KB</span></div>
+    <div><span class="source">test_query_tool-0.2.4.tar</span> vs.</div>
+    <div id="test_query_tool--.-.-.tar"><span class="source">test_query_tool-0.2.5.tar</span>
+      <a class="anchor" href="#test_query_tool--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">8.42 KB</span></div>
+      <div id="test_query_tool--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 29 lines modified</td><td colspan="2">Offset 1, 29 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>865002</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>196999</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2023-04-03<span class="dp">·</span>17:08:00.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2023-04-03<span class="dp">·</span>17:08:00.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>45<span class="dp">·</span>2023-04-05<span class="dp">·</span>19:58:10.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>45<span class="dp">·</span>2023-04-05<span class="dp">·</span>19:58:10.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>864711</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>196566</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.8<del>5</del>137<del>1</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>1</ins>8<ins>4</ins>137<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3477<span class="dp">·</span>2023-04-05<span class="dp">·</span>19:43:57.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3477<span class="dp">·</span>2023-04-05<span class="dp">·</span>19:43:57.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>8</del><del>4</del>8<del>7</del>1<del>7</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>1</ins>8<ins>2</ins>1<ins>9</ins><ins>4</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.852<del>9</del><del>49</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>1</ins>852<ins>58</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>857189</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/assets/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>189072</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/assets/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del><del>5</del>0<del>172</del>4<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>03</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/assets/index-<del>b060297</del>c.js</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><ins>1</ins>0<ins>444</ins>4<ins>9</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>10</ins>:<ins>46</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/assets/index-<ins>1524ddc</ins>c.js</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>03</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/assets/index-d081bea5.css</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>10</ins>:<ins>46</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/assets/index-d081bea5.css</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<del>4</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>5:<del>03</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/index.html</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<ins>3</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>5:<ins>24</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>25</del>:<del>03</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/frontend/dist/vite.svg</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>10</ins>:<ins>46</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/frontend/dist/vite.svg</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>8619</del>0<del>5</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>1935</ins>0<ins>2</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1438<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/dimension_service.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1438<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/dimension_service.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3941<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/entities_service.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3941<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/entities_service.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3653<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/filters_service.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3653<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/filters_service.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>437<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/query_tool_factory.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>437<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/query_tool_factory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1987<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/query_tool_service.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1987<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/query_tool_service.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/query_tool/services/register.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>2023-04-03<span class="dp">·</span>16:47:55.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/query_tool/services/register.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>865</del>1<del>02</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/setup.cfg</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>197</ins>1<ins>17</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>646<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:0<del>1</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/setup.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>646<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:0<ins>8</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.<del>864206</del><span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/</td><td class="diffline">24 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.<ins>195984</ins><span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/PKG-INFO</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>684<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/SOURCES.txt</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>684<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/dependency_links.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/requires.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>2</del>6:<del>07</del>.000000<span class="dp">·</span>test_query_tool-0.2.<del>4</del>/test_query_tool.egg-info/top_level.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>menakapanchaksharam<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>08</ins>:<ins>1</ins>6:<ins>16</ins>.000000<span class="dp">·</span>test_query_tool-0.2.<ins>5</ins>/test_query_tool.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/LICENSE</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--LICENSE"><span class="source">test_query_tool-0.2.5/LICENSE</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/__init__.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-__init__.py"><span class="source">test_query_tool-0.2.5/query_tool/__init__.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/frontend/dist/vite.svg</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-frontend-dist-vite.svg"><span class="source">test_query_tool-0.2.5/query_tool/frontend/dist/vite.svg</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-frontend-dist-vite.svg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/services/dimension_service.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-dimension_service.py"><span class="source">test_query_tool-0.2.5/query_tool/services/dimension_service.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-dimension_service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/services/entities_service.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-entities_service.py"><span class="source">test_query_tool-0.2.5/query_tool/services/entities_service.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-entities_service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/services/filters_service.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-filters_service.py"><span class="source">test_query_tool-0.2.5/query_tool/services/filters_service.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-filters_service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/services/query_tool_service.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-query_tool_service.py"><span class="source">test_query_tool-0.2.5/query_tool/services/query_tool_service.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-query_tool_service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/query_tool/services/register.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-register.py"><span class="source">test_query_tool-0.2.5/query_tool/services/register.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--query_tool-services-register.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">502 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/setup.py</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--setup.py"><span class="source">test_query_tool-0.2.5/setup.py</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>setuptools</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>setuptools</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">setuptools.setup(</td><td class="diffline">2 </td><td class="diffpresent">setuptools.setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;test_query_tool&quot;,</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;test_query_tool&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.2.<del>4</del>&quot;,</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.2.<ins>5</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Bluepinapple&quot;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Bluepinapple&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;viveksthul@bluepinapple.com&quot;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;viveksthul@bluepinapple.com&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Query<span class="dp">·</span>tool<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>query<span class="dp">·</span>from<span class="dp">·</span>selection&quot;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Query<span class="dp">·</span>tool<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>query<span class="dp">·</span>from<span class="dp">·</span>selection&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=&quot;&quot;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=&quot;&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/plain&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/plain&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=setuptools.find_packages(),</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=setuptools.find_packages(),</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">698 B</span></div>
+      <div><span class="source">test_query_tool-0.2.4/test_query_tool.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="test_query_tool--.-.-.tar---test_query_tool--.-.--test_query_tool.egg-info-SOURCES.txt"><span class="source">test_query_tool-0.2.5/test_query_tool.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#test_query_tool--.-.-.tar---test_query_tool--.-.--test_query_tool.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">LICENSE</td><td class="diffline">1 </td><td class="diffpresent">LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">MANIFEST.in</td><td class="diffline">2 </td><td class="diffpresent">MANIFEST.in</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">setup.py</td><td class="diffline">3 </td><td class="diffpresent">setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">query_tool/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">query_tool/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">query_tool/frontend/dist/index.html</td><td class="diffline">5 </td><td class="diffpresent">query_tool/frontend/dist/index.html</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">query_tool/frontend/dist/vite.svg</td><td class="diffline">6 </td><td class="diffpresent">query_tool/frontend/dist/vite.svg</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">query_tool/frontend/dist/assets/index-<del>b060297</del>c.js</td><td class="diffline">7 </td><td class="diffpresent">query_tool/frontend/dist/assets/index-<ins>1524ddc</ins>c.js</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">query_tool/frontend/dist/assets/index-d081bea5.css</td><td class="diffline">8 </td><td class="diffpresent">query_tool/frontend/dist/assets/index-d081bea5.css</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">query_tool/services/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">query_tool/services/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">query_tool/services/dimension_service.py</td><td class="diffline">10 </td><td class="diffpresent">query_tool/services/dimension_service.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">query_tool/services/entities_service.py</td><td class="diffline">11 </td><td class="diffpresent">query_tool/services/entities_service.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">query_tool/services/filters_service.py</td><td class="diffline">12 </td><td class="diffpresent">query_tool/services/filters_service.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">query_tool/services/query_tool_factory.py</td><td class="diffline">13 </td><td class="diffpresent">query_tool/services/query_tool_factory.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">query_tool/services/query_tool_service.py</td><td class="diffline">14 </td><td class="diffpresent">query_tool/services/query_tool_service.py</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

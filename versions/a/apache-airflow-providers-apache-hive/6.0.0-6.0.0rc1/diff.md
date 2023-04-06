@@ -1,0 +1,357 @@
+# Comparing `tmp/apache-airflow-providers-apache-hive-6.0.0.tar.gz` & `tmp/apache-airflow-providers-apache-hive-6.0.0rc1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/apache-airflow-providers-apache-hive-6.0.0.tar", last modified: Sun Apr  2 05:38:18 2023, max compression
++gzip compressed data, was "dist/apache-airflow-providers-apache-hive-6.0.0rc1.tar", last modified: Sun Apr  2 05:47:04 2023, max compression
+```
+
+## Comparing `apache-airflow-providers-apache-hive-6.0.0.tar` & `apache-airflow-providers-apache-hive-6.0.0rc1.tar`
+
+### file list
+
+```diff
+@@ -1,49 +1,49 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:18.000000 apache-airflow-providers-apache-hive-6.0.0/
+--rw-r--r--   0 root         (0) root         (0)    10850 2023-02-24 18:43:54.000000 apache-airflow-providers-apache-hive-6.0.0/LICENSE
+--rw-r--r--   0 root         (0) root         (0)     1122 2023-04-02 05:38:15.000000 apache-airflow-providers-apache-hive-6.0.0/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)      240 2023-02-24 18:43:54.000000 apache-airflow-providers-apache-hive-6.0.0/NOTICE
+--rw-r--r--   0 root         (0) root         (0)    17790 2023-04-02 05:38:18.000000 apache-airflow-providers-apache-hive-6.0.0/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)    16078 2023-04-02 05:38:15.000000 apache-airflow-providers-apache-hive-6.0.0/README.rst
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     5552 2023-04-02 05:38:15.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/get_provider_info.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/hooks/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/hooks/__init__.py
+--rw-r--r--   0 root         (0) root         (0)    42219 2023-03-27 08:32:48.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/hooks/hive.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/macros/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/macros/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     4581 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/macros/hive.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     7280 2023-03-27 08:32:48.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/hive.py
+--rw-r--r--   0 root         (0) root         (0)     7454 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/hive_stats.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/plugins/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/plugins/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     1146 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/plugins/hive.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/
+--rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     3039 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/hive_partition.py
+--rw-r--r--   0 root         (0) root         (0)     3389 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/metastore_partition.py
+--rw-r--r--   0 root         (0) root         (0)     4159 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/named_hive_partition.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/
+--rw-r--r--   0 root         (0) root         (0)      785 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     5279 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/hive_to_mysql.py
+--rw-r--r--   0 root         (0) root         (0)     2973 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/hive_to_samba.py
+--rw-r--r--   0 root         (0) root         (0)     5671 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/mssql_to_hive.py
+--rw-r--r--   0 root         (0) root         (0)     6587 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/mysql_to_hive.py
+--rw-r--r--   0 root         (0) root         (0)    11681 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/s3_to_hive.py
+--rw-r--r--   0 root         (0) root         (0)     5548 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/vertica_to_hive.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:38:18.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/
+--rw-r--r--   0 root         (0) root         (0)    17790 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     1643 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)      188 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/entry_points.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) root         (0)      489 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)        8 2023-04-02 05:38:17.000000 apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/top_level.txt
+--rw-r--r--   0 root         (0) root         (0)     5393 2023-04-01 16:40:04.000000 apache-airflow-providers-apache-hive-6.0.0/pyproject.toml
+--rw-r--r--   0 root         (0) root         (0)     2079 2023-04-02 05:38:18.000000 apache-airflow-providers-apache-hive-6.0.0/setup.cfg
+--rw-r--r--   0 root         (0) root         (0)     1952 2023-04-02 05:38:15.000000 apache-airflow-providers-apache-hive-6.0.0/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/
++-rw-r--r--   0 root         (0) root         (0)    10850 2023-02-24 18:43:54.000000 apache-airflow-providers-apache-hive-6.0.0rc1/LICENSE
++-rw-r--r--   0 root         (0) root         (0)     1122 2023-04-02 05:47:02.000000 apache-airflow-providers-apache-hive-6.0.0rc1/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)      240 2023-02-24 18:43:54.000000 apache-airflow-providers-apache-hive-6.0.0rc1/NOTICE
++-rw-r--r--   0 root         (0) root         (0)    17796 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)    16081 2023-04-02 05:47:02.000000 apache-airflow-providers-apache-hive-6.0.0rc1/README.rst
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     5552 2023-04-02 05:47:02.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/get_provider_info.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/hooks/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/hooks/__init__.py
++-rw-r--r--   0 root         (0) root         (0)    42219 2023-03-27 08:32:48.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/hooks/hive.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/macros/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/macros/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     4581 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/macros/hive.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     7280 2023-03-27 08:32:48.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/hive.py
++-rw-r--r--   0 root         (0) root         (0)     7454 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/hive_stats.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/plugins/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/plugins/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     1146 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/plugins/hive.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/
++-rw-r--r--   0 root         (0) root         (0)      787 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     3039 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/hive_partition.py
++-rw-r--r--   0 root         (0) root         (0)     3389 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/metastore_partition.py
++-rw-r--r--   0 root         (0) root         (0)     4159 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/named_hive_partition.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/
++-rw-r--r--   0 root         (0) root         (0)      785 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     5279 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/hive_to_mysql.py
++-rw-r--r--   0 root         (0) root         (0)     2973 2023-02-24 18:43:53.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/hive_to_samba.py
++-rw-r--r--   0 root         (0) root         (0)     5671 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/mssql_to_hive.py
++-rw-r--r--   0 root         (0) root         (0)     6587 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/mysql_to_hive.py
++-rw-r--r--   0 root         (0) root         (0)    11681 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/s3_to_hive.py
++-rw-r--r--   0 root         (0) root         (0)     5548 2023-03-27 08:32:49.000000 apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/vertica_to_hive.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/
++-rw-r--r--   0 root         (0) root         (0)    17796 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     1643 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)      188 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/entry_points.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0) root         (0)      499 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)        8 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)     5393 2023-04-01 16:40:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/pyproject.toml
++-rw-r--r--   0 root         (0) root         (0)     2092 2023-04-02 05:47:04.000000 apache-airflow-providers-apache-hive-6.0.0rc1/setup.cfg
++-rw-r--r--   0 root         (0) root         (0)     1952 2023-04-02 05:47:02.000000 apache-airflow-providers-apache-hive-6.0.0rc1/setup.py
+```
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/LICENSE` & `apache-airflow-providers-apache-hive-6.0.0rc1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/MANIFEST.in` & `apache-airflow-providers-apache-hive-6.0.0rc1/MANIFEST.in`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/PKG-INFO` & `apache-airflow-providers-apache-hive-6.0.0rc1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: apache-airflow-providers-apache-hive
+-Version: 6.0.0
++Version: 6.0.0rc1
+ Summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-hive package
+ Home-page: https://airflow.apache.org/
+ Download-URL: https://archive.apache.org/dist/airflow/providers
+ Author: Apache Software Foundation
+ Author-email: dev@airflow.apache.org
+ License: Apache License 2.0
+ Project-URL: Documentation, https://airflow.apache.org/docs/apache-airflow-providers-apache-hive/6.0.0/
+@@ -55,15 +55,15 @@
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+ 
+ 
+ Package ``apache-airflow-providers-apache-hive``
+ 
+-Release: ``6.0.0``
++Release: ``6.0.0rc1``
+ 
+ 
+ `Apache Hive <https://hive.apache.org/>`__
+ 
+ 
+ Provider package
+ ----------------
+```
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/README.rst` & `apache-airflow-providers-apache-hive-6.0.0rc1/README.rst`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+ 
+ 
+ Package ``apache-airflow-providers-apache-hive``
+ 
+-Release: ``6.0.0``
++Release: ``6.0.0rc1``
+ 
+ 
+ `Apache Hive <https://hive.apache.org/>`__
+ 
+ 
+ Provider package
+ ----------------
+```
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/get_provider_info.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/get_provider_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/hooks/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/hooks/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/hooks/hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/hooks/hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/macros/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/macros/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/macros/hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/macros/hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/operators/hive_stats.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/operators/hive_stats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/plugins/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/plugins/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/plugins/hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/plugins/hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/hive_partition.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/hive_partition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/metastore_partition.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/metastore_partition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/sensors/named_hive_partition.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/sensors/named_hive_partition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/__init__.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/hive_to_mysql.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/hive_to_mysql.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/hive_to_samba.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/hive_to_samba.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/mssql_to_hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/mssql_to_hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/mysql_to_hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/mysql_to_hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/s3_to_hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/s3_to_hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/airflow/providers/apache/hive/transfers/vertica_to_hive.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/airflow/providers/apache/hive/transfers/vertica_to_hive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/PKG-INFO` & `apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: apache-airflow-providers-apache-hive
+-Version: 6.0.0
++Version: 6.0.0rc1
+ Summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-hive package
+ Home-page: https://airflow.apache.org/
+ Download-URL: https://archive.apache.org/dist/airflow/providers
+ Author: Apache Software Foundation
+ Author-email: dev@airflow.apache.org
+ License: Apache License 2.0
+ Project-URL: Documentation, https://airflow.apache.org/docs/apache-airflow-providers-apache-hive/6.0.0/
+@@ -55,15 +55,15 @@
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+ 
+ 
+ Package ``apache-airflow-providers-apache-hive``
+ 
+-Release: ``6.0.0``
++Release: ``6.0.0rc1``
+ 
+ 
+ `Apache Hive <https://hive.apache.org/>`__
+ 
+ 
+ Provider package
+ ----------------
+```
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/apache_airflow_providers_apache_hive.egg-info/SOURCES.txt` & `apache-airflow-providers-apache-hive-6.0.0rc1/apache_airflow_providers_apache_hive.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/pyproject.toml` & `apache-airflow-providers-apache-hive-6.0.0rc1/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/setup.cfg` & `apache-airflow-providers-apache-hive-6.0.0rc1/setup.cfg`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -42,16 +42,16 @@
+ include_package_data = True
+ python_requires = ~=3.7
+ packages = find:
+ setup_requires = 
+ 	setuptools
+ 	wheel
+ install_requires = 
+-	apache-airflow-providers-common-sql>=1.3.1
+-	apache-airflow>=2.3.0
++	apache-airflow-providers-common-sql>=1.3.1.dev0
++	apache-airflow>=2.3.0.dev0
+ 	hmsclient>=0.1.0
+ 	pandas>=0.17.1
+ 	pyhive[hive]>=0.6.0
+ 	sasl>=0.3.1; python_version>="3.9"
+ 	thrift>=0.9.2
+ 
+ [options.entry_points]
+@@ -60,10 +60,10 @@
+ airflow.plugins = 
+ 	hive=airflow.providers.apache.hive.plugins.hive:HivePlugin
+ 
+ [files]
+ packages = airflow.providers.apache.hive
+ 
+ [egg_info]
+-tag_build = 
++tag_build = rc1
+ tag_date = 0
+```
+
+### Comparing `apache-airflow-providers-apache-hive-6.0.0/setup.py` & `apache-airflow-providers-apache-hive-6.0.0rc1/setup.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/usr/bin/diffoscope --no-progress tmp/pytest-inmanta-extensions-8.1.0.tar.gz tmp/pytest-inmanta-extensions-8.2.0.tar.gz --html versions/p/pytest-inmanta-extensions/8.1.0-8.2.0/index.html --text versions/p/pytest-inmanta-extensions/8.1.0-8.2.0/diff.txt --markdown versions/p/pytest-inmanta-extensions/8.1.0-8.2.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">13.8 KB</span></div>
+  <div><span class="source">tmp/pytest-inmanta-extensions-8.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pytest-inmanta-extensions-8.2.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">300 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pytest-inmanta-extensions-8.<del>1</del>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Mon</del><span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pytest-inmanta-extensions-8.<ins>2</ins>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span><ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">13.4 KB</span></div>
+    <div><span class="source">pytest-inmanta-extensions-8.1.0.tar</span> vs.</div>
+    <div id="pytest-inmanta-extensions--.-.-.tar"><span class="source">pytest-inmanta-extensions-8.2.0.tar</span>
+      <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">9.8 KB</span></div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 33 lines modified</td><td colspan="2">Offset 1, 33 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>083</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>246</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>199<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/MANIFEST.in</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>199<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>083</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>246</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>084</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>247</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2481<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/setup.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2481<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>081</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>244</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>082</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>244</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>627<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>627<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>68061<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>02</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/conftest.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>68061<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>18</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/conftest.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>082</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>245</ins>6<ins>90</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>081</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/</td><td class="diffline">12 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>243</ins>6<ins>90</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>082</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/enduser-certs/</td><td class="diffline">13 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>245</ins>6<ins>90</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/enduser-certs/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6223<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/enduser-certs/server.chain</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6223<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/enduser-certs/server.chain</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2069<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/enduser-certs/server.crt</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2069<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/enduser-certs/server.crt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3243<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/enduser-certs/server.key</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3243<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/enduser-certs/server.key</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3243<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3243<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1237<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>02</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/server.crt</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1237<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>18</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/server.crt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1679<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>02</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/data/server.open.key</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1679<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>18</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/data/server.open.key</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>082</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/db/</td><td class="diffline">20 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>245</ins>6<ins>90</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/db/</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>980<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>02</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/db/common.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>980<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>18</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/db/common.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>083</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/db/simple_project/</td><td class="diffline">22 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>246</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/db/simple_project/</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>212<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/db/simple_project/main.cf</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>212<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/db/simple_project/main.cf</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/db/simple_project/project.yml</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/db/simple_project/project.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>685<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span><del>15</del>:<del>19</del>:<del>08</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/plugin.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>685<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span><ins>09</ins>:<ins>57</ins>:<ins>10</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25435<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>02</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/inmanta_tests/utils.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25435<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>18</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/inmanta_tests/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.<del>083</del>6<del>16</del><span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/</td><td class="diffline">27 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.<ins>246</ins>6<ins>91</ins><span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>882<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>882<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/dependency_links.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/entry_points.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/requires.txt</td><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-02-0<del>6</del><span class="dp">·</span>1<del>5</del>:<del>21</del>:<del>25</del>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<del>1</del>.0/src/pytest_inmanta_extensions.egg-info/top_level.txt</td><td class="diffline">33 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(989)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(987)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-02-0<ins>9</ins><span class="dp">·</span>1<ins>0</ins>:<ins>00</ins>:<ins>42</ins>.000000<span class="dp">·</span>pytest-inmanta-extensions-8.<ins>2</ins>.0/src/pytest_inmanta_extensions.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">496 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/PKG-INFO</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--PKG-INFO"><span class="source">pytest-inmanta-extensions-8.2.0/PKG-INFO</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pytest-inmanta-extensions</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pytest-inmanta-extensions</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>8.<del>1</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>8.<ins>2</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Inmanta<span class="dp">·</span>tests<span class="dp">·</span>package</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Inmanta<span class="dp">·</span>tests<span class="dp">·</span>package</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inmanta/inmanta</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inmanta/inmanta</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Inmanta</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Inmanta</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>code@inmanta.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>code@inmanta.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/inmanta/inmanta-core/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/inmanta/inmanta-core/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>pytest<span class="dp">·</span>inmanta<span class="dp">·</span>tests</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>pytest<span class="dp">·</span>inmanta<span class="dp">·</span>tests</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">413 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/setup.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--setup.py"><span class="source">pytest-inmanta-extensions-8.2.0/setup.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 15 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Contact:<span class="dp">·</span>code@inmanta.com</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Contact:<span class="dp">·</span>code@inmanta.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">from<span class="dp">·</span>os<span class="dp">·</span>import<span class="dp">·</span>path</td><td class="diffline">17 </td><td class="diffpresent">from<span class="dp">·</span>os<span class="dp">·</span>import<span class="dp">·</span>path</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_namespace_packages,<span class="dp">·</span>setup</td><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_namespace_packages,<span class="dp">·</span>setup</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;8.<del>1</del>.0&quot;</td><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;8.<ins>2</ins>.0&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">20 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;asyncpg&quot;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;asyncpg&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;click&quot;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;click&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;inmanta-core~={version}.dev&quot;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;inmanta-core~={version}.dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pip2pi&quot;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pip2pi&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pyformance&quot;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pyformance&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/__init__.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-__init__.py"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/__init__.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/conftest.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-conftest.py"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/conftest.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-conftest.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.chain</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.chain"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.chain</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.chain">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.crt</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.crt"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.crt</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.crt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.key"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.key">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">213 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.key.open"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/ca/enduser-certs/server.key.open</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-ca-enduser-certs-server.key.open">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.crt</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-server.crt"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.crt</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-server.crt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/data/server.open.key</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-server.open.key"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/data/server.open.key</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-data-server.open.key">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/db/common.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-db-common.py"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/db/common.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-db-common.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/plugin.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-plugin.py"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/plugin.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/inmanta_tests/utils.py</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-utils.py"><span class="source">pytest-inmanta-extensions-8.2.0/src/inmanta_tests/utils.py</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-inmanta_tests-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">574 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-pytest_inmanta_extensions.egg-info-PKG-INFO"><span class="source">pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-pytest_inmanta_extensions.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pytest-inmanta-extensions</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pytest-inmanta-extensions</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>8.<del>1</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>8.<ins>2</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Inmanta<span class="dp">·</span>tests<span class="dp">·</span>package</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Inmanta<span class="dp">·</span>tests<span class="dp">·</span>package</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inmanta/inmanta</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/inmanta/inmanta</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Inmanta</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Inmanta</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>code@inmanta.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>code@inmanta.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/inmanta/inmanta-core/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/inmanta/inmanta-core/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>pytest<span class="dp">·</span>inmanta<span class="dp">·</span>tests</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>pytest<span class="dp">·</span>inmanta<span class="dp">·</span>tests</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">pytest-inmanta-extensions-8.1.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-pytest_inmanta_extensions.egg-info-SOURCES.txt"><span class="source">pytest-inmanta-extensions-8.2.0/src/pytest_inmanta_extensions.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#pytest-inmanta-extensions--.-.-.tar---pytest-inmanta-extensions--.-.--src-pytest_inmanta_extensions.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
