@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/posym-0.5.0.tar.gz tmp/posym-0.5.1.tar.gz --html versions/p/posym/0.5.0-0.5.1/index.html --text versions/p/posym/0.5.0-0.5.1/diff.txt --markdown versions/p/posym/0.5.0-0.5.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.3 KB</span></div>
+  <div><span class="source">tmp/posym-0.5.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/posym-0.5.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">260 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;posym-0.5.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;posym-0.5.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">12.0 KB</span></div>
+    <div><span class="source">posym-0.5.0.tar</span> vs.</div>
+    <div id="posym--.-.-.tar"><span class="source">posym-0.5.1.tar</span>
+      <a class="anchor" href="#posym--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.9 KB</span></div>
+      <div id="posym--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#posym--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 30 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13717<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13717<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13452<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13452<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/c/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/c/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12679<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/c/integrals.c</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12679<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/c/integrals.c</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7282<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/c/permutations.c</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7282<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/c/permutations.c</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/posym/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<del>131</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<ins>405</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>972<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/algebra.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>972<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/algebra.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30004<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/basis.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30004<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/basis.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28249<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/generate_tables.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28249<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/generate_tables.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12339<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/ir_tables.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12339<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/ir_tables.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4537<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4537<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1346<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/identity.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1346<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/identity.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2810<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/inversion.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2810<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/inversion.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6006<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/irotation.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6006<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/irotation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3693<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/reflection.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3693<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/reflection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5386<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/operations/rotation.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5386<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/operations/rotation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3001<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/pointgroup.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3001<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/pointgroup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6114<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym/tools.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6114<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym/tools.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13717<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/PKG-INFO</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13717<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/SOURCES.txt</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/dependency_links.txt</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/requires.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/posym.egg-info/top_level.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/posym.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>14</del>.<del>377541</del><span class="dp">·</span>posym-0.5.<del>0</del>/setup.cfg</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>37</ins>.<ins>560892</ins><span class="dp">·</span>posym-0.5.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1846<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>0</del>:<del>47</del>:<del>03</del>.000000<span class="dp">·</span>posym-0.5.<del>0</del>/setup.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1846<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>5</ins>:<ins>56</ins>:<ins>28</ins>.000000<span class="dp">·</span>posym-0.5.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">77.0 B</span></div>
+      <div><span class="source">posym-0.5.0/LICENSE</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--LICENSE"><span class="source">posym-0.5.1/LICENSE</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">388 B</span></div>
+      <div><span class="source">posym-0.5.0/PKG-INFO</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--PKG-INFO"><span class="source">posym-0.5.1/PKG-INFO</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>posym</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>posym</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>posym<span class="dp">·</span>module</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>posym<span class="dp">·</span>module</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/abelcarreras/posym</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/abelcarreras/posym</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Abel<span class="dp">·</span>Carreras</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Abel<span class="dp">·</span>Carreras</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>abelcarreras83@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>abelcarreras83@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">posym-0.5.0/README.md</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--README.md"><span class="source">posym-0.5.1/README.md</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">posym-0.5.0/c/integrals.c</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--c-integrals.c"><span class="source">posym-0.5.1/c/integrals.c</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--c-integrals.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">posym-0.5.0/c/permutations.c</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--c-permutations.c"><span class="source">posym-0.5.1/c/permutations.c</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--c-permutations.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.61 KB</span></div>
+      <div><span class="source">posym-0.5.0/posym/__init__.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-__init__.py"><span class="source">posym-0.5.1/posym/__init__.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&#x27;Abel<span class="dp">·</span>Carreras&#x27;</td><td class="diffline">1 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&#x27;Abel<span class="dp">·</span>Carreras&#x27;</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.5.<del>0</del>&#x27;</td><td class="diffline">2 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.5.<ins>1</ins>&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>posym.tools<span class="dp">·</span>import<span class="dp">·</span>list_round</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>posym.tools<span class="dp">·</span>import<span class="dp">·</span>list_round</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>posym.pointgroup<span class="dp">·</span>import<span class="dp">·</span>PointGroup</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>posym.pointgroup<span class="dp">·</span>import<span class="dp">·</span>PointGroup</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>posym.basis<span class="dp">·</span>import<span class="dp">·</span>BasisFunction</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>posym.basis<span class="dp">·</span>import<span class="dp">·</span>BasisFunction</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>scipy.spatial.transform<span class="dp">·</span>import<span class="dp">·</span>Rotation<span class="dp">·</span>as<span class="dp">·</span>R</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>scipy.spatial.transform<span class="dp">·</span>import<span class="dp">·</span>Rotation<span class="dp">·</span>as<span class="dp">·</span>R</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>scipy.optimize<span class="dp">·</span>import<span class="dp">·</span>minimize,<span class="dp">·</span>basinhopping</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>scipy.optimize<span class="dp">·</span>import<span class="dp">·</span>minimize,<span class="dp">·</span>basinhopping</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 206, 15 lines modified</td><td colspan="2">Offset 206, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>definition<span class="dp">·</span>group<span class="dp">·</span>measure</td><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>definition<span class="dp">·</span>group<span class="dp">·</span>measure</td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>-np.sum(coor_measures)</td><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>-np.sum(coor_measures)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>optimization_function<span class="dp">·</span>=<span class="dp">·</span>optimization_function_simple<span class="dp">·</span>if<span class="dp">·</span>fast_optimization<span class="dp">·</span>else<span class="dp">·</span>optimization_function_full</td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>optimization_function<span class="dp">·</span>=<span class="dp">·</span>optimization_function_simple<span class="dp">·</span>if<span class="dp">·</span>fast_optimization<span class="dp">·</span>else<span class="dp">·</span>optimization_function_full</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>preliminary<span class="dp">·</span>scan</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>preliminary<span class="dp">·</span>scan</td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>guess_angles<span class="dp">·</span>=<span class="dp">·</span>ref_value<span class="dp">·</span>=<span class="dp">·</span>None</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>guess_angles<span class="dp">·</span>=<span class="dp">·</span>ref_value<span class="dp">·</span>=<span class="dp">·</span>None</td></tr>
+<tr class="diffchanged"><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>angles<span class="dp">·</span>in<span class="dp">·</span>itertools.product(np.arange(0,<span class="dp">·</span>1<del>8</del>0,<span class="dp">·</span>10),<span class="dp">·</span>np.arange(0,<span class="dp">·</span>1<del>8</del>0,<span class="dp">·</span>10),<span class="dp">·</span>np.arange(0,<span class="dp">·</span>1<del>8</del>0,<span class="dp">·</span>10)):</td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>angles<span class="dp">·</span>in<span class="dp">·</span>itertools.product(np.arange(<ins>-9</ins>0,<span class="dp">·</span>1<ins>0</ins>0,<span class="dp">·</span>10),<span class="dp">·</span>np.arange(<ins>-9</ins>0,<span class="dp">·</span>1<ins>0</ins>0,<span class="dp">·</span>10),<span class="dp">·</span>np.arange(<ins>-9</ins>0,<span class="dp">·</span>1<ins>0</ins>0,<span class="dp">·</span>10)):</td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>value<span class="dp">·</span>=<span class="dp">·</span>optimization_function(angles)</td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>value<span class="dp">·</span>=<span class="dp">·</span>optimization_function(angles)</td></tr>
+<tr class="diffunmodified"><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>ref_value<span class="dp">·</span>is<span class="dp">·</span>None<span class="dp">·</span>or<span class="dp">·</span>value<span class="dp">·</span>&lt;<span class="dp">·</span>ref_value:</td><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>ref_value<span class="dp">·</span>is<span class="dp">·</span>None<span class="dp">·</span>or<span class="dp">·</span>value<span class="dp">·</span>&lt;<span class="dp">·</span>ref_value:</td></tr>
+<tr class="diffunmodified"><td class="diffline">214 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ref_value<span class="dp">·</span>=<span class="dp">·</span>value</td><td class="diffline">214 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ref_value<span class="dp">·</span>=<span class="dp">·</span>value</td></tr>
+<tr class="diffunmodified"><td class="diffline">215 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>guess_angles<span class="dp">·</span>=<span class="dp">·</span>angles</td><td class="diffline">215 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>guess_angles<span class="dp">·</span>=<span class="dp">·</span>angles</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">216 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>minimize(optimization_function,<span class="dp">·</span>guess_angles,<span class="dp">·</span>method=&#x27;CG&#x27;,)</td><td class="diffline">216 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>minimize(optimization_function,<span class="dp">·</span>guess_angles,<span class="dp">·</span>method=&#x27;CG&#x27;,)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 231, 25 lines modified</td><td colspan="2">Offset 231, 33 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">231 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sub_operation<span class="dp">·</span>=<span class="dp">·</span>copy.deepcopy(sub_operation)</td><td class="diffline">231 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sub_operation<span class="dp">·</span>=<span class="dp">·</span>copy.deepcopy(sub_operation)</td></tr>
+<tr class="diffunmodified"><td class="diffline">232 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sub_operation.apply_rotation(rotmol)</td><td class="diffline">232 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sub_operation.apply_rotation(rotmol)</td></tr>
+<tr class="diffunmodified"><td class="diffline">233 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>operations_list.append(sub_operation)</td><td class="diffline">233 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>operations_list.append(sub_operation)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">234 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>operations_list</td><td class="diffline">234 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>operations_list</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">235 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td><td class="diffline">235 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">236 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>measure(self):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">237 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>100*(1-self.get_ir_representation().values[0])</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">238 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td></tr>
+<tr class="diffunmodified"><td class="diffline">236 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>measure_pos(self):</td><td class="diffline">239 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>measure_pos(self):</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">237 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rotmol<span class="dp">·</span>=<span class="dp">·</span>R.from_euler(&#x27;zyx&#x27;,<span class="dp">·</span>self._angles,<span class="dp">·</span>degrees=True)</td><td class="diffline">240 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rotmol<span class="dp">·</span>=<span class="dp">·</span>R.from_euler(&#x27;zyx&#x27;,<span class="dp">·</span>self._angles,<span class="dp">·</span>degrees=True)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">238 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>co</del>or_measures<span class="dp">·</span>=<span class="dp">·</span>[]</td><td class="diffline">241 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>oper</ins><ins>at</ins>or_measures<span class="dp">·</span>=<span class="dp">·</span>[]</td></tr>
+<tr class="diffunmodified"><td class="diffline">239 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>operation<span class="dp">·</span>in<span class="dp">·</span>self._pg.operations:</td><td class="diffline">242 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>operation<span class="dp">·</span>in<span class="dp">·</span>self._pg.operations:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">243 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sub_operator_measures<span class="dp">·</span>=<span class="dp">·</span>[]</td></tr>
+<tr class="diffchanged"><td class="diffline">240 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span><del>sub_</del>op<del>eration</del><span class="dp">·</span>in<span class="dp">·</span>self._pg.get_sub_operations(operation.label):</td><td class="diffline">244 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>op<span class="dp">·</span>in<span class="dp">·</span>self._pg.get_sub_operations(operation.label):</td></tr>
+<tr class="diffchanged"><td class="diffline">241 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>coo</del>r<del>_m</del><span class="dp">·</span>=<span class="dp">·</span><del>sub_</del>op<del>eration</del>.get_measure_pos(self._coordinates,<span class="dp">·</span>self._symbols,<span class="dp">·</span>orientation=rotmol)</td><td class="diffline">245 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>ove</ins>r<ins>l</ins><ins>ap</ins><span class="dp">·</span>=<span class="dp">·</span>op.get_measure_pos(self._coordinates,<span class="dp">·</span>self._symbols,<span class="dp">·</span>orientation=rotmol)</td></tr>
+<tr class="diffchanged"><td class="diffline">242 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>c</del>oor_measures.append(<del>coo</del>r<del>_m</del>)</td><td class="diffline">246 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>sub</ins><ins>_</ins>o<ins>perat</ins>or_measures.append(<ins>ove</ins>r<ins>l</ins><ins>ap</ins>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">247 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>operator_measures.append(np.average(sub_operator_measures))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">248 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ir_rep<span class="dp">·</span>=<span class="dp">·</span>np.dot(self._pg.trans_matrix_inv,<span class="dp">·</span>operator_measures)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">243 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>1<del>-np.</del><del>average(coo</del>r_<del>m</del>e<del>as</del><del>ures</del>)</td><td class="diffline">249 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>1<ins>00<span class="dp">·</span>*<span class="dp">·</span>(1<span class="dp">·</span>-<span class="dp">·</span>i</ins>r_<ins>r</ins>e<ins>p[0]</ins>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">244 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td><td class="diffline">250 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td></tr>
+<tr class="diffunmodified"><td class="diffline">245 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>opt_coordinates(self):</td><td class="diffline">251 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>opt_coordinates(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">246 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rotmol<span class="dp">·</span>=<span class="dp">·</span>R.from_euler(&#x27;zyx&#x27;,<span class="dp">·</span>self._angles,<span class="dp">·</span>degrees=True)</td><td class="diffline">252 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rotmol<span class="dp">·</span>=<span class="dp">·</span>R.from_euler(&#x27;zyx&#x27;,<span class="dp">·</span>self._angles,<span class="dp">·</span>degrees=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">247 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>rotmol.apply(self._coordinates)</td><td class="diffline">253 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>rotmol.apply(self._coordinates)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">248 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td><td class="diffline">254 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/algebra.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-algebra.py"><span class="source">posym-0.5.1/posym/algebra.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-algebra.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/basis.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-basis.py"><span class="source">posym-0.5.1/posym/basis.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-basis.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/generate_tables.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-generate_tables.py"><span class="source">posym-0.5.1/posym/generate_tables.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-generate_tables.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/ir_tables.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-ir_tables.py"><span class="source">posym-0.5.1/posym/ir_tables.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-ir_tables.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/__init__.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-__init__.py"><span class="source">posym-0.5.1/posym/operations/__init__.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/identity.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-identity.py"><span class="source">posym-0.5.1/posym/operations/identity.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-identity.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/inversion.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-inversion.py"><span class="source">posym-0.5.1/posym/operations/inversion.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-inversion.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/irotation.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-irotation.py"><span class="source">posym-0.5.1/posym/operations/irotation.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-irotation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/reflection.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-reflection.py"><span class="source">posym-0.5.1/posym/operations/reflection.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-reflection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/operations/rotation.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-operations-rotation.py"><span class="source">posym-0.5.1/posym/operations/rotation.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-operations-rotation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/pointgroup.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-pointgroup.py"><span class="source">posym-0.5.1/posym/pointgroup.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-pointgroup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">posym-0.5.0/posym/tools.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym-tools.py"><span class="source">posym-0.5.1/posym/tools.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym-tools.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">418 B</span></div>
+      <div><span class="source">posym-0.5.0/posym.egg-info/PKG-INFO</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--posym.egg-info-PKG-INFO"><span class="source">posym-0.5.1/posym.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--posym.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>posym</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>posym</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>posym<span class="dp">·</span>module</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>posym<span class="dp">·</span>module</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/abelcarreras/posym</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/abelcarreras/posym</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Abel<span class="dp">·</span>Carreras</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Abel<span class="dp">·</span>Carreras</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>abelcarreras83@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>abelcarreras83@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">posym-0.5.0/setup.py</span> vs.</div>
+      <div id="posym--.-.-.tar---posym--.-.--setup.py"><span class="source">posym-0.5.1/setup.py</span>
+        <a class="anchor" href="#posym--.-.-.tar---posym--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

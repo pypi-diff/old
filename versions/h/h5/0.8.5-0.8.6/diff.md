@@ -1,0 +1,304 @@
+# Comparing `tmp/h5-0.8.5.tar.gz` & `tmp/h5-0.8.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "h5-0.8.5.tar", max compression
++gzip compressed data, was "h5-0.8.6.tar", max compression
+```
+
+## Comparing `h5-0.8.5.tar` & `h5-0.8.6.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+--rw-r--r--   0        0        0     2987 2023-04-05 20:11:35.022106 h5-0.8.5/h5/__init__.py
+--rw-r--r--   0        0        0     1048 2023-04-05 20:11:35.022106 h5-0.8.5/h5/__main__.py
+--rw-r--r--   0        0        0      184 2023-04-05 20:11:35.022106 h5-0.8.5/h5/_meta.py
+--rw-r--r--   0        0        0     8638 2023-04-05 20:11:35.022106 h5-0.8.5/h5/cli.py
+--rw-r--r--   0        0        0    15743 2023-04-05 20:11:35.022106 h5-0.8.5/h5/core.py
+--rw-r--r--   0        0        0    14738 2023-04-05 20:11:35.022106 h5-0.8.5/h5/dev.py
+--rw-r--r--   0        0        0     2935 2023-03-31 17:46:06.860725 h5-0.8.5/h5/legacy.py
+--rw-r--r--   0        0        0        0 2022-02-01 22:06:04.805953 h5-0.8.5/h5/py.typed
+--rw-r--r--   0        0        0     4457 2023-04-05 20:11:35.027132 h5-0.8.5/h5/testing.py
+--rw-r--r--   0        0        0     1056 2022-02-17 22:17:07.419494 h5-0.8.5/LICENSE
+--rw-r--r--   0        0        0     1825 2023-04-05 20:11:35.027132 h5-0.8.5/pyproject.toml
+--rw-r--r--   0        0        0      739 2022-09-19 18:35:16.982212 h5-0.8.5/README.md
+--rw-r--r--   0        0        0     1707 1970-01-01 00:00:00.000000 h5-0.8.5/setup.py
+--rw-r--r--   0        0        0     1983 1970-01-01 00:00:00.000000 h5-0.8.5/PKG-INFO
++-rw-r--r--   0        0        0     2987 2023-04-05 20:11:35.022106 h5-0.8.6/h5/__init__.py
++-rw-r--r--   0        0        0     1048 2023-04-05 20:11:35.022106 h5-0.8.6/h5/__main__.py
++-rw-r--r--   0        0        0      184 2023-04-06 17:00:16.254447 h5-0.8.6/h5/_meta.py
++-rw-r--r--   0        0        0     8659 2023-04-06 16:59:27.921434 h5-0.8.6/h5/cli.py
++-rw-r--r--   0        0        0    15743 2023-04-05 20:11:35.022106 h5-0.8.6/h5/core.py
++-rw-r--r--   0        0        0    14738 2023-04-05 20:11:35.022106 h5-0.8.6/h5/dev.py
++-rw-r--r--   0        0        0     2935 2023-03-31 17:46:06.860725 h5-0.8.6/h5/legacy.py
++-rw-r--r--   0        0        0        0 2022-02-01 22:06:04.805953 h5-0.8.6/h5/py.typed
++-rw-r--r--   0        0        0     4457 2023-04-05 20:11:35.027132 h5-0.8.6/h5/testing.py
++-rw-r--r--   0        0        0     1056 2022-02-17 22:17:07.419494 h5-0.8.6/LICENSE
++-rw-r--r--   0        0        0     1890 2023-04-06 17:00:59.895175 h5-0.8.6/pyproject.toml
++-rw-r--r--   0        0        0      739 2022-09-19 18:35:16.982212 h5-0.8.6/README.md
++-rw-r--r--   0        0        0     1752 1970-01-01 00:00:00.000000 h5-0.8.6/setup.py
++-rw-r--r--   0        0        0     2042 1970-01-01 00:00:00.000000 h5-0.8.6/PKG-INFO
+```
+
+### Comparing `h5-0.8.5/h5/__init__.py` & `h5-0.8.6/h5/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/h5/__main__.py` & `h5-0.8.6/h5/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/h5/cli.py` & `h5-0.8.6/h5/cli.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,21 +4,22 @@
+ 
+ from dataclasses import dataclass
+ from typing import Any, List, Optional, Tuple
+ 
+ import click
+ import numpy as np
+ 
+-from dgpy import h5dev
+ from globsters import globster
+ from rich.console import Console
+ from typing_extensions import TypeGuard
+ 
+ import h5
+ 
++from h5 import dev as h5dev
++
+ console = Console()
+ 
+ __all__ = (
+     "cli",
+     "H5CliConfig",
+ )
+ 
+@@ -199,14 +200,15 @@
+     "datasets",
+     is_flag=True,
+     default=False,
+     help="dump datasets",
+ )
+ @click.option(
+     "-a",
++    "--attrs",
+     "--attributes",
+     "attributes",
+     is_flag=True,
+     default=False,
+     help="dump attributes",
+ )
+ @click.option(
+```
+
+### Comparing `h5-0.8.5/h5/core.py` & `h5-0.8.6/h5/core.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/h5/dev.py` & `h5-0.8.6/h5/dev.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/h5/legacy.py` & `h5-0.8.6/h5/legacy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/h5/testing.py` & `h5-0.8.6/h5/testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/LICENSE` & `h5-0.8.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/pyproject.toml` & `h5-0.8.6/pyproject.toml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "h5"
+-version = "0.8.5"
++version = "0.8.6"
+ description = "H5py utils"
+ license = "MIT"
+ authors = ["jesse <jesse@dgi.com>"]
+ repository = "https://github.com/dynamic-graphics-inc/dgpy-libs"
+ homepage = "https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5"
+ readme = 'README.md'
+ packages = [
+@@ -30,17 +30,18 @@
+ [tool.poetry.dependencies]
+ python = ">=3.8.0"
+ h5py = ">=3.7.0"
+ numpy = "^1.24.2"
+ typing-extensions = "^4.5.0"
+ click = { version = "^8.1.3", optional = true }
+ rich = { version = "^13.3.3", optional = true }
++globsters = { version = "^0.0.2", optional = true }
+ 
+ [tool.poetry.extras]
+-cli = ["click", "rich"]
++cli = ["click", "rich", "globsters"]
+ 
+ 
+ [tool.poetry.dev-dependencies]
+ pytest = "^7.2.2"
+ 
+ # coverage config
+ # [tool.coverage.run]
+```
+
+### Comparing `h5-0.8.5/README.md` & `h5-0.8.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `h5-0.8.5/setup.py` & `h5-0.8.6/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -10,22 +10,24 @@
+ package_data = \
+ {'': ['*']}
+ 
+ install_requires = \
+ ['h5py>=3.7.0', 'numpy>=1.24.2,<2.0.0', 'typing-extensions>=4.5.0,<5.0.0']
+ 
+ extras_require = \
+-{'cli': ['click>=8.1.3,<9.0.0', 'rich>=13.3.3,<14.0.0']}
++{'cli': ['click>=8.1.3,<9.0.0',
++         'rich>=13.3.3,<14.0.0',
++         'globsters>=0.0.2,<0.0.3']}
+ 
+ entry_points = \
+ {'console_scripts': ['h5 = h5.cli:main']}
+ 
+ setup_kwargs = {
+     'name': 'h5',
+-    'version': '0.8.5',
++    'version': '0.8.6',
+     'description': 'H5py utils',
+     'long_description': '<a href="https://github.com/dynamic-graphics-inc/dgpy-libs">\n<img align="right" src="https://github.com/dynamic-graphics-inc/dgpy-libs/blob/main/docs/images/dgpy_banner.svg?raw=true" alt="drawing" height="120" width="300"/>\n</a>\n\n# h5\n\n[![Wheel](https://img.shields.io/pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n[![Version](https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)\n[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://img.shields.io/pypi/pyversions/h5.svg)\n[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\n**Install:** `pip install h5`\n\n---\n\nUtil functions for h5py and home of recursive generators!\n',
+     'author': 'jesse',
+     'author_email': 'jesse@dgi.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5',
+```
+
+#### html2text {}
+
+```diff
+@@ -1,18 +1,18 @@
+ # -*- coding: utf-8 -*- from setuptools import setup package_dir = \ {'': '.'}
+ packages = \ ['h5'] package_data = \ {'': ['*']} install_requires = \
+ ['h5py>=3.7.0', 'numpy>=1.24.2,<2.0.0', 'typing-extensions>=4.5.0,<5.0.0']
+-extras_require = \ {'cli': ['click>=8.1.3,<9.0.0', 'rich>=13.3.3,<14.0.0']}
+-entry_points = \ {'console_scripts': ['h5 = h5.cli:main']} setup_kwargs =
+-{ 'name': 'h5', 'version': '0.8.5', 'description': 'H5py utils',
+-'long_description': '\n[drawing]\n\n\n# h5\n\n[![Wheel](https://img.shields.io/
+-pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n[![Version]
+-(https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)\n
+-[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://
+-img.shields.io/pypi/pyversions/h5.svg)\n[![Code style: black](https://
++extras_require = \ {'cli': ['click>=8.1.3,<9.0.0', 'rich>=13.3.3,<14.0.0',
++'globsters>=0.0.2,<0.0.3']} entry_points = \ {'console_scripts': ['h5 = h5.cli:
++main']} setup_kwargs = { 'name': 'h5', 'version': '0.8.6', 'description': 'H5py
++utils', 'long_description': '\n[drawing]\n\n\n# h5\n\n[![Wheel](https://
++img.shields.io/pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n
++[![Version](https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/
++v/h5.svg)\n[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)]
++(https://img.shields.io/pypi/pyversions/h5.svg)\n[![Code style: black](https://
+ img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/
+ black)\n\n**Install:** `pip install h5`\n\n---\n\nUtil functions for h5py and
+ home of recursive generators!\n', 'author': 'jesse', 'author_email':
+ 'jesse@dgi.com', 'maintainer': 'None', 'maintainer_email': 'None', 'url':
+ 'https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5',
+ 'package_dir': package_dir, 'packages': packages, 'package_data': package_data,
+ 'install_requires': install_requires, 'extras_require': extras_require,
+```
+
+### Comparing `h5-0.8.5/PKG-INFO` & `h5-0.8.6/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: h5
+-Version: 0.8.5
++Version: 0.8.6
+ Summary: H5py utils
+ Home-page: https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5
+ License: MIT
+ Keywords: hdf5,h5py,h5,numpy
+ Author: jesse
+ Author-email: jesse@dgi.com
+ Requires-Python: >=3.8.0
+@@ -19,14 +19,15 @@
+ Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Typing :: Typed
+ Provides-Extra: cli
+ Requires-Dist: click (>=8.1.3,<9.0.0) ; extra == "cli"
++Requires-Dist: globsters (>=0.0.2,<0.0.3) ; extra == "cli"
+ Requires-Dist: h5py (>=3.7.0)
+ Requires-Dist: numpy (>=1.24.2,<2.0.0)
+ Requires-Dist: rich (>=13.3.3,<14.0.0) ; extra == "cli"
+ Requires-Dist: typing-extensions (>=4.5.0,<5.0.0)
+ Project-URL: Repository, https://github.com/dynamic-graphics-inc/dgpy-libs
+ Description-Content-Type: text/markdown
+```
+
+#### html2text {}
+
+```diff
+@@ -1,24 +1,25 @@
+-Metadata-Version: 2.1 Name: h5 Version: 0.8.5 Summary: H5py utils Home-page:
++Metadata-Version: 2.1 Name: h5 Version: 0.8.6 Summary: H5py utils Home-page:
+ https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5 License:
+ MIT Keywords: hdf5,h5py,h5,numpy Author: jesse Author-email: jesse@dgi.com
+ Requires-Python: >=3.8.0 Classifier: Development Status :: 5 - Production/
+ Stable Classifier: Intended Audience :: Developers Classifier: License :: OSI
+ Approved :: MIT License Classifier: Programming Language :: Python Classifier:
+ Programming Language :: Python :: 3 Classifier: Programming Language :: Python
+ :: 3.8 Classifier: Programming Language :: Python :: 3.9 Classifier:
+ Programming Language :: Python :: 3.10 Classifier: Programming Language ::
+ Python :: 3.11 Classifier: Programming Language :: Python :: 3.10 Classifier:
+ Programming Language :: Python :: 3.8 Classifier: Programming Language ::
+ Python :: 3.9 Classifier: Typing :: Typed Provides-Extra: cli Requires-Dist:
+-click (>=8.1.3,<9.0.0) ; extra == "cli" Requires-Dist: h5py (>=3.7.0) Requires-
+-Dist: numpy (>=1.24.2,<2.0.0) Requires-Dist: rich (>=13.3.3,<14.0.0) ; extra ==
+-"cli" Requires-Dist: typing-extensions (>=4.5.0,<5.0.0) Project-URL:
+-Repository, https://github.com/dynamic-graphics-inc/dgpy-libs Description-
+-Content-Type: text/markdown [drawing] # h5 [![Wheel](https://img.shields.io/
+-pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg) [![Version]
+-(https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)
+-[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://
++click (>=8.1.3,<9.0.0) ; extra == "cli" Requires-Dist: globsters
++(>=0.0.2,<0.0.3) ; extra == "cli" Requires-Dist: h5py (>=3.7.0) Requires-Dist:
++numpy (>=1.24.2,<2.0.0) Requires-Dist: rich (>=13.3.3,<14.0.0) ; extra == "cli"
++Requires-Dist: typing-extensions (>=4.5.0,<5.0.0) Project-URL: Repository,
++https://github.com/dynamic-graphics-inc/dgpy-libs Description-Content-Type:
++text/markdown [drawing] # h5 [![Wheel](https://img.shields.io/pypi/wheel/
++h5.svg)](https://img.shields.io/pypi/wheel/h5.svg) [![Version](https://
++img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg) [!
++[py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://
+ img.shields.io/pypi/pyversions/h5.svg) [![Code style: black](https://
+ img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/
+ black) **Install:** `pip install h5` --- Util functions for h5py and home of
+ recursive generators!
+```
+

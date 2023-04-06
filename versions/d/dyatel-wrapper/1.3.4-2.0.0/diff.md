@@ -1,0 +1,2946 @@
+# Comparing `tmp/dyatel-wrapper-1.3.4.tar.gz` & `tmp/dyatel-wrapper-2.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dyatel-wrapper-1.3.4.tar", last modified: Fri Feb 17 09:14:28 2023, max compression
++gzip compressed data, was "dyatel-wrapper-2.0.0.tar", last modified: Thu Apr  6 17:04:08 2023, max compression
+```
+
+## Comparing `dyatel-wrapper-1.3.4.tar` & `dyatel-wrapper-2.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,52 +1,49 @@
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.960737 dyatel-wrapper-1.3.4/
+--rw-r--r--   0 pvladimir   (502) staff       (20)    11347 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/LICENSE
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1262 2023-02-17 09:14:28.961016 dyatel-wrapper-1.3.4/PKG-INFO
+--rw-r--r--   0 pvladimir   (502) staff       (20)      179 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/README.md
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.945744 dyatel-wrapper-1.3.4/dyatel/
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.947702 dyatel-wrapper-1.3.4/dyatel/base/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     3622 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/base/checkbox.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     3971 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/base/driver_wrapper.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)    11694 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/base/element.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     3718 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/base/group.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     6132 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/base/page.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.950341 dyatel-wrapper-1.3.4/dyatel/dyatel_play/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1566 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_checkbox.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     8652 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_driver.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)    13116 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_element.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1498 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_page.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)      550 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_utils.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.951057 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.953615 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     2193 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_checkbox.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     8026 2023-02-14 22:52:43.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_driver.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)    18223 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_element.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1617 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_page.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.954623 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/driver/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     8108 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/driver/mobile_driver.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)      396 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/driver/web_driver.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.955707 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/elements/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     5877 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/elements/mobile_element.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     3517 2023-02-14 16:59:16.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/elements/web_element.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.957007 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/pages/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1550 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/pages/mobile_page.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)      505 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/pages/web_page.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     2757 2023-02-14 16:56:01.000000 dyatel-wrapper-1.3.4/dyatel/dyatel_sel/sel_utils.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1783 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/exceptions.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     6248 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/js_scripts.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1960 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/keyboard_keys.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.958834 dyatel-wrapper-1.3.4/dyatel/mixins/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     4312 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/mixins/driver_mixin.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     2286 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/mixins/element_mixin.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     6034 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/mixins/internal_utils.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     2384 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/mixins/log_mixin.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     4173 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/mixins/previous_object_mixin.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1746 2023-01-16 08:38:34.000000 dyatel-wrapper-1.3.4/dyatel/shared_utils.py
+--rw-r--r--   0 pvladimir   (502) staff       (20)    12169 2023-02-17 09:13:58.000000 dyatel-wrapper-1.3.4/dyatel/visual_comparison.py
+-drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-02-17 09:14:28.960428 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1262 2023-02-17 09:14:28.000000 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/PKG-INFO
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1216 2023-02-17 09:14:28.000000 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/SOURCES.txt
+--rw-r--r--   0 pvladimir   (502) staff       (20)        1 2023-02-17 09:14:28.000000 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/dependency_links.txt
+--rw-r--r--   0 pvladimir   (502) staff       (20)      102 2023-02-17 09:14:28.000000 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/requires.txt
+--rw-r--r--   0 pvladimir   (502) staff       (20)        7 2023-02-17 09:14:28.000000 dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/top_level.txt
+--rw-r--r--   0 pvladimir   (502) staff       (20)       79 2023-02-17 09:14:28.961798 dyatel-wrapper-1.3.4/setup.cfg
+--rw-r--r--   0 pvladimir   (502) staff       (20)     1734 2023-02-04 11:51:29.000000 dyatel-wrapper-1.3.4/setup.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.977931 dyatel-wrapper-2.0.0/
++-rw-r--r--   0 pvladimir   (502) staff       (20)    11347 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/LICENSE
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1313 2023-04-06 17:04:08.978167 dyatel-wrapper-2.0.0/PKG-INFO
++-rw-r--r--   0 pvladimir   (502) staff       (20)      179 2023-01-16 08:38:34.000000 dyatel-wrapper-2.0.0/README.md
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.954390 dyatel-wrapper-2.0.0/dyatel/
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.957529 dyatel-wrapper-2.0.0/dyatel/base/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     3739 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/base/driver_wrapper.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)    15251 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/base/element.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     2942 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/base/group.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     6441 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/base/page.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.960409 dyatel-wrapper-2.0.0/dyatel/dyatel_play/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     8645 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_play/play_driver.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)    13298 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_play/play_element.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)      366 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_play/play_page.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.961136 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.963823 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     9273 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/core_driver.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)    18323 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/core_element.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)      370 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/core_page.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.965241 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/driver/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     8118 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/driver/mobile_driver.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)      396 2023-03-15 14:23:39.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/driver/web_driver.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.966841 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/elements/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     6432 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/elements/mobile_element.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     3726 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/elements/web_element.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.968329 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/pages/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1125 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/pages/mobile_page.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)       90 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/pages/web_page.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)      497 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/dyatel_sel/sel_utils.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1516 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/exceptions.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     5943 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/js_scripts.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1960 2023-01-16 08:38:34.000000 dyatel-wrapper-2.0.0/dyatel/keyboard_keys.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.974703 dyatel-wrapper-2.0.0/dyatel/mixins/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     9030 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/core_mixin.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     2351 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/driver_mixin.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     2804 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/element_mixin.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     2781 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/logging.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     4098 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/previous_object_driver.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     4096 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/mixins/selector_synchronizer.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1389 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/shared_utils.py
++-rw-r--r--   0 pvladimir   (502) staff       (20)    14754 2023-04-06 17:00:28.000000 dyatel-wrapper-2.0.0/dyatel/visual_comparison.py
++drwxr-xr-x   0 pvladimir   (502) staff       (20)        0 2023-04-06 17:04:08.977491 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1313 2023-04-06 17:04:08.000000 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/PKG-INFO
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1117 2023-04-06 17:04:08.000000 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/SOURCES.txt
++-rw-r--r--   0 pvladimir   (502) staff       (20)        1 2023-04-06 17:04:08.000000 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/dependency_links.txt
++-rw-r--r--   0 pvladimir   (502) staff       (20)      136 2023-04-06 17:04:08.000000 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/requires.txt
++-rw-r--r--   0 pvladimir   (502) staff       (20)        7 2023-04-06 17:04:08.000000 dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/top_level.txt
++-rw-r--r--   0 pvladimir   (502) staff       (20)       79 2023-04-06 17:04:08.979069 dyatel-wrapper-2.0.0/setup.cfg
++-rw-r--r--   0 pvladimir   (502) staff       (20)     1841 2023-04-06 17:04:06.000000 dyatel-wrapper-2.0.0/setup.py
+```
+
+### Comparing `dyatel-wrapper-1.3.4/LICENSE` & `dyatel-wrapper-2.0.0/LICENSE`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -182,15 +182,15 @@
+       replaced with your own identifying information. (Don't include
+       the brackets!)  The text should be enclosed in the appropriate
+       comment syntax for the file format. We also recommend that a
+       file or class name and description of purpose be included on the
+       same "printed page" as the copyright notice for easier
+       identification within third-party archives.
+ 
+-   Copyright 2022 Podolian Vladimir
++   Copyright 2023 Podolian Vladimir
+ 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+        http://www.apache.org/licenses/LICENSE-2.0
+```
+
+### Comparing `dyatel-wrapper-1.3.4/PKG-INFO` & `dyatel-wrapper-2.0.0/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,23 +1,24 @@
+ Metadata-Version: 2.1
+ Name: dyatel-wrapper
+-Version: 1.3.4
++Version: 2.0.0
+ Summary: Wrapper of Selenium, Appium and Playwright with single API
+ Home-page: https://github.com/EnvInc/dyatel
+ Author: Podolian Vladimir
+ Author-email: vladimir.podolyan64@gmail.com
+ Project-URL: Source, https://github.com/EnvInc/dyatel
+ Project-URL: Tracker, https://github.com/EnvInc/dyatel/issues
+ Project-URL: Changelog, https://github.com/EnvInc/dyatel/blob/master/CHANGELOG.md
+ Keywords: selenium appium playwright web_automation mobile_automation
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Classifier: Topic :: Software Development :: Quality Assurance
+ Classifier: Topic :: Software Development :: Testing :: Acceptance
+ Classifier: License :: OSI Approved :: Apache Software License
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/base/element.py` & `dyatel-wrapper-2.0.0/dyatel/base/element.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,82 +1,122 @@
+ from __future__ import annotations
+ 
+ import time
+-from typing import Any, Union, List
++from typing import Any, Union, List, Type
+ 
+ from playwright.sync_api import Page as PlaywrightDriver
+ from appium.webdriver.webdriver import WebDriver as AppiumDriver
+ from selenium.webdriver.remote.webdriver import WebDriver as SeleniumDriver
+ 
++from dyatel.exceptions import *
+ from dyatel.base.driver_wrapper import DriverWrapper
+ from dyatel.dyatel_play.play_element import PlayElement
+ from dyatel.dyatel_sel.elements.mobile_element import MobileElement
+ from dyatel.dyatel_sel.elements.web_element import WebElement
+-from dyatel.exceptions import UnexpectedElementsCountException, UnexpectedValueException, UnexpectedTextException, \
+-    TimeoutException
+-from dyatel.mixins.internal_utils import WAIT_EL, get_platform_locator, is_target_on_screen, driver_index
+-from dyatel.mixins.previous_object_mixin import PreviousObjectDriver
++from dyatel.mixins.driver_mixin import get_driver_wrapper_from_object
++from dyatel.mixins.element_mixin import repr_builder
++from dyatel.mixins.previous_object_driver import PreviousObjectDriver
+ from dyatel.visual_comparison import VisualComparison
+ from dyatel.keyboard_keys import KeyboardKeys
++from dyatel.mixins.core_mixin import (
++    WAIT_EL,
++    is_target_on_screen,
++    all_mid_level_elements,
++    initialize_objects,
++    get_child_elements_with_names,
++    set_static,
++    is_group, all_locator_types,
++)
+ 
+ 
+ class Element(WebElement, MobileElement, PlayElement):
+     """ Element object crossroad. Should be defined as Page/Group class variable """
+ 
+-    def __init__(self, locator: str = '', locator_type: str = '', name: str = '',
+-                 parent: Any = None, wait: bool = None, **kwargs):
++    _object = 'element'
++
++    def __repr__(self):
++        return repr_builder(self)
++
++    def __call__(self, driver_wrapper=None):
++        if self.driver or driver_wrapper:
++            self.__full_init__(driver_wrapper=driver_wrapper)
++
++        return self
++
++    def __getattribute__(self, item):
++        if 'element' in item and not object.__getattribute__(self, '_initialized'):
++            raise NotInitializedException(f'The element is not initialized for {self.__class__.__name__} '
++                                          'Try to initialize base object first or call it directly as a method')
++
++        return object.__getattribute__(self, item)
++
++    def __init__(  # noqa
++            self,
++            locator: str = '',
++            locator_type: str = '',
++            name: str = '',
++            parent: Union[Any, False] = None,
++            wait: bool = None,
++            **kwargs
++    ):
+         """
+         Initializing of element based on current driver
+         Skip init if there are no driver, so will be initialized in Page/Group
+ 
+         :param locator: locator of element. Can be defined without locator_type
+         :param locator_type: Selenium only: specific locator type
+         :param name: name of element (will be attached to logs)
+-        :param parent: parent of element. Can be Group or other Element objects
++        :param parent: parent of element. Can be Group or other Element objects or False for skip
+         :param wait: include wait/checking of element in wait_page_loaded/is_page_opened methods of Page
+         :param kwargs:
+           - desktop: str = locator that will be used for desktop platform
+           - mobile: str = locator that will be used for all mobile platforms
+           - ios: str = locator that will be used for ios platform
+           - android: str = locator that will be used for android platform
+         """
++        if locator_type:
++            assert locator_type in all_locator_types, f'Locator type "{locator_type}" is not supported. ' \
++                                                      f'Choose from {all_locator_types}'
++
++        if parent:
++            assert isinstance(parent, (bool, all_mid_level_elements())), \
++                f'The "parent" of "{self.name}" should take an Element/Group object or False for skip. Get {parent}'
++
+         self.locator = locator
+         self.locator_type = locator_type
+-        self.name = name
++        self.name = name if name else locator
+         self.parent = parent
+         self.wait = wait
+ 
+-        if self.parent:
+-            assert isinstance(self.parent, Element), 'The "parent" argument should take an Element/Group object'
+-
+-        self._init_locals = locals() if not hasattr(self, '_init_locals') else getattr(self, '_init_locals')
+-        self._driver_instance = DriverWrapper
+-
+-        self.element_class = self._set_base_class()
+-        if self.element_class:
+-            self._initialized = True
+-            super().__init__(locator=self.locator, locator_type=self.locator_type, name=self.name, parent=self.parent,
+-                             wait=self.wait)
+-
+-    def __repr__(self):
+-        cls = self.__class__
+-        class_name = cls.__name__
+-        locator = f'locator="{get_platform_locator(self)}"'
+-        parent = self.parent.__class__.__name__ if self.parent else None
+-
+-        try:
+-            index = driver_index(self.driver_wrapper, self.driver)
+-            driver = index if index else 'driver'
+-        except AttributeError:
+-            index, driver = None, None
+-
+-        base = f'{class_name}({locator}, locator_type="{self.locator_type}", name="{self.name}", parent={parent}) ' \
+-               f'at {hex(id(self))}'
+-
+-        return f'{base}, {driver}={self.driver}' if driver else base
++        self._initialized = False
++        # Taking from Group first if available
++        self._scls = getattr(self, 'scls', Element)
++        self._init_locals = getattr(self, '_init_locals', locals())
++        self._driver_instance = getattr(self, '_driver_instance', DriverWrapper)
++
++        if self.driver:
++            self.__full_init__(self.driver_wrapper if is_group(self) else None)
++
++    def __full_init__(self, driver_wrapper=None):
++        self._driver_instance = get_driver_wrapper_from_object(driver_wrapper)
++        self._modify_object()
++        self._modify_children()
++
++        if not self._initialized:
++            self._base_cls = self._get_base_class()
++            set_static(self)
++            self._base_cls.__init__(
++                self,
++                locator=self.locator,
++                locator_type=self.locator_type,
++                name=self.name,
++                parent=self.parent,
++                wait=self.wait
++            )
++        self._initialized = True
+ 
+     # Following methods works same for both Selenium/Appium and Playwright APIs using dyatel methods
+ 
+     # Elements interaction
+ 
+     def set_text(self, text, silent=False) -> Element:
+         """
+@@ -206,14 +246,67 @@
+         try:
+             self.wait_element_hidden(timeout=timeout, silent=True)
+         except TimeoutException as exception:
+             if not silent:
+                 self.log(f'Ignored exception: "{exception.msg}"')
+         return self
+ 
++    def wait_enabled(self, timeout: int = WAIT_EL, silent: bool = False) -> Element:
++        """
++        Wait until element clickable
++
++        :param: timeout: time to stop waiting
++        :param: silent: erase log
++        :return: self
++        """
++        if not silent:
++            self.log(f'Wait until "{self.name}" become enabled')
++
++        element = self.element
++        enabled = False
++        start_time = time.time()
++        while time.time() - start_time < timeout and not enabled:
++            enabled = element.is_enabled()
++
++        if not enabled:
++            msg = f'"{self.name}" not enabled after {timeout} seconds. {self.get_element_info()}'
++            raise TimeoutException(msg)
++
++        return self
++
++    def wait_disabled(self, timeout: int = WAIT_EL, silent: bool = False) -> Element:
++        """
++        Wait until element clickable
++
++        :param: timeout: time to stop waiting
++        :param: silent: erase log
++        :return: self
++        """
++        if not silent:
++            self.log(f'Wait until "{self.name}" become disabled')
++
++        element = self.element
++        disabled = False
++        start_time = time.time()
++        while time.time() - start_time < timeout and not disabled:
++            disabled = not element.is_enabled()
++
++        if not disabled:
++            msg = f'"{self.name}" not disabled after {timeout} seconds. {self.get_element_info()}'
++            raise TimeoutException(msg)
++
++        return self
++
++    @property
++    def all_elements(self) -> Union[Any]:
++        if getattr(self, '_wrapped', None):
++            raise RecursionError(f'all_elements property already used for {self.name}')
++
++        return self._base_cls.all_elements.fget(self)
++
+     def is_visible(self, silent: bool = False) -> bool:
+         """
+         Check is current element top left corner or bottom right corner visible on current screen
+ 
+         :param silent: erase log
+         :return: bool
+         """
+@@ -248,53 +341,74 @@
+             x_end, y_end = rect['x'] + rect['width'], rect['y'] + rect['height']
+             is_start_visible = is_target_on_screen(x=rect['x'], y=rect['y'], possible_range=window_size)
+             is_end_visible = is_target_on_screen(x=x_end, y=y_end, possible_range=window_size)
+             is_visible = is_start_visible and is_end_visible
+ 
+         return is_visible
+ 
+-    def assert_screenshot(self, filename: str = '', test_name: str = '', name_suffix: str = '',
+-                          threshold: Union[int, float] = 0, delay: Union[int, float] = 0.5, scroll: bool = False,
+-                          remove: List[Element] = None, fill_background: Union[str, bool] = False) -> None:
++    def assert_screenshot(
++            self,
++            filename: str = '',
++            test_name: str = '',
++            name_suffix: str = '',
++            threshold: Union[int, float] = None,
++            delay: Union[int, float] = None,
++            scroll: bool = False,
++            remove: Union[Element, List[Element]] = None,
++            fill_background: Union[str, bool] = False
++    ) -> None:
+         """
+         Assert given (by name) and taken screenshot equals
+ 
+         :param filename: full screenshot name. Custom filename will be used if empty string given
+         :param test_name: test name for custom filename. Will try to find it automatically if empty string given
+         :param name_suffix: filename suffix. Good to use for same element with positive/netagative case
+         :param threshold: possible threshold
+         :param delay: delay before taking screenshot
+         :param scroll: scroll to element before taking the screenshot
+         :param remove: remove elements from screenshot
+         :param fill_background: fill background with given color or black color by default
+         :return: None
+         """
++        delay = delay or VisualComparison.default_delay
++        threshold = threshold or VisualComparison.default_threshold
++        remove = [remove] if type(remove) is not list and remove else remove
++
+         VisualComparison(self.driver_wrapper, self).assert_screenshot(
+             filename=filename, test_name=test_name, name_suffix=name_suffix, threshold=threshold, delay=delay,
+             scroll=scroll, remove=remove, fill_background=fill_background,
+         )
+ 
+-    def _set_base_class(self):
++    def _get_base_class(self) -> Type[WebElement, MobileElement, PlayElement]:
+         """
+         Get element class in according to current driver, and set him as base class
+ 
+         :return: element class
+         """
+-        if self.driver_wrapper:
+-
+-            PreviousObjectDriver().set_driver_from_previous_object_for_element(self, 5)
+-
+-            if not getattr(self, '_initialized', False):
+-                if self.parent is None:
+-                    PreviousObjectDriver().set_parent_from_previous_object_for_element(self, 5)
+-
++        base_cls = None
+         if isinstance(self.driver, PlaywrightDriver):
+-            Element.__bases__ = PlayElement,
+-            return PlayElement
++            base_cls = PlayElement
+         elif isinstance(self.driver, AppiumDriver):
+-            Element.__bases__ = MobileElement,
+-            return MobileElement
++            base_cls = MobileElement
+         elif isinstance(self.driver, SeleniumDriver):
+-            Element.__bases__ = WebElement,
+-            return WebElement
++            base_cls = WebElement
+ 
+         # No exception due to delayed initialization
++        return base_cls
++
++    def _modify_children(self):
++        """
++        Initializing of attributes with  type == Element.
++        Required for classes with base == Element.
++        """
++        initialize_objects(self, get_child_elements_with_names(self, all_mid_level_elements()))
++
++    def _modify_object(self):
++        """
++        Modify current object. Required for Element that placed into functions:
++        - set driver from previous object if previous driver different.
++        - set parent from previous object if previous is Group.
++        """
++        prev_object_manager = PreviousObjectDriver()
++        prev_object_manager.set_driver_from_previous_object_for_element(self, 6)
++        if not self._initialized and self.parent is None:
++            prev_object_manager.set_parent_from_previous_object_for_element(self, 6)
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/base/group.py` & `dyatel-wrapper-2.0.0/dyatel/base/group.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,92 +1,80 @@
+ from __future__ import annotations
+ 
+-import copy
+-from typing import Any, Union
++from typing import Any, Union, List
+ 
+ from dyatel.base.driver_wrapper import DriverWrapper
+ from dyatel.base.element import Element
+ from dyatel.mixins.driver_mixin import get_driver_wrapper_from_object
+-from dyatel.mixins.internal_utils import get_child_elements_with_names
+-from dyatel.mixins.previous_object_mixin import PreviousObjectDriver
++from dyatel.mixins.element_mixin import repr_builder
++from dyatel.mixins.previous_object_driver import PreviousObjectDriver
++from dyatel.mixins.core_mixin import (
++    all_mid_level_elements,
++    set_parent_for_attr,
++    get_child_elements,
++    initialize_objects,
++    get_child_elements_with_names,
++)
+ 
+ 
+-class AfterInitMeta(type):
+-    """ Call a custom function right after __init__ of original class """
+-
+-    def __call__(cls, *args, **kwargs):
+-        """
+-        Wrapper for calling a custom function right after __init__ of original class
+-
+-        :param args: original class args
+-        :param kwargs: original class kwargs
+-        :return: class object
+-        """
+-        obj = type.__call__(cls, *args, **kwargs)
+-        obj.customise_children()
+-        return obj
++class Group(Element):
++    """ Group of elements. Should be defined as class """
+ 
++    _object = 'group'
+ 
+-class Group(Element, metaclass=AfterInitMeta):
+-    """ Group of elements. Should be defined as class """
++    def __repr__(self):
++        return repr_builder(self)
+ 
+-    def __init__(self, locator: str = '', locator_type: str = '', name: str = '',
+-                 parent: Any = None, wait: bool = None, driver_wrapper: Union[DriverWrapper, Any] = None, **kwargs):
++    def __init__(  # noqa
++            self,
++            locator: str = '',
++            locator_type: str = '',
++            name: str = '',
++            parent: Union[Any, False] = None,
++            wait: bool = None,
++            driver_wrapper: Union[DriverWrapper, Any] = None,
++            **kwargs
++    ):
+         """
+         Initializing of group based on current driver
+ 
+         :param locator: anchor locator of group. Can be defined without locator_type
+         :param locator_type: Selenium only: specific locator type
+         :param name: name of group (will be attached to logs)
+-        :param parent: parent of element. Can be Group or Page objects
++        :param parent: parent of element. Can be Group or Page objects of False for skip
+         :param wait: include wait/checking of element in wait_page_loaded/is_page_opened methods of Page
+         :param driver_wrapper: set custom driver for group and group elements
+         :param kwargs:
+           - desktop: str = locator that will be used for desktop platform
+           - mobile: str = locator that will be used for all mobile platforms
+           - ios: str = locator that will be used for ios platform
+           - android: str = locator that will be used for android platform
+         """
+-        self.locator = locator
+-        self.locator_type = locator_type
+-        self.name = name
+-        self.parent = parent
+-        self.wait = wait
++        self._scls = Group
+         self._init_locals = locals()
++        self._driver_instance = get_driver_wrapper_from_object(driver_wrapper)
+ 
+-        super().__init__(locator=self.locator, locator_type=self.locator_type, name=self.name, parent=self.parent,
+-                         wait=self.wait)
+-        # it's necessary to leave it after init
+-        if driver_wrapper:
+-            self._driver_instance = get_driver_wrapper_from_object(self, driver_wrapper)
+-            self.set_driver(self._driver_instance)
+-        elif self.driver_wrapper:
+-            PreviousObjectDriver().set_driver_from_previous_object_for_page_or_group(self, 6)
++        super().__init__(
++            locator=locator,
++            locator_type=locator_type,
++            name=name,
++            parent=parent,
++            wait=wait
++        )
+ 
+-    def __repr__(self):
+-        return super().__repr__()
+-
+-    def set_driver(self, driver_wrapper) -> Group:
++    def _modify_children(self):
+         """
+-        Set driver instance for group and elements
+-
+-        :param driver_wrapper: driver wrapper object ~ Driver/WebDriver/MobileDriver/CoreDriver/PlayDriver
+-        :return: self
++        Initializing of attributes with type == Group/Element.
++        Required for classes with base == Group.
+         """
+-        if not driver_wrapper:
+-            return self
++        elements_types = all_mid_level_elements()
+ 
+-        self._set_driver(driver_wrapper, Element)
+-        return self
++        initialize_objects(self, get_child_elements_with_names(self, elements_types))
++        set_parent_for_attr(self, elements_types)
++        self.child_elements: List[Element] = get_child_elements(self, elements_types)
+ 
+-    def customise_children(self):
++    def _modify_object(self):
+         """
+-        Set parent and custom driver for Group class variables, if their instance is Element class
+-        Will be called automatically after __init__ by metaclass `AfterInitMeta`
++        Modify current object. Required for Group that placed into functions:
++        - set driver from previous object if previous driver different.
+         """
+-        for name, value in get_child_elements_with_names(self, Element).items():
+-            setattr(self, name, copy.copy(value))
+-            value = getattr(self, name)
+-            if value.parent is None:
+-                value.parent = self
+-            else:
+-                setattr(value, 'parent', copy.copy(value.parent))
++        PreviousObjectDriver().set_driver_from_previous_object_for_page_or_group(self, 6)
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/base/page.py` & `dyatel-wrapper-2.0.0/dyatel/base/page.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,31 +1,53 @@
+ from __future__ import annotations
+ 
+-from typing import Union, Any
++from typing import Union, Any, List, Type
+ 
+ from playwright.sync_api import Page as PlaywrightDriver
+ from appium.webdriver.webdriver import WebDriver as AppiumDriver
+ from selenium.webdriver.remote.webdriver import WebDriver as SeleniumDriver
+ 
+ from dyatel.base.driver_wrapper import DriverWrapper
+ from dyatel.base.element import Element
+ from dyatel.dyatel_play.play_page import PlayPage
+ from dyatel.dyatel_sel.pages.mobile_page import MobilePage
+ from dyatel.dyatel_sel.pages.web_page import WebPage
+ from dyatel.exceptions import DriverWrapperException
+ from dyatel.mixins.driver_mixin import get_driver_wrapper_from_object
+-from dyatel.mixins.internal_utils import WAIT_PAGE, get_platform_locator, driver_index
+-from dyatel.mixins.previous_object_mixin import PreviousObjectDriver
++from dyatel.mixins.element_mixin import repr_builder
++from dyatel.mixins.previous_object_driver import PreviousObjectDriver
++from dyatel.mixins.core_mixin import (
++    WAIT_PAGE,
++    initialize_objects,
++    get_child_elements_with_names,
++    all_mid_level_elements,
++    get_child_elements,
++    set_static,
++)
+ 
+ 
+ class Page(WebPage, MobilePage, PlayPage):
+     """ Page object crossroad. Should be defined as class """
+ 
+-    def __init__(self, locator: str = '', locator_type: str = '', name: str = '',
+-                 driver_wrapper: Union[DriverWrapper, Any] = None, **kwargs):
++    _object = 'page'
++
++    def __repr__(self):
++        return repr_builder(self)
++
++    def __call__(self, *arg, **kwargs):
++        return self
++
++    def __init__(  # noqa
++            self,
++            locator: str = '',
++            locator_type: str = '',
++            name: str = '',
++            driver_wrapper: Union[DriverWrapper, Any] = None,
++            **kwargs
++    ):
+         """
+         Initializing of page based on current driver
+ 
+         :param locator: anchor locator of page. Can be defined without locator_type
+         :param locator_type: Selenium only: specific locator type
+         :param name: name of page (will be attached to logs)
+         :param driver_wrapper: set custom driver for page and page elements
+@@ -33,35 +55,30 @@
+           - desktop: str = locator that will be used for desktop platform
+           - mobile: str = locator that will be used for all mobile platforms
+           - ios: str = locator that will be used for ios platform
+           - android: str = locator that will be used for android platform
+         """
+         self.locator = locator
+         self.locator_type = locator_type
+-        self.name = name
+-        self._init_locals = locals()
++        self.name = name if name else locator
+ 
+-        self._driver_instance = DriverWrapper
+-        self.__set_base_class()
+-        super().__init__(locator=self.locator, locator_type=self.locator_type, name=self.name)
+-        # it's necessary to leave it after init
+-        if driver_wrapper:
+-            self._driver_instance = get_driver_wrapper_from_object(self, driver_wrapper)
+-            self.set_driver(self._driver_instance)
+-        elif self.driver_wrapper:
+-            PreviousObjectDriver().set_driver_from_previous_object_for_page_or_group(self, 5)
++        self.url = getattr(self, 'url', '')
+ 
+-    def __repr__(self):
+-        cls = self.__class__
+-        class_name = cls.__name__
+-        locator = f'locator="{get_platform_locator(self)}"'
+-        index = driver_index(self.driver_wrapper, self.driver)
+-        driver = index if index else 'driver'
+-        return f'{class_name}({locator}, locator_type="{self.locator_type}", name="{self.name}") at {hex(id(self))}, '\
+-               f'{driver}={self.driver}'
++        self._element = None
++        self._init_locals = locals()
++        self._driver_instance = get_driver_wrapper_from_object(driver_wrapper)
++        self._modify_object()
++        self._modify_children()
++
++        self.page_elements: List[Element] = get_child_elements(self, Element)
++
++        self._scls = Page
++        self._base_cls = self._get_base_class()
++        set_static(self)
++        self._base_cls.__init__(self)
+ 
+     # Following methods works same for both Selenium/Appium and Playwright APIs using dyatel methods
+ 
+     def reload_page(self, wait_page_load=True) -> Page:
+         """
+         Reload current page
+ 
+@@ -95,15 +112,15 @@
+         :param silent: erase log
+         :param timeout: page/elements wait timeout
+         :return: self
+         """
+         if not silent:
+             self.log(f'Wait until page "{self.name}" loaded')
+ 
+-        self.anchor.wait_element(timeout=timeout)
++        self.anchor.wait_element(timeout=timeout, silent=True)
+ 
+         for element in self.page_elements:
+             if getattr(element, 'wait') is False:
+                 element.wait_element_hidden(timeout=timeout, silent=True)
+             elif getattr(element, 'wait') is True:
+                 element.wait_element(timeout=timeout, silent=True)
+         return self
+@@ -128,37 +145,48 @@
+         result &= self.anchor.is_displayed()
+ 
+         if self.url and with_url:
+             result &= self.driver_wrapper.current_url == self.url
+ 
+         return result
+ 
+-    def set_driver(self, driver_wrapper: DriverWrapper) -> Page:
++    @property
++    def anchor(self) -> Element:
+         """
+-        Set driver instance for page and elements/groups
++        Get anchor element of the page
+ 
+-        :param driver_wrapper: driver wrapper object ~ DriverWrapper/WebDriver/MobileDriver/CoreDriver/PlayDriver
+-        :return: self
++        :return: Element object
+         """
+-        if not driver_wrapper:
+-            return self
++        anchor = Element(locator=self.locator, locator_type=self.locator_type, name=self.name)
++        anchor.driver_wrapper = self.driver_wrapper
++        return anchor
+ 
+-        self._set_driver(driver_wrapper, Element)
+-        return self
+-
+-    def __set_base_class(self):
++    def _get_base_class(self) -> Type[PlayPage, MobilePage, WebPage]:
+         """
+         Get page class in according to current driver, and set him as base class
+ 
+         :return: page class
+         """
+         if isinstance(self.driver, PlaywrightDriver):
+-            Page.__bases__ = PlayPage,
+-            return PlayPage
++            cls = PlayPage
+         elif isinstance(self.driver, AppiumDriver):
+-            Page.__bases__ = MobilePage,
+-            return MobilePage
++            cls = MobilePage
+         elif isinstance(self.driver, SeleniumDriver):
+-            Page.__bases__ = WebPage,
+-            return WebPage
++            cls = WebPage
+         else:
+-            raise DriverWrapperException('Cant specify Page')
++            raise DriverWrapperException(f'Cant specify {Page.__name__}')
++
++        return cls
++
++    def _modify_children(self):
++        """
++        Initializing of attributes with type == Element.
++        Required for classes with base == Page.
++        """
++        initialize_objects(self, get_child_elements_with_names(self, all_mid_level_elements()))
++
++    def _modify_object(self):
++        """
++        Modify current object. Required for Page that placed into functions:
++        - set driver from previous object if previous driver different.
++        """
++        PreviousObjectDriver().set_driver_from_previous_object_for_page_or_group(self, 5)
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_driver.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_play/play_driver.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,19 @@
+ from __future__ import annotations
+ 
+ from typing import List, Union, Any
+ 
+ from playwright.sync_api import Page as PlaywrightPage, Locator, Page
+ from playwright.sync_api import Browser
+ 
+-from dyatel.mixins.internal_utils import get_timeout_in_ms
+-from dyatel.mixins.log_mixin import LogMixin
++from dyatel.mixins.core_mixin import get_timeout_in_ms
++from dyatel.mixins.logging import Logging
+ 
+ 
+-class PlayDriver(LogMixin):
++class PlayDriver(Logging):
+     instance: Browser = None
+     driver: PlaywrightPage = None
+     all_drivers: List[PlaywrightPage] = []
+     driver_wrapper: PlayDriver = None
+ 
+     def __init__(self, driver: Browser):
+         """
+@@ -105,14 +105,15 @@
+         :param: silent:
+         :return: None
+         """
+         if silent:
+             self.log('Quit driver instance')
+ 
+         self.driver.close()
++
+         self.all_drivers.remove(self.driver)
+ 
+         if self.driver == PlayDriver.driver:  # Clear only if original driver closed
+             PlayDriver.driver = None
+             PlayDriver.instance = None
+             PlayDriver.driver_wrapper = None
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_play/play_element.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_play/play_element.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,89 +1,83 @@
+ from __future__ import annotations
+ 
+ import time
+ from typing import Union, List, Any
+ 
+-# noinspection PyProtectedMember
+-from playwright._impl._api_types import TimeoutError as PlayTimeoutError
+-
+-from dyatel.dyatel_play.play_utils import get_selenium_completable_locator
++from playwright._impl._api_types import TimeoutError as PlayTimeoutError  # noqa
+ from playwright.sync_api import Page as PlaywrightPage, ElementHandle
+ from playwright.sync_api import Locator
+ 
+ from dyatel.exceptions import TimeoutException
+-from dyatel.mixins.log_mixin import LogMixin
++from dyatel.mixins.logging import Logging
+ from dyatel.shared_utils import cut_log_data
+ from dyatel.mixins.element_mixin import ElementMixin
+ from dyatel.mixins.driver_mixin import DriverMixin
+-from dyatel.mixins.internal_utils import (
++from dyatel.mixins.core_mixin import (
+     WAIT_EL,
+-    get_child_elements,
+     get_timeout_in_ms,
+-    initialize_objects_with_args,
+     calculate_coordinate_to_click,
+-    get_platform_locator,
++    is_group,
++    is_element,
+ )
++from dyatel.mixins.selector_synchronizer import get_platform_locator, get_playwright_locator
+ 
+ 
+-class PlayElement(ElementMixin, DriverMixin, LogMixin):
++class PlayElement(ElementMixin, DriverMixin, Logging):
+ 
+     def __init__(self, locator: str, locator_type: str, name: str, parent: Union[PlayElement, Any], wait: bool):
+         """
+         Initializing of web element with playwright driver
+ 
+         :param locator: anchor locator of page. Can be defined without locator_type
+         :param locator_type: compatibility arg - specific locator type
+         :param name: name of element (will be attached to logs)
+         :param parent: parent of element. Can be PlayElement, PlayPage, Group objects
+         :param wait: include wait/checking of element in wait_page_loaded/is_page_opened methods of Page
+         """
+         self._element = None
+ 
+-        self.locator = get_selenium_completable_locator(locator)
++        self.locator = get_playwright_locator(get_platform_locator(self, default_locator=locator))
+         self.locator_type = f'{locator_type} - locator_type does not supported for playwright'
+         self.name = name if name else self.locator
+         self.parent = parent
+         self.wait = wait
+ 
+-        self.child_elements: List[PlayElement] = get_child_elements(self, PlayElement)
+-        initialize_objects_with_args(self.child_elements)
+-
+     # Element
+ 
+     @property
+     def element(self) -> Locator:
+         """
+         Get playwright Locator object
+ 
+         :param: args: args from Locator object
+         :param: kwargs: kwargs from Locator object
+         :return: Locator
+         """
+         element = self._element
+         if not element:
+-            driver, locator = self._get_driver(), get_platform_locator(self)
++            driver = self._get_base()
+             if isinstance(driver, ElementHandle):
+-                element = driver.query_selector(locator)
++                element = driver.query_selector(self.locator)
+             else:
+-                element = driver.locator(locator)
++                element = driver.locator(self.locator)
+ 
+         return element
+ 
+     @element.setter
+-    def element(self, play_element: Locator):
++    def element(self, play_element: Union[Locator, None]):
+         """
+-        Current class element setter. Try to avoid usage of this function
++        Core element setter. Try to avoid usage of this function
+ 
+-        :param: play_element: playwright Locator object, that will be set for current class
++        :param: play_element: playwright Locator object
+         """
+         self._element = play_element
+     
+     @property
+-    def all_elements(self) -> List[Any]:
++    def all_elements(self) -> Union[None, List[Any]]:
+         """
+         Get all wrapped elements with playwright bases
+ 
+         :return: list of wrapped objects
+         """
+         return self._get_all_elements(self.element.element_handles(), PlayElement)
+ 
+@@ -195,14 +189,34 @@
+ 
+         :return: self
+         """
+         self.log(f'Hover outside from "{self.name}"')
+         self._first_element.hover(position={'x': float(x), 'y': float(y)}, force=True)
+         return self
+ 
++    def check(self) -> PlayElement:
++        """
++        Check current checkbox
++
++        :return: self
++        """
++        self._first_element.check()
++
++        return self
++
++    def uncheck(self) -> PlayElement:
++        """
++        Uncheck current checkbox
++
++        :return: self
++        """
++        self._first_element.uncheck()
++
++        return self
++
+     # Element waits
+ 
+     def wait_element(self, timeout: int = WAIT_EL, silent: bool = False) -> PlayElement:
+         """
+         Wait for current element available in page
+ 
+         :param: timeout: time to stop waiting
+@@ -211,15 +225,15 @@
+         """
+         if not silent:
+             self.log(f'Wait until presence of "{self.name}"')
+ 
+         try:
+             self._first_element.wait_for(state='visible', timeout=get_timeout_in_ms(timeout))
+         except PlayTimeoutError:
+-            raise TimeoutException(f'Element "{self.name}" not visible after {timeout} seconds') from None
++            raise TimeoutException(f'Element "{self.name}" not visible after {timeout} seconds')
+         return self
+ 
+     def wait_element_hidden(self, timeout: int = WAIT_EL, silent: bool = False) -> PlayElement:
+         """
+         Wait until element hidden
+ 
+         :param: timeout: time to stop waiting
+@@ -228,29 +242,15 @@
+         """
+         if not silent:
+             self.log(f'Wait hidden of "{self.name}"')
+ 
+         try:
+             self._first_element.wait_for(state='hidden', timeout=get_timeout_in_ms(timeout))
+         except PlayTimeoutError:
+-            raise TimeoutException(f'Element "{self.name}" still visible after {timeout} seconds') from None
+-        return self
+-
+-    def wait_clickable(self, timeout: int = WAIT_EL, silent: bool = False) -> PlayElement:
+-        """
+-        Compatibility placeholder
+-        Wait until element clickable
+-
+-        :param: timeout: time to stop waiting
+-        :param: silent: erase log
+-        :return: self
+-        """
+-        if not silent:
+-            self.log(f'Skip wait until clickable of "{self.name}". Timeout: {timeout}')
+-
++            raise TimeoutException(f'Element "{self.name}" still visible after {timeout} seconds')
+         return self
+ 
+     def wait_availability(self, timeout: int = WAIT_EL, silent: bool = False) -> PlayElement:
+         """
+         Wait for current element available in DOM
+ 
+         :param: timeout: time to stop waiting
+@@ -303,15 +303,16 @@
+     def text(self) -> str:
+         """
+         Get current element text
+ 
+         :return: element text
+         """
+         self.log(f'Get text from "{self.name}"')
+-        return self._first_element.text_content()
++        element = self._first_element
++        return element.text_content() if element.text_content() else element.input_value()
+ 
+     @property
+     def inner_text(self) -> str:
+         """
+         Get current element inner text
+ 
+         :return: element inner text
+@@ -401,30 +402,48 @@
+         A dictionary with the size and location of the element.
+ 
+         :return: dict ~ {'y': 0, 'x': 0, 'width': 0, 'height': 0}
+         """
+         sorted_items: list = sorted(self.element.bounding_box().items(), reverse=True)
+         return dict(sorted_items)
+ 
++    def is_enabled(self, silent: bool = False) -> bool:
++        """
++        Check if element enabled
++
++        :param silent: erase log
++        :return: True if element enabled
++        """
++        if not silent:
++            self.log(f'Check is element "{self.name}" enabled')
++
++        return self._first_element.is_enabled()
++
++    def is_checked(self) -> bool:
++        """
++        Is checkbox checked
++
++        :return: bool
++        """
++        return self._first_element.is_checked()
++
+     # Mixin
+ 
+-    def _get_driver(self) -> Union[PlaywrightPage, Locator, ElementHandle]:
++    def _get_base(self) -> Union[PlaywrightPage, Locator, ElementHandle]:
+         """
+         Get driver depends on parent element if available
+ 
+         :return: driver
+         """
+         base = self.driver
+         if self.parent:
+             self.log(f'Get element "{self.name}" from parent element "{self.parent.name}"', level='debug')
+ 
+-            if isinstance(self.parent, PlayElement):
++            if is_group(self.parent) or is_element(self.parent):
+                 base = self.parent.element
+-            else:
+-                base = self.parent.anchor.element
+ 
+         return base
+ 
+     @property
+     def _first_element(self):
+         """
+         Get first element
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_driver.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/core_driver.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,21 +1,24 @@
+ from __future__ import annotations
+ 
++import time
+ from typing import Union, List, Any
+ 
+ from appium.webdriver.webdriver import WebDriver as AppiumDriver
+-from selenium.common.exceptions import WebDriverException
++from selenium.common.exceptions import WebDriverException as SeleniumWebDriverException, NoAlertPresentException
++from selenium.webdriver.common.alert import Alert
+ from selenium.webdriver.remote.webdriver import WebDriver as SeleniumWebDriver
+ 
+ from dyatel.dyatel_sel.sel_utils import ActionChains
+-from dyatel.exceptions import DriverWrapperException
+-from dyatel.mixins.log_mixin import LogMixin
++from dyatel.exceptions import DriverWrapperException, TimeoutException
++from dyatel.mixins.core_mixin import WAIT_EL
++from dyatel.mixins.logging import Logging
+ 
+ 
+-class CoreDriver(LogMixin):
++class CoreDriver(Logging):
+     all_drivers: Union[List[AppiumDriver], List[SeleniumWebDriver]] = []
+     driver: Union[AppiumDriver, SeleniumWebDriver] = None
+     driver_wrapper = None
+ 
+     def __init__(self, driver: Union[AppiumDriver, SeleniumWebDriver]):
+         """
+         Initializing of core driver
+@@ -40,15 +43,15 @@
+         :param url: url for navigation
+         :return: self
+         """
+         self.log(f'Navigating to url {url}')
+ 
+         try:
+             self.driver.get(url)
+-        except WebDriverException:
++        except SeleniumWebDriverException:
+             raise DriverWrapperException(f'Can\'t proceed to {url}')
+ 
+         return self
+ 
+     def is_driver_opened(self) -> bool:
+         """
+         Check is driver opened or not
+@@ -111,14 +114,15 @@
+         :param: silent:
+         :return: None
+         """
+         if silent:
+             self.log('Quit driver instance')
+ 
+         self.driver.quit()
++
+         self.all_drivers.remove(self.driver)
+ 
+         if self.driver == CoreDriver.driver:  # Clear only if original driver closed
+             CoreDriver.driver = None
+             CoreDriver.driver_wrapper = None
+ 
+     def set_cookie(self, cookies: List[dict]) -> CoreDriver:
+@@ -268,14 +272,55 @@
+             tab = self.get_all_tabs()[tab]
+         else:
+             tab = self.get_all_tabs()[tab - 1]
+ 
+         self.driver.switch_to.window(tab)
+         return self
+ 
++    def switch_to_alert(self, timeout=WAIT_EL) -> Alert:
++        """
++        Wait for alert and switch to it
++
++        :param timeout: timeout to wait
++        :return: alert
++        """
++        alert = None
++        end_time = time.time() + timeout
++
++        while not alert and time.time() < end_time:
++            try:
++                alert = self.driver.switch_to.alert
++            except NoAlertPresentException:
++                alert = None
++
++        if not alert:
++            raise TimeoutException(f'Alert not found after {timeout} seconds')
++
++        return alert
++
++    def accept_alert(self) -> CoreDriver:
++        """
++        Wait for alert -> switch to it -> click accept
++
++        :return: self
++        """
++        self.switch_to_alert().accept()
++        self.switch_to_default_content()
++        return self
++
++    def dismiss_alert(self) -> CoreDriver:
++        """
++        Wait for alert -> switch to it -> click dismiss
++
++        :return: self
++        """
++        self.switch_to_alert().dismiss()
++        self.switch_to_default_content()
++        return self
++
+     def close_unused_tabs(self) -> CoreDriver:
+         """
+         Close all tabs except original
+ 
+         :return: self
+         """
+         tabs = self.get_all_tabs()
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/core/core_element.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_sel/core/core_element.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -17,34 +17,29 @@
+     ElementNotInteractableException as SeleniumElementNotInteractableException,
+     ElementClickInterceptedException as SeleniumElementClickInterceptedException,
+ )
+ 
+ from dyatel.dyatel_sel.sel_utils import ActionChains
+ from dyatel.js_scripts import get_element_size_js, get_element_position_on_screen_js
+ from dyatel.keyboard_keys import KeyboardKeys
+-from dyatel.mixins.log_mixin import LogMixin
++from dyatel.mixins.logging import Logging
+ from dyatel.shared_utils import cut_log_data
+ from dyatel.mixins.element_mixin import ElementMixin
+ from dyatel.mixins.driver_mixin import DriverMixin
++from dyatel.mixins.core_mixin import WAIT_EL, is_group, is_element
+ from dyatel.exceptions import (
+     TimeoutException,
+     InvalidSelectorException,
+     DriverWrapperException,
+     NoSuchElementException,
+     ElementNotInteractableException,
+ )
+-from dyatel.mixins.internal_utils import (
+-    WAIT_EL,
+-    get_child_elements,
+-    initialize_objects_with_args,
+-    get_platform_locator,
+-)
+ 
+ 
+-class CoreElement(ElementMixin, DriverMixin, LogMixin):
++class CoreElement(ElementMixin, DriverMixin, Logging):
+ 
+     def __init__(self, locator: str, locator_type: str, name: str, parent: Any, wait: bool):
+         """
+         Initializing of core element with appium/selenium driver
+         Contain same methods/data for both WebElement and MobileElement classes
+ 
+         :param locator: anchor locator of page. Can be defined without locator_type
+@@ -53,60 +48,61 @@
+         :param parent: parent of element. Can be Web/MobileElement, Web/MobilePage or Group objects
+         """
+         self._element: Union[SeleniumWebElement, None] = None
+         self.__element: Union[SeleniumWebElement, None] = None
+ 
+         self.locator = locator
+         self.locator_type = locator_type
+-        self.name = name if name else self.locator
++        self.name = name
+         self.parent: Any = parent
+         self.wait = wait
+ 
+-        self.child_elements: List[CoreElement] = get_child_elements(self, CoreElement)
+-        initialize_objects_with_args(self.child_elements)  # required for Group
+-
+     # Element
+ 
+     @property
+     def element(self) -> SeleniumWebElement:
+         """
+         Get selenium WebElement object
+ 
+         :return: Locator
+         """
+         return self._get_element(wait=True)
+ 
+     @element.setter
+-    def element(self, selenium_element: SeleniumWebElement):
++    def element(self, selenium_element: Union[SeleniumWebElement, AppiumWebElement]):
+         """
+-        Current class element setter. Try to avoid usage of this function
++        Core element setter. Try to avoid usage of this function
+ 
+-        :param: selenium_element: selenium WebElement object, that will be set for current class
++        :param: selenium_element: selenium WebElement or appium WebElement
+         """
+         self._element = selenium_element
+ 
+     # Element interaction
+ 
+-    def click(self) -> CoreElement:
++    def click(self, with_wait=True) -> CoreElement:
+         """
+         Click to current element
+ 
++        :param with_wait: wait for element before click
+         :return: self
+         """
+         self.log(f'Click into "{self.name}"')
+ 
+         self.element = self._get_element()
+-        exception_msg = f'Element "{self.name}" not interactable {self.get_element_logging_data()}'
++        exception_msg = f'Element "{self.name}" not interactable {self.get_element_info()}'
+ 
+         try:
+-            self.wait_clickable(silent=True).element.click()
++            if with_wait:
++                self.wait_element(silent=True)
++
++            self.wait_enabled(silent=True).element.click()
+         except SeleniumElementNotInteractableException:
+-            raise ElementNotInteractableException(exception_msg) from None
++            raise ElementNotInteractableException(exception_msg)
+         except SeleniumElementClickInterceptedException as exc:
+-            raise ElementNotInteractableException(f'{exception_msg}. Original error: {exc.msg}') from None
++            raise ElementNotInteractableException(f'{exception_msg}. Original error: {exc.msg}')
+         finally:
+             self.element = None
+ 
+         return self
+ 
+     def type_text(self, text: Union[str, KeyboardKeys], silent: bool = False) -> CoreElement:
+         """
+@@ -153,14 +149,46 @@
+         """
+         if not silent:
+             self.log(f'Clear text in "{self.name}"')
+ 
+         self.element.clear()
+         return self
+ 
++    def check(self) -> CoreElement:
++        """
++        Check current checkbox
++
++        :return: self
++        """
++        self.element = self._get_element(wait=True, from_dom=True)
++
++        try:
++            if not self.is_checked():
++                self.click(with_wait=False)
++        finally:
++            self.element = None
++
++        return self
++
++    def uncheck(self) -> CoreElement:
++        """
++        Uncheck current checkbox
++
++        :return: self
++        """
++        self.element = self._get_element(wait=True, from_dom=True)
++
++        try:
++            if self.is_checked():
++                self.click(with_wait=False)
++        finally:
++            self.element = None
++
++        return self
++
+     # Element waits
+ 
+     def wait_element(self, timeout: int = WAIT_EL, silent: bool = False) -> CoreElement:
+         """
+         Wait for current element available in page
+ 
+         :param: timeout: time to stop waiting
+@@ -173,15 +201,15 @@
+         is_displayed = False
+         start_time = time.time()
+         while time.time() - start_time < timeout and not is_displayed:
+             is_displayed = self.is_displayed(silent=True)
+ 
+         if not is_displayed:
+             base_exception_msg = f'Element "{self.name}" not visible after {timeout} seconds'
+-            raise TimeoutException(f'{base_exception_msg} {self.get_element_logging_data()}') from None
++            raise TimeoutException(f'{base_exception_msg} {self.get_element_info()}')
+ 
+         return self
+ 
+     def wait_element_hidden(self, timeout: int = WAIT_EL, silent: bool = False) -> CoreElement:
+         """
+         Wait until element hidden
+ 
+@@ -194,39 +222,16 @@
+ 
+         is_hidden = False
+         start_time = time.time()
+         while time.time() - start_time < timeout and not is_hidden:
+             is_hidden = self.is_hidden(silent=True)
+ 
+         if not is_hidden:
+-            msg = f'"{self.name}" still visible after {timeout} seconds. {self.get_element_logging_data()}'
+-            raise TimeoutException(msg) from None
+-
+-        return self
+-
+-    def wait_clickable(self, timeout: int = WAIT_EL, silent: bool = False) -> CoreElement:
+-        """
+-        Wait until element clickable
+-
+-        :param: timeout: time to stop waiting
+-        :param: silent: erase log
+-        :return: self
+-        """
+-        if not silent:
+-            self.log(f'Wait until "{self.name}" become clickable')
+-
+-        element = self.element
+-        is_clickable = False
+-        start_time = time.time()
+-        while time.time() - start_time < timeout and not is_clickable:
+-            is_clickable = element.is_enabled()
+-
+-        if not is_clickable:
+-            msg = f'"{self.name}" not clickable after {timeout} seconds. {self.get_element_logging_data()}'
+-            raise TimeoutException(msg) from None
++            msg = f'"{self.name}" still visible after {timeout} seconds. {self.get_element_info()}'
++            raise TimeoutException(msg)
+ 
+         return self
+ 
+     def wait_availability(self, timeout: int = WAIT_EL, silent: bool = False) -> CoreElement:
+         """
+         Wait for current element available in DOM
+ 
+@@ -239,16 +244,16 @@
+ 
+         is_available = False
+         start_time = time.time()
+         while time.time() - start_time < timeout and not is_available:
+             is_available = self.is_available()
+ 
+         if not is_available:
+-            msg = f'"{self.name}" not available in DOM after {timeout} seconds. {self.get_element_logging_data()}'
+-            raise TimeoutException(msg) from None
++            msg = f'"{self.name}" not available in DOM after {timeout} seconds. {self.get_element_info()}'
++            raise TimeoutException(msg)
+ 
+         return self
+ 
+     # Element state
+ 
+     def scroll_into_view(self, block: str = 'center', behavior: str = 'instant',
+                          sleep: Union[int, float] = 0) -> CoreElement:
+@@ -292,19 +297,20 @@
+         """
+         element = self.element
+         return self._scaled_screenshot(element.screenshot_as_png, element.size['width'])
+ 
+     @property
+     def text(self) -> str:
+         """
+-        Get current element text
++        Get text from current element
+ 
+         :return: element text
+         """
+-        return self.element.text
++        element = self._get_element(wait=True, from_dom=True)
++        return element.text
+ 
+     @property
+     def inner_text(self) -> str:
+         """
+         Get current element inner text
+ 
+         :return: element inner text
+@@ -382,40 +388,60 @@
+         :param: silent: erase log
+         :return: list of texts
+         """
+         if not silent:
+             self.log(f'Get all texts from "{self.name}"')
+ 
+         self.wait_element(silent=True)
+-        return list(element_item.text for element_item in getattr(self, 'all_elements'))
++        return list(element_item.text for element_item in self.all_elements)
+ 
+     def get_elements_count(self, silent: bool = False) -> int:
+         """
+         Get elements count
+ 
+         :param: silent: erase log
+         :return: elements count
+         """
+         if not silent:
+             self.log(f'Get elements count of "{self.name}"')
+ 
+-        return len(getattr(self, 'all_elements'))
++        return len(self.all_elements)
+ 
+     def get_rect(self) -> dict:
+         """
+         A dictionary with the size and location of the element.
+ 
+         :return: dict ~ {'y': 0, 'x': 0, 'width': 0, 'height': 0}
+         """
+         element = self.element
+         size = self.driver.execute_script(get_element_size_js, element)
+         location = self.driver.execute_script(get_element_position_on_screen_js, element)
+         sorted_items: list = sorted({**size, **location}.items(), reverse=True)
+         return dict(sorted_items)
+ 
++    def is_enabled(self, silent: bool = False) -> bool:
++        """
++        Check if element enabled
++
++        :param silent: erase log
++        :return: True if element enabled
++        """
++        if not silent:
++            self.log(f'Check is element "{self.name}" enabled')
++
++        return self.element.is_enabled()
++
++    def is_checked(self) -> bool:
++        """
++        Is checkbox checked
++
++        :return: bool
++        """
++        return self._get_element(wait=True, from_dom=True).is_selected()
++
+     # Mixin
+ 
+     def _get_wait(self, timeout: int = WAIT_EL) -> WebDriverWait:
+         """
+         Get wait with depends on parent element if available
+ 
+         :return: driver
+@@ -444,109 +470,104 @@
+ 
+         if scale != 1:
+             new_image_size = (int(img_binary.size[0] / scale), int(img_binary.size[1] / scale))
+             img_binary = img_binary.resize(new_image_size, Image.Resampling.LANCZOS)
+ 
+         return img_binary
+ 
+-    def _get_element(self, wait: bool = True) -> SeleniumWebElement:
++    def _get_element(self, wait: bool = True, from_dom: bool = False) -> SeleniumWebElement:
+         """
+         Get selenium element from driver or parent element
+ 
+         :param wait: wait for element or element parent before grab
++        :param from_dom: check element presenting in dom while wait
+         :return: SeleniumWebElement
+         """
+         element = self._element
+ 
+         if not element:
+             base = getattr(self.parent, '_element', None)
+ 
+             if not base:
+                 base = self._get_base(wait=wait)
+ 
+             try:
+                 element = self._find_element(base)
+-            except NoSuchElementException:
++            except (NoSuchElementException, SeleniumStaleElementReferenceException):
+                 element = None
+ 
+             if not element and wait:
++                wait_func = self.wait_availability if from_dom else self.wait_element
+                 try:
+-                    element = self.wait_element(silent=True).__element
++                    element = wait_func(silent=True).__element
+                 except TimeoutException:
+                     element = None
+ 
+         if not element:
+-            msg = f'Cant find element "{self.name}". {self.get_element_logging_data()}'
+-            raise NoSuchElementException(msg) from None
++            msg = f'Cant find element "{self.name}". {self.get_element_info()}'
++            raise NoSuchElementException(msg)
+ 
+         return element
+ 
+     def _get_base(self, wait: bool = True) -> Union[SeleniumWebDriver, SeleniumWebElement]:
+         """
+         Get driver with depends on parent element if available
+ 
+         :return: driver
+         """
+         base = self.driver
+ 
+         if not base:
+-            raise DriverWrapperException("Can't find driver") from None
++            raise DriverWrapperException("Can't find driver")
+ 
+         if self.driver_wrapper.mobile:
+             if self.driver_wrapper.is_native_context:
+                 return base
+ 
+         if self.parent:
+-            self.log(f'Get element "{self.name}" from parent element "{self.parent.name}"', level='debug')
+-
+             try:
+-
+-                if isinstance(self.parent, CoreElement):
+-                    base = self.parent._get_element(wait=wait)
+-                else:
+-                    get_element_func = getattr(self.parent.anchor, '_get_element')
+-                    base = get_element_func(wait=wait)
+-
++                if is_group(self.parent) or is_element(self.parent):
++                    base = self.parent._get_element(wait=wait)  # noqa
+             except NoSuchElementException:
+-                message = f'Cant find parent element "{self.parent.name}". {self.get_element_logging_data(self.parent)}'
+-                raise NoSuchElementException(message) from None
++                message = f'Cant find parent element "{self.parent.name}". {self.get_element_info(self.parent)}'
++                raise NoSuchElementException(message)
+ 
+         return base
+ 
+     def _find_element(self, base: Any) -> SeleniumWebElement:
+         """
+         Find selenium/appium element
+ 
+         :param base: parent element/driver object
+         :return: SeleniumWebElement or AppiumWebElement
+         """
+         try:
+-            return base.find_element(self.locator_type, get_platform_locator(self))
++            return base.find_element(self.locator_type, self.locator)
+         except (SeleniumInvalidArgumentException, SeleniumInvalidSelectorException) as exc:
+             self._raise_invalid_selector_exception(exc)
+         except SeleniumNoSuchElementException as exc:
+-            raise NoSuchElementException(exc.msg) from None
++            raise NoSuchElementException(exc.msg)
+ 
+     def _find_elements(self, base: Any) -> List[Union[SeleniumWebElement, AppiumWebElement]]:
+         """
+         Find all selenium/appium elements
+ 
+         :param base: parent element/driver object
+         :return: list of SeleniumWebElement or AppiumWebElement
+         """
+         try:
+-            return base.find_elements(self.locator_type, get_platform_locator(self))
++            return base.find_elements(self.locator_type, self.locator)
+         except (SeleniumInvalidArgumentException, InvalidSelectorException) as exc:
+             self._raise_invalid_selector_exception(exc)
+ 
+     def _raise_invalid_selector_exception(self, exc: Any) -> None:
+         """
+         Raises InvalidSelectorException if specific keywords in exception message
+ 
+         :param exc: original exc object
+         :return: None
+         """
+         if 'invalid locator' in exc.msg or 'is not a valid' in exc.msg:
+-            msg = f'Selector for "{self.name}" is invalid. {self.get_element_logging_data(self)}'
+-            raise InvalidSelectorException(msg) from None
++            msg = f'Selector for "{self.name}" is invalid. {self.get_element_info(self)}'
++            raise InvalidSelectorException(msg)
+         else:
+-            raise exc from None
++            raise exc
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/driver/mobile_driver.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_sel/driver/mobile_driver.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -150,27 +150,27 @@
+     @property
+     def is_native_context(self) -> bool:
+         """
+         Check is current context is native or not
+ 
+         :return: bool
+         """
+-        if not self.__is_native_context:
++        if self.__is_native_context is None:
+             self.__is_native_context = self.get_current_context() == self.native_context_name
+ 
+         return self.__is_native_context
+ 
+     @property
+     def is_web_context(self) -> bool:
+         """
+         Check is current context is web or not
+ 
+         :return: bool
+         """
+-        if not self.__is_web_context:
++        if self.__is_web_context is None:
+             self.__is_web_context = self.get_current_context() == self.web_context_name
+ 
+         return self.__is_web_context
+ 
+     def get_all_contexts(self) -> List[str]:
+         """
+         Get the contexts within the current session
+@@ -221,15 +221,15 @@
+ 
+         return self.top_bar_height
+ 
+     def get_bottom_bar_height(self, force: bool = False) -> int:
+         """
+         iOS only: Get bottom bar height
+ 
+-        :param force: get the new value forcly
++        :param force: get the new value forcibly
+         :return: self
+         """
+         if force or not self.top_bar_height:
+ 
+             from dyatel.base.element import Element
+ 
+             try:
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/elements/mobile_element.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_sel/elements/mobile_element.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,40 +1,45 @@
+ from __future__ import annotations
+ 
++import time
+ from typing import Union, List, BinaryIO, Any
+ 
+-from dyatel.base.driver_wrapper import DriverWrapper
+ from dyatel.dyatel_sel.core.core_element import CoreElement
+-from dyatel.dyatel_sel.sel_utils import get_legacy_selector, get_locator_type
+-from dyatel.mixins.internal_utils import calculate_coordinate_to_click
++from dyatel.mixins.core_mixin import calculate_coordinate_to_click
+ from dyatel.js_scripts import get_element_position_on_screen_js
++from dyatel.mixins.selector_synchronizer import get_platform_locator, get_selenium_locator_type, get_appium_selector
+ 
+ 
+ class MobileElement(CoreElement):
+ 
+     def __init__(self, locator: str, locator_type: str, name: str, parent: Union[MobileElement, Any], wait: bool):
+         """
+         Initializing of mobile element with appium driver
+ 
+         :param locator: anchor locator of page. Can be defined without locator_type
+         :param locator_type: specific locator type
+         :param name: name of element (will be attached to logs)
+         :param parent: parent of element. Can be MobileElement, MobilePage, Group objects
+         :param wait: include wait/checking of element in wait_page_loaded/is_page_opened methods of Page
+         """
+-        self.is_ios = DriverWrapper.is_ios
+-        self.is_android = DriverWrapper.is_android
+-
+-        self.locator_type = locator_type if locator_type else get_locator_type(locator)
+-        self.locator, self.locator_type = get_legacy_selector(locator, self.locator_type)
+-
+-        super().__init__(locator=self.locator, locator_type=self.locator_type, name=name, parent=parent, wait=wait)
++        locator = get_platform_locator(self, default_locator=locator)
++        locator_type = locator_type if locator_type else get_selenium_locator_type(locator)
++        locator, locator_type = get_appium_selector(locator, locator_type)
++
++        CoreElement.__init__(
++            self,
++            locator=locator,
++            locator_type=locator_type,
++            name=name,
++            parent=parent,
++            wait=wait
++        )
+ 
+     @property
+-    def all_elements(self) -> List[Any]:
++    def all_elements(self) -> Union[None, List[Any]]:
+         """
+         Get all wrapped elements with appium bases
+ 
+         :return: list of wrapped objects
+         """
+         appium_elements = self._find_elements(self._get_base())
+         return self._get_all_elements(appium_elements, MobileElement)
+@@ -50,15 +55,15 @@
+         """
+         if self.driver_wrapper.is_web_context:
+             if not self.is_fully_visible(silent=True):
+                 self.scroll_into_view()
+ 
+         x, y = calculate_coordinate_to_click(self, x, y)
+ 
+-        if calculate_top_bar and self.is_ios:
++        if calculate_top_bar and self.driver_wrapper.is_ios:
+             y += self.driver_wrapper.get_top_bar_height()
+ 
+         self.log(f'Tap outside from "{self.name}" with coordinates (x: {x}, y: {y})')
+ 
+         self.driver_wrapper.click_by_coordinates(x=x, y=y, silent=True)
+         return self
+ 
+@@ -72,15 +77,15 @@
+         """
+         if self.driver_wrapper.is_web_context:
+             if not self.is_fully_visible(silent=True):
+                 self.scroll_into_view()
+ 
+         x, y = calculate_coordinate_to_click(self, 0, 0)
+ 
+-        if calculate_top_bar and self.is_ios:
++        if calculate_top_bar and self.driver_wrapper.is_ios:
+             y += self.driver_wrapper.get_top_bar_height()
+ 
+         if not silent:
+             self.log(f'Tap into the center by coordinates (x: {x}, y: {y}) for "{self.name}"')
+ 
+         self.driver_wrapper.click_by_coordinates(x, y, silent=True)
+ 
+@@ -107,14 +112,30 @@
+         :param x: x-offset of element to hover(tap)
+         :param y: y-offset of element to hover(tap)
+         :param calculate_top_bar: iOS only - attach top bar height to calculation
+         :return: self
+         """
+         return self.click_outside(x=x, y=y, calculate_top_bar=calculate_top_bar)
+ 
++    def click_in_alert(self) -> MobileElement:
++        """
++        Click on element in alert with switch to native context
++
++        :return: self
++        """
++        try:
++            self.driver_wrapper.switch_to_native()
++            time.sleep(1)
++            if self.wait_element_without_error(timeout=5, silent=True).is_displayed(silent=True):
++                self.click()
++        finally:
++            self.driver_wrapper.switch_to_web()
++
++        return self
++
+     def get_screenshot(self, filename: str, legacy: bool = True) -> BinaryIO:
+         """
+         Taking element screenshot and saving with given path/filename
+ 
+         :param filename: path/filename
+         :param legacy: iOS only - crop element for page screenshot manually
+         :return: image binary
+@@ -126,15 +147,15 @@
+             image_binary = self._scaled_screenshot(img_binary, window_width)
+ 
+             if any(element_box) < 0 or window_height > self.element.size['height']:
+                 image_binary = image_binary.crop(element_box)
+ 
+             image_binary.save(filename)
+         else:
+-            image_binary = super().get_screenshot(filename)
++            image_binary = CoreElement.get_screenshot(self, filename)
+ 
+         return image_binary
+ 
+     def _element_box(self) -> tuple:
+         """
+         Get element coordinates on screen for ios safari
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/elements/web_element.py` & `dyatel-wrapper-2.0.0/dyatel/dyatel_sel/elements/web_element.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,33 +1,41 @@
+ from __future__ import annotations
+ 
+ from typing import Union, List, Any
+ 
+ from dyatel.dyatel_sel.core.core_element import CoreElement
+-from dyatel.dyatel_sel.sel_utils import get_locator_type
+-from dyatel.mixins.internal_utils import calculate_coordinate_to_click
++from dyatel.mixins.core_mixin import calculate_coordinate_to_click
++from dyatel.mixins.selector_synchronizer import get_platform_locator, get_selenium_locator_type
+ 
+ 
+ class WebElement(CoreElement):
+     def __init__(self, locator: str, locator_type: str, name: str, parent: Union[WebElement, Any], wait: bool):
+         """
+         Initializing of web element with selenium driver
+ 
+         :param locator: anchor locator of page. Can be defined without locator_type
+         :param locator_type: specific locator type
+         :param name: name of element (will be attached to logs)
+         :param parent: parent of element. Can be WebElement, WebPage, Group objects
+         :param wait: include wait/checking of element in wait_page_loaded/is_page_opened methods of Page
+         """
+-        self.locator_type = locator_type if locator_type else get_locator_type(locator)
++        locator = get_platform_locator(self, default_locator=locator)
++        locator_type = locator_type if locator_type else get_selenium_locator_type(locator)
+ 
+-        super().__init__(locator=locator, locator_type=self.locator_type, name=name, parent=parent, wait=wait)
++        CoreElement.__init__(
++            self,
++            locator=locator,
++            locator_type=locator_type,
++            name=name,
++            parent=parent,
++            wait=wait
++        )
+ 
+     @property
+-    def all_elements(self) -> List[Any]:
++    def all_elements(self) -> Union[None, List[Any]]:
+         """
+         Get all wrapped elements with selenium bases
+ 
+         :return: list of wrapped objects
+         """
+         selenium_elements = self._find_elements(self._get_base())
+         return self._get_all_elements(selenium_elements, WebElement)
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/dyatel_sel/sel_utils.py` & `dyatel-wrapper-2.0.0/dyatel/mixins/selector_synchronizer.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,20 +1,50 @@
+ from __future__ import annotations
+ 
+-from selenium.webdriver import ActionChains as SeleniumActionChains
++from typing import Any
++
+ from selenium.webdriver.common.by import By
+ 
+-from dyatel.exceptions import InvalidSelectorException
+-from dyatel.mixins.internal_utils import all_tags, get_child_elements
++from dyatel.exceptions import UnsuitableArgumentsException, InvalidSelectorException
++from dyatel.mixins.core_mixin import get_child_elements, all_tags
+ 
+ 
+ selenium_locator_types = get_child_elements(By, str)
+ 
+ 
+-def get_locator_type(locator: str):
++def get_platform_locator(obj: Any, default_locator: str = ''):
++    """
++    Get locator for current platform from object
++
++    :param obj: Page/Group/Element
++    :param default_locator: default locator for object
++    :return: current platform locator
++    """
++    locator = default_locator if default_locator else obj.locator
++    data = getattr(obj, '_init_locals').get('kwargs', {})
++
++    if not data or not obj.driver_wrapper:
++        return locator
++
++    if obj.driver_wrapper.desktop:
++        locator = data.get('desktop', locator)
++
++    elif obj.driver_wrapper.mobile:
++        locator = data.get('mobile', locator)
++        if data.get('mobile', False) and (data.get('android', False) or data.get('ios', False)):
++            raise UnsuitableArgumentsException('Dont use mobile and android/ios locators together')
++        elif obj.driver_wrapper.is_ios:
++            locator = data.get('ios', locator)
++        elif obj.driver_wrapper.is_android:
++            locator = data.get('android', locator)
++
++    return locator
++
++
++def get_selenium_locator_type(locator: str):
+     """
+     Get selenium completable locator type by given locator spell
+ 
+     :param locator: regular locator
+     :return:
+       By.ID if locator contain ":id" - com.android locator
+       By.TAG_NAME if locator contain tag name
+@@ -47,44 +77,54 @@
+ 
+     if is_only_tags:
+         return By.TAG_NAME
+ 
+     return By.ID
+ 
+ 
+-def get_legacy_selector(locator, locator_type):
++def get_appium_selector(locator: str, locator_type: str):
+     """
+     Workaround for using same locators for selenium and appium objects.
+     More info here https://github.com/appium/python-client/pull/724
+ 
+     :param locator: regular locator
+     :param locator_type: updated locator type from get_locator_type
+     :return: selenium like locator and locator_type
+     """
+     if locator_type == By.ID:
+-        locator_type = By.CSS_SELECTOR
+         locator = f'[id="{locator}"]'
++        locator_type = By.CSS_SELECTOR
+     elif locator_type == By.TAG_NAME:
+         locator_type = By.CSS_SELECTOR
+     elif locator_type == By.CLASS_NAME:
+-        locator_type = By.CSS_SELECTOR
+         locator = f".{locator}"
+-    elif locator_type == By.NAME:
+         locator_type = By.CSS_SELECTOR
++    elif locator_type == By.NAME:
+         locator = f'[name="{locator}"]'
++        locator_type = By.CSS_SELECTOR
+     return locator, locator_type
+ 
+ 
+-class ActionChains(SeleniumActionChains):
++def get_playwright_locator(locator: str):
++    """
++    Get playwright locator from selenium based
++
++    :param locator: locator in selenium format ~ '//div[@class="some-class"]'
++    :return: locator in playwright format ~ 'xpath=//div[@class="some-class"]'
++    """
++    brackets = '[' in locator and ']' in locator
+ 
+-    def move_to_location(self, x: int, y: int) -> ActionChains:
+-        """
+-        Moving the mouse to specified location
+-
+-        :param x: x coordinate
+-        :param y: y coordinate
+-        :return: self
+-        """
+-        self.w3c_actions.pointer_action.move_to_location(x, y)
+-        self.w3c_actions.key_action.pause()
++    if 'xpath=' in locator or 'id=' in locator:
++        return locator
+ 
+-        return self
++    if locator in all_tags:
++        return locator
++    elif '/' in locator:
++        return f'xpath={locator}'
++    elif '/' not in locator and brackets:
++        return locator
++    elif '.' in locator and not brackets:
++        return locator
++    elif '#' in locator:
++        return locator
++    else:
++        return f'id={locator}'
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/exceptions.py` & `dyatel-wrapper-2.0.0/dyatel/exceptions.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,29 +1,21 @@
+-from typing import Optional, Sequence
++from typing import Optional
+ 
+ 
+ class DriverWrapperException(Exception):
+     """
+     Base driver wrapper exceptions
+     """
+ 
+-    def __init__(self, msg: Optional[str] = None, screen: Optional[str] = None,
+-                 stacktrace: Optional[Sequence[str]] = None) -> None:
++    def __init__(self, msg: Optional[str] = None):
+         self.msg = msg
+-        self.screen = screen
+-        self.stacktrace = stacktrace
++        self.__suppress_context__ = True
+ 
+     def __str__(self) -> str:
+-        exception_msg = "Message: %s\n" % self.msg
+-        if self.screen:
+-            exception_msg += "Screenshot: available via screen\n"
+-        if self.stacktrace:
+-            stacktrace = "\n".join(self.stacktrace)
+-            exception_msg += "Stacktrace:\n%s" % stacktrace
+-        return exception_msg
++        return f"Message: {self.msg}"
+ 
+ 
+ class UnexpectedElementsCountException(DriverWrapperException):
+     """
+     Thrown when elements count isn't equal to expected
+     """
+     pass
+@@ -72,7 +64,14 @@
+ 
+ 
+ class UnsuitableArgumentsException(DriverWrapperException):
+     """
+     Thrown when object initialised with unsuitable arguments
+     """
+     pass
++
++
++class NotInitializedException(DriverWrapperException):
++    """
++    Thrown when getting access to not initialized object
++    """
++    pass
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/js_scripts.py` & `dyatel-wrapper-2.0.0/dyatel/js_scripts.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,10 @@
+ get_inner_height_js = 'return window.innerHeight'
+ get_inner_width_js = 'return window.innerWidth'
+ 
+-get_outer_height_js = 'return window.outerHeight'
+-
+ get_element_position_on_screen_js = """
+ function getPositionOnScreen(elem) {
+   let box = elem.getBoundingClientRect();
+   var y;
+   var x;
+   y = Math.floor(box.top)
+   x = Math.floor(box.left)
+@@ -36,14 +34,15 @@
+ delete_element_over_js = """
+ const elements = document.getElementsByClassName("dyatel-visual-comparison-support-element");
+ 
+ for (var i=0, max=elements.length; i < max; i++) {
+      elements[0].remove()
+ };
+ """
++
+ add_element_over_js = """
+ function appendElement(given_obj) {
+     given_obj = given_obj.getBoundingClientRect();
+     dyatel_obj = document.createElement("div");
+ 
+     dyatel_obj.style.zIndex=9999999;
+     dyatel_obj.setAttribute("class","dyatel-visual-comparison-support-element");
+@@ -57,20 +56,14 @@
+     dyatel_obj.style.top = given_obj.y + "px";
+     dyatel_obj.style.left = given_obj.x + "px";
+ };
+ 
+ return appendElement(arguments[0]);
+ """
+ 
+-check_element_js = 'arguments[0].checked = true'
+-uncheck_element_js = 'arguments[0].checked = false'
+-is_element_checked_js = 'return arguments[0].checked'
+-
+-click_js = 'arguments[0].click();'
+-is_displayed_js = 'return arguments[0].style.display == false;'
+ 
+ add_driver_index_comment_js = """
+ function addComment(driver_index) {
+   comment = document.createComment(" " + driver_index + " ");
+   document.body.appendChild(comment);
+ };
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/keyboard_keys.py` & `dyatel-wrapper-2.0.0/dyatel/keyboard_keys.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/mixins/element_mixin.py` & `dyatel-wrapper-2.0.0/dyatel/mixins/element_mixin.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,62 +1,80 @@
+ from __future__ import annotations
+ 
++from abc import abstractmethod
+ from copy import copy
+ from typing import List, Any, Union
+ 
+ from dyatel.mixins.driver_mixin import DriverMixin
+-from dyatel.mixins.internal_utils import get_child_elements_with_names, get_platform_locator
++from dyatel.mixins.core_mixin import (
++    driver_with_index,
++    get_element_info,
++    set_parent_for_attr,
++)
++
++
++def repr_builder(instance):
++    class_name = instance.__class__.__name__
++    obj_id = hex(id(instance))
++
++    try:
++        driver_title = driver_with_index(instance.driver_wrapper, instance.driver)
++        parent_class = instance.parent.__class__.__name__ if getattr(instance, 'parent', False) else None
++        locator_holder = getattr(instance, 'anchor', instance)
++
++        locator = f'locator="{locator_holder.locator}"'
++        locator_type = f'locator_type="{locator_holder.locator_type}"'
++        name = f'name="{instance.name}"'
++        parent = f'parent={parent_class}'
++        driver = f'{driver_title}={instance.driver}'
++
++        base = f'{class_name}({locator}, {locator_type}, {name}, {parent}) at {obj_id}'
++        additional_info = driver
++        return f'{base}, {additional_info}'
++    except AttributeError:
++        return f'{class_name} object at {obj_id}'
+ 
+ 
+ class ElementMixin(DriverMixin):
+     """ Mixin for PlayElement and CoreElement """
+ 
+-    def get_element_logging_data(self, element: Any = None) -> str:
++    @property
++    @abstractmethod
++    def all_elements(self):
++        raise NotImplementedError('all_elements method is not implemented for current class')
++
++    @abstractmethod
++    def wait_enabled(self, *args, **kwargs):
++        raise NotImplementedError('wait_enabled method is not implemented for current class')
++
++    @abstractmethod
++    def wait_element_without_error(self, *args, **kwargs):
++        raise NotImplementedError('wait_element_without_error method is not implemented for current class')
++
++    def get_element_info(self, element: Any = None) -> str:
+         """
+         Get full loging data depends on parent element
+ 
+         :param element: element to collect log data
+         :return: log string
+         """
+         element = element if element else self
+-        parent = element.parent
+-        current_data = f'Selector: ["{element.locator_type}": "{get_platform_locator(element)}"]'
+-        if parent:
+-            parent_data = f'Parent selector: ["{parent.locator_type}": "{get_platform_locator(parent)}"]'
+-            current_data = f'{current_data}. {parent_data}'
+-        return current_data
++        return get_element_info(element)
+ 
+     def _get_all_elements(self, sources: Union[tuple, list], instance_class: type) -> List[Any]:
+         """
+         Get all wrapped elements from sources
+ 
+         :param sources: list of elements: `all_elements` from selenium or `element_handles` from playwright
+         :param instance_class: attribute class to looking for
+         :return: list of wrapped elements
+         """
+         wrapped_elements = []
+ 
+         for element in sources:
+-            wrapped_object = copy(self)
++            wrapped_object: Any = copy(self)
+             wrapped_object.element = element
+-            self.__set_parent_for_attr(instance_class, wrapped_object)
++            wrapped_object._wrapped = True
++            set_parent_for_attr(wrapped_object, instance_class, with_copy=True)
+             wrapped_elements.append(wrapped_object)
+ 
+         return wrapped_elements
+-
+-    def __set_parent_for_attr(self, instance_class: type, base_obj: object):
+-        """
+-        Copy attributes of given object and set new parent for him
+-
+-        :param instance_class: attribute class to looking for
+-        :param base_obj: object of attribute
+-        :return: self
+-        """
+-        child_elements = get_child_elements_with_names(base_obj, instance_class).items()
+-
+-        for name, child in child_elements:
+-            wrapped_child = copy(child)
+-            wrapped_child.parent = base_obj
+-            setattr(base_obj, name, wrapped_child)
+-            self.__set_parent_for_attr(instance_class, wrapped_child)
+-
+-        return self
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/mixins/log_mixin.py` & `dyatel-wrapper-2.0.0/dyatel/mixins/logging.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,43 +1,55 @@
+ from __future__ import annotations
+ 
+ import logging
++import sys
+ from os.path import basename
+ from typing import Any
+ 
++from selenium.common.exceptions import WebDriverException as SeleniumWebDriverException
++
+ from dyatel.js_scripts import add_driver_index_comment_js, find_comments_js
+-from dyatel.mixins.internal_utils import get_frame, driver_index
++from dyatel.mixins.core_mixin import get_frame, driver_with_index
++
+ 
+-logging.basicConfig(
+-    level=logging.INFO,
+-    format='[%(asctime)s.%(msecs)03d][%(levelname).1s]%(message)s',
+-    datefmt="%h %d][%H:%M:%S"
+-)
++def dyatel_logs_settings():
++    logging.getLogger('WDM').setLevel(logging.ERROR)
++    logging.getLogger("urllib3").setLevel(logging.ERROR)
++    logging.basicConfig(
++        level=logging.INFO,
++        format='[%(asctime)s.%(msecs)03d][%(levelname).1s]%(message)s',
++        datefmt="%h %d][%H:%M:%S",
++        stream=sys.stdout
++    )
+ 
+ 
+ def get_log_message(message: str) -> str:
+     """
+     Get log message with code
+ 
+     :param message: custom message
+     :return: log message
+     """
+-    code = get_frame().f_back.f_back.f_code
++    code = get_frame(3).f_code
+     return f'[{basename(code.co_filename)}][{code.co_name}:{code.co_firstlineno}] {message}'
+ 
+ 
+ def send_log_message(log_message: str, level: str, ) -> None:
+     """
+     Send log message
+ 
+     :param level: log level
+     :param log_message: custom message
+     :return: None
+     """
+-    logging.log(getattr(logging, level.upper()), log_message)
++    try:
++        # workaround for https://github.com/pytest-dev/pytest/issues/5502
++        logging.log(getattr(logging, level.upper()), log_message)
++    except ValueError:
++        pass
+ 
+ 
+ def autolog(message: Any, level: str = 'info') -> Any:
+     """
+     Log message in format:
+       ~ [time][level][module][function:line] <message>
+       ~ [Aug 14][16:04:22.767][I][play_element.py][is_displayed:328] Check visibility of "Mouse page"
+@@ -46,35 +58,35 @@
+     :param level: log level
+     :return: message
+     """
+     send_log_message(str(message), level)
+     return message
+ 
+ 
+-class LogMixin:
++class Logging:
+ 
+-    def log(self, message: str, level: str = 'info') -> LogMixin:
++    def log(self, message: str, level: str = 'info') -> None:
+         """
+         Log message in format:
+           ~ [time][level][driver_index][module][function:line] <message>
+           ~ [Aug 14][16:04:22.767][I][2_driver][play_element.py][is_displayed:328] Check visibility of "Mouse page"
+ 
+         :param message: info message
+         :param level: log level
+         :return: None
+         """
+         driver = getattr(self, 'driver')
+         driver_wrapper = getattr(self, 'driver_wrapper')
+-        driver_log, index = '', driver_index(driver_wrapper, driver)
++        driver_log, index = '', driver_with_index(driver_wrapper, driver)
+ 
+         if index:
+             driver_log = f'[{index}]'
+ 
+-            if not hasattr(driver, 'driver_index'):
+-                driver.driver_index = index
+-
+-            if driver_wrapper.selenium:
+-                if '_driver' not in str(driver_wrapper.execute_script(find_comments_js)):
+-                    driver_wrapper.execute_script(add_driver_index_comment_js, index)
++            try:
++                if driver_wrapper.selenium:
++                    if '_driver' not in str(driver_wrapper.execute_script(find_comments_js)):
++                        driver_wrapper.execute_script(add_driver_index_comment_js, index)
++            except SeleniumWebDriverException:
++                pass
+ 
+         send_log_message(f'{driver_log}{get_log_message(message)}', level)
+-        return self
++        return None
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/shared_utils.py` & `dyatel-wrapper-2.0.0/dyatel/shared_utils.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,22 +1,13 @@
+ import io
+-import logging
+ from subprocess import Popen, PIPE, run
+ 
+ from PIL import Image
+ 
+ 
+-def set_logging_settings(level=logging.INFO):
+-    logging.getLogger('WDM').setLevel(logging.ERROR)
+-    logging.getLogger("urllib3").setLevel(logging.ERROR)
+-    logging.basicConfig(level=level, format='[%(asctime)s][%(levelname)s][%(filename)s:%(lineno)s] %(message)s',
+-                        datefmt='%Y-%m-%d %H:%M:%S')
+-    return logging
+-
+-
+ def resize_image(screenshot_binary, scale=3, img_format='JPEG'):
+     img = Image.open(io.BytesIO(screenshot_binary))
+     img = img.resize((img.width // scale, img.height // scale), Image.Resampling.LANCZOS)
+ 
+     result_img_binary = io.BytesIO()
+     img.convert('RGB').save(result_img_binary, format=img_format, optimize=True)
+     return result_img_binary.getvalue()
+@@ -38,12 +29,13 @@
+ 
+     return process
+ 
+ 
+ def cut_log_data(data: str, length=50) -> str:
+     """
+     Cut given data for reducing log length
++
+     :param data: original data ~ 'very long string for typing. string endless continues'
+     :param length: length to cut given data ~ 20
+     :return: edited data ~ 'Type text: "very long string for >>> 36 characters"'
+     """
+     return f'{data[:length]} >>> {len(data[length:])} characters' if len(data) > length else data
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel/visual_comparison.py` & `dyatel-wrapper-2.0.0/dyatel/visual_comparison.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,43 +1,56 @@
+ from __future__ import annotations
+ 
+ import os
++import re
+ import time
+ import importlib
+ import json
+ import base64
+-import math
+-import operator
+-from functools import reduce
++from urllib.parse import urljoin
+ from typing import Union, List, Any
+ from string import punctuation
+ 
+-from PIL import Image, ImageChops
++import cv2.cv2 as cv2
++import numpy
++from skimage._shared.utils import check_shape_equality  # noqa
++from skimage.metrics import structural_similarity
+ 
+-from dyatel.exceptions import DriverWrapperException
++from dyatel.exceptions import DriverWrapperException, TimeoutException
+ from dyatel.js_scripts import add_element_over_js, delete_element_over_js
+-from dyatel.mixins.log_mixin import autolog
+-from dyatel.mixins.internal_utils import get_frame
++from dyatel.mixins.logging import autolog
++from dyatel.mixins.core_mixin import get_frame, get_element_info
+ 
+ 
+ class VisualComparison:
+ 
+     visual_regression_path = ''
+     test_item = None
+     skip_screenshot_comparison = False
+     visual_reference_generation = False
+     hard_visual_reference_generation = False
++    default_delay = 0.75
++    default_threshold = 0
++    diff_color_scheme = (0, 255, 0)
+ 
+     def __init__(self, driver_wrapper, element):
+         self.driver_wrapper = driver_wrapper
+         self.dyatel_element = element
+ 
+-    def assert_screenshot(self, filename: str = '', test_name: str = '', name_suffix: str = '',
+-                          threshold: Union[int, float] = 0, delay: Union[int, float] = 0.5, scroll: bool = False,
+-                          remove: List[Any] = None, fill_background: Union[str, bool] = False) -> VisualComparison:
++    def assert_screenshot(
++            self,
++            filename: str,
++            test_name: str,
++            name_suffix: str,
++            threshold: Union[int, float],
++            delay: Union[int, float],
++            scroll: bool,
++            remove: List[Any],
++            fill_background: Union[str, bool],
++    ) -> VisualComparison:
+         """
+         Assert given (by name) and taken screenshot equals
+ 
+         :param filename: full screenshot name. Custom filename will be used if empty string given
+         :param test_name: test name for custom filename. Will try to find it automatically if empty string given
+         :param name_suffix: filename suffix. Good to use for same element with positive/negative case
+         :param threshold: possible threshold
+@@ -67,47 +80,45 @@
+         root_path = root_path if root_path.endswith('/') else f'{root_path}/'
+         reference_directory = f'{root_path}reference/'
+         output_directory = f'{root_path}output/'
+         diff_directory = f'{root_path}difference/'
+ 
+         reference_file = f'{reference_directory}{filename}.png'
+         output_file = f'{output_directory}{filename}.png'
+-        diff_file = f'{diff_directory}/diff_{filename}.png'
++        diff_file = f'{diff_directory}diff_{filename}.png'
+ 
+         os.makedirs(os.path.dirname(reference_directory), exist_ok=True)
+         os.makedirs(os.path.dirname(output_directory), exist_ok=True)
+         os.makedirs(os.path.dirname(diff_directory), exist_ok=True)
+ 
+         if scroll:
+             self.dyatel_element.scroll_into_view()
+ 
+-        time.sleep(delay)
+-
+         def save_screenshot(screenshot_name):
++            time.sleep(delay)
+             self._fill_background(fill_background)
+             self._appends_dummy_elements(remove)
+             self.dyatel_element.get_screenshot(screenshot_name)
+             self._remove_dummy_elements()
+ 
+         if self.hard_visual_reference_generation:
+             save_screenshot(reference_file)
+             return self
+ 
+-        try:
+-            Image.open(reference_file)
+-        except FileNotFoundError:
++        image = cv2.imread(reference_file)
++        if isinstance(image, type(None)):
+             save_screenshot(reference_file)
+ 
+             if self.visual_reference_generation:
+                 return self
+ 
+             self._disable_reruns()
+ 
+-            raise FileNotFoundError(f'Reference file "{reference_file}" not found, but its just saved. '
+-                                    f'If it CI run, then you need to commit reference files.') from None
++            raise AssertionError(f'Reference file "{reference_file}" not found, but its just saved. '
++                                 f'If it CI run, then you need to commit reference files.')
+ 
+         if self.visual_reference_generation:
+             return self
+ 
+         save_screenshot(output_file)
+         self._assert_same_images(output_file, reference_file, diff_file, threshold)
+         return self
+@@ -116,15 +127,22 @@
+         """
+         Placed an element above each from given list and paints it black
+ 
+         :param remove_data: list of elements to be fake removed
+         :return: VisualComparison
+         """
+         for obj in remove_data:
+-            self.driver_wrapper.execute_script(add_element_over_js, obj.element)
++
++            try:
++                el = obj.element
++            except TimeoutException:
++                msg = f'Cannot find {obj.name} while removing background from screenshot. {get_element_info(obj)}'
++                raise TimeoutException(msg)
++
++            self.driver_wrapper.execute_script(add_element_over_js, el)
+         return self
+ 
+     def _remove_dummy_elements(self) -> VisualComparison:
+         """
+         Remove all dummy elements from DOM
+ 
+         :return: VisualComparison
+@@ -144,43 +162,48 @@
+         if fill_background_data is True:
+             self.driver_wrapper.execute_script('arguments[0].style.background = "#000";', element)
+         if fill_background_data and type(fill_background_data) is str:
+             self.driver_wrapper.execute_script(f'arguments[0].style.background = "{fill_background_data}";', element)
+ 
+         return self
+ 
+-    def _assert_same_images(self, actual_file: str, reference_file: str, filename: str,
++    def _assert_same_images(self, actual_file: str, reference_file: str, diff_file: str,
+                             threshold: Union[int, float]) -> VisualComparison:
+         """
+         Assert that given images are equal to each other
+ 
+         :param actual_file: actual image path
+         :param reference_file: reference image path
+-        :param filename: difference image name
++        :param diff_file: difference image name
+         :param threshold: possible difference in percents
+         :return: VisualComparison
+         """
+-        reference_image = Image.open(reference_file).convert('RGB')
+-        output_image = Image.open(actual_file).convert('RGB')
+-        diff, actual_threshold = self._get_difference(reference_image, output_image)
++        reference_image = cv2.imread(reference_file)
++        output_image = cv2.imread(actual_file)
++
++        try:
++            check_shape_equality(reference_image, output_image)
++        except ValueError:
++            # TODO: Actual file can be added to allure report
++            raise AssertionError(f'Image size (width, height) is not same for {reference_file}: '
++                                 f'Expected: {reference_image.shape}; Actual: {output_image.shape}')
+ 
+-        same_size = reference_image.size == output_image.size
++        diff, actual_threshold = self._get_difference(reference_image, output_image)
+         is_different = actual_threshold > threshold
+ 
+-        if is_different or not same_size:
+-            diff.save(filename)
+-            self._attach_allure_diff(actual_file, reference_file, filename)
+-
+-        base_error = f"The new screenshot '{actual_file}' did not match the reference '{reference_file}'."
+-
+-        if not same_size:
+-            raise AssertionError(f'{base_error} Image size (width, height) is different: '
+-                                 f'Expected:{reference_image.size}, Actual: {output_image.size}.')
+         if is_different:
+-            raise AssertionError(f"{base_error} Threshold is: {actual_threshold}; Possible threshold is: {threshold}")
++            cv2.imwrite(diff_file, diff)
++            self._attach_allure_diff(actual_file, reference_file, diff_file)
++
++        base_error = f"New screenshot '{actual_file}' did not match the\n" \
++                     f"Reference screenshot '{reference_file}'.\n" \
++                     f"Diff image {urljoin('file:', diff_file)}.\n"
++
++        if is_different:
++            raise AssertionError(f"{base_error}Threshold is: {actual_threshold}; Possible threshold is: {threshold}")
+ 
+         return self
+ 
+     def _get_screenshot_name(self, test_function_name: str = '', name_suffix: str = '') -> str:
+         """
+         Get screenshot name
+ 
+@@ -238,38 +261,62 @@
+ 
+         for item in (']', '"', "'"):
+             screenshot_name = screenshot_name.replace(item, '')
+ 
+         for item in punctuation + ' ':
+             screenshot_name = screenshot_name.replace(item, '_')
+ 
++        screenshot_name = self._remove_unexpected_underscores(screenshot_name)
++
+         return screenshot_name.lower()
+ 
+-    @staticmethod
+-    def _get_difference(im1: Image, im2: Image):
++    def _get_difference(self, reference_img: numpy.ndarray, actual_img: numpy.ndarray) -> tuple[numpy.ndarray, float]:
+         """
+         Calculate difference between two images
+ 
+-        :param im1: image 1
+-        :param im2: image 2
++        :param reference_img: image 1, numpy.ndarray
++        :param actual_img: image 2, numpy.ndarray
+         :return: (diff image, diff float value )
+         """
+-        diff = ImageChops.difference(im1, im2)
+-        histogram = diff.histogram()
+-
+-        rms = reduce(
+-            operator.add,
+-            map(
+-                lambda h, i: h * (i ** 2),
+-                histogram,
+-                range(256)
+-            )
+-        )
++        # Convert images to grayscale
++        reference_img_gray = cv2.cvtColor(reference_img, cv2.COLOR_BGR2GRAY)
++        actual_img_gray = cv2.cvtColor(actual_img, cv2.COLOR_BGR2GRAY)
++
++        # Compute SSIM between the two images
++        score, diff = structural_similarity(reference_img_gray, actual_img_gray, full=True)
++        score *= 100
++
++        # The diff image contains the actual image differences between the two images
++        # and is represented as a floating point data type in the range [0,1]
++        # so we must convert the array to 8-bit unsigned integers in the range
++        # [0,255] before we can use it with OpenCV
++        diff = (diff * 255).astype("uint8")
++        diff_box = cv2.merge([diff, diff, diff])
++
++        # Threshold the difference image, followed by finding contours to
++        # obtain the regions of the two input images that differ
++        thresh = cv2.threshold(diff, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
++        contours = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
++        contours = contours[0] if len(contours) == 2 else contours[1]
++
++        mask = numpy.zeros(reference_img.shape, dtype='uint8')
++        filled_after = actual_img.copy()
++
++        for c in contours:
++            area = cv2.contourArea(c)
++            if area > 40:
++                x, y, w, h = cv2.boundingRect(c)
++                cv2.rectangle(reference_img, (x, y), (x + w, y + h), self.diff_color_scheme, 2)
++                cv2.rectangle(actual_img, (x, y), (x + w, y + h), self.diff_color_scheme, 2)
++                cv2.rectangle(diff_box, (x, y), (x + w, y + h), self.diff_color_scheme, 2)
++                cv2.drawContours(mask, [c], 0, (255, 255, 255), -1)
++                cv2.drawContours(filled_after, [c], 0, self.diff_color_scheme, -1)
+ 
+-        return diff, math.sqrt(rms / (float(im1.size[0]) * im1.size[1]))
++        diff_image, percent_diff = filled_after, 100 - score
++        return diff_image, percent_diff
+ 
+     @staticmethod
+     def _attach_allure_diff(actual_path: str, expected_path: str, diff_path: str) -> None:
+         """
+         Attach screenshots to allure screen diff plugin
+         https://github.com/allure-framework/allure2/blob/master/plugins/screen-diff-plugin/README.md
+ 
+@@ -285,17 +332,16 @@
+         except ModuleNotFoundError:
+             autolog('Skip screenshot attaching due to allure module not found')
+ 
+         if allure:
+ 
+             diff_dict = {}
+             for name, path in (('actual', actual_path), ('expected', expected_path), ('diff', diff_path)):
+-                image = open(path, 'rb')
+-                diff_dict.update({name: f'data:image/png;base64,{base64.b64encode(image.read()).decode("ascii")}'})
+-                image.close()
++                with open(path, 'rb') as image:
++                    diff_dict.update({name: f'data:image/png;base64,{base64.b64encode(image.read()).decode("ascii")}'})
+ 
+             allure.attach(name='diff', body=json.dumps(diff_dict), attachment_type='application/vnd.allure.image.diff')
+ 
+     def _disable_reruns(self) -> None:
+         """
+         Disable reruns for pytest
+ 
+@@ -304,7 +350,15 @@
+         try:
+             pytest_rerun = importlib.import_module('pytest_rerunfailures')
+         except ModuleNotFoundError:
+             return None
+ 
+         if hasattr(self.test_item, 'execution_count'):
+             self.test_item.execution_count = pytest_rerun.get_reruns_count(self.test_item) + 1
++
++    def _remove_unexpected_underscores(self, text) -> str:
++        """
++        Remove multiple underscores from given text
++
++        :return: test_screenshot__data___name -> test_screenshot_data_name
++        """
++        return re.sub(r'_{2,}', '_', text)
+```
+
+### Comparing `dyatel-wrapper-1.3.4/dyatel_wrapper.egg-info/PKG-INFO` & `dyatel-wrapper-2.0.0/dyatel_wrapper.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,23 +1,24 @@
+ Metadata-Version: 2.1
+ Name: dyatel-wrapper
+-Version: 1.3.4
++Version: 2.0.0
+ Summary: Wrapper of Selenium, Appium and Playwright with single API
+ Home-page: https://github.com/EnvInc/dyatel
+ Author: Podolian Vladimir
+ Author-email: vladimir.podolyan64@gmail.com
+ Project-URL: Source, https://github.com/EnvInc/dyatel
+ Project-URL: Tracker, https://github.com/EnvInc/dyatel/issues
+ Project-URL: Changelog, https://github.com/EnvInc/dyatel/blob/master/CHANGELOG.md
+ Keywords: selenium appium playwright web_automation mobile_automation
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Classifier: Topic :: Software Development :: Quality Assurance
+ Classifier: Topic :: Software Development :: Testing :: Acceptance
+ Classifier: License :: OSI Approved :: Apache Software License
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `dyatel-wrapper-1.3.4/setup.py` & `dyatel-wrapper-2.0.0/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,33 +1,35 @@
+ from setuptools import setup
+ 
+ with open('README.md') as f:
+     description = f.read()
+ 
+ setup(
+     name='dyatel-wrapper',
+-    version='1.3.4',
++    version='2.0.0',
+     url='https://github.com/EnvInc/dyatel',
+     packages=[
+         'dyatel',
+         'dyatel.base',
+         'dyatel.mixins',
+         'dyatel.dyatel_play',
+         'dyatel.dyatel_sel',
+         'dyatel.dyatel_sel.core',
+         'dyatel.dyatel_sel.driver',
+         'dyatel.dyatel_sel.elements',
+         'dyatel.dyatel_sel.pages',
+     ],
+     install_requires=[
+         'Appium-Python-Client>=2.1.2',
++        'numpy>=1.18.1',
++        'opencv-python==4.5.5.62',
++        'Pillow>=6.2.2',
++        'playwright>=1.30.0',
+         'selenium>=4.1.0',
+-        'playwright>=1.22.0',
+-        'webdriver-manager>=3.7.0',
+-        'Pillow>=9.1.1'
++        'scikit-image>=0.17.1',
+     ],
+     keywords='selenium appium playwright web_automation mobile_automation',
+     description='Wrapper of Selenium, Appium and Playwright with single API',
+     long_description=description,
+     long_description_content_type='text/markdown',
+     author_email='vladimir.podolyan64@gmail.com',
+     author='Podolian Vladimir',
+@@ -38,13 +40,14 @@
+     },
+     classifiers=[
+         'Development Status :: 3 - Alpha',
+         'Programming Language :: Python :: 3.7',
+         'Programming Language :: Python :: 3.8',
+         'Programming Language :: Python :: 3.9',
+         'Programming Language :: Python :: 3.10',
++        'Programming Language :: Python :: 3.11',
+         'Topic :: Software Development :: Libraries :: Python Modules',
+         'Topic :: Software Development :: Quality Assurance',
+         'Topic :: Software Development :: Testing :: Acceptance',
+         'License :: OSI Approved :: Apache Software License'
+     ],
+ )
+```
+

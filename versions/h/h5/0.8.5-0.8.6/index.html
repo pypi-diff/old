@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/h5-0.8.5.tar.gz tmp/h5-0.8.6.tar.gz --html versions/h/h5/0.8.5-0.8.6/index.html --text versions/h/h5/0.8.5-0.8.6/diff.txt --markdown versions/h/h5/0.8.5-0.8.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.1 KB</span></div>
+  <div><span class="source">tmp/h5-0.8.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/h5-0.8.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">172 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;h5-0.8.<del>5</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;h5-0.8.<ins>6</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.9 KB</span></div>
+    <div><span class="source">h5-0.8.5.tar</span> vs.</div>
+    <div id="h---.-.-.tar"><span class="source">h5-0.8.6.tar</span>
+      <a class="anchor" href="#h---.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.51 KB</span></div>
+      <div id="h---.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#h---.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2987<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<del>5</del>/h5/__init__.py</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2987<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1048<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<del>5</del>/h5/__main__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1048<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>11</del>:<del>35</del>.<del>022106</del><span class="dp">·</span>h5-0.8.<del>5</del>/h5/_meta.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>00</ins>:<ins>16</ins>.<ins>254447</ins><span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/_meta.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>86<del>38</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>11</del>:<del>35</del>.<del>0</del>2<del>2106</del><span class="dp">·</span>h5-0.8.<del>5</del>/h5/cli.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>86<ins>59</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>16</ins>:<ins>59</ins>:<ins>27</ins>.<ins>9</ins>2<ins>1434</ins><span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15743<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<del>5</del>/h5/core.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15743<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/core.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14738<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<del>5</del>/h5/dev.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14738<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.022106<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/dev.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2935<span class="dp">·</span>2023-03-31<span class="dp">·</span>17:46:06.860725<span class="dp">·</span>h5-0.8.<del>5</del>/h5/legacy.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2935<span class="dp">·</span>2023-03-31<span class="dp">·</span>17:46:06.860725<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/legacy.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-02-01<span class="dp">·</span>22:06:04.805953<span class="dp">·</span>h5-0.8.<del>5</del>/h5/py.typed</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-02-01<span class="dp">·</span>22:06:04.805953<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4457<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.027132<span class="dp">·</span>h5-0.8.<del>5</del>/h5/testing.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4457<span class="dp">·</span>2023-04-05<span class="dp">·</span>20:11:35.027132<span class="dp">·</span>h5-0.8.<ins>6</ins>/h5/testing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1056<span class="dp">·</span>2022-02-17<span class="dp">·</span>22:17:07.419494<span class="dp">·</span>h5-0.8.<del>5</del>/LICENSE</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1056<span class="dp">·</span>2022-02-17<span class="dp">·</span>22:17:07.419494<span class="dp">·</span>h5-0.8.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<del>25</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>20</del>:<del>11</del>:<del>35</del>.<del>027</del>1<del>32</del><span class="dp">·</span>h5-0.8.<del>5</del>/pyproject.toml</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<ins>90</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>17</ins>:<ins>00</ins>:<ins>59</ins>.<ins>895</ins>1<ins>75</ins><span class="dp">·</span>h5-0.8.<ins>6</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2022-09-19<span class="dp">·</span>18:35:16.982212<span class="dp">·</span>h5-0.8.<del>5</del>/README.md</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>739<span class="dp">·</span>2022-09-19<span class="dp">·</span>18:35:16.982212<span class="dp">·</span>h5-0.8.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<del>07</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>h5-0.8.<del>5</del>/setup.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<ins>52</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>h5-0.8.<ins>6</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1983</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>h5-0.8.<del>5</del>/PKG-INFO</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2042</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>h5-0.8.<ins>6</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/__init__.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--__init__.py"><span class="source">h5-0.8.6/h5/__init__.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/__main__.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--__main__.py"><span class="source">h5-0.8.6/h5/__main__.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">744 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/cli.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--cli.py"><span class="source">h5-0.8.6/h5/cli.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 21 lines modified</td><td colspan="2">Offset 4, 22 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>dataclasses<span class="dp">·</span>import<span class="dp">·</span>dataclass</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>dataclasses<span class="dp">·</span>import<span class="dp">·</span>dataclass</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>List,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>List,<span class="dp">·</span>Optional,<span class="dp">·</span>Tuple</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>click</td><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>click</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>dgpy<span class="dp">·</span>import<span class="dp">·</span>h5dev</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>globsters<span class="dp">·</span>import<span class="dp">·</span>globster</td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>globsters<span class="dp">·</span>import<span class="dp">·</span>globster</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>rich.console<span class="dp">·</span>import<span class="dp">·</span>Console</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>rich.console<span class="dp">·</span>import<span class="dp">·</span>Console</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>typing_extensions<span class="dp">·</span>import<span class="dp">·</span>TypeGuard</td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>typing_extensions<span class="dp">·</span>import<span class="dp">·</span>TypeGuard</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">import<span class="dp">·</span>h5</td><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>h5</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>h5<span class="dp">·</span>import<span class="dp">·</span>dev<span class="dp">·</span>as<span class="dp">·</span>h5dev</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">console<span class="dp">·</span>=<span class="dp">·</span>Console()</td><td class="diffline">13 </td><td class="diffpresent">console<span class="dp">·</span>=<span class="dp">·</span>Console()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>(</td><td class="diffline">14 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;cli&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;cli&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;H5CliConfig&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;H5CliConfig&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">)</td><td class="diffline">17 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 199, 14 lines modified</td><td colspan="2">Offset 200, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">199 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;datasets&quot;,</td><td class="diffline">200 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;datasets&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">200 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_flag=True,</td><td class="diffline">201 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_flag=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">201 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=False,</td><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=False,</td></tr>
+<tr class="diffunmodified"><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;dump<span class="dp">·</span>datasets&quot;,</td><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;dump<span class="dp">·</span>datasets&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">203 </td><td class="diffpresent">)</td><td class="diffline">204 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">204 </td><td class="diffpresent">@click.option(</td><td class="diffline">205 </td><td class="diffpresent">@click.option(</td></tr>
+<tr class="diffunmodified"><td class="diffline">205 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;-a&quot;,</td><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;-a&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;--attrs&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;--attributes&quot;,</td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;--attributes&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;attributes&quot;,</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;attributes&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_flag=True,</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_flag=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=False,</td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=False,</td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;dump<span class="dp">·</span>attributes&quot;,</td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;dump<span class="dp">·</span>attributes&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent">)</td><td class="diffline">213 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent">@click.option(</td><td class="diffline">214 </td><td class="diffpresent">@click.option(</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">77.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/core.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--core.py"><span class="source">h5-0.8.6/h5/core.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--core.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">75.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/dev.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--dev.py"><span class="source">h5-0.8.6/h5/dev.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--dev.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/legacy.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--legacy.py"><span class="source">h5-0.8.6/h5/legacy.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--legacy.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">h5-0.8.5/h5/testing.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--h--testing.py"><span class="source">h5-0.8.6/h5/testing.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--h--testing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">71.0 B</span></div>
+      <div><span class="source">h5-0.8.5/LICENSE</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--LICENSE"><span class="source">h5-0.8.6/LICENSE</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">909 B</span></div>
+      <div><span class="source">h5-0.8.5/pyproject.toml</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--pyproject.toml"><span class="source">h5-0.8.6/pyproject.toml</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;h5&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;h5&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.8.<del>5</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.8.<ins>6</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;H5py<span class="dp">·</span>utils&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;H5py<span class="dp">·</span>utils&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">5 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;jesse<span class="dp">·</span>&lt;jesse@dgi.com&gt;&quot;]</td><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;jesse<span class="dp">·</span>&lt;jesse@dgi.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dynamic-graphics-inc/dgpy-libs&quot;</td><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dynamic-graphics-inc/dgpy-libs&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&quot;</td><td class="diffline">8 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&#x27;README.md&#x27;</td><td class="diffline">9 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&#x27;README.md&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">10 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 17 lines modified</td><td colspan="2">Offset 30, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">30 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8.0&quot;</td><td class="diffline">31 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">h5py<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7.0&quot;</td><td class="diffline">32 </td><td class="diffpresent">h5py<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.24.2&quot;</td><td class="diffline">33 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.24.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">typing-extensions<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.5.0&quot;</td><td class="diffline">34 </td><td class="diffpresent">typing-extensions<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.5.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">click<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^8.1.3&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td><td class="diffline">35 </td><td class="diffpresent">click<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^8.1.3&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">rich<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^13.3.3&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td><td class="diffline">36 </td><td class="diffpresent">rich<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^13.3.3&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">globsters<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.0.2&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">[tool.poetry.extras]</td><td class="diffline">38 </td><td class="diffpresent">[tool.poetry.extras]</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">cli<span class="dp">·</span>=<span class="dp">·</span>[&quot;click&quot;,<span class="dp">·</span>&quot;rich&quot;]</td><td class="diffline">39 </td><td class="diffpresent">cli<span class="dp">·</span>=<span class="dp">·</span>[&quot;click&quot;,<span class="dp">·</span>&quot;rich&quot;<ins>,<span class="dp">·</span>&quot;globsters&quot;</ins>]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td><td class="diffline">40 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.2&quot;</td><td class="diffline">41 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.2&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">#<span class="dp">·</span>coverage<span class="dp">·</span>config</td><td class="diffline">42 </td><td class="diffpresent">#<span class="dp">·</span>coverage<span class="dp">·</span>config</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">#<span class="dp">·</span>[tool.coverage.run]</td><td class="diffline">43 </td><td class="diffpresent">#<span class="dp">·</span>[tool.coverage.run]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">75.0 B</span></div>
+      <div><span class="source">h5-0.8.5/README.md</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--README.md"><span class="source">h5-0.8.6/README.md</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.53 KB</span></div>
+      <div><span class="source">h5-0.8.5/setup.py</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--setup.py"><span class="source">h5-0.8.6/setup.py</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 10, 22 lines modified</td><td colspan="2">Offset 10, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">package_data<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">10 </td><td class="diffpresent">package_data<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}</td><td class="diffline">11 </td><td class="diffpresent">{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">12 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">[&#x27;h5py&gt;=3.7.0&#x27;,<span class="dp">·</span>&#x27;numpy&gt;=1.24.2,&lt;2.0.0&#x27;,<span class="dp">·</span>&#x27;typing-extensions&gt;=4.5.0,&lt;5.0.0&#x27;]</td><td class="diffline">13 </td><td class="diffpresent">[&#x27;h5py&gt;=3.7.0&#x27;,<span class="dp">·</span>&#x27;numpy&gt;=1.24.2,&lt;2.0.0&#x27;,<span class="dp">·</span>&#x27;typing-extensions&gt;=4.5.0,&lt;5.0.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">extras_require<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">14 </td><td class="diffpresent">extras_require<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">{&#x27;cli&#x27;:<span class="dp">·</span>[&#x27;click&gt;=8.1.3,&lt;9.0.0&#x27;,<del><span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;]}</del></td><td class="diffline">15 </td><td class="diffpresent">{&#x27;cli&#x27;:<span class="dp">·</span>[&#x27;click&gt;=8.1.3,&lt;9.0.0&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;globsters&gt;=0.0.2,&lt;0.0.3&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">18 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;h5<span class="dp">·</span>=<span class="dp">·</span>h5.cli:main&#x27;]}</td><td class="diffline">19 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;h5<span class="dp">·</span>=<span class="dp">·</span>h5.cli:main&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">20 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;h5&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;h5&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.8.<del>5</del>&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.8.<ins>6</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;H5py<span class="dp">·</span>utils&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;H5py<span class="dp">·</span>utils&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;&lt;a<span class="dp">·</span>href=&quot;https://github.com/dynamic-graphics-inc/dgpy-libs&quot;&gt;\n&lt;img<span class="dp">·</span>align=&quot;right&quot;<span class="dp">·</span>src=&quot;https://github.com/dynamic-graphics-inc/dgpy-libs/blob/main/docs/images/dgpy_banner.svg?raw=true&quot;<span class="dp">·</span>alt=&quot;drawing&quot;<span class="dp">·</span>height=&quot;120&quot;<span class="dp">·</span>width=&quot;300&quot;/&gt;\n&lt;/a&gt;\n\n#<span class="dp">·</span>h5\n\n[![Wheel](https://img.shields.io/pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n[![Version](https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)\n[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://img.shields.io/pypi/pyversions/h5.svg)\n[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\n**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`\n\n---\n\nUtil<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and<span class="dp">·</span>home<span class="dp">·</span>of<span class="dp">·</span>recursive<span class="dp">·</span>generators!\n&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;&lt;a<span class="dp">·</span>href=&quot;https://github.com/dynamic-graphics-inc/dgpy-libs&quot;&gt;\n&lt;img<span class="dp">·</span>align=&quot;right&quot;<span class="dp">·</span>src=&quot;https://github.com/dynamic-graphics-inc/dgpy-libs/blob/main/docs/images/dgpy_banner.svg?raw=true&quot;<span class="dp">·</span>alt=&quot;drawing&quot;<span class="dp">·</span>height=&quot;120&quot;<span class="dp">·</span>width=&quot;300&quot;/&gt;\n&lt;/a&gt;\n\n#<span class="dp">·</span>h5\n\n[![Wheel](https://img.shields.io/pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n[![Version](https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)\n[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://img.shields.io/pypi/pyversions/h5.svg)\n[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\n**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`\n\n---\n\nUtil<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and<span class="dp">·</span>home<span class="dp">·</span>of<span class="dp">·</span>recursive<span class="dp">·</span>generators!\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;jesse&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;jesse&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;jesse@dgi.com&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;jesse@dgi.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&#x27;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&#x27;,</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">1.98 KB</span></div>
+        <div id="h---.-.-.tar---h---.-.--setup.py---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#h---.-.-.tar---h---.-.--setup.py---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>-*-<span class="dp">·</span>coding:<span class="dp">·</span>utf-8<span class="dp">·</span>-*-<span class="dp">·</span>from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup<span class="dp">·</span>package_dir<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;&#x27;:<span class="dp">·</span>&#x27;.&#x27;}</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>-*-<span class="dp">·</span>coding:<span class="dp">·</span>utf-8<span class="dp">·</span>-*-<span class="dp">·</span>from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup<span class="dp">·</span>package_dir<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;&#x27;:<span class="dp">·</span>&#x27;.&#x27;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>[&#x27;h5&#x27;]<span class="dp">·</span>package_data<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}<span class="dp">·</span>install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">2 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>[&#x27;h5&#x27;]<span class="dp">·</span>package_data<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;&#x27;:<span class="dp">·</span>[&#x27;*&#x27;]}<span class="dp">·</span>install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">[&#x27;h5py&gt;=3.7.0&#x27;,<span class="dp">·</span>&#x27;numpy&gt;=1.24.2,&lt;2.0.0&#x27;,<span class="dp">·</span>&#x27;typing-extensions&gt;=4.5.0,&lt;5.0.0&#x27;]</td><td class="diffline">3 </td><td class="diffpresent">[&#x27;h5py&gt;=3.7.0&#x27;,<span class="dp">·</span>&#x27;numpy&gt;=1.24.2,&lt;2.0.0&#x27;,<span class="dp">·</span>&#x27;typing-extensions&gt;=4.5.0,&lt;5.0.0&#x27;]</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">extras_require<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;cli&#x27;:<span class="dp">·</span>[&#x27;click&gt;=8.1.3,&lt;9.0.0&#x27;,<span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;<del>]</del><del>}</del></td><td class="diffline">4 </td><td class="diffpresent">extras_require<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;cli&#x27;:<span class="dp">·</span>[&#x27;click&gt;=8.1.3,&lt;9.0.0&#x27;,<span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;<ins>,</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;h5<span class="dp">·</span>=<span class="dp">·</span>h5.cli:<del>main&#x27;]}<span class="dp">·</span>setup_kwargs<span class="dp">·</span>=</del></td><td class="diffline">5 </td><td class="diffpresent"><ins>&#x27;globsters&gt;=0.0.2,&lt;0.0.3&#x27;]}<span class="dp">·</span></ins>entry_points<span class="dp">·</span>=<span class="dp">·</span>\<span class="dp">·</span>{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;h5<span class="dp">·</span>=<span class="dp">·</span>h5.cli:</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">{<span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;h5&#x27;,<span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.8.<del>5</del>&#x27;,<span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;H5py<del><span class="dp">·</span>utils&#x27;,</del></td><td class="diffline">6 </td><td class="diffpresent"><ins>main&#x27;]}<span class="dp">·</span>setup_kwargs<span class="dp">·</span>=<span class="dp">·</span></ins>{<span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;h5&#x27;,<span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.8.<ins>6</ins>&#x27;,<span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;H5py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;\n[drawing]\n\n\n#<span class="dp">·</span>h5\n\n[![Wheel](https:<del>/</del>/<del>img.shields.io</del>/</td><td class="diffline">7 </td><td class="diffpresent"><ins>utils&#x27;,<span class="dp">·</span></ins>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;\n[drawing]\n\n\n#<span class="dp">·</span>h5\n\n[![Wheel](https://</td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">pypi/wheel/h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)\n[![Version]</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent"><del>(https://</del>img.shields.io/pypi/<del>v</del>/h5.svg)](https://img.shields.io/pypi/<del>v</del>/h5.svg)\n</td><td class="diffline">8 </td><td class="diffpresent">img.shields.io/pypi/<ins>whee</ins><ins>l</ins>/h5.svg)](https://img.shields.io/pypi/<ins>whee</ins><ins>l</ins>/h5.svg)\n</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">[![Version](https://img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)]<del>(https://</del></td><td class="diffline">10 </td><td class="diffpresent"><ins>v/h5.svg)\n</ins>[![py_versions](https://img.shields.io/pypi/pyversions/h5.svg)]</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">img.shields.io/pypi/pyversions/h5.svg)\n[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://</td><td class="diffline">11 </td><td class="diffpresent"><ins>(https://</ins>img.shields.io/pypi/pyversions/h5.svg)\n[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/</td><td class="diffline">12 </td><td class="diffpresent">img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">black)\n\n**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`\n\n---\n\nUtil<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and</td><td class="diffline">13 </td><td class="diffpresent">black)\n\n**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`\n\n---\n\nUtil<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">home<span class="dp">·</span>of<span class="dp">·</span>recursive<span class="dp">·</span>generators!\n&#x27;,<span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;jesse&#x27;,<span class="dp">·</span>&#x27;author_email&#x27;:</td><td class="diffline">14 </td><td class="diffpresent">home<span class="dp">·</span>of<span class="dp">·</span>recursive<span class="dp">·</span>generators!\n&#x27;,<span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;jesse&#x27;,<span class="dp">·</span>&#x27;author_email&#x27;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&#x27;jesse@dgi.com&#x27;,<span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,<span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,<span class="dp">·</span>&#x27;url&#x27;:</td><td class="diffline">15 </td><td class="diffpresent">&#x27;jesse@dgi.com&#x27;,<span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,<span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,<span class="dp">·</span>&#x27;url&#x27;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&#x27;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&#x27;,</td><td class="diffline">16 </td><td class="diffpresent">&#x27;https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&#x27;package_dir&#x27;:<span class="dp">·</span>package_dir,<span class="dp">·</span>&#x27;packages&#x27;:<span class="dp">·</span>packages,<span class="dp">·</span>&#x27;package_data&#x27;:<span class="dp">·</span>package_data,</td><td class="diffline">17 </td><td class="diffpresent">&#x27;package_dir&#x27;:<span class="dp">·</span>package_dir,<span class="dp">·</span>&#x27;packages&#x27;:<span class="dp">·</span>packages,<span class="dp">·</span>&#x27;package_data&#x27;:<span class="dp">·</span>package_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&#x27;install_requires&#x27;:<span class="dp">·</span>install_requires,<span class="dp">·</span>&#x27;extras_require&#x27;:<span class="dp">·</span>extras_require,</td><td class="diffline">18 </td><td class="diffpresent">&#x27;install_requires&#x27;:<span class="dp">·</span>install_requires,<span class="dp">·</span>&#x27;extras_require&#x27;:<span class="dp">·</span>extras_require,</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.56 KB</span></div>
+      <div><span class="source">h5-0.8.5/PKG-INFO</span> vs.</div>
+      <div id="h---.-.-.tar---h---.-.--PKG-INFO"><span class="source">h5-0.8.6/PKG-INFO</span>
+        <a class="anchor" href="#h---.-.-.tar---h---.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>h5</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>h5</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.8.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>H5py<span class="dp">·</span>utils</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>H5py<span class="dp">·</span>utils</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>hdf5,h5py,h5,numpy</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>hdf5,h5py,h5,numpy</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>jesse</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>jesse</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jesse@dgi.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jesse@dgi.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 19, 14 lines modified</td><td colspan="2">Offset 19, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed</td><td class="diffline">23 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>cli</td><td class="diffline">24 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>click<span class="dp">·</span>(&gt;=8.1.3,&lt;9.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;</td><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>click<span class="dp">·</span>(&gt;=8.1.3,&lt;9.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>globsters<span class="dp">·</span>(&gt;=0.0.2,&lt;0.0.3)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>h5py<span class="dp">·</span>(&gt;=3.7.0)</td><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>h5py<span class="dp">·</span>(&gt;=3.7.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(&gt;=1.24.2,&lt;2.0.0)</td><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(&gt;=1.24.2,&lt;2.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>rich<span class="dp">·</span>(&gt;=13.3.3,&lt;14.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;</td><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>rich<span class="dp">·</span>(&gt;=13.3.3,&lt;14.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>typing-extensions<span class="dp">·</span>(&gt;=4.5.0,&lt;5.0.0)</td><td class="diffline">30 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>typing-extensions<span class="dp">·</span>(&gt;=4.5.0,&lt;5.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/dynamic-graphics-inc/dgpy-libs</td><td class="diffline">31 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/dynamic-graphics-inc/dgpy-libs</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">32 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">2.52 KB</span></div>
+        <div id="h---.-.-.tar---h---.-.--PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#h---.-.-.tar---h---.-.--PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 24 lines modified</td><td colspan="2">Offset 1, 25 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>h5<span class="dp">·</span>Version:<span class="dp">·</span>0.8.<del>5</del><span class="dp">·</span>Summary:<span class="dp">·</span>H5py<span class="dp">·</span>utils<span class="dp">·</span>Home-page:</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>h5<span class="dp">·</span>Version:<span class="dp">·</span>0.8.<ins>6</ins><span class="dp">·</span>Summary:<span class="dp">·</span>H5py<span class="dp">·</span>utils<span class="dp">·</span>Home-page:</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5<span class="dp">·</span>License:</td><td class="diffline">2 </td><td class="diffpresent">https://github.com/dynamic-graphics-inc/dgpy-libs/tree/main/libs/h5<span class="dp">·</span>License:</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">MIT<span class="dp">·</span>Keywords:<span class="dp">·</span>hdf5,h5py,h5,numpy<span class="dp">·</span>Author:<span class="dp">·</span>jesse<span class="dp">·</span>Author-email:<span class="dp">·</span>jesse@dgi.com</td><td class="diffline">3 </td><td class="diffpresent">MIT<span class="dp">·</span>Keywords:<span class="dp">·</span>hdf5,h5py,h5,numpy<span class="dp">·</span>Author:<span class="dp">·</span>jesse<span class="dp">·</span>Author-email:<span class="dp">·</span>jesse@dgi.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.0<span class="dp">·</span>Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/</td><td class="diffline">4 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.0<span class="dp">·</span>Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Stable<span class="dp">·</span>Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI</td><td class="diffline">5 </td><td class="diffpresent">Stable<span class="dp">·</span>Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Classifier:</td><td class="diffline">6 </td><td class="diffpresent">Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">7 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9<span class="dp">·</span>Classifier:</td><td class="diffline">8 </td><td class="diffpresent">::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td><td class="diffline">9 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Python<span class="dp">·</span>::<span class="dp">·</span>3.11<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10<span class="dp">·</span>Classifier:</td><td class="diffline">10 </td><td class="diffpresent">Python<span class="dp">·</span>::<span class="dp">·</span>3.11<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td><td class="diffline">11 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Python<span class="dp">·</span>::<span class="dp">·</span>3.9<span class="dp">·</span>Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed<span class="dp">·</span>Provides-Extra:<span class="dp">·</span>cli<span class="dp">·</span>Requires-Dist:</td><td class="diffline">12 </td><td class="diffpresent">Python<span class="dp">·</span>::<span class="dp">·</span>3.9<span class="dp">·</span>Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed<span class="dp">·</span>Provides-Extra:<span class="dp">·</span>cli<span class="dp">·</span>Requires-Dist:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">click<span class="dp">·</span>(&gt;=8.1.3,&lt;9.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;<span class="dp">·</span>Requires-Dist:<span class="dp">·</span>globsters</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent"><del>click<span class="dp">·</span></del>(&gt;=<del>8</del>.<del>1</del>.<del>3</del>,&lt;<del>9</del>.0.<del>0</del>)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;<span class="dp">·</span>Requires-Dist:<span class="dp">·</span>h5py<span class="dp">·</span>(&gt;=3.7.0)<span class="dp">·</span>Requires-</td><td class="diffline">14 </td><td class="diffpresent">(&gt;=<ins>0</ins>.<ins>0</ins>.<ins>2</ins>,&lt;<ins>0</ins>.0.<ins>3</ins>)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;cli&quot;<span class="dp">·</span>Requires-Dist:<span class="dp">·</span>h5py<span class="dp">·</span>(&gt;=3.7.0)<span class="dp">·</span>Requires-<ins>Dist:</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><del>Dist:<span class="dp">·</span></del>numpy<span class="dp">·</span>(&gt;=1.24.2,&lt;2.0.0)<span class="dp">·</span>Requires-Dist:<span class="dp">·</span>rich<span class="dp">·</span>(&gt;=13.3.3,&lt;14.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==</td><td class="diffline">15 </td><td class="diffpresent">numpy<span class="dp">·</span>(&gt;=1.24.2,&lt;2.0.0)<span class="dp">·</span>Requires-Dist:<span class="dp">·</span>rich<span class="dp">·</span>(&gt;=13.3.3,&lt;14.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<ins><span class="dp">·</span>&quot;cli&quot;</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><del>&quot;cli&quot;<span class="dp">·</span></del>Requires-Dist:<span class="dp">·</span>typing-extensions<span class="dp">·</span>(&gt;=4.5.0,&lt;5.0.0)<span class="dp">·</span>Project-URL:</td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>typing-extensions<span class="dp">·</span>(&gt;=4.5.0,&lt;5.0.0)<span class="dp">·</span>Project-URL:<ins><span class="dp">·</span>Repository,</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent"><del>Repository,<span class="dp">·</span></del>https://github.com/dynamic-graphics-inc/dgpy-libs<span class="dp">·</span>Description-</td><td class="diffline">17 </td><td class="diffpresent">https://github.com/dynamic-graphics-inc/dgpy-libs<span class="dp">·</span>Descripti<ins>on-C</ins>o<ins>nte</ins>n<ins>t</ins>-<ins>Type:</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent"><del>Content-Type:<span class="dp">·</span></del>text/markdown<span class="dp">·</span>[drawing]<span class="dp">·</span>#<span class="dp">·</span>h5<span class="dp">·</span>[![Wheel](https://img.shields.io/</td><td class="diffline">18 </td><td class="diffpresent">text/markdown<span class="dp">·</span>[drawing]<span class="dp">·</span>#<span class="dp">·</span>h5<span class="dp">·</span>[![Wheel](https://img.shields.io<ins>/pypi/wheel</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent"><del>pypi/wheel/</del>h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)<span class="dp">·</span>[![Version]</td><td class="diffline">19 </td><td class="diffpresent">h5.svg)](https://img.shields.io/pypi/wheel/h5.svg)<span class="dp">·</span>[![Version]<ins>(https://</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent"><del>(https://</del>img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)</td><td class="diffline">20 </td><td class="diffpresent">img.shields.io/pypi/v/h5.svg)](https://img.shields.io/pypi/v/h5.svg)<ins><span class="dp">·</span>[!</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">[<del>![</del>py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://</td><td class="diffline">21 </td><td class="diffpresent">[py_versions](https://img.shields.io/pypi/pyversions/h5.svg)](https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">img.shields.io/pypi/pyversions/h5.svg)<span class="dp">·</span>[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://</td><td class="diffline">22 </td><td class="diffpresent">img.shields.io/pypi/pyversions/h5.svg)<span class="dp">·</span>[![Code<span class="dp">·</span>style:<span class="dp">·</span>black](https://</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/</td><td class="diffline">23 </td><td class="diffpresent">img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">black)<span class="dp">·</span>**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`<span class="dp">·</span>---<span class="dp">·</span>Util<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and<span class="dp">·</span>home<span class="dp">·</span>of</td><td class="diffline">24 </td><td class="diffpresent">black)<span class="dp">·</span>**Install:**<span class="dp">·</span>`pip<span class="dp">·</span>install<span class="dp">·</span>h5`<span class="dp">·</span>---<span class="dp">·</span>Util<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>h5py<span class="dp">·</span>and<span class="dp">·</span>home<span class="dp">·</span>of</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">recursive<span class="dp">·</span>generators!</td><td class="diffline">25 </td><td class="diffpresent">recursive<span class="dp">·</span>generators!</td></tr>
+</table>      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

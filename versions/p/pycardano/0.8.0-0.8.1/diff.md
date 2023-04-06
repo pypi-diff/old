@@ -1,0 +1,445 @@
+# Comparing `tmp/pycardano-0.8.0.tar.gz` & `tmp/pycardano-0.8.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pycardano-0.8.0.tar", max compression
++gzip compressed data, was "pycardano-0.8.1.tar", max compression
+```
+
+## Comparing `pycardano-0.8.0.tar` & `pycardano-0.8.1.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+--rw-r--r--   0        0        0     1062 2023-03-30 00:24:36.285523 pycardano-0.8.0/LICENSE
+--rw-r--r--   0        0        0     9058 2023-03-30 00:24:36.285523 pycardano-0.8.0/README.md
+--rw-r--r--   0        0        0      445 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/__init__.py
+--rw-r--r--   0        0        0    13503 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/address.py
+--rw-r--r--   0        0        0       84 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/backend/__init__.py
+--rw-r--r--   0        0        0     3757 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/backend/base.py
+--rw-r--r--   0        0        0    10050 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/backend/blockfrost.py
+--rw-r--r--   0        0        0    18163 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/backend/ogmios.py
+--rw-r--r--   0        0        0     1268 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/certificate.py
+--rw-r--r--   0        0        0       36 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/cip/__init__.py
+--rw-r--r--   0        0        0     6679 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/cip/cip8.py
+--rw-r--r--   0        0        0    13478 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/coinselection.py
+--rw-r--r--   0        0        0       37 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/crypto/__init__.py
+--rw-r--r--   0        0        0     4622 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/crypto/bech32.py
+--rw-r--r--   0        0        0    18871 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/crypto/bip32.py
+--rw-r--r--   0        0        0     1008 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/exception.py
+--rw-r--r--   0        0        0     3133 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/hash.py
+--rw-r--r--   0        0        0     9615 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/key.py
+--rw-r--r--   0        0        0      432 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/logging.py
+--rw-r--r--   0        0        0     4820 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/metadata.py
+--rw-r--r--   0        0        0     6259 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/nativescript.py
+--rw-r--r--   0        0        0      520 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/network.py
+--rw-r--r--   0        0        0    32478 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/plutus.py
+--rw-r--r--   0        0        0    28018 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/serialization.py
+--rw-r--r--   0        0        0    17682 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/transaction.py
+--rw-r--r--   0        0        0    50764 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/txbuilder.py
+--rw-r--r--   0        0        0      125 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/types.py
+--rw-r--r--   0        0        0     7111 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/utils.py
+--rw-r--r--   0        0        0     2189 2023-03-30 00:24:36.313525 pycardano-0.8.0/pycardano/witness.py
+--rw-r--r--   0        0        0     1789 2023-03-30 00:24:36.313525 pycardano-0.8.0/pyproject.toml
+--rw-r--r--   0        0        0    10605 1970-01-01 00:00:00.000000 pycardano-0.8.0/PKG-INFO
++-rw-r--r--   0        0        0     1062 2023-04-06 17:01:21.098474 pycardano-0.8.1/LICENSE
++-rw-r--r--   0        0        0     8826 2023-04-06 17:01:21.098474 pycardano-0.8.1/README.md
++-rw-r--r--   0        0        0      445 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/__init__.py
++-rw-r--r--   0        0        0    13503 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/address.py
++-rw-r--r--   0        0        0       84 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/backend/__init__.py
++-rw-r--r--   0        0        0     3757 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/backend/base.py
++-rw-r--r--   0        0        0    10050 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/backend/blockfrost.py
++-rw-r--r--   0        0        0    18163 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/backend/ogmios.py
++-rw-r--r--   0        0        0     1268 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/certificate.py
++-rw-r--r--   0        0        0       36 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/cip/__init__.py
++-rw-r--r--   0        0        0     6679 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/cip/cip8.py
++-rw-r--r--   0        0        0    13478 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/coinselection.py
++-rw-r--r--   0        0        0       37 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/crypto/__init__.py
++-rw-r--r--   0        0        0     4622 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/crypto/bech32.py
++-rw-r--r--   0        0        0    18871 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/crypto/bip32.py
++-rw-r--r--   0        0        0     1008 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/exception.py
++-rw-r--r--   0        0        0     3133 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/hash.py
++-rw-r--r--   0        0        0     9615 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/key.py
++-rw-r--r--   0        0        0      432 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/logging.py
++-rw-r--r--   0        0        0     4820 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/metadata.py
++-rw-r--r--   0        0        0     6259 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/nativescript.py
++-rw-r--r--   0        0        0      520 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/network.py
++-rw-r--r--   0        0        0    32620 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/plutus.py
++-rw-r--r--   0        0        0    27826 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/serialization.py
++-rw-r--r--   0        0        0    17682 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/transaction.py
++-rw-r--r--   0        0        0    50748 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/txbuilder.py
++-rw-r--r--   0        0        0      125 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/types.py
++-rw-r--r--   0        0        0     7111 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/utils.py
++-rw-r--r--   0        0        0     2189 2023-04-06 17:01:21.126474 pycardano-0.8.1/pycardano/witness.py
++-rw-r--r--   0        0        0     1789 2023-04-06 17:01:21.126474 pycardano-0.8.1/pyproject.toml
++-rw-r--r--   0        0        0    10373 1970-01-01 00:00:00.000000 pycardano-0.8.1/PKG-INFO
+```
+
+### Comparing `pycardano-0.8.0/LICENSE` & `pycardano-0.8.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/README.md` & `pycardano-0.8.1/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -250,14 +250,12 @@
+   <img src="./.github/donate_addr.png" height=150 width=150/>
+ </p>
+ 
+ 
+ ## Sponsors :heart:
+ 
+ <p align="left">
+-  <a href="https://www.blockery.io/"><img src="https://avatars.githubusercontent.com/u/97766045?s=50&v=4"/></a>
+   <a href="https://github.com/KtorZ"><img src="https://avatars.githubusercontent.com/u/5680256?s=50&v=4"/></a>
+-  <a href="https://github.com/lacepool"><img src="https://avatars.githubusercontent.com/u/79309785?s=50&v=4"/></a>
+-  <a href="https://github.com/muppetADA"><img width="50" src="https://avatars.githubusercontent.com/u/115075316?s=50&v=4"/></a>
+   <a href="https://github.com/CardanoDur"><img width="50" src="https://avatars.githubusercontent.com/u/1000466?s=50&v=4"/></a>
+   <a href="https://github.com/huths0lo"><img width="50" src="https://avatars.githubusercontent.com/u/78839856?s=50&v=4"/></a>
++  <a href="https://github.com/markrufino"><img width="50" src="https://avatars.githubusercontent.com/u/30117352?v=4"/></a>
+ </p>
+```
+
+### Comparing `pycardano-0.8.0/pycardano/address.py` & `pycardano-0.8.1/pycardano/address.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/backend/base.py` & `pycardano-0.8.1/pycardano/backend/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/backend/blockfrost.py` & `pycardano-0.8.1/pycardano/backend/blockfrost.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/backend/ogmios.py` & `pycardano-0.8.1/pycardano/backend/ogmios.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/certificate.py` & `pycardano-0.8.1/pycardano/certificate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/cip/cip8.py` & `pycardano-0.8.1/pycardano/cip/cip8.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/coinselection.py` & `pycardano-0.8.1/pycardano/coinselection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/crypto/bech32.py` & `pycardano-0.8.1/pycardano/crypto/bech32.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/crypto/bip32.py` & `pycardano-0.8.1/pycardano/crypto/bip32.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/exception.py` & `pycardano-0.8.1/pycardano/exception.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/hash.py` & `pycardano-0.8.1/pycardano/hash.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/key.py` & `pycardano-0.8.1/pycardano/key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/metadata.py` & `pycardano-0.8.1/pycardano/metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/nativescript.py` & `pycardano-0.8.1/pycardano/nativescript.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/network.py` & `pycardano-0.8.1/pycardano/network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/plutus.py` & `pycardano-0.8.1/pycardano/plutus.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -735,14 +735,20 @@
+     def __add__(self, other: ExecutionUnits) -> ExecutionUnits:
+         if not isinstance(other, ExecutionUnits):
+             raise TypeError(
+                 f"Expect type: {ExecutionUnits}, got {type(other)} instead."
+             )
+         return ExecutionUnits(self.mem + other.mem, self.steps + other.steps)
+ 
++    def is_empty(self) -> bool:
++        return self.mem == 0 and self.steps == 0
++
++    def __bool__(self):
++        return not self.is_empty()
++
+ 
+ @dataclass(repr=False)
+ class Redeemer(ArrayCBORSerializable):
+     tag: Optional[RedeemerTag] = field(default=None, init=False)
+ 
+     index: int = field(default=0, init=False)
+```
+
+### Comparing `pycardano-0.8.0/pycardano/serialization.py` & `pycardano-0.8.1/pycardano/serialization.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ """Defines CBOR serialization interfaces and provides useful serialization classes."""
+ 
+ from __future__ import annotations
+ 
+ import re
++import typing
+ from collections import OrderedDict, UserList, defaultdict
+ from copy import deepcopy
+ from dataclasses import Field, dataclass, fields
+ from datetime import datetime
+ from decimal import Decimal
+ from functools import wraps
+ from inspect import isclass
+@@ -409,73 +410,75 @@
+     Args:
+         f (dataclass_field): A data class field.
+         v (:const:`Primitive`): A CBOR primitive.
+ 
+     Returns:
+         Union[:const:`Primitive`, CBORSerializable]: A CBOR primitive or a CBORSerializable.
+     """
++
+     if "object_hook" in f.metadata:
+         return f.metadata["object_hook"](v)
+-    elif isclass(f.type) and issubclass(f.type, CBORSerializable):
+-        return f.type.from_primitive(v)
+-    elif hasattr(f.type, "__origin__") and (f.type.__origin__ is list):
+-        t_args = f.type.__args__
++    return _restore_typed_primitive(f.type, v)
++
++
++def _restore_typed_primitive(
++    t: typing.Type, v: Primitive
++) -> Union[Primitive, CBORSerializable]:
++    """Try to restore a value back to its original type based on information given in field.
++
++    Args:
++        f (type): A type
++        v (:const:`Primitive`): A CBOR primitive.
++
++    Returns:
++        Union[:const:`Primitive`, CBORSerializable]: A CBOR primitive or a CBORSerializable.
++    """
++    if t is Any or (t in PRIMITIVE_TYPES and isinstance(v, t)):
++        return v
++    elif isclass(t) and issubclass(t, CBORSerializable):
++        return t.from_primitive(v)
++    elif hasattr(t, "__origin__") and (t.__origin__ is list):
++        t_args = t.__args__
+         if len(t_args) != 1:
+             raise DeserializeException(
+                 f"List types need exactly one type argument, but got {t_args}"
+             )
+         t = t_args[0]
+         if not isinstance(v, list):
+             raise DeserializeException(f"Expected type list but got {type(v)}")
+-        if isclass(t) and issubclass(t, CBORSerializable):
+-            return IndefiniteList([t.from_primitive(w) for w in v])
+-        else:
+-            return IndefiniteList(v)
+-    elif isclass(f.type) and issubclass(f.type, IndefiniteList):
++        return IndefiniteList([_restore_typed_primitive(t, w) for w in v])
++    elif isclass(t) and issubclass(t, IndefiniteList):
+         return IndefiniteList(v)
+-    elif hasattr(f.type, "__origin__") and (f.type.__origin__ is dict):
+-        t_args = f.type.__args__
++    elif hasattr(t, "__origin__") and (t.__origin__ is dict):
++        t_args = t.__args__
+         if len(t_args) != 2:
+             raise DeserializeException(
+                 f"Dict types need exactly two type arguments, but got {t_args}"
+             )
+         key_t = t_args[0]
+         val_t = t_args[1]
+-        if isclass(key_t) and issubclass(key_t, CBORSerializable):
+-            key_converter = key_t.from_primitive
+-        else:
+-            key_converter = _identity
+-        if isclass(val_t) and issubclass(val_t, CBORSerializable):
+-            val_converter = val_t.from_primitive
+-        else:
+-            val_converter = _identity
+         if not isinstance(v, dict):
+             raise DeserializeException(f"Expected dict type but got {type(v)}")
+-        return {key_converter(key): val_converter(val) for key, val in v.items()}
+-    elif hasattr(f.type, "__origin__") and (
+-        f.type.__origin__ is Union or f.type.__origin__ is Optional
++        return {
++            _restore_typed_primitive(key_t, key): _restore_typed_primitive(val_t, val)
++            for key, val in v.items()
++        }
++    elif hasattr(t, "__origin__") and (
++        t.__origin__ is Union or t.__origin__ is Optional
+     ):
+-        t_args = f.type.__args__
++        t_args = t.__args__
+         for t in t_args:
+-            if isclass(t) and issubclass(t, IndefiniteList):
+-                return IndefiniteList(v)
+-            elif isclass(t) and issubclass(t, CBORSerializable):
+-                try:
+-                    return t.from_primitive(v)
+-                except DeserializeException:
+-                    pass
+-            else:
+-                if not isclass(t) and hasattr(t, "__origin__"):
+-                    t = t.__origin__
+-                if t in PRIMITIVE_TYPES and isinstance(v, t):
+-                    return v
++            try:
++                return _restore_typed_primitive(t, v)
++            except DeserializeException:
++                pass
+         raise DeserializeException(
+             f"Cannot deserialize object: \n{v}\n in any valid type from {t_args}."
+         )
+-    return v
++    raise DeserializeException(f"Cannot deserialize object: \n{v}\n to type {t}.")
+ 
+ 
+ ArrayBase = TypeVar("ArrayBase", bound="ArrayCBORSerializable")
+ """A generic type that is bounded by ArrayCBORSerializable."""
+ 
+ 
+ @dataclass(repr=False)
+@@ -552,16 +555,16 @@
+             val = getattr(self, f.name)
+             if val is None and f.metadata.get("optional"):
+                 continue
+             primitives.append(val)
+         return primitives
+ 
+     @classmethod
+-    @limit_primitive_type(list)
+-    def from_primitive(cls: Type[ArrayBase], values: list) -> ArrayBase:
++    @limit_primitive_type(list, tuple)
++    def from_primitive(cls: Type[ArrayBase], values: Union[list, tuple]) -> ArrayBase:
+         """Restore a primitive value to its original class type.
+ 
+         Args:
+             cls (ArrayBase): The original class type.
+             values (List[Primitive]): A list whose elements are CBOR primitives.
+ 
+         Returns:
+```
+
+### Comparing `pycardano-0.8.0/pycardano/transaction.py` & `pycardano-0.8.1/pycardano/transaction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/txbuilder.py` & `pycardano-0.8.1/pycardano/txbuilder.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -162,23 +162,23 @@
+         if self._should_estimate_execution_units is None:
+             if redeemer.ex_units:
+                 self._should_estimate_execution_units = False
+             else:
+                 self._should_estimate_execution_units = True
+                 redeemer.ex_units = ExecutionUnits(0, 0)
+         else:
+-            if not self._should_estimate_execution_units and redeemer.ex_units is None:
++            if not self._should_estimate_execution_units and not redeemer.ex_units:
+                 raise InvalidArgumentException(
+                     f"All redeemers need to provide execution units if the firstly "
+                     f"added redeemer specifies execution units. \n"
+                     f"Added redeemers: {self.redeemers} \n"
+                     f"New redeemer: {redeemer}"
+                 )
+             if self._should_estimate_execution_units:
+-                if redeemer.ex_units is not None:
++                if redeemer.ex_units:
+                     raise InvalidArgumentException(
+                         f"No redeemer should provide execution units if the firstly "
+                         f"added redeemer didn't provide execution units. \n"
+                         f"Added redeemers: {self.redeemers} \n"
+                         f"New redeemer: {redeemer}"
+                     )
+                 else:
+```
+
+### Comparing `pycardano-0.8.0/pycardano/utils.py` & `pycardano-0.8.1/pycardano/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pycardano/witness.py` & `pycardano-0.8.1/pycardano/witness.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pycardano-0.8.0/pyproject.toml` & `pycardano-0.8.1/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pycardano"
+-version = "0.8.0"
++version = "0.8.1"
+ classifiers = [
+     "Intended Audience :: Developers",
+     "License :: OSI Approved :: MIT License",
+     "Natural Language :: English",
+     "Programming Language :: Python :: 3",
+     "Programming Language :: Python :: 3.7",
+     "Programming Language :: Python :: 3.8",
+```
+
+### Comparing `pycardano-0.8.0/PKG-INFO` & `pycardano-0.8.1/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pycardano
+-Version: 0.8.0
++Version: 0.8.1
+ Summary: A Cardano library in Python
+ Home-page: https://github.com/Python-Cardano/pycardano
+ License: MIT
+ Keywords: python,cardano,blockchain,crypto
+ Author: Jerry
+ Author-email: jerrycgh@gmail.com
+ Requires-Python: >=3.7,<4.0
+@@ -288,15 +288,13 @@
+   <img src="./.github/donate_addr.png" height=150 width=150/>
+ </p>
+ 
+ 
+ ## Sponsors :heart:
+ 
+ <p align="left">
+-  <a href="https://www.blockery.io/"><img src="https://avatars.githubusercontent.com/u/97766045?s=50&v=4"/></a>
+   <a href="https://github.com/KtorZ"><img src="https://avatars.githubusercontent.com/u/5680256?s=50&v=4"/></a>
+-  <a href="https://github.com/lacepool"><img src="https://avatars.githubusercontent.com/u/79309785?s=50&v=4"/></a>
+-  <a href="https://github.com/muppetADA"><img width="50" src="https://avatars.githubusercontent.com/u/115075316?s=50&v=4"/></a>
+   <a href="https://github.com/CardanoDur"><img width="50" src="https://avatars.githubusercontent.com/u/1000466?s=50&v=4"/></a>
+   <a href="https://github.com/huths0lo"><img width="50" src="https://avatars.githubusercontent.com/u/78839856?s=50&v=4"/></a>
++  <a href="https://github.com/markrufino"><img width="50" src="https://avatars.githubusercontent.com/u/30117352?v=4"/></a>
+ </p>
+```
+

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/quetz_client-0.2.1.tar.gz tmp/quetz_client-0.3.0.tar.gz --html versions/q/quetz-client/0.2.1-0.3.0/index.html --text versions/q/quetz-client/0.2.1-0.3.0/diff.txt --markdown versions/q/quetz-client/0.2.1-0.3.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.38 KB</span></div>
+  <div><span class="source">tmp/quetz_client-0.2.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/quetz_client-0.3.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;quetz_client-0.<del>2</del>.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><span class="dp">·</span><del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;quetz_client-0.<ins>3</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.05 KB</span></div>
+    <div><span class="source">quetz_client-0.2.1.tar</span> vs.</div>
+    <div id="quetz_client--.-.-.tar"><span class="source">quetz_client-0.3.0.tar</span>
+      <a class="anchor" href="#quetz_client--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.76 KB</span></div>
+      <div id="quetz_client--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 23 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>744400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1510<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1510<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>748400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>960<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>960<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1123<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:<del>51</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1123<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:<ins>45</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>803<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>748400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/setup.cfg</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>803<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>744400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>187774</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>744400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:<del>51</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client/_version.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:<ins>45</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>711</del><span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client/cli.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>922</ins><span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5548<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client/client.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5548<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client/client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>744400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/PKG-INFO</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>450<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/SOURCES.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>450<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/dependency_links.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/entry_points.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>55<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/requires.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/src/quetz_client.egg-info/top_level.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/src/quetz_client.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>54</del>:<del>20</del>.<del>744400</del><span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/tests/</td><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>03</ins>:<ins>19</ins>.<ins>191775</ins><span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1146<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/tests/test_both.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1146<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/tests/test_both.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2182<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/tests/test_live.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2182<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/tests/test_live.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4100<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:3<del>9</del>.000000<span class="dp">·</span>quetz_client-0.<del>2</del>.<del>1</del>/tests/test_mock.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4100<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>02</ins>:3<ins>1</ins>.000000<span class="dp">·</span>quetz_client-0.<ins>3</ins>.<ins>0</ins>/tests/test_mock.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/LICENSE</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--LICENSE"><span class="source">quetz_client-0.3.0/LICENSE</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">509 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/PKG-INFO</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--PKG-INFO"><span class="source">quetz_client-0.3.0/PKG-INFO</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>quetz_client</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>quetz_client</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>2</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>3</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>client<span class="dp">·</span>to<span class="dp">·</span>interact<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>Quetz<span class="dp">·</span>server.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>client<span class="dp">·</span>to<span class="dp">·</span>interact<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>Quetz<span class="dp">·</span>server.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mamba-org/quetz-client</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mamba-org/quetz-client</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>QuantCo,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>QuantCo,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>noreply@quantco.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>noreply@quantco.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/README.md</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--README.md"><span class="source">quetz_client-0.3.0/README.md</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">479 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/pyproject.toml</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--pyproject.toml"><span class="source">quetz_client-0.3.0/pyproject.toml</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 29, 15 lines modified</td><td colspan="2">Offset 29, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">check_untyped_defs<span class="dp">·</span>=<span class="dp">·</span>true</td><td class="diffline">29 </td><td class="diffpresent">check_untyped_defs<span class="dp">·</span>=<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">[tool.pytest.ini_options]</td><td class="diffline">30 </td><td class="diffpresent">[tool.pytest.ini_options]</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">#<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>pytest&#x27;s<span class="dp">·</span>future<span class="dp">·</span>default.</td><td class="diffline">31 </td><td class="diffpresent">#<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>pytest&#x27;s<span class="dp">·</span>future<span class="dp">·</span>default.</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">addopts<span class="dp">·</span>=<span class="dp">·</span>&quot;--import-mode=importlib&quot;</td><td class="diffline">32 </td><td class="diffpresent">addopts<span class="dp">·</span>=<span class="dp">·</span>&quot;--import-mode=importlib&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">[tool.tbump.version]</td><td class="diffline">33 </td><td class="diffpresent">[tool.tbump.version]</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">current<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<del>2</del>.<del>1</del>&quot;</td><td class="diffline">34 </td><td class="diffpresent">current<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<ins>3</ins>.<ins>0</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">regex<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;&#x27;</td><td class="diffline">35 </td><td class="diffpresent">regex<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;major&gt;\d+)\.(?P&lt;minor&gt;\d+)\.(?P&lt;patch&gt;\d+)</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>(?P&lt;major&gt;\d+)\.(?P&lt;minor&gt;\d+)\.(?P&lt;patch&gt;\d+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>((?P&lt;channel&gt;a|b|rc|.dev)(?P&lt;release&gt;\d+))?</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>((?P&lt;channel&gt;a|b|rc|.dev)(?P&lt;release&gt;\d+))?</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td><td class="diffline">38 </td><td class="diffpresent">&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">[[tool.tbump.field]]</td><td class="diffline">39 </td><td class="diffpresent">[[tool.tbump.field]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;channel&quot;</td><td class="diffline">40 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;channel&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/setup.cfg</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--setup.cfg"><span class="source">quetz_client-0.3.0/setup.cfg</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/src/quetz_client/client.py</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--src-quetz_client-client.py"><span class="source">quetz_client-0.3.0/src/quetz_client/client.py</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--src-quetz_client-client.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">561 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/src/quetz_client.egg-info/PKG-INFO</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--src-quetz_client.egg-info-PKG-INFO"><span class="source">quetz_client-0.3.0/src/quetz_client.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--src-quetz_client.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>quetz-client</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>quetz-client</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>2</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>3</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>client<span class="dp">·</span>to<span class="dp">·</span>interact<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>Quetz<span class="dp">·</span>server.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>client<span class="dp">·</span>to<span class="dp">·</span>interact<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>Quetz<span class="dp">·</span>server.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mamba-org/quetz-client</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mamba-org/quetz-client</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>QuantCo,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>QuantCo,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>noreply@quantco.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>noreply@quantco.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/tests/test_both.py</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--tests-test_both.py"><span class="source">quetz_client-0.3.0/tests/test_both.py</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--tests-test_both.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/tests/test_live.py</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--tests-test_live.py"><span class="source">quetz_client-0.3.0/tests/test_live.py</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--tests-test_live.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">quetz_client-0.2.1/tests/test_mock.py</span> vs.</div>
+      <div id="quetz_client--.-.-.tar---quetz_client--.-.--tests-test_mock.py"><span class="source">quetz_client-0.3.0/tests/test_mock.py</span>
+        <a class="anchor" href="#quetz_client--.-.-.tar---quetz_client--.-.--tests-test_mock.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
