@@ -1,0 +1,141 @@
+--- tmp/griptape_core-0.1.2.tar.gz
++++ tmp/griptape_core-0.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "griptape_core-0.1.2.tar", max compression
+│ +gzip compressed data, was "griptape_core-0.1.3.tar", max compression
+│   --- griptape_core-0.1.2.tar
+├── +++ griptape_core-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ --rw-r--r--   0        0        0    11339 2023-04-06 20:17:23.178260 griptape_core-0.1.2/LICENSE
+│ │ --rw-r--r--   0        0        0     2802 2023-04-06 22:24:07.469627 griptape_core-0.1.2/README.md
+│ │ --rw-r--r--   0        0        0      389 2023-04-06 20:17:23.178444 griptape_core-0.1.2/griptape/__init__.py
+│ │ --rw-r--r--   0        0        0      184 2023-04-06 20:17:23.178636 griptape_core-0.1.2/griptape/adapters/__init__.py
+│ │ --rw-r--r--   0        0        0     2379 2023-04-06 20:17:23.178741 griptape_core-0.1.2/griptape/adapters/chatgpt_plugin_adapter.py
+│ │ --rw-r--r--   0        0        0     1132 2023-04-06 20:17:23.178828 griptape_core-0.1.2/griptape/adapters/langchain_tool_adapter.py
+│ │ --rw-r--r--   0        0        0      239 2023-04-06 20:17:23.178902 griptape_core-0.1.2/griptape/base_adapter.py
+│ │ --rw-r--r--   0        0        0      462 2023-04-06 20:17:23.178986 griptape_core-0.1.2/griptape/base_executor.py
+│ │ --rw-r--r--   0        0        0     3278 2023-04-06 20:17:23.179069 griptape_core-0.1.2/griptape/base_tool.py
+│ │ --rw-r--r--   0        0        0      358 2023-04-06 20:17:23.179136 griptape_core-0.1.2/griptape/decorators.py
+│ │ --rw-r--r--   0        0        0      143 2023-04-06 20:17:23.179248 griptape_core-0.1.2/griptape/executors/__init__.py
+│ │ --rw-r--r--   0        0        0     2720 2023-04-06 21:32:51.479337 griptape_core-0.1.2/griptape/executors/docker_executor.py
+│ │ --rw-r--r--   0        0        0     1882 2023-04-06 20:17:23.179422 griptape_core-0.1.2/griptape/executors/local_executor.py
+│ │ --rw-r--r--   0        0        0      489 2023-04-06 20:17:23.179590 griptape_core-0.1.2/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2
+│ │ --rw-r--r--   0        0        0      129 2023-04-06 20:17:23.179693 griptape_core-0.1.2/griptape/resources/docker_executor/Dockerfile
+│ │ --rw-r--r--   0        0        0      233 2023-04-06 20:17:23.179816 griptape_core-0.1.2/griptape/utils/__init__.py
+│ │ --rw-r--r--   0        0        0      892 2023-04-06 20:17:23.179887 griptape_core-0.1.2/griptape/utils/j2.py
+│ │ --rw-r--r--   0        0        0      371 2023-04-06 20:17:23.179953 griptape_core-0.1.2/griptape/utils/manifest_validator.py
+│ │ --rw-r--r--   0        0        0      708 2023-04-06 22:37:57.433363 griptape_core-0.1.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0     3759 1970-01-01 00:00:00.000000 griptape_core-0.1.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    11339 2023-04-06 20:17:23.178260 griptape_core-0.1.3/LICENSE
+│ │ +-rw-r--r--   0        0        0     2802 2023-04-06 22:24:07.469627 griptape_core-0.1.3/README.md
+│ │ +-rw-r--r--   0        0        0      389 2023-04-06 20:17:23.178444 griptape_core-0.1.3/griptape/__init__.py
+│ │ +-rw-r--r--   0        0        0      184 2023-04-06 20:17:23.178636 griptape_core-0.1.3/griptape/adapters/__init__.py
+│ │ +-rw-r--r--   0        0        0     2379 2023-04-06 20:17:23.178741 griptape_core-0.1.3/griptape/adapters/chatgpt_plugin_adapter.py
+│ │ +-rw-r--r--   0        0        0     1132 2023-04-06 20:17:23.178828 griptape_core-0.1.3/griptape/adapters/langchain_tool_adapter.py
+│ │ +-rw-r--r--   0        0        0      239 2023-04-06 20:17:23.178902 griptape_core-0.1.3/griptape/base_adapter.py
+│ │ +-rw-r--r--   0        0        0      462 2023-04-06 20:17:23.178986 griptape_core-0.1.3/griptape/base_executor.py
+│ │ +-rw-r--r--   0        0        0     3278 2023-04-06 20:17:23.179069 griptape_core-0.1.3/griptape/base_tool.py
+│ │ +-rw-r--r--   0        0        0      358 2023-04-06 20:17:23.179136 griptape_core-0.1.3/griptape/decorators.py
+│ │ +-rw-r--r--   0        0        0      143 2023-04-06 20:17:23.179248 griptape_core-0.1.3/griptape/executors/__init__.py
+│ │ +-rw-r--r--   0        0        0     3013 2023-04-06 22:49:07.290563 griptape_core-0.1.3/griptape/executors/docker_executor.py
+│ │ +-rw-r--r--   0        0        0     1882 2023-04-06 20:17:23.179422 griptape_core-0.1.3/griptape/executors/local_executor.py
+│ │ +-rw-r--r--   0        0        0      489 2023-04-06 20:17:23.179590 griptape_core-0.1.3/griptape/resources/chatgpt_plugin_adapter/ai-plugin.json.j2
+│ │ +-rw-r--r--   0        0        0      129 2023-04-06 20:17:23.179693 griptape_core-0.1.3/griptape/resources/docker_executor/Dockerfile
+│ │ +-rw-r--r--   0        0        0      233 2023-04-06 20:17:23.179816 griptape_core-0.1.3/griptape/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0      892 2023-04-06 20:17:23.179887 griptape_core-0.1.3/griptape/utils/j2.py
+│ │ +-rw-r--r--   0        0        0      371 2023-04-06 20:17:23.179953 griptape_core-0.1.3/griptape/utils/manifest_validator.py
+│ │ +-rw-r--r--   0        0        0      708 2023-04-06 22:51:27.564903 griptape_core-0.1.3/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3759 1970-01-01 00:00:00.000000 griptape_core-0.1.3/PKG-INFO
+│ │   --- griptape_core-0.1.2/LICENSE
+│ ├── +++ griptape_core-0.1.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/README.md
+│ ├── +++ griptape_core-0.1.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/griptape/adapters/chatgpt_plugin_adapter.py
+│ ├── +++ griptape_core-0.1.3/griptape/adapters/chatgpt_plugin_adapter.py
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/griptape/adapters/langchain_tool_adapter.py
+│ ├── +++ griptape_core-0.1.3/griptape/adapters/langchain_tool_adapter.py
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/griptape/base_tool.py
+│ ├── +++ griptape_core-0.1.3/griptape/base_tool.py
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/griptape/executors/docker_executor.py
+│ ├── +++ griptape_core-0.1.3/griptape/executors/docker_executor.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,23 +1,35 @@
+│ │  import logging
+│ │ -from attrs import define, field
+│ │ +from typing import Optional
+│ │ +from attr import define, field, Factory
+│ │  import docker
+│ │  from docker.errors import NotFound
+│ │  import griptape
+│ │  from griptape import BaseExecutor, BaseTool
+│ │  import stringcase
+│ │  import tempfile
+│ │  import shutil
+│ │  import os
+│ │  
+│ │  
+│ │  @define
+│ │  class DockerExecutor(BaseExecutor):
+│ │      DEFAULT_DOCKERFILE_DIR = "resources/docker_executor"
+│ │ -    client: docker.DockerClient = field(default=docker.from_env(assert_hostname=False), kw_only=True)
+│ │ +    client: docker.DockerClient = field(
+│ │ +        default=Factory(lambda self: self.default_docker_client(), takes_self=True),
+│ │ +        kw_only=True
+│ │ +    )
+│ │ +
+│ │ +    def default_docker_client(self) -> Optional[docker.DockerClient]:
+│ │ +        try:
+│ │ +            return docker.from_env()
+│ │ +        except Exception as e:
+│ │ +            logging.error(e)
+│ │ +
+│ │ +            return None
+│ │  
+│ │      def execute(self, tool_action: callable, value: bytes) -> bytes:
+│ │          tool = tool_action.__self__
+│ │  
+│ │          self.build_image(tool)
+│ │          self.remove_existing_container(self.container_name(tool))
+│ │   --- griptape_core-0.1.2/griptape/executors/local_executor.py
+│ ├── +++ griptape_core-0.1.3/griptape/executors/local_executor.py
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/griptape/utils/j2.py
+│ ├── +++ griptape_core-0.1.3/griptape/utils/j2.py
+│ │┄ Files identical despite different names
+│ │   --- griptape_core-0.1.2/pyproject.toml
+│ ├── +++ griptape_core-0.1.3/pyproject.toml
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "griptape-core"
+│ │ -version = "0.1.2"
+│ │ +version = "0.1.3"
+│ │  description = "Python framework for LLM middleware tools. Build once, run anywhere."
+│ │  authors = ["Griptape <hello@griptape.ai>"]
+│ │  license = "Apache 2.0"
+│ │  readme = "README.md"
+│ │  repository = "https://github.com/griptape-ai/griptape-core"
+│ │  
+│ │  packages = [
+│ │   --- griptape_core-0.1.2/PKG-INFO
+│ ├── +++ griptape_core-0.1.3/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: griptape-core
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: Python framework for LLM middleware tools. Build once, run anywhere.
+│ │  Home-page: https://github.com/griptape-ai/griptape-core
+│ │  License: Apache 2.0
+│ │  Author: Griptape
+│ │  Author-email: hello@griptape.ai
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: Other/Proprietary License

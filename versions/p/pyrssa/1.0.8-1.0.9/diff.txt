@@ -1,0 +1,799 @@
+--- tmp/pyrssa-1.0.8.tar.gz
++++ tmp/pyrssa-1.0.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pyrssa-1.0.8.tar", last modified: Thu Mar 16 08:47:58 2023, max compression
+│ +gzip compressed data, was "pyrssa-1.0.9.tar", last modified: Thu Apr  6 22:56:04 2023, max compression
+│   --- pyrssa-1.0.8.tar
+├── +++ pyrssa-1.0.9.tar
+│ ├── file list
+│ │ @@ -1,44 +1,51 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-16 08:47:58.740849 pyrssa-1.0.8/
+│ │ --rw-rw-rw-   0        0        0     1091 2022-09-24 10:51:51.000000 pyrssa-1.0.8/LICENSE
+│ │ --rw-rw-rw-   0        0        0       21 2022-09-30 08:40:22.000000 pyrssa-1.0.8/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0      257 2023-03-16 08:47:58.740849 pyrssa-1.0.8/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0        0 2022-09-24 10:50:29.000000 pyrssa-1.0.8/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-16 08:47:58.678476 pyrssa-1.0.8/pyrssa/
+│ │ --rw-rw-rw-   0        0        0      605 2023-03-15 12:48:47.000000 pyrssa-1.0.8/pyrssa/__init__.py
+│ │ --rw-rw-rw-   0        0        0    18040 2023-03-15 17:23:09.000000 pyrssa-1.0.8/pyrssa/base.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-16 08:47:58.705407 pyrssa-1.0.8/pyrssa/classes/
+│ │ --rw-rw-rw-   0        0        0     2729 2023-03-15 16:06:26.000000 pyrssa-1.0.8/pyrssa/classes/AutoSSA.py
+│ │ --rw-rw-rw-   0        0        0     3376 2023-03-15 16:04:15.000000 pyrssa-1.0.8/pyrssa/classes/Forecast.py
+│ │ --rw-rw-rw-   0        0        0      511 2023-03-15 16:05:28.000000 pyrssa-1.0.8/pyrssa/classes/HMatrix.py
+│ │ --rw-rw-rw-   0        0        0      946 2022-10-19 07:41:58.000000 pyrssa-1.0.8/pyrssa/classes/Parestimate.py
+│ │ --rw-rw-rw-   0        0        0     1363 2023-03-15 16:37:58.000000 pyrssa-1.0.8/pyrssa/classes/Resonstruction.py
+│ │ --rw-rw-rw-   0        0        0     3763 2023-03-15 17:27:58.000000 pyrssa-1.0.8/pyrssa/classes/SSA.py
+│ │ --rw-rw-rw-   0        0        0      785 2023-03-15 11:47:30.000000 pyrssa-1.0.8/pyrssa/classes/WCorMatrix.py
+│ │ --rw-rw-rw-   0        0        0        2 2022-04-28 10:42:36.000000 pyrssa-1.0.8/pyrssa/classes/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5199 2023-03-15 16:04:15.000000 pyrssa-1.0.8/pyrssa/conversion.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-16 08:47:58.739316 pyrssa-1.0.8/pyrssa/data/
+│ │ --rw-rw-rw-   0        0        0     7104 2023-01-09 02:45:19.000000 pyrssa-1.0.8/pyrssa/data/AustralianWine.csv
+│ │ --rw-rw-rw-   0        0        0    21806 2023-03-15 10:42:30.000000 pyrssa-1.0.8/pyrssa/data/bookings.csv
+│ │ --rw-rw-rw-   0        0        0    32176 2023-03-15 10:42:30.000000 pyrssa-1.0.8/pyrssa/data/brecon.csv
+│ │ --rw-rw-rw-   0        0        0       56 2023-03-15 10:42:30.000000 pyrssa-1.0.8/pyrssa/data/cadzow.sim.csv
+│ │ --rw-rw-rw-   0        0        0     3010 2023-03-14 13:10:48.000000 pyrssa-1.0.8/pyrssa/data/dftreering.csv
+│ │ --rw-rw-rw-   0        0        0     5194 2023-03-15 10:42:30.000000 pyrssa-1.0.8/pyrssa/data/dwarfst.csv
+│ │ --rw-rw-rw-   0        0        0  2070654 2023-03-15 10:42:31.000000 pyrssa-1.0.8/pyrssa/data/g15.csv
+│ │ --rw-rw-rw-   0        0        0      737 2023-03-15 10:42:30.000000 pyrssa-1.0.8/pyrssa/data/hotel.csv
+│ │ --rw-rw-rw-   0        0        0  1568965 2023-03-15 10:42:32.000000 pyrssa-1.0.8/pyrssa/data/iossa.err.csv
+│ │ --rw-rw-rw-   0        0        0   828616 2023-03-15 10:42:32.000000 pyrssa-1.0.8/pyrssa/data/kruppel.csv
+│ │ --rw-rw-rw-   0        0        0  5556221 2023-03-15 10:42:34.000000 pyrssa-1.0.8/pyrssa/data/monet.csv
+│ │ --rw-rw-rw-   0        0        0     2970 2023-03-15 10:42:34.000000 pyrssa-1.0.8/pyrssa/data/oilproduction.csv
+│ │ --rw-rw-rw-   0        0        0     6735 2023-03-15 10:42:34.000000 pyrssa-1.0.8/pyrssa/data/paynsa.csv
+│ │ --rw-rw-rw-   0        0        0     1860 2023-03-15 10:42:34.000000 pyrssa-1.0.8/pyrssa/data/sunspot2.csv
+│ │ --rw-rw-rw-   0        0        0      421 2023-01-09 02:46:03.000000 pyrssa-1.0.8/pyrssa/data/toeplitz.sim.csv
+│ │ --rw-rw-rw-   0        0        0      561 2022-10-31 03:13:17.000000 pyrssa-1.0.8/pyrssa/installer.py
+│ │ --rw-rw-rw-   0        0        0     9778 2023-03-16 08:43:42.000000 pyrssa-1.0.8/pyrssa/plot.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-16 08:47:58.694439 pyrssa-1.0.8/pyrssa.egg-info/
+│ │ --rw-rw-rw-   0        0        0      257 2023-03-16 08:47:58.000000 pyrssa-1.0.8/pyrssa.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      875 2023-03-16 08:47:58.000000 pyrssa-1.0.8/pyrssa.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-16 08:47:58.000000 pyrssa-1.0.8/pyrssa.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       36 2023-03-16 08:47:58.000000 pyrssa-1.0.8/pyrssa.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-03-16 08:47:58.000000 pyrssa-1.0.8/pyrssa.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-16 08:47:58.741850 pyrssa-1.0.8/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      460 2023-03-16 08:47:20.000000 pyrssa-1.0.8/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:56:04.898010 pyrssa-1.0.9/
+│ │ +-rw-rw-rw-   0        0        0     1091 2022-09-24 10:51:51.000000 pyrssa-1.0.9/LICENSE
+│ │ +-rw-rw-rw-   0        0        0       21 2022-09-30 08:40:22.000000 pyrssa-1.0.9/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0      257 2023-04-06 22:56:04.898010 pyrssa-1.0.9/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0        0 2022-09-24 10:50:29.000000 pyrssa-1.0.9/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:56:04.491169 pyrssa-1.0.9/pyrssa/
+│ │ +-rw-rw-rw-   0        0        0      620 2023-04-03 13:23:34.000000 pyrssa-1.0.9/pyrssa/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    21198 2023-04-06 20:56:31.000000 pyrssa-1.0.9/pyrssa/base.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:56:04.558861 pyrssa-1.0.9/pyrssa/classes/
+│ │ +-rw-rw-rw-   0        0        0     2751 2023-04-06 11:24:47.000000 pyrssa-1.0.9/pyrssa/classes/AutoSSA.py
+│ │ +-rw-rw-rw-   0        0        0     3376 2023-03-15 16:04:15.000000 pyrssa-1.0.9/pyrssa/classes/Forecast.py
+│ │ +-rw-rw-rw-   0        0        0      511 2023-03-15 16:05:28.000000 pyrssa-1.0.9/pyrssa/classes/HMatrix.py
+│ │ +-rw-rw-rw-   0        0        0     3398 2023-04-06 16:05:38.000000 pyrssa-1.0.9/pyrssa/classes/Parestimate.py
+│ │ +-rw-rw-rw-   0        0        0     1795 2023-04-06 22:23:36.000000 pyrssa-1.0.9/pyrssa/classes/Periodogram.py
+│ │ +-rw-rw-rw-   0        0        0     2214 2023-04-06 22:23:36.000000 pyrssa-1.0.9/pyrssa/classes/Resonstruction.py
+│ │ +-rw-rw-rw-   0        0        0     4968 2023-04-06 20:42:51.000000 pyrssa-1.0.9/pyrssa/classes/SSA.py
+│ │ +-rw-rw-rw-   0        0        0      785 2023-03-15 11:47:30.000000 pyrssa-1.0.9/pyrssa/classes/WCorMatrix.py
+│ │ +-rw-rw-rw-   0        0        0        2 2022-04-28 10:42:36.000000 pyrssa-1.0.9/pyrssa/classes/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6432 2023-04-06 17:59:50.000000 pyrssa-1.0.9/pyrssa/conversion.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:56:04.896414 pyrssa-1.0.9/pyrssa/data/
+│ │ +-rw-rw-rw-   0        0        0     9166 2023-04-06 17:25:19.000000 pyrssa-1.0.9/pyrssa/data/AustralianWine.csv
+│ │ +-rw-rw-rw-   0        0        0  4409342 2023-04-05 10:06:46.000000 pyrssa-1.0.9/pyrssa/data/Barbara.csv
+│ │ +-rw-rw-rw-   0        0        0   208487 2023-04-05 10:08:48.000000 pyrssa-1.0.9/pyrssa/data/Mars.csv
+│ │ +-rw-rw-rw-   0        0        0     9773 2023-04-05 10:35:12.000000 pyrssa-1.0.9/pyrssa/data/MotorVehicle.csv
+│ │ +-rw-rw-rw-   0        0        0    12099 2023-04-05 12:45:12.000000 pyrssa-1.0.9/pyrssa/data/USUnemployment.csv
+│ │ +-rw-rw-rw-   0        0        0    21806 2023-03-15 10:42:30.000000 pyrssa-1.0.9/pyrssa/data/bookings.csv
+│ │ +-rw-rw-rw-   0        0        0    32176 2023-03-15 10:42:30.000000 pyrssa-1.0.9/pyrssa/data/brecon.csv
+│ │ +-rw-rw-rw-   0        0        0       56 2023-03-15 10:42:30.000000 pyrssa-1.0.9/pyrssa/data/cadzow.sim.csv
+│ │ +-rw-rw-rw-   0        0        0     8848 2023-04-06 17:44:33.000000 pyrssa-1.0.9/pyrssa/data/co2.csv
+│ │ +-rw-rw-rw-   0        0        0     3010 2023-03-14 13:10:48.000000 pyrssa-1.0.9/pyrssa/data/dftreering.csv
+│ │ +-rw-rw-rw-   0        0        0     5194 2023-03-15 10:42:30.000000 pyrssa-1.0.9/pyrssa/data/dwarfst.csv
+│ │ +-rw-rw-rw-   0        0        0     8225 2023-04-06 17:03:25.000000 pyrssa-1.0.9/pyrssa/data/elec.csv
+│ │ +-rw-rw-rw-   0        0        0  2070654 2023-03-15 10:42:31.000000 pyrssa-1.0.9/pyrssa/data/g15.csv
+│ │ +-rw-rw-rw-   0        0        0     2588 2023-04-05 15:20:29.000000 pyrssa-1.0.9/pyrssa/data/hotel.csv
+│ │ +-rw-rw-rw-   0        0        0  1641254 2023-04-02 16:55:37.000000 pyrssa-1.0.9/pyrssa/data/iossa.err.csv
+│ │ +-rw-rw-rw-   0        0        0   828616 2023-03-15 10:42:32.000000 pyrssa-1.0.9/pyrssa/data/kruppel.csv
+│ │ +-rw-rw-rw-   0        0        0  5556221 2023-03-15 10:42:34.000000 pyrssa-1.0.9/pyrssa/data/monet.csv
+│ │ +-rw-rw-rw-   0        0        0     2970 2023-03-15 10:42:34.000000 pyrssa-1.0.9/pyrssa/data/oilproduction.csv
+│ │ +-rw-rw-rw-   0        0        0    16781 2023-04-06 08:42:28.000000 pyrssa-1.0.9/pyrssa/data/paynsa.csv
+│ │ +-rw-rw-rw-   0        0        0     1860 2023-03-15 10:42:34.000000 pyrssa-1.0.9/pyrssa/data/sunspot2.csv
+│ │ +-rw-rw-rw-   0        0        0      421 2023-01-09 02:46:03.000000 pyrssa-1.0.9/pyrssa/data/toeplitz.sim.csv
+│ │ +-rw-rw-rw-   0        0        0      571 2023-04-06 15:50:59.000000 pyrssa-1.0.9/pyrssa/installer.py
+│ │ +-rw-rw-rw-   0        0        0    16104 2023-04-06 22:39:23.000000 pyrssa-1.0.9/pyrssa/plot.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:56:04.528069 pyrssa-1.0.9/pyrssa.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      257 2023-04-06 22:56:04.000000 pyrssa-1.0.9/pyrssa.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1051 2023-04-06 22:56:04.000000 pyrssa-1.0.9/pyrssa.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 22:56:04.000000 pyrssa-1.0.9/pyrssa.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       29 2023-04-06 22:56:04.000000 pyrssa-1.0.9/pyrssa.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-06 22:56:04.000000 pyrssa-1.0.9/pyrssa.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 22:56:04.899011 pyrssa-1.0.9/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      453 2023-04-06 22:54:02.000000 pyrssa-1.0.9/setup.py
+│ │   --- pyrssa-1.0.8/LICENSE
+│ ├── +++ pyrssa-1.0.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/base.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/base.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,23 +1,25 @@
+│ │ -import pyrssa.classes.SSA
+│ │ -from pyrssa import SSA, IOSSA, Parestimate
+│ │ +from pyrssa.classes.SSA import SSABase
+│ │ +from pyrssa.classes.Parestimate import BaseParestimate
+│ │ +from pyrssa.classes.Periodogram import Periodogram
+│ │ +from pyrssa import SSA, IOSSA, FOSSA, Parestimate
+│ │  from pyrssa import Reconstruction
+│ │  from pyrssa import RForecast, VForecast, BForecast
+│ │  from pyrssa import WCorMatrix, HMatrix
+│ │  from pyrssa import GroupPgram, GroupWCor
+│ │  from pyrssa import installer
+│ │  from pyrssa.conversion import pyrssa_conversion_rules
+│ │  from rpy2 import robjects
+│ │  import rpy2.robjects.conversion as conversion
+│ │  import rpy2.robjects.packages as rpackages
+│ │  from rpy2.rinterface_lib import callbacks
+│ │ -from pandas import read_csv
+│ │ +import pandas as pd
+│ │  import numpy as np
+│ │  import os
+│ │ -from typing import Literal, Union
+│ │ +from typing import overload, Literal, Union
+│ │  import inspect
+│ │  
+│ │  # Set conversion rules
+│ │  conversion.set_conversion(pyrssa_conversion_rules)
+│ │  
+│ │  # Ignore warnings
+│ │  callbacks.consolewrite_warnerror = lambda *args: None
+│ │ @@ -30,25 +32,49 @@
+│ │  
+│ │  
+│ │  def _get_call(frame):
+│ │      call = inspect.getframeinfo(frame)[3][0]
+│ │      return call[call.find('=') + 1:].strip().rstrip()
+│ │  
+│ │  
+│ │ +def _set_datetime_index(dataframe, name):
+│ │ +    dataframe[name] = pd.DatetimeIndex(dataframe[name])
+│ │ +    dataframe.set_index(name, inplace=True, drop=True)
+│ │ +    dataframe.index.freq = dataframe.index.inferred_freq
+│ │ +
+│ │ +
+│ │  # Read pyrssa dataframes
+│ │ -def data(name):
+│ │ +def data(name, datetime_index=None):
+│ │      """
+│ │      Function for loading available in pyrssa package datasets. Available datasets are stored in the data directory.
+│ │  
+│ │      :param name: Name of dataset to load
+│ │ +    :param datetime_index: Name of column, where date or time index is stored
+│ │      :return: Loaded dataset
+│ │ -    :rtype: pandas.DataFrame
+│ │ +    :rtype: pandas.DataFrame or pandas.Series
+│ │  
+│ │      """
+│ │ -    return read_csv(os.path.join(os.path.join(os.path.dirname(os.path.realpath(__file__)), "data"), f'{name}.csv'))
+│ │ +    result = pd.read_csv(os.path.join(os.path.join(os.path.dirname(os.path.realpath(__file__)), "data"), f'{name}.csv'))
+│ │ +    if datetime_index is not None:
+│ │ +        _set_datetime_index(result, datetime_index)
+│ │ +    elif len(result.columns) > 1:
+│ │ +        # Search for datetime index and set it
+│ │ +        col_idx = next((i for i, v in enumerate(result.columns) if v.lower() in ['time', 'date', 'datetime']), None)
+│ │ +        if col_idx is not None:
+│ │ +            _set_datetime_index(result, result.columns[col_idx])
+│ │ +
+│ │ +    # If there is only one column in dataframe, return it as series
+│ │ +    if len(result.columns) == 1:
+│ │ +        return result[result.columns[0]]
+│ │ +    else:
+│ │ +        return result
+│ │ +
+│ │ +
+│ │ +def calc_v(x: SSABase, idx, **kwargs):
+│ │ +    return np.asarray(r_ssa.calc_v(x=x, idx=idx, **kwargs)).T
+│ │  
+│ │  
+│ │  def parestimate(x, groups, method="esprit", subspace="column", normalize_roots=None, dimensions=None,
+│ │                  solve_method="ls", drop=True):
+│ │      """
+│ │      Function to estimate the parameters (frequencies and rates) given a set of SSA eigenvectors.
+│ │  
+│ │ @@ -67,16 +93,22 @@
+│ │          'tls' for total-least-squares.
+│ │      :param drop: logical, if 'TRUE' then the result is coerced to the lowest dimension,
+│ │          when possible (length of groups is one)
+│ │  
+│ │      :return:
+│ │  
+│ │      """
+│ │ -    return Parestimate(x=x, groups=groups, method=method, subspace=subspace, normalize_roots=normalize_roots,
+│ │ -                       dimensions=dimensions, solve_method=solve_method, drop=drop)
+│ │ +    if len(groups) == 1:
+│ │ +        return BaseParestimate(x=x, groups=groups, method=method, subspace=subspace,
+│ │ +                               normalize_roots=normalize_roots, dimensions=dimensions,
+│ │ +                               solve_method=solve_method, drop=drop)
+│ │ +    else:
+│ │ +        return Parestimate(x=x, groups=groups, method=method, subspace=subspace,
+│ │ +                           normalize_roots=normalize_roots, dimensions=dimensions,
+│ │ +                           solve_method=solve_method, drop=drop)
+│ │  
+│ │  
+│ │  def ssa(x, L=None, neig=None, mask=None, wmask=None, kind="1d-ssa", circular=False,
+│ │          column_projector="none", row_projector="none", svd_method="auto"):
+│ │      """
+│ │  
+│ │      :param x: object to be decomposed. If DataFrame passed, the first column will be treated as a series
+│ │ @@ -274,16 +306,16 @@
+│ │                 circular=circular,
+│ │                 column_projector=column_projector,
+│ │                 row_projector=row_projector,
+│ │                 svd_method=svd_method,
+│ │                 call=_get_call(inspect.currentframe().f_back))
+│ │  
+│ │  
+│ │ -def reconstruct(x: pyrssa.classes.SSA.SSABase,
+│ │ -                groups: Union[list, dict, np.ndarray, GroupPgram],
+│ │ +def reconstruct(x: SSABase,
+│ │ +                groups: Union[list, dict, np.ndarray, GroupPgram, GroupWCor],
+│ │                  drop_attributes=False,
+│ │                  cache=True):
+│ │      """
+│ │  
+│ │      :param x: SSA object
+│ │      :type x: SSA
+│ │      :param groups: list of numeric vectors, indices of elementary components used for reconstruction,
+│ │ @@ -358,14 +390,19 @@
+│ │  
+│ │  
+│ │  def iossa(x: SSA, nested_groups, tol=1e-5, kappa=2, maxiter=100, norm=None, trace=False, kappa_balance=0.5, **kwargs):
+│ │      return IOSSA(x=x, nested_groups=nested_groups, tol=tol, kappa=kappa, maxiter=maxiter, norm=norm, trace=trace,
+│ │                   kappa_balance=kappa_balance, call=_get_call(inspect.currentframe().f_back), **kwargs)
+│ │  
+│ │  
+│ │ +def fossa(x: SSA, nested_groups, filter=(-1, 1), gamma=np.inf, normalize=True, call=None, **kwargs):
+│ │ +    return FOSSA(x=x, nested_groups=nested_groups, filter=filter,
+│ │ +                 gamma=gamma, normalize=normalize, **kwargs, call=call)
+│ │ +
+│ │ +
+│ │  # Weighted correlations
+│ │  def wcor(ds, groups=range(1, 51)):
+│ │      return WCorMatrix(ds, groups)
+│ │  
+│ │  
+│ │  # Forecasting functions
+│ │  
+│ │ @@ -385,26 +422,51 @@
+│ │                       only_intervals=only_intervals, drop=drop, drop_attributes=drop_attributes, cache=cache, **kwargs)
+│ │  
+│ │  
+│ │  def hmatr(F, B=None, T=None, L=None, neig=10):
+│ │      return HMatrix(F, B=B, T=T, L=L, neig=neig)
+│ │  
+│ │  
+│ │ -def grouping_auto_pgram(x: SSA, groups=None, base: Literal["series", "eigen", "factor"] = "series",
+│ │ +def grouping_auto_pgram(x: SSABase, groups=None, base: Literal["series", "eigen", "factor"] = "series",
+│ │                          freq_bins=2, threshold=0, method: Literal["constant", "linear"] = "constant",
+│ │                          drop=True, **kwargs):
+│ │ -
+│ │      return GroupPgram(x=x, groups=groups, base=base, freq_bins=freq_bins, threshold=threshold,
+│ │                        method=method, drop=drop, **kwargs)
+│ │  
+│ │  
+│ │ -def grouping_auto_wcor(x: SSA, groups=None, nclust=None, **kwargs):
+│ │ +def grouping_auto_wcor(x: SSABase, groups=None, nclust=None, **kwargs):
+│ │      return GroupWCor(x=x, groups=groups, nclust=nclust, **kwargs)
+│ │  
+│ │  
+│ │ -def grouping_auto(x: SSA, grouping_method: Literal["pgram", "wcor"] = "pgram", **kwargs):
+│ │ +@overload
+│ │ +def grouping_auto(x: SSABase, grouping_method: Literal["pgram"] = "pgram", groups=None, nclust=None,
+│ │ +                  base: Literal["series", "eigen", "factor"] = "series", freq_bins=2, threshold=0,
+│ │ +                  method: Literal["constant", "linear"] = "constant", drop=True, **kwargs) -> GroupPgram:
+│ │ +    ...
+│ │ +
+│ │ +
+│ │ +@overload
+│ │ +def grouping_auto(x: SSABase, grouping_method: Literal["wcor"] = "wcor", groups=None, nclust=None,
+│ │ +                  base: Literal["series", "eigen", "factor"] = "series",
+│ │ +                  freq_bins=2, threshold=0,
+│ │ +                  method: Literal["ward.D", "ward.D2", "single", "complete",
+│ │ +                                  "average", "mcquitty", "median", "centroid"] = "complete",
+│ │ +                  drop=True, **kwargs) -> GroupWCor:
+│ │ +    ...
+│ │ +
+│ │ +
+│ │ +def grouping_auto(x: SSABase, grouping_method: str = "pgram", groups=None, nclust=None,
+│ │ +                  base: Literal["series", "eigen", "factor"] = "series", freq_bins=2, threshold=0,
+│ │ +                  method: Literal["constant", "linear"] = "constant", drop=True, **kwargs):
+│ │      if grouping_method == "pgram":
+│ │ -        return grouping_auto_pgram(x, **kwargs)
+│ │ +        return grouping_auto_pgram(x, groups=groups, base=base, freq_bins=freq_bins, threshold=threshold,
+│ │ +                                   method=method, drop=drop, **kwargs)
+│ │      elif grouping_method == "wcor":
+│ │ -        return grouping_auto_wcor(x, **kwargs)
+│ │ +        return grouping_auto_wcor(x, groups=groups, nclust=nclust, method=method, **kwargs)
+│ │      else:
+│ │          raise ValueError(f"Grouping method {grouping_method} is not in available methods: 'pgram', 'wcor'")
+│ │ +
+│ │ +
+│ │ +def spectrum(x, spans=None, kernel=None, taper=0.1,
+│ │ +             pad=0, fast=True, demean=False, detrend=True, **kwargs):
+│ │ +    return Periodogram(x, spans=spans, kernel=kernel, taper=taper,
+│ │ +                       pad=pad, fast=fast, demean=demean, detrend=detrend, **kwargs)
+│ │   --- pyrssa-1.0.8/pyrssa/classes/AutoSSA.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/classes/AutoSSA.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,28 +1,28 @@
+│ │  import pandas as pd
+│ │  import numpy as np
+│ │  from typing import Literal
+│ │  from rpy2 import robjects
+│ │  import rpy2.robjects.packages as rpackages
+│ │ -from pyrssa.classes.SSA import SSA
+│ │ +from pyrssa.classes.SSA import SSABase
+│ │  from pyrssa.classes.WCorMatrix import WCorMatrix
+│ │  from rpy2.robjects import conversion
+│ │  
+│ │  r_ssa = rpackages.importr('Rssa')
+│ │  ssa_get = robjects.r('utils::getFromNamespace("$.ssa", "Rssa")')
+│ │  
+│ │  
+│ │  class AutoGroup:
+│ │  
+│ │      def __init__(self, obj):
+│ │          self.obj = obj
+│ │          self.names = list(robjects.r.names(self.obj))
+│ │          self.groups = []
+│ │          for i, name in enumerate(self.names):
+│ │ -            group = self.obj.rx(name)[0]
+│ │ +            group = np.asarray(self.obj.rx(name)[0])
+│ │              self.groups.append(group)
+│ │              setattr(self, name, group)
+│ │  
+│ │      def __getitem__(self, item):
+│ │          if isinstance(item, str):
+│ │              return getattr(self, item)
+│ │          elif isinstance(item, int):
+│ │ @@ -45,17 +45,16 @@
+│ │  
+│ │      def __repr__(self):
+│ │          return self.__str__()
+│ │  
+│ │  
+│ │  class GroupPgram(AutoGroup):
+│ │  
+│ │ -    def __init__(self, x: SSA, groups=None, base: Literal["series", "eigen", "factor"] = "series", freq_bins=2,
+│ │ +    def __init__(self, x: SSABase, groups=None, base: Literal["series", "eigen", "factor"] = "series", freq_bins=2,
+│ │                   threshold=0, method: Literal["constant", "linear"] = "constant", drop=True, **kwargs):
+│ │ -
+│ │          if groups is None:
+│ │              groups = range(1, min(x.nsigma(), x.nu()) + 1)
+│ │  
+│ │          super().__init__(obj=r_ssa.grouping_auto_pgram(x=x, groups=groups, base=base, **{"freq.bins": freq_bins},
+│ │                                                         threshold=threshold, method=method, drop=drop, **kwargs))
+│ │          with conversion.localconverter(robjects.default_converter):
+│ │              contributions_obj = robjects.r.attr(self.obj, "contributions")
+│ │ @@ -63,15 +62,15 @@
+│ │  
+│ │          self.type = robjects.r.attr(self.obj, "type")
+│ │          self.threshold = robjects.r.attr(self.obj, "threshold")
+│ │  
+│ │  
+│ │  class GroupWCor(AutoGroup):
+│ │  
+│ │ -    def __init__(self, x: SSA, groups=None, nclust=None, **kwargs):
+│ │ +    def __init__(self, x: SSABase, groups=None, nclust=None, **kwargs):
+│ │          if groups is None:
+│ │              groups = range(1, min(x.nsigma(), x.nu()) + 1)
+│ │          if nclust is None:
+│ │              nclust = len(groups) // 2
+│ │  
+│ │          super().__init__(obj=r_ssa.grouping_auto_wcor(x=x, groups=groups, nclust=nclust, **kwargs))
+│ │   --- pyrssa-1.0.8/pyrssa/classes/Forecast.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/classes/Forecast.py
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/classes/SSA.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/classes/SSA.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,32 +1,40 @@
+│ │  import pandas as pd
+│ │  import numpy as np
+│ │  from typing import Callable
+│ │  from rpy2 import robjects
+│ │  import rpy2.robjects.packages as rpackages
+│ │ -import inspect
+│ │ -
+│ │ +from functools import cached_property
+│ │  
+│ │  r_ssa = rpackages.importr('Rssa')
+│ │  ssa_get = robjects.r('utils::getFromNamespace("$.ssa", "Rssa")')
+│ │  
+│ │  
+│ │  class SSABase:
+│ │  
+│ │      def __init__(self, x, ssa_object, call: str):
+│ │          self.obj = ssa_object
+│ │ -        self.sigma = ssa_get(self.obj, "sigma")
+│ │ -        self.U = ssa_get(self.obj, "U").T
+│ │ -        self.V = ssa_get(self.obj, "V")
+│ │ -        self.series = pd.DataFrame(x)
+│ │ -        self.call = call
+│ │ +        self._x = x
+│ │ +        self._call = call
+│ │  
+│ │ -    @property
+│ │ -    def F(self):
+│ │ -        return self.series
+│ │ +    @cached_property
+│ │ +    def sigma(self):
+│ │ +        return np.asarray(ssa_get(self.obj, "sigma"))
+│ │ +
+│ │ +    @cached_property
+│ │ +    def U(self):
+│ │ +        return np.asarray(ssa_get(self.obj, "U")).T
+│ │ +
+│ │ +    @cached_property
+│ │ +    def V(self):
+│ │ +        return np.asarray(ssa_get(self.obj, "V"))
+│ │ +
+│ │ +    @cached_property
+│ │ +    def series(self):
+│ │ +        return pd.DataFrame(self._x)
+│ │  
+│ │      def contributions(self, idx=None):
+│ │          if idx is None:
+│ │              idx = range(1, self.nsigma() + 1)
+│ │          return r_ssa.contributions(self.obj, idx)
+│ │  
+│ │      def nspecial(self):
+│ │ @@ -35,16 +43,18 @@
+│ │      def nsigma(self):
+│ │          return r_ssa.nsigma(self.obj)[0]
+│ │  
+│ │      def nu(self):
+│ │          return r_ssa.nu(self.obj)[0]
+│ │  
+│ │      def __str__(self):
+│ │ +        final_call = self._call[:self._call.find('(') + 1] + "x=" + self._call[self._call.find('(') + 1:]
+│ │ +
+│ │          result = str(self.obj).split("\n")
+│ │ -        result[result.index("Call:") + 1] = self.call
+│ │ +        result[result.index("Call:") + 1] = final_call
+│ │          return "\n".join(result)
+│ │  
+│ │      def __repr__(self):
+│ │          return self.__str__()
+│ │  
+│ │  
+│ │  class SSA(SSABase):
+│ │ @@ -75,14 +85,15 @@
+│ │                                        row_projector=row_projector,
+│ │                                        svd_method=svd_method), call=call)
+│ │  
+│ │  
+│ │  def _norm_conversion(func):
+│ │      def wrapper(x):
+│ │          return float(func(np.array(x)))
+│ │ +
+│ │      return wrapper
+│ │  
+│ │  
+│ │  def _default_norm(x):
+│ │      return np.sqrt(np.mean(x ** 2))
+│ │  
+│ │  
+│ │ @@ -104,26 +115,54 @@
+│ │          self.maxiter = maxiter
+│ │          self.kappa_balance = kappa_balance
+│ │          self.trace = trace
+│ │          self.groups = nested_groups
+│ │          if norm is None:
+│ │              norm = _default_norm
+│ │          self.norm = robjects.rinterface.rternalize(_norm_conversion(norm))
+│ │ -        super().__init__(x.F, r_ssa.iossa(x=x, **{"nested.groups": self.nested_groups}, tol=self.tol,
+│ │ -                                          kappa=self.kappa, maxiter=self.maxiter, norm=self.norm,
+│ │ -                                          trace=self.trace,
+│ │ -                                          **{"kappa.balance": self.kappa_balance}, **kwargs), call=call)
+│ │ +        super().__init__(x.series, r_ssa.iossa(x=x, **{"nested.groups": self.nested_groups}, tol=self.tol,
+│ │ +                                               kappa=self.kappa, maxiter=self.maxiter, norm=self.norm,
+│ │ +                                               trace=self.trace,
+│ │ +                                               **{"kappa.balance": self.kappa_balance}, **kwargs), call=call)
+│ │  
+│ │      @property
+│ │      def iossa_groups(self):
+│ │          return self.groups
+│ │  
+│ │      def summary(self):
+│ │          result = str(self.obj).split("\n")
+│ │ -        result[result.index("Call:") + 1] = self.call
+│ │ +        result[result.index("Call:") + 1] = self._call
+│ │          return "\n".join(result)
+│ │  
+│ │      def __str__(self):
+│ │          return str(self.obj)
+│ │  
+│ │      def __repr__(self):
+│ │          return self.__str__()
+│ │ +
+│ │ +
+│ │ +class FOSSA(SSABase):
+│ │ +
+│ │ +    def __init__(self, x: SSA,
+│ │ +                 nested_groups,
+│ │ +                 filter=(-1, 1),
+│ │ +                 gamma=np.inf,
+│ │ +                 normalize=True,
+│ │ +                 call=None,
+│ │ +                 **kwargs):
+│ │ +        self.nested_groups = nested_groups
+│ │ +        self.filter = filter
+│ │ +        self.gamma = gamma
+│ │ +        self.normalize = normalize
+│ │ +        super().__init__(x.series, r_ssa.fossa(x=x, **{"nested.groups": self.nested_groups}, filter=self.filter,
+│ │ +                                               gamma=self.gamma, normalize=self.normalize, **kwargs), call=call)
+│ │ +
+│ │ +    def summary(self):
+│ │ +        result = str(self.obj).split("\n")
+│ │ +        result[result.index("Call:") + 1] = self._call
+│ │ +        return "\n".join(result)
+│ │ +
+│ │ +    def __str__(self):
+│ │ +        return str(self.obj)
+│ │ +
+│ │ +    def __repr__(self):
+│ │ +        return self.__str__()
+│ │   --- pyrssa-1.0.8/pyrssa/classes/WCorMatrix.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/classes/WCorMatrix.py
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/conversion.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/conversion.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,11 +1,10 @@
+│ │  from rpy2 import robjects
+│ │  import rpy2.robjects.conversion as conversion
+│ │  from rpy2.robjects import default_converter
+│ │ -from rpy2.rinterface_lib import sexp
+│ │  from rpy2.robjects.numpy2ri import converter as numpy_converter
+│ │  from rpy2.robjects.pandas2ri import converter as pandas_converter
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  from pyrssa.classes.SSA import SSABase
+│ │  from typing import Union
+│ │  
+│ │ @@ -58,87 +57,121 @@
+│ │      def __pow__(self, power, modulo=None):
+│ │          if isinstance(power, float) or isinstance(power, int):
+│ │              return robjects.r.sapply(self, "^", power)
+│ │  
+│ │      __rmul__ = __mul__
+│ │  
+│ │  
+│ │ +def is_iterable(obj):
+│ │ +    try:
+│ │ +        iter(obj)
+│ │ +        return True
+│ │ +    except TypeError:
+│ │ +        return False
+│ │ +
+│ │ +
+│ │ +def is_list(obj):
+│ │ +    return is_iterable(obj) and not isinstance(obj, (str, dict))
+│ │ +
+│ │ +
+│ │  def is_arr_of_type(arr, check_type, allow_inf=True, allow_na=True):
+│ │ -    if isinstance(arr, list) or isinstance(arr, np.ndarray):
+│ │ +    if isinstance(arr, list) or isinstance(arr, tuple) or isinstance(arr, np.ndarray):
+│ │          for x in arr:
+│ │              if not isinstance(x, check_type):
+│ │                  if not hasattr(x, '__iter__'):
+│ │ -                    if allow_na and np.isnan(x) or allow_inf and np.isinf(x):
+│ │ +                    if allow_na and not np.isnan(x) or allow_inf and not np.isinf(x):
+│ │                          return False
+│ │                  else:
+│ │                      return False
+│ │          return True
+│ │      else:
+│ │          return False
+│ │  
+│ │  
+│ │ -def is_int_arr(arr):
+│ │ -    return is_arr_of_type(arr, int)
+│ │ +def is_arr_of_types(obj, check_types, allow_inf=True, allow_na=True):
+│ │ +    if is_list(obj):
+│ │ +        return all([False if is_list(x) else
+│ │ +                    isinstance(x, check_types)
+│ │ +                    or (allow_na and np.isnan(x))
+│ │ +                    or (allow_inf and np.isinf(x)) for x in obj])
+│ │  
+│ │  
+│ │ -def is_float_arr(arr):
+│ │ -    return is_arr_of_type(arr, float)
+│ │ +def is_int_arr(obj):
+│ │ +    return isinstance(obj, range) or is_arr_of_types(obj, (int, np.int32, np.int64))
+│ │  
+│ │  
+│ │ -def is_of_int_lists_arr(arr):
+│ │ -    if isinstance(arr, list):
+│ │ -        for x in arr:
+│ │ -            if not isinstance(x, int) and not is_int_arr(x) and not isinstance(x, range):
+│ │ -                return False
+│ │ -    return True
+│ │ +def is_float_arr(obj):
+│ │ +    return is_arr_of_types(obj, (float, np.float32, np.float64))
+│ │  
+│ │  
+│ │ -def none_to_null(obj):
+│ │ +def none_to_null(_):
+│ │      return robjects.r('NULL')
+│ │  
+│ │  
+│ │  def range_to_vec(obj):
+│ │      return IntVector(list(obj))
+│ │  
+│ │  
+│ │  def list_to_vec(obj):
+│ │      if is_int_arr(obj):
+│ │          return IntVector(list(obj))
+│ │      elif is_float_arr(obj):
+│ │          return FloatVector(list(obj))
+│ │ -    elif is_of_int_lists_arr(obj):
+│ │ -        result = robjects.ListVector.from_length(len(obj))
+│ │ -        for i, x in enumerate(obj):
+│ │ -            if isinstance(x, int):
+│ │ -                result[i] = robjects.IntVector([x])
+│ │ -            else:
+│ │ -                result[i] = robjects.IntVector(list(x))
+│ │ -        return result
+│ │ +    # elif is_of_int_lists_arr(obj):
+│ │ +    #     result = robjects.ListVector.from_length(len(obj))
+│ │ +    #     for i, x in enumerate(obj):
+│ │ +    #         if isinstance(x, int):
+│ │ +    #             result[i] = robjects.IntVector([x])
+│ │ +    #         else:
+│ │ +    #             result[i] = robjects.IntVector(list(x))
+│ │ +    #     return result
+│ │      else:
+│ │          return robjects.ListVector(list(obj))
+│ │  
+│ │  
+│ │ +def collection_conversion(obj):
+│ │ +    if is_list(obj):
+│ │ +        if is_int_arr(obj):
+│ │ +            return IntVector(list(obj))
+│ │ +        elif is_float_arr(obj):
+│ │ +            return FloatVector(list(obj))
+│ │ +        else:
+│ │ +            result = robjects.ListVector.from_length(len(obj))
+│ │ +            for i, x in enumerate(obj):
+│ │ +                result[i] = collection_conversion(x)
+│ │ +            return result
+│ │ +    elif isinstance(obj, dict):
+│ │ +        return robjects.vectors.ListVector({str(k): collection_conversion(obj[k]) for k in obj})
+│ │ +    else:
+│ │ +        return obj
+│ │ +
+│ │ +
+│ │  def r_list(*args, **kwargs):
+│ │      if kwargs:
+│ │          for k in kwargs:
+│ │              if is_int_arr(kwargs[k]):
+│ │ -                kwargs[k] = IntVector(kwargs[k])
+│ │ +                kwargs[k] = list_to_vec(kwargs[k])
+│ │          return robjects.vectors.ListVector(kwargs)
+│ │      else:
+│ │          res = robjects.ListVector.from_length(len(args))
+│ │          for i in range(len(args)):
+│ │              res[i] = IntVector(args[i])
+│ │          return res
+│ │  
+│ │  
+│ │  def dict_to_vec(obj):
+│ │      obj = {str(k): obj[k] for k in obj}
+│ │      return r_list(**obj)
+│ │  
+│ │  
+│ │ +def convert(obj):
+│ │ +    if is_int_arr(obj):
+│ │ +        return robjects.IntVector(obj)
+│ │ +
+│ │ +
+│ │  def pyrssa_to_rssa(obj):
+│ │      return obj.obj
+│ │  
+│ │  
+│ │  def get_time_index(series):
+│ │      if isinstance(series, pd.DataFrame) or isinstance(series, pd.Series):
+│ │          if isinstance(series.index, pd.DatetimeIndex):
+│ │ @@ -155,13 +188,15 @@
+│ │          return new
+│ │      else:
+│ │          return time_index.union(new)
+│ │  
+│ │  
+│ │  pyrssa_converter = conversion.Converter('pyrssa converter')
+│ │  pyrssa_converter.py2rpy.register(type(None), none_to_null)
+│ │ -pyrssa_converter.py2rpy.register(range, range_to_vec)
+│ │ -pyrssa_converter.py2rpy.register(list, list_to_vec)
+│ │ -pyrssa_converter.py2rpy.register(dict, dict_to_vec)
+│ │ +pyrssa_converter.py2rpy.register(range, collection_conversion)
+│ │ +pyrssa_converter.py2rpy.register(tuple, collection_conversion)
+│ │ +pyrssa_converter.py2rpy.register(list, collection_conversion)
+│ │ +pyrssa_converter.py2rpy.register(dict, collection_conversion)
+│ │  pyrssa_converter.py2rpy.register(SSABase, pyrssa_to_rssa)
+│ │  
+│ │ -pyrssa_conversion_rules = default_converter + pyrssa_converter + numpy_converter + pandas_converter
+│ │ +# pyrssa_conversion_rules = default_converter + pyrssa_converter + numpy_converter + pandas_converter
+│ │ +pyrssa_conversion_rules = pandas_converter + numpy_converter + default_converter + pyrssa_converter
+│ │   --- pyrssa-1.0.8/pyrssa/data/bookings.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/bookings.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/brecon.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/brecon.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/dftreering.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/dftreering.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/dwarfst.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/dwarfst.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/g15.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/g15.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/kruppel.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/kruppel.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/monet.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/monet.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/oilproduction.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/oilproduction.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/data/sunspot2.csv
+│ ├── +++ pyrssa-1.0.9/pyrssa/data/sunspot2.csv
+│ │┄ Files identical despite different names
+│ │   --- pyrssa-1.0.8/pyrssa/installer.py
+│ ├── +++ pyrssa-1.0.9/pyrssa/installer.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -5,12 +5,12 @@
+│ │  # import R's utility package
+│ │  utils = rpackages.importr('utils')
+│ │  # select a mirror for R packages
+│ │  utils.chooseCRANmirror(ind=1)  # select the first mirror in the list
+│ │  
+│ │  
+│ │  def install_required():
+│ │ -    pack_names = ('Rssa',)
+│ │ +    pack_names = ('Rssa', 'stats', )
+│ │      names_to_install = [x for x in pack_names if not rpackages.isinstalled(x)]
+│ │      if len(names_to_install) > 0:
+│ │          utils.install_packages(
+│ │              StrVector(names_to_install))
+│ │   --- pyrssa-1.0.8/pyrssa.egg-info/SOURCES.txt
+│ ├── +++ pyrssa-1.0.9/pyrssa.egg-info/SOURCES.txt
+│ │┄ Files 12% similar despite different names
+│ │ @@ -12,24 +12,31 @@
+│ │  pyrssa.egg-info/dependency_links.txt
+│ │  pyrssa.egg-info/requires.txt
+│ │  pyrssa.egg-info/top_level.txt
+│ │  pyrssa/classes/AutoSSA.py
+│ │  pyrssa/classes/Forecast.py
+│ │  pyrssa/classes/HMatrix.py
+│ │  pyrssa/classes/Parestimate.py
+│ │ +pyrssa/classes/Periodogram.py
+│ │  pyrssa/classes/Resonstruction.py
+│ │  pyrssa/classes/SSA.py
+│ │  pyrssa/classes/WCorMatrix.py
+│ │  pyrssa/classes/__init__.py
+│ │  pyrssa/data/AustralianWine.csv
+│ │ +pyrssa/data/Barbara.csv
+│ │ +pyrssa/data/Mars.csv
+│ │ +pyrssa/data/MotorVehicle.csv
+│ │ +pyrssa/data/USUnemployment.csv
+│ │  pyrssa/data/bookings.csv
+│ │  pyrssa/data/brecon.csv
+│ │  pyrssa/data/cadzow.sim.csv
+│ │ +pyrssa/data/co2.csv
+│ │  pyrssa/data/dftreering.csv
+│ │  pyrssa/data/dwarfst.csv
+│ │ +pyrssa/data/elec.csv
+│ │  pyrssa/data/g15.csv
+│ │  pyrssa/data/hotel.csv
+│ │  pyrssa/data/iossa.err.csv
+│ │  pyrssa/data/kruppel.csv
+│ │  pyrssa/data/monet.csv
+│ │  pyrssa/data/oilproduction.csv
+│ │  pyrssa/data/paynsa.csv

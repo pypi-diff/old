@@ -1,0 +1,1986 @@
+--- tmp/ecosizer-engine-1.0.7.tar.gz
++++ tmp/ecosizer-engine-1.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ecosizer-engine-1.0.7.tar", last modified: Wed Mar 29 19:28:58 2023, max compression
+│ +gzip compressed data, was "ecosizer-engine-1.0.8.tar", last modified: Thu Apr  6 22:44:55 2023, max compression
+│   --- ecosizer-engine-1.0.7.tar
+├── +++ ecosizer-engine-1.0.8.tar
+│ ├── file list
+│ │ @@ -1,49 +1,49 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:46.101118 ecosizer-engine-1.0.7/
+│ │ --rw-rw-rw-   0        0        0       59 2023-03-28 23:58:57.000000 ecosizer-engine-1.0.7/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     2237 2023-03-29 19:28:58.027682 ecosizer-engine-1.0.7/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1708 2023-03-22 19:23:44.000000 ecosizer-engine-1.0.7/README.md
+│ │ --rw-rw-rw-   0        0        0      108 2023-03-28 18:57:57.000000 ecosizer-engine-1.0.7/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0      773 2023-03-29 19:28:58.235622 ecosizer-engine-1.0.7/setup.cfg
+│ │ --rw-rw-rw-   0        0        0       54 2023-03-29 19:24:48.000000 ecosizer-engine-1.0.7/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:44.529113 ecosizer-engine-1.0.7/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:47.665124 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/
+│ │ --rw-rw-rw-   0        0        0     2237 2023-03-29 19:28:43.000000 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1852 2023-03-29 19:28:44.000000 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-29 19:28:43.000000 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       26 2023-03-29 19:28:43.000000 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       24 2023-03-29 19:28:43.000000 ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:47.993125 ecosizer-engine-1.0.7/src/ecosizer_engine_package/
+│ │ --rw-rw-rw-   0        0        0      938 2023-03-28 22:19:23.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:48.553127 ecosizer-engine-1.0.7/src/ecosizer_engine_package/constants/
+│ │ --rw-rw-rw-   0        0        0      408 2023-03-27 23:55:41.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/constants/Constants.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-28 21:35:58.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/constants/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:48.745127 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-28 23:03:59.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:52.517140 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-28 23:41:15.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1350 2023-02-28 22:49:14.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/apartment.json
+│ │ --rw-rw-rw-   0        0        0     1026 2023-02-28 22:48:28.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/elementary_school.json
+│ │ --rw-rw-rw-   0        0        0     1182 2023-02-28 22:50:28.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/food_service_a.json
+│ │ --rw-rw-rw-   0        0        0     1327 2023-02-28 22:49:54.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/food_service_b.json
+│ │ --rw-rw-rw-   0        0        0     1295 2023-02-28 22:47:50.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/junior_high.json
+│ │ --rw-rw-rw-   0        0        0     1314 2023-02-28 22:42:23.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/mens_dorm.json
+│ │ --rw-rw-rw-   0        0        0     1314 2023-02-28 22:51:50.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/motel.json
+│ │ --rw-rw-rw-   0        0        0    49507 2023-03-02 22:31:49.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/multi_family.json
+│ │ --rw-rw-rw-   0        0        0     1328 2023-02-28 22:51:24.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/nursing_home.json
+│ │ --rw-rw-rw-   0        0        0     1113 2023-02-28 22:51:00.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/office_building.json
+│ │ --rw-rw-rw-   0        0        0     1175 2023-02-28 22:47:15.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/senior_high.json
+│ │ --rw-rw-rw-   0        0        0     1274 2023-02-28 22:52:14.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/womens_dorm.json
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:53.997145 ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/
+│ │ --rw-rw-rw-   0        0        0     6881 2023-03-29 15:01:46.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/BuildingCreator.py
+│ │ --rw-rw-rw-   0        0        0     7255 2023-03-28 23:38:31.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/EcosizerEngine.py
+│ │ --rw-rw-rw-   0        0        0     2959 2023-03-29 15:02:24.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/SystemCreator.py
+│ │ --rw-rw-rw-   0        0        0      917 2023-03-28 22:19:15.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:54.913148 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/
+│ │ --rw-rw-rw-   0        0        0     9768 2023-03-29 15:04:50.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/Building.py
+│ │ --rw-rw-rw-   0        0        0    23873 2023-03-29 15:05:14.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/SystemConfig.py
+│ │ --rw-rw-rw-   0        0        0      965 2023-03-29 00:14:15.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3071 2023-03-20 22:31:46.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systemConfigUtils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-29 19:28:45.093115 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/
+│ │ --rw-rw-rw-   0        0        0     3587 2023-03-29 15:03:40.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/ParallelLoopTank.py
+│ │ --rw-rw-rw-   0        0        0    17053 2023-03-29 15:04:42.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/SwingTank.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-28 21:35:43.000000 ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:45.527513 ecosizer-engine-1.0.8/
+│ │ +-rw-rw-rw-   0        0        0       59 2023-03-28 23:58:57.000000 ecosizer-engine-1.0.8/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     3453 2023-04-06 22:44:55.226953 ecosizer-engine-1.0.8/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2924 2023-04-03 18:07:17.000000 ecosizer-engine-1.0.8/README.md
+│ │ +-rw-rw-rw-   0        0        0      108 2023-03-28 18:57:57.000000 ecosizer-engine-1.0.8/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0      773 2023-04-06 22:44:55.374803 ecosizer-engine-1.0.8/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0       54 2023-03-29 19:24:48.000000 ecosizer-engine-1.0.8/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:44.455511 ecosizer-engine-1.0.8/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:46.511515 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3453 2023-04-06 22:44:43.000000 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1852 2023-04-06 22:44:44.000000 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 22:44:43.000000 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       26 2023-04-06 22:44:43.000000 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       24 2023-04-06 22:44:43.000000 ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:46.783515 ecosizer-engine-1.0.8/src/ecosizer_engine_package/
+│ │ +-rw-rw-rw-   0        0        0      938 2023-03-28 22:19:23.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:47.407516 ecosizer-engine-1.0.8/src/ecosizer_engine_package/constants/
+│ │ +-rw-rw-rw-   0        0        0      457 2023-04-06 22:07:52.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/constants/Constants.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-28 21:35:58.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/constants/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:47.663517 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-28 23:03:59.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:51.595524 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-28 23:41:15.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1350 2023-02-28 22:49:14.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/apartment.json
+│ │ +-rw-rw-rw-   0        0        0     1026 2023-02-28 22:48:28.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/elementary_school.json
+│ │ +-rw-rw-rw-   0        0        0     1182 2023-02-28 22:50:28.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/food_service_a.json
+│ │ +-rw-rw-rw-   0        0        0     1327 2023-02-28 22:49:54.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/food_service_b.json
+│ │ +-rw-rw-rw-   0        0        0     1295 2023-02-28 22:47:50.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/junior_high.json
+│ │ +-rw-rw-rw-   0        0        0     1314 2023-02-28 22:42:23.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/mens_dorm.json
+│ │ +-rw-rw-rw-   0        0        0     1314 2023-02-28 22:51:50.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/motel.json
+│ │ +-rw-rw-rw-   0        0        0    49507 2023-03-02 22:31:49.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/multi_family.json
+│ │ +-rw-rw-rw-   0        0        0     1328 2023-02-28 22:51:24.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/nursing_home.json
+│ │ +-rw-rw-rw-   0        0        0     1113 2023-02-28 22:51:00.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/office_building.json
+│ │ +-rw-rw-rw-   0        0        0     1175 2023-02-28 22:47:15.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/senior_high.json
+│ │ +-rw-rw-rw-   0        0        0     1274 2023-02-28 22:52:14.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/womens_dorm.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:52.859527 ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/
+│ │ +-rw-rw-rw-   0        0        0     6950 2023-04-06 22:07:52.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/BuildingCreator.py
+│ │ +-rw-rw-rw-   0        0        0     7060 2023-04-06 22:07:52.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/EcosizerEngine.py
+│ │ +-rw-rw-rw-   0        0        0     2886 2023-04-06 22:07:52.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/SystemCreator.py
+│ │ +-rw-rw-rw-   0        0        0      917 2023-04-03 17:54:51.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:54.207529 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/
+│ │ +-rw-rw-rw-   0        0        0     9792 2023-04-06 22:22:57.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/Building.py
+│ │ +-rw-rw-rw-   0        0        0    23873 2023-03-29 15:05:14.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/SystemConfig.py
+│ │ +-rw-rw-rw-   0        0        0      965 2023-03-29 00:14:15.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3071 2023-03-20 22:31:46.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systemConfigUtils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 22:44:54.855530 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/
+│ │ +-rw-rw-rw-   0        0        0     3587 2023-03-29 15:03:40.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/ParallelLoopTank.py
+│ │ +-rw-rw-rw-   0        0        0    16932 2023-04-06 22:07:52.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/SwingTank.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-28 21:35:43.000000 ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/__init__.py
+│ │   --- ecosizer-engine-1.0.7/setup.cfg
+│ ├── +++ ecosizer-engine-1.0.8/setup.cfg
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  00000000: 5b6d 6574 6164 6174 615d 0d0a 6e61 6d65  [metadata]..name
+│ │  00000010: 203d 2065 636f 7369 7a65 722d 656e 6769   = ecosizer-engi
+│ │  00000020: 6e65 0d0a 7665 7273 696f 6e20 3d20 312e  ne..version = 1.
+│ │ -00000030: 302e 370d 0a61 7574 686f 7220 3d20 4e6f  0.7..author = No
+│ │ +00000030: 302e 380d 0a61 7574 686f 7220 3d20 4e6f  0.8..author = No
+│ │  00000040: 6c61 6e0d 0a61 7574 686f 725f 656d 6169  lan..author_emai
+│ │  00000050: 6c20 3d20 6e6f 6c61 6e40 6563 6f74 6f70  l = nolan@ecotop
+│ │  00000060: 652e 636f 6d0d 0a64 6573 6372 6970 7469  e.com..descripti
+│ │  00000070: 6f6e 203d 2041 2073 6f66 7477 6172 6520  on = A software 
+│ │  00000080: 666f 7220 7369 7a69 6e67 2048 6561 7420  for sizing Heat 
+│ │  00000090: 5075 6d70 2057 6174 6572 2048 6561 7465  Pump Water Heate
+│ │  000000a0: 7273 2066 6f72 2062 7569 6c64 696e 6773  rs for buildings
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine.egg-info/SOURCES.txt
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/__init__.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/apartment.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/apartment.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/elementary_school.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/elementary_school.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/food_service_a.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/food_service_a.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/food_service_b.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/food_service_b.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/junior_high.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/junior_high.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/mens_dorm.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/mens_dorm.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/motel.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/motel.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/multi_family.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/multi_family.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/nursing_home.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/nursing_home.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/office_building.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/office_building.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/senior_high.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/senior_high.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/data/load_shapes/womens_dorm.json
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/data/load_shapes/womens_dorm.json
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/BuildingCreator.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/BuildingCreator.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,125 +1,128 @@
+│ │ -from ecosizer_engine_package.objects.Building import *
+│ │ -import numpy as np
+│ │ -
+│ │ -def createBuilding(incomingT_F, magnitude_stat, supplyT_F, building_type, loadshape = None, avgLoadshape = None,
+│ │ -                    returnT_F = 0, flow_rate = 0, gpdpp = 0, nBR = None, nApt = 0, Wapt = 0):
+│ │ -    
+│ │ -    """
+│ │ -    Initializes the building in which the HPWH system will be sized for
+│ │ -
+│ │ -    Attributes
+│ │ -    ----------
+│ │ -    incomingT_F : float 
+│ │ -        The incoming city water temperature on the design day. [°F]
+│ │ -    magnitude_stat : int or list
+│ │ -        a number that will be used to assess the magnitude of the building based on the building type
+│ │ -    supplyT_F : float
+│ │ -        The hot water supply temperature.[°F]
+│ │ -    building_type : string or list
+│ │ -        a string indicating the type of building we are sizing for (e.g. "multi_family", "office_building", etc.)
+│ │ -    loadShape : ndarray
+│ │ -        defaults to design load shape for building type.
+│ │ -    avgLoadShape : ndarray
+│ │ -        defaults to average load shape for building type.
+│ │ -    returnT_F : float 
+│ │ -        The water temperature returning from the recirculation loop. [°F]
+│ │ -    flow_rate : float 
+│ │ -        The pump flow rate of the recirculation loop. (GPM)
+│ │ -    gpdpp : float
+│ │ -        The volume of water in gallons at 120F each person uses per dat.[°F]
+│ │ -    nBR : array_like
+│ │ -        A list of the number of units by size in the order 0 bedroom units,
+│ │ -        1 bedroom units, 2 bedroom units, 3 bedroom units, 4 bedroom units,
+│ │ -        5 bedroom units.
+│ │ -    nApt: integer
+│ │ -        The number of apartments. Use with Qdot_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ -    Wapt:  float
+│ │ -        Watts of heat lost in through recirculation piping system. Used with N_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ -
+│ │ -    Raises
+│ │ -    ----------
+│ │ -    Exception: Error if building_type is not in list of valid building_type names.
+│ │ -    """
+│ │ -
+│ │ -    # handle multiuse buildings
+│ │ -    if isinstance(building_type, list):
+│ │ -        if len(building_type) == 1:
+│ │ -            building_type = building_type[0]
+│ │ -        else:
+│ │ -            if not isinstance(magnitude_stat, list) or len(building_type) != len(magnitude_stat):
+│ │ -                raise Exception("Missing values for multi-use building. Collected " + str(len(building_type)) + " building types but collected " + 
+│ │ -                                ("1" if not isinstance(magnitude_stat, list) else str(len(magnitude_stat)))+ " magnitude varriables")
+│ │ -            building_list = []
+│ │ -            for i in range(len(building_type)):
+│ │ -                building_list.append(createBuilding(incomingT_F, magnitude_stat[i], supplyT_F, building_type[i], loadshape, avgLoadshape,
+│ │ -                        returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt))
+│ │ -            return MultiUse(building_list, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -    
+│ │ -    #only one building type so there should only be one magnitude statistic 
+│ │ -    if isinstance(magnitude_stat, list):
+│ │ -        if len(magnitude_stat) == 1:
+│ │ -            magnitude_stat = magnitude_stat[0]
+│ │ -        else:
+│ │ -            raise Exception("Missing values for multi-use building. Collected 1 building type but collected " + str(len(magnitude_stat)) + " magnitude varriables")
+│ │ -    
+│ │ -    if not isinstance(building_type, str):
+│ │ -            raise Exception("building_type must be a string.")
+│ │ -    
+│ │ -    # check custom loadshape or install standard loadshape
+│ │ -    if(loadshape is None):
+│ │ -        loadshape = getLoadShape(building_type)
+│ │ -    else:
+│ │ -        checkLoadShape(loadshape)
+│ │ -    if(avgLoadshape is None):
+│ │ -        avgLoadshape = getLoadShape(building_type, 'Stream_Avg')
+│ │ -    else:
+│ │ -        checkLoadShape(avgLoadshape)
+│ │ -
+│ │ -    loadshape = np.array(loadshape) # TODO - this changes values of loadshape a bit, show this to scott
+│ │ -    avgLoadshape = np.array(avgLoadshape) # TODO - this changes values of loadshape a bit, show this to scott
+│ │ -
+│ │ -    match building_type:
+│ │ -        case 'apartment':
+│ │ -            return Apartment(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'elementary_school':
+│ │ -            return ElementarySchool(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'food_service_a':
+│ │ -            return FoodServiceA(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'food_service_b':
+│ │ -            return FoodServiceB(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'junior_high':
+│ │ -            return JuniorHigh(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'mens_dorm':
+│ │ -            return MensDorm(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'motel':
+│ │ -            return Motel(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'nursing_home':
+│ │ -            return NursingHome(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'office_building':
+│ │ -            return OfficeBuilding(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'senior_high':
+│ │ -            return SeniorHigh(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'womens_dorm':
+│ │ -            return WomensDorm(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        case 'multi_family':
+│ │ -            return MultiFamily(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt)
+│ │ -        case _:
+│ │ -            raise Exception("Unrecognized building type.")
+│ │ -        
+│ │ -def getLoadShape(file_name, shape = 'Stream'):
+│ │ -    if shape != 'Stream' and shape != 'Stream_Avg':
+│ │ -        raise Exception("Mapping key not found for loadshapes, valid keys are: 'Stream', or 'Stream_Avg'")
+│ │ -    try:
+│ │ -        with open(os.path.join(os.path.dirname(__file__), '../data/load_shapes/' + file_name + '.json')) as json_file:
+│ │ -            dataDict = json.load(json_file)
+│ │ -            return dataDict['loadshapes'][shape]
+│ │ -    except:
+│ │ -        raise Exception("No default loadshape found for building type " +file_name + ".")
+│ │ -        
+│ │ -def checkLoadShape(loadshape):
+│ │ -    if len(loadshape) != 24:
+│ │ -        raise Exception("Loadshape must be of length 24 but instead has length of "+str(len(loadshape))+".")
+│ │ -    if sum(loadshape) > 1 + 1e-3 or sum(loadshape) < 1 - 1e-3:
+│ │ -        raise Exception("Sum of the loadshape does not equal 1. Loadshape needs to be normalized.")
+│ │ -    if any(x < 0 for x in loadshape):
+│ │ -        raise Exception("Can not have negative load shape values in loadshape.")
+│ │ +from ecosizer_engine_package.objects.Building import *
+│ │ +import numpy as np
+│ │ +
+│ │ +def createBuilding(incomingT_F, magnitude_stat, supplyT_F, building_type, loadshape = None, avgLoadshape = None,
+│ │ +                    returnT_F = 0, flow_rate = 0, gpdpp = 0, nBR = None, nApt = 0, Wapt = 0, standardGPD = None):
+│ │ +    
+│ │ +    """
+│ │ +    Initializes the building in which the HPWH system will be sized for
+│ │ +
+│ │ +    Attributes
+│ │ +    ----------
+│ │ +    incomingT_F : float 
+│ │ +        The incoming city water temperature on the design day. [°F]
+│ │ +    magnitude_stat : int or list
+│ │ +        a number that will be used to assess the magnitude of the building based on the building type
+│ │ +    supplyT_F : float
+│ │ +        The hot water supply temperature.[°F]
+│ │ +    building_type : string or list
+│ │ +        a string indicating the type of building we are sizing for (e.g. "multi_family", "office_building", etc.)
+│ │ +    loadShape : ndarray
+│ │ +        defaults to design load shape for building type.
+│ │ +    avgLoadShape : ndarray
+│ │ +        defaults to average load shape for building type.
+│ │ +    returnT_F : float 
+│ │ +        The water temperature returning from the recirculation loop. [°F]
+│ │ +    flow_rate : float 
+│ │ +        The pump flow rate of the recirculation loop. (GPM)
+│ │ +    gpdpp : float
+│ │ +        The volume of water in gallons at 120F each person uses per dat.[°F]
+│ │ +    nBR : array_like
+│ │ +        A list of the number of units by size in the order 0 bedroom units,
+│ │ +        1 bedroom units, 2 bedroom units, 3 bedroom units, 4 bedroom units,
+│ │ +        5 bedroom units.
+│ │ +    nApt: integer
+│ │ +        The number of apartments. Use with Qdot_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ +    Wapt:  float
+│ │ +        Watts of heat lost in through recirculation piping system. Used with N_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ +    standardGPD : string
+│ │ +        indicates whether to use a standard gpdpp specification for multi-family buildings. Set to None if not using a standard gpdpp.
+│ │ +
+│ │ +    Raises
+│ │ +    ----------
+│ │ +    Exception: Error if building_type is not in list of valid building_type names.
+│ │ +
+│ │ +    """
+│ │ +
+│ │ +    # handle multiuse buildings
+│ │ +    if isinstance(building_type, list):
+│ │ +        if len(building_type) == 1:
+│ │ +            building_type = building_type[0]
+│ │ +        else:
+│ │ +            if not isinstance(magnitude_stat, list) or len(building_type) != len(magnitude_stat):
+│ │ +                raise Exception("Missing values for multi-use building. Collected " + str(len(building_type)) + " building types but collected " + 
+│ │ +                                ("1" if not isinstance(magnitude_stat, list) else str(len(magnitude_stat)))+ " magnitude varriables")
+│ │ +            building_list = []
+│ │ +            for i in range(len(building_type)):
+│ │ +                building_list.append(createBuilding(incomingT_F, magnitude_stat[i], supplyT_F, building_type[i], loadshape, avgLoadshape,
+│ │ +                        returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt))
+│ │ +            return MultiUse(building_list, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +    
+│ │ +    #only one building type so there should only be one magnitude statistic 
+│ │ +    if isinstance(magnitude_stat, list):
+│ │ +        if len(magnitude_stat) == 1:
+│ │ +            magnitude_stat = magnitude_stat[0]
+│ │ +        else:
+│ │ +            raise Exception("Missing values for multi-use building. Collected 1 building type but collected " + str(len(magnitude_stat)) + " magnitude varriables")
+│ │ +    
+│ │ +    if not isinstance(building_type, str):
+│ │ +            raise Exception("building_type must be a string.")
+│ │ +    
+│ │ +    # check custom loadshape or install standard loadshape
+│ │ +    if(loadshape is None):
+│ │ +        loadshape = getLoadShape(building_type)
+│ │ +    else:
+│ │ +        checkLoadShape(loadshape)
+│ │ +    if(avgLoadshape is None):
+│ │ +        avgLoadshape = getLoadShape(building_type, 'Stream_Avg')
+│ │ +    else:
+│ │ +        checkLoadShape(avgLoadshape)
+│ │ +
+│ │ +    loadshape = np.array(loadshape) # TODO - this changes values of loadshape a bit, show this to scott
+│ │ +    avgLoadshape = np.array(avgLoadshape) # TODO - this changes values of loadshape a bit, show this to scott
+│ │ +
+│ │ +    match building_type:
+│ │ +        case 'apartment':
+│ │ +            return Apartment(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'elementary_school':
+│ │ +            return ElementarySchool(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'food_service_a':
+│ │ +            return FoodServiceA(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'food_service_b':
+│ │ +            return FoodServiceB(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'junior_high':
+│ │ +            return JuniorHigh(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'mens_dorm':
+│ │ +            return MensDorm(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'motel':
+│ │ +            return Motel(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'nursing_home':
+│ │ +            return NursingHome(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'office_building':
+│ │ +            return OfficeBuilding(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'senior_high':
+│ │ +            return SeniorHigh(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'womens_dorm':
+│ │ +            return WomensDorm(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        case 'multi_family':
+│ │ +            return MultiFamily(magnitude_stat, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt, standardGPD)
+│ │ +        case _:
+│ │ +            raise Exception("Unrecognized building type.")
+│ │ +        
+│ │ +def getLoadShape(file_name, shape = 'Stream'):
+│ │ +    if shape != 'Stream' and shape != 'Stream_Avg':
+│ │ +        raise Exception("Mapping key not found for loadshapes, valid keys are: 'Stream', or 'Stream_Avg'")
+│ │ +    try:
+│ │ +        with open(os.path.join(os.path.dirname(__file__), '../data/load_shapes/' + file_name + '.json')) as json_file:
+│ │ +            dataDict = json.load(json_file)
+│ │ +            return dataDict['loadshapes'][shape]
+│ │ +    except:
+│ │ +        raise Exception("No default loadshape found for building type " +file_name + ".")
+│ │ +        
+│ │ +def checkLoadShape(loadshape):
+│ │ +    if len(loadshape) != 24:
+│ │ +        raise Exception("Loadshape must be of length 24 but instead has length of "+str(len(loadshape))+".")
+│ │ +    if sum(loadshape) > 1 + 1e-3 or sum(loadshape) < 1 - 1e-3:
+│ │ +        raise Exception("Sum of the loadshape does not equal 1. Loadshape needs to be normalized.")
+│ │ +    if any(x < 0 for x in loadshape):
+│ │ +        raise Exception("Can not have negative load shape values in loadshape.")
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/EcosizerEngine.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/EcosizerEngine.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,155 +1,157 @@
+│ │ -from .BuildingCreator import *
+│ │ -from .SystemCreator import *
+│ │ -
+│ │ -print("EcosizerEngine Copyright (C) 2023  Ecotope Inc. ")
+│ │ -print("This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute under certain conditions; details check GNU AFFERO GENERAL PUBLIC LICENSE_08102020.docx.")
+│ │ -
+│ │ -class EcosizerEngine:
+│ │ -
+│ │ -    def __init__(self, incomingT_F, magnitude_stat, supplyT_F, storageT_F, percentUseable, aquaFract, 
+│ │ -                            schematic, building_type, loadshape = None, avgLoadshape = None, schedule = None, cdf_shift = 1,
+│ │ -                            returnT_F = 0, flow_rate = 0, gpdpp = 0, nBR = None, safetyTM = 1.75,
+│ │ -                            defrostFactor = 1, compRuntime_hr = 16, nApt = 0, Wapt = 0, doLoadShift = False,
+│ │ -                            setpointTM_F = 135, TMonTemp_F = 120, offTime_hr = 0.333, CA = False):
+│ │ -        """
+│ │ -        Initializes and sizes the HPWH system for a building based on the given parameters.
+│ │ -
+│ │ -        Attributes
+│ │ -        ----------
+│ │ -        incomingT_F : float 
+│ │ -            The incoming city water temperature on the design day. [°F]
+│ │ -        magnitude_stat : int or list
+│ │ -            a number that will be used to assess the magnitude of the building based on the building type
+│ │ -        supplyT_F : float
+│ │ -            The hot water supply temperature.[°F]
+│ │ -        storageT_F : float 
+│ │ -            The hot water storage temperature. [°F]
+│ │ -        percentUseable : float
+│ │ -            The fraction of the storage volume that can be filled with hot water.
+│ │ -        aquaFract: float
+│ │ -            The fraction of the total hieght of the primary hot water tanks at which the Aquastat is located.
+│ │ -        schematic : String
+│ │ -            Indicates schematic type. Valid values are 'swingtank', 'paralleltank', and 'primary'
+│ │ -        building_type : string or list
+│ │ -            a string indicating the type of building we are sizing for (e.g. "multi_family", "office_building", etc.)
+│ │ -        loadShape : ndarray
+│ │ -            defaults to design load shape for building type.
+│ │ -        avgLoadShape : ndarray
+│ │ -            defaults to average load shape for building type.
+│ │ -        schedule : array_like
+│ │ -            List or array of 0's and 1's for don't run and run respectively. Used for load shifting
+│ │ -        cdf_shift: float
+│ │ -            Percentage of days the load shift will be met
+│ │ -        returnT_F : float 
+│ │ -            The water temperature returning from the recirculation loop. [°F]
+│ │ -        flow_rate : float 
+│ │ -            The pump flow rate of the recirculation loop. (GPM)
+│ │ -        gpdpp : float
+│ │ -            The volume of water in gallons at 120F each person uses per dat.[°F]
+│ │ -        nBR : array_like
+│ │ -            A list of the number of units by size in the order 0 bedroom units,
+│ │ -            1 bedroom units, 2 bedroom units, 3 bedroom units, 4 bedroom units,
+│ │ -            5 bedroom units.
+│ │ -        safetyTM : float
+│ │ -            The saftey factor for the temperature maintenance system.
+│ │ -        defrostFactor : float 
+│ │ -            A multipier used to account for defrost in the final heating capacity. Default equals 1.
+│ │ -        compRuntime_hr : float
+│ │ -            The number of hours the compressor will run on the design day. [Hr]
+│ │ -        nApt: integer
+│ │ -            The number of apartments. Use with Qdot_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ -        Wapt:  float
+│ │ -            Watts of heat lost in through recirculation piping system. Used with N_apt to determine total recirculation losses. (For multi-falmily buildings)  
+│ │ -        doLoadShift : boolean
+│ │ -            Set to true if doing loadshift
+│ │ -        setpointTM_F : float
+│ │ -            The setpoint of the temprature maintence tank. Defaults to 130 °F.
+│ │ -        TMonTemp_F : float
+│ │ -            The temperature where parallel loop tank will turn on.
+│ │ -            Defaults to 120 °F.
+│ │ -        offTime_hr: integer
+│ │ -            Maximum hours per day the temperature maintenance equipment can run.
+│ │ -
+│ │ -        """
+│ │ -        
+│ │ -        building = createBuilding( incomingT_F     = incomingT_F,
+│ │ -                                    magnitude_stat  = magnitude_stat, 
+│ │ -                                    supplyT_F       = supplyT_F, 
+│ │ -                                    building_type   = building_type,
+│ │ -                                    loadshape       = loadshape,
+│ │ -                                    avgLoadshape    = avgLoadshape,
+│ │ -                                    returnT_F       = returnT_F, 
+│ │ -                                    flow_rate       = flow_rate,
+│ │ -                                    gpdpp           = gpdpp,
+│ │ -                                    nBR             = nBR,
+│ │ -                                    nApt            = nApt,
+│ │ -                                    Wapt            = Wapt
+│ │ -        )
+│ │ -
+│ │ -        system = createSystem(  schematic, 
+│ │ -                                building, 
+│ │ -                                storageT_F, 
+│ │ -                                defrostFactor, 
+│ │ -                                percentUseable, 
+│ │ -                                compRuntime_hr, 
+│ │ -                                aquaFract, 
+│ │ -                                doLoadShift = doLoadShift, 
+│ │ -                                cdf_shift = cdf_shift, 
+│ │ -                                schedule = schedule, 
+│ │ -                                safetyTM = safetyTM, 
+│ │ -                                setpointTM_F = setpointTM_F, 
+│ │ -                                TMonTemp_F = TMonTemp_F, 
+│ │ -                                offTime_hr = offTime_hr, 
+│ │ -                                CA = CA
+│ │ -        )
+│ │ - 
+│ │ -        self.system = system
+│ │ -    
+│ │ -    def getSizingResults(self):
+│ │ -        """
+│ │ -        Returns the minimum primary volume and heating capacity sizing results
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        list
+│ │ -            self.PVol_G_atStorageT, self.PCap_kBTUhr (also self.TMVol_G, self.TMCap_kBTUhr if there is a TM system)
+│ │ -        """
+│ │ -        return self.system.getSizingResults()
+│ │ -
+│ │ -    def primaryCurve(self):
+│ │ -        """
+│ │ -        Sizes the primary system curve. Will catch the point at which the aquatstat
+│ │ -        fraction is too small for system and cuts the return arrays to match cutoff point.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        volN : array
+│ │ -            Array of volume in the tank at each hour.
+│ │ -
+│ │ -        primaryHeatHrs2kBTUHR : array
+│ │ -            Array of heating capacity in kBTU/hr
+│ │ -            
+│ │ -        heatHours : array
+│ │ -            Array of running hours per day corresponding to primaryHeatHrs2kBTUHR
+│ │ -            
+│ │ -        recIndex : int
+│ │ -            The index of the recommended heating rate. 
+│ │ -        """
+│ │ -        return self.system.primaryCurve()
+│ │ -    
+│ │ -    def plotStorageLoadSim(self, return_as_div=True):
+│ │ -        """
+│ │ -        Returns a plot of the of the simulation for the minimum sized primary
+│ │ -        system as a div or plotly figure. Can plot the minute level simulation
+│ │ -
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        return_as_div
+│ │ -            A logical on the output, as a div (true) or as a figure (false)
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        div/fig
+│ │ -            plot_div
+│ │ -        """
+│ │ +from .BuildingCreator import *
+│ │ +from .SystemCreator import *
+│ │ +
+│ │ +print("EcosizerEngine Copyright (C) 2023  Ecotope Inc.")
+│ │ +print("This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute under certain conditions; details check GNU AFFERO GENERAL PUBLIC LICENSE_08102020.docx.")
+│ │ +
+│ │ +class EcosizerEngine:
+│ │ +
+│ │ +    """
+│ │ +    Initializes and sizes the HPWH system for a building based on the given parameters.
+│ │ +
+│ │ +    Attributes
+│ │ +    ----------
+│ │ +    incomingT_F : float 
+│ │ +        The incoming city water temperature on the design day. [°F]
+│ │ +    magnitude_stat : int or list
+│ │ +        a number that will be used to assess the magnitude of the building based on the building type
+│ │ +    supplyT_F : float
+│ │ +        The hot water supply temperature.[°F]
+│ │ +    storageT_F : float 
+│ │ +        The hot water storage temperature. [°F]
+│ │ +    percentUseable : float
+│ │ +        The fraction of the storage volume that can be filled with hot water.
+│ │ +    aquaFract: float
+│ │ +        The fraction of the total hieght of the primary hot water tanks at which the Aquastat is located.
+│ │ +    schematic : String
+│ │ +        Indicates schematic type. Valid values are 'swingtank', 'paralleltank', and 'primary'
+│ │ +    building_type : string or list
+│ │ +        a string indicating the type of building we are sizing for (e.g. "multi_family", "office_building", etc.)
+│ │ +    loadShape : ndarray
+│ │ +        defaults to design load shape for building type.
+│ │ +    avgLoadShape : ndarray
+│ │ +        defaults to average load shape for building type.
+│ │ +    schedule : array_like
+│ │ +        List or array of 0's and 1's for don't run and run respectively. Used for load shifting
+│ │ +    cdf_shift: float
+│ │ +        Percentage of days the load shift will be met
+│ │ +    returnT_F : float 
+│ │ +        The water temperature returning from the recirculation loop. [°F]
+│ │ +    flow_rate : float 
+│ │ +        The pump flow rate of the recirculation loop. (GPM)
+│ │ +    gpdpp : float
+│ │ +        The volume of water in gallons at 120F each person uses per dat.[°F]
+│ │ +    nBR : array_like
+│ │ +        A list of the number of units by size in the order 0 bedroom units,
+│ │ +        1 bedroom units, 2 bedroom units, 3 bedroom units, 4 bedroom units,
+│ │ +        5 bedroom units.
+│ │ +    safetyTM : float
+│ │ +        The saftey factor for the temperature maintenance system.
+│ │ +    defrostFactor : float 
+│ │ +        A multipier used to account for defrost in the final heating capacity. Default equals 1.
+│ │ +    compRuntime_hr : float
+│ │ +        The number of hours the compressor will run on the design day. [Hr]
+│ │ +    nApt: integer
+│ │ +        The number of apartments. Use with Qdot_apt to determine total recirculation losses. (For multi-falmily buildings)
+│ │ +    Wapt:  float
+│ │ +        Watts of heat lost in through recirculation piping system. Used with N_apt to determine total recirculation losses. (For multi-falmily buildings)  
+│ │ +    doLoadShift : boolean
+│ │ +        Set to true if doing loadshift
+│ │ +    setpointTM_F : float
+│ │ +        The setpoint of the temprature maintence tank. Defaults to 130 °F.
+│ │ +    TMonTemp_F : float
+│ │ +        The temperature where parallel loop tank will turn on.
+│ │ +        Defaults to 120 °F.
+│ │ +    offTime_hr: integer
+│ │ +        Maximum hours per day the temperature maintenance equipment can run
+│ │ +    standardGPD : string
+│ │ +        indicates whether to use a standard gpdpp specification for multi-family buildings. Set to None if not using a standard gpdpp.
+│ │ +    """
+│ │ +
+│ │ +    def __init__(self, incomingT_F, magnitude_stat, supplyT_F, storageT_F, percentUseable, aquaFract, 
+│ │ +                            schematic, building_type, loadshape = None, avgLoadshape = None, schedule = None, cdf_shift = 1,
+│ │ +                            returnT_F = 0, flow_rate = 0, gpdpp = 0, nBR = None, safetyTM = 1.75,
+│ │ +                            defrostFactor = 1, compRuntime_hr = 16, nApt = 0, Wapt = 0, doLoadShift = False,
+│ │ +                            setpointTM_F = 135, TMonTemp_F = 120, offTime_hr = 0.333, standardGPD = None):
+│ │ +        
+│ │ +        building = createBuilding( incomingT_F     = incomingT_F,
+│ │ +                                    magnitude_stat  = magnitude_stat, 
+│ │ +                                    supplyT_F       = supplyT_F, 
+│ │ +                                    building_type   = building_type,
+│ │ +                                    loadshape       = loadshape,
+│ │ +                                    avgLoadshape    = avgLoadshape,
+│ │ +                                    returnT_F       = returnT_F, 
+│ │ +                                    flow_rate       = flow_rate,
+│ │ +                                    gpdpp           = gpdpp,
+│ │ +                                    nBR             = nBR,
+│ │ +                                    nApt            = nApt,
+│ │ +                                    Wapt            = Wapt,
+│ │ +                                    standardGPD     = standardGPD
+│ │ +        )
+│ │ +
+│ │ +        system = createSystem(  schematic, 
+│ │ +                                building, 
+│ │ +                                storageT_F, 
+│ │ +                                defrostFactor, 
+│ │ +                                percentUseable, 
+│ │ +                                compRuntime_hr, 
+│ │ +                                aquaFract, 
+│ │ +                                doLoadShift = doLoadShift, 
+│ │ +                                cdf_shift = cdf_shift, 
+│ │ +                                schedule = schedule, 
+│ │ +                                safetyTM = safetyTM, 
+│ │ +                                setpointTM_F = setpointTM_F, 
+│ │ +                                TMonTemp_F = TMonTemp_F, 
+│ │ +                                offTime_hr = offTime_hr
+│ │ +        )
+│ │ + 
+│ │ +        self.system = system
+│ │ +    
+│ │ +    def getSizingResults(self):
+│ │ +        """
+│ │ +        Returns the minimum primary volume and heating capacity sizing results
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        list
+│ │ +            self.PVol_G_atStorageT, self.PCap_kBTUhr (also self.TMVol_G, self.TMCap_kBTUhr if there is a TM system)
+│ │ +        """
+│ │ +        return self.system.getSizingResults()
+│ │ +
+│ │ +    def primaryCurve(self):
+│ │ +        """
+│ │ +        Sizes the primary system curve. Will catch the point at which the aquatstat
+│ │ +        fraction is too small for system and cuts the return arrays to match cutoff point.
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        volN : array
+│ │ +            Array of volume in the tank at each hour.
+│ │ +
+│ │ +        primaryHeatHrs2kBTUHR : array
+│ │ +            Array of heating capacity in kBTU/hr
+│ │ +            
+│ │ +        heatHours : array
+│ │ +            Array of running hours per day corresponding to primaryHeatHrs2kBTUHR
+│ │ +            
+│ │ +        recIndex : int
+│ │ +            The index of the recommended heating rate. 
+│ │ +        """
+│ │ +        return self.system.primaryCurve()
+│ │ +    
+│ │ +    def plotStorageLoadSim(self, return_as_div=True):
+│ │ +        """
+│ │ +        Returns a plot of the of the simulation for the minimum sized primary
+│ │ +        system as a div or plotly figure. Can plot the minute level simulation
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        return_as_div
+│ │ +            A logical on the output, as a div (true) or as a figure (false)
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        div/fig
+│ │ +            plot_div
+│ │ +        """
+│ │          return self.system.plotStorageLoadSim(return_as_div)
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/SystemCreator.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/SystemCreator.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,59 +1,59 @@
+│ │ -from ecosizer_engine_package.objects.SystemConfig import *
+│ │ -from ecosizer_engine_package.objects.systems.SwingTank import *
+│ │ -from ecosizer_engine_package.objects.systems.ParallelLoopTank import *
+│ │ -
+│ │ -def createSystem(schematic, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, doLoadShift = False, 
+│ │ -                 cdf_shift = 1, schedule = None, safetyTM = 1.75, setpointTM_F = 135, TMonTemp_F = 120, offTime_hr = 0.333, CA = False):
+│ │ -    """
+│ │ -    Initializes and sizes the HPWH system. Both primary and tempurature maintenance (for parrallel loop and swing tank) are set up in this function.
+│ │ -
+│ │ -    Attributes
+│ │ -    ----------
+│ │ -    schematic : String
+│ │ -        Indicates schematic type. Valid values are 'swingtank', 'paralleltank', and 'primary'
+│ │ -    building : Building
+│ │ -        Building object the HPWH system will be sized for.
+│ │ -    storageT_F : float 
+│ │ -        The hot water storage temperature. [°F]
+│ │ -   defrostFactor : float 
+│ │ -        A multipier used to account for defrost in the final heating capacity. Default equals 1.
+│ │ -    percentUseable : float
+│ │ -        The fraction of the storage volume that can be filled with hot water.
+│ │ -    compRuntime_hr : float
+│ │ -        The number of hours the compressor will run on the design day. [Hr]
+│ │ -    aquaFract: float
+│ │ -        The fraction of the total hieght of the primary hot water tanks at which the Aquastat is located.
+│ │ -    doLoadShift : boolean
+│ │ -        Set to true if doing loadshift
+│ │ -    cdf_shift: float
+│ │ -        Percentage of days the load shift will be met
+│ │ -    schedule : array_like
+│ │ -        List or array of 0's and 1's for don't run and run respectively. Used for load shifting
+│ │ -    safetyTM : float
+│ │ -        The saftey factor for the temperature maintenance system.
+│ │ -    setpointTM_F : float
+│ │ -        The setpoint of the temprature maintence tank. Defaults to 130 °F.
+│ │ -    TMonTemp_F : float
+│ │ -        The temperature where parallel loop tank will turn on.
+│ │ -        Defaults to 120 °F.
+│ │ -    offTime_hr: integer
+│ │ -        Maximum hours per day the temperature maintenance equipment can run.
+│ │ -
+│ │ -    Raises
+│ │ -    ----------
+│ │ -    Exception: Error if schematic is not in list of valid schematic names.
+│ │ -
+│ │ -    """
+│ │ -    
+│ │ -    match schematic:
+│ │ -        case 'swingtank':
+│ │ -            return SwingTank(safetyTM, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ -                             doLoadShift, cdf_shift, schedule, CA)        
+│ │ -        case 'paralleltank':
+│ │ -            return ParallelLoopTank(safetyTM, setpointTM_F, TMonTemp_F, offTime_hr, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ -                 doLoadShift, cdf_shift, schedule)
+│ │ -        case 'primary':
+│ │ -            return Primary(building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, doLoadShift, cdf_shift, schedule)
+│ │ -        case _:
+│ │ -            raise Exception("Unknown system schematic type.")
+│ │ +from ecosizer_engine_package.objects.SystemConfig import *
+│ │ +from ecosizer_engine_package.objects.systems.SwingTank import *
+│ │ +from ecosizer_engine_package.objects.systems.ParallelLoopTank import *
+│ │ +
+│ │ +def createSystem(schematic, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, doLoadShift = False, 
+│ │ +                 cdf_shift = 1, schedule = None, safetyTM = 1.75, setpointTM_F = 135, TMonTemp_F = 120, offTime_hr = 0.333):
+│ │ +    """
+│ │ +    Initializes and sizes the HPWH system. Both primary and tempurature maintenance (for parrallel loop and swing tank) are set up in this function.
+│ │ +
+│ │ +    Attributes
+│ │ +    ----------
+│ │ +    schematic : String
+│ │ +        Indicates schematic type. Valid values are 'swingtank', 'paralleltank', and 'primary'
+│ │ +    building : Building
+│ │ +        Building object the HPWH system will be sized for.
+│ │ +    storageT_F : float 
+│ │ +        The hot water storage temperature. [°F]
+│ │ +    defrostFactor : float 
+│ │ +        A multipier used to account for defrost in the final heating capacity. Default equals 1.
+│ │ +    percentUseable : float
+│ │ +        The fraction of the storage volume that can be filled with hot water.
+│ │ +    compRuntime_hr : float
+│ │ +        The number of hours the compressor will run on the design day. [Hr]
+│ │ +    aquaFract: float
+│ │ +        The fraction of the total hieght of the primary hot water tanks at which the Aquastat is located.
+│ │ +    doLoadShift : boolean
+│ │ +        Set to true if doing loadshift
+│ │ +    cdf_shift: float
+│ │ +        Percentage of days the load shift will be met
+│ │ +    schedule : array_like
+│ │ +        List or array of 0's and 1's for don't run and run respectively. Used for load shifting
+│ │ +    safetyTM : float
+│ │ +        The saftey factor for the temperature maintenance system.
+│ │ +    setpointTM_F : float
+│ │ +        The setpoint of the temprature maintence tank. Defaults to 130 °F.
+│ │ +    TMonTemp_F : float
+│ │ +        The temperature where parallel loop tank will turn on.
+│ │ +        Defaults to 120 °F.
+│ │ +    offTime_hr: integer
+│ │ +        Maximum hours per day the temperature maintenance equipment can run.
+│ │ +
+│ │ +    Raises
+│ │ +    ----------
+│ │ +    Exception: Error if schematic is not in list of valid schematic names.
+│ │ +
+│ │ +    """
+│ │ +    
+│ │ +    match schematic:
+│ │ +        case 'swingtank':
+│ │ +            return SwingTank(safetyTM, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ +                             doLoadShift, cdf_shift, schedule)        
+│ │ +        case 'paralleltank':
+│ │ +            return ParallelLoopTank(safetyTM, setpointTM_F, TMonTemp_F, offTime_hr, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ +                 doLoadShift, cdf_shift, schedule)
+│ │ +        case 'primary':
+│ │ +            return Primary(building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, doLoadShift, cdf_shift, schedule)
+│ │ +        case _:
+│ │ +            raise Exception("Unknown system schematic type.")
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/engine/__init__.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/engine/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/Building.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/Building.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,159 +1,162 @@
+│ │ -import os
+│ │ -import json
+│ │ -import numpy as np
+│ │ -
+│ │ -from ecosizer_engine_package.constants.Constants import *
+│ │ -
+│ │ -class Building:
+│ │ -    def __init__(self, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        
+│ │ -        self._checkParams(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -        self.loadshape = loadshape
+│ │ -        self.avgLoadshape = avgLoadshape
+│ │ -        self.incomingT_F = incomingT_F
+│ │ -        self.supplyT_F = supplyT_F
+│ │ -        self.recirc_loss = (supplyT_F - returnT_F) * flow_rate * rhoCp * 60. #BTU/HR
+│ │ -
+│ │ -    def _checkParams(self, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        if not isinstance(loadshape, np.ndarray) or len(loadshape) != 24:
+│ │ -            raise Exception("Error: Loadshape must be a list of length 24.")
+│ │ -        if sum(loadshape) > 1 + 1e-3 or sum(loadshape) < 1 - 1e-3:
+│ │ -            raise Exception("Error:  Sum of the loadshape does not equal 1 but "+str(sum(loadshape))+".")
+│ │ -        if any(x < 0 for x in loadshape):
+│ │ -            raise Exception("Error:  Can not have negative load shape values in loadshape.")
+│ │ -        if not isinstance(avgLoadshape, np.ndarray) or len(avgLoadshape) != 24:
+│ │ -            raise Exception("Error: Average loadshape must be a list of length 24.")
+│ │ -        if sum(avgLoadshape) > 1 + 1e-3 or sum(avgLoadshape) < 1 - 1e-3:
+│ │ -            raise Exception("Error:  Sum of the average loadshape does not equal 1 but "+str(sum(loadshape))+".")
+│ │ -        if any(x < 0 for x in avgLoadshape):
+│ │ -            raise Exception("Error:  Can not have negative load shape values in average loadshape.")
+│ │ -        if not (isinstance(supplyT_F, int) or isinstance(supplyT_F, float)):
+│ │ -            raise Exception("Error: Supply temp must be a number.")
+│ │ -        if not (isinstance(returnT_F, int) or isinstance(returnT_F, float)):
+│ │ -            raise Exception("Error: Return temp must be a number.")
+│ │ -        if supplyT_F <= returnT_F:
+│ │ -            raise Exception("Error: Supply temp must be higher than return temp.")
+│ │ -        if not (isinstance(incomingT_F, int) or isinstance(incomingT_F, float)):
+│ │ -            raise Exception("Error: City water temp must be a number.")
+│ │ -        if not (isinstance(flow_rate, int) or isinstance(flow_rate, float)):
+│ │ -            raise Exception("Error: Flow rate must be a number.")
+│ │ -        if not hasattr(self, 'magnitude'):
+│ │ -            raise Exception("Magnitude has not been set.")
+│ │ -
+│ │ -class MensDorm(Building):
+│ │ -    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_students * 18.9 # ASHREA GPD per student
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class WomensDorm(Building):
+│ │ -    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_students * 16.4 # ASHREA GPD per student
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class Motel(Building):
+│ │ -    def __init__(self, n_units, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_units * 28.8 # ASHREA GPD per unit
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class NursingHome(Building):
+│ │ -    def __init__(self, n_beds, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_beds * 20.1 # ASHREA GPD per bed
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class OfficeBuilding(Building):
+│ │ -    def __init__(self, n_people, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_people * 1.11 # ASHREA GPD per person
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class FoodServiceA(Building):
+│ │ -    def __init__(self, n_meals, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_meals * 11.032 # ASHREA GPD per meal
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class FoodServiceB(Building):
+│ │ -    def __init__(self, n_meals, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_meals * 6.288 # ASHREA GPD per meal
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class Apartment(Building):
+│ │ -    def __init__(self, n_units, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_units * 42.8 # ASHREA GPD per unit
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class ElementarySchool(Building):
+│ │ -    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_students * 1.081 # ASHREA GPD per student
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class JuniorHigh(Building):
+│ │ -    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_students * 3.27 # ASHREA GPD per student
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -
+│ │ -class SeniorHigh(Building):
+│ │ -    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        self.magnitude = n_students * 3.02 # ASHREA GPD per student
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -    
+│ │ -class MultiFamily(Building):
+│ │ -    def __init__(self, n_people, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt):
+│ │ -        # check inputs
+│ │ -        if not (isinstance(gpdpp, int) or isinstance(gpdpp, float) or isinstance(gpdpp, str)):
+│ │ -            raise Exception("Error: GPDPP must be a number or sting representing the default GGPD statistic to use.")
+│ │ -        if not (isinstance(nApt, int)):
+│ │ -            raise Exception("Error: Number of apartments must be an integer.")
+│ │ -        if not (isinstance(Wapt, int)):
+│ │ -            raise Exception("Error: WATTs per apt must be an integer.")
+│ │ -        with open(os.path.join(os.path.dirname(__file__), '../data/load_shapes/multi_family.json')) as json_file:
+│ │ -            dataDict = json.load(json_file)
+│ │ -            # Check if gpdpp is a string and look up by key
+│ │ -            if isinstance(gpdpp, str): # if the inputs here is a string get the get the gpdpp
+│ │ -
+│ │ -                if gpdpp.lower() == "ca" :
+│ │ -                    if nBR is None or not (isinstance(nBR, list) or isinstance(nBR, np.ndarray))or sum(nBR) == 0 or len(nBR) != 6:
+│ │ -                        raise Exception("Cannot get the gpdpp for the CA data set without knowning the number of units by bedroom size for 0 BR (studios) through 5+ BR, the list must be of length 6 in that order.")
+│ │ -
+│ │ -                    # Count up the gpdpp for each bedroom type
+│ │ -                    daily_totals = np.zeros(365)
+│ │ -                    for ii in range(0,6):
+│ │ -                        daily_totals += nBR[ii] * np.array(dataDict['ca_gpdpp'][str(ii) + "br"]) # daily totals is gpdpp * bedroom
+│ │ -
+│ │ -                    # Get the 98th percentile day divide by the number of people rounded up to an integer.
+│ │ -                    gpdpp = round(np.percentile(daily_totals,98)/ sum(nBR), 1)
+│ │ -
+│ │ -                # Else look up by normal key function
+│ │ -                else:
+│ │ -                    gpdpp = dataDict['gpdpp'][gpdpp][0] # TODO error handle
+│ │ -            
+│ │ -            self.magnitude = gpdpp * n_people # gpdpp * number_of_people
+│ │ -
+│ │ -        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ -        # recalculate recirc_loss with different method if applicable
+│ │ -        if(nApt > 0 and Wapt > 0):
+│ │ -            self.recirc_loss = nApt * Wapt * W_TO_BTUHR
+│ │ -
+│ │ -class MultiUse(Building):
+│ │ -    def __init__(self, building_list, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ -        # Generates building with loadshape that is combination of multiple loadshapes, one for each use section of the building. Each loadshape is multiplied
+│ │ -        # by the magnitude of that use section of the multi-use building, then all added together and divided by the total magnitude for the whole building
+│ │ -
+│ │ -        total_magnitude = building_list[0].magnitude
+│ │ -        total_loadshape = [j * building_list[0].magnitude for j in building_list[0].loadshape]
+│ │ -        total_avg_loadshape = [j * building_list[0].magnitude for j in building_list[0].avgLoadshape]
+│ │ -
+│ │ -        for i in range(1, len(building_list)):
+│ │ -            total_magnitude += building_list[i].magnitude
+│ │ -            add_loadshape = [j * building_list[i].magnitude for j in building_list[i].loadshape]
+│ │ -            add_avg_loadshape = [j * building_list[i].magnitude for j in building_list[i].avgLoadshape]
+│ │ -            total_loadshape = [total_loadshape[j] + add_loadshape[j] for j in range(len(total_loadshape))]
+│ │ -            total_avg_loadshape = [total_avg_loadshape[j] + add_avg_loadshape[j] for j in range(len(total_avg_loadshape))]
+│ │ -
+│ │ -        total_loadshape = [j / total_magnitude for j in total_loadshape]
+│ │ -        total_avg_loadshape = [j / total_magnitude for j in total_avg_loadshape]
+│ │ -        total_loadshape = np.array(total_loadshape)
+│ │ -        total_avg_loadshape = np.array(total_avg_loadshape)
+│ │ -
+│ │ -        self.magnitude = total_magnitude
+│ │ -
+│ │ +import os
+│ │ +import json
+│ │ +import numpy as np
+│ │ +
+│ │ +from ecosizer_engine_package.constants.Constants import *
+│ │ +
+│ │ +class Building:
+│ │ +    def __init__(self, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        
+│ │ +        self._checkParams(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +        self.loadshape = loadshape
+│ │ +        self.avgLoadshape = avgLoadshape
+│ │ +        self.incomingT_F = incomingT_F
+│ │ +        self.supplyT_F = supplyT_F
+│ │ +        self.recirc_loss = (supplyT_F - returnT_F) * flow_rate * rhoCp * 60. #BTU/HR
+│ │ +
+│ │ +    def _checkParams(self, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        if not isinstance(loadshape, np.ndarray) or len(loadshape) != 24:
+│ │ +            raise Exception("Error: Loadshape must be a list of length 24.")
+│ │ +        if sum(loadshape) > 1 + 1e-3 or sum(loadshape) < 1 - 1e-3:
+│ │ +            raise Exception("Error:  Sum of the loadshape does not equal 1 but "+str(sum(loadshape))+".")
+│ │ +        if any(x < 0 for x in loadshape):
+│ │ +            raise Exception("Error:  Can not have negative load shape values in loadshape.")
+│ │ +        if not isinstance(avgLoadshape, np.ndarray) or len(avgLoadshape) != 24:
+│ │ +            raise Exception("Error: Average loadshape must be a list of length 24.")
+│ │ +        if sum(avgLoadshape) > 1 + 1e-3 or sum(avgLoadshape) < 1 - 1e-3:
+│ │ +            raise Exception("Error:  Sum of the average loadshape does not equal 1 but "+str(sum(loadshape))+".")
+│ │ +        if any(x < 0 for x in avgLoadshape):
+│ │ +            raise Exception("Error:  Can not have negative load shape values in average loadshape.")
+│ │ +        if not (isinstance(supplyT_F, int) or isinstance(supplyT_F, float)):
+│ │ +            raise Exception("Error: Supply temp must be a number.")
+│ │ +        if not (isinstance(returnT_F, int) or isinstance(returnT_F, float)):
+│ │ +            raise Exception("Error: Return temp must be a number.")
+│ │ +        if supplyT_F <= returnT_F:
+│ │ +            raise Exception("Error: Supply temp must be higher than return temp.")
+│ │ +        if not (isinstance(incomingT_F, int) or isinstance(incomingT_F, float)):
+│ │ +            raise Exception("Error: City water temp must be a number.")
+│ │ +        if not (isinstance(flow_rate, int) or isinstance(flow_rate, float)):
+│ │ +            raise Exception("Error: Flow rate must be a number.")
+│ │ +        if not hasattr(self, 'magnitude'):
+│ │ +            raise Exception("Magnitude has not been set.")
+│ │ +
+│ │ +class MensDorm(Building):
+│ │ +    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_students * 18.9 # ASHREA GPD per student
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class WomensDorm(Building):
+│ │ +    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_students * 16.4 # ASHREA GPD per student
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class Motel(Building):
+│ │ +    def __init__(self, n_units, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_units * 28.8 # ASHREA GPD per unit
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class NursingHome(Building):
+│ │ +    def __init__(self, n_beds, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_beds * 20.1 # ASHREA GPD per bed
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class OfficeBuilding(Building):
+│ │ +    def __init__(self, n_people, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_people * 1.11 # ASHREA GPD per person
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class FoodServiceA(Building):
+│ │ +    def __init__(self, n_meals, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_meals * 11.032 # ASHREA GPD per meal
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class FoodServiceB(Building):
+│ │ +    def __init__(self, n_meals, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_meals * 6.288 # ASHREA GPD per meal
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class Apartment(Building):
+│ │ +    def __init__(self, n_units, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_units * 42.8 # ASHREA GPD per unit
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class ElementarySchool(Building):
+│ │ +    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_students * 1.081 # ASHREA GPD per student
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class JuniorHigh(Building):
+│ │ +    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_students * 3.27 # ASHREA GPD per student
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +
+│ │ +class SeniorHigh(Building):
+│ │ +    def __init__(self, n_students, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        self.magnitude = n_students * 3.02 # ASHREA GPD per student
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +    
+│ │ +class MultiFamily(Building):
+│ │ +    def __init__(self, n_people, loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate, gpdpp, nBR, nApt, Wapt, standardGPD):
+│ │ +        # check inputs
+│ │ +        if not (isinstance(nApt, int)):
+│ │ +            raise Exception("Error: Number of apartments must be an integer.")
+│ │ +        if not (isinstance(Wapt, int)):
+│ │ +            raise Exception("Error: WATTs per apt must be an integer.")
+│ │ +        if standardGPD is None:
+│ │ +            if not (isinstance(gpdpp, int) or isinstance(gpdpp, float)):
+│ │ +                raise Exception("Error: GPDPP must be a number.")
+│ │ +        else:
+│ │ +            if isinstance(standardGPD, str) and standardGPD in possibleStandardGPDs: # if the input here is a string get the appropriate standard gpdpp
+│ │ +                with open(os.path.join(os.path.dirname(__file__), '../data/load_shapes/multi_family.json')) as json_file:
+│ │ +                    dataDict = json.load(json_file)
+│ │ +
+│ │ +                    if standardGPD.lower() == "ca" :
+│ │ +                        if nBR is None or not (isinstance(nBR, list) or isinstance(nBR, np.ndarray))or sum(nBR) == 0 or len(nBR) != 6:
+│ │ +                            raise Exception("Cannot get the gpdpp for the CA data set without knowning the number of units by bedroom size for 0 BR (studios) through 5+ BR, the list must be of length 6 in that order.")
+│ │ +
+│ │ +                        # Count up the gpdpp for each bedroom type
+│ │ +                        daily_totals = np.zeros(365)
+│ │ +                        for i in range(0,6):
+│ │ +                            daily_totals += nBR[i] * np.array(dataDict['ca_gpdpp'][str(i) + "br"]) # daily totals is gpdpp * bedroom
+│ │ +
+│ │ +                        # Get the 98th percentile day divide by the number of people rounded up to an integer.
+│ │ +                        gpdpp = round(np.percentile(daily_totals,98)/ sum(nBR), 1)
+│ │ +
+│ │ +                    # Else look up by normal key function
+│ │ +                    else:
+│ │ +                        gpdpp = dataDict['gpdpp'][standardGPD][0]
+│ │ +            else:
+│ │ +                raise Exception("Error: standardGPD must be a String of one of the following values: " + str(possibleStandardGPDs))
+│ │ +            
+│ │ +        self.magnitude = gpdpp * n_people # gpdpp * number_of_people
+│ │ +
+│ │ +        super().__init__(loadshape, avgLoadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │ +        # recalculate recirc_loss with different method if applicable
+│ │ +        if(nApt > 0 and Wapt > 0):
+│ │ +            self.recirc_loss = nApt * Wapt * W_TO_BTUHR
+│ │ +
+│ │ +class MultiUse(Building):
+│ │ +    def __init__(self, building_list, incomingT_F, supplyT_F, returnT_F, flow_rate):
+│ │ +        # Generates building with loadshape that is combination of multiple loadshapes, one for each use section of the building. Each loadshape is multiplied
+│ │ +        # by the magnitude of that use section of the multi-use building, then all added together and divided by the total magnitude for the whole building
+│ │ +
+│ │ +        total_magnitude = building_list[0].magnitude
+│ │ +        total_loadshape = [j * building_list[0].magnitude for j in building_list[0].loadshape]
+│ │ +        total_avg_loadshape = [j * building_list[0].magnitude for j in building_list[0].avgLoadshape]
+│ │ +
+│ │ +        for i in range(1, len(building_list)):
+│ │ +            total_magnitude += building_list[i].magnitude
+│ │ +            add_loadshape = [j * building_list[i].magnitude for j in building_list[i].loadshape]
+│ │ +            add_avg_loadshape = [j * building_list[i].magnitude for j in building_list[i].avgLoadshape]
+│ │ +            total_loadshape = [total_loadshape[j] + add_loadshape[j] for j in range(len(total_loadshape))]
+│ │ +            total_avg_loadshape = [total_avg_loadshape[j] + add_avg_loadshape[j] for j in range(len(total_avg_loadshape))]
+│ │ +
+│ │ +        total_loadshape = [j / total_magnitude for j in total_loadshape]
+│ │ +        total_avg_loadshape = [j / total_magnitude for j in total_avg_loadshape]
+│ │ +        total_loadshape = np.array(total_loadshape)
+│ │ +        total_avg_loadshape = np.array(total_avg_loadshape)
+│ │ +
+│ │ +        self.magnitude = total_magnitude
+│ │ +
+│ │          super().__init__(total_loadshape, total_avg_loadshape, incomingT_F, supplyT_F, returnT_F, flow_rate)
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/SystemConfig.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/SystemConfig.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/__init__.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systemConfigUtils.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systemConfigUtils.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/ParallelLoopTank.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/ParallelLoopTank.py
+│ │┄ Files identical despite different names
+│ │   --- ecosizer-engine-1.0.7/src/ecosizer_engine_package/objects/systems/SwingTank.py
+│ ├── +++ ecosizer-engine-1.0.8/src/ecosizer_engine_package/objects/systems/SwingTank.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,392 +1,394 @@
+│ │ -from ecosizer_engine_package.objects.SystemConfig import SystemConfig
+│ │ -import numpy as np
+│ │ -from ecosizer_engine_package.objects.Building import Building
+│ │ -from ecosizer_engine_package.constants.Constants import *
+│ │ -from ecosizer_engine_package.objects.systemConfigUtils import roundList, mixVolume, HRLIST_to_MINLIST, getPeakIndices, checkHeatHours
+│ │ -from plotly.graph_objs import Figure, Scatter
+│ │ -from plotly.offline import plot
+│ │ -from plotly.subplots import make_subplots
+│ │ -
+│ │ -class SwingTank(SystemConfig):
+│ │ -
+│ │ -    #Sizing tables, likely won't need anymore? TODO
+│ │ -    Table_Napts = [0, 12, 24, 48, 96]
+│ │ -    sizingTable_EMASHRAE = ["80", "80", "80", "120 - 300", "120 - 300"]
+│ │ -    sizingTable_CA = ["80", "96", "168", "288", "480"]
+│ │ -    sizingTable = [40, 50, 80, 100, 120, 150, 160, 175, 200, 240, 250, 320, 350, 400, 440, 480]
+│ │ -
+│ │ -    def __init__(self, safetyTM, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ -                 doLoadShift = False, cdf_shift = 1, schedule = None, CA = False):
+│ │ -        # check Saftey factor
+│ │ -        if not (isinstance(safetyTM, float) or isinstance(safetyTM, int)) or safetyTM <= 1.:
+│ │ -            raise Exception("The saftey factor for the temperature maintenance system must be greater than 1 or the system will never keep up with the losses.")
+│ │ -        # check building because recirc losses needed before super().__init__()
+│ │ -        if not isinstance(building, Building):
+│ │ -            raise Exception("Error: Building is not valid.")
+│ │ -        
+│ │ -        self.safetyTM = safetyTM
+│ │ -        self.TMVol_G = 300 # TODO Scott to figure out table stuff for self.TMVol_G use 120 for now TODO had to set to 300
+│ │ -        self.element_deadband_F = 8.
+│ │ -        self.TMCap_kBTUhr = self.safetyTM * building.recirc_loss / 1000.
+│ │ -        super().__init__(building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ -                 doLoadShift, cdf_shift, schedule)
+│ │ -    
+│ │ -    def getSizingResults(self):
+│ │ -        """
+│ │ -        Returns the minimum primary volume and heating capacity sizing results
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        list
+│ │ -            self.PVol_G_atStorageT, self.PCap_kBTUhr, self.TMVol_G, self.TMCap_kBTUhr
+│ │ -        """
+│ │ -        return [self.PVol_G_atStorageT, self.PCap_kBTUhr, self.TMVol_G, self.TMCap_kBTUhr]
+│ │ -    
+│ │ -    def _calcRunningVol(self, heatHrs, onOffArr, loadshape, effMixFract = 0.):
+│ │ -        """
+│ │ -        Function to find the running volume for the hot water storage tank, which
+│ │ -        is needed for calculating the total volume for primary sizing and in the event of load shift sizing
+│ │ -        represents the entire volume.
+│ │ -
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        heatHrs : float
+│ │ -            The number of hours primary heating equipment can run in a day.
+│ │ -        onOffArr : ndarray
+│ │ -            array of 1/0's where 1's allow heat pump to run and 0's dissallow. of length 24.
+│ │ -        loadshape : ndarray
+│ │ -            normalized array of length 24 representing the daily loadshape for this calculation.
+│ │ -        effMixFract: float
+│ │ -            The fractional adjustment to the total hot water load for the primary system.
+│ │ -            
+│ │ -        Raises
+│ │ -        ------
+│ │ -        Exception: Error if oversizeing system.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        runV_G : float
+│ │ -            The running volume in gallons
+│ │ -        eff_HW_mix_faction : float
+│ │ -            The fractional adjustment to the total hot water load for the
+│ │ -            primary system. Only used in a swing tank system.
+│ │ -
+│ │ -        """
+│ │ -
+│ │ -        eff_HW_mix_faction = effMixFract
+│ │ -        genrate = np.tile(onOffArr,2) / heatHrs #hourly 
+│ │ -        diffN   = genrate - np.tile(loadshape, 2) #hourly
+│ │ -        diffInd = getPeakIndices(diffN[0:24]) #Days repeat so just get first day!
+│ │ -                
+│ │ -        # Get the running volume ##############################################
+│ │ -        if len(diffInd) == 0:
+│ │ -            raise Exception("ERROR ID 03","The heating rate is greater than the peak volume the system is oversized! Try increasing the hours the heat pump runs in a day",)
+│ │ -
+│ │ -        # Watch out for cases where the heating is to close to the initial peak value so also check the hour afterwards too.
+│ │ -        nRealpeaks = len(diffInd)
+│ │ -        diffInd = np.append(diffInd, diffInd+1)
+│ │ -        diffInd = diffInd[diffInd < 24]
+│ │ -        runV_G = 0
+│ │ -        for peakInd in diffInd:
+│ │ -            hw_out = np.tile(loadshape, 2)
+│ │ -            hw_out = np.array(HRLIST_to_MINLIST(hw_out[peakInd:peakInd+24])) \
+│ │ -                / 60 * self.building.magnitude # to minute
+│ │ -            
+│ │ -            # Simulate the swing tank assuming it hits the peak just above the supply temperature.
+│ │ -            # Get the volume removed for the primary adjusted by the swing tank
+│ │ -            [_, _, hw_out_from_swing] = self.simJustSwing(len(hw_out), hw_out, self.building.supplyT_F + 0.1)
+│ │ -
+│ │ -            # Get the effective adjusted hot water demand on the primary system at the storage temperature.
+│ │ -            temp_eff_HW_mix_faction = sum(hw_out_from_swing)/self.building.magnitude
+│ │ -            genrate_min = np.array(HRLIST_to_MINLIST(genrate[peakInd:peakInd+24])) \
+│ │ -                / 60 * self.building.magnitude * temp_eff_HW_mix_faction # to minute
+│ │ -
+│ │ -            # Get the new difference in generation and demand
+│ │ -            diffN = genrate_min - hw_out_from_swing
+│ │ -            # Get the rest of the day from the start of the peak
+│ │ -            diffCum = np.cumsum(diffN)
+│ │ -
+│ │ -            # Check if additional cases saftey checks have oversized the system.
+│ │ -            if(np.where(diffInd == peakInd)[0][0] >= nRealpeaks):
+│ │ -                if not any(diffCum < 0.):
+│ │ -                    continue
+│ │ -
+│ │ -            new_runV_G = -min(diffCum[diffCum<0.])
+│ │ -
+│ │ -            if runV_G < new_runV_G:
+│ │ -                runV_G = new_runV_G #Minimum value less than 0 or 0.
+│ │ -                eff_HW_mix_faction = temp_eff_HW_mix_faction
+│ │ -
+│ │ -        return runV_G, eff_HW_mix_faction
+│ │ -    
+│ │ -    def simJustSwing(self, N, hw_out, initST=None):
+│ │ -        """
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        N : int
+│ │ -            the length of the simulation in hours
+│ │ -        hw_out : list
+│ │ -
+│ │ -        initST : float
+│ │ -            Primary Swing tank at start of sim
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        hw_outSwing : list
+│ │ -
+│ │ -        """
+│ │ -        swingT = [self.building.supplyT_F] + [0] * (N - 1)
+│ │ -        D_hw = hw_out
+│ │ -
+│ │ -        if initST:
+│ │ -            swingT[0] = initST
+│ │ -        
+│ │ -        # Run the "simulation"
+│ │ -
+│ │ -        hw_outSwing = [0] * N
+│ │ -        hw_outSwing[0] = D_hw[0]
+│ │ -        srun = [0] * N
+│ │ -        swingheating = False
+│ │ -
+│ │ -        for i in range(1, N):
+│ │ -
+│ │ -            hw_outSwing[i] = mixVolume(D_hw[i], swingT[i-1], self.building.incomingT_F, self.building.supplyT_F)
+│ │ -            swingheating, swingT[i], srun[i] = self.__runOneSwingStep(swingheating, swingT[i-1], hw_outSwing[i])
+│ │ -
+│ │ -        return [swingT, srun, hw_outSwing]
+│ │ -    
+│ │ -    def __runOneSwingStep(self, swingheating, Tcurr, hw_out):
+│ │ -        """
+│ │ -        Runs one step on the swing tank step. Since the swing tank is in series
+│ │ -        with the primary system the temperature needs to be tracked to inform
+│ │ -        inputs for primary step. The driving assumptions hereare that the swing
+│ │ -        tank is well mixed and can be tracked by the average tank temperature
+│ │ -        and that the system loses the recirculation loop losses as a constant
+│ │ -        Watts and thus the actual flow rate and return temperature from the
+│ │ -        loop are irrelevant.
+│ │ -
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        Tcurr : float
+│ │ -            The current temperature at the timestep.
+│ │ -        hw_out : float
+│ │ -            The volume of DHW removed from the swing tank system.
+│ │ -        hw_in : float
+│ │ -            The volume of DHW added to the system.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        Tnew : float
+│ │ -            The new swing tank tempeature the timestep assuming the tank is well mixed.
+│ │ -        did_run : int
+│ │ -            Logic if heated during time step (1) or not (0)
+│ │ -
+│ │ -        """
+│ │ -        did_run = 0
+│ │ -
+│ │ -        # Take out the recirc losses
+│ │ -        Tnew = Tcurr - self.building.recirc_loss / 60 / rhoCp / self.TMVol_G
+│ │ -        element_dT = self.TMCap_kBTUhr * 1000  / 60 / rhoCp / self.TMVol_G
+│ │ -
+│ │ -        # Add in heat for a draw
+│ │ -        if hw_out:
+│ │ -            Tnew += hw_out * (self.storageT_F - Tcurr) / self.TMVol_G
+│ │ -
+│ │ -        # Check if the element is heating
+│ │ -        if swingheating:
+│ │ -            Tnew += element_dT #If heating, generate HW and lose HW
+│ │ -            did_run = 1
+│ │ -
+│ │ -            # Check if the element should turn off
+│ │ -            if Tnew > self.building.supplyT_F + self.element_deadband_F: # If too hot
+│ │ -                time_over = (Tnew - (self.building.supplyT_F + self.element_deadband_F)) / element_dT # Temp below turn on / rate of element heating gives time above trigger plus deadband
+│ │ -                Tnew -= element_dT * time_over # Make full with miss volume
+│ │ -                did_run = (1-time_over)
+│ │ -
+│ │ -                swingheating = False
+│ │ -        else:
+│ │ -            if Tnew <= self.building.supplyT_F: # If the element should turn on
+│ │ -                time_missed = (self.building.supplyT_F - Tnew)/element_dT # Temp below turn on / rate of element heating gives time below tigger
+│ │ -                Tnew += element_dT * time_missed # Start heating
+│ │ -
+│ │ -                did_run = time_missed
+│ │ -                swingheating = True # Start heating
+│ │ -
+│ │ -        if Tnew < self.building.supplyT_F: # Check for errors
+│ │ -            raise Exception("The swing tank dropped below the supply temperature! The system is undersized")
+│ │ -
+│ │ -        return swingheating, Tnew, did_run
+│ │ -    
+│ │ -    def _primaryHeatHrs2kBTUHR(self, heathours, effSwingVolFract=1):
+│ │ -        """
+│ │ -        Converts from hours of heating in a day to heating capacity.
+│ │ -
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        heathours : float or numpy.ndarray
+│ │ -            The number of hours primary heating equipment can run.
+│ │ -
+│ │ -        effSwingVolFract : float or numpy.ndarray
+│ │ -            The fractional adjustment to the total hot water load for the
+│ │ -            primary system. Only used in a swing tank system.
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        heatCap
+│ │ -            The heating capacity in [btu/hr].
+│ │ -        """
+│ │ -        checkHeatHours(heathours)
+│ │ -        heatCap = self.building.magnitude * effSwingVolFract / heathours * rhoCp * \
+│ │ -            (self.storageT_F - self.building.incomingT_F) / self.defrostFactor /1000.
+│ │ -        return heatCap
+│ │ -    
+│ │ -    def _getTotalVolAtStorage(self, runningVol_G):
+│ │ -        """
+│ │ -        Calculates the maximum primary storage using the Ecotope sizing methodology
+│ │ -        For a swing tank the storage volume is found at the appropriate temperature in calcRunningVol
+│ │ -        
+│ │ -        Returns
+│ │ -        -------
+│ │ -        totalVolMax : float
+│ │ -            The total storage volume in gallons adjusted to the storage tempreature
+│ │ -        
+│ │ -        """
+│ │ -        return runningVol_G / (1-self.aquaFract)
+│ │ -
+│ │ -    def simulate(self, initPV=None, initST=None, Pcapacity=None, Pvolume=None):
+│ │ -        """
+│ │ -        Inputs
+│ │ -        ------
+│ │ -        initPV : float
+│ │ -            Primary volume at start of the simulation
+│ │ -        initST : float
+│ │ -            Primary Swing tank at start of the simulation
+│ │ -        Pcapacity : float
+│ │ -            The primary heating capacity in kBTUhr to use for the simulation,
+│ │ -            default is the sized system
+│ │ -        Pvolume : float
+│ │ -            The primary storage volume in gallons to  to use for the simulation,
+│ │ -            default is the sized system
+│ │ -        """
+│ │ -
+│ │ -        G_hw, D_hw, V0, Vtrig, pV, pheating = self._getInitialSimulationValues(Pcapacity, Pvolume)
+│ │ -
+│ │ -        swingT = [self.storageT_F] + [0] * (len(G_hw) - 1)
+│ │ -        srun = [0] * (len(G_hw))
+│ │ -        hw_outSwing = [0] * (len(G_hw))
+│ │ -        hw_outSwing[0] = D_hw[0]
+│ │ -        prun = [0] * (len(G_hw))
+│ │ -
+│ │ -        if initPV:
+│ │ -            pV[0] = initPV
+│ │ -        if initST:
+│ │ -            swingT[0] = initST
+│ │ -        
+│ │ -        swingheating = False
+│ │ -
+│ │ -        # Run the "simulation"
+│ │ -        for ii in range(1, len(G_hw)):
+│ │ -            hw_outSwing[ii] = mixVolume(D_hw[ii], swingT[ii-1], self.building.incomingT_F, self.building.supplyT_F)
+│ │ -
+│ │ -            swingheating, swingT[ii], srun[ii] = self.__runOneSwingStep(swingheating, swingT[ii-1], hw_outSwing[ii])
+│ │ -            #Get the mixed generation
+│ │ -            mixedGHW = mixVolume(G_hw[ii], self.storageT_F, self.building.incomingT_F, self.building.supplyT_F)
+│ │ -            pheating, pV[ii], prun[ii] = self.runOnePrimaryStep(pheating, V0, Vtrig, pV[ii-1], hw_outSwing[ii], mixedGHW)
+│ │ -
+│ │ -        return [roundList(pV, 3),
+│ │ -                roundList(G_hw, 3),
+│ │ -                roundList(D_hw, 3),
+│ │ -                roundList(prun, 3),
+│ │ -                roundList(swingT, 3),
+│ │ -                roundList(srun, 3),
+│ │ -                hw_outSwing]
+│ │ -
+│ │ -    def plotStorageLoadSim(self, return_as_div=True):
+│ │ -        """
+│ │ -        Returns a plot of the of the simulation for the minimum sized primary
+│ │ -        system as a div or plotly figure. Can plot the minute level simulation
+│ │ -
+│ │ -        Parameters
+│ │ -        ----------
+│ │ -        return_as_div
+│ │ -            A logical on the output, as a div (true) or as a figure (false)
+│ │ -
+│ │ -        Returns
+│ │ -        -------
+│ │ -        div/fig
+│ │ -            plot_div
+│ │ -        """
+│ │ -        hrind_fromback = 24 # Look at the last 24 hours of the simulation not the whole thing
+│ │ -        [V, G_hw, D_hw, run, swingT, srun, _] = self.simulate()
+│ │ -
+│ │ -        run = np.array(run[-(60*hrind_fromback):])*60
+│ │ -        G_hw = np.array(G_hw[-(60*hrind_fromback):])*60
+│ │ -        D_hw = np.array(D_hw[-(60*hrind_fromback):])*60
+│ │ -        V = np.array(V[-(60*hrind_fromback):])
+│ │ -
+│ │ -        if any(i < 0 for i in V):
+│ │ -            raise Exception("Primary storage ran out of Volume!")
+│ │ -
+│ │ -        fig = make_subplots(rows=2, cols=1,
+│ │ -                            specs=[[{"secondary_y": False}],
+│ │ -                                    [{"secondary_y": True}]])
+│ │ -
+│ │ -
+│ │ -        # Do primary components
+│ │ -        x_data = list(range(len(V)))
+│ │ -
+│ │ -        if self.doLoadShift:
+│ │ -            ls_off = [int(not x)* max(V)*2 for x in G_hw]
+│ │ -            fig.add_trace(Scatter(x=x_data, y=ls_off, name='Load Shift Off Period',
+│ │ -                                  mode='lines', line_shape='hv',
+│ │ -                                  opacity=0.5, marker_color='grey',
+│ │ -                                  fill='tonexty'))
+│ │ -
+│ │ -        fig.add_trace(Scatter(x=x_data, y=V, name='Useful Storage Volume at Storage Temperature',
+│ │ -                              mode='lines', line_shape='hv',
+│ │ -                              opacity=0.8, marker_color='green'))
+│ │ -        fig.add_trace(Scatter(x=x_data, y=run, name = "Hot Water Generation at Storage Temperature",
+│ │ -                              mode='lines', line_shape='hv',
+│ │ -                              opacity=0.8, marker_color='red'))
+│ │ -        fig.add_trace(Scatter(x=x_data, y=D_hw, name='Hot Water Demand at Supply Temperature',
+│ │ -                              mode='lines', line_shape='hv',
+│ │ -                              opacity=0.8, marker_color='blue'))
+│ │ -        fig.update_yaxes(range=[0, np.ceil(max(np.append(V,D_hw))/100)*100])
+│ │ -
+│ │ -        fig.update_layout(title="Hot Water Simulation",
+│ │ -                          xaxis_title= "Minute of Day",
+│ │ -                          yaxis_title="Gallons or\nGallons per Hour",
+│ │ -                          width=900,
+│ │ -                          height=700)
+│ │ -
+│ │ -        # Do Swing Tank components:
+│ │ -        swingT = np.array(swingT[-(60*hrind_fromback):])
+│ │ -        srun = np.array(srun[-(60*hrind_fromback):]) * self.TMCap_kBTUhr/W_TO_BTUHR #srun is logical so convert to kW
+│ │ -
+│ │ -        fig.add_trace(Scatter(x=x_data, y=swingT,
+│ │ -                                name='Swing Tank Temperature',
+│ │ -                                mode='lines', line_shape='hv',
+│ │ -                                opacity=0.8, marker_color='purple',yaxis="y2"),
+│ │ -                        row=2,col=1,
+│ │ -                        secondary_y=False )
+│ │ -
+│ │ -        fig.add_trace(Scatter(x=x_data, y=srun,
+│ │ -                                name='Swing Tank Resistance Element',
+│ │ -                                mode='lines', line_shape='hv',
+│ │ -                                opacity=0.8, marker_color='goldenrod'),
+│ │ -                        row=2,col=1,
+│ │ -                        secondary_y=True)
+│ │ -
+│ │ -        fig.update_yaxes(title_text="Swing Tank\nTemperature (\N{DEGREE SIGN}F)",
+│ │ -                            showgrid=False, row=2, col=1,
+│ │ -                            secondary_y=False, range=[self.building.supplyT_F-5, self.storageT_F])
+│ │ -
+│ │ -        fig.update_yaxes(title_text="Resistance Element\nOutput (kW)",
+│ │ -                            showgrid=False, row=2, col=1,
+│ │ -                            secondary_y=True, range=[0,np.ceil(max(srun)/10)*10])
+│ │ -
+│ │ -        if return_as_div:
+│ │ -            plot_div = plot(fig, output_type='div', show_link=False, link_text="",
+│ │ -                        include_plotlyjs = False)
+│ │ -            return plot_div
+│ │ +from ecosizer_engine_package.objects.SystemConfig import SystemConfig
+│ │ +import numpy as np
+│ │ +from ecosizer_engine_package.objects.Building import Building
+│ │ +from ecosizer_engine_package.constants.Constants import *
+│ │ +from ecosizer_engine_package.objects.systemConfigUtils import roundList, mixVolume, HRLIST_to_MINLIST, getPeakIndices, checkHeatHours
+│ │ +from plotly.graph_objs import Figure, Scatter
+│ │ +from plotly.offline import plot
+│ │ +from plotly.subplots import make_subplots
+│ │ +
+│ │ +class SwingTank(SystemConfig):
+│ │ +
+│ │ +    #Assuming that these swing sizing methodologies will be dropped in next code cycle so they likely can be removed, it not we will need to implement additional swing sizing
+│ │ +    Table_Napts = [0, 12, 24, 48, 96]
+│ │ +    sizingTable = [40, 50, 80, 100, 120, 160, 175, 240, 350] #multiples of standard tank sizes
+│ │ +
+│ │ +    def __init__(self, safetyTM, building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract,
+│ │ +                 doLoadShift = False, cdf_shift = 1, schedule = None):
+│ │ +        # check Saftey factor
+│ │ +        if not (isinstance(safetyTM, float) or isinstance(safetyTM, int)) or safetyTM <= 1.:
+│ │ +            raise Exception("The saftey factor for the temperature maintenance system must be greater than 1 or the system will never keep up with the losses.")
+│ │ +        # check building because recirc losses needed before super().__init__()
+│ │ +        if not isinstance(building, Building):
+│ │ +            raise Exception("Error: Building is not valid.")
+│ │ +        #check if recirc losses require tank larger than 350 gallons
+│ │ +        if building.recirc_loss / (watt_per_gal_recirc_factor * W_TO_BTUHR) > max(self.sizingTable):
+│ │ +            raise Exception("Recirculation losses are too high, consider using multiple central plants.")
+│ │ +
+│ │ +        self.safetyTM = safetyTM
+│ │ +        self.TMVol_G = min([x for x in self.sizingTable if x >= (building.recirc_loss / (watt_per_gal_recirc_factor * W_TO_BTUHR))])
+│ │ +        self.element_deadband_F = 8.
+│ │ +        self.TMCap_kBTUhr = self.safetyTM * building.recirc_loss / 1000.
+│ │ +        
+│ │ +        super().__init__(building, storageT_F, defrostFactor, percentUseable, compRuntime_hr, aquaFract, 
+│ │ +                 doLoadShift, cdf_shift, schedule)
+│ │ +    
+│ │ +    def getSizingResults(self):
+│ │ +        """
+│ │ +        Returns the minimum primary volume and heating capacity sizing results
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        list
+│ │ +            self.PVol_G_atStorageT, self.PCap_kBTUhr, self.TMVol_G, self.TMCap_kBTUhr
+│ │ +        """
+│ │ +        return [self.PVol_G_atStorageT, self.PCap_kBTUhr, self.TMVol_G, self.TMCap_kBTUhr]
+│ │ +    
+│ │ +    def _calcRunningVol(self, heatHrs, onOffArr, loadshape, effMixFract = 0.):
+│ │ +        """
+│ │ +        Function to find the running volume for the hot water storage tank, which
+│ │ +        is needed for calculating the total volume for primary sizing and in the event of load shift sizing
+│ │ +        represents the entire volume.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        heatHrs : float
+│ │ +            The number of hours primary heating equipment can run in a day.
+│ │ +        onOffArr : ndarray
+│ │ +            array of 1/0's where 1's allow heat pump to run and 0's dissallow. of length 24.
+│ │ +        loadshape : ndarray
+│ │ +            normalized array of length 24 representing the daily loadshape for this calculation.
+│ │ +        effMixFract: float
+│ │ +            The fractional adjustment to the total hot water load for the primary system.
+│ │ +            
+│ │ +        Raises
+│ │ +        ------
+│ │ +        Exception: Error if oversizeing system.
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        runV_G : float
+│ │ +            The running volume in gallons
+│ │ +        eff_HW_mix_faction : float
+│ │ +            The fractional adjustment to the total hot water load for the
+│ │ +            primary system. Only used in a swing tank system.
+│ │ +
+│ │ +        """
+│ │ +
+│ │ +        eff_HW_mix_faction = effMixFract
+│ │ +        genrate = np.tile(onOffArr,2) / heatHrs #hourly 
+│ │ +        diffN   = genrate - np.tile(loadshape, 2) #hourly
+│ │ +        diffInd = getPeakIndices(diffN[0:24]) #Days repeat so just get first day!
+│ │ +                
+│ │ +        # Get the running volume ##############################################
+│ │ +        if len(diffInd) == 0:
+│ │ +            raise Exception("ERROR ID 03","The heating rate is greater than the peak volume the system is oversized! Try increasing the hours the heat pump runs in a day",)
+│ │ +
+│ │ +        # Watch out for cases where the heating is to close to the initial peak value so also check the hour afterwards too.
+│ │ +        nRealpeaks = len(diffInd)
+│ │ +        diffInd = np.append(diffInd, diffInd+1)
+│ │ +        diffInd = diffInd[diffInd < 24]
+│ │ +        runV_G = 0
+│ │ +        for peakInd in diffInd:
+│ │ +            hw_out = np.tile(loadshape, 2)
+│ │ +            hw_out = np.array(HRLIST_to_MINLIST(hw_out[peakInd:peakInd+24])) \
+│ │ +                / 60 * self.building.magnitude # to minute
+│ │ +            
+│ │ +            # Simulate the swing tank assuming it hits the peak just above the supply temperature.
+│ │ +            # Get the volume removed for the primary adjusted by the swing tank
+│ │ +            [_, _, hw_out_from_swing] = self.simJustSwing(len(hw_out), hw_out, self.building.supplyT_F + 0.1)
+│ │ +
+│ │ +            # Get the effective adjusted hot water demand on the primary system at the storage temperature.
+│ │ +            temp_eff_HW_mix_faction = sum(hw_out_from_swing)/self.building.magnitude
+│ │ +            genrate_min = np.array(HRLIST_to_MINLIST(genrate[peakInd:peakInd+24])) \
+│ │ +                / 60 * self.building.magnitude * temp_eff_HW_mix_faction # to minute
+│ │ +
+│ │ +            # Get the new difference in generation and demand
+│ │ +            diffN = genrate_min - hw_out_from_swing
+│ │ +            # Get the rest of the day from the start of the peak
+│ │ +            diffCum = np.cumsum(diffN)
+│ │ +
+│ │ +            # Check if additional cases saftey checks have oversized the system.
+│ │ +            if(np.where(diffInd == peakInd)[0][0] >= nRealpeaks):
+│ │ +                if not any(diffCum < 0.):
+│ │ +                    continue
+│ │ +
+│ │ +            new_runV_G = -min(diffCum[diffCum<0.])
+│ │ +
+│ │ +            if runV_G < new_runV_G:
+│ │ +                runV_G = new_runV_G #Minimum value less than 0 or 0.
+│ │ +                eff_HW_mix_faction = temp_eff_HW_mix_faction
+│ │ +
+│ │ +        return runV_G, eff_HW_mix_faction
+│ │ +    
+│ │ +    def simJustSwing(self, N, hw_out, initST=None):
+│ │ +        """
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        N : int
+│ │ +            the length of the simulation in hours
+│ │ +        hw_out : list
+│ │ +
+│ │ +        initST : float
+│ │ +            Primary Swing tank at start of sim
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        hw_outSwing : list
+│ │ +
+│ │ +        """
+│ │ +        swingT = [self.building.supplyT_F] + [0] * (N - 1)
+│ │ +        D_hw = hw_out
+│ │ +
+│ │ +        if initST:
+│ │ +            swingT[0] = initST
+│ │ +        
+│ │ +        # Run the "simulation"
+│ │ +
+│ │ +        hw_outSwing = [0] * N
+│ │ +        hw_outSwing[0] = D_hw[0]
+│ │ +        srun = [0] * N
+│ │ +        swingheating = False
+│ │ +
+│ │ +        for i in range(1, N):
+│ │ +
+│ │ +            hw_outSwing[i] = mixVolume(D_hw[i], swingT[i-1], self.building.incomingT_F, self.building.supplyT_F)
+│ │ +            swingheating, swingT[i], srun[i] = self.__runOneSwingStep(swingheating, swingT[i-1], hw_outSwing[i])
+│ │ +
+│ │ +        return [swingT, srun, hw_outSwing]
+│ │ +    
+│ │ +    def __runOneSwingStep(self, swingheating, Tcurr, hw_out):
+│ │ +        """
+│ │ +        Runs one step on the swing tank step. Since the swing tank is in series
+│ │ +        with the primary system the temperature needs to be tracked to inform
+│ │ +        inputs for primary step. The driving assumptions hereare that the swing
+│ │ +        tank is well mixed and can be tracked by the average tank temperature
+│ │ +        and that the system loses the recirculation loop losses as a constant
+│ │ +        Watts and thus the actual flow rate and return temperature from the
+│ │ +        loop are irrelevant.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        Tcurr : float
+│ │ +            The current temperature at the timestep.
+│ │ +        hw_out : float
+│ │ +            The volume of DHW removed from the swing tank system.
+│ │ +        hw_in : float
+│ │ +            The volume of DHW added to the system.
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        Tnew : float
+│ │ +            The new swing tank tempeature the timestep assuming the tank is well mixed.
+│ │ +        did_run : int
+│ │ +            Logic if heated during time step (1) or not (0)
+│ │ +
+│ │ +        """
+│ │ +        did_run = 0
+│ │ +
+│ │ +        # Take out the recirc losses
+│ │ +        Tnew = Tcurr - self.building.recirc_loss / 60 / rhoCp / self.TMVol_G
+│ │ +        element_dT = self.TMCap_kBTUhr * 1000  / 60 / rhoCp / self.TMVol_G
+│ │ +
+│ │ +        # Add in heat for a draw
+│ │ +        if hw_out:
+│ │ +            Tnew += hw_out * (self.storageT_F - Tcurr) / self.TMVol_G
+│ │ +
+│ │ +        # Check if the element is heating
+│ │ +        if swingheating:
+│ │ +            Tnew += element_dT #If heating, generate HW and lose HW
+│ │ +            did_run = 1
+│ │ +
+│ │ +            # Check if the element should turn off
+│ │ +            if Tnew > self.building.supplyT_F + self.element_deadband_F: # If too hot
+│ │ +                time_over = (Tnew - (self.building.supplyT_F + self.element_deadband_F)) / element_dT # Temp below turn on / rate of element heating gives time above trigger plus deadband
+│ │ +                Tnew -= element_dT * time_over # Make full with miss volume
+│ │ +                did_run = (1-time_over)
+│ │ +
+│ │ +                swingheating = False
+│ │ +        else:
+│ │ +            if Tnew <= self.building.supplyT_F: # If the element should turn on
+│ │ +                time_missed = (self.building.supplyT_F - Tnew)/element_dT # Temp below turn on / rate of element heating gives time below tigger
+│ │ +                Tnew += element_dT * time_missed # Start heating
+│ │ +
+│ │ +                did_run = time_missed
+│ │ +                swingheating = True # Start heating
+│ │ +
+│ │ +        if Tnew < self.building.supplyT_F: # Check for errors
+│ │ +            raise Exception("The swing tank dropped below the supply temperature! The system is undersized")
+│ │ +
+│ │ +        return swingheating, Tnew, did_run
+│ │ +    
+│ │ +    def _primaryHeatHrs2kBTUHR(self, heathours, effSwingVolFract=1):
+│ │ +        """
+│ │ +        Converts from hours of heating in a day to heating capacity.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        heathours : float or numpy.ndarray
+│ │ +            The number of hours primary heating equipment can run.
+│ │ +
+│ │ +        effSwingVolFract : float or numpy.ndarray
+│ │ +            The fractional adjustment to the total hot water load for the
+│ │ +            primary system. Only used in a swing tank system.
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        heatCap
+│ │ +            The heating capacity in [btu/hr].
+│ │ +        """
+│ │ +        checkHeatHours(heathours)
+│ │ +        heatCap = self.building.magnitude * effSwingVolFract / heathours * rhoCp * \
+│ │ +            (self.storageT_F - self.building.incomingT_F) / self.defrostFactor /1000.
+│ │ +        return heatCap
+│ │ +    
+│ │ +    def _getTotalVolAtStorage(self, runningVol_G):
+│ │ +        """
+│ │ +        Calculates the maximum primary storage using the Ecotope sizing methodology
+│ │ +        For a swing tank the storage volume is found at the appropriate temperature in calcRunningVol
+│ │ +        
+│ │ +        Returns
+│ │ +        -------
+│ │ +        totalVolMax : float
+│ │ +            The total storage volume in gallons adjusted to the storage tempreature
+│ │ +        
+│ │ +        """
+│ │ +        return runningVol_G / (1-self.aquaFract)
+│ │ +
+│ │ +    def simulate(self, initPV=None, initST=None, Pcapacity=None, Pvolume=None):
+│ │ +        """
+│ │ +        Inputs
+│ │ +        ------
+│ │ +        initPV : float
+│ │ +            Primary volume at start of the simulation
+│ │ +        initST : float
+│ │ +            Primary Swing tank at start of the simulation
+│ │ +        Pcapacity : float
+│ │ +            The primary heating capacity in kBTUhr to use for the simulation,
+│ │ +            default is the sized system
+│ │ +        Pvolume : float
+│ │ +            The primary storage volume in gallons to  to use for the simulation,
+│ │ +            default is the sized system
+│ │ +        """
+│ │ +
+│ │ +        G_hw, D_hw, V0, Vtrig, pV, pheating = self._getInitialSimulationValues(Pcapacity, Pvolume)
+│ │ +
+│ │ +        swingT = [self.storageT_F] + [0] * (len(G_hw) - 1)
+│ │ +        srun = [0] * (len(G_hw))
+│ │ +        hw_outSwing = [0] * (len(G_hw))
+│ │ +        hw_outSwing[0] = D_hw[0]
+│ │ +        prun = [0] * (len(G_hw))
+│ │ +
+│ │ +        if initPV:
+│ │ +            pV[0] = initPV
+│ │ +        if initST:
+│ │ +            swingT[0] = initST
+│ │ +        
+│ │ +        swingheating = False
+│ │ +
+│ │ +        # Run the "simulation"
+│ │ +        for ii in range(1, len(G_hw)):
+│ │ +            hw_outSwing[ii] = mixVolume(D_hw[ii], swingT[ii-1], self.building.incomingT_F, self.building.supplyT_F)
+│ │ +
+│ │ +            swingheating, swingT[ii], srun[ii] = self.__runOneSwingStep(swingheating, swingT[ii-1], hw_outSwing[ii])
+│ │ +            #Get the mixed generation
+│ │ +            mixedGHW = mixVolume(G_hw[ii], self.storageT_F, self.building.incomingT_F, self.building.supplyT_F)
+│ │ +            pheating, pV[ii], prun[ii] = self.runOnePrimaryStep(pheating, V0, Vtrig, pV[ii-1], hw_outSwing[ii], mixedGHW)
+│ │ +
+│ │ +        return [roundList(pV, 3),
+│ │ +                roundList(G_hw, 3),
+│ │ +                roundList(D_hw, 3),
+│ │ +                roundList(prun, 3),
+│ │ +                roundList(swingT, 3),
+│ │ +                roundList(srun, 3),
+│ │ +                hw_outSwing]
+│ │ +
+│ │ +    def plotStorageLoadSim(self, return_as_div=True):
+│ │ +        """
+│ │ +        Returns a plot of the of the simulation for the minimum sized primary
+│ │ +        system as a div or plotly figure. Can plot the minute level simulation
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        return_as_div
+│ │ +            A logical on the output, as a div (true) or as a figure (false)
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        div/fig
+│ │ +            plot_div
+│ │ +        """
+│ │ +        hrind_fromback = 24 # Look at the last 24 hours of the simulation not the whole thing
+│ │ +        [V, G_hw, D_hw, run, swingT, srun, _] = self.simulate()
+│ │ +
+│ │ +        run = np.array(run[-(60*hrind_fromback):])*60
+│ │ +        G_hw = np.array(G_hw[-(60*hrind_fromback):])*60
+│ │ +        D_hw = np.array(D_hw[-(60*hrind_fromback):])*60
+│ │ +        V = np.array(V[-(60*hrind_fromback):])
+│ │ +
+│ │ +        if any(i < 0 for i in V):
+│ │ +            raise Exception("Primary storage ran out of Volume!")
+│ │ +
+│ │ +        fig = make_subplots(rows=2, cols=1,
+│ │ +                            specs=[[{"secondary_y": False}],
+│ │ +                                    [{"secondary_y": True}]])
+│ │ +
+│ │ +
+│ │ +        # Do primary components
+│ │ +        x_data = list(range(len(V)))
+│ │ +
+│ │ +        if self.doLoadShift:
+│ │ +            ls_off = [int(not x)* max(V)*2 for x in G_hw]
+│ │ +            fig.add_trace(Scatter(x=x_data, y=ls_off, name='Load Shift Off Period',
+│ │ +                                  mode='lines', line_shape='hv',
+│ │ +                                  opacity=0.5, marker_color='grey',
+│ │ +                                  fill='tonexty'))
+│ │ +
+│ │ +        fig.add_trace(Scatter(x=x_data, y=V, name='Useful Storage Volume at Storage Temperature',
+│ │ +                              mode='lines', line_shape='hv',
+│ │ +                              opacity=0.8, marker_color='green'))
+│ │ +        fig.add_trace(Scatter(x=x_data, y=run, name = "Hot Water Generation at Storage Temperature",
+│ │ +                              mode='lines', line_shape='hv',
+│ │ +                              opacity=0.8, marker_color='red'))
+│ │ +        fig.add_trace(Scatter(x=x_data, y=D_hw, name='Hot Water Demand at Supply Temperature',
+│ │ +                              mode='lines', line_shape='hv',
+│ │ +                              opacity=0.8, marker_color='blue'))
+│ │ +        fig.update_yaxes(range=[0, np.ceil(max(np.append(V,D_hw))/100)*100])
+│ │ +
+│ │ +        fig.update_layout(title="Hot Water Simulation",
+│ │ +                          xaxis_title= "Minute of Day",
+│ │ +                          yaxis_title="Gallons or\nGallons per Hour",
+│ │ +                          width=900,
+│ │ +                          height=700)
+│ │ +
+│ │ +        # Do Swing Tank components:
+│ │ +        swingT = np.array(swingT[-(60*hrind_fromback):])
+│ │ +        srun = np.array(srun[-(60*hrind_fromback):]) * self.TMCap_kBTUhr/W_TO_BTUHR #srun is logical so convert to kW
+│ │ +
+│ │ +        fig.add_trace(Scatter(x=x_data, y=swingT,
+│ │ +                                name='Swing Tank Temperature',
+│ │ +                                mode='lines', line_shape='hv',
+│ │ +                                opacity=0.8, marker_color='purple',yaxis="y2"),
+│ │ +                        row=2,col=1,
+│ │ +                        secondary_y=False )
+│ │ +
+│ │ +        fig.add_trace(Scatter(x=x_data, y=srun,
+│ │ +                                name='Swing Tank Resistance Element',
+│ │ +                                mode='lines', line_shape='hv',
+│ │ +                                opacity=0.8, marker_color='goldenrod'),
+│ │ +                        row=2,col=1,
+│ │ +                        secondary_y=True)
+│ │ +
+│ │ +        fig.update_yaxes(title_text="Swing Tank\nTemperature (\N{DEGREE SIGN}F)",
+│ │ +                            showgrid=False, row=2, col=1,
+│ │ +                            secondary_y=False, range=[self.building.supplyT_F-5, self.storageT_F])
+│ │ +
+│ │ +        fig.update_yaxes(title_text="Resistance Element\nOutput (kW)",
+│ │ +                            showgrid=False, row=2, col=1,
+│ │ +                            secondary_y=True, range=[0,np.ceil(max(srun)/10)*10])
+│ │ +
+│ │ +        if return_as_div:
+│ │ +            plot_div = plot(fig, output_type='div', show_link=False, link_text="",
+│ │ +                        include_plotlyjs = False)
+│ │ +            return plot_div
+│ │          return fig

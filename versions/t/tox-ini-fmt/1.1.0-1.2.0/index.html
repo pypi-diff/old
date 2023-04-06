@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/tox_ini_fmt-1.1.0.tar.gz tmp/tox_ini_fmt-1.2.0.tar.gz --html versions/t/tox-ini-fmt/1.1.0-1.2.0/index.html --text versions/t/tox-ini-fmt/1.1.0-1.2.0/diff.txt --markdown versions/t/tox-ini-fmt/1.1.0-1.2.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.0 KB</span></div>
+  <div><span class="source">tmp/tox_ini_fmt-1.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/tox_ini_fmt-1.2.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.0 KB</span></div>
+    <div><span class="source">tox_ini_fmt-1.1.0.tar</span> vs.</div>
+    <div id="tox_ini_fmt--.-.-.tar"><span class="source">tox_ini_fmt-1.2.0.tar</span>
+      <a class="anchor" href="#tox_ini_fmt--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.84 KB</span></div>
+      <div id="tox_ini_fmt--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1804<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tox.ini</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1804<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tox.ini</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1927<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/__main__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1927<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2172<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/cli.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2172<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/py.typed</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/version.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1214<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1214<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/requires.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/requires.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<del>16</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/section_order.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<ins>09</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/section_order.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>4882</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/test_env.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>3123</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/test_env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>3449</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/tox_section.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1058</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/tox_section.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>121</del>4<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/src/tox_ini_fmt/formatter/util.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>548</ins>4<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/src/tox_ini_fmt/formatter/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>165<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/conftest.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>165<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/conftest.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2321<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/test_cli.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2321<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/test_cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2753<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/test_main.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2753<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/test_main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>438<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/test_tox_ini_fmt.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>438<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/test_tox_ini_fmt.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1699<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/formatter/test_line_endings.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1699<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/formatter/test_line_endings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1373<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/formatter/test_requires.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1373<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/formatter/test_requires.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2667<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/formatter/test_section_order.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2667<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/formatter/test_section_order.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>3761</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/formatter/test_test_env.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>4277</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/formatter/test_test_env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>351<del>8</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/tests/formatter/test_tox_section.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>351<ins>1</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/tests/formatter/test_tox_section.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>114<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/.gitignore</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>114<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1023<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/LICENSE.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1023<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/LICENSE.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3658<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/README.md</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3658<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2621<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/pyproject.toml</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2621<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5342<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<del>1</del>.0/PKG-INFO</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5342<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>tox_ini_fmt-1.<ins>2</ins>.0/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tox.ini</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tox.ini"><span class="source">tox_ini_fmt-1.2.0/tox.ini</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tox.ini">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/src/tox_ini_fmt/__main__.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-__main__.py"><span class="source">tox_ini_fmt-1.2.0/src/tox_ini_fmt/__main__.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/src/tox_ini_fmt/cli.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-cli.py"><span class="source">tox_ini_fmt-1.2.0/src/tox_ini_fmt/cli.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/src/tox_ini_fmt/formatter/__init__.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-__init__.py"><span class="source">tox_ini_fmt-1.2.0/src/tox_ini_fmt/formatter/__init__.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/src/tox_ini_fmt/formatter/requires.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-requires.py"><span class="source">tox_ini_fmt-1.2.0/src/tox_ini_fmt/formatter/requires.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-requires.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">663 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/src/tox_ini_fmt/formatter/section_order.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-section_order.py"><span class="source">tox_ini_fmt-1.2.0/src/tox_ini_fmt/formatter/section_order.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--src-tox_ini_fmt-formatter-section_order.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>annotations</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>annotations</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>itertools</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>itertools</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>configparser<span class="dp">·</span>import<span class="dp">·</span>ConfigParser</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>configparser<span class="dp">·</span>import<span class="dp">·</span>ConfigParser</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>.<del>tox_se</del><del>c</del>ti<del>o</del><del>n</del><span class="dp">·</span>import<span class="dp">·</span>order_env_list</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>.<ins>u</ins>ti<ins>l</ins><span class="dp">·</span>import<span class="dp">·</span>order_env_list</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">def<span class="dp">·</span>order_sections(parser:<span class="dp">·</span>ConfigParser,<span class="dp">·</span>pin_toxenvs:<span class="dp">·</span>list[str])<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">5 </td><td class="diffpresent">def<span class="dp">·</span>order_sections(parser:<span class="dp">·</span>ConfigParser,<span class="dp">·</span>pin_toxenvs:<span class="dp">·</span>list[str])<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Start<span class="dp">·</span>with<span class="dp">·</span>tox,<span class="dp">·</span>then<span class="dp">·</span>testenv.<span class="dp">·</span>The<span class="dp">·</span>testenv<span class="dp">·</span>elements<span class="dp">·</span>follow<span class="dp">·</span>the<span class="dp">·</span>order<span class="dp">·</span>within<span class="dp">·</span>envlist.<span class="dp">·</span>Then<span class="dp">·</span>all<span class="dp">·</span>other<span class="dp">·</span>testenv<span class="dp">·</span>elements,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Start<span class="dp">·</span>with<span class="dp">·</span>tox,<span class="dp">·</span>then<span class="dp">·</span>testenv.<span class="dp">·</span>The<span class="dp">·</span>testenv<span class="dp">·</span>elements<span class="dp">·</span>follow<span class="dp">·</span>the<span class="dp">·</span>order<span class="dp">·</span>within<span class="dp">·</span>envlist.<span class="dp">·</span>Then<span class="dp">·</span>all<span class="dp">·</span>other<span class="dp">·</span>testenv<span class="dp">·</span>elements,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>and<span class="dp">·</span>end<span class="dp">·</span>it<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>other<span class="dp">·</span>sections<span class="dp">·</span>present<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>file<span class="dp">·</span>(e.g.<span class="dp">·</span>pytest/mypy<span class="dp">·</span>configuration).</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>and<span class="dp">·</span>end<span class="dp">·</span>it<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>other<span class="dp">·</span>sections<span class="dp">·</span>present<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>file<span class="dp">·</span>(e.g.<span class="dp">·</span>pytest/mypy<span class="dp">·</span>configuration).</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/test_cli.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-test_cli.py"><span class="source">tox_ini_fmt-1.2.0/tests/test_cli.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-test_cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/test_main.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-test_main.py"><span class="source">tox_ini_fmt-1.2.0/tests/test_main.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-test_main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/formatter/test_line_endings.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_line_endings.py"><span class="source">tox_ini_fmt-1.2.0/tests/formatter/test_line_endings.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_line_endings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/formatter/test_requires.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_requires.py"><span class="source">tox_ini_fmt-1.2.0/tests/formatter/test_requires.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_requires.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/formatter/test_section_order.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_section_order.py"><span class="source">tox_ini_fmt-1.2.0/tests/formatter/test_section_order.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_section_order.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.73 KB</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/formatter/test_test_env.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_test_env.py"><span class="source">tox_ini_fmt-1.2.0/tests/formatter/test_test_env.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_test_env.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 15 lines modified</td><td colspan="2">Offset 2, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>textwrap<span class="dp">·</span>import<span class="dp">·</span>dedent</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>textwrap<span class="dp">·</span>import<span class="dp">·</span>dedent</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter<span class="dp">·</span>import<span class="dp">·</span>format_tox_ini</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter<span class="dp">·</span>import<span class="dp">·</span>format_tox_ini</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter.test_env<span class="dp">·</span>import<span class="dp">·</span>to_<del>deps,<span class="dp">·</span>to_</del>ordered_list</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter.test_env<span class="dp">·</span>import<span class="dp">·</span>to_ordered_list</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter.util<span class="dp">·</span>import<span class="dp">·</span>to_py_dependencies</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">def<span class="dp">·</span>test_no_tox_section(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">8 </td><td class="diffpresent">def<span class="dp">·</span>test_no_tox_section(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;&quot;)</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>format_tox_ini(tox_ini)<span class="dp">·</span>==<span class="dp">·</span>&quot;\n&quot;</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>format_tox_ini(tox_ini)<span class="dp">·</span>==<span class="dp">·</span>&quot;\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 136, 17 lines modified</td><td colspan="2">Offset 137, 28 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent">def<span class="dp">·</span>test_fail_on_bad_set_env(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">137 </td><td class="diffpresent">def<span class="dp">·</span>test_fail_on_bad_set_env(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;[testenv]\nsetenv<span class="dp">·</span>=<span class="dp">·</span>A&quot;)</td><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;[testenv]\nsetenv<span class="dp">·</span>=<span class="dp">·</span>A&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>pytest.raises(RuntimeError,<span class="dp">·</span>match=&quot;invalid<span class="dp">·</span>line<span class="dp">·</span>A<span class="dp">·</span>in<span class="dp">·</span>setenv&quot;):</td><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>pytest.raises(RuntimeError,<span class="dp">·</span>match=&quot;invalid<span class="dp">·</span>line<span class="dp">·</span>A<span class="dp">·</span>in<span class="dp">·</span>setenv&quot;):</td></tr>
+<tr class="diffunmodified"><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>format_tox_ini(tox_ini)</td><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>format_tox_ini(tox_ini)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent">def<span class="dp">·</span>test_deps_conditional()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">141 </td><td class="diffpresent">def<span class="dp">·</span>test_deps_conditional()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffchanged"><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>to_deps(</td><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>to_<ins>py_</ins>dep<ins>endencie</ins>s(</td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\ncoverage,codecov:<span class="dp">·</span>coverage\ncodecov:<span class="dp">·</span>codecov&quot;</td><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\ncoverage,codecov:<span class="dp">·</span>coverage\ncodecov:<span class="dp">·</span>codecov&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\n-r{toxinidir}/test-requirements.txt\n-r{toxinidir}/dev-requirements.txt&quot;</td><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\n-r{toxinidir}/test-requirements.txt\n-r{toxinidir}/dev-requirements.txt&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\nvirtue\nb&quot;,</td><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\nvirtue\nb&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>(</td><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>==<span class="dp">·</span>&quot;\n-r{toxinidir}/dev-requirements.txt\n-r{toxinidir}/test-requirements.txt&quot;</td><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>==<span class="dp">·</span>&quot;\n-r{toxinidir}/dev-requirements.txt\n-r{toxinidir}/test-requirements.txt&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\nb\nvirtue&quot;</td><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\nb\nvirtue&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\ncodecov:<span class="dp">·</span>codecov\ncodecov,<span class="dp">·</span>coverage:<span class="dp">·</span>coverage&quot;</td><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;\ncodecov:<span class="dp">·</span>codecov\ncodecov,<span class="dp">·</span>coverage:<span class="dp">·</span>coverage&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">152 </td><td class="diffpresent">def<span class="dp">·</span>test_python_req_sort_by_name()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>to_py_dependencies(&quot;pytest-cov\npytest\npytest-magic&gt;=1\npytest&gt;=1&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>result<span class="dp">·</span>==<span class="dp">·</span>&quot;\npytest\npytest&gt;=1\npytest-cov\npytest-magic&gt;=1&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">155 </td><td class="diffpresent">def<span class="dp">·</span>test_depends_ordering(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;[testenv]\ndepends<span class="dp">·</span>=\n<span class="dp">·</span>py311\n<span class="dp">·</span>py312\n<span class="dp">·</span>py39\n<span class="dp">·</span>p310&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>outcome<span class="dp">·</span>=<span class="dp">·</span>format_tox_ini(tox_ini)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>outcome<span class="dp">·</span>==<span class="dp">·</span>&quot;[testenv]\ndepends<span class="dp">·</span>=\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>py312\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>py311\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>py39\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>p310\n&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">536 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/tests/formatter/test_tox_section.py</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_tox_section.py"><span class="source">tox_ini_fmt-1.2.0/tests/formatter/test_tox_section.py</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--tests-formatter-test_tox_section.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 15 lines modified</td><td colspan="2">Offset 2, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>textwrap<span class="dp">·</span>import<span class="dp">·</span>dedent</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>textwrap<span class="dp">·</span>import<span class="dp">·</span>dedent</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>pytest</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter<span class="dp">·</span>import<span class="dp">·</span>format_tox_ini</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter<span class="dp">·</span>import<span class="dp">·</span>format_tox_ini</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter.<del>tox_se</del><del>c</del>ti<del>o</del><del>n</del><span class="dp">·</span>import<span class="dp">·</span>order_env_list</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>tox_ini_fmt.formatter.<ins>u</ins>ti<ins>l</ins><span class="dp">·</span>import<span class="dp">·</span>order_env_list</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">def<span class="dp">·</span>test_no_tox_section(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">7 </td><td class="diffpresent">def<span class="dp">·</span>test_no_tox_section(tox_ini:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;&quot;)</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tox_ini.write_text(&quot;&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>format_tox_ini(tox_ini)<span class="dp">·</span>==<span class="dp">·</span>&quot;\n&quot;</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>format_tox_ini(tox_ini)<span class="dp">·</span>==<span class="dp">·</span>&quot;\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/LICENSE.txt</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--LICENSE.txt"><span class="source">tox_ini_fmt-1.2.0/LICENSE.txt</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--LICENSE.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/README.md</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--README.md"><span class="source">tox_ini_fmt-1.2.0/README.md</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/pyproject.toml</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--pyproject.toml"><span class="source">tox_ini_fmt-1.2.0/pyproject.toml</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">679 B</span></div>
+      <div><span class="source">tox_ini_fmt-1.1.0/PKG-INFO</span> vs.</div>
+      <div id="tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--PKG-INFO"><span class="source">tox_ini_fmt-1.2.0/PKG-INFO</span>
+        <a class="anchor" href="#tox_ini_fmt--.-.-.tar---tox_ini_fmt--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tox-ini-fmt</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tox-ini-fmt</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<del>1</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<ins>2</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>tox<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>generic<span class="dp">·</span>virtualenv<span class="dp">·</span>management<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>tool</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>tox<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>generic<span class="dp">·</span>virtualenv<span class="dp">·</span>management<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>tool</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://tox.wiki</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://tox.wiki</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/blob/main/README.md#tox-ini-fmt</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/blob/main/README.md#tox-ini-fmt</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Release<span class="dp">·</span>Notes,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/blob/main/CHANGELOG.md</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Release<span class="dp">·</span>Notes,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/blob/main/CHANGELOG.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/tox-dev/tox-ini-fmt/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Bernát<span class="dp">·</span>Gábor<span class="dp">·</span>&lt;gaborjbernat@gmail.com&gt;</td><td class="diffline">10 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Bernát<span class="dp">·</span>Gábor<span class="dp">·</span>&lt;gaborjbernat@gmail.com&gt;</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
