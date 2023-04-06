@@ -1,0 +1,523 @@
+# Comparing `tmp/nanobind-1.1.0-py3-none-any.whl.zip` & `tmp/nanobind-1.1.1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,35 +1,35 @@
+-Zip file size: 168275 bytes, number of entries: 74
+--rw-r--r--  2.0 unx      536 b- defN 23-Apr-05 08:36 nanobind/__init__.py
++Zip file size: 168470 bytes, number of entries: 74
++-rw-r--r--  2.0 unx      536 b- defN 23-Apr-06 11:42 nanobind/__init__.py
+ -rw-r--r--  2.0 unx      839 b- defN 23-Apr-05 07:55 nanobind/__main__.py
+ -rw-r--r--  2.0 unx    21432 b- defN 23-Mar-08 17:01 nanobind/cmake/darwin-ld-cpython.sym
+ -rw-r--r--  2.0 unx    24563 b- defN 23-Mar-08 17:01 nanobind/cmake/darwin-ld-pypy.sym
+ -rw-r--r--  2.0 unx    10363 b- defN 23-Mar-08 17:02 nanobind/cmake/nanobind-config.cmake
+ -rw-r--r--  2.0 unx    11776 b- defN 23-Feb-20 15:57 nanobind/ext/robin_map/include/tsl/robin_growth_policy.h
+ -rw-r--r--  2.0 unx    54550 b- defN 23-Feb-20 15:57 nanobind/ext/robin_map/include/tsl/robin_hash.h
+ -rw-r--r--  2.0 unx    28414 b- defN 23-Feb-20 15:57 nanobind/ext/robin_map/include/tsl/robin_map.h
+ -rw-r--r--  2.0 unx    23593 b- defN 22-Oct-19 09:26 nanobind/ext/robin_map/include/tsl/robin_set.h
+ -rw-r--r--  2.0 unx     5601 b- defN 23-Feb-20 15:29 nanobind/include/nanobind/make_iterator.h
+--rw-r--r--  2.0 unx     1628 b- defN 23-Apr-05 08:36 nanobind/include/nanobind/nanobind.h
++-rw-r--r--  2.0 unx     1628 b- defN 23-Apr-06 11:41 nanobind/include/nanobind/nanobind.h
+ -rw-r--r--  2.0 unx     5626 b- defN 23-Feb-20 15:29 nanobind/include/nanobind/nb_accessor.h
+ -rw-r--r--  2.0 unx     7173 b- defN 23-Apr-05 07:55 nanobind/include/nanobind/nb_attr.h
+ -rw-r--r--  2.0 unx     5325 b- defN 22-Nov-11 13:15 nanobind/include/nanobind/nb_call.h
+--rw-r--r--  2.0 unx    14183 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/nb_cast.h
++-rw-r--r--  2.0 unx    14184 b- defN 23-Apr-05 20:48 nanobind/include/nanobind/nb_cast.h
+ -rw-r--r--  2.0 unx    19171 b- defN 23-Apr-05 07:55 nanobind/include/nanobind/nb_class.h
+ -rw-r--r--  2.0 unx     5507 b- defN 23-Apr-05 07:55 nanobind/include/nanobind/nb_defs.h
+ -rw-r--r--  2.0 unx     4129 b- defN 22-Oct-21 08:25 nanobind/include/nanobind/nb_descr.h
+ -rw-r--r--  2.0 unx      666 b- defN 23-Feb-20 15:29 nanobind/include/nanobind/nb_enums.h
+ -rw-r--r--  2.0 unx     3526 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/nb_error.h
+ -rw-r--r--  2.0 unx     9751 b- defN 23-Feb-27 12:44 nanobind/include/nanobind/nb_func.h
+ -rw-r--r--  2.0 unx    18304 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/nb_lib.h
+ -rw-r--r--  2.0 unx     1167 b- defN 23-Mar-27 14:22 nanobind/include/nanobind/nb_misc.h
+ -rw-r--r--  2.0 unx     1377 b- defN 22-Oct-21 08:25 nanobind/include/nanobind/nb_python.h
+ -rw-r--r--  2.0 unx     6280 b- defN 23-Feb-20 15:29 nanobind/include/nanobind/nb_traits.h
+ -rw-r--r--  2.0 unx     2468 b- defN 22-Nov-06 21:45 nanobind/include/nanobind/nb_tuple.h
+--rw-r--r--  2.0 unx    23438 b- defN 23-Feb-27 12:44 nanobind/include/nanobind/nb_types.h
++-rw-r--r--  2.0 unx    25089 b- defN 23-Apr-06 11:26 nanobind/include/nanobind/nb_types.h
+ -rw-r--r--  2.0 unx    12285 b- defN 23-Apr-05 07:55 nanobind/include/nanobind/ndarray.h
+ -rw-r--r--  2.0 unx     7449 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/operators.h
+ -rw-r--r--  2.0 unx      276 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/tensor.h
+ -rw-r--r--  2.0 unx     3010 b- defN 23-Feb-20 15:29 nanobind/include/nanobind/trampoline.h
+ -rw-r--r--  2.0 unx     8411 b- defN 23-Apr-05 07:55 nanobind/include/nanobind/eigen/dense.h
+ -rw-r--r--  2.0 unx     6486 b- defN 23-Mar-07 23:06 nanobind/include/nanobind/eigen/sparse.h
+ -rw-r--r--  2.0 unx      535 b- defN 22-Oct-21 08:25 nanobind/include/nanobind/stl/array.h
+@@ -64,13 +64,13 @@
+ -rw-r--r--  2.0 unx    39298 b- defN 23-Apr-05 07:55 nanobind/src/nb_func.cpp
+ -rw-r--r--  2.0 unx    19095 b- defN 23-Mar-28 11:28 nanobind/src/nb_internals.cpp
+ -rw-r--r--  2.0 unx     8552 b- defN 23-Mar-07 23:06 nanobind/src/nb_internals.h
+ -rw-r--r--  2.0 unx    19495 b- defN 23-Apr-05 08:25 nanobind/src/nb_ndarray.cpp
+ -rw-r--r--  2.0 unx    45214 b- defN 23-Mar-28 11:28 nanobind/src/nb_type.cpp
+ -rw-r--r--  2.0 unx    18990 b- defN 23-Feb-27 08:33 nanobind/src/ndarray.cpp
+ -rw-r--r--  2.0 unx     3701 b- defN 22-Nov-03 20:52 nanobind/src/trampoline.cpp
+--rw-r--r--  2.0 unx     1521 b- defN 23-Apr-05 08:38 nanobind-1.1.0.dist-info/LICENSE
+--rw-r--r--  2.0 unx     1248 b- defN 23-Apr-05 08:38 nanobind-1.1.0.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 08:38 nanobind-1.1.0.dist-info/WHEEL
+--rw-r--r--  2.0 unx        9 b- defN 23-Apr-05 08:38 nanobind-1.1.0.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     6823 b- defN 23-Apr-05 08:38 nanobind-1.1.0.dist-info/RECORD
+-74 files, 623299 bytes uncompressed, 157317 bytes compressed:  74.8%
++-rw-r--r--  2.0 unx     1521 b- defN 23-Apr-06 11:44 nanobind-1.1.1.dist-info/LICENSE
++-rw-r--r--  2.0 unx     1248 b- defN 23-Apr-06 11:44 nanobind-1.1.1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 11:44 nanobind-1.1.1.dist-info/WHEEL
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-06 11:44 nanobind-1.1.1.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     6823 b- defN 23-Apr-06 11:44 nanobind-1.1.1.dist-info/RECORD
++74 files, 624951 bytes uncompressed, 157512 bytes compressed:  74.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -201,23 +201,23 @@
+ 
+ Filename: nanobind/src/ndarray.cpp
+ Comment: 
+ 
+ Filename: nanobind/src/trampoline.cpp
+ Comment: 
+ 
+-Filename: nanobind-1.1.0.dist-info/LICENSE
++Filename: nanobind-1.1.1.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: nanobind-1.1.0.dist-info/METADATA
++Filename: nanobind-1.1.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: nanobind-1.1.0.dist-info/WHEEL
++Filename: nanobind-1.1.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: nanobind-1.1.0.dist-info/top_level.txt
++Filename: nanobind-1.1.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: nanobind-1.1.0.dist-info/RECORD
++Filename: nanobind-1.1.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## nanobind/__init__.py
+
+```diff
+@@ -8,14 +8,14 @@
+     "Return the path to the nanobind include directory"
+     return os.path.join(os.path.abspath(os.path.dirname(__file__)), "include")
+ 
+ def cmake_dir() -> str:
+     "Return the path to the nanobind CMake module directory."
+     return os.path.join(os.path.abspath(os.path.dirname(__file__)), "cmake")
+ 
+-__version__ = "1.1.0"
++__version__ = "1.1.1"
+ 
+ __all__ = (
+     "__version__",
+     "include_dir",
+     "cmake_dir",
+ )
+```
+
+## nanobind/include/nanobind/nanobind.h
+
+```diff
+@@ -19,15 +19,15 @@
+    // The next two lines disable warnings that are "just noise" according to Stephan T. Lavavej (a MSFT STL maintainer)
+ #  pragma warning(disable: 4275) // non dll-interface class 'std::exception' used as base for dll-interface class [..]
+ #  pragma warning(disable: 4251) // [..] needs to have a dll-interface to be used by clients of class [..]
+ #endif
+ 
+ #define NB_VERSION_MAJOR 1
+ #define NB_VERSION_MINOR 1
+-#define NB_VERSION_PATCH 0
++#define NB_VERSION_PATCH 1
+ 
+ // Core C++ headers that nanobind depends on
+ #include <cstdint>
+ #include <exception>
+ #include <stdexcept>
+ #include <type_traits>
+ #include <typeinfo>
+```
+
+## nanobind/include/nanobind/nb_cast.h
+
+```diff
+@@ -216,15 +216,15 @@
+         Caster c;
+         if (!c.from_python(src, flags, cleanup))
+             return false;
+         value = T2{ (T &&) c.value };
+         return true;
+     }
+ 
+-    static handle from_cpp(const T &src, rv_policy policy,
++    static handle from_cpp(const T2 &src, rv_policy policy,
+                            cleanup_list *cleanup) noexcept {
+         return Caster::from_cpp(src.value, policy, cleanup);
+     }
+ };
+ 
+ template <typename T>
+ struct type_caster<T, enable_if_t<std::is_base_of_v<detail::api_tag, T>>> {
+```
+
+## nanobind/include/nanobind/nb_types.h
+
+```diff
+@@ -23,50 +23,65 @@
+ 
+ /// Like NB_OBJECT but allow null-initialization
+ #define NB_OBJECT_DEFAULT(Type, Parent, Str, Check)                            \
+     NB_OBJECT(Type, Parent, Str, Check)                                        \
+     NB_INLINE Type() : Parent() {}
+ 
+ /// Helper macro to create detail::api comparison functions
+-#define NB_API_COMP(name, op)                                                  \
+-    template <typename T> NB_INLINE bool name(const api<T> &o) const {         \
++#define NB_DECL_COMP(name)                                                     \
++    template <typename T2> NB_INLINE bool name(const api<T2> &o) const;
++
++#define NB_IMPL_COMP(name, op)                                                 \
++    template <typename T1> template <typename T2>                              \
++    NB_INLINE bool api<T1>::name(const api<T2> &o) const {                     \
+         return detail::obj_comp(derived().ptr(), o.derived().ptr(), op);       \
+     }
+ 
+-/// Helper macro to create detail::api unary operators
+-#define NB_API_OP_1(name, op)                                                  \
+-    NB_INLINE auto name() const {                                              \
++/// Helper macros to create detail::api unary operators
++#define NB_DECL_OP_1(name)                                                     \
++    NB_INLINE object name() const;
++
++#define NB_IMPL_OP_1(name, op)                                                 \
++    template <typename T> NB_INLINE object api<T>::name() const {              \
+         return steal(detail::obj_op_1(derived().ptr(), op));                   \
+     }
+ 
+-/// Helper macro to create detail::api binary operators
+-#define NB_API_OP_2(name, op)                                                  \
+-    template <typename T> NB_INLINE auto name(const api<T> &o) const {         \
++/// Helper macros to create detail::api binary operators
++#define NB_DECL_OP_2(name)                                                     \
++    template <typename T2> NB_INLINE object name(const api<T2> &o) const;
++
++#define NB_IMPL_OP_2(name, op)                                                 \
++    template <typename T1> template <typename T2>                              \
++    NB_INLINE object api<T1>::name(const api<T2> &o) const {                   \
+         return steal(                                                          \
+             detail::obj_op_2(derived().ptr(), o.derived().ptr(), op));         \
+     }
+ 
+-#define NB_API_OP_2_I(name, op)                                                \
+-    template <typename T> NB_INLINE auto name(const api<T> &o) {               \
++#define NB_DECL_OP_2_I(name)                                                   \
++    template <typename T2> NB_INLINE object name(const api<T2> &o);
++
++#define NB_IMPL_OP_2_I(name, op)                                               \
++    template <typename T1> template <typename T2>                              \
++    NB_INLINE object api<T1>::name(const api<T2> &o) {                         \
+         return steal(                                                          \
+             detail::obj_op_2(derived().ptr(), o.derived().ptr(), op));         \
+     }
+ 
+-#define NB_API_OP_2_IO(name)                                                   \
++#define NB_IMPL_OP_2_IO(name)                                                  \
+     template <typename T> NB_INLINE decltype(auto) name(const api<T> &o) {     \
+         return operator=(handle::name(o));                                     \
+     }
+ 
+ // A few forward declarations
+ class object;
+ class handle;
+ class iterator;
+ 
+-template <typename T = object> T borrow(handle h);
+-template <typename T = object> T steal(handle h);
++template <typename T = object> NB_INLINE T borrow(handle h);
++template <typename T = object> NB_INLINE T steal(handle h);
+ 
+ NAMESPACE_BEGIN(detail)
+ 
+ template <typename T, typename SFINAE = int> struct type_caster;
+ template <typename T> using make_caster = type_caster<intrinsic_t<T>>;
+ 
+ template <typename Impl> class accessor;
+@@ -108,41 +123,41 @@
+     accessor<num_item> operator[](T key) const;
+     args_proxy operator*() const;
+ 
+     template <rv_policy policy = rv_policy::automatic_reference,
+               typename... Args>
+     object operator()(Args &&...args) const;
+ 
+-    NB_API_COMP(equal,      Py_EQ)
+-    NB_API_COMP(not_equal,  Py_NE)
+-    NB_API_COMP(operator<,  Py_LT)
+-    NB_API_COMP(operator<=, Py_LE)
+-    NB_API_COMP(operator>,  Py_GT)
+-    NB_API_COMP(operator>=, Py_GE)
+-    NB_API_OP_1(operator-,  PyNumber_Negative)
+-    NB_API_OP_1(operator~,  PyNumber_Invert)
+-    NB_API_OP_2(operator+,  PyNumber_Add)
+-    NB_API_OP_2(operator-,  PyNumber_Subtract)
+-    NB_API_OP_2(operator*,  PyNumber_Multiply)
+-    NB_API_OP_2(operator/,  PyNumber_TrueDivide)
+-    NB_API_OP_2(operator|,  PyNumber_Or)
+-    NB_API_OP_2(operator&,  PyNumber_And)
+-    NB_API_OP_2(operator^,  PyNumber_Xor)
+-    NB_API_OP_2(operator<<, PyNumber_Lshift)
+-    NB_API_OP_2(operator>>, PyNumber_Rshift)
+-    NB_API_OP_2(floor_div,  PyNumber_FloorDivide)
+-    NB_API_OP_2_I(operator+=, PyNumber_InPlaceAdd)
+-    NB_API_OP_2_I(operator-=, PyNumber_InPlaceSubtract)
+-    NB_API_OP_2_I(operator*=, PyNumber_InPlaceMultiply)
+-    NB_API_OP_2_I(operator/=, PyNumber_InPlaceTrueDivide)
+-    NB_API_OP_2_I(operator|=, PyNumber_InPlaceOr)
+-    NB_API_OP_2_I(operator&=, PyNumber_InPlaceAnd)
+-    NB_API_OP_2_I(operator^=, PyNumber_InPlaceXor)
+-    NB_API_OP_2_I(operator<<=,PyNumber_InPlaceLshift)
+-    NB_API_OP_2_I(operator>>=,PyNumber_InPlaceRshift)
++    NB_DECL_COMP(equal)
++    NB_DECL_COMP(not_equal)
++    NB_DECL_COMP(operator<)
++    NB_DECL_COMP(operator<=)
++    NB_DECL_COMP(operator>)
++    NB_DECL_COMP(operator>=)
++    NB_DECL_OP_1(operator-)
++    NB_DECL_OP_1(operator~)
++    NB_DECL_OP_2(operator+)
++    NB_DECL_OP_2(operator-)
++    NB_DECL_OP_2(operator*)
++    NB_DECL_OP_2(operator/)
++    NB_DECL_OP_2(operator|)
++    NB_DECL_OP_2(operator&)
++    NB_DECL_OP_2(operator^)
++    NB_DECL_OP_2(operator<<)
++    NB_DECL_OP_2(operator>>)
++    NB_DECL_OP_2(floor_div)
++    NB_DECL_OP_2_I(operator+=)
++    NB_DECL_OP_2_I(operator-=)
++    NB_DECL_OP_2_I(operator*=)
++    NB_DECL_OP_2_I(operator/=)
++    NB_DECL_OP_2_I(operator|=)
++    NB_DECL_OP_2_I(operator&=)
++    NB_DECL_OP_2_I(operator^=)
++    NB_DECL_OP_2_I(operator<<=)
++    NB_DECL_OP_2_I(operator>>=)
+ };
+ 
+ NAMESPACE_END(detail)
+ 
+ class handle : public detail::api<handle> {
+     friend class python_error;
+     friend struct detail::str_attr;
+@@ -175,15 +190,15 @@
+         Py_XDECREF(m_ptr);
+ #else
+         detail::decref_checked(m_ptr);
+ #endif
+         return *this;
+     }
+ 
+-    NB_INLINE operator bool() const { return m_ptr != nullptr; }
++    NB_INLINE explicit operator bool() const { return m_ptr != nullptr; }
+     NB_INLINE PyObject *ptr() const { return m_ptr; }
+     NB_INLINE static bool check_(handle) { return true; }
+ 
+ protected:
+     PyObject *m_ptr = nullptr;
+ };
+ 
+@@ -221,23 +236,23 @@
+         handle temp(m_ptr);
+         m_ptr = o.m_ptr;
+         o.m_ptr = nullptr;
+         temp.dec_ref();
+         return *this;
+     }
+ 
+-    NB_API_OP_2_IO(operator+=)
+-    NB_API_OP_2_IO(operator-=)
+-    NB_API_OP_2_IO(operator*=)
+-    NB_API_OP_2_IO(operator/=)
+-    NB_API_OP_2_IO(operator|=)
+-    NB_API_OP_2_IO(operator&=)
+-    NB_API_OP_2_IO(operator^=)
+-    NB_API_OP_2_IO(operator<<=)
+-    NB_API_OP_2_IO(operator>>=)
++    NB_IMPL_OP_2_IO(operator+=)
++    NB_IMPL_OP_2_IO(operator-=)
++    NB_IMPL_OP_2_IO(operator*=)
++    NB_IMPL_OP_2_IO(operator/=)
++    NB_IMPL_OP_2_IO(operator|=)
++    NB_IMPL_OP_2_IO(operator&=)
++    NB_IMPL_OP_2_IO(operator^=)
++    NB_IMPL_OP_2_IO(operator<<=)
++    NB_IMPL_OP_2_IO(operator>>=)
+ };
+ 
+ template <typename T> NB_INLINE T borrow(handle h) {
+     return { h, detail::borrow_t() };
+ }
+ 
+ template <typename T> NB_INLINE T steal(handle h) {
+@@ -665,14 +680,51 @@
+ 
+ private:
+     handle h;
+     Py_ssize_t pos;
+     PyObject *key = nullptr, *value = nullptr;
+ };
+ 
++NB_IMPL_COMP(equal,      Py_EQ)
++NB_IMPL_COMP(not_equal,  Py_NE)
++NB_IMPL_COMP(operator<,  Py_LT)
++NB_IMPL_COMP(operator<=, Py_LE)
++NB_IMPL_COMP(operator>,  Py_GT)
++NB_IMPL_COMP(operator>=, Py_GE)
++NB_IMPL_OP_1(operator-,  PyNumber_Negative)
++NB_IMPL_OP_1(operator~,  PyNumber_Invert)
++NB_IMPL_OP_2(operator+,  PyNumber_Add)
++NB_IMPL_OP_2(operator-,  PyNumber_Subtract)
++NB_IMPL_OP_2(operator*,  PyNumber_Multiply)
++NB_IMPL_OP_2(operator/,  PyNumber_TrueDivide)
++NB_IMPL_OP_2(operator|,  PyNumber_Or)
++NB_IMPL_OP_2(operator&,  PyNumber_And)
++NB_IMPL_OP_2(operator^,  PyNumber_Xor)
++NB_IMPL_OP_2(operator<<, PyNumber_Lshift)
++NB_IMPL_OP_2(operator>>, PyNumber_Rshift)
++NB_IMPL_OP_2(floor_div,  PyNumber_FloorDivide)
++NB_IMPL_OP_2_I(operator+=, PyNumber_InPlaceAdd)
++NB_IMPL_OP_2_I(operator-=, PyNumber_InPlaceSubtract)
++NB_IMPL_OP_2_I(operator*=, PyNumber_InPlaceMultiply)
++NB_IMPL_OP_2_I(operator/=, PyNumber_InPlaceTrueDivide)
++NB_IMPL_OP_2_I(operator|=, PyNumber_InPlaceOr)
++NB_IMPL_OP_2_I(operator&=, PyNumber_InPlaceAnd)
++NB_IMPL_OP_2_I(operator^=, PyNumber_InPlaceXor)
++NB_IMPL_OP_2_I(operator<<=,PyNumber_InPlaceLshift)
++NB_IMPL_OP_2_I(operator>>=,PyNumber_InPlaceRshift)
++
++#undef NB_DECL_COMP
++#undef NB_IMPL_COMP
++#undef NB_DECL_OP_1
++#undef NB_IMPL_OP_1
++#undef NB_DECL_OP_2
++#undef NB_IMPL_OP_2
++#undef NB_DECL_OP_2_I
++#undef NB_IMPL_OP_2_I
++#undef NB_IMPL_OP_2_IO
+ 
+ NAMESPACE_END(detail)
+ 
+ inline detail::dict_iterator dict::begin() const { return { *this }; }
+ inline detail::dict_iterator dict::end() const { return { }; }
+ 
+ #if !defined(Py_LIMITED_API) && !defined(PYPY_VERSION)
+@@ -689,13 +741,7 @@
+ inline detail::fast_iterator list::end() const {
+     PyListObject *v = (PyListObject *) m_ptr;
+     return v->ob_item + v->ob_base.ob_size;
+ }
+ #endif
+ 
+ NAMESPACE_END(NB_NAMESPACE)
+-
+-#undef NB_API_COMP
+-#undef NB_API_OP_1
+-#undef NB_API_OP_2
+-#undef NB_API_OP_2_I
+-#undef NB_API_OP_2_IO
+```
+
+## Comparing `nanobind-1.1.0.dist-info/LICENSE` & `nanobind-1.1.1.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `nanobind-1.1.0.dist-info/METADATA` & `nanobind-1.1.1.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: nanobind
+-Version: 1.1.0
++Version: 1.1.1
+ Summary: nanobind: tiny and efficient C++/Python bindings
+ Home-page: https://github.com/wjakob/nanobind
+ Author: Wenzel Jakob
+ Author-email: wenzel.jakob@epfl.ch
+ License: BSD
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+## Comparing `nanobind-1.1.0.dist-info/RECORD` & `nanobind-1.1.1.dist-info/RECORD`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,34 +1,34 @@
+-nanobind/__init__.py,sha256=VbV6jsIl5m7iM8bDFY5uS0CGS6QoUGrzGEHnK8GRCxk,536
++nanobind/__init__.py,sha256=PbPTDoZOnLwzhQ3mZC4esADkpqydcdxY4qlp109RUr4,536
+ nanobind/__main__.py,sha256=pOZfAi6HXCHLnzBZ0Ax1jJ-PbFDYJ-XP51yG5AgTmjA,839
+ nanobind/cmake/darwin-ld-cpython.sym,sha256=qi-ZCmrzmvlN6QdhfUmQLQAyVaAg7dhH-DTSpGWhvoQ,21432
+ nanobind/cmake/darwin-ld-pypy.sym,sha256=QF3OnNiEZfCskhbCig1FaaNF3DfkjDzLTMcP94o1_uE,24563
+ nanobind/cmake/nanobind-config.cmake,sha256=sqWcyrMVyu6Efelrbe0wQDLrVXR9-o5s6NzE7Omz2rs,10363
+ nanobind/ext/robin_map/include/tsl/robin_growth_policy.h,sha256=LJaMwboQYidGGoaldoAplZDcslLeT5sP6L8lZghVaDU,11776
+ nanobind/ext/robin_map/include/tsl/robin_hash.h,sha256=9jsUsbV085jb736e5Z6MJIYUSvrwBpLYmagPsOTiglc,54550
+ nanobind/ext/robin_map/include/tsl/robin_map.h,sha256=WQiZfe4hA3mzQLlJXDZQax0rWjctSnyJnB9jJJgeC6Y,28414
+ nanobind/ext/robin_map/include/tsl/robin_set.h,sha256=m5o-74heDBBcvGNsGME8_Y4wiLMO8Ax8t70urBH6srk,23593
+ nanobind/include/nanobind/make_iterator.h,sha256=WKcEOQc_L_Mhhk1GgwwvsysUTbSgiBCmDnm0X7K330o,5601
+-nanobind/include/nanobind/nanobind.h,sha256=NPCBr1zIPlPw3btlA6DqC-PWJDoMFImhmXI9rn54hgI,1628
++nanobind/include/nanobind/nanobind.h,sha256=aLeMVo1ZNjdt9Ad4Txz3k1wfeWZV2apeIaWO95lzDbE,1628
+ nanobind/include/nanobind/nb_accessor.h,sha256=27K0E4cJYSBtD5VVsBtrLCWZTnTXXdr0IwtqLHeQ0aQ,5626
+ nanobind/include/nanobind/nb_attr.h,sha256=REBdouY7U8ZHif3rTWv8Ar73RarjMeXSev-w5JHR3QU,7173
+ nanobind/include/nanobind/nb_call.h,sha256=nNDUBNN8bbTgMUYRry_I7SR8deNHs2P1T7pPemCFK9k,5325
+-nanobind/include/nanobind/nb_cast.h,sha256=NK8VhOyASThnDl47k_ZMKiEHxVPpZF6IIJCbtjoCOTs,14183
++nanobind/include/nanobind/nb_cast.h,sha256=FnKKSKayMZmwF_CXWkab5WBsHmjdZZfNIicagotJp9A,14184
+ nanobind/include/nanobind/nb_class.h,sha256=6_emXw1sBxTaxg0GQusA2ltsMCP_yIMiMwhV_Y2AAr0,19171
+ nanobind/include/nanobind/nb_defs.h,sha256=3oQ6zkZwCO6VVDqjeh6l_77U2rkEDdhGMeGctUdNOzQ,5507
+ nanobind/include/nanobind/nb_descr.h,sha256=tX2-_5kHTuIe62iGi0sqn-QehGNYGjcL32OmeWoYY2g,4129
+ nanobind/include/nanobind/nb_enums.h,sha256=JSxGC4c2YyN83gmcTVV450KLJX_RTRPAHRPUhxuAvds,666
+ nanobind/include/nanobind/nb_error.h,sha256=Z8rGRtW9D7FjIOeS0G_tXYN5zN1LAvZNvVQ5O3r2FBs,3526
+ nanobind/include/nanobind/nb_func.h,sha256=QMxiOQf6LnI5hDcrHa5r-KEkXLfbEJ-n64xmL1Y98Rk,9751
+ nanobind/include/nanobind/nb_lib.h,sha256=g5Biz2O7Gf9MZ0da87OoHmpn8WPLi0PRrHHU2hfTIeY,18304
+ nanobind/include/nanobind/nb_misc.h,sha256=D9NdER_kwi7qHGgYtKTsjPKHIkZqcGpqG9wT9XMtT74,1167
+ nanobind/include/nanobind/nb_python.h,sha256=tuHjb9Dd4X5MOILJdgOFN_7RBIAAq3Y1bL_-POIRqKU,1377
+ nanobind/include/nanobind/nb_traits.h,sha256=eJNLIHHx_1PMYHJwxsbf_QaM_1fGb3vsj1OES-7hCb8,6280
+ nanobind/include/nanobind/nb_tuple.h,sha256=aqqTm9DkjH_SvDuPLKjU3Ya1lgs_LWyaQMkhTQRZoIc,2468
+-nanobind/include/nanobind/nb_types.h,sha256=7z3eb8ymdiUCTC49JrYzpK4aCvsNtvWn_uYHhViXhBs,23438
++nanobind/include/nanobind/nb_types.h,sha256=xxXX5X9XsMbNNcagEOC_6lFi78qpN26G3YH4R9L5bq4,25089
+ nanobind/include/nanobind/ndarray.h,sha256=pUyfae5pWFHzdpw_VJo4DCYED5sehEYx0W-PgVXfSq4,12285
+ nanobind/include/nanobind/operators.h,sha256=jSHKzNE_NDc--E65ycUsU6b0x1O_ThpzzCMV4uv5IE4,7449
+ nanobind/include/nanobind/tensor.h,sha256=TkAx35liSSU7ptGwsSdPMlbuCVlhZcnBgvPVGCf88fY,276
+ nanobind/include/nanobind/trampoline.h,sha256=pbOUaSdforI340HWsVPJ96xuNIVPTRDrnD6ag2kufQY,3010
+ nanobind/include/nanobind/eigen/dense.h,sha256=XXvpoh1sszCq6x_hxpVnhP11UwDNOvTiHx0YDBgxqZo,8411
+ nanobind/include/nanobind/eigen/sparse.h,sha256=M1y9wF0AqVaIXXywzQVFtGZ91t5z8dytv_st5CxBhjg,6486
+ nanobind/include/nanobind/stl/array.h,sha256=-jdVTy9gcqjH4kBVWbm52dGecHr90rwkusJX6ucHrII,535
+@@ -63,12 +63,12 @@
+ nanobind/src/nb_func.cpp,sha256=rIatUgEtYMaJrm7SMNbN0ZfsFLWN9x2z8SvlWh9cHCw,39298
+ nanobind/src/nb_internals.cpp,sha256=XSPHc7M0In4YQFKW7qRRl0RCzcdCY_8ybrmi3JDb0Mk,19095
+ nanobind/src/nb_internals.h,sha256=qFOrJGJOfBy1i8KZeigOWTiGq86t0kCKMF7GbzZd-uA,8552
+ nanobind/src/nb_ndarray.cpp,sha256=st0LPnCSy5cWrX25dxUgdaRK_ARDl_IocFQCDm1uISA,19495
+ nanobind/src/nb_type.cpp,sha256=LabD6dP4eOE8-mDtsQAbLlJtYOelKgMQ-Dwdc5eC28g,45214
+ nanobind/src/ndarray.cpp,sha256=Dwe3-ytb-V2fMh-a_BjoMPmtXTwclXnT9vuE8XiqR2o,18990
+ nanobind/src/trampoline.cpp,sha256=wepoIarbrDwA_rBD2yz7KQn4Hoyixai-sxDRrl8RNXY,3701
+-nanobind-1.1.0.dist-info/LICENSE,sha256=8wUJGk5XgFhwsheijqSx8WYQ7s6EV9I3D4Iqlpa3WDY,1521
+-nanobind-1.1.0.dist-info/METADATA,sha256=Tb7AL8ILDPDqkl_Wre2Q2kj4ReYQAK6YRSLQ6xcO8Cg,1248
+-nanobind-1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-nanobind-1.1.0.dist-info/top_level.txt,sha256=3pRezwhnZCbmPhzcbPKfaw-IRYTQ6WbLWu14UZgONhs,9
+-nanobind-1.1.0.dist-info/RECORD,,
++nanobind-1.1.1.dist-info/LICENSE,sha256=8wUJGk5XgFhwsheijqSx8WYQ7s6EV9I3D4Iqlpa3WDY,1521
++nanobind-1.1.1.dist-info/METADATA,sha256=jpy6dr2kTdOSFacOxeKCCT2bU9yeWc5zCdKQzGypnVQ,1248
++nanobind-1.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++nanobind-1.1.1.dist-info/top_level.txt,sha256=3pRezwhnZCbmPhzcbPKfaw-IRYTQ6WbLWu14UZgONhs,9
++nanobind-1.1.1.dist-info/RECORD,,
+```
+

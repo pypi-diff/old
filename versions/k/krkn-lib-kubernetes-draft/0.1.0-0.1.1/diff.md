@@ -1,0 +1,63 @@
+# Comparing `tmp/krkn_lib_kubernetes_draft-0.1.0.tar.gz` & `tmp/krkn_lib_kubernetes_draft-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "krkn_lib_kubernetes_draft-0.1.0.tar", max compression
++gzip compressed data, was "krkn_lib_kubernetes_draft-0.1.1.tar", max compression
+```
+
+## Comparing `krkn_lib_kubernetes_draft-0.1.0.tar` & `krkn_lib_kubernetes_draft-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,7 @@
+--rw-r--r--   0        0        0    10173 2023-04-06 11:06:57.736383 krkn_lib_kubernetes_draft-0.1.0/LICENSE
+--rw-r--r--   0        0        0       22 2023-04-06 11:06:57.736383 krkn_lib_kubernetes_draft-0.1.0/README.md
+--rw-r--r--   0        0        0      488 2023-04-06 11:06:57.812387 krkn_lib_kubernetes_draft-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0       63 2023-04-06 11:06:57.736383 krkn_lib_kubernetes_draft-0.1.0/src/krkn_lib_kubernetes/__init__.py
+--rw-r--r--   0        0        0    32904 2023-04-06 11:07:09.433068 krkn_lib_kubernetes_draft-0.1.0/src/krkn_lib_kubernetes/client.py
+--rw-r--r--   0        0        0     1690 2023-04-06 11:06:57.736383 krkn_lib_kubernetes_draft-0.1.0/src/krkn_lib_kubernetes/resources.py
+--rw-r--r--   0        0        0      671 1970-01-01 00:00:00.000000 krkn_lib_kubernetes_draft-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0    10173 2023-04-06 11:44:10.783346 krkn_lib_kubernetes_draft-0.1.1/LICENSE
++-rw-r--r--   0        0        0       22 2023-04-06 11:44:10.783346 krkn_lib_kubernetes_draft-0.1.1/README.md
++-rw-r--r--   0        0        0      502 2023-04-06 11:44:10.871348 krkn_lib_kubernetes_draft-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0       63 2023-04-06 11:44:10.787346 krkn_lib_kubernetes_draft-0.1.1/src/krkn_lib_kubernetes_draft/__init__.py
++-rw-r--r--   0        0        0    32904 2023-04-06 11:44:23.919653 krkn_lib_kubernetes_draft-0.1.1/src/krkn_lib_kubernetes_draft/client.py
++-rw-r--r--   0        0        0     1690 2023-04-06 11:44:10.787346 krkn_lib_kubernetes_draft-0.1.1/src/krkn_lib_kubernetes_draft/resources.py
++-rw-r--r--   0        0        0      671 1970-01-01 00:00:00.000000 krkn_lib_kubernetes_draft-0.1.1/PKG-INFO
+```
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.0/LICENSE` & `krkn_lib_kubernetes_draft-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.0/src/krkn_lib_kubernetes/client.py` & `krkn_lib_kubernetes_draft-0.1.1/src/krkn_lib_kubernetes_draft/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.0/src/krkn_lib_kubernetes/resources.py` & `krkn_lib_kubernetes_draft-0.1.1/src/krkn_lib_kubernetes_draft/resources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.0/PKG-INFO` & `krkn_lib_kubernetes_draft-0.1.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: krkn-lib-kubernetes-draft
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: Kubernetes library for Kraken
+ Home-page: https://github.com/redhat-chaos/krkn
+ License: Apache-2.0
+ Author: Red Hat Chaos Engineering Team
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+```
+

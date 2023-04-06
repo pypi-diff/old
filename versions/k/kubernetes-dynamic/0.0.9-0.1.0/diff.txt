@@ -1,0 +1,1921 @@
+--- tmp/kubernetes-dynamic-0.0.9.tar.gz
++++ tmp/kubernetes-dynamic-0.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kubernetes-dynamic-0.0.9.tar", last modified: Wed Apr  5 15:45:38 2023, max compression
+│ +gzip compressed data, was "kubernetes-dynamic-0.1.0.tar", last modified: Thu Apr  6 11:47:11 2023, max compression
+│   --- kubernetes-dynamic-0.0.9.tar
+├── +++ kubernetes-dynamic-0.1.0.tar
+│ ├── file list
+│ │ @@ -1,45 +1,61 @@
+│ │ -drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      538 2023-03-28 15:57:58.000000 kubernetes-dynamic-0.0.9/LICENSE
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     3312 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/PKG-INFO
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2434 2023-04-04 08:18:12.000000 kubernetes-dynamic-0.0.9/README.md
+│ │ -drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/kubernetes_dynamic/
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      655 2023-04-03 12:51:18.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/__init__.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      753 2023-04-03 12:03:04.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/_kubernetes.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)       22 2023-04-05 15:45:14.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/_version.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)    22156 2023-04-05 14:45:11.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/client.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1636 2023-03-30 08:14:54.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/config.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     3373 2023-04-03 22:20:31.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/events.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1263 2023-04-03 22:10:29.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/exceptions.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1807 2023-03-30 14:21:20.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/formatters.py
+│ │ -drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)    28915 2023-03-31 12:46:34.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/__init__.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)   140534 2023-04-03 11:57:28.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/all.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2483 2023-04-05 15:44:03.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/common.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1855 2023-04-03 11:57:26.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/configmap.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      830 2023-04-03 11:57:26.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/ingress.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1088 2023-04-03 11:57:26.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/namespace.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     4187 2023-04-05 14:45:17.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/pod.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     8000 2023-04-04 07:55:22.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/resource_item.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2857 2023-04-05 12:25:42.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/resource_value.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2942 2023-04-03 11:57:26.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/secret.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      480 2023-04-03 11:57:26.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/stateful_set.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     5788 2023-04-05 12:35:43.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic/resource_api.py
+│ │ -drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     3312 2023-04-05 15:45:38.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1170 2023-04-05 15:45:38.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)        1 2023-04-05 15:45:38.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)       28 2023-04-05 15:45:38.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/requires.txt
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)       19 2023-04-05 15:45:38.000000 kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/top_level.txt
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1415 2023-04-03 12:59:55.000000 kubernetes-dynamic-0.0.9/pyproject.toml
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)       28 2023-03-29 13:15:48.000000 kubernetes-dynamic-0.0.9/requirements.txt
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)       38 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/setup.cfg
+│ │ -drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-05 15:45:38.856378 kubernetes-dynamic-0.0.9/tests/
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)    11490 2023-04-03 12:41:53.000000 kubernetes-dynamic-0.0.9/tests/test_client.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      921 2023-03-30 08:05:36.000000 kubernetes-dynamic-0.0.9/tests/test_config.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2010 2023-04-03 11:54:29.000000 kubernetes-dynamic-0.0.9/tests/test_configmap.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      623 2023-04-03 11:54:58.000000 kubernetes-dynamic-0.0.9/tests/test_ingress.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     1632 2023-04-03 19:25:18.000000 kubernetes-dynamic-0.0.9/tests/test_namespace.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     5105 2023-04-03 12:43:00.000000 kubernetes-dynamic-0.0.9/tests/test_pod.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     4796 2023-04-03 21:08:04.000000 kubernetes-dynamic-0.0.9/tests/test_resource_item.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)      761 2023-04-03 20:50:33.000000 kubernetes-dynamic-0.0.9/tests/test_resource_value.py
+│ │ --rw-r--r--   0 akobor    (1000) akobor    (1000)     2770 2023-04-03 12:49:49.000000 kubernetes-dynamic-0.0.9/tests/test_secret.py
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      538 2023-03-28 15:57:58.000000 kubernetes-dynamic-0.1.0/LICENSE
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     3312 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2434 2023-04-04 08:18:12.000000 kubernetes-dynamic-0.1.0/README.md
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/kubernetes_dynamic/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      713 2023-04-06 10:41:23.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/__init__.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      821 2023-04-06 09:49:15.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/_kubernetes.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)       22 2023-04-06 10:40:14.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/_version.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    14242 2023-04-06 10:30:23.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/client.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1636 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/config.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     3373 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/events.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1279 2023-04-06 09:06:15.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/exceptions.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1807 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/formatters.py
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)        0 2023-04-06 08:52:24.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/__init__.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2620 2023-04-06 08:55:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/dateutil.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    17528 2023-04-06 10:34:53.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/discovery.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     3895 2023-04-06 09:13:20.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/exceptions.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     3618 2023-04-06 08:58:17.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/exec_provider.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     4499 2023-04-06 08:58:21.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/incluster_config.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    32113 2023-04-06 09:30:16.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/kube_config.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    20272 2023-04-06 11:29:54.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/resource_api.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    22528 2023-04-06 09:12:10.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/ws_client.py
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    28915 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/__init__.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)   140534 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/all.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2483 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/common.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1855 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/configmap.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      830 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/ingress.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1092 2023-04-06 10:50:43.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/namespace.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     4174 2023-04-06 10:59:33.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/pod.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     8305 2023-04-06 10:50:03.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/resource_item.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2857 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/resource_value.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2944 2023-04-06 10:50:56.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/secret.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      480 2023-04-05 15:49:31.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/stateful_set.py
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)        0 2023-04-06 08:45:10.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/__init__.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    27737 2023-04-06 10:42:24.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/api_client.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    15174 2023-04-06 09:13:43.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/configuration.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     5104 2023-04-06 08:50:35.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/exceptions.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)    12499 2023-04-06 09:14:24.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic/openapi_client/rest.py
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     3312 2023-04-06 11:47:11.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1745 2023-04-06 11:47:11.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)        1 2023-04-06 11:47:11.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      117 2023-04-06 11:47:11.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/requires.txt
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)       19 2023-04-06 11:47:11.000000 kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1415 2023-04-03 12:59:55.000000 kubernetes-dynamic-0.1.0/pyproject.toml
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      117 2023-04-06 10:42:13.000000 kubernetes-dynamic-0.1.0/requirements.txt
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)       38 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/setup.cfg
+│ │ +drwxr-xr-x   0 akobor    (1000) akobor    (1000)        0 2023-04-06 11:47:11.492714 kubernetes-dynamic-0.1.0/tests/
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     7240 2023-04-06 11:16:08.000000 kubernetes-dynamic-0.1.0/tests/test_client.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      921 2023-03-30 08:05:36.000000 kubernetes-dynamic-0.1.0/tests/test_config.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2010 2023-04-03 11:54:29.000000 kubernetes-dynamic-0.1.0/tests/test_configmap.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      623 2023-04-03 11:54:58.000000 kubernetes-dynamic-0.1.0/tests/test_ingress.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     1636 2023-04-06 10:51:07.000000 kubernetes-dynamic-0.1.0/tests/test_namespace.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     5097 2023-04-06 11:09:52.000000 kubernetes-dynamic-0.1.0/tests/test_pod.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     4222 2023-04-06 11:30:59.000000 kubernetes-dynamic-0.1.0/tests/test_resource_api.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     4804 2023-04-06 10:50:03.000000 kubernetes-dynamic-0.1.0/tests/test_resource_item.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)      761 2023-04-03 20:50:33.000000 kubernetes-dynamic-0.1.0/tests/test_resource_value.py
+│ │ +-rw-r--r--   0 akobor    (1000) akobor    (1000)     2770 2023-04-03 12:49:49.000000 kubernetes-dynamic-0.1.0/tests/test_secret.py
+│ │   --- kubernetes-dynamic-0.0.9/LICENSE
+│ ├── +++ kubernetes-dynamic-0.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/PKG-INFO
+│ ├── +++ kubernetes-dynamic-0.1.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kubernetes-dynamic
+│ │ -Version: 0.0.9
+│ │ +Version: 0.1.0
+│ │  Summary: Kubernetes Dynamic client
+│ │  Author-email: Attila Kobor <atti92@gmail.com>, Balazs Hamorszky <balihb@gmail.com>
+│ │  License: BSD-3-Clause
+│ │  Project-URL: homepage, https://github.com/atti92/kubernetes-dynamic
+│ │  Project-URL: documentation, https://github.com/atti92/kubernetes-dynamic
+│ │  Project-URL: repository, https://github.com/atti92/kubernetes-dynamic.git
+│ │  Project-URL: changelog, https://github.com/atti92/kubernetes-dynamic/blob/main/README.md
+│ │   --- kubernetes-dynamic-0.0.9/README.md
+│ ├── +++ kubernetes-dynamic-0.1.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/__init__.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/__init__.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -7,26 +7,29 @@
+│ │      "CheckResult",
+│ │      "ResourceItem",
+│ │      "ResourceValue",
+│ │      "ResourceApi",
+│ │      "Event",
+│ │      "EventType",
+│ │      "Watch",
+│ │ +    "__version__"
+│ │  ]
+│ │  
+│ │  from . import exceptions, models
+│ │ +from ._version import __version__
+│ │  from .client import K8sClient
+│ │  from .config import K8sConfig
+│ │  from .events import Event, EventType, Watch
+│ │ +from .kube.resource_api import ResourceApi
+│ │  from .models.resource_item import CheckResult, ResourceItem
+│ │  from .models.resource_value import ResourceValue
+│ │ -from .resource_api import ResourceApi
+│ │  
+│ │  cl: K8sClient
+│ │  
+│ │  
+│ │  def __getattr__(name: str):
+│ │      if name == "cl":
+│ │          global cl
+│ │          cl = K8sClient()
+│ │          return cl
+│ │      raise AttributeError(name)
+│ │ +
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/client.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/kube/resource_api.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,445 +1,396 @@
+│ │ +# Copyright 2019 The Kubernetes Authors.
+│ │ +#
+│ │ +# Licensed under the Apache License, Version 2.0 (the "License");
+│ │ +# you may not use this file except in compliance with the License.
+│ │ +# You may obtain a copy of the License at
+│ │ +#
+│ │ +#     http://www.apache.org/licenses/LICENSE-2.0
+│ │ +#
+│ │ +# Unless required by applicable law or agreed to in writing, software
+│ │ +# distributed under the License is distributed on an "AS IS" BASIS,
+│ │ +# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │ +# See the License for the specific language governing permissions and
+│ │ +# limitations under the License.
+│ │  from __future__ import annotations
+│ │  
+│ │ -import json
+│ │  import re
+│ │ -from pathlib import Path
+│ │ -from typing import Any, Callable, List, Optional, Type, TypeVar, overload
+│ │ +from typing import TYPE_CHECKING, Callable, Generic, Iterator, Optional, Type, TypeVar, cast, overload
+│ │  
+│ │ -import kubernetes.stream.ws_client as ws_client
+│ │ -import pydantic
+│ │ -import yaml
+│ │ -
+│ │ -import kubernetes_dynamic.models as models
+│ │ -
+│ │ -from . import _kubernetes
+│ │ -from .config import K8sConfig
+│ │ -from .events import Event, Watch
+│ │ -from .exceptions import (
+│ │ -    ConfigException,
+│ │ -    ConflictError,
+│ │ -    EventTimeoutError,
+│ │ -    InvalidParameter,
+│ │ -    NotFoundError,
+│ │ -    ResourceNotUniqueError,
+│ │ -    UnprocessibleEntityError,
+│ │ -)
+│ │ -from .formatters import format_selector
+│ │ -from .models.common import ItemList, get_type
+│ │ -from .models.resource_item import CheckResult, ResourceItem
+│ │ -from .resource_api import ResourceApi
+│ │ -
+│ │ -T = TypeVar("T", bound=ResourceItem)
+│ │ -
+│ │ -
+│ │ -MISSING = object()
+│ │ -
+│ │ -
+│ │ -def serialize_object(
+│ │ -    data, serializer: Optional[Type[ResourceItem] | Callable] = None
+│ │ -) -> ResourceItem | ItemList[ResourceItem]:
+│ │ -    if serializer and not isinstance(serializer, Type):
+│ │ -        try:
+│ │ -            return serializer(data)
+│ │ -        except TypeError:
+│ │ -            return serializer(data, data)
+│ │ -    kind = data.get("kind", "")
+│ │ -    is_list = False
+│ │ -    if kind.endswith("List") and "items" in data:
+│ │ -        kind = kind[:-4]
+│ │ -        is_list = True
+│ │ -
+│ │ -    api_version = data.get("apiVersion", "v1")
+│ │ -
+│ │ -    obj_type = serializer or get_type(kind, api_version, ResourceItem)
+│ │ -
+│ │ -    if not is_list:
+│ │ -        return pydantic.parse_obj_as(obj_type, data)
+│ │ -
+│ │ -    for item in data["items"]:
+│ │ -        item.setdefault("apiVersion", api_version)
+│ │ -        item.setdefault("kind", kind)
+│ │ -    items = pydantic.parse_obj_as(List[obj_type], data["items"])
+│ │ -    return ItemList(items, metadata=data["metadata"])
+│ │ -
+│ │ -
+│ │ -def meta_request(func):
+│ │ -    """Handles parsing response structure and translating API Exceptions"""
+│ │ -
+│ │ -    def inner(self, *args, **kwargs):
+│ │ -        serialize = kwargs.pop("serialize", True)
+│ │ -        serializer = kwargs.pop("serializer", None)
+│ │ -        response = func(self, *args, **kwargs)
+│ │ -        if not response:
+│ │ -            return None
+│ │ -        if not serialize:
+│ │ -            return response
+│ │ -        try:
+│ │ -            data = json.loads(response.data)
+│ │ -            return serialize_object(data, serializer)
+│ │ -        except json.JSONDecodeError:
+│ │ -            return response.data
+│ │ -
+│ │ -    return inner
+│ │ -
+│ │ -
+│ │ -class K8sClient(object):
+│ │ -    _loaded: bool = False
+│ │ -    in_cluster: bool = False
+│ │ -
+│ │ -    componentstatuses: ResourceApi[models.V1ComponentStatus]
+│ │ -    configmaps: ResourceApi[models.V1ConfigMap]
+│ │ -    endpoints: ResourceApi[models.V1Endpoints]
+│ │ -    events: ResourceApi[models.CoreV1Event]
+│ │ -    limitranges: ResourceApi[models.V1LimitRange]
+│ │ -    namespaces: ResourceApi[models.V1Namespace]
+│ │ -    nodes: ResourceApi[models.V1Node]
+│ │ -    persistentvolumeclaims: ResourceApi[models.V1PersistentVolumeClaim]
+│ │ -    persistentvolumes: ResourceApi[models.V1PersistentVolume]
+│ │ -    pods: ResourceApi[models.V1Pod]
+│ │ -    podtemplates: ResourceApi[models.V1PodTemplate]
+│ │ -    replicationcontrollers: ResourceApi[models.V1ReplicationController]
+│ │ -    resourcequotas: ResourceApi[models.V1ResourceQuota]
+│ │ -    secrets: ResourceApi[models.V1Secret]
+│ │ -    serviceaccounts: ResourceApi[models.V1ServiceAccount]
+│ │ -    services: ResourceApi[models.V1Service]
+│ │ -    mutatingwebhookconfigurations: ResourceApi[models.V1MutatingWebhookConfiguration]
+│ │ -    validatingwebhookconfigurations: ResourceApi[models.V1ValidatingWebhookConfiguration]
+│ │ -    customresourcedefinitions: ResourceApi[models.V1CustomResourceDefinition]
+│ │ -    apiservices: ResourceApi[models.V1APIService]
+│ │ -    controllerrevisions: ResourceApi[models.V1ControllerRevision]
+│ │ -    daemonsets: ResourceApi[models.V1DaemonSet]
+│ │ -    deployments: ResourceApi[models.V1Deployment]
+│ │ -    replicasets: ResourceApi[models.V1ReplicaSet]
+│ │ -    statefulsets: ResourceApi[models.V1StatefulSet]
+│ │ -    horizontalpodautoscalers: ResourceApi[models.V1HorizontalPodAutoscaler]
+│ │ -    cronjobs: ResourceApi[models.V1CronJob]
+│ │ -    jobs: ResourceApi[models.V1Job]
+│ │ -    certificatesigningrequests: ResourceApi[models.V1CertificateSigningRequest]
+│ │ -    leases: ResourceApi[models.V1Lease]
+│ │ -    endpointslices: ResourceApi[models.V1EndpointSlice]
+│ │ -    flowschemas: ResourceApi[models.V1beta2FlowSchema]
+│ │ -    prioritylevelconfigurations: ResourceApi[models.V1beta2PriorityLevelConfiguration]
+│ │ -    ingressclasses: ResourceApi[models.V1IngressClass]
+│ │ -    ingresses: ResourceApi[models.V1Ingress]
+│ │ -    networkpolicies: ResourceApi[models.V1NetworkPolicy]
+│ │ -    runtimeclasses: ResourceApi[models.V1RuntimeClass]
+│ │ -    poddisruptionbudgets: ResourceApi[models.V1PodDisruptionBudget]
+│ │ -    clusterrolebindings: ResourceApi[models.V1ClusterRoleBinding]
+│ │ -    clusterroles: ResourceApi[models.V1ClusterRole]
+│ │ -    rolebindings: ResourceApi[models.V1RoleBinding]
+│ │ -    roles: ResourceApi[models.V1Role]
+│ │ -    priorityclasses: ResourceApi[models.V1PriorityClass]
+│ │ -    csidrivers: ResourceApi[models.V1CSIDriver]
+│ │ -    csinodes: ResourceApi[models.V1CSINode]
+│ │ -    csistoragecapacities: ResourceApi[models.V1CSIStorageCapacity]
+│ │ -    storageclasses: ResourceApi[models.V1StorageClass]
+│ │ -    volumeattachments: ResourceApi[models.V1VolumeAttachment]
+│ │ +from kubernetes_dynamic.events import Event, Watch
+│ │ +from kubernetes_dynamic.exceptions import EventTimeoutError
+│ │ +from kubernetes_dynamic.formatters import format_selector
+│ │ +from kubernetes_dynamic.kube.exceptions import ConflictError, NotFoundError, UnprocessibleEntityError
+│ │ +from kubernetes_dynamic.models.resource_value import ResourceValue
+│ │  
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        api_client: Optional[_kubernetes.ApiClient] = None,
+│ │ -        *,
+│ │ -        config_file: Optional[str] = None,
+│ │ -        config_dict: Optional[dict] = None,
+│ │ -        context: Optional[str] = None,
+│ │ -        cache_file=None,
+│ │ -        discoverer=None,
+│ │ -    ):
+│ │ -        discoverer = discoverer or _kubernetes.dynamic.LazyDiscoverer
+│ │ -        self.config = self.get_config(config_file, config_dict=config_dict, context=context)
+│ │ -        self.client = api_client or _kubernetes.ApiClient(configuration=self.config.configuration)
+│ │ -        self.configuration = self.client.configuration
+│ │ -        self.__discoverer = discoverer(self, cache_file)
+│ │ +R = TypeVar("R", bound=ResourceValue)
+│ │  
+│ │ -    @property
+│ │ -    def resources(self):
+│ │ -        return self.__discoverer
+│ │ +if TYPE_CHECKING:
+│ │ +    from kubernetes_dynamic.client import K8sClient
+│ │ +    from kubernetes_dynamic.models.common import ItemList
+│ │ +    from kubernetes_dynamic.models.resource_item import CheckResult
+│ │  
+│ │ -    @property
+│ │ -    def version(self):
+│ │ -        return self.__discoverer.version
+│ │  
+│ │ -    @staticmethod
+│ │ -    def get_config_file() -> str:
+│ │ -        """Get kube config file."""
+│ │ -        return str(Path(_kubernetes.KUBE_CONFIG_DEFAULT_LOCATION).expanduser().resolve())
+│ │ -
+│ │ -    @staticmethod
+│ │ -    def get_kube_config_loader(
+│ │ -        config_file: Optional[str] = None, config_dict: Optional[dict] = None, context: Optional[str] = None
+│ │ -    ) -> _kubernetes.InClusterConfigLoader | _kubernetes.KubeConfigLoader:
+│ │ -        if not config_dict and not config_file:
+│ │ -            config_file = K8sClient.get_config_file()
+│ │ -        try:
+│ │ -            in_cluster_loader = _kubernetes.InClusterConfigLoader(
+│ │ -                token_filename=_kubernetes.SERVICE_TOKEN_FILENAME,
+│ │ -                cert_filename=_kubernetes.SERVICE_CERT_FILENAME,
+│ │ -                try_refresh_token=True,
+│ │ -            )
+│ │ -            in_cluster_loader.load_and_set()
+│ │ -            K8sClient.in_cluster = True
+│ │ -            return in_cluster_loader
+│ │ -        except ConfigException:
+│ │ -            K8sClient.in_cluster = False
+│ │ -            return _kubernetes._get_kube_config_loader(config_file, config_dict, active_context=context)
+│ │ -
+│ │ -    @staticmethod
+│ │ -    def find_context(name: Optional[str], loader: _kubernetes.KubeConfigLoader) -> Optional[str]:
+│ │ -        """Find a context by name, or get the default."""
+│ │ -        if not name:
+│ │ -            return None
+│ │ -        contexts = loader.list_contexts()
+│ │ -        for context in contexts:
+│ │ -            if not isinstance(context, dict):
+│ │ -                continue
+│ │ -            if "context" not in context:
+│ │ -                continue
+│ │ -            if context.get("name") == name or context["context"].get("cluster") == name:
+│ │ -                return context.get("name")
+│ │ -        raise RuntimeError(f"No context name='{name}' found!")
+│ │ +class _Missing:
+│ │ +    pass
+│ │  
+│ │ -    def get_config(
+│ │ -        self,
+│ │ -        config_file: Optional[str] = None,
+│ │ -        *,
+│ │ -        config_dict: Optional[dict] = None,
+│ │ -        context: Optional[str] = None,
+│ │ -    ) -> K8sConfig:
+│ │ -        """Get kubernetes config.
+│ │  
+│ │ -        Args:
+│ │ -            config_file: File to load.
+│ │ -            config_dict: Load config from dict instead of using a file.
+│ │ -            context: Set kube context.
+│ │ -        """
+│ │ -        loader = K8sClient.get_kube_config_loader(config_file, config_dict, context=context)
+│ │ -        if isinstance(loader, _kubernetes.InClusterConfigLoader):
+│ │ -            return K8sConfig(configuration=_kubernetes.Configuration.get_default_copy())
+│ │ -        config_file = config_file or K8sClient.get_config_file()
+│ │ -        context = K8sClient.find_context(context, loader)
+│ │ -        loader.set_active_context(context)
+│ │ -        configuration = type.__call__(_kubernetes.Configuration)
+│ │ -        loader.load_and_set(configuration)
+│ │ -        return K8sConfig(
+│ │ -            configuration=configuration,
+│ │ -            context=str(loader.current_context["context"].get("cluster")),
+│ │ -            namespace=str(loader.current_context["context"].get("namespace", "default")),
+│ │ -        )
+│ │ +MISSING = _Missing()
+│ │  
+│ │ -    @overload
+│ │ -    def get_api(
+│ │ -        self,
+│ │ -        name: Optional[str] = None,
+│ │ -        object_type: None = None,
+│ │ -        api_version: Optional[str] = None,
+│ │ -        kind: Optional[str] = None,
+│ │ -        **filter_dict,
+│ │ -    ) -> ResourceApi[ResourceItem]:
+│ │ -        ...
+│ │  
+│ │ -    @overload
+│ │ -    def get_api(
+│ │ -        self,
+│ │ -        name: Optional[str] = None,
+│ │ -        object_type: Type[T] = None,
+│ │ -        api_version: Optional[str] = None,
+│ │ -        kind: Optional[str] = None,
+│ │ -        **filter_dict,
+│ │ -    ) -> ResourceApi[T]:
+│ │ -        ...
+│ │ +class ResourceApi(Generic[R]):
+│ │ +    """Represents an API resource type, containing the information required to build urls for requests"""
+│ │  
+│ │ -    def get_api(
+│ │ +    def __init__(
+│ │          self,
+│ │ -        name: Optional[str] = None,
+│ │ -        object_type: Optional[Type[T]] = ResourceItem,
+│ │ -        api_version: Optional[str] = None,
+│ │ -        kind: Optional[str] = None,
+│ │ -        **filter_dict,
+│ │ -    ) -> ResourceApi[T]:
+│ │ -        if api_version:
+│ │ -            filter_dict["api_version"] = api_version
+│ │ -        if kind:
+│ │ -            filter_dict["kind"] = kind
+│ │ -        if name:
+│ │ -            filter_dict["name"] = name
+│ │ -        try:
+│ │ -            api = self.resources.get(**filter_dict)
+│ │ -        except ResourceNotUniqueError:
+│ │ -            api = [
+│ │ -                r
+│ │ -                for r in self.resources.search(**filter_dict)
+│ │ -                if r.preferred and isinstance(r, _kubernetes.dynamic.Resource)
+│ │ -            ][0]
+│ │ -        api._resource_type = object_type or get_type(str(api.kind), str(api.api_version), ResourceItem)  # type: ignore
+│ │ -        return api  # type: ignore
+│ │ -
+│ │ -    def __getattr__(self, name: str) -> ResourceApi[ResourceItem]:
+│ │ -        if name.startswith("_"):
+│ │ -            raise AttributeError(name)
+│ │ -        return self.get_api(name)
+│ │ +        prefix=None,
+│ │ +        group=None,
+│ │ +        api_version=None,
+│ │ +        kind=None,
+│ │ +        namespaced=False,
+│ │ +        verbs=None,
+│ │ +        name=None,
+│ │ +        preferred=False,
+│ │ +        client=None,
+│ │ +        singularName=None,
+│ │ +        shortNames=None,
+│ │ +        categories=None,
+│ │ +        subresources=None,
+│ │ +        resource_type=None,
+│ │ +        **kwargs,
+│ │ +    ):
+│ │ +
+│ │ +        if None in (api_version, kind, prefix):
+│ │ +            raise ValueError("At least prefix, kind, and api_version must be provided")
+│ │ +
+│ │ +        self.prefix = prefix
+│ │ +        self.group = group
+│ │ +        self.api_version = api_version
+│ │ +        self.kind = kind
+│ │ +        self.namespaced = namespaced
+│ │ +        self.verbs = verbs
+│ │ +        self.name = name
+│ │ +        self.preferred = preferred
+│ │ +        self.singular_name = singularName or (name[:-1] if name else "")
+│ │ +        self.short_names = shortNames
+│ │ +        self.categories = categories
+│ │ +        self.subresources = {k: Subresource(self, **v) for k, v in (subresources or {}).items()}
+│ │ +        self.client: K8sClient = client
+│ │ +        self.resource_type: Optional[Type[R]] = resource_type
+│ │ +
+│ │ +        self.extra_args = kwargs
+│ │ +
+│ │ +    def to_dict(self):
+│ │ +        d = {
+│ │ +            "_type": "Resource",
+│ │ +            "prefix": self.prefix,
+│ │ +            "group": self.group,
+│ │ +            "api_version": self.api_version,
+│ │ +            "kind": self.kind,
+│ │ +            "namespaced": self.namespaced,
+│ │ +            "verbs": self.verbs,
+│ │ +            "name": self.name,
+│ │ +            "preferred": self.preferred,
+│ │ +            "singularName": self.singular_name,
+│ │ +            "shortNames": self.short_names,
+│ │ +            "categories": self.categories,
+│ │ +            "subresources": {k: sr.to_dict() for k, sr in self.subresources.items()},
+│ │ +        }
+│ │ +        d.update(self.extra_args)
+│ │ +        return d
+│ │ +
+│ │ +    @property
+│ │ +    def group_version(self) -> str:
+│ │ +        if self.group:
+│ │ +            return "{}/{}".format(self.group, self.api_version)
+│ │ +        return cast(str, self.api_version)
+│ │ +
+│ │ +    def __repr__(self):
+│ │ +        return "<{}({}/{})>".format(self.__class__.__name__, self.group_version, self.name)
+│ │  
+│ │      @property
+│ │ -    def events_events(self) -> ResourceApi[models.EventsV1Event]:
+│ │ -        return self.get_api("events", object_type=models.EventsV1Event, api_version="events.k8s.io/v1")
+│ │ +    def urls(self) -> dict[str, str]:
+│ │ +        full_prefix = "{}/{}".format(self.prefix, self.group_version)
+│ │ +        resource_name = self.name.lower()
+│ │ +        return {
+│ │ +            "base": "/{}/{}".format(full_prefix, resource_name),
+│ │ +            "namespaced_base": "/{}/namespaces/{{namespace}}/{}".format(full_prefix, resource_name),
+│ │ +            "full": "/{}/{}/{{name}}".format(full_prefix, resource_name),
+│ │ +            "namespaced_full": "/{}/namespaces/{{namespace}}/{}/{{name}}".format(full_prefix, resource_name),
+│ │ +        }
+│ │ +
+│ │ +    def path(self, name=None, namespace=None) -> str:
+│ │ +        url_type = []
+│ │ +        path_params = {}
+│ │ +        if self.namespaced and namespace:
+│ │ +            url_type.append("namespaced")
+│ │ +            path_params["namespace"] = namespace
+│ │ +        if name:
+│ │ +            url_type.append("full")
+│ │ +            path_params["name"] = name
+│ │ +        else:
+│ │ +            url_type.append("base")
+│ │ +        return self.urls["_".join(url_type)].format(**path_params)
+│ │ +
+│ │ +    def __getattr__(self, name) -> Subresource:
+│ │ +        if name in self.subresources:
+│ │ +            return self.subresources[name]
+│ │ +        raise AttributeError(name)
+│ │ +
+│ │ +    def serialize_body(self, body):
+│ │ +        """Serialize body to raw dict so apiserver can handle it
+│ │  
+│ │ -    def ensure_namespace_param(self, resource, namespace, body=None) -> Optional[str]:
+│ │ -        if not resource.namespaced:
+│ │ +        :param body: kubernetes resource body, current support: Union[Dict, ResourceValue]
+│ │ +        """
+│ │ +        if callable(getattr(body, "to_dict", None)):
+│ │ +            return body.to_dict()
+│ │ +        return body or {}
+│ │ +
+│ │ +    def ensure_namespace_param(self, namespace: Optional[str | _Missing], body=None, allow_all=False) -> Optional[str]:
+│ │ +        if not self.namespaced:
+│ │              return None
+│ │          if namespace is MISSING:
+│ │              if body:
+│ │                  namespace = body.get("metadata", {}).get("namespace", self.config.namespace)
+│ │              else:
+│ │ -                namespace = self.config.namespace
+│ │ -        if not namespace:
+│ │ -            raise ValueError("Namespace is required for {}.{}".format(resource.group_version, resource.kind))
+│ │ -        return namespace
+│ │ +                namespace = self.client.config.namespace
+│ │ +        if not allow_all and not namespace:
+│ │ +            raise ValueError("Namespace is required for {}.{}".format(self.group_version, self.kind))
+│ │ +        return cast(Optional[str], namespace)
+│ │  
+│ │ -    def ensure_name_param(self, resource, name, body=None) -> str:
+│ │ +    def ensure_name_param(self, name, body=None) -> str:
+│ │          if not name and body:
+│ │              name = body.get("metadata", {}).get("name")
+│ │          if not name:
+│ │ -            raise ValueError("Name is required for {}.{}".format(resource.group_version, resource.kind))
+│ │ +            raise ValueError("Name is required for {}.{}".format(self.group_version, self.kind))
+│ │          return name
+│ │  
+│ │ -    def serialize_body(self, body):
+│ │ -        """Serialize body to raw dict so apiserver can handle it
+│ │ +    @overload
+│ │ +    def read(
+│ │ +        self,
+│ │ +        *,
+│ │ +        namespace: Optional[str | _Missing] = None,
+│ │ +        label_selector: Optional[str] = None,
+│ │ +        field_selector: Optional[str] = None,
+│ │ +        **kwargs,
+│ │ +    ) -> ItemList[R]:
+│ │ +        """Get a list of models.
+│ │ +        Setting namespace to `None` or `""` will yield from all namespaces.
+│ │  
+│ │ -        :param body: kubernetes resource body, current support: Union[Dict, ResourceValue]
+│ │ +        Args:
+│ │ +            namespace: namespace of the resource. Defaults to `current` set to None/Empty for all.
+│ │ +            label_selector: Label selectors to use for query.
+│ │ +            field_selector: Field selectors to use for query.
+│ │          """
+│ │ -        if callable(getattr(body, "to_dict", None)):
+│ │ -            return body.to_dict()
+│ │ -        return body or {}
+│ │ +        ...  # pragma: no cover
+│ │ +
+│ │ +    @overload
+│ │ +    def read(self, name: str, namespace: Optional[str | _Missing] = None, **kwargs) -> R:
+│ │ +        """Get a resource model.
+│ │ +
+│ │ +        Args:
+│ │ +            name: name of the resource you want to query.
+│ │ +            namespace: namespace of the resource. Defaults to `current`.
+│ │ +
+│ │ +        Raises:
+│ │ +            NotFoundError: When the model does not exists.
+│ │ +        """
+│ │ +        ...  # pragma: no cover
+│ │ +
+│ │ +    def read(
+│ │ +        self, name: Optional[str] = None, namespace: Optional[str | _Missing] = MISSING, **kwargs
+│ │ +    ) -> R | ItemList[R]:
+│ │ +        namespace = self.ensure_namespace_param(namespace, allow_all=not name)
+│ │ +        path = self.path(name=name, namespace=namespace)
+│ │ +        return self.client.request("get", path, **kwargs)
+│ │  
+│ │ -    def read(self, resource: ResourceApi, name=None, namespace=MISSING, **kwargs):
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace)
+│ │ -        path = resource.path(name=name, namespace=namespace)
+│ │ -        return self.request("get", path, **kwargs)
+│ │ +    @overload
+│ │ +    def get(
+│ │ +        self,
+│ │ +        *,
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        label_selector: Optional[str] = None,
+│ │ +        field_selector: Optional[str] = None,
+│ │ +        **kwargs,
+│ │ +    ) -> ItemList[R]:
+│ │ +        """Get a list of models.
+│ │ +        Setting namespace to `None` or `""` will yield from all namespaces.
+│ │ +
+│ │ +        Args:
+│ │ +            namespace: namespace of the resource. Defaults to `current` set to None/Empty for all.
+│ │ +            label_selector: Label selectors to use for query.
+│ │ +            field_selector: Field selectors to use for query.
+│ │ +        """
+│ │ +        ...  # pragma: no cover
+│ │ +
+│ │ +    @overload
+│ │ +    def get(self, name: str, namespace: Optional[str | _Missing] = MISSING, **kwargs) -> Optional[R]:
+│ │ +        """Get a resource model.
+│ │ +
+│ │ +        Args:
+│ │ +            name: name of the resource you want to query.
+│ │ +            namespace: namespace of the resource. Defaults to `current`.
+│ │ +        """
+│ │ +        ...  # pragma: no cover
+│ │  
+│ │ -    def get(self, resource: ResourceApi, name=None, namespace=MISSING, **kwargs):
+│ │ +    def get(
+│ │ +        self, name: Optional[str] = None, namespace: Optional[str | _Missing] = MISSING, **kwargs
+│ │ +    ) -> Optional[R] | ItemList[R]:
+│ │          try:
+│ │ -            return self.read(resource, name, namespace, **kwargs)
+│ │ +            return self.read(name, namespace, **kwargs) if name else self.read(namespace=namespace, **kwargs)
+│ │          except NotFoundError:
+│ │              return None
+│ │  
+│ │ -    def find(self, resource: ResourceApi, pattern, namespace=MISSING, **kwargs):
+│ │ +    def find(self, pattern: str, namespace: Optional[str | _Missing] = MISSING, **kwargs) -> list[R]:
+│ │ +        """Find a list of models.
+│ │ +        Setting namespace to `None` or `""` will yield from all namespaces.
+│ │ +
+│ │ +        Args:
+│ │ +            pattern: regex pattern for metadata.name.
+│ │ +            namespace: namespace of the resource. Defaults to `current` set to None/Empty for all.
+│ │ +            label_selector: Label selectors to use for query.
+│ │ +            field_selector: Field selectors to use for query.
+│ │ +        """
+│ │          items = []
+│ │ -        data = self.get(resource, namespace=namespace, **kwargs)
+│ │ +        data: Optional[ItemList[R]] = self.get(namespace=namespace, **kwargs)
+│ │          if not data:
+│ │              return items
+│ │          for item in data:
+│ │              if re.match(pattern, item.metadata.name):
+│ │                  items.append(item)
+│ │          return items
+│ │  
+│ │ -    def create(self, resource: ResourceApi, body=None, namespace=MISSING, **kwargs):
+│ │ +    def create(self, body: dict | R, namespace: Optional[str | _Missing] = MISSING, **kwargs) -> R:
+│ │          body = self.serialize_body(body)
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace, body)
+│ │ -        path = resource.path(namespace=namespace)
+│ │ -        return self.request("post", path, body=body, **kwargs)
+│ │ +        namespace = self.ensure_namespace_param(namespace, body)
+│ │ +        path = self.path(namespace=namespace)
+│ │ +        return self.client.request("post", path, body=body, **kwargs)
+│ │ +
+│ │ +    @overload
+│ │ +    def delete(
+│ │ +        self, name: str, namespace: Optional[str | _Missing] = MISSING, body: Optional[dict | R] = None, **kwargs
+│ │ +    ) -> R:
+│ │ +        ...  # pragma: no cover
+│ │  
+│ │ +    @overload
+│ │      def delete(
+│ │          self,
+│ │ -        resource: ResourceApi,
+│ │ -        name=None,
+│ │ -        namespace=MISSING,
+│ │ -        body=None,
+│ │ -        label_selector=None,
+│ │ -        field_selector=None,
+│ │ +        *,
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        body: Optional[dict | R] = None,
+│ │ +        label_selector: Optional[str] = None,
+│ │ +        field_selector: Optional[str] = None,
+│ │          **kwargs,
+│ │ -    ):
+│ │ +    ) -> ItemList[R]:
+│ │ +        ...  # pragma: no cover
+│ │ +
+│ │ +    def delete(
+│ │ +        self,
+│ │ +        name: Optional[str] = None,
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        body: Optional[dict | R] = None,
+│ │ +        label_selector: Optional[str] = None,
+│ │ +        field_selector: Optional[str] = None,
+│ │ +        **kwargs,
+│ │ +    ) -> ItemList[R] | R:
+│ │          if not (name or label_selector or field_selector):
+│ │              raise ValueError("At least one of name|label_selector|field_selector is required")
+│ │ -        if resource.namespaced and not (label_selector or field_selector):
+│ │ -            namespace = self.ensure_namespace_param(resource, namespace)
+│ │ -        path = resource.path(name=name, namespace=namespace)
+│ │ -        return self.request(
+│ │ +        if self.namespaced and not (label_selector or field_selector):
+│ │ +            namespace = self.ensure_namespace_param(namespace, allow_all=not name)
+│ │ +        path = self.path(name=name, namespace=namespace)
+│ │ +        return self.client.request(
+│ │              "delete", path, body=body, label_selector=label_selector, field_selector=field_selector, **kwargs
+│ │          )
+│ │  
+│ │ -    def replace(self, resource: ResourceApi, body=None, name=None, namespace=MISSING, **kwargs):
+│ │ +    def replace(
+│ │ +        self, body: dict | R, name: Optional[str] = None, namespace: Optional[str | _Missing] = MISSING, **kwargs
+│ │ +    ) -> R:
+│ │          body = self.serialize_body(body)
+│ │ -        name = self.ensure_name_param(resource, name, body)
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace, body)
+│ │ -        path = resource.path(name=name, namespace=namespace)
+│ │ -        return self.request("put", path, body=body, **kwargs)
+│ │ -
+│ │ -    def patch(self, resource: ResourceApi, body=None, name=None, namespace=MISSING, **kwargs):
+│ │ +        name = self.ensure_name_param(name, body)
+│ │ +        namespace = self.ensure_namespace_param(namespace, body)
+│ │ +        path = self.path(name=name, namespace=namespace)
+│ │ +        return self.client.request("put", path, body=body, **kwargs)
+│ │ +
+│ │ +    def patch(
+│ │ +        self, body: dict | R, name: Optional[str] = None, namespace: Optional[str | _Missing] = MISSING, **kwargs
+│ │ +    ) -> R:
+│ │          body = self.serialize_body(body)
+│ │ -        name = self.ensure_name_param(resource, name, body)
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace, body)
+│ │ +        name = self.ensure_name_param(name, body)
+│ │ +        namespace = self.ensure_namespace_param(namespace, body)
+│ │  
+│ │          content_type = kwargs.pop("content_type", "application/strategic-merge-patch+json")
+│ │ -        path = resource.path(name=name, namespace=namespace)
+│ │ +        path = self.path(name=name, namespace=namespace)
+│ │  
+│ │ -        return self.request("patch", path, body=body, content_type=content_type, **kwargs)
+│ │ +        return self.client.request("patch", path, body=body, content_type=content_type, **kwargs)
+│ │  
+│ │      def server_side_apply(
+│ │ -        self, resource: ResourceApi, body=None, name=None, namespace=MISSING, force_conflicts=None, **kwargs
+│ │ -    ):
+│ │ +        self,
+│ │ +        body: dict | R,
+│ │ +        name: Optional[str] = None,
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        force_conflicts: Optional[bool] = None,
+│ │ +        **kwargs,
+│ │ +    ) -> R:
+│ │          body = self.serialize_body(body)
+│ │ -        name = self.ensure_name_param(resource, name, body)
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace, body)
+│ │ +        name = self.ensure_name_param(name, body)
+│ │ +        namespace = self.ensure_namespace_param(namespace, body)
+│ │  
+│ │ -        # force content type to 'application/apply-patch+yaml'
+│ │          kwargs.update({"content_type": "application/apply-patch+yaml"})
+│ │ -        path = resource.path(name=name, namespace=namespace)
+│ │ +        path = self.path(name=name, namespace=namespace)
+│ │  
+│ │ -        return self.request("patch", path, body=body, force_conflicts=force_conflicts, **kwargs)
+│ │ +        return self.client.request("patch", path, body=body, force_conflicts=force_conflicts, **kwargs)
+│ │  
+│ │      def watch(
+│ │          self,
+│ │ -        resource: ResourceApi,
+│ │ -        namespace=MISSING,
+│ │ -        name=None,
+│ │ -        label_selector=None,
+│ │ -        field_selector=None,
+│ │ -        resource_version=None,
+│ │ -        timeout=None,
+│ │ -        watcher=None,
+│ │ -    ):
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace)
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        name: Optional[str] = None,
+│ │ +        label_selector: Optional[str] = None,
+│ │ +        field_selector: Optional[str] = None,
+│ │ +        resource_version: Optional[str] = None,
+│ │ +        timeout: Optional[float] = None,
+│ │ +        watcher: Optional[Watch] = None,
+│ │ +    ) -> Iterator[Event[R]]:
+│ │ +        namespace = self.ensure_namespace_param(namespace, allow_all=True)
+│ │          if name:
+│ │              field_selector = field_selector or ""
+│ │              field_selector += f",metadata.name={name}"
+│ │ -        watcher = watcher or Watch(self.client, resource._resource_type)
+│ │ +        watcher = watcher or Watch(self.client.client, self.resource_type)
+│ │          if watcher and not resource_version:
+│ │              resource_version = watcher.resource_version
+│ │          return watcher.stream(
+│ │ -            resource.get,
+│ │ -            namespace=namespace or self.config.namespace,
+│ │ +            self.get,
+│ │ +            namespace=namespace or self.client.config.namespace,
+│ │              name=None,
+│ │              field_selector=field_selector,
+│ │              label_selector=label_selector,
+│ │              resource_version=resource_version,
+│ │              serialize=False,
+│ │              timeout_seconds=timeout,
+│ │          )
+│ │  
+│ │      def wait_until(
+│ │          self,
+│ │ -        resource: ResourceApi,
+│ │          *,
+│ │ -        namespace=MISSING,
+│ │ -        name=None,
+│ │ +        namespace: Optional[str | _Missing] = MISSING,
+│ │ +        name: Optional[str] = None,
+│ │          check: Callable[[Event], CheckResult],
+│ │ -        field_selector=None,
+│ │ -        label_selector=None,
+│ │ +        field_selector: Optional[str] = None,
+│ │ +        label_selector: Optional[str] = None,
+│ │          timeout: int = 30,
+│ │          **kwargs,
+│ │      ) -> Event:
+│ │          """Wait until a certain custom check returns true for a resource returned by the stream."""
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace)
+│ │ +        namespace = self.ensure_namespace_param(namespace)
+│ │          field_selectors = [] if not field_selector else [format_selector(field_selector)]
+│ │          if name:
+│ │              field_selectors.append(f"metadata.name={name}")
+│ │  
+│ │          last = None
+│ │          result = None
+│ │ -        for event in resource.watch(
+│ │ +        for event in self.watch(
+│ │              field_selector=format_selector(field_selectors),
+│ │              label_selector=format_selector(label_selector),
+│ │              timeout=timeout,
+│ │              namespace=namespace,
+│ │              **kwargs,
+│ │          ):
+│ │              last = event
+│ │ @@ -448,125 +399,148 @@
+│ │                  return event
+│ │          if last is None:
+│ │              raise EventTimeoutError(f"Timed out waiting for check. {self.kind} {name} not found.", last=last)
+│ │          if result is not None and result.message:
+│ │              raise EventTimeoutError(result.message, last=last)
+│ │          raise EventTimeoutError(f"Timed out waiting for check on {self.kind} {name} .", last=last)
+│ │  
+│ │ -    def websocket(self, func: Callable, name=None, namespace=MISSING, *args, **kwargs) -> ws_client.WSClient:
+│ │ -        prev_request = self.client.request
+│ │ -        try:
+│ │ -
+│ │ -            def _websocket(*args, **kwargs):  # pragma: no cover
+│ │ -                try:
+│ │ -                    client = ws_client.websocket_call(self.configuration, *args, **kwargs)
+│ │ -                except Exception as e:
+│ │ -                    raise e
+│ │ -                return client
+│ │ -
+│ │ -            self.client.request = _websocket
+│ │ -            return func(
+│ │ -                *args,
+│ │ -                name=name,
+│ │ -                namespace=namespace,
+│ │ -                query_params=[(k, v) for k, v in kwargs.items() if v is not None],
+│ │ -                _preload_content=True,
+│ │ -                serialize=False,
+│ │ -            )
+│ │ -        finally:
+│ │ -            self.client.request = prev_request
+│ │ -
+│ │ -    def stream(self, func: Callable, name=None, namespace=MISSING, *args, **kwargs) -> str:
+│ │ -        client = self.websocket(func, name, namespace, *args, **kwargs)
+│ │ -        client.run_forever(timeout=kwargs.get("_request_timeout", 0))  # type: ignore
+│ │ -        return ws_client.WSResponse("%s" % "".join(client.read_all())).data
+│ │ -
+│ │ -    @meta_request
+│ │ -    def request(self, method: str, path: str, body=None, **params) -> Any:
+│ │ -        if not path.startswith("/"):
+│ │ -            path = "/" + path
+│ │ -
+│ │ -        path_params = params.pop("path_params", {})
+│ │ -        query_params = params.pop("query_params", [])
+│ │ -
+│ │ -        header_params = params.pop("header_params", {})
+│ │ -        form_params = []
+│ │ -        local_var_files = {}
+│ │ -
+│ │ -        # Checking Accept header.
+│ │ -        new_header_params = dict((key.lower(), value) for key, value in header_params.items())
+│ │ -        if "accept" not in new_header_params:
+│ │ -            header_params["Accept"] = self.client.select_header_accept(["application/json", "application/yaml"])
+│ │ -
+│ │ -        # HTTP header `Content-Type`
+│ │ -        header_params["Content-Type"] = params.pop("content_type", self.client.select_header_content_type(["*/*"]))
+│ │ -        async_req = params.pop("async_req", False)
+│ │ -        _return_http_data_only = params.pop("_return_http_data_only", True)
+│ │ -        _request_timeout = params.pop("_request_timeout", None)
+│ │ -
+│ │ -        # Authentication setting
+│ │ -        auth_settings = ["BearerToken"]
+│ │ -
+│ │ -        for key, value in params.items():
+│ │ -            if value is not None:
+│ │ -                query_params.append((key.lstrip("_"), value))
+│ │ -
+│ │ -        api_response = self.client.call_api(
+│ │ -            path,
+│ │ -            method.upper(),
+│ │ -            path_params,
+│ │ -            query_params,
+│ │ -            header_params,
+│ │ -            body=body,
+│ │ -            post_params=form_params,
+│ │ -            async_req=async_req,
+│ │ -            files=local_var_files,
+│ │ -            auth_settings=auth_settings,
+│ │ -            _preload_content=False,
+│ │ -            _return_http_data_only=_return_http_data_only,
+│ │ -            _request_timeout=_request_timeout,
+│ │ -        )
+│ │ -        return api_response.get() if async_req else api_response  # type: ignore
+│ │ -
+│ │ -    def apply(
+│ │ -        self,
+│ │ -        *,
+│ │ -        namespace: Optional[str | object] = MISSING,
+│ │ -        file_path: Optional[str | Path] = None,
+│ │ -        data: Optional[dict | list | ResourceItem] = None,
+│ │ -    ) -> list[ResourceItem]:
+│ │ -        """Apply a kubernetes resource."""
+│ │ -        if file_path is not None and data is not None:
+│ │ -            raise InvalidParameter("`file_path` and `data` is mutually exclusive.")
+│ │ -        if not data:
+│ │ -            if not file_path:
+│ │ -                raise InvalidParameter("`file_path` or `data` must be provided.")
+│ │ -            if not Path(file_path).exists():
+│ │ -                raise FileNotFoundError(file_path)
+│ │ -            with open(file_path) as fp:
+│ │ -                data = list(yaml.full_load_all(fp))
+│ │ -        if not isinstance(data, list):
+│ │ -            data = [data]
+│ │ -
+│ │ -        items = []
+│ │ -        for item in data:
+│ │ -            resource = self.get_api(kind=item["kind"], api_version=item["apiVersion"].split("/")[-1])
+│ │ -            items.append(self._apply(resource, item, namespace))
+│ │ -        return items
+│ │ -
+│ │ -    def _apply(
+│ │ -        self, resource: ResourceApi, body: dict | ResourceItem, namespace: Optional[str | object] = MISSING, **kwargs
+│ │ -    ) -> ResourceItem:
+│ │ -        namespace = self.ensure_namespace_param(resource, namespace)
+│ │ +    def apply(self, body: dict | R, namespace: Optional[str | _Missing] = MISSING, **kwargs) -> R:
+│ │ +        namespace = self.ensure_namespace_param(namespace)
+│ │          body["metadata"].setdefault("annotations", {})
+│ │          name = body["metadata"]["name"]
+│ │          try:
+│ │ -            return resource.create(body=body, namespace=namespace, **kwargs)
+│ │ +            return self.create(body=body, namespace=namespace, **kwargs)
+│ │          except ConflictError:
+│ │              pass
+│ │          try:
+│ │ -            return resource.patch(name=name, body=body, namespace=namespace, **kwargs)
+│ │ +            return self.patch(name=name, body=body, namespace=namespace, **kwargs)
+│ │          except UnprocessibleEntityError:
+│ │              pass
+│ │  
+│ │ -        resource.delete(name=name, namespace=namespace, **kwargs)
+│ │ -        return resource.create(body=body, namespace=namespace, **kwargs)
+│ │ +        self.delete(name=name, namespace=namespace, **kwargs)
+│ │ +        return self.create(body=body, namespace=namespace, **kwargs)
+│ │ +
+│ │ +
+│ │ +class ResourceList(ResourceApi):
+│ │ +    """Represents a list of API objects"""
+│ │ +
+│ │ +    def __init__(self, client, group="", api_version="v1", base_kind="", kind=None, base_resource_lookup=None):
+│ │ +        self.client = client
+│ │ +        self.group = group
+│ │ +        self.api_version = api_version
+│ │ +        self.kind = kind or "{}List".format(base_kind)
+│ │ +        self.base_kind = base_kind
+│ │ +        self.base_resource_lookup = base_resource_lookup
+│ │ +        self.__base_resource = None
+│ │ +
+│ │ +    def base_resource(self):
+│ │ +        if self.__base_resource:
+│ │ +            return self.__base_resource
+│ │ +        elif self.base_resource_lookup:
+│ │ +            self.__base_resource = self.client.resources.get(**self.base_resource_lookup)
+│ │ +            return self.__base_resource
+│ │ +        elif self.base_kind:
+│ │ +            self.__base_resource = self.client.resources.get(
+│ │ +                group=self.group, api_version=self.api_version, kind=self.base_kind
+│ │ +            )
+│ │ +            return self.__base_resource
+│ │ +        return None
+│ │ +
+│ │ +    def _items_to_resources(self, body):
+│ │ +        """Takes a List body and return a dictionary with the following structure:
+│ │ +        {
+│ │ +            'api_version': str,
+│ │ +            'kind': str,
+│ │ +            'items': [{
+│ │ +                'resource': Resource,
+│ │ +                'name': str,
+│ │ +                'namespace': str,
+│ │ +            }]
+│ │ +        }
+│ │ +        """
+│ │ +        if body is None:
+│ │ +            raise ValueError("You must provide a body when calling methods on a ResourceList")
+│ │ +
+│ │ +        api_version = body["apiVersion"]
+│ │ +        kind = body["kind"]
+│ │ +        items = body.get("items")
+│ │ +        if not items:
+│ │ +            raise ValueError("The `items` field in the body must be populated when calling methods on a ResourceList")
+│ │ +
+│ │ +        if self.kind != kind:
+│ │ +            raise ValueError(
+│ │ +                "Methods on a {} must be called with a body containing the same kind. Receieved {} instead".format(
+│ │ +                    self.kind, kind
+│ │ +                )
+│ │ +            )
+│ │ +
+│ │ +        return {"api_version": api_version, "kind": kind, "items": [self._item_to_resource(item) for item in items]}
+│ │ +
+│ │ +    def _item_to_resource(self, item):
+│ │ +        metadata = item.get("metadata", {})
+│ │ +        resource = self.base_resource()
+│ │ +        if not resource:
+│ │ +            api_version = item.get("apiVersion", self.api_version)
+│ │ +            kind = item.get("kind", self.base_kind)
+│ │ +            resource = self.client.resources.get(api_version=api_version, kind=kind)
+│ │ +        return {
+│ │ +            "resource": resource,
+│ │ +            "definition": item,
+│ │ +            "name": metadata.get("name"),
+│ │ +            "namespace": metadata.get("namespace"),
+│ │ +        }
+│ │ +
+│ │ +    def to_dict(self):
+│ │ +        return {
+│ │ +            "_type": "ResourceList",
+│ │ +            "group": self.group,
+│ │ +            "api_version": self.api_version,
+│ │ +            "kind": self.kind,
+│ │ +            "base_kind": self.base_kind,
+│ │ +        }
+│ │ +
+│ │ +    def __getattr__(self, name):
+│ │ +        if self.base_resource():
+│ │ +            return getattr(self.base_resource(), name)
+│ │ +        return None
+│ │ +
+│ │ +
+│ │ +class Subresource(ResourceApi):
+│ │ +    """Represents a subresource of an API resource. This generally includes operations
+│ │ +    like scale, as well as status objects for an instantiated resource
+│ │ +    """
+│ │ +
+│ │ +    def __init__(self, parent, **kwargs):
+│ │ +        self.parent = parent
+│ │ +        self.prefix = parent.prefix
+│ │ +        self.group = parent.group
+│ │ +        self.api_version = parent.api_version
+│ │ +        self.kind = kwargs.pop("kind")
+│ │ +        self.name = kwargs.pop("name")
+│ │ +        self.subresource = kwargs.pop("subresource", None) or self.name.split("/")[1]
+│ │ +        self.namespaced = kwargs.pop("namespaced", False)
+│ │ +        self.verbs = kwargs.pop("verbs", None)
+│ │ +        self.extra_args = kwargs
+│ │ +
+│ │ +    @property
+│ │ +    def urls(self):
+│ │ +        full_prefix = "{}/{}".format(self.prefix, self.group_version)
+│ │ +        return {
+│ │ +            "full": "/{}/{}/{{name}}/{}".format(full_prefix, self.parent.name, self.subresource),
+│ │ +            "namespaced_full": "/{}/namespaces/{{namespace}}/{}/{{name}}/{}".format(
+│ │ +                full_prefix, self.parent.name, self.subresource
+│ │ +            ),
+│ │ +        }
+│ │ +
+│ │ +    def to_dict(self):
+│ │ +        d = {
+│ │ +            "kind": self.kind,
+│ │ +            "name": self.name,
+│ │ +            "subresource": self.subresource,
+│ │ +            "namespaced": self.namespaced,
+│ │ +            "verbs": self.verbs,
+│ │ +        }
+│ │ +        d.update(self.extra_args)
+│ │ +        return d
+│ │ +
+│ │ +    def __getattr__(self, name) -> Subresource:
+│ │ +        return getattr(self.parent, name)
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/config.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/config.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/events.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/events.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/exceptions.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/exceptions.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -13,22 +13,21 @@
+│ │      "GoneError",
+│ │      "UnprocessibleEntityError",
+│ │      "TooManyRequestsError",
+│ │      "InternalServerError",
+│ │      "ServiceUnavailableError",
+│ │      "ServerTimeoutError",
+│ │      "ConfigException",
+│ │ -    "api_exception"
+│ │ +    "api_exception",
+│ │  ]
+│ │  
+│ │  
+│ │ -from kubernetes.config.config_exception import ConfigException
+│ │ -from kubernetes.dynamic.exceptions import (
+│ │ -    ApiException,
+│ │ +from kubernetes_dynamic.kube.exceptions import (
+│ │      BadRequestError,
+│ │ +    ConfigException,
+│ │      ConflictError,
+│ │      DynamicApiError,
+│ │      ForbiddenError,
+│ │      GoneError,
+│ │      InternalServerError,
+│ │      KubernetesValidateMissing,
+│ │      MethodNotAllowedError,
+│ │ @@ -38,14 +37,15 @@
+│ │      ServerTimeoutError,
+│ │      ServiceUnavailableError,
+│ │      TooManyRequestsError,
+│ │      UnauthorizedError,
+│ │      UnprocessibleEntityError,
+│ │      api_exception,
+│ │  )
+│ │ +from kubernetes_dynamic.openapi_client.exceptions import ApiException
+│ │  
+│ │  
+│ │  class InvalidParameter(Exception):
+│ │      pass
+│ │  
+│ │  
+│ │  class EventTimeoutError(TimeoutError):
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/formatters.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/formatters.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/__init__.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/all.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/all.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/common.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/common.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/configmap.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/configmap.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/ingress.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/ingress.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/namespace.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/namespace.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -15,19 +15,19 @@
+│ │  
+│ │  class V1Namespace(ResourceItem):
+│ │      spec: V1NamespaceSpec = Field(default_factory=lambda: get_default("V1NamespaceSpec"))
+│ │      status: V1NamespaceStatus = Field(default_factory=lambda: get_default("V1NamespaceStatus"))
+│ │  
+│ │      def annotate(self, annotations_dict: Dict[str, str]) -> V1Namespace:
+│ │          """Add annotation(s) to the namespace."""
+│ │ -        self.refresh()
+│ │ +        self.refresh_()
+│ │          existing: Dict[str, str] = self.metadata.annotations or {}
+│ │          existing.update(annotations_dict)
+│ │ -        return self.patch()
+│ │ +        return self.patch_()
+│ │  
+│ │      @classmethod
+│ │      def ensure(cls, name: str) -> V1Namespace:
+│ │          item = V1Namespace(metadata=cast(V1ObjectMeta, {"name": name}))
+│ │          try:
+│ │ -            return item.create()
+│ │ +            return item.create_()
+│ │          except ConflictError:
+│ │ -            return item.refresh()
+│ │ +            return item.refresh_()
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/pod.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/pod.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -43,16 +43,16 @@
+│ │          container: str = "",
+│ │          stdin: bool = True,
+│ │          stdout: bool = True,
+│ │          stderr: bool = True,
+│ │          tty: bool = True,
+│ │      ) -> str:
+│ │          """Run command on pod."""
+│ │ -        response = self.client.stream(
+│ │ -            self.client.pods.exec.get,  # type: ignore
+│ │ +        response = self._client.stream(
+│ │ +            self._api.exec.get,  # type: ignore
+│ │              self.metadata.name,
+│ │              self.metadata.namespace,
+│ │              container=container,
+│ │              command=command,
+│ │              stdin=stdin,
+│ │              stdout=stdout,
+│ │              stderr=stderr,
+│ │ @@ -69,15 +69,15 @@
+│ │          pretty: Optional[bool] = None,
+│ │          previous: Optional[bool] = None,
+│ │          since_seconds: Optional[int] = None,
+│ │          tail_lines: Optional[int] = None,
+│ │          timestamps: Optional[bool] = None,
+│ │      ) -> Iterator[str]:
+│ │          """Get pod logs."""
+│ │ -        response: HTTPResponse = self.client.pods.log.get(
+│ │ +        response: HTTPResponse = self._api.log.get(
+│ │              self.metadata.name,
+│ │              self.metadata.namespace,
+│ │              container=container,
+│ │              follow=follow,
+│ │              insecureSkipTLSVerifyBackend=insecure,
+│ │              limitBytes=limit,
+│ │              pretty=pretty,
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/resource_item.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/resource_item.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -6,19 +6,20 @@
+│ │  
+│ │  import pydantic
+│ │  from typing_extensions import Self
+│ │  
+│ │  from kubernetes_dynamic.events import Event, EventType
+│ │  
+│ │  from ..exceptions import NotFoundError
+│ │ -from ..resource_api import ResourceApi
+│ │  from .common import V1ObjectMeta
+│ │  from .resource_value import ResourceValue
+│ │  
+│ │  if typing.TYPE_CHECKING:
+│ │ +    from kubernetes_dynamic.kube.resource_api import ResourceApi
+│ │ +
+│ │      from ..client import K8sClient
+│ │  
+│ │  
+│ │  class CheckResult:
+│ │      """Result object to represent the result and message of a check."""
+│ │  
+│ │      def __init__(self, state: bool, message: Optional[str] = None) -> None:
+│ │ @@ -38,16 +39,16 @@
+│ │      """Kubernetes resource objects."""
+│ │  
+│ │      apiVersion: str = ""
+│ │      kind: str = ""
+│ │      metadata: V1ObjectMeta = pydantic.Field(default_factory=V1ObjectMeta)
+│ │      status: ResourceValue = pydantic.Field(default_factory=ResourceValue)
+│ │  
+│ │ -    _client: Optional[K8sClient] = pydantic.PrivateAttr()
+│ │ -    _api: Optional[ResourceApi] = pydantic.PrivateAttr()
+│ │ +    _client_instance: Optional[K8sClient] = pydantic.PrivateAttr()
+│ │ +    _api_instance: Optional[ResourceApi] = pydantic.PrivateAttr()
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          definition: dict | ResourceValue | None = None,
+│ │          client=None,
+│ │          **kwargs,
+│ │      ):
+│ │ @@ -58,16 +59,19 @@
+│ │              final_def["kind"] = kind
+│ │          api_version = final_def.get("apiVersion") or self.apiVersion or defaults.get("apiVersion")
+│ │          if api_version:
+│ │              final_def["apiVersion"] = api_version
+│ │  
+│ │          super().__init__(**final_def)
+│ │  
+│ │ -        self._api: Optional[ResourceApi] = None
+│ │ -        self._client = client
+│ │ +        self._api_instance: Optional[ResourceApi] = None
+│ │ +        self._client_instance = client
+│ │ +
+│ │ +    def __repr__(self):
+│ │ +        return f"{self.__class__.__name__}(name={self.metadata.name}, namespace={self.metadata.namespace})"
+│ │  
+│ │      @classmethod
+│ │      def get_defaults(cls):
+│ │          """Get some default values based on the class."""
+│ │          values = {}
+│ │          for cl in [cls] + list(cls.__bases__):
+│ │              parts = re.sub("([a-z0-9])([A-Z])", r"\1 \2", cl.__name__).split()
+│ │ @@ -77,56 +81,60 @@
+│ │                  version_index = parts.index(version) + 1
+│ │                  values["kind"] = "".join(parts[version_index:])
+│ │                  values["apiVersion"] = version.lower()
+│ │                  break
+│ │          return values
+│ │  
+│ │      @property
+│ │ -    def api(self) -> ResourceApi:
+│ │ +    def _api(self) -> ResourceApi:
+│ │          """Get resource api."""
+│ │ -        if not self._api or self._api.api_version != self.apiVersion or self._api.kind != self.kind:
+│ │ -            self._api = self.client.get_api(kind=self.kind, api_version=self.apiVersion)
+│ │ -        return self._api
+│ │ +        if (
+│ │ +            not self._api_instance
+│ │ +            or self._api_instance.api_version != self.apiVersion
+│ │ +            or self._api_instance.kind != self.kind
+│ │ +        ):
+│ │ +            self._api_instance = self._client.get_api(kind=self.kind, api_version=self.apiVersion)
+│ │ +        return self._api_instance
+│ │  
+│ │      @property
+│ │ -    def client(self) -> K8sClient:
+│ │ +    def _client(self) -> K8sClient:
+│ │          """Get resource api."""
+│ │ -        if not self._client:
+│ │ -            self._client = self.default_client()
+│ │ -        return self._client
+│ │ +        if not self._client_instance:
+│ │ +            self._client_instance = self.default_client()
+│ │ +        return self._client_instance
+│ │  
+│ │      @classmethod
+│ │      def default_client(cls) -> K8sClient:
+│ │          """Create a default K8sClient."""
+│ │          from ..client import K8sClient
+│ │  
+│ │          return K8sClient()
+│ │  
+│ │ -    def refresh(self) -> Self:
+│ │ +    def refresh_(self) -> Self:
+│ │          """Refreshes the local instance with kubernetes data."""
+│ │ -        data = self.read()
+│ │ +        data = self.read_()
+│ │          if data is None:
+│ │              raise NotFoundError(self)
+│ │          return self._update_attrs(data)
+│ │  
+│ │ -    def patch(self) -> Self:
+│ │ +    def patch_(self) -> Self:
+│ │          """Updates the Kubernetes resource."""
+│ │ -        return self._update_attrs(self.api.patch(name=self.metadata.name, body=self))
+│ │ +        return self._update_attrs(self._api.patch(name=self.metadata.name, body=self))
+│ │  
+│ │ -    def create(self) -> Self:
+│ │ +    def create_(self) -> Self:
+│ │          """Creates the object in Kubernetes."""
+│ │ -        return self._update_attrs(self.api.create(self))
+│ │ +        return self._update_attrs(self._api.create(self))
+│ │  
+│ │ -    def read(self) -> Optional[Self]:
+│ │ +    def read_(self) -> Optional[Self]:
+│ │          """Reads the object in Kubernetes."""
+│ │ -        return self.api.get(self.metadata.name, self.metadata.namespace)
+│ │ +        return self._api.get(self.metadata.name, self.metadata.namespace)
+│ │  
+│ │ -    def delete(self) -> Self:
+│ │ +    def delete_(self) -> Self:
+│ │          """Deletes the object from Kubernetes."""
+│ │ -        return self.api.delete(self.metadata.name, self.metadata.namespace)
+│ │ +        return self._api.delete(self.metadata.name, self.metadata.namespace)
+│ │  
+│ │      @staticmethod
+│ │      def check_object_conditions(item: ResourceItem) -> CheckResult:
+│ │          """Check object conditions."""
+│ │          name = item.metadata.name
+│ │          if not item.status or not item.status.conditions:
+│ │              return CheckResult(False, f"No conditions found on {item.kind} {name}.")
+│ │ @@ -168,15 +176,15 @@
+│ │              return ResourceItem.check_object_conditions(item)
+│ │          else:
+│ │              raise NotImplementedError(f"Unimplemented resource readiness check for {item.kind}  {item.metadata.name}.")
+│ │  
+│ │      def is_ready(self, refresh: bool = False) -> CheckResult:
+│ │          """Check if the resource data successfully satisfies the ready state."""
+│ │          if refresh:
+│ │ -            self.refresh()
+│ │ +            self.refresh_()
+│ │          return self.check_object_is_ready(self)
+│ │  
+│ │      def wait_until_status(self, status: str, timeout: int = 30) -> Event:
+│ │          """Wait until the resource is in a specific status."""
+│ │  
+│ │          def status_check(event: Event) -> CheckResult:
+│ │              result = event.raw_object["status"]["phase"] == status and event.type != EventType.DELETED
+│ │ @@ -214,13 +222,12 @@
+│ │          return self.wait_until(
+│ │              check=not_ready,
+│ │              timeout=timeout,
+│ │              **kwargs,
+│ │          )
+│ │  
+│ │      def wait_until(self, check: Callable[[Event], CheckResult], timeout: int = 30, **kwargs) -> Event:
+│ │ -        return self.client.wait_until(
+│ │ -            self.api,
+│ │ +        return self.api.wait_until(
+│ │              check=check,
+│ │              timeout=timeout,
+│ │              **kwargs,
+│ │          )
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/resource_value.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/resource_value.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic/models/secret.py
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic/models/secret.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -26,19 +26,19 @@
+│ │          **kwargs,
+│ │      ):
+│ │          super().__init__(*args, **kwargs)
+│ │          self._required_keys = required_keys
+│ │  
+│ │      def exists(self) -> bool:
+│ │          """Checks if the secret exists in Kubernetes."""
+│ │ -        return self.read() is not None
+│ │ +        return self.read_() is not None
+│ │  
+│ │      def validate_keys(self) -> Tuple[bool, bool, list]:
+│ │          """Validates a secret exists and has the correct format."""
+│ │ -        secret = self.read()
+│ │ +        secret = self.read_()
+│ │          is_valid = True
+│ │          missing_data_keys = []
+│ │  
+│ │          if secret is None:
+│ │              return (False, False, missing_data_keys)
+│ │  
+│ │          if self.type is not None and secret.type != self.type:
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/PKG-INFO
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kubernetes-dynamic
+│ │ -Version: 0.0.9
+│ │ +Version: 0.1.0
+│ │  Summary: Kubernetes Dynamic client
+│ │  Author-email: Attila Kobor <atti92@gmail.com>, Balazs Hamorszky <balihb@gmail.com>
+│ │  License: BSD-3-Clause
+│ │  Project-URL: homepage, https://github.com/atti92/kubernetes-dynamic
+│ │  Project-URL: documentation, https://github.com/atti92/kubernetes-dynamic
+│ │  Project-URL: repository, https://github.com/atti92/kubernetes-dynamic.git
+│ │  Project-URL: changelog, https://github.com/atti92/kubernetes-dynamic/blob/main/README.md
+│ │   --- kubernetes-dynamic-0.0.9/kubernetes_dynamic.egg-info/SOURCES.txt
+│ ├── +++ kubernetes-dynamic-0.1.0/kubernetes_dynamic.egg-info/SOURCES.txt
+│ │┄ Files 10% similar despite different names
+│ │ @@ -6,33 +6,47 @@
+│ │  kubernetes_dynamic/_kubernetes.py
+│ │  kubernetes_dynamic/_version.py
+│ │  kubernetes_dynamic/client.py
+│ │  kubernetes_dynamic/config.py
+│ │  kubernetes_dynamic/events.py
+│ │  kubernetes_dynamic/exceptions.py
+│ │  kubernetes_dynamic/formatters.py
+│ │ -kubernetes_dynamic/resource_api.py
+│ │  kubernetes_dynamic.egg-info/PKG-INFO
+│ │  kubernetes_dynamic.egg-info/SOURCES.txt
+│ │  kubernetes_dynamic.egg-info/dependency_links.txt
+│ │  kubernetes_dynamic.egg-info/requires.txt
+│ │  kubernetes_dynamic.egg-info/top_level.txt
+│ │ +kubernetes_dynamic/kube/__init__.py
+│ │ +kubernetes_dynamic/kube/dateutil.py
+│ │ +kubernetes_dynamic/kube/discovery.py
+│ │ +kubernetes_dynamic/kube/exceptions.py
+│ │ +kubernetes_dynamic/kube/exec_provider.py
+│ │ +kubernetes_dynamic/kube/incluster_config.py
+│ │ +kubernetes_dynamic/kube/kube_config.py
+│ │ +kubernetes_dynamic/kube/resource_api.py
+│ │ +kubernetes_dynamic/kube/ws_client.py
+│ │  kubernetes_dynamic/models/__init__.py
+│ │  kubernetes_dynamic/models/all.py
+│ │  kubernetes_dynamic/models/common.py
+│ │  kubernetes_dynamic/models/configmap.py
+│ │  kubernetes_dynamic/models/ingress.py
+│ │  kubernetes_dynamic/models/namespace.py
+│ │  kubernetes_dynamic/models/pod.py
+│ │  kubernetes_dynamic/models/resource_item.py
+│ │  kubernetes_dynamic/models/resource_value.py
+│ │  kubernetes_dynamic/models/secret.py
+│ │  kubernetes_dynamic/models/stateful_set.py
+│ │ +kubernetes_dynamic/openapi_client/__init__.py
+│ │ +kubernetes_dynamic/openapi_client/api_client.py
+│ │ +kubernetes_dynamic/openapi_client/configuration.py
+│ │ +kubernetes_dynamic/openapi_client/exceptions.py
+│ │ +kubernetes_dynamic/openapi_client/rest.py
+│ │  tests/test_client.py
+│ │  tests/test_config.py
+│ │  tests/test_configmap.py
+│ │  tests/test_ingress.py
+│ │  tests/test_namespace.py
+│ │  tests/test_pod.py
+│ │ +tests/test_resource_api.py
+│ │  tests/test_resource_item.py
+│ │  tests/test_resource_value.py
+│ │  tests/test_secret.py
+│ │   --- kubernetes-dynamic-0.0.9/pyproject.toml
+│ ├── +++ kubernetes-dynamic-0.1.0/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_client.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_client.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,27 +1,21 @@
+│ │  from typing import Any
+│ │  from unittest.mock import MagicMock
+│ │  
+│ │ -import pydantic
+│ │  import pytest
+│ │ -from kubernetes import dynamic
+│ │ -from kubernetes.config import ConfigException
+│ │  
+│ │ -from kubernetes_dynamic.client import (
+│ │ -    ConflictError,
+│ │ -    K8sClient,
+│ │ -    NotFoundError,
+│ │ -    ResourceNotUniqueError,
+│ │ -    UnprocessibleEntityError,
+│ │ -)
+│ │ -from kubernetes_dynamic.events import Event
+│ │ +from kubernetes_dynamic._kubernetes import ResourceApi
+│ │ +from kubernetes_dynamic.client import K8sClient
+│ │  from kubernetes_dynamic.exceptions import InvalidParameter
+│ │  from kubernetes_dynamic.formatters import format_selector
+│ │ +from kubernetes_dynamic.kube.exceptions import (
+│ │ +    ConfigException,
+│ │ +    ResourceNotUniqueError,
+│ │ +)
+│ │  from kubernetes_dynamic.models.pod import V1Pod
+│ │ -from kubernetes_dynamic.models.resource_value import ResourceValue
+│ │  
+│ │  
+│ │  def resource_api(namespaced=True, obj_type=None):
+│ │      return MagicMock(namespaced=namespaced, _resource_type=obj_type)
+│ │  
+│ │  
+│ │  def fake_pod():
+│ │ @@ -87,15 +81,15 @@
+│ │      if api_version:
+│ │          filter_dict["api_version"] = api_version
+│ │      if kind:
+│ │          filter_dict["kind"] = kind
+│ │      if name:
+│ │          filter_dict["name"] = name
+│ │      assert api == mock_resources.get.return_value
+│ │ -    assert api._resource_type == V1Pod
+│ │ +    assert api.resource_type == V1Pod
+│ │      mock_resources.get.assert_called_with(**filter_dict)
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "name, object_type, api_version, kind, filter",
+│ │      [
+│ │          ("pods", V1Pod, "v1", "Pod", {}),
+│ │ @@ -114,28 +108,28 @@
+│ │      filter: dict,
+│ │      mock_resources: MagicMock,
+│ │  ):
+│ │      mock_resources.get.side_effect = ResourceNotUniqueError
+│ │      mock_resources.search.return_value = [
+│ │          MagicMock(kind="Pod", api_version="v2", preferred=False),
+│ │          MagicMock(kind="Pod", api_version="v1", preferred=True),
+│ │ -        MagicMock(kind="Pod", api_version="v1", preferred=True, spec=dynamic.Resource),
+│ │ +        MagicMock(kind="Pod", api_version="v1", preferred=True, spec=ResourceApi),
+│ │          MagicMock(kind="Pod", api_version="v4", preferred=False),
+│ │      ]
+│ │      cl = K8sClient()
+│ │      api = cl.get_api(name=name, object_type=object_type, api_version=api_version, kind=kind, **filter)
+│ │      filter_dict = filter
+│ │      if api_version:
+│ │          filter_dict["api_version"] = api_version
+│ │      if kind:
+│ │          filter_dict["kind"] = kind
+│ │      if name:
+│ │          filter_dict["name"] = name
+│ │      assert api == mock_resources.search.return_value[2]
+│ │ -    assert api._resource_type == V1Pod
+│ │ +    assert api.resource_type == V1Pod
+│ │      mock_resources.search.assert_called_with(**filter_dict)
+│ │      mock_resources.get.assert_called_with(**filter_dict)
+│ │  
+│ │  
+│ │  def test_k8s_client_getattr(mock_resources: MagicMock):
+│ │      mock_resources.get.return_value = MagicMock(kind="Pod", api_version="v1")
+│ │      cl = K8sClient()
+│ │ @@ -161,123 +155,18 @@
+│ │      ],
+│ │  )
+│ │  def test_k8s_client_format_selector(selector, output: str):
+│ │      """Test label selector formatting."""
+│ │      assert format_selector(selector) == output
+│ │  
+│ │  
+│ │ -def test_k8s_client_get(mock_request: MagicMock):
+│ │ -    """Test get method."""
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert K8sClient().get(resource_api(), "name", "namespace") == fake_pod()
+│ │ -
+│ │ -    mock_request.side_effect = NotFoundError(MagicMock())
+│ │ -    assert K8sClient().get(resource_api(), "name", "namespace") is None
+│ │ -
+│ │ -
+│ │ -def test_find(mock_request: MagicMock):
+│ │ -    """Test generic find method."""
+│ │ -    pods = fake_pods()
+│ │ -    mock_request.return_value = pods
+│ │ -    assert K8sClient().find(resource_api(), "pod-.*", "namespace") == pods
+│ │ -
+│ │ -    mock_request.side_effect = [pods]
+│ │ -    assert K8sClient().find(resource_api(), "something.*", "namespace") == []
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_get_clusterwide(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert K8sClient().get(resource_api(namespaced=False), "name", "namespace") == fake_pod()
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_get_kwarg_namespace(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert K8sClient().get(resource_api(), "name", namespace="namespace") == fake_pod()
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_get_404(mock_request: MagicMock):
+│ │ -    mock_request.side_effect = (NotFoundError(fake_pod()),)
+│ │ -    assert K8sClient().get(resource_api(), "name", "namespace") is None
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_create(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert K8sClient().create(resource_api(), MagicMock(), "namespace") == fake_pod()
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_delete(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert (
+│ │ -        K8sClient().delete(resource_api(), "name", "namespace", MagicMock(), "label_selector", "field_selector")
+│ │ -        == fake_pod()
+│ │ -    )
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_replace(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert (
+│ │ -        K8sClient().replace(
+│ │ -            resource_api(),
+│ │ -            MagicMock(),
+│ │ -            "name",
+│ │ -            "namespace",
+│ │ -        )
+│ │ -        == fake_pod()
+│ │ -    )
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_patch(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert (
+│ │ -        K8sClient().patch(
+│ │ -            resource_api(),
+│ │ -            MagicMock(),
+│ │ -            "name",
+│ │ -            "namespace",
+│ │ -        )
+│ │ -        == fake_pod()
+│ │ -    )
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_server_side_apply(mock_request: MagicMock):
+│ │ -    mock_request.return_value = fake_pod()
+│ │ -    assert K8sClient().server_side_apply(resource_api(), MagicMock(), "name", "namespace", True) == fake_pod()
+│ │ -
+│ │ -
+│ │ -def test_k8s_client_watch(mock_request: MagicMock):
+│ │ -    resp = MagicMock()
+│ │ -    resp.__iter__.return_value = [
+│ │ -        '{"type": "ADDED", "object": {"apiVersion": "v1", "kind": "A", "data": 1}}',
+│ │ -        '{"type": "DELETED", "object": {"apiVersion": "v1", "kind": "A", "data": 1}}',
+│ │ -        '{"type": "MODIFIED", "object": {"apiVersion": "v1", "kind": "A", "data": 1}}',
+│ │ -        '{"type": "ERROR", "object": {"apiVersion": "v1", "kind": "A", "data": 1}}',
+│ │ -    ]
+│ │ -    api = resource_api(obj_type=ResourceValue)
+│ │ -    api.get.return_value = resp
+│ │ -    for idx, item in enumerate(
+│ │ -        K8sClient().watch(
+│ │ -            api,
+│ │ -            "namespace",
+│ │ -            "name",
+│ │ -            "label_selector",
+│ │ -            "field_selector",
+│ │ -            "resource_version",
+│ │ -            "timeout",
+│ │ -            None,
+│ │ -        )
+│ │ -    ):
+│ │ -        assert item == pydantic.parse_raw_as(Event, resp.__iter__.return_value[idx])
+│ │ -        assert isinstance(item.object, ResourceValue)
+│ │ -        assert item.object.data == 1
+│ │ -
+│ │ -
+│ │  def test_k8s_client_stream():
+│ │      method = MagicMock()
+│ │ -    method.return_value.data = MagicMock()
+│ │ -    assert K8sClient().stream(method, "name", "namespace") == method.return_value.data
+│ │ +    method.return_value.read_all.return_value = "data"
+│ │ +    assert K8sClient().stream(method, "name", "namespace") == "data"
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "namespace, file_path, data, error, exc",
+│ │      [
+│ │          ("namespace", "file/path", {}, "mutually exclusive", InvalidParameter),
+│ │          ("namespace", "file/path", {"data": ""}, "mutually exclusive", InvalidParameter),
+│ │ @@ -308,22 +197,12 @@
+│ │      path_mock.return_value.exists.return_value = True
+│ │      mocker.patch("kubernetes_dynamic.client.open")
+│ │      yaml_mock = mocker.patch("kubernetes_dynamic.client.yaml")
+│ │      yaml_mock.full_load_all.return_value = []
+│ │      item = {"kind": "Pod", "apiVersion": "v1", "metadata": {"name": "pod-name"}}
+│ │      expected = MagicMock()
+│ │  
+│ │ -    pod_api.create.side_effect = [ConflictError(MagicMock(name="pod-name")), expected]
+│ │ -    pod_api.patch.side_effect = UnprocessibleEntityError(MagicMock(name="pod-name"))
+│ │ +    pod_api.apply.return_value = expected
+│ │  
+│ │      cl = K8sClient()
+│ │      cl.config.namespace = "my_namespace"
+│ │      assert cl.apply(data=item) == [expected]
+│ │ -
+│ │ -    item["metadata"]["annotations"] = {}
+│ │ -    pod_api.create.assert_called_with(body=item, namespace="my_namespace")
+│ │ -    pod_api.patch.assert_called_with(name="pod-name", body=item, namespace="my_namespace")
+│ │ -    pod_api.delete.assert_called_with(name="pod-name", namespace="my_namespace")
+│ │ -
+│ │ -    pod_api.create.side_effect = [ConflictError(MagicMock(name="pod-name")), expected]
+│ │ -    pod_api.patch.side_effect = UnprocessibleEntityError(MagicMock(name="pod-name"))
+│ │ -    assert cl.apply(data=[item]) == [expected]
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_config.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_config.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_configmap.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_configmap.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_ingress.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_ingress.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_namespace.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_namespace.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,11 +1,10 @@
+│ │  from unittest.mock import MagicMock
+│ │  
+│ │ -from kubernetes.dynamic.exceptions import ConflictError
+│ │ -
+│ │ +from kubernetes_dynamic.kube.exceptions import ConflictError
+│ │  from kubernetes_dynamic.models.namespace import V1Namespace
+│ │  
+│ │  
+│ │  def test_namespace_init():
+│ │      pod = V1Namespace.parse_obj(dict(metadata={"name": "my_namespace"}))
+│ │      assert pod.metadata.name == "my_namespace"
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_pod.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_pod.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -58,15 +58,15 @@
+│ │      }
+│ │  
+│ │  
+│ │  def test_pod_exec(mock_client):
+│ │      pod = V1Pod.parse_obj(dict(metadata={"name": "my_pod", "namespace": "my_namespace"}))
+│ │      assert pod.exec("command", "container") == mock_client.stream.return_value
+│ │      mock_client.stream.assert_called_with(
+│ │ -        mock_client.pods.exec.get,
+│ │ +        pod._api.exec.get,
+│ │          "my_pod",
+│ │          "my_namespace",
+│ │          container="container",
+│ │          command="command",
+│ │          stdin=True,
+│ │          stdout=True,
+│ │          stderr=True,
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_resource_item.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_resource_item.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from unittest.mock import MagicMock
+│ │  
+│ │  import pytest
+│ │ -from kubernetes.dynamic.exceptions import NotFoundError
+│ │  
+│ │ +from kubernetes_dynamic.kube.exceptions import NotFoundError
+│ │  from kubernetes_dynamic.models.resource_item import CheckResult, ResourceItem
+│ │  
+│ │  
+│ │  def test_resource_init_dict():
+│ │      item = ResourceItem(dict(key1="val1", key2={"subkey1": 3}, key3=[{"subl1": 4}]))
+│ │      assert item.key1 == "val1"
+│ │      assert item.key2.subkey1 == 3
+│ │ @@ -22,34 +22,34 @@
+│ │      assert item.api is item.api
+│ │  
+│ │  
+│ │  def test_resource_refresh(mock_client):
+│ │      item = ResourceItem(metadata={"name": "name", "namespace": "namespace"})
+│ │  
+│ │      mock_client.get_api.return_value.get.return_value = {"metadata": {"name": "name", "namespace": "namespace"}}
+│ │ -    assert item.refresh() == item
+│ │ +    assert item.refresh_() == item
+│ │  
+│ │      mock_client.get_api.return_value.get.return_value = None
+│ │      with pytest.raises(NotFoundError):
+│ │ -        item.refresh()
+│ │ +        item.refresh_()
+│ │  
+│ │  
+│ │  def test_resource_is_ready(mock_client, mocker):
+│ │      is_ready_mock = mocker.patch("kubernetes_dynamic.models.resource_item.ResourceItem.check_object_is_ready")
+│ │      item = ResourceItem(metadata={"name": "name", "namespace": "namespace"})
+│ │  
+│ │      assert item.is_ready() == is_ready_mock.return_value
+│ │      mock_client.get_api.return_value.get.assert_not_called()
+│ │      assert item.is_ready(refresh=True) == is_ready_mock.return_value
+│ │      mock_client.get_api.return_value.get.assert_called()
+│ │  
+│ │  
+│ │  def test_resource_delete(mock_client):
+│ │      item = ResourceItem(metadata={"name": "name", "namespace": "namespace"})
+│ │ -    assert item.delete() == mock_client.get_api.return_value.delete.return_value
+│ │ +    assert item.delete_() == mock_client.get_api.return_value.delete.return_value
+│ │      mock_client.get_api.return_value.delete.assert_called()
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "conditions, result",
+│ │      [
+│ │          ([], CheckResult(False, "No conditions found on Kind name.")),
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_resource_value.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_resource_value.py
+│ │┄ Files identical despite different names
+│ │   --- kubernetes-dynamic-0.0.9/tests/test_secret.py
+│ ├── +++ kubernetes-dynamic-0.1.0/tests/test_secret.py
+│ │┄ Files identical despite different names

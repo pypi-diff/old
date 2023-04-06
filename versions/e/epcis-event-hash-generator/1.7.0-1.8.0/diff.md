@@ -1,0 +1,1528 @@
+# Comparing `tmp/epcis-event-hash-generator-1.7.0.tar.gz` & `tmp/epcis-event-hash-generator-1.8.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "epcis-event-hash-generator-1.7.0.tar", last modified: Fri Feb 10 11:07:10 2023, max compression
++gzip compressed data, was "epcis-event-hash-generator-1.8.0.tar", last modified: Thu Apr  6 11:45:29 2023, max compression
+```
+
+## Comparing `epcis-event-hash-generator-1.7.0.tar` & `epcis-event-hash-generator-1.8.0.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+-drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-02-10 11:07:09.997485 epcis-event-hash-generator-1.7.0/
+--rw-r--r--   0 sebastian  (1000) sebastian  (1000)     1065 2020-01-15 09:04:43.000000 epcis-event-hash-generator-1.7.0/LICENSE
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    18945 2023-02-10 11:07:09.993486 epcis-event-hash-generator-1.7.0/PKG-INFO
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    18190 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/README.md
+-drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-02-10 11:07:09.993486 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     5089 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/__init__.py
+--rwxrwxr-x   0 sebastian  (1000) sebastian  (1000)     5086 2022-04-12 14:10:06.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/__main__.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)      140 2021-03-25 18:01:10.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/context.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    25121 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/dl_normaliser.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2168 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/events_from_file_reader.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2056 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/file_document_loader.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    10325 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/hash_generator.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     7953 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/json_to_py.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     3774 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/json_xml_model_mismatch_correction.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     5923 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/xml_to_py.py
+-drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-02-10 11:07:09.993486 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    18945 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/PKG-INFO
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)      950 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/SOURCES.txt
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)        1 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/dependency_links.txt
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       67 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/entry_points.txt
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       45 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/requires.txt
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       27 2023-02-10 11:07:09.000000 epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/top_level.txt
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       38 2023-02-10 11:07:09.997485 epcis-event-hash-generator-1.7.0/setup.cfg
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1224 2023-02-10 11:06:57.000000 epcis-event-hash-generator-1.7.0/setup.py
+-drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-02-10 11:07:09.993486 epcis-event-hash-generator-1.7.0/tests/
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2236 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/tests/test_all_values_present.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1339 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/tests/test_bare_string_normalisation.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1051 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.7.0/tests/test_explicit_hash_values.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1508 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.7.0/tests/test_required_properties.py
+--rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     3383 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.7.0/tests/test_xml_to_py.py
++drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-04-06 11:45:29.548482 epcis-event-hash-generator-1.8.0/
++-rw-r--r--   0 sebastian  (1000) sebastian  (1000)     1065 2020-01-15 09:04:43.000000 epcis-event-hash-generator-1.8.0/LICENSE
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    21377 2023-04-06 11:45:29.548482 epcis-event-hash-generator-1.8.0/PKG-INFO
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    20622 2023-04-06 11:40:50.000000 epcis-event-hash-generator-1.8.0/README.md
++drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-04-06 11:45:29.544482 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     4922 2023-03-28 09:17:42.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/__init__.py
++-rwxrwxr-x   0 sebastian  (1000) sebastian  (1000)     5086 2022-04-12 14:10:06.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/__main__.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)      140 2021-03-25 18:01:10.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/context.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    26376 2023-04-06 11:40:50.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/dl_normaliser.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2168 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/events_from_file_reader.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2056 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/file_document_loader.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    11624 2023-03-28 09:17:42.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/hash_generator.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     8200 2023-03-28 09:17:42.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/json_to_py.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     3774 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/json_xml_model_mismatch_correction.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     5923 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/xml_to_py.py
++drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-04-06 11:45:29.544482 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)    21377 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/PKG-INFO
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)      950 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/SOURCES.txt
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)        1 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/dependency_links.txt
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       67 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/entry_points.txt
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       44 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/requires.txt
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       27 2023-04-06 11:45:29.000000 epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/top_level.txt
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)       38 2023-04-06 11:45:29.548482 epcis-event-hash-generator-1.8.0/setup.cfg
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1223 2023-04-06 11:41:13.000000 epcis-event-hash-generator-1.8.0/setup.py
++drwxrwxr-x   0 sebastian  (1000) sebastian  (1000)        0 2023-04-06 11:45:29.544482 epcis-event-hash-generator-1.8.0/tests/
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     2367 2023-03-28 09:17:42.000000 epcis-event-hash-generator-1.8.0/tests/test_all_values_present.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1339 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.8.0/tests/test_bare_string_normalisation.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1051 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.8.0/tests/test_explicit_hash_values.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     1508 2021-03-08 11:41:20.000000 epcis-event-hash-generator-1.8.0/tests/test_required_properties.py
++-rw-rw-r--   0 sebastian  (1000) sebastian  (1000)     3383 2023-02-10 10:37:47.000000 epcis-event-hash-generator-1.8.0/tests/test_xml_to_py.py
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/LICENSE` & `epcis-event-hash-generator-1.8.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/PKG-INFO` & `epcis-event-hash-generator-1.8.0/README.md`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,52 +1,33 @@
+-Metadata-Version: 2.1
+-Name: epcis-event-hash-generator
+-Version: 1.7.0
+-Summary: Exemplary implementation of the EPCIS event hash generator algorithm described in the README
+-Home-page: https://github.com/RalphTro/epcis-event-hash-generator
+-Author: Package author: Sebastian Schmittner
+-    Code authors: https://github.com/RalphTro/epcis-event-hash-generator/graphs/contributors
+-Author-email: sebastian.schmittner@eecc.de
+-License: MIT
+-Keywords: epcis GS1 hashing traceability
+-Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: License :: OSI Approved :: MIT License
+-Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.6
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ # EPCIS Event Hash Generator
+ 
+ [![Build Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Unit%20Tests/badge.svg?v=42)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Unit+Tests%22)
+ [![Linter Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Code%20Style/badge.svg)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Code+Style%22)
+ ![Docker Release Build](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Docker%20Release%20Build/badge.svg)
+ 
+-This is a proposal/reference implementation for a method to uniquely identify an EPCIS event or validate the integrity thereof. To this end, a syntax-/representation-agnostic approach based on hashing is developed.
+-The <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
++This is a reference implementation for a method to uniquely identify an EPCIS event as specified in the Core Business Vocabulary (CBV) Standard 2.0. 
++The *EPCIS Event Hash ID* works syntax-/representation-agnostic and is based on hashing.
++This <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
+ 
+ ![EPCIS event hash generator algorithm illustration](docs/epcisEventHashGenerator.png)
+ 
+ 
+ ## Status of the reference implementation
+ 
+-The current (v1.6.0 at the time of writing) set of examples and implementation of the json parser is based on an old version of the EPCIS 2.0 JSON schema, see https://github.com/RalphTro/epcis-event-hash-generator/issues/37 . Currently, only the XML hashing should be used. See
+-https://github.com/gs1/EPCIS/blob/master/JSON/
+-for the current (still draft) version of the JSON schema and for examples.
++Working as expected, no known major bugs.  
+ 
+ 
+ 
+ ## TL;DR
+ 
+ The implementation provided here is a prototypical reference implementation meant for testing against other implementations, but **not meant for production**. If you discover that this implementation does not conform perfectly to the algorithm description or contains any other bugs, please file an issue at https://github.com/RalphTro/epcis-event-hash-generator/issues .
+ 
+ ### Command Line
+ 
+-The Hashing Algorithm described below is implemented as a python script, including a command line utility which can be run directly.
++The Hashing Algorithm described below is implemented as a Python script, including a command line utility which can be run directly.
+ 
+ The package is release on PyPI at https://pypi.org/project/epcis-event-hash-generator/ hence it can be installed via
+ ```
+ python3 -m pip install epcis_event_hash_generator
+ ```
+ 
+ For usage information run
+@@ -61,17 +42,17 @@
+ The script also comes wrapped as a web service in a docker image for ease of integration into a testing environment.
+ You may use 
+ 
+ - [the latest release version of the web service container](https://github.com/RalphTro/epcis-event-hash-generator/packages/484860 ). See here for usage.
+ 
+ 
+ ## Introduction  
+-There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the eventID field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
++There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID field (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the `eventID` field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
+ EPCIS events have a couple of differences to other electronic documents:
+-+ They are embedded in an EPCIS document that can contain multiple events 
+++ They are embedded in an EPCIS document which can contain multiple events 
+ + As of EPCIS 2.0, it is permitted to capture and share EPCIS data through two different syntaxes (XML and JSON/JSON-LD)
+ + EPCIS events provides ample flexibility to include user-specific extensions 
+ + When expressed in JSON/JSON-LD, the sequence of elements may vary
+ 
+ This is why industry needs to have a consistent, reliable approach to create a hash value that is viable to uniquely identify a specific EPCIS event. 
+ 
+ Notice that the algorithm described here provides a way of *hashing* an event. A *signature* scheme can be build using this hash, but the hash by itself does not yield a proof of authenticity/authorship. For example, a man in the middle attack can re-compute the hash after tampering.
+@@ -99,69 +80,67 @@
+ 4. Data elements SHALL NOT be added if they are omitted in a given EPCIS event or do not apply.
+ 5. Whitespace characters at the beginning or end of values SHALL be truncated.
+ 6. Quantitative values SHALL NOT have trailing zeros. (For example, a quantity of one SHALL be expressed as '1', and SHALL NOT be expressed as '1.0'; 0.3434 SHALL be expressed as 0.3434, with any trailing zeros truncated.)
+ 7. Numeric values SHALL be expressed without single quotes.
+ 8. All timestamps SHALL be expressed in UTC; the zero UTC offset SHALL be expressed with the capital letter 'Z'. 
+ 9. All timestamps SHALL be expressed with millisecond precision. If an EPCIS event lacks the latter, the millisecond field SHALL be zero-filled (e.g., YYYY-MM-DDTHH:MM:SS.000Z).
+ 10. Strings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-11. All child elements as part of a list (e.g. epc in epcList, bizTransaction in bizTransactionList, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. quantityElement in quantityList, sensorReport in sensorElement), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
+-13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in bizTransaction or Source/Destination Type in source), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
+-14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding GS1 Web Vocabulary URI equivalent (starting with ‘https://ref.gs1.org’).
+-Example:
+-‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
+-
+-15. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
+-16. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
+-17. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
+-18. If an EPCIS event comprises ILMD elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-19. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
++11. All child elements as part of a list (e.g. `epc` in `epcList`, `bizTransaction` in `bizTransactionList`, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character. A field name denoting a list (e.g. `epcList`, `bizTransactionList`, `sensorElementList`) SHALL only appear once in the pre-hash string.
++12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. `quantityElement` in `quantityList`, `sensorReport` in `sensorElement`), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
++13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in `bizTransaction` or Source/Destination Type in `source`), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
++14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding CBV Web URI term (starting with ‘https://ref.gs1.org’).
++Example: ‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
++15. If present, any Compact URI Expression (CURIE) SHALL be expanded to its full URI equivalent. This also holds true for standard CBV values, i.e. with the CURIE prefix expansions ‘gs1’ (https://gs1.org/voc/), ‘epcis’ (https://ref.gs1.org/epcis/) and ‘cbv’ (https://ref.gs1.org/cbv/). Example: ‘gs1:Temperature’ --> ‘https://gs1.org/voc/Temperature’
++16. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
++17. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
++18. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
++19. If an EPCIS event comprises `ILMD` elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
++20. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
+ The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-20. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `errorDeclaration`, `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), the top-level user extension element(s) SHALL be prefixed with the corresponding EPCIS standard field name. Apart from that, the SHALL be added to the pre-hash string similarly as specified in the previous step.
+-21. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
++21. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), they SHALL be added at the end of its enclosing parent’s regular fields. Apart from that, they SHALL be added to the pre-hash string similarly as specified in the previous step.
++22. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
+ ni:///{digest algorithm};{digest value}?ver={CBV version}
+ i.e. characters 'n', 'i', followed by one colon (':'), three slash characters ('/'), the digest algorithm, one semicolon (';'), the digest value, one question mark ('?'), the characters 'v', 'e', 'r', one equal sign ('='), and the version of the EPCIS Event Hash ID algorithm that was used to generate the pre-hash string, indicated by the CBV version.
+-22. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
+-23. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
++23. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
++24. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
+ 
+ ### Canonical property order 
+ 
+ Applicable for all EPCIS Event Types, i.e. `ObjectEvent`, `AggregationEvent`, `TransactionEvent`, `TransformationEvent` and `AssociationEvent`.
+ 
+ | Sequence | Data Element |
+ | -------- | ------------ |
+ | 1 | `eventType` |
+ | 2 | `eventTime` |
+ | 3 | `eventTimeZoneOffset` |
+-| 4 | `errorDeclaration` (`declarationTime`, `reason`, `correctiveEventIDs` – `correctiveEventID`) |
+-| 5 | `epcList` – `epc` |
+-| 6 | `parentID` |
+-| 7 | `inputEPCList` – `epc` |
+-| 8 | `childEPCs` – `epc` |
+-| 9 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 10 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 11 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 12 | `outputEPCList` – `epc` |
+-| 13 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 14 | `action` |
+-| 15 | `transformationID` |
+-| 16 | `bizStep` |
+-| 17 | `disposition` |
+-| 18 | `persistentDisposition` - (`set`, `unset`) |
+-| 19 | `readPoint` – `id` |
+-| 20 | `bizLocation` – `id` |
+-| 21 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
+-| 22 | `sourceList` – `source` (`source ID`, `source type`) |
+-| 23 | `destinationList` – `destination` (`destination ID`, `destination type`) |
+-| 24 | `sensorElement` ( |
++| 4 | `epcList` – `epc` |
++| 5 | `parentID` |
++| 6 | `inputEPCList` – `epc` |
++| 7 | `childEPCs` – `epc` |
++| 8 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 9 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 10 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 11 | `outputEPCList` – `epc` |
++| 12 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 13 | `action` |
++| 14 | `transformationID` |
++| 15 | `bizStep` |
++| 16 | `disposition` |
++| 17 | `persistentDisposition` - (`set`, `unset`) |
++| 18 | `readPoint` – `id` |
++| 19 | `bizLocation` – `id` |
++| 20 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
++| 21 | `sourceList` – `source` (`source ID`, `source type`) |
++| 22 | `destinationList` – `destination` (`destination ID`, `destination type`) |
++| 23 | `sensorElementList` - `sensorElement` ( |
+ |    | `sensorMetadata` (`time`, `startTime`, `endTime`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `bizRules`), |
+-|    | `sensorReport` (`type`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`)|
++|    | `sensorReport` (`type`, `exception`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`, `coordinateReferenceSystem`)|
+ |    | ) |
+-| 25 | `ilmd` – `{ILMD elements}` |
+-| 26 | `{User extension elements}`|
++| 24 | `ilmd` – `{ILMD elements}` |
++| 25 | `{User extension elements}`|
+ 
+ For better understanding, the following illustrations include the data content of EPCIS events (including a couple of user extensions - all defined under 'https://ns.example.com/epcis'), show the corresponding pre-hash string as well as the canonical hash value of that event.
+ 
+ Example 1:
+ 
+ ![Example 1 for EPCIS event pre-hash computation](docs/hashingAlgorithmLogicIllustration_example1.png)
+ 
+@@ -188,24 +167,48 @@
+ * Identifying duplicate EPCIS events
+ * Matching an error declaration to an original event (see EPCIS Standard, section 7.4.1.4)
+ * Notarisation of EPCIS events (i.e. leveraging digital signatures)  
+ 
+ That said, the algorithm has limited applicability when EPCIS events are redacted (meaning that, e.g. for privacy reasons, EPCIS events are not shared entirely, but deliberately omit specific fields or including readPoint IDs with a lesser granularity - see EPCIS and CBV Implementation Guide, section 6.7). In such a case, the content of a redacted EPCIS event will in no case yield to the hash value of the original one.
+ 
+ ## References
+-* EPCIS Standard, v. 1.2: https://www.gs1.org/standards/epcis
+-* Core Business Vocabulary (CBV) Standard, v. 1.2.2: https://www.gs1.org/standards/epcis
++* EPCIS Standard, v. 2.0: https://ref.gs1.org/standards/epcis/
++* Core Business Vocabulary (CBV) Standard, v. 2.0: https://ref.gs1.org/standards/cbv/
+ * RFC 6920, Naming Things with Hashes, https://tools.ietf.org/html/rfc6920
+ * Named Information Hash Algorithm Registry, https://www.iana.org/assignments/named-information/named-information.xhtml
+ 
++## Acknowledgements
++
++The following table lists, in alphabetical order of their GitHub profile name, all persons who have contributed to this project so far through:
++- software development (:computer:)
++- maintenance (:construction:) 
++- submitting issues (:ticket:)
++- testing (:microscope:)
++- providing advice/feedback/ideas (:bulb:) 
++
++All of this was and is both very valuable as well as very much appreciated and we would like to take the opportunity to express our gratitude for all this valuable support.  
++
++| GitHub Profile |  Link + Image         | Name (if revealed)   | Primary contribution |
++| -------------- | --------------------- | -------------------- | -------------- |
++| Aravinda93     | [![](https://github.com/Aravinda93.png?size=50)](https://github.com/Aravinda93)     | Aravinda Baliga      | :ticket: :bulb: :microscope: |
++| clementh59     | [![](https://github.com/clementh59.png?size=50)](https://github.com/clementh59)     | Clément              | :ticket: :microscope: |
++| CraigRe        | [![](https://github.com/CraigRe.png?size=50)](https://github.com/CraigRe)           | Craig Alan Repec     | :bulb:  |
++| dakbhavesh     | [![](https://github.com/dakbhavesh.png?size=50)](https://github.com/dakbhavesh)     | Bhavesh Shah         | :computer: :construction: :microscope: |
++| domguinard     | [![](https://github.com/domguinard.png?size=50)](https://github.com/domguinard)     | Dominique Guinard    | :bulb: |
++| Echsecutor     | [![](https://github.com/Echsecutor.png?size=50)](https://github.com/Echsecutor)     | Sebastian Schmittner | :computer: :construction: :microscope: |
++| mgh128         | [![](https://github.com/mgh128.png?size=50)](https://github.com/mgh128)             | Mark Harrison        | :bulb: |
++| RalphTro       | [![](https://github.com/RalphTro.png?size=50)](https://github.com/RalphTro)         | Ralph Troeger        | :microscope: :ticket: :computer: |
++| sboeckelmann   | [![](https://github.com/sboeckelmann.png?size=50)](https://github.com/sboeckelmann) | Sven Boeckelmann     | :bulb: |
++| ShaikDayan     | [![](https://github.com/ShaikDayan.png?size=50)](https://github.com/ShaikDayan)     | Shaik Dayan          | :microscope: :ticket: |
++| tnahddisttud   | [![](https://github.com/tnahddisttud.png?size=50)](https://github.com/tnahddisttud) | Siddhant Pandey      | :computer: :construction: |
+ 
+ ## License
+ 
+-<img alt="MIT" style="border-width:0" src="https://opensource.org/files/OSIApproved_1.png" width="150px;"/><br />
++<img alt="Open Source Initiative" style="border-width:0" src="docs/OSI.jpeg" width="150px;"/><br />
+ 
+-Copyright 2020, 2021 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
++Copyright 2020-2023 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/README.md` & `epcis-event-hash-generator-1.8.0/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,34 +1,51 @@
++Metadata-Version: 2.1
++Name: epcis-event-hash-generator
++Version: 1.8.0
++Summary: Exemplary implementation of the EPCIS event hash generator algorithm described in the README
++Home-page: https://github.com/RalphTro/epcis-event-hash-generator
++Author: Package author: Sebastian Schmittner
++    Code authors: https://github.com/RalphTro/epcis-event-hash-generator/graphs/contributors
++Author-email: sebastian.schmittner@eecc.de
++License: MIT
++Keywords: epcis GS1 hashing traceability
++Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.8
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Operating System :: OS Independent
++Requires-Python: >=3.6
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ # EPCIS Event Hash Generator
+ 
+ [![Build Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Unit%20Tests/badge.svg?v=42)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Unit+Tests%22)
+ [![Linter Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Code%20Style/badge.svg)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Code+Style%22)
+ ![Docker Release Build](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Docker%20Release%20Build/badge.svg)
+ 
+-This is a proposal/reference implementation for a method to uniquely identify an EPCIS event or validate the integrity thereof. To this end, a syntax-/representation-agnostic approach based on hashing is developed.
+-The <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
++This is a reference implementation for a method to uniquely identify an EPCIS event as specified in the Core Business Vocabulary (CBV) Standard 2.0. 
++The *EPCIS Event Hash ID* works syntax-/representation-agnostic and is based on hashing.
++This <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
+ 
+ ![EPCIS event hash generator algorithm illustration](docs/epcisEventHashGenerator.png)
+ 
+ 
+ ## Status of the reference implementation
+ 
+-The current (v1.6.0 at the time of writing) set of examples and implementation of the json parser is based on an old version of the EPCIS 2.0 JSON schema, see https://github.com/RalphTro/epcis-event-hash-generator/issues/37 . Currently, only the XML hashing should be used. See
+-https://github.com/gs1/EPCIS/blob/master/JSON/
+-for the current (still draft) version of the JSON schema and for examples.
++Working as expected, no known major bugs.  
+ 
+ 
+ 
+ ## TL;DR
+ 
+ The implementation provided here is a prototypical reference implementation meant for testing against other implementations, but **not meant for production**. If you discover that this implementation does not conform perfectly to the algorithm description or contains any other bugs, please file an issue at https://github.com/RalphTro/epcis-event-hash-generator/issues .
+ 
+ ### Command Line
+ 
+-The Hashing Algorithm described below is implemented as a python script, including a command line utility which can be run directly.
++The Hashing Algorithm described below is implemented as a Python script, including a command line utility which can be run directly.
+ 
+ The package is release on PyPI at https://pypi.org/project/epcis-event-hash-generator/ hence it can be installed via
+ ```
+ python3 -m pip install epcis_event_hash_generator
+ ```
+ 
+ For usage information run
+@@ -43,17 +60,17 @@
+ The script also comes wrapped as a web service in a docker image for ease of integration into a testing environment.
+ You may use 
+ 
+ - [the latest release version of the web service container](https://github.com/RalphTro/epcis-event-hash-generator/packages/484860 ). See here for usage.
+ 
+ 
+ ## Introduction  
+-There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the eventID field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
++There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID field (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the `eventID` field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
+ EPCIS events have a couple of differences to other electronic documents:
+-+ They are embedded in an EPCIS document that can contain multiple events 
+++ They are embedded in an EPCIS document which can contain multiple events 
+ + As of EPCIS 2.0, it is permitted to capture and share EPCIS data through two different syntaxes (XML and JSON/JSON-LD)
+ + EPCIS events provides ample flexibility to include user-specific extensions 
+ + When expressed in JSON/JSON-LD, the sequence of elements may vary
+ 
+ This is why industry needs to have a consistent, reliable approach to create a hash value that is viable to uniquely identify a specific EPCIS event. 
+ 
+ Notice that the algorithm described here provides a way of *hashing* an event. A *signature* scheme can be build using this hash, but the hash by itself does not yield a proof of authenticity/authorship. For example, a man in the middle attack can re-compute the hash after tampering.
+@@ -81,69 +98,67 @@
+ 4. Data elements SHALL NOT be added if they are omitted in a given EPCIS event or do not apply.
+ 5. Whitespace characters at the beginning or end of values SHALL be truncated.
+ 6. Quantitative values SHALL NOT have trailing zeros. (For example, a quantity of one SHALL be expressed as '1', and SHALL NOT be expressed as '1.0'; 0.3434 SHALL be expressed as 0.3434, with any trailing zeros truncated.)
+ 7. Numeric values SHALL be expressed without single quotes.
+ 8. All timestamps SHALL be expressed in UTC; the zero UTC offset SHALL be expressed with the capital letter 'Z'. 
+ 9. All timestamps SHALL be expressed with millisecond precision. If an EPCIS event lacks the latter, the millisecond field SHALL be zero-filled (e.g., YYYY-MM-DDTHH:MM:SS.000Z).
+ 10. Strings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-11. All child elements as part of a list (e.g. epc in epcList, bizTransaction in bizTransactionList, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. quantityElement in quantityList, sensorReport in sensorElement), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
+-13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in bizTransaction or Source/Destination Type in source), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
+-14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding GS1 Web Vocabulary URI equivalent (starting with ‘https://ref.gs1.org’).
+-Example:
+-‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
+-
+-15. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
+-16. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
+-17. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
+-18. If an EPCIS event comprises ILMD elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-19. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
++11. All child elements as part of a list (e.g. `epc` in `epcList`, `bizTransaction` in `bizTransactionList`, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character. A field name denoting a list (e.g. `epcList`, `bizTransactionList`, `sensorElementList`) SHALL only appear once in the pre-hash string.
++12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. `quantityElement` in `quantityList`, `sensorReport` in `sensorElement`), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
++13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in `bizTransaction` or Source/Destination Type in `source`), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
++14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding CBV Web URI term (starting with ‘https://ref.gs1.org’).
++Example: ‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
++15. If present, any Compact URI Expression (CURIE) SHALL be expanded to its full URI equivalent. This also holds true for standard CBV values, i.e. with the CURIE prefix expansions ‘gs1’ (https://gs1.org/voc/), ‘epcis’ (https://ref.gs1.org/epcis/) and ‘cbv’ (https://ref.gs1.org/cbv/). Example: ‘gs1:Temperature’ --> ‘https://gs1.org/voc/Temperature’
++16. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
++17. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
++18. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
++19. If an EPCIS event comprises `ILMD` elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
++20. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
+ The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-20. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `errorDeclaration`, `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), the top-level user extension element(s) SHALL be prefixed with the corresponding EPCIS standard field name. Apart from that, the SHALL be added to the pre-hash string similarly as specified in the previous step.
+-21. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
++21. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), they SHALL be added at the end of its enclosing parent’s regular fields. Apart from that, they SHALL be added to the pre-hash string similarly as specified in the previous step.
++22. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
+ ni:///{digest algorithm};{digest value}?ver={CBV version}
+ i.e. characters 'n', 'i', followed by one colon (':'), three slash characters ('/'), the digest algorithm, one semicolon (';'), the digest value, one question mark ('?'), the characters 'v', 'e', 'r', one equal sign ('='), and the version of the EPCIS Event Hash ID algorithm that was used to generate the pre-hash string, indicated by the CBV version.
+-22. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
+-23. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
++23. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
++24. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
+ 
+ ### Canonical property order 
+ 
+ Applicable for all EPCIS Event Types, i.e. `ObjectEvent`, `AggregationEvent`, `TransactionEvent`, `TransformationEvent` and `AssociationEvent`.
+ 
+ | Sequence | Data Element |
+ | -------- | ------------ |
+ | 1 | `eventType` |
+ | 2 | `eventTime` |
+ | 3 | `eventTimeZoneOffset` |
+-| 4 | `errorDeclaration` (`declarationTime`, `reason`, `correctiveEventIDs` – `correctiveEventID`) |
+-| 5 | `epcList` – `epc` |
+-| 6 | `parentID` |
+-| 7 | `inputEPCList` – `epc` |
+-| 8 | `childEPCs` – `epc` |
+-| 9 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 10 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 11 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 12 | `outputEPCList` – `epc` |
+-| 13 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 14 | `action` |
+-| 15 | `transformationID` |
+-| 16 | `bizStep` |
+-| 17 | `disposition` |
+-| 18 | `persistentDisposition` - (`set`, `unset`) |
+-| 19 | `readPoint` – `id` |
+-| 20 | `bizLocation` – `id` |
+-| 21 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
+-| 22 | `sourceList` – `source` (`source ID`, `source type`) |
+-| 23 | `destinationList` – `destination` (`destination ID`, `destination type`) |
+-| 24 | `sensorElement` ( |
++| 4 | `epcList` – `epc` |
++| 5 | `parentID` |
++| 6 | `inputEPCList` – `epc` |
++| 7 | `childEPCs` – `epc` |
++| 8 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 9 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 10 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 11 | `outputEPCList` – `epc` |
++| 12 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 13 | `action` |
++| 14 | `transformationID` |
++| 15 | `bizStep` |
++| 16 | `disposition` |
++| 17 | `persistentDisposition` - (`set`, `unset`) |
++| 18 | `readPoint` – `id` |
++| 19 | `bizLocation` – `id` |
++| 20 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
++| 21 | `sourceList` – `source` (`source ID`, `source type`) |
++| 22 | `destinationList` – `destination` (`destination ID`, `destination type`) |
++| 23 | `sensorElementList` - `sensorElement` ( |
+ |    | `sensorMetadata` (`time`, `startTime`, `endTime`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `bizRules`), |
+-|    | `sensorReport` (`type`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`)|
++|    | `sensorReport` (`type`, `exception`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`, `coordinateReferenceSystem`)|
+ |    | ) |
+-| 25 | `ilmd` – `{ILMD elements}` |
+-| 26 | `{User extension elements}`|
++| 24 | `ilmd` – `{ILMD elements}` |
++| 25 | `{User extension elements}`|
+ 
+ For better understanding, the following illustrations include the data content of EPCIS events (including a couple of user extensions - all defined under 'https://ns.example.com/epcis'), show the corresponding pre-hash string as well as the canonical hash value of that event.
+ 
+ Example 1:
+ 
+ ![Example 1 for EPCIS event pre-hash computation](docs/hashingAlgorithmLogicIllustration_example1.png)
+ 
+@@ -170,24 +185,48 @@
+ * Identifying duplicate EPCIS events
+ * Matching an error declaration to an original event (see EPCIS Standard, section 7.4.1.4)
+ * Notarisation of EPCIS events (i.e. leveraging digital signatures)  
+ 
+ That said, the algorithm has limited applicability when EPCIS events are redacted (meaning that, e.g. for privacy reasons, EPCIS events are not shared entirely, but deliberately omit specific fields or including readPoint IDs with a lesser granularity - see EPCIS and CBV Implementation Guide, section 6.7). In such a case, the content of a redacted EPCIS event will in no case yield to the hash value of the original one.
+ 
+ ## References
+-* EPCIS Standard, v. 1.2: https://www.gs1.org/standards/epcis
+-* Core Business Vocabulary (CBV) Standard, v. 1.2.2: https://www.gs1.org/standards/epcis
++* EPCIS Standard, v. 2.0: https://ref.gs1.org/standards/epcis/
++* Core Business Vocabulary (CBV) Standard, v. 2.0: https://ref.gs1.org/standards/cbv/
+ * RFC 6920, Naming Things with Hashes, https://tools.ietf.org/html/rfc6920
+ * Named Information Hash Algorithm Registry, https://www.iana.org/assignments/named-information/named-information.xhtml
+ 
++## Acknowledgements
++
++The following table lists, in alphabetical order of their GitHub profile name, all persons who have contributed to this project so far through:
++- software development (:computer:)
++- maintenance (:construction:) 
++- submitting issues (:ticket:)
++- testing (:microscope:)
++- providing advice/feedback/ideas (:bulb:) 
++
++All of this was and is both very valuable as well as very much appreciated and we would like to take the opportunity to express our gratitude for all this valuable support.  
++
++| GitHub Profile |  Link + Image         | Name (if revealed)   | Primary contribution |
++| -------------- | --------------------- | -------------------- | -------------- |
++| Aravinda93     | [![](https://github.com/Aravinda93.png?size=50)](https://github.com/Aravinda93)     | Aravinda Baliga      | :ticket: :bulb: :microscope: |
++| clementh59     | [![](https://github.com/clementh59.png?size=50)](https://github.com/clementh59)     | Clément              | :ticket: :microscope: |
++| CraigRe        | [![](https://github.com/CraigRe.png?size=50)](https://github.com/CraigRe)           | Craig Alan Repec     | :bulb:  |
++| dakbhavesh     | [![](https://github.com/dakbhavesh.png?size=50)](https://github.com/dakbhavesh)     | Bhavesh Shah         | :computer: :construction: :microscope: |
++| domguinard     | [![](https://github.com/domguinard.png?size=50)](https://github.com/domguinard)     | Dominique Guinard    | :bulb: |
++| Echsecutor     | [![](https://github.com/Echsecutor.png?size=50)](https://github.com/Echsecutor)     | Sebastian Schmittner | :computer: :construction: :microscope: |
++| mgh128         | [![](https://github.com/mgh128.png?size=50)](https://github.com/mgh128)             | Mark Harrison        | :bulb: |
++| RalphTro       | [![](https://github.com/RalphTro.png?size=50)](https://github.com/RalphTro)         | Ralph Troeger        | :microscope: :ticket: :computer: |
++| sboeckelmann   | [![](https://github.com/sboeckelmann.png?size=50)](https://github.com/sboeckelmann) | Sven Boeckelmann     | :bulb: |
++| ShaikDayan     | [![](https://github.com/ShaikDayan.png?size=50)](https://github.com/ShaikDayan)     | Shaik Dayan          | :microscope: :ticket: |
++| tnahddisttud   | [![](https://github.com/tnahddisttud.png?size=50)](https://github.com/tnahddisttud) | Siddhant Pandey      | :computer: :construction: |
+ 
+ ## License
+ 
+-<img alt="MIT" style="border-width:0" src="https://opensource.org/files/OSIApproved_1.png" width="150px;"/><br />
++<img alt="Open Source Initiative" style="border-width:0" src="docs/OSI.jpeg" width="150px;"/><br />
+ 
+-Copyright 2020, 2021 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
++Copyright 2020-2023 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/__init__.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -18,20 +18,14 @@
+ When using the command line utility, this can be changed via the -j flag.
+ """
+ 
+ PROP_ORDER = [
+     ('eventTime', None),
+     ('eventTimeZoneOffset', None),
+     ('certificationInfo', None),
+-    ('errorDeclaration',
+-     [
+-         ('declarationTime', None),
+-         ('reason', None),
+-         ('correctiveEventIDs', [('correctiveEventID', None)])
+-     ]),
+     ('parentID', None),
+     ('epcList', [('epc', None)]),
+     ('inputEPCList', [('epc', None)]),
+     ('childEPCs', [('epc', None)]),
+     ('quantityList', [('quantityElement',
+                        [
+                            ('epcClass', None),
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/__main__.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/dl_normaliser.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/dl_normaliser.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -9,34 +9,33 @@
+ (c) strips off any further attributes.
+ 
+ .. module:: dl_normaliser
+    :synopsis: Normalises the gs1 id formats to digital link for https://github.com/RalphTro/epcis-event-hash-generator/
+ 
+ .. moduleauthor:: Ralph Troeger <ralph.troeger@gs1.de>
+ 
+-Copyright 2019-2021 Ralph Troeger
++Copyright 2019-2023 Ralph Troeger
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms given in the LICENSE file.
+ 
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the LICENSE
+ file for details.
+ 
+ """
+ 
+ from re import match
+-from gtin import GTIN
+ import logging
++import math
+ 
+ 
+ def __web_uri_percent_encoder(input):
+-    """
+-    Function percent-encodes URL-unsafe characters in GS1 Digital Link URIs.
++    """Function percent-encodes URL-unsafe characters in GS1 Digital Link URIs.
+ 
+     Table 7-1 in the GS1 Digital Link Standard requires
+     the following symbols to be percent-encoded:
+     '!', space, '#', '%', '&', '(', ')', '*', '+', ',', '/', ':'
+     EPC URIs already prohibit some of them (e.g. '#')
+     Function 'webURIPercentEncoder' is called to ensure that
+     data elements accommodating these symbols are percent-encoded.
+@@ -47,28 +46,56 @@
+         Character requiring percent-encoding.
+ 
+     Returns
+     -------
+     str
+         Percent-encoded equivalent of character.
+     """
+-    return (
+-        input.replace('!', '%21')
+-             .replace('(', '%28')
+-             .replace(')', '%29')
+-             .replace('*', '%2A')
+-             .replace('+', '%2B')
+-             .replace(',', '%2C')
+-             .replace(':', '%3A')
+-    )
+ 
++    return (input.replace('!', '%21')
++            .replace('(', '%28')
++            .replace(')', '%29')
++            .replace('*', '%2A')
++            .replace('+', '%2B')
++            .replace(',', '%2C')
++            .replace(':', '%3A'))
+ 
+-def normaliser(uri):
++
++def check_digit(key_wo_checkdigit):
++    """Returns check digit for GTIN-8, GTIN-12, GTIN-13, GLN, GTIN-14, SSCC, GSIN, GSRN, GSRN-P.
++    For further details, see GS1 GenSpecs, section 7.9.1: Standard check digit calculations for GS1 data structures.
++
++    Parameters
++    ----------
++    key_wo_checkdigit : str
++        GS1 key without check digit.
++
++    Returns
++    -------
++        str: Check digit for GS1 key.
+     """
+-    Function converts any standard URI conveying a GS1 Key in Canonical GS1 DL URI.
++
++    # Reverse string
++    key_wo_checkdigit = key_wo_checkdigit[::-1]
++    # Alternatively fetch digits, multiply them by 3 or 1, and sum them up
++    summation = 0
++    for i in range(len(key_wo_checkdigit) - 1, -1, -1):
++        if int(key_wo_checkdigit[i]) == 0:
++            continue
++        elif i % 2 != 0:
++            summation += int(key_wo_checkdigit[i]) * 1
++        else:
++            summation += int(key_wo_checkdigit[i]) * 3
++    # Subtract sum from nearest equal or higher multiple of ten
++    checkdigit = math.ceil(summation / 10) * 10 - summation
++    return checkdigit
++
++
++def normaliser(uri):
++    """Function converts any standard URI conveying a GS1 Key in Canonical GS1 DL URI.
+ 
+     Function 'normaliser' expects any URI to be used in EPCIS events
+     that convey a GS1 key, i.e. EPC URIs, EPC Class URIs,
+     EPC ID Pattern URIs, or GS1 Digital Link URIs.
+     It returns a corresponding, constrained version of a
+     canonical GS1 Digital Link URI, i.e. with
+     the lowest level of identification and without CPV/query string.
+@@ -80,14 +107,15 @@
+ 
+     Returns
+     -------
+     str
+         Constrained, canonicalised GS1 Digital Link URI equivalent.
+     None
+     """
++
+     if not isinstance(uri, str):
+         logging.warning("dl normaliser called with non-string argument")
+         return None
+ 
+     try:
+         partition = uri.index('.')
+     except ValueError:
+@@ -96,214 +124,216 @@
+ 
+     # EPC URIs
+     if match(
+             r'^urn:epc:id:sgtin:((\d{6}\.\d{7})|(\d{7}\.\d{6})|(\d{8}\.\d{5})|(\d{9}\.\d{4})|(\d{10}\.\d{3})|(\d{11}\.\d{2})|(\d{12}\.\d{1}))\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}$',
+             uri) is not None:
+         gs1companyprefix = uri[17:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
+         serial = uri[32:]
+-        return ('https://id.gs1.org/01/' + str(GTIN(raw=rawGTIN)) + '/21/' + __web_uri_percent_encoder(serial))
++        return ('https://id.gs1.org/01/' + raw_gtin + str(check_digit(raw_gtin)) + '/21/' + __web_uri_percent_encoder(
++            serial))
+ 
+     if match(
+             r'^urn:epc:id:sscc:((\d{6}\.\d{11}$)|(\d{7}\.\d{10}$)|(\d{8}\.\d{9}$)|(\d{9}\.\d{8}$)|(\d{10}\.\d{7}$)|(\d{11}\.\d{6}$)|(\d{12}\.\d{5}$))',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+-        serialref = uri[(partition + 1):]
++        serialref = uri[(partition + 2):]
+         rawSSCC = uri[(partition + 1):(partition + 2)] + gs1companyprefix + serialref
+-        return ('https://id.gs1.org/00/' + str(GTIN(raw=rawSSCC)))
++        return ('https://id.gs1.org/00/' + rawSSCC + str(check_digit(rawSSCC)))
+ 
+     if match(
+             r'^urn:epc:id:sgln:((\d{6}\.\d{6})|(\d{7}\.\d{5})|(\d{8}\.\d{4})|(\d{9}\.\d{3})|(\d{10}\.\d{2})|(\d{11}\.\d{1})|(\d{12}\.))\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         locationref = uri[(partition + 1):(partition + 1 +
+                                            (12 - len(gs1companyprefix)))]
+         rawGLN = gs1companyprefix + locationref
+         extension = uri[30:]
+         if extension == '0':
+-            return ('https://id.gs1.org/414/' + str(GTIN(raw=rawGLN)))
++            return ('https://id.gs1.org/414/' + rawGLN + str(check_digit(rawGLN)))
+         else:
+-            return ('https://id.gs1.org/414/' + str(GTIN(raw=rawGLN)) + '/254/' + __web_uri_percent_encoder(extension))
++            return ('https://id.gs1.org/414/' + rawGLN + str(check_digit(rawGLN)) + '/254/' + __web_uri_percent_encoder(
++                extension))
+ 
+     if match(
+             r'^urn:epc:id:grai:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.\.))\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,16}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         assetref = uri[(partition + 1):(partition + 1 + (12 - len(gs1companyprefix)))]
+-        rawGRAI = '0' + gs1companyprefix + assetref
++        raw_grai = '0' + gs1companyprefix + assetref
+         serial = uri[30:]
+-        return ('https://id.gs1.org/8003/' + str(GTIN(raw=rawGRAI)) + __web_uri_percent_encoder(serial))
++        return ('https://id.gs1.org/8003/' + raw_grai + str(check_digit(raw_grai)) + __web_uri_percent_encoder(serial))
+ 
+     if match(
+             r'^urn:epc:id:giai:(([\d]{6}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,24})|([\d]{7}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,23})|([\d]{8}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,22})|([\d]{9}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,21})|([\d]{10}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20})|([\d]{11}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,19})|([\d]{12}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,18}))$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         assetref = uri[(partition + 1):]
+         return ('https://id.gs1.org/8004/' + gs1companyprefix + __web_uri_percent_encoder(assetref))
+ 
+     if match(
+             r'^urn:epc:id:gsrn:(([\d]{6}\.[\d]{11}$)|([\d]{7}\.[\d]{10}$)|([\d]{8}\.[\d]{9}$)|([\d]{9}\.[\d]{8}$)|([\d]{10}\.[\d]{7}$)|([\d]{11}\.[\d]{6}$)|([\d]{12}\.[\d]{5}$))',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         serviceref = uri[(partition + 1):]
+         rawGSRN = gs1companyprefix + serviceref
+-        return ('https://id.gs1.org/8018/' + str(GTIN(raw=rawGSRN)))
++        return ('https://id.gs1.org/8018/' + rawGSRN + str(check_digit(rawGSRN)))
+ 
+     if match(
+             r'^urn:epc:id:gsrnp:(([\d]{6}\.[\d]{11}$)|([\d]{7}\.[\d]{10}$)|([\d]{8}\.[\d]{9}$)|([\d]{9}\.[\d]{8}$)|([\d]{10}\.[\d]{7}$)|([\d]{11}\.[\d]{6}$)|([\d]{12}\.[\d]{5}$))',
+             uri) is not None:
+         gs1companyprefix = uri[17:partition]
+         serviceref = uri[(partition + 1):]
+         rawGSRNP = gs1companyprefix + serviceref
+-        return ('https://id.gs1.org/8017/' + str(GTIN(raw=rawGSRNP)))
++        return ('https://id.gs1.org/8017/' + rawGSRNP + str(check_digit(rawGSRNP)))
+ 
+     if match(
+             r'^urn:epc:id:gdti:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.\.))(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         documenttype = uri[(partition + 1):(partition + 1 +
+                                             (12 - len(gs1companyprefix)))]
+-        rawGDTI = gs1companyprefix + documenttype
++        raw_gdti = gs1companyprefix + documenttype
+         serial = uri[30:]
+-        return ('https://id.gs1.org/253/' + str(GTIN(raw=rawGDTI)) + __web_uri_percent_encoder(serial))
++        return 'https://id.gs1.org/253/' + raw_gdti + str(check_digit(raw_gdti)) + __web_uri_percent_encoder(serial)
+ 
+     if match(
+             r'^urn:epc:id:cpi:((\d{6}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,24})|(\d{7}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,23})|(\d{8}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,22})|(\d{9}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,21})|(\d{10}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,20})|(\d{11}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,19})|(\d{12}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,18}))\.[\d]{1,12}$',
+             uri) is not None:
+         gs1companyprefix = uri[15:partition]
+         separator = uri.rfind('.')
+-        cpref = uri[(partition + 1):(separator)]
+-        rawCPI = gs1companyprefix + cpref
++        cpref = uri[(partition + 1):separator]
++        raw_cpi = gs1companyprefix + cpref
+         serial = uri[(separator + 1):]
+-        return ('https://id.gs1.org/8010/' + __web_uri_percent_encoder(rawCPI) + '/8011/' + serial)
++        return 'https://id.gs1.org/8010/' + __web_uri_percent_encoder(raw_cpi) + '/8011/' + serial
+ 
+     if match(
+             r'^urn:epc:id:sgcn:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.))\.[\d]{1,12}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         couponref = uri[(partition + 1):(partition + 1 + (12 - len(gs1companyprefix)))]
+-        rawSGCN = gs1companyprefix + couponref
++        raw_sgcn = gs1companyprefix + couponref
+         serial = uri[30:]
+-        return ('https://id.gs1.org/255/' + str(GTIN(raw=rawSGCN)) + serial)
++        return 'https://id.gs1.org/255/' + raw_sgcn + str(check_digit(raw_sgcn)) + serial
+ 
+     if match(
+             r'^urn:epc:id:ginc:([\d]{6}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,24}|[\d]{7}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,23}|[\d]{8}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,22}|[\d]{9}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,21}|[\d]{10}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}|[\d]{11}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,19}|[\d]{12}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,18})$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         consignmentref = uri[(partition + 1):]
+-        return ('https://id.gs1.org/401/' + gs1companyprefix + __web_uri_percent_encoder(consignmentref))
++        return 'https://id.gs1.org/401/' + gs1companyprefix + __web_uri_percent_encoder(consignmentref)
+ 
+     if match(
+             r'^urn:epc:id:gsin:(([\d]{6}\.[\d]{10}$)|([\d]{7}\.[\d]{9}$)|([\d]{8}\.[\d]{8}$)|([\d]{9}\.[\d]{7}$)|([\d]{10}\.[\d]{6}$)|([\d]{11}\.[\d]{5}$)|([\d]{12}\.[\d]{4}$))',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         shipperref = uri[(partition + 1):]
+         rawGSIN = gs1companyprefix + shipperref
+-        return ('https://id.gs1.org/402/' + str(GTIN(raw=rawGSIN)))
++        return 'https://id.gs1.org/402/' + rawGSIN + str(check_digit(rawGSIN))
+ 
+     if match(
+             r'^urn:epc:id:itip:(([\d]{6}\.[\d]{7})|([\d]{7}\.[\d]{6})|([\d]{8}\.[\d]{5})|([\d]{9}\.[\d]{4})|([\d]{10}\.[\d]{3})|([\d]{11}\.[\d]{2})|([\d]{12}\.[\d]{1}))\.[\d]{2}\.[\d]{2}\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
+         piece = uri[31:33]
+         total = uri[34:36]
+         serial = uri[37:]
+-        return ('https://id.gs1.org/8006/' + str(GTIN(raw=rawGTIN)) +
+-                piece + total + '/21/' + __web_uri_percent_encoder(serial))
++        return 'https://id.gs1.org/8006/' + raw_gtin + str(check_digit(raw_gtin)) + piece + total + \
++               '/21/' + __web_uri_percent_encoder(serial)
+ 
+     if match(
+             r'^urn:epc:id:upui:((\d{6}\.\d{7})|(\d{7}\.\d{6})|(\d{8}\.\d{5})|(\d{9}\.\d{4})|(\d{10}\.\d{3})|(\d{11}\.\d{2})|(\d{12}\.\d{1}))\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,28}$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
+         serial = uri[31:]
+-        return ('https://id.gs1.org/01/' + str(GTIN(raw=rawGTIN)) + '/235/' + __web_uri_percent_encoder(serial))
++        return 'https://id.gs1.org/01/' + raw_gtin + str(check_digit(raw_gtin)) + '/235/' + __web_uri_percent_encoder(serial)
+ 
+     if match(
+             r'^urn:epc:id:pgln:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.))$',
+             uri) is not None:
+         gs1companyprefix = uri[16:partition]
+         partyref = uri[(partition + 1):(partition + 1 + (12 - len(gs1companyprefix)))]
+         rawGLN = gs1companyprefix + partyref
+-        return ('https://id.gs1.org/417/' + str(GTIN(raw=rawGLN)))
++        return 'https://id.gs1.org/417/' + rawGLN + str(check_digit(rawGLN))
+ 
+     # EPC Class URIs
+     if match(
+             r'^urn:epc:class:lgtin:(([\d]{6}\.[\d]{7})|([\d]{7}\.[\d]{6})|([\d]{8}\.[\d]{5})|([\d]{9}\.[\d]{4})|([\d]{10}\.[\d]{3})|([\d]{11}\.[\d]{2})|([\d]{12}\.[\d]{1}))\.(\%2[125-9A-Fa-f]|\%3[0-9A-Fa-f]|\%4[1-9A-Fa-f]|\%5[0-9AaFf]|\%6[1-9A-Fa-f]|\%7[0-9Aa]|[!\')(*+,.0-9:;=A-Za-z_-]){1,20}$',
+             uri) is not None:
+         gs1companyprefix = uri[20:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
+         lot = uri[35:]
+-        return ('https://id.gs1.org/01/' + str(GTIN(raw=rawGTIN)) + '/10/' + __web_uri_percent_encoder(lot))
++        return 'https://id.gs1.org/01/' + raw_gtin + str(check_digit(raw_gtin)) + '/10/' + __web_uri_percent_encoder(lot)
+ 
+     # EPC ID Pattern URIs
+     if match(
+             r'^urn:epc:idpat:sgtin:((\d{6}\.\d{7})|(\d{7}\.\d{6})|(\d{8}\.\d{5})|(\d{9}\.\d{4})|(\d{10}\.\d{3})|(\d{11}\.\d{2})|(\d{12}\.\d{1}))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[20:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
+-        return ('https://id.gs1.org/01/' + str(GTIN(raw=rawGTIN)))
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
++        return 'https://id.gs1.org/01/' + raw_gtin + str(check_digit(raw_gtin))
+ 
+     if match(
+             r'^urn:epc:idpat:grai:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.\.))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[19:partition]
+         assetref = uri[(partition + 1):(partition + 1 + (12 - len(gs1companyprefix)))]
+-        rawGRAI = '0' + gs1companyprefix + assetref
+-        return ('https://id.gs1.org/8003/' + str(GTIN(raw=rawGRAI)))
++        raw_grai = '0' + gs1companyprefix + assetref
++        return 'https://id.gs1.org/8003/' + raw_grai + str(check_digit(raw_grai))
+ 
+     if match(
+             r'^urn:epc:idpat:gdti:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.\.))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[19:partition]
+         documenttype = uri[(partition + 1):(partition + 1 +
+                                             (12 - len(gs1companyprefix)))]
+-        rawGDTI = gs1companyprefix + documenttype
+-        return ('https://id.gs1.org/253/' + str(GTIN(raw=rawGDTI)))
++        raw_gdti = gs1companyprefix + documenttype
++        return 'https://id.gs1.org/253/' + raw_gdti + str(check_digit(raw_gdti))
+ 
+     if match(
+             r'^urn:epc:idpat:sgcn:(([\d]{6}\.[\d]{6})|([\d]{7}\.[\d]{5})|([\d]{8}\.[\d]{4})|([\d]{9}\.[\d]{3})|([\d]{10}\.[\d]{2})|([\d]{11}\.[\d]{1})|([\d]{12}\.\.))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[19:partition]
+         couponref = uri[(partition + 1):(partition + 1 + (12 - len(gs1companyprefix)))]
+-        rawSGCN = gs1companyprefix + couponref
+-        return ('https://id.gs1.org/255/' + str(GTIN(raw=rawSGCN)))
++        raw_sgcn = gs1companyprefix + couponref
++        return 'https://id.gs1.org/255/' + raw_sgcn + str(check_digit(raw_sgcn))
+ 
+     if match(
+             r'^urn:epc:idpat:cpi:((\d{6}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,24})|(\d{7}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,23})|(\d{8}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,22})|(\d{9}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,21})|(\d{10}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,20})|(\d{11}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,19})|(\d{12}\.(\%2[3dfDF]|\%3[0-9]|\%4[1-9A-Fa-f]|\%5[0-9Aa]|[0-9A-Z-]){1,18}))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[18:partition]
+         separator = uri.rfind('.')
+         cpref = uri[(partition + 1):(separator)]
+-        rawCPI = gs1companyprefix + cpref
+-        return ('https://id.gs1.org/8010/' + __web_uri_percent_encoder(rawCPI))
++        raw_cpi = gs1companyprefix + cpref
++        return 'https://id.gs1.org/8010/' + __web_uri_percent_encoder(raw_cpi)
+ 
+     if match(
+             r'^urn:epc:idpat:itip:(([\d]{6}\.[\d]{7})|([\d]{7}\.[\d]{6})|([\d]{8}\.[\d]{5})|([\d]{9}\.[\d]{4})|([\d]{10}\.[\d]{3})|([\d]{11}\.[\d]{2})|([\d]{12}\.[\d]{1}))\.[\d]{2}\.[\d]{2}\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[19:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
+         piece = uri[34:36]
+         total = uri[37:39]
+-        return ('https://id.gs1.org/8006/' + str(GTIN(raw=rawGTIN)) + piece + total)
++        return 'https://id.gs1.org/8006/' + raw_gtin + str(check_digit(raw_gtin)) + piece + total
+ 
+     if match(
+             r'^urn:epc:idpat:upui:((\d{6}\.\d{7})|(\d{7}\.\d{6})|(\d{8}\.\d{5})|(\d{9}\.\d{4})|(\d{10}\.\d{3})|(\d{11}\.\d{2})|(\d{12}\.\d{1}))\.\*$',
+             uri) is not None:
+         gs1companyprefix = uri[19:partition]
+         itemref = uri[(partition + 1):(partition + 1 + (13 - len(gs1companyprefix)))]
+-        rawGTIN = itemref[0:1] + gs1companyprefix + itemref[1:]
+-        return ('https://id.gs1.org/01/' + str(GTIN(raw=rawGTIN)))
++        raw_gtin = itemref[0:1] + gs1companyprefix + itemref[1:]
++        return 'https://id.gs1.org/01/' + raw_gtin + str(check_digit(raw_gtin))
+ 
+     # GS1 DL URIs
+     if match(
+             r'^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[A-Za-z_-]{10}$))',
+             uri) is None:
+         return None
+ 
+@@ -437,9 +467,9 @@
+             uri) or
+         match(r'https:\/\/id.gs1.org\/8006\/(\d{18})$', uri) or
+         match(r'https:\/\/id.gs1.org\/8010\/([\x23\x2D\x2F\x30-\x39\x41-\x5A]{0,30})\/8011/(\d{0,12})$', uri) or
+         match(r'https:\/\/id.gs1.org\/8010\/([\x23\x2D\x2F\x30-\x39\x41-\x5A]{0,30})$', uri) or
+         match(r'https:\/\/id.gs1.org\/8017\/(\d{18})$', uri) or
+         match(r'https:\/\/id.gs1.org\/8018\/(\d{18})$', uri)
+     ) is not None:  # noqa E124
+-        return (uri)
++        return uri
+     return None
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/events_from_file_reader.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/events_from_file_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/file_document_loader.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/file_document_loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/hash_generator.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/hash_generator.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -46,14 +46,20 @@
+         abstract_date_time = dateutil.parser.parse(timestamp)
+     except ValueError:
+         logging.warning("'%s' is labelled as time but does not match the ISO 8601 dateTime format", timestamp)
+         return timestamp
+ 
+     # convert to UTC
+     abstract_date_time = abstract_date_time.astimezone(datetime.timezone.utc)
++
++    microsecond = abstract_date_time.microsecond
++
++    # round off microsecond upto 3 digits
++    abstract_date_time = abstract_date_time.replace(microsecond=round(microsecond, -3))
++
+     # normalise precision to ms and convert to ISO string using "Z" instead of +00:00
+     fixed = abstract_date_time.isoformat(timespec='milliseconds')[:-6] + "Z"
+ 
+     logging.debug("corrected timestamp '{}'".format(fixed))
+     return fixed
+ 
+ 
+@@ -91,14 +97,17 @@
+     `child_list`    is to be a list of simple python object, i.e. triples of two strings (key/value) and a list of
+                     simple python objects (grand children).
+     `child_order`   is expected to be a property order, see PROP_ORDER.
+ 
+     """
+     pre_hash = ""
+     logging.debug("Calculating pre hash for child list %s \nWith order %s", child_list, child_order)
++
++    user_extensions = _gather_user_extensions(child_list)
++
+     for (child_name, sub_child_order) in child_order:
+         children = [x for x in child_list if x[0] == child_name]  # elements with the same name
+         list_of_values = []
+ 
+         for child in children:
+             child_pre_hash = _child_to_pre_hash_string(child, sub_child_order)
+             if child_pre_hash:
+@@ -114,14 +123,18 @@
+         list_of_values.sort()
+ 
+         if "".join(list_of_values):  # fixes #16
+             if pre_hash:
+                 list_of_values.insert(0, pre_hash)  # yields correct Joining behavior
+             pre_hash = JOIN_BY.join(list_of_values)
+ 
++    if len(user_extensions) > 0:
++        user_extensions_prehash = _generic_child_list_to_prehash_string(user_extensions)
++        pre_hash = pre_hash + JOIN_BY + user_extensions_prehash
++
+     logging.debug("child list pre hash is %s", pre_hash)
+ 
+     return pre_hash
+ 
+ 
+ def _canonize_value(text):
+     """Run a value through all format canonizations"""
+@@ -131,14 +144,42 @@
+     if converted:
+         logging.debug("Converted %s to %s", text, converted)
+         return converted
+     logging.debug("No canonical form for '%s'", text)
+     return text
+ 
+ 
++def _gather_user_extensions(child_list):
++    """
++    Collect user extensions enclosed in child like sensorElementList, readPoint, etc.
++    So that user extensions can be appended to its enclosing element only
++    """
++    user_extensions = []
++
++    if len(child_list) <= 1:
++        return user_extensions
++
++    # ignore top level user extensions
++    for child in child_list:
++        if 'eventTime' in child[0] or 'action' in child[0]:
++            return user_extensions
++
++    # collect user extensions in a separate list
++    for x in child_list:
++        if isinstance(x, tuple) and ('{' in x[0] and '/}' in x[0]):
++            user_extensions.append(x)
++
++    # remove user extensions from original list
++    if user_extensions:
++        for element_to_remove in user_extensions:
++            child_list.remove(element_to_remove)
++
++    return user_extensions
++
++
+ def _try_format_web_vocabulary(text):
+     """Replace old CBV URNs by new web vocabulary equivalents."""
+     return text.replace(
+         'urn:epcglobal:cbv:bizstep:', 'https://ref.gs1.org/cbv/BizStep-'
+     ).replace(
+         'urn:epcglobal:cbv:disp:', 'https://ref.gs1.org/cbv/Disp-'
+     ).replace(
+@@ -195,15 +236,15 @@
+ def _gather_elements_not_in_order(children, child_order):
+     """
+     Collects vendor extensions not covered by the defined child order. Consumes the root.
+     """
+ 
+     # remove fields that are to be ignored in the hash:
+     # remove all elements from XML tree which do shouldn't take part in hash calculation
+-    to_be_ignored = ["recordTime", "eventID", "type"]
++    to_be_ignored = ["recordTime", "eventID", "type", "errorDeclaration"]
+     children = [child for child in children if child[0] not in to_be_ignored]
+     if children:
+         return _generic_child_list_to_prehash_string(children)
+ 
+     return ""
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/json_to_py.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/json_to_py.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -57,23 +57,31 @@
+     from context import epcis_event_hash_generator  # noqa: F401
+ 
+ from epcis_event_hash_generator import json_xml_model_mismatch_correction
+ 
+ _namespaces = {}  # global dictionary gathered during parsing
+ 
+ 
+-def _namespace_replace(key):
++def _namespace_replace(text, is_value=False):
+     """If the key contains a namespace (followed by ":"), replace it with
+     the {naemspace_url} from the _namespaces dict.
+     """
+-    splitted = key.split(":", 1)
+-    if len(splitted) > 1:
++
++    if not isinstance(text, str):
++        return text
++
++    splitted = text.split(":", 1)
++
++    if len(splitted) > 1 and splitted[0] in _namespaces:
++        if is_value:
++            return _namespaces[splitted[0]].replace('{', '').replace('}', '') + splitted[1]
++
+         return _namespaces[splitted[0]] + splitted[1]
+ 
+-    return key
++    return text
+ 
+ 
+ def _collect_namespaces_from_jsonld_context(context):
+     global _namespaces
+ 
+     if not isinstance(context, str):
+         if isinstance(context, list):
+@@ -121,15 +129,15 @@
+                         py_obj[2].append((key, element[1], element[2]))
+                 else:
+                     child = (key, child[1], child[2])
+                     py_obj[2].append(child)
+ 
+     else:
+         logging.debug("converting '%s' to str", json_obj)
+-        return "", str(json_obj), []
++        return "", str(_namespace_replace(json_obj, True)), []
+ 
+     # do not sort elements with bizTransaction, source and destination
+     if not [k for k in ["bizTransaction", "source", "destination"] if k in json_obj]:
+         py_obj[2].sort()
+     return py_obj
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/json_xml_model_mismatch_correction.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/json_xml_model_mismatch_correction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator/xml_to_py.py` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator/xml_to_py.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/PKG-INFO` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: epcis-event-hash-generator
+-Version: 1.7.0
++Version: 1.8.0
+ Summary: Exemplary implementation of the EPCIS event hash generator algorithm described in the README
+ Home-page: https://github.com/RalphTro/epcis-event-hash-generator
+ Author: Package author: Sebastian Schmittner
+     Code authors: https://github.com/RalphTro/epcis-event-hash-generator/graphs/contributors
+ Author-email: sebastian.schmittner@eecc.de
+ License: MIT
+ Keywords: epcis GS1 hashing traceability
+@@ -18,35 +18,34 @@
+ 
+ # EPCIS Event Hash Generator
+ 
+ [![Build Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Unit%20Tests/badge.svg?v=42)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Unit+Tests%22)
+ [![Linter Status](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Code%20Style/badge.svg)](https://github.com/RalphTro/epcis-event-hash-generator/actions?query=workflow%3A%22Code+Style%22)
+ ![Docker Release Build](https://github.com/RalphTro/epcis-event-hash-generator/workflows/Docker%20Release%20Build/badge.svg)
+ 
+-This is a proposal/reference implementation for a method to uniquely identify an EPCIS event or validate the integrity thereof. To this end, a syntax-/representation-agnostic approach based on hashing is developed.
+-The <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
++This is a reference implementation for a method to uniquely identify an EPCIS event as specified in the Core Business Vocabulary (CBV) Standard 2.0. 
++The *EPCIS Event Hash ID* works syntax-/representation-agnostic and is based on hashing.
++This <b>PROTOTYPICAL DEMO SOFTWARE</b> takes an EPCIS Document (either formatted in XML or JSON-LD) and returns the hash value(s) of the contained EPCIS events representing a unique fingerprint thereof. 
+ 
+ ![EPCIS event hash generator algorithm illustration](docs/epcisEventHashGenerator.png)
+ 
+ 
+ ## Status of the reference implementation
+ 
+-The current (v1.6.0 at the time of writing) set of examples and implementation of the json parser is based on an old version of the EPCIS 2.0 JSON schema, see https://github.com/RalphTro/epcis-event-hash-generator/issues/37 . Currently, only the XML hashing should be used. See
+-https://github.com/gs1/EPCIS/blob/master/JSON/
+-for the current (still draft) version of the JSON schema and for examples.
++Working as expected, no known major bugs.  
+ 
+ 
+ 
+ ## TL;DR
+ 
+ The implementation provided here is a prototypical reference implementation meant for testing against other implementations, but **not meant for production**. If you discover that this implementation does not conform perfectly to the algorithm description or contains any other bugs, please file an issue at https://github.com/RalphTro/epcis-event-hash-generator/issues .
+ 
+ ### Command Line
+ 
+-The Hashing Algorithm described below is implemented as a python script, including a command line utility which can be run directly.
++The Hashing Algorithm described below is implemented as a Python script, including a command line utility which can be run directly.
+ 
+ The package is release on PyPI at https://pypi.org/project/epcis-event-hash-generator/ hence it can be installed via
+ ```
+ python3 -m pip install epcis_event_hash_generator
+ ```
+ 
+ For usage information run
+@@ -61,17 +60,17 @@
+ The script also comes wrapped as a web service in a docker image for ease of integration into a testing environment.
+ You may use 
+ 
+ - [the latest release version of the web service container](https://github.com/RalphTro/epcis-event-hash-generator/packages/484860 ). See here for usage.
+ 
+ 
+ ## Introduction  
+-There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the eventID field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
++There are situations in which organisations require to uniquely refer to a specific EPCIS event. For instance, companies may only want to store the <b>hash value of a given EPCIS event on a distributed shared ledger ('blockchain')</b> instead of any actual payload. Digitally signed and in conjunction with a unique timestamp, this is a powerful and effective way to prove the integrity of the underlying event data. Another use case consists to use such an approach to <b>populate the eventID field with values that are intrinsic to the EPCIS event</b> - if an organisation captures an event without an eventID field (which is not required as of the standard) and sends that event to a business partner who needs to assign a unique ID, they can agree that the business partner populates the `eventID` field applying this methodology before storing the event on the server. If the organisation later wants to query for that specific event, it knows how the eventID was created, thus is able to query for it through the eventID value.
+ EPCIS events have a couple of differences to other electronic documents:
+-+ They are embedded in an EPCIS document that can contain multiple events 
+++ They are embedded in an EPCIS document which can contain multiple events 
+ + As of EPCIS 2.0, it is permitted to capture and share EPCIS data through two different syntaxes (XML and JSON/JSON-LD)
+ + EPCIS events provides ample flexibility to include user-specific extensions 
+ + When expressed in JSON/JSON-LD, the sequence of elements may vary
+ 
+ This is why industry needs to have a consistent, reliable approach to create a hash value that is viable to uniquely identify a specific EPCIS event. 
+ 
+ Notice that the algorithm described here provides a way of *hashing* an event. A *signature* scheme can be build using this hash, but the hash by itself does not yield a proof of authenticity/authorship. For example, a man in the middle attack can re-compute the hash after tampering.
+@@ -99,69 +98,67 @@
+ 4. Data elements SHALL NOT be added if they are omitted in a given EPCIS event or do not apply.
+ 5. Whitespace characters at the beginning or end of values SHALL be truncated.
+ 6. Quantitative values SHALL NOT have trailing zeros. (For example, a quantity of one SHALL be expressed as '1', and SHALL NOT be expressed as '1.0'; 0.3434 SHALL be expressed as 0.3434, with any trailing zeros truncated.)
+ 7. Numeric values SHALL be expressed without single quotes.
+ 8. All timestamps SHALL be expressed in UTC; the zero UTC offset SHALL be expressed with the capital letter 'Z'. 
+ 9. All timestamps SHALL be expressed with millisecond precision. If an EPCIS event lacks the latter, the millisecond field SHALL be zero-filled (e.g., YYYY-MM-DDTHH:MM:SS.000Z).
+ 10. Strings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-11. All child elements as part of a list (e.g. epc in epcList, bizTransaction in bizTransactionList, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character.
+-12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. quantityElement in quantityList, sensorReport in sensorElement), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
+-13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in bizTransaction or Source/Destination Type in source), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
+-14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding GS1 Web Vocabulary URI equivalent (starting with ‘https://ref.gs1.org’).
+-Example:
+-‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
+-
+-15. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
+-16. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
+-17. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
+-18. If an EPCIS event comprises ILMD elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-19. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
++11. All child elements as part of a list (e.g. `epc` in `epcList`, `bizTransaction` in `bizTransactionList`, etc.) SHALL be sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character. A field name denoting a list (e.g. `epcList`, `bizTransactionList`, `sensorElementList`) SHALL only appear once in the pre-hash string.
++12. If a child element of a list itself comprises one or more key-value pairs itself (e.g. `quantityElement` in `quantityList`, `sensorReport` in `sensorElement`), the latter SHALL be concatenated to a string (similar to the procedure specified above) and, if they belong to the same level, sequenced according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character..
++13. If an EPCIS field comprises a type attribute (e.g. Business Transaction Type in `bizTransaction` or Source/Destination Type in `source`), the type key-value pair (where the key is 'type' and the value the respective type attribute) SHALL follow the actual key-value before the alphabetical ordering takes place. 
++14. If present, any URN-based standard vocabulary value (starting with ‘urn:epcglobal:cbv’) SHALL be expressed in its corresponding CBV Web URI term (starting with ‘https://ref.gs1.org’).
++Example: ‘urn:epcglobal:cbv:bizstep:receiving’ --> ‘https://ref.gs1.org/cbv/BizStep-receiving’
++15. If present, any Compact URI Expression (CURIE) SHALL be expanded to its full URI equivalent. This also holds true for standard CBV values, i.e. with the CURIE prefix expansions ‘gs1’ (https://gs1.org/voc/), ‘epcis’ (https://ref.gs1.org/epcis/) and ‘cbv’ (https://ref.gs1.org/cbv/). Example: ‘gs1:Temperature’ --> ‘https://gs1.org/voc/Temperature’
++16. If an EPCIS event is represented in JSON/JSON-LD, standard vocabulary elements are not expressed as URIs, but in bare string notation (i.e. ‘in_transit’ instead of ‘https://ref.gs1.org/cbv/Disp-in_transit’). All standard vocabulary elements expressed in bare string notation SHALL be expanded to their corresponding GS1 Web URI (starting with ‘https://ref.gs1.org/cbv’).
++17. If present, EPC URIs (starting with ‘urn:epc:id’), EPC Class URIs (starting with ‘urn:epc:class’) or EPC Pattern URIs (starting with ‘urn:epc:idpat’) SHALL be converted into the corresponding canonical GS1 Digital Link URI (starting with ‘https://id.gs1.org’). Canonical GS1 Digital Link URIs are specified in [GS1 Digital Link: URI Syntax, release 1.2], section 4.11.
++18. If a GS1 Digital Link URI is present, it SHALL take the form of a constrained canonical GS1 Digital Link URI. Specifically: (I) A custom domain SHALL be replaced by ‘https://id.gs1.org’. (II) The query string SHALL be stripped off. (III) It SHALL only contain the most fine-granular level of identification, i.e. contain the following GS1 keys/key qualifiers only: `00 / 01 / 01 21 / 01 10 / 01 235 / 253 / 255 / 401 / 402 / 414 / 414 254 / 417 / 8003 / 8004 / 8006 / 8006 21 / 8006 10 / 8010 / 8010 8011 / 8017 / 8018`
++19. If an EPCIS event comprises `ILMD` elements, the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('='). The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
++20. If an EPCIS event comprises user extension elements at event level – irrespective whether they appear at top level or are nested – the latter SHALL comprise their key names (full namespace embraced by curly brackets ('{' and '}') and the respective local name), as well as, if present, the contained value, prefixed by an equal sign ('=').
+ The resulting substrings SHALL be sorted according to their case-sensitive lexical ordering, considering UTF-8/ASCII code values of each successive character when they are appended to the pre-hash string.
+-20. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `errorDeclaration`, `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), the top-level user extension element(s) SHALL be prefixed with the corresponding EPCIS standard field name. Apart from that, the SHALL be added to the pre-hash string similarly as specified in the previous step.
+-21. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
++21. If an EPCIS event comprises user extension elements as part of an EPCIS standard field with an extension point (namely `readPoint`, `bizLocation`, `sensorElement`, `sensorMetadata`, and `sensorReport`), they SHALL be added at the end of its enclosing parent’s regular fields. Apart from that, they SHALL be added to the pre-hash string similarly as specified in the previous step.
++22. The resulting pre-hash string SHALL be embedded in a 'ni' URI scheme as specified in RFC 6920, as follows:
+ ni:///{digest algorithm};{digest value}?ver={CBV version}
+ i.e. characters 'n', 'i', followed by one colon (':'), three slash characters ('/'), the digest algorithm, one semicolon (';'), the digest value, one question mark ('?'), the characters 'v', 'e', 'r', one equal sign ('='), and the version of the EPCIS Event Hash ID algorithm that was used to generate the pre-hash string, indicated by the CBV version.
+-22. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
+-23. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
++23. The digest algorithm SHALL contain one of the hash name string values as listed in the Named Information Hash Algorithm Registry (see https://www.iana.org/assignments/named-information/named-information.xhtml)
++24. The CBV version SHALL be indicated as follows: the three characters 'C', 'B', 'V', followed by one or several digits indicating the major release version, one dot character ('.') and one or more digits indicating the minor release version. In addition, it MAY be appended with one dot character ('.') and one or more digits indicating a revision of a given CBV standard release, if applicable (i.e. if a revision of the CBV standard specifies an updated version of the EPCIS Event Hash ID algorithm).
+ 
+ ### Canonical property order 
+ 
+ Applicable for all EPCIS Event Types, i.e. `ObjectEvent`, `AggregationEvent`, `TransactionEvent`, `TransformationEvent` and `AssociationEvent`.
+ 
+ | Sequence | Data Element |
+ | -------- | ------------ |
+ | 1 | `eventType` |
+ | 2 | `eventTime` |
+ | 3 | `eventTimeZoneOffset` |
+-| 4 | `errorDeclaration` (`declarationTime`, `reason`, `correctiveEventIDs` – `correctiveEventID`) |
+-| 5 | `epcList` – `epc` |
+-| 6 | `parentID` |
+-| 7 | `inputEPCList` – `epc` |
+-| 8 | `childEPCs` – `epc` |
+-| 9 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 10 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 11 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 12 | `outputEPCList` – `epc` |
+-| 13 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
+-| 14 | `action` |
+-| 15 | `transformationID` |
+-| 16 | `bizStep` |
+-| 17 | `disposition` |
+-| 18 | `persistentDisposition` - (`set`, `unset`) |
+-| 19 | `readPoint` – `id` |
+-| 20 | `bizLocation` – `id` |
+-| 21 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
+-| 22 | `sourceList` – `source` (`source ID`, `source type`) |
+-| 23 | `destinationList` – `destination` (`destination ID`, `destination type`) |
+-| 24 | `sensorElement` ( |
++| 4 | `epcList` – `epc` |
++| 5 | `parentID` |
++| 6 | `inputEPCList` – `epc` |
++| 7 | `childEPCs` – `epc` |
++| 8 | `quantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 9 | `childQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 10 | `inputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 11 | `outputEPCList` – `epc` |
++| 12 | `outputQuantityList` – `quantityElement` (`epcClass`, `quantity`, `uom`) |
++| 13 | `action` |
++| 14 | `transformationID` |
++| 15 | `bizStep` |
++| 16 | `disposition` |
++| 17 | `persistentDisposition` - (`set`, `unset`) |
++| 18 | `readPoint` – `id` |
++| 19 | `bizLocation` – `id` |
++| 20 | `bizTransactionList` – `bizTransaction` (`business transaction identifier`, `business transaction type`) |
++| 21 | `sourceList` – `source` (`source ID`, `source type`) |
++| 22 | `destinationList` – `destination` (`destination ID`, `destination type`) |
++| 23 | `sensorElementList` - `sensorElement` ( |
+ |    | `sensorMetadata` (`time`, `startTime`, `endTime`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `bizRules`), |
+-|    | `sensorReport` (`type`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`)|
++|    | `sensorReport` (`type`, `exception`, `deviceID`, `deviceMetadata`, `rawData`, `dataProcessingMethod`, `time`, `microorganism`, `chemicalSubstance`, `value`, `component`, `stringValue`, `booleanValue`, `hexBinaryValue`, `uriValue`, `minValue`, `maxValue`, `meanValue`, `sDev`, `percRank`, `percValue`, `uom`, `coordinateReferenceSystem`)|
+ |    | ) |
+-| 25 | `ilmd` – `{ILMD elements}` |
+-| 26 | `{User extension elements}`|
++| 24 | `ilmd` – `{ILMD elements}` |
++| 25 | `{User extension elements}`|
+ 
+ For better understanding, the following illustrations include the data content of EPCIS events (including a couple of user extensions - all defined under 'https://ns.example.com/epcis'), show the corresponding pre-hash string as well as the canonical hash value of that event.
+ 
+ Example 1:
+ 
+ ![Example 1 for EPCIS event pre-hash computation](docs/hashingAlgorithmLogicIllustration_example1.png)
+ 
+@@ -188,24 +185,48 @@
+ * Identifying duplicate EPCIS events
+ * Matching an error declaration to an original event (see EPCIS Standard, section 7.4.1.4)
+ * Notarisation of EPCIS events (i.e. leveraging digital signatures)  
+ 
+ That said, the algorithm has limited applicability when EPCIS events are redacted (meaning that, e.g. for privacy reasons, EPCIS events are not shared entirely, but deliberately omit specific fields or including readPoint IDs with a lesser granularity - see EPCIS and CBV Implementation Guide, section 6.7). In such a case, the content of a redacted EPCIS event will in no case yield to the hash value of the original one.
+ 
+ ## References
+-* EPCIS Standard, v. 1.2: https://www.gs1.org/standards/epcis
+-* Core Business Vocabulary (CBV) Standard, v. 1.2.2: https://www.gs1.org/standards/epcis
++* EPCIS Standard, v. 2.0: https://ref.gs1.org/standards/epcis/
++* Core Business Vocabulary (CBV) Standard, v. 2.0: https://ref.gs1.org/standards/cbv/
+ * RFC 6920, Naming Things with Hashes, https://tools.ietf.org/html/rfc6920
+ * Named Information Hash Algorithm Registry, https://www.iana.org/assignments/named-information/named-information.xhtml
+ 
++## Acknowledgements
++
++The following table lists, in alphabetical order of their GitHub profile name, all persons who have contributed to this project so far through:
++- software development (:computer:)
++- maintenance (:construction:) 
++- submitting issues (:ticket:)
++- testing (:microscope:)
++- providing advice/feedback/ideas (:bulb:) 
++
++All of this was and is both very valuable as well as very much appreciated and we would like to take the opportunity to express our gratitude for all this valuable support.  
++
++| GitHub Profile |  Link + Image         | Name (if revealed)   | Primary contribution |
++| -------------- | --------------------- | -------------------- | -------------- |
++| Aravinda93     | [![](https://github.com/Aravinda93.png?size=50)](https://github.com/Aravinda93)     | Aravinda Baliga      | :ticket: :bulb: :microscope: |
++| clementh59     | [![](https://github.com/clementh59.png?size=50)](https://github.com/clementh59)     | Clément              | :ticket: :microscope: |
++| CraigRe        | [![](https://github.com/CraigRe.png?size=50)](https://github.com/CraigRe)           | Craig Alan Repec     | :bulb:  |
++| dakbhavesh     | [![](https://github.com/dakbhavesh.png?size=50)](https://github.com/dakbhavesh)     | Bhavesh Shah         | :computer: :construction: :microscope: |
++| domguinard     | [![](https://github.com/domguinard.png?size=50)](https://github.com/domguinard)     | Dominique Guinard    | :bulb: |
++| Echsecutor     | [![](https://github.com/Echsecutor.png?size=50)](https://github.com/Echsecutor)     | Sebastian Schmittner | :computer: :construction: :microscope: |
++| mgh128         | [![](https://github.com/mgh128.png?size=50)](https://github.com/mgh128)             | Mark Harrison        | :bulb: |
++| RalphTro       | [![](https://github.com/RalphTro.png?size=50)](https://github.com/RalphTro)         | Ralph Troeger        | :microscope: :ticket: :computer: |
++| sboeckelmann   | [![](https://github.com/sboeckelmann.png?size=50)](https://github.com/sboeckelmann) | Sven Boeckelmann     | :bulb: |
++| ShaikDayan     | [![](https://github.com/ShaikDayan.png?size=50)](https://github.com/ShaikDayan)     | Shaik Dayan          | :microscope: :ticket: |
++| tnahddisttud   | [![](https://github.com/tnahddisttud.png?size=50)](https://github.com/tnahddisttud) | Siddhant Pandey      | :computer: :construction: |
+ 
+ ## License
+ 
+-<img alt="MIT" style="border-width:0" src="https://opensource.org/files/OSIApproved_1.png" width="150px;"/><br />
++<img alt="Open Source Initiative" style="border-width:0" src="docs/OSI.jpeg" width="150px;"/><br />
+ 
+-Copyright 2020, 2021 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
++Copyright 2020-2023 | Ralph Tröger <ralph.troeger@gs1.de> and Sebastian Schmittner <schmittner@eecc.info>
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/epcis_event_hash_generator.egg-info/SOURCES.txt` & `epcis-event-hash-generator-1.8.0/epcis_event_hash_generator.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/setup.py` & `epcis-event-hash-generator-1.8.0/setup.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="epcis-event-hash-generator",
+     keywords="epcis GS1 hashing traceability",
+-    version="1.7.0",
++    version="1.8.0",
+     author="""Package author: Sebastian Schmittner
+     Code authors: https://github.com/RalphTro/epcis-event-hash-generator/graphs/contributors""",
+     author_email="sebastian.schmittner@eecc.de",
+     license="MIT",
+     description="Exemplary implementation of the EPCIS event hash generator algorithm described in the README",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+@@ -27,10 +27,10 @@
+         "console_scripts": [
+             "generator=epcis_event_hash_generator.main:main",
+         ]
+     },
+     install_requires=[
+         'python_dateutil>=2.8',
+         'Flask>=1.1',
+-        'gtin>=0.1.13'
++        'PyLD==2.0.3'
+     ],
+ )
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/tests/test_all_values_present.py` & `epcis-event-hash-generator-1.8.0/tests/test_all_values_present.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -10,17 +10,22 @@
+ 
+ TEST_FILE_PATH = "examples/"
+ 
+ 
+ def _py_to_value_list(py_obj):
+     """
+     Transform a nested (Key, Value, Children) object tree into a list of (key, value) pairs.
+-    Ignoring times and eventID
++    Ignoring times, eventID and errorDeclaration
+     """
+     key_values = []
++
++    # Disregard a check for errorDeclaration
++    if py_obj[0] == "errorDeclaration":
++        return key_values
++
+     if isinstance(py_obj, tuple) and len(py_obj) == 2:
+         children = py_obj
+     else:
+         key, value, children = py_obj
+         if "time" not in key.lower() and value != "" and key != "eventID":
+             key_values.append((key, _canonize_value(value)))
+```
+
+### Comparing `epcis-event-hash-generator-1.7.0/tests/test_bare_string_normalisation.py` & `epcis-event-hash-generator-1.8.0/tests/test_bare_string_normalisation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/tests/test_explicit_hash_values.py` & `epcis-event-hash-generator-1.8.0/tests/test_explicit_hash_values.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/tests/test_required_properties.py` & `epcis-event-hash-generator-1.8.0/tests/test_required_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `epcis-event-hash-generator-1.7.0/tests/test_xml_to_py.py` & `epcis-event-hash-generator-1.8.0/tests/test_xml_to_py.py`
+
+ * *Files identical despite different names*
+

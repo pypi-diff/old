@@ -1,0 +1,1186 @@
+--- tmp/servicefoundry-0.8.3rc1.tar.gz
++++ tmp/servicefoundry-0.8.4rc1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "servicefoundry-0.8.3rc1.tar", max compression
+│ +gzip compressed data, was "servicefoundry-0.8.4rc1.tar", max compression
+│   --- servicefoundry-0.8.3rc1.tar
+├── +++ servicefoundry-0.8.4rc1.tar
+│ ├── file list
+│ │ @@ -1,136 +1,136 @@
+│ │ --rw-r--r--   0        0        0      672 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/README.md
+│ │ --rw-r--r--   0        0        0     2284 2023-03-29 09:46:03.329803 servicefoundry-0.8.3rc1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1211 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/__init__.py
+│ │ --rw-r--r--   0        0        0    36153 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/auto_gen/models.py
+│ │ --rw-r--r--   0        0        0     4159 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/__init__.py
+│ │ --rw-r--r--   0        0        0      531 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/builders/__init__.py
+│ │ --rw-r--r--   0        0        0     1364 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/builders/dockerfile.py
+│ │ --rw-r--r--   0        0        0     1357 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/builders/tfy_python_buildpack/__init__.py
+│ │ --rw-r--r--   0        0        0     6479 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/builders/tfy_python_buildpack/dockerfile_template.py
+│ │ --rw-r--r--   0        0        0     6458 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/builder/docker_service.py
+│ │ --rw-r--r--   0        0        0       66 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/__init__.py
+│ │ --rw-r--r--   0        0        0      494 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/__main__.py
+│ │ --rw-r--r--   0        0        0     3089 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/cli_main.py
+│ │ --rw-r--r--   0        0        0      958 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/__init__.py
+│ │ --rw-r--r--   0        0        0     1098 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/build_command.py
+│ │ --rw-r--r--   0        0        0     2803 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/build_logs_command.py
+│ │ --rw-r--r--   0        0        0     1890 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/create_command.py
+│ │ --rw-r--r--   0        0        0     2007 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/delete_command.py
+│ │ --rw-r--r--   0        0        0     1227 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/deploy_v2_command.py
+│ │ --rw-r--r--   0        0        0     2852 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/get_command.py
+│ │ --rw-r--r--   0        0        0     2944 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/infra_bootstrap.py
+│ │ --rw-r--r--   0        0        0     3753 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/list_command.py
+│ │ --rw-r--r--   0        0        0     1080 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/login_command.py
+│ │ --rw-r--r--   0        0        0      591 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/logout_command.py
+│ │ --rw-r--r--   0        0        0     3878 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/logs_command.py
+│ │ --rw-r--r--   0        0        0     1670 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/patch_command.py
+│ │ --rw-r--r--   0        0        0     1077 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/redeploy_command.py
+│ │ --rw-r--r--   0        0        0     1474 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/commands/trigger_command.py
+│ │ --rw-r--r--   0        0        0      206 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/config.py
+│ │ --rw-r--r--   0        0        0      228 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/console.py
+│ │ --rw-r--r--   0        0        0      510 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/const.py
+│ │ --rw-r--r--   0        0        0     3032 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/display_util.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/io/__init__.py
+│ │ --rw-r--r--   0        0        0     2289 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/io/cli_input_hook.py
+│ │ --rw-r--r--   0        0        0     2500 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/cli/util.py
+│ │ --rw-r--r--   0        0        0      347 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/core/__init__.py
+│ │ --rw-r--r--   0        0        0      379 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/core/login.py
+│ │ --rw-r--r--   0        0        0      184 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/core/logout.py
+│ │ --rw-r--r--   0        0        0      313 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/core/util.py
+│ │ --rw-r--r--   0        0        0      188 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/__init__.py
+│ │ --rw-r--r--   0        0        0      775 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/__main__.py
+│ │ --rw-r--r--   0        0        0     2857 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/app.py
+│ │ --rw-r--r--   0        0        0     1844 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/build.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/class_deployment/__init__.py
+│ │ --rw-r--r--   0        0        0      673 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/class_deployment/deployment.py
+│ │ --rw-r--r--   0        0        0      185 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/class_deployment/my_module.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/function_deployment/__init__.py
+│ │ --rw-r--r--   0        0        0      600 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/function_deployment/deployment.py
+│ │ --rw-r--r--   0        0        0      297 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/function_deployment/my_module.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/__init__.py
+│ │ --rw-r--r--   0        0        0     1772 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/deployment.py
+│ │ --rw-r--r--   0        0        0      369 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/model.py
+│ │ --rw-r--r--   0        0        0     1513 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/model_composition.py
+│ │ --rw-r--r--   0        0        0      153 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/utils.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.729836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/__init__.py
+│ │ --rw-r--r--   0        0        0      414 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/deployment.py
+│ │ --rw-r--r--   0        0        0      518 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/my_module.py
+│ │ --rw-r--r--   0        0        0      191 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/__init__.py
+│ │ --rw-r--r--   0        0        0       67 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/context.py
+│ │ --rw-r--r--   0        0        0     1875 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/method.py
+│ │ --rw-r--r--   0        0        0     4224 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/remote.py
+│ │ --rw-r--r--   0        0        0     4494 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/route.py
+│ │ --rw-r--r--   0        0        0     3471 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/service.py
+│ │ --rw-r--r--   0        0        0     1231 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/function_service/utils.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/internal/__init__.py
+│ │ --rw-r--r--   0        0        0      960 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/internal/experimental.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/__init__.py
+│ │ --rw-r--r--   0        0        0     1801 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/input_hook.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/notebook/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/notebook/io/__init__.py
+│ │ --rw-r--r--   0        0        0     1871 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/notebook/io/notebook_callback.py
+│ │ --rw-r--r--   0        0        0     1041 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/notebook/io/notebook_input_hook.py
+│ │ --rw-r--r--   0        0        0     1010 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/notebook/notebook_util.py
+│ │ --rw-r--r--   0        0        0      532 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/output_callback.py
+│ │ --rw-r--r--   0        0        0      629 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/parameters.py
+│ │ --rw-r--r--   0        0        0      825 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/io/rich_output_callback.py
+│ │ --rw-r--r--   0        0        0      175 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/json_util.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/__init__.py
+│ │ --rw-r--r--   0        0        0     2906 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/auth/auth_service_client.py
+│ │ --rw-r--r--   0        0        0     4228 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/auth/credential_file_manager.py
+│ │ --rw-r--r--   0        0        0     4268 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/auth/credential_provider.py
+│ │ --rw-r--r--   0        0        0     1854 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/auth/servicefoundry_session.py
+│ │ --rw-r--r--   0        0        0     7447 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/binarydownloader.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/__init__.py
+│ │ --rw-r--r--   0        0        0      671 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/cookiecutter_client.py
+│ │ --rw-r--r--   0        0        0     2563 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/git_client.py
+│ │ --rw-r--r--   0        0        0    22811 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/service_foundry_client.py
+│ │ --rw-r--r--   0        0        0      455 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/shell_client.py
+│ │ --rw-r--r--   0        0        0     1455 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/terragrunt_client.py
+│ │ --rw-r--r--   0        0        0     1122 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/clients/utils.py
+│ │ --rw-r--r--   0        0        0     1331 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/config/config_manager.py
+│ │ --rw-r--r--   0        0        0     2232 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/config/dict_questionaire.py
+│ │ --rw-r--r--   0        0        0    10594 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/config/infra_config.py
+│ │ --rw-r--r--   0        0        0     1886 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/config/installation_config.py
+│ │ --rw-r--r--   0        0        0     1752 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/const.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/dao/__init__.py
+│ │ --rw-r--r--   0        0        0     5568 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/dao/application.py
+│ │ --rw-r--r--   0        0        0     1028 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/dao/version.py
+│ │ --rw-r--r--   0        0        0     2533 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/dao/workspace.py
+│ │ --rw-r--r--   0        0        0      588 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/exceptions.py
+│ │ --rw-r--r--   0        0        0      288 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/argo-secrets.mustache
+│ │ --rw-r--r--   0        0        0      918 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/argo-ubermold.mustache
+│ │ --rw-r--r--   0        0        0    23708 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/install_truefoundry.py
+│ │ --rw-r--r--   0        0        0     1411 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/nats-bootstrap.sh
+│ │ --rw-r--r--   0        0        0      328 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/tfy-agent.mustache
+│ │ --rw-r--r--   0        0        0     1137 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/tfy-control-plane.mustache
+│ │ --rw-r--r--   0        0        0     6290 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/infra/utils.py
+│ │ --rw-r--r--   0        0        0     1463 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/logs_utils.py
+│ │ --rw-r--r--   0        0        0     1409 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/messages.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/model/__init__.py
+│ │ --rw-r--r--   0        0        0     9608 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/model/entity.py
+│ │ --rw-r--r--   0        0        0     5191 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/session.py
+│ │ --rw-r--r--   0        0        0      993 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/util.py
+│ │ --rw-r--r--   0        0        0     4995 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/lib/win32.py
+│ │ --rw-r--r--   0        0        0      688 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/logger.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/__init__.py
+│ │ --rw-r--r--   0        0        0      517 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/deploy.py
+│ │ --rw-r--r--   0        0        0      305 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/main.py
+│ │ --rw-r--r--   0        0        0      303 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/servicefoundry.yaml
+│ │ --rw-r--r--   0        0        0      441 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_manual.yaml
+│ │ --rw-r--r--   0        0        0      524 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_schedule.yaml
+│ │ --rw-r--r--   0        0        0      639 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/hf/deploy.py
+│ │ --rw-r--r--   0        0        0      190 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/hf/servicefoundry.yaml
+│ │ --rw-r--r--   0        0        0      579 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/deploy.py
+│ │ --rw-r--r--   0        0        0      313 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/servicefoundry.yaml
+│ │ --rw-r--r--   0        0        0      764 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/service_deployment/deploy.py
+│ │ --rw-r--r--   0        0        0      117 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/service_deployment/main.py
+│ │ --rw-r--r--   0        0        0      482 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/examples/service_deployment/servicefoundry.yaml
+│ │ --rw-r--r--   0        0        0      188 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/__init__.py
+│ │ --rw-r--r--   0        0        0     9914 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/deploy.py
+│ │ --rw-r--r--   0        0        0     1876 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/deployable_patched_models.py
+│ │ --rw-r--r--   0        0        0     1105 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/models.py
+│ │ --rw-r--r--   0        0        0     5006 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/patched_models.py
+│ │ --rw-r--r--   0        0        0     8890 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/v2/lib/source.py
+│ │ --rw-r--r--   0        0        0      130 2023-03-29 09:45:52.733836 servicefoundry-0.8.3rc1/servicefoundry/version.py
+│ │ --rw-r--r--   0        0        0     2582 1970-01-01 00:00:00.000000 servicefoundry-0.8.3rc1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      672 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/README.md
+│ │ +-rw-r--r--   0        0        0     2284 2023-04-06 11:50:30.759486 servicefoundry-0.8.4rc1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1266 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/__init__.py
+│ │ +-rw-r--r--   0        0        0    36721 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/auto_gen/models.py
+│ │ +-rw-r--r--   0        0        0     4159 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/__init__.py
+│ │ +-rw-r--r--   0        0        0      531 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/builders/__init__.py
+│ │ +-rw-r--r--   0        0        0     1364 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/builders/dockerfile.py
+│ │ +-rw-r--r--   0        0        0     1357 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/builders/tfy_python_buildpack/__init__.py
+│ │ +-rw-r--r--   0        0        0     6479 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/builders/tfy_python_buildpack/dockerfile_template.py
+│ │ +-rw-r--r--   0        0        0     6458 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/builder/docker_service.py
+│ │ +-rw-r--r--   0        0        0       66 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/__init__.py
+│ │ +-rw-r--r--   0        0        0      494 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/__main__.py
+│ │ +-rw-r--r--   0        0        0     3089 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/cli_main.py
+│ │ +-rw-r--r--   0        0        0      958 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/__init__.py
+│ │ +-rw-r--r--   0        0        0     1098 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/build_command.py
+│ │ +-rw-r--r--   0        0        0     2803 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/build_logs_command.py
+│ │ +-rw-r--r--   0        0        0     1890 2023-04-06 11:50:17.759329 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/create_command.py
+│ │ +-rw-r--r--   0        0        0     2007 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/delete_command.py
+│ │ +-rw-r--r--   0        0        0     1227 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/deploy_v2_command.py
+│ │ +-rw-r--r--   0        0        0     2852 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/get_command.py
+│ │ +-rw-r--r--   0        0        0     2944 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/infra_bootstrap.py
+│ │ +-rw-r--r--   0        0        0     3753 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/list_command.py
+│ │ +-rw-r--r--   0        0        0     1080 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/login_command.py
+│ │ +-rw-r--r--   0        0        0      591 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/logout_command.py
+│ │ +-rw-r--r--   0        0        0     3878 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/logs_command.py
+│ │ +-rw-r--r--   0        0        0     1670 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/patch_command.py
+│ │ +-rw-r--r--   0        0        0     1077 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/redeploy_command.py
+│ │ +-rw-r--r--   0        0        0     1474 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/commands/trigger_command.py
+│ │ +-rw-r--r--   0        0        0      206 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/config.py
+│ │ +-rw-r--r--   0        0        0      228 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/console.py
+│ │ +-rw-r--r--   0        0        0      510 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/const.py
+│ │ +-rw-r--r--   0        0        0     3032 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/display_util.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/io/__init__.py
+│ │ +-rw-r--r--   0        0        0     2289 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/io/cli_input_hook.py
+│ │ +-rw-r--r--   0        0        0     2500 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/cli/util.py
+│ │ +-rw-r--r--   0        0        0      347 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/core/__init__.py
+│ │ +-rw-r--r--   0        0        0      379 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/core/login.py
+│ │ +-rw-r--r--   0        0        0      184 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/core/logout.py
+│ │ +-rw-r--r--   0        0        0      313 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/core/util.py
+│ │ +-rw-r--r--   0        0        0      188 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/__init__.py
+│ │ +-rw-r--r--   0        0        0      775 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/__main__.py
+│ │ +-rw-r--r--   0        0        0     2857 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/app.py
+│ │ +-rw-r--r--   0        0        0     1844 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/build.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/class_deployment/__init__.py
+│ │ +-rw-r--r--   0        0        0      673 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/class_deployment/deployment.py
+│ │ +-rw-r--r--   0        0        0      185 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/class_deployment/my_module.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/function_deployment/__init__.py
+│ │ +-rw-r--r--   0        0        0      600 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/function_deployment/deployment.py
+│ │ +-rw-r--r--   0        0        0      297 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/function_deployment/my_module.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/__init__.py
+│ │ +-rw-r--r--   0        0        0     1772 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/deployment.py
+│ │ +-rw-r--r--   0        0        0      369 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/model.py
+│ │ +-rw-r--r--   0        0        0     1513 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/model_composition.py
+│ │ +-rw-r--r--   0        0        0      153 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/__init__.py
+│ │ +-rw-r--r--   0        0        0      414 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/deployment.py
+│ │ +-rw-r--r--   0        0        0      518 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/my_module.py
+│ │ +-rw-r--r--   0        0        0      191 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/__init__.py
+│ │ +-rw-r--r--   0        0        0       67 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/context.py
+│ │ +-rw-r--r--   0        0        0     1875 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/method.py
+│ │ +-rw-r--r--   0        0        0     4224 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/remote.py
+│ │ +-rw-r--r--   0        0        0     4494 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/route.py
+│ │ +-rw-r--r--   0        0        0     3471 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/service.py
+│ │ +-rw-r--r--   0        0        0     1231 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/function_service/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/internal/__init__.py
+│ │ +-rw-r--r--   0        0        0      960 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/internal/experimental.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/__init__.py
+│ │ +-rw-r--r--   0        0        0     1801 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/input_hook.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/notebook/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/notebook/io/__init__.py
+│ │ +-rw-r--r--   0        0        0     1871 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/notebook/io/notebook_callback.py
+│ │ +-rw-r--r--   0        0        0     1041 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/notebook/io/notebook_input_hook.py
+│ │ +-rw-r--r--   0        0        0     1010 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/notebook/notebook_util.py
+│ │ +-rw-r--r--   0        0        0      532 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/output_callback.py
+│ │ +-rw-r--r--   0        0        0      629 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/parameters.py
+│ │ +-rw-r--r--   0        0        0      825 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/io/rich_output_callback.py
+│ │ +-rw-r--r--   0        0        0      175 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/json_util.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/__init__.py
+│ │ +-rw-r--r--   0        0        0     2906 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/auth/auth_service_client.py
+│ │ +-rw-r--r--   0        0        0     4228 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/auth/credential_file_manager.py
+│ │ +-rw-r--r--   0        0        0     4268 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/auth/credential_provider.py
+│ │ +-rw-r--r--   0        0        0     1854 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/auth/servicefoundry_session.py
+│ │ +-rw-r--r--   0        0        0     7447 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/binarydownloader.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/__init__.py
+│ │ +-rw-r--r--   0        0        0      671 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/cookiecutter_client.py
+│ │ +-rw-r--r--   0        0        0     2563 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/git_client.py
+│ │ +-rw-r--r--   0        0        0    23861 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/service_foundry_client.py
+│ │ +-rw-r--r--   0        0        0      455 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/shell_client.py
+│ │ +-rw-r--r--   0        0        0     1455 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/terragrunt_client.py
+│ │ +-rw-r--r--   0        0        0     1122 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/clients/utils.py
+│ │ +-rw-r--r--   0        0        0     1331 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/config/config_manager.py
+│ │ +-rw-r--r--   0        0        0     2232 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/config/dict_questionaire.py
+│ │ +-rw-r--r--   0        0        0    10594 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/config/infra_config.py
+│ │ +-rw-r--r--   0        0        0     1886 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/config/installation_config.py
+│ │ +-rw-r--r--   0        0        0     1752 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/const.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/dao/__init__.py
+│ │ +-rw-r--r--   0        0        0     5568 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/dao/application.py
+│ │ +-rw-r--r--   0        0        0     1028 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/dao/version.py
+│ │ +-rw-r--r--   0        0        0     2533 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/dao/workspace.py
+│ │ +-rw-r--r--   0        0        0      588 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/exceptions.py
+│ │ +-rw-r--r--   0        0        0      288 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/argo-secrets.mustache
+│ │ +-rw-r--r--   0        0        0      918 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/argo-ubermold.mustache
+│ │ +-rw-r--r--   0        0        0    23708 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/install_truefoundry.py
+│ │ +-rw-r--r--   0        0        0     1411 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/nats-bootstrap.sh
+│ │ +-rw-r--r--   0        0        0      328 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/tfy-agent.mustache
+│ │ +-rw-r--r--   0        0        0     1137 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/tfy-control-plane.mustache
+│ │ +-rw-r--r--   0        0        0     6290 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/infra/utils.py
+│ │ +-rw-r--r--   0        0        0     1463 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/logs_utils.py
+│ │ +-rw-r--r--   0        0        0     1409 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/messages.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/model/__init__.py
+│ │ +-rw-r--r--   0        0        0     9608 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/model/entity.py
+│ │ +-rw-r--r--   0        0        0     5191 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/session.py
+│ │ +-rw-r--r--   0        0        0      993 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/util.py
+│ │ +-rw-r--r--   0        0        0     4995 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/lib/win32.py
+│ │ +-rw-r--r--   0        0        0      688 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/logger.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/__init__.py
+│ │ +-rw-r--r--   0        0        0      517 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/deploy.py
+│ │ +-rw-r--r--   0        0        0      305 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/main.py
+│ │ +-rw-r--r--   0        0        0      303 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/servicefoundry.yaml
+│ │ +-rw-r--r--   0        0        0      441 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_manual.yaml
+│ │ +-rw-r--r--   0        0        0      524 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_schedule.yaml
+│ │ +-rw-r--r--   0        0        0      639 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/hf/deploy.py
+│ │ +-rw-r--r--   0        0        0      190 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/hf/servicefoundry.yaml
+│ │ +-rw-r--r--   0        0        0      579 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/deploy.py
+│ │ +-rw-r--r--   0        0        0      313 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/servicefoundry.yaml
+│ │ +-rw-r--r--   0        0        0      764 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/service_deployment/deploy.py
+│ │ +-rw-r--r--   0        0        0      117 2023-04-06 11:50:17.763330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/service_deployment/main.py
+│ │ +-rw-r--r--   0        0        0      482 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/examples/service_deployment/servicefoundry.yaml
+│ │ +-rw-r--r--   0        0        0      188 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/__init__.py
+│ │ +-rw-r--r--   0        0        0     9914 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/deploy.py
+│ │ +-rw-r--r--   0        0        0     1876 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/deployable_patched_models.py
+│ │ +-rw-r--r--   0        0        0     1105 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/models.py
+│ │ +-rw-r--r--   0        0        0     5276 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/patched_models.py
+│ │ +-rw-r--r--   0        0        0     8890 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/v2/lib/source.py
+│ │ +-rw-r--r--   0        0        0      130 2023-04-06 11:50:17.767330 servicefoundry-0.8.4rc1/servicefoundry/version.py
+│ │ +-rw-r--r--   0        0        0     2582 1970-01-01 00:00:00.000000 servicefoundry-0.8.4rc1/PKG-INFO
+│ │   --- servicefoundry-0.8.3rc1/README.md
+│ ├── +++ servicefoundry-0.8.4rc1/README.md
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/pyproject.toml
+│ ├── +++ servicefoundry-0.8.4rc1/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "servicefoundry"
+│ │ -version = "0.8.3rc1"  # do not change, auto-generated by poetry-dynamic-versioning
+│ │ +version = "0.8.4rc1"  # do not change, auto-generated by poetry-dynamic-versioning
+│ │  description = "Generate deployed services from code"
+│ │  authors = ["Abhishek Choudhary <abhichoudhary06@gmail.com>"]
+│ │  homepage = "https://github.com/innoavator/servicefoundry"
+│ │  repository = "https://github.com/innoavator/servicefoundry"
+│ │  readme = "README.md"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/__init__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/__init__.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,14 +1,29 @@
+│ │  from servicefoundry.auto_gen.models import (
+│ │      AppProtocol,
+│ │      CanaryStep,
+│ │      ConcurrencyPolicy,
+│ │      Protocol,
+│ │  )
+│ │  from servicefoundry.core import login, logout
+│ │ +from servicefoundry.lib.dao.application import (
+│ │ +    delete_application,
+│ │ +    get_application,
+│ │ +    list_applications,
+│ │ +    trigger_job,
+│ │ +)
+│ │ +from servicefoundry.lib.dao.version import (
+│ │ +    get_version as get_application_version,
+│ │ +    list_versions as list_application_versions,
+│ │ +)
+│ │ +from servicefoundry.lib.dao.workspace import (
+│ │ +    delete_workspace,
+│ │ +    get_workspace_by_fqn,
+│ │ +    list_workspaces,
+│ │ +)
+│ │  from servicefoundry.v2.lib.deployable_patched_models import (
+│ │      Application,
+│ │      Job,
+│ │      ModelDeployment,
+│ │      Service,
+│ │  )
+│ │  from servicefoundry.v2.lib.patched_models import (
+│ │ @@ -34,25 +49,13 @@
+│ │      Port,
+│ │      PythonBuild,
+│ │      RPSMetric,
+│ │      RemoteSource,
+│ │      Resources,
+│ │      Rolling,
+│ │      Schedule,
+│ │ +    SecretMount,
+│ │ +    StringDataMount,
+│ │ +    VolumeMount,
+│ │      TruefoundryModelRegistry,
+│ │  )
+│ │  from servicefoundry.version import __version__
+│ │ -from servicefoundry.lib.dao.application import (
+│ │ -    delete_application,
+│ │ -    get_application,
+│ │ -    list_applications,
+│ │ -    trigger_job,
+│ │ -)
+│ │ -from servicefoundry.lib.dao.version import (
+│ │ -    get_version as get_application_version,
+│ │ -    list_versions as list_application_versions,
+│ │ -)
+│ │ -from servicefoundry.lib.dao.workspace import (
+│ │ -    delete_workspace,
+│ │ -    get_workspace_by_fqn,
+│ │ -    list_workspaces,
+│ │ -)
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/auto_gen/models.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/auto_gen/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  # generated by datamodel-codegen:
+│ │  #   filename:  application.json
+│ │ -#   timestamp: 2023-03-24T12:37:18+00:00
+│ │ +#   timestamp: 2023-04-06T11:36:11+00:00
+│ │  
+│ │  from __future__ import annotations
+│ │  
+│ │  from enum import Enum
+│ │  from typing import Dict, List, Optional, Union
+│ │  
+│ │  from pydantic import BaseModel, Field, confloat, conint, constr
+│ │ @@ -501,14 +501,26 @@
+│ │      )
+│ │      model_version_fqn: constr(regex=r"^model:[a-zA-Z0-9/_\-]+:\d+$") = Field(
+│ │          ...,
+│ │          description="+label=Model Version FQN\n+usage=The FQN of the model version that you want to deploy.",
+│ │      )
+│ │  
+│ │  
+│ │ +class VolumeMount(BaseModel):
+│ │ +    type: constr(regex=r"^volume$") = Field(..., description="+value=volume")
+│ │ +    mount_path: constr(regex=r"^\/(?:[^/\n]+\/*)*[^/\n]+(\.[^/\n]+)?$") = Field(
+│ │ +        ...,
+│ │ +        description="+label=Volume mount path\n+usage=Absolute file path where the volume will be mounted.\n+message=Please enter a valid mount path",
+│ │ +    )
+│ │ +    volume_fqn: constr(regex=r"^tfy-volume:\/\/.+:.+:.+$") = Field(
+│ │ +        ...,
+│ │ +        description="+label=Volume\n+usage=The Truefoundry volume that needs to be mounted.",
+│ │ +    )
+│ │ +
+│ │ +
+│ │  class Autoscaling(BaseModel):
+│ │      min_replicas: conint(ge=1) = Field(
+│ │          1,
+│ │          description="+label=Minimum replicas\n+usage=Minimum number of replicas to keep available",
+│ │      )
+│ │      max_replicas: conint(ge=1, le=20) = Field(
+│ │          ...,
+│ │ @@ -621,15 +633,15 @@
+│ │      service_account: Optional[str] = Field(
+│ │          None, description="+usage=Service account that this workload should use"
+│ │      )
+│ │      file_mounts: Optional[List[FileMount]] = Field(
+│ │          None,
+│ │          description="+usage=Files to be mounted to job pod(s). **Deprecated**\n+ignore\n+sort=10010",
+│ │      )
+│ │ -    mounts: Optional[List[Union[SecretMount, StringDataMount]]] = Field(
+│ │ +    mounts: Optional[List[Union[SecretMount, StringDataMount, VolumeMount]]] = Field(
+│ │          None,
+│ │          description="+usage=Configure data to be mounted to job pod(s)\n+ignore\n+sort=10011",
+│ │      )
+│ │      labels: Optional[Dict[str, str]] = Field(
+│ │          None, description="+label=Labels\n+usage=Add labels to service metadata"
+│ │      )
+│ │  
+│ │ @@ -690,15 +702,15 @@
+│ │      service_account: Optional[str] = Field(
+│ │          None, description="+usage=Service account that this workload should use"
+│ │      )
+│ │      file_mounts: Optional[List[FileMount]] = Field(
+│ │          None,
+│ │          description="+usage=Files to be mounted to service pod(s). **Deprecated**\n+ignore\n+sort=10010",
+│ │      )
+│ │ -    mounts: Optional[List[Union[SecretMount, StringDataMount]]] = Field(
+│ │ +    mounts: Optional[List[Union[SecretMount, StringDataMount, VolumeMount]]] = Field(
+│ │          None,
+│ │          description="+usage=Configure data to be mounted to service pod(s)\n+ignore\n+sort=10011",
+│ │      )
+│ │      labels: Optional[Dict[str, str]] = Field(
+│ │          None, description="+label=Labels\n+usage=Add labels to service metadata"
+│ │      )
+│ │      rollout_strategy: Optional[Union[Rolling, Canary, BlueGreen]] = Field(
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/__init__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/builders/__init__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/builders/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/builders/dockerfile.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/builders/dockerfile.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/builders/tfy_python_buildpack/__init__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/builders/tfy_python_buildpack/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/builders/tfy_python_buildpack/dockerfile_template.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/builders/tfy_python_buildpack/dockerfile_template.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/builder/docker_service.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/builder/docker_service.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/cli_main.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/cli_main.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/__init__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/build_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/build_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/build_logs_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/build_logs_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/create_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/create_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/delete_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/delete_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/deploy_v2_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/deploy_v2_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/get_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/get_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/infra_bootstrap.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/infra_bootstrap.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/list_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/list_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/login_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/login_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/logout_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/logout_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/logs_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/logs_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/patch_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/patch_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/redeploy_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/redeploy_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/commands/trigger_command.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/commands/trigger_command.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/display_util.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/display_util.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/io/cli_input_hook.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/io/cli_input_hook.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/cli/util.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/cli/util.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/__main__.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/app.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/app.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/build.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/build.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/class_deployment/deployment.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/class_deployment/deployment.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/function_deployment/deployment.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/function_deployment/deployment.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/deployment.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/deployment.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/model_composition/model_composition.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/model_composition/model_composition.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/my_module.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/deployment_examples/one_service_calling_another/my_module.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/method.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/method.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/remote/remote.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/remote/remote.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/route.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/route.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/service.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/service.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/function_service/utils.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/function_service/utils.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/internal/experimental.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/internal/experimental.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/input_hook.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/input_hook.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/notebook/io/notebook_callback.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/notebook/io/notebook_callback.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/notebook/io/notebook_input_hook.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/notebook/io/notebook_input_hook.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/notebook/notebook_util.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/notebook/notebook_util.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/output_callback.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/output_callback.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/parameters.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/parameters.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/io/rich_output_callback.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/io/rich_output_callback.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/auth/auth_service_client.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/auth/auth_service_client.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/auth/credential_file_manager.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/auth/credential_file_manager.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/auth/credential_provider.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/auth/credential_provider.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/auth/servicefoundry_session.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/auth/servicefoundry_session.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/binarydownloader.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/binarydownloader.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/clients/cookiecutter_client.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/clients/cookiecutter_client.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/clients/git_client.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/clients/git_client.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/clients/service_foundry_client.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/clients/service_foundry_client.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -77,24 +77,31 @@
+│ │              self._session = ServiceFoundrySession()
+│ │              base_url = self._session.base_url
+│ │          elif not base_url:
+│ │              raise Exception("Neither session, not base_url provided")
+│ │  
+│ │          self._base_url = base_url.strip("/")
+│ │          self._api_server_url = f"{self._base_url}/{API_SERVER_RELATIVE_PATH}"
+│ │ -        if __version__ != "0.0.0":
+│ │ -            # "0.0.0" indicates dev version
+│ │ -            min_cli_version = self._get_min_cli_version_requirement()
+│ │ -            if version.parse(__version__) < version.parse(min_cli_version):
+│ │ -                raise Exception(
+│ │ -                    "You are using an outdated version of `servicefoundry`.\n"
+│ │ -                    f"Execute `pip install servicefoundry>={min_cli_version}` to install the supported version.",
+│ │ -                )
+│ │ -        else:
+│ │ -            logger.debug("Ignoring minimum cli version check")
+│ │ +
+│ │ +    def check_min_cli_version(fn):
+│ │ +        def inner(self, *args, **kwargs):
+│ │ +            if __version__ != "0.0.0":
+│ │ +                # "0.0.0" indicates dev version
+│ │ +                min_cli_version = self._get_min_cli_version_requirement()
+│ │ +                if version.parse(__version__) < version.parse(min_cli_version):
+│ │ +                    raise Exception(
+│ │ +                        "You are using an outdated version of `servicefoundry`.\n"
+│ │ +                        f"Execute `pip install servicefoundry>={min_cli_version}` to install the supported version.",
+│ │ +                    )
+│ │ +            else:
+│ │ +                logger.debug("Ignoring minimum cli version check")
+│ │ +
+│ │ +            return fn(self, *args, **kwargs)
+│ │ +
+│ │ +        return inner
+│ │  
+│ │      @property
+│ │      def base_url(self) -> str:
+│ │          return self._base_url
+│ │  
+│ │      def get_tenant_info(self) -> TenantInfo:
+│ │          res = requests.get(
+│ │ @@ -112,24 +119,27 @@
+│ │          return res["minVersion"]
+│ │  
+│ │      def _get_header(self):
+│ │          if not self._session:
+│ │              return {}
+│ │          return {"Authorization": f"Bearer {self._session.access_token}"}
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_id_from_fqn(self, fqn_type: str, fqn: str):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/fqn/{fqn_type}"
+│ │          res = requests.get(url, headers=self._get_header(), params={"fqn": fqn})
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_workspace(self):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_workspaces(
+│ │          self,
+│ │          cluster_id: Optional[str] = None,
+│ │          workspace_name: Optional[str] = None,
+│ │          workspace_fqn: Optional[str] = None,
+│ │      ) -> List[Workspace]:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace"
+│ │ @@ -140,14 +150,15 @@
+│ │              params["workspaceName"] = workspace_name
+│ │          if workspace_fqn:
+│ │              params["workspaceFqn"] = workspace_fqn
+│ │          res = requests.get(url, params=params, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          return parse_obj_as(List[Workspace], response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def create_workspace(
+│ │          self,
+│ │          workspace_name: str,
+│ │          cluster_name: str,
+│ │          resources: WorkspaceResources,
+│ │      ) -> Workspace:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace"
+│ │ @@ -161,88 +172,98 @@
+│ │                  }
+│ │              },
+│ │              headers=self._get_header(),
+│ │          )
+│ │          res = request_handling(res)
+│ │          return Workspace.parse_obj(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def remove_workspace(self, workspace_id, force=False) -> Workspace:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace/{workspace_id}"
+│ │          force = json.dumps(
+│ │              force
+│ │          )  # this dumb conversion is required because `params` just casts as str
+│ │          res = requests.delete(url, headers=self._get_header(), params={"force": force})
+│ │          response = request_handling(res)
+│ │          return Workspace.parse_obj(response["workspace"])
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_workspace_by_name(self, workspace_name, cluster_id):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace"
+│ │          res = requests.get(
+│ │              url,
+│ │              headers=self._get_header(),
+│ │              params={"name": workspace_name, "clusterId": cluster_id},
+│ │          )
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_workspace(self, workspace_id):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace/{workspace_id}"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_workspace_by_fqn(self, workspace_fqn: str) -> List[Workspace]:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/workspace"
+│ │          res = requests.get(
+│ │              url,
+│ │              headers=self._get_header(),
+│ │              params={"fqn": workspace_fqn},
+│ │          )
+│ │          response = request_handling(res)
+│ │          return parse_obj_as(List[Workspace], response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_deployments(self, workspace_id: str = None):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/deployment"
+│ │          params = {}
+│ │          if workspace_id:
+│ │              params["workspaceId"] = workspace_id
+│ │          res = requests.get(url=url, params=params, headers=self._get_header())
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_cluster(self):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/cluster"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_cluster(self, cluster_id):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/cluster/{cluster_id}"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_presigned_url(self, space_name, service_name, env):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/deployment/code-upload-url"
+│ │          res = requests.post(
+│ │              url,
+│ │              json={
+│ │                  "workspaceFqn": space_name,
+│ │                  "serviceName": service_name,
+│ │                  "stage": env,
+│ │              },
+│ │              headers=self._get_header(),
+│ │          )
+│ │          return request_handling(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def upload_code_package(
+│ │          self, workspace_fqn: str, component_name: str, package_local_path: str
+│ │      ) -> str:
+│ │          http_response = self.get_presigned_url(
+│ │              space_name=workspace_fqn, service_name=component_name, env="default"
+│ │          )
+│ │          _upload_packaged_code(metadata=http_response, package_file=package_local_path)
+│ │  
+│ │          return http_response["uri"]
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def deploy_application(
+│ │          self, workspace_id: str, application: Application
+│ │      ) -> Deployment:
+│ │          data = {
+│ │              "workspaceId": workspace_id,
+│ │              "name": application.name,
+│ │              "manifest": application.dict(exclude_none=True),
+│ │ @@ -304,28 +325,31 @@
+│ │              sio.emit(
+│ │                  subscribe_message,
+│ │                  json.dumps(query_dict),
+│ │              )
+│ │              if wait:
+│ │                  sio.wait()
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_deployment(self, application_id: str, deployment_id: str) -> Deployment:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app/{application_id}/deployments/{deployment_id}"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          res = request_handling(res)
+│ │          return Deployment.parse_obj(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_deployment_statuses(
+│ │          self, application_id: str, deployment_id: str
+│ │      ) -> List[AppDeploymentStatusResponse]:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app/{application_id}/deployments/{deployment_id}/statuses"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          res = request_handling(res)
+│ │          return parse_obj_as(List[AppDeploymentStatusResponse], res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_deployment_build_response(
+│ │          self, application_id: str, deployment_id: str
+│ │      ) -> List[BuildResponse]:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app/{application_id}/deployments/{deployment_id}/builds"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          res = request_handling(res)
+│ │          return parse_obj_as(List[BuildResponse], res)
+│ │ @@ -354,14 +378,15 @@
+│ │              data["numLogsToIgnore"] = int(num_logs_to_ignore)
+│ │  
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/logs/{workspace_id}"
+│ │          res = requests.get(url=url, params=data, headers=self._get_header())
+│ │          res = request_handling(res)
+│ │          return list(res["logs"])
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def tail_build_logs(
+│ │          self,
+│ │          build_response: BuildResponse,
+│ │          callback=OutputCallBack(),
+│ │          wait: bool = True,
+│ │      ):
+│ │          tail_logs_obj = json.loads(build_response.tailLogsUrl)
+│ │ @@ -373,14 +398,15 @@
+│ │                  "startTs": build_response.logsStartTs,
+│ │              },
+│ │              callback=callback,
+│ │              wait=wait,
+│ │              subscribe_message=BUILD_LOGS_SUBSCRIBE_MESSAGE,
+│ │          )
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def tail_logs_for_deployment(
+│ │          self,
+│ │          workspace_id: str,
+│ │          application_id: str,
+│ │          deployment_id: str,
+│ │          start_ts: int,
+│ │          limit: int,
+│ │ @@ -401,14 +427,15 @@
+│ │                  },
+│ │              },
+│ │              callback=callback,
+│ │              wait=wait,
+│ │              subscribe_message=DEPLOYMENT_LOGS_SUBSCRIBE_MESSAGE,
+│ │          )
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def poll_logs_for_deployment(
+│ │          self,
+│ │          workspace_id: str,
+│ │          application_id: str,
+│ │          deployment_id: str,
+│ │          start_ts: int,
+│ │          limit: int,
+│ │ @@ -445,14 +472,15 @@
+│ │                          break
+│ │                      num_logs_to_ignore += 1
+│ │  
+│ │                  start_ts_nano = int(last_log_time)
+│ │                  spinner.update(status=f"Waiting for {poll_interval_seconds} secs.")
+│ │                  time.sleep(poll_interval_seconds)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def fetch_deployment_logs(
+│ │          self,
+│ │          workspace_id: str,
+│ │          application_id: str,
+│ │          deployment_id: str,
+│ │          start_ts: Optional[int],
+│ │          end_ts: Optional[int],
+│ │ @@ -466,57 +494,63 @@
+│ │              start_ts_nano=int(start_ts * 1e6),
+│ │              end_ts_nano=int(end_ts * 1e6),
+│ │              limit=limit,
+│ │          )
+│ │          for log in logs_list:
+│ │              callback.print_line(self._get_log_print_line(log))
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def fetch_build_logs(
+│ │          self,
+│ │          build_response: BuildResponse,
+│ │          callback=OutputCallBack(),
+│ │      ) -> None:
+│ │          url = build_response.getLogsUrl
+│ │          res = requests.get(url=url, headers=self._get_header())
+│ │          logs_list = request_handling(res)
+│ │          for log in logs_list["logs"]:
+│ │              # TODO: Have to establish a log line format that includes timestamp, level, message
+│ │              callback.print_line(self._get_log_print_line(log))
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_deployment_info_by_fqn(self, deployment_fqn: str) -> DeploymentFqnResponse:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/fqn/deployment"
+│ │          res = requests.get(
+│ │              url, headers=self._get_header(), params={"fqn": deployment_fqn}
+│ │          )
+│ │          res = request_handling(res)
+│ │          return DeploymentFqnResponse.parse_obj(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_application_info_by_fqn(
+│ │          self, application_fqn: str
+│ │      ) -> ApplicationFqnResponse:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/fqn/app"
+│ │          res = requests.get(
+│ │              url, headers=self._get_header(), params={"fqn": application_fqn}
+│ │          )
+│ │          res = request_handling(res)
+│ │          return ApplicationFqnResponse.parse_obj(res)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def remove_application(self, application_id: str):
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app/{application_id}"
+│ │          res = requests.delete(url, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          # TODO: Add pydantic here.
+│ │          return response
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_application_info(self, application_id: str) -> Application:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app/{application_id}"
+│ │          res = requests.get(url, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          return Application.parse_obj(response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def process_infra(self, infra_manifest: Any) -> Any:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/infra"
+│ │          # url = "http://localhost:8080/manifests/infra"
+│ │          res = requests.post(
+│ │              url,
+│ │              headers=self._get_header(),
+│ │              json={"manifest": infra_manifest},
+│ │ @@ -541,28 +575,30 @@
+│ │              body["input"]["command"] = command
+│ │          if params:
+│ │              body["input"]["params"] = params
+│ │          res = requests.post(url, json=body, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          return TriggerJobResult.parse_obj(response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_docker_registry_creds(
+│ │          self, docker_registry_fqn: str
+│ │      ) -> DockerRegistryCredentials:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/docker-registry/creds"
+│ │          res = requests.get(
+│ │              url,
+│ │              headers=self._get_header(),
+│ │              params={
+│ │                  "fqn": docker_registry_fqn,
+│ │              },
+│ │          )
+│ │          response = request_handling(res)
+│ │          return DockerRegistryCredentials.parse_obj(response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def create_repo_in_registry(
+│ │          self, docker_registry_fqn: str, workspace_fqn: str, application_name: str
+│ │      ) -> CreateDockerRepositoryResponse:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/docker-registry/create-repo"
+│ │          res = requests.post(
+│ │              url,
+│ │              headers=self._get_header(),
+│ │ @@ -571,14 +607,15 @@
+│ │                  "workspaceFqn": workspace_fqn,
+│ │                  "applicationName": application_name,
+│ │              },
+│ │          )
+│ │          response = request_handling(res)
+│ │          return CreateDockerRepositoryResponse.parse_obj(response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_applications(
+│ │          self,
+│ │          application_id: Optional[str] = None,
+│ │          workspace_id: Optional[str] = None,
+│ │          application_name: Optional[str] = None,
+│ │      ) -> List[Application]:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/app"
+│ │ @@ -589,14 +626,15 @@
+│ │              params["workspaceId"] = workspace_id
+│ │          if application_name:
+│ │              params["applicationName"] = application_name
+│ │          res = requests.get(url, params=params, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          return parse_obj_as(List[Application], response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def list_versions(
+│ │          self,
+│ │          application_id: str,
+│ │          deployment_version: Optional[int] = None,
+│ │          deployment_id: Optional[str] = None,
+│ │      ) -> List[Deployment]:
+│ │          url = (
+│ │ @@ -607,13 +645,14 @@
+│ │              params["version"] = deployment_version
+│ │          if deployment_id:
+│ │              params["deploymentId"] = deployment_id
+│ │          res = requests.get(url, params=params, headers=self._get_header())
+│ │          response = request_handling(res)
+│ │          return parse_obj_as(List[Deployment], response)
+│ │  
+│ │ +    @check_min_cli_version
+│ │      def get_token_from_api_key(self, api_key: str) -> Token:
+│ │          url = f"{self._api_server_url}/{VERSION_PREFIX}/oauth/api-key/token"
+│ │          data = {"apiKey": api_key}
+│ │          res = requests.get(url, params=data)
+│ │          res = request_handling(res)
+│ │          return Token.parse_obj(res)
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/clients/terragrunt_client.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/clients/terragrunt_client.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/clients/utils.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/clients/utils.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/config/config_manager.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/config/config_manager.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/config/dict_questionaire.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/config/dict_questionaire.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/config/infra_config.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/config/infra_config.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/config/installation_config.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/config/installation_config.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/const.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/const.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/dao/application.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/dao/application.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/dao/version.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/dao/version.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/dao/workspace.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/dao/workspace.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/exceptions.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/infra/argo-ubermold.mustache
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/infra/argo-ubermold.mustache
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/infra/install_truefoundry.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/infra/install_truefoundry.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/infra/nats-bootstrap.sh
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/infra/nats-bootstrap.sh
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/infra/tfy-control-plane.mustache
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/infra/tfy-control-plane.mustache
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/infra/utils.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/infra/utils.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/logs_utils.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/logs_utils.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/messages.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/messages.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/model/entity.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/model/entity.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/session.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/session.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/util.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/util.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/lib/win32.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/lib/win32.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/logger.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/logger.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/deploy.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/deploy.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_schedule.yaml
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/examples/job_deployment/servicefoundry_schedule.yaml
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/hf/deploy.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/hf/deploy.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/deploy.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/examples/model_deployment/mlfoundry/deploy.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/examples/service_deployment/deploy.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/examples/service_deployment/deploy.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/lib/deploy.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/lib/deploy.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/lib/deployable_patched_models.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/lib/deployable_patched_models.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/lib/models.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/lib/models.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/lib/patched_models.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/lib/patched_models.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -197,24 +197,43 @@
+│ │      )
+│ │  
+│ │  
+│ │  class BlueGreen(models.BlueGreen):
+│ │      class Config:
+│ │          extra = "forbid"
+│ │  
+│ │ -    type: Literal["blue_green"] = Field("blue_green", description="+value=blue_green")
+│ │ +    type: Literal["blue_green"] = "blue_green"
+│ │  
+│ │  
+│ │  class Canary(models.Canary):
+│ │      class Config:
+│ │          extra = "forbid"
+│ │  
+│ │ -    type: Literal["canary"] = Field("canary", description="+value=canary")
+│ │ +    type: Literal["canary"] = "canary"
+│ │  
+│ │  
+│ │  class Rolling(models.Rolling):
+│ │      class Config:
+│ │          extra = "forbid"
+│ │  
+│ │ -    type: Literal["rolling_update"] = Field(
+│ │ -        "rolling_update", description="+value=rolling_update"
+│ │ -    )
+│ │ +    type: Literal["rolling_update"] = "rolling_update"
+│ │ +
+│ │ +
+│ │ +class SecretMount(models.SecretMount):
+│ │ +    class Config:
+│ │ +        extra = "forbid"
+│ │ +
+│ │ +    type: constr(regex=r"^secret$") = "secret"
+│ │ +
+│ │ +
+│ │ +class StringDataMount(models.StringDataMount):
+│ │ +    class Config:
+│ │ +        extra = "forbid"
+│ │ +
+│ │ +    type: constr(regex=r"^string$") = "string"
+│ │ +
+│ │ +
+│ │ +class VolumeMount(models.VolumeMount):
+│ │ +    class Config:
+│ │ +        extra = "forbid"
+│ │ +
+│ │ +    type: constr(regex=r"^volume$") = "volume"
+│ │   --- servicefoundry-0.8.3rc1/servicefoundry/v2/lib/source.py
+│ ├── +++ servicefoundry-0.8.4rc1/servicefoundry/v2/lib/source.py
+│ │┄ Files identical despite different names
+│ │   --- servicefoundry-0.8.3rc1/PKG-INFO
+│ ├── +++ servicefoundry-0.8.4rc1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: servicefoundry
+│ │ -Version: 0.8.3rc1
+│ │ +Version: 0.8.4rc1
+│ │  Summary: Generate deployed services from code
+│ │  Home-page: https://github.com/innoavator/servicefoundry
+│ │  Author: Abhishek Choudhary
+│ │  Author-email: abhichoudhary06@gmail.com
+│ │  Requires-Python: >=3.7,<3.12
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.7
