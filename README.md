@@ -10,6 +10,8 @@ using diffoscope, output formats:
 Projects with artifacts > 10 MB are ignored and some "special cases" are not
 handled yet: no guarantee that all packages are tracked.
 
+Changes are pushed to this repository until it reaches some magic limits.
+
 Requirements: podman
 
 ```
