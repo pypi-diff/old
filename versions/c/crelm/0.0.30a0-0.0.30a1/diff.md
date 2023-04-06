@@ -1,0 +1,122 @@
+# Comparing `tmp/crelm-0.0.30a0.tar.gz` & `tmp/crelm-0.0.30a1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "crelm-0.0.30a0.tar", max compression
++gzip compressed data, was "crelm-0.0.30a1.tar", max compression
+```
+
+## Comparing `crelm-0.0.30a0.tar` & `crelm-0.0.30a1.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0     1088 2023-03-20 17:24:58.163553 crelm-0.0.30a0/LICENSE
+--rw-r--r--   0        0        0      582 2023-03-29 17:17:37.948852 crelm-0.0.30a0/README.md
+--rw-r--r--   0        0        0      181 2023-03-20 17:24:58.163553 crelm-0.0.30a0/crelm/__init__.py
+--rw-r--r--   0        0        0     2976 2023-04-04 12:56:00.776271 crelm-0.0.30a0/crelm/factory.py
+--rw-r--r--   0        0        0      380 2023-03-20 17:24:58.163553 crelm-0.0.30a0/crelm/libcrelm.py
+--rw-r--r--   0        0        0   103701 2023-03-20 17:24:58.163553 crelm-0.0.30a0/crelm/makeheaders.c
+--rw-r--r--   0        0        0     1900 2023-03-20 17:24:58.163553 crelm-0.0.30a0/crelm/makeheaders_crelm.c
+--rw-r--r--   0        0        0    12725 2023-04-04 12:58:04.379778 crelm-0.0.30a0/crelm/tube.py
+--rw-r--r--   0        0        0      748 2023-04-04 13:03:59.514450 crelm-0.0.30a0/pyproject.toml
+--rw-r--r--   0        0        0     1469 1970-01-01 00:00:00.000000 crelm-0.0.30a0/PKG-INFO
++-rw-r--r--   0        0        0     1088 2023-03-20 17:24:58.163553 crelm-0.0.30a1/LICENSE
++-rw-r--r--   0        0        0      582 2023-03-29 17:17:37.948852 crelm-0.0.30a1/README.md
++-rw-r--r--   0        0        0      181 2023-03-20 17:24:58.163553 crelm-0.0.30a1/crelm/__init__.py
++-rw-r--r--   0        0        0     2976 2023-04-04 12:56:00.776271 crelm-0.0.30a1/crelm/factory.py
++-rw-r--r--   0        0        0      380 2023-03-20 17:24:58.163553 crelm-0.0.30a1/crelm/libcrelm.py
++-rw-r--r--   0        0        0   103701 2023-03-20 17:24:58.163553 crelm-0.0.30a1/crelm/makeheaders.c
++-rw-r--r--   0        0        0     1900 2023-03-20 17:24:58.163553 crelm-0.0.30a1/crelm/makeheaders_crelm.c
++-rw-r--r--   0        0        0    12751 2023-04-06 18:24:26.937452 crelm-0.0.30a1/crelm/tube.py
++-rw-r--r--   0        0        0      748 2023-04-06 18:25:07.713381 crelm-0.0.30a1/pyproject.toml
++-rw-r--r--   0        0        0     1469 1970-01-01 00:00:00.000000 crelm-0.0.30a1/PKG-INFO
+```
+
+### Comparing `crelm-0.0.30a0/LICENSE` & `crelm-0.0.30a1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `crelm-0.0.30a0/README.md` & `crelm-0.0.30a1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `crelm-0.0.30a0/crelm/factory.py` & `crelm-0.0.30a1/crelm/factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crelm-0.0.30a0/crelm/makeheaders.c` & `crelm-0.0.30a1/crelm/makeheaders.c`
+
+ * *Files identical despite different names*
+
+### Comparing `crelm-0.0.30a0/crelm/makeheaders_crelm.c` & `crelm-0.0.30a1/crelm/makeheaders_crelm.c`
+
+ * *Files identical despite different names*
+
+### Comparing `crelm-0.0.30a0/crelm/tube.py` & `crelm-0.0.30a1/crelm/tube.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -384,16 +384,16 @@
+                 return None
+ 
+         from sys import path
+         path.append(self._gen_foldername)
+ 
+         try:
+             module = import_module(self._module_name)
+-        except:
+-            print(f'{self._name}: Unable to load module')
++        except Exception as error
++            print(f'{self._name}: Unable to load module {error}')
+             return None
+ 
+         reload(module)
+         self._lib = module.lib
+         self._ffi = module.ffi
+ 
+         paste = Tube.Paste(self)
+```
+
+### Comparing `crelm-0.0.30a0/pyproject.toml` & `crelm-0.0.30a1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "crelm"
+-version = "0.0.30a0"
++version = "0.0.30a1"
+ description = "Utility that automates turning simple C classes into Python objects"
+ authors = [
+   "WideOpenTech <foss@wideopentech.co.uk>",
+ ]
+ readme = "README.md"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+```
+
+### Comparing `crelm-0.0.30a0/PKG-INFO` & `crelm-0.0.30a1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: crelm
+-Version: 0.0.30a0
++Version: 0.0.30a1
+ Summary: Utility that automates turning simple C classes into Python objects
+ Home-page: https://github.com/wideopensource/crelm
+ Author: WideOpenTech
+ Author-email: foss@wideopentech.co.uk
+ Requires-Python: >=3.8,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+

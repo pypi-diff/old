@@ -1,0 +1,614 @@
+# Comparing `tmp/cloudsnorkel.cdk-github-runners-0.9.0.tar.gz` & `tmp/cloudsnorkel.cdk-github-runners-0.9.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cloudsnorkel.cdk-github-runners-0.9.0.tar", last modified: Mon Apr  3 23:03:03 2023, max compression
++gzip compressed data, was "cloudsnorkel.cdk-github-runners-0.9.1.tar", last modified: Thu Apr  6 18:23:34 2023, max compression
+```
+
+## Comparing `cloudsnorkel.cdk-github-runners-0.9.0.tar` & `cloudsnorkel.cdk-github-runners-0.9.1.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,22 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.462712 cloudsnorkel.cdk-github-runners-0.9.0/
+--rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    12119 2023-04-03 23:03:03.462712 cloudsnorkel.cdk-github-runners-0.9.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    11060 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-03 23:03:03.462712 cloudsnorkel.cdk-github-runners-0.9.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.458712 cloudsnorkel.cdk-github-runners-0.9.0/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.458712 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.458712 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/
+--rw-r--r--   0 runner    (1001) docker     (123)   495414 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.458712 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/_jsii/
+--rw-r--r--   0 runner    (1001) docker     (123)      430 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)  1948365 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.0.jsii.tgz
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 23:02:50.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 23:03:03.458712 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    12119 2023-04-03 23:03:03.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      570 2023-04-03 23:03:03.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 23:03:03.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-03 23:03:03.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-03 23:03:03.000000 cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.348339 cloudsnorkel.cdk-github-runners-0.9.1/
++-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-06 18:23:34.348339 cloudsnorkel.cdk-github-runners-0.9.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    11544 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 18:23:34.348339 cloudsnorkel.cdk-github-runners-0.9.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.344339 cloudsnorkel.cdk-github-runners-0.9.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.344339 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.344339 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/
++-rw-r--r--   0 runner    (1001) docker     (123)   495846 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.344339 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/_jsii/
++-rw-r--r--   0 runner    (1001) docker     (123)      430 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)  1964979 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.1.jsii.tgz
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:23:22.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:23:34.344339 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-06 18:23:34.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      570 2023-04-06 18:23:34.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:23:34.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-06 18:23:34.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-06 18:23:34.000000 cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/LICENSE` & `cloudsnorkel.cdk-github-runners-0.9.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/PKG-INFO` & `cloudsnorkel.cdk-github-runners-0.9.1/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cloudsnorkel.cdk-github-runners
+-Version: 0.9.0
++Version: 0.9.1
+ Summary: CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.
+ Home-page: https://github.com/CloudSnorkel/cdk-github-runners.git
+ Author: Amir Szekely<amir@cloudsnorkel.com>
+ License: Apache-2.0
+ Project-URL: Source, https://github.com/CloudSnorkel/cdk-github-runners.git
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+@@ -52,28 +52,32 @@
+ 
+ The best way to browse API documentation is on [Constructs Hub](https://constructs.dev/packages/@cloudsnorkel/cdk-github-runners/). It is available in all supported programming languages.
+ 
+ ## Providers
+ 
+ A runner provider creates compute resources on-demand and uses [actions/runner](https://github.com/actions/runner) to start a runner.
+ 
+-|                  | EC2               | CodeBuild                  | Fargate        | Lambda        |
+-|------------------|-------------------|----------------------------|----------------|---------------|
+-| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | 15 minutes    |
+-| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | 1 to 6        |
+-| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | 128mb to 10gb |
+-| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Up to 10gb    |
+-| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64 |
+-| **sudo**         | ✔                 | ✔                         | ✔              | ❌           |
+-| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ❌           |
+-| **Spot pricing** | ✔                 | ❌                         | ✔              | ❌           |
+-| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux         |
++|                  | EC2               | CodeBuild                  | Fargate        | ECS            | Lambda        |
++|------------------|-------------------|----------------------------|----------------|----------------|---------------|
++| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | Unlimited      | 15 minutes    |
++| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | Unlimited      | 1 to 6        |
++| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | Unlimited      | 128mb to 10gb |
++| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Unlimited      | Up to 10gb    |
++| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64  | x86_64, ARM64 |
++| **sudo**         | ✔                 | ✔                         | ✔              | ✔              | ❌           |
++| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ✔              | ❌           |
++| **Spot pricing** | ✔                 | ❌                         | ✔              | ✔              | ❌           |
++| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux, Windows | Linux         |
+ 
+ The best provider to use mostly depends on your current infrastructure. When in doubt, CodeBuild is always a good choice. Execution history and logs are easy to view, and it has no restrictive limits unless you need to run for more than 8 hours.
+ 
++* EC2 is useful when you want runners to have complete access to the host
++* ECS is useful when you want to control the infrastructure, like leaving the runner host running for faster startups
++* Lambda is useful for short jobs that can work within time, size and readonly system constraints
++
+ You can also create your own provider by implementing `IRunnerProvider`.
+ 
+ ## Installation
+ 
+ 1. Confirm you're using CDK v2
+ 2. Install the appropriate package
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/README.md` & `cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,7 +1,31 @@
++Metadata-Version: 2.1
++Name: cloudsnorkel.cdk-github-runners
++Version: 0.9.1
++Summary: CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.
++Home-page: https://github.com/CloudSnorkel/cdk-github-runners.git
++Author: Amir Szekely<amir@cloudsnorkel.com>
++License: Apache-2.0
++Project-URL: Source, https://github.com/CloudSnorkel/cdk-github-runners.git
++Classifier: Intended Audience :: Developers
++Classifier: Operating System :: OS Independent
++Classifier: Programming Language :: JavaScript
++Classifier: Programming Language :: Python :: 3 :: Only
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Classifier: Typing :: Typed
++Classifier: Development Status :: 4 - Beta
++Classifier: License :: OSI Approved
++Requires-Python: ~=3.7
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ # GitHub Self-Hosted Runners CDK Constructs
+ 
+ [![NPM](https://img.shields.io/npm/v/@cloudsnorkel/cdk-github-runners?label=npm&logo=npm)](https://www.npmjs.com/package/@cloudsnorkel/cdk-github-runners)
+ [![PyPI](https://img.shields.io/pypi/v/cloudsnorkel.cdk-github-runners?label=pypi&logo=pypi)](https://pypi.org/project/cloudsnorkel.cdk-github-runners)
+ [![Maven Central](https://img.shields.io/maven-central/v/com.cloudsnorkel/cdk.github.runners.svg?label=Maven%20Central&logo=java)](https://search.maven.org/search?q=g:%22com.cloudsnorkel%22%20AND%20a:%22cdk.github.runners%22)
+ [![Go](https://img.shields.io/github/v/tag/CloudSnorkel/cdk-github-runners?color=red&label=go&logo=go)](https://pkg.go.dev/github.com/CloudSnorkel/cdk-github-runners-go/cloudsnorkelcdkgithubrunners)
+ [![Nuget](https://img.shields.io/nuget/v/CloudSnorkel.Cdk.Github.Runners?color=red&&logo=nuget)](https://www.nuget.org/packages/CloudSnorkel.Cdk.Github.Runners/)
+@@ -28,28 +52,32 @@
+ 
+ The best way to browse API documentation is on [Constructs Hub](https://constructs.dev/packages/@cloudsnorkel/cdk-github-runners/). It is available in all supported programming languages.
+ 
+ ## Providers
+ 
+ A runner provider creates compute resources on-demand and uses [actions/runner](https://github.com/actions/runner) to start a runner.
+ 
+-|                  | EC2               | CodeBuild                  | Fargate        | Lambda        |
+-|------------------|-------------------|----------------------------|----------------|---------------|
+-| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | 15 minutes    |
+-| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | 1 to 6        |
+-| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | 128mb to 10gb |
+-| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Up to 10gb    |
+-| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64 |
+-| **sudo**         | ✔                 | ✔                         | ✔              | ❌           |
+-| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ❌           |
+-| **Spot pricing** | ✔                 | ❌                         | ✔              | ❌           |
+-| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux         |
++|                  | EC2               | CodeBuild                  | Fargate        | ECS            | Lambda        |
++|------------------|-------------------|----------------------------|----------------|----------------|---------------|
++| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | Unlimited      | 15 minutes    |
++| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | Unlimited      | 1 to 6        |
++| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | Unlimited      | 128mb to 10gb |
++| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Unlimited      | Up to 10gb    |
++| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64  | x86_64, ARM64 |
++| **sudo**         | ✔                 | ✔                         | ✔              | ✔              | ❌           |
++| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ✔              | ❌           |
++| **Spot pricing** | ✔                 | ❌                         | ✔              | ✔              | ❌           |
++| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux, Windows | Linux         |
+ 
+ The best provider to use mostly depends on your current infrastructure. When in doubt, CodeBuild is always a good choice. Execution history and logs are easy to view, and it has no restrictive limits unless you need to run for more than 8 hours.
+ 
++* EC2 is useful when you want runners to have complete access to the host
++* ECS is useful when you want to control the infrastructure, like leaving the runner host running for faster startups
++* Lambda is useful for short jobs that can work within time, size and readonly system constraints
++
+ You can also create your own provider by implementing `IRunnerProvider`.
+ 
+ ## Installation
+ 
+ 1. Confirm you're using CDK v2
+ 2. Install the appropriate package
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/setup.py` & `cloudsnorkel.cdk-github-runners-0.9.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import json
+ import setuptools
+ 
+ kwargs = json.loads(
+     """
+ {
+     "name": "cloudsnorkel.cdk-github-runners",
+-    "version": "0.9.0",
++    "version": "0.9.1",
+     "description": "CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.",
+     "license": "Apache-2.0",
+     "url": "https://github.com/CloudSnorkel/cdk-github-runners.git",
+     "long_description_content_type": "text/markdown",
+     "author": "Amir Szekely<amir@cloudsnorkel.com>",
+     "bdist_wheel": {
+         "universal": true
+@@ -22,15 +22,15 @@
+     },
+     "packages": [
+         "cloudsnorkel.cdk_github_runners",
+         "cloudsnorkel.cdk_github_runners._jsii"
+     ],
+     "package_data": {
+         "cloudsnorkel.cdk_github_runners._jsii": [
+-            "cdk-github-runners@0.9.0.jsii.tgz"
++            "cdk-github-runners@0.9.1.jsii.tgz"
+         ],
+         "cloudsnorkel.cdk_github_runners": [
+             "py.typed"
+         ]
+     },
+     "python_requires": "~=3.7",
+     "install_requires": [
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel/cdk_github_runners/__init__.py` & `cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel/cdk_github_runners/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -29,28 +29,32 @@
+ 
+ The best way to browse API documentation is on [Constructs Hub](https://constructs.dev/packages/@cloudsnorkel/cdk-github-runners/). It is available in all supported programming languages.
+ 
+ ## Providers
+ 
+ A runner provider creates compute resources on-demand and uses [actions/runner](https://github.com/actions/runner) to start a runner.
+ 
+-|                  | EC2               | CodeBuild                  | Fargate        | Lambda        |
+-|------------------|-------------------|----------------------------|----------------|---------------|
+-| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | 15 minutes    |
+-| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | 1 to 6        |
+-| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | 128mb to 10gb |
+-| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Up to 10gb    |
+-| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64 |
+-| **sudo**         | ✔                 | ✔                         | ✔              | ❌           |
+-| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ❌           |
+-| **Spot pricing** | ✔                 | ❌                         | ✔              | ❌           |
+-| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux         |
++|                  | EC2               | CodeBuild                  | Fargate        | ECS            | Lambda        |
++|------------------|-------------------|----------------------------|----------------|----------------|---------------|
++| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | Unlimited      | 15 minutes    |
++| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | Unlimited      | 1 to 6        |
++| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | Unlimited      | 128mb to 10gb |
++| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Unlimited      | Up to 10gb    |
++| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64  | x86_64, ARM64 |
++| **sudo**         | ✔                 | ✔                         | ✔              | ✔              | ❌           |
++| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ✔              | ❌           |
++| **Spot pricing** | ✔                 | ❌                         | ✔              | ✔              | ❌           |
++| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux, Windows | Linux         |
+ 
+ The best provider to use mostly depends on your current infrastructure. When in doubt, CodeBuild is always a good choice. Execution history and logs are easy to view, and it has no restrictive limits unless you need to run for more than 8 hours.
+ 
++* EC2 is useful when you want runners to have complete access to the host
++* ECS is useful when you want to control the infrastructure, like leaving the runner host running for faster startups
++* Lambda is useful for short jobs that can work within time, size and readonly system constraints
++
+ You can also create your own provider by implementing `IRunnerProvider`.
+ 
+ ## Installation
+ 
+ 1. Confirm you're using CDK v2
+ 2. Install the appropriate package
+ 
+@@ -2712,15 +2716,15 @@
+         log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+         retry_options: typing.Optional[typing.Union["ProviderRetryOptions", typing.Dict[builtins.str, typing.Any]]] = None,
+     ) -> None:
+         '''
+         :param scope: -
+         :param id: -
+         :param ephemeral_storage_size: (experimental) The size of the function’s /tmp directory in MiB. Default: 10 GiB
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['lambda']
+         :param memory_size: (experimental) The amount of memory, in MB, that is allocated to your Lambda function. Lambda uses this value to proportionally allocate the amount of CPU power. For more information, see Resource Model in the AWS Lambda Developer Guide. Default: 2048
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public lambda with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: public lambda with no security group
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The function execution time (in seconds) after which Lambda terminates the function. Because the execution time affects cost, set this value based on the function's expected execution time. Default: Duration.minutes(15)
+@@ -5932,15 +5936,15 @@
+         retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+     ) -> None:
+         '''
+         :param scope: -
+         :param id: -
+         :param compute_type: (experimental) The type of compute to use for this build. See the {@link ComputeType} enum for the possible values. Default: {@link ComputeType#SMALL }
+         :param docker_in_docker: (experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode. Disabling this can speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times. Default: true
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['codebuild']
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public project with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: a new security group, if {@link vpc } is used
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The number of minutes after which AWS CodeBuild stops the build if it's not complete. For valid values, see the timeoutInMinutes field in the AWS CodeBuild User Guide. Default: Duration.hours(1)
+         :param vpc: (experimental) VPC to launch the runners in. Default: no VPC
+@@ -6293,15 +6297,15 @@
+         vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+     ) -> None:
+         '''
+         :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+         :param retry_options: (experimental) Options to retry operation in case of failure like missing capacity, or API quota issues. Default: retry 10 times up to about 45 minutes
+         :param compute_type: (experimental) The type of compute to use for this build. See the {@link ComputeType} enum for the possible values. Default: {@link ComputeType#SMALL }
+         :param docker_in_docker: (experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode. Disabling this can speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times. Default: true
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['codebuild']
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public project with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: a new security group, if {@link vpc } is used
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The number of minutes after which AWS CodeBuild stops the build if it's not complete. For valid values, see the timeoutInMinutes field in the AWS CodeBuild User Guide. Default: Duration.hours(1)
+         :param vpc: (experimental) VPC to launch the runners in. Default: no VPC
+@@ -6413,15 +6417,15 @@
+     def image_builder(self) -> typing.Optional[IRunnerImageBuilder]:
+         '''(experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements.
+ 
+         The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false.
+ 
+         The image builder determines the OS and architecture of the runner.
+ 
+-        :default: CodeBuildRunnerProviderProps.imageBuilder()
++        :default: CodeBuildRunnerProvider.imageBuilder()
+ 
+         :stability: experimental
+         '''
+         result = self._values.get("image_builder")
+         return typing.cast(typing.Optional[IRunnerImageBuilder], result)
+ 
+     @builtins.property
+@@ -7481,15 +7485,15 @@
+         '''
+         :param scope: -
+         :param id: -
+         :param assign_public_ip: (experimental) Assign public IP to the runner task. Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway. Default: true
+         :param cluster: (experimental) Existing Fargate cluster to use. Default: a new cluster
+         :param cpu: (experimental) The number of cpu units used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the memory parameter: 256 (.25 vCPU) - Available memory values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) 512 (.5 vCPU) - Available memory values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) 1024 (1 vCPU) - Available memory values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) 2048 (2 vCPU) - Available memory values: Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) 4096 (4 vCPU) - Available memory values: Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) Default: 1024
+         :param ephemeral_storage_gib: (experimental) The amount (in GiB) of ephemeral storage to be allocated to the task. The maximum supported value is 200 GiB. NOTE: This parameter is only supported for tasks hosted on AWS Fargate using platform version 1.4.0 or later. Default: 20
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['fargate']
+         :param memory_limit_mib: (experimental) The amount (in MiB) of memory used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the cpu parameter: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) - Available cpu values: 256 (.25 vCPU) 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) - Available cpu values: 512 (.5 vCPU) 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) - Available cpu values: 1024 (1 vCPU) Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) - Available cpu values: 2048 (2 vCPU) Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) - Available cpu values: 4096 (4 vCPU) Default: 2048
+         :param security_group: (deprecated) Security group to assign to the task. Default: a new security group
+         :param security_groups: (experimental) Security groups to assign to the task. Default: a new security group
+         :param spot: (experimental) Use Fargate spot capacity provider to save money. - Runners may fail to start due to missing capacity. - Runners might be stopped prematurely with spot pricing. Default: false
+         :param subnet_selection: (experimental) Subnets to run the runners in. Default: Fargate default
+@@ -7894,23 +7898,23 @@
+         memory_limit_mib: typing.Optional[jsii.Number] = None,
+         security_group: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup] = None,
+         security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+         spot: typing.Optional[builtins.bool] = None,
+         subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+         vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+     ) -> None:
+-        '''(experimental) Properties for FargateRunner.
++        '''(experimental) Properties for FargateRunnerProvider.
+ 
+         :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+         :param retry_options: (experimental) Options to retry operation in case of failure like missing capacity, or API quota issues. Default: retry 10 times up to about 45 minutes
+         :param assign_public_ip: (experimental) Assign public IP to the runner task. Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway. Default: true
+         :param cluster: (experimental) Existing Fargate cluster to use. Default: a new cluster
+         :param cpu: (experimental) The number of cpu units used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the memory parameter: 256 (.25 vCPU) - Available memory values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) 512 (.5 vCPU) - Available memory values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) 1024 (1 vCPU) - Available memory values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) 2048 (2 vCPU) - Available memory values: Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) 4096 (4 vCPU) - Available memory values: Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) Default: 1024
+         :param ephemeral_storage_gib: (experimental) The amount (in GiB) of ephemeral storage to be allocated to the task. The maximum supported value is 200 GiB. NOTE: This parameter is only supported for tasks hosted on AWS Fargate using platform version 1.4.0 or later. Default: 20
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['fargate']
+         :param memory_limit_mib: (experimental) The amount (in MiB) of memory used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the cpu parameter: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) - Available cpu values: 256 (.25 vCPU) 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) - Available cpu values: 512 (.5 vCPU) 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) - Available cpu values: 1024 (1 vCPU) Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) - Available cpu values: 2048 (2 vCPU) Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) - Available cpu values: 4096 (4 vCPU) Default: 2048
+         :param security_group: (deprecated) Security group to assign to the task. Default: a new security group
+         :param security_groups: (experimental) Security groups to assign to the task. Default: a new security group
+         :param spot: (experimental) Use Fargate spot capacity provider to save money. - Runners may fail to start due to missing capacity. - Runners might be stopped prematurely with spot pricing. Default: false
+         :param subnet_selection: (experimental) Subnets to run the runners in. Default: Fargate default
+@@ -8065,15 +8069,15 @@
+ 
+     @builtins.property
+     def image_builder(self) -> typing.Optional[IRunnerImageBuilder]:
+         '''(experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements.
+ 
+         The image builder determines the OS and architecture of the runner.
+ 
+-        :default: FargateRunnerProviderProps.imageBuilder()
++        :default: FargateRunnerProvider.imageBuilder()
+ 
+         :stability: experimental
+         '''
+         result = self._values.get("image_builder")
+         return typing.cast(typing.Optional[IRunnerImageBuilder], result)
+ 
+     @builtins.property
+@@ -8235,15 +8239,15 @@
+         log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+         retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+     ) -> None:
+         '''
+         :param scope: -
+         :param id: -
+         :param ephemeral_storage_size: (experimental) The size of the function’s /tmp directory in MiB. Default: 10 GiB
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['lambda']
+         :param memory_size: (experimental) The amount of memory, in MB, that is allocated to your Lambda function. Lambda uses this value to proportionally allocate the amount of CPU power. For more information, see Resource Model in the AWS Lambda Developer Guide. Default: 2048
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public lambda with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: public lambda with no security group
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The function execution time (in seconds) after which Lambda terminates the function. Because the execution time affects cost, set this value based on the function's expected execution time. Default: Duration.minutes(15)
+@@ -8310,15 +8314,15 @@
+         timeout: typing.Optional[_aws_cdk_ceddda9d.Duration] = None,
+         vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+     ) -> None:
+         '''
+         :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+         :param retry_options: (experimental) Options to retry operation in case of failure like missing capacity, or API quota issues. Default: retry 10 times up to about 45 minutes
+         :param ephemeral_storage_size: (experimental) The size of the function’s /tmp directory in MiB. Default: 10 GiB
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component. The image builder determines the OS and architecture of the runner. Default: LambdaRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['lambda']
+         :param memory_size: (experimental) The amount of memory, in MB, that is allocated to your Lambda function. Lambda uses this value to proportionally allocate the amount of CPU power. For more information, see Resource Model in the AWS Lambda Developer Guide. Default: 2048
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public lambda with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: public lambda with no security group
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The function execution time (in seconds) after which Lambda terminates the function. Because the execution time affects cost, set this value based on the function's expected execution time. Default: Duration.minutes(15)
+@@ -8413,15 +8417,15 @@
+     def image_builder(self) -> typing.Optional[IRunnerImageBuilder]:
+         '''(experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements.
+ 
+         The image builder must contain the {@link RunnerImageComponent.lambdaEntrypoint} component.
+ 
+         The image builder determines the OS and architecture of the runner.
+ 
+-        :default: LambdaRunnerProviderProps.imageBuilder()
++        :default: LambdaRunnerProvider.imageBuilder()
+ 
+         :stability: experimental
+         '''
+         result = self._values.get("image_builder")
+         return typing.cast(typing.Optional[IRunnerImageBuilder], result)
+ 
+     @builtins.property
+@@ -8575,15 +8579,15 @@
+         retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+     ) -> None:
+         '''
+         :param scope: -
+         :param id: -
+         :param compute_type: (experimental) The type of compute to use for this build. See the {@link ComputeType} enum for the possible values. Default: {@link ComputeType#SMALL }
+         :param docker_in_docker: (experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode. Disabling this can speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times. Default: true
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder must contain the {@link RunnerImageComponent.dockerInDocker} component unless ``dockerInDocker`` is set to false. The image builder determines the OS and architecture of the runner. Default: CodeBuildRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['codebuild']
+         :param security_group: (deprecated) Security group to assign to this instance. Default: public project with no security group
+         :param security_groups: (experimental) Security groups to assign to this instance. Default: a new security group, if {@link vpc } is used
+         :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+         :param timeout: (experimental) The number of minutes after which AWS CodeBuild stops the build if it's not complete. For valid values, see the timeoutInMinutes field in the AWS CodeBuild User Guide. Default: Duration.hours(1)
+         :param vpc: (experimental) VPC to launch the runners in. Default: no VPC
+@@ -8724,15 +8728,15 @@
+         '''
+         :param scope: -
+         :param id: -
+         :param assign_public_ip: (experimental) Assign public IP to the runner task. Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway. Default: true
+         :param cluster: (experimental) Existing Fargate cluster to use. Default: a new cluster
+         :param cpu: (experimental) The number of cpu units used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the memory parameter: 256 (.25 vCPU) - Available memory values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) 512 (.5 vCPU) - Available memory values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) 1024 (1 vCPU) - Available memory values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) 2048 (2 vCPU) - Available memory values: Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) 4096 (4 vCPU) - Available memory values: Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) Default: 1024
+         :param ephemeral_storage_gib: (experimental) The amount (in GiB) of ephemeral storage to be allocated to the task. The maximum supported value is 200 GiB. NOTE: This parameter is only supported for tasks hosted on AWS Fargate using platform version 1.4.0 or later. Default: 20
+-        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProviderProps.imageBuilder()
++        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: FargateRunnerProvider.imageBuilder()
+         :param label: (deprecated) GitHub Actions label used for this provider. Default: undefined
+         :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['fargate']
+         :param memory_limit_mib: (experimental) The amount (in MiB) of memory used by the task. For tasks using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the cpu parameter: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) - Available cpu values: 256 (.25 vCPU) 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) - Available cpu values: 512 (.5 vCPU) 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB) - Available cpu values: 1024 (1 vCPU) Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) - Available cpu values: 2048 (2 vCPU) Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) - Available cpu values: 4096 (4 vCPU) Default: 2048
+         :param security_group: (deprecated) Security group to assign to the task. Default: a new security group
+         :param security_groups: (experimental) Security groups to assign to the task. Default: a new security group
+         :param spot: (experimental) Use Fargate spot capacity provider to save money. - Runners may fail to start due to missing capacity. - Runners might be stopped prematurely with spot pricing. Default: false
+         :param subnet_selection: (experimental) Subnets to run the runners in. Default: Fargate default
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO` & `cloudsnorkel.cdk-github-runners-0.9.1/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,31 +1,7 @@
+-Metadata-Version: 2.1
+-Name: cloudsnorkel.cdk-github-runners
+-Version: 0.9.0
+-Summary: CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.
+-Home-page: https://github.com/CloudSnorkel/cdk-github-runners.git
+-Author: Amir Szekely<amir@cloudsnorkel.com>
+-License: Apache-2.0
+-Project-URL: Source, https://github.com/CloudSnorkel/cdk-github-runners.git
+-Classifier: Intended Audience :: Developers
+-Classifier: Operating System :: OS Independent
+-Classifier: Programming Language :: JavaScript
+-Classifier: Programming Language :: Python :: 3 :: Only
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
+-Classifier: Programming Language :: Python :: 3.10
+-Classifier: Programming Language :: Python :: 3.11
+-Classifier: Typing :: Typed
+-Classifier: Development Status :: 4 - Beta
+-Classifier: License :: OSI Approved
+-Requires-Python: ~=3.7
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ # GitHub Self-Hosted Runners CDK Constructs
+ 
+ [![NPM](https://img.shields.io/npm/v/@cloudsnorkel/cdk-github-runners?label=npm&logo=npm)](https://www.npmjs.com/package/@cloudsnorkel/cdk-github-runners)
+ [![PyPI](https://img.shields.io/pypi/v/cloudsnorkel.cdk-github-runners?label=pypi&logo=pypi)](https://pypi.org/project/cloudsnorkel.cdk-github-runners)
+ [![Maven Central](https://img.shields.io/maven-central/v/com.cloudsnorkel/cdk.github.runners.svg?label=Maven%20Central&logo=java)](https://search.maven.org/search?q=g:%22com.cloudsnorkel%22%20AND%20a:%22cdk.github.runners%22)
+ [![Go](https://img.shields.io/github/v/tag/CloudSnorkel/cdk-github-runners?color=red&label=go&logo=go)](https://pkg.go.dev/github.com/CloudSnorkel/cdk-github-runners-go/cloudsnorkelcdkgithubrunners)
+ [![Nuget](https://img.shields.io/nuget/v/CloudSnorkel.Cdk.Github.Runners?color=red&&logo=nuget)](https://www.nuget.org/packages/CloudSnorkel.Cdk.Github.Runners/)
+@@ -52,28 +28,32 @@
+ 
+ The best way to browse API documentation is on [Constructs Hub](https://constructs.dev/packages/@cloudsnorkel/cdk-github-runners/). It is available in all supported programming languages.
+ 
+ ## Providers
+ 
+ A runner provider creates compute resources on-demand and uses [actions/runner](https://github.com/actions/runner) to start a runner.
+ 
+-|                  | EC2               | CodeBuild                  | Fargate        | Lambda        |
+-|------------------|-------------------|----------------------------|----------------|---------------|
+-| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | 15 minutes    |
+-| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | 1 to 6        |
+-| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | 128mb to 10gb |
+-| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Up to 10gb    |
+-| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64 |
+-| **sudo**         | ✔                 | ✔                         | ✔              | ❌           |
+-| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ❌           |
+-| **Spot pricing** | ✔                 | ❌                         | ✔              | ❌           |
+-| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux         |
++|                  | EC2               | CodeBuild                  | Fargate        | ECS            | Lambda        |
++|------------------|-------------------|----------------------------|----------------|----------------|---------------|
++| **Time limit**   | Unlimited         | 8 hours                    | Unlimited      | Unlimited      | 15 minutes    |
++| **vCPUs**        | Unlimited         | 2, 4, 8, or 72             | 0.25 to 4      | Unlimited      | 1 to 6        |
++| **RAM**          | Unlimited         | 3gb, 7gb, 15gb, or 145gb   | 512mb to 30gb  | Unlimited      | 128mb to 10gb |
++| **Storage**      | Unlimited         | 50gb to 824gb              | 20gb to 200gb  | Unlimited      | Up to 10gb    |
++| **Architecture** | x86_64, ARM64     | x86_64, ARM64              | x86_64, ARM64  | x86_64, ARM64  | x86_64, ARM64 |
++| **sudo**         | ✔                 | ✔                         | ✔              | ✔              | ❌           |
++| **Docker**       | ✔                 | ✔ (Linux only)            | ❌              | ✔              | ❌           |
++| **Spot pricing** | ✔                 | ❌                         | ✔              | ✔              | ❌           |
++| **OS**           | Linux, Windows    | Linux, Windows             | Linux, Windows | Linux, Windows | Linux         |
+ 
+ The best provider to use mostly depends on your current infrastructure. When in doubt, CodeBuild is always a good choice. Execution history and logs are easy to view, and it has no restrictive limits unless you need to run for more than 8 hours.
+ 
++* EC2 is useful when you want runners to have complete access to the host
++* ECS is useful when you want to control the infrastructure, like leaving the runner host running for faster startups
++* Lambda is useful for short jobs that can work within time, size and readonly system constraints
++
+ You can also create your own provider by implementing `IRunnerProvider`.
+ 
+ ## Installation
+ 
+ 1. Confirm you're using CDK v2
+ 2. Install the appropriate package
+```
+
+### Comparing `cloudsnorkel.cdk-github-runners-0.9.0/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt` & `cloudsnorkel.cdk-github-runners-0.9.1/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+ src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
+ src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
+ src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
+ src/cloudsnorkel/cdk_github_runners/__init__.py
+ src/cloudsnorkel/cdk_github_runners/py.typed
+ src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
+-src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.0.jsii.tgz
++src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.1.jsii.tgz
+```
+

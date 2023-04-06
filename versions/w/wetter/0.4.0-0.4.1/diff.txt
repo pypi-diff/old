@@ -1,0 +1,101 @@
+--- tmp/wetter-0.4.0.tar.gz
++++ tmp/wetter-0.4.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "wetter-0.4.0.tar", max compression
+│ +gzip compressed data, was "wetter-0.4.1.tar", max compression
+│   --- wetter-0.4.0.tar
+├── +++ wetter-0.4.1.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ --rw-r--r--   0        0        0     8538 2023-04-06 18:05:02.976247 wetter-0.4.0/README.md
+│ │ --rw-r--r--   0        0        0     1491 2023-04-06 18:05:02.976247 wetter-0.4.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2025 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/__init__.py
+│ │ --rw-r--r--   0        0        0    10236 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/app.py
+│ │ --rw-r--r--   0        0        0     1203 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/backend/__init__.py
+│ │ --rw-r--r--   0        0        0     7117 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/backend/extern.py
+│ │ --rw-r--r--   0        0        0     5307 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/backend/local.py
+│ │ --rw-r--r--   0        0        0     5631 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/backend/queries.py
+│ │ --rw-r--r--   0        0        0      409 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/config/__init__.py
+│ │ --rw-r--r--   0        0        0     4131 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/config/config.py
+│ │ --rw-r--r--   0        0        0     1418 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/config/defaults.py
+│ │ --rw-r--r--   0        0        0     1906 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/config/parser.py
+│ │ --rw-r--r--   0        0        0     3057 2023-04-06 18:05:02.980248 wetter-0.4.0/wetter/tools.py
+│ │ --rw-r--r--   0        0        0     9911 1970-01-01 00:00:00.000000 wetter-0.4.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     8538 2023-04-06 18:18:11.877640 wetter-0.4.1/README.md
+│ │ +-rw-r--r--   0        0        0     1491 2023-04-06 18:18:11.881640 wetter-0.4.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2025 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/__init__.py
+│ │ +-rw-r--r--   0        0        0    10236 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/app.py
+│ │ +-rw-r--r--   0        0        0     1203 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/backend/__init__.py
+│ │ +-rw-r--r--   0        0        0     7117 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/backend/extern.py
+│ │ +-rw-r--r--   0        0        0     5307 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/backend/local.py
+│ │ +-rw-r--r--   0        0        0     5631 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/backend/queries.py
+│ │ +-rw-r--r--   0        0        0      409 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/config/__init__.py
+│ │ +-rw-r--r--   0        0        0     4131 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/config/config.py
+│ │ +-rw-r--r--   0        0        0     1418 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/config/defaults.py
+│ │ +-rw-r--r--   0        0        0     1906 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/config/parser.py
+│ │ +-rw-r--r--   0        0        0     3057 2023-04-06 18:18:11.881640 wetter-0.4.1/wetter/tools.py
+│ │ +-rw-r--r--   0        0        0     9911 1970-01-01 00:00:00.000000 wetter-0.4.1/PKG-INFO
+│ │   --- wetter-0.4.0/README.md
+│ ├── +++ wetter-0.4.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/pyproject.toml
+│ ├── +++ wetter-0.4.1/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "wetter"
+│ │ -version = "0.4.0"
+│ │ +version = "0.4.1"
+│ │  description = "CLI tool to parse weather data"
+│ │  authors = ["Uğur Çayoğlu <cayoglu@me.com>"]
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/ucyo/wetter-py"
+│ │  repository = "https://github.com/ucyo/wetter-py"
+│ │  documentation = "https://github.com/ucyo/wetter-py"
+│ │   --- wetter-0.4.0/wetter/__init__.py
+│ ├── +++ wetter-0.4.1/wetter/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/app.py
+│ ├── +++ wetter-0.4.1/wetter/app.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/backend/__init__.py
+│ ├── +++ wetter-0.4.1/wetter/backend/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/backend/extern.py
+│ ├── +++ wetter-0.4.1/wetter/backend/extern.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/backend/local.py
+│ ├── +++ wetter-0.4.1/wetter/backend/local.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/backend/queries.py
+│ ├── +++ wetter-0.4.1/wetter/backend/queries.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/config/config.py
+│ ├── +++ wetter-0.4.1/wetter/config/config.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/config/defaults.py
+│ ├── +++ wetter-0.4.1/wetter/config/defaults.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/config/parser.py
+│ ├── +++ wetter-0.4.1/wetter/config/parser.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/wetter/tools.py
+│ ├── +++ wetter-0.4.1/wetter/tools.py
+│ │┄ Files identical despite different names
+│ │   --- wetter-0.4.0/PKG-INFO
+│ ├── +++ wetter-0.4.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: wetter
+│ │ -Version: 0.4.0
+│ │ +Version: 0.4.1
+│ │  Summary: CLI tool to parse weather data
+│ │  Home-page: https://github.com/ucyo/wetter-py
+│ │  License: MIT
+│ │  Author: Uğur Çayoğlu
+│ │  Author-email: cayoglu@me.com
+│ │  Requires-Python: >=3.8.1,<4.0.0
+│ │  Classifier: Development Status :: 3 - Alpha

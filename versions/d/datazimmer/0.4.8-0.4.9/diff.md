@@ -1,0 +1,1909 @@
+# Comparing `tmp/datazimmer-0.4.8.tar.gz` & `tmp/datazimmer-0.4.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "datazimmer-0.4.8.tar", last modified: Wed Jan 11 14:53:37 2023, max compression
++gzip compressed data, was "datazimmer-0.4.9.tar", last modified: Wed Jan 18 17:03:42 2023, max compression
+```
+
+## Comparing `datazimmer-0.4.8.tar` & `datazimmer-0.4.9.tar`
+
+### file list
+
+```diff
+@@ -1,138 +1,141 @@
+--rw-r--r--   0        0        0      903 2023-01-11 14:53:30.707366 datazimmer-0.4.8/.github/workflows/compatibility_test.yml
+--rw-r--r--   0        0        0     1155 2023-01-11 14:53:30.707366 datazimmer-0.4.8/.github/workflows/test.yml
+--rw-r--r--   0        0        0      565 2023-01-11 14:53:30.707366 datazimmer-0.4.8/.github/workflows/twine_release.yml
+--rw-r--r--   0        0        0     1795 2023-01-11 14:53:30.707366 datazimmer-0.4.8/.gitignore
+--rw-r--r--   0        0        0      288 2023-01-11 14:53:30.707366 datazimmer-0.4.8/.readthedocs.yml
+--rw-r--r--   0        0        0      491 2023-01-11 14:53:30.707366 datazimmer-0.4.8/CITATION.cff
+--rw-r--r--   0        0        0     1077 2023-01-11 14:53:30.707366 datazimmer-0.4.8/LICENSE
+--rw-r--r--   0        0        0     2122 2023-01-11 14:53:30.707366 datazimmer-0.4.8/README.md
+--rw-r--r--   0        0        0     3713 2023-01-11 14:53:30.707366 datazimmer-0.4.8/conftest.py
+--rw-r--r--   0        0        0      624 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/__init__.py
+--rw-r--r--   0        0        0     3316 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/aswan_integration.py
+--rw-r--r--   0        0        0     7893 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/config_loading.py
+--rw-r--r--   0        0        0      102 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/exceptions.py
+--rw-r--r--   0        0        0    14626 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/explorer.py
+--rw-r--r--   0        0        0      624 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/get_runtime.py
+--rw-r--r--   0        0        0     3197 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/gh_actions.py
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/__init__.py
+--rw-r--r--   0        0        0     3155 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/atoms.py
+--rw-r--r--   0        0        0     1344 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/complete_id.py
+--rw-r--r--   0        0        0     1744 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/datascript.py
+--rw-r--r--   0        0        0     4537 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/high_level.py
+--rw-r--r--   0        0        0     6668 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/metadata/scrutable.py
+--rw-r--r--   0        0        0     2989 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/naming.py
+--rw-r--r--   0        0        0     1318 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/nb_generator.py
+--rw-r--r--   0        0        0      526 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/persistent_state.py
+--rw-r--r--   0        0        0     8136 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/pipeline_element.py
+--rw-r--r--   0        0        0     7498 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/project_runtime.py
+--rw-r--r--   0        0        0      925 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/raw_data.py
+--rw-r--r--   0        0        0     6362 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/registry.py
+--rw-r--r--   0        0        0      713 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/reporting.py
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/sql/__init__.py
+--rw-r--r--   0        0        0       87 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/sql/draw.py
+--rw-r--r--   0        0        0     9260 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/sql/loader.py
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/__init__.py
+--rw-r--r--   0        0        0     6481 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/create_dogshow.py
+--rw-r--r--   0        0        0      346 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_config.py
+--rw-r--r--   0        0        0     2944 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_full_integration.py
+--rw-r--r--   0        0        0      437 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_registry.py
+--rw-r--r--   0        0        0      350 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_runtime.py
+--rw-r--r--   0        0        0     1819 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_scrutable.py
+--rw-r--r--   0        0        0      235 2023-01-11 14:53:30.707366 datazimmer-0.4.8/datazimmer/tests/test_util.py
+--rw-r--r--   0        0        0      943 2023-01-11 14:53:30.711366 datazimmer-0.4.8/datazimmer/tests/test_validation.py
+--rw-r--r--   0        0        0     6491 2023-01-11 14:53:30.711366 datazimmer-0.4.8/datazimmer/typer_commands.py
+--rw-r--r--   0        0        0     2891 2023-01-11 14:53:30.711366 datazimmer-0.4.8/datazimmer/utils.py
+--rw-r--r--   0        0        0     2877 2023-01-11 14:53:30.711366 datazimmer-0.4.8/datazimmer/validation_functions.py
+--rw-r--r--   0        0        0      114 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.AbstractEntity.rst
+--rw-r--r--   0        0        0      123 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.CompositeTypeBase.rst
+--rw-r--r--   0        0        0      746 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.DzAswan.rst
+--rw-r--r--   0        0        0      269 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.EntityClass.rst
+--rw-r--r--   0        0        0       87 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.Index.rst
+--rw-r--r--   0        0        0       96 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.Nullable.rst
+--rw-r--r--   0        0        0      444 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.PersistentState.rst
+--rw-r--r--   0        0        0      592 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.ReportFile.rst
+--rw-r--r--   0        0        0      565 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.ScruTable.rst
+--rw-r--r--   0        0        0       99 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.SourceUrl.rst
+--rw-r--r--   0        0        0      107 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.dump_dfs_to_tables.rst
+--rw-r--r--   0        0        0      104 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.get_raw_data_path.rst
+--rw-r--r--   0        0        0       77 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.register.rst
+--rw-r--r--   0        0        0      113 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.register_data_loader.rst
+--rw-r--r--   0        0        0      113 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/api/datazimmer.register_env_creator.rst
+--rw-r--r--   0        0        0       39 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/autosumm.rst
+--rw-r--r--   0        0        0     2402 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/conf.py
+--rw-r--r--   0        0        0      263 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/index.rst
+--rw-r--r--   0        0        0       77 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/notebooks/doc-001-intro.rst
+--rw-r--r--   0        0        0     4171 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/notebooks/doc-002-glossary.rst
+--rw-r--r--   0        0        0      616 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/notebooks/doc-003-mock-projects.rst
+--rw-r--r--   0        0        0     1269 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/notebooks/doc-004-rules-conventions.rst
+--rw-r--r--   0        0        0      284 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/notebooks/doc-005-cli.rst
+--rw-r--r--   0        0        0      102 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/main.rst
+--rw-r--r--   0        0        0       45 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.0.rst
+--rw-r--r--   0        0        0       46 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.1.rst
+--rw-r--r--   0        0        0       27 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.2.rst
+--rw-r--r--   0        0        0       15 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.3.rst
+--rw-r--r--   0        0        0       15 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.4.rst
+--rw-r--r--   0        0        0       15 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.1.5.rst
+--rw-r--r--   0        0        0       34 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.1.rst
+--rw-r--r--   0        0        0       31 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.2.rst
+--rw-r--r--   0        0        0       31 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.3.rst
+--rw-r--r--   0        0        0       31 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.4.rst
+--rw-r--r--   0        0        0       29 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.5.rst
+--rw-r--r--   0        0        0       39 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.6.rst
+--rw-r--r--   0        0        0       34 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.2.7.rst
+--rw-r--r--   0        0        0       45 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.0.rst
+--rw-r--r--   0        0        0       32 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.1.rst
+--rw-r--r--   0        0        0       48 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.10.rst
+--rw-r--r--   0        0        0       47 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.2.rst
+--rw-r--r--   0        0        0       39 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.3.rst
+--rw-r--r--   0        0        0       33 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.4.rst
+--rw-r--r--   0        0        0       34 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.5.rst
+--rw-r--r--   0        0        0       32 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.6.rst
+--rw-r--r--   0        0        0       32 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.7.rst
+--rw-r--r--   0        0        0       31 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.8.rst
+--rw-r--r--   0        0        0       35 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.3.9.rst
+--rw-r--r--   0        0        0       37 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.0.rst
+--rw-r--r--   0        0        0       32 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.1.rst
+--rw-r--r--   0        0        0       52 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.2.rst
+--rw-r--r--   0        0        0       66 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.3.rst
+--rw-r--r--   0        0        0       53 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.4.rst
+--rw-r--r--   0        0        0       45 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.5.rst
+--rw-r--r--   0        0        0       41 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.6.rst
+--rw-r--r--   0        0        0       71 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.7.rst
+--rw-r--r--   0        0        0       47 2023-01-11 14:53:30.711366 datazimmer-0.4.8/docs/release_notes/v0.4.8.rst
+--rw-r--r--   0        0        0      159 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/confs.yaml
+--rw-r--r--   0        0        0     1773 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/data/photo.csv
+--rw-r--r--   0        0        0     3459 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/explorer/dec-setup/dog_one/sexes.ipynb
+--rw-r--r--   0        0        0      655 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/explorer/dec.yaml
+--rw-r--r--   0        0        0      186 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/explorer2/dec.yaml
+--rw-r--r--   0        0        0      655 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/minimal.py
+--rw-r--r--   0        0        0    10395 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/notebooks/create-dogshow-test-data.ipynb
+--rw-r--r--   0        0        0       57 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/zimmer.yaml
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/__init__.py
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/__init__.py
+--rw-r--r--   0        0        0     2217 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/create_envs.py
+--rw-r--r--   0        0        0     1566 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/ns_meta.py
+--rw-r--r--   0        0        0     2957 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/update_data.py
+--rw-r--r--   0        0        0      392 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/zimmer.yaml
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/__init__.py
+--rw-r--r--   0        0        0      674 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/joint_success.py
+--rw-r--r--   0        0        0      261 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/zimmer.yaml
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/__init__.py
+--rw-r--r--   0        0        0     2491 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/core.py
+--rw-r--r--   0        0        0      120 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dograce/{{cookiecutter.project}}/zimmer.yaml
+--rw-r--r--   0        0        0        0 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/__init__.py
+--rw-r--r--   0        0        0       65 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/__init__.py
+--rw-r--r--   0        0        0      421 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/meta.py
+--rw-r--r--   0        0        0      945 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/proc.py
+--rw-r--r--   0        0        0     1093 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/sex_matches.py
+--rw-r--r--   0        0        0     2415 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/success.py
+--rw-r--r--   0        0        0      810 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/top_report.py
+--rw-r--r--   0        0        0      575 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/zimmer.yaml
+--rw-r--r--   0        0        0     2940 2023-01-11 14:53:30.711366 datazimmer-0.4.8/dogshow/todo/complex_success.py
+--rw-r--r--   0        0        0      612 2023-01-11 14:53:30.711366 datazimmer-0.4.8/notebooks/doc-001-intro.ipynb
+--rw-r--r--   0        0        0     5328 2023-01-11 14:53:30.711366 datazimmer-0.4.8/notebooks/doc-002-glossary.ipynb
+--rw-r--r--   0        0        0     1877 2023-01-11 14:53:30.711366 datazimmer-0.4.8/notebooks/doc-003-mock-projects.ipynb
+--rw-r--r--   0        0        0     1928 2023-01-11 14:53:30.711366 datazimmer-0.4.8/notebooks/doc-004-rules-conventions.ipynb
+--rw-r--r--   0        0        0     1235 2023-01-11 14:53:30.711366 datazimmer-0.4.8/notebooks/doc-005-cli.ipynb
+--rw-r--r--   0        0        0     1218 2023-01-11 14:53:30.711366 datazimmer-0.4.8/pyproject.toml
+--rw-r--r--   0        0        0     3712 1970-01-01 00:00:00.000000 datazimmer-0.4.8/PKG-INFO
++-rw-r--r--   0        0        0      976 2023-01-18 17:03:38.602541 datazimmer-0.4.9/.github/workflows/compatibility_test.yml
++-rw-r--r--   0        0        0     1228 2023-01-18 17:03:38.602541 datazimmer-0.4.9/.github/workflows/test.yml
++-rw-r--r--   0        0        0      565 2023-01-18 17:03:38.602541 datazimmer-0.4.9/.github/workflows/twine_release.yml
++-rw-r--r--   0        0        0     1795 2023-01-18 17:03:38.602541 datazimmer-0.4.9/.gitignore
++-rw-r--r--   0        0        0      288 2023-01-18 17:03:38.602541 datazimmer-0.4.9/.readthedocs.yml
++-rw-r--r--   0        0        0      491 2023-01-18 17:03:38.602541 datazimmer-0.4.9/CITATION.cff
++-rw-r--r--   0        0        0     1077 2023-01-18 17:03:38.602541 datazimmer-0.4.9/LICENSE
++-rw-r--r--   0        0        0     2877 2023-01-18 17:03:38.602541 datazimmer-0.4.9/README.md
++-rw-r--r--   0        0        0     3713 2023-01-18 17:03:38.602541 datazimmer-0.4.9/conftest.py
++-rw-r--r--   0        0        0      624 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/__init__.py
++-rw-r--r--   0        0        0     3316 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/aswan_integration.py
++-rw-r--r--   0        0        0     7970 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/config_loading.py
++-rw-r--r--   0        0        0      102 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/exceptions.py
++-rw-r--r--   0        0        0    14626 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/explorer.py
++-rw-r--r--   0        0        0      624 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/get_runtime.py
++-rw-r--r--   0        0        0     3197 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/gh_actions.py
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/__init__.py
++-rw-r--r--   0        0        0     3155 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/atoms.py
++-rw-r--r--   0        0        0     1344 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/complete_id.py
++-rw-r--r--   0        0        0     1744 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/datascript.py
++-rw-r--r--   0        0        0     4538 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/high_level.py
++-rw-r--r--   0        0        0     6668 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/metadata/scrutable.py
++-rw-r--r--   0        0        0     3371 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/naming.py
++-rw-r--r--   0        0        0     1318 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/nb_generator.py
++-rw-r--r--   0        0        0      526 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/persistent_state.py
++-rw-r--r--   0        0        0     8136 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/pipeline_element.py
++-rw-r--r--   0        0        0     7718 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/project_runtime.py
++-rw-r--r--   0        0        0      935 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/raw_data.py
++-rw-r--r--   0        0        0     6107 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/registry.py
++-rw-r--r--   0        0        0      713 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/reporting.py
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/sql/__init__.py
++-rw-r--r--   0        0        0       87 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/sql/draw.py
++-rw-r--r--   0        0        0     9260 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/sql/loader.py
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/tests/__init__.py
++-rw-r--r--   0        0        0     6124 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/tests/create_dogshow.py
++-rw-r--r--   0        0        0      346 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/tests/test_config.py
++-rw-r--r--   0        0        0     3086 2023-01-18 17:03:38.602541 datazimmer-0.4.9/datazimmer/tests/test_full_integration.py
++-rw-r--r--   0        0        0      437 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_registry.py
++-rw-r--r--   0        0        0      350 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_runtime.py
++-rw-r--r--   0        0        0     1819 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_scrutable.py
++-rw-r--r--   0        0        0      152 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_sql.py
++-rw-r--r--   0        0        0      235 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_util.py
++-rw-r--r--   0        0        0      943 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/tests/test_validation.py
++-rw-r--r--   0        0        0     8534 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/typer_commands.py
++-rw-r--r--   0        0        0     3125 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/utils.py
++-rw-r--r--   0        0        0     2877 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/validation_functions.py
++-rw-r--r--   0        0        0     9464 2023-01-18 17:03:38.606541 datazimmer-0.4.9/datazimmer/zenodo.py
++-rw-r--r--   0        0        0      114 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.AbstractEntity.rst
++-rw-r--r--   0        0        0      123 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.CompositeTypeBase.rst
++-rw-r--r--   0        0        0      746 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.DzAswan.rst
++-rw-r--r--   0        0        0      269 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.EntityClass.rst
++-rw-r--r--   0        0        0       87 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.Index.rst
++-rw-r--r--   0        0        0       96 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.Nullable.rst
++-rw-r--r--   0        0        0      444 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.PersistentState.rst
++-rw-r--r--   0        0        0      592 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.ReportFile.rst
++-rw-r--r--   0        0        0      565 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.ScruTable.rst
++-rw-r--r--   0        0        0       99 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.SourceUrl.rst
++-rw-r--r--   0        0        0      107 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.dump_dfs_to_tables.rst
++-rw-r--r--   0        0        0      104 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.get_raw_data_path.rst
++-rw-r--r--   0        0        0       77 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.register.rst
++-rw-r--r--   0        0        0      113 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.register_data_loader.rst
++-rw-r--r--   0        0        0      113 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/api/datazimmer.register_env_creator.rst
++-rw-r--r--   0        0        0       39 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/autosumm.rst
++-rw-r--r--   0        0        0     2402 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/conf.py
++-rw-r--r--   0        0        0      263 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/index.rst
++-rw-r--r--   0        0        0       77 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/notebooks/doc-001-intro.rst
++-rw-r--r--   0        0        0     4171 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/notebooks/doc-002-glossary.rst
++-rw-r--r--   0        0        0      616 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/notebooks/doc-003-mock-projects.rst
++-rw-r--r--   0        0        0     1269 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/notebooks/doc-004-rules-conventions.rst
++-rw-r--r--   0        0        0      284 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/notebooks/doc-005-cli.rst
++-rw-r--r--   0        0        0      102 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/main.rst
++-rw-r--r--   0        0        0       45 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.0.rst
++-rw-r--r--   0        0        0       46 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.1.rst
++-rw-r--r--   0        0        0       27 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.2.rst
++-rw-r--r--   0        0        0       15 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.3.rst
++-rw-r--r--   0        0        0       15 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.4.rst
++-rw-r--r--   0        0        0       15 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.1.5.rst
++-rw-r--r--   0        0        0       34 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.1.rst
++-rw-r--r--   0        0        0       31 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.2.rst
++-rw-r--r--   0        0        0       31 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.3.rst
++-rw-r--r--   0        0        0       31 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.4.rst
++-rw-r--r--   0        0        0       29 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.5.rst
++-rw-r--r--   0        0        0       39 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.6.rst
++-rw-r--r--   0        0        0       34 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.2.7.rst
++-rw-r--r--   0        0        0       45 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.0.rst
++-rw-r--r--   0        0        0       32 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.1.rst
++-rw-r--r--   0        0        0       48 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.10.rst
++-rw-r--r--   0        0        0       47 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.2.rst
++-rw-r--r--   0        0        0       39 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.3.rst
++-rw-r--r--   0        0        0       33 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.4.rst
++-rw-r--r--   0        0        0       34 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.5.rst
++-rw-r--r--   0        0        0       32 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.6.rst
++-rw-r--r--   0        0        0       32 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.7.rst
++-rw-r--r--   0        0        0       31 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.8.rst
++-rw-r--r--   0        0        0       35 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.3.9.rst
++-rw-r--r--   0        0        0       37 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.0.rst
++-rw-r--r--   0        0        0       32 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.1.rst
++-rw-r--r--   0        0        0       52 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.2.rst
++-rw-r--r--   0        0        0       66 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.3.rst
++-rw-r--r--   0        0        0       53 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.4.rst
++-rw-r--r--   0        0        0       45 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.5.rst
++-rw-r--r--   0        0        0       41 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.6.rst
++-rw-r--r--   0        0        0       71 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.7.rst
++-rw-r--r--   0        0        0       47 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.8.rst
++-rw-r--r--   0        0        0       53 2023-01-18 17:03:38.606541 datazimmer-0.4.9/docs/release_notes/v0.4.9.rst
++-rw-r--r--   0        0        0      159 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/confs.yaml
++-rw-r--r--   0        0        0     1773 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/data/photo.csv
++-rw-r--r--   0        0        0     3459 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/explorer/dec-setup/dog_one/sexes.ipynb
++-rw-r--r--   0        0        0      655 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/explorer/dec.yaml
++-rw-r--r--   0        0        0      186 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/explorer2/dec.yaml
++-rw-r--r--   0        0        0      655 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/minimal.py
++-rw-r--r--   0        0        0     9861 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/notebooks/create-dogshow-test-data.ipynb
++-rw-r--r--   0        0        0       57 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/zimmer.yaml
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/__init__.py
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/__init__.py
++-rw-r--r--   0        0        0     2304 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/create_envs.py
++-rw-r--r--   0        0        0     1566 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/ns_meta.py
++-rw-r--r--   0        0        0     3192 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/update_data.py
++-rw-r--r--   0        0        0      307 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/zimmer.yaml
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/__init__.py
++-rw-r--r--   0        0        0      674 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/joint_success.py
++-rw-r--r--   0        0        0      261 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/zimmer.yaml
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/__init__.py
++-rw-r--r--   0        0        0     2530 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/core.py
++-rw-r--r--   0        0        0      120 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dograce/{{cookiecutter.project}}/zimmer.yaml
++-rw-r--r--   0        0        0        0 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/__init__.py
++-rw-r--r--   0        0        0       65 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/__init__.py
++-rw-r--r--   0        0        0      421 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/meta.py
++-rw-r--r--   0        0        0      945 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/proc.py
++-rw-r--r--   0        0        0     1093 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/sex_matches.py
++-rw-r--r--   0        0        0     2415 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/success.py
++-rw-r--r--   0        0        0      810 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/top_report.py
++-rw-r--r--   0        0        0      575 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/zimmer.yaml
++-rw-r--r--   0        0        0     2940 2023-01-18 17:03:38.606541 datazimmer-0.4.9/dogshow/todo/complex_success.py
++-rw-r--r--   0        0        0      612 2023-01-18 17:03:38.606541 datazimmer-0.4.9/notebooks/doc-001-intro.ipynb
++-rw-r--r--   0        0        0     5328 2023-01-18 17:03:38.606541 datazimmer-0.4.9/notebooks/doc-002-glossary.ipynb
++-rw-r--r--   0        0        0     1877 2023-01-18 17:03:38.606541 datazimmer-0.4.9/notebooks/doc-003-mock-projects.ipynb
++-rw-r--r--   0        0        0     1928 2023-01-18 17:03:38.606541 datazimmer-0.4.9/notebooks/doc-004-rules-conventions.ipynb
++-rw-r--r--   0        0        0     1235 2023-01-18 17:03:38.606541 datazimmer-0.4.9/notebooks/doc-005-cli.ipynb
++-rw-r--r--   0        0        0     1253 2023-01-18 17:03:38.606541 datazimmer-0.4.9/pyproject.toml
++-rw-r--r--   0        0        0     4579 1970-01-01 00:00:00.000000 datazimmer-0.4.9/PKG-INFO
+```
+
+### Comparing `datazimmer-0.4.8/.github/workflows/compatibility_test.yml` & `datazimmer-0.4.9/.github/workflows/test.yml`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,36 +1,49 @@
+-name: OS Compatibility Test
++name: Python Test
+ 
+ on:
+   pull_request:
+     branches: 
+       - main
+   push:
+     branches:
+       - main
+ 
+ jobs:
+-  comp_test:
+-    strategy:
+-      matrix:
+-        os: [ubuntu-latest] # [windows-2022, windows-2019, macos-11, macos-10.15]
+-    runs-on: ${{ matrix.os }}
++  test:
++    runs-on: ubuntu-latest
++    services:
++      postgres:
++        image: postgres
++        env:
++          POSTGRES_PASSWORD: postgres
++        options: >-
++          --health-cmd pg_isready
++          --health-interval 10s
++          --health-timeout 5s
++          --health-retries 5
++        ports:
++          - 5432:5432
+     steps:
+     - uses: actions/checkout@v3
+     - uses: actions/setup-python@v4
+       with:
+         python-version: '3.10'
+     - name: Install dependencies
+       run: |
+         python -m pip install --upgrade pip
+-        pip install -e .[test,profile,explorer,collect]
++        pip install -e .[test,profile,postgres,explorer,collect,zenodo]
+     - name: Setup Git
+       run: |
+         git config --global receive.denyCurrentBranch updateInstead
+         git config --global init.defaultBranch main
+         git config --global user.email "leo@dumbartonserum.com"
+         git config --global user.name "Leo Dumbarton"
+     - name: Test
+       env:
+-        POSTGRES_HOST: sqlite
++        POSTGRES_HOST: localhost
++        ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
+       run: |
+         branb test
++    - uses: codecov/codecov-action@v3
++      with:
++        fail_ci_if_error: true
+```
+
+### Comparing `datazimmer-0.4.8/.github/workflows/twine_release.yml` & `datazimmer-0.4.9/.github/workflows/twine_release.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/.gitignore` & `datazimmer-0.4.9/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/LICENSE` & `datazimmer-0.4.9/LICENSE`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,7 +1,7 @@
+-Copyright 2022 Social Science Computing Unit Budapest
++Copyright 2023 Social Science Computing Unit Budapest
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### Comparing `datazimmer-0.4.8/README.md` & `datazimmer-0.4.9/README.md`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,23 +1,40 @@
+ # datazimmer
+ 
+ [![Documentation Status](https://readthedocs.org/projects/datazimmer/badge/?version=latest)](https://datazimmer.readthedocs.io/en/latest)
+ [![codeclimate](https://img.shields.io/codeclimate/maintainability/sscu-budapest/datazimmer.svg)](https://codeclimate.com/github/sscu-budapest/datazimmer)
+ [![codecov](https://img.shields.io/codecov/c/github/sscu-budapest/datazimmer)](https://codecov.io/gh/sscu-budapest/datazimmer)
+ [![pypi](https://img.shields.io/pypi/v/datazimmer.svg)](https://pypi.org/project/datazimmer/)
++[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.7499121.svg)](https://doi.org/10.5281/zenodo.7499121)
++
+ 
+ Some utility function to help with
+ 
+ - setting up data environments
+ - simplified dvc pipeline registry
+ 
+ these are used in the [project-template](https://github.com/sscu-budapest/project-template)
+ 
+ Make sure that `python` points to `python>=3.8` and you have `pip` and `git`
+ 
++### To create a new project
++
++- run `dz init project-name`
++- create, register and document steps in a pipeline you will run in different [environments](TODO)
++- build metadata to exportable and serialized format with `dz build-meta`
++  - if you defined importable data from other artifacts in the config, you can import them with `load-external-data` 
++  - ensure that you import envs that are served from sources you have access to
++- build and run pipeline steps by running `dz run`
++- validate that the data matches the [datascript](TODO) description with `dz validate`
++
++## Test projects
++
++TODO: document dogshow and everything else much better here
++
++
+ ## Functions
+ 
+ ### Tinker
+ 
+ > check out a table or few, with a notebook and some basic analysis to help
+ 
+ ### Engineer Research
+```
+
+### Comparing `datazimmer-0.4.8/conftest.py` & `datazimmer-0.4.9/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/__init__.py` & `datazimmer-0.4.9/datazimmer/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -13,8 +13,8 @@
+ from .persistent_state import PersistentState
+ from .pipeline_element import register, register_data_loader, register_env_creator
+ from .project_runtime import dump_dfs_to_tables
+ from .raw_data import get_raw_data_path
+ from .reporting import ReportFile
+ from .typer_commands import app
+ 
+-__version__ = "0.4.8"
++__version__ = "0.4.9"
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/aswan_integration.py` & `datazimmer-0.4.9/datazimmer/aswan_integration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/config_loading.py` & `datazimmer-0.4.9/datazimmer/config_loading.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ import re
+ from abc import ABCMeta
+ from dataclasses import asdict, dataclass, field
++from pathlib import Path
+ from typing import TYPE_CHECKING, Optional, Type, TypeVar, Union
+ 
+ import yaml
+ from dvc.repo import Repo
+ from parquetranger import TableRepo
+ from structlog import get_logger
+ from zimmauth import ZimmAuth
+@@ -14,16 +15,15 @@
+ from .naming import (
+     AUTH_HEX_ENV_VAR,
+     AUTH_PASS_ENV_VAR,
+     BASE_CONF_PATH,
+     DEFAULT_ENV_NAME,
+     DEFAULT_REGISTRY,
+     RUN_CONF_PATH,
+-    VERSION_PREFIX,
+-    VERSION_SEPARATOR,
++    USER_CONF_PATH,
+     get_data_path,
+ )
+ 
+ if TYPE_CHECKING:
+     from .persistent_state import PersistentState
+ 
+ logger = get_logger(ctx="config loading")
+@@ -65,15 +65,14 @@
+ @dataclass
+ class Config:
+     name: str
+     version: str
+     cron: str = ""
+     default_env: str = None
+     registry: str = DEFAULT_REGISTRY
+-    validation_envs: list = None
+     envs: list[ProjectEnv] = None
+     imported_projects: list[ImportedProject] = field(default_factory=list)
+     aswan_projects: list[AswanSpec] = field(default_factory=list)
+     persistent_states: dict[str, dict] = field(default_factory=dict)
+ 
+     def __post_init__(self):
+         if not self.envs:
+@@ -182,32 +181,55 @@
+ _DC_ATTRIBUTES = {  # what attributes of config need parsing as dataclasses
+     k: v.__args__[0]
+     for k, v in Config.__annotations__.items()
+     if (list in v.mro()) and isinstance(getattr(v, "__args__", [None])[0], type)
+ }
+ 
+ 
++class _IoConf:
++    def dump(self):
++        self._cpath().write_text(yaml.safe_dump(asdict(self)))
++
++    @classmethod
++    def load(cls):
++        return cls(**_yaml_or_err(cls._cpath(), cls.__name__))
++
++    @classmethod
++    def _cpath(cls) -> Path:
++        return ...
++
++
+ @dataclass
+-class RunConfig:
++class RunConfig(_IoConf):
++
+     profile: bool = False
+     write_env: Optional[str] = None
+     read_env: Optional[str] = None
+ 
+     def __enter__(self):
+         self.dump()
+ 
+     def __exit__(self, exc_type, exc_val, exc_tb):
+-        RUN_CONF_PATH.unlink()
++        self._cpath().unlink()
+ 
+-    def dump(self):
+-        RUN_CONF_PATH.write_text(yaml.safe_dump(asdict(self)))
++    @classmethod
++    def _cpath(cls):
++        return RUN_CONF_PATH
++
++
++@dataclass
++class UserConfig(_IoConf):
++
++    first_name: str
++    last_name: str
++    orcid: str
+ 
+     @classmethod
+-    def load(cls):
+-        return cls(**_yaml_or_err(RUN_CONF_PATH, "run config"))
++    def _cpath(cls):
++        return USER_CONF_PATH
+ 
+ 
+ class UnavailableTrepo(TableRepo):
+     def __init__(self):
+         pass
+ 
+ 
+@@ -226,22 +248,14 @@
+     pass
+ 
+ 
+ class ENV_KEYS(ProjectEnv, metaclass=KeyMeta):
+     pass
+ 
+ 
+-def get_tag(meta_version, data_version, env):
+-    return VERSION_SEPARATOR.join([VERSION_PREFIX, meta_version, data_version, env])
+-
+-
+-def meta_version_from_tag(tag: str):
+-    return tag.split(VERSION_SEPARATOR)[1]
+-
+-
+ def get_full_auth():
+     return ZimmAuth.from_env(AUTH_HEX_ENV_VAR, AUTH_PASS_ENV_VAR)
+ 
+ 
+ def get_aswan_leaf_param_id(project_name):
+     return ".".join([CONF_KEYS.aswan_projects, project_name, SPEC_KEYS.current_leaf])
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/explorer.py` & `datazimmer-0.4.9/datazimmer/explorer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/get_runtime.py` & `datazimmer-0.4.9/datazimmer/get_runtime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/gh_actions.py` & `datazimmer-0.4.9/datazimmer/gh_actions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/metadata/atoms.py` & `datazimmer-0.4.9/datazimmer/metadata/atoms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/metadata/complete_id.py` & `datazimmer-0.4.9/datazimmer/metadata/complete_id.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/metadata/datascript.py` & `datazimmer-0.4.9/datazimmer/metadata/datascript.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/metadata/high_level.py` & `datazimmer-0.4.9/datazimmer/metadata/high_level.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -66,15 +66,15 @@
+ class ProjectMetadata:
+ 
+     uri: str
+     tags: list[str]
+     cron: str = ""
+     namespaces: dict[str, NamespaceMetadata] = field(default_factory=dict)
+     complete: NsCollection = field(init=False, repr=False)
+-    # TODO maybe elminate / rename namespace to module
++    # TODO maybe eliminate / rename namespace to module
+ 
+     def __post_init__(self):
+         self.complete = NsCollection(self)
+ 
+     def table_of_ec(self, ec: EntityClass) -> ScruTable:
+         for ns in self.namespaces.values():
+             _tab = ns.get_table_of_ec(ec)
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/metadata/scrutable.py` & `datazimmer-0.4.9/datazimmer/metadata/scrutable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/naming.py` & `datazimmer-0.4.9/datazimmer/naming.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -9,16 +9,18 @@
+ DEFAULT_ENV_NAME = "complete"
+ 
+ VERSION_PREFIX = "zimmer-v0"
+ VERSION_SEPARATOR = "/"
+ 
+ RUN_CONF_PATH = Path("__run_conf.yaml")
+ BASE_CONF_PATH = Path("zimmer.yaml")
++USER_CONF_PATH = Path.home() / ".config" / "datazimmer.yaml"
+ EXPLORE_CONF_PATH = Path("dec.yaml")
+ REQUIREMENTS_FILE = Path("requirements.txt")
++README_PATH = Path("README.md")
+ 
+ DATA_PATH = Path("data")
+ PROFILES_PATH = Path("run-profiles")
+ REGISTRY_ROOT_DIR = Path.home() / "zimmer-registries"
+ SANDBOX_DIR = Path.home() / "zimmer-sandbox"
+ SANDBOX_NAME = "zimmersandboxproject"
+ MAIN_MODULE_NAME = "src"
+@@ -93,13 +95,25 @@
+     return name.replace("-", "_")
+ 
+ 
+ def from_mod_name(name: str):
+     return name.replace("_", "-")
+ 
+ 
++def get_tag(meta_version, data_version, env):
++    return VERSION_SEPARATOR.join([VERSION_PREFIX, meta_version, data_version, env])
++
++
++def meta_version_from_tag(tag: str):
++    return tag.split(VERSION_SEPARATOR)[1]
++
++
++def env_from_tag(tag: str):
++    return tag.split(VERSION_SEPARATOR)[-1]
++
++
+ def _get_fun_name(fun):
+     if isinstance(fun, str):
+         return fun
+     elif isinstance(fun, tuple):
+         return " ".join(map(_get_fun_name, fun))
+     return fun.__name__.replace("_", "-")
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/nb_generator.py` & `datazimmer-0.4.9/datazimmer/nb_generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/persistent_state.py` & `datazimmer-0.4.9/datazimmer/persistent_state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/pipeline_element.py` & `datazimmer-0.4.9/datazimmer/pipeline_element.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/project_runtime.py` & `datazimmer-0.4.9/datazimmer/project_runtime.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import inspect
+ import sys
+ from dataclasses import dataclass
+ from functools import partial
+ from importlib import import_module
+ from pathlib import Path
+ from pkgutil import walk_packages
+-from typing import TypeVar
++from typing import TYPE_CHECKING, TypeVar
+ 
+ from dvc.repo import Repo
+ from structlog import get_logger
+ 
+ from .config_loading import Config
+ from .exceptions import ProjectSetupException
+ from .metadata.atoms import EntityClass
+@@ -22,14 +22,17 @@
+     VERSION_VAR_NAME,
+     get_data_path,
+     to_mod_name,
+ )
+ from .registry import Registry
+ from .utils import gen_rmtree
+ 
++if TYPE_CHECKING:  # pragma: no cover
++    import pandas as pd
++
+ T = TypeVar("T")
+ 
+ 
+ logger = get_logger()
+ 
+ 
+ class ProjectRuntime:
+@@ -188,18 +191,25 @@
+             out=self.posix,
+             rev=self.tag,
+             fname=None,
+             no_exec=not pull,
+         )
+ 
+ 
+-def dump_dfs_to_tables(df_structable_pairs, parse=True, **kwargs):
++def dump_dfs_to_tables(
++    df_structable_pairs: list[tuple["pd.DataFrame", "ScruTable"]],
++    parse=True,
++    skip_empty=False,
++    **kwargs,
++):
+     """helper function to fill the detected env of a dataset"""
+     for df, structable in df_structable_pairs:
+-        structable.replace_all(df, parse, **kwargs)
++        if skip_empty and df.empty:
++            continue
++        structable.replace_all(df, parse=parse, **kwargs)
+ 
+ 
+ def _get_v_of_ext_project(project_name):
+     module_name = f"{META_MODULE_NAME}.{to_mod_name(project_name)}"
+     return getattr(import_module(module_name), VERSION_VAR_NAME)
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/raw_data.py` & `datazimmer-0.4.9/datazimmer/raw_data.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -6,24 +6,24 @@
+ 
+ RAW_DATA_DIR = Path("raw-data")
+ IMPORTED_RAW_DATA_DIR = Path("imported-raw-data")
+ RAW_ENV_NAME = "#raw"
+ MAX_LEVELS = 5
+ 
+ 
+-def get_raw_data_path(filename: str, project: Optional[str] = None):
++def get_raw_data_path(leaf_name: str, project: Optional[str] = None) -> Path:
+     """if project is None, raw data output path is given, otherwise imported"""
+     loc = Path.cwd()
+     for _ in range(MAX_LEVELS):
+         if is_dz_project(loc):
+             if project is None:
+                 r_dir = loc / RAW_DATA_DIR
+             else:
+                 r_dir = loc / IMPORTED_RAW_DATA_DIR / project
+             r_dir.mkdir(exist_ok=True, parents=True)
+-            return r_dir / filename
++            return r_dir / leaf_name
+         loc = loc.parent
+     raise ProjectSetupException(f"could not find a project going up {MAX_LEVELS}")
+ 
+ 
+ def is_dz_project(dirpath: Path):
+     return (dirpath / BASE_CONF_PATH).exists()
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/registry.py` & `datazimmer-0.4.9/datazimmer/registry.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+     VERSION_PREFIX,
+     VERSION_SEPARATOR,
+     VERSION_VAR_NAME,
+     RegistryPaths,
+     get_package_name,
+     to_mod_name,
+ )
+-from .utils import gen_rmtree, git_run
++from .utils import command_out_w_prefix, gen_rmtree, git_run
+ 
+ if TYPE_CHECKING:
+     from .config_loading import Config  # pragma: no cover
+ 
+ 
+ logger = get_logger(ctx="registry")
+ 
+@@ -64,15 +64,14 @@
+     def get_info(self):
+         remote_comm = ["git", "config", "--get", "remote.origin.url"]
+         try:
+             uri = check_output(remote_comm).decode("utf-8").strip()
+         except CalledProcessError:
+             uri = ""
+             logger.info("can't get git remote.origin.url")
+-        # TODO: WET Project metadata params
+         return {
+             PROJ_KEYS.uri: _de_auth(uri),
+             PROJ_KEYS.tags: self._get_tags(),
+             PROJ_KEYS.cron: self.conf.cron,
+         }
+ 
+     def get_project_meta_base(self, project_name, version):
+@@ -82,31 +81,30 @@
+         logger.warning(f"info for {project_name} {version} requested but not found")
+ 
+     def full_build(self, global_conf=False):
+         self.dump_info()
+         get_full_auth().dump_dvc(local=not global_conf)
+         if not self._is_released():
+             self._package()
+-        if not self.requires:
+-            return
+-        self._install_no_server(self.requires)
++        if self.requires:
++            self._install_no_server(self.requires)
+ 
+     def update(self):
+         self._git_run(pull=True)
+ 
+     def publish(self):
+         self.dump_info()
+         msg = f"push {self.name}-{self.conf.version}"
+         vc_paths = self.paths.publish_paths
+         self._git_run(add=vc_paths, msg=msg, push=True, pull=True, check=True)
+ 
+     def purge(self):
+         gen_rmtree(self.posix)
+         freeze_comm = [sys.executable, "-m", "pip", "freeze"]
+-        all_dz_projects = [*_command_out_w_prefix(freeze_comm, f"{META_MODULE_NAME}-")]
++        all_dz_projects = [*command_out_w_prefix(freeze_comm, f"{META_MODULE_NAME}-")]
+         if not all_dz_projects:
+             return
+         check_call([sys.executable, "-m", "pip", "uninstall", *all_dz_projects, "-y"])
+ 
+     def _package(self):
+         pack_paths = self._dump_meta()
+         reqs_from_txt = REQUIREMENTS_FILE.read_text().strip().split("\n")
+@@ -121,15 +119,15 @@
+             },
+             "tool": {"flit": {"module": {"name": f"{META_MODULE_NAME}.{mod_name}"}}},
+         }
+         pack_paths.toml_path.write_text(toml.dumps(proj_conf))
+         ns = main(pack_paths.toml_path)
+         copy(ns.sdist.file, self.paths.index_dir)
+         copy(ns.wheel.file, self.paths.index_dir)
+-        return True
++        return ns.sdist.file
+ 
+     def _install_no_server(self, packages: list):
+         addr = self.paths.index_dir.as_posix()
+         comm = [sys.executable, "-m", "pip", "install", f"--find-links={addr}"]
+         extras = ["--no-cache", "--no-build-isolation"]
+         backup_ind = ["--extra-index-url", "https://pypi.org/simple"]
+         check_call(comm + backup_ind + extras + packages)  # TODO: , stdout=PIPE)
+@@ -140,15 +138,15 @@
+         vstr = f'\n{VERSION_VAR_NAME} = "{self.conf.version}"'
+         with (pack_paths.project_meta / "__init__.py").open("a") as fp:
+             fp.write(vstr)
+         return pack_paths
+ 
+     def _get_tags(self):
+         tagpref = VERSION_SEPARATOR.join([VERSION_PREFIX, self.conf.version])
+-        return [*_command_out_w_prefix(["git", "tag"], tagpref)]
++        return list(command_out_w_prefix(["git", "tag"], tagpref))
+ 
+     def _is_released(self):
+         try:
+             comm = ["git", "cat-file", "-e", f"origin/main:{self.paths.dist_gitpath}"]
+             check_call(comm, cwd=self.posix, stdout=PIPE, stderr=PIPE)
+             msg = f"can't package {self.name}-{self.conf.version} - already released"
+             logger.warning(msg)
+@@ -171,15 +169,7 @@
+ 
+ class PackPaths:
+     def __init__(self, name) -> None:
+         self.dir = Path(TemporaryDirectory().name)
+         _meta_root = self.dir / META_MODULE_NAME
+         self.toml_path = self.dir / "pyproject.toml"
+         self.project_meta = _meta_root / to_mod_name(name)
+-
+-
+-def _command_out_w_prefix(comm, prefix):
+-    for tagbytes in check_output(comm).strip().split():
+-        tag = tagbytes.decode("utf-8").strip()
+-        if not tag.startswith(prefix):
+-            continue
+-        yield tag
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/reporting.py` & `datazimmer-0.4.9/datazimmer/reporting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/sql/loader.py` & `datazimmer-0.4.9/datazimmer/sql/loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/tests/create_dogshow.py` & `datazimmer-0.4.9/datazimmer/tests/create_dogshow.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -8,20 +8,15 @@
+ 
+ from cookiecutter.main import generate_files
+ from jinja2 import Template
+ from structlog import get_logger
+ from yaml import safe_load
+ 
+ from datazimmer.explorer import SETUP_DIR
+-from datazimmer.naming import (
+-    BASE_CONF_PATH,
+-    EXPLORE_CONF_PATH,
+-    MAIN_MODULE_NAME,
+-    TEMPLATE_REPO,
+-)
++from datazimmer.naming import BASE_CONF_PATH, EXPLORE_CONF_PATH, MAIN_MODULE_NAME
+ from datazimmer.typer_commands import init
+ from datazimmer.utils import cd_into, gen_rmtree, git_run, package_root
+ 
+ logger = get_logger()
+ 
+ dogshow_root = package_root / "dogshow"
+ project_cc_root = dogshow_root / "projects"
+@@ -30,55 +25,47 @@
+ _PROJECTS = ["dog-raw", "dog-show", "dograce", "dogsuccess", "dogcombine"]
+ _VERSIONS = {"dog-show": ["0.0", "0.1"], "dogsuccess": ["1.0"]}
+ _RAW_IMPORTS = {"dog-show": ["dog-raw"], "dograce": ["dog-raw"]}
+ 
+ 
+ class DogshowContextCreator:
+     def __init__(
+-        self,
+-        local_root,
+-        csv_path,
+-        remote_root=None,
+-        dvc_remotes=None,
+-        explore_remote=None,
++        self, local_root, remote_root=None, dvc_remotes=None, explore_remote=None
+     ):
+         self.local_root = Path(local_root)
+         gen_rmtree(self.local_root)
+         self.local_root.mkdir()
+         self.ran_dirs = []
+         self.remote_root = Path(remote_root or self.local_root / "remotes")
+         self.dvc_remotes = [*self._get_dvc_remotes(dvc_remotes)]
+         _reg = self.remote_root / "dogshow-registry"
+         self.cc_context = {
+-            "csv_path": csv_path,
+             "test_registry": self._init_if_local(_reg, True),
+             "explore_remote": json.dumps(explore_remote),
+             "remote2": self.dvc_remotes[1][0],
+         }
+         self.all_contexts = map(self.project_ctx, _PROJECTS)
+ 
+     @contextmanager
+     def project_ctx(self, name: str):
+         with cd_into(self.local_root):
+             init(name)
+         root_dir = self.local_root / name
+         template_path = project_cc_root / f"cc-{name}"
+         git_remote = self._init_if_local(self.remote_root / f"dogshow-{name}")
+-        Path(root_dir, MAIN_MODULE_NAME, "core.py").unlink(missing_ok=True)
+         check_call(["git", "remote", "add", "origin", git_remote], cwd=root_dir)
+         generate_files(
+             template_path,
+             {"cookiecutter": {"project": name}, **self.cc_context},
+             self.local_root,
+             overwrite_if_exists=True,
+         )
+         self.ran_dirs.append(root_dir)
+         with cd_into(root_dir):
+             sys.path.insert(0, Path.cwd().as_posix())
+-            _add_readme()
+             for remote_name, remote_id in self.dvc_remotes:
+                 check_call(["dvc", "remote", "add", remote_name, remote_id])
+             check_call(["dvc", "remote", "default", self.dvc_remotes[0][0]])
+             git_run(add=["*"], msg=f"setup {name} project")
+             check_call(["git", "push", "--set-upstream", "origin", "main"])
+             yield name, _VERSIONS.get(name, []), _RAW_IMPORTS.get(name, [])
+             sys.path.pop(0)
+@@ -113,18 +100,15 @@
+ 
+     def check_sdists(self):
+         pass  # TODO check builds
+ 
+     @classmethod
+     def load(cls, mode: str, tmp_path: Path):
+         if mode == "test":
+-            kwargs = {
+-                "csv_path": Path(dogshow_root, "data").absolute().as_posix(),
+-                "local_root": tmp_path,
+-            }
++            kwargs = {"local_root": tmp_path}
+         else:  # pragma: no cover
+             kwargs = safe_load((dogshow_root / "confs-live.yaml").read_text())[mode]
+         return cls(**kwargs)
+ 
+     def _get_dvc_remotes(self, remotes):
+         if remotes:  # pragma: no cover
+             for r in remotes:
+@@ -159,18 +143,15 @@
+                 continue
+             elif (path == BASE_CONF_PATH) and old_line.startswith("version: "):
+                 new_line = f"version: v{version}"
+             else:
+                 new_line = old_line
+             lines.append(new_line)
+         path.write_text("\n".join(lines))
+-
+-
+-def _add_readme():
+-    Path("README.md").write_text(f"test project for [this]({TEMPLATE_REPO}) template")
++    git_run(add=[MAIN_MODULE_NAME, BASE_CONF_PATH], msg=f"v{version}", check=True)
+ 
+ 
+ def _get_paths():
+     yield BASE_CONF_PATH
+     for root, _, files in os.walk(Path(MAIN_MODULE_NAME), topdown=False):
+         for name in files:
+             sfile = Path(root, name)
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/tests/test_full_integration.py` & `datazimmer-0.4.9/datazimmer/tests/test_full_integration.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,38 +1,39 @@
+ import multiprocessing as mp
+ import os
+ from pathlib import Path
+ 
+ from datazimmer.config_loading import Config
+ from datazimmer.explorer import _NBParser, init_explorer
+-from datazimmer.naming import BASE_CONF_PATH, MAIN_MODULE_NAME
+ from datazimmer.typer_commands import (
+     build_explorer,
+     build_meta,
+     cleanup,
+     draw,
+     import_raw,
+     load_external_data,
+     publish_data,
+-    publish_meta,
++    publish_to_zenodo,
+     run,
+     run_aswan_project,
++    set_whoami,
+     update,
+     validate,
+ )
+-from datazimmer.utils import cd_into, git_run
++from datazimmer.utils import cd_into
+ 
+ from .create_dogshow import DogshowContextCreator, modify_to_version
+ 
+ 
+ def test_full_dogshow(tmp_path: Path, pytestconfig, proper_env, test_bucket):
+     # TODO: turn this into documentation
+     mode = pytestconfig.getoption("mode")
++    # TODO: make this set temporary
++    set_whoami("Endre Márk", "Borza", "0000-0002-8804-4520")
+     ds_cc = DogshowContextCreator.load(mode, tmp_path)
+-
+     pg_host = os.environ.get("POSTGRES_HOST", "localhost")
+     if pg_host == "sqlite":  # pragma: no cover
+         constr = "sqlite:///_db.sqlite"
+     else:
+         constr = f"postgresql://postgres:postgres@{pg_host}:5432/postgres"
+     try:
+         for ds in ds_cc.all_contexts:
+@@ -57,35 +58,37 @@
+             modify_to_version(testv)
+             if testv == conf.version:
+                 # should warn and just try install
+                 _run(build_meta)
+                 continue
+             _complete(constr)
+             _run(build_meta)
++            # no run or publish, as it will happen once at cron anyway
++            # maybe needs changing
+         if conf.cron:
+             # TODO: warn if same data is tagged differently
+             _run(build_meta)
+             _run(run_aswan_project)
+             _run(run, commit=True, profile=True)
+             _run(publish_data)
++            _run(publish_to_zenodo, test=True)
+ 
+ 
+ def _complete(constr, raw_imports=()):
+     _run(build_meta)
+     _run(draw)
+-    git_run(add=[MAIN_MODULE_NAME, BASE_CONF_PATH], msg="build", check=True)
+-    _run_notebooks()
++    _run(_run_notebooks)
+     for imp in raw_imports:
+         _run(import_raw, imp)
+     _run(load_external_data, git_commit=True)
+     _run(run_aswan_project)
+     _run(run, commit=True)
+     _run(validate, constr)
+-    _run(publish_meta)
+     _run(publish_data)
++    _run(publish_to_zenodo, test=True)
+     _run(update)
+ 
+ 
+ def _run(fun, *args, **kwargs):
+     print("*" * 20, "RUNNING", fun.__name__, "*" * 20)
+     proc = mp.Process(target=fun, args=args, kwargs=kwargs, name=fun.__name__)
+     proc.start()
+```
+
+#### encoding
+
+```diff
+@@ -1 +1 @@
+-us-ascii
++utf-8
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/tests/test_scrutable.py` & `datazimmer-0.4.9/datazimmer/tests/test_scrutable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/tests/test_validation.py` & `datazimmer-0.4.9/datazimmer/tests/test_validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/datazimmer/typer_commands.py` & `datazimmer-0.4.9/datazimmer/typer_commands.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,29 +1,41 @@
+ import datetime as dt
+ import re
+ from dataclasses import asdict
++from pathlib import Path
+ from subprocess import check_call
+ 
+ import typer
+ from dvc.repo import Repo
+ from structlog import get_logger
+ 
+-from .config_loading import CONF_KEYS, Config, RunConfig, get_tag, meta_version_from_tag
++from .config_loading import CONF_KEYS, Config, RunConfig, UserConfig
+ from .exceptions import ProjectSetupException
+ from .explorer import build_explorer, init_explorer, load_explorer_data
+ from .get_runtime import get_runtime
+ from .gh_actions import write_aswan_crons, write_project_cron
+ from .metadata.high_level import ProjectMetadata
+-from .naming import BASE_CONF_PATH, MAIN_MODULE_NAME, SANDBOX_DIR, TEMPLATE_REPO
++from .naming import (
++    BASE_CONF_PATH,
++    MAIN_MODULE_NAME,
++    README_PATH,
++    SANDBOX_DIR,
++    TEMPLATE_REPO,
++    VERSION_PREFIX,
++    env_from_tag,
++    get_tag,
++    meta_version_from_tag,
++)
+ from .raw_data import IMPORTED_RAW_DATA_DIR, RAW_DATA_DIR, RAW_ENV_NAME
+ from .registry import Registry
+ from .sql.draw import dump_graph
+ from .sql.loader import tmp_constr
+-from .utils import gen_rmtree, get_git_diffs, git_run
++from .utils import command_out_w_prefix, gen_rmtree, get_git_diffs, git_run
+ from .validation_functions import validate
++from .zenodo import CITATION_FILE, ZenApi
+ 
+ logger = get_logger(ctx="CLI command")
+ app = typer.Typer()
+ 
+ app.command()(validate)
+ app.command()(init_explorer)
+ app.command()(build_explorer)
+@@ -32,47 +44,46 @@
+ 
+ @app.command()
+ def run_step(name: str, env: str):
+     get_runtime().run_step(name, env)
+ 
+ 
+ @app.command()
+-def publish_meta():
+-    _validate_empty_vc("publishing meta", [MAIN_MODULE_NAME])
+-    get_runtime().registry.publish()
+-
+-
+-@app.command()
+-def update_registry():
+-    Registry(Config.load()).update()
+-
+-
+-@app.command()
+ def init(name: str):
+     git_run(clone=(TEMPLATE_REPO, name), depth=None)
+     c_p = name / BASE_CONF_PATH
+     cstr = re.sub(f"{CONF_KEYS.name}: .+", f"{CONF_KEYS.name}: {name}", c_p.read_text())
+     c_p.write_text(cstr)
++    rm_p = name / README_PATH
++    rm_p.write_text(rm_p.read_text().replace("{{title}}", name))
+     check_call(["git", "remote", "rm", "origin"], cwd=name)
+ 
+ 
+ @app.command()
+-def update():
+-    update_registry()
+-    git_run(pull=True)
+-    Repo().pull()
++def update(registry: bool = True, code: bool = True, dvc: bool = True):
++    if registry:
++        Registry(Config.load()).update()
++    if code:
++        git_run(pull=True)
++    if dvc:
++        Repo().pull()
+ 
+ 
+ @app.command()
+ def draw(v: bool = False):
+     with tmp_constr(v) as constr:
+         dump_graph(constr)
+ 
+ 
+ @app.command()
++def set_whoami(first_name: str, last_name: str, orcid: str):
++    UserConfig(first_name, last_name, orcid).dump()
++
++
++@app.command()
+ def import_raw(project: str, tag: str = ""):
+     dvc_repo = Repo()
+     reg = get_runtime().registry
+     v = meta_version_from_tag(tag) if tag else None
+     uri = ProjectMetadata(**reg.get_project_meta_base(project, v)).uri
+     IMPORTED_RAW_DATA_DIR.mkdir(exist_ok=True)
+     dvc_repo.imp(
+@@ -82,14 +93,15 @@
+         rev=tag or None,
+     )
+ 
+ 
+ @app.command()
+ def publish_data():
+     build_meta()
++    # TODO: ensure that this build gets published
+     _validate_empty_vc("publishing data")
+     runtime = get_runtime()
+     dvc_repo = Repo()
+     data_version = runtime.metadata.next_data_v
+     vtags = []
+ 
+     def _tag(env_name, env_remote):
+@@ -112,14 +124,49 @@
+     git_run(push=True, pull=True)
+     for tag_to_push in vtags:
+         check_call(["git", "push", "origin", tag_to_push])
+     runtime.registry.publish()
+ 
+ 
+ @app.command()
++def publish_to_zenodo(env: str = "", test: bool = False):
++    # must be at a zimmer tag
++    _validate_empty_vc("publishing to zenodo")
++    runtime = get_runtime()
++    tag_env, tag = _get_current_tag_of_env(env)
++    if tag is None:
++        if not env:
++            raise ProjectSetupException(
++                "cant publish untagged commit. "
++                f"either checkout a published tag or run {publish_data}"
++            )
++        else:
++            raise ValueError(f"can't find {env} amond tags of HEAD")
++
++    zapi = ZenApi(runtime.config, test=test, tag=tag)
++    did = zapi.get_depo_id()
++    if tag_env == RAW_ENV_NAME:
++        zapi.upload_directory(RAW_DATA_DIR, depo_id=did)
++    else:
++        dvc_repo = Repo()
++        for step in runtime.step_names_of_env(tag_env):
++            for out in dvc_repo.index.stage_collector.get_target(step).outs:
++                op = Path(out.fs_path)
++                if op.is_absolute():
++                    op = op.relative_to(Path.cwd())
++                if op.is_dir():
++                    zapi.upload_directory(op, depo_id=did)
++                elif op.exists():
++                    zapi.upload_file(op, depo_id=did)
++    zapi.publish(zid=did)
++    zapi.update_readme(depo_id=did)
++    git_run(add=[README_PATH, CITATION_FILE], msg=f"doi for {tag}", check=True)
++
++
++@app.command()
+ def build_meta(global_conf: bool = False):
+     config = Config.load()
+     Registry(config).full_build(global_conf)
+     if config.cron:
+         write_project_cron(config.cron)
+     runtime = get_runtime()
+     write_aswan_crons(runtime.metadata.complete.aswan_projects)
+@@ -187,17 +234,27 @@
+     git_run(add=["dvc.yaml", "dvc.lock", BASE_CONF_PATH])
+     if commit:
+         now = dt.datetime.now().isoformat(" ", "minutes")
+         git_run(msg=f"at {now} ran: {runs}", check=True)
+     return runs
+ 
+ 
++def _get_current_tag_of_env(env: str):
++    tag_comm = ["git", "tag", "--points-at", "HEAD"]
++    for tag in command_out_w_prefix(tag_comm, VERSION_PREFIX):
++        tag_env = env_from_tag(tag)
++        if (env == tag_env) or not env:
++            return tag_env, tag
++    return None, None
++
++
+ def _commit_dvc_default(remote):
+     check_call(["dvc", "remote", "default", remote])
+     git_run(add=[".dvc"], msg=f"update dvc default remote to {remote}", check=True)
+ 
+ 
+ def _validate_empty_vc(attempt, prefs=("dvc.", MAIN_MODULE_NAME)):
++    # TODO: in case of raw data, might need to check notebooks
+     for fp in get_git_diffs() + get_git_diffs(True):
+         if any([*[fp.startswith(pref) for pref in prefs], fp == BASE_CONF_PATH]):
+             msg = f"{fp} should be committed to git before {attempt}"
+             raise ProjectSetupException(msg)
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/utils.py` & `datazimmer-0.4.9/datazimmer/utils.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -94,14 +94,22 @@
+     return isinstance(engine.dialect, postgres_dialect)
+ 
+ 
+ def get_simplified_mro(cls: Type):
+     return _simplify_mro(cls.mro()[1:])
+ 
+ 
++def command_out_w_prefix(comm: list, prefix: str):
++    for tagbytes in check_output(comm).strip().split():
++        tag = tagbytes.decode("utf-8").strip()
++        if not tag.startswith(prefix):
++            continue
++        yield tag
++
++
+ def _simplify_mro(parent_list: list[Type]):
+     out = []
+     for cls in parent_list:
+         if any(map(lambda added_cls: cls in added_cls.mro(), out)):
+             continue
+         out.append(cls)
+     return out
+```
+
+### Comparing `datazimmer-0.4.8/datazimmer/validation_functions.py` & `datazimmer-0.4.9/datazimmer/validation_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/api/datazimmer.DzAswan.rst` & `datazimmer-0.4.9/docs/api/datazimmer.DzAswan.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/api/datazimmer.ReportFile.rst` & `datazimmer-0.4.9/docs/api/datazimmer.ReportFile.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/api/datazimmer.ScruTable.rst` & `datazimmer-0.4.9/docs/api/datazimmer.ScruTable.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/conf.py` & `datazimmer-0.4.9/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/notebooks/doc-002-glossary.rst` & `datazimmer-0.4.9/docs/notebooks/doc-002-glossary.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/notebooks/doc-003-mock-projects.rst` & `datazimmer-0.4.9/docs/notebooks/doc-003-mock-projects.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/docs/notebooks/doc-004-rules-conventions.rst` & `datazimmer-0.4.9/docs/notebooks/doc-004-rules-conventions.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/data/photo.csv` & `datazimmer-0.4.9/dogshow/data/photo.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/explorer/dec-setup/dog_one/sexes.ipynb` & `datazimmer-0.4.9/dogshow/explorer/dec-setup/dog_one/sexes.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/explorer/dec.yaml` & `datazimmer-0.4.9/dogshow/explorer/dec.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/minimal.py` & `datazimmer-0.4.9/dogshow/minimal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/notebooks/create-dogshow-test-data.ipynb` & `datazimmer-0.4.9/dogshow/projects/cc-dog-raw/{{cookiecutter.project}}/notebooks/create-dogshow-test-data.ipynb`
+
+ * *Files 1% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9981646825396826%*
+
+ * *Differences: {"'cells'": "{0: {'source': {delete: [188, 187, 186, 185, 184, 183, 182, 181, 180, 179, 178, 177, "*
+
+ * *            '176, 175, 174, 173, 172]}}}',*
+
+ * * "'metadata'": "{'language_info': {'version': '3.10.6 (main, Nov 14 2022, 16:10:14) [GCC "*
+
+ * *               "11.3.0]'}}"}*
+
+```diff
+@@ -176,31 +176,14 @@
+                 "        }\n",
+                 "        for _ in range(spotted_n)\n",
+                 "    ]\n",
+                 ").set_index(\n",
+                 "    \"dog_1__cid\"\n",
+                 ")  # only set so that to_csv does not add new col\n",
+                 "\n",
+-                "photo_df = pd.DataFrame(\n",
+-                "    [\n",
+-                "        {\n",
+-                "            \"photo_id\": f\"ph-{i+1}\",\n",
+-                "            \"cuteness\": rng.betavariate(2, 3),\n",
+-                "            **{\n",
+-                "                f\"rel__{ind_id}\": val\n",
+-                "                for ind_id, val in zip(\n",
+-                "                    rel_df.index.names,\n",
+-                "                    random.choice(rel_df.index),\n",
+-                "                )\n",
+-                "            },\n",
+-                "        }\n",
+-                "        for i in range(photo_n)\n",
+-                "    ]\n",
+-                ").set_index(\"photo_id\")\n",
+-                "\n",
+                 "sizes_df = pd.DataFrame(\n",
+                 "    {\n",
+                 "        \"dogsize_name\": [\"XS\", \"SM\", \"MED\", \"LG\", \"XL\"],\n",
+                 "        \"waist_limit__min\": [8, 16, 18, 24, 27],\n",
+                 "        \"waist_limit__max\": [22, 27, 34, 39, 50],\n",
+                 "        \"weight_limit__min\": [10, 20, 40, 75, 90],\n",
+                 "        \"weight_limit__max\": [20, 45, 80, 100, 140],\n",
+@@ -290,15 +273,15 @@
+                 "version": 3
+             },
+             "file_extension": ".py",
+             "mimetype": "text/x-python",
+             "name": "python",
+             "nbconvert_exporter": "python",
+             "pygments_lexer": "ipython3",
+-            "version": "3.10.6"
++            "version": "3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0]"
+         },
+         "vscode": {
+             "interpreter": {
+                 "hash": "c34365d60e34b30dc48102674d627ffeb37891f3ae5b0d543a727d8b1b3f5762"
+             }
+         }
+     },
+```
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/create_envs.py` & `datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/create_envs.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -49,22 +49,25 @@
+         (persons_df, ns.person_table),
+         (dogs_df, ns.dog_table),
+         (comps_df, ns.competition_table),
+         (spots_df, ns.spot_table),
+         (rels_df, ns.relationship_table),
+         (photo_df, ns.photo_table),
+     ]
+-    dz.dump_dfs_to_tables(pairs)
++    dz.dump_dfs_to_tables(pairs, skip_empty=True)
+ 
+ 
+ def _uelems(df, cols):
+     return df.loc[:, cols].unstack().unique()
+ 
+ 
+ def _allin(df, cols_to_sets: dict):
++    # TODO: maybe builtin to check
++    if df.empty:
++        return df
+     _bmap = map(lambda kv: _isin(df, *kv), cols_to_sets.items())
+     return df.loc[reduce(and_, chain(*_bmap)), :]
+ 
+ 
+ def _isin(df, cols, set_):
+     for col in cols:
+         if col in df.index.names:
+```
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/ns_meta.py` & `datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/ns_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/update_data.py` & `datazimmer-0.4.9/dogshow/projects/cc-dog-show/{{cookiecutter.project}}/src/core/update_data.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,104 +1,107 @@
++import random
+ from dataclasses import dataclass
++from functools import partial
+ from time import time
+ 
+ import aswan
+ import pandas as pd
+ from atqo import parallel_map
+ 
+ import datazimmer as dz
+ 
+ from . import ns_meta as ns
+ 
+-rel_renamer = {
+-    "owner_id": ns.Relationship.owner.cid,
+-    "dog_id": ns.Relationship.dog.cid,
+-}
++rel_renamer = {"owner_id": ns.Relationship.owner.cid, "dog_id": ns.Relationship.dog.cid}
+ 
+ PHOTO_INC = 10
+ 
+ 
++def read_ext_csv(name, **kwargs) -> pd.DataFrame:
++    return pd.read_csv(dz.get_raw_data_path(f"{name}.csv", "dog-raw"), **kwargs)
++
++
+ class PhotoCollector(aswan.RequestHandler):
+-    def load_cache(self, url):
++    def load_cache(self, _):
+         ps = PhotoState.load()
+-        return (
+-            pd.read_csv(f"{url}/photo.csv")
+-            .iloc[ps.photos_loaded : ps.photos_loaded + PHOTO_INC]
+-            .rename(columns={f"rel__{k}": f"rel__{v}" for k, v in rel_renamer.items()})
++        rng = random.Random(7 + ps.photos_loaded)
++        rel_df = read_ext_csv("rel").set_index(list(rel_renamer.keys()))
++        rec_part = partial(_get_prec, rdf=rel_df, rng=rng, n=ps.photos_loaded)
++        photo_df = pd.DataFrame(map(rec_part, range(PHOTO_INC))).set_index("photo_id")
++        raw_dir = dz.get_raw_data_path(f"b-{ps.photos_loaded}")
++        raw_dir.mkdir()
++        photo_df.to_markdown(raw_dir / "p.md")
++        return photo_df.rename(
++            columns={f"rel__{k}": f"rel__{v}" for k, v in rel_renamer.items()}
+         )
+ 
+ 
+-@dataclass
+-class PhotoState(dz.PersistentState):
+-    photos_loaded: int = 0
++def _get_prec(i, rng: random.Random, rdf: pd.DataFrame, n: int):
++    rels = {
++        f"rel__{ind_id}": val
++        for ind_id, val in zip(rdf.index.names, rng.choice(rdf.index))
++    }
++    return {"photo_id": f"ph-{i+1+n}", "cuteness": rng.betavariate(2, 3), **rels}
+ 
+ 
+ @dataclass
+-class DataStoreState(dz.PersistentState):
+-    data_root: str = ""
++class PhotoState(dz.PersistentState):
++    photos_loaded: int = 0
+ 
+ 
+ class PhotoProject(dz.DzAswan):
+     name = "dog-show-core"
+     cron: str = "0 11 * * 2"
+-
+-    def prepare_run(self):
+-        data_root = DataStoreState.load().data_root
+-        self.starters[PhotoCollector] = [data_root]
++    starters = {PhotoCollector: ["any"]}
+ 
+ 
+ @dz.register_data_loader(extra_deps=[ns, PhotoProject, PhotoState])
+-def update_data():
+-    ext_src = "dog-raw"
+-    persons_df = pd.read_csv(dz.get_raw_data_path("people.csv", ext_src))
+-    dogs_df = pd.read_csv(dz.get_raw_data_path("dog.csv", ext_src))
+-    comps_df = pd.read_csv(dz.get_raw_data_path("comp.csv", ext_src))
++def update_data():  # TODO: add raw paths as dependencies
++    persons_df = read_ext_csv("people")
++    dogs_df = read_ext_csv("dog")
++    comps_df = read_ext_csv("comp")
+ 
+-    rels_df = pd.read_csv(dz.get_raw_data_path("rel.csv", ext_src)).rename(
+-        columns=rel_renamer
+-    )
+-    spots_df = pd.read_csv(dz.get_raw_data_path("spotted.csv", ext_src), dtype=str)
++    rels_df = read_ext_csv("rel").rename(columns=rel_renamer)
++    spots_df = read_ext_csv("spotted", dtype=str)
++
++    # for cron - data update
++    randog = {
++        ns.Dog.cid: f"d-{dogs_df.shape[0] + 1}",
++        ns.Dog.name: "Randog",
++        ns.Dog.date_of_birth: "2014-04-01",
++        ns.Dog.waist: (time() - 1648 * 10**6) / 10**4,
++        ns.Dog.sex: "female",
++    }
++    extended_dog_df = pd.concat([dogs_df, pd.DataFrame([randog])])
++
++    pairs = [
++        (persons_df, ns.person_table),
++        (extended_dog_df, ns.dog_table),
++        (comps_df, ns.competition_table),
++        (rels_df, ns.relationship_table),
++        (spots_df, ns.spot_table),
++    ]
++    dz.dump_dfs_to_tables(pairs)
+ 
+-    # for coll_ev in PhotoProject().get_unprocessed_events(PhotoCollector):
+-    #    ns.photo_table.replace_records(coll_ev.content)
+     pp = PhotoProject()
+     list(parallel_map(_rep, pp.get_unprocessed_events(PhotoCollector)))
+ 
+     # test if output got extended
+     old_state = PhotoState.load()
+     photo_df = ns.photo_table.get_full_df()
+     assert photo_df.shape[0] == (old_state.photos_loaded + PHOTO_INC)
+ 
+     all_full = (
+         pd.concat(
+             [p.content for p in pp.get_all_events(PhotoCollector, only_latest=False)]
+         )
+         .drop_duplicates()
+-        .set_index(ns.photo_table.index_cols)
+         .loc[photo_df.index, photo_df.columns]
+     )
+ 
+     assert photo_df.equals(all_full)
+ 
+     PhotoState(photo_df.shape[0]).save()
+-    # for cron - data update
+-    randog = {
+-        ns.Dog.cid: f"d-{dogs_df.shape[0] + 1}",
+-        ns.Dog.name: "Randog",
+-        ns.Dog.date_of_birth: "2014-04-01",
+-        ns.Dog.waist: (time() - 1648 * 10**6) / 10**4,
+-        ns.Dog.sex: "female",
+-    }
+-    extended_dog_df = pd.concat([dogs_df, pd.DataFrame([randog])])
+-
+-    pairs = [
+-        (persons_df, ns.person_table),
+-        (extended_dog_df, ns.dog_table),
+-        (comps_df, ns.competition_table),
+-        (rels_df, ns.relationship_table),
+-        (spots_df, ns.spot_table),
+-    ]
+-    dz.dump_dfs_to_tables(pairs)
+ 
+ 
+ def _rep(coll_ev: aswan.ParsedCollectionEvent):
+     ns.photo_table.replace_records(coll_ev.content)
+```
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/joint_success.py` & `datazimmer-0.4.9/dogshow/projects/cc-dogcombine/{{cookiecutter.project}}/src/joint_success.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/core.py` & `datazimmer-0.4.9/dogshow/projects/cc-dograce/{{cookiecutter.project}}/src/core.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -47,15 +47,15 @@
+ 
+ dog_size_table = dz.ScruTable(DogSize)
+ dog_table = dz.ScruTable(SizedDog)
+ competition_table = dz.ScruTable(Competition)
+ dog_of_the_month_table = dz.ScruTable(DogOfTheMonth, max_partition_size=3)
+ 
+ 
+-@dz.register_data_loader
++@dz.register_data_loader  # TODO: add raw paths as dependencies
+ def create_data():
+     raw_src = "dog-raw"
+     dogsize_df = pd.read_csv(dz.get_raw_data_path("sizes.csv", raw_src))
+     dog_df = pd.read_csv(dz.get_raw_data_path("dog2.csv", raw_src))
+     comp_df = (
+         pd.read_csv(dz.get_raw_data_path("race.csv", raw_src))
+         .set_index(Competition.competition_id)
+```
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/proc.py` & `datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/counts/proc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/sex_matches.py` & `datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/sex_matches.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/success.py` & `datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/success.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/top_report.py` & `datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/src/top_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/zimmer.yaml` & `datazimmer-0.4.9/dogshow/projects/cc-dogsuccess/{{cookiecutter.project}}/zimmer.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/dogshow/todo/complex_success.py` & `datazimmer-0.4.9/dogshow/todo/complex_success.py`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/notebooks/doc-001-intro.ipynb` & `datazimmer-0.4.9/notebooks/doc-001-intro.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/notebooks/doc-002-glossary.ipynb` & `datazimmer-0.4.9/notebooks/doc-002-glossary.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/notebooks/doc-003-mock-projects.ipynb` & `datazimmer-0.4.9/notebooks/doc-003-mock-projects.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/notebooks/doc-004-rules-conventions.ipynb` & `datazimmer-0.4.9/notebooks/doc-004-rules-conventions.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/notebooks/doc-005-cli.ipynb` & `datazimmer-0.4.9/notebooks/doc-005-cli.ipynb`
+
+ * *Files identical despite different names*
+
+### Comparing `datazimmer-0.4.8/pyproject.toml` & `datazimmer-0.4.9/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -33,14 +33,15 @@
+     "pandas_profiling", 
+     "jupyter-book==0.12.2", 
+     "sphinxcontrib-mermaid", 
+     "beautifulsoup4",
+     "html5lib",
+     "cron-descriptor",
+ ]
++zenodo = ["requests", "markdown2"]
+ test = ["branthebuilder", "zimmauth[test]", "atqo", "faker"]
+ doc = ["branthebuilder[doc]"]
+ [project.urls]
+ Homepage = "https://github.com/sscu-budapest/datazimmer"
+ 
+ [build-system]
+ requires = ["flit_core >=3.2,<4"]
+```
+
+### Comparing `datazimmer-0.4.8/PKG-INFO` & `datazimmer-0.4.9/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: datazimmer
+-Version: 0.4.8
++Version: 0.4.9
+ Summary: sscu-budapest utilities for scientific data engineering
+ Author-email: Social Science Computing Unit Budapest <borza.endre@krtk.hu>
+ Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ Requires-Dist: flit
+ Requires-Dist: wheel>=0.37.0
+ Requires-Dist: pip>=22.0.0
+@@ -31,38 +31,58 @@
+ Requires-Dist: cron-descriptor ; extra == "explorer"
+ Requires-Dist: psycopg2 ; extra == "postgres"
+ Requires-Dist: pyinstrument ; extra == "profile"
+ Requires-Dist: branthebuilder ; extra == "test"
+ Requires-Dist: zimmauth[test] ; extra == "test"
+ Requires-Dist: atqo ; extra == "test"
+ Requires-Dist: faker ; extra == "test"
++Requires-Dist: requests ; extra == "zenodo"
++Requires-Dist: markdown2 ; extra == "zenodo"
+ Project-URL: Homepage, https://github.com/sscu-budapest/datazimmer
+ Provides-Extra: collect
+ Provides-Extra: doc
+ Provides-Extra: explorer
+ Provides-Extra: postgres
+ Provides-Extra: profile
+ Provides-Extra: test
++Provides-Extra: zenodo
+ 
+ # datazimmer
+ 
+ [![Documentation Status](https://readthedocs.org/projects/datazimmer/badge/?version=latest)](https://datazimmer.readthedocs.io/en/latest)
+ [![codeclimate](https://img.shields.io/codeclimate/maintainability/sscu-budapest/datazimmer.svg)](https://codeclimate.com/github/sscu-budapest/datazimmer)
+ [![codecov](https://img.shields.io/codecov/c/github/sscu-budapest/datazimmer)](https://codecov.io/gh/sscu-budapest/datazimmer)
+ [![pypi](https://img.shields.io/pypi/v/datazimmer.svg)](https://pypi.org/project/datazimmer/)
++[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.7499121.svg)](https://doi.org/10.5281/zenodo.7499121)
++
+ 
+ Some utility function to help with
+ 
+ - setting up data environments
+ - simplified dvc pipeline registry
+ 
+ these are used in the [project-template](https://github.com/sscu-budapest/project-template)
+ 
+ Make sure that `python` points to `python>=3.8` and you have `pip` and `git`
+ 
++### To create a new project
++
++- run `dz init project-name`
++- create, register and document steps in a pipeline you will run in different [environments](TODO)
++- build metadata to exportable and serialized format with `dz build-meta`
++  - if you defined importable data from other artifacts in the config, you can import them with `load-external-data` 
++  - ensure that you import envs that are served from sources you have access to
++- build and run pipeline steps by running `dz run`
++- validate that the data matches the [datascript](TODO) description with `dz validate`
++
++## Test projects
++
++TODO: document dogshow and everything else much better here
++
++
+ ## Functions
+ 
+ ### Tinker
+ 
+ > check out a table or few, with a notebook and some basic analysis to help
+ 
+ ### Engineer Research
+```
+
