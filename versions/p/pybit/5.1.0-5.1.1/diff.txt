@@ -1,0 +1,271 @@
+--- tmp/pybit-5.1.0.tar.gz
++++ tmp/pybit-5.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pybit-5.1.0.tar", last modified: Thu Apr  6 11:07:14 2023, max compression
+│ +gzip compressed data, was "pybit-5.1.1.tar", last modified: Thu Apr  6 11:16:27 2023, max compression
+│   --- pybit-5.1.0.tar
+├── +++ pybit-5.1.1.tar
+│ ├── file list
+│ │ @@ -1,46 +1,46 @@
+│ │ -drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:07:14.491958 pybit-5.1.0/
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)    20766 2023-04-06 11:06:42.000000 pybit-5.1.0/CHANGELOG.md
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1217 2022-05-19 15:36:12.000000 pybit-5.1.0/LICENSE
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)       83 2021-06-17 15:56:06.000000 pybit-5.1.0/MANIFEST.in
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     7944 2023-04-06 11:07:14.492894 pybit-5.1.0/PKG-INFO
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     6294 2023-04-05 16:35:20.000000 pybit-5.1.0/README.md
+│ │ -drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:07:14.397335 pybit-5.1.0/examples/
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     6148 2023-04-03 15:36:24.000000 pybit-5.1.0/examples/.DS_Store
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1143 2023-04-06 10:07:37.000000 pybit-5.1.0/examples/direct_session.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1450 2023-04-03 15:35:39.000000 pybit-5.1.0/examples/http_example_explanatory.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      315 2023-04-03 15:35:39.000000 pybit-5.1.0/examples/http_example_quickstart.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1861 2023-04-05 13:48:47.000000 pybit-5.1.0/examples/websocket_example_explanatory.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      258 2023-04-06 10:16:05.000000 pybit-5.1.0/examples/websocket_example_quickstart.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     2256 2023-04-06 10:07:37.000000 pybit-5.1.0/examples/wrapper_class.py
+│ │ -drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:07:14.470999 pybit-5.1.0/pybit/
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)       18 2023-04-06 11:06:42.000000 pybit-5.1.0/pybit/__init__.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1964 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_helpers.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)    12518 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_http_manager.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     7591 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_account.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)    13126 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_asset.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     8532 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_market.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     8543 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_position.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     2826 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_spot_leverage_token.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     6113 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_spot_margin_trade.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     8520 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_trade.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     5765 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_v5_user.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)    15535 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/_websocket_stream.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      694 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/account.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1647 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/asset.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1461 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/exceptions.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      856 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/market.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      607 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/position.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      406 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/spot_leverage_token.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      932 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/spot_margin_trade.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      600 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/trade.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     8680 2023-04-06 10:22:19.000000 pybit-5.1.0/pybit/unified_trading.py
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      560 2023-04-03 15:35:39.000000 pybit-5.1.0/pybit/user.py
+│ │ -drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:07:14.490071 pybit-5.1.0/pybit.egg-info/
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     7944 2023-04-06 11:07:14.000000 pybit-5.1.0/pybit.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      926 2023-04-06 11:07:14.000000 pybit-5.1.0/pybit.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)        1 2023-04-06 11:07:14.000000 pybit-5.1.0/pybit.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)        1 2021-07-09 21:25:55.000000 pybit-5.1.0/pybit.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)       37 2023-04-06 11:07:14.000000 pybit-5.1.0/pybit.egg-info/requires.txt
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)        6 2023-04-06 11:07:14.000000 pybit-5.1.0/pybit.egg-info/top_level.txt
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)      131 2023-04-06 11:07:14.495136 pybit-5.1.0/setup.cfg
+│ │ --rw-r--r--   0 uk09002ml   (502) staff       (20)     1216 2023-04-06 11:06:42.000000 pybit-5.1.0/setup.py
+│ │ +drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:16:27.012733 pybit-5.1.1/
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)    20766 2023-04-06 11:16:00.000000 pybit-5.1.1/CHANGELOG.md
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1217 2022-05-19 15:36:12.000000 pybit-5.1.1/LICENSE
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)       83 2021-06-17 15:56:06.000000 pybit-5.1.1/MANIFEST.in
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     7944 2023-04-06 11:16:27.013172 pybit-5.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     6294 2023-04-06 11:15:33.000000 pybit-5.1.1/README.md
+│ │ +drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:16:26.979205 pybit-5.1.1/examples/
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     6148 2023-04-03 15:36:24.000000 pybit-5.1.1/examples/.DS_Store
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1143 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/direct_session.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1450 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/http_example_explanatory.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      315 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/http_example_quickstart.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1861 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/websocket_example_explanatory.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      258 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/websocket_example_quickstart.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     2256 2023-04-06 11:15:33.000000 pybit-5.1.1/examples/wrapper_class.py
+│ │ +drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:16:27.002312 pybit-5.1.1/pybit/
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)       18 2023-04-06 11:16:00.000000 pybit-5.1.1/pybit/__init__.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1964 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_helpers.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)    12518 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_http_manager.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     7591 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_account.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)    13126 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_asset.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     8532 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_market.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     8543 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_position.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     2826 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_spot_leverage_token.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     6113 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_spot_margin_trade.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     8520 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_trade.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     5765 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_v5_user.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)    15535 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/_websocket_stream.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      694 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/account.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1647 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/asset.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1461 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/exceptions.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      856 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/market.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      607 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/position.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      406 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/spot_leverage_token.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      932 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/spot_margin_trade.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      600 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/trade.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     8681 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/unified_trading.py
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      560 2023-04-06 11:15:33.000000 pybit-5.1.1/pybit/user.py
+│ │ +drwxr-xr-x   0 uk09002ml   (502) staff       (20)        0 2023-04-06 11:16:27.011758 pybit-5.1.1/pybit.egg-info/
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     7944 2023-04-06 11:16:26.000000 pybit-5.1.1/pybit.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      926 2023-04-06 11:16:26.000000 pybit-5.1.1/pybit.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)        1 2023-04-06 11:16:26.000000 pybit-5.1.1/pybit.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)        1 2021-07-09 21:25:55.000000 pybit-5.1.1/pybit.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)       37 2023-04-06 11:16:26.000000 pybit-5.1.1/pybit.egg-info/requires.txt
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)        6 2023-04-06 11:16:26.000000 pybit-5.1.1/pybit.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)      131 2023-04-06 11:16:27.014461 pybit-5.1.1/setup.cfg
+│ │ +-rw-r--r--   0 uk09002ml   (502) staff       (20)     1216 2023-04-06 11:16:00.000000 pybit-5.1.1/setup.py
+│ │   --- pybit-5.1.0/CHANGELOG.md
+│ ├── +++ pybit-5.1.1/CHANGELOG.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  # Changelog
+│ │  
+│ │  All notable changes to this project will be documented in this file.
+│ │  
+│ │  The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+│ │  and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+│ │  
+│ │ -## [5.1.0] - 2023-04-06
+│ │ +## [5.1.1] - 2023-04-06
+│ │  ### Added
+│ │  - HTTP endpoints to the `copy_trading` module
+│ │  
+│ │  ### Modified
+│ │  - Docstrings in the `copy_trading` module to make it easier to find the API documentation for reference
+│ │  - Example files
+│ │   --- pybit-5.1.0/LICENSE
+│ ├── +++ pybit-5.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/PKG-INFO
+│ ├── +++ pybit-5.1.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pybit
+│ │ -Version: 5.1.0
+│ │ +Version: 5.1.1
+│ │  Summary: Python3 Bybit HTTP/WebSocket API Connector
+│ │  Home-page: https://github.com/bybit-exchange/pybit
+│ │  Author: Dexter Dickinson
+│ │  Author-email: dexter.dickinson@bybit.com
+│ │  License: MIT License
+│ │  Description: # pybit
+│ │          <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+│ │   --- pybit-5.1.0/README.md
+│ ├── +++ pybit-5.1.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/examples/.DS_Store
+│ ├── +++ pybit-5.1.1/examples/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/examples/direct_session.py
+│ ├── +++ pybit-5.1.1/examples/direct_session.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/examples/http_example_explanatory.py
+│ ├── +++ pybit-5.1.1/examples/http_example_explanatory.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/examples/websocket_example_explanatory.py
+│ ├── +++ pybit-5.1.1/examples/websocket_example_explanatory.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/examples/wrapper_class.py
+│ ├── +++ pybit-5.1.1/examples/wrapper_class.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_helpers.py
+│ ├── +++ pybit-5.1.1/pybit/_helpers.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_http_manager.py
+│ ├── +++ pybit-5.1.1/pybit/_http_manager.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_account.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_account.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_asset.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_asset.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_market.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_market.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_position.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_position.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_spot_leverage_token.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_spot_leverage_token.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_spot_margin_trade.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_spot_margin_trade.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_trade.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_trade.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_v5_user.py
+│ ├── +++ pybit-5.1.1/pybit/_v5_user.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/_websocket_stream.py
+│ ├── +++ pybit-5.1.1/pybit/_websocket_stream.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/account.py
+│ ├── +++ pybit-5.1.1/pybit/account.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/asset.py
+│ ├── +++ pybit-5.1.1/pybit/asset.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/exceptions.py
+│ ├── +++ pybit-5.1.1/pybit/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/market.py
+│ ├── +++ pybit-5.1.1/pybit/market.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/position.py
+│ ├── +++ pybit-5.1.1/pybit/position.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/spot_margin_trade.py
+│ ├── +++ pybit-5.1.1/pybit/spot_margin_trade.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/trade.py
+│ ├── +++ pybit-5.1.1/pybit/trade.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit/unified_trading.py
+│ ├── +++ pybit-5.1.1/pybit/unified_trading.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -201,15 +201,15 @@
+│ │          Required args:
+│ │              symbol (string): Symbol name
+│ │  
+│ │           Additional information:
+│ │              https://bybit-exchange.github.io/docs/v5/websocket/public/ticker
+│ │          """
+│ │          self._validate_public_topic()
+│ │ -        topic = f"ticker.{symbol}"
+│ │ +        topic = f"tickers.{symbol}"
+│ │          self.subscribe(topic, callback)
+│ │  
+│ │      def kline_stream(self, interval: int, symbol: str, callback):
+│ │          """Subscribe to the klines stream.
+│ │  
+│ │          Push frequency: 1-60s
+│ │   --- pybit-5.1.0/pybit/user.py
+│ ├── +++ pybit-5.1.1/pybit/user.py
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/pybit.egg-info/PKG-INFO
+│ ├── +++ pybit-5.1.1/pybit.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pybit
+│ │ -Version: 5.1.0
+│ │ +Version: 5.1.1
+│ │  Summary: Python3 Bybit HTTP/WebSocket API Connector
+│ │  Home-page: https://github.com/bybit-exchange/pybit
+│ │  Author: Dexter Dickinson
+│ │  Author-email: dexter.dickinson@bybit.com
+│ │  License: MIT License
+│ │  Description: # pybit
+│ │          <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+│ │   --- pybit-5.1.0/pybit.egg-info/SOURCES.txt
+│ ├── +++ pybit-5.1.1/pybit.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- pybit-5.1.0/setup.py
+│ ├── +++ pybit-5.1.1/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  here = path.abspath(path.dirname(__file__))
+│ │  
+│ │  with open(path.join(here, "README.md"), encoding="utf-8") as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name='pybit',
+│ │ -    version='5.1.0',
+│ │ +    version='5.1.1',
+│ │      description='Python3 Bybit HTTP/WebSocket API Connector', 
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/bybit-exchange/pybit",
+│ │      license="MIT License",
+│ │      author="Dexter Dickinson",
+│ │      author_email="dexter.dickinson@bybit.com",

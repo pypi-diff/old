@@ -1,0 +1,454 @@
+--- tmp/nucliadb_utils-2.6.0.post135-py3-none-any.whl.zip
++++ tmp/nucliadb_utils-2.6.0.post136-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,71 +1,71 @@
+│ -Zip file size: 97322 bytes, number of entries: 69
+│ --rw-r--r--  2.0 unx      895 b- defN 23-Apr-06 05:33 nucliadb_utils/__init__.py
+│ --rw-r--r--  2.0 unx     5877 b- defN 23-Apr-06 05:33 nucliadb_utils/authentication.py
+│ --rw-r--r--  2.0 unx     4518 b- defN 23-Apr-06 05:33 nucliadb_utils/clandestined.py
+│ --rw-r--r--  2.0 unx     1090 b- defN 23-Apr-06 05:33 nucliadb_utils/exceptions.py
+│ --rw-r--r--  2.0 unx     1872 b- defN 23-Apr-06 05:33 nucliadb_utils/featureflagging.py
+│ --rw-r--r--  2.0 unx     3572 b- defN 23-Apr-06 05:33 nucliadb_utils/indexing.py
+│ --rw-r--r--  2.0 unx      867 b- defN 23-Apr-06 05:33 nucliadb_utils/keys.py
+│ --rw-r--r--  2.0 unx     2720 b- defN 23-Apr-06 05:33 nucliadb_utils/metrics.py
+│ --rw-r--r--  2.0 unx     1519 b- defN 23-Apr-06 05:33 nucliadb_utils/nats.py
+│ --rw-r--r--  2.0 unx     1173 b- defN 23-Apr-06 05:33 nucliadb_utils/partition.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 05:33 nucliadb_utils/py.typed
+│ --rw-r--r--  2.0 unx     1713 b- defN 23-Apr-06 05:33 nucliadb_utils/run.py
+│ --rw-r--r--  2.0 unx     4451 b- defN 23-Apr-06 05:33 nucliadb_utils/settings.py
+│ --rw-r--r--  2.0 unx     1337 b- defN 23-Apr-06 05:33 nucliadb_utils/settings_running.py
+│ --rw-r--r--  2.0 unx      890 b- defN 23-Apr-06 05:33 nucliadb_utils/store.py
+│ --rw-r--r--  2.0 unx     6633 b- defN 23-Apr-06 05:33 nucliadb_utils/transaction.py
+│ --rw-r--r--  2.0 unx     9964 b- defN 23-Apr-06 05:33 nucliadb_utils/utilities.py
+│ --rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 05:33 nucliadb_utils/audit/__init__.py
+│ --rw-r--r--  2.0 unx     2013 b- defN 23-Apr-06 05:33 nucliadb_utils/audit/audit.py
+│ --rw-r--r--  2.0 unx     2446 b- defN 23-Apr-06 05:33 nucliadb_utils/audit/basic.py
+│ --rw-r--r--  2.0 unx     7688 b- defN 23-Apr-06 05:33 nucliadb_utils/audit/stream.py
+│ --rw-r--r--  2.0 unx      900 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/__init__.py
+│ --rw-r--r--  2.0 unx      975 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/exceptions.py
+│ --rw-r--r--  2.0 unx     1216 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/memcache.py
+│ --rw-r--r--  2.0 unx     6776 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/nats.py
+│ --rw-r--r--  2.0 unx     1654 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/pubsub.py
+│ --rw-r--r--  2.0 unx     3676 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/redis.py
+│ --rw-r--r--  2.0 unx     1302 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/settings.py
+│ --rw-r--r--  2.0 unx     5906 b- defN 23-Apr-06 05:33 nucliadb_utils/cache/utility.py
+│ --rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 05:33 nucliadb_utils/fastapi/__init__.py
+│ --rw-r--r--  2.0 unx     1316 b- defN 23-Apr-06 05:33 nucliadb_utils/fastapi/metrics.py
+│ --rw-r--r--  2.0 unx     1737 b- defN 23-Apr-06 05:33 nucliadb_utils/fastapi/openapi.py
+│ --rw-r--r--  2.0 unx     3888 b- defN 23-Apr-06 05:33 nucliadb_utils/fastapi/run.py
+│ --rw-r--r--  2.0 unx     3786 b- defN 23-Apr-06 05:33 nucliadb_utils/fastapi/versioning.py
+│ --rw-r--r--  2.0 unx      855 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/__init__.py
+│ --rw-r--r--  2.0 unx     2165 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/exceptions.py
+│ --rw-r--r--  2.0 unx    24755 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/gcs.py
+│ --rw-r--r--  2.0 unx    10180 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/local.py
+│ --rw-r--r--  2.0 unx     2093 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/nuclia.py
+│ --rw-r--r--  2.0 unx    17174 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/pg.py
+│ --rw-r--r--  2.0 unx    15029 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/s3.py
+│ --rw-r--r--  2.0 unx     1276 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/settings.py
+│ --rw-r--r--  2.0 unx    16412 b- defN 23-Apr-06 05:33 nucliadb_utils/storages/storage.py
+│ --rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/__init__.py
+│ --rw-r--r--  2.0 unx    10691 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/asyncbenchmark.py
+│ --rw-r--r--  2.0 unx     1043 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/clandestined.py
+│ --rw-r--r--  2.0 unx     1686 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/conftest.py
+│ --rw-r--r--  2.0 unx     2758 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/gcs.py
+│ --rw-r--r--  2.0 unx     2307 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/indexing.py
+│ --rw-r--r--  2.0 unx     1310 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/local.py
+│ --rw-r--r--  2.0 unx     7697 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/nats.py
+│ --rw-r--r--  2.0 unx     2216 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/s3.py
+│ --rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/__init__.py
+│ --rw-r--r--  2.0 unx     5159 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_authentication.py
+│ --rw-r--r--  2.0 unx    14507 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_clandestined.py
+│ --rw-r--r--  2.0 unx     1949 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_clandestined_collision.py
+│ --rw-r--r--  2.0 unx     5303 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_clandestined_rendezvous_hash.py
+│ --rw-r--r--  2.0 unx     1910 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_run.py
+│ --rw-r--r--  2.0 unx     1189 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_tests.py
+│ --rw-r--r--  2.0 unx     1667 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_transaction.py
+│ --rw-r--r--  2.0 unx     4436 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/test_utilities.py
+│ --rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/storages/__init__.py
+│ --rw-r--r--  2.0 unx    16726 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/storages/test_pg.py
+│ --rw-r--r--  2.0 unx     4943 b- defN 23-Apr-06 05:33 nucliadb_utils/tests/unit/storages/test_storage.py
+│ --rw-r--r--  2.0 unx     1924 b- defN 23-Apr-06 05:35 nucliadb_utils-2.6.0.post135.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:35 nucliadb_utils-2.6.0.post135.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       15 b- defN 23-Apr-06 05:35 nucliadb_utils-2.6.0.post135.dist-info/top_level.txt
+│ --rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 05:34 nucliadb_utils-2.6.0.post135.dist-info/zip-safe
+│ --rw-rw-r--  2.0 unx     6216 b- defN 23-Apr-06 05:35 nucliadb_utils-2.6.0.post135.dist-info/RECORD
+│ -69 files, 284221 bytes uncompressed, 87356 bytes compressed:  69.3%
+│ +Zip file size: 97435 bytes, number of entries: 69
+│ +-rw-r--r--  2.0 unx      895 b- defN 23-Apr-06 11:12 nucliadb_utils/__init__.py
+│ +-rw-r--r--  2.0 unx     5877 b- defN 23-Apr-06 11:12 nucliadb_utils/authentication.py
+│ +-rw-r--r--  2.0 unx     4518 b- defN 23-Apr-06 11:12 nucliadb_utils/clandestined.py
+│ +-rw-r--r--  2.0 unx     1090 b- defN 23-Apr-06 11:12 nucliadb_utils/exceptions.py
+│ +-rw-r--r--  2.0 unx     1872 b- defN 23-Apr-06 11:12 nucliadb_utils/featureflagging.py
+│ +-rw-r--r--  2.0 unx     3572 b- defN 23-Apr-06 11:12 nucliadb_utils/indexing.py
+│ +-rw-r--r--  2.0 unx      867 b- defN 23-Apr-06 11:12 nucliadb_utils/keys.py
+│ +-rw-r--r--  2.0 unx     2720 b- defN 23-Apr-06 11:12 nucliadb_utils/metrics.py
+│ +-rw-r--r--  2.0 unx     1519 b- defN 23-Apr-06 11:12 nucliadb_utils/nats.py
+│ +-rw-r--r--  2.0 unx     1173 b- defN 23-Apr-06 11:12 nucliadb_utils/partition.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 11:12 nucliadb_utils/py.typed
+│ +-rw-r--r--  2.0 unx     1713 b- defN 23-Apr-06 11:12 nucliadb_utils/run.py
+│ +-rw-r--r--  2.0 unx     4451 b- defN 23-Apr-06 11:12 nucliadb_utils/settings.py
+│ +-rw-r--r--  2.0 unx     1337 b- defN 23-Apr-06 11:12 nucliadb_utils/settings_running.py
+│ +-rw-r--r--  2.0 unx      890 b- defN 23-Apr-06 11:12 nucliadb_utils/store.py
+│ +-rw-r--r--  2.0 unx     6633 b- defN 23-Apr-06 11:12 nucliadb_utils/transaction.py
+│ +-rw-r--r--  2.0 unx     9964 b- defN 23-Apr-06 11:12 nucliadb_utils/utilities.py
+│ +-rw-r--r--  2.0 unx      835 b- defN 23-Apr-06 11:12 nucliadb_utils/audit/__init__.py
+│ +-rw-r--r--  2.0 unx     2013 b- defN 23-Apr-06 11:12 nucliadb_utils/audit/audit.py
+│ +-rw-r--r--  2.0 unx     2446 b- defN 23-Apr-06 11:12 nucliadb_utils/audit/basic.py
+│ +-rw-r--r--  2.0 unx     7688 b- defN 23-Apr-06 11:12 nucliadb_utils/audit/stream.py
+│ +-rw-r--r--  2.0 unx      900 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/__init__.py
+│ +-rw-r--r--  2.0 unx      975 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/exceptions.py
+│ +-rw-r--r--  2.0 unx     1216 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/memcache.py
+│ +-rw-r--r--  2.0 unx     6776 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/nats.py
+│ +-rw-r--r--  2.0 unx     1654 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/pubsub.py
+│ +-rw-r--r--  2.0 unx     3676 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/redis.py
+│ +-rw-r--r--  2.0 unx     1302 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/settings.py
+│ +-rw-r--r--  2.0 unx     5906 b- defN 23-Apr-06 11:12 nucliadb_utils/cache/utility.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 11:12 nucliadb_utils/fastapi/__init__.py
+│ +-rw-r--r--  2.0 unx     1316 b- defN 23-Apr-06 11:12 nucliadb_utils/fastapi/metrics.py
+│ +-rw-r--r--  2.0 unx     1737 b- defN 23-Apr-06 11:12 nucliadb_utils/fastapi/openapi.py
+│ +-rw-r--r--  2.0 unx     3888 b- defN 23-Apr-06 11:12 nucliadb_utils/fastapi/run.py
+│ +-rw-r--r--  2.0 unx     3786 b- defN 23-Apr-06 11:12 nucliadb_utils/fastapi/versioning.py
+│ +-rw-r--r--  2.0 unx      855 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/__init__.py
+│ +-rw-r--r--  2.0 unx     2165 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/exceptions.py
+│ +-rw-r--r--  2.0 unx    25473 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/gcs.py
+│ +-rw-r--r--  2.0 unx    10180 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/local.py
+│ +-rw-r--r--  2.0 unx     2093 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/nuclia.py
+│ +-rw-r--r--  2.0 unx    17174 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/pg.py
+│ +-rw-r--r--  2.0 unx    15029 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/s3.py
+│ +-rw-r--r--  2.0 unx     1276 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/settings.py
+│ +-rw-r--r--  2.0 unx    16412 b- defN 23-Apr-06 11:12 nucliadb_utils/storages/storage.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/__init__.py
+│ +-rw-r--r--  2.0 unx    10691 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/asyncbenchmark.py
+│ +-rw-r--r--  2.0 unx     1043 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/clandestined.py
+│ +-rw-r--r--  2.0 unx     1686 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/conftest.py
+│ +-rw-r--r--  2.0 unx     2758 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/gcs.py
+│ +-rw-r--r--  2.0 unx     2307 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/indexing.py
+│ +-rw-r--r--  2.0 unx     1310 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/local.py
+│ +-rw-r--r--  2.0 unx     7697 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/nats.py
+│ +-rw-r--r--  2.0 unx     2216 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/s3.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/__init__.py
+│ +-rw-r--r--  2.0 unx     5159 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_authentication.py
+│ +-rw-r--r--  2.0 unx    14507 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_clandestined.py
+│ +-rw-r--r--  2.0 unx     1949 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_clandestined_collision.py
+│ +-rw-r--r--  2.0 unx     5303 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_clandestined_rendezvous_hash.py
+│ +-rw-r--r--  2.0 unx     1910 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_run.py
+│ +-rw-r--r--  2.0 unx     1189 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_tests.py
+│ +-rw-r--r--  2.0 unx     1667 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_transaction.py
+│ +-rw-r--r--  2.0 unx     4436 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/test_utilities.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/storages/__init__.py
+│ +-rw-r--r--  2.0 unx    16726 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/storages/test_pg.py
+│ +-rw-r--r--  2.0 unx     4943 b- defN 23-Apr-06 11:12 nucliadb_utils/tests/unit/storages/test_storage.py
+│ +-rw-r--r--  2.0 unx     1924 b- defN 23-Apr-06 11:14 nucliadb_utils-2.6.0.post136.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 11:14 nucliadb_utils-2.6.0.post136.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       15 b- defN 23-Apr-06 11:14 nucliadb_utils-2.6.0.post136.dist-info/top_level.txt
+│ +-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 11:13 nucliadb_utils-2.6.0.post136.dist-info/zip-safe
+│ +-rw-rw-r--  2.0 unx     6216 b- defN 23-Apr-06 11:14 nucliadb_utils-2.6.0.post136.dist-info/RECORD
+│ +69 files, 284939 bytes uncompressed, 87469 bytes compressed:  69.3%
+├── zipnote {}
+│ @@ -186,23 +186,23 @@
+│  
+│  Filename: nucliadb_utils/tests/unit/storages/test_pg.py
+│  Comment: 
+│  
+│  Filename: nucliadb_utils/tests/unit/storages/test_storage.py
+│  Comment: 
+│  
+│ -Filename: nucliadb_utils-2.6.0.post135.dist-info/METADATA
+│ +Filename: nucliadb_utils-2.6.0.post136.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: nucliadb_utils-2.6.0.post135.dist-info/WHEEL
+│ +Filename: nucliadb_utils-2.6.0.post136.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: nucliadb_utils-2.6.0.post135.dist-info/top_level.txt
+│ +Filename: nucliadb_utils-2.6.0.post136.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: nucliadb_utils-2.6.0.post135.dist-info/zip-safe
+│ +Filename: nucliadb_utils-2.6.0.post136.dist-info/zip-safe
+│  Comment: 
+│  
+│ -Filename: nucliadb_utils-2.6.0.post135.dist-info/RECORD
+│ +Filename: nucliadb_utils-2.6.0.post136.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── nucliadb_utils/storages/gcs.py
+│ @@ -30,27 +30,30 @@
+│  
+│  import aiohttp
+│  import backoff  # type: ignore
+│  import google.auth.transport.requests  # type: ignore
+│  import yarl
+│  from google.oauth2 import service_account  # type: ignore
+│  from nucliadb_protos.resources_pb2 import CloudFile
+│ +from nucliadb_telemetry import metrics
+│  from nucliadb_telemetry.utils import get_telemetry, init_telemetry
+│  from opentelemetry.instrumentation.aiohttp_client import create_trace_config
+│  
+│  from nucliadb_utils import logger
+│  from nucliadb_utils.storages import CHUNK_SIZE
+│  from nucliadb_utils.storages.exceptions import (
+│      CouldNotCopyNotFound,
+│      CouldNotCreateBucket,
+│      InvalidOffset,
+│      ResumableUploadGone,
+│  )
+│  from nucliadb_utils.storages.storage import Storage, StorageField
+│  
+│ +storage_ops_observer = metrics.Observer("gcs_ops", labels={"type": ""})
+│ +
+│  
+│  def strip_query_params(url: yarl.URL) -> str:
+│      return str(url.with_query(None))
+│  
+│  
+│  MAX_SIZE = 1073741824
+│  
+│ @@ -96,14 +99,15 @@
+│      ):
+│          await self.copy(
+│              origin_uri, destination_uri, origin_bucket_name, destination_bucket_name
+│          )
+│          await self.storage.delete_upload(origin_uri, origin_bucket_name)
+│  
+│      @backoff.on_exception(backoff.expo, RETRIABLE_EXCEPTIONS, max_tries=4)
+│ +    @storage_ops_observer.wrap({"type": "copy"})
+│      async def copy(
+│          self,
+│          origin_uri: str,
+│          destination_uri: str,
+│          origin_bucket_name: str,
+│          destination_bucket_name: str,
+│      ):
+│ @@ -129,14 +133,15 @@
+│                      destination_bucket_name=destination_bucket_name,
+│                      text=text,
+│                  )
+│              else:
+│                  data = await resp.json()
+│                  assert data["resource"]["name"] == destination_uri
+│  
+│ +    @storage_ops_observer.wrap({"type": "iter_data"})
+│      async def iter_data(self, headers=None):
+│          if headers is None:
+│              headers = {}
+│  
+│          key = self.field.uri if self.field else self.key
+│          if self.field is None:
+│              bucket = self.bucket
+│ @@ -179,14 +184,15 @@
+│          """
+│          async for chunk in self.iter_data(
+│              headers={"Range": f"bytes={start}-{end - 1}"}
+│          ):
+│              yield chunk
+│  
+│      @backoff.on_exception(backoff.expo, RETRIABLE_EXCEPTIONS, max_tries=4)
+│ +    @storage_ops_observer.wrap({"type": "start_upload"})
+│      async def start(self, cf: CloudFile) -> CloudFile:
+│          """Init an upload.
+│  
+│          cf: New file to upload
+│          """
+│          if self.storage.session is None:
+│              raise AttributeError()
+│ @@ -263,14 +269,15 @@
+│      @backoff.on_exception(
+│          backoff.constant,
+│          RETRIABLE_EXCEPTIONS,
+│          interval=1,
+│          max_tries=4,
+│          jitter=backoff.random_jitter,
+│      )
+│ +    @storage_ops_observer.wrap({"type": "append_data"})
+│      async def _append(self, cf: CloudFile, data: bytes):
+│          if self.field is None:
+│              raise AttributeError()
+│  
+│          if self.storage.session is None:
+│              raise AttributeError()
+│  
+│ @@ -346,14 +353,15 @@
+│          self.field.uri = self.key
+│          self.field.ClearField("resumable_uri")
+│          self.field.ClearField("offset")
+│          self.field.ClearField("upload_uri")
+│          self.field.ClearField("parts")
+│  
+│      @backoff.on_exception(backoff.expo, RETRIABLE_EXCEPTIONS, max_tries=4)
+│ +    @storage_ops_observer.wrap({"type": "exists"})
+│      async def exists(self) -> Optional[Dict[str, str]]:
+│          """
+│          Existence can be checked either with a CloudFile data in the field attribute
+│          or own StorageField key and bucket. Field takes precendece
+│          """
+│          if self.storage.session is None:
+│              raise AttributeError()
+│ @@ -450,14 +458,15 @@
+│      def _get_access_token(self):
+│          if self._credentials.valid is False:
+│              req = google.auth.transport.requests.Request()
+│              self._credentials.refresh(req)
+│              self._creation_access_token = datetime.now()
+│          return self._credentials.token
+│  
+│ +    @storage_ops_observer.wrap({"type": "initialize"})
+│      async def initialize(self, service_name: Optional[str] = "GCS_SERVICE"):
+│          loop = asyncio.get_event_loop()
+│  
+│          tracer_provider = get_telemetry(service_name)
+│          if tracer_provider:  # pragma: no cover
+│              await init_telemetry(tracer_provider)
+│              logger.info("Initializing Telemetry on GCS Driver")
+│ @@ -500,14 +509,15 @@
+│          if self._credentials is None:
+│              return {}
+│          loop = asyncio.get_event_loop()
+│          token = await loop.run_in_executor(self._executor, self._get_access_token)
+│          return {"AUTHORIZATION": f"Bearer {token}"}
+│  
+│      @backoff.on_exception(backoff.expo, RETRIABLE_EXCEPTIONS, max_tries=4)
+│ +    @storage_ops_observer.wrap({"type": "delete"})
+│      async def delete_upload(self, uri: str, bucket_name: str):
+│          if self.session is None:
+│              raise AttributeError()
+│          if uri is not None:
+│              url = "{}/{}/o/{}".format(
+│                  self.object_base_url, bucket_name, quote_plus(uri)
+│              )
+│ @@ -526,14 +536,15 @@
+│                              exc_info=True,
+│                          )
+│                      else:
+│                          raise GoogleCloudException(f"{resp.status}: {json.dumps(data)}")
+│          else:
+│              raise AttributeError("No valid uri")
+│  
+│ +    @storage_ops_observer.wrap({"type": "check_bucket_exists"})
+│      async def check_exists(self, bucket_name: str):
+│          if self.session is None:
+│              raise AttributeError()
+│  
+│          headers = await self.get_access_headers()
+│          url = f"{self.object_base_url}/{bucket_name}?project={self._project}"
+│          async with self.session.get(
+│ @@ -556,14 +567,15 @@
+│  
+│          url = f"{self.object_base_url}?project={self._project}"
+│          labels = deepcopy(self._bucket_labels)
+│          if kbid is not None:
+│              labels["kbid"] = kbid.lower()
+│          await self._create_bucket(url, headers, bucket_name, labels)
+│  
+│ +    @storage_ops_observer.wrap({"type": "create_bucket"})
+│      async def _create_bucket(self, url, headers, bucket_name, labels):
+│          async with self.session.post(
+│              url,
+│              headers=headers,
+│              json={
+│                  "name": bucket_name,
+│                  "location": self._location,
+│ @@ -601,14 +613,15 @@
+│          try:
+│              await self.create_bucket(bucket_name, kbid)
+│              created = True
+│          except Exception as e:
+│              logger.exception(f"Could not create bucket {kbid}", exc_info=e)
+│          return created
+│  
+│ +    @storage_ops_observer.wrap({"type": "schedule_delete"})
+│      async def schedule_delete_kb(self, kbid: str):
+│          if self.session is None:
+│              raise AttributeError()
+│          bucket_name = self.get_bucket_name(kbid)
+│          headers = await self.get_access_headers()
+│          url = f"{self.object_base_url}/{bucket_name}?fields=lifecycle"
+│          deleted = False
+│ @@ -629,14 +642,15 @@
+│                          exc_info=True,
+│                      )
+│                  else:
+│                      raise GoogleCloudException(f"{resp.status}: {json.dumps(data)}")
+│              deleted = True
+│          return deleted
+│  
+│ +    @storage_ops_observer.wrap({"type": "delete"})
+│      async def delete_kb(self, kbid: str):
+│          if self.session is None:
+│              raise AttributeError()
+│          bucket_name = self.get_bucket_name(kbid)
+│          headers = await self.get_access_headers()
+│          url = f"{self.object_base_url}/{bucket_name}"
+│          deleted = False
+│   --- nucliadb_utils-2.6.0.post135.dist-info/METADATA
+├── +++ nucliadb_utils-2.6.0.post136.dist-info/METADATA
+│┄ Files 4% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: nucliadb-utils
+│ -Version: 2.6.0.post135
+│ +Version: 2.6.0.post136
+│  Summary: UNKNOWN
+│  Home-page: https://nuclia.com
+│  License: BSD
+│  Platform: UNKNOWN
+│  Classifier: Development Status :: 4 - Beta
+│  Classifier: Programming Language :: Python :: 3.7
+│  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ @@ -12,15 +12,15 @@
+│  Requires-Dist: aiohttp (>=3.8.1)
+│  Requires-Dist: prometheus-client (>=0.12.0)
+│  Requires-Dist: types-requests (>=2.27.7)
+│  Requires-Dist: mmh3 (>=3.0.0)
+│  Requires-Dist: nats-py[nkeys] (>=2.1.3)
+│  Requires-Dist: pyjwt (>=2.4.0)
+│  Requires-Dist: memorylru (>=1.1.2)
+│ -Requires-Dist: nucliadb-protos (==2.6.0-post135)
+│ +Requires-Dist: nucliadb-protos (==2.6.0-post136)
+│  Requires-Dist: nucliadb-telemetry (>=1.5.0)
+│  Requires-Dist: mrflagly
+│  Provides-Extra: cache
+│  Requires-Dist: redis (>=4.3.4) ; extra == 'cache'
+│  Requires-Dist: orjson (>=3.6.7) ; extra == 'cache'
+│  Requires-Dist: lru-dict (>=1.1.7) ; extra == 'cache'
+│  Provides-Extra: fastapi
+│   --- nucliadb_utils-2.6.0.post135.dist-info/RECORD
+├── +++ nucliadb_utils-2.6.0.post136.dist-info/RECORD
+│┄ Files 2% similar despite different names
+│ @@ -30,15 +30,15 @@
+│  nucliadb_utils/fastapi/__init__.py,sha256=itSI7dtTwFP55YMX4iK7JzdMHS5CQVUiB1XzQu4UBh8,833
+│  nucliadb_utils/fastapi/metrics.py,sha256=7cfOKdAYtYMZ-n62Hui-SOfBRnBVQht363f2AfUI6qc,1316
+│  nucliadb_utils/fastapi/openapi.py,sha256=b0pLuri0QuzQd0elDyOVXM42YYmES_cmT-jEfsQ1G6Y,1737
+│  nucliadb_utils/fastapi/run.py,sha256=eG-Ttvl0Ii6BlHQkTnCEXPZwlMzQK3LIV-7IVfUvvJw,3888
+│  nucliadb_utils/fastapi/versioning.py,sha256=yzHG_TS8ga-qXum6op2dZUxDrVr_zBjAu6LNz28Elao,3786
+│  nucliadb_utils/storages/__init__.py,sha256=WOSaQhFBQ_TePebZa1nCy_MJAI61ioY_52P9x8LG4SI,855
+│  nucliadb_utils/storages/exceptions.py,sha256=B4rAjJSjnrcKbnWQpTi1xCz55uRcOrOuQI-W8-tgInI,2165
+│ -nucliadb_utils/storages/gcs.py,sha256=MJ-7-Z7uaFOQOSVp1i-jRea_-EILhHcRmTA7ZlTeRUQ,24755
+│ +nucliadb_utils/storages/gcs.py,sha256=ILjuENvLdgKkQyTgG0Lqjj53p-oRCLm2mKwH3DF-Q6g,25473
+│  nucliadb_utils/storages/local.py,sha256=BHc3fG_aiKIVujlqKgig9EiCv5HrKzYCbdPhuhTR-Oc,10180
+│  nucliadb_utils/storages/nuclia.py,sha256=4qYM0sI9uYbURy-cKtWWiU13ojkWsgjZ8Z0V_cvv7Fo,2093
+│  nucliadb_utils/storages/pg.py,sha256=hvWZOhUJsboIMCvtFaDg4Dl8Mi5hkEBuYvuPFJESLhI,17174
+│  nucliadb_utils/storages/s3.py,sha256=LShMSeHJVTvS4xYlimFbKZvHQqaCOIJ7Wr1gsc9kJgc,15029
+│  nucliadb_utils/storages/settings.py,sha256=bUl3D7To-s3OVXPFFF7LwJbEKGF2WvDM14pwqQdkyoQ,1276
+│  nucliadb_utils/storages/storage.py,sha256=wDxaN4ErTsuzYdr7FYXv7kMBkiMd65Qqz_XafgfjOs0,16412
+│  nucliadb_utils/tests/__init__.py,sha256=itSI7dtTwFP55YMX4iK7JzdMHS5CQVUiB1XzQu4UBh8,833
+│ @@ -58,12 +58,12 @@
+│  nucliadb_utils/tests/unit/test_run.py,sha256=VHeojVBj_AfV_uNch9eEi4zCT-O94VKjwb_O-UZgqpA,1910
+│  nucliadb_utils/tests/unit/test_tests.py,sha256=-YHgVMKJr_3WYwrBj9TnwpVLIkP80PLZpWnvAIYvnz8,1189
+│  nucliadb_utils/tests/unit/test_transaction.py,sha256=0K09sWCEZ9iFXHYOiPDhS1Vw5F4akyrmboLalwH-B6U,1667
+│  nucliadb_utils/tests/unit/test_utilities.py,sha256=96pliy7wk1RqA8r7ogsf4_9AE7FRNK6PjTrB5O-_jBw,4436
+│  nucliadb_utils/tests/unit/storages/__init__.py,sha256=itSI7dtTwFP55YMX4iK7JzdMHS5CQVUiB1XzQu4UBh8,833
+│  nucliadb_utils/tests/unit/storages/test_pg.py,sha256=KAIzD3QuJFMRNSSAKz-M5qrO9fJIHYbZfiOOleTgP1c,16726
+│  nucliadb_utils/tests/unit/storages/test_storage.py,sha256=td_CgoTEmr3j6OnEHe5idLi5JhYlcYHwIhL_19ov9mc,4943
+│ -nucliadb_utils-2.6.0.post135.dist-info/METADATA,sha256=ytF_sUQ0A7njF1qPyDGNsbQg4YrdAtAMJXsMQayLtP0,1924
+│ -nucliadb_utils-2.6.0.post135.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -nucliadb_utils-2.6.0.post135.dist-info/top_level.txt,sha256=fE3vJtALTfgh7bcAWcNhcfXkNPp_eVVpbKK-2IYua3E,15
+│ -nucliadb_utils-2.6.0.post135.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+│ -nucliadb_utils-2.6.0.post135.dist-info/RECORD,,
+│ +nucliadb_utils-2.6.0.post136.dist-info/METADATA,sha256=fLkW4PVFy-bulXN4O2nFTeYhHh8KnwQp7rgxmaj9wT4,1924
+│ +nucliadb_utils-2.6.0.post136.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +nucliadb_utils-2.6.0.post136.dist-info/top_level.txt,sha256=fE3vJtALTfgh7bcAWcNhcfXkNPp_eVVpbKK-2IYua3E,15
+│ +nucliadb_utils-2.6.0.post136.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+│ +nucliadb_utils-2.6.0.post136.dist-info/RECORD,,

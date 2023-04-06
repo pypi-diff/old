@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/PyLockAES-1.2.2.tar.gz tmp/PyLockAES-1.2.3.tar.gz --html versions/P/PyLockAES/1.2.2-1.2.3/index.html --text versions/P/PyLockAES/1.2.2-1.2.3/diff.txt --markdown versions/P/PyLockAES/1.2.2-1.2.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.23 KB</span></div>
+  <div><span class="source">tmp/PyLockAES-1.2.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/PyLockAES-1.2.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">268 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;PyLockAES-1.2.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>11:1<del>2</del>:<del>29</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;PyLockAES-1.2.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.92 KB</span></div>
+    <div><span class="source">PyLockAES-1.2.2.tar</span> vs.</div>
+    <div id="PyLockAES--.-.-.tar"><span class="source">PyLockAES-1.2.3.tar</span>
+      <a class="anchor" href="#PyLockAES--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.9 KB</span></div>
+      <div id="PyLockAES--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#PyLockAES--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.<del>10</del>6<del>060</del><span class="dp">·</span>PyLockAES-1.2.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.<ins>71</ins>6<ins>941</ins><span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.<del>106060</del><span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.<ins>712941</ins><span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.<del>106060</del><span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PyLockAES.egg-info/</td><td class="diffline">3 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.<ins>712941</ins><span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PyLockAES.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>28</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PyLockAES.egg-info/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>160<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PyLockAES.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>191<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PyLockAES.egg-info/SOURCES.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>191<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PyLockAES.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>28</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PyLockAES.egg-info/dependency_links.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PyLockAES.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>28</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/PyLockAES.egg-info/top_level.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/PyLockAES.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.<del>106060</del><span class="dp">·</span>PyLockAES-1.2.<del>2</del>/pylockaes/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.<ins>712941</ins><span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/pylockaes/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>66</del>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>2</del>5.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/pylockaes/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>83</ins>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>6</ins>:<ins>5</ins>5.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/pylockaes/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>66</del>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>25</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/pylockaes/encrypt_decrypt.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>83</ins>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>07</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/pylockaes/encrypt_decrypt.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>29</del>.<del>10</del>6<del>060</del><span class="dp">·</span>PyLockAES-1.2.<del>2</del>/setup.cfg</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>10</ins>.<ins>71</ins>6<ins>941</ins><span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>237<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<del>2</del>:<del>25</del>.000000<span class="dp">·</span>PyLockAES-1.2.<del>2</del>/setup.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>leonardo<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>237<span class="dp">·</span>2023-04-06<span class="dp">·</span>11:1<ins>8</ins>:<ins>07</ins>.000000<span class="dp">·</span>PyLockAES-1.2.<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1010 B</span></div>
+      <div><span class="source">PyLockAES-1.2.2/pylockaes/__init__.py</span> vs.</div>
+      <div id="PyLockAES--.-.-.tar---PyLockAES--.-.--pylockaes-__init__.py"><span class="source">PyLockAES-1.2.3/pylockaes/__init__.py</span>
+        <a class="anchor" href="#PyLockAES--.-.-.tar---PyLockAES--.-.--pylockaes-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>Crypto.Cipher<span class="dp">·</span>import<span class="dp">·</span>AES</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>Crypto.Cipher<span class="dp">·</span>import<span class="dp">·</span>AES</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>string</td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>string</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>random</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>random</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">class<span class="dp">·</span>AESEncryption:</td><td class="diffline">5 </td><td class="diffpresent">class<span class="dp">·</span>AESEncryption:</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>password):</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>password<ins>_length</ins>):</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.key<span class="dp">·</span>=<span class="dp">·</span>self.generate_key(password)</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.key<span class="dp">·</span>=<span class="dp">·</span>self.generate_key(password<ins>_length</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.iv<span class="dp">·</span>=<span class="dp">·</span>os.urandom(AES.block_size)</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.iv<span class="dp">·</span>=<span class="dp">·</span>os.urandom(AES.block_size)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@staticmethod</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>generate_key(password):</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>generate_key(<ins>self,<span class="dp">·</span></ins>password<ins>_length</ins>):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>alphabet<span class="dp">·</span>=<span class="dp">·</span>string.ascii_letters<span class="dp">·</span>+<span class="dp">·</span>string.digits<span class="dp">·</span>+<span class="dp">·</span>string.punctuation</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>password<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;.join(random.choice(alphabet)<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(password_length))</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>password.encode(&quot;utf-8&quot;)</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>password.encode(&quot;utf-8&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>+=<span class="dp">·</span>b&#x27;\0&#x27;<span class="dp">·</span>*<span class="dp">·</span>(AES.block_size<span class="dp">·</span>-<span class="dp">·</span>len(key)<span class="dp">·</span>%<span class="dp">·</span>AES.block_size)</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>+=<span class="dp">·</span>b&#x27;\0&#x27;<span class="dp">·</span>*<span class="dp">·</span>(AES.block_size<span class="dp">·</span>-<span class="dp">·</span>len(key)<span class="dp">·</span>%<span class="dp">·</span>AES.block_size)</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>key</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>key</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>encrypt_file(self,<span class="dp">·</span>input_file,<span class="dp">·</span>output_file):</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>encrypt_file(self,<span class="dp">·</span>input_file,<span class="dp">·</span>output_file):</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(input_file,<span class="dp">·</span>&quot;rb&quot;)<span class="dp">·</span>as<span class="dp">·</span>infile:</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(input_file,<span class="dp">·</span>&quot;rb&quot;)<span class="dp">·</span>as<span class="dp">·</span>infile:</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(output_file,<span class="dp">·</span>&quot;wb&quot;)<span class="dp">·</span>as<span class="dp">·</span>outfile:</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(output_file,<span class="dp">·</span>&quot;wb&quot;)<span class="dp">·</span>as<span class="dp">·</span>outfile:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1020 B</span></div>
+      <div><span class="source">PyLockAES-1.2.2/pylockaes/encrypt_decrypt.py</span> vs.</div>
+      <div id="PyLockAES--.-.-.tar---PyLockAES--.-.--pylockaes-encrypt_decrypt.py"><span class="source">PyLockAES-1.2.3/pylockaes/encrypt_decrypt.py</span>
+        <a class="anchor" href="#PyLockAES--.-.-.tar---PyLockAES--.-.--pylockaes-encrypt_decrypt.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>Crypto.Cipher<span class="dp">·</span>import<span class="dp">·</span>AES</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>Crypto.Cipher<span class="dp">·</span>import<span class="dp">·</span>AES</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>string</td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>string</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>random</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>random</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">class<span class="dp">·</span>AESEncryption:</td><td class="diffline">5 </td><td class="diffpresent">class<span class="dp">·</span>AESEncryption:</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>password):</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>password<ins>_length</ins>):</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.key<span class="dp">·</span>=<span class="dp">·</span>self.generate_key(password)</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.key<span class="dp">·</span>=<span class="dp">·</span>self.generate_key(password<ins>_length</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.iv<span class="dp">·</span>=<span class="dp">·</span>os.urandom(AES.block_size)</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.iv<span class="dp">·</span>=<span class="dp">·</span>os.urandom(AES.block_size)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@staticmethod</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>generate_key(password):</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>generate_key(<ins>self,<span class="dp">·</span></ins>password<ins>_length</ins>):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>alphabet<span class="dp">·</span>=<span class="dp">·</span>string.ascii_letters<span class="dp">·</span>+<span class="dp">·</span>string.digits<span class="dp">·</span>+<span class="dp">·</span>string.punctuation</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>password<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;.join(random.choice(alphabet)<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(password_length))</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>password.encode(&quot;utf-8&quot;)</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>password.encode(&quot;utf-8&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>+=<span class="dp">·</span>b&#x27;\0&#x27;<span class="dp">·</span>*<span class="dp">·</span>(AES.block_size<span class="dp">·</span>-<span class="dp">·</span>len(key)<span class="dp">·</span>%<span class="dp">·</span>AES.block_size)</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>+=<span class="dp">·</span>b&#x27;\0&#x27;<span class="dp">·</span>*<span class="dp">·</span>(AES.block_size<span class="dp">·</span>-<span class="dp">·</span>len(key)<span class="dp">·</span>%<span class="dp">·</span>AES.block_size)</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>key</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>key</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>encrypt_file(self,<span class="dp">·</span>input_file,<span class="dp">·</span>output_file):</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>encrypt_file(self,<span class="dp">·</span>input_file,<span class="dp">·</span>output_file):</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(input_file,<span class="dp">·</span>&quot;rb&quot;)<span class="dp">·</span>as<span class="dp">·</span>infile:</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(input_file,<span class="dp">·</span>&quot;rb&quot;)<span class="dp">·</span>as<span class="dp">·</span>infile:</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(output_file,<span class="dp">·</span>&quot;wb&quot;)<span class="dp">·</span>as<span class="dp">·</span>outfile:</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(output_file,<span class="dp">·</span>&quot;wb&quot;)<span class="dp">·</span>as<span class="dp">·</span>outfile:</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

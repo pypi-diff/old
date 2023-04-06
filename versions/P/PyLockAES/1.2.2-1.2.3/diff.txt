@@ -1,0 +1,92 @@
+--- tmp/PyLockAES-1.2.2.tar.gz
++++ tmp/PyLockAES-1.2.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "PyLockAES-1.2.2.tar", last modified: Thu Apr  6 11:12:29 2023, max compression
+│ +gzip compressed data, was "PyLockAES-1.2.3.tar", last modified: Thu Apr  6 11:18:10 2023, max compression
+│   --- PyLockAES-1.2.2.tar
+├── +++ PyLockAES-1.2.3.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ -drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:12:29.106060 PyLockAES-1.2.2/
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      160 2023-04-06 11:12:29.106060 PyLockAES-1.2.2/PKG-INFO
+│ │ -drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:12:29.106060 PyLockAES-1.2.2/PyLockAES.egg-info/
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      160 2023-04-06 11:12:28.000000 PyLockAES-1.2.2/PyLockAES.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      191 2023-04-06 11:12:29.000000 PyLockAES-1.2.2/PyLockAES.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)        1 2023-04-06 11:12:28.000000 PyLockAES-1.2.2/PyLockAES.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)       10 2023-04-06 11:12:28.000000 PyLockAES-1.2.2/PyLockAES.egg-info/top_level.txt
+│ │ -drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:12:29.106060 PyLockAES-1.2.2/pylockaes/
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)     1668 2023-04-06 11:12:25.000000 PyLockAES-1.2.2/pylockaes/__init__.py
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)     1668 2023-04-06 11:12:25.000000 PyLockAES-1.2.2/pylockaes/encrypt_decrypt.py
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)       38 2023-04-06 11:12:29.106060 PyLockAES-1.2.2/setup.cfg
+│ │ --rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      237 2023-04-06 11:12:25.000000 PyLockAES-1.2.2/setup.py
+│ │ +drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:18:10.716941 PyLockAES-1.2.3/
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      160 2023-04-06 11:18:10.712941 PyLockAES-1.2.3/PKG-INFO
+│ │ +drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:18:10.712941 PyLockAES-1.2.3/PyLockAES.egg-info/
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      160 2023-04-06 11:18:10.000000 PyLockAES-1.2.3/PyLockAES.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      191 2023-04-06 11:18:10.000000 PyLockAES-1.2.3/PyLockAES.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)        1 2023-04-06 11:18:10.000000 PyLockAES-1.2.3/PyLockAES.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)       10 2023-04-06 11:18:10.000000 PyLockAES-1.2.3/PyLockAES.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 leonardo  (1000) leonardo  (1000)        0 2023-04-06 11:18:10.712941 PyLockAES-1.2.3/pylockaes/
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)     1838 2023-04-06 11:16:55.000000 PyLockAES-1.2.3/pylockaes/__init__.py
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)     1838 2023-04-06 11:18:07.000000 PyLockAES-1.2.3/pylockaes/encrypt_decrypt.py
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)       38 2023-04-06 11:18:10.716941 PyLockAES-1.2.3/setup.cfg
+│ │ +-rw-rw-r--   0 leonardo  (1000) leonardo  (1000)      237 2023-04-06 11:18:07.000000 PyLockAES-1.2.3/setup.py
+│ │   --- PyLockAES-1.2.2/pylockaes/__init__.py
+│ ├── +++ PyLockAES-1.2.3/pylockaes/__init__.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,20 +1,21 @@
+│ │  from Crypto.Cipher import AES
+│ │  import os
+│ │  import string
+│ │  import random
+│ │  
+│ │  
+│ │  class AESEncryption:
+│ │ -    def __init__(self, password):
+│ │ -        self.key = self.generate_key(password)
+│ │ +    def __init__(self, password_length):
+│ │ +        self.key = self.generate_key(password_length)
+│ │          self.iv = os.urandom(AES.block_size)
+│ │  
+│ │ -    @staticmethod
+│ │ -    def generate_key(password):
+│ │ +    def generate_key(self, password_length):
+│ │ +        alphabet = string.ascii_letters + string.digits + string.punctuation
+│ │ +        password = ''.join(random.choice(alphabet) for i in range(password_length))
+│ │          key = password.encode("utf-8")
+│ │          key += b'\0' * (AES.block_size - len(key) % AES.block_size)
+│ │          return key
+│ │  
+│ │      def encrypt_file(self, input_file, output_file):
+│ │          with open(input_file, "rb") as infile:
+│ │              with open(output_file, "wb") as outfile:
+│ │   --- PyLockAES-1.2.2/pylockaes/encrypt_decrypt.py
+│ ├── +++ PyLockAES-1.2.3/pylockaes/encrypt_decrypt.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,20 +1,21 @@
+│ │  from Crypto.Cipher import AES
+│ │  import os
+│ │  import string
+│ │  import random
+│ │  
+│ │  
+│ │  class AESEncryption:
+│ │ -    def __init__(self, password):
+│ │ -        self.key = self.generate_key(password)
+│ │ +    def __init__(self, password_length):
+│ │ +        self.key = self.generate_key(password_length)
+│ │          self.iv = os.urandom(AES.block_size)
+│ │  
+│ │ -    @staticmethod
+│ │ -    def generate_key(password):
+│ │ +    def generate_key(self, password_length):
+│ │ +        alphabet = string.ascii_letters + string.digits + string.punctuation
+│ │ +        password = ''.join(random.choice(alphabet) for i in range(password_length))
+│ │          key = password.encode("utf-8")
+│ │          key += b'\0' * (AES.block_size - len(key) % AES.block_size)
+│ │          return key
+│ │  
+│ │      def encrypt_file(self, input_file, output_file):
+│ │          with open(input_file, "rb") as infile:
+│ │              with open(output_file, "wb") as outfile:

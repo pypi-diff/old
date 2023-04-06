@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/nucliadb_sdk-2.6.0.post135-py3-none-any.whl.zip tmp/nucliadb_sdk-2.6.0.post136-py3-none-any.whl.zip --html versions/n/nucliadb-sdk/2.6.0.post135-2.6.0.post136/index.html --text versions/n/nucliadb-sdk/2.6.0.post135-2.6.0.post136/diff.txt --markdown versions/n/nucliadb-sdk/2.6.0.post135-2.6.0.post136/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.76 KB</span></div>
+  <div><span class="source">tmp/nucliadb_sdk-2.6.0.post135-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/nucliadb_sdk-2.6.0.post136-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">4.32 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3004<del>2</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>24</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3004<ins>3</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>24</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1440<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1440<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16458<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/client.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16458<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/entities.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/entities.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>978<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/file.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>978<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/file.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13121<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/knowledgebox.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13121<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/knowledgebox.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1302<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/labels.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1302<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/labels.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/py.typed</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14146<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/resource.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14146<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/resource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3763<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/search.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3763<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/search.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/utils.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1611<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/vectors.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1611<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/vectors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>833<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>833<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>891<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/conftest.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>891<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/conftest.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2778<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/fixtures.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2778<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/fixtures.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1183<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/test_create.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1183<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/test_create.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1715<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/test_dict_resource.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1715<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/test_dict_resource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/test_search_resource.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/test_search_resource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3909<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/test_set_resource.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3909<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/test_set_resource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>33</del><span class="dp">·</span>nucliadb_sdk/tests/test_vectors.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>12</ins><span class="dp">·</span>nucliadb_sdk/tests/test_vectors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>691<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>35</del><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/METADATA</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>691<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>14</ins><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>35</del><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/WHEEL</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>14</ins><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>35</del><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/top_level.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>14</ins><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>34</del><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/zip-safe</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>13</ins><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2058<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><del>05</del>:<del>35</del><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/RECORD</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2058<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-06<span class="dp">·</span><ins>11</ins>:<ins>14</ins><span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">24<span class="dp">·</span>files,<span class="dp">·</span>87865<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2668<del>8</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>69.6%</td><td class="diffline">26 </td><td class="diffpresent">24<span class="dp">·</span>files,<span class="dp">·</span>87865<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2668<ins>9</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>69.6%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">820 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 51, 23 lines modified</td><td colspan="2">Offset 51, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk/tests/test_set_resource.py</td><td class="diffline">51 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk/tests/test_set_resource.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">52 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk/tests/test_vectors.py</td><td class="diffline">53 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk/tests/test_vectors.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">54 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/METADATA</td><td class="diffline">55 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">56 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/WHEEL</td><td class="diffline">57 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">58 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/top_level.txt</td><td class="diffline">59 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">60 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/zip-safe</td><td class="diffline">61 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/zip-safe</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">62 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/RECORD</td><td class="diffline">63 </td><td class="diffpresent">Filename:<span class="dp">·</span>nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">64 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">65 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">892 B</span></div>
+    <div><span class="source">nucliadb_sdk-2.6.0.post135.dist-info/METADATA</span> vs.</div>
+    <div id="nucliadb_sdk--.-.-.post---.dist-info-METADATA"><span class="source">nucliadb_sdk-2.6.0.post136.dist-info/METADATA</span>
+      <a class="anchor" href="#nucliadb_sdk--.-.-.post---.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 2% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 21 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nucliadb-sdk</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nucliadb-sdk</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0.post13<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0.post13<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>UNKNOWN</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://nucliadb.com</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://nucliadb.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>BSD</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>BSD</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">7 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Affero<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(AGPLv3+)</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Affero<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(AGPLv3+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>httpx</td><td class="diffline">12 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>httpx</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>requests</td><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>requests</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>nucliadb-models<span class="dp">·</span>(==2.6.0-post13<del>5</del>)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>nucliadb-models<span class="dp">·</span>(==2.6.0-post13<ins>6</ins>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>NucliaDB<span class="dp">·</span>SDK</td><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>NucliaDB<span class="dp">·</span>SDK</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">NucliaDB<span class="dp">·</span>Cloud<span class="dp">·</span>and<span class="dp">·</span>NucliaDB<span class="dp">·</span>OSS<span class="dp">·</span>sdk</td><td class="diffline">16 </td><td class="diffpresent">NucliaDB<span class="dp">·</span>Cloud<span class="dp">·</span>and<span class="dp">·</span>NucliaDB<span class="dp">·</span>OSS<span class="dp">·</span>sdk</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Update<span class="dp">·</span>and<span class="dp">·</span>compile<span class="dp">·</span>the<span class="dp">·</span>nucliadb<span class="dp">·</span>image<span class="dp">·</span>locally<span class="dp">·</span>before<span class="dp">·</span>running<span class="dp">·</span>the<span class="dp">·</span>tests.</td><td class="diffline">17 </td><td class="diffpresent">Update<span class="dp">·</span>and<span class="dp">·</span>compile<span class="dp">·</span>the<span class="dp">·</span>nucliadb<span class="dp">·</span>image<span class="dp">·</span>locally<span class="dp">·</span>before<span class="dp">·</span>running<span class="dp">·</span>the<span class="dp">·</span>tests.</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">From<span class="dp">·</span>nucliadb<span class="dp">·</span>root<span class="dp">·</span>dir:</td><td class="diffline">18 </td><td class="diffpresent">From<span class="dp">·</span>nucliadb<span class="dp">·</span>root<span class="dp">·</span>dir:</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.67 KB</span></div>
+    <div><span class="source">nucliadb_sdk-2.6.0.post135.dist-info/RECORD</span> vs.</div>
+    <div id="nucliadb_sdk--.-.-.post---.dist-info-RECORD"><span class="source">nucliadb_sdk-2.6.0.post136.dist-info/RECORD</span>
+      <a class="anchor" href="#nucliadb_sdk--.-.-.post---.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 4% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 12 lines modified</td><td colspan="2">Offset 13, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">nucliadb_sdk/tests/conftest.py,sha256=L7a9YyCqVDYDGQvNtC7HyK2F24yvoN0mAcDQfSi8EmQ,891</td><td class="diffline">13 </td><td class="diffpresent">nucliadb_sdk/tests/conftest.py,sha256=L7a9YyCqVDYDGQvNtC7HyK2F24yvoN0mAcDQfSi8EmQ,891</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">nucliadb_sdk/tests/fixtures.py,sha256=hyfjgInAqGrXZxvxeNFhDMRzZmS07m3_NPqLQXbcTpI,2778</td><td class="diffline">14 </td><td class="diffpresent">nucliadb_sdk/tests/fixtures.py,sha256=hyfjgInAqGrXZxvxeNFhDMRzZmS07m3_NPqLQXbcTpI,2778</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">nucliadb_sdk/tests/test_create.py,sha256=eI2SUacgok1Yls593J1hsIK5j-NwdHjQbSTnNUv6xSw,1183</td><td class="diffline">15 </td><td class="diffpresent">nucliadb_sdk/tests/test_create.py,sha256=eI2SUacgok1Yls593J1hsIK5j-NwdHjQbSTnNUv6xSw,1183</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">nucliadb_sdk/tests/test_dict_resource.py,sha256=d9UIb39_uUGp5GojNgamzj4cCNIL7Ny5rgO_QVrOq7A,1715</td><td class="diffline">16 </td><td class="diffpresent">nucliadb_sdk/tests/test_dict_resource.py,sha256=d9UIb39_uUGp5GojNgamzj4cCNIL7Ny5rgO_QVrOq7A,1715</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">nucliadb_sdk/tests/test_search_resource.py,sha256=APrK2u0ko9BWQJu-E6Yg85C0JL0ARfof__H02DZz9Q8,14102</td><td class="diffline">17 </td><td class="diffpresent">nucliadb_sdk/tests/test_search_resource.py,sha256=APrK2u0ko9BWQJu-E6Yg85C0JL0ARfof__H02DZz9Q8,14102</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">nucliadb_sdk/tests/test_set_resource.py,sha256=cwLcDgkp3M1jad31f4dwUYNwZUoUFYt-kPRHWUebnIM,3909</td><td class="diffline">18 </td><td class="diffpresent">nucliadb_sdk/tests/test_set_resource.py,sha256=cwLcDgkp3M1jad31f4dwUYNwZUoUFYt-kPRHWUebnIM,3909</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">nucliadb_sdk/tests/test_vectors.py,sha256=43hlY-Mj6kVwHexixs1YQ5ic5wQUax4Rz-oqEHkFQHE,1429</td><td class="diffline">19 </td><td class="diffpresent">nucliadb_sdk/tests/test_vectors.py,sha256=43hlY-Mj6kVwHexixs1YQ5ic5wQUax4Rz-oqEHkFQHE,1429</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/METADATA,sha256=<del>rEVSQ77Si_n4itgTxVYGh7Y3nim6pgQz3_RzJgXENCE</del>,691</td><td class="diffline">20 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/METADATA,sha256=<ins>wqQNmUCdR7Sr7WRGVLHrGDmqmCdIa2YKelyq8y9QkLk</ins>,691</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td><td class="diffline">21 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/top_level.txt,sha256=_dCwt_JnsZ3463lfvc5KcM2wUQJ9aSvKSsAAjGH8R0Y,13</td><td class="diffline">22 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/top_level.txt,sha256=_dCwt_JnsZ3463lfvc5KcM2wUQJ9aSvKSsAAjGH8R0Y,13</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1</td><td class="diffline">23 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<del>5</del>.dist-info/RECORD,,</td><td class="diffline">24 </td><td class="diffpresent">nucliadb_sdk-2.6.0.post13<ins>6</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

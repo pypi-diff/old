@@ -1,0 +1,135 @@
+--- tmp/jammato-1.0.tar.gz
++++ tmp/jammato-1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "jammato-1.0.tar", last modified: Thu Apr  6 11:02:42 2023, max compression
+│ +gzip compressed data, was "jammato-1.1.tar", last modified: Thu Apr  6 11:16:51 2023, max compression
+│   --- jammato-1.0.tar
+├── +++ jammato-1.1.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 nicolasblumenroehr   (501) staff       (20)        0 2023-04-06 11:02:42.853981 jammato-1.0/
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)      735 2023-04-06 11:02:42.854118 jammato-1.0/PKG-INFO
+│ │ -drwxr-xr-x   0 nicolasblumenroehr   (501) staff       (20)        0 2023-04-06 11:02:42.853904 jammato-1.0/jammato/
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)      591 2023-04-06 10:39:05.716584 jammato-1.0/jammato/__init__.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3116 2023-04-06 10:30:55.448096 jammato-1.0/jammato/analyse_study.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     8242 2023-04-06 10:38:29.731422 jammato-1.0/jammato/attribute_inserter.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)    13036 2023-04-06 10:31:42.701312 jammato-1.0/jammato/attribute_mapper.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1323 2023-03-31 12:32:39.297165 jammato-1.0/jammato/cache_schemas.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3926 2023-04-06 10:48:03.942088 jammato-1.0/jammato/data_cleaning.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)    10210 2023-04-06 10:48:17.982257 jammato-1.0/jammato/dicom_mapping.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     5036 2023-03-31 12:32:39.299785 jammato-1.0/jammato/dicom_reader.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3966 2023-03-31 12:32:39.300571 jammato-1.0/jammato/metadata_reader.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     7796 2023-03-31 12:32:39.302015 jammato-1.0/jammato/schema_reader.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1356 2023-03-31 12:32:39.302417 jammato-1.0/jammato/schemas_collector.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)       22 2023-04-06 10:13:16.532667 jammato-1.0/jammato/version.py
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)       39 2023-04-06 10:17:27.211535 jammato-1.0/setup.cfg
+│ │ --rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1081 2023-04-06 11:02:39.115799 jammato-1.0/setup.py
+│ │ +drwxr-xr-x   0 nicolasblumenroehr   (501) staff       (20)        0 2023-04-06 11:16:51.326361 jammato-1.1/
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)      735 2023-04-06 11:16:51.326580 jammato-1.1/PKG-INFO
+│ │ +drwxr-xr-x   0 nicolasblumenroehr   (501) staff       (20)        0 2023-04-06 11:16:51.326255 jammato-1.1/jammato/
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)      591 2023-04-06 10:39:05.716584 jammato-1.1/jammato/__init__.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3116 2023-04-06 10:30:55.448096 jammato-1.1/jammato/analyse_study.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     8242 2023-04-06 10:38:29.731422 jammato-1.1/jammato/attribute_inserter.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)    13036 2023-04-06 10:31:42.701312 jammato-1.1/jammato/attribute_mapper.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1323 2023-03-31 12:32:39.297165 jammato-1.1/jammato/cache_schemas.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3926 2023-04-06 10:48:03.942088 jammato-1.1/jammato/data_cleaning.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)    10210 2023-04-06 10:48:17.982257 jammato-1.1/jammato/dicom_mapping.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     5036 2023-03-31 12:32:39.299785 jammato-1.1/jammato/dicom_reader.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     3966 2023-03-31 12:32:39.300571 jammato-1.1/jammato/metadata_reader.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     7796 2023-03-31 12:32:39.302015 jammato-1.1/jammato/schema_reader.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1356 2023-03-31 12:32:39.302417 jammato-1.1/jammato/schemas_collector.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)       22 2023-04-06 10:13:16.532667 jammato-1.1/jammato/version.py
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)       39 2023-04-06 10:17:27.211535 jammato-1.1/setup.cfg
+│ │ +-rw-r--r--   0 nicolasblumenroehr   (501) staff       (20)     1079 2023-04-06 11:15:52.863281 jammato-1.1/setup.py
+│ │   --- jammato-1.0/PKG-INFO
+│ ├── +++ jammato-1.1/PKG-INFO
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: jammato
+│ │ -Version: 1.0
+│ │ +Version: 1.1
+│ │  Summary: A package for mapping metadata attributes from proprietary file format schemas to a json schema document.
+│ │  Home-page: https://github.com/user/nicolasblumenroehr
+│ │  Author: Nicolas Blumenroehr
+│ │  Author-email: nicolas.blumenroehr@gmail.com
+│ │  License: cc
+│ │ -Download-URL: https://github.com/kit-data-manager/JaMMaTo/archive/refs/tags/3.0.0.tar.gz
+│ │ +Download-URL: https://github.com/kit-data-manager/JaMMaTo/archive/refs/tags/3.0.1.tar.gz
+│ │  Description: UNKNOWN
+│ │  Keywords: Schema,Mapping,DICOM,JSON
+│ │  Platform: UNKNOWN
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Topic :: Software Development :: Build Tools
+│ │  Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+│ │   --- jammato-1.0/jammato/__init__.py
+│ ├── +++ jammato-1.1/jammato/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/analyse_study.py
+│ ├── +++ jammato-1.1/jammato/analyse_study.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/attribute_inserter.py
+│ ├── +++ jammato-1.1/jammato/attribute_inserter.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/attribute_mapper.py
+│ ├── +++ jammato-1.1/jammato/attribute_mapper.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/cache_schemas.py
+│ ├── +++ jammato-1.1/jammato/cache_schemas.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/data_cleaning.py
+│ ├── +++ jammato-1.1/jammato/data_cleaning.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/dicom_mapping.py
+│ ├── +++ jammato-1.1/jammato/dicom_mapping.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/dicom_reader.py
+│ ├── +++ jammato-1.1/jammato/dicom_reader.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/metadata_reader.py
+│ ├── +++ jammato-1.1/jammato/metadata_reader.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/schema_reader.py
+│ ├── +++ jammato-1.1/jammato/schema_reader.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/jammato/schemas_collector.py
+│ ├── +++ jammato-1.1/jammato/schemas_collector.py
+│ │┄ Files identical despite different names
+│ │   --- jammato-1.0/setup.py
+│ ├── +++ jammato-1.1/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,29 +1,29 @@
+│ │  from distutils.core import setup
+│ │  setup(
+│ │    name = 'jammato',        
+│ │    packages = ['jammato'],   
+│ │ -  version = '1.0',      
+│ │ +  version = '1.1',      
+│ │    license='cc',        
+│ │    description = 'A package for mapping metadata attributes from proprietary file format schemas to a json schema document.',
+│ │    author = 'Nicolas Blumenroehr',                  
+│ │    author_email = 'nicolas.blumenroehr@gmail.com',      
+│ │    url = 'https://github.com/user/nicolasblumenroehr',   
+│ │ -  download_url = 'https://github.com/kit-data-manager/JaMMaTo/archive/refs/tags/3.0.0.tar.gz',    
+│ │ +  download_url = 'https://github.com/kit-data-manager/JaMMaTo/archive/refs/tags/3.0.1.tar.gz',    
+│ │    keywords = ['Schema', 'Mapping', 'DICOM', 'JSON'],   
+│ │    install_requires=[           
+│ │          'pydicom',
+│ │          'jsonschema',
+│ │          'urllib3',
+│ │          'datetime',
+│ │          'typing',
+│ │          'zipp',
+│ │          'nested_lookup'
+│ │        ],
+│ │ -  python_requires = ['>=3.7'],
+│ │ +  python_requires = '>=3.8',
+│ │    classifiers=[
+│ │      'Development Status :: 3 - Alpha',      
+│ │      'Intended Audience :: Developers',      
+│ │      'Topic :: Software Development :: Build Tools',
+│ │      'License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',   
+│ │      'Programming Language :: Python :: 3'
+│ │    ],

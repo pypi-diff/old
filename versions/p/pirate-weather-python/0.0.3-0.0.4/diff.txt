@@ -1,0 +1,276 @@
+--- tmp/pirate-weather-python-0.0.3.tar.gz
++++ tmp/pirate-weather-python-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/pirate-weather-python-0.0.3.tar", last modified: Wed Apr  5 11:11:38 2023, max compression
+│ +gzip compressed data, was "dist/pirate-weather-python-0.0.4.tar", last modified: Thu Apr  6 11:20:45 2023, max compression
+│   --- pirate-weather-python-0.0.3.tar
+├── +++ pirate-weather-python-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather/
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather/types/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/types/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1214 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/types/languages.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      210 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/types/units.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      274 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/types/weather.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     7383 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/api.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1476 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/base.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      283 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/exceptions.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     4395 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/forecast.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1698 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/request_manager.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      494 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/pirate_weather/utils.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      634 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      661 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)       45 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/requires.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)       21 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/pirate_weather_python.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/tests/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     6488 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/data.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      332 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/mokcs.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1654 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/test_base.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     5224 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/test_forecast.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      316 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/tests/utils.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     4450 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/README.md
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      981 2023-04-05 11:11:36.000000 pirate-weather-python-0.0.3/setup.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      634 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/PKG-INFO
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)       38 2023-04-05 11:11:38.000000 pirate-weather-python-0.0.3/setup.cfg
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather/
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather/types/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/types/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1214 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/types/languages.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      210 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/types/units.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      274 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/types/weather.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     7966 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/api.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1476 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/base.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      283 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/exceptions.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     4395 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/forecast.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1698 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/request_manager.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      494 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/pirate_weather/utils.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      634 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      661 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)       45 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/requires.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)       21 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/pirate_weather_python.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/tests/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     6488 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/data.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      332 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/mokcs.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1654 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/test_base.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     5224 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/test_forecast.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      316 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/tests/utils.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     4450 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/README.md
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      981 2023-04-06 11:20:43.000000 pirate-weather-python-0.0.4/setup.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      634 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/PKG-INFO
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)       38 2023-04-06 11:20:45.000000 pirate-weather-python-0.0.4/setup.cfg
+│ │   --- pirate-weather-python-0.0.3/pirate_weather/types/languages.py
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather/types/languages.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/pirate_weather/api.py
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather/api.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,9 +1,10 @@
+│ │  from datetime import datetime
+│ │  from enum import Enum
+│ │ +from typing import List, Optional
+│ │  
+│ │  import aiohttp
+│ │  import pytz
+│ │  
+│ │  from .forecast import Forecast
+│ │  from .request_manager import (BaseRequestManger, RequestManger,
+│ │                                RequestMangerAsync)
+│ │ @@ -44,14 +45,21 @@
+│ │              lang=Languages.ENGLISH,
+│ │              values_units=Units.AUTO,
+│ │              exclude: [Weather] = None,
+│ │              timezone: str = None,
+│ │      ):
+│ │          raise NotImplementedError
+│ │  
+│ │ +    @staticmethod
+│ │ +    def convert_exclude_param_to_string(exclude: Optional[List[Weather]]):
+│ │ +        if exclude:
+│ │ +            exclude = [ex.value for ex in exclude]
+│ │ +            exclude = ",".join(exclude)
+│ │ +        return exclude
+│ │ +
+│ │      def get_url(self, latitude: float, longitude: float, time=None,
+│ │                  api_version=PirateWeatherApiVersion.BASE, **params):
+│ │          host = api_version
+│ │          valid_lat_long = self.validate_lat_long(latitude=latitude, longitude=longitude)
+│ │          if not valid_lat_long:
+│ │              raise ValueError("Invalid Latitude or Longitude values.")
+│ │          if time is None:
+│ │ @@ -99,14 +107,15 @@
+│ │              extend: bool = None,
+│ │              lang=Languages.ENGLISH,
+│ │              values_units=Units.AUTO,
+│ │              exclude: [Weather] = None,
+│ │              timezone: str = None,
+│ │      ) -> Forecast:
+│ │          url = self.get_url(latitude, longitude)
+│ │ +        exclude = self.convert_exclude_param_to_string(exclude)
+│ │          data = self.request_manager.make_request(
+│ │              url=url,
+│ │              extend=Weather.HOURLY if extend else None,
+│ │              lang=lang,
+│ │              units=values_units,
+│ │              exclude=exclude,
+│ │              timezone=timezone,
+│ │ @@ -122,14 +131,15 @@
+│ │              lang=Languages.ENGLISH,
+│ │              values_units=Units.AUTO,
+│ │              exclude: [Weather] = None,
+│ │              timezone: str = None,
+│ │      ) -> Forecast:
+│ │          url = self.get_url(latitude, longitude, int(time.timestamp()),
+│ │                             api_version=PirateWeatherApiVersion.TIME_MACHINE)
+│ │ +        exclude = self.convert_exclude_param_to_string(exclude)
+│ │          data = self.request_manager.make_request(
+│ │              url=url,
+│ │              extend=Weather.HOURLY if extend else None,
+│ │              lang=lang,
+│ │              units=values_units,
+│ │              exclude=exclude,
+│ │              timezone=timezone,
+│ │ @@ -151,14 +161,16 @@
+│ │          current_time = int(datetime.now().timestamp())
+│ │          if timezone:
+│ │              tz = pytz.timezone(timezone)
+│ │              current_time = datetime.now(tz)
+│ │  
+│ │          diff = required_time - current_time
+│ │  
+│ │ +        exclude = self.convert_exclude_param_to_string(exclude)
+│ │ +
+│ │          url = self.get_url(latitude, longitude, diff)
+│ │          data = self.request_manager.make_request(
+│ │              url=url,
+│ │              extend=Weather.HOURLY if extend else None,
+│ │              lang=lang,
+│ │              units=values_units,
+│ │              exclude=exclude,
+│ │ @@ -185,14 +197,15 @@
+│ │                             extend: bool = None,
+│ │                             lang=Languages.ENGLISH,
+│ │                             values_units=Units.AUTO,
+│ │                             exclude: [Weather] = None,
+│ │                             timezone: str = None,
+│ │                             ) -> Forecast:
+│ │          url = self.get_url(latitude, longitude)
+│ │ +        exclude = self.convert_exclude_param_to_string(exclude)
+│ │          data = await self.request_manager.make_request(
+│ │              url=url,
+│ │              extend=Weather.HOURLY if extend else None,
+│ │              lang=lang,
+│ │              units=values_units,
+│ │              exclude=exclude,
+│ │              timezone=timezone,
+│ │ @@ -208,14 +221,15 @@
+│ │                                          extend: bool = False,
+│ │                                          lang=Languages.ENGLISH,
+│ │                                          values_units=Units.AUTO,
+│ │                                          exclude: [Weather] = None,
+│ │                                          timezone: str = None
+│ │                                          ) -> Forecast:
+│ │          url = self.get_url(latitude, longitude, int(time.timestamp()))
+│ │ +        exclude = self.convert_exclude_param_to_string(exclude)
+│ │          data = await self.request_manager.make_request(
+│ │              url=url,
+│ │              extend=Weather.HOURLY if extend else None,
+│ │              lang=lang,
+│ │              units=values_units,
+│ │              exclude=exclude,
+│ │              timezone=timezone,
+│ │   --- pirate-weather-python-0.0.3/pirate_weather/base.py
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather/base.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/pirate_weather/forecast.py
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather/forecast.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/pirate_weather/request_manager.py
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather/request_manager.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/pirate_weather_python.egg-info/PKG-INFO
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather_python.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: pirate-weather-python
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: The Pirate Weather API wrapper
+│ │  Home-page: https://github.com/bakobako/pirate-weather-python
+│ │  Author: bakobako
+│ │  Author-email: adam.bako@keboola.com
+│ │  License: GPLv3 License
+│ │ -Download-URL: https://github.com/bakobako/pirate-weather-python/archive/0.0.3.tar.gz
+│ │ +Download-URL: https://github.com/bakobako/pirate-weather-python/archive/0.0.4.tar.gz
+│ │  Description: View on github
+│ │  Platform: UNKNOWN
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │   --- pirate-weather-python-0.0.3/pirate_weather_python.egg-info/SOURCES.txt
+│ ├── +++ pirate-weather-python-0.0.4/pirate_weather_python.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/tests/data.py
+│ ├── +++ pirate-weather-python-0.0.4/tests/data.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/tests/test_base.py
+│ ├── +++ pirate-weather-python-0.0.4/tests/test_base.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/tests/test_forecast.py
+│ ├── +++ pirate-weather-python-0.0.4/tests/test_forecast.py
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/README.md
+│ ├── +++ pirate-weather-python-0.0.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- pirate-weather-python-0.0.3/setup.py
+│ ├── +++ pirate-weather-python-0.0.4/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import os
+│ │  
+│ │  from setuptools import find_packages, setup
+│ │  
+│ │ -__version__ = "0.0.3"
+│ │ +__version__ = "0.0.4"
+│ │  
+│ │  
+│ │  with open(os.path.join(
+│ │          os.path.abspath(os.path.dirname(__file__)), "README.md")
+│ │  ) as f:
+│ │      README = f.read()
+│ │   --- pirate-weather-python-0.0.3/PKG-INFO
+│ ├── +++ pirate-weather-python-0.0.4/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: pirate-weather-python
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: The Pirate Weather API wrapper
+│ │  Home-page: https://github.com/bakobako/pirate-weather-python
+│ │  Author: bakobako
+│ │  Author-email: adam.bako@keboola.com
+│ │  License: GPLv3 License
+│ │ -Download-URL: https://github.com/bakobako/pirate-weather-python/archive/0.0.3.tar.gz
+│ │ +Download-URL: https://github.com/bakobako/pirate-weather-python/archive/0.0.4.tar.gz
+│ │  Description: View on github
+│ │  Platform: UNKNOWN
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
