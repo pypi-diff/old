@@ -1,0 +1,72 @@
+--- tmp/MD2NMR-0.0.4.tar.gz
++++ tmp/MD2NMR-0.0.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "MD2NMR-0.0.4.tar", last modified: Thu Mar 23 14:48:31 2023, max compression
+│ +gzip compressed data, was "MD2NMR-0.0.5.tar", last modified: Thu Apr  6 19:46:36 2023, max compression
+│   --- MD2NMR-0.0.4.tar
+├── +++ MD2NMR-0.0.5.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 14:48:31.675558 MD2NMR-0.0.4/
+│ │ --rw-rw-rw-   0        0        0     1085 2023-01-27 18:02:21.000000 MD2NMR-0.0.4/LICENSE
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 14:48:31.674560 MD2NMR-0.0.4/MD2NMR.egg-info/
+│ │ --rw-rw-rw-   0        0        0      375 2023-03-23 14:48:31.000000 MD2NMR-0.0.4/MD2NMR.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      185 2023-03-23 14:48:31.000000 MD2NMR-0.0.4/MD2NMR.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-23 14:48:31.000000 MD2NMR-0.0.4/MD2NMR.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       94 2023-03-23 14:48:31.000000 MD2NMR-0.0.4/MD2NMR.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-23 14:48:31.000000 MD2NMR-0.0.4/MD2NMR.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      375 2023-03-23 14:48:31.675558 MD2NMR-0.0.4/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1425 2023-03-22 19:32:41.000000 MD2NMR-0.0.4/README.md
+│ │ --rw-rw-rw-   0        0        0      111 2023-03-23 14:48:31.676551 MD2NMR-0.0.4/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      706 2023-03-23 14:45:22.000000 MD2NMR-0.0.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 19:46:36.040061 MD2NMR-0.0.5/
+│ │ +-rw-rw-rw-   0        0        0     1085 2023-01-27 18:02:21.000000 MD2NMR-0.0.5/LICENSE
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 19:46:36.039061 MD2NMR-0.0.5/MD2NMR.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      635 2023-04-06 19:46:35.000000 MD2NMR-0.0.5/MD2NMR.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      185 2023-04-06 19:46:35.000000 MD2NMR-0.0.5/MD2NMR.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 19:46:35.000000 MD2NMR-0.0.5/MD2NMR.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       94 2023-04-06 19:46:35.000000 MD2NMR-0.0.5/MD2NMR.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 19:46:35.000000 MD2NMR-0.0.5/MD2NMR.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      635 2023-04-06 19:46:36.040061 MD2NMR-0.0.5/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2005 2023-04-06 19:30:35.000000 MD2NMR-0.0.5/README.md
+│ │ +-rw-rw-rw-   0        0        0      111 2023-04-06 19:46:36.040562 MD2NMR-0.0.5/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      966 2023-04-06 19:44:56.000000 MD2NMR-0.0.5/setup.py
+│ │   --- MD2NMR-0.0.4/LICENSE
+│ ├── +++ MD2NMR-0.0.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- MD2NMR-0.0.4/README.md
+│ ├── +++ MD2NMR-0.0.5/README.md
+│ │┄ Files 22% similar despite different names
+│ │ @@ -12,18 +12,30 @@
+│ │  or use pip:
+│ │  pip install virtualenv #create virtual environment
+│ │  virtualenv test_env  
+│ │  source test_env/bin/activate
+│ │  pip install numpy==1.23.4 pandas==1.5.1 scikit-learn==1.1.3 scipy==1.9.3 mdtraj==1.9.7
+│ │  
+│ │  Usage:
+│ │ -Before usage one should first check the config.py and make sure the hyperparameters are suitable for the calculation.
+│ │ +For single file mode (basic usage):
+│ │ +python md2nmr.py -t {$topology_file$} -y {$trajectory_file_path$}
+│ │ +
+│ │ +
+│ │ +Before usage one should first check the config.py and make sure the parameters are suitable for the calculation. change the prefix list and working directory/output directory as needed.
+│ │ +
+│ │ +Double check the magnetic field strength is corresponding to experiment result: B0 in md2nmr.py file.
+│ │ +
+│ │ +To test: use the following command to download a testing MD traj under './data' directory.
+│ │ +then run following command to test. result should be in the output directory.
+│ │ +python ./src/md2nmr.py -t H2A.pdb -y H2A_1.xtc 
+│ │ +
+│ │ +then change the $use_chain_ids$ in config.py to "use_chain_ids = False" and run:
+│ │ +to test on the other trajectory.
+│ │ +python ./src/md2nmr.py -t vanilla_run1.pdb -y vanilla_run1.xtc
+│ │  
+│ │ -for single file mode (basic usage):
+│ │ -python md2nmr.py -t "topology_file_path" -y "trajectory_file_path"
+│ │  
+│ │  for batch mode: check the config file and modify the prefix list var in it.
+│ │  Note that the batch mode will generate results for all traj/topo under working directory with satisfied prefix.
+│ │  then in command line:
+│ │  python main.py --batch=True

@@ -1,0 +1,4183 @@
+# Comparing `tmp/polyglot_piranha-0.3.0.tar.gz` & `tmp/polyglot_piranha-0.3.1.tar.gz`
+
+## Comparing `polyglot_piranha-0.3.0.tar` & `polyglot_piranha-0.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,127 +1,127 @@
+--rw-r--r--   0        0        0     2024 1970-01-01 00:00:00.000000 polyglot_piranha-0.3.0/Cargo.toml
+--rw-r--r--   0     1001      123    29816 2023-02-27 20:45:36.000000 polyglot_piranha-0.3.0/Cargo.lock
+--rw-r--r--   0     1001      123    11359 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/LICENSE
+--rw-r--r--   0     1001      123     3091 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/README.md
+--rw-r--r--   0     1001      123     1373 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/EnumWithClassSymbol.java
+--rw-r--r--   0     1001      123      994 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaRuntimeException.java
+--rw-r--r--   0     1001      123     5517 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaUtils.java
+--rw-r--r--   0     1001      123     5621 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/UsageCounter.java
+--rw-r--r--   0     1001      123    66915 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/XPFlagCleaner.java
+--rw-r--r--   0     1001      123    21518 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/Config.java
+--rw-r--r--   0     1001      123     5106 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/MethodRecord.java
+--rw-r--r--   0     1001      123      377 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaConfigurationException.java
+--rw-r--r--   0     1001      123     3615 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaEnumRecord.java
+--rw-r--r--   0     1001      123     5039 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaMethodRecord.java
+--rw-r--r--   0     1001      123     2584 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaRecord.java
+--rw-r--r--   0     1001      123     2605 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationArgument.java
+--rw-r--r--   0     1001      123      550 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationResolutionException.java
+--rw-r--r--   0     1001      123     2456 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/ResolvedTestAnnotation.java
+--rw-r--r--   0     1001      123    13106 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationResolver.java
+--rw-r--r--   0     1001      123     5875 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationSpecRecord.java
+--rw-r--r--   0     1001      123    85120 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/ConfigurationTest.java
+--rw-r--r--   0     1001      123    55188 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/CorePiranhaTest.java
+--rw-r--r--   0     1001      123    48474 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/EnumConstantTest.java
+--rw-r--r--   0     1001      123     2304 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/PiranhaTestingHelpers.java
+--rw-r--r--   0     1001      123    33367 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/TestCaseCleanUpTest.java
+--rw-r--r--   0     1001      123     6780 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/TreatmentGroupsTest.java
+--rw-r--r--   0     1001      123     3480 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerNegativeCases.java
+--rw-r--r--   0     1001      123     8540 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCases.java
+--rw-r--r--   0     1001      123     4153 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesControl.java
+--rw-r--r--   0     1001      123     4326 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesTreatment.java
+--rw-r--r--   0     1001      123     2555 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCases.java
+--rw-r--r--   0     1001      123     1490 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesControl.java
+--rw-r--r--   0     1001      123     2091 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotAllowMethodChain.java
+--rw-r--r--   0     1001      123     2194 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotallowArgMatchingAndMethodChain.java
+--rw-r--r--   0     1001      123     1550 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatment.java
+--rw-r--r--   0     1001      123     1618 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatmentDoNotAllowMatchingArgMethodInvc.java
+--rw-r--r--   0     1001      123     1573 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPTest.java
+--rw-r--r--   0     1001      123       75 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/BoolParam.java
+--rw-r--r--   0     1001      123      109 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/BoolParameter.java
+--rw-r--r--   0     1001      123      175 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/OverlappingNameInterface.java
+--rw-r--r--   0     1001      123      103 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/PVal.java
+--rw-r--r--   0     1001      123      154 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/Parameter.java
+--rw-r--r--   0     1001      123      155 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/SomeOtherInterface.java
+--rw-r--r--   0     1001      123      160 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/SomeParamRev.java
+--rw-r--r--   0     1001      123      122 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/StaticMthds.java
+--rw-r--r--   0     1001      123      229 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/invalid/piranha.properties
+--rw-r--r--   0     1001      123       97 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid.json
+--rw-r--r--   0     1001      123      202 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_2.json
+--rw-r--r--   0     1001      123      213 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_3.json
+--rw-r--r--   0     1001      123      216 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_4.json
+--rw-r--r--   0     1001      123      361 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_enum_no_arg.json
+--rw-r--r--   0     1001      123      525 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_method_chain_control.json
+--rw-r--r--   0     1001      123      526 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_method_chain_treated.json
+--rw-r--r--   0     1001      123      488 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_no_flag_method_name.json
+--rw-r--r--   0     1001      123      489 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_no_flag_method_name_no_method_chain.json
+--rw-r--r--   0     1001      123      526 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_no_method_chain.json
+--rw-r--r--   0     1001      123      704 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_argument.json
+--rw-r--r--   0     1001      123     1332 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_clean_by_setters_ignore_others.json
+--rw-r--r--   0     1001      123      192 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_noFlag.json
+--rw-r--r--   0     1001      123      739 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_noTreatmentGroup.json
+--rw-r--r--   0     1001      123      652 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_receive.json
+--rw-r--r--   0     1001      123     1896 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_receive_argument.json
+--rw-r--r--   0     1001      123      844 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return.json
+--rw-r--r--   0     1001      123     1776 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_argument.json
+--rw-r--r--   0     1001      123     1932 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_receive.json
+--rw-r--r--   0     1001      123     4525 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_receive_argument.json
+--rw-r--r--   0     1001      123      251 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_with_enum_no_match.json
+--rw-r--r--   0     1001      123      246 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_with_enum_wrong_arg.json
+--rw-r--r--   0     1001      123      142 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_without_enum.json
+--rw-r--r--   0     1001      123     1637 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_unnecessary_instance_method.json
+--rw-r--r--   0     1001      123     1304 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/sample/src/main/java/com/uber/mylib/MyClass.java
+--rw-r--r--   0     1001      123     1304 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.bak
+--rw-r--r--   0     1001      123     1107 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.expect
+--rw-r--r--   0     1001      123     2565 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/javascript/src/config_checker.js
+--rw-r--r--   0     1001      123     4304 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/javascript/src/piranha.js
+--rw-r--r--   0     1001      123    27988 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/javascript/src/refactor.js
+--rw-r--r--   0     1001      123     1445 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/javascript/src/source_checker.js
+--rw-r--r--   0     1001      123      646 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/CMakeLists.txt
+--rw-r--r--   0     1001      123     1064 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/README.txt
+--rw-r--r--   0     1001      123    26229 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.cpp
+--rw-r--r--   0     1001      123        0 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.exports
+--rw-r--r--   0     1001      123      793 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/pyproject.toml
+--rw-r--r--   0     1001      123     2043 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/go/edges.toml
+--rw-r--r--   0     1001      123    10585 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/go/rules.toml
+--rw-r--r--   0     1001      123     1460 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/go/scope_config.toml
+--rwxr-xr-x   0     1001      123     2241 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/java/edges.toml
+--rwxr-xr-x   0     1001      123    15509 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/java/rules.toml
+--rwxr-xr-x   0     1001      123     3472 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/java/scope_config.toml
+--rwxr-xr-x   0     1001      123     2251 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/kt/edges.toml
+--rwxr-xr-x   0     1001      123    18693 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/kt/rules.toml
+--rwxr-xr-x   0     1001      123     2139 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/kt/scope_config.toml
+--rw-r--r--   0     1001      123     1133 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/swift/edges.toml
+--rw-r--r--   0     1001      123     8823 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/swift/rules.toml
+--rw-r--r--   0     1001      123      928 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/cleanup_rules/swift/scope_config.toml
+--rw-r--r--   0     1001      123     7317 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/lib.rs
+--rw-r--r--   0     1001      123     1679 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/main.rs
+--rw-r--r--   0     1001      123     5799 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/constraint.rs
+--rw-r--r--   0     1001      123     3084 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/default_configs.rs
+--rw-r--r--   0     1001      123     4551 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/edit.rs
+--rw-r--r--   0     1001      123     6574 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/language.rs
+--rw-r--r--   0     1001      123     4469 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/matches.rs
+--rw-r--r--   0     1001      123      928 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/mod.rs
+--rw-r--r--   0     1001      123     1987 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/outgoing_edges.rs
+--rw-r--r--   0     1001      123    17166 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/piranha_arguments.rs
+--rw-r--r--   0     1001      123     2074 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/piranha_output.rs
+--rw-r--r--   0     1001      123     7916 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/rule.rs
+--rw-r--r--   0     1001      123     6286 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/rule_graph.rs
+--rw-r--r--   0     1001      123     5931 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/rule_store.rs
+--rw-r--r--   0     1001      123     3329 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/scopes.rs
+--rw-r--r--   0     1001      123    16186 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/source_code_unit.rs
+--rw-r--r--   0     1001      123     1586 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/unit_tests/piranha_arguments_test.rs
+--rw-r--r--   0     1001      123     8334 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/unit_tests/rule_test.rs
+--rw-r--r--   0     1001      123     6058 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/unit_tests/scopes_test.rs
+--rw-r--r--   0     1001      123     8790 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/models/unit_tests/source_code_unit_test.rs
+--rw-r--r--   0     1001      123     7643 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/mod.rs
+--rw-r--r--   0     1001      123     1515 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_go.rs
+--rw-r--r--   0     1001      123     8691 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_java.rs
+--rw-r--r--   0     1001      123     1862 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_kt.rs
+--rw-r--r--   0     1001      123     2349 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_python.rs
+--rw-r--r--   0     1001      123     1661 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_swift.rs
+--rw-r--r--   0     1001      123      958 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_ts.rs
+--rw-r--r--   0     1001      123     1053 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/tests/test_piranha_tsx.rs
+--rw-r--r--   0     1001      123     5476 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/utilities/mod.rs
+--rw-r--r--   0     1001      123    12743 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/utilities/tree_sitter_utilities.rs
+--rw-r--r--   0     1001      123     3681 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/utilities/unit_tests/tree_sitter_utilities_test.rs
+--rw-r--r--   0     1001      123     2237 2023-02-27 20:43:25.000000 polyglot_piranha-0.3.0/src/utilities/unit_tests/utilities_test.rs
+--rw-r--r--   0        0        0     3797 1970-01-01 00:00:00.000000 polyglot_piranha-0.3.0/PKG-INFO
++-rw-r--r--   0        0        0     2024 1970-01-01 00:00:00.000000 polyglot_piranha-0.3.1/Cargo.toml
++-rw-r--r--   0     1001      123    35210 2023-04-06 19:48:46.000000 polyglot_piranha-0.3.1/Cargo.lock
++-rw-r--r--   0     1001      123    11359 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/LICENSE
++-rw-r--r--   0     1001      123     3091 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/README.md
++-rw-r--r--   0     1001      123     1373 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/EnumWithClassSymbol.java
++-rw-r--r--   0     1001      123      994 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaRuntimeException.java
++-rw-r--r--   0     1001      123     5517 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaUtils.java
++-rw-r--r--   0     1001      123     5621 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/UsageCounter.java
++-rw-r--r--   0     1001      123    66915 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/XPFlagCleaner.java
++-rw-r--r--   0     1001      123    21518 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/Config.java
++-rw-r--r--   0     1001      123     5106 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/MethodRecord.java
++-rw-r--r--   0     1001      123      377 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaConfigurationException.java
++-rw-r--r--   0     1001      123     3615 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaEnumRecord.java
++-rw-r--r--   0     1001      123     5039 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaMethodRecord.java
++-rw-r--r--   0     1001      123     2584 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaRecord.java
++-rw-r--r--   0     1001      123     2605 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationArgument.java
++-rw-r--r--   0     1001      123      550 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationResolutionException.java
++-rw-r--r--   0     1001      123     2456 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/ResolvedTestAnnotation.java
++-rw-r--r--   0     1001      123    13106 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationResolver.java
++-rw-r--r--   0     1001      123     5875 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationSpecRecord.java
++-rw-r--r--   0     1001      123    85120 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/ConfigurationTest.java
++-rw-r--r--   0     1001      123    55188 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/CorePiranhaTest.java
++-rw-r--r--   0     1001      123    48474 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/EnumConstantTest.java
++-rw-r--r--   0     1001      123     2304 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/PiranhaTestingHelpers.java
++-rw-r--r--   0     1001      123    33367 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/TestCaseCleanUpTest.java
++-rw-r--r--   0     1001      123     6780 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/TreatmentGroupsTest.java
++-rw-r--r--   0     1001      123     3480 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerNegativeCases.java
++-rw-r--r--   0     1001      123     8540 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCases.java
++-rw-r--r--   0     1001      123     4153 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesControl.java
++-rw-r--r--   0     1001      123     4326 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesTreatment.java
++-rw-r--r--   0     1001      123     2555 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCases.java
++-rw-r--r--   0     1001      123     1490 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesControl.java
++-rw-r--r--   0     1001      123     2091 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotAllowMethodChain.java
++-rw-r--r--   0     1001      123     2194 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotallowArgMatchingAndMethodChain.java
++-rw-r--r--   0     1001      123     1550 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatment.java
++-rw-r--r--   0     1001      123     1618 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatmentDoNotAllowMatchingArgMethodInvc.java
++-rw-r--r--   0     1001      123     1573 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPTest.java
++-rw-r--r--   0     1001      123       75 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/BoolParam.java
++-rw-r--r--   0     1001      123      109 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/BoolParameter.java
++-rw-r--r--   0     1001      123      175 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/OverlappingNameInterface.java
++-rw-r--r--   0     1001      123      103 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/PVal.java
++-rw-r--r--   0     1001      123      154 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/Parameter.java
++-rw-r--r--   0     1001      123      155 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/SomeOtherInterface.java
++-rw-r--r--   0     1001      123      160 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/SomeParamRev.java
++-rw-r--r--   0     1001      123      122 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/mock/StaticMthds.java
++-rw-r--r--   0     1001      123      229 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/invalid/piranha.properties
++-rw-r--r--   0     1001      123       97 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid.json
++-rw-r--r--   0     1001      123      202 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_2.json
++-rw-r--r--   0     1001      123      213 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_3.json
++-rw-r--r--   0     1001      123      216 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/invalid/properties_test_invalid_4.json
++-rw-r--r--   0     1001      123      361 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_enum_no_arg.json
++-rw-r--r--   0     1001      123      525 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_method_chain_control.json
++-rw-r--r--   0     1001      123      526 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_method_chain_treated.json
++-rw-r--r--   0     1001      123      488 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_no_flag_method_name.json
++-rw-r--r--   0     1001      123      489 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_no_flag_method_name_no_method_chain.json
++-rw-r--r--   0     1001      123      526 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_no_method_chain.json
++-rw-r--r--   0     1001      123      704 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_argument.json
++-rw-r--r--   0     1001      123     1332 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_clean_by_setters_ignore_others.json
++-rw-r--r--   0     1001      123      192 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_noFlag.json
++-rw-r--r--   0     1001      123      739 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_noTreatmentGroup.json
++-rw-r--r--   0     1001      123      652 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_receive.json
++-rw-r--r--   0     1001      123     1896 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_receive_argument.json
++-rw-r--r--   0     1001      123      844 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return.json
++-rw-r--r--   0     1001      123     1776 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_argument.json
++-rw-r--r--   0     1001      123     1932 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_receive.json
++-rw-r--r--   0     1001      123     4525 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_receive_argument.json
++-rw-r--r--   0     1001      123      251 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_with_enum_no_match.json
++-rw-r--r--   0     1001      123      246 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_with_enum_wrong_arg.json
++-rw-r--r--   0     1001      123      142 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_without_enum.json
++-rw-r--r--   0     1001      123     1637 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_unnecessary_instance_method.json
++-rw-r--r--   0     1001      123     1304 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/sample/src/main/java/com/uber/mylib/MyClass.java
++-rw-r--r--   0     1001      123     1304 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.bak
++-rw-r--r--   0     1001      123     1107 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.expect
++-rw-r--r--   0     1001      123     2565 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/javascript/src/config_checker.js
++-rw-r--r--   0     1001      123     4304 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/javascript/src/piranha.js
++-rw-r--r--   0     1001      123    27988 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/javascript/src/refactor.js
++-rw-r--r--   0     1001      123     1445 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/javascript/src/source_checker.js
++-rw-r--r--   0     1001      123      646 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/CMakeLists.txt
++-rw-r--r--   0     1001      123     1064 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/README.txt
++-rw-r--r--   0     1001      123    26229 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.cpp
++-rw-r--r--   0     1001      123        0 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.exports
++-rw-r--r--   0     1001      123      793 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/pyproject.toml
++-rw-r--r--   0     1001      123     2043 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/go/edges.toml
++-rw-r--r--   0     1001      123    11027 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/go/rules.toml
++-rw-r--r--   0     1001      123     1460 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/go/scope_config.toml
++-rwxr-xr-x   0     1001      123     2241 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/java/edges.toml
++-rwxr-xr-x   0     1001      123    15939 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/java/rules.toml
++-rwxr-xr-x   0     1001      123     3582 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/java/scope_config.toml
++-rwxr-xr-x   0     1001      123     2251 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/kt/edges.toml
++-rwxr-xr-x   0     1001      123    19122 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/kt/rules.toml
++-rwxr-xr-x   0     1001      123     2139 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/kt/scope_config.toml
++-rw-r--r--   0     1001      123     1133 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/swift/edges.toml
++-rw-r--r--   0     1001      123     9296 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/swift/rules.toml
++-rw-r--r--   0     1001      123     1369 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/cleanup_rules/swift/scope_config.toml
++-rw-r--r--   0     1001      123     7317 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/lib.rs
++-rw-r--r--   0     1001      123     1679 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/main.rs
++-rw-r--r--   0     1001      123     5799 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/constraint.rs
++-rw-r--r--   0     1001      123     3143 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/default_configs.rs
++-rw-r--r--   0     1001      123     4915 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/edit.rs
++-rw-r--r--   0     1001      123     6744 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/language.rs
++-rw-r--r--   0     1001      123    11140 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/matches.rs
++-rw-r--r--   0     1001      123      928 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/mod.rs
++-rw-r--r--   0     1001      123     1987 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/outgoing_edges.rs
++-rw-r--r--   0     1001      123    14103 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/piranha_arguments.rs
++-rw-r--r--   0     1001      123     2091 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/piranha_output.rs
++-rw-r--r--   0     1001      123     7916 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/rule.rs
++-rw-r--r--   0     1001      123     6286 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/rule_graph.rs
++-rw-r--r--   0     1001      123     5931 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/rule_store.rs
++-rw-r--r--   0     1001      123     3329 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/scopes.rs
++-rw-r--r--   0     1001      123    14473 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/source_code_unit.rs
++-rw-r--r--   0     1001      123     1586 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/unit_tests/piranha_arguments_test.rs
++-rw-r--r--   0     1001      123     8340 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/unit_tests/rule_test.rs
++-rw-r--r--   0     1001      123     6061 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/unit_tests/scopes_test.rs
++-rw-r--r--   0     1001      123     6996 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/models/unit_tests/source_code_unit_test.rs
++-rw-r--r--   0     1001      123     8196 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/mod.rs
++-rw-r--r--   0     1001      123     1647 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_go.rs
++-rw-r--r--   0     1001      123    12255 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_java.rs
++-rw-r--r--   0     1001      123     1862 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_kt.rs
++-rw-r--r--   0     1001      123     2423 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_python.rs
++-rw-r--r--   0     1001      123     1833 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_swift.rs
++-rw-r--r--   0     1001      123     1138 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_ts.rs
++-rw-r--r--   0     1001      123     1281 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/tests/test_piranha_tsx.rs
++-rw-r--r--   0     1001      123     5476 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/utilities/mod.rs
++-rw-r--r--   0     1001      123    12743 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/utilities/tree_sitter_utilities.rs
++-rw-r--r--   0     1001      123     3681 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/utilities/unit_tests/tree_sitter_utilities_test.rs
++-rw-r--r--   0     1001      123     2237 2023-04-06 19:46:26.000000 polyglot_piranha-0.3.1/src/utilities/unit_tests/utilities_test.rs
++-rw-r--r--   0        0        0     3797 1970-01-01 00:00:00.000000 polyglot_piranha-0.3.1/PKG-INFO
+```
+
+### Comparing `polyglot_piranha-0.3.0/Cargo.toml` & `polyglot_piranha-0.3.1/Cargo.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+   "Ameya Ketkar <ketkara@uber.com>",
+   "Lazaro Clapp <lazaro@uber.com>",
+   "Murali Krishna Ramanathan",
+   "Uber Technologies Inc.",
+ ]
+ name = "piranha"
+ description = "Polyglot Piranha is a library for performing structural find and replace with deep cleanup."
+-version = "0.3.0"
++version = "0.3.1"
+ edition = "2021"
+ include = ["pyproject.toml", "src/"]
+ exclude = ["legacy"]
+ license-file = "LICENSE"
+ categories = [
+   "structural find-replace",
+   "find-replace",
+@@ -32,15 +32,15 @@
+ [build-dependencies]
+ cc = "1.0.73"
+ 
+ [dependencies]
+ tree-sitter = "0.20.6"
+ tree-sitter-traversal = "0.1.2"
+ json = "0.12.4"
+-toml = "0.5.9"
++toml = "0.7.3"
+ serde = "1.0.136"
+ serde_derive = "1.0.136"
+ colored = "2.0.0"
+ itertools = "0.10.3"
+ regex = "1.5.5"
+ jwalk = "0.8.1"
+ clap = { version = "4.0.3", features = ["derive"] }
+@@ -55,18 +55,18 @@
+ tree-sitter-swift = { git = "https://github.com/satyam1749/tree-sitter-swift.git", rev = "c92496b5273e4d3b094148fee51de371c94729bf" }
+ tree-sitter-python = "0.20.2"
+ tree-sitter-typescript = "0.20.1"
+ # TODO: Update after https://github.com/tree-sitter/tree-sitter-go/pull/103 lands
+ tree-sitter-go = { git = "https://github.com/uber/tree-sitter-go.git", rev = "8f807196afab4a1a1256dbf62a011020c6fe7745" }
+ derive_builder = "0.12.0"
+ getset = "0.1.2"
+-pyo3 = "0.17.1"
+-pyo3-log = "0.7.0"
++pyo3 = "0.18.2"
++pyo3-log = "0.8.1"
+ 
+ [features]
+ extension-module = ["pyo3/extension-module"]
+ default = ["extension-module"]
+ 
+ 
+ [dev-dependencies]
+ assert_cmd = "2.0.7"
+-predicates = "2.1.5"
++predicates = "3.0.2"
+```
+
+### Comparing `polyglot_piranha-0.3.0/Cargo.lock` & `polyglot_piranha-0.3.1/Cargo.lock`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -8,25 +8,66 @@
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "cc936419f96fa211c1b9166887b38e5e40b19958e5b895be7c1f93adec7071ac"
+ dependencies = [
+  "memchr",
+ ]
+ 
+ [[package]]
++name = "anstream"
++version = "0.2.6"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "342258dd14006105c2b75ab1bd7543a03bdf0cfc94383303ac212a04939dff6f"
++dependencies = [
++ "anstyle",
++ "anstyle-parse",
++ "anstyle-wincon",
++ "concolor-override",
++ "concolor-query",
++ "is-terminal",
++ "utf8parse",
++]
++
++[[package]]
++name = "anstyle"
++version = "0.3.5"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "23ea9e81bd02e310c216d080f6223c179012256e5151c41db88d12c88a1684d2"
++
++[[package]]
++name = "anstyle-parse"
++version = "0.1.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "a7d1bb534e9efed14f3e5f44e7dd1a4f709384023a4165199a4241e18dff0116"
++dependencies = [
++ "utf8parse",
++]
++
++[[package]]
++name = "anstyle-wincon"
++version = "0.2.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "c3127af6145b149f3287bb9a0d10ad9c5692dba8c53ad48285e5bec4063834fa"
++dependencies = [
++ "anstyle",
++ "windows-sys 0.45.0",
++]
++
++[[package]]
+ name = "arc-swap"
+ version = "1.6.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "bddcadddf5e9015d310179a59bb28c4d4b9920ad0f11e8e14dbadf654890c9a6"
+ 
+ [[package]]
+ name = "assert_cmd"
+-version = "2.0.8"
++version = "2.0.10"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "9834fcc22e0874394a010230586367d4a3e9f11b560f469262678547e1d2575e"
++checksum = "ec0b2340f55d9661d76793b2bfc2eb0e62689bd79d067a95707ea762afd5e9dd"
+ dependencies = [
++ "anstyle",
+  "bstr",
+  "doc-comment",
+  "predicates",
+  "predicates-core",
+  "predicates-tree",
+  "wait-timeout",
+ ]
+@@ -52,17 +93,17 @@
+ name = "bitflags"
+ version = "1.3.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
+ 
+ [[package]]
+ name = "bstr"
+-version = "1.3.0"
++version = "1.4.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "5ffdb39cb703212f3c11973452c2861b972f757b021158f3516ba10f2fa8b2c1"
++checksum = "c3d4260bcc2e8fc9df1eac4919a720effeb63a3f0952f5bf4944adfa18897f09"
+ dependencies = [
+  "memchr",
+  "once_cell",
+  "regex-automata",
+  "serde",
+ ]
+ 
+@@ -76,61 +117,81 @@
+ name = "cfg-if"
+ version = "1.0.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+ 
+ [[package]]
+ name = "clap"
+-version = "4.1.7"
++version = "4.2.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "2f3061d6db6d8fcbbd4b05e057f2acace52e64e96b498c08c2d7a4e65addd340"
++checksum = "046ae530c528f252094e4a77886ee1374437744b2bff1497aa898bbddbbb29b3"
+ dependencies = [
+- "bitflags",
++ "clap_builder",
+  "clap_derive",
+- "clap_lex",
+- "is-terminal",
+  "once_cell",
++]
++
++[[package]]
++name = "clap_builder"
++version = "4.2.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "223163f58c9a40c3b0a43e1c4b50a9ce09f007ea2cb1ec258a687945b4b7929f"
++dependencies = [
++ "anstream",
++ "anstyle",
++ "bitflags",
++ "clap_lex",
+  "strsim",
+- "termcolor",
+ ]
+ 
+ [[package]]
+ name = "clap_derive"
+-version = "4.1.7"
++version = "4.2.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "34d122164198950ba84a918270a3bb3f7ededd25e15f7451673d986f55bd2667"
++checksum = "3f9644cd56d6b87dbe899ef8b053e331c0637664e9e21a33dfcdc36093f5c5c4"
+ dependencies = [
+  "heck",
+- "proc-macro-error",
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 2.0.13",
+ ]
+ 
+ [[package]]
+ name = "clap_lex"
+-version = "0.3.2"
++version = "0.4.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "350b9cf31731f9957399229e9b2adc51eeabdfbe9d71d9a0552275fd12710d09"
+-dependencies = [
+- "os_str_bytes",
+-]
++checksum = "8a2dd5a6fe8c6e3502f568a6353e5273bbb15193ad9a89e457b9970798efbea1"
+ 
+ [[package]]
+ name = "colored"
+ version = "2.0.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "b3616f750b84d8f0de8a58bda93e08e2a81ad3f523089b05f1dffecab48c6cbd"
+ dependencies = [
+  "atty",
+  "lazy_static",
+  "winapi",
+ ]
+ 
+ [[package]]
++name = "concolor-override"
++version = "1.0.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "a855d4a1978dc52fb0536a04d384c2c0c1aa273597f08b77c8c4d3b2eec6037f"
++
++[[package]]
++name = "concolor-query"
++version = "0.3.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "88d11d52c3d7ca2e6d0040212be9e4dbbcd78b6447f535b6b561f449427944cf"
++dependencies = [
++ "windows-sys 0.45.0",
++]
++
++[[package]]
+ name = "crossbeam"
+ version = "0.8.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "2801af0d36612ae591caa9568261fddce32ce6e08a7275ea334a06a4ad021a2c"
+ dependencies = [
+  "cfg-if",
+  "crossbeam-channel",
+@@ -138,43 +199,43 @@
+  "crossbeam-epoch",
+  "crossbeam-queue",
+  "crossbeam-utils",
+ ]
+ 
+ [[package]]
+ name = "crossbeam-channel"
+-version = "0.5.6"
++version = "0.5.7"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c2dd04ddaf88237dc3b8d8f9a3c1004b506b54b3313403944054d23c0870c521"
++checksum = "cf2b3e8478797446514c91ef04bafcb59faba183e621ad488df88983cc14128c"
+ dependencies = [
+  "cfg-if",
+  "crossbeam-utils",
+ ]
+ 
+ [[package]]
+ name = "crossbeam-deque"
+-version = "0.8.2"
++version = "0.8.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "715e8152b692bba2d374b53d4875445368fdf21a94751410af607a5ac677d1fc"
++checksum = "ce6fd6f855243022dcecf8702fef0c297d4338e226845fe067f6341ad9fa0cef"
+ dependencies = [
+  "cfg-if",
+  "crossbeam-epoch",
+  "crossbeam-utils",
+ ]
+ 
+ [[package]]
+ name = "crossbeam-epoch"
+-version = "0.9.13"
++version = "0.9.14"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "01a9af1f4c2ef74bb8aa1f7e19706bc72d03598c8a570bb5de72243c7a9d9d5a"
++checksum = "46bd5f3f85273295a9d14aedfb86f6aadbff6d8f5295c4a9edb08e819dcf5695"
+ dependencies = [
+  "autocfg",
+  "cfg-if",
+  "crossbeam-utils",
+- "memoffset 0.7.1",
++ "memoffset",
+  "scopeguard",
+ ]
+ 
+ [[package]]
+ name = "crossbeam-queue"
+ version = "0.3.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+@@ -182,54 +243,54 @@
+ dependencies = [
+  "cfg-if",
+  "crossbeam-utils",
+ ]
+ 
+ [[package]]
+ name = "crossbeam-utils"
+-version = "0.8.14"
++version = "0.8.15"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "4fb766fa798726286dbbb842f174001dab8abc7b627a1dd86e0b7222a95d929f"
++checksum = "3c063cd8cc95f5c377ed0d4b49a4b21f632396ff690e8470c29b3359b346984b"
+ dependencies = [
+  "cfg-if",
+ ]
+ 
+ [[package]]
+ name = "darling"
+-version = "0.14.3"
++version = "0.14.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c0808e1bd8671fb44a113a14e13497557533369847788fa2ae912b6ebfce9fa8"
++checksum = "7b750cb3417fd1b327431a470f388520309479ab0bf5e323505daf0290cd3850"
+ dependencies = [
+  "darling_core",
+  "darling_macro",
+ ]
+ 
+ [[package]]
+ name = "darling_core"
+-version = "0.14.3"
++version = "0.14.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "001d80444f28e193f30c2f293455da62dcf9a6b29918a4253152ae2b1de592cb"
++checksum = "109c1ca6e6b7f82cc233a97004ea8ed7ca123a9af07a8230878fcfda9b158bf0"
+ dependencies = [
+  "fnv",
+  "ident_case",
+  "proc-macro2",
+  "quote",
+  "strsim",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "darling_macro"
+-version = "0.14.3"
++version = "0.14.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "b36230598a2d5de7ec1c6f51f72d8a99a9208daff41de2084d06e3fd3ea56685"
++checksum = "a4aab4dbc9f7611d8b55048a3a16d2d010c2c8334e46304b40ac1cc14bf3b48e"
+ dependencies = [
+  "darling_core",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "derive_builder"
+ version = "0.12.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "8d67778784b508018359cbc8696edb3db78160bab2c2a28ba7f56ef6932997f8"
+@@ -242,25 +303,25 @@
+ version = "0.12.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "c11bdc11a0c47bc7d37d582b5285da6849c96681023680b906673c5707af7b0f"
+ dependencies = [
+  "darling",
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "derive_builder_macro"
+ version = "0.12.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "ebcda35c7a396850a55ffeac740804b40ffec779b98fffbb1738f4033f0ee79e"
+ dependencies = [
+  "derive_builder_core",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "difflib"
+ version = "0.4.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "6184e33543162437515c2e2b48714794e37845ec9851711914eec9d308f6ebe8"
+@@ -288,21 +349,21 @@
+  "log",
+  "regex",
+  "termcolor",
+ ]
+ 
+ [[package]]
+ name = "errno"
+-version = "0.2.8"
++version = "0.3.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "f639046355ee4f37944e44f60642c6f3a7efa3cf6b78c78a0d989a8ce6c396a1"
++checksum = "50d6a0976c999d473fe89ad888d5a284e55366d9dc9038b1ba2aa15128c4afa0"
+ dependencies = [
+  "errno-dragonfly",
+  "libc",
+- "winapi",
++ "windows-sys 0.45.0",
+ ]
+ 
+ [[package]]
+ name = "errno-dragonfly"
+ version = "0.1.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "aa68f1b12764fab894d2755d2518754e71b4fd80ecfb822714a1206c2aab39bf"
+@@ -337,18 +398,24 @@
+ version = "0.1.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e45727250e75cc04ff2846a66397da8ef2b3db8e40e0cef4df67950a07621eb9"
+ dependencies = [
+  "proc-macro-error",
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
++name = "hashbrown"
++version = "0.12.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
++
++[[package]]
+ name = "heck"
+ version = "0.4.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
+ 
+ [[package]]
+ name = "hermit-abi"
+@@ -383,55 +450,66 @@
+ [[package]]
+ name = "ident_case"
+ version = "1.0.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "b9e0384b61958566e926dc50660321d12159025e767c18e043daf26b70104c39"
+ 
+ [[package]]
++name = "indexmap"
++version = "1.9.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "bd070e393353796e801d209ad339e89596eb4c8d430d18ede6a1cced8fafbd99"
++dependencies = [
++ "autocfg",
++ "hashbrown",
++]
++
++[[package]]
+ name = "indoc"
+ version = "1.0.9"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "bfa799dd5ed20a7e349f3b4639aa80d74549c81716d9ec4f994c9b5815598306"
+ 
+ [[package]]
+ name = "io-lifetimes"
+-version = "1.0.5"
++version = "1.0.10"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "1abeb7a0dd0f8181267ff8adc397075586500b81b28a73e8a0208b00fc170fb3"
++checksum = "9c66c74d2ae7e79a5a8f7ac924adbe38ee42a859c6539ad869eb51f0b52dc220"
+ dependencies = [
++ "hermit-abi 0.3.1",
+  "libc",
+- "windows-sys",
++ "windows-sys 0.48.0",
+ ]
+ 
+ [[package]]
+ name = "is-terminal"
+-version = "0.4.4"
++version = "0.4.7"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "21b6b32576413a8e69b90e952e4a026476040d81017b80445deda5f2d3921857"
++checksum = "adcf93614601c8129ddf72e2d5633df827ba6551541c6d8c59520a371475be1f"
+ dependencies = [
+  "hermit-abi 0.3.1",
+  "io-lifetimes",
+  "rustix",
+- "windows-sys",
++ "windows-sys 0.48.0",
+ ]
+ 
+ [[package]]
+ name = "itertools"
+ version = "0.10.5"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473"
+ dependencies = [
+  "either",
+ ]
+ 
+ [[package]]
+ name = "itoa"
+-version = "1.0.5"
++version = "1.0.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "fad582f4b9e86b6caa621cabeb0963332d92eea04729ab12892c2533951e6440"
++checksum = "453ad9f582a441959e5f0d088b02ce04cfe8d51a8eaf077f12ac6d3e94164ca6"
+ 
+ [[package]]
+ name = "json"
+ version = "0.12.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "078e285eafdfb6c4b434e0d31e8cfcb5115b651496faca5749b88fafd4f23bfd"
+ 
+@@ -449,23 +527,23 @@
+ name = "lazy_static"
+ version = "1.4.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
+ 
+ [[package]]
+ name = "libc"
+-version = "0.2.139"
++version = "0.2.141"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "201de327520df007757c1f0adce6e827fe8562fbc28bfd9c15571c66ca1f5f79"
++checksum = "3304a64d199bb964be99741b7a14d26972741915b3649639149b2479bb46f4b5"
+ 
+ [[package]]
+ name = "linux-raw-sys"
+-version = "0.1.4"
++version = "0.3.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "f051f77a7c8e6957c0696eac88f26b0117e54f52d3fc682ab19397a8812846a4"
++checksum = "d59d8c75012853d2e872fb56bc8a2e53718e2cafe1a4c823143141c6d90c322f"
+ 
+ [[package]]
+ name = "lock_api"
+ version = "0.4.9"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "435011366fe56583b16cf956f9df0095b405b82d76425bc8981c0e22e60ec4df"
+ dependencies = [
+@@ -486,26 +564,17 @@
+ name = "memchr"
+ version = "2.5.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
+ 
+ [[package]]
+ name = "memoffset"
+-version = "0.6.5"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "5aa361d4faea93603064a027415f07bd8e1d5c88c9fbf68bf56a285428fd79ce"
+-dependencies = [
+- "autocfg",
+-]
+-
+-[[package]]
+-name = "memoffset"
+-version = "0.7.1"
++version = "0.8.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "5de893c32cde5f383baa4c04c5d6dbdd735cfd4a794b0debdb2bb1b421da5ff4"
++checksum = "d61c719bcfbcf5d62b3a09efa6088de8c54bc0bfcd3ea7ae39fcc186108b8de1"
+ dependencies = [
+  "autocfg",
+ ]
+ 
+ [[package]]
+ name = "normalize-line-endings"
+ version = "0.3.0"
+@@ -534,20 +603,14 @@
+ [[package]]
+ name = "once_cell"
+ version = "1.17.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
+ 
+ [[package]]
+-name = "os_str_bytes"
+-version = "6.4.1"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "9b7820b9daea5457c9f21c69448905d723fbd21136ccf521748f23fd49e723ee"
+-
+-[[package]]
+ name = "parking_lot"
+ version = "0.12.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "3742b2c103b9f06bc9fff0a37ff4912935851bee6d36f3c02bcc755bcfec228f"
+ dependencies = [
+  "lock_api",
+  "parking_lot_core",
+@@ -559,20 +622,20 @@
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "9069cbb9f99e3a5083476ccb29ceb1de18b9118cafa53e90c9551235de2b9521"
+ dependencies = [
+  "cfg-if",
+  "libc",
+  "redox_syscall",
+  "smallvec",
+- "windows-sys",
++ "windows-sys 0.45.0",
+ ]
+ 
+ [[package]]
+ name = "piranha"
+-version = "0.3.0"
++version = "0.3.1"
+ dependencies = [
+  "assert_cmd",
+  "cc",
+  "clap",
+  "colored",
+  "derive_builder",
+  "env_logger",
+@@ -598,52 +661,53 @@
+  "tree-sitter-swift",
+  "tree-sitter-traversal",
+  "tree-sitter-typescript",
+ ]
+ 
+ [[package]]
+ name = "predicates"
+-version = "2.1.5"
++version = "3.0.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "59230a63c37f3e18569bdb90e4a89cbf5bf8b06fea0b84e65ea10cc4df47addd"
++checksum = "c575290b64d24745b6c57a12a31465f0a66f3a4799686a6921526a33b0797965"
+ dependencies = [
++ "anstyle",
+  "difflib",
+  "float-cmp",
+  "itertools",
+  "normalize-line-endings",
+  "predicates-core",
+  "regex",
+ ]
+ 
+ [[package]]
+ name = "predicates-core"
+-version = "1.0.5"
++version = "1.0.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "72f883590242d3c6fc5bf50299011695fa6590c2c70eac95ee1bdb9a733ad1a2"
++checksum = "b794032607612e7abeb4db69adb4e33590fa6cf1149e95fd7cb00e634b92f174"
+ 
+ [[package]]
+ name = "predicates-tree"
+-version = "1.0.7"
++version = "1.0.9"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "54ff541861505aabf6ea722d2131ee980b8276e10a1297b94e896dd8b621850d"
++checksum = "368ba315fb8c5052ab692e68a0eefec6ec57b23a36959c14496f0b0df2c0cecf"
+ dependencies = [
+  "predicates-core",
+  "termtree",
+ ]
+ 
+ [[package]]
+ name = "proc-macro-error"
+ version = "1.0.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "da25490ff9892aab3fcf7c36f08cfb902dd3e71ca0f9f9517bea02a73a5ce38c"
+ dependencies = [
+  "proc-macro-error-attr",
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+  "version_check",
+ ]
+ 
+ [[package]]
+ name = "proc-macro-error-attr"
+ version = "1.0.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+@@ -652,97 +716,97 @@
+  "proc-macro2",
+  "quote",
+  "version_check",
+ ]
+ 
+ [[package]]
+ name = "proc-macro2"
+-version = "1.0.51"
++version = "1.0.56"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "5d727cae5b39d21da60fa540906919ad737832fe0b1c165da3a34d6548c849d6"
++checksum = "2b63bdb0cd06f1f4dedf69b254734f9b45af66e4a031e42a7480257d9898b435"
+ dependencies = [
+  "unicode-ident",
+ ]
+ 
+ [[package]]
+ name = "pyo3"
+-version = "0.17.3"
++version = "0.18.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "268be0c73583c183f2b14052337465768c07726936a260f480f0857cb95ba543"
++checksum = "cfb848f80438f926a9ebddf0a539ed6065434fd7aae03a89312a9821f81b8501"
+ dependencies = [
+  "cfg-if",
+  "indoc",
+  "libc",
+- "memoffset 0.6.5",
++ "memoffset",
+  "parking_lot",
+  "pyo3-build-config",
+  "pyo3-ffi",
+  "pyo3-macros",
+  "unindent",
+ ]
+ 
+ [[package]]
+ name = "pyo3-build-config"
+-version = "0.17.3"
++version = "0.18.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "28fcd1e73f06ec85bf3280c48c67e731d8290ad3d730f8be9dc07946923005c8"
++checksum = "98a42e7f42e917ce6664c832d5eee481ad514c98250c49e0b03b20593e2c7ed0"
+ dependencies = [
+  "once_cell",
+  "target-lexicon",
+ ]
+ 
+ [[package]]
+ name = "pyo3-ffi"
+-version = "0.17.3"
++version = "0.18.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "0f6cb136e222e49115b3c51c32792886defbfb0adead26a688142b346a0b9ffc"
++checksum = "a0707f0ab26826fe4ccd59b69106e9df5e12d097457c7b8f9c0fd1d2743eec4d"
+ dependencies = [
+  "libc",
+  "pyo3-build-config",
+ ]
+ 
+ [[package]]
+ name = "pyo3-log"
+-version = "0.7.0"
++version = "0.8.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "e5695ccff5060c13ca1751cf8c857a12da9b0bf0378cb071c5e0326f7c7e4c1b"
++checksum = "f9c8b57fe71fb5dcf38970ebedc2b1531cf1c14b1b9b4c560a182a57e115575c"
+ dependencies = [
+  "arc-swap",
+  "log",
+  "pyo3",
+ ]
+ 
+ [[package]]
+ name = "pyo3-macros"
+-version = "0.17.3"
++version = "0.18.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "94144a1266e236b1c932682136dc35a9dee8d3589728f68130c7c3861ef96b28"
++checksum = "978d18e61465ecd389e1f235ff5a467146dc4e3c3968b90d274fe73a5dd4a438"
+ dependencies = [
+  "proc-macro2",
+  "pyo3-macros-backend",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "pyo3-macros-backend"
+-version = "0.17.3"
++version = "0.18.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c8df9be978a2d2f0cdebabb03206ed73b11314701a5bfe71b0d753b81997777f"
++checksum = "8e0e1128f85ce3fca66e435e08aa2089a2689c1c48ce97803e13f63124058462"
+ dependencies = [
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 1.0.109",
+ ]
+ 
+ [[package]]
+ name = "quote"
+-version = "1.0.23"
++version = "1.0.26"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8856d8364d252a14d474036ea1358d63c9e6965c8e5c1885c18f73d70bff9c7b"
++checksum = "4424af4bf778aae2051a77b60283332f386554255d722233d09fbfc7e30da2fc"
+ dependencies = [
+  "proc-macro2",
+ ]
+ 
+ [[package]]
+ name = "rand"
+ version = "0.4.6"
+@@ -769,27 +833,27 @@
+ name = "rand_core"
+ version = "0.4.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "9c33a3c44ca05fa6f1807d8e6743f3824e8509beca625669633be0acbdf509dc"
+ 
+ [[package]]
+ name = "rayon"
+-version = "1.6.1"
++version = "1.7.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "6db3a213adf02b3bcfd2d3846bb41cb22857d131789e01df434fb7e7bc0759b7"
++checksum = "1d2df5196e37bcc87abebc0053e20787d73847bb33134a69841207dd0a47f03b"
+ dependencies = [
+  "either",
+  "rayon-core",
+ ]
+ 
+ [[package]]
+ name = "rayon-core"
+-version = "1.10.2"
++version = "1.11.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "356a0625f1954f730c0201cdab48611198dc6ce21f4acff55089b5a78e6e835b"
++checksum = "4b8f95bd6966f5c87776639160a66bd8ab9895d9d4ab01ddba9fc60661aebe8d"
+ dependencies = [
+  "crossbeam-channel",
+  "crossbeam-deque",
+  "crossbeam-utils",
+  "num_cpus",
+ ]
+ 
+@@ -809,99 +873,108 @@
+ checksum = "fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a"
+ dependencies = [
+  "bitflags",
+ ]
+ 
+ [[package]]
+ name = "regex"
+-version = "1.7.1"
++version = "1.7.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "48aaa5748ba571fb95cd2c85c09f629215d3a6ece942baa100950af03a34f733"
++checksum = "8b1f693b24f6ac912f4893ef08244d70b6067480d2f1a46e950c9691e6749d1d"
+ dependencies = [
+  "aho-corasick",
+  "memchr",
+  "regex-syntax",
+ ]
+ 
+ [[package]]
+ name = "regex-automata"
+ version = "0.1.10"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "6c230d73fb8d8c1b9c0b3135c5142a8acee3a0558fb8db5cf1cb65f8d7862132"
+ 
+ [[package]]
+ name = "regex-syntax"
+-version = "0.6.28"
++version = "0.6.29"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "456c603be3e8d448b072f410900c09faf164fbce2d480456f50eea6e25f9c848"
++checksum = "f162c6dd7b008981e4d40210aca20b4bd0f9b60ca9271061b07f78537722f2e1"
+ 
+ [[package]]
+ name = "remove_dir_all"
+ version = "0.5.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "3acd125665422973a33ac9d3dd2df85edad0f4ae9b00dafb1a05e43a9f5ef8e7"
+ dependencies = [
+  "winapi",
+ ]
+ 
+ [[package]]
+ name = "rustix"
+-version = "0.36.8"
++version = "0.37.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "f43abb88211988493c1abb44a70efa56ff0ce98f233b7b276146f1f3f7ba9644"
++checksum = "1aef160324be24d31a62147fae491c14d2204a3865c7ca8c3b0d7f7bcb3ea635"
+ dependencies = [
+  "bitflags",
+  "errno",
+  "io-lifetimes",
+  "libc",
+  "linux-raw-sys",
+- "windows-sys",
++ "windows-sys 0.48.0",
+ ]
+ 
+ [[package]]
+ name = "ryu"
+-version = "1.0.12"
++version = "1.0.13"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "7b4b9743ed687d4b4bcedf9ff5eaa7398495ae14e61cba0a295704edbc7decde"
++checksum = "f91339c0467de62360649f8d3e185ca8de4224ff281f66000de5eb2a77a79041"
+ 
+ [[package]]
+ name = "scopeguard"
+ version = "1.1.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
+ 
+ [[package]]
+ name = "serde"
+-version = "1.0.152"
++version = "1.0.159"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "bb7d1f0d3021d347a83e556fc4683dea2ea09d87bccdf88ff5c12545d89d5efb"
++checksum = "3c04e8343c3daeec41f58990b9d77068df31209f2af111e059e9fe9646693065"
+ 
+ [[package]]
+ name = "serde_derive"
+-version = "1.0.152"
++version = "1.0.159"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "af487d118eecd09402d70a5d72551860e788df87b464af30e5ea6a38c75c541e"
++checksum = "4c614d17805b093df4b147b51339e7e44bf05ef59fba1e45d83500bcfb4d8585"
+ dependencies = [
+  "proc-macro2",
+  "quote",
+- "syn",
++ "syn 2.0.13",
+ ]
+ 
+ [[package]]
+ name = "serde_json"
+-version = "1.0.93"
++version = "1.0.95"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "cad406b69c91885b5107daf2c29572f6c8cdb3c66826821e286c533490c0bc76"
++checksum = "d721eca97ac802aa7777b701877c8004d950fc142651367300d21c1cc0194744"
+ dependencies = [
+  "itoa",
+  "ryu",
+  "serde",
+ ]
+ 
+ [[package]]
++name = "serde_spanned"
++version = "0.6.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "0efd8caf556a6cebd3b285caf480045fcc1ac04f6bd786b09a6f11af30c4fcf4"
++dependencies = [
++ "serde",
++]
++
++[[package]]
+ name = "smallvec"
+ version = "1.10.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "a507befe795404456341dfab10cef66ead4c041f62b8b11bbb92bffe5d0953e0"
+ 
+ [[package]]
+ name = "strsim"
+@@ -917,14 +990,25 @@
+ dependencies = [
+  "proc-macro2",
+  "quote",
+  "unicode-ident",
+ ]
+ 
+ [[package]]
++name = "syn"
++version = "2.0.13"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "4c9da457c5285ac1f936ebd076af6dac17a61cfe7826f2076b4d015cf47bc8ec"
++dependencies = [
++ "proc-macro2",
++ "quote",
++ "unicode-ident",
++]
++
++[[package]]
+ name = "target-lexicon"
+ version = "0.12.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "8ae9980cab1db3fceee2f6c6f643d5d8de2997c58ee8d25fb0cc8a9e9e7348e5"
+ 
+ [[package]]
+ name = "tempdir"
+@@ -943,32 +1027,57 @@
+ checksum = "be55cf8942feac5c765c2c993422806843c9a9a45d4d5c407ad6dd2ea95eb9b6"
+ dependencies = [
+  "winapi-util",
+ ]
+ 
+ [[package]]
+ name = "termtree"
+-version = "0.4.0"
++version = "0.4.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "95059e91184749cb66be6dc994f67f182b6d897cb3df74a5bf66b5e709295fd8"
++checksum = "3369f5ac52d5eb6ab48c6b4ffdc8efbcad6b89c765749064ba298f2c68a16a76"
+ 
+ [[package]]
+ name = "toml"
+-version = "0.5.11"
++version = "0.7.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b403acf6f2bb0859c93c7f0d967cb4a75a7ac552100f9322faf64dc047669b21"
++dependencies = [
++ "serde",
++ "serde_spanned",
++ "toml_datetime",
++ "toml_edit",
++]
++
++[[package]]
++name = "toml_datetime"
++version = "0.6.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "3ab8ed2edee10b50132aed5f331333428b011c99402b5a534154ed15746f9622"
++dependencies = [
++ "serde",
++]
++
++[[package]]
++name = "toml_edit"
++version = "0.19.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "f4f7f0dd8d50a853a531c426359045b1998f04219d88799810762cd4ad314234"
++checksum = "239410c8609e8125456927e6707163a3b1fdb40561e4b803bc041f466ccfdc13"
+ dependencies = [
++ "indexmap",
+  "serde",
++ "serde_spanned",
++ "toml_datetime",
++ "winnow",
+ ]
+ 
+ [[package]]
+ name = "tree-sitter"
+-version = "0.20.9"
++version = "0.20.10"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "d4423c784fe11398ca91e505cdc71356b07b1a924fc8735cfab5333afe3e18bc"
++checksum = "e747b1f9b7b931ed39a548c1fae149101497de3c1fc8d9e18c62c1a66c683d3d"
+ dependencies = [
+  "cc",
+  "regex",
+ ]
+ 
+ [[package]]
+ name = "tree-sitter-go"
+@@ -1034,25 +1143,31 @@
+ dependencies = [
+  "cc",
+  "tree-sitter",
+ ]
+ 
+ [[package]]
+ name = "unicode-ident"
+-version = "1.0.6"
++version = "1.0.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "84a22b9f218b40614adcb3f4ff08b703773ad44fa9423e4e0d346d5db86e4ebc"
++checksum = "e5464a87b239f13a63a501f2701565754bae92d243d4bb7eb12f6d57d2269bf4"
+ 
+ [[package]]
+ name = "unindent"
+ version = "0.1.11"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e1766d682d402817b5ac4490b3c3002d91dfa0d22812f341609f97b08757359c"
+ 
+ [[package]]
++name = "utf8parse"
++version = "0.2.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "711b9620af191e0cdc7468a8d14e709c3dcdb115b36f838e601583af800a370a"
++
++[[package]]
+ name = "version_check"
+ version = "0.9.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
+ 
+ [[package]]
+ name = "wait-timeout"
+@@ -1096,66 +1211,141 @@
+ 
+ [[package]]
+ name = "windows-sys"
+ version = "0.45.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "75283be5efb2831d37ea142365f009c02ec203cd29a3ebecbc093d52315b66d0"
+ dependencies = [
+- "windows-targets",
++ "windows-targets 0.42.2",
++]
++
++[[package]]
++name = "windows-sys"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "677d2418bec65e3338edb076e806bc1ec15693c5d0104683f2efe857f61056a9"
++dependencies = [
++ "windows-targets 0.48.0",
+ ]
+ 
+ [[package]]
+ name = "windows-targets"
+-version = "0.42.1"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8e2522491fbfcd58cc84d47aeb2958948c4b8982e9a2d8a2a35bbaed431390e7"
++checksum = "8e5180c00cd44c9b1c88adb3693291f1cd93605ded80c250a75d472756b4d071"
+ dependencies = [
+- "windows_aarch64_gnullvm",
+- "windows_aarch64_msvc",
+- "windows_i686_gnu",
+- "windows_i686_msvc",
+- "windows_x86_64_gnu",
+- "windows_x86_64_gnullvm",
+- "windows_x86_64_msvc",
++ "windows_aarch64_gnullvm 0.42.2",
++ "windows_aarch64_msvc 0.42.2",
++ "windows_i686_gnu 0.42.2",
++ "windows_i686_msvc 0.42.2",
++ "windows_x86_64_gnu 0.42.2",
++ "windows_x86_64_gnullvm 0.42.2",
++ "windows_x86_64_msvc 0.42.2",
+ ]
+ 
+ [[package]]
++name = "windows-targets"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "7b1eb6f0cd7c80c79759c929114ef071b87354ce476d9d94271031c0497adfd5"
++dependencies = [
++ "windows_aarch64_gnullvm 0.48.0",
++ "windows_aarch64_msvc 0.48.0",
++ "windows_i686_gnu 0.48.0",
++ "windows_i686_msvc 0.48.0",
++ "windows_x86_64_gnu 0.48.0",
++ "windows_x86_64_gnullvm 0.48.0",
++ "windows_x86_64_msvc 0.48.0",
++]
++
++[[package]]
++name = "windows_aarch64_gnullvm"
++version = "0.42.2"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "597a5118570b68bc08d8d59125332c54f1ba9d9adeedeef5b99b02ba2b0698f8"
++
++[[package]]
+ name = "windows_aarch64_gnullvm"
+-version = "0.42.1"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "91ae572e1b79dba883e0d315474df7305d12f569b400fcf90581b06062f7e1bc"
++
++[[package]]
++name = "windows_aarch64_msvc"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8c9864e83243fdec7fc9c5444389dcbbfd258f745e7853198f365e3c4968a608"
++checksum = "e08e8864a60f06ef0d0ff4ba04124db8b0fb3be5776a5cd47641e942e58c4d43"
+ 
+ [[package]]
+ name = "windows_aarch64_msvc"
+-version = "0.42.1"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b2ef27e0d7bdfcfc7b868b317c1d32c641a6fe4629c171b8928c7b08d98d7cf3"
++
++[[package]]
++name = "windows_i686_gnu"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "4c8b1b673ffc16c47a9ff48570a9d85e25d265735c503681332589af6253c6c7"
++checksum = "c61d927d8da41da96a81f029489353e68739737d3beca43145c8afec9a31a84f"
+ 
+ [[package]]
+ name = "windows_i686_gnu"
+-version = "0.42.1"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "622a1962a7db830d6fd0a69683c80a18fda201879f0f447f065a3b7467daa241"
++
++[[package]]
++name = "windows_i686_msvc"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "de3887528ad530ba7bdbb1faa8275ec7a1155a45ffa57c37993960277145d640"
++checksum = "44d840b6ec649f480a41c8d80f9c65108b92d89345dd94027bfe06ac444d1060"
+ 
+ [[package]]
+ name = "windows_i686_msvc"
+-version = "0.42.1"
++version = "0.48.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "bf4d1122317eddd6ff351aa852118a2418ad4214e6613a50e0191f7004372605"
++checksum = "4542c6e364ce21bf45d69fdd2a8e455fa38d316158cfd43b3ac1c5b1b19f8e00"
+ 
+ [[package]]
+ name = "windows_x86_64_gnu"
+-version = "0.42.1"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c1040f221285e17ebccbc2591ffdc2d44ee1f9186324dd3e84e99ac68d699c45"
++checksum = "8de912b8b8feb55c064867cf047dda097f92d51efad5b491dfb98f6bbb70cb36"
++
++[[package]]
++name = "windows_x86_64_gnu"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "ca2b8a661f7628cbd23440e50b05d705db3686f894fc9580820623656af974b1"
++
++[[package]]
++name = "windows_x86_64_gnullvm"
++version = "0.42.2"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "26d41b46a36d453748aedef1486d5c7a85db22e56aff34643984ea85514e94a3"
+ 
+ [[package]]
+ name = "windows_x86_64_gnullvm"
+-version = "0.42.1"
++version = "0.48.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "628bfdf232daa22b0d64fdb62b09fcc36bb01f05a3939e20ab73aaf9470d0463"
++checksum = "7896dbc1f41e08872e9d5e8f8baa8fdd2677f29468c4e156210174edc7f7b953"
+ 
+ [[package]]
+ name = "windows_x86_64_msvc"
+-version = "0.42.1"
++version = "0.42.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "447660ad36a13288b1db4d4248e857b510e8c3a225c822ba4fb748c0aafecffd"
++checksum = "9aec5da331524158c6d1a4ac0ab1541149c0b9505fde06423b02f5ef0106b9f0"
++
++[[package]]
++name = "windows_x86_64_msvc"
++version = "0.48.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "1a515f5799fe4961cb532f983ce2b23082366b898e52ffbce459c86f67c8378a"
++
++[[package]]
++name = "winnow"
++version = "0.4.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "ae8970b36c66498d8ff1d66685dc86b91b29db0c7739899012f63a63814b4b28"
++dependencies = [
++ "memchr",
++]
+```
+
+### Comparing `polyglot_piranha-0.3.0/LICENSE` & `polyglot_piranha-0.3.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/README.md` & `polyglot_piranha-0.3.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/EnumWithClassSymbol.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/EnumWithClassSymbol.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaRuntimeException.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaRuntimeException.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaUtils.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/PiranhaUtils.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/UsageCounter.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/UsageCounter.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/XPFlagCleaner.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/XPFlagCleaner.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/Config.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/Config.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/MethodRecord.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/MethodRecord.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaEnumRecord.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaEnumRecord.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaMethodRecord.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaMethodRecord.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaRecord.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/config/PiranhaRecord.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationArgument.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationArgument.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationResolutionException.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/AnnotationResolutionException.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/ResolvedTestAnnotation.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/ResolvedTestAnnotation.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationResolver.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationResolver.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationSpecRecord.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/main/java/com/uber/piranha/testannotations/TestAnnotationSpecRecord.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/ConfigurationTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/ConfigurationTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/CorePiranhaTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/CorePiranhaTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/EnumConstantTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/EnumConstantTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/PiranhaTestingHelpers.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/PiranhaTestingHelpers.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/TestCaseCleanUpTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/TestCaseCleanUpTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/java/com/uber/piranha/TreatmentGroupsTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/java/com/uber/piranha/TreatmentGroupsTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerNegativeCases.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerNegativeCases.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCases.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCases.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesControl.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesControl.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesTreatment.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPFlagCleanerPositiveCasesTreatment.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCases.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCases.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesControl.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesControl.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotAllowMethodChain.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotAllowMethodChain.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotallowArgMatchingAndMethodChain.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesDoNotallowArgMatchingAndMethodChain.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatment.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatment.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatmentDoNotAllowMatchingArgMethodInvc.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPMethodChainCasesTreatmentDoNotAllowMatchingArgMethodInvc.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/com/uber/piranha/XPTest.java` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/com/uber/piranha/XPTest.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_method_chain_control.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_method_chain_control.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_method_chain_treated.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_method_chain_treated.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_no_method_chain.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_no_method_chain.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_argument.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_argument.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_clean_by_setters_ignore_others.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_clean_by_setters_ignore_others.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_noTreatmentGroup.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_noTreatmentGroup.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_receive.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_receive.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_receive_argument.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_receive_argument.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_argument.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_argument.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_receive.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_receive.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_test_return_receive_argument.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_test_return_receive_argument.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/piranha/src/test/resources/config/properties_unnecessary_instance_method.json` & `polyglot_piranha-0.3.1/legacy/java/piranha/src/test/resources/config/properties_unnecessary_instance_method.json`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/sample/src/main/java/com/uber/mylib/MyClass.java` & `polyglot_piranha-0.3.1/legacy/java/sample/src/main/java/com/uber/mylib/MyClass.java`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.bak` & `polyglot_piranha-0.3.1/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.bak`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.expect` & `polyglot_piranha-0.3.1/legacy/java/sample/src/main/resources/com/uber/mylib/MyClass.expect`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/javascript/src/config_checker.js` & `polyglot_piranha-0.3.1/legacy/javascript/src/config_checker.js`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/javascript/src/piranha.js` & `polyglot_piranha-0.3.1/legacy/javascript/src/piranha.js`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/javascript/src/refactor.js` & `polyglot_piranha-0.3.1/legacy/javascript/src/refactor.js`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/javascript/src/source_checker.js` & `polyglot_piranha-0.3.1/legacy/javascript/src/source_checker.js`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/CMakeLists.txt` & `polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/CMakeLists.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/README.txt` & `polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/README.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.cpp` & `polyglot_piranha-0.3.1/legacy/objc/src/XPFlagRefactoring/XPFlagRefactoring.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/pyproject.toml` & `polyglot_piranha-0.3.1/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/go/edges.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/go/edges.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ #
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/go/rules.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/go/rules.toml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ #
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -116,28 +116,32 @@
+ """
+ replace = "false"
+ replace_node = "binary_expression"
+ groups = ["boolean_expression_simplify"]
+ is_seed_rule = false
+ 
+ # Before :
+-#  abc() && false
++#  abc && false
+ # After :
+ #  false
+ #
+ [[rules]]
+ name = "simplify_something_and_false"
+ query = """
+ (
+     (binary_expression
+         left : ([
+                 (identifier)
++                (parenthesized_expression (identifier))
+                 (true)
++                (parenthesized_expression (true))
+                 (false)
++                (parenthesized_expression (false))
+                 (selector_expression)
++                (parenthesized_expression (selector_expression))
+             ]) @lhs
+         operator : "&&"
+         right: [(false) (parenthesized_expression (false))]
+     ) @binary_expression
+ )
+ """
+ replace = "false"
+@@ -154,17 +158,21 @@
+ [[rules]]
+ name = "simplify_something_or_true"
+ query = """
+ (
+     (binary_expression
+         left : ([
+                 (identifier)
++                (parenthesized_expression (identifier))
+                 (true)
++                (parenthesized_expression (true))
+                 (false)
++                (parenthesized_expression (false))
+                 (selector_expression)
++                (parenthesized_expression (selector_expression))
+             ]) @lhs
+         operator:"||"
+         right: [(true) (parenthesized_expression (true))]
+     ) @binary_expression
+ )
+ """
+ replace = "true"
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/go/scope_config.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/go/scope_config.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ #
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/java/edges.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/java/edges.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ 
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/java/rules.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/java/rules.toml`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -192,51 +192,65 @@
+     )
+ @binary_expression)"""
+ replace = "false"
+ replace_node = "binary_expression"
+ is_seed_rule = false
+ 
+ # Before :
+-#  abc() && false
++#  abc && false
+ # After :
+ #  false
+ #
+ [[rules]]
+ name = "simplify_something_and_false"
+ groups = ["boolean_expression_simplify"]
+ query = """
+ (
+     (binary_expression
+-        left : (_) @lhs
++        left : [
++            (identifier)
++            (parenthesized_expression (identifier))
++            (true)
++            (parenthesized_expression (true))
++            (false)
++            (parenthesized_expression (false))
++        ] @lhs
+         operator : "&&"
+         right: [(false) (parenthesized_expression (false))]
+     )
+ @binary_expression)
+ """
+ replace = "false"
+ replace_node = "binary_expression"
+ is_seed_rule = false
+ 
+ # Before :
+-#  abc() || true
++#  abc || true
+ # After :
+ #  true
+ #
+ [[rules]]
+ groups = ["boolean_expression_simplify"]
+ name = "simplify_something_or_true"
+ query = """
+ (
+     (binary_expression
+-        left : (_) @lhs
++        left : [
++            (identifier)
++            (parenthesized_expression (identifier))
++            (true)
++            (parenthesized_expression (true))
++            (false)
++            (parenthesized_expression (false))
++        ] @lhs
+         operator:"||"
+         right: [(true) (parenthesized_expression (true))]
+     )
+ @binary_expression)"""
+-replace = "@lhs"
++replace = "true"
+ replace_node = "binary_expression"
+ is_seed_rule = false
+ 
+ # Before :
+ #  true || abc()
+ # After :
+ #  true
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/java/scope_config.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/java/scope_config.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -73,18 +73,25 @@
+   ]
+ )@qdn"""
+ 
+ # Scope generators for Java Class.
+ [[scopes]]
+ name = "Class"
+ [[scopes.rules]]
+-matcher = "(class_declaration name:(_) @n) @c"
+-generator = """
+-(
+-((class_declaration name:(_) @z) @qc)
++matcher = """(
++  [
++    (class_declaration name:(_) @n) @c
++    (enum_declaration name:(_) @n) @c
++  ]
++)"""
++generator = """(
++  [
++    ((class_declaration name:(_) @z) @qc)
++    ((enum_declaration name:(_) @z) @qc)
++  ]
+ (#eq? @z "@n")
+ )
+ """
+ 
+ # Scope generator for java compilation unit
+ [[scopes]]
+ name = "File"
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/kt/edges.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/kt/edges.toml`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ 
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/kt/rules.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/kt/rules.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -62,15 +62,15 @@
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_ladder_if_false_with_alternative"
+ query = """
+ (
+ (if_expression (_) (_) 
+                (control_structure_body ((if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_) ) @consquent
++               (control_structure_body) @consquent
+                (_) @alternative) @if_expression) )) @outer_if
+ (#eq? @condition "false")
+ )
+ """
+ replace = "@alternative"
+ replace_node = "if_expression"
+ is_seed_rule = false
+@@ -82,15 +82,15 @@
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_ladder_if_false"
+ query = """
+ (
+ (if_expression (_) (_) 
+                (control_structure_body ((if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_) ) @consquent)) ) @alternative) @if_expression
++               (control_structure_body) @consquent)) ) @alternative) @if_expression
+ (#eq? @condition "false")
+ )
+ """
+ replace = ""
+ replace_node = "if_expression"
+ is_seed_rule = false
+ 
+@@ -101,15 +101,15 @@
+ # 
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_if_true"
+ query = """
+ (
+ (if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_) @consequence ) ) @if_expression
++               (control_structure_body (_)* @consequence ) ) @if_expression
+ (#eq? @condition "true")
+ )
+ """
+ replace = "@consequence"
+ replace_node = "if_expression"
+ is_seed_rule = false
+ 
+@@ -121,40 +121,40 @@
+ # abc()
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_if_true_with_alternative"
+ query = """
+ (
+ (if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_) @consequence ) 
+-               (control_structure_body (_) ) @alternative) @if_expression
++               (control_structure_body (_)* @consequence ) 
++               (control_structure_body) @alternative) @if_expression
+ (#eq? @condition "true")
+ )
+ """
+ replace = "@consequence"
+ replace_node = "if_expression"
+ is_seed_rule = false
+ 
+ # Before : 
+ #  if (false) { doSomething(); } else { doSomethingElse();}
+ # After :
+-#  { doSomethingElse(); } 
++#  doSomethingElse(); 
+ #
+ # Before : 
+ #  if (false) { doSomething(); }
+ # After :
+ #  
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_if_false_with_alternative"
+ query = """
+ (
+ (if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_)? ) @consquent
+-               (control_structure_body (_)? @alternative) ) @if_expression
++               (control_structure_body) @consquent
++               (control_structure_body (_)* @alternative) ) @if_expression
+ (#eq? @condition "false")
+ )"""
+ replace = "@alternative"
+ replace_node = "if_expression"
+ is_seed_rule = false
+ 
+ # Before : 
+@@ -163,15 +163,15 @@
+ #  
+ [[rules]]
+ groups = ["if_cleanup", "boolean_expression_simplify"]
+ name = "simplify_if_false"
+ query = """
+ (
+ (if_expression [((boolean_literal) @condition) (parenthesized_expression (boolean_literal) @condition)] 
+-               (control_structure_body (_)? ) @consquent) @if_expression
++               (control_structure_body) @consquent) @if_expression
+ (#eq? @condition "false")
+ )"""
+ replace = ""
+ replace_node = "if_expression"
+ is_seed_rule = false
+ 
+ # Before : 
+@@ -265,47 +265,55 @@
+ (#eq? @lhs "false")  
+ )"""
+ replace = "false"
+ replace_node = "conjunction_expression"
+ is_seed_rule = false
+ 
+ # Before :
+-#  abc() && false
++#  abc && false
+ # After :
+ #  false
+ #
+ [[rules]]
+ groups = ["boolean_expression_simplify"]
+ name = "simplify_something_and_false"
+ query = """
+ (
+-(conjunction_expression (_) @lhs 
++(conjunction_expression [(simple_identifier)
++                          (parenthesized_expression (simple_identifier))
++                          (boolean_literal)
++                          (parenthesized_expression (boolean_literal))
++                        ] @lhs 
+                         [((boolean_literal) @rhs) (parenthesized_expression (boolean_literal) @rhs)] ) @conjunction_expression
+ (#eq? @rhs "false")  
+ )
+ """
+ replace = "false"
+ replace_node = "conjunction_expression"
+ is_seed_rule = false
+ 
+ # Before :
+-#  abc() || true
++#  abc || true
+ # After :
+ #  true
+ #
+ [[rules]]
+ groups = ["boolean_expression_simplify"]
+ name = "simplify_something_or_true"
+ query = """
+ (
+-(disjunction_expression (_) @lhs 
++(disjunction_expression [(simple_identifier)
++                          (parenthesized_expression (simple_identifier))
++                          (boolean_literal)
++                          (parenthesized_expression (boolean_literal))
++                        ] @lhs 
+                         [((boolean_literal) @rhs) (parenthesized_expression (boolean_literal) @rhs)] ) @disjunction_expression
+ (#eq? @rhs "true")  
+ )"""
+-replace = "@lhs"
++replace = "true"
+ replace_node = "disjunction_expression"
+ is_seed_rule = false
+ 
+ # Before :
+ #  true || abc()
+ # After :
+ #  true
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/kt/scope_config.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/kt/scope_config.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/swift/edges.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/swift/edges.toml`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ 
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/cleanup_rules/swift/rules.toml` & `polyglot_piranha-0.3.1/src/cleanup_rules/swift/rules.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright (c) 2022 Uber Technologies, Inc.
++# Copyright (c) 2023 Uber Technologies, Inc.
+ # 
+ # <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ # except in compliance with the License. You may obtain a copy of the License at
+ # <p>http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # <p>Unless required by applicable law or agreed to in writing, software distributed under the
+ # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -403,14 +403,39 @@
+ (#eq? @true "true")
+ )"""
+ groups = ["guard_cleanup"]
+ replace_node = "guard_block"
+ replace = ""
+ is_seed_rule = false
+ 
++#
++# Before
++#   guard false else {
++#       return f1()
++#   }
++#   f2()
++# After 
++#   return f1()
++#   f2()
++#
++[[rules]]
++name = "guard_always_false"
++query = """(
++(guard_statement
++    condition: [(boolean_literal) @false  
++            (tuple_expression 
++                value: (boolean_literal) @false)]
++    (statements) @else_block
++    ) @guard_block
++(#eq? @false "false")
++)"""
++groups = ["guard_cleanup"]
++replace_node = "guard_block"
++replace = "@else_block"
++is_seed_rule = false
+ 
+ # Dummy rule that acts as a junction for all boolean based cleanups
+ # Let's say you want to define rules from A -> B, A -> C, D -> B, D -> C, ... 
+ # A pattern here is - if there is an outgoing edge to B there is another to C.
+ # In these cases, you can use a dummy rule X as shown below:
+ # X -> B, X - C, A -> X, D -> X, ...
+ [[rules]]
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/lib.rs` & `polyglot_piranha-0.3.1/src/lib.rs`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/main.rs` & `polyglot_piranha-0.3.1/src/main.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+- Copyright (c) 2022 Uber Technologies, Inc.
++ Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/constraint.rs` & `polyglot_piranha-0.3.1/src/models/constraint.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/default_configs.rs` & `polyglot_piranha-0.3.1/src/models/default_configs.rs`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+- Copyright (c) 2022 Uber Technologies, Inc.
++ Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -43,15 +43,15 @@
+   vec![]
+ }
+ 
+ pub fn default_delete_file_if_empty() -> bool {
+   true
+ }
+ 
+-pub fn default_cleanup_comments_buffer() -> usize {
++pub fn default_cleanup_comments_buffer() -> i32 {
+   2
+ }
+ 
+ pub fn default_cleanup_comments() -> bool {
+   false
+ }
+ 
+@@ -138,7 +138,11 @@
+ pub(crate) fn default_rule_graph() -> RuleGraph {
+   RuleGraph::default()
+ }
+ 
+ pub(crate) fn default_is_seed_rule() -> bool {
+   true
+ }
++
++pub(crate) fn default_allow_dirty_ast() -> bool {
++  false
++}
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/edit.rs` & `polyglot_piranha-0.3.1/src/models/edit.rs`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,77 +1,89 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
+-use std::{collections::HashMap, fmt};
++use std::fmt;
+ 
+ use colored::Colorize;
+-use getset::Getters;
++use getset::{Getters, MutGetters};
+ use log::{debug, trace};
+ use serde_derive::{Deserialize, Serialize};
+ use tree_sitter::{Node, Range};
+ 
+ use super::{
+   matches::Match, rule::InstantiatedRule, rule_store::RuleStore, source_code_unit::SourceCodeUnit,
+ };
+ use crate::utilities::{
+   gen_py_str_methods,
+   tree_sitter_utilities::{get_context, get_node_for_range},
+   Instantiate,
+ };
+ use pyo3::{prelude::pyclass, pymethods};
+ 
+-#[derive(Serialize, Debug, Clone, Getters, Deserialize)]
++#[derive(Serialize, Debug, Clone, Getters, MutGetters, Deserialize)]
+ #[pyclass]
+ pub(crate) struct Edit {
+   // The match representing the target site of the edit
+   #[pyo3(get)]
+   #[get = "pub"]
++  #[get_mut]
+   p_match: Match,
+   // The string to replace the substring encompassed by the match
+   #[pyo3(get)]
+   #[get = "pub"]
+   replacement_string: String,
+   // The rule used for creating this match-replace
+   #[pyo3(get)]
+   #[get = "pub"]
+   matched_rule: String,
+ }
+ 
+ gen_py_str_methods!(Edit);
+ 
+ impl Edit {
+-  pub(crate) fn new(p_match: Match, replacement_string: String, matched_rule: String) -> Self {
+-    Self {
++  pub(crate) fn new(
++    p_match: Match, replacement_string: String, matched_rule: String, code: &String,
++  ) -> Self {
++    let mut edit = Self {
+       p_match,
+       replacement_string,
+       matched_rule,
++    };
++    if edit.is_delete() {
++      edit.p_match_mut().expand_to_associated_matches(code);
+     }
++    edit
+   }
+-
++  #[cfg(test)]
+   pub(crate) fn delete_range(code: &str, replacement_range: Range) -> Self {
++    use std::collections::HashMap;
+     Self {
+       p_match: Match::new(
+         code[replacement_range.start_byte..replacement_range.end_byte].to_string(),
+         replacement_range,
+         HashMap::new(),
+       ),
+       replacement_string: String::new(),
+       matched_rule: "Delete Range".to_string(),
+     }
+   }
++
++  pub(crate) fn is_delete(&self) -> bool {
++    self.replacement_string.trim().is_empty()
++  }
+ }
+ 
+ impl fmt::Display for Edit {
+   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+     let replace_range: Range = self.p_match().range();
+     let replacement = self.replacement_string();
+     let replaced_code_snippet = self.p_match().matched_string();
+@@ -130,13 +142,18 @@
+     // Get all matches for the query in the given scope `node`.
+ 
+     return self
+       .get_matches(rule, rule_store, node, recursive)
+       .first()
+       .map(|p_match| {
+         let replacement_string = rule.replace().instantiate(p_match.matches());
+-        let edit = Edit::new(p_match.clone(), replacement_string, rule.name());
++        let edit = Edit::new(
++          p_match.clone(),
++          replacement_string,
++          rule.name(),
++          self.code(),
++        );
+         trace!("Rewrite found : {:#?}", edit);
+         edit
+       });
+   }
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/language.rs` & `polyglot_piranha-0.3.1/src/models/language.rs`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+- Copyright (c) 2022 Uber Technologies, Inc.
++ Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -24,52 +24,50 @@
+   outgoing_edges::Edges,
+   rule::Rules,
+   scopes::{ScopeConfig, ScopeGenerator},
+ };
+ 
+ #[derive(Debug, Clone, Getters, PartialEq)]
+ pub struct PiranhaLanguage {
++  /// The extension of the language FIXME: - https://github.com/uber/piranha/issues/365
+   #[get = "pub"]
+   name: String,
++  /// the language (enum)
+   #[get = "pub"]
+   supported_language: SupportedLanguage,
++  /// the language (As tree sitter model)
+   #[get = "pub"]
+   language: tree_sitter::Language,
++  /// Built-in rules for the language
+   #[get = "pub(crate)"]
+   rules: Option<Rules>,
++  /// Built-in edges for the language
+   #[get = "pub(crate)"]
+   edges: Option<Edges>,
++  /// Scope configurations for the language
+   #[get = "pub(crate)"]
+   scopes: Vec<ScopeGenerator>,
++  /// The node kinds to be considered when searching for comments
+   #[get = "pub"]
+   comment_nodes: Vec<String>,
+ }
+ 
+-#[derive(Deserialize, Debug, Clone, PartialEq)]
++#[derive(Deserialize, Debug, Clone, PartialEq, Default)]
+ pub enum SupportedLanguage {
++  #[default]
+   Java,
+   Kotlin,
+   Go,
+   Swift,
+   Ts,
+   Tsx,
+   Python,
+ }
+ 
+-impl Default for SupportedLanguage {
+-  fn default() -> Self {
+-    SupportedLanguage::Java
+-  }
+-}
+-
+ impl PiranhaLanguage {
+-  pub fn is_comment(&self, kind: String) -> bool {
+-    self.comment_nodes().contains(&kind)
+-  }
+-
+   pub fn create_query(&self, query_str: String) -> Query {
+     let query = Query::new(self.language, query_str.as_str());
+     if let Ok(q) = query {
+       return q;
+     }
+     panic!(
+       "Could not parse the query : {:?} {:?}",
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/mod.rs` & `polyglot_piranha-0.3.1/src/models/mod.rs`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/outgoing_edges.rs` & `polyglot_piranha-0.3.1/src/models/outgoing_edges.rs`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/piranha_arguments.rs` & `polyglot_piranha-0.3.1/src/models/piranha_arguments.rs`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,49 +1,45 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
+-use crate::models::edit::Edit;
+-
+ use super::{
+   default_configs::{
+-    default_cleanup_comments, default_cleanup_comments_buffer, default_code_snippet,
+-    default_delete_consecutive_new_lines, default_delete_file_if_empty, default_dry_run,
+-    default_global_tag_prefix, default_number_of_ancestors_in_parent_scope,
++    default_allow_dirty_ast, default_cleanup_comments, default_cleanup_comments_buffer,
++    default_code_snippet, default_delete_consecutive_new_lines, default_delete_file_if_empty,
++    default_dry_run, default_global_tag_prefix, default_number_of_ancestors_in_parent_scope,
+     default_path_to_codebase, default_path_to_configurations, default_path_to_output_summaries,
+     default_piranha_language, default_rule_graph, default_substitutions, GO, JAVA, KOTLIN, PYTHON,
+     SWIFT, TSX, TYPESCRIPT,
+   },
+   language::PiranhaLanguage,
+   rule_graph::{read_user_config_files, RuleGraph, RuleGraphBuilder},
+   source_code_unit::SourceCodeUnit,
+ };
+ use crate::utilities::parse_key_val;
+ use clap::builder::TypedValueParser;
+ use clap::Parser;
+ use derive_builder::Builder;
+ use getset::{CopyGetters, Getters};
+ use itertools::Itertools;
+-use log::{debug, info, warn};
++use log::{info, warn};
+ use pyo3::{
+   prelude::{pyclass, pymethods},
+   types::PyDict,
+ };
+ use regex::Regex;
+-use tree_sitter::{InputEdit, Range};
+-use tree_sitter_traversal::{traverse, Order};
+ 
+ use std::collections::HashMap;
+ 
+ /// A refactoring tool that eliminates dead code related to stale feature flags
+ #[derive(Clone, Getters, CopyGetters, Debug, Parser, Builder)]
+ #[clap(name = "Piranha")]
+ #[pyclass]
+@@ -108,15 +104,15 @@
+   #[builder(default = "default_number_of_ancestors_in_parent_scope()")]
+   #[clap(long, default_value_t = default_number_of_ancestors_in_parent_scope())]
+   number_of_ancestors_in_parent_scope: u8,
+   /// The number of lines to consider for cleaning up the comments
+   #[get = "pub"]
+   #[builder(default = "default_cleanup_comments_buffer()")]
+   #[clap(long, default_value_t = default_cleanup_comments_buffer())]
+-  cleanup_comments_buffer: usize,
++  cleanup_comments_buffer: i32,
+ 
+   /// Enables deletion of associated comments
+   #[get = "pub"]
+   #[builder(default = "default_cleanup_comments()")]
+   #[clap(long, default_value_t = default_cleanup_comments())]
+   cleanup_comments: bool,
+ 
+@@ -127,14 +123,20 @@
+   dry_run: bool,
+ 
+   // A graph that captures the flow amongst the rules
+   #[get = "pub"]
+   #[builder(default = "default_rule_graph()")]
+   #[clap(skip)]
+   rule_graph: RuleGraph,
++
++  /// Allows syntax errors in the input source code
++  #[get = "pub"]
++  #[builder(default = "default_allow_dirty_ast()")]
++  #[clap(long, default_value_t = default_allow_dirty_ast())]
++  allow_dirty_ast: bool,
+ }
+ 
+ impl Default for PiranhaArguments {
+   fn default() -> Self {
+     PiranhaArgumentsBuilder::default().build()
+   }
+ }
+@@ -154,23 +156,24 @@
+   /// * cleanup_comments (bool) : Enables deletion of associated comments
+   /// * cleanup_comments_buffer (usize): The number of lines to consider for cleaning up the comments
+   /// * number_of_ancestors_in_parent_scope (usize): The number of ancestors considered when `PARENT` rules
+   /// * delete_consecutive_new_lines (bool) : Replaces consecutive `\n`s  with a `\n`
+   /// * global_tag_prefix (string): the prefix for global tags
+   /// * delete_file_if_empty (bool): User option that determines whether an empty file will be deleted
+   /// * path_to_output_summary : Path to the file where the Piranha output summary should be persisted
++  /// * allow_dirty_ast : Allows syntax errors in the input source code
+   /// Returns PiranhaArgument.
+   #[new]
+   fn py_new(
+     language: String, substitutions: &PyDict, path_to_configurations: Option<String>,
+     rule_graph: Option<RuleGraph>, path_to_codebase: Option<String>, code_snippet: Option<String>,
+-    dry_run: Option<bool>, cleanup_comments: Option<bool>, cleanup_comments_buffer: Option<usize>,
++    dry_run: Option<bool>, cleanup_comments: Option<bool>, cleanup_comments_buffer: Option<i32>,
+     number_of_ancestors_in_parent_scope: Option<u8>, delete_consecutive_new_lines: Option<bool>,
+     global_tag_prefix: Option<String>, delete_file_if_empty: Option<bool>,
+-    path_to_output_summary: Option<String>,
++    path_to_output_summary: Option<String>, allow_dirty_ast: Option<bool>,
+   ) -> Self {
+     let subs = substitutions
+       .iter()
+       .map(|(k, v)| (k.to_string(), v.to_string()))
+       .collect_vec();
+ 
+     let rg = rule_graph.unwrap_or_else(|| RuleGraphBuilder::default().build());
+@@ -185,14 +188,15 @@
+       cleanup_comments = cleanup_comments.unwrap_or_else(default_cleanup_comments),
+       cleanup_comments_buffer = cleanup_comments_buffer.unwrap_or_else(default_cleanup_comments_buffer),
+       number_of_ancestors_in_parent_scope = number_of_ancestors_in_parent_scope.unwrap_or_else(default_number_of_ancestors_in_parent_scope),
+       delete_consecutive_new_lines = delete_consecutive_new_lines.unwrap_or_else(default_delete_consecutive_new_lines),
+       global_tag_prefix = global_tag_prefix.unwrap_or_else(default_global_tag_prefix),
+       delete_file_if_empty = delete_file_if_empty.unwrap_or_else(default_delete_file_if_empty),
+       path_to_output_summary = path_to_output_summary,
++      allow_dirty_ast = allow_dirty_ast.unwrap_or_else(default_allow_dirty_ast),
+     }
+   }
+ }
+ 
+ impl PiranhaArguments {
+   pub fn get_language(&self) -> String {
+     self.language.name().to_string()
+@@ -272,15 +276,15 @@
+   let built_in_rules = RuleGraphBuilder::default()
+     .edges(piranha_language.edges().clone().unwrap_or_default().edges)
+     .rules(piranha_language.rules().clone().unwrap_or_default().rules)
+     .build();
+ 
+   // TODO: Move to `PiranhaArgumentBuilder`'s _validate - https://github.com/uber/piranha/issues/387
+   // Get the user-defined rule graph (if any) via the Python/Rust API
+-  let mut user_defined_rules = _arg.rule_graph().clone();
++  let mut user_defined_rules: RuleGraph = _arg.rule_graph().clone();
+   // In the scenario when rules/edges are passed as toml files
+   if !_arg.path_to_configurations().is_empty() {
+     user_defined_rules = read_user_config_files(_arg.path_to_configurations())
+   }
+ 
+   if user_defined_rules.graph().is_empty() {
+     warn!("NO RULES PROVIDED. Please provide rules via the RuleGraph API or as toml files");
+@@ -326,95 +330,14 @@
+ 
+ #[cfg(test)]
+ #[path = "unit_tests/piranha_arguments_test.rs"]
+ mod piranha_arguments_test;
+ 
+ // Implements instance methods related to applying the user options provided in  piranha arguments
+ impl SourceCodeUnit {
+-  /// Delete the comment associated to the deleted code element
+-  pub(crate) fn _delete_associated_comment(
+-    &mut self, edit: &Edit, applied_edit: &mut InputEdit, parser: &mut tree_sitter::Parser,
+-  ) {
+-    // Check if the edit kind is "DELETE something"
+-    if *self.piranha_arguments().cleanup_comments() && edit.replacement_string().is_empty() {
+-      let deleted_at = edit.p_match().range().start_point.row;
+-      if let Some(comment_range) = self._get_comment_at_line(
+-        deleted_at,
+-        *self.piranha_arguments().cleanup_comments_buffer(),
+-        edit.p_match().range().start_byte,
+-      ) {
+-        debug!("Deleting an associated comment");
+-        *applied_edit = self._apply_edit(&Edit::delete_range(self.code(), comment_range), parser);
+-      }
+-    }
+-  }
+-
+-  /// This function reports the range of the comment associated to the deleted element.
+-  ///
+-  /// # Arguments:
+-  /// * row : The row number where the deleted element started
+-  /// * buffer: Number of lines that we want to look up to find associated comment
+-  ///
+-  /// # Algorithm :
+-  /// Get all the nodes that either start and end at [row]
+-  /// If **all** nodes are comments
+-  /// * return the range of the comment
+-  /// If the [row] has no node that either starts/ends there:
+-  /// * recursively call this method for [row] -1 (until buffer is positive)
+-  /// This function reports the range of the comment associated to the deleted element.
+-  ///
+-  /// # Arguments:
+-  /// * row : The row number where the deleted element started
+-  /// * buffer: Number of lines that we want to look up to find associated comment
+-  ///
+-  /// # Algorithm :
+-  /// Get all the nodes that either start and end at [row]
+-  /// If **all** nodes are comments
+-  /// * return the range of the comment
+-  /// If the [row] has no node that either starts/ends there:
+-  /// * recursively call this method for [row] -1 (until buffer is positive)
+-  fn _get_comment_at_line(
+-    &mut self, row: usize, buffer: usize, start_byte: usize,
+-  ) -> Option<Range> {
+-    // Get all nodes that start or end on `updated_row`.
+-    let mut relevant_nodes_found = false;
+-    let mut relevant_nodes_are_comments = true;
+-    let mut comment_range = None;
+-    // Since the previous edit was a delete, the start and end of the replacement range is [start_byte].
+-    let node = self
+-      .root_node()
+-      .descendant_for_byte_range(start_byte, start_byte)
+-      .unwrap_or_else(|| self.root_node());
+-
+-    for node in traverse(node.walk(), Order::Post) {
+-      if node.start_position().row == row || node.end_position().row == row {
+-        relevant_nodes_found = true;
+-        let is_comment: bool = self
+-          .piranha_arguments()
+-          .language()
+-          .is_comment(node.kind().to_string());
+-        relevant_nodes_are_comments = relevant_nodes_are_comments && is_comment;
+-        if is_comment {
+-          comment_range = Some(node.range());
+-        }
+-      }
+-    }
+-
+-    if relevant_nodes_found {
+-      if relevant_nodes_are_comments {
+-        return comment_range;
+-      }
+-    } else if buffer > 0 {
+-      // We pass [start_byte] itself, because we know that parent of the current row is the parent of the above row too.
+-      // If that's not the case, its okay, because we will not find any comments in these scenarios.
+-      return self._get_comment_at_line(row - 1, buffer - 1, start_byte);
+-    }
+-    None
+-  }
+-
+   /// Replaces three consecutive newline characters with two
+   pub(crate) fn perform_delete_consecutive_new_lines(&mut self) {
+     if *self.piranha_arguments().delete_consecutive_new_lines() {
+       let regex = Regex::new(r"\n(\s*\n)+(\s*\n)").unwrap();
+       let x = &regex.replace_all(self.code(), "\n${2}").into_owned();
+       self.set_code(x.clone());
+     }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/piranha_output.rs` & `polyglot_piranha-0.3.1/src/models/piranha_output.rs`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,69 +1,62 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
+-use std::path::PathBuf;
+-
++use getset::Getters;
+ use itertools::Itertools;
+ use serde_derive::{Deserialize, Serialize};
+ 
+ use crate::utilities::gen_py_str_methods;
+ 
+ use super::{edit::Edit, matches::Match, source_code_unit::SourceCodeUnit};
+ use pyo3::{prelude::pyclass, pymethods};
+ 
+ /// A class to represent Piranha's output
+-#[derive(Serialize, Debug, Clone, Default, Deserialize)]
++#[derive(Serialize, Debug, Clone, Default, Deserialize, Getters)]
+ #[pyclass]
+ pub struct PiranhaOutputSummary {
+   /// Path to the file
+   #[pyo3(get)]
++  #[get = "pub(crate)"]
+   path: String,
+-  /// Content of the file after all the rewrites
++  /// Original content of the file after all the rewrites
++  #[pyo3(get)]
++  #[get = "pub(crate)"]
++  #[serde(skip)]
++  original_content: String,
++  /// Final content of the file after all the rewrites
+   #[pyo3(get)]
++  #[get = "pub(crate)"]
+   content: String,
+   /// All the occurrences of "match-only" rules
+   #[pyo3(get)]
++  #[get = "pub(crate)"]
+   matches: Vec<(String, Match)>,
+   /// All the applied edits
+   #[pyo3(get)]
++  #[get = "pub(crate)"]
+   rewrites: Vec<Edit>,
+ }
+ 
+ gen_py_str_methods!(PiranhaOutputSummary);
+ 
+ impl PiranhaOutputSummary {
+   pub(crate) fn new(source_code_unit: &SourceCodeUnit) -> PiranhaOutputSummary {
+     return PiranhaOutputSummary {
+       path: String::from(source_code_unit.path().as_os_str().to_str().unwrap()),
++      original_content: source_code_unit.original_content().to_string(),
+       content: source_code_unit.code().to_string(),
+       matches: source_code_unit.matches().iter().cloned().collect_vec(),
+       rewrites: source_code_unit.rewrites().iter().cloned().collect_vec(),
+     };
+   }
+-
+-  pub(crate) fn matches(&self) -> &[(String, Match)] {
+-    self.matches.as_ref()
+-  }
+-
+-  pub(crate) fn rewrites(&self) -> &[Edit] {
+-    self.rewrites.as_ref()
+-  }
+-
+-  pub fn path(&self) -> PathBuf {
+-    PathBuf::from(self.path.as_str())
+-  }
+-
+-  pub fn content(&self) -> &str {
+-    self.content.as_ref()
+-  }
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/rule.rs` & `polyglot_piranha-0.3.1/src/models/rule.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/rule_graph.rs` & `polyglot_piranha-0.3.1/src/models/rule_graph.rs`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/rule_store.rs` & `polyglot_piranha-0.3.1/src/models/rule_store.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/scopes.rs` & `polyglot_piranha-0.3.1/src/models/scopes.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/source_code_unit.rs` & `polyglot_piranha-0.3.1/src/models/source_code_unit.rs`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -35,14 +35,18 @@
+ };
+ use getset::{CopyGetters, Getters, MutGetters, Setters};
+ // Maintains the updated source code content and AST of the file
+ #[derive(Clone, Getters, CopyGetters, MutGetters, Setters)]
+ pub(crate) struct SourceCodeUnit {
+   // The tree representing the file
+   ast: Tree,
++  // The original content of a file
++  #[get = "pub"]
++  #[set = "pub(crate)"]
++  original_content: String,
+   // The content of a file
+   #[get = "pub"]
+   #[set = "pub(crate)"]
+   code: String,
+   // The tag substitution cache.
+   // This map is looked up to instantiate new rules.
+   #[get = "pub"]
+@@ -66,23 +70,31 @@
+ 
+ impl SourceCodeUnit {
+   pub(crate) fn new(
+     parser: &mut Parser, code: String, substitutions: &HashMap<String, String>, path: &Path,
+     piranha_arguments: &PiranhaArguments,
+   ) -> Self {
+     let ast = parser.parse(&code, None).expect("Could not parse code");
+-    Self {
++    let source_code_unit = Self {
+       ast,
++      original_content: code.to_string(),
+       code,
+       substitutions: substitutions.clone(),
+       path: path.to_path_buf(),
+       rewrites: Vec::new(),
+       matches: Vec::new(),
+       piranha_arguments: piranha_arguments.clone(),
++    };
++    // Panic if allow dirty ast is false and the tree is syntactically incorrect
++    if !piranha_arguments.allow_dirty_ast() && source_code_unit._number_of_errors() > 0 {
++      error!("{}: {}", "Syntax Error".red(), path.to_str().unwrap().red());
++      _ = &source_code_unit._panic_for_syntax_error();
+     }
++
++    source_code_unit
+   }
+ 
+   pub(crate) fn root_node(&self) -> Node<'_> {
+     self.ast.root_node()
+   }
+ 
+   /// Will apply the `rule` to all of its occurrences in the source code unit.
+@@ -309,104 +321,52 @@
+   ) {
+     for rule in rules {
+       self.apply_rule(rule.to_owned(), rules_store, parser, &scope_query)
+     }
+     self.perform_delete_consecutive_new_lines();
+   }
+ 
+-  pub(crate) fn apply_edit(&mut self, edit: &Edit, parser: &mut Parser) -> InputEdit {
+-    // Get the tree_sitter's input edit representation
+-    let mut applied_edit = self._apply_edit(edit, parser);
+-    self._delete_associated_comment(edit, &mut applied_edit, parser);
+-    applied_edit
+-  }
+-
+   /// Applies an edit to the source code unit
+   /// # Arguments
+   /// * `replace_range` - the range of code to be replaced
+   /// * `replacement_str` - the replacement string
+   /// * `parser`
+   ///
+   /// # Returns
+   /// The `edit:InputEdit` performed.
+   ///
+   /// Note - Causes side effect. - Updates `self.ast` and `self.code`
+-  pub(crate) fn _apply_edit(&mut self, edit: &Edit, parser: &mut Parser) -> InputEdit {
+-    let mut edit_to_apply = edit.clone();
+-    // Check if the edit is a `Delete` operation then delete trailing comma
+-    if edit.replacement_string().trim().is_empty() {
+-      edit_to_apply = self.delete_trailing_comma(edit);
+-    }
++  pub(crate) fn apply_edit(&mut self, edit: &Edit, parser: &mut Parser) -> InputEdit {
+     // Get the tree_sitter's input edit representation
+-    let (new_source_code, ts_edit) = get_tree_sitter_edit(self.code.clone(), &edit_to_apply);
++    let (new_source_code, ts_edit) = get_tree_sitter_edit(self.code.clone(), edit);
+     // Apply edit to the tree
++    let number_of_errors = self._number_of_errors();
+     self.ast.edit(&ts_edit);
+     self._replace_file_contents_and_re_parse(&new_source_code, parser, true);
+-    if self.ast.root_node().has_error() {
+-      let msg = format!(
+-        "Produced syntactically incorrect source code {}",
+-        self.code()
+-      );
+-      error!("{}", msg);
+-      panic!("{}", msg);
++
++    // Panic if the number of errors increased after the edit
++    if self._number_of_errors() > number_of_errors {
++      self._panic_for_syntax_error();
+     }
+     ts_edit
+   }
+ 
+-  /// Deletes the trailing comma after the {deleted_range}
+-  /// # Arguments
+-  /// * `deleted_range` - the range of the deleted code
+-  ///
+-  /// # Returns
+-  /// code range of the closest node
+-  ///
+-  /// Algorithm:
+-  /// Get the node after the {deleted_range}'s end byte (heuristic 5 characters)
+-  /// Traverse this node and get the node closest to the range {deleted_range}'s end byte
+-  /// IF this closest node is a comma, extend the {new_delete_range} to include the comma.
+-  fn delete_trailing_comma(&self, edit: &Edit) -> Edit {
+-    let deleted_range: Range = edit.p_match().range();
+-    let mut new_deleted_range = deleted_range;
+-
+-    // Get the node immediately after the to-be-deleted code
+-    if let Some(parent_node) = self
+-      .ast
+-      .root_node()
+-      .descendant_for_byte_range(deleted_range.end_byte, deleted_range.end_byte + 1)
+-      .and_then(|n| n.parent())
+-    {
+-      // Traverse this `parent_node` to find the closest next node after the `replace_range`
+-      if let Some(node_after_to_be_deleted_node) = traverse(parent_node.walk(), Order::Post)
+-        .filter(|n| n.start_byte() >= deleted_range.end_byte)
+-        .min_by(|a, b| {
+-          (a.start_byte() - deleted_range.end_byte).cmp(&(b.start_byte() - deleted_range.end_byte))
+-        })
+-      {
+-        // If the next closest node to the "to be deleted node" is a comma , extend the
+-        // the deletion range to include the comma
+-        if node_after_to_be_deleted_node
+-          .utf8_text(self.code().as_bytes())
+-          .unwrap()
+-          .trim()
+-          .eq(",")
+-        {
+-          new_deleted_range.end_byte = node_after_to_be_deleted_node.end_byte();
+-          new_deleted_range.end_point = node_after_to_be_deleted_node.end_position();
+-        }
+-      }
+-    }
+-    return Edit::new(
+-      Match::new(
+-        self.code()[new_deleted_range.start_byte..new_deleted_range.end_byte].to_string(),
+-        new_deleted_range,
+-        edit.p_match().matches().clone(),
+-      ),
+-      edit.replacement_string().to_string(),
+-      edit.matched_rule().to_string(),
++  fn _panic_for_syntax_error(&self) {
++    let msg = format!(
++      "Produced syntactically incorrect source code {}",
++      self.code()
+     );
++    panic!("{}", msg);
++  }
++
++  /// Returns the number of errors in the AST
++  fn _number_of_errors(&self) -> usize {
++    traverse(self.root_node().walk(), Order::Post)
++      .filter(|node| node.is_error() || node.is_missing())
++      .count()
+   }
+ 
+   // Replaces the content of the current file with the new content and re-parses the AST
+   /// # Arguments
+   /// * `replacement_content` - new content of file
+   /// * `parser`
+   /// * `is_current_ast_edited` : have you invoked `edit` on the current AST ?
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/unit_tests/piranha_arguments_test.rs` & `polyglot_piranha-0.3.1/src/models/unit_tests/piranha_arguments_test.rs`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+- Copyright (c) 2022 Uber Technologies, Inc.
++ Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/unit_tests/rule_test.rs` & `polyglot_piranha-0.3.1/src/models/unit_tests/rule_test.rs`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -91,15 +91,15 @@
+             )",
+           ]
+         }
+     ]
+   };
+   let rule = InstantiatedRule::new(&_rule, &HashMap::new());
+   let source_code = "class Test {
+-          pub void foobar(){
++          public void foobar(){
+             boolean isFlagTreated = true;
+             isFlagTreated = true;
+             if (isFlagTreated) {
+               // Do something;
+             }
+           }
+         }";
+@@ -150,15 +150,15 @@
+               (#not-eq? @a.rhs \"@init\")
+             )",
+           ]
+         }
+       ]
+   };
+   let source_code = "class Test {
+-          pub void foobar(){
++          public void foobar(){
+             boolean isFlagTreated = true;
+             isFlagTreated = false;
+             if (isFlagTreated) {
+               // Do something;
+             }
+           }
+         }";
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/unit_tests/scopes_test.rs` & `polyglot_piranha-0.3.1/src/models/unit_tests/scopes_test.rs`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+- Copyright (c) 2022 Uber Technologies, Inc.
++ Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -17,15 +17,15 @@
+     language::PiranhaLanguage,
+     piranha_arguments::{PiranhaArguments, PiranhaArgumentsBuilder},
+   },
+   utilities::tree_sitter_utilities::TSQuery,
+ };
+ 
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -111,15 +111,15 @@
+     .unwrap()
+ }
+ 
+ /// Positive test for the generated scope query, given scope generators, source code and position of pervious edit.
+ #[test]
+ fn test_get_scope_query_positive() {
+   let source_code = "class Test {
+-      pub void foobar(int a, int b, int c){
++      public void foobar(int a, int b, int c){
+         boolean isFlagTreated = true;
+         isFlagTreated = false;
+         if (isFlagTreated) {
+           System.out.println(a + b + c);
+         }
+       }
+     }";
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/models/unit_tests/source_code_unit_test.rs` & `polyglot_piranha-0.3.1/src/models/unit_tests/source_code_unit_test.rs`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -12,15 +12,15 @@
+ */
+ 
+ use tree_sitter::Parser;
+ 
+ use crate::{
+   constraint,
+   models::{
+-    default_configs::{JAVA, SWIFT, UNUSED_CODE_PATH},
++    default_configs::{JAVA, UNUSED_CODE_PATH},
+     language::PiranhaLanguage,
+     piranha_arguments::PiranhaArgumentsBuilder,
+     rule::InstantiatedRule,
+     rule_store::RuleStore,
+   },
+   piranha_rule,
+   utilities::eq_without_whitespace,
+@@ -119,70 +119,14 @@
+ 
+   let _ = source_code_unit.apply_edit(
+     &Edit::delete_range(source_code, range(1000, 2000, 0, 0, 0, 0)),
+     &mut parser,
+   );
+ }
+ 
+-/// Positive test of an edit being applied  given replacement range  and replacement string.
+-/// This scenario checks the logic that removes the comma identified by tree-sitter.
+-#[test]
+-fn test_apply_edit_comma_handling_via_grammar() {
+-  let source_code = "class Test {
+-      @SuppressWarnings(\"NullAway\",\"FooBar\")
+-      public void is_valid(@Nullable String s){
+-        return s != null && check(s);
+-      }
+-    }";
+-
+-  let java = get_java_tree_sitter_language();
+-  let mut parser = java.parser();
+-
+-  let mut source_code_unit =
+-    SourceCodeUnit::default(source_code, &mut parser, java.name().to_string());
+-
+-  let _ = source_code_unit.apply_edit(
+-    &Edit::delete_range(source_code, range(37, 47, 2, 26, 2, 36)),
+-    &mut parser,
+-  );
+-  assert!(eq_without_whitespace(
+-    &source_code.replace("\"NullAway\",", ""),
+-    source_code_unit.code()
+-  ));
+-}
+-
+-/// Positive test of an edit being applied  given replacement range  and replacement string.
+-/// Currently swift grammar does not always identify extra commas, we use regex replace at this point.
+-/// This test scenario checks the regex replacement logic.
+-#[test]
+-fn test_apply_edit_comma_handling_via_regex() {
+-  let source_code = "class Test {
+-    func some_func() {
+-      var bike1 = Bike(name: \"BMX Bike\", gear: 2)
+-      print(\"Name: \\(bike1.name) and Gear: \\(bike1.gear)\")
+-  }
+-}";
+-
+-  let swift = PiranhaLanguage::from(SWIFT);
+-
+-  let mut parser = swift.parser();
+-
+-  let mut source_code_unit =
+-    SourceCodeUnit::default(source_code, &mut parser, swift.name().to_string());
+-
+-  let _ = source_code_unit.apply_edit(
+-    &Edit::delete_range(source_code, range(59, 75, 3, 23, 3, 41)),
+-    &mut parser,
+-  );
+-  assert!(eq_without_whitespace(
+-    &source_code.replace("name: \"BMX Bike\",", ""),
+-    source_code_unit.code()
+-  ));
+-}
+-
+ #[test]
+ fn test_satisfies_constraints_positive() {
+   let _rule = piranha_rule! {
+     name= "test",
+     query= "(
+       ((local_variable_declaration
+                       declarator: (variable_declarator
+@@ -201,15 +145,15 @@
+         (#not-eq? @a.rhs \"@init\")
+       )",]
+     }]
+ 
+   };
+   let rule = InstantiatedRule::new(&_rule, &HashMap::new());
+   let source_code = "class Test {
+-      pub void foobar(){
++      public void foobar(){
+         boolean isFlagTreated = true;
+         isFlagTreated = true;
+         if (isFlagTreated) {
+         // Do something;
+         }
+        }
+       }";
+@@ -266,15 +210,15 @@
+         (#eq? @a.lhs \"@variable_name\")
+         (#not-eq? @a.rhs \"@init\")
+       )",]
+     }]
+   };
+   let rule = InstantiatedRule::new(&_rule, &HashMap::new());
+   let source_code = "class Test {
+-      pub void foobar(){
++      public void foobar(){
+         boolean isFlagTreated = true;
+         isFlagTreated = false;
+         if (isFlagTreated) {
+         // Do something;
+         }
+        }
+       }";
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/mod.rs` & `polyglot_piranha-0.3.1/src/tests/mod.rs`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,24 +1,27 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
+ use crate::execute_piranha;
+ use crate::models::piranha_arguments::PiranhaArguments;
++use crate::models::piranha_output::PiranhaOutputSummary;
+ use crate::utilities::{eq_without_whitespace, read_file};
+ 
++use itertools::Itertools;
++use std::collections::HashMap;
+ use std::fs;
+ use std::path::Path;
+ use tempdir::TempDir;
+ 
+ mod test_piranha_java;
+ mod test_piranha_kt;
+ 
+@@ -70,14 +73,29 @@
+       )
+       .unwrap();
+     }
+   }
+   temp_dir
+ }
+ 
++fn assert_frequency_for_matches(
++  summaries: &Vec<PiranhaOutputSummary>, match_freq: &HashMap<&str, u32>,
++) {
++  let frequencies: HashMap<String, u32> = summaries
++    .iter()
++    .flat_map(|x| x.matches())
++    .into_group_map_by(|x| x.0.clone())
++    .into_iter()
++    .map(|(k, v)| (k, v.len() as u32))
++    .collect();
++  for (matched_rule, count) in match_freq.iter() {
++    assert_eq!(frequencies[*matched_rule], *count)
++  }
++}
++
+ /// Checks if the file updates returned by piranha are as expected.
+ fn execute_piranha_and_check_result(
+   piranha_arguments: &PiranhaArguments, path_to_expected: &Path, files_changed: usize,
+   ignore_whitespace: bool,
+ ) {
+   let path_to_codebase = Path::new(piranha_arguments.path_to_codebase());
+   let output_summaries = execute_piranha(piranha_arguments);
+@@ -128,28 +146,30 @@
+ }
+ 
+ /// This macro creates a new match test case.
+ ///
+ /// # Arguments:
+ /// * test_name: Name of the test (identifier)
+ /// * relative_path: relative path such that `test-resources/<language>/<relative_path>` leads to a directory containing the folders `input` and `configurations`
+-/// * expected_number_of_matches: expression returning the expected number of matches
++/// * matches_frequency: The expected frequency for each match
+ ///
+ /// Usage:
+ /// ```
+ /// create_match_tests! {
+ ///  "java",
+-///  test_a1:  "relative/path_1", 2;
+-///  test_a2:  "relative/path_2", 3;
++///  test_a1:  "relative/path_1", HashMap::from([("match_class", 2));
++///  test_a2:  "relative/path_2", HashMap::from([("match_class", 2), ("match_class_1", 1)])
++///  
++/// ;
+ /// }
+ /// ```
+ macro_rules! create_match_tests {
+   ($language: expr,
+     $($test_name:ident: $path_to_test: expr,
+-                        $expected_number_of_matches: expr
++                        $matches_frequency: expr
+                         $(,$kw: ident = $value: expr)* ; )*) => {
+     $(
+     #[test]
+     fn $test_name() {
+       super::initialize();
+       let _path= std::path::PathBuf::from("test-resources").join($language).join($path_to_test);
+       let path_to_codebase = _path.join("input").to_str().unwrap().to_string();
+@@ -159,18 +179,15 @@
+         path_to_configurations = path_to_configurations,
+         language= $crate::models::language::PiranhaLanguage::from($language),
+         $(
+           $kw = $value,
+         )*
+       };
+       let output_summaries = $crate::execute_piranha(&piranha_arguments);
+-      assert_eq!(
+-        output_summaries.iter().flat_map(|os| os.matches().iter()).count(),
+-        $expected_number_of_matches
+-      );
++      super::assert_frequency_for_matches(&output_summaries, &$matches_frequency);
+     }
+   )*
+   };
+ }
+ 
+ /// This macro creates a new rewrite test case.
+ ///
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_go.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_go.rs`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,42 +1,44 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
++use std::collections::HashMap;
++
+ use super::{create_match_tests, create_rewrite_tests, substitutions};
+ 
+ use crate::models::default_configs::GO;
+ 
+ create_match_tests! {
+   GO,
+-  test_match_only_for_loop: "structural_find/go_stmt_for_loop", 1;
+-  test_match_only_go_stmt_for_loop:"structural_find/for_loop", 4;
++  test_match_only_for_loop: "structural_find/go_stmt_for_loop", HashMap::from([("find_go_stmt_for_loop", 1)]);
++  test_match_only_go_stmt_for_loop:"structural_find/for_loop", HashMap::from([("find_for", 4)]);
+ }
+ 
+ create_rewrite_tests! {
+   GO,
+   test_builtin_boolean_expression_simplify:  "feature_flag/builtin_rules/boolean_expression_simplify", 1,
+     substitutions= substitutions! {
+       "true_flag_name" => "true",
+       "false_flag_name" => "false",
+       "nil_flag_name" => "nil"
+     };
+   test_builtin_statement_cleanup: "feature_flag/builtin_rules/statement_cleanup", 1,
+     substitutions= substitutions! {
+       "treated" => "true",
+       "treated_complement" => "false"
+-    };
++    }, cleanup_comments = true;
+   test_const_same_file: "feature_flag/system_1/const_same_file", 1,
+     substitutions= substitutions! {
+       "stale_flag_name" => "staleFlag",
+       "treated" => "false"
+     };
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_java.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_java.rs`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -20,15 +20,15 @@
+   models::{
+     default_configs::JAVA, language::PiranhaLanguage, piranha_arguments::piranha_arguments,
+     rule_graph::RuleGraphBuilder,
+   },
+   piranha_rule,
+   utilities::eq_without_whitespace,
+ };
+-use std::path::PathBuf;
++use std::{collections::HashMap, path::PathBuf};
+ 
+ create_rewrite_tests! {
+   JAVA,
+   test_feature_flag_system_1_treated: "feature_flag_system_1/treated/", 2,
+     substitutions = substitutions! {
+       "stale_flag_name" => "STALE_FLAG",
+       "treated"=>  "true",
+@@ -62,15 +62,15 @@
+   test_user_option_delete_if_empty: "user_option_delete_if_empty", 1;
+   test_user_option_do_not_delete_if_empty : "user_option_do_not_delete_if_empty", 1, delete_file_if_empty =false;
+   test_new_line_character_used_in_string_literal:  "new_line_character_used_in_string_literal",   1;
+ }
+ 
+ create_match_tests! {
+   JAVA,
+-  test_java_match_only: "structural_find", 20;
++  test_java_match_only: "structural_find", HashMap::from([("find_enum_constant", 1), ("find_method", 1), ("replace_isToggleEnabled_with_boolean_literal", 20)]);
+ }
+ 
+ #[test]
+ #[should_panic(
+   expected = "Could not instantiate the rule Rule { name: \"find_interface_extension\""
+ )]
+ fn test_scenarios_find_and_propagate_panic() {
+@@ -118,39 +118,40 @@
+ 
+ #[test]
+ fn test_new_line_character_used_in_string_literal_code_snippet() {
+   initialize();
+   let path_to_scenario = PathBuf::from("test-resources")
+     .join(JAVA)
+     .join("new_line_character_used_in_string_literal");
+-
++  let code_snippet = "package com.uber.piranha;
++  class SomeClass {
++    void someMethod(String s) {
++      assert (s.equals(\"Hello \\n World\"));
++    }
++  }";
+   let piranha_arguments = piranha_arguments! {
+     path_to_configurations = path_to_scenario.join("configurations").to_str().unwrap().to_string(),
+     language = PiranhaLanguage::from(JAVA),
+     dry_run = true,
+-    code_snippet = "package com.uber.piranha;
+-    class SomeClass {
+-      void someMethod(String s) {
+-        assert (s.equals(\"Hello \\n World\"));
+-      }
+-    }".to_string(),
++    code_snippet = code_snippet.to_string(),
+   };
+ 
+   let expected = "package com.uber.piranha;
+   class SomeClass {
+     void someMethod(String s) {
+       assert (\"Hello \\n World\".equals(s));
+     }
+   }";
+   let output_summaries = execute_piranha(&piranha_arguments);
+   assert!(output_summaries.len() == 1);
+   assert!(eq_without_whitespace(
+     output_summaries[0].content(),
+     expected
+   ));
++  assert!(output_summaries[0].original_content().eq(code_snippet));
+ }
+ 
+ #[test]
+ fn test_user_option_do_not_delete_consecutive_lines() {
+   let _path = PathBuf::from("test-resources")
+     .join(JAVA)
+     .join("user_option_do_not_delete_consecutive_lines");
+@@ -250,7 +251,106 @@
+                 .rules(rules)
+                 .edges(edges)
+                 .build(),
+   };
+ 
+   execute_piranha_and_check_result(&args, _path.join("expected").as_path(), 1, true)
+ }
++
++/// This test is to check if Piranha is able to handle a syntactically incorrect tree.
++#[test]
++fn test_handle_syntactically_incorrect_tree() {
++  let _path = PathBuf::from("test-resources")
++    .join(JAVA)
++    .join("handle_syntactically_incorrect_tree");
++  let temp_dir = copy_folder_to_temp_dir(&_path.join("input"));
++
++  let rule = piranha_rule! {
++    name = "Append l",
++    query = "(
++  (variable_declarator value: (decimal_integer_literal) @value)
++  (#not-match? @value \"l|L\")
++  )",
++    replace_node = "value",
++    replace = "@valuel"
++  };
++
++  let piranha_arguments = piranha_arguments! {
++    path_to_codebase = temp_dir.path().to_str().unwrap().to_string(),
++    language = PiranhaLanguage::from(JAVA),
++    rule_graph = RuleGraphBuilder::default()
++                .rules(vec![rule])
++                .build(),
++    allow_dirty_ast = true,
++  };
++
++  execute_piranha_and_check_result(&piranha_arguments, &_path.join("expected"), 1, true);
++  // Delete temp_dir
++  temp_dir.close().unwrap();
++}
++
++/// This test is to check if Piranha panics when it encounters a syntactically incorrect tree and
++/// allow_dirty_ast is *not* set (to true).
++#[test]
++#[should_panic(expected = "Produced syntactically incorrect source code")]
++fn test_do_not_allow_syntactically_incorrect_tree() {
++  let _path = PathBuf::from("test-resources")
++    .join(JAVA)
++    .join("handle_syntactically_incorrect_tree");
++  let temp_dir = copy_folder_to_temp_dir(&_path.join("input"));
++
++  let rule = piranha_rule! {
++    name = "Append l",
++    query = "(
++  (variable_declarator value: (decimal_integer_literal) @value)
++  (#not-match? @value \"l|L\")
++  )",
++    replace_node = "value",
++    replace = "@valuel"
++  };
++
++  let piranha_arguments = piranha_arguments! {
++    path_to_codebase = temp_dir.path().to_str().unwrap().to_string(),
++    language = PiranhaLanguage::from(JAVA),
++    rule_graph = RuleGraphBuilder::default()
++                .rules(vec![rule])
++                .build(),
++  };
++
++  execute_piranha_and_check_result(&piranha_arguments, &_path.join("expected"), 1, true);
++  // Delete temp_dir
++  temp_dir.close().unwrap();
++}
++
++/// This test is to check if Piranha is able to handle a syntactically incorrect tree.
++/// We expect Piranha to panic in this case because the rule produces a "more" syntactically incorrect tree.
++#[test]
++#[should_panic(expected = "Produced syntactically incorrect source code")]
++fn test_handle_syntactically_incorrect_tree_panic() {
++  let _path = PathBuf::from("test-resources")
++    .join(JAVA)
++    .join("handle_syntactically_incorrect_tree");
++  let temp_dir = copy_folder_to_temp_dir(&_path.join("input"));
++
++  let rule = piranha_rule! {
++    name = "Append x (wrong rule)",
++    query = "(
++  (variable_declarator value: (decimal_integer_literal) @value)
++  (#not-match? @value \"X|x\")
++  )",
++    replace_node = "value",
++    // Purposefully appending `x` so that it results in a incorrect syntax tree.
++    replace = "@valuex"
++  };
++
++  let piranha_arguments = piranha_arguments! {
++    path_to_codebase = temp_dir.path().to_str().unwrap().to_string(),
++    language = PiranhaLanguage::from(JAVA),
++    rule_graph = RuleGraphBuilder::default()
++                .rules(vec![rule])
++                .build(),
++  };
++
++  execute_piranha_and_check_result(&piranha_arguments, &_path.join("expected"), 1, true);
++  // Delete temp_dir
++  temp_dir.close().unwrap();
++}
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_kt.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_kt.rs`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_python.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_python.rs`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,23 +1,23 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
+ use assert_cmd::prelude::{CommandCargoExt, OutputAssertExt};
+ 
+-use std::{fs::File, path::Path, process::Command};
++use std::{collections::HashMap, fs::File, path::Path, process::Command};
+ use tempdir::TempDir;
+ 
+ use super::create_match_tests;
+ 
+ use crate::{
+   models::{default_configs::PYTHON, piranha_output::PiranhaOutputSummary},
+   utilities::{eq_without_whitespace, read_file},
+@@ -25,15 +25,15 @@
+ 
+ /// This test is almost equivalent to create_rewrite_tests!(PYTHON, test_delete_modify_str_literal_from_list: ...)
+ /// It is "almost equivalent" because we pass `--dry-run`and the compare the contents of
+ /// of expected files against `PiranhaOutputSummary`
+ #[test]
+ fn test_delete_modify_str_literal_from_list_via_cli() {
+   let temp_dir = TempDir::new_in(".", "tmp_test").unwrap();
+-  let temp_file = temp_dir.path().join("output.txt");
++  let temp_file = temp_dir.path().join("output.json");
+   _ = File::create(temp_file.as_path());
+ 
+   let mut cmd = Command::cargo_bin("polyglot_piranha").unwrap();
+   cmd
+     .args(["-c", "test-resources/py/delete_cleanup_str_in_list/input"])
+     .args([
+       "-f",
+@@ -53,8 +53,8 @@
+     Path::new("test-resources/py/delete_cleanup_str_in_list/expected/only_lists.py");
+   let expected = read_file(&expected_path.to_path_buf()).unwrap();
+   assert!(eq_without_whitespace(output[0].content(), &expected));
+ 
+   _ = temp_dir.close();
+ }
+ 
+-create_match_tests!(PYTHON, test_match_only: "structural_find", 3;);
++create_match_tests!(PYTHON, test_match_only: "structural_find", HashMap::from([("find_lists_with_str_literals", 3)]););
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_swift.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_swift.rs`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -35,8 +35,13 @@
+   test_cleanup_rules_file: "cleanup_rules", 1,
+     substitutions = substitutions! {
+       "stale_flag" => "stale_flag_one",
+       "treated" => "true",
+       "treated_complement" => "false"
+     },
+     cleanup_comments = true, delete_file_if_empty= false;
++  test_leading_comma: "leading_comma", 1,
++    substitutions = substitutions! {
++      "stale_flag" => "one"
++    },
++    cleanup_comments = true, delete_file_if_empty= false;
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_ts.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_ts.rs`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,9 +1,11 @@
++use std::collections::HashMap;
++
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+@@ -12,11 +14,11 @@
+ */
+ use super::create_match_tests;
+ 
+ use crate::models::default_configs::TYPESCRIPT;
+ 
+ create_match_tests! {
+   TYPESCRIPT,
+-  test_find_fors_within_functions_not_within_whiles:  "structural_find/find_fors_within_functions_not_within_whiles", 1;
+-  test_find_fors_within_functions:"structural_find/find_fors_within_functions", 2;
+-  test_find_fors: "structural_find/find_fors", 3;
++  test_find_fors_within_functions_not_within_whiles:  "structural_find/find_fors_within_functions_not_within_whiles", HashMap::from([("find_fors_within_functions_not_within_whiles", 1)]);
++  test_find_fors_within_functions:"structural_find/find_fors_within_functions", HashMap::from([("find_fors_within_functions", 2)]);
++  test_find_fors: "structural_find/find_fors", HashMap::from([("find_fors", 3)]);
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/tests/test_piranha_tsx.rs` & `polyglot_piranha-0.3.1/src/tests/test_piranha_tsx.rs`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,23 +1,25 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+ 
++use std::collections::HashMap;
++
+ use super::create_match_tests;
+ 
+ use crate::models::default_configs::TSX;
+ 
+ create_match_tests! {
+   TSX,
+-  test_ts_match_only_find_fors: "structural_find/find_jsx_elements", 4;
+-  test_match_find_props_identifiers_within_b_jsx_elements: "structural_find/find_props_identifiers_within_b_jsx_elements", 2;
+-  test_find_props_identifiers_within_variable_declarators_not_within_divs: "structural_find/find_props_identifiers_within_variable_declarators_not_within_divs", 2;
++  test_ts_match_only_find_fors: "structural_find/find_jsx_elements", HashMap::from([("find_jsx_elements", 4)]);
++  test_match_find_props_identifiers_within_b_jsx_elements: "structural_find/find_props_identifiers_within_b_jsx_elements", HashMap::from([("find_props_identifiers_within_b_jsx_elements", 2)]);
++  test_find_props_identifiers_within_variable_declarators_not_within_divs: "structural_find/find_props_identifiers_within_variable_declarators_not_within_divs", HashMap::from([("find_props_identifiers_within_variable_declarators_not_within_divs", 2)]);
+ }
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/utilities/mod.rs` & `polyglot_piranha-0.3.1/src/utilities/mod.rs`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/utilities/tree_sitter_utilities.rs` & `polyglot_piranha-0.3.1/src/utilities/tree_sitter_utilities.rs`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/utilities/unit_tests/tree_sitter_utilities_test.rs` & `polyglot_piranha-0.3.1/src/utilities/unit_tests/tree_sitter_utilities_test.rs`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/src/utilities/unit_tests/utilities_test.rs` & `polyglot_piranha-0.3.1/src/utilities/unit_tests/utilities_test.rs`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ /*
+-Copyright (c) 2022 Uber Technologies, Inc.
++Copyright (c) 2023 Uber Technologies, Inc.
+ 
+  <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. You may obtain a copy of the License at
+  <p>http://www.apache.org/licenses/LICENSE-2.0
+ 
+  <p>Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+```
+
+### Comparing `polyglot_piranha-0.3.0/PKG-INFO` & `polyglot_piranha-0.3.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: polyglot_piranha
+-Version: 0.3.0
++Version: 0.3.1
+ License-File: LICENSE
+ License-File: LICENSE
+ License-File: NOTICE
+ Summary: Polyglot Piranha is a library for performing structural find and replace with deep cleanup.
+ Keywords: refactoring,code update,structural find-replace,structural search and replace,structural search
+ Author: Uber Technologies Inc.
+ Author-email: Ameya Ketkar <ketkara@uber.com>, Lazaro Clapp <lazaro@uber.com>
+```
+

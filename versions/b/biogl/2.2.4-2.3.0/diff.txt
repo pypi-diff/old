@@ -1,0 +1,187 @@
+--- tmp/biogl-2.2.4.tar.gz
++++ tmp/biogl-2.3.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "biogl-2.2.4.tar", last modified: Thu Nov 18 20:50:34 2021, max compression
+│ +gzip compressed data, was "biogl-2.3.0.tar", last modified: Thu Apr  6 19:52:40 2023, max compression
+│   --- biogl-2.2.4.tar
+├── +++ biogl-2.3.0.tar
+│ ├── file list
+│ │ @@ -1,28 +1,28 @@
+│ │ -drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2021-11-18 20:50:34.433615 biogl-2.2.4/
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1069 2020-05-24 18:03:01.000000 biogl-2.2.4/LICENSE
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1125 2021-11-18 20:50:34.433615 biogl-2.2.4/PKG-INFO
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      643 2020-05-25 19:22:46.000000 biogl-2.2.4/README.md
+│ │ -drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2021-11-18 20:50:34.433615 biogl-2.2.4/biogl/
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     7251 2021-03-18 19:06:53.000000 biogl-2.2.4/biogl/GxfParse.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      722 2021-11-18 20:48:40.000000 biogl-2.2.4/biogl/__init__.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      766 2021-07-13 19:51:04.000000 biogl-2.2.4/biogl/arg_info_header.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      481 2018-06-28 18:06:47.000000 biogl-2.2.4/biogl/byte_convert.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      747 2021-08-03 18:10:49.000000 biogl-2.2.4/biogl/coord_overlap.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1475 2021-07-28 00:50:57.000000 biogl-2.2.4/biogl/fasta_parse.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      739 2021-11-18 20:49:48.000000 biogl-2.2.4/biogl/file_hash.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1069 2018-06-28 18:36:57.000000 biogl-2.2.4/biogl/flex_open.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      584 2018-06-28 18:06:47.000000 biogl-2.2.4/biogl/get_runtime.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      482 2019-05-18 16:32:54.000000 biogl-2.2.4/biogl/is_fasta.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1105 2020-04-15 22:30:19.000000 biogl-2.2.4/biogl/label_info.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      296 2020-09-22 18:26:13.000000 biogl-2.2.4/biogl/random_seq.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      808 2021-05-05 18:08:46.000000 biogl-2.2.4/biogl/recursive_items.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1088 2020-07-02 03:54:26.000000 biogl-2.2.4/biogl/rev_comp.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     3846 2021-10-18 21:08:47.000000 biogl-2.2.4/biogl/translate.py
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      444 2019-07-13 21:08:12.000000 biogl-2.2.4/biogl/window.py
+│ │ -drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2021-11-18 20:50:34.433615 biogl-2.2.4/biogl.egg-info/
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)     1125 2021-11-18 20:50:34.000000 biogl-2.2.4/biogl.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      464 2021-11-18 20:50:34.000000 biogl-2.2.4/biogl.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)        1 2021-11-18 20:50:34.000000 biogl-2.2.4/biogl.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)        6 2021-11-18 20:50:34.000000 biogl-2.2.4/biogl.egg-info/top_level.txt
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)       38 2021-11-18 20:50:34.433615 biogl-2.2.4/setup.cfg
+│ │ --rw-r--r--   0 glarue    (1000) glarue    (1000)      661 2021-11-18 20:49:13.000000 biogl-2.2.4/setup.py
+│ │ +drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2023-04-06 19:52:40.295933 biogl-2.3.0/
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1069 2020-05-24 18:03:01.000000 biogl-2.3.0/LICENSE
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1088 2023-04-06 19:52:40.295933 biogl-2.3.0/PKG-INFO
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      643 2020-05-25 19:22:46.000000 biogl-2.3.0/README.md
+│ │ +drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2023-04-06 19:52:40.292599 biogl-2.3.0/biogl/
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     7251 2021-03-18 19:06:53.000000 biogl-2.3.0/biogl/GxfParse.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      722 2021-11-18 20:48:40.000000 biogl-2.3.0/biogl/__init__.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      766 2021-07-13 19:51:04.000000 biogl-2.3.0/biogl/arg_info_header.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      481 2018-06-28 18:06:47.000000 biogl-2.3.0/biogl/byte_convert.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      747 2021-08-03 18:10:49.000000 biogl-2.3.0/biogl/coord_overlap.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1475 2021-07-28 00:50:57.000000 biogl-2.3.0/biogl/fasta_parse.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      967 2023-04-06 19:50:41.000000 biogl-2.3.0/biogl/file_hash.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1069 2018-06-28 18:36:57.000000 biogl-2.3.0/biogl/flex_open.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      584 2018-06-28 18:06:47.000000 biogl-2.3.0/biogl/get_runtime.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      482 2019-05-18 16:32:54.000000 biogl-2.3.0/biogl/is_fasta.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1105 2020-04-15 22:30:19.000000 biogl-2.3.0/biogl/label_info.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      296 2020-09-22 18:26:13.000000 biogl-2.3.0/biogl/random_seq.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      808 2021-05-05 18:08:46.000000 biogl-2.3.0/biogl/recursive_items.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1088 2020-07-02 03:54:26.000000 biogl-2.3.0/biogl/rev_comp.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     3846 2021-10-18 21:08:47.000000 biogl-2.3.0/biogl/translate.py
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      444 2019-07-13 21:08:12.000000 biogl-2.3.0/biogl/window.py
+│ │ +drwxr-xr-x   0 glarue    (1000) glarue    (1000)        0 2023-04-06 19:52:40.295933 biogl-2.3.0/biogl.egg-info/
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)     1088 2023-04-06 19:52:39.000000 biogl-2.3.0/biogl.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      464 2023-04-06 19:52:40.000000 biogl-2.3.0/biogl.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)        1 2023-04-06 19:52:39.000000 biogl-2.3.0/biogl.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)        6 2023-04-06 19:52:40.000000 biogl-2.3.0/biogl.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)       38 2023-04-06 19:52:40.295933 biogl-2.3.0/setup.cfg
+│ │ +-rw-r--r--   0 glarue    (1000) glarue    (1000)      661 2023-04-06 19:52:15.000000 biogl-2.3.0/setup.py
+│ │   --- biogl-2.2.4/LICENSE
+│ ├── +++ biogl-2.3.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/PKG-INFO
+│ ├── +++ biogl-2.3.0/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,16 +1,14 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: biogl
+│ │ -Version: 2.2.4
+│ │ +Version: 2.3.0
+│ │  Summary: A collection of small bioinformatics helper functions
+│ │  Home-page: https://github.com/glarue/biogl
+│ │  Author: Graham Larue
+│ │  Author-email: egrahamlarue@gmail.com
+│ │ -License: UNKNOWN
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.5
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ @@ -26,9 +24,7 @@
+│ │  There are a variety of ways to use this module within other Python code, some of which are platform-dependent.
+│ │  
+│ │  On Linux, my preferred method is to simply add the location of the `biogl` directory to the `PYTHONPATH` environmental variable in your preferred shell. For example, if you are using Bash, simply add the following to your `~/.bashrc` file:
+│ │  
+│ │  ```
+│ │  export PYTHONPATH=$PYTHONPATH:{biogl_directory_path}
+│ │  ```
+│ │ -
+│ │ -
+│ │   --- biogl-2.2.4/README.md
+│ ├── +++ biogl-2.3.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/GxfParse.py
+│ ├── +++ biogl-2.3.0/biogl/GxfParse.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/__init__.py
+│ ├── +++ biogl-2.3.0/biogl/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/arg_info_header.py
+│ ├── +++ biogl-2.3.0/biogl/arg_info_header.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/coord_overlap.py
+│ ├── +++ biogl-2.3.0/biogl/coord_overlap.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/fasta_parse.py
+│ ├── +++ biogl-2.3.0/biogl/fasta_parse.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/flex_open.py
+│ ├── +++ biogl-2.3.0/biogl/flex_open.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/get_runtime.py
+│ ├── +++ biogl-2.3.0/biogl/get_runtime.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/label_info.py
+│ ├── +++ biogl-2.3.0/biogl/label_info.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/recursive_items.py
+│ ├── +++ biogl-2.3.0/biogl/recursive_items.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/rev_comp.py
+│ ├── +++ biogl-2.3.0/biogl/rev_comp.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl/translate.py
+│ ├── +++ biogl-2.3.0/biogl/translate.py
+│ │┄ Files identical despite different names
+│ │   --- biogl-2.2.4/biogl.egg-info/PKG-INFO
+│ ├── +++ biogl-2.3.0/biogl.egg-info/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,16 +1,14 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: biogl
+│ │ -Version: 2.2.4
+│ │ +Version: 2.3.0
+│ │  Summary: A collection of small bioinformatics helper functions
+│ │  Home-page: https://github.com/glarue/biogl
+│ │  Author: Graham Larue
+│ │  Author-email: egrahamlarue@gmail.com
+│ │ -License: UNKNOWN
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.5
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ @@ -26,9 +24,7 @@
+│ │  There are a variety of ways to use this module within other Python code, some of which are platform-dependent.
+│ │  
+│ │  On Linux, my preferred method is to simply add the location of the `biogl` directory to the `PYTHONPATH` environmental variable in your preferred shell. For example, if you are using Bash, simply add the following to your `~/.bashrc` file:
+│ │  
+│ │  ```
+│ │  export PYTHONPATH=$PYTHONPATH:{biogl_directory_path}
+│ │  ```
+│ │ -
+│ │ -
+│ │   --- biogl-2.2.4/setup.py
+│ ├── +++ biogl-2.3.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="biogl",
+│ │ -    version="2.2.4",
+│ │ +    version="2.3.0",
+│ │      author="Graham Larue",
+│ │      author_email="egrahamlarue@gmail.com",
+│ │      description="A collection of small bioinformatics helper functions",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/glarue/biogl",
+│ │      packages=setuptools.find_packages(),

@@ -1,0 +1,147 @@
+--- tmp/suitetecsa_core-1.1.0-py2.py3-none-any.whl.zip
++++ tmp/suitetecsa_core-1.1.1b1-py2.py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,9 +1,9 @@
+│ -Zip file size: 41663 bytes, number of entries: 25
+│ --rw-rw-r--  2.0 unx     1812 b- defN 23-Apr-06 17:28 suitetecsa_core/__init__.py
+│ +Zip file size: 41681 bytes, number of entries: 25
+│ +-rw-rw-r--  2.0 unx     1814 b- defN 23-Apr-06 19:40 suitetecsa_core/__init__.py
+│  -rw-rw-r--  2.0 unx     1110 b- defN 23-Apr-06 17:28 suitetecsa_core/core/__init__.py
+│  -rw-rw-r--  2.0 unx     1714 b- defN 23-Apr-06 17:28 suitetecsa_core/core/exceptions.py
+│  -rw-rw-r--  2.0 unx     1111 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/__init__.py
+│  -rw-rw-r--  2.0 unx     1644 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/model/__init__.py
+│  -rw-rw-r--  2.0 unx     2118 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/model/connection.py
+│  -rw-rw-r--  2.0 unx     1963 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/model/connections_summary.py
+│  -rw-rw-r--  2.0 unx     2611 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/model/nauta_user.py
+│ @@ -15,13 +15,13 @@
+│  -rw-rw-r--  2.0 unx     1590 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/model/transfers_summary.py
+│  -rw-rw-r--  2.0 unx     6402 b- defN 23-Apr-06 17:28 suitetecsa_core/domain/service/nauta_client.py
+│  -rw-rw-r--  2.0 unx    47867 b- defN 23-Apr-06 17:28 suitetecsa_core/repository/scrapper_provider.py
+│  -rw-rw-r--  2.0 unx     9184 b- defN 23-Apr-06 17:28 suitetecsa_core/repository/session_provider.py
+│  -rw-rw-r--  2.0 unx     1111 b- defN 23-Apr-06 17:28 suitetecsa_core/utils/__init__.py
+│  -rw-rw-r--  2.0 unx    17588 b- defN 23-Apr-06 17:28 suitetecsa_core/utils/nauta.py
+│  -rw-rw-r--  2.0 unx     1171 b- defN 23-Apr-06 17:28 suitetecsa_core/utils/parser.py
+│ --rwxr-xr-x  2.0 unx     1093 b- defN 23-Apr-06 17:57 suitetecsa_core-1.1.0.dist-info/LICENSE
+│ --rw-rw-r--  2.0 unx    14695 b- defN 23-Apr-06 17:57 suitetecsa_core-1.1.0.dist-info/METADATA
+│ --rw-rw-r--  2.0 unx      110 b- defN 23-Apr-06 17:57 suitetecsa_core-1.1.0.dist-info/WHEEL
+│ --rw-rw-r--  2.0 unx       16 b- defN 23-Apr-06 17:57 suitetecsa_core-1.1.0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     2376 b- defN 23-Apr-06 17:57 suitetecsa_core-1.1.0.dist-info/RECORD
+│ -25 files, 125524 bytes uncompressed, 37731 bytes compressed:  69.9%
+│ +-rwxr-xr-x  2.0 unx     1093 b- defN 23-Apr-06 19:45 suitetecsa_core-1.1.1b1.dist-info/LICENSE
+│ +-rw-rw-r--  2.0 unx    14697 b- defN 23-Apr-06 19:45 suitetecsa_core-1.1.1b1.dist-info/METADATA
+│ +-rw-rw-r--  2.0 unx      110 b- defN 23-Apr-06 19:45 suitetecsa_core-1.1.1b1.dist-info/WHEEL
+│ +-rw-rw-r--  2.0 unx       16 b- defN 23-Apr-06 19:45 suitetecsa_core-1.1.1b1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     2386 b- defN 23-Apr-06 19:45 suitetecsa_core-1.1.1b1.dist-info/RECORD
+│ +25 files, 125538 bytes uncompressed, 37729 bytes compressed:  69.9%
+├── zipnote {}
+│ @@ -54,23 +54,23 @@
+│  
+│  Filename: suitetecsa_core/utils/nauta.py
+│  Comment: 
+│  
+│  Filename: suitetecsa_core/utils/parser.py
+│  Comment: 
+│  
+│ -Filename: suitetecsa_core-1.1.0.dist-info/LICENSE
+│ +Filename: suitetecsa_core-1.1.1b1.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: suitetecsa_core-1.1.0.dist-info/METADATA
+│ +Filename: suitetecsa_core-1.1.1b1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: suitetecsa_core-1.1.0.dist-info/WHEEL
+│ +Filename: suitetecsa_core-1.1.1b1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: suitetecsa_core-1.1.0.dist-info/top_level.txt
+│ +Filename: suitetecsa_core-1.1.1b1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: suitetecsa_core-1.1.0.dist-info/RECORD
+│ +Filename: suitetecsa_core-1.1.1b1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── suitetecsa_core/__init__.py
+│ @@ -7,17 +7,14 @@
+│  #  Software.
+│  #  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+│  #  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+│  #  OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+│  #  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+│  
+│  from enum import Enum
+│ -from .domain.service.nauta_client import NautaClient
+│ -from .repository.session_provider import DefaultNautaSession
+│ -from .repository.scrapper_provider import DefaultNautaScrapper
+│  
+│  
+│  class Portal(Enum):
+│      CONNECT = 0
+│      USER = 1
+│  
+│  
+│ @@ -33,8 +30,13 @@
+│      GET_CONNECTIONS = "connections"
+│      GET_RECHARGES = "recharges"
+│      GET_TRANSFERS = "transfers"
+│      GET_QUOTES_PAID = "quotes_paid"
+│      CHECK_CONNECTION = 14
+│  
+│  
+│ +from .domain.service.nauta_client import NautaClient
+│ +from .repository.session_provider import DefaultNautaSession
+│ +from .repository.scrapper_provider import DefaultNautaScrapper
+│ +
+│ +
+│  __all__ = ['Portal', 'Action', 'NautaClient', 'DefaultNautaSession', 'DefaultNautaScrapper']
+│   --- suitetecsa_core-1.1.0.dist-info/LICENSE
+├── +++ suitetecsa_core-1.1.1b1.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- suitetecsa_core-1.1.0.dist-info/METADATA
+├── +++ suitetecsa_core-1.1.1b1.dist-info/METADATA
+│┄ Files 0% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: suitetecsa-core
+│ -Version: 1.1.0
+│ +Version: 1.1.1b1
+│  Summary: Una API que interactúa con los servicios web de ETECSA. 
+│  Home-page: https://github.com/SuitETECSA/suitetecsa-sdk-python
+│  Author: lesclaz
+│  Author-email: lesclaz95@gmail.com
+│  License: MIT
+│  Keywords: ETECSA nauta tools
+│  Platform: Unix
+│   --- suitetecsa_core-1.1.0.dist-info/RECORD
+├── +++ suitetecsa_core-1.1.1b1.dist-info/RECORD
+│┄ Files 16% similar despite different names
+│ @@ -1,8 +1,8 @@
+│ -suitetecsa_core/__init__.py,sha256=UZWtgA3HeQR33opQPFzM-vv0bRU0Vqp-WCkUitqU9P4,1812
+│ +suitetecsa_core/__init__.py,sha256=9SunocvPrFJKINDLkwONkgfVHVjJDWJp_8w10YQPCME,1814
+│  suitetecsa_core/core/__init__.py,sha256=JgamlmRsQ5jze4xSo0huaXOpbDcMz-ggpcSuPF8NNHE,1110
+│  suitetecsa_core/core/exceptions.py,sha256=-GhLcZQO1etlrQQEtEBUp3TOAoAUuCwrp47F8ZdrwtI,1714
+│  suitetecsa_core/domain/__init__.py,sha256=JpJWbYq4RwEEqBxEfhNDhKo_JfCp4mWcI1bDU__KWLE,1111
+│  suitetecsa_core/domain/model/__init__.py,sha256=wiylKwVP6wAGXbp4mtwwsifaWwKfS4qCKfa7ZeaEEA8,1644
+│  suitetecsa_core/domain/model/connection.py,sha256=TK1MpIeRusaukyUGDD2BrlBhYae61IIv8fIB3S1zwKA,2118
+│  suitetecsa_core/domain/model/connections_summary.py,sha256=658XYx9CvzXYkd_geZPQ-OZRAxUwSSFeEd95JaCrl6I,1963
+│  suitetecsa_core/domain/model/nauta_user.py,sha256=RoYJPQk68QJuNFPpX9tX0q_MhWmcp4mmS3aA2lLwiFk,2611
+│ @@ -14,12 +14,12 @@
+│  suitetecsa_core/domain/model/transfers_summary.py,sha256=suHQ2F9fBrQXvtNaohN1ZyaOqoJiDxmVKcOK_CWhFto,1590
+│  suitetecsa_core/domain/service/nauta_client.py,sha256=cUasLCRnVZnxb0WjUAidjbOw4VTEQeuClmMeLWHkemk,6402
+│  suitetecsa_core/repository/scrapper_provider.py,sha256=YLBnwhW0bMb-a0JrFZFQhXU4p1RqdYEt_5by92pK5GA,47867
+│  suitetecsa_core/repository/session_provider.py,sha256=yCBXj4SahpAvwoxZIQR68rww0yViyCFcqZVb59_ccbM,9184
+│  suitetecsa_core/utils/__init__.py,sha256=JpJWbYq4RwEEqBxEfhNDhKo_JfCp4mWcI1bDU__KWLE,1111
+│  suitetecsa_core/utils/nauta.py,sha256=aade-8IGQmkRHnOFvE0Sx4os0p5UWg_cZeJhF0MEfrw,17588
+│  suitetecsa_core/utils/parser.py,sha256=VEHWY4Mue3IiTl-_ewB_DnLs8thPYAQA_hk1BErsGeg,1171
+│ -suitetecsa_core-1.1.0.dist-info/LICENSE,sha256=6-BPHUBXAxzbXWu0o9tvAd5WN3Dwl9BqpmPRIaZ_VW4,1093
+│ -suitetecsa_core-1.1.0.dist-info/METADATA,sha256=Y_zC1DTRcoHbGJ94sSJ6mc4ivsFvaenGho7lAXoxslw,14695
+│ -suitetecsa_core-1.1.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+│ -suitetecsa_core-1.1.0.dist-info/top_level.txt,sha256=CrFnef7PIg8TwlhrynAzwH9czpmLMmvmrGmDxPk1_XQ,16
+│ -suitetecsa_core-1.1.0.dist-info/RECORD,,
+│ +suitetecsa_core-1.1.1b1.dist-info/LICENSE,sha256=6-BPHUBXAxzbXWu0o9tvAd5WN3Dwl9BqpmPRIaZ_VW4,1093
+│ +suitetecsa_core-1.1.1b1.dist-info/METADATA,sha256=ek0qOa5B0EBLiQGZhmFzHBbRWDSvUC-mdaP1R_4V3U4,14697
+│ +suitetecsa_core-1.1.1b1.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+│ +suitetecsa_core-1.1.1b1.dist-info/top_level.txt,sha256=CrFnef7PIg8TwlhrynAzwH9czpmLMmvmrGmDxPk1_XQ,16
+│ +suitetecsa_core-1.1.1b1.dist-info/RECORD,,

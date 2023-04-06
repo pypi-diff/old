@@ -1,0 +1,170 @@
+# Comparing `tmp/django_string_externalization-0.2.tar.gz` & `tmp/django_string_externalization-0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "django_string_externalization-0.2.tar", last modified: Fri Jan  6 18:31:37 2023, max compression
++gzip compressed data, was "django_string_externalization-0.3.tar", last modified: Thu Apr  6 19:53:17 2023, max compression
+```
+
+## Comparing `django_string_externalization-0.2.tar` & `django_string_externalization-0.3.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-01-06 18:31:37.785011 django_string_externalization-0.2/
+--rw-r--r--   0 acl        (501) staff       (20)     3170 2023-01-06 18:31:37.784844 django_string_externalization-0.2/PKG-INFO
+--rw-r--r--   0 acl        (501) staff       (20)     2821 2023-01-06 16:32:29.000000 django_string_externalization-0.2/README.md
+-drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-01-06 18:31:37.784054 django_string_externalization-0.2/django_string_externalization/
+--rw-r--r--   0 acl        (501) staff       (20)       67 2022-11-24 20:10:16.000000 django_string_externalization-0.2/django_string_externalization/__init__.py
+--rw-r--r--   0 acl        (501) staff       (20)     1052 2023-01-03 21:23:08.000000 django_string_externalization-0.2/django_string_externalization/html_util.py
+--rw-r--r--   0 acl        (501) staff       (20)      837 2022-11-24 20:10:16.000000 django_string_externalization-0.2/django_string_externalization/text_entry_manager.py
+--rw-r--r--   0 acl        (501) staff       (20)     3496 2023-01-06 18:30:44.000000 django_string_externalization-0.2/django_string_externalization/text_maker.py
+--rw-r--r--   0 acl        (501) staff       (20)     2669 2022-11-24 20:10:16.000000 django_string_externalization-0.2/django_string_externalization/text_watcher.py
+-drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-01-06 18:31:37.784655 django_string_externalization-0.2/django_string_externalization.egg-info/
+--rw-r--r--   0 acl        (501) staff       (20)     3170 2023-01-06 18:31:37.000000 django_string_externalization-0.2/django_string_externalization.egg-info/PKG-INFO
+--rw-r--r--   0 acl        (501) staff       (20)      457 2023-01-06 18:31:37.000000 django_string_externalization-0.2/django_string_externalization.egg-info/SOURCES.txt
+--rw-r--r--   0 acl        (501) staff       (20)        1 2023-01-06 18:31:37.000000 django_string_externalization-0.2/django_string_externalization.egg-info/dependency_links.txt
+--rw-r--r--   0 acl        (501) staff       (20)       30 2023-01-06 18:31:37.000000 django_string_externalization-0.2/django_string_externalization.egg-info/top_level.txt
+--rw-r--r--   0 acl        (501) staff       (20)       38 2023-01-06 18:31:37.785066 django_string_externalization-0.2/setup.cfg
+--rw-r--r--   0 acl        (501) staff       (20)      904 2023-01-06 18:31:12.000000 django_string_externalization-0.2/setup.py
++drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-04-06 19:53:17.833226 django_string_externalization-0.3/
++-rw-r--r--   0 acl        (501) staff       (20)     3170 2023-04-06 19:53:17.833078 django_string_externalization-0.3/PKG-INFO
++-rw-r--r--   0 acl        (501) staff       (20)     2821 2023-01-06 16:32:29.000000 django_string_externalization-0.3/README.md
++drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-04-06 19:53:17.832255 django_string_externalization-0.3/django_string_externalization/
++-rw-r--r--   0 acl        (501) staff       (20)       67 2022-11-24 20:10:16.000000 django_string_externalization-0.3/django_string_externalization/__init__.py
++-rw-r--r--   0 acl        (501) staff       (20)     1052 2023-01-03 21:23:08.000000 django_string_externalization-0.3/django_string_externalization/html_util.py
++-rw-r--r--   0 acl        (501) staff       (20)      837 2022-11-24 20:10:16.000000 django_string_externalization-0.3/django_string_externalization/text_entry_manager.py
++-rw-r--r--   0 acl        (501) staff       (20)     3544 2023-04-06 19:50:54.000000 django_string_externalization-0.3/django_string_externalization/text_maker.py
++-rw-r--r--   0 acl        (501) staff       (20)     2669 2022-11-24 20:10:16.000000 django_string_externalization-0.3/django_string_externalization/text_watcher.py
++drwxr-xr-x   0 acl        (501) staff       (20)        0 2023-04-06 19:53:17.832856 django_string_externalization-0.3/django_string_externalization.egg-info/
++-rw-r--r--   0 acl        (501) staff       (20)     3170 2023-04-06 19:53:17.000000 django_string_externalization-0.3/django_string_externalization.egg-info/PKG-INFO
++-rw-r--r--   0 acl        (501) staff       (20)      457 2023-04-06 19:53:17.000000 django_string_externalization-0.3/django_string_externalization.egg-info/SOURCES.txt
++-rw-r--r--   0 acl        (501) staff       (20)        1 2023-04-06 19:53:17.000000 django_string_externalization-0.3/django_string_externalization.egg-info/dependency_links.txt
++-rw-r--r--   0 acl        (501) staff       (20)       30 2023-04-06 19:53:17.000000 django_string_externalization-0.3/django_string_externalization.egg-info/top_level.txt
++-rw-r--r--   0 acl        (501) staff       (20)       38 2023-04-06 19:53:17.833273 django_string_externalization-0.3/setup.cfg
++-rw-r--r--   0 acl        (501) staff       (20)      904 2023-04-06 19:51:42.000000 django_string_externalization-0.3/setup.py
+```
+
+### Comparing `django_string_externalization-0.2/PKG-INFO` & `django_string_externalization-0.3/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django_string_externalization
+-Version: 0.2
++Version: 0.3
+ Home-page: https://github.com/AlexCLeduc/django_string_externalization
+ Author: AlexCLeduc
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `django_string_externalization-0.2/README.md` & `django_string_externalization-0.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `django_string_externalization-0.2/django_string_externalization/html_util.py` & `django_string_externalization-0.3/django_string_externalization/html_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_string_externalization-0.2/django_string_externalization/text_entry_manager.py` & `django_string_externalization-0.3/django_string_externalization/text_entry_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_string_externalization-0.2/django_string_externalization/text_maker.py` & `django_string_externalization-0.3/django_string_externalization/text_maker.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -23,14 +23,18 @@
+     def __init__(self, global_keys, text_files):
+         self.validate_text_files(text_files)
+ 
+         self.entry_manager = TextEntryManager(text_files)
+         self.entry_manager.load()
+         self.global_keys = global_keys
+ 
++    def get_language_code(self):
++        # when called from a non-localized URL (e.g. admin), get_language() is None
++        return get_language() or "en"
++
+     @staticmethod
+     def validate_text_files(text_files):
+         for path in text_files:
+             if path.startswith("."):
+                 raise TextMakerError(f"don't start paths with './' offender: {path}")
+             if not path.endswith(".text.yaml"):
+                 raise TextMakerError("files must have the '.text.yaml' extension")
+@@ -43,17 +47,15 @@
+         key,
+         allow_md=True,
+         extra_keys={},
+         sanitize_input=True,
+         sanitize_output=True,
+         should_mark_safe=True,
+     ):
+-        lang = (
+-            get_language() or "en"
+-        )  # when called from a non-localized URL (e.g. admin), get_language() is None
++        lang = get_language() 
+         global_keys = self.global_keys[lang]
+ 
+         if sanitize_input is True:
+             extra_keys = {
+                 k: self.sanitize_html(force_str(v)) for k, v in extra_keys.items()
+             }
+```
+
+### Comparing `django_string_externalization-0.2/django_string_externalization/text_watcher.py` & `django_string_externalization-0.3/django_string_externalization/text_watcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_string_externalization-0.2/django_string_externalization.egg-info/PKG-INFO` & `django_string_externalization-0.3/django_string_externalization.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django-string-externalization
+-Version: 0.2
++Version: 0.3
+ Home-page: https://github.com/AlexCLeduc/django_string_externalization
+ Author: AlexCLeduc
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `django_string_externalization-0.2/setup.py` & `django_string_externalization-0.3/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="django_string_externalization",
+-    version="0.2",
++    version="0.3",
+     author="AlexCLeduc",
+     # author_email="author@example.com",
+     # description="A small example package",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/AlexCLeduc/django_string_externalization",
+     packages=[
+```
+

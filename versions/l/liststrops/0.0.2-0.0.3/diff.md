@@ -1,0 +1,41 @@
+# Comparing `tmp/liststrops-0.0.2.tar.gz` & `tmp/liststrops-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "liststrops-0.0.2.tar", last modified: Thu Apr  6 19:28:12 2023, max compression
++gzip compressed data, was "liststrops-0.0.3.tar", last modified: Thu Apr  6 19:46:14 2023, max compression
+```
+
+## Comparing `liststrops-0.0.2.tar` & `liststrops-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,12 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:28:12.297697 liststrops-0.0.2/
+--rw-rw-rw-   0        0        0       14 2023-04-06 18:54:14.000000 liststrops-0.0.2/LICENSE.txt
+--rw-rw-rw-   0        0        0      125 2023-04-06 19:28:12.293567 liststrops-0.0.2/PKG-INFO
+--rw-rw-rw-   0        0        0      449 2023-04-06 19:08:03.000000 liststrops-0.0.2/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:28:12.287288 liststrops-0.0.2/liststrops.egg-info/
+--rw-rw-rw-   0        0        0      125 2023-04-06 19:28:11.000000 liststrops-0.0.2/liststrops.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      166 2023-04-06 19:28:12.000000 liststrops-0.0.2/liststrops.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 19:28:11.000000 liststrops-0.0.2/liststrops.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 19:28:11.000000 liststrops-0.0.2/liststrops.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 19:28:12.298483 liststrops-0.0.2/setup.cfg
+--rw-rw-rw-   0        0        0      159 2023-04-06 19:26:47.000000 liststrops-0.0.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 19:46:14.086325 liststrops-0.0.3/
++-rw-rw-rw-   0        0        0       98 2023-04-06 19:46:14.083389 liststrops-0.0.3/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-06 19:46:14.045417 liststrops-0.0.3/liststrops/
++-rw-rw-rw-   0        0        0        0 2023-04-06 18:56:22.000000 liststrops-0.0.3/liststrops/__init__.py
++-rw-rw-rw-   0        0        0      390 2023-04-06 19:07:03.000000 liststrops-0.0.3/liststrops/index.py
++drwxrwxrwx   0        0        0        0 2023-04-06 19:46:14.077751 liststrops-0.0.3/liststrops.egg-info/
++-rw-rw-rw-   0        0        0       98 2023-04-06 19:46:13.000000 liststrops-0.0.3/liststrops.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      187 2023-04-06 19:46:13.000000 liststrops-0.0.3/liststrops.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 19:46:13.000000 liststrops-0.0.3/liststrops.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       11 2023-04-06 19:46:13.000000 liststrops-0.0.3/liststrops.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 19:46:14.087332 liststrops-0.0.3/setup.cfg
++-rw-rw-rw-   0        0        0      159 2023-04-06 19:45:01.000000 liststrops-0.0.3/setup.py
+```
+

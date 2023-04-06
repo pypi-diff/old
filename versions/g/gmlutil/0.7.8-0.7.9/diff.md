@@ -1,0 +1,146 @@
+# Comparing `tmp/gmlutil-0.7.8.tar.gz` & `tmp/gmlutil-0.7.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/gmlutil-0.7.8.tar", last modified: Tue Apr  4 23:20:28 2023, max compression
++gzip compressed data, was "dist/gmlutil-0.7.9.tar", last modified: Wed Apr  5 00:16:23 2023, max compression
+```
+
+## Comparing `gmlutil-0.7.8.tar` & `gmlutil-0.7.9.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-04 23:20:28.884962 gmlutil-0.7.8/
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      854 2023-04-04 23:20:28.884562 gmlutil-0.7.8/PKG-INFO
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      199 2022-07-26 00:57:31.000000 gmlutil-0.7.8/README.md
+-drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-04 23:20:28.876404 gmlutil-0.7.8/gmlutil/
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)       77 2022-07-25 19:26:55.000000 gmlutil-0.7.8/gmlutil/__init__.py
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)    43804 2023-01-25 19:55:11.000000 gmlutil-0.7.8/gmlutil/gmlutil.py
+-drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-04 23:20:28.883639 gmlutil-0.7.8/gmlutil.egg-info/
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      854 2023-04-04 23:20:28.000000 gmlutil-0.7.8/gmlutil.egg-info/PKG-INFO
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      211 2023-04-04 23:20:28.000000 gmlutil-0.7.8/gmlutil.egg-info/SOURCES.txt
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)        1 2023-04-04 23:20:28.000000 gmlutil-0.7.8/gmlutil.egg-info/dependency_links.txt
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      425 2023-04-04 23:20:28.000000 gmlutil-0.7.8/gmlutil.egg-info/requires.txt
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)        8 2023-04-04 23:20:28.000000 gmlutil-0.7.8/gmlutil.egg-info/top_level.txt
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)       38 2023-04-04 23:20:28.885223 gmlutil-0.7.8/setup.cfg
+--rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)     1537 2023-04-04 23:20:21.000000 gmlutil-0.7.8/setup.py
++drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-05 00:16:23.305602 gmlutil-0.7.9/
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      854 2023-04-05 00:16:23.300077 gmlutil-0.7.9/PKG-INFO
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      199 2022-07-26 00:57:31.000000 gmlutil-0.7.9/README.md
++drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-05 00:16:23.288806 gmlutil-0.7.9/gmlutil/
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)       77 2022-07-25 19:26:55.000000 gmlutil-0.7.9/gmlutil/__init__.py
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)    43804 2023-01-25 19:55:11.000000 gmlutil-0.7.9/gmlutil/gmlutil.py
++drwxr-xr-x   0 phillip.kimejgallo.com   (502) staff       (20)        0 2023-04-05 00:16:23.298263 gmlutil-0.7.9/gmlutil.egg-info/
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      854 2023-04-05 00:16:22.000000 gmlutil-0.7.9/gmlutil.egg-info/PKG-INFO
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      211 2023-04-05 00:16:23.000000 gmlutil-0.7.9/gmlutil.egg-info/SOURCES.txt
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)        1 2023-04-05 00:16:22.000000 gmlutil-0.7.9/gmlutil.egg-info/dependency_links.txt
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)      535 2023-04-05 00:16:22.000000 gmlutil-0.7.9/gmlutil.egg-info/requires.txt
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)        8 2023-04-05 00:16:22.000000 gmlutil-0.7.9/gmlutil.egg-info/top_level.txt
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)       38 2023-04-05 00:16:23.305913 gmlutil-0.7.9/setup.cfg
++-rw-r--r--   0 phillip.kimejgallo.com   (502) staff       (20)     1670 2023-04-05 00:16:19.000000 gmlutil-0.7.9/setup.py
+```
+
+### Comparing `gmlutil-0.7.8/PKG-INFO` & `gmlutil-0.7.9/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: gmlutil
+-Version: 0.7.8
++Version: 0.7.9
+ Summary: General Machine Learning Utility Package
+ Home-page: https://github.com/Phillip1982/gmlutil
+ Author: Phillip Kim
+ Author-email: phillip.kim@ejgallo.com
+ License: BSD 2-clause
+ Description: UNKNOWN
+ Platform: UNKNOWN
+```
+
+### Comparing `gmlutil-0.7.8/gmlutil/gmlutil.py` & `gmlutil-0.7.9/gmlutil/gmlutil.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gmlutil-0.7.8/gmlutil.egg-info/PKG-INFO` & `gmlutil-0.7.9/gmlutil.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: gmlutil
+-Version: 0.7.8
++Version: 0.7.9
+ Summary: General Machine Learning Utility Package
+ Home-page: https://github.com/Phillip1982/gmlutil
+ Author: Phillip Kim
+ Author-email: phillip.kim@ejgallo.com
+ License: BSD 2-clause
+ Description: UNKNOWN
+ Platform: UNKNOWN
+```
+
+### Comparing `gmlutil-0.7.8/setup.py` & `gmlutil-0.7.9/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,41 +1,45 @@
+ from setuptools import setup
+ 
+ setup(
+     name='gmlutil',
+-    version='0.7.8',    
++    version='0.7.9',    
+     description='General Machine Learning Utility Package',
+     url='https://github.com/Phillip1982/gmlutil',
+     author='Phillip Kim',
+     author_email='phillip.kim@ejgallo.com',
+     license='BSD 2-clause', ## Change this
+     packages=['gmlutil'],
+     install_requires=[
+-		'boto3', # 1.20.24', 
+-		'botocore', # 1.23.24', 
++    	'aiobotocore==2.5.0',
++		'boto3==1.26.76', # 1.20.24', 
++		'botocore==1.29.76', # 1.23.24', 
+ 		'cx-Oracle==8.3.0',
+ 		'dash==2.0.0',
+ 		'datetime==4.3',
+ 		'folium==0.14.0',
+ 		'fuzzywuzzy==0.18.0',
+ 		'geopandas==0.10.2',
+ 		'hana-ml',
+ 		'imbalanced-learn==0.8.0',
+ 		'jupyter_dash==0.4.0',
+ 		'kmodes==0.11.0',
+ 		'minio==4.0.6',
+-		'numpy==1.19.5',
++		'numpy==1.21.6',
+ 		'pandas==1.1.5',
+ 		'plotly==5.4.0',
+ 		'psycopg2-binary==2.9.1',
+ 		'pyhdb==0.3.4',
+ 		'pymssql==2.2.1',
+ 		'pytest-astropy',
+ 		'pytrends==4.7.3',
+-		'sagemaker',
++		'rsa<4.8,>=3.1.2',
++		'sagemaker==2.0.0',
++		'sagemaker-data-insights==0.3.0',
++		'sparkmagic==0.20.4',
+ 		'sqlalchemy-redshift==0.8.6',
+ 		's3transfer==0.6.0', # 0.5.0',
+ 		'typing_extensions>=4.0',
+ 		'umap-learn==0.5.1',
+ 		'xgboost==1.3.3'],
+     classifiers=[
+         'Development Status :: 5 - Production/Stable',
+```
+

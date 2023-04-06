@@ -1,0 +1,222 @@
+# Comparing `tmp/img2array-1.0.2.tar.gz` & `tmp/img2array-1.0.3.tar.gz`
+
+## Comparing `img2array-1.0.2.tar` & `img2array-1.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 img2array-1.0.2/requirements.txt
+--rw-r--r--   0        0        0       51 2020-02-02 00:00:00.000000 img2array-1.0.2/.vscode/settings.json
+--rw-r--r--   0        0        0       32 2020-02-02 00:00:00.000000 img2array-1.0.2/src/img2array/__init__.py
+--rw-r--r--   0        0        0     1836 2020-02-02 00:00:00.000000 img2array-1.0.2/src/img2array/__main__.py
+--rw-r--r--   0        0        0     2528 2020-02-02 00:00:00.000000 img2array-1.0.2/src/img2array/img2array.py
+--rw-r--r--   0        0        0     3093 2020-02-02 00:00:00.000000 img2array-1.0.2/.gitignore
+--rw-r--r--   0        0        0     1067 2020-02-02 00:00:00.000000 img2array-1.0.2/LICENSE
+--rw-r--r--   0        0        0      853 2020-02-02 00:00:00.000000 img2array-1.0.2/README.md
+--rw-r--r--   0        0        0      743 2020-02-02 00:00:00.000000 img2array-1.0.2/pyproject.toml
+--rw-r--r--   0        0        0     1475 2020-02-02 00:00:00.000000 img2array-1.0.2/PKG-INFO
++-rw-r--r--   0        0        0       33 2020-02-02 00:00:00.000000 img2array-1.0.3/requirements.txt
++-rw-r--r--   0        0        0       51 2020-02-02 00:00:00.000000 img2array-1.0.3/.vscode/settings.json
++-rw-r--r--   0        0        0       32 2020-02-02 00:00:00.000000 img2array-1.0.3/src/img2array/__init__.py
++-rw-r--r--   0        0        0     1836 2020-02-02 00:00:00.000000 img2array-1.0.3/src/img2array/__main__.py
++-rw-r--r--   0        0        0     2601 2020-02-02 00:00:00.000000 img2array-1.0.3/src/img2array/img2array.py
++-rw-r--r--   0        0        0     3093 2020-02-02 00:00:00.000000 img2array-1.0.3/.gitignore
++-rw-r--r--   0        0        0     1067 2020-02-02 00:00:00.000000 img2array-1.0.3/LICENSE
++-rw-r--r--   0        0        0      889 2020-02-02 00:00:00.000000 img2array-1.0.3/README.md
++-rw-r--r--   0        0        0      755 2020-02-02 00:00:00.000000 img2array-1.0.3/pyproject.toml
++-rw-r--r--   0        0        0     1511 2020-02-02 00:00:00.000000 img2array-1.0.3/PKG-INFO
+```
+
+### Comparing `img2array-1.0.2/src/img2array/__main__.py` & `img2array-1.0.3/src/img2array/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `img2array-1.0.2/src/img2array/img2array.py` & `img2array-1.0.3/src/img2array/img2array.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,29 +1,29 @@
++import sys
+ from PIL import Image
+ 
+ class img2array:
+     """Converts an image to an array"""
+ 
+     image_path = ""
+     item_prefix = ""
+     item_postfix = ""
+     color_format = ""
+     image_file: Image.Image
+-    final_array = []
+ 
+     image_height = 0
+     image_width = 0
+ 
+     def __init__(
+         self, image_path: str, item_prefix: str, item_postfix: str, color_format="RGB"
+     ):
+         self.image_path = image_path
+         self.item_prefix = item_prefix
+         self.item_postfix = item_postfix
+-        self.color_format = color_format 
++        self.color_format = color_format
+ 
+     def open_file(self, image_path: str):
+         self.image_file = Image.open(image_path)
+         self.image_height = self.image_file.height
+         self.image_width = self.image_file.width
+ 
+     def print_file(self):
+@@ -37,32 +37,34 @@
+                 print(f"{self.create_item(self.image_file.getpixel(tuple([x, y])))}{comma}", end="")
+             comma = ","
+             if y >= self.image_height - 1:
+                 comma = ""
+             print("}" + comma)
+         print("}")
+ 
+-    def set_color_format(self, pixel_value: tuple | str) -> str | None:
++    def set_color_format(self, pixel_value: tuple | str) -> str:
+         # Default pixel_value is RGBA
+         if self.color_format == "RGB":
+             return f"{pixel_value[0]}, {pixel_value[1]}, {pixel_value[2]}"
+         elif self.color_format == "RGBA":
+             return f"{pixel_value[0]}, {pixel_value[1]}, {pixel_value[2]}, {pixel_value[3]}"
+         elif self.color_format == "Hex":
+-            return "#{0:02x}{1:02x}{2:02x}".format(
++            return f"#{0:02x}{1:02x}{2:02x}".format(
+                 pixel_value[0], pixel_value[1], pixel_value[2]
+             )
+         elif self.color_format == "HexAlpha":
+-            return "#{0:02x}{1:02x}{2:02x}{3:02x}".format(
++            return f"#{0:02x}{1:02x}{2:02x}{3:02x}".format(
+                 pixel_value[0], pixel_value[1], pixel_value[2], pixel_value[3]
+             )
+         elif self.color_format == "" or self.color_format == None:
+             print("No color format set, using RGB as a fallback.")
+             self.color_format = "RGB"
+             return self.create_item(pixel_value)
++        print(f"Unknown color format {self.color_format}, exiting.")
++        sys.exit(1)
+ 
+     def create_item(self, pixel_value: tuple | str) -> str:
+         val = self.set_color_format(pixel_value)
+         return f"{self.item_prefix}{val}{self.item_postfix}"
+ 
+     def close_file(self):
+         self.image_file.close()
+```
+
+### Comparing `img2array-1.0.2/.gitignore` & `img2array-1.0.3/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `img2array-1.0.2/LICENSE` & `img2array-1.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `img2array-1.0.2/README.md` & `img2array-1.0.3/README.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -7,14 +7,18 @@
+ 
+ -h, --help    :  Help text  
+ -i, --image   :  Image file path  
+ -p, --prefix  :  Prefix for the item, like "colorFunc\("  
+ -P, --postfix :  Postfix for the item, like "\)"  
+ -f, --format  :  Format of the color, defaults to RGB. Possible values: RGB, RGBA, Hex, HexAlpha  
+ 
++# Install
++
++`pip install img2array`
++
+ # Example
+ 
+ `python -m img2array -i file.png --prefix=coolFunction\( --postfix=\) --format=RGB`
+ 
+ **Note**: the \ before () may be required or not depending on the shell you're using.
+ 
+ This should print an array version of the image like
+```
+
+### Comparing `img2array-1.0.2/pyproject.toml` & `img2array-1.0.3/pyproject.toml`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["hatchling"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+ name = "img2array"
+-version = "1.0.2"
++version = "1.0.3"
+ authors = [
+   { name="Akseli Lahtinen", email="akselmo@akselmo.dev" },
+ ]
+ description = "Prints the pixels of an image into an array of RGB values, that can be easily exported to embedded applications."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+@@ -17,12 +17,13 @@
+     "Operating System :: OS Independent",
+ ]
+ dependencies = [
+   "Pillow==9.4.0",
+ ]
+ 
+ [project.scripts]
+-img2array = "img2array:__main__"
++img2array = "img2array.img2array:__main__"
+ 
+ [project.urls]
+ "Homepage" = "https://codeberg.org/akselmo/img2array"
+-"Bug Tracker" = "https://codeberg.org/akselmo/img2array/issues"
++"Bug Tracker" = "https://codeberg.org/akselmo/img2array/issues"
++
+```
+
+### Comparing `img2array-1.0.2/PKG-INFO` & `img2array-1.0.3/PKG-INFO`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: img2array
+-Version: 1.0.2
++Version: 1.0.3
+ Summary: Prints the pixels of an image into an array of RGB values, that can be easily exported to embedded applications.
+ Project-URL: Homepage, https://codeberg.org/akselmo/img2array
+ Project-URL: Bug Tracker, https://codeberg.org/akselmo/img2array/issues
+ Author-email: Akseli Lahtinen <akselmo@akselmo.dev>
+ License-File: LICENSE
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -22,14 +22,18 @@
+ 
+ -h, --help    :  Help text  
+ -i, --image   :  Image file path  
+ -p, --prefix  :  Prefix for the item, like "colorFunc\("  
+ -P, --postfix :  Postfix for the item, like "\)"  
+ -f, --format  :  Format of the color, defaults to RGB. Possible values: RGB, RGBA, Hex, HexAlpha  
+ 
++# Install
++
++`pip install img2array`
++
+ # Example
+ 
+ `python -m img2array -i file.png --prefix=coolFunction\( --postfix=\) --format=RGB`
+ 
+ **Note**: the \ before () may be required or not depending on the shell you're using.
+ 
+ This should print an array version of the image like
+```
+
