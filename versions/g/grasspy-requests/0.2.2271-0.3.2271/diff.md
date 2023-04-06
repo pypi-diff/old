@@ -1,0 +1,310 @@
+# Comparing `tmp/grasspy-requests-0.2.2271.tar.gz` & `tmp/grasspy-requests-0.3.2271.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "grasspy-requests-0.2.2271.tar", last modified: Fri May 13 09:54:53 2022, max compression
++gzip compressed data, was "grasspy-requests-0.3.2271.tar", last modified: Thu Apr  6 12:35:46 2023, max compression
+```
+
+## Comparing `grasspy-requests-0.2.2271.tar` & `grasspy-requests-0.3.2271.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,22 @@
+-drwxrwxrwx   0        0        0        0 2022-05-13 09:54:53.882964 grasspy-requests-0.2.2271/
+--rw-rw-rw-   0        0        0     9592 2022-05-12 06:49:59.000000 grasspy-requests-0.2.2271/LICENSE
+--rw-rw-rw-   0        0        0     1300 2022-05-13 09:54:53.882964 grasspy-requests-0.2.2271/PKG-INFO
+--rw-rw-rw-   0        0        0      715 2022-05-13 09:51:24.000000 grasspy-requests-0.2.2271/README.md
+--rw-rw-rw-   0        0        0       86 2022-04-16 05:38:39.000000 grasspy-requests-0.2.2271/pyproject.toml
+--rw-rw-rw-   0        0        0      719 2022-05-13 09:54:53.888964 grasspy-requests-0.2.2271/setup.cfg
+-drwxrwxrwx   0        0        0        0 2022-05-13 09:54:53.854965 grasspy-requests-0.2.2271/src/
+-drwxrwxrwx   0        0        0        0 2022-05-13 09:54:53.872967 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/
+--rw-rw-rw-   0        0        0     1300 2022-05-13 09:54:53.000000 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      485 2022-05-13 09:54:53.000000 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2022-05-13 09:54:53.000000 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        9 2022-05-13 09:54:53.000000 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       13 2022-05-13 09:54:53.000000 grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/top_level.txt
+-drwxrwxrwx   0        0        0        0 2022-05-13 09:54:53.881966 grasspy-requests-0.2.2271/src/网络请求/
+--rw-rw-rw-   0        0        0      883 2022-05-13 09:42:55.000000 grasspy-requests-0.2.2271/src/网络请求/__init__.py
+--rw-rw-rw-   0        0        0     7590 2022-05-13 09:37:40.000000 grasspy-requests-0.2.2271/src/网络请求/api.py
+--rw-rw-rw-   0        0        0    13082 2022-05-13 07:14:23.000000 grasspy-requests-0.2.2271/src/网络请求/会话.py
+--rw-rw-rw-   0        0        0     3214 2022-05-13 02:18:15.000000 grasspy-requests-0.2.2271/src/网络请求/公用.py
+--rw-rw-rw-   0        0        0    12175 2022-05-13 08:02:09.000000 grasspy-requests-0.2.2271/src/网络请求/模型.py
+--rw-rw-rw-   0        0        0     1282 2022-05-13 06:29:04.000000 grasspy-requests-0.2.2271/src/网络请求/请求参数.py
+--rw-rw-rw-   0        0        0     8875 2022-05-13 07:13:20.000000 grasspy-requests-0.2.2271/src/网络请求/适配器.py
+--rw-rw-rw-   0        0        0       48 2022-05-13 06:42:57.000000 grasspy-requests-0.2.2271/src/网络请求/酷卡.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:35:46.179986 grasspy-requests-0.3.2271/
++-rw-rw-rw-   0        0        0     9592 2022-05-12 06:49:59.000000 grasspy-requests-0.3.2271/LICENSE
++-rw-rw-rw-   0        0        0     1300 2023-04-06 12:35:46.179986 grasspy-requests-0.3.2271/PKG-INFO
++-rw-rw-rw-   0        0        0      715 2022-05-13 09:51:24.000000 grasspy-requests-0.3.2271/README.md
++-rw-rw-rw-   0        0        0       86 2022-04-16 05:38:39.000000 grasspy-requests-0.3.2271/pyproject.toml
++-rw-rw-rw-   0        0        0      729 2023-04-06 12:35:46.187988 grasspy-requests-0.3.2271/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 12:35:46.071985 grasspy-requests-0.3.2271/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 12:35:46.112990 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/
++-rw-rw-rw-   0        0        0     1300 2023-04-06 12:35:45.000000 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      485 2023-04-06 12:35:45.000000 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 12:35:45.000000 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       17 2023-04-06 12:35:45.000000 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       13 2023-04-06 12:35:45.000000 grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 12:35:46.178985 grasspy-requests-0.3.2271/src/网络请求/
++-rw-rw-rw-   0        0        0      877 2022-05-15 12:05:08.000000 grasspy-requests-0.3.2271/src/网络请求/__init__.py
++-rw-rw-rw-   0        0        0     7590 2022-05-13 09:37:40.000000 grasspy-requests-0.3.2271/src/网络请求/api.py
++-rw-rw-rw-   0        0        0    13046 2022-05-15 12:05:08.000000 grasspy-requests-0.3.2271/src/网络请求/会话.py
++-rw-rw-rw-   0        0        0     3214 2022-05-13 02:18:15.000000 grasspy-requests-0.3.2271/src/网络请求/公用.py
++-rw-rw-rw-   0        0        0    12151 2022-05-15 12:05:08.000000 grasspy-requests-0.3.2271/src/网络请求/模型.py
++-rw-rw-rw-   0        0        0     1282 2022-05-13 06:29:04.000000 grasspy-requests-0.3.2271/src/网络请求/请求参数.py
++-rw-rw-rw-   0        0        0     8875 2022-05-13 07:13:20.000000 grasspy-requests-0.3.2271/src/网络请求/适配器.py
++-rw-rw-rw-   0        0        0       48 2022-05-13 06:42:57.000000 grasspy-requests-0.3.2271/src/网络请求/酷卡.py
+```
+
+### Comparing `grasspy-requests-0.2.2271/LICENSE` & `grasspy-requests-0.3.2271/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `grasspy-requests-0.2.2271/PKG-INFO` & `grasspy-requests-0.3.2271/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: grasspy-requests
+-Version: 0.2.2271
++Version: 0.3.2271
+ Summary: Chinsese version of requests for grasspy
+ Home-page: https://gitee.com/laowu2019_admin/zwrequests
+ Author: Laowu Grasspy
+ Author-email: 760230681@qq.com
+ Project-URL: Bug Tracker, https://gitee.com/laowu2019_admin/zwrequests/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `grasspy-requests-0.2.2271/README.md` & `grasspy-requests-0.3.2271/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `grasspy-requests-0.2.2271/setup.cfg` & `grasspy-requests-0.3.2271/setup.cfg`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ 00000000: 5b6d 6574 6164 6174 615d 0d0a 6e61 6d65  [metadata]..name
+ 00000010: 203d 2067 7261 7373 7079 2d72 6571 7565   = grasspy-reque
+ 00000020: 7374 730d 0a76 6572 7369 6f6e 203d 2030  sts..version = 0
+-00000030: 2e32 2e32 3237 310d 0a61 7574 686f 7220  .2.2271..author 
++00000030: 2e33 2e32 3237 310d 0a61 7574 686f 7220  .3.2271..author 
+ 00000040: 3d20 4c61 6f77 7520 4772 6173 7370 790d  = Laowu Grasspy.
+ 00000050: 0a61 7574 686f 725f 656d 6169 6c20 3d20  .author_email = 
+ 00000060: 3736 3032 3330 3638 3140 7171 2e63 6f6d  760230681@qq.com
+ 00000070: 0d0a 6465 7363 7269 7074 696f 6e20 3d20  ..description = 
+ 00000080: 4368 696e 7365 7365 2076 6572 7369 6f6e  Chinsese version
+ 00000090: 206f 6620 7265 7175 6573 7473 2066 6f72   of requests for
+ 000000a0: 2067 7261 7373 7079 0d0a 6c6f 6e67 5f64   grasspy..long_d
+@@ -33,13 +33,14 @@
+ 00000200: 6570 656e 6465 6e74 0d0a 0d0a 5b6f 7074  ependent....[opt
+ 00000210: 696f 6e73 5d0d 0a70 6163 6b61 6765 5f64  ions]..package_d
+ 00000220: 6972 203d 200d 0a09 3d20 7372 630d 0a70  ir = ...= src..p
+ 00000230: 6163 6b61 6765 7320 3d20 6669 6e64 3a0d  ackages = find:.
+ 00000240: 0a70 7974 686f 6e5f 7265 7175 6972 6573  .python_requires
+ 00000250: 203d 203e 3d33 2e31 300d 0a69 6e73 7461   = >=3.10..insta
+ 00000260: 6c6c 5f72 6571 7569 7265 7320 3d20 0d0a  ll_requires = ..
+-00000270: 0972 6571 7565 7374 730d 0a0d 0a5b 6f70  .requests....[op
+-00000280: 7469 6f6e 732e 7061 636b 6167 6573 2e66  tions.packages.f
+-00000290: 696e 645d 0d0a 7768 6572 6520 3d20 7372  ind]..where = sr
+-000002a0: 630d 0a0d 0a5b 6567 675f 696e 666f 5d0d  c....[egg_info].
+-000002b0: 0a74 6167 5f62 7569 6c64 203d 200d 0a74  .tag_build = ..t
+-000002c0: 6167 5f64 6174 6520 3d20 300d 0a0d 0a    ag_date = 0....
++00000270: 0972 6571 7565 7374 7320 3d3d 2032 2e32  .requests == 2.2
++00000280: 372e 310d 0a0d 0a5b 6f70 7469 6f6e 732e  7.1....[options.
++00000290: 7061 636b 6167 6573 2e66 696e 645d 0d0a  packages.find]..
++000002a0: 7768 6572 6520 3d20 7372 630d 0a0d 0a5b  where = src....[
++000002b0: 6567 675f 696e 666f 5d0d 0a74 6167 5f62  egg_info]..tag_b
++000002c0: 7569 6c64 203d 200d 0a74 6167 5f64 6174  uild = ..tag_dat
++000002d0: 6520 3d20 300d 0a0d 0a                   e = 0....
+```
+
+### Comparing `grasspy-requests-0.2.2271/src/grasspy_requests.egg-info/PKG-INFO` & `grasspy-requests-0.3.2271/src/grasspy_requests.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: grasspy-requests
+-Version: 0.2.2271
++Version: 0.3.2271
+ Summary: Chinsese version of requests for grasspy
+ Home-page: https://gitee.com/laowu2019_admin/zwrequests
+ Author: Laowu Grasspy
+ Author-email: 760230681@qq.com
+ Project-URL: Bug Tracker, https://gitee.com/laowu2019_admin/zwrequests/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/__init__.py` & `grasspy-requests-0.3.2271/src/网络请求/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -24,10 +24,10 @@
+      },
+      ...
+    }
+ 
+ 当然也支持其他 HTTP 方法.
+ """
+ 从 网络请求 导入 公用
+-从 网络请求.模型 导入 〇请求, 〇响应, 〇准备好的请求
++从 网络请求.模型 导入 〇请求, 〇响应, 〇就绪请求
+ 从 网络请求.api 导入 请求, 查_get, 头_head, 增_post, 补_patch, 改_put, 删_delete, 权_options
+ 从 网络请求.会话 导入 〇会话
+```
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/api.py` & `grasspy-requests-0.3.2271/src/网络请求/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/会话.py` & `grasspy-requests-0.3.2271/src/网络请求/会话.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -20,38 +20,38 @@
+     套路 解决重定向(分身, 响应, 请求, 流=假, 超时=空, 验证=真, 证书=空,
+                    代理々=空, 生成请求=假, **适配器关键词参数々):
+         """Receives a Response. Returns a generator of Responses or Requests."""
+         返回 分身.resolve_redirects(响应, 请求, stream=流, timeout=超时,
+                 verify=验证, cert=证书, proxies=代理々, yield_requests=生成请求,
+                 **适配器关键词参数々)
+ 
+-    套路 重建认证(分身, 准备好的请求, 响应):
++    套路 重建认证(分身, 就绪请求, 响应):
+         """When being redirected we may want to strip authentication from the
+         request to avoid leaking credentials. This method intelligently removes
+         and reapplies authentication where possible to avoid credential loss.
+         """
+-        分身.rebuild_auth(准备好的请求, 响应)
++        分身.rebuild_auth(就绪请求, 响应)
+ 
+-    套路 重建代理々(分身, 准备好的请求, 代理々) -> dict:
++    套路 重建代理々(分身, 就绪请求, 代理々) -> dict:
+         """This method re-evaluates the proxy configuration by considering the
+         environment variables. If we are redirected to a URL covered by
+         NO_PROXY, we strip the proxy configuration. Otherwise, we set missing
+         proxy keys for this URL (in case they were stripped by a previous
+         redirect).
+ 
+         This method also replaces the Proxy-Authorization header where
+         necessary.
+         """
+-        返回 分身.rebuild_proxies(准备好的请求, 代理々)
++        返回 分身.rebuild_proxies(就绪请求, 代理々)
+ 
+-    套路 重建方法(分身, 准备好的请求, 响应):
++    套路 重建方法(分身, 就绪请求, 响应):
+         """When being redirected we may want to change the method of the request
+         based on certain specs or browser behavior.
+         """
+-        分身.rebuild_method(准备好的请求, 响应)
++        分身.rebuild_method(就绪请求, 响应)
+ 
+ _反向注入(〇会话重定向混入, SessionRedirectMixin)
+ 
+ 
+ 类 〇会话(Session):
+     """A Requests session.
+```
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/公用.py` & `grasspy-requests-0.3.2271/src/网络请求/公用.py`
+
+ * *Files identical despite different names*
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/模型.py` & `grasspy-requests-0.3.2271/src/网络请求/模型.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -65,15 +65,15 @@
+                          data=数据, params=参数々, auth=认证, cookies=酷卡々,
+                          hooks=钩子々, json=json)
+ 
+     def __repr__(self):
+         return '<请求 [%s]>' % (self.method)
+ 
+     套路 准备(分身):
+-        """构造一个 '准备好的请求' 对象以供发送并返回该对象."""
++        """构造一个 '就绪请求' 对象以供发送并返回该对象."""
+         返回 分身.prepare()
+ 
+     @property
+     套路 方法(分身):
+         返回 分身.method
+     
+     @property
+@@ -99,15 +99,15 @@
+     @property
+     套路 酷卡々(分身):
+         返回 分身.cookies
+ 
+ _反向注入(〇请求, Request)
+ 
+ 
+-类 〇准备好的请求(PreparedRequest):
++类 〇就绪请求(PreparedRequest):
+     """The fully mutable :class:`PreparedRequest <PreparedRequest>` object,
+     containing the exact bytes that will be sent to the server.
+ 
+     Instances are generated from a :class:`Request <Request>` object, and
+     should not be instantiated manually; doing so may produce undesirable
+     effects.
+ 
+@@ -128,15 +128,15 @@
+         方法 = _请求方法字典.获取(方法, 方法)
+         """Prepares the entire request with the given parameters."""
+         分身.prepare(method=方法, url=url, headers=头信息, files=文件々,
+                     data=数据, params=参数々, auth=认证, cookies=酷卡々,
+                     hooks=钩子々, json=json)
+ 
+     def __repr__(self):
+-        return '<准备好的请求 [%s]>' % (self.method)
++        return '<就绪请求 [%s]>' % (self.method)
+ 
+     套路 拷贝(分身):
+         返回 分身.copy()
+ 
+     套路 准备方法(分身, 方法):
+         方法 = _请求方法字典.获取(方法, 方法)
+         """Prepares the given HTTP method."""
+@@ -195,15 +195,15 @@
+     套路 请求体(分身, 值):
+         分身.body = 值
+     
+     @property
+     套路 钩子々(分身):
+         返回 分身.hooks
+ 
+-_反向注入(〇准备好的请求, PreparedRequest)
++_反向注入(〇就绪请求, PreparedRequest)
+ 
+ 
+ 类 〇响应(Response):
+     """响应对象, 包含服务器对 HTTP 请求的响应.
+     """
+     @property
+     套路 正常(分身):
+```
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/请求参数.py` & `grasspy-requests-0.3.2271/src/网络请求/请求参数.py`
+
+ * *Files identical despite different names*
+
+### Comparing `grasspy-requests-0.2.2271/src/网络请求/适配器.py` & `grasspy-requests-0.3.2271/src/网络请求/适配器.py`
+
+ * *Files identical despite different names*
+

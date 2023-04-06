@@ -1,0 +1,615 @@
+--- tmp/cocopp-2.6.1.158.tar.gz
++++ tmp/cocopp-2.6.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "cocopp-2.6.1.158.tar", last modified: Fri Mar 24 15:03:14 2023, max compression
+│ +gzip compressed data, was "cocopp-2.6.3.tar", last modified: Thu Apr  6 12:22:52 2023, max compression
+│   --- cocopp-2.6.1.158.tar
+├── +++ cocopp-2.6.3.tar
+│ ├── file list
+│ │ @@ -1,119 +1,119 @@
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.632345 cocopp-2.6.1.158/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     5228 2023-03-24 15:03:14.632205 cocopp-2.6.1.158/PKG-INFO
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     4283 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/README.md
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.612236 cocopp-2.6.1.158/cocopp/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     5887 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/__init__.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      782 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/__main__.py
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)     7030 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/algportfolio.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    63680 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/archiving.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1309 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      475 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1994 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-biobj-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1425 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-biobj-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     3120 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-biobj-ext-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     2543 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-biobj-ext-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     3445 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-constrained-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1359 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-constrained-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1897 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-largescale-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      475 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-largescale-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1739 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-noisy-benchmarkinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      720 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bbob-noisy-benchmarkshortinfos.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    32627 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/bestalg.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)  1989040 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bestalgentries2009.pickle.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    18379 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/bwsettings.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    11352 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/captions.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     5770 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/cococommands.py
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.617132 cocopp-2.6.1.158/cocopp/comp2/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      203 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/comp2/__init__.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    15119 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/comp2/ppfig2.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    14528 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/comp2/pprldistr2.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    19042 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/comp2/ppscatter.py
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.618325 cocopp-2.6.1.158/cocopp/compall/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      213 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/compall/__init__.py
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)     1681 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/compall/organizeRTDpictures.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    33726 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/compall/ppfigcons.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    33123 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/compall/ppfigs.py
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)     8420 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/compall/ppperfprof.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    45483 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/compall/pprldmany.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    35878 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/compall/pptables.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     8157 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/config.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     6114 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/dataformatsettings.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     6061 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/findfiles.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     4690 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/firstsession.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    14138 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/genericsettings.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     8960 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/grayscalesettings.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1391 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/htmldesc.py
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.618548 cocopp-2.6.1.158/cocopp/js/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    17374 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/js/sorttable.js
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    88742 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/latex_commands_for_html.html
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    16573 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/old_line_styles.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     4858 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/ppconverrorbars.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    38039 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/ppfig.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    23804 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/ppfigcons1.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    25901 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/ppfigdim.py
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)     9456 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/ppfigparam.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    33257 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pplogloss.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    37802 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pprldistr.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)   956204 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pprldistr2009_1e-8.pickle.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)   415327 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pprldistr2009_hardestRLB.pickle.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     1793 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pprldistr2009_hardestRLB.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)   161361 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/pproc.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     9638 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pprocold.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     3878 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/ppsingle.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    22534 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/pptable.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    15674 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/pptex.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     2751 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/preparehtml.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     8371 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/preparetexforhtml.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    21097 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/readalign.py
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.621409 cocopp-2.6.1.158/cocopp/refalgs/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    75488 2023-01-19 10:30:28.000000 cocopp-2.6.1.158/cocopp/refalgs/best09-16-bbob-noisy.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    63907 2023-01-19 10:30:28.000000 cocopp-2.6.1.158/cocopp/refalgs/best09-16-bbob.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    71354 2023-01-19 10:30:28.000000 cocopp-2.6.1.158/cocopp/refalgs/best2009-bbob-noisy.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    54603 2023-01-19 10:30:28.000000 cocopp-2.6.1.158/cocopp/refalgs/best2009-bbob.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    98292 2023-01-19 10:30:28.000000 cocopp-2.6.1.158/cocopp/refalgs/best2016-bbob-biobj.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    52716 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/refalgs/best2019-bbob-largescale.tar.gz
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    18720 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/rungeneric.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    12546 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/rungeneric1.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    20550 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/rungenericmany.py
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)     6824 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/sanitycheck.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    21634 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/test.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    39066 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/testbedsettings.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    20417 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/toolsdivers.py
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    39687 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/cocopp/toolsstats.py
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.631889 cocopp-2.6.1.158/cocopp/tth/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    53585 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/CHANGES
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     7709 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/Xfonts.fix
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      178 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/l2h.bat
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      389 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/latex2gif
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      558 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/license.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      627 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/ps2gif
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      560 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/ps2gif.bat
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)      777 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/ps2png
+│ │ --rwxr-xr-x   0 hansen     (501) staff       (20)   616477 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tth
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    14660 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tth.1
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)  1047728 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tth.exe
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     7341 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tth.gif
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)   190376 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tth_manual.html
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    15879 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tthsplit
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    86247 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/cocopp/tth/tthsplit.exe
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.612982 cocopp-2.6.1.158/cocopp.egg-info/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     5228 2023-03-24 15:03:14.000000 cocopp-2.6.1.158/cocopp.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     3129 2023-03-24 15:03:14.000000 cocopp-2.6.1.158/cocopp.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)        1 2023-03-24 15:03:14.000000 cocopp-2.6.1.158/cocopp.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)        7 2023-03-24 15:03:14.000000 cocopp-2.6.1.158/cocopp.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-03-24 15:03:14.616590 cocopp-2.6.1.158/latex-templates/
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    92415 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/latex-templates/ACM-Reference-Format.bst
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    69848 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/latex-templates/acmart.cls
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     9626 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/latex-templates/acmcopyright.sty
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    91826 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/bbob.bib
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     9666 2022-06-14 20:40:56.000000 cocopp-2.6.1.158/latex-templates/comment.sty
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    31249 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateBBOBLSarticle.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    33339 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateBBOBarticle.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    46334 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateBBOBconstrained.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    26990 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateBIOBJarticle.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    33277 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateBIOBJmultiple.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    31447 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateMIXINTarticle.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)    34776 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templateNOISYarticle.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     4941 2023-03-24 13:36:47.000000 cocopp-2.6.1.158/latex-templates/templatepreamble.tex
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)       38 2023-03-24 15:03:14.632380 cocopp-2.6.1.158/setup.cfg
+│ │ --rw-r--r--   0 hansen     (501) staff       (20)     5842 2023-03-24 15:00:45.000000 cocopp-2.6.1.158/setup.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.098657 cocopp-2.6.3/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     5224 2023-04-06 12:22:52.098463 cocopp-2.6.3/PKG-INFO
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     4283 2022-06-14 20:40:56.000000 cocopp-2.6.3/README.md
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.079360 cocopp-2.6.3/cocopp/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     5887 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/__init__.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      782 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/__main__.py
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)     7030 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/algportfolio.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    63680 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/archiving.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1309 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      475 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1994 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-biobj-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1425 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-biobj-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     3120 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-biobj-ext-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     2543 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-biobj-ext-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     3445 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-constrained-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1359 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-constrained-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1897 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-largescale-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      475 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-largescale-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1739 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-noisy-benchmarkinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      720 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bbob-noisy-benchmarkshortinfos.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    32627 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/bestalg.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)  1989040 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bestalgentries2009.pickle.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    18379 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/bwsettings.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    11352 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/captions.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     5770 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/cococommands.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.084313 cocopp-2.6.3/cocopp/comp2/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      203 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/comp2/__init__.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    15119 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/comp2/ppfig2.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    14528 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/comp2/pprldistr2.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    19042 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/comp2/ppscatter.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.085588 cocopp-2.6.3/cocopp/compall/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      213 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/compall/__init__.py
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)     1681 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/compall/organizeRTDpictures.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    33726 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/compall/ppfigcons.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    33123 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/compall/ppfigs.py
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)     8420 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/compall/ppperfprof.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    45483 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/compall/pprldmany.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    35878 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/compall/pptables.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     8157 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/config.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     6114 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/dataformatsettings.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     6061 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/findfiles.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     4690 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/firstsession.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    14138 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/genericsettings.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     8960 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/grayscalesettings.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1391 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/htmldesc.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.085780 cocopp-2.6.3/cocopp/js/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    17374 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/js/sorttable.js
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    88742 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/latex_commands_for_html.html
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    16573 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/old_line_styles.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     4858 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/ppconverrorbars.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    38140 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/ppfig.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    23804 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/ppfigcons1.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    25901 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/ppfigdim.py
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)     9456 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/ppfigparam.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    33257 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pplogloss.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    37802 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pprldistr.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)   956204 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pprldistr2009_1e-8.pickle.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)   415327 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pprldistr2009_hardestRLB.pickle.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     1793 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pprldistr2009_hardestRLB.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)   161361 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/pproc.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     9638 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pprocold.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     3878 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/ppsingle.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    22534 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/pptable.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    15674 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/pptex.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     2751 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/preparehtml.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     8371 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/preparetexforhtml.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    21097 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/readalign.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.091216 cocopp-2.6.3/cocopp/refalgs/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    75488 2023-01-19 10:30:28.000000 cocopp-2.6.3/cocopp/refalgs/best09-16-bbob-noisy.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    63907 2023-01-19 10:30:28.000000 cocopp-2.6.3/cocopp/refalgs/best09-16-bbob.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    71354 2023-01-19 10:30:28.000000 cocopp-2.6.3/cocopp/refalgs/best2009-bbob-noisy.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    54603 2023-01-19 10:30:28.000000 cocopp-2.6.3/cocopp/refalgs/best2009-bbob.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    98292 2023-01-19 10:30:28.000000 cocopp-2.6.3/cocopp/refalgs/best2016-bbob-biobj.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    52716 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/refalgs/best2019-bbob-largescale.tar.gz
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    18720 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/rungeneric.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    12546 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/rungeneric1.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    20550 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/rungenericmany.py
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)     6824 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/sanitycheck.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    21634 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/test.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    39066 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/testbedsettings.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    20417 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/toolsdivers.py
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    39687 2023-04-06 12:22:40.000000 cocopp-2.6.3/cocopp/toolsstats.py
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.097990 cocopp-2.6.3/cocopp/tth/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    53585 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/CHANGES
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     7709 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/Xfonts.fix
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      178 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/l2h.bat
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      389 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/latex2gif
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      558 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/license.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      627 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/ps2gif
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      560 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/ps2gif.bat
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)      777 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/ps2png
+│ │ +-rwxr-xr-x   0 hansen     (501) staff       (20)   616477 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tth
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    14660 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tth.1
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)  1047728 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tth.exe
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     7341 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tth.gif
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)   190376 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tth_manual.html
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    15879 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tthsplit
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    86247 2022-06-14 20:40:56.000000 cocopp-2.6.3/cocopp/tth/tthsplit.exe
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.079887 cocopp-2.6.3/cocopp.egg-info/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     5224 2023-04-06 12:22:52.000000 cocopp-2.6.3/cocopp.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     3129 2023-04-06 12:22:52.000000 cocopp-2.6.3/cocopp.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)        1 2023-04-06 12:22:52.000000 cocopp-2.6.3/cocopp.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)        7 2023-04-06 12:22:52.000000 cocopp-2.6.3/cocopp.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 hansen     (501) staff       (20)        0 2023-04-06 12:22:52.083369 cocopp-2.6.3/latex-templates/
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    92415 2022-06-14 20:40:56.000000 cocopp-2.6.3/latex-templates/ACM-Reference-Format.bst
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    69848 2022-06-14 20:40:56.000000 cocopp-2.6.3/latex-templates/acmart.cls
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     9626 2022-06-14 20:40:56.000000 cocopp-2.6.3/latex-templates/acmcopyright.sty
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    91826 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/bbob.bib
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     9666 2022-06-14 20:40:56.000000 cocopp-2.6.3/latex-templates/comment.sty
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    31249 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateBBOBLSarticle.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    33339 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateBBOBarticle.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    46334 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateBBOBconstrained.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    26990 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateBIOBJarticle.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    33277 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateBIOBJmultiple.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    31447 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateMIXINTarticle.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)    34776 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templateNOISYarticle.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     4941 2023-04-06 12:22:40.000000 cocopp-2.6.3/latex-templates/templatepreamble.tex
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)       38 2023-04-06 12:22:52.098714 cocopp-2.6.3/setup.cfg
+│ │ +-rw-r--r--   0 hansen     (501) staff       (20)     5683 2023-04-06 12:22:36.000000 cocopp-2.6.3/setup.py
+│ │   --- cocopp-2.6.1.158/PKG-INFO
+│ ├── +++ cocopp-2.6.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cocopp
+│ │ -Version: 2.6.1.158
+│ │ +Version: 2.6.3
+│ │  Summary: Benchmarking framework for all types of black-box optimization algorithms, postprocessing. 
+│ │  Home-page: https://github.com/numbbo/coco
+│ │  Maintainer: Dimo Brockhoff and Nikolaus Hansen
+│ │  Maintainer-email: dimo.brockhoff@inria.fr
+│ │  License: BSD
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Intended Audience :: Education
+│ │   --- cocopp-2.6.1.158/README.md
+│ ├── +++ cocopp-2.6.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/__init__.py
+│ ├── +++ cocopp-2.6.3/cocopp/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/__main__.py
+│ ├── +++ cocopp-2.6.3/cocopp/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/algportfolio.py
+│ ├── +++ cocopp-2.6.3/cocopp/algportfolio.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/archiving.py
+│ ├── +++ cocopp-2.6.3/cocopp/archiving.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-biobj-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-biobj-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-biobj-benchmarkshortinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-biobj-benchmarkshortinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-biobj-ext-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-biobj-ext-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-biobj-ext-benchmarkshortinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-biobj-ext-benchmarkshortinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-constrained-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-constrained-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-constrained-benchmarkshortinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-constrained-benchmarkshortinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-largescale-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-largescale-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-noisy-benchmarkinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-noisy-benchmarkinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bbob-noisy-benchmarkshortinfos.txt
+│ ├── +++ cocopp-2.6.3/cocopp/bbob-noisy-benchmarkshortinfos.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bestalg.py
+│ ├── +++ cocopp-2.6.3/cocopp/bestalg.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bestalgentries2009.pickle.gz
+│ ├── +++ cocopp-2.6.3/cocopp/bestalgentries2009.pickle.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/bwsettings.py
+│ ├── +++ cocopp-2.6.3/cocopp/bwsettings.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/captions.py
+│ ├── +++ cocopp-2.6.3/cocopp/captions.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/cococommands.py
+│ ├── +++ cocopp-2.6.3/cocopp/cococommands.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/comp2/ppfig2.py
+│ ├── +++ cocopp-2.6.3/cocopp/comp2/ppfig2.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/comp2/pprldistr2.py
+│ ├── +++ cocopp-2.6.3/cocopp/comp2/pprldistr2.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/comp2/ppscatter.py
+│ ├── +++ cocopp-2.6.3/cocopp/comp2/ppscatter.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/organizeRTDpictures.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/organizeRTDpictures.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/ppfigcons.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/ppfigcons.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/ppfigs.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/ppfigs.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/ppperfprof.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/ppperfprof.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/pprldmany.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/pprldmany.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/compall/pptables.py
+│ ├── +++ cocopp-2.6.3/cocopp/compall/pptables.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/config.py
+│ ├── +++ cocopp-2.6.3/cocopp/config.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/dataformatsettings.py
+│ ├── +++ cocopp-2.6.3/cocopp/dataformatsettings.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/findfiles.py
+│ ├── +++ cocopp-2.6.3/cocopp/findfiles.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/firstsession.py
+│ ├── +++ cocopp-2.6.3/cocopp/firstsession.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/genericsettings.py
+│ ├── +++ cocopp-2.6.3/cocopp/genericsettings.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/grayscalesettings.py
+│ ├── +++ cocopp-2.6.3/cocopp/grayscalesettings.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/htmldesc.py
+│ ├── +++ cocopp-2.6.3/cocopp/htmldesc.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/js/sorttable.js
+│ ├── +++ cocopp-2.6.3/cocopp/js/sorttable.js
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/latex_commands_for_html.html
+│ ├── +++ cocopp-2.6.3/cocopp/latex_commands_for_html.html
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/old_line_styles.py
+│ ├── +++ cocopp-2.6.3/cocopp/old_line_styles.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/ppconverrorbars.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppconverrorbars.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/ppfig.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppfig.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -884,19 +884,21 @@
+│ │              background_algorithms = [algorithm for algorithm in algorithms
+│ │                                       if algorithm in pathnames]
+│ │              background_algorithms.sort()
+│ │              if len(background_algorithms) > 0:
+│ │                  ppfigs_styles = {'marker': '',
+│ │                                   'color': format[0],
+│ │                                   'linestyle': format[1],
+│ │ +                                 'zorder': -1.5,
+│ │                                   }
+│ │                  pprldmany_styles = {'marker': '',
+│ │                                      'label': '',
+│ │                                      'color': format[0],
+│ │                                      'linestyle': format[1],
+│ │ +                                    'zorder': -1.5,
+│ │                                      }
+│ │                  plotting_styles.append(PlottingStyle(pprldmany_styles, ppfigs_styles, background_algorithms, True))
+│ │  
+│ │      foreground_algorithms = [key for key in algorithms
+│ │                               if key in genericsettings.foreground_algorithm_list]
+│ │      # foreground_algorithms.sort()  # sorting is not desired, we want to be able to control the order!
+│ │      plotting_styles.append(PlottingStyle({},
+│ │   --- cocopp-2.6.1.158/cocopp/ppfigcons1.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppfigcons1.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/ppfigdim.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppfigdim.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/ppfigparam.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppfigparam.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pplogloss.py
+│ ├── +++ cocopp-2.6.3/cocopp/pplogloss.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pprldistr.py
+│ ├── +++ cocopp-2.6.3/cocopp/pprldistr.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pprldistr2009_1e-8.pickle.gz
+│ ├── +++ cocopp-2.6.3/cocopp/pprldistr2009_1e-8.pickle.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pprldistr2009_hardestRLB.pickle.gz
+│ ├── +++ cocopp-2.6.3/cocopp/pprldistr2009_hardestRLB.pickle.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pprldistr2009_hardestRLB.py
+│ ├── +++ cocopp-2.6.3/cocopp/pprldistr2009_hardestRLB.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pproc.py
+│ ├── +++ cocopp-2.6.3/cocopp/pproc.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pprocold.py
+│ ├── +++ cocopp-2.6.3/cocopp/pprocold.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/ppsingle.py
+│ ├── +++ cocopp-2.6.3/cocopp/ppsingle.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pptable.py
+│ ├── +++ cocopp-2.6.3/cocopp/pptable.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/pptex.py
+│ ├── +++ cocopp-2.6.3/cocopp/pptex.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/preparehtml.py
+│ ├── +++ cocopp-2.6.3/cocopp/preparehtml.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/preparetexforhtml.py
+│ ├── +++ cocopp-2.6.3/cocopp/preparetexforhtml.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/readalign.py
+│ ├── +++ cocopp-2.6.3/cocopp/readalign.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best09-16-bbob-noisy.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best09-16-bbob-noisy.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best09-16-bbob.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best09-16-bbob.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best2009-bbob-noisy.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best2009-bbob-noisy.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best2009-bbob.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best2009-bbob.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best2016-bbob-biobj.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best2016-bbob-biobj.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/refalgs/best2019-bbob-largescale.tar.gz
+│ ├── +++ cocopp-2.6.3/cocopp/refalgs/best2019-bbob-largescale.tar.gz
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/rungeneric.py
+│ ├── +++ cocopp-2.6.3/cocopp/rungeneric.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/rungeneric1.py
+│ ├── +++ cocopp-2.6.3/cocopp/rungeneric1.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/rungenericmany.py
+│ ├── +++ cocopp-2.6.3/cocopp/rungenericmany.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/sanitycheck.py
+│ ├── +++ cocopp-2.6.3/cocopp/sanitycheck.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/test.py
+│ ├── +++ cocopp-2.6.3/cocopp/test.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/testbedsettings.py
+│ ├── +++ cocopp-2.6.3/cocopp/testbedsettings.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/toolsdivers.py
+│ ├── +++ cocopp-2.6.3/cocopp/toolsdivers.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/toolsstats.py
+│ ├── +++ cocopp-2.6.3/cocopp/toolsstats.py
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/CHANGES
+│ ├── +++ cocopp-2.6.3/cocopp/tth/CHANGES
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/Xfonts.fix
+│ ├── +++ cocopp-2.6.3/cocopp/tth/Xfonts.fix
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/license.txt
+│ ├── +++ cocopp-2.6.3/cocopp/tth/license.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/ps2gif
+│ ├── +++ cocopp-2.6.3/cocopp/tth/ps2gif
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/ps2gif.bat
+│ ├── +++ cocopp-2.6.3/cocopp/tth/ps2gif.bat
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/ps2png
+│ ├── +++ cocopp-2.6.3/cocopp/tth/ps2png
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tth
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tth
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tth.1
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tth.1
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tth.exe
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tth.exe
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tth.gif
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tth.gif
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tth_manual.html
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tth_manual.html
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tthsplit
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tthsplit
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp/tth/tthsplit.exe
+│ ├── +++ cocopp-2.6.3/cocopp/tth/tthsplit.exe
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/cocopp.egg-info/PKG-INFO
+│ ├── +++ cocopp-2.6.3/cocopp.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cocopp
+│ │ -Version: 2.6.1.158
+│ │ +Version: 2.6.3
+│ │  Summary: Benchmarking framework for all types of black-box optimization algorithms, postprocessing. 
+│ │  Home-page: https://github.com/numbbo/coco
+│ │  Maintainer: Dimo Brockhoff and Nikolaus Hansen
+│ │  Maintainer-email: dimo.brockhoff@inria.fr
+│ │  License: BSD
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Intended Audience :: Education
+│ │   --- cocopp-2.6.1.158/cocopp.egg-info/SOURCES.txt
+│ ├── +++ cocopp-2.6.3/cocopp.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/ACM-Reference-Format.bst
+│ ├── +++ cocopp-2.6.3/latex-templates/ACM-Reference-Format.bst
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/acmart.cls
+│ ├── +++ cocopp-2.6.3/latex-templates/acmart.cls
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/acmcopyright.sty
+│ ├── +++ cocopp-2.6.3/latex-templates/acmcopyright.sty
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/bbob.bib
+│ ├── +++ cocopp-2.6.3/latex-templates/bbob.bib
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/comment.sty
+│ ├── +++ cocopp-2.6.3/latex-templates/comment.sty
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateBBOBLSarticle.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateBBOBLSarticle.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateBBOBarticle.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateBBOBarticle.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateBBOBconstrained.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateBBOBconstrained.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateBIOBJarticle.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateBIOBJarticle.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateBIOBJmultiple.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateBIOBJmultiple.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateMIXINTarticle.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateMIXINTarticle.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templateNOISYarticle.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templateNOISYarticle.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/latex-templates/templatepreamble.tex
+│ ├── +++ cocopp-2.6.3/latex-templates/templatepreamble.tex
+│ │┄ Files identical despite different names
+│ │   --- cocopp-2.6.1.158/setup.py
+│ ├── +++ cocopp-2.6.3/setup.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -3,16 +3,15 @@
+│ │  
+│ │  Prepare distribution::
+│ │  
+│ │      make a git tag (on GitHub) to have a new distribution release number
+│ │  
+│ │      outcomment (activate) install requirements below (in this file)
+│ │      python setup.py check
+│ │ -    python -m build > dist_call_output.txt ; less dist_call_output.txt  # see https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html#summary
+│ │ -    # was: python setup.py sdist bdist_wheel --universal > dist_call_output.txt ; less dist_call_output.txt  # bdist_wininst
+│ │ +    python setup.py sdist bdist_wheel --universal > dist_call_output.txt ; less dist_call_output.txt  # bdist_wininst
+│ │  
+│ │  Check distribution and project description::
+│ │  
+│ │      tree build | less  # check that the build folders are clean
+│ │      twine check dist/*
+│ │  
+│ │  Finally upload the distribution::

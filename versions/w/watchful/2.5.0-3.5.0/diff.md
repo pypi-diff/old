@@ -1,0 +1,864 @@
+# Comparing `tmp/watchful-2.5.0.tar.gz` & `tmp/watchful-3.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watchful-2.5.0.tar", last modified: Tue Mar 28 08:03:31 2023, max compression
++gzip compressed data, was "watchful-3.5.0.tar", last modified: Thu Apr  6 12:17:55 2023, max compression
+```
+
+## Comparing `watchful-2.5.0.tar` & `watchful-3.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.538543 watchful-2.5.0/
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     1075 2023-03-28 08:00:31.000000 watchful-2.5.0/LICENSE
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      261 2023-03-28 08:00:31.000000 watchful-2.5.0/MANIFEST.in
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     2650 2023-03-28 08:03:31.538543 watchful-2.5.0/PKG-INFO
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     6405 2023-03-28 08:00:31.000000 watchful-2.5.0/README.md
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     2064 2023-03-28 08:00:31.000000 watchful-2.5.0/README_PYPI.md
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     1554 2023-03-28 08:00:31.000000 watchful-2.5.0/README_PY_ENV.md
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.534543 watchful-2.5.0/examples/
+--rw-r--r--   0 circleci  (3434) circleci  (3434)   296246 2023-03-28 08:00:31.000000 watchful-2.5.0/examples/api_intro.ipynb
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     1900 2023-03-28 08:00:31.000000 watchful-2.5.0/examples/requirements_api_intro.txt
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      998 2023-03-28 08:00:31.000000 watchful-2.5.0/pylama.ini
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      375 2023-03-28 08:00:31.000000 watchful-2.5.0/pyproject.toml
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      983 2023-03-28 08:03:31.542543 watchful-2.5.0/setup.cfg
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.530543 watchful-2.5.0/src/
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.538543 watchful-2.5.0/src/watchful/
+--rw-r--r--   0 circleci  (3434) circleci  (3434)        5 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/VERSION
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      575 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/__init__.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)    33498 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/attributes.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)    48367 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/client.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)    15770 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/enrich.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     2745 2023-03-28 08:00:31.000000 watchful-2.5.0/src/watchful/enricher.py
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.538543 watchful-2.5.0/src/watchful.egg-info/
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     2650 2023-03-28 08:03:31.000000 watchful-2.5.0/src/watchful.egg-info/PKG-INFO
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      587 2023-03-28 08:03:31.000000 watchful-2.5.0/src/watchful.egg-info/SOURCES.txt
+--rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-03-28 08:03:31.000000 watchful-2.5.0/src/watchful.egg-info/dependency_links.txt
+--rw-r--r--   0 circleci  (3434) circleci  (3434)       93 2023-03-28 08:03:31.000000 watchful-2.5.0/src/watchful.egg-info/requires.txt
+--rw-r--r--   0 circleci  (3434) circleci  (3434)        9 2023-03-28 08:03:31.000000 watchful-2.5.0/src/watchful.egg-info/top_level.txt
+-drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-03-28 08:03:31.538543 watchful-2.5.0/tests/
+--rwxr-xr-x   0 circleci  (3434) circleci  (3434)      388 2023-03-28 08:00:31.000000 watchful-2.5.0/tests/test_0000_import_sdk.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)     2691 2023-03-28 08:00:31.000000 watchful-2.5.0/tests/test_0001_sdk_version_and_default_conn.py
+--rw-r--r--   0 circleci  (3434) circleci  (3434)      772 2023-03-28 08:00:31.000000 watchful-2.5.0/tests/test_0002_encoding.py
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.945730 watchful-3.5.0/
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     1075 2023-04-06 12:14:03.000000 watchful-3.5.0/LICENSE
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      261 2023-04-06 12:14:03.000000 watchful-3.5.0/MANIFEST.in
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     2650 2023-04-06 12:17:55.945730 watchful-3.5.0/PKG-INFO
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     6405 2023-04-06 12:14:03.000000 watchful-3.5.0/README.md
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     2064 2023-04-06 12:14:03.000000 watchful-3.5.0/README_PYPI.md
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     1554 2023-04-06 12:14:03.000000 watchful-3.5.0/README_PY_ENV.md
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.945730 watchful-3.5.0/examples/
++-rw-r--r--   0 circleci  (3434) circleci  (3434)   325333 2023-04-06 12:14:03.000000 watchful-3.5.0/examples/api_intro.ipynb
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     1900 2023-04-06 12:14:03.000000 watchful-3.5.0/examples/requirements_api_intro.txt
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      998 2023-04-06 12:14:03.000000 watchful-3.5.0/pylama.ini
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      375 2023-04-06 12:14:03.000000 watchful-3.5.0/pyproject.toml
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      983 2023-04-06 12:17:55.949730 watchful-3.5.0/setup.cfg
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.941730 watchful-3.5.0/src/
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.945730 watchful-3.5.0/src/watchful/
++-rw-r--r--   0 circleci  (3434) circleci  (3434)        5 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/VERSION
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      575 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/__init__.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)    39332 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/attributes.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)    48367 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/client.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)    15767 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/enrich.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     6356 2023-04-06 12:14:03.000000 watchful-3.5.0/src/watchful/enricher.py
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.945730 watchful-3.5.0/src/watchful.egg-info/
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     2650 2023-04-06 12:17:55.000000 watchful-3.5.0/src/watchful.egg-info/PKG-INFO
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      587 2023-04-06 12:17:55.000000 watchful-3.5.0/src/watchful.egg-info/SOURCES.txt
++-rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-04-06 12:17:55.000000 watchful-3.5.0/src/watchful.egg-info/dependency_links.txt
++-rw-r--r--   0 circleci  (3434) circleci  (3434)       93 2023-04-06 12:17:55.000000 watchful-3.5.0/src/watchful.egg-info/requires.txt
++-rw-r--r--   0 circleci  (3434) circleci  (3434)        9 2023-04-06 12:17:55.000000 watchful-3.5.0/src/watchful.egg-info/top_level.txt
++drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-06 12:17:55.945730 watchful-3.5.0/tests/
++-rwxr-xr-x   0 circleci  (3434) circleci  (3434)      388 2023-04-06 12:14:03.000000 watchful-3.5.0/tests/test_0000_import_sdk.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)     2691 2023-04-06 12:14:03.000000 watchful-3.5.0/tests/test_0001_sdk_version_and_default_conn.py
++-rw-r--r--   0 circleci  (3434) circleci  (3434)      772 2023-04-06 12:14:03.000000 watchful-3.5.0/tests/test_0002_encoding.py
+```
+
+### Comparing `watchful-2.5.0/LICENSE` & `watchful-3.5.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/PKG-INFO` & `watchful-3.5.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watchful
+-Version: 2.5.0
++Version: 3.5.0
+ Summary: Watchful API for Interacting with Watchful Environment
+ Home-page: https://github.com/Watchfulio/watchful-py
+ Author: Watchful, Inc.
+ Author-email: engineering@watchful.io
+ License: MIT License
+ Project-URL: Bug Tracker, https://github.com/Watchfulio/watchful-py/issues
+ Keywords: watchful
+```
+
+### Comparing `watchful-2.5.0/README.md` & `watchful-3.5.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/README_PYPI.md` & `watchful-3.5.0/README_PYPI.md`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/README_PY_ENV.md` & `watchful-3.5.0/README_PY_ENV.md`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/examples/api_intro.ipynb` & `watchful-3.5.0/examples/api_intro.ipynb`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9895833333333333%*
+
+ * *Differences: {"'metadata'": "{'kernelspec': {'display_name': 'Python 3', 'name': 'python3'}}"}*
+
+```diff
+@@ -5075,17 +5075,17 @@
+             "metadata": {},
+             "outputs": [],
+             "source": []
+         }
+     ],
+     "metadata": {
+         "kernelspec": {
+-            "display_name": "watchful_api_intro_py3_8_12",
++            "display_name": "Python 3",
+             "language": "python",
+-            "name": "watchful_api_intro_py3_8_12"
++            "name": "python3"
+         },
+         "language_info": {
+             "codemirror_mode": {
+                 "name": "ipython",
+                 "version": 3
+             },
+             "file_extension": ".py",
+```
+
+### Comparing `watchful-2.5.0/examples/requirements_api_intro.txt` & `watchful-3.5.0/examples/requirements_api_intro.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -64,15 +64,15 @@
+ pptree==3.1
+ preshed==3.0.8
+ prompt-toolkit==3.0.8
+ psutil==5.9.3
+ ptyprocess==0.7.0
+ pure-eval==0.2.2
+ py4j==0.10.9.7
+-pydantic==1.10.2
++pydantic==1.10.7
+ Pygments==2.13.0
+ pyparsing==3.0.9
+ PySocks==1.7.1
+ python-dateutil==2.8.2
+ PyYAML==6.0
+ pyzmq==24.0.1
+ regex==2022.10.31
+@@ -96,15 +96,15 @@
+ textblob==0.15.3
+ thinc==8.1.9
+ threadpoolctl==3.1.0
+ tokenizers==0.13.2
+ torch==1.13.0
+ tornado==6.2
+ tqdm==4.64.1
+-traitlets==5.5.0
++traitlets==5.9.0
+ transformers==4.26.1
+ typer==0.7.0
+ typing_extensions==4.4.0
+ urllib3==1.26.13
+ wasabi==0.10.1
+ watchful==1.2.0
+ wcwidth==0.2.5
+```
+
+### Comparing `watchful-2.5.0/pylama.ini` & `watchful-3.5.0/pylama.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/setup.cfg` & `watchful-3.5.0/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/src/watchful/__init__.py` & `watchful-3.5.0/src/watchful/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/src/watchful/attributes.py` & `watchful-3.5.0/src/watchful/attributes.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -9,39 +9,30 @@
+ import json
+ import numbers
+ import os
+ import pprint
+ import re
+ from heapq import merge
+ from multiprocessing import Pool
+-from typing import Callable, Dict, List, Optional, Tuple, Union
++from typing import Callable, Dict, List, Optional, Tuple
+ import psutil
+-from watchful import client
++from watchful import client, enricher
+ 
+ 
+ # Utility printer.
+ pprint._sorted = lambda x: x
+ pprint = pprint.PrettyPrinter(indent=4).pprint
+ 
+ 
+ # Constants for use in the data enrichment. Generally, they should not be edited
+ # directly.
+ IS_MULTIPROC = False
+ MULTIPROC_CHUNKSIZE = None
+ ENRICHMENT_ARGS = None
+ ATTR_WRITER = None
+-EnrichedCell = List[
+-    Tuple[
+-        Union[
+-            List[Tuple[int]],
+-            Dict[str, List[str]],
+-            Optional[str],
+-        ]
+-    ]
+-]
+ 
+ 
+ # Constants for encoding spans into compact strings. Do not edit them.
+ BASE = 64
+ COMPRESSED_LEN = 8
+ 
+ # Chars: "0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmno"
+@@ -204,15 +195,15 @@
+     :type spans: List[Tuple[int, int]]
+     :return: The list of contiguous spans.
+     :rtype: List[int]
+     """
+ 
+     contig = []
+     offset = 0
+-    for (a, b) in spans:
++    for a, b in spans:
+         contig.append(a - offset)
+         contig.append(b - a)
+         offset = b
+ 
+     return contig
+ 
+ 
+@@ -271,15 +262,15 @@
+         for span_data in cell_data:
+             span = span_data[0]
+             attr_vals = span_data[1]
+             name = span_data[2] if len(span_data) == 3 else None
+ 
+             # Gather the new attributes and values
+             # Gather and create new mappings at the same time. Duh :)
+-            for (attr, vals) in attr_vals.items():
++            for attr, vals in attr_vals.items():
+                 if attr not in attrs:
+                     attrs[attr] = len(attrs) + 1
+                     values[attr] = {}
+                     new_attrs.append(attr)
+                 for val in vals:
+                     if isinstance(val, numbers.Number):
+                         val = str(val)
+@@ -294,15 +285,15 @@
+                             new_values[attr] = []
+                         new_values[attr].append(val)
+ 
+             # Create the vector for the current cell.
+             span_val = []
+             if name is not None:
+                 span_val.append(name)
+-            for (attr, vals) in attr_vals.items():
++            for attr, vals in attr_vals.items():
+                 assert len(span) == len(
+                     vals
+                 ), "Must be the same amount of spans as attribute values."
+                 # Not base64 the attributes to save space since there aren't
+                 # that many of them.
+                 span_val.append(attrs[attr])
+                 span_val.append(
+@@ -312,37 +303,37 @@
+             cell.append(base64str(contig_spans(span)))
+             cell.append(span_val)
+ 
+         # Output the lines (attributes, values and the cell value itself).
+         if new_attrs:
+             write_jsonl(["@"] + new_attrs)
+         if new_values:
+-            for (k, vals) in new_values.items():
++            for k, vals in new_values.items():
+                 write_jsonl(["$", k] + vals)
+         write_jsonl(cell)
+ 
+     # Write the header once and return the write function to be called by users.
+     write_jsonl({"version": "0.3", "rows": n_rows, "cols": n_cols})
+     return write
+ 
+ 
+ def spacy_atterize(
+     doc,  # spacy.tokens.doc.Doc (remove type hint to reduce load time)
+-) -> EnrichedCell:
++) -> enricher.EnrichedCell:
+     """
+     This function creates an enriched cell from the cell inference derived by
+     SpaCy NLP. It extracts attributes from a SpaCy document. Attributes are
+     associated to substrings, being tokens, entities, sentences or noun chunks.
+     Every Substring is identified by its character start index and character end
+     index.
+ 
+     :param doc: Cell inference.
+     :type doc: spacy.tokens.doc.Doc
+     :return: The enriched cell.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     # Return value
+     cell = []
+ 
+     def float_to_str(f):
+         return str(round(f * 100.0))
+@@ -461,28 +452,28 @@
+     return cell
+ 
+ 
+ def spacy_atterize_fn(
+     cell: str,
+     spacy_atterize_: Callable,
+     nlp: Callable,
+-) -> EnrichedCell:
++) -> enricher.EnrichedCell:
+     """
+     This function creates an enriched cell from the original cell using the
+     SpaCy NLP enrichment objects.
+ 
+     :param cell: The original cell.
+     :type cell: str
+     :param spacy_atterize_: The enrichment function that creates an enriched
+         cell from the cell inference derived by SpaCy NLP.
+     :type spacy_atterize_: Callable
+     :param nlp: A SpaCy NLP enrichment object.
+     :type nlp: Callable
+     :return: The enriched cell.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     # Adding spacytextblob, cannot do it in load_spacy because of
+     # our multiprocessing code. Adding a pipe to SpaCy is idempotent.
+     from spacytextblob.spacytextblob import (  # pylint: disable=unused-import
+         SpacyTextBlob,
+     )
+@@ -507,26 +498,26 @@
+     nlp.enable_pipe("senter")
+ 
+     return (nlp,)
+ 
+ 
+ def flair_atterize(
+     sent,  # flair.data.Sentence (remove type hint to reduce load time)
+-) -> EnrichedCell:
++) -> enricher.EnrichedCell:
+     """
+     This function creates an enriched cell from the cell inference derived by
+     Flair NLP. It extracts attributes from a Flair paragraph. Attributes are
+     associated to substrings, being tokens, entities, sentences or noun chunks.
+     Every Substring is identified by its character start index and character end
+     index.
+ 
+     :param sent: Cell inference.
+     :type sent: flair.data.Sentence
+     :return: The enriched cell.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     enriched_cell = []
+ 
+     ent_spans = []
+     ent_values = []
+     ent_scores = []
+@@ -542,30 +533,30 @@
+ 
+ 
+ def flair_atterize_fn(
+     cell: str,
+     flair_atterize_: Callable,
+     tagger_pred: Callable,
+     sent_fn: Callable,
+-) -> EnrichedCell:
++) -> enricher.EnrichedCell:
+     """
+     This function creates an enriched cell from the original cell using the
+     Flair NLP enrichment objects.
+ 
+     :param cell: The original cell.
+     :type cell: str
+     :param flair_atterize_: The enrichment function that creates an enriched
+         cell from the cell inference derived by Flair NLP.
+     :type flair_atterize_: Callable
+     :param tagger_pred: A Flair NLP enrichment object.
+     :type tagger_pred: Callable
+     :param sent_fn: A Flair NLP enrichment object.
+     :type sent_fn: Callable
+     :return: The enriched cell.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     sent = sent_fn(cell)
+     tagger_pred(sent)
+ 
+     return flair_atterize_(sent)
+ 
+@@ -587,24 +578,27 @@
+     # warnings.filterwarnings("ignore", module="huggingface_hub")
+ 
+     tagger = SequenceTagger.load("ner")
+ 
+     return (tagger.predict, Sentence)
+ 
+ 
+-def enrich_row(row: Dict[Optional[str], Optional[str]]) -> List[EnrichedCell]:
++@enricher.set_enrich_fn_order()
++def enrich_row(
++    row: Dict[Optional[str], Optional[str]]
++) -> List[enricher.EnrichedCell]:
+     """
+     This function enriches one row. It takes named cells of an input row and
+     returns an enriched row. The global ``ENRICHMENT_ARGS`` would have
+     previously been set so it can be used here.
+ 
+     :param row: The dictionary of named cell values in the row.
+     :type row: Dict[Optional[str], Optional[str]]
+     :return: The list of enriched cell values in the row.
+-    :rtype: List[EnrichedCell]
++    :rtype: List[enricher.EnrichedCell]
+     """
+ 
+     assert (
+         None not in row
+     ), "Dataset error: there is at least one unused cell value!"
+     row_values = row.values()
+     assert (
+@@ -625,29 +619,29 @@
+         enriched_row.append(enriched_cell)
+ 
+     return enriched_row
+ 
+ 
+ def adjust_span_offsets_from_char_to_byte(
+     cell: str,
+-    enriched_cell: EnrichedCell,
+-) -> EnrichedCell:
++    enriched_cell: enricher.EnrichedCell,
++) -> enricher.EnrichedCell:
+     """
+     This function adjusts all the spans of an enriched cell from character
+     offsets to byte offsets, since Watchful's data enrichment API takes in byte
+     offsets. This is useful if your data enrichment functions and models creates
+     character offsets.
+ 
+     :param cell: The string value contained in the cell.
+     :type cell: str
+     :param enriched_cell: A list of attributes for the cell.
+-    :type enriched_cell: EnrichedCell
++    :type enriched_cell: enricher.EnrichedCell
+     :return: The list of attributes for the cell whose span offsets have been
+         adjusted.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     byte_offsets = {}
+     byte_offset = 0
+ 
+     for char_offset, ch in enumerate(cell):
+         byte_offsets[char_offset] = byte_offset
+@@ -681,14 +675,54 @@
+     global ENRICHMENT_ARGS
+     ENRICHMENT_ARGS = args
+ 
+ 
+ def enrich(
+     in_file: str,
+     out_file: str,
++    enrich_row_or_col_fn: Callable,
++    enrichment_args: Tuple,
++) -> None:
++    """
++    This function enriches a dataset, using an enrichment function that enriches
++    either row by row or column by column and other enrichment objects, and then
++    produces the attributes.
++
++    :param in_file: The filepath of the csv formatted original dataset or the
++        dataset exported from Watchful. This latter will be the former appended
++        with the Watchful columns "Hints" and "HandLabels". It follows that
++        these columns are reserved for Watchful and should not be present in the
++        original dataset.
++    :type in_file: str
++    :param out_file: The filepath where the enriched attributes in Watchful
++        custom format for ingestion by Watchful application are written to.
++    :type out_file: str
++    :param enrich_row_or_col_fn: The user custom function for enriching every
++        row or every column of the dataset.
++    :type enrich_row_or_col_fn: Callable
++    :param enrichment_args: The additional enrichment objects to perform the
++        data enrichment.
++    :type enrichment_args: Tuple
++    """
++
++    order = enrich_row_or_col_fn.order
++    if order == "row":
++        enrich_by_row(in_file, out_file, enrich_row_or_col_fn, enrichment_args)
++    elif order == "col":
++        enrich_by_col(in_file, out_file, enrich_row_or_col_fn, enrichment_args)
++    else:
++        raise ValueError(
++            f'The enrichment order "{order}" is unrecognized; use one of '
++            f"{enricher.ENRICHMENT_ORDERS}."
++        )
++
++
++def enrich_by_row(
++    in_file: str,
++    out_file: str,
+     enrich_row_fn: Callable,
+     enrichment_args: Tuple,
+ ) -> None:
+     """
+     This function enriches a dataset, using an enrichment function that enriches
+     row by row and other enrichment objects, and then produces the attributes.
+ 
+@@ -715,15 +749,14 @@
+         n_rows = None
+         for n_rows, _ in enumerate(in_reader, 1):
+             pass
+ 
+     with open(in_file, encoding="utf-8", newline="") as infile, open(
+         out_file, "w", encoding="utf-8"
+     ) as outfile:
+-
+         in_reader = csv.DictReader(infile)
+ 
+         global ATTR_WRITER
+         ATTR_WRITER = writer(outfile, n_rows, n_cols)
+ 
+         if IS_MULTIPROC:
+             # Parallelize to the number of available cores (not the number of
+@@ -752,39 +785,139 @@
+             init_args(*enrichment_args)
+             for enriched_row in map(enrich_row_fn, in_reader):
+                 proc_enriched_row(enriched_row)
+ 
+         del ATTR_WRITER
+ 
+ 
+-def proc_enriched_row(enriched_row: List[EnrichedCell]) -> None:
++def enrich_by_col(
++    in_file: str,
++    out_file: str,
++    enrich_col_fn: Callable,
++    enrichment_args: Tuple,
++) -> None:
++    """
++    This function enriches a dataset, using an enrichment function that enriches
++    column by column and other enrichment objects, and then produces the
++    attributes.
++
++    :param in_file: The filepath of the csv formatted original dataset or the
++        dataset exported from Watchful. This latter will be the former appended
++        with the Watchful columns "Hints" and "HandLabels". It follows that
++        these columns are reserved for Watchful and should not be present in the
++        original dataset.
++    :type in_file: str
++    :param out_file: The filepath where the enriched attributes in Watchful
++        custom format for ingestion by Watchful application are written to.
++    :type out_file: str
++    :param enrich_col_fn: The user custom function for enriching every column of
++        the dataset.
++    :type enrich_col_fn: Callable
++    :param enrichment_args: The additional enrichment objects to perform the
++        data enrichment.
++    :type enrichment_args: Tuple
++    """
++
++    with open(in_file, encoding="utf-8", newline="") as infile:
++        in_reader = csv.reader(infile)
++        col_names = next(in_reader)
++        n_cols = len(col_names)
++        n_rows = None
++        for n_rows, _ in enumerate(in_reader, 1):
++            pass
++
++    with open(out_file, "w", encoding="utf-8") as outfile:
++
++        def __row_reader_to_col_reader(col_names, in_file):
++            def __get_col(col_name, in_reader):
++                return col_name, map(lambda row: row[col_name], in_reader)
++
++            for col_name in col_names:
++                with open(in_file, encoding="utf-8", newline="") as infile:
++                    in_reader = csv.DictReader(infile)
++                    yield __get_col(col_name, in_reader)
++
++        def __enriched_cols_to_enriched_rows(enriched_cols, n_rows):
++            def __get_row(i):
++                return map(lambda enriched_col: enriched_col[i], enriched_cols)
++
++            for i in range(n_rows):
++                yield __get_row(i)
++
++        in_reader = __row_reader_to_col_reader(col_names, in_file)
++
++        global ATTR_WRITER
++        ATTR_WRITER = writer(outfile, n_rows, n_cols)
++
++        if IS_MULTIPROC:
++            # Parallelize to the number of available cores (not the number of
++            # available hyper threads). ``psutil`` is the only standard Python
++            # package that can provide this measure (with logical=False).
++            # Testing revealed wall times to be quite close to using all logical
++            # CPUs, with better overall system responsiveness and less thermal
++            # throttling in this scenario.
++            # Additionally, as Python's threading uses a GIL, it is unsuitable
++            # for this task. Use its multiprocessing intsead. However,
++            # multiprocessing uses pickle and is unable to send functions across
++            # process boundaries, hence the global variable set by the
++            # initializer.
++            with Pool(
++                initializer=init_args,
++                initargs=enrichment_args,
++                processes=psutil.cpu_count(logical=False),
++            ) as pool:
++                for enriched_row in __enriched_cols_to_enriched_rows(
++                    # Put into memory for speed, but may need to trade-off speed
++                    # for memory when the dataset is large, by storing into
++                    # persistent storage.
++                    list(
++                        pool.imap(
++                            func=enrich_col_fn,
++                            iterable=in_reader,
++                            chunksize=MULTIPROC_CHUNKSIZE,
++                        )
++                    ),
++                    n_rows,
++                ):
++                    proc_enriched_row(enriched_row)
++        else:
++            init_args(*enrichment_args)
++            for enriched_row in __enriched_cols_to_enriched_rows(
++                list(map(enrich_col_fn, in_reader)), n_rows
++            ):
++                proc_enriched_row(enriched_row)
++
++        del ATTR_WRITER
++
++
++def proc_enriched_row(enriched_row: List[enricher.EnrichedCell]) -> None:
+     """
+     This function is iterated over every enriched row. Optionally, you may add
+     code if you wish to do something auxiliary with every row.
+ 
+     :param enriched_row: A list of enriched cells.
+-    :type enriched_row: List[EnrichedCell]
++    :type enriched_row: List[enricher.EnrichedCell]
+     """
+ 
+     # Do not edit this code.
+     for enriched_cell in enriched_row:
+         proc_enriched_cell(enriched_cell)
+ 
+     # Edit the code below if you wish to do something auxiliary with every row.
+     # Here we simply print to stdout at the end of every `enriched_row`.
+     # print(f'{"*" * 20} end of row {"*" * 20}')
+ 
+ 
+-def proc_enriched_cell(enriched_cell: EnrichedCell) -> None:
++def proc_enriched_cell(enriched_cell: enricher.EnrichedCell) -> None:
+     """
+     This function is iterated over every enriched cell. Optionally, you may add
+     code if you wish to do something auxiliary with every cell.
+ 
+     :param enriched_cell: An enriched cell.
+-    :type enriched_cell: EnrichedCell
++    :type enriched_cell: enricher.EnrichedCell
+     """
+ 
+     # Do not edit this code.
+     ATTR_WRITER(enriched_cell)
+ 
+     # Edit the code below if you wish to do something auxiliary with every cell.
+     # Here we simply print every ``enriched_cell`` to stdout.
+@@ -829,27 +962,28 @@
+ 
+         def get_attr_row(attr_row_all):
+             return list(map(attr_row_all.__getitem__, attr_locs))
+ 
+     return get_attr_row, attr_name_list, attr_reader
+ 
+ 
++@enricher.set_enrich_fn_order()
+ def enrich_row_with_attribute_data(
+     row: Dict[Optional[str], Optional[str]],
+-) -> List[EnrichedCell]:
++) -> List[enricher.EnrichedCell]:
+     """
+     This function extracts the attributes from a row of an attributes file.
+     Attributes are associated to the entire text in each named cell of the input
+     dataset row. The entire text in each cell of the input dataset row is
+     identified by its byte start index and byte end index.
+ 
+     :param row: The dictionary of named cell values in the row.
+     :type row: Dict[Optional[str], Optional[str]]
+     :return: The list of enriched cell values in the row.
+-    :rtype: List[EnrichedCell]
++    :rtype: List[enricher.EnrichedCell]
+     """
+ 
+     assert (
+         None not in row
+     ), "Dataset error: there is at least one unused cell value!"
+     row_values = row.values()
+     assert (
+@@ -927,25 +1061,25 @@
+     return True
+ 
+ 
+ def atterize_values_in_cell(
+     cell: str,
+     attribute_name: str,
+     values: List[re.Pattern],
+-) -> EnrichedCell:
++) -> enricher.EnrichedCell:
+     """
+     This is a helper function to ``create_attribute_for_values()`` for finding
+     the spans for each value in ``values``.
+ 
+     :param cell: The original cell.
+     :type cell: str
+     :param attribute_name: The attribute name.
+     :type attribute_name: str
+     :return: The enriched cell.
+-    :rtype: EnrichedCell
++    :rtype: enricher.EnrichedCell
+     """
+ 
+     cell = str(cell)
+     matches = [
+         [(m.start(), m.end()) for m in re.finditer(pattern, cell)]
+         for pattern in values
+     ]
+```
+
+### Comparing `watchful-2.5.0/src/watchful/client.py` & `watchful-3.5.0/src/watchful/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/src/watchful/enrich.py` & `watchful-3.5.0/src/watchful/enrich.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -205,15 +205,14 @@
+         del_out_file = True
+         # Create a temporary ``out_file`` and mark it for deletion.
+         args.out_file = f"{os.path.splitext(args.in_file)[0]}.attrs"
+ 
+     # Enrich with attributes from a csv file, that is, already created from an
+     # external pipeline.
+     if args.attr_file:
+-
+         # Enrich with all attributes.
+         if not args.attr_names:
+             print(
+                 f"Enriching {args.in_file} using all attributes from "
+                 f"{args.attr_file} ..."
+             )
+             attributes.enrich(
+@@ -254,15 +253,14 @@
+                     f"{args.attr_names} do not match those in the attribute "
+                     f"input file {args.attr_file}."
+                 )
+                 sys.exit(1)
+ 
+     # Enrich using out-of-the-box NLPs.
+     elif custom_enricher is None:
+-
+         # SpaCy NLP.
+         if args.standard_nlp == "spacy":
+             # Want to know what pipes are used? Uncomment these:
+             # nlp = attributes.load_spacy()
+             # import pprint
+             # pprint.PrettyPrinter(indent=4).pprint(nlp.analyze_pipes())
+ 
+@@ -319,15 +317,15 @@
+         # functions and models in ``custom_enricher`` are used to perform the
+         # data enrichment.
+         print("Using your custom enricher ...")
+         print(f"Enriching {args.in_file} ...")
+         attributes.enrich(
+             args.in_file,
+             args.out_file,
+-            custom_enricher.enrich_row,
++            custom_enricher.enrich_fn,
+             custom_enricher.enrichment_args,
+         )
+         if not del_out_file:
+             print(f"Wrote attributes to {args.out_file}.")
+ 
+     # If Watchful application is remote, delete the downloaded dataset as the
+     # data enrichment is completed.
+```
+
+### Comparing `watchful-2.5.0/src/watchful.egg-info/PKG-INFO` & `watchful-3.5.0/src/watchful.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watchful
+-Version: 2.5.0
++Version: 3.5.0
+ Summary: Watchful API for Interacting with Watchful Environment
+ Home-page: https://github.com/Watchfulio/watchful-py
+ Author: Watchful, Inc.
+ Author-email: engineering@watchful.io
+ License: MIT License
+ Project-URL: Bug Tracker, https://github.com/Watchfulio/watchful-py/issues
+ Keywords: watchful
+```
+
+### Comparing `watchful-2.5.0/src/watchful.egg-info/SOURCES.txt` & `watchful-3.5.0/src/watchful.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/tests/test_0001_sdk_version_and_default_conn.py` & `watchful-3.5.0/tests/test_0001_sdk_version_and_default_conn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchful-2.5.0/tests/test_0002_encoding.py` & `watchful-3.5.0/tests/test_0002_encoding.py`
+
+ * *Files identical despite different names*
+

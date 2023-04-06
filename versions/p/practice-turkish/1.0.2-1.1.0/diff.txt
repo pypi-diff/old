@@ -1,0 +1,167 @@
+--- tmp/practice_turkish-1.0.2.tar.gz
++++ tmp/practice_turkish-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "practice_turkish-1.0.2.tar", max compression
+│ +gzip compressed data, was "practice_turkish-1.1.0.tar", max compression
+│   --- practice_turkish-1.0.2.tar
+├── +++ practice_turkish-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ --rw-r--r--   0        0        0     1088 2022-12-25 17:03:47.565551 practice_turkish-1.0.2/LICENSE
+│ │ --rw-r--r--   0        0        0        0 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/__init__.py
+│ │ --rw-r--r--   0        0        0      265 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/__init__.py
+│ │ --rw-r--r--   0        0        0     5416 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/csvdictionary.py
+│ │ --rw-r--r--   0        0        0     7688 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/dictionary.py
+│ │ --rw-r--r--   0        0        0      600 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/parse.py
+│ │ --rw-r--r--   0        0        0     4153 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/telegram.py
+│ │ --rw-r--r--   0        0        0     2376 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/dictionaries/turkrutdictionary.py
+│ │ --rw-r--r--   0        0        0     3319 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/filepath.py
+│ │ --rw-r--r--   0        0        0      154 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/languages/__init__.py
+│ │ --rw-r--r--   0        0        0     2100 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/languages/clipboard.py
+│ │ --rw-r--r--   0        0        0     2231 2023-03-20 15:55:02.774770 practice_turkish-1.0.2/practice_turkish/languages/englishinput.py
+│ │ --rw-r--r--   0        0        0     3108 2023-03-20 15:55:02.790391 practice_turkish-1.0.2/practice_turkish/languages/languages.py
+│ │ --rw-r--r--   0        0        0     2385 2023-03-20 15:55:02.790391 practice_turkish-1.0.2/practice_turkish/languages/russianinput.py
+│ │ --rw-r--r--   0        0        0     4110 2023-03-20 15:55:02.790391 practice_turkish-1.0.2/practice_turkish/languages/turkishinput.py
+│ │ --rw-r--r--   0        0        0     7429 2023-03-20 15:55:02.790391 practice_turkish-1.0.2/practice_turkish/make_csv.py
+│ │ --rw-r--r--   0        0        0     5438 2023-04-01 09:20:06.391960 practice_turkish-1.0.2/practice_turkish/number.py
+│ │ --rw-r--r--   0        0        0      542 2023-03-20 15:55:02.790391 practice_turkish-1.0.2/practice_turkish/practice.py
+│ │ --rw-r--r--   0        0        0     7786 2023-03-25 07:31:44.640012 practice_turkish-1.0.2/practice_turkish/translation.py
+│ │ --rw-r--r--   0        0        0      786 2023-04-01 09:21:27.216550 practice_turkish-1.0.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0     4608 2023-03-25 07:54:16.042336 practice_turkish-1.0.2/README.md
+│ │ --rw-r--r--   0        0        0     5310 1970-01-01 00:00:00.000000 practice_turkish-1.0.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1088 2022-12-25 17:03:47.565551 practice_turkish-1.1.0/LICENSE
+│ │ +-rw-r--r--   0        0        0        0 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/__init__.py
+│ │ +-rw-r--r--   0        0        0      265 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/dictionaries/__init__.py
+│ │ +-rw-r--r--   0        0        0     5416 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/dictionaries/csvdictionary.py
+│ │ +-rw-r--r--   0        0        0     7688 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/dictionaries/dictionary.py
+│ │ +-rw-r--r--   0        0        0      600 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/dictionaries/parse.py
+│ │ +-rw-r--r--   0        0        0     4178 2023-04-06 12:26:58.282093 practice_turkish-1.1.0/practice_turkish/dictionaries/telegram.py
+│ │ +-rw-r--r--   0        0        0     2376 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/dictionaries/turkrutdictionary.py
+│ │ +-rw-r--r--   0        0        0     3319 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/filepath.py
+│ │ +-rw-r--r--   0        0        0      154 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/languages/__init__.py
+│ │ +-rw-r--r--   0        0        0     2100 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/languages/clipboard.py
+│ │ +-rw-r--r--   0        0        0     2231 2023-03-20 15:55:02.774770 practice_turkish-1.1.0/practice_turkish/languages/englishinput.py
+│ │ +-rw-r--r--   0        0        0     3108 2023-03-20 15:55:02.790391 practice_turkish-1.1.0/practice_turkish/languages/languages.py
+│ │ +-rw-r--r--   0        0        0     2385 2023-03-20 15:55:02.790391 practice_turkish-1.1.0/practice_turkish/languages/russianinput.py
+│ │ +-rw-r--r--   0        0        0     4110 2023-03-20 15:55:02.790391 practice_turkish-1.1.0/practice_turkish/languages/turkishinput.py
+│ │ +-rw-r--r--   0        0        0     7429 2023-03-20 15:55:02.790391 practice_turkish-1.1.0/practice_turkish/make_csv.py
+│ │ +-rw-r--r--   0        0        0     5438 2023-04-01 09:20:06.391960 practice_turkish-1.1.0/practice_turkish/number.py
+│ │ +-rw-r--r--   0        0        0      542 2023-03-20 15:55:02.790391 practice_turkish-1.1.0/practice_turkish/practice.py
+│ │ +-rw-r--r--   0        0        0     7786 2023-03-25 07:31:44.640012 practice_turkish-1.1.0/practice_turkish/translation.py
+│ │ +-rw-r--r--   0        0        0      786 2023-04-06 12:27:16.859820 practice_turkish-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     4608 2023-03-25 07:54:16.042336 practice_turkish-1.1.0/README.md
+│ │ +-rw-r--r--   0        0        0     5310 1970-01-01 00:00:00.000000 practice_turkish-1.1.0/PKG-INFO
+│ │   --- practice_turkish-1.0.2/LICENSE
+│ ├── +++ practice_turkish-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/dictionaries/csvdictionary.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/dictionaries/csvdictionary.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/dictionaries/dictionary.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/dictionaries/dictionary.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/dictionaries/parse.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/dictionaries/parse.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/dictionaries/telegram.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/dictionaries/telegram.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,10 @@
+│ │  from configparser import ConfigParser, SectionProxy
+│ │  from dataclasses import dataclass
+│ │ +import json
+│ │  
+│ │  import requests
+│ │  
+│ │  
+│ │  class TelegramError(Exception):
+│ │      "Generic error with regard to the bot API."
+│ │      pass
+│ │ @@ -104,19 +105,19 @@
+│ │      Raises
+│ │      ----------
+│ │      AuthenticationError
+│ │          If the pair (`user_id`, `token`) is rejected by the bot.
+│ │      """
+│ │      response = requests.post(
+│ │          url=url,
+│ │ -        data={
+│ │ +        data=json.dumps({
+│ │              "user id": user_id,
+│ │              "token": token,
+│ │              "text": text
+│ │ -        }
+│ │ +        })
+│ │      )
+│ │      if response.status_code == 403:
+│ │          raise AuthenticationError(
+│ │              "User token is rejected!\nPlease, check 'USER ID' and 'TOKEN' fields in your configuration file."
+│ │          )
+│ │      if response.status_code != 200:
+│ │          raise requests.HTTPError(response.text)
+│ │   --- practice_turkish-1.0.2/practice_turkish/dictionaries/turkrutdictionary.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/dictionaries/turkrutdictionary.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/filepath.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/filepath.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/languages/clipboard.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/languages/clipboard.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/languages/englishinput.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/languages/englishinput.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/languages/languages.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/languages/languages.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/languages/russianinput.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/languages/russianinput.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/languages/turkishinput.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/languages/turkishinput.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/make_csv.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/make_csv.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/number.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/number.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/practice.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/practice.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/practice_turkish/translation.py
+│ ├── +++ practice_turkish-1.1.0/practice_turkish/translation.py
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/pyproject.toml
+│ ├── +++ practice_turkish-1.1.0/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "practice_turkish"
+│ │ -version = "1.0.2"
+│ │ +version = "1.1.0"
+│ │  description = "A set of tools to practice your Turkish"
+│ │  authors = ["Egor Fadeev <fadeevegor@yandex.ru>"]
+│ │  readme = "README.md"
+│ │  packages = [{include = "practice_turkish"}]
+│ │  license = "MIT"
+│ │  repository = "https://github.com/FadeevEgor/PracticeTurkish"
+│ │   --- practice_turkish-1.0.2/README.md
+│ ├── +++ practice_turkish-1.1.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- practice_turkish-1.0.2/PKG-INFO
+│ ├── +++ practice_turkish-1.1.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: practice-turkish
+│ │ -Version: 1.0.2
+│ │ +Version: 1.1.0
+│ │  Summary: A set of tools to practice your Turkish
+│ │  Home-page: https://github.com/FadeevEgor/PracticeTurkish
+│ │  License: MIT
+│ │  Author: Egor Fadeev
+│ │  Author-email: fadeevegor@yandex.ru
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License

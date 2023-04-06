@@ -1,0 +1,150 @@
+# Comparing `tmp/mq-misc-0.0.2.tar.gz` & `tmp/mq-misc-0.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\mq-misc-0.0.2.tar", last modified: Mon Mar  1 15:10:28 2021, max compression
++gzip compressed data, was "mq-misc-0.0.4.tar", last modified: Thu Apr  6 12:32:53 2023, max compression
+```
+
+## Comparing `mq-misc-0.0.2.tar` & `mq-misc-0.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,21 @@
+-drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.891760 mq-misc-0.0.2/
+--rw-rw-rw-   0        0        0     2058 2021-03-01 15:10:28.890760 mq-misc-0.0.2/PKG-INFO
+--rw-rw-rw-   0        0        0     1171 2021-02-25 10:31:08.000000 mq-misc-0.0.2/README.md
+-drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.873765 mq-misc-0.0.2/mq_misc/
+--rw-rw-rw-   0        0        0        0 2021-02-25 07:26:08.000000 mq-misc-0.0.2/mq_misc/__init__.py
+--rw-rw-rw-   0        0        0     9576 2021-03-01 14:56:31.000000 mq-misc-0.0.2/mq_misc/amqp.py
+--rw-rw-rw-   0        0        0       69 2021-02-05 10:51:53.000000 mq-misc-0.0.2/mq_misc/errors.py
+-drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.888760 mq-misc-0.0.2/mq_misc/publish/
+--rw-rw-rw-   0        0        0        0 2021-02-25 07:39:04.000000 mq-misc-0.0.2/mq_misc/publish/__init__.py
+--rw-rw-rw-   0        0        0     1597 2021-02-25 10:29:09.000000 mq-misc-0.0.2/mq_misc/publish/__main__.py
+-drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.885760 mq-misc-0.0.2/mq_misc.egg-info/
+--rw-rw-rw-   0        0        0     2058 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      282 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      119 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        8 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2021-03-01 15:10:28.891760 mq-misc-0.0.2/setup.cfg
+--rw-rw-rw-   0        0        0     1223 2021-03-01 15:07:46.000000 mq-misc-0.0.2/setup.py
++drwxr-xr-x   0 gorinenko   (501) staff       (20)        0 2023-04-06 12:32:53.193759 mq-misc-0.0.4/
++-rw-r--r--   0 gorinenko   (501) staff       (20)    11357 2022-09-30 08:13:25.000000 mq-misc-0.0.4/LICENSE
++-rw-r--r--   0 gorinenko   (501) staff       (20)     2184 2023-04-06 12:32:53.193090 mq-misc-0.0.4/PKG-INFO
++-rw-r--r--   0 gorinenko   (501) staff       (20)     1753 2023-04-06 12:20:56.000000 mq-misc-0.0.4/README.md
++drwxr-xr-x   0 gorinenko   (501) staff       (20)        0 2023-04-06 12:32:53.188684 mq-misc-0.0.4/mq_misc/
++-rw-r--r--   0 gorinenko   (501) staff       (20)        0 2022-09-30 08:13:25.000000 mq-misc-0.0.4/mq_misc/__init__.py
++-rw-r--r--   0 gorinenko   (501) staff       (20)    11158 2023-04-06 12:17:03.000000 mq-misc-0.0.4/mq_misc/amqp.py
++-rw-r--r--   0 gorinenko   (501) staff       (20)       65 2022-09-30 08:13:25.000000 mq-misc-0.0.4/mq_misc/errors.py
++drwxr-xr-x   0 gorinenko   (501) staff       (20)        0 2023-04-06 12:32:53.192073 mq-misc-0.0.4/mq_misc/publish/
++-rw-r--r--   0 gorinenko   (501) staff       (20)        0 2022-09-30 08:13:25.000000 mq-misc-0.0.4/mq_misc/publish/__init__.py
++-rw-r--r--   0 gorinenko   (501) staff       (20)     2274 2022-09-30 09:32:32.000000 mq-misc-0.0.4/mq_misc/publish/__main__.py
++drwxr-xr-x   0 gorinenko   (501) staff       (20)        0 2023-04-06 12:32:53.190875 mq-misc-0.0.4/mq_misc.egg-info/
++-rw-r--r--   0 gorinenko   (501) staff       (20)     2184 2023-04-06 12:32:53.000000 mq-misc-0.0.4/mq_misc.egg-info/PKG-INFO
++-rw-r--r--   0 gorinenko   (501) staff       (20)      309 2023-04-06 12:32:53.000000 mq-misc-0.0.4/mq_misc.egg-info/SOURCES.txt
++-rw-r--r--   0 gorinenko   (501) staff       (20)        1 2023-04-06 12:32:53.000000 mq-misc-0.0.4/mq_misc.egg-info/dependency_links.txt
++-rw-r--r--   0 gorinenko   (501) staff       (20)      129 2023-04-06 12:32:53.000000 mq-misc-0.0.4/mq_misc.egg-info/requires.txt
++-rw-r--r--   0 gorinenko   (501) staff       (20)        8 2023-04-06 12:32:53.000000 mq-misc-0.0.4/mq_misc.egg-info/top_level.txt
++-rw-r--r--   0 gorinenko   (501) staff       (20)       38 2023-04-06 12:32:53.193891 mq-misc-0.0.4/setup.cfg
++-rw-r--r--   0 gorinenko   (501) staff       (20)     1225 2023-04-06 12:32:21.000000 mq-misc-0.0.4/setup.py
++drwxr-xr-x   0 gorinenko   (501) staff       (20)        0 2023-04-06 12:32:53.192558 mq-misc-0.0.4/tests/
++-rw-r--r--   0 gorinenko   (501) staff       (20)     1886 2023-04-06 12:17:03.000000 mq-misc-0.0.4/tests/test_amqp.py
+```
+
+### Comparing `mq-misc-0.0.2/setup.py` & `mq-misc-0.0.4/setup.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,42 +1,43 @@
+-import setuptools
+-"""
+-python -m pip install --upgrade setuptools wheel twine
+-python setup.py sdist bdist_wheel
+-
+-python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+-python -m twine upload dist/*
+-"""
+-with open("README.md", "r") as fh:
+-    long_description = fh.read()
+-
+-setuptools.setup(
+-    name="mq-misc",
+-    version="0.0.2",
+-    author="Anton Gorinenko",
+-    author_email="anton.gorinenko@gmail.com",
+-    description="Utility package for working with rabbitmq",
+-    long_description=long_description,
+-    keywords='python, asyncio, utils, mq, aio_pika, rabbit mq, rabbit',
+-    long_description_content_type="text/markdown",
+-    packages=setuptools.find_packages(exclude=['tests']),
+-    classifiers=[
+-        "Programming Language :: Python :: 3.8",
+-        "Operating System :: OS Independent",
+-    ],
+-    install_requires=[
+-        "aio_pika==6.8.0",
+-        "ConfigArgParse==1.3"
+-    ],
+-    extras_require={
+-        'test': [
+-            'pytest',
+-            'pytest-cov',
+-            'pytest-aiohttp',
+-            'pytest-mock',
+-            'pylint',
+-            'pytest-dotenv',
+-            'envparse'
+-        ]
+-    },
+-    python_requires='>=3.8',
+-)
++import setuptools
++"""
++python -m pip install --upgrade setuptools wheel twine
++python setup.py sdist bdist_wheel
++
++python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
++python -m twine upload dist/*
++"""
++with open('README.md', 'r', encoding='utf-8') as fh:
++    long_description = fh.read()
++
++setuptools.setup(
++    name="mq-misc",
++    version="0.0.4",
++    author="Anton Gorinenko",
++    author_email="anton.gorinenko@gmail.com",
++    description="Utility package for working with rabbitmq",
++    long_description=long_description,
++    keywords='python, asyncio, utils, mq, aio_pika, rabbit mq, rabbit',
++    long_description_content_type="text/markdown",
++    packages=setuptools.find_packages(exclude=['tests']),
++    classifiers=[
++        "Programming Language :: Python :: 3.8",
++        "Operating System :: OS Independent",
++    ],
++    install_requires=[
++        "aio_pika>=6.8.0",
++        "ConfigArgParse>=1.3"
++    ],
++    extras_require={
++        'test': [
++            'pytest',
++            'pytest-cov',
++            'pytest-asyncio',
++            'pytest-mock',
++            'pylint',
++            'pytest-dotenv',
++            'envparse',
++            'asynctest',
++        ]
++    },
++    python_requires='>=3.8',
++)
+```
+

@@ -1,0 +1,243 @@
+# Comparing `tmp/fw_meta-3.1.3-py3-none-any.whl.zip` & `tmp/fw_meta-3.2.0-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,11 +1,11 @@
+-Zip file size: 13538 bytes, number of entries: 9
+--rw-r--r--  2.0 unx      269 b- defN 80-Jan-01 00:00 fw_meta/__init__.py
++Zip file size: 13751 bytes, number of entries: 9
++-rw-r--r--  2.0 unx      386 b- defN 80-Jan-01 00:00 fw_meta/__init__.py
+ -rw-r--r--  2.0 unx      631 b- defN 80-Jan-01 00:00 fw_meta/aliases.py
+ -rw-r--r--  2.0 unx     7728 b- defN 80-Jan-01 00:00 fw_meta/exports.py
+--rw-r--r--  2.0 unx    17698 b- defN 80-Jan-01 00:00 fw_meta/imports.py
++-rw-r--r--  2.0 unx    18540 b- defN 80-Jan-01 00:00 fw_meta/imports.py
+ -rw-r--r--  2.0 unx        0 b- defN 80-Jan-01 00:00 fw_meta/py.typed
+--rw-r--r--  2.0 unx    10028 b- defN 80-Jan-01 00:00 fw_meta-3.1.3.dist-info/METADATA
+--rw-r--r--  2.0 unx       88 b- defN 80-Jan-01 00:00 fw_meta-3.1.3.dist-info/WHEEL
+--rw-r--r--  2.0 unx     1078 b- defN 80-Jan-01 00:00 fw_meta-3.1.3.dist-info/LICENSE
+-?rw-r--r--  2.0 unx      665 b- defN 16-Jan-01 00:00 fw_meta-3.1.3.dist-info/RECORD
+-9 files, 38185 bytes uncompressed, 12410 bytes compressed:  67.5%
++-rw-r--r--  2.0 unx     1078 b- defN 80-Jan-01 00:00 fw_meta-3.2.0.dist-info/LICENSE
++-rw-r--r--  2.0 unx    10028 b- defN 80-Jan-01 00:00 fw_meta-3.2.0.dist-info/METADATA
++-rw-r--r--  2.0 unx       88 b- defN 80-Jan-01 00:00 fw_meta-3.2.0.dist-info/WHEEL
++?rw-r--r--  2.0 unx      665 b- defN 16-Jan-01 00:00 fw_meta-3.2.0.dist-info/RECORD
++9 files, 39144 bytes uncompressed, 12623 bytes compressed:  67.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -9,20 +9,20 @@
+ 
+ Filename: fw_meta/imports.py
+ Comment: 
+ 
+ Filename: fw_meta/py.typed
+ Comment: 
+ 
+-Filename: fw_meta-3.1.3.dist-info/METADATA
++Filename: fw_meta-3.2.0.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: fw_meta-3.1.3.dist-info/WHEEL
++Filename: fw_meta-3.2.0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: fw_meta-3.1.3.dist-info/LICENSE
++Filename: fw_meta-3.2.0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: fw_meta-3.1.3.dist-info/RECORD
++Filename: fw_meta-3.2.0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## fw_meta/__init__.py
+
+```diff
+@@ -1,8 +1,16 @@
+ """Flywheel meta extractor."""
+ from importlib.metadata import version
+ 
+ __version__ = version(__name__)
++__all__ = [
++    "ExportFilter",
++    "ExportRule",
++    "ExportTemplate",
++    "ImportRule",
++    "MetaData",
++    "MetaExtractor",
++    "extract_meta",
++]
+ 
+-# pylint: disable=unused-import
+ from .exports import ExportFilter, ExportRule, ExportTemplate
+ from .imports import ImportRule, MetaData, MetaExtractor, extract_meta
+```
+
+## fw_meta/imports.py
+
+```diff
+@@ -61,15 +61,15 @@
+         """Return JSON dump of the inflated meta."""
+         return json.dumps(self.dict, separators=(",", ":")).encode()
+ 
+ 
+ Mappings = t.Union[str, t.List[t.Union[t.Tuple[str, str], str]], t.Dict[str, str]]
+ 
+ 
+-class MetaExtractor:  # pylint: disable=too-few-public-methods
++class MetaExtractor:
+     """Meta Extractor."""
+ 
+     def __init__(
+         self,
+         *,
+         mappings: Mappings = None,
+         defaults: Mappings = None,
+@@ -77,15 +77,15 @@
+         customize: t.Callable[[dict, dict], None] = None,
+     ) -> None:
+         """Validate, compile and (functools)cache metadata extraction mapping patterns."""
+         # load/validate mapping patterns
+         # TODO allow mapping expressions in reverse order
+         # be aware of file.path and (fileinfo.)path conflict
+         self.mappings = [
+-            (Template(t), ImportPattern(p))
++            (ImportTemplate(t), ImportPattern(p))
+             for t, p in parse_metadata_mappings(mappings or [])
+         ]
+         # validate default fields and values
+         self.defaults = dict(
+             load_field_tuple(field, default)
+             for field, default in parse_metadata_mappings(defaults or [])
+         )
+@@ -101,29 +101,35 @@
+         """Return set of fields appear in the mappings/defaults/overrides."""
+         return set().union(
+             self.defaults.keys(),
+             self.overrides.keys(),
+             *[p.fields for _, p in self.mappings],
+         )
+ 
+-    def extract(self, data: t.Any) -> MetaData:  # pylint: disable=too-many-locals
++    def extract(self, data: t.Any) -> MetaData:
+         """Extract metadata from given dict like object."""
+         meta: t.Dict[str, t.Any] = {}
+ 
++        def get(field):
++            if field.startswith("!"):
++                return get_field(meta, field[1:])
++            return get_field(data, field)
++
+         def setdefault(field, value):
+             if value not in ("", None):
+                 field, value = load_field_tuple(field, value)
+                 meta.setdefault(field, value)
+ 
+         for template, pattern in self.mappings:
+-            values = [get_field(data, field) for field in template.fields]
+-            if any(value in ("", None) for value in values):
+-                # skip if data doesn't have a value for one or more keys
++            ctx = {field: get(field) for field in template.fields}
++            # skip if data doesn't have a value for one or more fields
++            if any(value in ("", None) for value in ctx.values()):
+                 continue
+-            for field, value in pattern.match(template.format(data)).to_flat().items():
++            # format the template, then parse with the pattern
++            for field, value in pattern.match(template.format(ctx)).to_flat().items():
+                 # setdefault allows using multiple patterns as fallback
+                 setdefault(field, value)
+         # apply user-defaults (eg. {'project.label': 'Default Project'})
+         for field, user_default in self.defaults.items():
+             setdefault(field, user_default)
+         # apply file-defaults (eg. {'session.label': 'StudyDescription'})
+         default_meta: dict = getattr(data, "get_default_meta", lambda: {})()
+@@ -263,14 +269,17 @@
+ 
+ IMPORT_FIELD_LOADERS: t.Dict[str, t.Callable] = {
+     "external_routing_id": load_any,
+     "group._id": load_group_id,
+     "group.label": load_cont_label,
+     "project._id": load_cont_id,
+     "project.label": load_cont_label,
++    # TODO consider supporting project info updates in uploader
++    # TODO validate and raise on empty info key (project.info.)
++    "project.info.*": load_any,
+     "subject._id": load_cont_id,
+     "subject.routing_field": load_any,
+     "subject.label": load_cont_label,
+     "subject.firstname": load_any,
+     "subject.lastname": load_any,
+     "subject.sex": load_subj_sex,
+     # "subject.type": load_subj_type,
+@@ -322,23 +331,39 @@
+ }
+ IMPORT_FIELDS = list(IMPORT_FIELD_LOADERS)
+ IMPORT_FIELD_INDEX = {field: index for index, field in enumerate(IMPORT_FIELDS)}
+ IMPORT_FIELD_NUM = defaultdict(lambda: len(IMPORT_FIELDS), IMPORT_FIELD_INDEX)
+ 
+ 
+ def validate_import_field(field: str) -> t.Tuple[str, str]:
+-    """Return validated/canonic import field name for the field shorthand."""
++    """Return canonic import field name and it's value regex for a short name."""
+     field = parse_field_name(field, aliases=ALIASES, allowed=IMPORT_FIELDS)
+     if field in LABEL_FIELDS:
+         return field, LABEL_RE
+     return field, ""
+ 
+ 
++def validate_import_template_field(field: str) -> str:
++    """Return canonic import field name if !prefixed, otherwise value as-is."""
++    if field.startswith("!"):
++        field, _ = validate_import_field(field[1:])
++        return f"!{field}"
++    return field
++
++
++class ImportTemplate(Template):
++    """Import template for formatting data or !metadata fields."""
++
++    def __init__(self, template: str) -> None:
++        """Init template with !field name validators."""
++        super().__init__(template, validate=validate_import_template_field)
++
++
+ class ImportPattern(Pattern):
+-    """Import pattern for extracting Flywheel metadata fields from strings."""
++    """Import pattern for extracting metadata fields from strings."""
+ 
+     def __init__(self, pattern: str) -> None:
+         """Init pattern with field name validators and value loaders."""
+         super().__init__(
+             pattern,
+             validate=validate_import_field,
+             loaders=IMPORT_FIELD_LOADERS,
+```
+
+## Comparing `fw_meta-3.1.3.dist-info/METADATA` & `fw_meta-3.2.0.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fw-meta
+-Version: 3.1.3
++Version: 3.2.0
+ Summary: Flywheel metadata extraction.
+ Home-page: https://gitlab.com/flywheel-io/tools/lib/fw-meta
+ License: MIT
+ Keywords: Flywheel,DICOM,metadata,extract
+ Author: Flywheel
+ Author-email: support@flywheel.io
+ Requires-Python: >=3.8,<4.0
+```
+
+## Comparing `fw_meta-3.1.3.dist-info/LICENSE` & `fw_meta-3.2.0.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+

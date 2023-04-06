@@ -1,0 +1,201 @@
+# Comparing `tmp/data_augmentation_GASPLN-0.1.3.tar.gz` & `tmp/data_augmentation_GASPLN-0.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "data_augmentation_GASPLN-0.1.3.tar", last modified: Wed Apr  5 13:23:13 2023, max compression
++gzip compressed data, was "data_augmentation_GASPLN-0.1.4.tar", last modified: Thu Apr  6 12:32:35 2023, max compression
+```
+
+## Comparing `data_augmentation_GASPLN-0.1.3.tar` & `data_augmentation_GASPLN-0.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxrwxrwx   0        0        0        0 2023-04-05 13:23:13.979376 data_augmentation_GASPLN-0.1.3/
+--rw-rw-rw-   0        0        0    35823 2023-04-05 12:48:41.000000 data_augmentation_GASPLN-0.1.3/LICENSE
+--rw-rw-rw-   0        0        0       24 2023-04-05 12:48:41.000000 data_augmentation_GASPLN-0.1.3/MANIFEST.in
+--rw-rw-rw-   0        0        0      217 2023-04-05 13:23:13.980376 data_augmentation_GASPLN-0.1.3/PKG-INFO
+--rw-rw-rw-   0        0        0     1737 2023-04-05 12:48:41.000000 data_augmentation_GASPLN-0.1.3/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-05 13:23:13.934844 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/
+--rw-rw-rw-   0        0        0        0 2023-04-05 12:48:41.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 13:23:13.971328 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/data/
+--rw-rw-rw-   0        0        0  7024004 2023-04-05 12:48:41.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/data/synonyms_pt_BR.parquet
+--rw-rw-rw-   0        0        0     2302 2023-04-05 13:22:35.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/functions.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 13:23:13.970327 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/
+--rw-rw-rw-   0        0        0      217 2023-04-05 13:23:13.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      415 2023-04-05 13:23:13.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-05 13:23:13.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       38 2023-04-05 13:23:13.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       25 2023-04-05 13:23:13.000000 data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       86 2023-04-05 13:23:13.980376 data_augmentation_GASPLN-0.1.3/setup.cfg
+--rw-rw-rw-   0        0        0      512 2023-04-05 13:23:00.000000 data_augmentation_GASPLN-0.1.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:32:35.765363 data_augmentation_GASPLN-0.1.4/
++-rw-rw-rw-   0        0        0    35823 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/LICENSE
++-rw-rw-rw-   0        0        0       24 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/MANIFEST.in
++-rw-rw-rw-   0        0        0      217 2023-04-06 12:32:35.766363 data_augmentation_GASPLN-0.1.4/PKG-INFO
++-rw-rw-rw-   0        0        0     1977 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 12:32:35.720235 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/
++-rw-rw-rw-   0        0        0        0 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:32:35.758365 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/data/
++-rw-rw-rw-   0        0        0  7024004 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/data/synonyms_pt_BR.parquet
++-rw-rw-rw-   0        0        0     2565 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/data_augmentation.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:32:35.757364 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/
++-rw-rw-rw-   0        0        0      217 2023-04-06 12:32:35.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      423 2023-04-06 12:32:35.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 12:32:35.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       38 2023-04-06 12:32:35.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       25 2023-04-06 12:32:35.000000 data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       86 2023-04-06 12:32:35.767363 data_augmentation_GASPLN-0.1.4/setup.cfg
++-rw-rw-rw-   0        0        0      512 2023-04-06 12:32:05.000000 data_augmentation_GASPLN-0.1.4/setup.py
+```
+
+### Comparing `data_augmentation_GASPLN-0.1.3/LICENSE` & `data_augmentation_GASPLN-0.1.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `data_augmentation_GASPLN-0.1.3/README.md` & `data_augmentation_GASPLN-0.1.4/README.md`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,42 +1,46 @@
+ # Data Augmentation Library for Portuguese (Brazil)
+ 
+-Research project developed in conjunction with the [GASPLN](https://wp.ufpel.edu.br/gaspln/) research group of the Federal University of Pelotas (UFPel) to create a Python library for Data Augmentation in Portuguese (Brazil).
++This is a research project developed in collaboration with the [GASPLN](https://wp.ufpel.edu.br/gaspln/) research group of the Federal University of Pelotas (UFPel) aimed at creating a Python library for Data Augmentation in Portuguese (Brazil).
+ 
+ ## Installation
+ 
+-The package is available on PyPI and can be installed with pip:
++The package is available on PyPI and can be easily installed using pip:
+ 
+ ```bash
+ pip install data_augmentation_GASPLN
+ ```
+ 
+-## How to use
++## Usage
+ 
+-***THIS PROJECT IS STILL UNDER CONSTRUCTION AND NOT READY FOR USE***
++***PLEASE NOTE THAT THIS PROJECT IS STILL UNDER CONSTRUCTION AND NOT YET READY FOR USE***
+ 
+-With that said, there are some functions in test that can be used, as shown below.
++That being said, the library currently has some test functions that can be used, as shown below.
+ 
+-You can import the library as follows:
++To use the library, simply import it as follows:
+ 
+ ```python
+-import data_augmentation_GASPLN.functions as da
++from data_augmentation_GASPLN import data_augmentation as da
+ ```
+ 
+ ### Synonym Replacement
+ 
++The `synonyms_replacement()` function can be used for synonym replacement. Here's an example:
++
+ ```python
+ da.synonyms_replacement("Data augmentation é uma técnica de aprendizado de máquina que aumenta o número de dados de treinamento, alterando os dados existentes de alguma forma a fim de criar novos dados.", 0.5)
+ ```
+ 
+-Where the first parameter is the text to be augmented, and the second parameter is the amount of words to be replaced by synonyms (0.5 = 50% of the words in the text), if they are found in the synonym dictionary.
++The first parameter is the text to be augmented, and the second parameter is the percentage of words to be replaced by synonyms (by default, and in this example, 50% of the words in the text).
+ 
+ ### Back Translation
+ 
++The `back_translation()` function can be used for back translation. Here's an example:
++
+ ```python
+ da.back_translation("Data augmentation é uma técnica de aprendizado de máquina que aumenta o número de dados de treinamento, alterando os dados existentes de alguma forma a fim de criar novos dados.", 2)
+ ```
+ 
+-Where the first parameter is the text to be augmented, and the second parameter is the number of translations to be made. As for now, there are two options available for the second parameter, 1 or 2, where:
++The first parameter is the text to be augmented, and the second parameter is the number of translations to be performed. Currently, two options are available for the second parameter, 1 or 2, where:
+ 
+ - 1 = Portuguese > English > Portuguese
+ - 2 = Portuguese > Spanish > English > Portuguese
+```
+
+### Comparing `data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/data/synonyms_pt_BR.parquet` & `data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/data/synonyms_pt_BR.parquet`
+
+ * *Files identical despite different names*
+
+### Comparing `data_augmentation_GASPLN-0.1.3/data_augmentation_GASPLN/functions.py` & `data_augmentation_GASPLN-0.1.4/data_augmentation_GASPLN/data_augmentation.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,7 +1,8 @@
++import spacy
+ import nltk
+ import pandas as pd
+ import pyarrow as pa
+ import pyarrow.parquet as pq
+ import numpy as np
+ import translators as ts
+ import translators.server as tss
+@@ -32,26 +33,36 @@
+     nltk.download('averaged_perceptron_tagger')
+     
+ # load the synonyms_pt_BR.parquet file to a dataframe using pkg_resources to avoid hardcoding the path
+ synonyms_df = pd.read_parquet(pkg_resources.resource_filename('data_augmentation_GASPLN', 'data/synonyms_pt_BR.parquet'))
+ 
+ def synonyms_replacement(text, percentage=0.5):
+     tokens = nltk.word_tokenize(text)
+-    stop_words = nltk.corpus.stopwords.words('portuguese')
+     
+     number_of_words = int(len(tokens) * percentage)
+     indexes = np.random.choice(len(tokens), number_of_words, replace=False)
+     
+     for index in indexes:
+         word = tokens[index]
+         
+-        if word not in synonyms_df['word'].values:
++        if len(word) == 1:
+             continue
+         
+-        if word in stop_words:
++        syn_category = None
++        for syn in synonyms_df.itertuples():
++            if syn.word == word:
++                syn_category = nlp(syn.synonyms[0])[0].pos_
++                break
++        
++        if syn_category is None:
++            continue
++        
++        word_category = nlp(word)[0].pos_
++        
++        if word_category != syn_category:
+             continue
+         
+         synonyms = list(synonyms_df[synonyms_df['word'] == word]['synonyms'].values[0])
+         
+         if len(synonyms) == 0:
+             continue
+```
+
+### Comparing `data_augmentation_GASPLN-0.1.3/setup.py` & `data_augmentation_GASPLN-0.1.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+     name='data_augmentation_GASPLN',
+-    version='0.1.3',
++    version='0.1.4',
+     author='Artur Melchiori Cerri',
+     author_email='arturmelchiori@gmail.com',
+     description='Data augmentation for Portuguese language',
+     install_requires=[
+         "nltk",
+         "pandas",
+         "pyarrow",
+```
+
